@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ZeroTrustSecurityPage() {,
-  return (,
+export default function ZeroTrustSecurityPage() {
+  return (
     <>,
       <Head>,
         <title>Zero Trust Security - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ZeroTrustSecurityPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

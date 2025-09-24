@@ -1,107 +1,97 @@
 import ModernLayout from '../../components/layout/ModernLayout',
 // Services data will be defined inline,
-import {,
-  Zap,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Database,;
-  Rocket,;
-  ArrowRight,;
-  CheckCircle,;
-  DollarSign,;
-  Clock,;
+import {
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Database;
+  Rocket;
+  ArrowRight;
+  CheckCircle;
+  DollarSign;
+  Clock;
 } from 'lucide-react',
-,
-export default function ServicesPage() {,
-  const categories = [,
-    {,
-      id: 'micro-saas',;
-      name: 'Micro SaaS',;
-      icon: Rocket,;
-      description: 'Ready-to-deploy SaaS solutions for common business needs',;
-      color: 'from-blue-50o0 to-blue-60o0',;
-    },;
-    {,
-      id: 'ai-solutions',;
-      name: 'AI Solutions',;
-      icon: Brain,;
-      description: 'Intelligent automation and machine learning solutions',;
-      color: 'from-purple-50o0 to-purple-60o0',;
-    },;
-    {,
-      id: 'it-services',;
-      name: 'IT Services',;
-      icon: Database,;
-      description: 'Infrastructure, security, and operational excellence',;
-      color: 'from-green-50o0 to-green-60o0',;
-    },;
+export default function ServicesPage() {
+  const categories = [
+    {
+      id: 'micro-saas';
+      name: 'Micro SaaS';
+      icon: Rocket;
+      description: 'Ready-to-deploy SaaS solutions for common business needs';
+      color: 'from-blue-50o0 to-blue-60o0';
+    };
+    {
+      id: 'ai-solutions';
+      name: 'AI Solutions';
+      icon: Brain;
+      description: 'Intelligent automation and machine learning solutions';
+      color: 'from-purple-50o0 to-purple-60o0';
+    };
+    {
+      id: 'it-services';
+      name: 'IT Services';
+      icon: Database;
+      description: 'Infrastructure, security, and operational excellence';
+      color: 'from-green-50o0 to-green-60o0';
+    };
   ],
-,
-  const servicesList = [,
-    {,
-      id: 'micro-saas',;
-      title: 'Micro SaaS Solutions',;
+  const servicesList = [
+    {
+      id: 'micro-saas';
+      title: 'Micro SaaS Solutions';
       description:,
-        'Ready-to-deploy SaaS applications for common business needs',;
-      features: [,
-        'Quick deployment',;
-        'Scalable architecture',;
-        'Custom branding',;
-        'API integration',;
-      ],;
-      pricing: 'Starting at $99/month',;
-      icon: Rocket,;
-    },;
-    {,
-      id: 'ai-solutions',;
-      title: 'AI & Machine Learning',;
-      description: 'Intelligent automation and machine learning solutions',;
-      features: [,
-        'Natural language processing',;
-        'Computer vision',;
-        'Predictive analytics',;
-        'Automated workflows',;
-      ],;
-      pricing: 'Custom pricing',;
-      icon: Brain,;
-    },;
-    {,
-      id: 'it-services',;
-      title: 'IT Infrastructure',;
-      description: 'Comprehensive IT services and infrastructure management',;
-      features: [,
-        'Cloud migration',;
-        'Security audits',;
-        '24/7 monitoring',;
-        'Disaster recovery',;
-      ],;
-      pricing: 'Starting at $299/month',;
-      icon: Database,;
-    },;
+        'Ready-to-deploy SaaS applications for common business needs';
+      features: [
+        'Quick deployment';
+        'Scalable architecture';
+        'Custom branding';
+        'API integration';
+      ];
+      pricing: 'Starting at $99/month';
+      icon: Rocket;
+    };
+    {
+      id: 'ai-solutions';
+      title: 'AI & Machine Learning';
+      description: 'Intelligent automation and machine learning solutions';
+      features: [
+        'Natural language processing';
+        'Computer vision';
+        'Predictive analytics';
+        'Automated workflows';
+      ];
+      pricing: 'Custom pricing';
+      icon: Brain;
+    };
+    {
+      id: 'it-services';
+      title: 'IT Infrastructure';
+      description: 'Comprehensive IT services and infrastructure management';
+      features: [
+        'Cloud migration';
+        'Security audits';
+        '24/7 monitoring';
+        'Disaster recovery';
+      ];
+      pricing: 'Starting at $299/month';
+      icon: Database;
+    };
   ],
-,
-  const getServicesByCategory = (categoryId: string) => {,
-    return servicesList.filter(service => service.categoryName === categoryId),
-  ,};
-,
-  const getCategoryIcon = (categoryName: string) => {,
+  const getServicesByCategory = (categoryId: string) => {
+    return servicesList.filter(service => service.categoryName === categoryId)};
+  const getCategoryIcon = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.icon : Zap,
-  ,};
-,
-  const getCategoryColor = (categoryName: string) => {,
+    return category ? category.icon : Zap};
+  const getCategoryColor = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.color : 'from-gray-50o0 to-gray-60o0',
-  ,};
-,
-  return (,
-    <ModernLayout,
+    return category ? category.color : 'from-gray-50o0 to-gray-60o0'};
+  return (
+    <ModernLayout
       title='Services | Zion Tech Group',
       description='Comprehensive technology solutions including Micro SaaS, AI solutions, and IT services to accelerate your digital transformation.',
-      canonical='https: //ziontechgroup.com/services',
-    >,
-      {/* Hero Section */,}
+      canonical='https: //ziontechgroup.com/services'>,
+      {/* Hero Section */}
       <section className='bg-gradient-to-br from-gray-50 to-blue-50 py-20'>,
         <div className='mx-auto max-w-7xl px-6 text-center'>,
           <h1 className='text-5xl lg: text-6xl font-bold text-gray-90o0 mb-6'>,
@@ -126,10 +116,10 @@ export default function ServicesPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-            {categories.map(category => (,
-              <div key={category.id,} className='text-center group'>,
-                <div,
-                  className={`h-24 w-24 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+            {categories.map(category => (
+              <div key={category.id} className='text-center group'>,
+                <div
+                  className={`h-24 w-24 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover: scale-110 transition-transform duration-30o0`}
                 >,
                   <category.icon className='h-12 w-12 text-white' />,
                 </div>,
@@ -141,20 +131,19 @@ export default function ServicesPage() {,
                   {getServicesByCategory(category.name).length} services,
                   available,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
       {/* Services by Category */}
-      {categories.map(category => (,
-        <section,
+      {categories.map(category => (
+        <section
           key={category.id}
           className={`py-20 ${category.id === 'micro-saas' ? 'bg-gray-50' : 'bg-white'}`}
         >,
           <div className='mx-auto max-w-7xl px-6'>,
             <div className='text-center mb-16'>,
-              <div,
+              <div
                 className={`inline-flex items-center space-x-3 bg-gradient-to-r ${category.color} text-white px-6 py-3 rounded-full mb-6`}
               >,
                 <category.icon className='h-6 w-6' />,
@@ -168,16 +157,15 @@ export default function ServicesPage() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
-              {getServicesByCategory(category.name).map(service => (,
-                <div,
-                  key={service.id,}
-                  className='bg-white rounded-2xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 border border-gray-10o0',
-                >,
+              {getServicesByCategory(category.name).map(service => (
+                <div
+                  key={service.id}
+                  className='bg-white rounded-2xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 border border-gray-10o0'>,
                   <div className='p-8'>,
-                    {/* Header */,}
+                    {/* Header */}
                     <div className='flex items-start justify-between mb-6'>,
                       <div className='flex items-center space-x-4'>,
-                        <div,
+                        <div
                           className={`h-16 w-16 bg-gradient-to-br ${getCategoryColor(service.categoryName)} rounded-xl flex items-center justify-center`}
                         >,
                           <Zap className='h-8 w-8 text-white' />,
@@ -210,15 +198,13 @@ export default function ServicesPage() {,
                         Key Features,
                       </h4>,
                       <ul className='space-y-2'>,
-                        {service.features.map((feature, index) => (,
-                          <li,
+                        {service.features.map((feature, index) => (
+                          <li
                             key={index}
-                            className='flex items-center space-x-2 text-sm text-gray-60o0',
-                          >,
+                            className='flex items-center space-x-2 text-sm text-gray-60o0'>,
                             <CheckCircle className='h-4 w-4 text-green-50o0' />,
                             <span>{feature}</span>,
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                     {/* CTA */}
@@ -233,21 +219,18 @@ export default function ServicesPage() {,
                           <span>Enterprise ready</span>,
                         </div>,
                       </div>,
-                      <a,
+                      <a
                         href={service.href}
-                        className='bg-blue-60o0 text-white px-6 py-3 rounded-lg font-medium hover: bg-blue-70o0 transition-colors flex items-center space-x-2',
-                      >,
+                        className='bg-blue-60o0 text-white px-6 py-3 rounded-lg font-medium hover: bg-blue-70o0 transition-colors flex items-center space-x-2'>,
                         <span>Get Started</span>,
                         <ArrowRight className='h-4 w-4' />,
                       </a>,
                     </div>,
                   </div>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </div>,
-        </section>,
-      ))}
+        </section>))}
 ,
       {/* Why Choose Our Services */}
       <section className='py-20 bg-gray-50'>,
@@ -324,22 +307,18 @@ export default function ServicesPage() {,
             goals and drive business growth.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
-            <a,
+            <a
               href='/contact',
-              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0'>,
               Get Started Today,
             </a>,
-            <a,
+            <a
               href='/case-studies',
-              className='border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0',
-            >,
+              className='border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'>,
               View Case Studies,
             </a>,
           </div>,
         </div>,
       </section>,
-    </ModernLayout>,
-  ),
-,}
+    </ModernLayout>)}
 ,

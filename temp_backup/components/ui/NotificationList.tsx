@@ -1,60 +1,50 @@
 import React, { useEffect, useMemo, useState } from 'react',
 import { Bell, Filter, CheckCheck, Trash2 } from 'lucide-react',
-import {,
-  NotificationItem,;
-  NotificationFilter,;
-  fetchNotifications,;
-  mapFilterToQuery,;
-  markAllAsRead,;
-  markNotificationRead,;
-  clearAllNotifications,;
+import {
+  NotificationItem;
+  NotificationFilter;
+  fetchNotifications;
+  mapFilterToQuery;
+  markAllAsRead;
+  markNotificationRead;
+  clearAllNotifications;
 } from '../../utils/notifications',
-,
-const tabs: { key: NotificationFilter, label: string ,}[] = [,
-  { key: 'all', label: 'All' ,},;
-  { key: 'unread', label: 'Unread' ,},;
-  { key: 'system', label: 'System' ,},;
-  { key: 'onboarding', label: 'Onboarding' ,},;
-  { key: 'quotes', label: 'Quotes' ,},;
-  { key: 'matches', label: 'Matches' ,},;
+const tabs: { key: NotificationFilter, label: string }[] = [
+  { key: 'all', label: 'All' };
+  { key: 'unread', label: 'Unread' };
+  { key: 'system', label: 'System' };
+  { key: 'onboarding', label: 'Onboarding' };
+  { key: 'quotes', label: 'Quotes' };
+  { key: 'matches', label: 'Matches' };
 ],
-,
-export default function NotificationList() {,
+export default function NotificationList() {
   const [active, setActive] = useState<NotificationFilter>('all'),
   const [loading, setLoading] = useState(false),
   const [items, setItems] = useState<NotificationItem[]>([]),
-,
-  async function load() {,
+  async function load() {
     setLoading(true),
-    try {,
-      await fetchNotifications({ filter: active ,}).then(setItems),
-    } finally {,
-      setLoading(false),
-    }
+    try {
+      await fetchNotifications({ filter: active }).then(setItems)} finally {
+      setLoading(false)}
   }
 ,
-  useEffect(() => {,
+  useEffect(() => {
     load(),
-    // eslint-disable-next-line react-hooks/exhaustive-deps,
-  }, [active]),
-,
-  async function handleMarkAll() {,
+    // eslint-disable-next-line react-hooks/exhaustive-deps}, [active]),
+  async function handleMarkAll() {
     await markAllAsRead(),
-    await load(),
-  }
+    await load()}
 ,
-  async function handleClearAll() {,
+  async function handleClearAll() {
     await clearAllNotifications(),
-    await load(),
-  }
+    await load()}
 ,
-  async function handleMarkOne(id: string) {,
+  async function handleMarkOne(id: string) {
     await markNotificationRead(id),
-    await load(),
-  ,}
+    await load()}
 ,
-  const emptyMessage = useMemo(() => {,
-    switch (active) {,
+  const emptyMessage = useMemo(() => {
+    switch (active) {
       case 'unread':,
         return 'No unread notifications',
       case 'system':,
@@ -66,64 +56,55 @@ export default function NotificationList() {,
       case 'matches':,
         return 'No new matches',
       default: ,
-        return 'No notifications',
-    ,}
+        return 'No notifications'}
   }, [active]),
-,
-  return (,
+  return (
     <div className='space-y-4'>,
       <div className='rounded-2xl border border-gray-20o0 dark: border-gray-80o0 bg-white/60 dark:bg-gray-90o0/60 backdrop-blur p-2'>,
         <div className='flex items-center justify-between gap-2 px-2 py-1'>,
           <div className='flex items-center gap-1 overflow-auto'>,
-            {tabs.map(t => (,
-              <button,
-                key={t.key,}
+            {tabs.map(t => (
+              <button
+                key={t.key}
                 onClick={() => setActive(t.key)}
-                className={`text-sm px-3 py-1.5 rounded-full border transition whitespace-nowrap ${,
+                className={`text-sm px-3 py-1.5 rounded-full border transition whitespace-nowrap ${
                   active === t.key,
                     ? 'border-transparent bg-gradient-to-r from-indigo-50o0 via-violet-50o0 to-cyan-40o0 text-white shadow',
-                    : 'border-gray-20o0 dark: border-gray-80o0 hover:bg-black/5 dark:hover:bg-white/10',
-                ,}`}
+                    : 'border-gray-20o0 dark: border-gray-80o0 hover:bg-black/5 dark:hover:bg-white/10'}`}
               >,
                 {t.label}
-              </button>,
-            ))}
+              </button>))}
           </div>,
           <div className='flex items-center gap-2'>,
-            <button,
+            <button
               onClick={handleMarkAll}
-              className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 inline-flex items-center gap-1',
-            >,
+              className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 inline-flex items-center gap-1'>,
               <CheckCheck className='h-3.5 w-3.5' /> Mark all as read,
             </button>,
-            <button,
-              onClick={handleClearAll,}
-              className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 inline-flex items-center gap-1',
-            >,
+            <button
+              onClick={handleClearAll}
+              className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0 inline-flex items-center gap-1'>,
               <Trash2 className='h-3.5 w-3.5' /> Clear all,
             </button>,
           </div>,
         </div>,
       </div>,
       <div className='space-y-3'>,
-        {loading && (,
+        {loading && (
           <div className='rounded-xl p-6 border border-gray-20o0 dark:border-gray-80o0 bg-white/60 dark:bg-gray-90o0/60'>,
             Loading...,
-          </div>,
-        ),}
-        {!loading && items.length === 0 && (,
+          </div>)}
+        {!loading && items.length === 0 && (
           <div className='rounded-xl p-6 border border-gray-20o0 dark: border-gray-80o0 bg-white/60 dark:bg-gray-90o0/60 text-sm opacity-70'>,
-            {emptyMessage,}
-          </div>,
-        )}
+            {emptyMessage}
+          </div>)}
         {!loading &&,
-          items.map(n => (,
-            <div,
+          items.map(n => (
+            <div
               key={n.id}
-              className='rounded-xl border border-gray-20o0 dark: border-gray-80o0 bg-white/60 dark:bg-gray-90o0/60 p-4 flex items-start gap-3',
-            >,
-              <div,
-                className={`h-10 w-10 rounded-xl flex items-center justify-center shrink-0 shadow bg-gradient-to-br ${,
+              className='rounded-xl border border-gray-20o0 dark: border-gray-80o0 bg-white/60 dark:bg-gray-90o0/60 p-4 flex items-start gap-3'>,
+              <div
+                className={`h-10 w-10 rounded-xl flex items-center justify-center shrink-0 shadow bg-gradient-to-br ${
                   n.type === 'system',
                     ? 'from-blue-50o0 to-cyan-40o0',
                     : n.type === 'onboarding',
@@ -132,8 +113,7 @@ export default function NotificationList() {,
                         ? 'from-emerald-50o0 to-teal-40o0',
                         : n.type === 'match',
                           ? 'from-pink-50o0 to-rose-40o0',
-                          : 'from-slate-50o0 to-gray-40o0',
-                ,}`}
+                          : 'from-slate-50o0 to-gray-40o0'}`}
               >,
                 <Bell className='h-4 w-4 text-white' />,
               </div>,
@@ -144,32 +124,24 @@ export default function NotificationList() {,
                     {new Date(n.created_at).toLocaleString()}
                   </div>,
                 </div>,
-                {n.body && (,
-                  <div className='text-sm opacity-80 mt-1'>{n.body}</div>,
-                )}
+                {n.body && (
+                  <div className='text-sm opacity-80 mt-1'>{n.body}</div>)}
                 <div className='mt-3 flex items-center gap-2'>,
-                  {!n.read_status && (,
-                    <button,
+                  {!n.read_status && (
+                    <button
                       onClick={() => handleMarkOne(n.id)}
-                      className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0',
-                    >,
+                      className='text-xs px-3 py-1.5 rounded-md bg-gray-10o0 dark: bg-gray-80o0 hover:bg-gray-20o0 dark:hover:bg-gray-70o0'>,
                       Mark as read,
-                    </button>,
-                  ),}
-                  {n.related_action && (,
-                    <a,
+                    </button>)}
+                  {n.related_action && (
+                    <a
                       href={n.related_action}
-                      className='text-xs px-3 py-1.5 rounded-md bg-gradient-to-r from-indigo-50o0 via-violet-50o0 to-cyan-40o0 text-white shadow hover: opacity-95',
-                    >,
+                      className='text-xs px-3 py-1.5 rounded-md bg-gradient-to-r from-indigo-50o0 via-violet-50o0 to-cyan-40o0 text-white shadow hover: opacity-95'>,
                       Open,
-                    </a>,
-                  ),}
+                    </a>)}
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

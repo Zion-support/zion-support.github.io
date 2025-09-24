@@ -1,15 +1,13 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Events - Zion Tech Group | Conferences, Webinars & Workshops',;
+export const metadata = {
+  title: 'Events - Zion Tech Group | Conferences, Webinars & Workshops';
   description:,
-    'Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.',;
+    'Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.';
   keywords:,
-    'events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events',;
+    'events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events';
 };
-,
-export default function EventsPage() {,
-  return (,
+export default function EventsPage() {
+  return (
     <div className='min-h-screen'>,
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
@@ -59,19 +57,18 @@ export default function EventsPage() {,
                 </div>,
                 <div className='space-y-2 mb-6 text-sm'>,
                   <div className='flex items-center text-gray-30o0'>,
-                    <svg,
+                    <svg
                       className='w-4 h-4 mr-2',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
                         d='M17.657 16.657L13.414 20.9a1.998 1.998 0 0o1-2.827 0l-4.244-4.243a8 8 0 1111.314 0z',
                       />,
-                      <path,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -81,13 +78,12 @@ export default function EventsPage() {,
                     San Francisco, CA,
                   </div>,
                   <div className='flex items-center text-gray-30o0'>,
-                    <svg,
+                    <svg
                       className='w-4 h-4 mr-2',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -97,13 +93,12 @@ export default function EventsPage() {,
                     3 Days,
                   </div>,
                   <div className='flex items-center text-gray-30o0'>,
-                    <svg,
+                    <svg
                       className='w-4 h-4 mr-2',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -114,32 +109,29 @@ export default function EventsPage() {,
                   </div>,
                 </div>,
                 <div className='flex flex-col sm: flex-row gap-4'>,
-                  <Link,
+                  <Link
                     href='/events/zion-tech-summit-20o25',
-                    className='btn-primary',
-                  >,
+                    className='btn-primary'>,
                     Register Now,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/events/zion-tech-summit-20o25/agenda',
-                    className='btn-secondary',
-                  >,
+                    className='btn-secondary'>,
                     View Agenda,
                   </Link>,
                 </div>,
               </div>,
               <div className='relative'>,
                 <div className='w-full h-64 lg:h-80 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-xl flex items-center justify-center'>,
-                  <svg,
+                  <svg
                     className='w-24 h-24 text-blue-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4',
                     />,
                   </svg>,
@@ -161,16 +153,15 @@ export default function EventsPage() {,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
             <div className='card text-center group hover:bg-blue-50o0/10 transition-colors'>,
               <div className='w-20 h-20 bg-blue-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-50o0/30'>,
-                <svg,
+                <svg
                   className='w-10 h-10 text-blue-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4',
                   />,
                 </svg>,
@@ -180,53 +171,49 @@ export default function EventsPage() {,
                 Large-scale industry events featuring keynote speakers, panel,
                 discussions, and networking opportunities,
               </p>,
-              <Link,
+              <Link
                 href='/events/category/conferences',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 View Conferences →,
               </Link>,
             </div>,
             <div className='card text-center group hover:bg-purple-50o0/10 transition-colors'>,
               <div className='w-20 h-20 bg-purple-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-50o0/30'>,
-                <svg,
+                <svg
                   className='w-10 h-10 text-purple-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M15 10l4.553-2.276A1 1 0 0o121 8.618v6.764a1 1 0 0o1-1.447.894L15 14M5 18h8a2 2 0 0o02-2V8a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v8a2 2 0 0o02 2z',
                   />,
                 </svg>,
               </div>,
               <h3 className='text-xl font-semibold mb-3'>Webinars</h3>,
               <p className='text-gray-40o0 mb-4'>,
-                Online educational sessions covering specific topics,;
+                Online educational sessions covering specific topics;
                 technologies, and industry trends,
               </p>,
-              <Link,
+              <Link
                 href='/events/category/webinars',
-                className='text-purple-40o0 hover: text-purple-30o0 text-sm font-medium',
-              >,
+                className='text-purple-40o0 hover: text-purple-30o0 text-sm font-medium'>,
                 View Webinars →,
               </Link>,
             </div>,
             <div className='card text-center group hover:bg-green-50o0/10 transition-colors'>,
               <div className='w-20 h-20 bg-green-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-50o0/30'>,
-                <svg,
+                <svg
                   className='w-10 h-10 text-green-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
                   />,
                 </svg>,
@@ -236,17 +223,16 @@ export default function EventsPage() {,
                 Hands-on training sessions and interactive learning experiences,
                 for practical skill development,
               </p>,
-              <Link,
+              <Link
                 href='/events/category/workshops',
-                className='text-green-40o0 hover: text-green-30o0 text-sm font-medium',
-              >,
+                className='text-green-40o0 hover: text-green-30o0 text-sm font-medium'>,
                 View Workshops →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Upcoming Events */,}
+      {/* Upcoming Events */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='text-center mb-16'>,
@@ -258,16 +244,15 @@ export default function EventsPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {/* Example Event Cards (trimmed for brevity) */,}
+            {/* Example Event Cards (trimmed for brevity) */}
             <div className='card group'>,
               <div className='w-full h-48 bg-gradient-to-br from-blue-50o0/20 to-indigo-50o0/20 rounded-xl mb-6 flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-16 h-16 text-blue-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -290,13 +275,12 @@ export default function EventsPage() {,
                 pitfalls to avoid.,
               </p>,
               <div className='flex items-center text-sm text-gray-40o0 mb-4'>,
-                <svg,
+                <svg
                   className='w-4 h-4 mr-2',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -305,14 +289,13 @@ export default function EventsPage() {,
                 </svg>,
                 60 minutes,
               </div>,
-              <Link,
+              <Link
                 href='/events/ai-enterprise-implementation-webinar',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 Register Now →,
               </Link>,
             </div>,
-            {/* Additional cards omitted for brevity */,}
+            {/* Additional cards omitted for brevity */}
           </div>,
         </div>,
       </section>,
@@ -331,17 +314,14 @@ export default function EventsPage() {,
               <Link href='/contact' className='btn-primary text-lg px-8 py-4'>,
                 Contact Us,
               </Link>,
-              <Link,
+              <Link
                 href='/events/custom',
-                className='btn-secondary text-lg px-8 py-4',
-              >,
+                className='btn-secondary text-lg px-8 py-4'>,
                 Request Custom Event,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

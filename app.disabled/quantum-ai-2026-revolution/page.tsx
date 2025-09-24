@@ -1,23 +1,21 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Quantum AI 20o26 Revolution - The Future of Computing',;
+export const metadata = {
+  title: 'Quantum AI 20o26 Revolution - The Future of Computing';
   description:,
-    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',;
-  keywords: [,
-    'quantum AI 20o26',;
-    'quantum computing',;
-    'neural interfaces',;
-    'synthetic intelligence',;
-    'AI revolution 20o26',;
-  ],;
+    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.';
+  keywords: [
+    'quantum AI 20o26';
+    'quantum computing';
+    'neural interfaces';
+    'synthetic intelligence';
+    'AI revolution 20o26';
+  ];
 };
-,
-export default function QuantumAI20o26RevolutionPage() {,
-  return (,
+export default function QuantumAI20o26RevolutionPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0'>,
-      <SEO,
+      <SEO
         title='Quantum AI 20o26 Revolution - The Future of Computing',
         description='Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',
         keywords='quantum AI 20o26, quantum computing, neural interfaces, synthetic intelligence, AI revolution 20o26',
@@ -40,22 +38,20 @@ export default function QuantumAI20o26RevolutionPage() {,
             that will transform every aspect of human life.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
               Explore the Future,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-ai-20o26-revolution/technology-preview',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-all'>,
               Technology Preview,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Revolutionary Technologies */,}
+      {/* Revolutionary Technologies */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -121,7 +117,7 @@ export default function QuantumAI20o26RevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Roadmap */,}
+      {/* Technology Roadmap */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -194,15 +190,12 @@ export default function QuantumAI20o26RevolutionPage() {,
             access to quantum AI technologies and be at the forefront of,
             innovation.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
             Join the Revolution,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

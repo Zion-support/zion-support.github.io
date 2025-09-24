@@ -1,22 +1,20 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o25 Trends & Predictions: The Future of Artificial Intelligence',;
+export const metadata = {
+  title: 'AI 20o25 Trends & Predictions: The Future of Artificial Intelligence';
   description:,
-    'Discover the most important AI trends and predictions for 20o25. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',;
-  keywords: [,
-    'AI 20o25',;
-    'AI trends',;
-    'AI predictions',;
-    'artificial intelligence',;
-    'quantum computing',;
-    'neural interfaces',;
-    'machine learning',;
-  ],;
+    'Discover the most important AI trends and predictions for 20o25. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.';
+  keywords: [
+    'AI 20o25';
+    'AI trends';
+    'AI predictions';
+    'artificial intelligence';
+    'quantum computing';
+    'neural interfaces';
+    'machine learning';
+  ];
 };
-,
-export default function AI20o25TrendsPage() {,
-  return (,
+export default function AI20o25TrendsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -36,23 +34,21 @@ export default function AI20o25TrendsPage() {,
               implementation strategies.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='#trends',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Explore Trends,
               </Link>,
-              <Link,
+              <Link
                 href='#predictions',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Predictions,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -81,14 +77,14 @@ export default function AI20o25TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section id='trends' className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
             Top AI Trends for 20o25,
           </h2>,
           <div className='space-y-12'>,
-            {/* Trend 1 */,}
+            {/* Trend 1 */}
             <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-50o0'>,
               <div className='flex items-center mb-4'>,
                 <span className='text-4xl mr-4'>🧠</span>,
@@ -114,7 +110,7 @@ export default function AI20o25TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 2 */,}
+            {/* Trend 2 */}
             <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-50o0'>,
               <div className='flex items-center mb-4'>,
                 <span className='text-4xl mr-4'>⚛️</span>,
@@ -140,7 +136,7 @@ export default function AI20o25TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 3 */,}
+            {/* Trend 3 */}
             <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-50o0'>,
               <div className='flex items-center mb-4'>,
                 <span className='text-4xl mr-4'>🤖</span>,
@@ -166,7 +162,7 @@ export default function AI20o25TrendsPage() {,
                 </ul>,
               </div>,
             </div>,
-            {/* Trend 4 */,}
+            {/* Trend 4 */}
             <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-orange-50o0'>,
               <div className='flex items-center mb-4'>,
                 <span className='text-4xl mr-4'>🌐</span>,
@@ -195,7 +191,7 @@ export default function AI20o25TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Predictions Section */,}
+      {/* Predictions Section */}
       <section id='predictions' className='py-16 bg-gray-50'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -251,7 +247,7 @@ export default function AI20o25TrendsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold mb-4'>,
@@ -262,22 +258,20 @@ export default function AI20o25TrendsPage() {,
             transformation journey today.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-implementation-guide',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Download Implementation Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Schedule Consultation,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -296,10 +290,9 @@ export default function AI20o25TrendsPage() {,
                 </p>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-enterprise-transformation',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <div className='text-4xl mb-4'>🏢</div>,
                 <h3 className='text-xl font-semibold mb-2 group-hover:text-purple-60o0 transition-colors'>,
@@ -326,7 +319,5 @@ export default function AI20o25TrendsPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

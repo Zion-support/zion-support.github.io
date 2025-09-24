@@ -1,38 +1,30 @@
-export type HeatmapCell = { value: number ,};
-,
-export type HeatmapProps = {,
+export type HeatmapCell = { value: number };
+export type HeatmapProps = {
   rows: number,
   cols: number,
   data: HeatmapCell[], // length rows*cols,
-  title?: string,
-,};
-,
-export default function Heatmap({ rows, cols, data, title }: HeatmapProps) {,
+  title?: string};
+export default function Heatmap({ rows, cols, data, title }: HeatmapProps) {
   const max = Math.max(1, ...data.map(d => d.value)),
-  return (,
+  return (
     <div>,
-      {title ? (,
+      {title ? (
         <div className='mb-2 text-sm text-gray-60o0 dark: text-gray-40o0'>,
-          {title,}
-        </div>,
-      ) : null}
-      <div,
+          {title}
+        </div>) : null}
+      <div
         className='grid gap-1',
-        style={{ gridTemplateColumns: `repeat(${cols,}, minmax(0, 1fr))` }}
+        style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
       >,
-        {data.map((cell, idx) => {,
+        {data.map((cell, idx) => {
           const intensity = cell.value / max,
           const bg = `rgba(59,130,246,${0.1 + intensity * 0.9})`,
-          return (,
-            <div,
+          return (
+            <div
               key={idx}
               className='h-4 rounded',
-              style={{ backgroundColor: bg ,}}
-            />,
-          ),
-        })}
+              style={{ backgroundColor: bg }}
+            />)})}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

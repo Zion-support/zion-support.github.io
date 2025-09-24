@@ -1,12 +1,12 @@
 import Link from 'next/link',
 ArrowRightBrainZapTargetTrendingUpUsersGlobeLightbulb,
-export default function AI20o25ContentRevolutionBreakthroughBanner() {,
-  return (,
+export default function AI20o25ContentRevolutionBreakthroughBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-pink-90o0 to-purple-90o0 rounded-3xl p-8 md: p-12 mb-16 border border-purple-50o0/20">,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C27B0" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="relative z-10">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-8">,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">,
             <Brain className="w-4 h-4"  />,
@@ -84,18 +84,16 @@ export default function AI20o25ContentRevolutionBreakthroughBanner() {,
         {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-wrap justify-center gap-4 mb-6">,
-            <Link,
+            <Link
               href="/blog/ai-20o25-ultimate-content-revolution-breakthrough",
-              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-full font-bold text-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
-            >,
+              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-full font-bold text-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">,
               <Brain className="w-5 h-5"  />,
               Read Full Breakthrough,
               <ArrowRight className="w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies/ai-20o25-content-revolution-50o00-roi-success",
-              className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-30o0 flex items-center gap-2 backdrop-blur-sm border border-white/20",
-            >,
+              className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-30o0 flex items-center gap-2 backdrop-blur-sm border border-white/20">,
               <Users className="w-5 h-5"  />,
               View Success Story,
               <ArrowRight className="w-5 h-5"  />,
@@ -106,6 +104,4 @@ export default function AI20o25ContentRevolutionBreakthroughBanner() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}

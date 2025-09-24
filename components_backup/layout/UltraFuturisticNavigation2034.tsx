@@ -1,428 +1,412 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Zap,;
-  Sparkles,;
-  Shield,;
-  Microscope,;
-  DollarSign,;
-  Home,;
-  Users,;
-  Briefcase,;
-  BookOpen,;
-  MessageCircle,;
-  Star,;
-  TrendingUp,;
-  Target,;
-  Layers,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  ShieldCheck,;
-  Earth,;
-  Factory,;
-  Car,;
-  Building,;
-  GraduationCap,;
-  Scale,;
-  Palette,;
-  Camera,;
-  Video,;
-  Music,;
-  Gamepad2,;
-  Heart,;
-  Leaf,;
-  Sun,;
-  Moon,;
-  Wind,;
-  Droplets,;
-  Mountain,;
-  Code,;
-  Wrench,;
-  Smartphone,;
-  BarChart3,;
-  Eye,;
-  Network,;
-  Server,;
-  HardDrive,;
-  Monitor,;
-  Laptop,;
-  Watch,;
-  Headphones,;
-  Speaker,;
-  Mic,;
-  Keyboard,;
-  Mouse,;
-  CpuIcon,;
-  DatabaseIcon,;
-  CloudIcon,;
-  LockIcon,;
-  ShieldIcon,;
-  GlobeIcon,;
-  ZapIcon,;
-  SparklesIcon,;
-  BrainIcon,;
-  AtomIcon,;
-  HeartIcon,;
-  RocketIcon,;
-  ShieldIcon as ShieldIcon2,;
-  TargetIcon,;
-  MicroscopeIcon,;
-  StarIcon,;
-  ArrowRight,;
-  Infinity,;
-  Crown,;
-  Gem,;
-  Sparkles as SparklesIcon2,;
-  BarChart,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Settings,;
-  HelpCircle,;
-  FileText,;
-  Calendar,;
-  CreditCard,;
-  ShoppingCart,;
-  Gift,;
-  Award,;
-  Zap as ZapIcon2,;
-  Target as TargetIcon2,;
-  Handshake,;
-  Linkedin,;
-  Github,;
-  Twitter,;
-  Youtube,;
-  Instagram,;
+import {
+  Menu;
+  X;
+  ChevronDown;
+  Search;
+  Phone;
+  Mail;
+  MapPin;
+  Rocket;
+  Brain;
+  Atom;
+  Globe;
+  Zap;
+  Sparkles;
+  Shield;
+  Microscope;
+  DollarSign;
+  Home;
+  Users;
+  Briefcase;
+  BookOpen;
+  MessageCircle;
+  Star;
+  TrendingUp;
+  Target;
+  Layers;
+  Cpu;
+  Database;
+  Cloud;
+  Lock;
+  ShieldCheck;
+  Earth;
+  Factory;
+  Car;
+  Building;
+  GraduationCap;
+  Scale;
+  Palette;
+  Camera;
+  Video;
+  Music;
+  Gamepad2;
+  Heart;
+  Leaf;
+  Sun;
+  Moon;
+  Wind;
+  Droplets;
+  Mountain;
+  Code;
+  Wrench;
+  Smartphone;
+  BarChart3;
+  Eye;
+  Network;
+  Server;
+  HardDrive;
+  Monitor;
+  Laptop;
+  Watch;
+  Headphones;
+  Speaker;
+  Mic;
+  Keyboard;
+  Mouse;
+  CpuIcon;
+  DatabaseIcon;
+  CloudIcon;
+  LockIcon;
+  ShieldIcon;
+  GlobeIcon;
+  ZapIcon;
+  SparklesIcon;
+  BrainIcon;
+  AtomIcon;
+  HeartIcon;
+  RocketIcon;
+  ShieldIcon as ShieldIcon2;
+  TargetIcon;
+  MicroscopeIcon;
+  StarIcon;
+  ArrowRight;
+  Infinity;
+  Crown;
+  Gem;
+  Sparkles as SparklesIcon2;
+  BarChart;
+  PieChart;
+  LineChart;
+  Activity;
+  Settings;
+  HelpCircle;
+  FileText;
+  Calendar;
+  CreditCard;
+  ShoppingCart;
+  Gift;
+  Award;
+  Zap as ZapIcon2;
+  Target as TargetIcon2;
+  Handshake;
+  Linkedin;
+  Github;
+  Twitter;
+  Youtube;
+  Instagram;
 } from 'lucide-react',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const mainNavigation = [,
-  {,
-    name: 'Home',;
-    href: '/',;
-    icon: Home,;
-    description: 'Welcome to Zion Tech Group',;
-  },;
-  {,
-    name: 'Services',;
-    href: '/services',;
-    icon: Briefcase,;
-    description: 'Explore our comprehensive service offerings',;
-  },;
-  {,
-    name: '20o24 Services',;
-    href: '/services-20o24',;
-    icon: Sparkles,;
-    description: 'Latest revolutionary services for 20o24',;
-  },;
-  {,
-    name: 'Solutions',;
-    href: '/solutions',;
-    icon: Target,;
-    description: 'Industry-specific solutions and use cases',;
-  },;
-  {,
-    name: 'Pricing',;
-    href: '/pricing-20o33',;
-    icon: DollarSign,;
-    description: 'Transparent pricing for all our services',;
-  },;
-  {,
-    name: 'Resources',;
-    href: '/resources',;
-    icon: BookOpen,;
-    description: 'Documentation, guides, and learning materials',;
-  },;
-  {,
-    name: 'Case Studies',;
-    href: '/case-studies',;
-    icon: FileText,;
-    description: 'Success stories from our customers',;
-  },;
-  {,
-    name: 'Blog',;
-    href: '/blog',;
-    icon: MessageCircle,;
-    description: 'Latest insights and industry trends',;
-  },;
-  {,
-    name: 'About',;
-    href: '/about',;
-    icon: Users,;
-    description: 'Learn about our company and mission',;
-  },;
-  {,
-    name: 'Careers',;
-    href: '/careers',;
-    icon: Briefcase,;
-    description: 'Join our innovative team',;
-  },;
-  {,
-    name: 'Contact',;
-    href: '/contact',;
-    icon: MessageCircle,;
-    description: 'Get in touch with our experts',;
-  },;
+const mainNavigation = [
+  {
+    name: 'Home';
+    href: '/';
+    icon: Home;
+    description: 'Welcome to Zion Tech Group';
+  };
+  {
+    name: 'Services';
+    href: '/services';
+    icon: Briefcase;
+    description: 'Explore our comprehensive service offerings';
+  };
+  {
+    name: '20o24 Services';
+    href: '/services-20o24';
+    icon: Sparkles;
+    description: 'Latest revolutionary services for 20o24';
+  };
+  {
+    name: 'Solutions';
+    href: '/solutions';
+    icon: Target;
+    description: 'Industry-specific solutions and use cases';
+  };
+  {
+    name: 'Pricing';
+    href: '/pricing-20o33';
+    icon: DollarSign;
+    description: 'Transparent pricing for all our services';
+  };
+  {
+    name: 'Resources';
+    href: '/resources';
+    icon: BookOpen;
+    description: 'Documentation, guides, and learning materials';
+  };
+  {
+    name: 'Case Studies';
+    href: '/case-studies';
+    icon: FileText;
+    description: 'Success stories from our customers';
+  };
+  {
+    name: 'Blog';
+    href: '/blog';
+    icon: MessageCircle;
+    description: 'Latest insights and industry trends';
+  };
+  {
+    name: 'About';
+    href: '/about';
+    icon: Users;
+    description: 'Learn about our company and mission';
+  };
+  {
+    name: 'Careers';
+    href: '/careers';
+    icon: Briefcase;
+    description: 'Join our innovative team';
+  };
+  {
+    name: 'Contact';
+    href: '/contact';
+    icon: MessageCircle;
+    description: 'Get in touch with our experts';
+  };
 ],
-,
-const serviceCategories = [,
-  {,
-    title: '🧠 Revolutionary AI Services',;
-    icon: BrainIcon,;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',;
-    description: 'Next-generation AI consciousness and creativity',;
-    services: [,
-      {,
-        name: 'AI Business Intelligence Pro',;
-        href: '/ai-business-intelligence-pro',;
-        description: 'Transform data into actionable insights',;
-        price: '$299/month',;
-      },;
-      {,
-        name: 'AI Customer Success Automation',;
-        href: '/ai-customer-success-automation',;
-        description: 'Automate customer success workflows',;
-        price: '$199/month',;
-      },;
-      {,
-        name: 'AI Email Marketing Automation',;
-        href: '/ai-email-marketing-automation',;
-        description: 'Intelligent email campaigns',;
-        price: '$79/month',;
-      },;
-      {,
-        name: 'AI Social Media Manager',;
-        href: '/ai-social-media-manager',;
-        description: 'Automate social media management',;
-        price: '$89/month',;
-      },;
-    ],;
-  },;
-  {,
-    title: '⚛️ Quantum & Emerging Tech',;
-    icon: AtomIcon,;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',;
-    description: 'Quantum computing and beyond',;
-    services: [,
-      {,
-        name: 'Quantum-Secure Communication',;
-        href: '/quantum-secure-communication',;
-        description: 'Future-proof encryption',;
-        price: '$599/month',;
-      },;
-      {,
-        name: 'Quantum-Secure Database Platform',;
-        href: '/quantum-secure-database-platform',;
-        description: 'Quantum-resistant database security',;
-        price: '$899/month',;
-      },;
-      {,
-        name: 'Blockchain Supply Chain Transparency',;
-        href: '/blockchain-supply-chain-transparency',;
-        description: 'End-to-end traceability',;
-        price: '$399/month',;
-      },;
-    ],;
-  },;
-  {,
-    title: '🏙️ Enterprise IT Solutions',;
-    icon: CpuIcon,;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',;
-    description: 'Autonomous enterprise infrastructure',;
-    services: [,
-      {,
-        name: 'Autonomous DevOps Platform',;
-        href: '/autonomous-devops-platform',;
-        description: 'Self-healing infrastructure',;
-        price: '$799/month',;
-      },;
-      {,
-        name: 'Zero Trust Network Architecture',;
-        href: '/zero-trust-network-architecture',;
-        description: 'Never trust, always verify',;
-        price: '$599/month',;
-      },;
-      {,
-        name: 'Edge Computing Orchestration',;
-        href: '/edge-computing-orchestration',;
-        description: 'Distributed edge computing',;
-        price: '$449/month',;
-      },;
-      {,
-        name: 'AI-Powered IT Operations Center',;
-        href: '/ai-powered-it-operations-center',;
-        description: 'Intelligent IT operations',;
-        price: '$699/month',;
-      },;
-    ],;
-  },;
-  {,
-    title: '🔌 API & Development Tools',;
-    icon: Code,;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',;
-    description: 'Developer experience and API management',;
-    services: [,
-      {,
-        name: 'AI-Powered API Management',;
-        href: '/ai-powered-api-management',;
-        description: 'Intelligent API lifecycle management',;
-        price: '$349/month',;
-      },;
-      {,
-        name: 'AI-Powered Project Management Pro',;
-        href: '/ai-project-management-pro',;
-        description: 'Intelligent project planning',;
-        price: '$179/month',;
-      },;
-      {,
-        name: 'AI-Powered Customer Support Automation',;
-        href: '/ai-customer-support-automation',;
-        description: '24/7 intelligent support',;
-        price: '$129/month',;
-      },;
-    ],;
-  },;
-  {,
-    title: '💰 Business & Analytics',;
-    icon: BarChart,;
-    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',;
-    description: 'Business intelligence and optimization',;
-    services: [,
-      {,
-        name: 'AI-Powered SEO Automation Pro',;
-        href: '/ai-seo-automation-pro',;
-        description: 'Automate SEO with AI',;
-        price: '$149/month',;
-      },;
-      {,
-        name: 'Intelligent Cloud Cost Optimization',;
-        href: '/intelligent-cloud-cost-optimization',;
-        description: 'Reduce cloud costs by 40%',;
-        price: '$199/month',;
-      },;
-    ],;
-  },;
-  {,
-    title: '🔒 Security & Compliance',;
-    icon: ShieldIcon,;
-    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',;
-    description: 'Advanced security and compliance solutions',;
-    services: [,
-      {,
-        name: 'AI-Powered Network Security',;
-        href: '/ai-powered-network-security',;
-        description: 'Intelligent threat detection',;
-        price: '$549/month',;
-      },;
-    ],;
-  },;
+const serviceCategories = [
+  {
+    title: '🧠 Revolutionary AI Services';
+    icon: BrainIcon;
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
+    description: 'Next-generation AI consciousness and creativity';
+    services: [
+      {
+        name: 'AI Business Intelligence Pro';
+        href: '/ai-business-intelligence-pro';
+        description: 'Transform data into actionable insights';
+        price: '$299/month';
+      };
+      {
+        name: 'AI Customer Success Automation';
+        href: '/ai-customer-success-automation';
+        description: 'Automate customer success workflows';
+        price: '$199/month';
+      };
+      {
+        name: 'AI Email Marketing Automation';
+        href: '/ai-email-marketing-automation';
+        description: 'Intelligent email campaigns';
+        price: '$79/month';
+      };
+      {
+        name: 'AI Social Media Manager';
+        href: '/ai-social-media-manager';
+        description: 'Automate social media management';
+        price: '$89/month';
+      };
+    ];
+  };
+  {
+    title: '⚛️ Quantum & Emerging Tech';
+    icon: AtomIcon;
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
+    description: 'Quantum computing and beyond';
+    services: [
+      {
+        name: 'Quantum-Secure Communication';
+        href: '/quantum-secure-communication';
+        description: 'Future-proof encryption';
+        price: '$599/month';
+      };
+      {
+        name: 'Quantum-Secure Database Platform';
+        href: '/quantum-secure-database-platform';
+        description: 'Quantum-resistant database security';
+        price: '$899/month';
+      };
+      {
+        name: 'Blockchain Supply Chain Transparency';
+        href: '/blockchain-supply-chain-transparency';
+        description: 'End-to-end traceability';
+        price: '$399/month';
+      };
+    ];
+  };
+  {
+    title: '🏙️ Enterprise IT Solutions';
+    icon: CpuIcon;
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
+    description: 'Autonomous enterprise infrastructure';
+    services: [
+      {
+        name: 'Autonomous DevOps Platform';
+        href: '/autonomous-devops-platform';
+        description: 'Self-healing infrastructure';
+        price: '$799/month';
+      };
+      {
+        name: 'Zero Trust Network Architecture';
+        href: '/zero-trust-network-architecture';
+        description: 'Never trust, always verify';
+        price: '$599/month';
+      };
+      {
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration';
+        description: 'Distributed edge computing';
+        price: '$449/month';
+      };
+      {
+        name: 'AI-Powered IT Operations Center';
+        href: '/ai-powered-it-operations-center';
+        description: 'Intelligent IT operations';
+        price: '$699/month';
+      };
+    ];
+  };
+  {
+    title: '🔌 API & Development Tools';
+    icon: Code;
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
+    description: 'Developer experience and API management';
+    services: [
+      {
+        name: 'AI-Powered API Management';
+        href: '/ai-powered-api-management';
+        description: 'Intelligent API lifecycle management';
+        price: '$349/month';
+      };
+      {
+        name: 'AI-Powered Project Management Pro';
+        href: '/ai-project-management-pro';
+        description: 'Intelligent project planning';
+        price: '$179/month';
+      };
+      {
+        name: 'AI-Powered Customer Support Automation';
+        href: '/ai-customer-support-automation';
+        description: '24/7 intelligent support';
+        price: '$129/month';
+      };
+    ];
+  };
+  {
+    title: '💰 Business & Analytics';
+    icon: BarChart;
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0';
+    description: 'Business intelligence and optimization';
+    services: [
+      {
+        name: 'AI-Powered SEO Automation Pro';
+        href: '/ai-seo-automation-pro';
+        description: 'Automate SEO with AI';
+        price: '$149/month';
+      };
+      {
+        name: 'Intelligent Cloud Cost Optimization';
+        href: '/intelligent-cloud-cost-optimization';
+        description: 'Reduce cloud costs by 40%';
+        price: '$199/month';
+      };
+    ];
+  };
+  {
+    title: '🔒 Security & Compliance';
+    icon: ShieldIcon;
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0';
+    description: 'Advanced security and compliance solutions';
+    services: [
+      {
+        name: 'AI-Powered Network Security';
+        href: '/ai-powered-network-security';
+        description: 'Intelligent threat detection';
+        price: '$549/month';
+      };
+    ];
+  };
 ],
-,
-const quickLinks = [,
-  { name: 'Documentation', href: '/docs', icon: FileText ,},;
-  { name: 'API Reference', href: '/api', icon: Code ,},;
-  { name: 'Support Center', href: '/support', icon: HelpCircle ,},;
-  { name: 'Status Page', href: '/status', icon: Activity ,},;
-  { name: 'Security', href: '/security', icon: Shield ,},;
-  { name: 'Privacy', href: '/privacy', icon: Lock ,},;
-  { name: 'Terms', href: '/terms', icon: FileText ,},;
-  { name: 'Partners', href: '/partners', icon: Handshake ,},;
+const quickLinks = [
+  { name: 'Documentation', href: '/docs', icon: FileText };
+  { name: 'API Reference', href: '/api', icon: Code };
+  { name: 'Support Center', href: '/support', icon: HelpCircle };
+  { name: 'Status Page', href: '/status', icon: Activity };
+  { name: 'Security', href: '/security', icon: Shield };
+  { name: 'Privacy', href: '/privacy', icon: Lock };
+  { name: 'Terms', href: '/terms', icon: FileText };
+  { name: 'Partners', href: '/partners', icon: Handshake };
 ],
-,
-const socialLinks = [,
-  {,
-    name: 'LinkedIn',;
-    href: 'https://linkedin.com/company/ziontechgroup',;
-    icon: Linkedin,;
-  },;
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github ,},;
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter ,},;
-  {,
-    name: 'YouTube',;
-    href: 'https://youtube.com/@ziontechgroup',;
-    icon: Youtube,;
-  },;
-  {,
-    name: 'Instagram',;
-    href: 'https://instagram.com/ziontechgroup',;
-    icon: Instagram,;
-  },;
+const socialLinks = [
+  {
+    name: 'LinkedIn';
+    href: 'https://linkedin.com/company/ziontechgroup';
+    icon: Linkedin;
+  };
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github };
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter };
+  {
+    name: 'YouTube';
+    href: 'https://youtube.com/@ziontechgroup';
+    icon: Youtube;
+  };
+  {
+    name: 'Instagram';
+    href: 'https://instagram.com/ziontechgroup';
+    icon: Instagram;
+  };
 ],
-,
-const UltraFuturisticNavigation20o34: React.FC = () => {,
+const UltraFuturisticNavigation20o34: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(''),
-,
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
-,
-  const handleDropdownToggle = (category: string) => {,
-    setActiveDropdown(activeDropdown === category ? null : category),
-  ,};
-,
-  const handleSearch = (e: React.FormEvent) => {,
+  const handleDropdownToggle = (category: string) => {
+    setActiveDropdown(activeDropdown === category ? null : category)};
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     // Implement search functionality,
-    console.log('Searching for:', searchQuery),
-  };
-,
-  return (,
+    // // console.log('Searching for:', searchQuery)};
+  return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20'>,
       {/* Top contact bar */}
       <div className='bg-gradient-to-r from-cyan-90o0/50 via-purple-90o0/50 to-pink-90o0/50 border-b border-cyan-50o0/20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center justify-between h-10 text-xs'>,
             <div className='flex items-center space-x-6 text-cyan-30o0'>,
-              <a,
-                href={`tel:${contactInfo.mobile,}`}
-                className='flex items-center hover: text-cyan-20o0 transition-colors',
-              >,
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='flex items-center hover: text-cyan-20o0 transition-colors'>,
                 <Phone className='w-3 h-3 mr-2' />,
-                {contactInfo.mobile,}
+                {contactInfo.mobile}
               </a>,
-              <a,
-                href={`mailto: ${contactInfo.email,}`}
-                className='flex items-center hover: text-cyan-20o0 transition-colors',
-              >,
+              <a
+                href={`mailto: ${contactInfo.email}`}
+                className='flex items-center hover: text-cyan-20o0 transition-colors'>,
                 <Mail className='w-3 h-3 mr-2' />,
-                {contactInfo.email,}
+                {contactInfo.email}
               </a>,
             </div>,
             <div className='flex items-center space-x-4'>,
               <span className='text-cyan-30o0'>📍 {contactInfo.address}</span>,
               <div className='flex items-center space-x-2'>,
-                {socialLinks.map(social => (,
-                  <a,
+                {socialLinks.map(social => (
+                  <a
                     key={social.name}
                     href={social.href}
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='text-cyan-30o0 hover: text-cyan-20o0 transition-colors',
-                  >,
+                    className='text-cyan-30o0 hover: text-cyan-20o0 transition-colors'>,
                     <social.icon className='w-3 h-3' />,
-                  </a>,
-                )),}
+                  </a>))}
               </div>,
             </div>,
           </div>,
@@ -431,12 +415,12 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
       {/* Main navigation */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex items-center justify-between h-20'>,
-          {/* Logo */,}
+          {/* Logo */}
           <motion.div,
             className='flex items-center',
-            initial={{ opacity: 0, x: -20 ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            transition={{ duration: 0.5 ,}}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >,
             <Link href='/' className='flex items-center space-x-3 group'>,
               <div className='relative'>,
@@ -455,47 +439,43 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
               </div>,
             </Link>,
           </motion.div>,
-          {/* Desktop Navigation */,}
+          {/* Desktop Navigation */}
           <div className='hidden lg: flex items-center space-x-8'>,
-            {/* Main navigation links */,}
+            {/* Main navigation links */}
             <div className='flex items-center space-x-6'>,
-              {mainNavigation.slice(0, 4).map(item => (,
-                <Link,
+              {mainNavigation.slice(0, 4).map(item => (
+                <Link
                   key={item.name}
                   href={item.href}
-                  className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium relative group',
-                >,
-                  {item.name,}
+                  className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium relative group'>,
+                  {item.name}
                   <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover: w-full transition-all duration-30o0'></span>,
-                </Link>,
-              )),}
+                </Link>))}
             </div>,
             {/* Services dropdown */}
             <div className='relative'>,
-              <button,
+              <button
                 onClick={() => handleDropdownToggle('services')}
-                className='flex items-center space-x-2 text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium group',
-              >,
+                className='flex items-center space-x-2 text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium group'>,
                 <span>Services</span>,
-                <ChevronDown,
-                  className={`w-4 h-4 transition-transform duration-20o0 ${activeDropdown === 'services' ? 'rotate-180' : '',}`}
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-20o0 ${activeDropdown === 'services' ? 'rotate-180' : ''}`}
                 />,
                 <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover: w-full transition-all duration-30o0'></span>,
               </button>,
               <AnimatePresence>,
-                {activeDropdown === 'services' && (,
+                {activeDropdown === 'services' && (
                   <motion.div,
-                    initial={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                    animate={{ opacity: 1, y: 0, scale: 1 ,}}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                    transition={{ duration: 0.2 ,}}
-                    className='absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-xl shadow-2xl shadow-cyan-50o0/10 p-4 z-50',
-                  >,
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className='absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-xl shadow-2xl shadow-cyan-50o0/10 p-4 z-50'>,
                     <div className='grid grid-cols-1 gap-4'>,
-                      {serviceCategories.map(category => (,
+                      {serviceCategories.map(category => (
                         <div key={category.title} className='group'>,
-                          <div,
-                            className={`p-3 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-10 border border-cyan-50o0/20 group-hover: bg-opacity-20 transition-all duration-20o0`,}
+                          <div
+                            className={`p-3 rounded-lg bg-gradient-to-r ${category.color} bg-opacity-10 border border-cyan-50o0/20 group-hover: bg-opacity-20 transition-all duration-20o0`}
                           >,
                             <div className='flex items-center space-x-3 mb-2'>,
                               <category.icon className='w-5 h-5 text-cyan-30o0' />,
@@ -507,17 +487,17 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
                               {category.description}
                             </p>,
                             <div className='space-y-2'>,
-                              {category.services.map(service => (,
-                                <Link,
+                              {category.services.map(service => (
+                                <Link
                                   key={service.name}
                                   href={service.href}
                                   className='block p-2 rounded bg-black/30 hover: bg-cyan-50o0/10 transition-all duration-20o0 group',
-                                  onClick={closeMenu,}
+                                  onClick={closeMenu}
                                 >,
                                   <div className='flex items-center justify-between'>,
                                     <div>,
                                       <div className='text-sm font-medium text-white group-hover: text-cyan-30o0 transition-colors'>,
-                                        {service.name,}
+                                        {service.name}
                                       </div>,
                                       <div className='text-xs text-gray-40o0'>,
                                         {service.description}
@@ -527,38 +507,33 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
                                       {service.price}
                                     </div>,
                                   </div>,
-                                </Link>,
-                              ))}
+                                </Link>))}
                             </div>,
                           </div>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
-                  </motion.div>,
-                )}
+                  </motion.div>)}
               </AnimatePresence>,
             </div>,
             {/* More navigation links */}
             <div className='flex items-center space-x-6'>,
-              {mainNavigation.slice(4, 7).map(item => (,
-                <Link,
+              {mainNavigation.slice(4, 7).map(item => (
+                <Link
                   key={item.name}
                   href={item.href}
-                  className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium relative group',
-                >,
-                  {item.name,}
+                  className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0 font-medium relative group'>,
+                  {item.name}
                   <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 group-hover: w-full transition-all duration-30o0'></span>,
-                </Link>,
-              )),}
+                </Link>))}
             </div>,
           </div>,
           {/* Right side - Search and CTA */}
           <div className='hidden lg: flex items-center space-x-4'>,
-            {/* Search */,}
+            {/* Search */}
             <form onSubmit={handleSearch} className='relative'>,
               <div className='relative'>,
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0' />,
-                <input,
+                <input
                   type='text',
                   placeholder='Search services...',
                   value={searchQuery}
@@ -567,44 +542,39 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
                 />,
               </div>,
             </form>,
-            {/* CTA Button */,}
-            <Link,
+            {/* CTA Button */}
+            <Link
               href='/contact',
-              className='px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover: from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25 hover:shadow-cyan-50o0/40 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover: from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25 hover:shadow-cyan-50o0/40 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Started,
             </Link>,
           </div>,
-          {/* Mobile menu button */,}
+          {/* Mobile menu button */}
           <div className='lg: hidden'>,
-            <button,
-              onClick={toggleMenu,}
-              className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0',
-            >,
-              {isOpen ? (,
-                <X className='w-6 h-6' />,
-              ) : (,
-                <Menu className='w-6 h-6' />,
-              ),}
+            <button
+              onClick={toggleMenu}
+              className='text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0'>,
+              {isOpen ? (
+                <X className='w-6 h-6' />) : (
+                <Menu className='w-6 h-6' />)}
             </button>,
           </div>,
         </div>,
       </div>,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0.3 ,}}
-            className='lg: hidden bg-black/95 backdrop-blur-xl border-t border-cyan-50o0/20',
-          >,
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg: hidden bg-black/95 backdrop-blur-xl border-t border-cyan-50o0/20'>,
             <div className='px-4 py-6 space-y-6'>,
-              {/* Mobile search */,}
+              {/* Mobile search */}
               <form onSubmit={handleSearch} className='relative'>,
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0' />,
-                <input,
+                <input
                   type='text',
                   placeholder='Search services...',
                   value={searchQuery}
@@ -612,44 +582,36 @@ const UltraFuturisticNavigation20o34: React.FC = () => {,
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-50o0/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50',
                 />,
               </form>,
-              {/* Mobile navigation links */,}
+              {/* Mobile navigation links */}
               <div className='space-y-4'>,
-                {mainNavigation.map(item => (,
-                  <Link,
+                {mainNavigation.map(item => (
+                  <Link
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-50o0/10 transition-all duration-20o0 group',
-                  >,
+                    className='flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-50o0/10 transition-all duration-20o0 group'>,
                     <item.icon className='w-5 h-5 text-cyan-40o0' />,
                     <div>,
                       <div className='text-white font-medium group-hover:text-cyan-30o0 transition-colors'>,
-                        {item.name,}
+                        {item.name}
                       </div>,
                       <div className='text-sm text-gray-40o0'>,
                         {item.description}
                       </div>,
                     </div>,
-                  </Link>,
-                ))}
+                  </Link>))}
               </div>,
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-cyan-50o0/20'>,
-                <Link,
+                <Link
                   href='/contact',
                   onClick={closeMenu}
-                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25',
-                >,
+                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-lg shadow-lg shadow-cyan-50o0/25'>,
                   Get Started,
                 </Link>,
               </div>,
             </div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
-    </nav>,
-  ),
-};
-,
-export default UltraFuturisticNavigation20o34,
-,
+    </nav>)};
+export default UltraFuturisticNavigation20o34;

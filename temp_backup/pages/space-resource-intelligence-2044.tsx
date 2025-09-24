@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function SpaceResourceIntelligence20o44Page() {,
-  return (,
+export default function SpaceResourceIntelligence20o44Page() {
+  return (
     <>,
       <Head>,
         <title>Space Resource Intelligence 20o44 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='space resource intelligence 20o44 page',
         />,
@@ -21,7 +20,5 @@ export default function SpaceResourceIntelligence20o44Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

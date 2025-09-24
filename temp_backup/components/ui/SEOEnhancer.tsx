@@ -1,7 +1,6 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-interface SEOEnhancerProps {,
+interface SEOEnhancerProps {
   title: string,
   description: string,
   keywords?: string[],
@@ -16,97 +15,93 @@ interface SEOEnhancerProps {,
   structuredData?: any,
   canonicalUrl?: string,
   noIndex?: boolean,
-  noFollow?: boolean,
-,}
+  noFollow?: boolean}
 ,
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
-  title,;
-  description,;
-  keywords = [],;
-  image = '/og-image.jpg',;
-  url,;
-  type = 'website',;
-  publishedTime,;
-  modifiedTime,;
-  author,;
-  section,;
-  tags = [],;
-  structuredData,;
-  canonicalUrl,;
-  noIndex = false,;
-  noFollow = false,;
-}) => {,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title;
+  description;
+  keywords = [];
+  image = '/og-image.jpg';
+  url;
+  type = 'website';
+  publishedTime;
+  modifiedTime;
+  author;
+  section;
+  tags = [];
+  structuredData;
+  canonicalUrl;
+  noIndex = false;
+  noFollow = false;
+}) => {
   const siteName = 'Zion Tech Group',
   const siteUrl = 'https: //ziontechgroup.com',
-  const fullUrl = url ? `${siteUrl,}${url}` : siteUrl,
+  const fullUrl = url ? `${siteUrl}${url}` : siteUrl,
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`,
-,
   // Default structured data for organization,
-  const defaultStructuredData = {,
-    '@context': 'https://schema.org',;
-    '@type': 'Organization',;
-    name: 'Zion Tech Group',;
-    url: siteUrl,;
-    logo: `${siteUrl,}/logo.png`,;
+  const defaultStructuredData = {
+    '@context': 'https://schema.org';
+    '@type': 'Organization';
+    name: 'Zion Tech Group';
+    url: siteUrl;
+    logo: `${siteUrl}/logo.png`;
     description:,
-      'Leading-edge AI consciousness, quantum computing, and micro SAAS solutions for enterprise transformation.',;
-    address: {,
-      '@type': 'PostalAddress',;
-      streetAddress: '364 E Main St STE 10o08',;
-      addressLocality: 'Middletown',;
-      addressRegion: 'DE',;
-      postalCode: '19709',;
-      addressCountry: 'US',;
-    },;
-    contactPoint: {,
-      '@type': 'ContactPoint',;
-      telephone: '+1-30o2-464-0950',;
-      contactType: 'customer service',;
-      email: 'kleber@ziontechgroup.com',;
-    },;
-    sameAs: [,
-      'https://github.com/Zion-Holdings',;
-      'https://linkedin.com/company/zion-tech-group',;
-    ],;
-    foundingDate: '20o20',;
-    numberOfEmployees: '50-10o0',;
-    industry: 'Technology',;
-    serviceType: [,
-      'AI & Machine Learning',;
-      'Quantum Computing',;
-      'Micro SAAS Solutions',;
-      'Enterprise IT Services',;
-      'Cybersecurity',;
-      'Cloud Infrastructure',;
-    ],;
+      'Leading-edge AI consciousness, quantum computing, and micro SAAS solutions for enterprise transformation.';
+    address: {
+      '@type': 'PostalAddress';
+      streetAddress: '364 E Main St STE 10o08';
+      addressLocality: 'Middletown';
+      addressRegion: 'DE';
+      postalCode: '19709';
+      addressCountry: 'US';
+    };
+    contactPoint: {
+      '@type': 'ContactPoint';
+      telephone: '+1-30o2-464-0950';
+      contactType: 'customer service';
+      email: 'kleber@ziontechgroup.com';
+    };
+    sameAs: [
+      'https://github.com/Zion-Holdings';
+      'https://linkedin.com/company/zion-tech-group';
+    ];
+    foundingDate: '20o20';
+    numberOfEmployees: '50-10o0';
+    industry: 'Technology';
+    serviceType: [
+      'AI & Machine Learning';
+      'Quantum Computing';
+      'Micro SAAS Solutions';
+      'Enterprise IT Services';
+      'Cybersecurity';
+      'Cloud Infrastructure';
+    ];
   };
-,
   // Service-specific structured data,
   const serviceStructuredData =,
     type === 'service',
-      ? {,
-          '@context': 'https://schema.org',;
-          '@type': 'Service',;
-          name: title,;
-          description: description,;
-          provider: {,
-            '@type': 'Organization',;
-            name: 'Zion Tech Group',;
-          },;
-          serviceType: section || 'Technology Service',;
-          areaServed: 'Worldwide',;
-          availableChannel: {,
-            '@type': 'ServiceChannel',;
-            serviceUrl: fullUrl,;
-          },;
-          hasOfferCatalog: {,
-            '@type': 'OfferCatalog',;
-            name: 'Technology Services',;
-          },;
+      ? {
+          '@context': 'https://schema.org';
+          '@type': 'Service';
+          name: title;
+          description: description;
+          provider: {
+            '@type': 'Organization';
+            name: 'Zion Tech Group';
+          };
+          serviceType: section || 'Technology Service';
+          areaServed: 'Worldwide';
+          availableChannel: {
+            '@type': 'ServiceChannel';
+            serviceUrl: fullUrl;
+          };
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog';
+            name: 'Technology Services';
+          };
         }
       : null,
-,
-  return (,
+  return (
     <Head>,
       {/* Basic Meta Tags */}
       <title>,
@@ -115,40 +110,37 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       <meta name='description' content={description} />,
       <meta name='keywords' content={keywords.join(', ')} />,
       <meta name='author' content={author || 'Zion Tech Group'} />,
-      <meta,
+      <meta
         name='robots',
         content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`}
       />,
       {/* Canonical URL */}
       <link rel='canonical' href={canonicalUrl || fullUrl} />,
       {/* Open Graph Meta Tags */}
-      <meta property='og: title' content={title,} />,
-      <meta property='og: description' content={description,} />,
-      <meta property='og: type' content={type,} />,
-      <meta property='og: url' content={fullUrl,} />,
-      <meta property='og: image' content={fullImageUrl,} />,
-      <meta property='og: site_name' content={siteName,} />,
+      <meta property='og: title' content={title} />,
+      <meta property='og: description' content={description} />,
+      <meta property='og: type' content={type} />,
+      <meta property='og: url' content={fullUrl} />,
+      <meta property='og: image' content={fullImageUrl} />,
+      <meta property='og: site_name' content={siteName} />,
       <meta property='og: locale' content='en_US' />,
-      {/* Twitter Card Meta Tags */,}
+      {/* Twitter Card Meta Tags */}
       <meta name='twitter: card' content='summary_large_image' />,
-      <meta name='twitter:title' content={title,} />,
-      <meta name='twitter: description' content={description,} />,
-      <meta name='twitter: image' content={fullImageUrl,} />,
+      <meta name='twitter:title' content={title} />,
+      <meta name='twitter: description' content={description} />,
+      <meta name='twitter: image' content={fullImageUrl} />,
       <meta name='twitter: site' content='@ziontechgroup' />,
-      {/* Article-specific meta tags */,}
-      {type === 'article' && publishedTime && (,
+      {/* Article-specific meta tags */}
+      {type === 'article' && publishedTime && (
         <>,
-          <meta property='article: published_time' content={publishedTime,} />,
-          {modifiedTime && (,
-            <meta property='article: modified_time' content={modifiedTime,} />,
-          )}
-          {author && <meta property='article: author' content={author,} />}
-          {section && <meta property='article: section' content={section,} />}
-          {tags.map((tag, index) => (,
-            <meta key={index} property='article: tag' content={tag,} />,
-          ))}
-        </>,
-      )}
+          <meta property='article: published_time' content={publishedTime} />,
+          {modifiedTime && (
+            <meta property='article: modified_time' content={modifiedTime} />)}
+          {author && <meta property='article: author' content={author} />}
+          {section && <meta property='article: section' content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property='article: tag' content={tag} />))}
+        </>)}
 ,
       {/* Additional Meta Tags */}
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />,
@@ -156,25 +148,25 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       <meta name='msapplication-TileColor' content='#3B82F6' />,
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https: //fonts.googleapis.com' />,
-      <link,
+      <link
         rel='preconnect',
         href='https://fonts.gstatic.com',
         crossOrigin='anonymous',
       />,
-      {/* Favicon and App Icons */,}
+      {/* Favicon and App Icons */}
       <link rel='icon' type='image/x-icon' href='/favicon.ico' />,
-      <link,
+      <link
         rel='apple-touch-icon',
         sizes='180x180',
         href='/apple-touch-icon.png',
       />,
-      <link,
+      <link
         rel='icon',
         type='image/png',
         sizes='32x32',
         href='/favicon-32x32.png',
       />,
-      <link,
+      <link
         rel='icon',
         type='image/png',
         sizes='16x16',
@@ -182,20 +174,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       />,
       <link rel='manifest' href='/site.webmanifest' />,
       {/* Structured Data */}
-      <script,
+      <script
         type='application/ld+json',
-        dangerouslySetInnerHTML={{,
-          __html: JSON.stringify(structuredData || defaultStructuredData),;
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData || defaultStructuredData);
         }}
       />,
-      {serviceStructuredData && (,
-        <script,
+      {serviceStructuredData && (
+        <script
           type='application/ld+json',
-          dangerouslySetInnerHTML={{,
-            __html: JSON.stringify(serviceStructuredData),;
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceStructuredData);
           }}
-        />,
-      )}
+        />)}
 ,
       {/* Additional SEO Meta Tags */}
       <meta name='application-name' content={siteName} />,
@@ -210,9 +201,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
       <meta name='format-detection' content='date=no' />,
       <meta name='format-detection' content='address=no' />,
       <meta name='format-detection' content='email=no' />,
-    </Head>,
-  ),
-};
-,
-export default SEOEnhancer,
-,
+    </Head>)};
+export default SEOEnhancer;

@@ -1,33 +1,31 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide',;
+    'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide';
   description:,
-    'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation. Complete guide to digital transformation success.',;
-  keywords: [,
-    'AI Revolution',;
-    'Digital Transformation',;
-    'ROI',;
-    'Fortune 50o0',;
-    'Strategy',;
-    '30,0o00% ROI',;
-  ],;
-  openGraph: {,
+    'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation. Complete guide to digital transformation success.';
+  keywords: [
+    'AI Revolution';
+    'Digital Transformation';
+    'ROI';
+    'Fortune 50o0';
+    'Strategy';
+    '30,0o00% ROI';
+  ];
+  openGraph: {
     title:,
-      'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide',;
+      'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide';
     description:,
-      'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: ['AI Revolution', 'Digital Transformation', 'ROI', 'Fortune 50o0'],;
-  },;
+      'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation.';
+    type: 'article';
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: ['AI Revolution', 'Digital Transformation', 'ROI', 'Fortune 50o0'];
+  };
 };
-,
-export default function UltimateDigitalTransformationRevolutionPage() {,
-  return (,
+export default function UltimateDigitalTransformationRevolutionPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20'>,
@@ -43,23 +41,21 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
               Complete Guide to 30,0o00% ROI Through Strategic AI Implementation,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Implementation Help,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Contact Our Experts,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -224,7 +220,7 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
                   Manufacturing,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Revolutionary changes include autonomous production lines,;
+                  Revolutionary changes include autonomous production lines;
                   predictive maintenance, quality control automation, and supply,
                   chain optimization.,
                 </p>,
@@ -237,7 +233,7 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
                   Financial Services,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  AI-powered risk assessment, automated fraud detection,;
+                  AI-powered risk assessment, automated fraud detection;
                   personalized financial advice, and real-time transaction,
                   processing.,
                 </p>,
@@ -283,22 +279,18 @@ export default function UltimateDigitalTransformationRevolutionPage() {,
             AI-driven digital transformation.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Contact Our Experts,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

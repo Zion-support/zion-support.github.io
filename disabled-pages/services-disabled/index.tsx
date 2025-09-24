@@ -1,8 +1,7 @@
 import type { NextPage } from 'next',
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-,
-  return (,
+  return (
     <EnhancedLayout>,
       <h1 className="text-3xl font-bold mb-4">Our Services</h1>,
       <p className="text-gray-70o0 mb-6">Comprehensive solutions across software, cloud, and AI.</p>,
@@ -26,10 +25,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
           Security Auditing,
         </Link>,
       </div>,
-    </EnhancedLayout>,
-  ),
-,};
-,
+    </EnhancedLayout>)};
       <div className="min-h-screen bg-white">,
         {/* Header */}
         <header className="bg-white shadow-sm">,
@@ -71,19 +67,18 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
         <section className="py-16 max-w-6xl mx-auto px-6">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">Our Service Portfolio</h2>,
           <div className="grid md: gri d-cols-2 lg: gri d-cols-3 gap-8">,
-            {services.map((service, index) => {,
+            {services.map((service, index) => {
               const IconComponent = service.icon,
-              return (,
+              return (
                 <div key={index} className="bg-white border border-gray-20o0 rounded-xl p-6 shadow-lg hover: shado w-xl transition-shadow">,
                   <div className="flex items-center mb-4">,
                     <div className="w-12 h-12 bg-gradient-to-r from-indigo-50o0 to-blue-50o0 rounded-lg flex items-center justify-center mr-4">,
                       <IconComponent className="w-6 h-6 text-white"   />,
                     </div>,
-                    <h3 className="text-xl font-semibold text-gray-90o0">{service.name,}</h3>,
+                    <h3 className="text-xl font-semibold text-gray-90o0">{service.name}</h3>,
                   </div>,
                   <p className="text-gray-60o0 mb-4">{service.description}</p>,
                   <ul className="space-y-2 mb-6">,
-                    {service.features.map((feature, featureIndex) => (,
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-60o0">,
-                        <Check className="w-3 h-3 text-green-50o0 mr-2 flex-shrink-0"   />,
-}}))))
+                        <Check className="w-3 h-3 text-green-50o0 mr-2 flex-shrink-0"   />}}))))

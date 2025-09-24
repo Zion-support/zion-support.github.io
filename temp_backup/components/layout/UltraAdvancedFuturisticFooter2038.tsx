@@ -1,157 +1,145 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Facebook,;
-  Twitter,;
-  Instagram,;
-  Linkedin,;
-  Youtube,;
-  ArrowUp,;
-  Star,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Target,;
-  Rocket,;
-  Github,;
-  MessageCircle,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  BookOpen,;
-  FileText,;
-  Video,;
-  Lightbulb,;
-  Building,;
-  Handshake,
-} from 'lucide-react',
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Facebook;
+  Twitter;
+  Instagram;
+  Linkedin;
+  Youtube;
+  ArrowUp;
+  Star;
+  Brain;
+  Atom;
+  Shield;
+  Target;
+  Rocket;
+  Github;
+  MessageCircle;
+  Zap;
+  TrendingUp;
+  Users;
+  BookOpen;
+  FileText;
+  Video;
+  Lightbulb;
+  Building;
+  Handshake} from 'lucide-react',
 import Link from 'next/link',
-,
-const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
-  const scrollToTop = () => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
-  const footerSections = [,
-    {,
-      title: 'Featured Services',;
-      description: 'Our most popular and innovative solutions',;
-      icon: <Star className="w-5 h-5 text-yellow-40o0"  />,;
-      links: [,
-        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' },;
-        { name: 'Quantum Financial Forecasting', href: '/quantum-financial-forecasting', featured: true, price: 'From $1,499/month' },;
-        { name: 'Autonomous Healthcare Diagnostics', href: '/autonomous-healthcare-diagnostics', featured: true, price: 'From $899/month' ,},;
-        { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', featured: true, price: 'From $799/month' ,},;
-        { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: true, price: 'From $399/month' ,},;
-        { name: 'Quantum Cybersecurity Sentinel', href: '/quantum-cybersecurity-sentinel', featured: true, price: 'From $599/month' ,},;
-        { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', featured: true, price: 'From $499/month' ,},;
-        { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', featured: true, price: 'From $1,999/month' },;
-        { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success', featured: true, price: 'From $299/month' ,},;
-        { name: 'Quantum Edge Computing Platform', href: '/quantum-edge-computing-platform', featured: true, price: 'From $899/month' ,}
-      ],
-    },;
-    {,
-      title: 'AI & Consciousness',;
-      description: 'Revolutionary AI platforms and solutions',;
-      icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,;
-      links: [,
-        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' },;
-        { name: 'AI Emotional Intelligence Trainer', href: '/ai-emotional-intelligence-trainer', featured: false, price: 'From $2,999/month' },;
-        { name: 'Autonomous AI Research Assistant', href: '/autonomous-ai-research-assistant', featured: false, price: 'From $1,999/month' },;
-        { name: 'Quantum AI Hybrid Platform', href: '/quantum-ai-hybrid-platform', featured: false, price: 'From $3,999/month' },;
-        { name: 'AI Autonomous Content Factory', href: '/autonomous-ai-content-factory', featured: false, price: 'From $1,299/month' },;
-        { name: 'AI Predictive Maintenance Orchestrator', href: '/ai-predictive-maintenance-orchestrator', featured: false, price: 'From $899/month' ,},;
-        { name: 'Quantum AI Security Framework', href: '/quantum-ai-security-framework', featured: false, price: 'From $1,799/month' },;
-        { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', featured: false, price: 'From $1,599/month' },;
-        { name: 'Quantum AI Ethics & Governance', href: '/quantum-ai-ethics-governance', featured: false, price: 'From $2,199/month' },;
-        { name: 'AI Autonomous Legal Assistant', href: '/ai-autonomous-legal-assistant', featured: false, price: 'From $299/month' ,}
-      ],
-    },;
-    {,
-      title: 'Quantum & Emerging Tech',;
-      description: 'Breakthrough quantum and space technologies',;
-      icon: <Atom className="w-5 h-5 text-blue-40o0"  />,;
-      links: [,
-        { name: 'Quantum Financial Forecasting Platform', href: '/quantum-financial-forecasting', featured: false, price: 'From $1,499/month' },;
-        { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', featured: false, price: 'From $799/month' ,},;
-        { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery', featured: false, price: 'From $1,999/month' },;
-        { name: 'Quantum Edge Computing Platform', href: '/quantum-edge-computing-platform', featured: false, price: 'From $899/month' ,},;
-        { name: 'Quantum Network Security Platform', href: '/quantum-network-security', featured: false, price: 'From $999/month' ,},;
-        { name: 'Quantum Data Center Optimization', href: '/quantum-data-center-optimization', featured: false, price: 'From $1,299/month' },;
-        { name: 'Quantum Enterprise Architecture', href: '/quantum-enterprise-architecture', featured: false, price: 'From $899/month' ,},;
-        { name: 'Quantum Identity Management', href: '/quantum-identity-management', featured: false, price: 'From $599/month' ,},;
-        { name: 'Quantum Edge Computing Orchestration', href: '/quantum-edge-computing-orchestration', featured: false, price: 'From $1,099/month' },;
-        { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform', featured: false, price: 'Contact for pricing' ,}
-      ],
-    },;
-    {,
-      title: 'Enterprise IT Solutions',;
-      description: 'Advanced enterprise infrastructure solutions',;
-      icon: <Shield className="w-5 h-5 text-purple-40o0"  />,;
-      links: [,
-        { name: 'Autonomous Cloud Orchestrator', href: '/autonomous-cloud-orchestrator', featured: false, price: 'From $799/month' ,},;
-        { name: 'AI-Powered DevOps Automation', href: '/ai-powered-devops-automation', featured: false, price: 'From $599/month' ,},;
-        { name: 'Autonomous IT Service Management', href: '/autonomous-it-service-management', featured: false, price: 'From $499/month' ,},;
-        { name: 'AI-Powered Disaster Recovery', href: '/ai-powered-disaster-recovery', featured: false, price: 'From $699/month' ,},;
-        { name: 'Autonomous Data Governance', href: '/autonomous-data-governance', featured: false, price: 'From $799/month' ,},;
-        { name: 'AI-Powered Enterprise Architecture', href: '/ai-powered-enterprise-architecture', featured: false, price: 'From $899/month' ,},;
-        { name: 'Autonomous Network Operations Center', href: '/autonomous-network-operations', featured: false, price: 'From $1,199/month' },;
-        { name: 'AI-Powered IT Service Management', href: '/ai-powered-it-service-management', featured: false, price: 'From $899/month' ,},;
-        { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform', featured: false, price: 'From $1,099/month' },;
+const UltraAdvancedFuturisticFooter20o38: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  const footerSections = [
+    {
+      title: 'Featured Services';
+      description: 'Our most popular and innovative solutions';
+      icon: <Star className="w-5 h-5 text-yellow-40o0"  />;
+      links: [
+        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' };
+        { name: 'Quantum Financial Forecasting', href: '/quantum-financial-forecasting', featured: true, price: 'From $1,499/month' };
+        { name: 'Autonomous Healthcare Diagnostics', href: '/autonomous-healthcare-diagnostics', featured: true, price: 'From $899/month' };
+        { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', featured: true, price: 'From $799/month' };
+        { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: true, price: 'From $399/month' };
+        { name: 'Quantum Cybersecurity Sentinel', href: '/quantum-cybersecurity-sentinel', featured: true, price: 'From $599/month' };
+        { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', featured: true, price: 'From $499/month' };
+        { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', featured: true, price: 'From $1,999/month' };
+        { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success', featured: true, price: 'From $299/month' };
+        { name: 'Quantum Edge Computing Platform', href: '/quantum-edge-computing-platform', featured: true, price: 'From $899/month' }
+      ]};
+    {
+      title: 'AI & Consciousness';
+      description: 'Revolutionary AI platforms and solutions';
+      icon: <Brain className="w-5 h-5 text-cyan-40o0"  />;
+      links: [
+        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' };
+        { name: 'AI Emotional Intelligence Trainer', href: '/ai-emotional-intelligence-trainer', featured: false, price: 'From $2,999/month' };
+        { name: 'Autonomous AI Research Assistant', href: '/autonomous-ai-research-assistant', featured: false, price: 'From $1,999/month' };
+        { name: 'Quantum AI Hybrid Platform', href: '/quantum-ai-hybrid-platform', featured: false, price: 'From $3,999/month' };
+        { name: 'AI Autonomous Content Factory', href: '/autonomous-ai-content-factory', featured: false, price: 'From $1,299/month' };
+        { name: 'AI Predictive Maintenance Orchestrator', href: '/ai-predictive-maintenance-orchestrator', featured: false, price: 'From $899/month' };
+        { name: 'Quantum AI Security Framework', href: '/quantum-ai-security-framework', featured: false, price: 'From $1,799/month' };
+        { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', featured: false, price: 'From $1,599/month' };
+        { name: 'Quantum AI Ethics & Governance', href: '/quantum-ai-ethics-governance', featured: false, price: 'From $2,199/month' };
+        { name: 'AI Autonomous Legal Assistant', href: '/ai-autonomous-legal-assistant', featured: false, price: 'From $299/month' }
+      ]};
+    {
+      title: 'Quantum & Emerging Tech';
+      description: 'Breakthrough quantum and space technologies';
+      icon: <Atom className="w-5 h-5 text-blue-40o0"  />;
+      links: [
+        { name: 'Quantum Financial Forecasting Platform', href: '/quantum-financial-forecasting', featured: false, price: 'From $1,499/month' };
+        { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', featured: false, price: 'From $799/month' };
+        { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery', featured: false, price: 'From $1,999/month' };
+        { name: 'Quantum Edge Computing Platform', href: '/quantum-edge-computing-platform', featured: false, price: 'From $899/month' };
+        { name: 'Quantum Network Security Platform', href: '/quantum-network-security', featured: false, price: 'From $999/month' };
+        { name: 'Quantum Data Center Optimization', href: '/quantum-data-center-optimization', featured: false, price: 'From $1,299/month' };
+        { name: 'Quantum Enterprise Architecture', href: '/quantum-enterprise-architecture', featured: false, price: 'From $899/month' };
+        { name: 'Quantum Identity Management', href: '/quantum-identity-management', featured: false, price: 'From $599/month' };
+        { name: 'Quantum Edge Computing Orchestration', href: '/quantum-edge-computing-orchestration', featured: false, price: 'From $1,099/month' };
+        { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform', featured: false, price: 'Contact for pricing' }
+      ]};
+    {
+      title: 'Enterprise IT Solutions';
+      description: 'Advanced enterprise infrastructure solutions';
+      icon: <Shield className="w-5 h-5 text-purple-40o0"  />;
+      links: [
+        { name: 'Autonomous Cloud Orchestrator', href: '/autonomous-cloud-orchestrator', featured: false, price: 'From $799/month' };
+        { name: 'AI-Powered DevOps Automation', href: '/ai-powered-devops-automation', featured: false, price: 'From $599/month' };
+        { name: 'Autonomous IT Service Management', href: '/autonomous-it-service-management', featured: false, price: 'From $499/month' };
+        { name: 'AI-Powered Disaster Recovery', href: '/ai-powered-disaster-recovery', featured: false, price: 'From $699/month' };
+        { name: 'Autonomous Data Governance', href: '/autonomous-data-governance', featured: false, price: 'From $799/month' };
+        { name: 'AI-Powered Enterprise Architecture', href: '/ai-powered-enterprise-architecture', featured: false, price: 'From $899/month' };
+        { name: 'Autonomous Network Operations Center', href: '/autonomous-network-operations', featured: false, price: 'From $1,199/month' };
+        { name: 'AI-Powered IT Service Management', href: '/ai-powered-it-service-management', featured: false, price: 'From $899/month' };
+        { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform', featured: false, price: 'From $1,099/month' };
         { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform', featured: false, price: 'From $1,499/month' }
-      ],
-    },;
-    {,
-      title: 'Micro SAAS Solutions',;
-      description: 'Specialized business applications and tools',;
-      icon: <Rocket className="w-5 h-5 text-green-40o0"  />,;
-      links: [,
-        { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: false, price: 'From $399/month' ,},;
-        { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success', featured: false, price: 'From $299/month' ,},;
-        { name: 'AI Autonomous Legal Assistant', href: '/ai-autonomous-legal-assistant', featured: false, price: 'From $299/month' ,},;
-        { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', featured: false, price: 'From $499/month' ,},;
-        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine', featured: false, price: 'From $399/month' ,},;
-        { name: 'AI Sales Intelligence Automation', href: '/ai-sales-intelligence-automation', featured: false, price: 'From $599/month' ,},;
-        { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', featured: false, price: 'From $399/month' ,},;
-        { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', featured: false, price: 'From $1,999/month' },;
-        { name: 'AI Predictive Maintenance Orchestrator', href: '/ai-predictive-maintenance-orchestrator', featured: false, price: 'From $899/month' ,},;
+      ]};
+    {
+      title: 'Micro SAAS Solutions';
+      description: 'Specialized business applications and tools';
+      icon: <Rocket className="w-5 h-5 text-green-40o0"  />;
+      links: [
+        { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: false, price: 'From $399/month' };
+        { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success', featured: false, price: 'From $299/month' };
+        { name: 'AI Autonomous Legal Assistant', href: '/ai-autonomous-legal-assistant', featured: false, price: 'From $299/month' };
+        { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', featured: false, price: 'From $499/month' };
+        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine', featured: false, price: 'From $399/month' };
+        { name: 'AI Sales Intelligence Automation', href: '/ai-sales-intelligence-automation', featured: false, price: 'From $599/month' };
+        { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', featured: false, price: 'From $399/month' };
+        { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', featured: false, price: 'From $1,999/month' };
+        { name: 'AI Predictive Maintenance Orchestrator', href: '/ai-predictive-maintenance-orchestrator', featured: false, price: 'From $899/month' };
         { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', featured: false, price: 'From $1,599/month' }
-      ],
-    }
+      ]}
   ],
-,
-  const quickLinks = [,
-    { name: 'About Us', href: '/about', icon: <Building className="w-4 h-4"  /> ,},;
-    { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4"  /> ,},;
-    { name: 'Investors', href: '/investors', icon: <TrendingUp className="w-4 h-4"  /> ,},;
-    { name: 'Careers', href: '/careers', icon: <Users className="w-4 h-4"  /> ,},;
-    { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> ,},;
-    { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4"  /> ,},;
-    { name: 'Research & Development', href: '/research-development', icon: <Lightbulb className="w-4 h-4"  /> ,},;
-    { name: 'Training', href: '/training', icon: <BookOpen className="w-4 h-4"  /> ,}
+  const quickLinks = [
+    { name: 'About Us', href: '/about', icon: <Building className="w-4 h-4"  /> };
+    { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4"  /> };
+    { name: 'Investors', href: '/investors', icon: <TrendingUp className="w-4 h-4"  /> };
+    { name: 'Careers', href: '/careers', icon: <Users className="w-4 h-4"  /> };
+    { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> };
+    { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4"  /> };
+    { name: 'Research & Development', href: '/research-development', icon: <Lightbulb className="w-4 h-4"  /> };
+    { name: 'Training', href: '/training', icon: <BookOpen className="w-4 h-4"  /> }
   ],
-,
-  const socialLinks = [,
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5"  /> ,},;
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> ,},;
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> ,},;
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> ,},;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> ,},;
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: <Github className="w-5 h-5"  /> ,}
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5"  /> };
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> };
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> };
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> };
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> };
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: <Github className="w-5 h-5"  /> }
   ],
-,
-  return (,
+  return (
     <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-40o0/20 mt-20">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50o0/5 to-transparent"></div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Main Footer Content */,}
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-6 gap-8 mb-12">,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className="lg: col-span-2 xl:col-span-2">,
             <div className="flex items-center space-x-3 mb-6">,
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-40o0 to-blue-60o0 rounded-xl flex items-center justify-center">,
@@ -188,7 +176,7 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
             </div>,
           </div>,
           {/* Service Categories */}
-          {footerSections.map((section, index) => (,
+          {footerSections.map((section, index) => (
             <div key={section.title} className="space-y-4">,
               <div className="flex items-center space-x-2">,
                 {section.icon}
@@ -196,50 +184,43 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
               </div>,
               <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>,
               <div className="space-y-2">,
-                {section.links.slice(0, 6).map((link) => (,
-                  <Link,
+                {section.links.slice(0, 6).map((link) => (
+                  <Link
                     key={link.name}
                     href={link.href}
-                    className="group block",
-                  >,
+                    className="group block">,
                     <div className="flex items-center justify-between p-2 rounded-lg hover: bg-cyan-40o0/10 transition-all duration-20o0">,
                       <span className="text-sm text-gray-30o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">,
-                        {link.name,}
+                        {link.name}
                       </span>,
-                      {link.featured && (,
-                        <Star className="w-3 h-3 text-yellow-40o0"  />,
-                      )}
+                      {link.featured && (
+                        <Star className="w-3 h-3 text-yellow-40o0"  />)}
                     </div>,
-                    {link.price && (,
-                      <p className="text-xs text-cyan-40o0 ml-2">{link.price}</p>,
-                    )}
-                  </Link>,
-                ))}
+                    {link.price && (
+                      <p className="text-xs text-cyan-40o0 ml-2">{link.price}</p>)}
+                  </Link>))}
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Quick Links & Social */}
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-8 pt-8 border-t border-cyan-40o0/20">,
-          {/* Quick Links */,}
+          {/* Quick Links */}
           <div>,
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">,
               <Target className="w-5 h-5 text-cyan-40o0"  />,
               <span>Quick Links</span>,
             </h4>,
             <div className="grid grid-cols-2 gap-2">,
-              {quickLinks.map((link) => (,
-                <Link,
+              {quickLinks.map((link) => (
+                <Link
                   key={link.name}
                   href={link.href}
-                  className="flex items-center space-x-2 p-2 rounded-lg hover: bg-cyan-40o0/10 transition-all duration-20o0 group",
-                >,
-                  {link.icon,}
+                  className="flex items-center space-x-2 p-2 rounded-lg hover: bg-cyan-40o0/10 transition-all duration-20o0 group">,
+                  {link.icon}
                   <span className="text-sm text-gray-30o0 group-hover: text-cyan-40o0 transition-colors duration-20o0">,
-                    {link.name,}
+                    {link.name}
                   </span>,
-                </Link>,
-              ))}
+                </Link>))}
             </div>,
           </div>,
           {/* Social Links */}
@@ -249,19 +230,17 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
               <span>Connect With Us</span>,
             </h4>,
             <div className="grid grid-cols-3 gap-3">,
-              {socialLinks.map((link) => (,
-                <a,
+              {socialLinks.map((link) => (
+                <a
                   key={link.name}
                   href={link.href}
                   target="_blank",
                   rel="noopener noreferrer",
-                  className="flex items-center justify-center p-3 bg-cyan-40o0/10 rounded-lg hover: bg-cyan-40o0/20 transition-all duration-20o0 group",
-                >,
+                  className="flex items-center justify-center p-3 bg-cyan-40o0/10 rounded-lg hover: bg-cyan-40o0/20 transition-all duration-20o0 group">,
                   <div className="text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">,
-                    {link.icon,}
+                    {link.icon}
                   </div>,
-                </a>,
-              ))}
+                </a>))}
             </div>,
           </div>,
         </div>,
@@ -284,24 +263,22 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Back to Top Button */,}
+      {/* Back to Top Button */}
       <motion.button,
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        transition={{ delay: 0.5 ,}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full shadow-2xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-30o0/50 group",
-        aria-label="Back to top",
-      >,
+        aria-label="Back to top">,
         <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-20o0"  />,
       </motion.button>,
-      {/* Floating Contact Button */,}
+      {/* Floating Contact Button */}
       <motion.div,
-        initial={{ opacity: 0, x: 10o0 ,}}
-        animate={{ opacity: 1, x: 0 ,}}
-        transition={{ delay: 0.8 ,}}
-        className="fixed bottom-8 left-8 z-40",
-      >,
+        initial={{ opacity: 0, x: 10o0 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.8 }}
+        className="fixed bottom-8 left-8 z-40">,
         <Link href="/contact">,
           <button className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-medium rounded-full shadow-2xl hover: from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 focus:outline-none focus:ring-4 focus:ring-purple-30o0/50 group">,
             <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-20o0"  />,
@@ -309,8 +286,5 @@ const UltraAdvancedFuturisticFooter20o38: React.FC = () => {,
           </button>,
         </Link>,
       </motion.div>,
-    </footer>,
-  ),
-,};
-,
-export default UltraAdvancedFuturisticFooter20o38,
+    </footer>)};
+export default UltraAdvancedFuturisticFooter20o38;

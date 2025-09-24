@@ -1,9 +1,7 @@
-export function Cart() {,
-  return (,
+export function Cart() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

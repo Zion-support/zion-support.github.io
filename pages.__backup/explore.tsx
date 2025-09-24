@@ -1,48 +1,40 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function ExplorePage() {,
-  const explorationCategories = [,
-    {,
-      title: "AI Automation",;
-      description: "Discover how artificial intelligence is revolutionizing automation across industries",;
-      icon: "🤖",;
-      features: ["Machine Learning"Neural Networks"Predictive Analytics"],;
-      link: "/explore/ai-automation",
-    ,},;
-    {,
-      title: "Cloud Computing",;
-      description: "Explore the latest in cloud infrastructure and autonomous management",;
-      icon: "☁️",;
-      features: ["Auto-scaling"Load Balancing"Cost Optimization"],;
-      link: "/explore/cloud-computing",
-    ,},;
-    {,
-      title: "DevOps & CI/CD",;
-      description: "Learn about autonomous development and deployment pipelines",;
-      icon: "🔄",;
-      features: ["Auto-deployment"Testing"Monitoring"],;
-      link: "/explore/devops",
-    ,},;
-    {,
-      title: "Content Generation",;
-      description: "See how AI creates and optimizes content automatically",;
-      icon: "✍️",;
-      features: ["SEO Optimization"Brand Consistency"Multi-language"],;
-      link: "/explore/content-generation",
-    ,}
+export default function ExplorePage() {
+  const explorationCategories = [
+    {
+      title: "AI Automation";
+      description: "Discover how artificial intelligence is revolutionizing automation across industries";
+      icon: "🤖";
+      features: ["Machine Learning"Neural Networks"Predictive Analytics"];
+      link: "/explore/ai-automation"};
+    {
+      title: "Cloud Computing";
+      description: "Explore the latest in cloud infrastructure and autonomous management";
+      icon: "☁️";
+      features: ["Auto-scaling"Load Balancing"Cost Optimization"];
+      link: "/explore/cloud-computing"};
+    {
+      title: "DevOps & CI/CD";
+      description: "Learn about autonomous development and deployment pipelines";
+      icon: "🔄";
+      features: ["Auto-deployment"Testing"Monitoring"];
+      link: "/explore/devops"};
+    {
+      title: "Content Generation";
+      description: "See how AI creates and optimizes content automatically";
+      icon: "✍️";
+      features: ["SEO Optimization"Brand Consistency"Multi-language"];
+      link: "/explore/content-generation"}
   ],
-,
-  const trendingTopics = [,
-    "Autonomous Systems",;
-    "AI Ethics",;
-    "Edge Computing",;
-    "Quantum Computing",;
-    "Blockchain Automation",;
-    "IoT Integration",
-  ],
-,
-  return (,
+  const trendingTopics = [
+    "Autonomous Systems";
+    "AI Ethics";
+    "Edge Computing";
+    "Quantum Computing";
+    "Blockchain Automation";
+    "IoT Integration"],
+  return (
     <>,
       <Head>,
         <title>Explore | Zion - Discover AI & Automation</title>,
@@ -60,11 +52,11 @@ export default function ExplorePage() {,
             </p>,
           </div>,
         </div>,
-        {/* Search Bar */,}
+        {/* Search Bar */}
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 -mt-10 relative z-10">,
           <div className="bg-white rounded-xl shadow-lg p-6">,
             <div className="flex items-center space-x-4">,
-              <input,
+              <input
                 type="text",
                 placeholder="Search for topicstechnologiesor concepts...",
                 className="flex-1 px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent",
@@ -75,32 +67,29 @@ export default function ExplorePage() {,
             </div>,
           </div>,
         </div>,
-        {/* Exploration Categories */,}
+        {/* Exploration Categories */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">Explore by Category</h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-            {explorationCategories.map((categoryindex) => (,
-              <Link,
-                key={index,}
+            {explorationCategories.map((categoryindex) => (
+              <Link
+                key={index}
                 href={category.link}
-                className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5",
-              >,
-                <div className="text-6xl mb-4">{category.icon,}</div>,
+                className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5">,
+                <div className="text-6xl mb-4">{category.icon}</div>,
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-4">{category.title}</h3>,
                 <p className="text-gray-60o0 mb-6">{category.description}</p>,
                 <ul className="space-y-2 mb-6">,
-                  {category.features.map((featureIndex) => (,
+                  {category.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-70o0">,
                       <span className="w-2 h-2 bg-blue-50o0 rounded-full mr-3"></span>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <span className="text-blue-60o0 hover: text-blue-80o0 font-semibold">,
-                  Explore {category.title,} →,
+                  Explore {category.title} →,
                 </span>,
-              </Link>,
-            ))}
+              </Link>))}
           </div>,
         </div>,
         {/* Trending Topics */}
@@ -108,21 +97,19 @@ export default function ExplorePage() {,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">Trending Topics</h2>,
           <div className="bg-white rounded-2xl shadow-xl p-8">,
             <div className="flex flex-wrap gap-3 justify-center">,
-              {trendingTopics.map((topicindex) => (,
-                <span,
-                  key={index,}
-                  className="bg-blue-10o0 text-blue-80o0 px-4 py-2 rounded-full text-sm font-medium hover: bg-blue-20o0 transition-colors cursor-pointer",
-                >,
-                  {topic,}
-                </span>,
-              ))}
+              {trendingTopics.map((topicindex) => (
+                <span
+                  key={index}
+                  className="bg-blue-10o0 text-blue-80o0 px-4 py-2 rounded-full text-sm font-medium hover: bg-blue-20o0 transition-colors cursor-pointer">,
+                  {topic}
+                </span>))}
             </div>,
           </div>,
         </div>,
         {/* Interactive Elements */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-            {/* Learning Path */,}
+            {/* Learning Path */}
             <div className="bg-white rounded-xl shadow-lg p-8">,
               <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Learning Path</h3>,
               <p className="text-gray-60o0 mb-6">,
@@ -146,7 +133,7 @@ export default function ExplorePage() {,
                 Start Learning,
               </button>,
             </div>,
-            {/* Interactive Demo */,}
+            {/* Interactive Demo */}
             <div className="bg-white rounded-xl shadow-lg p-8">,
               <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Try It Live</h3>,
               <p className="text-gray-60o0 mb-6">,
@@ -167,6 +154,4 @@ export default function ExplorePage() {,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

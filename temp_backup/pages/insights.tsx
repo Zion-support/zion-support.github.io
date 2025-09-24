@@ -1,170 +1,165 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function InsightsPage() {,
-  const industryTrends = [,
-    {,
-      title: 'AI Automation Market Growth',;
+export default function InsightsPage() {
+  const industryTrends = [
+    {
+      title: 'AI Automation Market Growth';
       description:,
-        'The global AI automation market is projected to reach $184 billion by 20o27, driven by increasing demand for operational efficiency.',;
-      metric: '184B',;
-      unit: 'USD by 20o27',;
-      trend: 'up',;
-      change: '+23.5%',;
-      period: 'CAGR 20o22-20o27',;
-    },;
-    {,
-      title: 'Autonomous Systems Adoption',;
+        'The global AI automation market is projected to reach $184 billion by 20o27, driven by increasing demand for operational efficiency.';
+      metric: '184B';
+      unit: 'USD by 20o27';
+      trend: 'up';
+      change: '+23.5%';
+      period: 'CAGR 20o22-20o27';
+    };
+    {
+      title: 'Autonomous Systems Adoption';
       description:,
-        '78% of Fortune 50o0 companies have implemented or are planning to implement autonomous systems within the next 2 years.',;
-      metric: '78%',;
-      unit: 'Fortune 50o0',;
-      trend: 'up',;
-      change: '+15%',;
-      period: 'vs. 20o23',;
-    },;
-    {,
-      title: 'Energy Efficiency Gains',;
+        '78% of Fortune 50o0 companies have implemented or are planning to implement autonomous systems within the next 2 years.';
+      metric: '78%';
+      unit: 'Fortune 50o0';
+      trend: 'up';
+      change: '+15%';
+      period: 'vs. 20o23';
+    };
+    {
+      title: 'Energy Efficiency Gains';
       description:,
-        'AI-powered autonomous systems are delivering average energy savings of 25-40% across manufacturing and infrastructure sectors.',;
-      metric: '25-40%',;
-      unit: 'Energy Savings',;
-      trend: 'up',;
-      change: '+12%',;
-      period: 'vs. 20o23',;
-    },;
-    {,
-      title: 'Cybersecurity Investment',;
+        'AI-powered autonomous systems are delivering average energy savings of 25-40% across manufacturing and infrastructure sectors.';
+      metric: '25-40%';
+      unit: 'Energy Savings';
+      trend: 'up';
+      change: '+12%';
+      period: 'vs. 20o23';
+    };
+    {
+      title: 'Cybersecurity Investment';
       description:,
-        'Organizations are increasing cybersecurity spending for autonomous systems by an average of 35% annually.',;
-      metric: '35%',;
-      unit: 'Annual Increase',;
-      trend: 'up',;
-      change: '+8%',;
-      period: 'vs. 20o23',;
-    },;
+        'Organizations are increasing cybersecurity spending for autonomous systems by an average of 35% annually.';
+      metric: '35%';
+      unit: 'Annual Increase';
+      trend: 'up';
+      change: '+8%';
+      period: 'vs. 20o23';
+    };
   ],
-,
-  const researchInsights = [,
-    {,
-      title: 'Human-AI Collaboration Patterns',;
+  const researchInsights = [
+    {
+      title: 'Human-AI Collaboration Patterns';
       description:,
-        'Our research reveals that organizations with strong human-AI collaboration frameworks achieve 3x better outcomes than those relying solely on automation.',;
-      category: 'Research Study',;
-      date: 'January 20o25',;
-      readTime: '5 min read',;
-      insights: [,
-        '3x better outcomes',;
-        'Improved job satisfaction',;
-        'Higher innovation rates',;
-      ],;
-    },;
-    {,
-      title: 'Edge Computing in Autonomous Systems',;
+        'Our research reveals that organizations with strong human-AI collaboration frameworks achieve 3x better outcomes than those relying solely on automation.';
+      category: 'Research Study';
+      date: 'January 20o25';
+      readTime: '5 min read';
+      insights: [
+        '3x better outcomes';
+        'Improved job satisfaction';
+        'Higher innovation rates';
+      ];
+    };
+    {
+      title: 'Edge Computing in Autonomous Systems';
       description:,
-        'Analysis of 50o0+ autonomous system deployments shows that edge computing reduces latency by 60% and improves reliability by 40%.',;
-      category: 'Technical Analysis',;
-      date: 'December 20o24',;
-      readTime: '7 min read',;
-      insights: [,
-        '60% latency reduction',;
-        '40% reliability improvement',;
-        'Cost optimization',;
-      ],;
-    },;
-    {,
-      title: 'Sustainability Impact Measurement',;
+        'Analysis of 50o0+ autonomous system deployments shows that edge computing reduces latency by 60% and improves reliability by 40%.';
+      category: 'Technical Analysis';
+      date: 'December 20o24';
+      readTime: '7 min read';
+      insights: [
+        '60% latency reduction';
+        '40% reliability improvement';
+        'Cost optimization';
+      ];
+    };
+    {
+      title: 'Sustainability Impact Measurement';
       description:,
-        'Comprehensive study of autonomous systems across industries reveals average carbon footprint reduction of 30-45%.',;
-      category: 'Environmental Study',;
-      date: 'November 20o24',;
-      readTime: '6 min read',;
-      insights: [,
-        '30-45% carbon reduction',;
-        'Resource optimization',;
-        'Circular economy integration',;
-      ],;
-    },;
+        'Comprehensive study of autonomous systems across industries reveals average carbon footprint reduction of 30-45%.';
+      category: 'Environmental Study';
+      date: 'November 20o24';
+      readTime: '6 min read';
+      insights: [
+        '30-45% carbon reduction';
+        'Resource optimization';
+        'Circular economy integration';
+      ];
+    };
   ],
-,
-  const thoughtLeadership = [,
-    {,
-      author: 'Dr. Sarah Chen',;
-      role: 'Chief AI Officer',;
-      company: 'Zion Tech Group',;
-      title: 'The Future of Autonomous Decision-Making',;
+  const thoughtLeadership = [
+    {
+      author: 'Dr. Sarah Chen';
+      role: 'Chief AI Officer';
+      company: 'Zion Tech Group';
+      title: 'The Future of Autonomous Decision-Making';
       excerpt:,
-        "As autonomous systems become more sophisticated, we're entering an era where AI can make complex decisions with minimal human oversight. But what does this mean for business, society, and human agency?",;
-      date: 'January 20, 20o25',;
-      readTime: '8 min read',;
-      category: 'AI Ethics',;
-    },;
-    {,
-      author: 'Marcus Rodriguez',;
-      role: 'VP of Engineering',;
-      company: 'Zion Tech Group',;
-      title: 'Building Resilient Autonomous Infrastructure',;
+        "As autonomous systems become more sophisticated, we're entering an era where AI can make complex decisions with minimal human oversight. But what does this mean for business, society, and human agency?";
+      date: 'January 20, 20o25';
+      readTime: '8 min read';
+      category: 'AI Ethics';
+    };
+    {
+      author: 'Marcus Rodriguez';
+      role: 'VP of Engineering';
+      company: 'Zion Tech Group';
+      title: 'Building Resilient Autonomous Infrastructure';
       excerpt:,
-        "The key to successful autonomous systems isn't just intelligence—it's resilience. Learn how to design systems that can adapt, recover, and thrive in unpredictable environments.",;
-      date: 'January 18, 20o25',;
-      readTime: '10 min read',;
-      category: 'Infrastructure',;
-    },;
-    {,
-      author: 'Dr. Emily Watson',;
-      role: 'Research Director',;
-      company: 'Zion Tech Group',;
-      title: 'Quantum AI: Beyond the Hype',;
+        "The key to successful autonomous systems isn't just intelligence—it's resilience. Learn how to design systems that can adapt, recover, and thrive in unpredictable environments.";
+      date: 'January 18, 20o25';
+      readTime: '10 min read';
+      category: 'Infrastructure';
+    };
+    {
+      author: 'Dr. Emily Watson';
+      role: 'Research Director';
+      company: 'Zion Tech Group';
+      title: 'Quantum AI: Beyond the Hype';
       excerpt:,
-        "Quantum computing promises to revolutionize AI, but what's real and what's hype? Our research team breaks down the current state and future potential of quantum AI.",;
-      date: 'January 15, 20o25',;
-      readTime: '12 min read',;
-      category: 'Quantum Computing',;
-    },;
+        "Quantum computing promises to revolutionize AI, but what's real and what's hype? Our research team breaks down the current state and future potential of quantum AI.";
+      date: 'January 15, 20o25';
+      readTime: '12 min read';
+      category: 'Quantum Computing';
+    };
   ],
-,
-  const upcomingResearch = [,
-    {,
-      title: 'Autonomous Systems in Healthcare: Safety and Efficacy Study',;
+  const upcomingResearch = [
+    {
+      title: 'Autonomous Systems in Healthcare: Safety and Efficacy Study';
       description:,
-        'Comprehensive analysis of autonomous systems in healthcare settings, focusing on patient safety, clinical outcomes, and regulatory compliance.',;
-      timeline: 'Q2 20o25',;
-      status: 'In Progress',;
-      team: 'Healthcare AI Research Team',;
-    },;
-    {,
-      title: 'Edge AI Performance Benchmarking Framework',;
+        'Comprehensive analysis of autonomous systems in healthcare settings, focusing on patient safety, clinical outcomes, and regulatory compliance.';
+      timeline: 'Q2 20o25';
+      status: 'In Progress';
+      team: 'Healthcare AI Research Team';
+    };
+    {
+      title: 'Edge AI Performance Benchmarking Framework';
       description:,
-        'Development of standardized benchmarks for evaluating edge AI performance in autonomous systems across different industries and use cases.',;
-      timeline: 'Q3 20o25',;
-      status: 'Planning Phase',;
-      team: 'Performance Engineering Team',;
-    },;
-    {,
-      title: 'Sustainable AI Development Guidelines',;
+        'Development of standardized benchmarks for evaluating edge AI performance in autonomous systems across different industries and use cases.';
+      timeline: 'Q3 20o25';
+      status: 'Planning Phase';
+      team: 'Performance Engineering Team';
+    };
+    {
+      title: 'Sustainable AI Development Guidelines';
       description:,
-        'Creating industry standards and best practices for developing environmentally conscious AI systems and autonomous technologies.',;
-      timeline: 'Q4 20o25',;
-      status: 'Research Phase',;
-      team: 'Sustainability Research Team',;
-    },;
+        'Creating industry standards and best practices for developing environmentally conscious AI systems and autonomous technologies.';
+      timeline: 'Q4 20o25';
+      status: 'Research Phase';
+      team: 'Sustainability Research Team';
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>,
           Insights & Research | Zion Tech Group - AI & Automation Intelligence,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Access cutting-edge research, industry insights, and thought leadership on autonomous systems and AI automation from Zion Tech Group.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Insights & Research | Zion Tech Group - AI & Automation Intelligence',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Access cutting-edge research, industry insights, and thought leadership on autonomous systems and AI automation.',
         />,
@@ -173,10 +168,9 @@ export default function InsightsPage() {,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-6xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/',
-                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                 ← Back to Home,
               </Link>,
             </nav>,
@@ -195,11 +189,10 @@ export default function InsightsPage() {,
                 Industry Trends & Metrics,
               </h2>,
               <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-                {industryTrends.map((trend, index) => (,
-                  <div,
+                {industryTrends.map((trend, index) => (
+                  <div
                     key={index}
-                    className='bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20',
-                  >,
+                    className='bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20'>,
                     <div className='text-center mb-4'>,
                       <div className='text-3xl font-bold text-cyan-40o0 mb-1'>,
                         {trend.metric}
@@ -220,8 +213,7 @@ export default function InsightsPage() {,
                         {trend.period}
                       </span>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </section>,
             {/* Research Insights */}
@@ -230,11 +222,10 @@ export default function InsightsPage() {,
                 Latest Research Insights,
               </h2>,
               <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                {researchInsights.map((insight, index) => (,
-                  <div,
+                {researchInsights.map((insight, index) => (
+                  <div
                     key={index}
-                    className='bg-gradient-to-br from-purple-40o0/10 to-fuchsia-40o0/10 rounded-xl p-6 border border-purple-40o0/20',
-                  >,
+                    className='bg-gradient-to-br from-purple-40o0/10 to-fuchsia-40o0/10 rounded-xl p-6 border border-purple-40o0/20'>,
                     <div className='flex items-center gap-3 mb-4'>,
                       <span className='px-3 py-1 bg-purple-40o0/20 text-purple-40o0 text-sm rounded-full border border-purple-40o0/30'>,
                         {insight.category}
@@ -250,19 +241,16 @@ export default function InsightsPage() {,
                       {insight.description}
                     </p>,
                     <div className='space-y-2 mb-4'>,
-                      {insight.insights.map((item, itemIndex) => (,
-                        <div,
+                      {insight.insights.map((item, itemIndex) => (
+                        <div
                           key={itemIndex}
-                          className='flex items-center gap-2',
-                        >,
+                          className='flex items-center gap-2'>,
                           <span className='w-2 h-2 bg-purple-40o0 rounded-full'></span>,
                           <span className='text-white/70 text-sm'>{item}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                     <div className='text-white/60 text-xs'>{insight.date}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </section>,
             {/* Thought Leadership */}
@@ -271,11 +259,10 @@ export default function InsightsPage() {,
                 Thought Leadership,
               </h2>,
               <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                {thoughtLeadership.map((article, index) => (,
-                  <div,
+                {thoughtLeadership.map((article, index) => (
+                  <div
                     key={index}
-                    className='bg-gradient-to-br from-green-40o0/10 to-emerald-40o0/10 rounded-xl p-6 border border-green-40o0/20',
-                  >,
+                    className='bg-gradient-to-br from-green-40o0/10 to-emerald-40o0/10 rounded-xl p-6 border border-green-40o0/20'>,
                     <div className='flex items-center gap-3 mb-4'>,
                       <span className='px-3 py-1 bg-green-40o0/20 text-green-40o0 text-sm rounded-full border border-green-40o0/30'>,
                         {article.category}
@@ -301,8 +288,7 @@ export default function InsightsPage() {,
                         {article.date}
                       </div>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </section>,
             {/* Upcoming Research */}
@@ -311,11 +297,10 @@ export default function InsightsPage() {,
                 Upcoming Research Projects,
               </h2>,
               <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                {upcomingResearch.map((project, index) => (,
-                  <div,
+                {upcomingResearch.map((project, index) => (
+                  <div
                     key={index}
-                    className='bg-gradient-to-br from-blue-40o0/10 to-cyan-40o0/10 rounded-xl p-6 border border-blue-40o0/20',
-                  >,
+                    className='bg-gradient-to-br from-blue-40o0/10 to-cyan-40o0/10 rounded-xl p-6 border border-blue-40o0/20'>,
                     <div className='flex items-center justify-between mb-4'>,
                       <span className='px-3 py-1 bg-blue-40o0/20 text-blue-40o0 text-sm rounded-full border border-blue-40o0/30'>,
                         {project.status}
@@ -331,8 +316,7 @@ export default function InsightsPage() {,
                       {project.description}
                     </p>,
                     <div className='text-white/60 text-xs'>{project.team}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </section>,
             {/* Research Methodology */}
@@ -453,16 +437,14 @@ export default function InsightsPage() {,
                   available for partnerships and consulting engagements.,
                 </p>,
                 <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0',
-                  >,
+                    className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0'>,
                     Start Collaboration,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/resources',
-                    className='inline-block px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0',
-                  >,
+                    className='inline-block px-8 py-4 bg-white/10 text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
                     View Resources,
                   </Link>,
                 </div>,
@@ -471,7 +453,5 @@ export default function InsightsPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

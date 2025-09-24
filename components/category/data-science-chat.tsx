@@ -1,9 +1,8 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const DataScienceChat: NextPage = () => {,
-  return (,
+const DataScienceChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>DataScienceChat - Zion Tech Solutions</title>,
@@ -14,9 +13,5 @@ const DataScienceChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default DataScienceChat,
-,
+    </div>)};
+export default DataScienceChat;

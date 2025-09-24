@@ -3,25 +3,20 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button',
 import Card from '../components/ui/Card',
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react',
-,
-export default function AuditLogVaultPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  const features = [,
-    'Append-only, tamper-evident storage',;
-    'Flexible retention and legal holds',;
-    'Cryptographic digests and attestations',;
-    'Fine-grained search and export bundles',;
-    'Chain-of-custody and access reviews',;
-    'Alerts for risky access patterns',
-  ],
-,
-  return (,
+export default function AuditLogVaultPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  const features = [
+    'Append-only, tamper-evident storage';
+    'Flexible retention and legal holds';
+    'Cryptographic digests and attestations';
+    'Fine-grained search and export bundles';
+    'Chain-of-custody and access reviews';
+    'Alerts for risky access patterns'],
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Audit Log Vault | Zion Tech Group</title>,
@@ -42,9 +37,8 @@ export default function AuditLogVaultPage() {,
               <p className="text-gray-30o0 mb-6">Centralize audit logs from apps and platforms into an immutable, indexed store with strong retention controls and cryptographic integrity, ready for SOC 2, HIPAA and ISO reviews.</p>,
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>,
               <ul className="grid grid-cols-1 md: grid-cols-2 gap-3 text-gray-30o0">,
-                {features.map((f) => (,
-                  <li key={f,} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-40o0 mt-0.5"  /> <span>{f}</span></li>,
-                ))}
+                {features.map((f) => (
+                  <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-40o0 mt-0.5"  /> <span>{f}</span></li>))}
               </ul>,
             </Card>,
             <Card className="p-6 bg-black/40 border border-gray-70o0/50">,
@@ -56,15 +50,13 @@ export default function AuditLogVaultPage() {,
                 <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-60o0 text-gray-20o0"><ExternalLink className="w-4 h-4 mr-2"  /> Learn More</Button>,
               </div>,
               <div className="mt-6 space-y-3 text-sm">,
-                <div className="flex items-center gap-2 text-cyan-40o0"><Phone className="w-4 h-4"  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover: underline">{contactInfo.mobile,}</a></div>,
-                <div className="flex items-center gap-2 text-purple-40o0"><Mail className="w-4 h-4"  /><a href={`mailto: ${contactInfo.email,}`} className="hover: underline">{contactInfo.email,}</a></div>,
-                <div className="flex items-center gap-2 text-green-40o0"><MapPin className="w-4 h-4"  /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address,}</a></div>,
+                <div className="flex items-center gap-2 text-cyan-40o0"><Phone className="w-4 h-4"  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover: underline">{contactInfo.mobile}</a></div>,
+                <div className="flex items-center gap-2 text-purple-40o0"><Mail className="w-4 h-4"  /><a href={`mailto: ${contactInfo.email}`} className="hover: underline">{contactInfo.email}</a></div>,
+                <div className="flex items-center gap-2 text-green-40o0"><MapPin className="w-4 h-4"  /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address}</a></div>,
               </div>,
             </Card>,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

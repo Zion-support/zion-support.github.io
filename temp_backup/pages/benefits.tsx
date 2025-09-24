@@ -1,320 +1,315 @@
-import React from 'react',
+import React from 'react';
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
-import {,
-  Heart,;
-  Shield,;
-  DollarSign,;
-  GraduationCap,;
-  Globe,;
-  ArrowRight,;
-  CheckCircle,;
-  TrendingUp,;
-  Infinity,;
-  Eye,;
-  Sparkles,;
-  Clock,;
-  Zap,;
-  Users,;
-  Award,;
-  Coffee,;
-  Dumbbell,;
-  TreePine,;
-  Home,;
-  Car,;
-  Plane,;
-  BookOpen,;
-  Monitor,;
-  Smartphone,;
-  Wifi,;
-  Utensils,;
+import {
+  Heart;
+  Shield;
+  DollarSign;
+  GraduationCap;
+  Globe;
+  ArrowRight;
+  CheckCircle;
+  TrendingUp;
+  Infinity;
+  Eye;
+  Sparkles;
+  Clock;
+  Zap;
+  Users;
+  Award;
+  Coffee;
+  Dumbbell;
+  TreePine;
+  Home;
+  Car;
+  Plane;
+  BookOpen;
+  Monitor;
+  Smartphone;
+  Wifi;
+  Utensils;
 } from 'lucide-react',
-,
-const BenefitsPage: React.FC = () => {,
-  const benefitCategories = [,
-    {,
-      title: 'Health & Wellness',;
+const BenefitsPage: React.FC = () => {
+  const benefitCategories = [
+    {
+      title: 'Health & Wellness';
       description:,
-        'Comprehensive health coverage and wellness programs to keep you healthy and happy',;
-      icon: Heart,;
-      color: 'from-red-50o0 to-pink-50o0',;
-      benefits: [,
-        {,
-          name: 'Medical, Dental & Vision',;
+        'Comprehensive health coverage and wellness programs to keep you healthy and happy';
+      icon: Heart;
+      color: 'from-red-50o0 to-pink-50o0';
+      benefits: [
+        {
+          name: 'Medical, Dental & Vision';
           description:,
-            '10o0% employer-paid premium coverage for you and your family',;
-          details: [,
-            'Comprehensive medical coverage',;
-            'Dental and vision plans',;
-            'Prescription drug coverage',;
-            'Mental health services',;
-          ],;
-        },;
-        {,
-          name: 'Wellness Programs',;
+            '10o0% employer-paid premium coverage for you and your family';
+          details: [
+            'Comprehensive medical coverage';
+            'Dental and vision plans';
+            'Prescription drug coverage';
+            'Mental health services';
+          ];
+        };
+        {
+          name: 'Wellness Programs';
           description:,
-            'Gym memberships, fitness classes, and wellness challenges',;
-          details: [,
-            'Free gym memberships',;
-            'On-site fitness classes',;
-            'Wellness challenges and rewards',;
-            'Health coaching services',;
-          ],;
-        },;
-        {,
-          name: 'Mental Health Support',;
-          description: 'Professional counseling and mental health resources',;
-          details: [,
-            'Employee assistance program',;
-            'Mental health counseling',;
-            'Stress management workshops',;
-            'Meditation and mindfulness programs',;
-          ],;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Financial Security',;
+            'Gym memberships, fitness classes, and wellness challenges';
+          details: [
+            'Free gym memberships';
+            'On-site fitness classes';
+            'Wellness challenges and rewards';
+            'Health coaching services';
+          ];
+        };
+        {
+          name: 'Mental Health Support';
+          description: 'Professional counseling and mental health resources';
+          details: [
+            'Employee assistance program';
+            'Mental health counseling';
+            'Stress management workshops';
+            'Meditation and mindfulness programs';
+          ];
+        };
+      ];
+    };
+    {
+      title: 'Financial Security';
       description:,
-        'Competitive compensation and financial benefits to secure your future',;
-      icon: DollarSign,;
-      color: 'from-green-50o0 to-emerald-50o0',;
-      benefits: [,
-        {,
-          name: 'Competitive Salary',;
+        'Competitive compensation and financial benefits to secure your future';
+      icon: DollarSign;
+      color: 'from-green-50o0 to-emerald-50o0';
+      benefits: [
+        {
+          name: 'Competitive Salary';
           description:,
-            'Above-market compensation with regular performance reviews',;
-          details: [,
-            'Market-leading base salaries',;
-            'Performance-based bonuses',;
-            'Annual salary reviews',;
-            'Equity participation',;
-          ],;
-        },;
-        {,
-          name: '40o1(k) & Retirement',;
-          description: 'Generous retirement savings with employer matching',;
-          details: [,
-            '40o1(k) with 6% employer match',;
-            'Roth 40o1(k) options',;
-            'Financial planning services',;
-            'Retirement education',;
-          ],;
-        },;
-        {,
-          name: 'Stock Options & Equity',;
+            'Above-market compensation with regular performance reviews';
+          details: [
+            'Market-leading base salaries';
+            'Performance-based bonuses';
+            'Annual salary reviews';
+            'Equity participation';
+          ];
+        };
+        {
+          name: '40o1(k) & Retirement';
+          description: 'Generous retirement savings with employer matching';
+          details: [
+            '40o1(k) with 6% employer match';
+            'Roth 40o1(k) options';
+            'Financial planning services';
+            'Retirement education';
+          ];
+        };
+        {
+          name: 'Stock Options & Equity';
           description:,
-            'Ownership in the company through stock options and equity grants',;
-          details: [,
-            'Stock option grants',;
-            'Restricted stock units',;
-            'Performance equity awards',;
-            'Employee stock purchase plan',;
-          ],;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Learning & Development',;
+            'Ownership in the company through stock options and equity grants';
+          details: [
+            'Stock option grants';
+            'Restricted stock units';
+            'Performance equity awards';
+            'Employee stock purchase plan';
+          ];
+        };
+      ];
+    };
+    {
+      title: 'Learning & Development';
       description:,
-        'Continuous learning opportunities to advance your career and skills',;
-      icon: GraduationCap,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      benefits: [,
-        {,
-          name: 'Professional Development',;
-          description: 'Courses, certifications, and learning resources',;
-          details: [,
-            'Unlimited learning budget',;
-            'Professional certifications',;
-            'Conference attendance',;
-            'Online learning platforms',;
-          ],;
-        },;
-        {,
-          name: 'Tuition Reimbursement',;
-          description: 'Support for advanced degrees and continuing education',;
-          details: [,
-            'Graduate degree support',;
-            'Course reimbursement',;
-            'Professional development',;
-            'Industry certifications',;
-          ],;
-        },;
-        {,
-          name: 'Internal Training',;
-          description: 'Company-sponsored training and skill development',;
-          details: [,
-            'Technical workshops',;
-            'Leadership training',;
-            'Soft skills development',;
-            'Cross-functional training',;
-          ],;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Work-Life Balance',;
+        'Continuous learning opportunities to advance your career and skills';
+      icon: GraduationCap;
+      color: 'from-blue-50o0 to-cyan-50o0';
+      benefits: [
+        {
+          name: 'Professional Development';
+          description: 'Courses, certifications, and learning resources';
+          details: [
+            'Unlimited learning budget';
+            'Professional certifications';
+            'Conference attendance';
+            'Online learning platforms';
+          ];
+        };
+        {
+          name: 'Tuition Reimbursement';
+          description: 'Support for advanced degrees and continuing education';
+          details: [
+            'Graduate degree support';
+            'Course reimbursement';
+            'Professional development';
+            'Industry certifications';
+          ];
+        };
+        {
+          name: 'Internal Training';
+          description: 'Company-sponsored training and skill development';
+          details: [
+            'Technical workshops';
+            'Leadership training';
+            'Soft skills development';
+            'Cross-functional training';
+          ];
+        };
+      ];
+    };
+    {
+      title: 'Work-Life Balance';
       description:,
-        'Flexible work arrangements and time off to maintain work-life harmony',;
-      icon: Clock,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      benefits: [,
-        {,
-          name: 'Flexible Work Arrangements',;
-          description: 'Remote work options and flexible scheduling',;
-          details: [,
-            '10o0% remote work option',;
-            'Flexible start/end times',;
-            'Hybrid work models',;
-            'Work from anywhere',;
-          ],;
-        },;
-        {,
-          name: 'Unlimited PTO',;
-          description: 'Take time off when you need it to recharge',;
-          details: [,
-            'Unlimited paid time off',;
-            'Sick leave coverage',;
-            'Personal days',;
-            'Mental health days',;
-          ],;
-        },;
-        {,
-          name: 'Family-Friendly Policies',;
-          description: 'Support for families and life events',;
-          details: [,
-            'Paid parental leave',;
-            'Family medical leave',;
-            'Childcare support',;
-            'Elder care resources',;
-          ],;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Office & Perks',;
+        'Flexible work arrangements and time off to maintain work-life harmony';
+      icon: Clock;
+      color: 'from-purple-50o0 to-pink-50o0';
+      benefits: [
+        {
+          name: 'Flexible Work Arrangements';
+          description: 'Remote work options and flexible scheduling';
+          details: [
+            '10o0% remote work option';
+            'Flexible start/end times';
+            'Hybrid work models';
+            'Work from anywhere';
+          ];
+        };
+        {
+          name: 'Unlimited PTO';
+          description: 'Take time off when you need it to recharge';
+          details: [
+            'Unlimited paid time off';
+            'Sick leave coverage';
+            'Personal days';
+            'Mental health days';
+          ];
+        };
+        {
+          name: 'Family-Friendly Policies';
+          description: 'Support for families and life events';
+          details: [
+            'Paid parental leave';
+            'Family medical leave';
+            'Childcare support';
+            'Elder care resources';
+          ];
+        };
+      ];
+    };
+    {
+      title: 'Office & Perks';
       description:,
-        'Modern office amenities and daily perks to enhance your work experience',;
-      icon: Coffee,;
-      color: 'from-orange-50o0 to-red-50o0',;
-      benefits: [,
-        {,
-          name: 'Modern Office Spaces',;
-          description: 'Beautiful, well-equipped offices with modern amenities',;
-          details: [,
-            'Open concept workspaces',;
-            'Private meeting rooms',;
-            'Collaboration areas',;
-            'Quiet zones',;
-          ],;
-        },;
-        {,
-          name: 'Daily Perks',;
-          description: 'Free meals, snacks, and beverages throughout the day',;
-          details: [,
-            'Free breakfast and lunch',;
-            'Unlimited snacks',;
-            'Premium coffee and tea',;
-            'Healthy food options',;
-          ],;
-        },;
-        {,
-          name: 'Technology & Equipment',;
-          description: 'Latest technology and equipment to do your best work',;
-          details: [,
-            'Latest laptops and devices',;
-            'Dual monitors',;
-            'Ergonomic furniture',;
-            'Mobile phone plans',;
-          ],;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Community & Culture',;
-      description: 'Team building, social events, and a supportive community',;
-      icon: Users,;
-      color: 'from-indigo-50o0 to-purple-50o0',;
-      benefits: [,
-        {,
-          name: 'Team Building',;
-          description: 'Regular team events and social activities',;
-          details: [,
-            'Team offsites',;
-            'Social events',;
-            'Holiday parties',;
-            'Team building activities',;
-          ],;
-        },;
-        {,
-          name: 'Employee Resource Groups',;
-          description: 'Connect with colleagues who share your interests',;
-          details: [,
-            'Diversity groups',;
-            'Professional networks',;
-            'Interest-based clubs',;
-            'Mentorship programs',;
-          ],;
-        },;
-        {,
-          name: 'Recognition Programs',;
-          description: 'Celebrate achievements and contributions',;
-          details: [,
-            'Employee of the month',;
-            'Performance awards',;
-            'Innovation recognition',;
-            'Peer recognition',;
-          ],;
-        },;
-      ],;
-    },;
+        'Modern office amenities and daily perks to enhance your work experience';
+      icon: Coffee;
+      color: 'from-orange-50o0 to-red-50o0';
+      benefits: [
+        {
+          name: 'Modern Office Spaces';
+          description: 'Beautiful, well-equipped offices with modern amenities';
+          details: [
+            'Open concept workspaces';
+            'Private meeting rooms';
+            'Collaboration areas';
+            'Quiet zones';
+          ];
+        };
+        {
+          name: 'Daily Perks';
+          description: 'Free meals, snacks, and beverages throughout the day';
+          details: [
+            'Free breakfast and lunch';
+            'Unlimited snacks';
+            'Premium coffee and tea';
+            'Healthy food options';
+          ];
+        };
+        {
+          name: 'Technology & Equipment';
+          description: 'Latest technology and equipment to do your best work';
+          details: [
+            'Latest laptops and devices';
+            'Dual monitors';
+            'Ergonomic furniture';
+            'Mobile phone plans';
+          ];
+        };
+      ];
+    };
+    {
+      title: 'Community & Culture';
+      description: 'Team building, social events, and a supportive community';
+      icon: Users;
+      color: 'from-indigo-50o0 to-purple-50o0';
+      benefits: [
+        {
+          name: 'Team Building';
+          description: 'Regular team events and social activities';
+          details: [
+            'Team offsites';
+            'Social events';
+            'Holiday parties';
+            'Team building activities';
+          ];
+        };
+        {
+          name: 'Employee Resource Groups';
+          description: 'Connect with colleagues who share your interests';
+          details: [
+            'Diversity groups';
+            'Professional networks';
+            'Interest-based clubs';
+            'Mentorship programs';
+          ];
+        };
+        {
+          name: 'Recognition Programs';
+          description: 'Celebrate achievements and contributions';
+          details: [
+            'Employee of the month';
+            'Performance awards';
+            'Innovation recognition';
+            'Peer recognition';
+          ];
+        };
+      ];
+    };
   ],
-,
-  const additionalPerks = [,
-    {,
-      icon: Plane,;
-      title: 'Travel & Transportation',;
+  const additionalPerks = [
+    {
+      icon: Plane;
+      title: 'Travel & Transportation';
       description:,
-        'Commuter benefits, travel allowances, and transportation support',;
-    },;
-    {,
-      icon: Home,;
-      title: 'Home Office Setup',;
-      description: 'Ergonomic furniture and equipment for remote work',;
-    },;
-    {,
-      icon: Car,;
-      title: 'Transportation Benefits',;
-      description: 'Commuter passes, parking, and ride-sharing credits',;
-    },;
-    {,
-      icon: Wifi,;
-      title: 'Internet & Utilities',;
-      description: 'Home internet and utility reimbursements',;
-    },;
+        'Commuter benefits, travel allowances, and transportation support';
+    };
+    {
+      icon: Home;
+      title: 'Home Office Setup';
+      description: 'Ergonomic furniture and equipment for remote work';
+    };
+    {
+      icon: Car;
+      title: 'Transportation Benefits';
+      description: 'Commuter passes, parking, and ride-sharing credits';
+    };
+    {
+      icon: Wifi;
+      title: 'Internet & Utilities';
+      description: 'Home internet and utility reimbursements';
+    };
   ],
-,
-  const totalCompensation = [,
-    { label: 'Base Salary', value: 'Competitive' ,},;
-    { label: 'Performance Bonus', value: 'Up to 25%' ,},;
-    { label: 'Equity Value', value: '$50K-$20o0K' ,},;
-    { label: 'Benefits Value', value: '$15K-$25K' ,},;
+  const totalCompensation = [
+    { label: 'Base Salary', value: 'Competitive' };
+    { label: 'Performance Bonus', value: 'Up to 25%' };
+    { label: 'Equity Value', value: '$50K-$20o0K' };
+    { label: 'Benefits Value', value: '$15K-$25K' };
   ],
-,
-  return (,
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-blue-90o0'>,
         {/* Hero Section */}
         <section className='relative pt-32 pb-20 px-4'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='mb-8',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='mb-8'>,
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 text-blue-30o0 text-sm font-medium mb-6'>,
                 <Award className='w-4 h-4 mr-2' />,
                 Employee Benefits,
@@ -324,7 +319,7 @@ const BenefitsPage: React.FC = () => {,
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                 We believe in taking care of our people. Our comprehensive,
-                benefits package is designed to support your health, wealth,;
+                benefits package is designed to support your health, wealth;
                 growth, and well-being both inside and outside of work.,
               </p>,
             </motion.div>,
@@ -334,29 +329,27 @@ const BenefitsPage: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Total Compensation Package,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-                Our benefits add significant value to your total compensation,;
+                Our benefits add significant value to your total compensation;
                 making Zion Tech Group one of the most attractive employers in,
                 the technology industry.,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-2 md: grid-cols-4 gap-8'>,
-              {totalCompensation.map((item, index) => (,
+              {totalCompensation.map((item, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='text-center',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='text-center'>,
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 mb-4'>,
                     <DollarSign className='w-8 h-8 text-blue-40o0' />,
                   </div>,
@@ -364,8 +357,7 @@ const BenefitsPage: React.FC = () => {,
                     {item.value}
                   </div>,
                   <div className='text-gray-40o0'>{item.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -373,11 +365,10 @@ const BenefitsPage: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Benefits by Category,
               </h2>,
@@ -388,16 +379,15 @@ const BenefitsPage: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className='space-y-16'>,
-              {benefitCategories.map((category, index) => (,
+              {benefitCategories.map((category, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className='bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50'>,
                   <div className='flex items-center mb-8'>,
-                    <div,
+                    <div
                       className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} mr-6`}
                     >,
                       <category.icon className='w-8 h-8 text-white' />,
@@ -412,11 +402,10 @@ const BenefitsPage: React.FC = () => {,
                     </div>,
                   </div>,
                   <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>,
-                    {category.benefits.map((benefit, benefitIndex) => (,
-                      <div,
+                    {category.benefits.map((benefit, benefitIndex) => (
+                      <div
                         key={benefitIndex}
-                        className='bg-gray-80o0/50 rounded-xl p-6 border border-gray-70o0/50',
-                      >,
+                        className='bg-gray-80o0/50 rounded-xl p-6 border border-gray-70o0/50'>,
                         <h4 className='text-xl font-bold text-white mb-3'>,
                           {benefit.name}
                         </h4>,
@@ -424,21 +413,17 @@ const BenefitsPage: React.FC = () => {,
                           {benefit.description}
                         </p>,
                         <div className='space-y-2'>,
-                          {benefit.details.map((detail, detailIndex) => (,
-                            <div,
+                          {benefit.details.map((detail, detailIndex) => (
+                            <div
                               key={detailIndex}
-                              className='flex items-center text-sm',
-                            >,
+                              className='flex items-center text-sm'>,
                               <CheckCircle className='w-4 h-4 text-emerald-40o0 mr-2 flex-shrink-0' />,
                               <span className='text-gray-30o0'>{detail}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -446,11 +431,10 @@ const BenefitsPage: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Additional Perks & Benefits,
               </h2>,
@@ -460,25 +444,23 @@ const BenefitsPage: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>,
-              {additionalPerks.map((perk, index) => (,
+              {additionalPerks.map((perk, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='text-center bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='text-center bg-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0'>,
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 mb-6'>,
                     <perk.icon className='w-8 h-8 text-blue-40o0' />,
                   </div>,
                   <h3 className='text-xl font-bold text-white mb-3'>,
-                    {perk.title,}
+                    {perk.title}
                   </h3>,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {perk.description}
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -486,66 +468,64 @@ const BenefitsPage: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Why Our Benefits Stand Out,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-                Our benefits package is designed to be comprehensive,;
+                Our benefits package is designed to be comprehensive;
                 competitive, and genuinely supportive of our employees' needs,
                 and aspirations.,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  icon: Shield,;
-                  title: '10o0% Employer Paid',;
+              {[
+                {
+                  icon: Shield;
+                  title: '10o0% Employer Paid';
                   description:,
-                    'Most of our benefits are fully employer-paid, reducing your out-of-pocket costs',;
-                },;
-                {,
-                  icon: Globe,;
-                  title: 'Global Coverage',;
+                    'Most of our benefits are fully employer-paid, reducing your out-of-pocket costs';
+                };
+                {
+                  icon: Globe;
+                  title: 'Global Coverage';
                   description:,
-                    'Benefits that work for you regardless of where you live and work',;
-                },;
-                {,
-                  icon: Zap,;
-                  title: 'Above Market',;
+                    'Benefits that work for you regardless of where you live and work';
+                };
+                {
+                  icon: Zap;
+                  title: 'Above Market';
                   description:,
-                    'Our benefits package exceeds industry standards and competitor offerings',;
-                },;
-                {,
-                  icon: Users,;
-                  title: 'Family Inclusive',;
+                    'Our benefits package exceeds industry standards and competitor offerings';
+                };
+                {
+                  icon: Users;
+                  title: 'Family Inclusive';
                   description:,
-                    'Comprehensive coverage for your entire family, not just you',;
-                },;
-                {,
-                  icon: Clock,;
-                  title: 'Immediate Eligibility',;
+                    'Comprehensive coverage for your entire family, not just you';
+                };
+                {
+                  icon: Clock;
+                  title: 'Immediate Eligibility';
                   description:,
-                    'Most benefits start from day one, no waiting periods',;
-                },;
-                {,
-                  icon: Award,;
-                  title: 'Regular Updates',;
+                    'Most benefits start from day one, no waiting periods';
+                };
+                {
+                  icon: Award;
+                  title: 'Regular Updates';
                   description:,
-                    'We continuously improve our benefits based on employee feedback',;
-                },;
-              ].map((feature, index) => (,
+                    'We continuously improve our benefits based on employee feedback';
+                };
+              ].map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='text-center',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='text-center'>,
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-50o0/30 mb-6'>,
                     <feature.icon className='w-8 h-8 text-blue-40o0' />,
                   </div>,
@@ -555,8 +535,7 @@ const BenefitsPage: React.FC = () => {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -564,9 +543,9 @@ const BenefitsPage: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Ready to Experience These Benefits?,
@@ -577,17 +556,15 @@ const BenefitsPage: React.FC = () => {,
                 excited about our mission.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/careers',
-                  className='inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0 transform hover:scale-10o5',
-                >,
+                  className='inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0 transform hover:scale-10o5'>,
                   <Award className='w-5 h-5 mr-2' />,
                   View Open Positions,
                 </Link>,
-                <Link,
+                <Link
                   href='/culture',
-                  className='inline-flex items-center px-8 py-4 rounded-xl border border-blue-50o0/50 text-blue-40o0 font-semibold hover:bg-blue-50o0/10 transition-all duration-20o0',
-                >,
+                  className='inline-flex items-center px-8 py-4 rounded-xl border border-blue-50o0/50 text-blue-40o0 font-semibold hover:bg-blue-50o0/10 transition-all duration-20o0'>,
                   <Users className='w-5 h-5 mr-2' />,
                   Learn About Our Culture,
                 </Link>,
@@ -596,9 +573,5 @@ const BenefitsPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,};
-,
-export default BenefitsPage,
-,
+    </Layout>)};
+export default BenefitsPage;

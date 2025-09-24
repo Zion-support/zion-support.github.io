@@ -1,25 +1,21 @@
 import { Link } from 'react-router-dom',
 import { motion } from 'framer-motion',
-import {,
-  MapPin,;
-  Phone,;
-  Mail,;
-  Twitter,;
-  Linkedin,;
-  Facebook,;
-  Instagram,;
-  Github,;
-  Heart,;
-  ArrowUp,
-} from 'lucide-react',
+import {
+  MapPin;
+  Phone;
+  Mail;
+  Twitter;
+  Linkedin;
+  Facebook;
+  Instagram;
+  Github;
+  Heart;
+  ArrowUp} from 'lucide-react',
 import { FooterNewsletter } from './FooterNewsletter',
-,
-const Footer = () => {,
-  const scrollToTop = () => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
-  return (,
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  return (
     <footer className="bg-zion-blue-dark text-white relative overflow-hidden">,
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">,
@@ -29,13 +25,13 @@ const Footer = () => {,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">,
-          {/* Contact & Social */,}
+          {/* Contact & Social */}
           <div className="lg: col-span-2">,
             <motion.div,
               className="mb-6",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >,
               <h3 className="text-white font-semibold mb-4 text-lg">Contact Us</h3>,
               <div className="space-y-3">,
@@ -62,8 +58,8 @@ const Footer = () => {,
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full",
                 aria-label="Twitter",
                 title="Twitter",
-                whileHover={{ scale: 1.1 ,}} ,
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }} ,
+                whileTap={{ scale: 0.95 }}
               >,
                 <Twitter className="h-5 w-5" aria-label="Twitter" />,
               </motion.a>,
@@ -74,8 +70,8 @@ const Footer = () => {,
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full",
                 aria-label="LinkedIn",
                 title="LinkedIn",
-                whileHover={{ scale: 1.1 ,}} ,
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }} ,
+                whileTap={{ scale: 0.95 }}
               >,
                 <Linkedin className="h-5 w-5" aria-label="LinkedIn" />,
               </motion.a>,
@@ -86,8 +82,8 @@ const Footer = () => {,
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full",
                 aria-label="Facebook",
                 title="Facebook",
-                whileHover={{ scale: 1.1 ,}} ,
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }} ,
+                whileTap={{ scale: 0.95 }}
               >,
                 <Facebook className="h-5 w-5" aria-label="Facebook" />,
               </motion.a>,
@@ -98,8 +94,8 @@ const Footer = () => {,
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full",
                 aria-label="Instagram",
                 title="Instagram",
-                whileHover={{ scale: 1.1 ,}} ,
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }} ,
+                whileTap={{ scale: 0.95 }}
               >,
                 <Instagram className="h-5 w-5" aria-label="Instagram" />,
               </motion.a>,
@@ -110,8 +106,8 @@ const Footer = () => {,
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full",
                 aria-label="GitHub",
                 title="GitHub",
-                whileHover={{ scale: 1.1 ,}} ,
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }} ,
+                whileTap={{ scale: 0.95 }}
               >,
                 <Github className="h-5 w-5" aria-label="GitHub" />,
               </motion.a>,
@@ -130,7 +126,7 @@ const Footer = () => {,
               <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">IT Onsite Services</Link></li>,
             </ul>,
           </div>,
-          {/* Company */,}
+          {/* Company */}
           <div>,
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>,
             <ul className="space-y-3">,
@@ -143,7 +139,7 @@ const Footer = () => {,
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Sitemap</Link></li>,
             </ul>,
           </div>,
-          {/* Support & Resources */,}
+          {/* Support & Resources */}
           <div>,
             <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>,
             <ul className="space-y-3 mb-6">,
@@ -156,7 +152,7 @@ const Footer = () => {,
               <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">System Status</Link></li>,
             </ul>,
           </div>,
-          {/* Newsletter */,}
+          {/* Newsletter */}
           <div>,
             <h3 className="text-white font-semibold mb-4 text-lg">Stay Updated</h3>,
             <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">,
@@ -172,7 +168,7 @@ const Footer = () => {,
           <div className="flex flex-col md:flex-row justify-between items-center">,
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">,
               <p className="text-zion-slate-light text-sm">,
-                &copy, {new Date().getFullYear(),} Zion Tech Group. All rights reserved.,
+                &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.,
               </p>,
               <div className="flex items-center gap-2 text-zion-slate-light/60">,
                 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>,
@@ -187,7 +183,7 @@ const Footer = () => {,
             </div>,
             <motion.div,
               className="flex items-center space-x-2 text-zion-slate-light text-sm",
-              whileHover={{ scale: 1.0o5 ,}}
+              whileHover={{ scale: 1.0o5 }}
             >,
               <span>Made with</span>,
               <Heart className="w-4 h-4 text-red-40o0 animate-pulse" />,
@@ -200,17 +196,13 @@ const Footer = () => {,
       <motion.button,
         onClick={scrollToTop}
         className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover: shadow-zion-cyan/25 transition-all duration-30o0 z-40",
-        whileHover={{ scale: 1.1 ,}}
-        whileTap={{ scale: 0.95 ,}}
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        transition={{ delay: 1 ,}}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1 }}
       >,
         <ArrowUp className="w-5 h-5" />,
       </motion.button>,
-    </footer>,
-  ),
-};
-,
-export default Footer,
-,
+    </footer>)};
+export default Footer;

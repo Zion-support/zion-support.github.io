@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function ZionGlobal2025Page() {,
-  return (,
+export default function ZionGlobal2025Page() {
+  return (
     <>,
       <Head>,
         <title>Zion Global 2025 - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function ZionGlobal2025Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

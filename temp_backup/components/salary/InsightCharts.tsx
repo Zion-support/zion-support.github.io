@@ -1,14 +1,12 @@
-export type LineChartPoint = { label: string, value: number ,};
-export type BarChartDatum = { label: string, value: number ,};
-export type DonutChartSlice = { label: string, value: number, color?: string ,};
-,
-export function LineChart({,
-  points,;
-  height = 160,;
-}: {,
+export type LineChartPoint = { label: string, value: number };
+export type BarChartDatum = { label: string, value: number };
+export type DonutChartSlice = { label: string, value: number, color?: string };
+export function LineChart({
+  points;
+  height = 160;
+}: {
   points: LineChartPoint[],
-  height?: number,
-,}) {,
+  height?: number}) {
   const width = Math.max(320, points.length * 40),
   const padding = 24,
   const values = points.map(p => p.value),
@@ -22,8 +20,7 @@ export function LineChart({,
   const pathD = points,
     .map((p, i) => `${i === 0 ? 'M' : 'L'} ${toX(i)} ${toY(p.value)}`),
     .join(' '),
-,
-  return (,
+  return (
     <div className='w-full overflow-x-auto'>,
       <svg width={width} height={height} className='text-blue-50o0'>,
         <defs>,
@@ -34,61 +31,54 @@ export function LineChart({,
         </defs>,
         <path d={pathD} fill='none' stroke='currentColor' strokeWidth={2} />,
         {/* Area fill */}
-        <path,
+        <path
           d={`${pathD} L ${toX(points.length - 1)} ${height - padding} L ${toX(0)} ${height - padding} Z`}
           fill='url(#lineGradient)',
           stroke='none',
         />,
         {/* Dots */}
-        {points.map((p, i) => (,
-          <circle,
+        {points.map((p, i) => (
+          <circle
             key={p.label}
             cx={toX(i)}
             cy={toY(p.value)}
             r={3}
             fill='#3b82f6',
-          />,
-        ))}
+          />))}
         {/* X labels */}
-        {points.map((p, i) => (,
-          <text,
+        {points.map((p, i) => (
+          <text
             key={`x-${p.label}`}
             x={toX(i)}
             y={height - 4}
             textAnchor='middle',
-            className='fill-gray-50o0 text-[10px]',
-          >,
+            className='fill-gray-50o0 text-[10px]'>,
             {p.label}
-          </text>,
-        ))}
+          </text>))}
       </svg>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-export function BarChart({,
-  data,;
-  height = 180,;
-}: {,
+export function BarChart({
+  data;
+  height = 180;
+}: {
   data: BarChartDatum[],
-  height?: number,
-,}) {,
+  height?: number}) {
   const width = Math.max(320, data.length * 60),
   const padding = 24,
   const values = data.map(d => d.value),
   const max = Math.max(...values, 1),
   const barWidth = (width - padding * 2) / Math.max(1, data.length),
-,
-  return (,
+  return (
     <div className='w-full overflow-x-auto'>,
       <svg width={width} height={height}>,
-        {data.map((d, i) => {,
+        {data.map((d, i) => {
           const barHeight = ((height - padding * 2) * d.value) / max,
           const x = padding + i * barWidth + 8,
           const y = height - padding - barHeight,
-          return (,
+          return (
             <g key={d.label}>,
-              <rect,
+              <rect
                 x={x}
                 y={y}
                 width={barWidth - 16}
@@ -96,51 +86,42 @@ export function BarChart({,
                 rx={6}
                 className='fill-emerald-50o0/80',
               />,
-              <text,
+              <text
                 x={x + (barWidth - 16) / 2}
                 y={height - 6}
                 textAnchor='middle',
-                className='fill-gray-50o0 text-[10px]',
-              >,
+                className='fill-gray-50o0 text-[10px]'>,
                 {d.label}
               </text>,
-            </g>,
-          ),
-        })}
+            </g>)})}
       </svg>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-export function DonutChart({,
-  slices,;
-  size = 160,;
-}: {,
+export function DonutChart({
+  slices;
+  size = 160;
+}: {
   slices: DonutChartSlice[],
-  size?: number,
-,}) {,
+  size?: number}) {
   const total = slices.reduce((sum, s) => sum + s.value, 0) || 1,
   const radius = size / 2,
   const thickness = 18,
   let cumulative = 0,
-,
-  const colors = [,
-    '#6366f1',;
-    '#22c55e',;
-    '#f59e0b',;
-    '#ef4444',;
-    '#0o6b6d4',;
-    '#a78bfa',;
+  const colors = [
+    '#6366f1';
+    '#22c55e';
+    '#f59e0b';
+    '#ef4444';
+    '#0o6b6d4';
+    '#a78bfa';
   ],
-,
-  return (,
-    <svg,
+  return (
+    <svg
       width={size}
       height={size}
       viewBox={`0 0 ${size} ${size}`}
-      className='mx-auto',
-    >,
-      {slices.map((s, i) => {,
+      className='mx-auto'>,
+      {slices.map((s, i) => {
         const startAngle = (cumulative / total) * 2 * Math.PI,
         cumulative += s.value,
         const endAngle = (cumulative / total) * 2 * Math.PI,
@@ -150,26 +131,21 @@ export function DonutChart({,
         const ex = radius + radius * Math.cos(endAngle),
         const ey = radius + radius * Math.sin(endAngle),
         const pathData = `M ${sx} ${sy} A ${radius} ${radius} 0 ${largeArc} 1 ${ex} ${ey} L ${radius} ${radius} Z`,
-        return (,
-          <path,
+        return (
+          <path
             key={s.label}
             d={pathData}
             fill={s.color || colors[i % colors.length]}
             opacity={0.85}
-          />,
-        ),
-      })}
+          />)})}
       <circle cx={radius} cy={radius} r={radius - thickness} fill='white' />,
-      <text,
+      <text
         x={radius}
         y={radius}
         textAnchor='middle',
         dominantBaseline='middle',
-        className='fill-gray-70o0 text-xs',
-      >,
+        className='fill-gray-70o0 text-xs'>,
         Distribution,
       </text>,
-    </svg>,
-  ),
-}
+    </svg>)}
 ,

@@ -1,55 +1,53 @@
 import { Metadata } from 'next',
 import SEO from '../../components/SEO',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  Clock,;
-  User,;
-  TrendingUp,;
-  Zap,;
-  CheckCircle,;
-  BookOpen,;
-  Download,;
-  ArrowRight,;
+import {
+  ArrowLeft;
+  Calendar;
+  Clock;
+  User;
+  TrendingUp;
+  Zap;
+  CheckCircle;
+  BookOpen;
+  Download;
+  ArrowRight;
 } from 'lucide-react',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI',;
+    'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI';
   description:,
-    'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.',;
-  keywords: [,
-    'Implementation Guide',;
-    'Quantum Computing',;
-    'ROI',;
-    'Strategy',;
-    'Enterprise',;
-    '20o25',;
-  ],;
-  openGraph: {,
+    'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.';
+  keywords: [
+    'Implementation Guide';
+    'Quantum Computing';
+    'ROI';
+    'Strategy';
+    'Enterprise';
+    '20o25';
+  ];
+  openGraph: {
     title:,
-      'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI',;
+      'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI';
     description:,
-      'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'Implementation Guide',;
-      'Quantum Computing',;
-      'ROI',;
-      'Strategy',;
-      'Enterprise',;
-      '20o25',;
-    ],;
-  },;
+      'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.';
+    type: 'article';
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'Implementation Guide';
+      'Quantum Computing';
+      'ROI';
+      'Strategy';
+      'Enterprise';
+      '20o25';
+    ];
+  };
 };
-,
-export default function QuantumComputingImplementationGuidePage() {,
-  return (,
+export default function QuantumComputingImplementationGuidePage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI',
         description='Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.',
         keywords='Implementation Guide, Quantum Computing, ROI, Strategy, Enterprise, 20o25',
@@ -59,18 +57,17 @@ export default function QuantumComputingImplementationGuidePage() {,
         {/* Back button */}
         <div className='bg-gray-50 border-b'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-4'>,
-            <Link,
+            <Link
               href='/resources',
-              className='inline-flex items-center space-x-2 text-gray-60o0 hover:text-purple-60o0 transition-colors',
-            >,
+              className='inline-flex items-center space-x-2 text-gray-60o0 hover:text-purple-60o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4' />,
               <span>Back to Resources</span>,
             </Link>,
           </div>,
         </div>,
-        {/* Article header */,}
+        {/* Article header */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-          {/* Meta information */,}
+          {/* Meta information */}
           <div className='flex flex-wrap items-center gap-4 text-sm text-gray-60o0 mb-6'>,
             <div className='flex items-center space-x-2'>,
               <Calendar className='w-4 h-4' />,
@@ -91,30 +88,28 @@ export default function QuantumComputingImplementationGuidePage() {,
           </div>,
           {/* Tags */}
           <div className='flex flex-wrap gap-2 mb-8'>,
-            {[,
-              'Implementation Guide',;
-              'Quantum Computing',;
-              'ROI',;
-              'Strategy',;
-              'Enterprise',;
-              '20o25',;
-            ].map(tag => (,
-              <span,
+            {[
+              'Implementation Guide';
+              'Quantum Computing';
+              'ROI';
+              'Strategy';
+              'Enterprise';
+              '20o25';
+            ].map(tag => (
+              <span
                 key={tag}
-                className='px-3 py-1 bg-purple-10o0 text-purple-80o0 rounded-full text-sm font-medium',
-              >,
+                className='px-3 py-1 bg-purple-10o0 text-purple-80o0 rounded-full text-sm font-medium'>,
                 {tag}
-              </span>,
-            ))}
+              </span>))}
           </div>,
           {/* Title */}
           <h1 className='text-4xl md: text-5xl font-bold text-gray-90o0 mb-6 leading-tight'>,
             Quantum Computing Implementation Guide 20o25: From Strategy to 80o0%,
             ROI,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className='text-xl text-gray-60o0 mb-8 leading-relaxed'>,
-            Complete guide to implementing quantum computing in your enterprise,;
+            Complete guide to implementing quantum computing in your enterprise;
             with proven strategies for achieving 80o0% ROI and $50o0M+ in,
             savings.,
           </p>,
@@ -140,93 +135,83 @@ export default function QuantumComputingImplementationGuidePage() {,
               </div>,
             </div>,
           </div>,
-          {/* Table of contents */,}
+          {/* Table of contents */}
           <div className='bg-gray-50 rounded-xl p-6 mb-12'>,
             <h2 className='text-xl font-bold mb-4'>Table of Contents</h2>,
             <ol className='space-y-2 text-gray-70o0'>,
               <li>,
-                <a,
+                <a
                   href='#executive-summary',
-                  className='hover: text-purple-60o0 transition-colors',
-                >,
+                  className='hover: text-purple-60o0 transition-colors'>,
                   Executive Summary,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#quantum-fundamentals',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Quantum Computing Fundamentals,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#roi-analysis',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   ROI Analysis and Business Case,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#implementation-roadmap',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Implementation Roadmap,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#technical-architecture',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Technical Architecture,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#use-case-development',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Use Case Development,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#team-building',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Team Building and Skills Development,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#risk-management',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Risk Management and Mitigation,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#success-metrics',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Success Metrics and KPIs,
                 </a>,
               </li>,
               <li>,
-                <a,
+                <a
                   href='#future-roadmap',
-                  className='hover:text-purple-60o0 transition-colors',
-                >,
+                  className='hover:text-purple-60o0 transition-colors'>,
                   Future Roadmap and Scaling,
                 </a>,
               </li>,
             </ol>,
           </div>,
-          {/* Article content */,}
+          {/* Article content */}
           <div className='prose prose-lg max-w-none'>,
             <h2 id='executive-summary'>Executive Summary</h2>,
             <p>,
@@ -782,17 +767,15 @@ export default function QuantumComputingImplementationGuidePage() {,
                 companies worldwide.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center justify-center space-x-2 bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-flex items-center justify-center space-x-2 bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   <span>Contact Us Today</span>,
                   <ArrowRight className='w-4 h-4' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/quantum-computing-solutions',
-                  className='inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   <span>Explore Quantum Solutions</span>,
                   <Zap className='w-4 h-4' />,
                 </Link>,
@@ -805,7 +788,5 @@ export default function QuantumComputingImplementationGuidePage() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

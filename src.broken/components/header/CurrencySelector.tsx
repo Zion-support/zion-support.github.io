@@ -1,20 +1,18 @@
 import { Button } from '@/components/ui/button',
-import {,
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { useCurrencySupportedCurrency } from '@/context/CurrencyContext',
 DollarSign,
-const SUPPORTED: { code: SupportedCurrency, symbol: string ,}[] = [,
-  { code: 'USD'symbol: '$' ,},;
-  { code: 'EUR'symbol: '€' ,},;
-  { code: 'GBP'symbol: '£' ,}],
-,
-export function CurrencySelector() {,
+const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
+  { code: 'USD'symbol: '$' };
+  { code: 'EUR'symbol: '€' };
+  { code: 'GBP'symbol: '£' }],
+export function CurrencySelector() {
   const { currencysetCurrency } = useCurrency(),
-,
-  return (,
+  return (
     <DropdownMenu>,
       <DropdownMenuTrigger asChild>,
         <Button variant="ghost" size="icon" className="text-white hover: bg-zion-purple/10">,
@@ -23,17 +21,14 @@ export function CurrencySelector() {,
         </Button>,
       </DropdownMenuTrigger>,
       <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">,
-        {SUPPORTED.map(c => (,
-          <DropdownMenuItem,
-            key={c.code,}
-            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover: bg-zion-purple/10',}`}
+        {SUPPORTED.map(c => (
+          <DropdownMenuItem
+            key={c.code}
+            className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover: bg-zion-purple/10'}`}
             onClick={() => setCurrency(c.code)}
           >,
             {c.symbol} {c.code}
-          </DropdownMenuItem>,
-        ))}
+          </DropdownMenuItem>))}
       </DropdownMenuContent>,
-    </DropdownMenu>,
-  ),
-}
+    </DropdownMenu>)}
 ,

@@ -1,25 +1,23 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Enterprise Automation Success Stories: Ultimate Guide',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Enterprise Automation Success Stories: Ultimate Guide';
   description:,
-    'Discover how Fortune 50o0 companies achieved 30o0%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',;
-  keywords: [,
-    'AI automation',;
-    'enterprise',;
-    'case studies',;
-    'ROI',;
-    'success stories',;
-    'Fortune 50o0',;
-  ],;
+    'Discover how Fortune 50o0 companies achieved 30o0%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.';
+  keywords: [
+    'AI automation';
+    'enterprise';
+    'case studies';
+    'ROI';
+    'success stories';
+    'Fortune 50o0';
+  ];
 };
-,
-export default function AIEnterpriseAutomationSuccessStoriesPage() {,
-  return (,
+export default function AIEnterpriseAutomationSuccessStoriesPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25 Enterprise Automation Success Stories: Ultimate Guide',
         description='Discover how Fortune 50o0 companies achieved 30o0%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',
         keywords='AI automation, enterprise, case studies, ROI, success stories, Fortune 50o0',
@@ -41,23 +39,21 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
               proven results.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Free Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Our Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Content Preview */,}
+      {/* Content Preview */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='prose prose-lg max-w-none'>,
@@ -67,7 +63,7 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
             <p>,
               In 20o25, artificial intelligence has become the cornerstone of,
               enterprise success. Companies that have embraced AI automation are,
-              seeing unprecedented results: {' ',}
+              seeing unprecedented results: {' '}
               <strong>30o0% average ROI increase</strong>,{' '}
               <strong>85% reduction in operational costs</strong>, and{' '}
               <strong>95% improvement in customer satisfaction</strong>.,
@@ -176,16 +172,14 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
                 tomorrow.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0',
-                >,
+                  className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0'>,
                   Get Free AI Assessment,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='border-2 border-purple-50o0 text-purple-50o0 px-8 py-4 rounded-lg font-bold hover:bg-purple-50o0 hover:text-white transition-all duration-30o0',
-                >,
+                  className='border-2 border-purple-50o0 text-purple-50o0 px-8 py-4 rounded-lg font-bold hover:bg-purple-50o0 hover:text-white transition-all duration-30o0'>,
                   View More Case Studies,
                 </Link>,
               </div>,
@@ -193,7 +187,5 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

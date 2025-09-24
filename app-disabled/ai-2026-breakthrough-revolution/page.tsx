@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import Card from '../../components/ui/Card',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26 Breakthrough Revolution - The Future of Artificial Intelligence',;
+    'AI 20o26 Breakthrough Revolution - The Future of Artificial Intelligence';
   description:,
-    'Discover the revolutionary AI breakthroughs of 20o26 that are transforming industries and reshaping the future of technology.',;
-  keywords: [,
-    'AI 20o26',;
-    'artificial intelligence breakthrough',;
-    'machine learning revolution',;
-    'neural networks',;
-    'quantum AI',;
-  ],;
+    'Discover the revolutionary AI breakthroughs of 20o26 that are transforming industries and reshaping the future of technology.';
+  keywords: [
+    'AI 20o26';
+    'artificial intelligence breakthrough';
+    'machine learning revolution';
+    'neural networks';
+    'quantum AI';
+  ];
 };
-,
-export default function AI20o26BreakthroughRevolution() {,
-  return (,
+export default function AI20o26BreakthroughRevolution() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26 Breakthrough Revolution - The Future of Artificial Intelligence',
         description='Discover the revolutionary AI breakthroughs of 20o26 that are transforming industries and reshaping the future of technology.',
         keywords='AI 20o26, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI',
@@ -39,27 +37,25 @@ export default function AI20o26BreakthroughRevolution() {,
             </h1>,
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
               Experience the most transformative AI breakthroughs of 20o26. From,
-              quantum-enhanced neural networks to autonomous business systems,;
+              quantum-enhanced neural networks to autonomous business systems;
               discover how AI is revolutionizing every aspect of human life.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
                 Get Early Access,
               </Link>,
-              <Link,
+              <Link
                 href='/ai-20o26',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
                 Explore More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Key Breakthroughs Section */,}
+      {/* Key Breakthroughs Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -104,7 +100,7 @@ export default function AI20o26BreakthroughRevolution() {,
                 Predictive Intelligence,
               </h3>,
               <p className='text-gray-20o0 mb-6'>,
-                Advanced predictive AI systems that can forecast market trends,;
+                Advanced predictive AI systems that can forecast market trends;
                 customer behavior, and business outcomes with unprecedented,
                 accuracy and detail.,
               </p>,
@@ -143,7 +139,7 @@ export default function AI20o26BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack */,}
+      {/* Technology Stack */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -195,7 +191,7 @@ export default function AI20o26BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold mb-6'>,
@@ -207,22 +203,18 @@ export default function AI20o26BreakthroughRevolution() {,
             and achieve unprecedented success.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
               Start Your AI Journey,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
               Learn More,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

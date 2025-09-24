@@ -1,52 +1,47 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Code,;
-  Database, Globe, Shield, Cpu, Users2, Award,;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock,;
-  Server, GitBranch, Cloud, Monitor, Settings,;
-  RefreshCw, Play, Pause, AlertTriangle, CheckCircle2, Building,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'Autonomous DevOps Platform | Zion Tech Group',;
-  description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',;
-  keywords: 'autonomous DevOps, AI DevOps, automated deployment, infrastructure automation, CI/CD, monitoring',;
-  openGraph: {,
-    title: 'Autonomous DevOps Platform | Zion Tech Group',;
-    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',;
-    url: 'https://ziontechgroup.com/autonomous-devops-platform',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-devops-platform.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'Autonomous DevOps Platform',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Autonomous DevOps Platform | Zion Tech Group',;
-    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',;
-    images: ['https://ziontechgroup.com/og-image-devops-platform.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/autonomous-devops-platform',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-export default function AutonomousDevOpsPlatform() {,
-  return (,
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Code;
+  Database, Globe, Shield, Cpu, Users2, Award;
+  CheckCircle, Target, BarChart3, TrendingUp, Lock;
+  Server, GitBranch, Cloud, Monitor, Settings;
+  RefreshCw, Play, Pause, AlertTriangle, CheckCircle2, Building} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'Autonomous DevOps Platform | Zion Tech Group';
+  description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
+  keywords: 'autonomous DevOps, AI DevOps, automated deployment, infrastructure automation, CI/CD, monitoring';
+  openGraph: {
+    title: 'Autonomous DevOps Platform | Zion Tech Group';
+    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
+    url: 'https://ziontechgroup.com/autonomous-devops-platform';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-devops-platform.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'Autonomous DevOps Platform'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Autonomous DevOps Platform | Zion Tech Group';
+    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
+    images: ['https://ziontechgroup.com/og-image-devops-platform.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/autonomous-devops-platform'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+export default function AutonomousDevOpsPlatform() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -61,28 +56,26 @@ export default function AutonomousDevOpsPlatform() {,
               Autonomous DevOps Platform,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Transform your development operations with AI-powered automation that handles deployment,;
+              Transform your development operations with AI-powered automation that handles deployment;
               monitoring, and infrastructure management autonomously.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#features",
-                className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover:bg-orange-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover:bg-orange-50o0/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -128,7 +121,7 @@ export default function AutonomousDevOpsPlatform() {,
               </div>,
               <h3 className="text-xl font-semibold mb-3">Auto-Scaling</h3>,
               <p className="text-gray-40o0">,
-                Dynamic resource allocation that automatically scales based on demand and performance.,
+                Dynamic resource allocation that automatically scales based on demand and window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-blue-90o0/20 border border-indigo-50o0/20">,
@@ -245,7 +238,7 @@ export default function AutonomousDevOpsPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -263,7 +256,7 @@ export default function AutonomousDevOpsPlatform() {,
               </div>,
               <h3 className="text-xl font-semibold mb-3">Continuous Monitoring</h3>,
               <p className="text-gray-40o0">,
-                AI continuously monitors code changes, infrastructure, and system performance.,
+                AI continuously monitors code changes, infrastructure, and system window.window.performance.,
               </p>,
             </div>,
             <div className="text-center">,
@@ -375,24 +368,22 @@ export default function AutonomousDevOpsPlatform() {,
             Join the future of DevOps where AI-powered automation meets intelligent infrastructure management.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Your Project,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover: bg-orange-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover: bg-orange-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -404,14 +395,14 @@ export default function AutonomousDevOpsPlatform() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-orange-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-orange-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -425,10 +416,9 @@ export default function AutonomousDevOpsPlatform() {,
               <p className="text-gray-40o0 mb-6">,
                 Let's discuss your DevOps automation needs. Schedule a consultation with our team today.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover: from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-60o0 to-red-60o0 rounded-xl font-semibold text-white hover: from-orange-70o0 hover:to-red-70o0 transition-all duration-30o0">,
                 Schedule Consultation,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -436,7 +426,5 @@ export default function AutonomousDevOpsPlatform() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

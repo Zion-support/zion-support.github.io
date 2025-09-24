@@ -1,8 +1,7 @@
 import Link from 'next/link',
 BrainZapEyeStarArrowRightUsersTarget,
-,
-const NeuralInterfaceRevolution20o35PromotionBanner = () => {,
-  return (,
+const NeuralInterfaceRevolution20o35PromotionBanner = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-16'>,
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-emerald-40o0/10 via-cyan-40o0/10 to-blue-40o0/10 animate-pulse'></div>,
@@ -27,7 +26,7 @@ const NeuralInterfaceRevolution20o35PromotionBanner = () => {,
             direct brain-computer communicationenhanced cognitionand seamless,
             digital integration,
           </p>,
-          {/* Key Features */,}
+          {/* Key Features */}
           <div className='grid md: grid-cols-3 gap-6 mb-12'>,
             <div className='bg-gradient-to-br from-emerald-80o0/50 to-teal-80o0/50 backdrop-blur-sm rounded-2xl p-6 border border-emerald-50o0/30'>,
               <div className='bg-gradient-to-r from-emerald-40o0 to-cyan-40o0 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4'>,
@@ -62,7 +61,7 @@ const NeuralInterfaceRevolution20o35PromotionBanner = () => {,
               <div className='text-cyan-40o0 font-bold mt-2'>Mind-Blowing</div>,
             </div>,
           </div>,
-          {/* Revolutionary Applications */,}
+          {/* Revolutionary Applications */}
           <div className='bg-gradient-to-r from-emerald-80o0/30 to-cyan-80o0/30 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-emerald-50o0/30'>,
             <h3 className='text-2xl font-bold mb-6 bg-gradient-to-r from-emerald-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
               Revolutionary Neural Applications,
@@ -92,32 +91,30 @@ const NeuralInterfaceRevolution20o35PromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/neural-interface-20o35',
-              className='bg-gradient-to-r from-emerald-40o0 to-cyan-40o0 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-30o0 hover:to-cyan-30o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-emerald-40o0 to-cyan-40o0 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-30o0 hover:to-cyan-30o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center'>,
               <Brain className='w-5 h-5 mr-2' />,
               Explore Neural Interfaces,
               <ArrowRight className='w-5 h-5 ml-2' />,
             </Link>,
-            <Link,
+            <Link
               href='/neural-applications',
-              className='border-2 border-emerald-40o0 text-emerald-40o0 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-40o0 hover:text-black transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='border-2 border-emerald-40o0 text-emerald-40o0 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-40o0 hover:text-black transition-all duration-30o0 flex items-center justify-center'>,
               View Applications,
               <ArrowRight className='w-5 h-5 ml-2' />,
             </Link>,
           </div>,
-          {/* Urgency Message */,}
+          {/* Urgency Message */}
           <div className='mt-8 p-4 bg-gradient-to-r from-green-60o0/20 to-emerald-60o0/20 border border-green-50o0/30 rounded-xl'>,
             <p className='text-green-30o0 font-semibold'>,
               🧠 BREAKTHROUGH ALERT: First 25 individuals get exclusive access,
               to advanced neural interface prototypes,
             </p>,
           </div>,
-          {/* Technical Specifications */,}
+          {/* Technical Specifications */}
           <div className='mt-8 grid md: grid-cols-4 gap-4'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold bg-gradient-to-r from-emerald-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
@@ -146,9 +143,5 @@ const NeuralInterfaceRevolution20o35PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NeuralInterfaceRevolution20o35PromotionBanner,
-,
+    </div>)};
+export default NeuralInterfaceRevolution20o35PromotionBanner;

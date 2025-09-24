@@ -1,101 +1,97 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function AutomationInsightsPage() {,
-  const automationTrends = [,
-    {,
-      id: 'ai-automation-20o25',;
-      title: 'AI Automation Trends 20o25',;
+export default function AutomationInsightsPage() {
+  const automationTrends = [
+    {
+      id: 'ai-automation-20o25';
+      title: 'AI Automation Trends 20o25';
       description:,
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',;
-      category: 'Trends',;
-      readTime: '8 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'autonomous-systems',;
-      title: 'Building Autonomous Systems',;
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.';
+      category: 'Trends';
+      readTime: '8 min read';
+      featured: true;
+    };
+    {
+      id: 'autonomous-systems';
+      title: 'Building Autonomous Systems';
       description:,
-        'Learn how to design and implement truly autonomous systems that operate independently.',;
-      category: 'Implementation',;
-      readTime: '12 min read',;
-      featured: false,;
-    },;
-    {,
-      id: 'automation-roi',;
-      title: 'Calculating Automation ROI',;
+        'Learn how to design and implement truly autonomous systems that operate independently.';
+      category: 'Implementation';
+      readTime: '12 min read';
+      featured: false;
+    };
+    {
+      id: 'automation-roi';
+      title: 'Calculating Automation ROI';
       description:,
-        'A comprehensive guide to measuring and maximizing return on investment for automation projects.',;
-      category: 'Business',;
-      readTime: '10 min read',;
-      featured: false,;
-    },;
+        'A comprehensive guide to measuring and maximizing return on investment for automation projects.';
+      category: 'Business';
+      readTime: '10 min read';
+      featured: false;
+    };
   ],
-,
-  const automationTools = [,
-    {,
-      id: 'automation-framework',;
-      title: 'Zion Automation Framework',;
+  const automationTools = [
+    {
+      id: 'automation-framework';
+      title: 'Zion Automation Framework';
       description:,
-        'Our proprietary framework for building scalable automation solutions.',;
-      type: 'Framework',;
-      complexity: 'Advanced',;
-    },;
-    {,
-      id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',;
+        'Our proprietary framework for building scalable automation solutions.';
+      type: 'Framework';
+      complexity: 'Advanced';
+    };
+    {
+      id: 'performance-monitor';
+      title: 'Performance Monitoring Suite';
       description:,
-        'Comprehensive tools for monitoring and optimizing automation performance.',;
-      type: 'Tool',;
-      complexity: 'Intermediate',;
-    },;
-    {,
-      id: 'deployment-automation',;
-      title: 'Deployment Automation',;
-      description: 'Streamlined deployment processes for automation systems.',;
-      type: 'Process',;
-      complexity: 'Beginner',;
-    },;
+        'Comprehensive tools for monitoring and optimizing automation window.window.performance.';
+      type: 'Tool';
+      complexity: 'Intermediate';
+    };
+    {
+      id: 'deployment-automation';
+      title: 'Deployment Automation';
+      description: 'Streamlined deployment processes for automation systems.';
+      type: 'Process';
+      complexity: 'Beginner';
+    };
   ],
-,
-  const successMetrics = [,
-    {,
-      metric: '227',;
-      label: 'Active Automations',;
-      description: 'Successfully deployed and running',;
-    },;
-    {,
-      metric: '99.9%',;
-      label: 'Uptime',;
-      description: 'Reliable automation performance',;
-    },;
-    {,
-      metric: '40%',;
-      label: 'Efficiency Gain',;
-      label: 'Average improvement across projects',;
-    },;
-    {,
-      metric: '2,960+',;
-      label: 'Pages Generated',;
-      description: 'Content created autonomously',;
-    },;
+  const successMetrics = [
+    {
+      metric: '227';
+      label: 'Active Automations';
+      description: 'Successfully deployed and running';
+    };
+    {
+      metric: '99.9%';
+      label: 'Uptime';
+      description: 'Reliable automation performance';
+    };
+    {
+      metric: '40%';
+      label: 'Efficiency Gain';
+      label: 'Average improvement across projects';
+    };
+    {
+      metric: '2,960+';
+      label: 'Pages Generated';
+      description: 'Content created autonomously';
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>,
           Automation Insights | Zion Tech Group - AI Automation Expertise,
         </title>,
-        <meta,
+        <meta
           name='description',
           content="Explore Zion Tech 'Group', 's automation insightstrendsand expertise in building autonomous systems.",
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Automation Insights | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Expert insights on AI automationautonomous systemsand industry trends.',
         />,
@@ -113,14 +109,14 @@ export default function AutomationInsightsPage() {,
             </p>,
           </section>,
           <section className='mx-auto max-w-7xl'>,
-            {/* Success Metrics */,}
+            {/* Success Metrics */}
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>,
               <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>,
                 Our Automation Success,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-                {successMetrics.map(itemindex => (,
-                  <div key={index,} className='text-center'>,
+                {successMetrics.map(itemindex => (
+                  <div key={index} className='text-center'>,
                     <div className='text-4xl font-bold text-fuchsia-400 mb-2'>,
                       {item.metric}
                     </div>,
@@ -130,8 +126,7 @@ export default function AutomationInsightsPage() {,
                     <div className='text-sm text-white/70'>,
                       {item.description}
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Automation Trends */}
@@ -140,14 +135,13 @@ export default function AutomationInsightsPage() {,
                 Latest Automation Trends,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                {automationTrends.map(trendindex => (,
-                  <div,
-                    key={index,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover: bg-white/15 transition-all duration-300',
-                  >,
+                {automationTrends.map(trendindex => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover: bg-white/15 transition-all duration-300'>,
                     <div className='flex items-center justify-between mb-4'>,
                       <span className='px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full'>,
-                        {trend.category,}
+                        {trend.category}
                       </span>,
                       <span className='text-white/60 text-sm'>,
                         {trend.readTime}
@@ -157,14 +151,12 @@ export default function AutomationInsightsPage() {,
                       {trend.title}
                     </h3>,
                     <p className='text-white/70 mb-4'>{trend.description}</p>,
-                    <Link,
+                    <Link
                       href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors',
-                    >,
+                      className='inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors'>,
                       Read More <span className='ml-1'>→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </div>,
             {/* Automation Tools & Frameworks */}
@@ -173,11 +165,10 @@ export default function AutomationInsightsPage() {,
                 Our Automation Tools,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-                {automationTools.map(toolindex => (,
-                  <div,
-                    key={index,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center',
-                  >,
+                {automationTools.map(toolindex => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>,
                     <div className='text-4xl mb-4'>🔧</div>,
                     <h3 className='text-xl font-bold mb-3 text-white'>,
                       {tool.title}
@@ -191,8 +182,7 @@ export default function AutomationInsightsPage() {,
                         {tool.complexity}
                       </span>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Call to Action */}
@@ -205,16 +195,14 @@ export default function AutomationInsightsPage() {,
                 future,
               </p>,
               <div className='flex flex-wrap justify-center gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105',
-                >,
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'>,
                   Get Started,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200',
-                >,
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'>,
                   View Case Studies,
                 </Link>,
               </div>,
@@ -222,7 +210,5 @@ export default function AutomationInsightsPage() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

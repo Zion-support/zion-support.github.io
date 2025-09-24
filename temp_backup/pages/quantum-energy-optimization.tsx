@@ -1,62 +1,57 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Code,;
-  Database, Globe, Shield, Cpu, Users2, Award,;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock,;
-  Server, Network, Monitor, Settings, RefreshCw,;
-  Play, Pause, AlertTriangle, CheckCircle2, Building,;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,;
-  Wallet, CreditCard, PiggyBank, Building2, Activity,;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio,;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,;
-  Calendar, Clock, Target, Users2, FileText2, PieChart,;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,;
-  TrendingUp, Shield, Globe, Database, Network, Zap,;
-  Battery, Sun, Wind, Leaf, Gauge, Activity, TrendingUp,;
-  BarChart3, Target, Settings, Cog, Wrench, Monitor,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'Quantum Energy Optimization | Zion Tech Group',;
-  description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',;
-  keywords: 'quantum energy optimization, smart grid, energy efficiency, renewable energy, AI energy management, sustainable energy, quantum energy',;
-  openGraph: {,
-    title: 'Quantum Energy Optimization | Zion Tech Group',;
-    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',;
-    url: 'https://ziontechgroup.com/quantum-energy-optimization',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-quantum-energy.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'Quantum Energy Optimization',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Quantum Energy Optimization | Zion Tech Group',;
-    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',;
-    images: ['https://ziontechgroup.com/og-image-quantum-energy.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/quantum-energy-optimization',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-export default function QuantumEnergyOptimization() {,
-  return (,
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Code;
+  Database, Globe, Shield, Cpu, Users2, Award;
+  CheckCircle, Target, BarChart3, TrendingUp, Lock;
+  Server, Network, Monitor, Settings, RefreshCw;
+  Play, Pause, AlertTriangle, CheckCircle2, Building;
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
+  Wallet, CreditCard, PiggyBank, Building2, Activity;
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
+  Film, Headphones, Camera, Gamepad2, Tv, Radio;
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
+  Calendar, Clock, Target, Users2, FileText2, PieChart;
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
+  TrendingUp, Shield, Globe, Database, Network, Zap;
+  Battery, Sun, Wind, Leaf, Gauge, Activity, TrendingUp;
+  BarChart3, Target, Settings, Cog, Wrench, Monitor} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'Quantum Energy Optimization | Zion Tech Group';
+  description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
+  keywords: 'quantum energy optimization, smart grid, energy efficiency, renewable energy, AI energy management, sustainable energy, quantum energy';
+  openGraph: {
+    title: 'Quantum Energy Optimization | Zion Tech Group';
+    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
+    url: 'https://ziontechgroup.com/quantum-energy-optimization';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-quantum-energy.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'Quantum Energy Optimization'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Quantum Energy Optimization | Zion Tech Group';
+    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
+    images: ['https://ziontechgroup.com/og-image-quantum-energy.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/quantum-energy-optimization'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+export default function QuantumEnergyOptimization() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -75,24 +70,22 @@ export default function QuantumEnergyOptimization() {,
               optimization platform featuring AI-driven efficiency and smart grid intelligence.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#features",
-                className="inline-flex items-center px-8 py-4 border border-green-50o0/30 rounded-xl font-semibold text-green-30o0 hover:bg-green-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-green-50o0/30 rounded-xl font-semibold text-green-30o0 hover:bg-green-50o0/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -147,7 +140,7 @@ export default function QuantumEnergyOptimization() {,
               </div>,
               <h3 className="text-xl font-semibold mb-3">Real-Time Monitoring</h3>,
               <p className="text-gray-40o0">,
-                Continuous energy monitoring and predictive maintenance for optimal performance.,
+                Continuous energy monitoring and predictive maintenance for optimal window.window.performance.,
               </p>,
             </div>,
             <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-blue-90o0/20 border border-purple-50o0/20">,
@@ -255,7 +248,7 @@ export default function QuantumEnergyOptimization() {,
           </div>,
         </div>,
       </section>,
-      {/* Energy Applications Section */,}
+      {/* Energy Applications Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -375,7 +368,7 @@ export default function QuantumEnergyOptimization() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases Section */,}
+      {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -454,24 +447,22 @@ export default function QuantumEnergyOptimization() {,
             Experience the future of energy optimization with our revolutionary quantum platform.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Optimizing,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-green-50o0/30 rounded-xl font-semibold text-green-30o0 hover: bg-green-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-green-50o0/30 rounded-xl font-semibold text-green-30o0 hover: bg-green-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -483,14 +474,14 @@ export default function QuantumEnergyOptimization() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-green-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-green-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -504,10 +495,9 @@ export default function QuantumEnergyOptimization() {,
               <p className="text-gray-40o0 mb-6">,
                 Let's discuss your energy needs and how quantum optimization can transform your operations.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover: from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover: from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0">,
                 Schedule Consultation,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -515,6 +505,4 @@ export default function QuantumEnergyOptimization() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}

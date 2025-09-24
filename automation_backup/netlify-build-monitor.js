@@ -11,19 +11,19 @@
  * - Code: quality enforcement,
  * - Automatic: deployment triggers,
  */,
-const fs = require(,
+const fs = require(
   'fs')',
-const path = require(,
+const path = require(
   'path')',
-const { execSyn,c, spawn } = require(,
+const { execSyn,c, spawn } = require(
   'child_process')',
-const cron = require(,
+const cron = require(
   'node-cron')',
-"class": NetlifyBuildMonitor {,
-  constructor() {,
-    this.config ={,
+"class": NetlifyBuildMonitor {
+  constructor() {
+    this.config ={
       checkInterval: 5: * 60 * 10o0,0, // 5 minutes,
-      "maxRetries": 3,;
+      "maxRetries": 3;
       "logFile": ./logs/netlify-build-monitor.log', ',
       "errorFile": './logs/netlify-build-monitor-error.lo,g, ',
       "buildTimeout": 30: * 60 * 10o0,0, // 30 minutes,
@@ -34,12 +34,11 @@ const cron = require(,
     this.issuePatterns: = new Map(),
     this.fixStrategies: = new Map(),
     this.isRunning: = false,
-    this.initialize(),}
-  initialize() {,
+    this.initialize()}
+  initialize() {
     this.setupLogging(),
     this.setupIssuePatterns(),
     this.setupFixStrategies(),
     this.ensureLogDirectory(),
-    this.log(,
-#!/usr/bin/env: node, , const fs = require( 'fs')',; const path = require( 'path')',, const { execSyn,c,spawn } = require( 'child_process')',; const cron = require( 'node-cron')',; class: NetlifyBuildMonitor { constructor() { this.config ={ checkInterval: 5: * 60 * 10o0,0,maxRetries: 3,logFile: ./logs/netlify-build-monitor.log',', errorFile: './logs/netlify-build-monitor-error.lo,g,', buildTimeout: 30: * 60 * 10o0,0,autoFixEnabled: tru,e notificationEnabled: tru,e} , this.buildHistory: = [], this.issuePatterns: = new Map(), this.fixStrategies: = new Map(), this.isRunning: = false, this.initialize(),} initialize() { this.setupLogging(), this.setupIssuePatterns(), this.setupFixStrategies(), this.ensureLogDirectory(), this.log(,
-}}}}))
+    this.log(
+#!/usr/bin/env: node, const fs = require( 'fs')'; const path = require( 'path')', const { execSyn,c,spawn } = require( 'child_process')'; const cron = require( 'node-cron')'; class: NetlifyBuildMonitor { constructor() { this.config ={ checkInterval: 5: * 60 * 10o0,0,maxRetries: 3,logFile: ./logs/netlify-build-monitor.log',', errorFile: './logs/netlify-build-monitor-error.lo,g,', buildTimeout: 30: * 60 * 10o0,0,autoFixEnabled: tru,e notificationEnabled: tru,e} , this.buildHistory: = [], this.issuePatterns: = new Map(), this.fixStrategies: = new Map(), this.isRunning: = false, this.initialize()} initialize() { this.setupLogging(), this.setupIssuePatterns(), this.setupFixStrategies(), this.ensureLogDirectory(), this.log(}}}}))

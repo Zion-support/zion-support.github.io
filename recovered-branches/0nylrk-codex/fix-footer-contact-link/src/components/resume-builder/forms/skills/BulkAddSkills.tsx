@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -8,80 +8,65 @@ import { useResume } from '@/hooks/useResume',
 import { BulkAddSkillsProps } from './types',
 import { AlertDescription } from '@/components/ui/alert',
 import { Textarea } from '@/components/ui/textarea',
-,
-export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {,
+export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
   const [bulkSkillsetBulkSkills] = useState(''),
   const [errorsetError] = useState<string | null>(null),
   const { enhanceContentisEnhancing } = useResumeEnhancer(),
   const { addSkill } = useResume(),
-,
-  const handleCategorizeSkills = async () => {,
-    if (!bulkSkills || bulkSkills.trim().length === 0) {,
+  const handleCategorizeSkills = async () => {
+    if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize'),
-      return,
-    }
+      return}
 ,
     setError(null),
-    try {,
-      const enhancedContent = await enhanceContent(,
-        bulkSkills,;
-        'skill-categorization',
-      ),
-,
-      if (enhancedContent) {,
-        try {,
+    try {
+      const enhancedContent = await enhanceContent(
+        bulkSkills;
+        'skill-categorization'),
+      if (enhancedContent) {
+        try {
           // Parse the JSON response,
           const categorizedSkills = JSON.parse(enhancedContent),
-,
           // Add the categorized skills,
-          for (const [categoryskillsList] of Object.entries(categorizedSkills)) {,
-            if (Array.isArray(skillsList)) {,
-              for (const skillName of skillsList as string[]) {,
-                await addSkill(resumeId{,
-                  name: skillName,;
-                  category: category,;
-                  proficiency: 3,}),
-              }
+          for (const [categoryskillsList] of Object.entries(categorizedSkills)) {
+            if (Array.isArray(skillsList)) {
+              for (const skillName of skillsList as string[]) {
+                await addSkill(resumeId{
+                  name: skillName;
+                  category: category;
+                  proficiency: 3})}
             }
           }
 ,
           // Reset the form and bulk input,
           setBulkSkills(''),
-,
           // Refresh the skills,
-          await onSuccess(),
-        } catch (err) {,
-          setError('Failed to parse categorized skills. Please try again.'),
-        }
+          await onSuccess()} catch (err) {
+          setError('Failed to parse categorized skills. Please try again.')}
       }
-    } catch (err: any) {,
-      setError(err.message || 'Failed to categorize skills'),
-    ,}
+    } catch (err: any) {
+      setError(err.message || 'Failed to categorize skills')}
   };
-,
-  return (,
+  return (
     <div className="bg-muted/40 p-6 rounded-lg">,
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>,
       <div className="space-y-4">,
         <div className="space-y-2">,
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>,
-          <Textarea,
+          <Textarea
             className="min-h-24",
             placeholder="PythonReactTypeScriptProject ManagementCommunication...",
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />,
         </div>,
-        <Button,
+        <Button
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
-          className="gap-2",
-        >,
-          {isEnhancing ? (,
-            <Loader2 className="h-4 w-4 animate-spin" />,
-          ) : (,
-            <Sparkles className="h-4 w-4" />,
-          )}
+          className="gap-2">,
+          {isEnhancing ? (
+            <Loader2 className="h-4 w-4 animate-spin" />) : (
+            <Sparkles className="h-4 w-4" />)}
           Categorize with AI,
         </Button>,
         <p className="text-xs text-muted-foreground mt-1">,
@@ -89,7 +74,4 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {,
         </p>,
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>,
-    </div>,
-  ),
-};
-,
+    </div>)};

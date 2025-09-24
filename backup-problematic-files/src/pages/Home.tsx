@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { Link } from 'react-router-dom',
-,
-const HomePage: React.FC = () => {,
-  return (,
+const HomePage: React.FC = () => {
+  return (
     <div className='animate-fade-in'>,
       <section className='text-center py-12 md:py-20'>,
         <h1 className='text-4xl md:text-6xl font-bold text-gray-90o0 mb-6 leading-tight'>,
@@ -11,40 +10,38 @@ const HomePage: React.FC = () => {,
           <span className='text-purple-60o0'>Enterprise IT</span>,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto leading-relaxed'>,
-          We design, build and operate production-grade platforms: AI copilots,;
+          We design, build and operate production-grade platforms: AI copilots;
           data/ML pipelines, automation, cloud infra, and secure micro SaaS,
           products.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             to='/services',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors focus-visible:focus',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors focus-visible:focus'>,
             Explore Services,
           </Link>,
-          <a,
+          <a
             href='https://ziontechgroup.com',
-            className='border-2 border-gray-30o0 text-gray-70o0 px-8 py-3 rounded-lg font-semibold hover:border-gray-40o0 transition-colors focus-visible:focus',
-          >,
+            className='border-2 border-gray-30o0 text-gray-70o0 px-8 py-3 rounded-lg font-semibold hover:border-gray-40o0 transition-colors focus-visible:focus'>,
             Visit Main Site,
           </a>,
         </div>,
       </section>,
       <section className='py-12'>,
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-          <Card,
+          <Card
             title='Micro SaaS',
             href='/services/micro-saas',
             description='End-to-end product engineering with billing, auth, analytics and growth.',
             icon='🚀',
           />,
-          <Card,
+          <Card
             title='AI Services',
             href='/services/ai-services',
             description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.',
             icon='🤖',
           />,
-          <Card,
+          <Card
             title='IT Services',
             href='/services/it-services',
             description='Cloud migration, DevOps, SRE, security hardening and cost optimization.',
@@ -63,67 +60,56 @@ const HomePage: React.FC = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-          <FeatureCard,
+          <FeatureCard
             title='Fast Delivery',
             description='Rapid prototyping and deployment with modern tools and practices.',
           />,
-          <FeatureCard,
+          <FeatureCard
             title='Scalable Architecture',
             description='Built for growth with cloud-native, microservices architecture.',
           />,
-          <FeatureCard,
+          <FeatureCard
             title='24/7 Support',
             description='Round-the-clock monitoring and support for your critical systems.',
           />,
-          <FeatureCard,
+          <FeatureCard
             title='Cost Effective',
             description='Optimized solutions that reduce operational costs and improve efficiency.',
           />,
         </div>,
       </section>,
-    </div>,
-  ),
-};
-,
-function Card({,
-  title,;
-  description,;
-  href,;
-  icon,;
-}: {,
+    </div>)};
+function Card({
+  title;
+  description;
+  href;
+  icon;
+}: {
   title: string,
   description: string,
   href: string,
-  icon: string,
-,}) {,
-  return (,
-    <Link,
+  icon: string}) {
+  return (
+    <Link
       to={href}
-      className='group border border-gray-20o0 rounded-xl p-6 block hover: border-blue-30o0 hover:shadow-lg transition-all duration-20o0 bg-white',
-    >,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      className='group border border-gray-20o0 rounded-xl p-6 block hover: border-blue-30o0 hover:shadow-lg transition-all duration-20o0 bg-white'>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-blue-60o0 transition-colors'>,
-        {title,}
+        {title}
       </h3>,
       <p className='text-gray-60o0 leading-relaxed'>{description}</p>,
-    </Link>,
-  ),
-}
+    </Link>)}
 ,
-function FeatureCard({,
-  title,;
-  description,;
-}: {,
+function FeatureCard({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center p-6'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-export default HomePage,
-,
+export default HomePage;

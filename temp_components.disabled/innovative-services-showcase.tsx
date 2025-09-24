@@ -1,60 +1,50 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
+import {
   BrainZapRocketShieldGlobeCpu,
-  ArrowRightExternalLinkCheckStar,;
-  TrendingUpUsersClockDollarSignPhoneMailMapPin,
-} from 'lucide-react',
+  ArrowRightExternalLinkCheckStar;
+  TrendingUpUsersClockDollarSignPhoneMailMapPin} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { innovativeAIServices } from '../data/innovative-ai-services',
 import { innovativeITServices } from '../data/innovative-it-services',
 import { innovativeMicroSaas } from '../data/innovative-micro-saas',
-,
-export default function InnovativeServicesShowcase() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-        delayChildren: 0.2,
-      ,}
+export default function InnovativeServicesShowcase() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+        delayChildren: 0.2}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0y: 30 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.6,;
-        ease: "easeOut" as const,
-      ,}
+  const itemVariants ={
+    hidden: { opacity: 0y: 30 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.6;
+        ease: "easeOut" as const}
     }
   };
-,
-  const ServiceCard = ({ serviceindex }: { service: any, index: number ,}) => (,
+  const ServiceCard = ({ serviceindex }: { service: any, index: number }) => (
     <motion.div,
       variants={itemVariants}
-      className="group relative overflow-hidden rounded-2xl border border-gray-80o0 bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 backdrop-blur-xl transition-all duration-50o0 hover: scale-10o5 hover:border-cyan-50o0/50 hover:shadow-2xl hover:shadow-cyan-50o0/25",
-    >,
-      {/* Service Header */,}
+      className="group relative overflow-hidden rounded-2xl border border-gray-80o0 bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 backdrop-blur-xl transition-all duration-50o0 hover: scale-10o5 hover:border-cyan-50o0/50 hover:shadow-2xl hover:shadow-cyan-50o0/25">,
+      {/* Service Header */}
       <div className={`p-6 bg-gradient-to-r ${service.color} bg-clip-text`}>,
         <div className="flex items-center justify-between mb-4">,
           <span className="text-4xl">{service.icon}</span>,
-          {service.popular && (,
+          {service.popular && (
             <span className="px-3 py-1 text-xs font-semibold text-yellow-40o0 bg-yellow-40o0/10 rounded-full border border-yellow-40o0/20">,
               Popular,
-            </span>,
-          )}
+            </span>)}
         </div>,
         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>,
         <p className="text-gray-30o0 text-sm">{service.tagline}</p>,
@@ -80,12 +70,11 @@ export default function InnovativeServicesShowcase() {,
         <div className="mb-4">,
           <h4 className="text-white font-semibold mb-2">Key Features: </h4>,
           <ul className="space-y-1">,
-            {service.features.slice(0o5).map((feature: stringidx: number) => (,
-              <li key={idx,} className="flex items-center text-gray-30o0 text-sm">,
+            {service.features.slice(0o5).map((feature: stringidx: number) => (
+              <li key={idx} className="flex items-center text-gray-30o0 text-sm">,
                 <Check className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0"  />,
                 {feature}
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
         {/* Market Data */}
@@ -93,11 +82,11 @@ export default function InnovativeServicesShowcase() {,
           <div className="grid grid-cols-2 gap-2 text-xs">,
             <div>,
               <span className="text-gray-40o0">Market Size: </span>,
-              <div className="text-cyan-40o0 font-semibold">{service.marketSize,}</div>,
+              <div className="text-cyan-40o0 font-semibold">{service.marketSize}</div>,
             </div>,
             <div>,
               <span className="text-gray-40o0">Growth Rate: </span>,
-              <div className="text-green-40o0 font-semibold">{service.growthRate,}</div>,
+              <div className="text-green-40o0 font-semibold">{service.growthRate}</div>,
             </div>,
           </div>,
         </div>,
@@ -110,28 +99,24 @@ export default function InnovativeServicesShowcase() {,
         </div>,
         {/* Action Buttons */}
         <div className="flex gap-2">,
-          <a,
+          <a
             href={service.link}
-            className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-40o0 hover:to-blue-50o0 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-30o0 flex items-center justify-center group",
-          >,
+            className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-40o0 hover:to-blue-50o0 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-30o0 flex items-center justify-center group">,
             <Rocket className="w-4 h-4 mr-2 group-hover:animate-bounce"  />,
             Learn More,
           </a>,
-          <a,
+          <a
             href="/contact",
-            className="bg-gray-70o0 hover:bg-gray-60o0 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-30o0 flex items-center justify-center",
-          >,
+            className="bg-gray-70o0 hover:bg-gray-60o0 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all duration-30o0 flex items-center justify-center">,
             <ExternalLink className="w-4 h-4"  />,
           </a>,
         </div>,
       </div>,
-      {/* Hover Effects */,}
+      {/* Hover Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-blue-50o0/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0 pointer-events-none"  />,
-    </motion.div>,
-  ),
-,
-  return (,
-    <UltraAdvancedFuturisticBackground intensity={1.5,} variant="quantum-holographic-advanced">,
+    </motion.div>),
+  return (
+    <UltraAdvancedFuturisticBackground intensity={1.5} variant="quantum-holographic-advanced">,
       <div className="min-h-screen">,
         <Head>,
           <title>Innovative Services Showcase - Zion Tech Group</title>,
@@ -143,13 +128,13 @@ export default function InnovativeServicesShowcase() {,
           <meta property="og:type" content="website"  />,
           <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase"  />,
         </Head>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 50 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 1ease: "easeOut" ,}}
+              initial={{ opacity: 0y: 50 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 1ease: "easeOut" }}
             >,
               <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
                 <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
@@ -162,13 +147,13 @@ export default function InnovativeServicesShowcase() {,
                 Experience the future of technology with our revolutionary AITand micro SaaS services.,
                 Each solution is designed to transform your business and drive unprecedented growth.,
               </p>,
-              {/* Contact Info */,}
+              {/* Contact Info */}
               <div className="bg-gray-90o0/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-80o0 max-w-2xl mx-auto mb-12">,
                 <h3 className="text-white font-semibold mb-4">Ready to Transform Your Business?</h3>,
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">,
                   <div className="flex items-center justify-center">,
                     <Phone className="w-4 h-4 text-cyan-40o0 mr-2"  />,
-                    <span className="text-gray-30o0">{contactInfo.mobile,}</span>,
+                    <span className="text-gray-30o0">{contactInfo.mobile}</span>,
                   </div>,
                   <div className="flex items-center justify-center">,
                     <Mail className="w-4 h-4 text-purple-40o0 mr-2"  />,
@@ -187,12 +172,11 @@ export default function InnovativeServicesShowcase() {,
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12">,
               <div className="flex items-center justify-center mb-4">,
                 <Brain className="w-8 h-8 text-cyan-40o0 mr-3"  />,
                 <h2 className="text-4xl font-bold text-white">AI-Powered Services</h2>,
@@ -206,12 +190,10 @@ export default function InnovativeServicesShowcase() {,
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",
-              viewport={{ once: true ,}}
-              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-            >,
-              {innovativeAIServices.map((serviceindex) => (,
-                <ServiceCard key={service.id,} service={service} index={index}  />,
-              ))}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              {innovativeAIServices.map((serviceindex) => (
+                <ServiceCard key={service.id} service={service} index={index}  />))}
             </motion.div>,
           </div>,
         </section>,
@@ -219,12 +201,11 @@ export default function InnovativeServicesShowcase() {,
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-90o0/30">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12">,
               <div className="flex items-center justify-center mb-4">,
                 <Cpu className="w-8 h-8 text-purple-40o0 mr-3"  />,
                 <h2 className="text-4xl font-bold text-white">Enterprise IT Solutions</h2>,
@@ -238,12 +219,10 @@ export default function InnovativeServicesShowcase() {,
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",
-              viewport={{ once: true ,}}
-              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-            >,
-              {innovativeITServices.map((serviceindex) => (,
-                <ServiceCard key={service.id,} service={service} index={index}  />,
-              ))}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              {innovativeITServices.map((serviceindex) => (
+                <ServiceCard key={service.id} service={service} index={index}  />))}
             </motion.div>,
           </div>,
         </section>,
@@ -251,12 +230,11 @@ export default function InnovativeServicesShowcase() {,
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12">,
               <div className="flex items-center justify-center mb-4">,
                 <Rocket className="w-8 h-8 text-pink-40o0 mr-3"  />,
                 <h2 className="text-4xl font-bold text-white">Micro SaaS Solutions</h2>,
@@ -270,12 +248,10 @@ export default function InnovativeServicesShowcase() {,
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",
-              viewport={{ once: true ,}}
-              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-            >,
-              {innovativeMicroSaas.map((serviceindex) => (,
-                <ServiceCard key={service.id,} service={service} index={index}  />,
-              ))}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              {innovativeMicroSaas.map((serviceindex) => (
+                <ServiceCard key={service.id} service={service} index={index}  />))}
             </motion.div>,
           </div>,
         </section>,
@@ -283,10 +259,10 @@ export default function InnovativeServicesShowcase() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-90o0/20 to-purple-90o0/20">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0y: 30 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Ready to Experience the Future?,
@@ -296,28 +272,26 @@ export default function InnovativeServicesShowcase() {,
                 Start your journey today and unlock unprecedented growth potential.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-40o0 hover:to-blue-50o0 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25",
-                >,
+                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-40o0 hover:to-blue-50o0 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25">,
                   <Zap className="w-6 h-6 inline mr-2"  />,
                   Get Started Today,
                 </a>,
-                <a,
+                <a
                   href="/pricing",
-                  className="border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-30o0 transform hover:scale-10o5">,
                   <DollarSign className="w-6 h-6 inline mr-2"  />,
                   View Pricing,
                 </a>,
               </div>,
-              {/* Contact Details */,}
+              {/* Contact Details */}
               <div className="mt-12 bg-gray-90o0/50 backdrop-blur-xl rounded-2xl p-6 border border-gray-80o0">,
                 <h3 className="text-white font-semibold mb-4">Contact Our Team</h3>,
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">,
                   <div className="flex items-center justify-center">,
                     <Phone className="w-4 h-4 text-cyan-40o0 mr-2"  />,
-                    <span className="text-gray-30o0">{contactInfo.mobile,}</span>,
+                    <span className="text-gray-30o0">{contactInfo.mobile}</span>,
                   </div>,
                   <div className="flex items-center justify-center">,
                     <Mail className="w-4 h-4 text-purple-40o0 mr-2"  />,
@@ -333,6 +307,4 @@ export default function InnovativeServicesShowcase() {,
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}

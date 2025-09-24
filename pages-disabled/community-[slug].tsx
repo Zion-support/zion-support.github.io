@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
 import { MessageSquare } from 'lucide-react',
@@ -7,51 +7,43 @@ import EmptyState from '@/components/community/EmptyState',
 import { createClient } from '@supabase/supabase-js',
 import PostCard from '@/components/community/PostCard',
 import type { ForumPost } from '@/types/community',
-,
-interface CategoryPageProps {,
+interface CategoryPageProps {
   posts: ForumPost[],
   hasSession: boolean,
-  category: string,
-,}
+  category: string}
 ,
-const CategoryPage: React.FC<CategoryPageProps> = ({,
-  posts,;
-  hasSession,;
-  category,;
-}) => {,
-  return (,
+const CategoryPage: React.FC<CategoryPageProps> = ({
+  posts;
+  hasSession;
+  category;
+}) => {
+  return (
     <>,
       <Head>,
         <title>{`${category} Forum – ZionAI`}</title>,
       </Head>,
       <main className='container py-8'>,
-        {posts && posts.length > 0 ? (,
+        {posts && posts.length > 0 ? (
           <div className='space-y-4'>,
-            {posts.map(post => (,
-              <PostCard key={post.id} post={post} />,
-            ))}
-          </div>,
-        ) : (,
-          <EmptyState,
+            {posts.map(post => (
+              <PostCard key={post.id} post={post} />))}
+          </div>) : (
+          <EmptyState
             title='No discussions yet',
             subtitle='Be the first to start a conversation.',
             cta='Create Post',
             href={`/community/create?category=${category}`}
             hasSession={hasSession}
-          />,
-        )}
+          />)}
       </main>,
-    </>,
-  ),
-};
-,
-export const getServerSideProps = async ({,
-  req,;
-  params,;
-}: {,
+    </>)};
+export const getServerSideProps = async ({
+  req;
+  params;
+}: {
   req: any,
-  params?: { slug?: string ,};
-}) => {,
+  params?: { slug?: string };
+}) => {
   const category = params?.slug as string,
   const supabaseUrl =,
     process.env.SUPABASE_URL ||,
@@ -64,8 +56,7 @@ export const getServerSideProps = async ({,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||,
     '',
   const token = req.cookies?.['sb-access-token'] || null,
-,
-  if (!supabaseUrl || !anonKey) {,
+  if (!supabaseUrl || !anonKey) {
     return { props: { posts: [], hasSession: Boolean(token), category } };
   }
 ,
@@ -74,20 +65,16 @@ export const getServerSideProps = async ({,
     .from('forum_posts'),
     .select('*'),
     .eq('category_id', category),
-    .order('created_at', { ascending: false ,}),
+    .order('created_at', { ascending: false }),
+  if (error) {
+    console.error('Post fetch error:', error.message)}
 ,
-  if (error) {,
-    console.error('Post fetch error:', error.message),
-  }
-,
-  return {,
-    props: {,
-      posts: (data as ForumPost[]) || [],;
-      hasSession: Boolean(token),;
-      category,;
-    },;
+  return {
+    props: {
+      posts: (data as ForumPost[]) || [];
+      hasSession: Boolean(token);
+      category;
+    };
   };
 };
-,
-export default CategoryPage,
-,
+export default CategoryPage;

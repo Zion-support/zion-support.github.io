@@ -8,15 +8,15 @@ import {Input} from "@/components/ui/input",
 import {Button} from "@/components/ui/button",
 import {Textarea} from "@/components/ui/textarea",
 import {ForumCategory} from "@/types/community",
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import {,
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import {
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
-import { Textarea } from "@/components/ui/textarea",;
-import { ForumCategory } from "@/types/community",;
+import { Textarea } from "@/components/ui/textarea";
+import { ForumCategory } from "@/types/community";
 import { useState } from './react',
 import { use_form } from './react - hook - form',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card',
@@ -25,135 +25,104 @@ import { Input } from '@/components / ui / input',
 import { Button } from '@/components / ui / button',
 import { Textarea } from '@/components / ui / textarea',
 import { ForumCategory } from '@/types / community',
-
-,
-,
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card",;
+  CardTitle} from "@/components/ui/card";
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form",;
-interface PostFormValues {,
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
+  FormMessage} from "@/components/ui/form";
+interface PostFormValues {
+  title: string;
+  content: string;
+  categoryId: ForumCategory;
   tags: string,
-  tags: string,
-,}
-interface PostFormProps {,
+  tags: string}
+interface PostFormProps {
   initialValues?: Partial<PostFormValues>,
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean,
-}
+  onSubmit: (values: PostFormValues) => void;
+  isEditing?: boolean}
 ,
-export const PostForm = ({,
+export const PostForm = ({
   initialValues,
   onSubmit,
+  Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
+  CardTitle} from "@/components/ui/card";
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
+interface PostFormValues {
+  title: string;
+  content: string;
+  categoryId: ForumCategory;
+  tags: string}
 ,
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,
-} from "@/components/ui/card",;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage,
-} from "@/components/ui/form",;
-interface PostFormValues {,
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string,
-,}
-,
-interface PostFormProps {,
-  initialValues?: Partial<PostFormValues>,;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean,
-}
+interface PostFormProps {
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void;
+  isEditing?: boolean}
 ,
   initialValues?: Partial<PostFormValues>,
   onSubmit: (values: PostFormValues) => void,
-  isEditing?: boolean,
-,}
-export const PostForm = ({,
-  initialValues,;
-  onSubmit,;
-  isEditing = false,
-}: PostFormProps) => {,
-  const form = useForm<PostFormValues>({,
-    defaultValues: {,
+  isEditing?: boolean}
+export const PostForm = ({
+  initialValues;
+  onSubmit;
+  isEditing = false}: PostFormProps) => {
+  const form = useForm<PostFormValues>({
+    defaultValues: {
       title: initialValues?.title |"",
       content: initialValues?.content |"",
       categoryId: initialValues?.categoryId |"project-help",
-      tags: initialValues?.tags |"",
-    ,}
-,
-  }),
+      tags: initialValues?.tags |""}
+}),
   const [isSubmitting, setIsSubmitting] = useState(false),
-,
-interface PostFormValues {,
-  title: string,;
-  content: string,;
-  category_id: ForumCategory,;
-  tags: string,
-,}
-interface PostFormProps {,
+interface PostFormValues {
+  title: string;
+  content: string;
+  category_id: ForumCategory;
+  tags: string}
+interface PostFormProps {
   initial_values?: Partial < PostFormValues>,
-  on_submit: (values: PostFormValues) => void,;
-  is_editing?: boolean,
-}
-export const PostForm = ({,
+  on_submit: (values: PostFormValues) => void;
+  is_editing?: boolean}
+export const PostForm = ({
   initial_values,
   on_submit,
-  is_editing = false,
-}: PostFormProps) =>: any {,
-  const form = use_form < PostFormValues>({,
-    default_values: {,
-      title: initial_values?.title || "",;
-      content: initial_values?.content || "",;
-      category_id: initial_values?.category_id || "project - help",;
-      tags: initial_values?.tags || "",
-    ,}
+  is_editing = false}: PostFormProps) =>: any {
+  const form = use_form < PostFormValues>({
+    default_values: {
+      title: initial_values?.title || "";
+      content: initial_values?.content || "";
+      category_id: initial_values?.category_id || "project - help";
+      tags: initial_values?.tags || ""}
   }),
-,
   const [is_submitting, setIsSubmitting] = useState (false),
+  const handle_submit = async (values: PostFormValues) => {
+    setIsSubmitting (true);
+    try {
+      await on_submit (values)} finally {
+      setIsSubmitting(false)}
+});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSubmit = async (values: PostFormValues) => {
+    setIsSubmitting(true);
+    try {
+      await onSubmit(values)} finally {
+      setIsSubmitting(false)}
+}
 ,
-  const handle_submit = async (values: PostFormValues) => {,
-    setIsSubmitting (true),;
-    try {,
-      await on_submit (values),
-    } finally {,
-      setIsSubmitting(false),
-    }
-,
-  }),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-,
-  const handleSubmit = async (values: PostFormValues) => {,
-    setIsSubmitting(true),;
-    try {,
-      await onSubmit(values),
-    } finally {,
-      setIsSubmitting(false),
-,
-    }
-,
-  }
-,
-  return (,
+  return (
     <Card>,
       <CardHeader>,
         <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>,
@@ -161,28 +130,25 @@ export const PostForm = ({,
       <CardContent>,
         <Form {...form}>,
           <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>,
-            <FormField,
+            <FormField
               control={form && form.control}
               name="title",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Title</FormLabel>,
-,
                   <FormControl>,
                     <Input placeholder="Enter post title..." {...field} />,
                   </FormControl>,
                   <FormMessage />,
-,
             />,
-,
-            <FormField,
+            <FormField
               control={form && form.control}
               name="content",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Category</FormLabel>,
                   <FormControl>,
-                    <select,
+                    <select
                       className="w-full p-2 border rounded-md",
                       {...field}>,
                       <option value="getting-hired">Getting Hired</option>,
@@ -192,18 +158,16 @@ export const PostForm = ({,
                     </select>,
                   </FormControl>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-,
-            <FormField,
+            <FormField
               control={form && form.control}
               name="categoryId",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Category</FormLabel>,
                   <FormControl>,
-                    <select,
+                    <select
                       className="w-full p-2 border rounded-md",
                       {...field}>,
                       <option value="getting-hired">Getting Hired</option>,
@@ -213,45 +177,32 @@ export const PostForm = ({,
                     </select>,
                   </FormControl>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
 ,
             />,
-,
-            <FormField,
+            <FormField
               control={form && form.control}
               name="tags",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Tags (comma-separated)</FormLabel>,
                   <FormControl>,
-                    <Input,
+                    <Input
                       placeholder="e && e.g. resume, hiring, flutter",
                       {...field} ,
                     />,
                   </FormControl>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-,
             <Button type="submit" disabled={isSubmitting}>,
               {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
             </Button>,
           </form>,
         </Form>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,
-export default PostForm,
-,
-,
-},;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-})
+export default PostForm;
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))})

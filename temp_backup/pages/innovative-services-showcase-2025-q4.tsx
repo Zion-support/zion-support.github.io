@@ -1,129 +1,117 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check,;
-  Zap,;
-  Shield,;
-  Rocket,;
-  Brain,;
-  Atom,;
-  Target,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  ExternalLink,;
-  Clock,;
-  DollarSign,;
-  Shield as SecurityIcon,;
-  Search,;
+import {
+  Check;
+  Zap;
+  Shield;
+  Rocket;
+  Brain;
+  Atom;
+  Target;
+  Star;
+  TrendingUp;
+  Users;
+  Award;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowRight;
+  ExternalLink;
+  Clock;
+  DollarSign;
+  Shield as SecurityIcon;
+  Search;
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovative20o25Q4MicroSaasServices } from '../data/innovative-20o25-q4-micro-saas-services',
 import { innovative20o25Q4ITServices } from '../data/innovative-20o25-q4-it-services',
 import { innovative20o25Q4AIServices } from '../data/innovative-20o25-q4-ai-services',
-,
-const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
+const InnovativeServicesShowcase20o25Q4: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
-,
-  const categories = [,
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> ,},;
-    {,
-      id: 'micro-saas',;
-      name: 'Micro SAAS',;
-      icon: <Rocket className='w-5 h-5' />,;
-    },;
-    {,
-      id: 'it-services',;
-      name: 'IT Services',;
-      icon: <Shield className='w-5 h-5' />,;
-    },;
-    {,
-      id: 'ai-services',;
-      name: 'AI Services',;
-      icon: <Brain className='w-5 h-5' />,;
-    },;
+  const categories = [
+    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> };
+    {
+      id: 'micro-saas';
+      name: 'Micro SAAS';
+      icon: <Rocket className='w-5 h-5' />;
+    };
+    {
+      id: 'it-services';
+      name: 'IT Services';
+      icon: <Shield className='w-5 h-5' />;
+    };
+    {
+      id: 'ai-services';
+      name: 'AI Services';
+      icon: <Brain className='w-5 h-5' />;
+    };
   ],
-,
-  const allServices = [,
-    ...innovative20o25Q4MicroSaasServices.map(service => ({,
-      ...service,;
-      category: 'micro-saas',;
-    })),;
-    ...innovative20o25Q4ITServices.map(service => ({,
-      ...service,;
-      category: 'it-services',;
-    })),;
-    ...innovative20o25Q4AIServices.map(service => ({,
-      ...service,;
-      category: 'ai-services',;
-    })),;
+  const allServices = [
+    ...innovative20o25Q4MicroSaasServices.map(service => ({
+      ...service;
+      category: 'micro-saas';
+    }));
+    ...innovative20o25Q4ITServices.map(service => ({
+      ...service;
+      category: 'it-services';
+    }));
+    ...innovative20o25Q4AIServices.map(service => ({
+      ...service;
+      category: 'ai-services';
+    }));
   ],
-,
   // Helper function to get setup time from different service structures,
-  const getSetupTime = (service: any) => {,
+  const getSetupTime = (service: any) => {
     if (service.setupTime) return service.setupTime,
     if (service.price?.setupTime) return service.price.setupTime,
-    return 'Contact for details',
-  ,};
-,
+    return 'Contact for details'};
   // Helper function to get trial days from different service structures,
-  const getTrialDays = (service: any) => {,
+  const getTrialDays = (service: any) => {
     if (service.trialDays) return service.trialDays,
     if (service.price?.trialDays) return service.price.trialDays,
-    return null,
-  ,};
-,
-  const filteredServices = allServices.filter(service => {,
+    return null};
+  const filteredServices = allServices.filter(service => {
     const matchesCategory =,
       activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+    return matchesCategory && matchesSearch}),
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-      },;
-    },;
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+      };
+    };
   };
-,
-  return (,
+  return (
     <Layout>,
-      <SEO,
+      <SEO
         title='Innovative Services Showcase Q4 20o25 | Zion Tech Group',
         description='Discover our cutting-edge micro SAAS, IT, and AI services for Q4 20o25. Transform your business with intelligent solutions, competitive pricing, and expert support.',
-        keywords={[,
-          'micro SAAS',;
-          'IT services',;
-          'AI services',;
-          'business solutions',;
-          'digital transformation',;
-          'enterprise software',;
+        keywords={[
+          'micro SAAS';
+          'IT services';
+          'AI services';
+          'business solutions';
+          'digital transformation';
+          'enterprise software';
         ]}
       />,
       {/* Hero Section */}
@@ -131,9 +119,9 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
         <div className='absolute inset-0 bg-black opacity-20'></div>,
         <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-5xl md: text-6xl font-bold mb-6'>,
               Innovative Services Showcase,
@@ -143,7 +131,7 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto'>,
               Transform your business with our cutting-edge micro SAAS, IT,
-              infrastructure, and AI-powered solutions. Real implementations,;
+              infrastructure, and AI-powered solutions. Real implementations;
               competitive pricing, and proven ROI.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4 mb-8'>,
@@ -184,12 +172,11 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
               </div>,
             </div>,
             <div className='flex items-center gap-4'>,
-              <a,
+              <a
                 href='https://ziontechgroup.com',
                 target='_blank',
                 rel='noopener noreferrer',
-                className='bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center gap-2',
-              >,
+                className='bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center gap-2'>,
                 Visit Website,
                 <ExternalLink className='w-4 h-4' />,
               </a>,
@@ -197,28 +184,26 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Category Filter */,}
+      {/* Category Filter */}
       <section className='py-8 bg-gray-50'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex flex-col md:flex-row gap-4 items-center justify-between'>,
             <div className='flex flex-wrap gap-2'>,
-              {categories.map(category => (,
-                <button,
-                  key={category.id,}
+              {categories.map(category => (
+                <button
+                  key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${,
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                     activeCategory === category.id,
                       ? 'bg-blue-60o0 text-white shadow-lg',
-                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-                  ,}`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
                 >,
                   {category.icon}
                   {category.name}
-                </button>,
-              ))}
+                </button>))}
             </div>,
             <div className='relative'>,
-              <input,
+              <input
                 type='text',
                 placeholder='Search services...',
                 value={searchTerm}
@@ -230,32 +215,29 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Services Grid */,}
+      {/* Services Grid */}
       <section className='py-16'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial='hidden',
             animate='visible',
-            className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-          >,
-            {filteredServices.map(service => (,
+            className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
+            {filteredServices.map(service => (
               <motion.div,
-                key={service.id,}
+                key={service.id}
                 variants={itemVariants}
-                className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden group',
-              >,
-                {/* Service Header */,}
-                <div,
+                className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden group'>,
+                {/* Service Header */}
+                <div
                   className={`bg-gradient-to-r ${service.color} p-6 text-white`}
                 >,
                   <div className='flex items-center justify-between mb-4'>,
                     <span className='text-4xl'>{service.icon}</span>,
-                    {service.popular && (,
+                    {service.popular && (
                       <span className='bg-yellow-40o0 text-yellow-90o0 px-3 py-1 rounded-full text-sm font-semibold'>,
                         Popular,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <h3 className='text-xl font-bold mb-2'>{service.name}</h3>,
                   <p className='text-white/90 text-sm'>{service.tagline}</p>,
@@ -286,12 +268,11 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
                         <Clock className='w-4 h-4' />,
                         {getSetupTime(service)}
                       </div>,
-                      {getTrialDays(service) && (,
+                      {getTrialDays(service) && (
                         <div className='flex items-center gap-1'>,
                           <Zap className='w-4 h-4' />,
                           {getTrialDays(service)} days trial,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                   </div>,
                   {/* Key Features */}
@@ -300,15 +281,13 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
                       Key Features: ,
                     </h4>,
                     <ul className='space-y-1'>,
-                      {service.features.slice(0, 4).map((feature, index) => (,
-                        <li,
+                      {service.features.slice(0, 4).map((feature, index) => (
+                        <li
                           key={index}
-                          className='flex items-center gap-2 text-sm text-gray-60o0',
-                        >,
+                          className='flex items-center gap-2 text-sm text-gray-60o0'>,
                           <Check className='w-4 h-4 text-green-50o0 flex-shrink-0' />,
                           <span className='line-clamp-1'>{feature}</span>,
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   {/* Benefits */}
@@ -317,15 +296,13 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
                       Key Benefits: ,
                     </h4>,
                     <ul className='space-y-1'>,
-                      {service.benefits.slice(0, 3).map((benefit, index) => (,
-                        <li,
+                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                        <li
                           key={index}
-                          className='flex items-center gap-2 text-sm text-gray-60o0',
-                        >,
+                          className='flex items-center gap-2 text-sm text-gray-60o0'>,
                           <TrendingUp className='w-4 h-4 text-blue-50o0 flex-shrink-0' />,
                           <span className='line-clamp-1'>{benefit}</span>,
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   {/* ROI and Market Info */}
@@ -334,32 +311,29 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
                       <div className='font-semibold text-blue-90o0 mb-1'>,
                         ROI Promise: ,
                       </div>,
-                      <div className='text-blue-70o0'>{service.roi,}</div>,
+                      <div className='text-blue-70o0'>{service.roi}</div>,
                     </div>,
                   </div>,
                   {/* Action Buttons */}
                   <div className='flex gap-2'>,
-                    <a,
+                    <a
                       href={service.link}
                       target='_blank',
                       rel='noopener noreferrer',
-                      className='flex-1 bg-blue-60o0 text-white px-4 py-2 rounded-lg font-semibold hover: bg-blue-70o0 transition-colors text-center flex items-center justify-center gap-2 group-hover:bg-blue-70o0',
-                    >,
+                      className='flex-1 bg-blue-60o0 text-white px-4 py-2 rounded-lg font-semibold hover: bg-blue-70o0 transition-colors text-center flex items-center justify-center gap-2 group-hover:bg-blue-70o0'>,
                       Learn More,
                       <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />,
                     </a>,
-                    <a,
+                    <a
                       href='mailto:kleber@ziontechgroup.com?subject=Inquiry about %service.name%',
-                      className='bg-gray-10o0 text-gray-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-20o0 transition-colors flex items-center justify-center',
-                    >,
+                      className='bg-gray-10o0 text-gray-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-20o0 transition-colors flex items-center justify-center'>,
                       <Mail className='w-4 h-4' />,
                     </a>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </motion.div>,
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <div className='text-center py-16'>,
               <div className='text-gray-40o0 text-6xl mb-4'>🔍</div>,
               <h3 className='text-xl font-semibold text-gray-60o0 mb-2'>,
@@ -368,8 +342,7 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
               <p className='text-gray-50o0'>,
                 Try adjusting your search terms or category filter.,
               </p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* Why Choose Zion Tech Group */}
@@ -380,7 +353,7 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
               Why Choose Zion Tech Group?,
             </h2>,
             <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-              We deliver real, market-validated solutions with proven ROI,;
+              We deliver real, market-validated solutions with proven ROI;
               competitive pricing, and enterprise-grade support.,
             </p>,
           </div>,
@@ -445,17 +418,15 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
             ready to help you succeed.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='tel:+130o24640950',
-              className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center gap-2',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center gap-2'>,
               <Phone className='w-5 h-5' />,
               Call +1 30o2 464 0950,
             </a>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors flex items-center justify-center gap-2',
-            >,
+              className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors flex items-center justify-center gap-2'>,
               <Mail className='w-5 h-5' />,
               Email Us,
             </a>,
@@ -465,22 +436,17 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {,
               📍 364 E Main St STE 10o08 Middletown DE 19709,
             </p>,
             <p>,
-              🌐{' ',}
-              <a,
+              🌐{' '}
+              <a
                 href='https: //ziontechgroup.com',
                 target='_blank',
                 rel='noopener noreferrer',
-                className='underline hover:text-white',
-              >,
+                className='underline hover:text-white'>,
                 https://ziontechgroup.com,
               </a>,
             </p>,
           </div>,
         </div>,
       </section>,
-    </Layout>,
-  ),
-,};
-,
-export default InnovativeServicesShowcase20o25Q4,
-,
+    </Layout>)};
+export default InnovativeServicesShowcase20o25Q4;

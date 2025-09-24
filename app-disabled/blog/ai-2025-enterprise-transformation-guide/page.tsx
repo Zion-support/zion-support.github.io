@@ -1,23 +1,21 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Complete Enterprise Transformation Guide | Zion Tech Group',;
+    'AI 20o25: The Complete Enterprise Transformation Guide | Zion Tech Group';
   description:,
-    'Discover how AI is revolutionizing enterprise operations in 20o25. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.',;
-  keywords: [,
-    'AI transformation',;
-    'enterprise AI',;
-    'neural interfaces',;
-    'quantum computing',;
-    'business automation',;
-    '20o25',;
-  ],;
+    'Discover how AI is revolutionizing enterprise operations in 20o25. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.';
+  keywords: [
+    'AI transformation';
+    'enterprise AI';
+    'neural interfaces';
+    'quantum computing';
+    'business automation';
+    '20o25';
+  ];
 };
-,
-export default function AI20o25EnterpriseTransformationGuide() {,
-  return (,
+export default function AI20o25EnterpriseTransformationGuide() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -38,23 +36,21 @@ export default function AI20o25EnterpriseTransformationGuide() {,
               worldwide.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get AI Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Content Overview */,}
+      {/* Content Overview */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
@@ -93,7 +89,7 @@ export default function AI20o25EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Technologies Section */,}
+      {/* Key Technologies Section */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -141,7 +137,7 @@ export default function AI20o25EnterpriseTransformationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Stories Section */,}
+      {/* Success Stories Section */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -212,22 +208,18 @@ export default function AI20o25EnterpriseTransformationGuide() {,
             can revolutionize your business operations.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get Started Today,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               View More Case Studies,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

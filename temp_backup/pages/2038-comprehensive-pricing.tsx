@@ -1,103 +1,95 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check,;
-  Star,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Brain,;
-  Shield,;
-  Target,;
-  Rocket,;
-  Heart,;
-  Building,;
-  Grid,;
+import {
+  Check;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Brain;
+  Shield;
+  Target;
+  Rocket;
+  Heart;
+  Building;
+  Grid;
 } from 'lucide-react',
-,
 // Import our new 20o38 services,
 import { innovative20o38CuttingEdgeServices } from '../data/innovative-20o38-cutting-edge-services',
 import { innovative20o38ITMicroSaasServices } from '../data/innovative-20o38-it-micro-saas-services',
-,
 // Create unified services array,
-const all20o38Services = [,
-  ...innovative20o38CuttingEdgeServices,;
-  ...innovative20o38ITMicroSaasServices,;
+const all20o38Services = [
+  ...innovative20o38CuttingEdgeServices;
+  ...innovative20o38ITMicroSaasServices;
 ],
-,
-const categories = [,
-  {,
-    id: 'ai-quantum',;
-    name: 'AI & Quantum',;
-    icon: <Brain className='w-6 h-6' />,;
-    color: 'from-cyan-50o0 to-blue-50o0',;
-    description: 'Revolutionary AI and quantum computing solutions',;
-  },;
-  {,
-    id: 'space-tech',;
-    name: 'Space Technology',;
-    icon: <Rocket className='w-6 h-6' />,;
-    color: 'from-pink-50o0 to-rose-50o0',;
-    description: 'Next-generation space exploration and mining',;
-  },;
-  {,
-    id: 'cybersecurity',;
-    name: 'Cybersecurity',;
-    icon: <Shield className='w-6 h-6' />,;
-    color: 'from-red-50o0 to-orange-50o0',;
-    description: 'Quantum-powered security and threat intelligence',;
-  },;
-  {,
-    id: 'healthcare',;
-    name: 'Healthcare AI',;
-    icon: <Heart className='w-6 h-6' />,;
-    color: 'from-red-50o0 to-pink-50o0',;
-    description: 'Autonomous healthcare and medical AI',;
-  },;
-  {,
-    id: 'micro-saas',;
-    name: 'Micro SAAS',;
-    icon: <Target className='w-6 h-6' />,;
-    color: 'from-orange-50o0 to-red-50o0',;
-    description: 'Intelligent business automation solutions',;
-  },;
-  {,
-    id: 'it-infrastructure',;
-    name: 'IT Infrastructure',;
-    icon: <Building className='w-6 h-6' />,;
-    color: 'from-blue-50o0 to-purple-50o0',;
-    description: 'Advanced IT and DevOps solutions',;
-  },;
-  {,
-    id: 'climate-tech',;
-    name: 'Climate Technology',;
-    icon: <Globe className='w-6 h-6' />,;
-    color: 'from-teal-50o0 to-green-50o0',;
-    description: 'AI-powered climate prediction and analysis',;
-  },;
+const categories = [
+  {
+    id: 'ai-quantum';
+    name: 'AI & Quantum';
+    icon: <Brain className='w-6 h-6' />;
+    color: 'from-cyan-50o0 to-blue-50o0';
+    description: 'Revolutionary AI and quantum computing solutions';
+  };
+  {
+    id: 'space-tech';
+    name: 'Space Technology';
+    icon: <Rocket className='w-6 h-6' />;
+    color: 'from-pink-50o0 to-rose-50o0';
+    description: 'Next-generation space exploration and mining';
+  };
+  {
+    id: 'cybersecurity';
+    name: 'Cybersecurity';
+    icon: <Shield className='w-6 h-6' />;
+    color: 'from-red-50o0 to-orange-50o0';
+    description: 'Quantum-powered security and threat intelligence';
+  };
+  {
+    id: 'healthcare';
+    name: 'Healthcare AI';
+    icon: <Heart className='w-6 h-6' />;
+    color: 'from-red-50o0 to-pink-50o0';
+    description: 'Autonomous healthcare and medical AI';
+  };
+  {
+    id: 'micro-saas';
+    name: 'Micro SAAS';
+    icon: <Target className='w-6 h-6' />;
+    color: 'from-orange-50o0 to-red-50o0';
+    description: 'Intelligent business automation solutions';
+  };
+  {
+    id: 'it-infrastructure';
+    name: 'IT Infrastructure';
+    icon: <Building className='w-6 h-6' />;
+    color: 'from-blue-50o0 to-purple-50o0';
+    description: 'Advanced IT and DevOps solutions';
+  };
+  {
+    id: 'climate-tech';
+    name: 'Climate Technology';
+    icon: <Globe className='w-6 h-6' />;
+    color: 'from-teal-50o0 to-green-50o0';
+    description: 'AI-powered climate prediction and analysis';
+  };
 ],
-,
-export default function Comprehensive20o38Pricing() {,
+export default function Comprehensive20o38Pricing() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
-,
   const filteredServices =,
     selectedCategory === 'all',
       ? all20o38Services,
       : all20o38Services.filter(service =>,
           service.category,
             .toLowerCase(),
-            .includes(,
+            .includes(
               categories,
                 .find(cat => cat.id === selectedCategory),
-                ?.name.toLowerCase() || '',
-            ),
-        ),
-,
-  return (,
+                ?.name.toLowerCase() || '')),
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='20o38 Comprehensive Pricing | Zion Tech Group',
         description='Complete pricing for our revolutionary 20o38 services. AI-powered solutions, quantum computing, space technology, and intelligent micro SAAS platforms with transparent pricing.',
         keywords='20o38 pricing, AI services pricing, quantum computing pricing, space technology pricing, micro SAAS pricing',
@@ -107,11 +99,10 @@ export default function Comprehensive20o38Pricing() {,
         <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20'></div>,
         <div className='relative max-w-7xl mx-auto text-center'>,
           <motion.h1,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-5xl md: text-7xl font-bold text-white mb-6',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-5xl md: text-7xl font-bold text-white mb-6'>,
             <span className='bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent'>,
               20o38,
             </span>,
@@ -125,22 +116,20 @@ export default function Comprehensive20o38Pricing() {,
             </span>,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             Transparent pricing for our cutting-edge 20o38 services. Every,
             solution is designed to deliver exceptional ROI and transform your,
             business with next-generation technology.,
           </motion.p>,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto'>,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-center'>,
               <div className='flex flex-col items-center'>,
                 <Phone className='w-6 h-6 text-cyan-40o0 mb-2' />,
@@ -164,17 +153,16 @@ export default function Comprehensive20o38Pricing() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Pricing Overview */,}
+      {/* Pricing Overview */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Transparent{' ',}
+              Transparent{' '}
               <span className='bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent'>,
                 Pricing,
               </span>{' '}
@@ -188,42 +176,35 @@ export default function Comprehensive20o38Pricing() {,
           </motion.div>,
           {/* Pricing Statistics */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-16'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center'>,
               <div className='text-3xl font-bold text-cyan-40o0 mb-2'>,
                 $,
-                {Math.min(,
+                {Math.min(
                   ...all20o38Services.map(s =>,
-                    parseInt(s.price.replace(/[^0-9]/g, '')),
-                  ),
-                )}
+                    parseInt(s.price.replace(/[^0-9]/g, ''))))}
               </div>,
               <div className='text-gray-30o0'>Starting Price</div>,
             </div>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center'>,
               <div className='text-3xl font-bold text-purple-40o0 mb-2'>,
                 $,
-                {Math.max(,
+                {Math.max(
                   ...all20o38Services.map(s =>,
-                    parseInt(s.price.replace(/[^0-9]/g, '')),
-                  ),
-                )}
+                    parseInt(s.price.replace(/[^0-9]/g, ''))))}
               </div>,
               <div className='text-gray-30o0'>Premium Price</div>,
             </div>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center'>,
               <div className='text-3xl font-bold text-emerald-40o0 mb-2'>,
                 $,
-                {Math.round(,
-                  all20o38Services.reduce(,
-                    (sum, s) => sum + parseInt(s.price.replace(/[^0-9]/g, '')),;
-                    0,
-                  ) / all20o38Services.length,
-                )}
+                {Math.round(
+                  all20o38Services.reduce(
+                    (sum, s) => sum + parseInt(s.price.replace(/[^0-9]/g, ''));
+                    0) / all20o38Services.length)}
               </div>,
               <div className='text-gray-30o0'>Average Price</div>,
             </div>,
@@ -236,60 +217,54 @@ export default function Comprehensive20o38Pricing() {,
           </motion.div>,
           {/* Category Filter */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='flex justify-center mb-12',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='flex justify-center mb-12'>,
             <div className='flex gap-2 overflow-x-auto pb-2'>,
-              <button,
+              <button
                 onClick={() => setSelectedCategory('all')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl whitespace-nowrap transition-all duration-20o0 ${,
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl whitespace-nowrap transition-all duration-20o0 ${
                   selectedCategory === 'all',
                     ? 'bg-gradient-to-r from-gray-50o0 to-slate-50o0 text-white shadow-lg',
-                    : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                ,}`}
+                    : 'bg-white/20 text-gray-30o0 hover: bg-white/30'}`}
               >,
                 <Grid className='w-5 h-5' />,
                 All Services,
               </button>,
-              {categories.map(category => (,
-                <button,
+              {categories.map(category => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-xl whitespace-nowrap transition-all duration-20o0 ${,
+                  className={`flex items-center gap-2 px-6 py-3 rounded-xl whitespace-nowrap transition-all duration-20o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' +,
                         category.color +,
                         ' text-white shadow-lg',
-                      : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                  ,}`}
+                      : 'bg-white/20 text-gray-30o0 hover: bg-white/30'}`}
                 >,
                   {category.icon}
                   {category.name}
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </motion.div>,
           {/* Services Pricing Grid */}
           <div className='grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8'>,
-            {filteredServices.map((service, index) => (,
+            {filteredServices.map((service, index) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className='bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover: transform hover:scale-10o5 transition-all duration-30o0',
-              >,
-                {/* Service Header */,}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover: transform hover:scale-10o5 transition-all duration-30o0'>,
+                {/* Service Header */}
                 <div className='p-6 border-b border-white/20'>,
                   <div className='flex items-center justify-between mb-4'>,
                     <div className='text-4xl'>{service.icon}</div>,
-                    {service.popular && (,
+                    {service.popular && (
                       <span className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-semibold'>,
                         Popular,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <h3 className='text-xl font-bold text-white mb-2'>,
                     {service.name}
@@ -305,16 +280,14 @@ export default function Comprehensive20o38Pricing() {,
                   </div>,
                   <div className='flex items-center gap-2 mb-4'>,
                     <div className='flex items-center gap-1'>,
-                      {[...Array(5)].map((_, i) => (,
-                        <Star,
+                      {[...Array(5)].map((_, i) => (
+                        <Star
                           key={i}
-                          className={`w-4 h-4 ${,
+                          className={`w-4 h-4 ${
                             i < Math.floor(service.rating),
                               ? 'text-yellow-40o0 fill-current',
-                              : 'text-gray-40o0',
-                          }`}
-                        />,
-                      ))}
+                              : 'text-gray-40o0'}`}
+                        />))}
                     </div>,
                     <span className='text-gray-40o0 text-sm'>,
                       ({service.reviews} reviews),
@@ -329,23 +302,20 @@ export default function Comprehensive20o38Pricing() {,
                   <ul className='space-y-3 mb-6'>,
                     {service.features,
                       .slice(0, 6),
-                      .map((feature, featureIndex) => (,
-                        <li,
+                      .map((feature, featureIndex) => (
+                        <li
                           key={featureIndex}
-                          className='flex items-start gap-3',
-                        >,
+                          className='flex items-start gap-3'>,
                           <Check className='w-5 h-5 text-emerald-40o0 mt-0.5 flex-shrink-0' />,
                           <span className='text-gray-30o0 text-sm'>,
                             {feature}
                           </span>,
-                        </li>,
-                      ))}
+                        </li>))}
                   </ul>,
-                  {service.features.length > 6 && (,
+                  {service.features.length > 6 && (
                     <p className='text-gray-40o0 text-sm text-center'>,
                       +{service.features.length - 6} more features,
-                    </p>,
-                  )}
+                    </p>)}
                 </div>,
                 {/* Service Details */}
                 <div className='p-6 bg-white/5'>,
@@ -389,15 +359,13 @@ export default function Comprehensive20o38Pricing() {,
                       {service.roi}
                     </p>,
                   </div>,
-                  <a,
+                  <a
                     href={service.link}
-                    className='w-full bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white py-3 px-6 rounded-xl hover: from-cyan-50o0 hover:to-blue-50o0 transition-all duration-20o0 flex items-center justify-center gap-2 font-semibold',
-                  >,
+                    className='w-full bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white py-3 px-6 rounded-xl hover: from-cyan-50o0 hover:to-blue-50o0 transition-all duration-20o0 flex items-center justify-center gap-2 font-semibold'>,
                     Get Started,
                   </a>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -405,13 +373,12 @@ export default function Comprehensive20o38Pricing() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Flexible{' ',}
+              Flexible{' '}
               <span className='bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent'>,
                 Pricing,
               </span>{' '}
@@ -424,13 +391,12 @@ export default function Comprehensive20o38Pricing() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-            {/* Starter Tier */,}
+            {/* Starter Tier */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className='bg-white/10 backdrop-blur-lg rounded-2xl p-8',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='bg-white/10 backdrop-blur-lg rounded-2xl p-8'>,
               <div className='text-center mb-8'>,
                 <h3 className='text-2xl font-bold text-white mb-4'>Starter</h3>,
                 <div className='text-4xl font-bold text-cyan-40o0 mb-2'>,
@@ -460,13 +426,12 @@ export default function Comprehensive20o38Pricing() {,
                 Choose Starter,
               </button>,
             </motion.div>,
-            {/* Professional Tier */,}
+            {/* Professional Tier */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-2xl p-8 relative',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-2xl p-8 relative'>,
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
                 <span className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-4 py-2 rounded-full text-sm font-semibold'>,
                   Most Popular,
@@ -505,13 +470,12 @@ export default function Comprehensive20o38Pricing() {,
                 Choose Professional,
               </button>,
             </motion.div>,
-            {/* Enterprise Tier */,}
+            {/* Enterprise Tier */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.6 ,}}
-              className='bg-white/10 backdrop-blur-lg rounded-2xl p-8',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className='bg-white/10 backdrop-blur-lg rounded-2xl p-8'>,
               <div className='text-center mb-8'>,
                 <h3 className='text-2xl font-bold text-white mb-4'>,
                   Enterprise,
@@ -552,32 +516,29 @@ export default function Comprehensive20o38Pricing() {,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.h2,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-4xl md: text-5xl font-bold text-white mb-6',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-4xl md: text-5xl font-bold text-white mb-6'>,
             Ready to Get Started?,
           </motion.h2>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='text-xl text-gray-30o0 mb-8',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-30o0 mb-8'>,
             Contact us today to discuss your needs and get a personalized quote,
             for our revolutionary 20o38 services.,
           </motion.p>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='grid grid-cols-1 md: grid-cols-3 gap-6',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6'>,
               <Phone className='w-8 h-8 text-cyan-40o0 mx-auto mb-4' />,
               <h3 className='text-white font-semibold mb-2'>Call Us</h3>,
@@ -604,11 +565,10 @@ export default function Comprehensive20o38Pricing() {,
             </div>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.6 ,}}
-            className='mt-12',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className='mt-12'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8'>,
               <h3 className='text-2xl font-bold text-white mb-4'>Address</h3>,
               <p className='text-gray-30o0 mb-4'>,
@@ -626,7 +586,5 @@ export default function Comprehensive20o38Pricing() {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

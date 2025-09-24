@@ -1,6 +1,4 @@
 'use client',
-,
-export default function NewContent20o25AnalyticsRevolutionBanner() {,
-  return null,
-}
+export default function NewContent20o25AnalyticsRevolutionBanner() {
+  return null}
 ,

@@ -1,55 +1,54 @@
 import { motion } from 'framer-motion',
-export function PerformanceOptimizedLoader({,
-  size = 'md',;
-  color = 'primary',;
-  text,;
-  fullScreen = false,;
-}) {,
-  const sizeClasses = {,
-    sm: 'w-6 h-6',;
-    md: 'w-12 h-12',;
-    lg: 'w-16 h-16',;
+export function PerformanceOptimizedLoader({
+  size = 'md';
+  color = 'primary';
+  text;
+  fullScreen = false;
+}) {
+  const sizeClasses = {
+    sm: 'w-6 h-6';
+    md: 'w-12 h-12';
+    lg: 'w-16 h-16';
   };
-  const colorClasses = {,
-    primary: 'text-zion-purple',;
-    secondary: 'text-zion-cyan',;
-    white: 'text-white',;
+  const colorClasses = {
+    primary: 'text-zion-purple';
+    secondary: 'text-zion-cyan';
+    white: 'text-white';
   };
-  const spinnerVariants = {,
-    animate: {,
-      rotate: 360,;
-      transition: {,
-        duration: 1,;
-        repeat: Infinity,;
-        ease: 'linear',;
-      },;
-    },;
+  const spinnerVariants = {
+    animate: {
+      rotate: 360;
+      transition: {
+        duration: 1;
+        repeat: Infinity;
+        ease: 'linear';
+      };
+    };
   };
-  const pulseVariants = {,
-    animate: {,
-      scale: [1, 1.2, 1],;
-      opacity: [0.5, 1, 0.5],;
-      transition: {,
-        duration: 2,;
-        repeat: Infinity,;
-        ease: 'easeInOut',;
-      },;
-    },;
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.2, 1];
+      opacity: [0.5, 1, 0.5];
+      transition: {
+        duration: 2;
+        repeat: Infinity;
+        ease: 'easeInOut';
+      };
+    };
   };
-  const LoaderContent = () => (,
+  const LoaderContent = () => (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       <motion.div,
         variants={spinnerVariants}
         animate='animate',
         className={`${sizeClasses[size]} ${colorClasses[color]}`}
       >,
-        <svg,
+        <svg
           className='w-full h-full',
           viewBox='0 0 24 24',
           fill='none',
-          xmlns='http: //www.w3.org/20o00/svg',
-        >,
-          <circle,
+          xmlns='http: //www.w3.org/20o00/svg'>,
+          <circle
             cx='12',
             cy='12',
             r='10',
@@ -62,54 +61,44 @@ export function PerformanceOptimizedLoader({,
           />,
         </svg>,
       </motion.div>,
-      {text && (,
+      {text && (
         <motion.p,
-          variants={pulseVariants,}
+          variants={pulseVariants}
           animate='animate',
-          className='text-zion-slate-light text-center font-medium',
-        >,
+          className='text-zion-slate-light text-center font-medium'>,
           {text}
-        </motion.p>,
-      )}
-    </div>,
-  ),
-  if (fullScreen) {,
-    return (,
+        </motion.p>)}
+    </div>),
+  if (fullScreen) {
+    return (
       <motion.div,
-        initial={{ opacity: 0 ,}}
-        animate={{ opacity: 1 ,}}
-        exit={{ opacity: 0 ,}}
-        className='fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50',
-      >,
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className='fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50'>,
         <LoaderContent />,
-      </motion.div>,
-    ),
-  }
-  return <LoaderContent />,
-}
+      </motion.div>)}
+  return <LoaderContent />}
 // Skeleton loader for content,
-export function SkeletonLoader({ className = '', lines = 3, height = 'h-4' }) {,
-  return (,
+export function SkeletonLoader({ className = '', lines = 3, height = 'h-4' }) {
+  return (
     <div className={`space-y-3 ${className}`}>,
-      {Array.from({ length: lines ,}).map((_, index) => (,
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div,
           key={index}
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: index * 0.1 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
-          style={{,
-            width: `${Math.random() * 40 + 60,}%`,;
+          style={{
+            width: `${Math.random() * 40 + 60}%`;
           }}
-        />,
-      ))}
-    </div>,
-  ),
-}
+        />))}
+    </div>)}
 // Card skeleton loader,
-export function CardSkeleton({ className = '' }) {,
-  return (,
-    <div,
+export function CardSkeleton({ className = '' }) {
+  return (
+    <div
       className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}
     >,
       <div className='space-y-4'>,
@@ -127,24 +116,19 @@ export function CardSkeleton({ className = '' }) {,
           <div className='h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24' />,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 // Grid skeleton loader,
-export function GridSkeleton({ columns = 3, rows = 2, className = '' }) {,
-  return (,
-    <div,
-      className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-${columns,} gap-6 ${className}`}
+export function GridSkeleton({ columns = 3, rows = 2, className = '' }) {
+  return (
+    <div
+      className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}
     >,
-      {Array.from({ length: columns * rows ,}).map((_, index) => (,
-        <CardSkeleton key={index} />,
-      ))}
-    </div>,
-  ),
-}
+      {Array.from({ length: columns * rows }).map((_, index) => (
+        <CardSkeleton key={index} />))}
+    </div>)}
 // Page skeleton loader,
-export function PageSkeleton({ className = '' }) {,
-  return (,
+export function PageSkeleton({ className = '' }) {
+  return (
     <div className={`space-y-8 ${className}`}>,
       {/* Header skeleton */}
       <div className='space-y-4'>,
@@ -158,7 +142,5 @@ export function PageSkeleton({ className = '' }) {,
         <div className='h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2' />,
         <div className='h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3' />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

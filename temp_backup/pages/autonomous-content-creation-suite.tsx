@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AutonomousContentCreationSuitePage() {,
-  return (,
+export default function AutonomousContentCreationSuitePage() {
+  return (
     <>,
       <Head>,
         <title>Autonomous Content Creation Suite - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='autonomous content creation suite page',
         />,
@@ -21,7 +20,5 @@ export default function AutonomousContentCreationSuitePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

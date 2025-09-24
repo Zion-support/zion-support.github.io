@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react',
 import Link from 'next/link',
 import SEO from '../components/SEO',
 import LoadingSpinner from '../components/LoadingSpinner',
-,
 // Import new advanced AI components,
 import AdvancedContentRecommendationEngine from '../components/AdvancedContentRecommendationEngine',
 import RealTimePerformanceDashboard from '../components/RealTimePerformanceDashboard',
@@ -14,15 +13,12 @@ import AdvancedAnalyticsEngine from '../components/AdvancedAnalyticsEngine',
 import AutomationWorkflowEngine from '../components/AutomationWorkflowEngine',
 import EnterpriseDataManagement from '../components/EnterpriseDataManagement',
 import APIManagementSystem from '../components/APIManagementSystem',
-,
 // Lazy load heavy components,
 const ROICalculator = lazy(() => import('../components/ROICalculator')),
 const StructuredData = lazy(() => import('../components/StructuredData')),
-const PerformanceMetrics = lazy(,
-  () => import('../components/PerformanceMetrics'),
-),
+const PerformanceMetrics = lazy(
+  () => import('../components/PerformanceMetrics')),
 const TechnologyStack = lazy(() => import('../components/TechnologyStack')),
-,
 // Import key promotional components,
 import NewContentPromotionBanner from '../components/NewContentPromotionBanner',
 import InteractiveContentDiscoveryWidget from '../components/InteractiveContentDiscoveryWidget',
@@ -55,25 +51,23 @@ import QuantumAI20o26BreakthroughBanner from '../components/QuantumAI20o26Breakt
 import QuantumAIContentShowcase20o26 from '../components/QuantumAIContentShowcase20o26',
 import RevolutionaryContentBanner20o25 from '../components/RevolutionaryContentBanner20o25',
 import NewContent20o25UltimateShowcaseBanner from '../components/NewContent20o25UltimateShowcaseBanner',
-,
-export const metadata = {,
-  title: 'Zion Tech Group - AI & Technology Solutions',;
+export const metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions';
   description:,
-    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',;
-  keywords: [,
-    'AI automation',;
-    'cloud computing',;
-    'micro SaaS',;
-    'technology consulting',;
-    'enterprise solutions',;
-    'digital transformation',;
-  ],;
+    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.';
+  keywords: [
+    'AI automation';
+    'cloud computing';
+    'micro SaaS';
+    'technology consulting';
+    'enterprise solutions';
+    'digital transformation';
+  ];
 };
-,
-export default function HomePage() {,
-  return (,
+export default function HomePage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Zion Tech Group - AI & Technology Solutions',
         description='Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
         keywords='AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
@@ -132,23 +126,21 @@ export default function HomePage() {,
                 success.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Get Started,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -179,7 +171,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -195,10 +187,9 @@ export default function HomePage() {,
                   Intelligent automation solutions that streamline operations,
                   and boost productivity across your organization.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
@@ -211,10 +202,9 @@ export default function HomePage() {,
                   Scalable, secure cloud solutions designed to support your,
                   business growth and digital transformation.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/cloud-infrastructure',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
@@ -227,17 +217,16 @@ export default function HomePage() {,
                   Custom micro SaaS applications that solve specific business,
                   challenges with modern, scalable solutions.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/micro-saas',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Content Promotion Banners */,}
+        {/* Content Promotion Banners */}
         <NewContent20o25Showcase />,
         <UltimateContentShowcase20o25 />,
         <RevolutionaryContent20o26Banner />,
@@ -266,35 +255,33 @@ export default function HomePage() {,
         <APIManagementSystem />,
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size='lg' text='Loading...' />}>,
-          <StructuredData,
+          <StructuredData
             type='Organization',
-            data={{,
-              name: 'Zion Tech Group',;
+            data={{
+              name: 'Zion Tech Group';
               description:,
-                'Transforming businesses through cutting-edge technology solutions',;
-              url: 'https://zion.app',;
-              logo: 'https://zion.app/images/zion-tech-group-logo.png',;
-              sameAs: [,
-                'https://twitter.com/ZionTechGroup',;
-                'https://linkedin.com/company/zion-tech-group',;
-              ],;
+                'Transforming businesses through cutting-edge technology solutions';
+              url: 'https://zion.app';
+              logo: 'https://zion.app/images/zion-tech-group-logo.png';
+              sameAs: [
+                'https://twitter.com/ZionTechGroup';
+                'https://linkedin.com/company/zion-tech-group';
+              ];
             }}
           />,
-          <StructuredData,
+          <StructuredData
             type='WebSite',
-            data={{,
-              name: 'Zion Tech Group',;
-              url: 'https://zion.app',;
-              potentialAction: {,
-                '@type': 'SearchAction',;
-                target: 'https://zion.app/search?q={search_term_string,}',;
-                'query-input': 'required name=search_term_string',;
-              },;
+            data={{
+              name: 'Zion Tech Group';
+              url: 'https://zion.app';
+              potentialAction: {
+                '@type': 'SearchAction';
+                target: 'https://zion.app/search?q={search_term_string}';
+                'query-input': 'required name=search_term_string';
+              };
             }}
           />,
         </Suspense>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

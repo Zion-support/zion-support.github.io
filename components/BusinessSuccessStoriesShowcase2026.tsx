@@ -1,10 +1,9 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   ArrowRight,
   Star,
   TrendingUp,
@@ -12,232 +11,204 @@ import {,
   Zap,
   Shield,
   Brain,
-  Globe,;
-  CheckCircle,;
-  Play,;
-  Download,;
-  ExternalLink,;
-  Sparkles,;
-  Target,;
-  Award,;
-  Rocket,;
-  DollarSign,;
-  BarChart3,;
-  Clock,;
-  Building,;
-  Quote,;
-  ThumbsUp,;
-  Eye,;
-  Share2,;
-  Heart,
-} from 'lucide-react',
-,
-const BusinessSuccessStoriesShowcase20o26 = () => {,
+  Globe;
+  CheckCircle;
+  Play;
+  Download;
+  ExternalLink;
+  Sparkles;
+  Target;
+  Award;
+  Rocket;
+  DollarSign;
+  BarChart3;
+  Clock;
+  Building;
+  Quote;
+  ThumbsUp;
+  Eye;
+  Share2;
+  Heart} from 'lucide-react',
+const BusinessSuccessStoriesShowcase20o26 = () => {
   const [activeStorysetActiveStory] = useState(0),
   const [hoveredCardsetHoveredCard] = useState(null),
-,
-  const successStories = [,
-    {,
-      id: 1,;
-      company: 'TechCorp Global',;
-      industry: 'Technology',;
-      size: 'Fortune 50o0',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Manual processes causing 40% efficiency loss and high operational costs',;
-      solution: 'Implemented AI-powered automation system with neural consensus technology',;
-      results: {,
-        efficiency: '+30o0%',;
-        costReduction: '-65%',;
-        timeSaved: '2,50o0 hours/month',;
-        roi: '450%',
-      ,},;
-      testimonial: {,
-        text: 'The AI automation system transformed our entire operation. We achieved 30o0% efficiency improvement and saved millions in operational costs.',;
-        author: 'Sarah Johnson',;
-        position: 'CEOTechCorp Global',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['Neural Consensus 'AI', 'Workflow 'Automation', 'Predictive Analytics'],;
-      duration: '6 months',;
-      featured: true,;
-      rating: 5.0,;
-      views: 1560o0,;
-      likes: 892,
-    ,},;
-    {,
-      id: 2,;
-      company: 'FinanceFirst Bank',;
-      industry: 'Financial Services',;
-      size: 'Enterprise',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Cybersecurity threats and compliance issues affecting customer trust',;
-      solution: 'Deployed quantum-safe encryption and AI-powered threat detection system',;
-      results: {,
-        security: 'Zero breaches',;
-        compliance: '10o0%',;
-        customerTrust: '+85%',;
-        roi: '320%',
-      ,},;
-      testimonial: {,
-        text: 'Our security posture improved dramatically. Zero breaches since implementation and 10o0% compliance achievement.',;
-        author: 'Michael Chen',;
-        position: 'CISOFinanceFirst Bank',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['Quantum-Safe 'Encryption', 'AI Threat 'Detection', 'Zero-Trust Security'],;
-      duration: '4 months',;
-      featured: false,;
-      rating: 4.9,;
-      views: 1230o0,;
-      likes: 654,
-    ,},;
-    {,
-      id: 3,;
-      company: 'ManufacturingPro Inc',;
-      industry: 'Manufacturing',;
-      size: 'Mid-Market',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Equipment downtime causing $2M monthly losses and production delays',;
-      solution: 'Implemented predictive maintenance AI and automated quality control systems',;
-      results: {,
-        downtime: '-80%',;
-        quality: '+95%',;
-        savings: '$1.8M/month',;
-        roi: '280%',
-      ,},;
-      testimonial: {,
-        text: 'Predictive maintenance AI reduced our downtime by 80% and saved us $1.8M monthly. Game-changing technology.',;
-        author: 'David Rodriguez',;
-        position: 'Operations DirectorManufacturingPro',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['Predictive Maintenance 'AI', 'Quality Control 'Automation', 'IoT Integration'],;
-      duration: '5 months',;
-      featured: true,;
-      rating: 4.8,;
-      views: 980o0,;
-      likes: 456,
-    ,},;
-    {,
-      id: 4,;
-      company: 'RetailMax Chain',;
-      industry: 'Retail',;
-      size: 'Large Enterprise',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Inventory management inefficiencies and poor customer experience',;
-      solution: 'Deployed AI-powered inventory optimization and customer analytics platform',;
-      results: {,
-        inventory: '+40% accuracy',;
-        sales: '+25%',;
-        customerSatisfaction: '+90%',;
-        roi: '380%',
-      ,},;
-      testimonial: {,
-        text: 'AI-driven inventory management increased our sales by 25% and customer satisfaction by 90%. Incredible results.',;
-        author: 'Lisa Anderson',;
-        position: 'VP OperationsRetailMax',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['Inventory 'AI', 'Customer 'Analytics', 'Demand Forecasting'],;
-      duration: '3 months',;
-      featured: false,;
-      rating: 4.9,;
-      views: 1120o0,;
-      likes: 723,
-    ,},;
-    {,
-      id: 5,;
-      company: 'HealthTech Solutions',;
-      industry: 'Healthcare',;
-      size: 'Enterprise',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Patient data analysis taking weeks and diagnostic accuracy issues',;
-      solution: 'Implemented AI diagnostic platform with real-time patient data analysis',;
-      results: {,
-        diagnosis: '+95% accuracy',;
-        timeReduction: '-75%',;
-        patientOutcomes: '+60%',;
-        roi: '520%',
-      ,},;
-      testimonial: {,
-        text: 'AI diagnostic platform improved our diagnostic accuracy to 95% and reduced analysis time by 75%. Life-saving technology.',;
-        author: 'Dr. Emily Watson',;
-        position: 'Chief Medical OfficerHealthTech',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['AI 'Diagnostics', 'Real-time 'Analytics', 'Medical AI'],;
-      duration: '7 months',;
-      featured: true,;
-      rating: 5.0,;
-      views: 1890o0,;
-      likes: 120o3,
-    ,},;
-    {,
-      id: 6,;
-      company: 'LogisticsPro Ltd',;
-      industry: 'Logistics',;
-      size: 'Mid-Market',;
-      logo: '/api/placeholder/80/80',;
-      challenge: 'Route optimization and fuel costs consuming 30% of revenue',;
-      solution: 'Deployed AI route optimization and fuel efficiency management system',;
-      results: {,
-        fuelCosts: '-35%',;
-        deliveryTime: '-50%',;
-        customerSatisfaction: '+70%',;
-        roi: '290%',
-      ,},;
-      testimonial: {,
-        text: 'AI route optimization reduced our fuel costs by 35% and delivery time by 50%. Massive operational improvement.',;
-        author: 'James Wilson',;
-        position: 'Logistics DirectorLogisticsPro',;
-        avatar: '/api/placeholder/60/60',
-      ,},;
-      technologies: ['Route Optimization 'AI', 'Fuel 'Efficiency', 'Supply Chain AI'],;
-      duration: '4 months',;
-      featured: false,;
-      rating: 4.7,;
-      views: 870o0,;
-      likes: 389,
-    ,}
+  const successStories = [
+    {
+      id: 1;
+      company: 'TechCorp Global';
+      industry: 'Technology';
+      size: 'Fortune 50o0';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Manual processes causing 40% efficiency loss and high operational costs';
+      solution: 'Implemented AI-powered automation system with neural consensus technology';
+      results: {
+        efficiency: '+30o0%';
+        costReduction: '-65%';
+        timeSaved: '2,50o0 hours/month';
+        roi: '450%'};
+      testimonial: {
+        text: 'The AI automation system transformed our entire operation. We achieved 30o0% efficiency improvement and saved millions in operational costs.';
+        author: 'Sarah Johnson';
+        position: 'CEOTechCorp Global';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['Neural Consensus 'AI', 'Workflow 'Automation', 'Predictive Analytics'];
+      duration: '6 months';
+      featured: true;
+      rating: 5.0;
+      views: 1560o0;
+      likes: 892};
+    {
+      id: 2;
+      company: 'FinanceFirst Bank';
+      industry: 'Financial Services';
+      size: 'Enterprise';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Cybersecurity threats and compliance issues affecting customer trust';
+      solution: 'Deployed quantum-safe encryption and AI-powered threat detection system';
+      results: {
+        security: 'Zero breaches';
+        compliance: '10o0%';
+        customerTrust: '+85%';
+        roi: '320%'};
+      testimonial: {
+        text: 'Our security posture improved dramatically. Zero breaches since implementation and 10o0% compliance achievement.';
+        author: 'Michael Chen';
+        position: 'CISOFinanceFirst Bank';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['Quantum-Safe 'Encryption', 'AI Threat 'Detection', 'Zero-Trust Security'];
+      duration: '4 months';
+      featured: false;
+      rating: 4.9;
+      views: 1230o0;
+      likes: 654};
+    {
+      id: 3;
+      company: 'ManufacturingPro Inc';
+      industry: 'Manufacturing';
+      size: 'Mid-Market';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Equipment downtime causing $2M monthly losses and production delays';
+      solution: 'Implemented predictive maintenance AI and automated quality control systems';
+      results: {
+        downtime: '-80%';
+        quality: '+95%';
+        savings: '$1.8M/month';
+        roi: '280%'};
+      testimonial: {
+        text: 'Predictive maintenance AI reduced our downtime by 80% and saved us $1.8M monthly. Game-changing technology.';
+        author: 'David Rodriguez';
+        position: 'Operations DirectorManufacturingPro';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['Predictive Maintenance 'AI', 'Quality Control 'Automation', 'IoT Integration'];
+      duration: '5 months';
+      featured: true;
+      rating: 4.8;
+      views: 980o0;
+      likes: 456};
+    {
+      id: 4;
+      company: 'RetailMax Chain';
+      industry: 'Retail';
+      size: 'Large Enterprise';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Inventory management inefficiencies and poor customer experience';
+      solution: 'Deployed AI-powered inventory optimization and customer analytics platform';
+      results: {
+        inventory: '+40% accuracy';
+        sales: '+25%';
+        customerSatisfaction: '+90%';
+        roi: '380%'};
+      testimonial: {
+        text: 'AI-driven inventory management increased our sales by 25% and customer satisfaction by 90%. Incredible results.';
+        author: 'Lisa Anderson';
+        position: 'VP OperationsRetailMax';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['Inventory 'AI', 'Customer 'Analytics', 'Demand Forecasting'];
+      duration: '3 months';
+      featured: false;
+      rating: 4.9;
+      views: 1120o0;
+      likes: 723};
+    {
+      id: 5;
+      company: 'HealthTech Solutions';
+      industry: 'Healthcare';
+      size: 'Enterprise';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Patient data analysis taking weeks and diagnostic accuracy issues';
+      solution: 'Implemented AI diagnostic platform with real-time patient data analysis';
+      results: {
+        diagnosis: '+95% accuracy';
+        timeReduction: '-75%';
+        patientOutcomes: '+60%';
+        roi: '520%'};
+      testimonial: {
+        text: 'AI diagnostic platform improved our diagnostic accuracy to 95% and reduced analysis time by 75%. Life-saving technology.';
+        author: 'Dr. Emily Watson';
+        position: 'Chief Medical OfficerHealthTech';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['AI 'Diagnostics', 'Real-time 'Analytics', 'Medical AI'];
+      duration: '7 months';
+      featured: true;
+      rating: 5.0;
+      views: 1890o0;
+      likes: 120o3};
+    {
+      id: 6;
+      company: 'LogisticsPro Ltd';
+      industry: 'Logistics';
+      size: 'Mid-Market';
+      logo: '/api/placeholder/80/80';
+      challenge: 'Route optimization and fuel costs consuming 30% of revenue';
+      solution: 'Deployed AI route optimization and fuel efficiency management system';
+      results: {
+        fuelCosts: '-35%';
+        deliveryTime: '-50%';
+        customerSatisfaction: '+70%';
+        roi: '290%'};
+      testimonial: {
+        text: 'AI route optimization reduced our fuel costs by 35% and delivery time by 50%. Massive operational improvement.';
+        author: 'James Wilson';
+        position: 'Logistics DirectorLogisticsPro';
+        avatar: '/api/placeholder/60/60'};
+      technologies: ['Route Optimization 'AI', 'Fuel 'Efficiency', 'Supply Chain AI'];
+      duration: '4 months';
+      featured: false;
+      rating: 4.7;
+      views: 870o0;
+      likes: 389}
   ],
-,
   const featuredStories = successStories.filter(story => story.featured),
   const allStories = successStories,
-,
-  const getIndustryIcon = (industry) => {,
-    switch (industry) {,
+  const getIndustryIcon = (industry) => {
+    switch (industry) {
       case 'Technology': return Brain,
       case 'Financial Services': return Shield,
       case 'Manufacturing': return Zap,
       case 'Retail': return Globe,
       case 'Healthcare': return Target,
       case 'Logistics': return Truck,
-      default: return Building,
-    ,}
+      default: return Building}
   };
-,
-  const getIndustryColor = (industry) => {,
-    switch (industry) {,
+  const getIndustryColor = (industry) => {
+    switch (industry) {
       case 'Technology': return 'from-purple-50o0 to-blue-50o0',
       case 'Financial Services': return 'from-green-50o0 to-teal-50o0',
       case 'Manufacturing': return 'from-orange-50o0 to-red-50o0',
       case 'Retail': return 'from-pink-50o0 to-rose-50o0',
       case 'Healthcare': return 'from-blue-50o0 to-indigo-50o0',
       case 'Logistics': return 'from-yellow-50o0 to-orange-50o0',
-      default: return 'from-slate-50o0 to-slate-60o0',
-    ,}
+      default: return 'from-slate-50o0 to-slate-60o0'}
   };
-,
-  return (,
+  return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-10o0 to-blue-10o0 text-purple-80o0 px-4 py-2 rounded-full text-sm font-medium mb-4">,
             <Sparkles className="w-4 h-4"  />,
             Business Success Stories Showcase 20o26,
@@ -250,28 +221,26 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
             with our AI solutions. See the measurable impact on their bottom line.,
           </p>,
         </motion.div>,
-        {/* Featured Stories */,}
+        {/* Featured Stories */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.2 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="mb-16">,
           <h3 className="text-2xl font-bold text-slate-90o0 mb-8 text-center">Featured Success Stories</h3>,
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
-            {featuredStories.map((storyindex) => {,
+            {featuredStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry),
               const industryColor = getIndustryColor(story.industry),
-,
-              return (,
+              return (
                 <motion.div,
-                  key={story.id,}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5delay: index * 0.1 ,}}
-                  whileHover={{ y: -5scale: 1.0o2 ,}}
+                  key={story.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  whileHover={{ y: -5scale: 1.0o2 }}
                   className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden group cursor-pointer",
-                  onClick={() => setActiveStory(story.id - 1),}
+                  onClick={() => setActiveStory(story.id - 1)}
                 >,
                   {/* Header */}
                   <div className={`bg-gradient-to-r ${industryColor} p-6 text-white`}>,
@@ -310,26 +279,23 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
                     <div className="mb-6">,
                       <h5 className="font-semibold text-slate-90o0 mb-3">Key Results</h5>,
                       <div className="grid grid-cols-2 gap-3">,
-                        {Object.entries(story.results).slice(0o4).map(([keyvalue]resultIndex) => (,
+                        {Object.entries(story.results).slice(0o4).map(([keyvalue]resultIndex) => (
                           <div key={resultIndex} className="text-center">,
                             <div className="text-lg font-bold text-purple-60o0">{value}</div>,
                             <div className="text-xs text-slate-60o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     {/* Technologies */}
                     <div className="mb-4">,
                       <h5 className="font-semibold text-slate-90o0 mb-2">Technologies Used</h5>,
                       <div className="flex flex-wrap gap-1">,
-                        {story.technologies.map((techIndex) => (,
-                          <span,
+                        {story.technologies.map((techIndex) => (
+                          <span
                             key={techIndex}
-                            className="bg-slate-10o0 text-slate-60o0 px-2 py-1 rounded-full text-xs",
-                          >,
+                            className="bg-slate-10o0 text-slate-60o0 px-2 py-1 rounded-full text-xs">,
                             {tech}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                     </div>,
                     {/* Stats */}
@@ -360,33 +326,29 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
                       </button>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),
-            ,})}
+                </motion.div>)})}
           </div>,
         </motion.div>,
         {/* All Stories Grid */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.4 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
+          className="mb-16">,
           <h3 className="text-2xl font-bold text-slate-90o0 mb-8 text-center">All Success Stories</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {allStories.map((storyindex) => {,
+            {allStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry),
               const industryColor = getIndustryColor(story.industry),
-,
-              return (,
+              return (
                 <motion.div,
-                  key={story.id,}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5delay: index * 0.1 ,}}
-                  whileHover={{ y: -3scale: 1.0o1 ,}}
+                  key={story.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  whileHover={{ y: -3scale: 1.0o1 }}
                   className="bg-white rounded-xl shadow-md hover: shadow-lg transition-all duration-30o0 overflow-hidden group cursor-pointer",
-                  onClick={() => setActiveStory(story.id - 1),}
+                  onClick={() => setActiveStory(story.id - 1)}
                 >,
                   {/* Header */}
                   <div className={`bg-gradient-to-r ${industryColor} p-4 text-white`}>,
@@ -411,12 +373,11 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
                     <h5 className="font-semibold text-slate-90o0 mb-2 line-clamp-1">{story.challenge}</h5>,
                     {/* Key Results */}
                     <div className="grid grid-cols-2 gap-2 mb-3">,
-                      {Object.entries(story.results).slice(0o2).map(([keyvalue]resultIndex) => (,
+                      {Object.entries(story.results).slice(0o2).map(([keyvalue]resultIndex) => (
                         <div key={resultIndex} className="text-center">,
                           <div className="text-sm font-bold text-purple-60o0">{value}</div>,
                           <div className="text-xs text-slate-60o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                     {/* Stats */}
                     <div className="flex items-center justify-between text-xs text-slate-50o0 mb-3">,
@@ -438,18 +399,15 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
                       Read Story,
                     </button>,
                   </div>,
-                </motion.div>,
-              ),
-            ,})}
+                </motion.div>)})}
           </div>,
         </motion.div>,
         {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.6 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
+          className="text-center">,
           <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">,
             <h3 className="text-3xl font-bold mb-4">,
               Ready to Write Your Success Story?,
@@ -471,8 +429,5 @@ const BusinessSuccessStoriesShowcase20o26 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default BusinessSuccessStoriesShowcase20o26,
+    </div>)};
+export default BusinessSuccessStoriesShowcase20o26;

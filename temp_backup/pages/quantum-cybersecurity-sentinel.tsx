@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QuantumCybersecuritySentinelPage() {,
-  return (,
+export default function QuantumCybersecuritySentinelPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Cybersecurity Sentinel - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quantum cybersecurity sentinel page',
         />,
@@ -21,7 +20,5 @@ export default function QuantumCybersecuritySentinelPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

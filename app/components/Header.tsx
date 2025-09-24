@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -11,8 +12,7 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ]
+    { name: 'Contact', href: '/contact' }]
 
   return (
     <header className='bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700'>
@@ -20,9 +20,7 @@ export default function Header() {
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <div className='flex-shrink-0'>
-            <h1 className='text-2xl font-bold text-gray-900 dark:text-white'>
-              Zion Tech Group
-            </h1>
+            <h1 className='text-2xl font-bold text-gray-900 dark:text-white'>Zion Tech Group</h1>
           </div>
           {/* Desktop Navigation */}
           <nav className='hidden md:flex space-x-8'>
@@ -49,18 +47,14 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className='text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900'
             >
-              {isMenuOpen ? (
-                <XMarkIcon className='h-6 w-6' />
-              ) : (
-                <Bars3Icon className='h-6 w-6' />
-              )}
+              {isMenuOpen ? <XMarkIcon className='h-6 w-6' /> : <Bars3Icon className='h-6 w-6' />}
             </button>
           </div>
         </div>
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className='md:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700'>
+            <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 border-top border-gray-200 dark:border-gray-700'>
               {navigation.map(item => (
                 <a
                   key={item.name}

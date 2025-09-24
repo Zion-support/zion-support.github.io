@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Video Generator | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Video Generator | Zion Tech Group';
   description:,
-    'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.',;
+    'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.';
 };
-,
-export default function AIVideoGeneratorPage() {,
-  return (,
+export default function AIVideoGeneratorPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       <div className='text-center mb-12'>,
         <h1 className='text-5xl font-bold text-gray-90o0 mb-6'>,
@@ -20,34 +18,34 @@ export default function AIVideoGeneratorPage() {,
         </p>,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
-        <FeatureCard,
+        <FeatureCard
           title='Video Creation',
-          details={[,
-            'Text-to-video generation',;
-            'Image-to-video conversion',;
-            'Script-based video creation',;
-            'Multiple video formats',;
-            'HD/4K quality output',;
+          details={[
+            'Text-to-video generation';
+            'Image-to-video conversion';
+            'Script-based video creation';
+            'Multiple video formats';
+            'HD/4K quality output';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='AI Features',
-          details={[,
-            'Voice synthesis (20+ languages)',;
-            'Automatic scene generation',;
-            'Smart transitions & effects',;
-            'Background music generation',;
-            'Subtitle generation',;
+          details={[
+            'Voice synthesis (20+ languages)';
+            'Automatic scene generation';
+            'Smart transitions & effects';
+            'Background music generation';
+            'Subtitle generation';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Templates & Customization',
-          details={[,
-            'Professional templates',;
-            'Brand customization',;
-            'Logo integration',;
-            'Color scheme matching',;
-            'Custom animations',;
+          details={[
+            'Professional templates';
+            'Brand customization';
+            'Logo integration';
+            'Color scheme matching';
+            'Custom animations';
           ]}
         />,
       </div>,
@@ -62,124 +60,109 @@ export default function AIVideoGeneratorPage() {,
           all sizes.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors',
-          >,
+            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
-function FeatureCard({ title, details }: { title: string, details: string[] ,}) {,
-  return (,
+function FeatureCard({ title, details }: { title: string, details: string[] }) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover: shadow-md transition-shadow'>,
-      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title,}</h3>,
+      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2 text-gray-60o0'>,
-        {details.map((detail, index) => (,
+        {details.map((detail, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-pink-50o0 mr-2'>•</span> {detail}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingSection() {,
-  return (,
+function PricingSection() {
+  return (
     <div className='mb-12'>,
       <h2 className='text-3xl font-bold text-center text-gray-90o0 mb-8'>,
         Pricing Plans,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <PricingPlan,
+        <PricingPlan
           name='Starter',
           price='$39/mo',
-          features={[,
-            '10 videos/month (up to 2 min each)',;
-            'Basic templates',;
-            'Standard quality (1080p)',;
-            'Email support',;
-            'Basic customization',;
+          features={[
+            '10 videos/month (up to 2 min each)';
+            'Basic templates';
+            'Standard quality (1080p)';
+            'Email support';
+            'Basic customization';
           ]}
         />,
-        <PricingPlan,
+        <PricingPlan
           name='Professional',
           price='$129/mo',
-          features={[,
-            '50 videos/month (up to 5 min each)',;
-            'Premium templates',;
-            '4K quality output',;
-            'Priority support',;
-            'Advanced customization & branding',;
+          features={[
+            '50 videos/month (up to 5 min each)';
+            'Premium templates';
+            '4K quality output';
+            'Priority support';
+            'Advanced customization & branding';
           ]}
           featured={true}
         />,
-        <PricingPlan,
+        <PricingPlan
           name='Enterprise',
           price='$399/mo',
-          features={[,
-            'Unlimited videos',;
-            'Custom template creation',;
-            'White-label solution',;
-            'Dedicated support',;
-            'API access & integrations',;
+          features={[
+            'Unlimited videos';
+            'Custom template creation';
+            'White-label solution';
+            'Dedicated support';
+            'API access & integrations';
           ]}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingPlan({,
-  name,;
-  price,;
-  features,;
-  featured = false,;
-}: {,
+function PricingPlan({
+  name;
+  price;
+  features;
+  featured = false;
+}: {
   name: string,
   price: string,
   features: string[],
-  featured?: boolean,
-,}) {,
-  return (,
-    <div,
-      className={`border rounded-xl p-6 ${,
+  featured?: boolean}) {
+  return (
+    <div
+      className={`border rounded-xl p-6 ${
         featured,
           ? 'border-pink-50o0 bg-pink-50 shadow-lg',
-          : 'border-gray-20o0 bg-white shadow-sm',
-      }`}
+          : 'border-gray-20o0 bg-white shadow-sm'}`}
     >,
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-gray-90o0 mb-4'>{price}</div>,
       <ul className='space-y-2 text-gray-60o0 mb-6'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-pink-50o0 mr-2'>✓</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${,
+        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured,
             ? 'bg-pink-60o0 text-white hover:bg-pink-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
 import { AppHeader } from './layout/AppHeader',
 import Footer from './components/Footer',
 import { ChatAssistant } from './components/ChatAssistant',
-,
 // Lazy load pages,
 const Home = React.lazy(() => import('./pages/Home')),
 const About = React.lazy(() => import('./pages/About')),
@@ -18,24 +17,18 @@ const Privacy = React.lazy(() => import('./pages/Privacy')),
 const Terms = React.lazy(() => import('./pages/Terms')),
 const Sitemap = React.lazy(() => import('./pages/Sitemap')),
 const GreenIT = React.lazy(() => import('./pages/GreenIT')),
-,
 // Enhanced Service Pages - only the ones we created and know work,
-const Q420o25CuttingEdgeServicesShowcase = React.lazy(,
-  () => import('./pages/Q420o25CuttingEdgeServicesShowcase'),
-),
-const Zion20o26InnovativeServicesShowcase = React.lazy(,
-  () => import('./pages/Zion20o26InnovativeServicesShowcase'),
-),
-,
+const Q420o25CuttingEdgeServicesShowcase = React.lazy(
+  () => import('./pages/Q420o25CuttingEdgeServicesShowcase')),
+const Zion20o26InnovativeServicesShowcase = React.lazy(
+  () => import('./pages/Zion20o26InnovativeServicesShowcase')),
 // Loading component,
-const LoadingSpinner = () => (,
+const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>,
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></div>,
-  </div>,
-),
-,
-function App() {,
-  return (,
+  </div>),
+function App() {
+  return (
     <Router>,
       <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>,
         <AppHeader />,
@@ -56,11 +49,11 @@ function App() {,
               <Route path='/partners' element={<PartnersPage />} />,
               <Route path='/login' element={<Login />} />,
               {/* Enhanced Service Routes - only the working ones */}
-              <Route,
+              <Route
                 path='/q4-20o25-cutting-edge-services',
                 element={<Q420o25CuttingEdgeServicesShowcase />}
               />,
-              <Route,
+              <Route
                 path='/zion-20o26-innovative-services',
                 element={<Zion20o26InnovativeServicesShowcase />}
               />,
@@ -70,9 +63,6 @@ function App() {,
         <Footer />,
         <ChatAssistant />,
       </div>,
-    </Router>,
-  ),
-}
+    </Router>)}
 ,
-export default App,
-,
+export default App;

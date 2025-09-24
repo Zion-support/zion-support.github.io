@@ -1,26 +1,24 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI Automation Success Stories 20o26: Real ROI Results - Zion Tech Group',;
+    'AI Automation Success Stories 20o26: Real ROI Results - Zion Tech Group';
   description:,
-    'Discover real AI automation success stories from 20o26. See how companies achieved 30o0%+ ROI, 70% cost reduction, and massive productivity gains.',;
-  keywords: [,
-    'AI automation success stories',;
-    'AI ROI',;
-    'automation case studies',;
-    'AI business results',;
-    'automation ROI',;
-    'AI transformation',;
-  ],;
+    'Discover real AI automation success stories from 20o26. See how companies achieved 30o0%+ ROI, 70% cost reduction, and massive productivity gains.';
+  keywords: [
+    'AI automation success stories';
+    'AI ROI';
+    'automation case studies';
+    'AI business results';
+    'automation ROI';
+    'AI transformation';
+  ];
 };
-,
-export default function AIAutomationSuccessStories20o26() {,
-  return (,
+export default function AIAutomationSuccessStories20o26() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI Automation Success Stories 20o26: Real ROI Results',
         description='Discover real AI automation success stories from 20o26. See how companies achieved 30o0%+ ROI, 70% cost reduction, and massive productivity gains.',
         keywords='AI automation success stories, AI ROI, automation case studies, AI business results, automation ROI, AI transformation',
@@ -45,23 +43,21 @@ export default function AIAutomationSuccessStories20o26() {,
                 transformative business outcomes.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Your Success Story,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                   Start Automation,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -95,13 +91,13 @@ export default function AIAutomationSuccessStories20o26() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Stories */,}
+        {/* Success Stories */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
               Real Success Stories,
             </h2>,
-            {/* Story 1 */,}
+            {/* Story 1 */}
             <div className='mb-16'>,
               <div className='bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl'>,
                 <div className='flex items-center mb-6'>,
@@ -168,7 +164,7 @@ export default function AIAutomationSuccessStories20o26() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 2 */,}
+            {/* Story 2 */}
             <div className='mb-16'>,
               <div className='bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl'>,
                 <div className='flex items-center mb-6'>,
@@ -237,7 +233,7 @@ export default function AIAutomationSuccessStories20o26() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 3 */,}
+            {/* Story 3 */}
             <div className='mb-16'>,
               <div className='bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl'>,
                 <div className='flex items-center mb-6'>,
@@ -306,7 +302,7 @@ export default function AIAutomationSuccessStories20o26() {,
                 </div>,
               </div>,
             </div>,
-            {/* Story 4 */,}
+            {/* Story 4 */}
             <div className='mb-16'>,
               <div className='bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-xl'>,
                 <div className='flex items-center mb-6'>,
@@ -379,7 +375,7 @@ export default function AIAutomationSuccessStories20o26() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Success Factors */,}
+        {/* Implementation Success Factors */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -403,7 +399,7 @@ export default function AIAutomationSuccessStories20o26() {,
                   Phased Approach,
                 </h3>,
                 <p className='text-gray-60o0'>,
-                  Successful implementations use a phased rollout strategy,;
+                  Successful implementations use a phased rollout strategy;
                   starting with high-impact, low-risk projects to build,
                   momentum.,
                 </p>,
@@ -432,32 +428,29 @@ export default function AIAutomationSuccessStories20o26() {,
               with AI automation.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Your AI Journey,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                 Explore AI Services,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
               Related Articles,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-ultimate-business-transformation',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   AI 20o26: Ultimate Business Transformation,
                 </h3>,
@@ -466,10 +459,9 @@ export default function AIAutomationSuccessStories20o26() {,
                   driving unprecedented ROI.,
                 </p>,
               </Link>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-hyperautomation-business-playbook',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   AI 20o26: Hyperautomation Business Playbook,
                 </h3>,
@@ -478,10 +470,9 @@ export default function AIAutomationSuccessStories20o26() {,
                   across your enterprise.,
                 </p>,
               </Link>,
-              <Link,
+              <Link
                 href='/blog/ai-20o25-enterprise-ai-agents-breakthrough',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   Enterprise AI Agents: 20o25 Breakthrough,
                 </h3>,
@@ -494,7 +485,5 @@ export default function AIAutomationSuccessStories20o26() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>)}
 ,

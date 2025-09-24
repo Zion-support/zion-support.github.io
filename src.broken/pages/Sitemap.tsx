@@ -1,9 +1,7 @@
-export function Sitemap() {,
-  return (,
+export function Sitemap() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

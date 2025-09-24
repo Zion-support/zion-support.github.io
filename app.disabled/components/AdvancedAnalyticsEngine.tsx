@@ -1,8 +1,7 @@
 'use client',
-,
-import React from 'react',
-const AdvancedAnalyticsEngine: React.FC = () => {,
-  return (,
+import React from 'react';
+const AdvancedAnalyticsEngine: React.FC = () => {
+  return (
     <div className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center'>,
@@ -14,11 +13,7 @@ const AdvancedAnalyticsEngine: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default function AdvancedAnalyticsEngine() {,
-  return null,
-}
+    </div>)};
+export default function AdvancedAnalyticsEngine() {
+  return null}
 ,

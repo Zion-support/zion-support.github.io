@@ -1,46 +1,45 @@
-import React from 'react',
-export const metadata = {,
-  title: 'Web Application Development | Zion Tech Group',;
+import React from 'react';
+export const metadata = {
+  title: 'Web Application Development | Zion Tech Group';
   description:,
-    'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.',;
+    'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.';
 };
-,
-export default function WebApplicationDevelopmentPage() {,
-  return (,
+export default function WebApplicationDevelopmentPage() {
+  return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
         Web Application Development,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Build powerful web applications with modern technologies. Responsive,;
+        Build powerful web applications with modern technologies. Responsive;
         scalable, and secure solutions for all business needs.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
-        <FeatureCard,
+        <FeatureCard
           title='Frontend Development',
-          features={[,
-            'React/Vue.js/Angular',;
-            'Responsive design',;
-            'Progressive Web Apps',;
-            'Performance optimization',;
+          features={[
+            'React/Vue.js/Angular';
+            'Responsive design';
+            'Progressive Web Apps';
+            'Performance optimization';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Backend Development',
-          features={[,
-            'Node.js/Python/Java',;
-            'RESTful APIs',;
-            'Database design',;
-            'Cloud deployment',;
+          features={[
+            'Node.js/Python/Java';
+            'RESTful APIs';
+            'Database design';
+            'Cloud deployment';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Full-Stack Solutions',
-          features={[,
-            'End-to-end development',;
-            'Database integration',;
-            'Third-party APIs',;
-            'Maintenance & support',;
+          features={[
+            'End-to-end development';
+            'Database integration';
+            'Third-party APIs';
+            'Maintenance & support';
           ]}
         />,
       </div>,
@@ -101,130 +100,114 @@ export default function WebApplicationDevelopmentPage() {,
           and timeline.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors',
-          >,
+            className='bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-emerald-60o0 text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-emerald-60o0 text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,
-function FeatureCard({,
-  title,;
-  features,;
-}: {,
+function FeatureCard({
+  title;
+  features;
+}: {
   title: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2 text-gray-60o0'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-emerald-50o0 mr-2'>•</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <div className='mt-16'>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         Pricing Plans,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <Plan,
+        <Plan
           name='Basic Website',
           price='$9,999',
-          features={[,
-            'Simple web application',;
-            'Basic functionality',;
-            'Responsive design',;
-            '2 months development',;
+          features={[
+            'Simple web application';
+            'Basic functionality';
+            'Responsive design';
+            '2 months development';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Professional App',
           price='$24,999',
-          features={[,
-            'Advanced features',;
-            'Custom design',;
-            'Database integration',;
-            '4 months development',;
-            '3 months support',;
+          features={[
+            'Advanced features';
+            'Custom design';
+            'Database integration';
+            '4 months development';
+            '3 months support';
           ]}
           popular={true}
         />,
-        <Plan,
+        <Plan
           name='Enterprise Solution',
           price='$59,999+',
-          features={[,
-            'Complex functionality',;
-            'Custom backend',;
-            'Advanced integrations',;
-            'Dedicated team',;
-            '6+ months development',;
+          features={[
+            'Complex functionality';
+            'Custom backend';
+            'Advanced integrations';
+            'Dedicated team';
+            '6+ months development';
           ]}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Plan({,
-  name,;
-  price,;
-  features,;
-  popular = false,;
-}: {,
+function Plan({
+  name;
+  price;
+  features;
+  popular = false;
+}: {
   name: string,
   price: string,
   features: string[],
-  popular?: boolean,
-,}) {,
-  return (,
-    <div,
+  popular?: boolean}) {
+  return (
+    <div
       className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-emerald-50o0 ring-2 ring-emerald-20o0' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-emerald-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-emerald-60o0 mb-4'>{price}</div>,
       <ul className='space-y-2 text-gray-60o0 mb-6'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${,
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular,
             ? 'bg-emerald-60o0 text-white hover:bg-emerald-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

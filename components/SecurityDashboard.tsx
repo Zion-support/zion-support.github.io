@@ -1,59 +1,47 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 ShieldAlertTriangleCheckCircleEyeLockActivityUsersServer,
-const SecurityDashboard = () => {,
-  const [securityMetricsetSecurityMetrics] = useState({,
-    threatLevel: 'Low',;
-    activeThreats: 0,;
-    blockedAttacks: 1247,;
-    systemHealth: 98,;
-    usersOnline: 156,;
-    lastScan: '2 minutes ago',}),
-,
-  const [threatsetThreats] = useState([,
-    { id: 1type: 'DDoS 'Attack', 'severity: ''Medium', 'status: ''Blocked', 'time: '5 min ago' ,},;
-    { id: 2type: 'SQL 'Injection', 'severity: ''High', 'status: ''Blocked', 'time: '12 min ago' ,},;
-    { id: 3type: ''Malware', 'severity: ''Low', 'status: ''Quarantined', 'time: '1 hour ago' ,},;
+const SecurityDashboard = () => {
+  const [securityMetricsetSecurityMetrics] = useState({
+    threatLevel: 'Low';
+    activeThreats: 0;
+    blockedAttacks: 1247;
+    systemHealth: 98;
+    usersOnline: 156;
+    lastScan: '2 minutes ago'}),
+  const [threatsetThreats] = useState([
+    { id: 1type: 'DDoS 'Attack', 'severity: ''Medium', 'status: ''Blocked', 'time: '5 min ago' };
+    { id: 2type: 'SQL 'Injection', 'severity: ''High', 'status: ''Blocked', 'time: '12 min ago' };
+    { id: 3type: ''Malware', 'severity: ''Low', 'status: ''Quarantined', 'time: '1 hour ago' };
   ]),
-,
-  const [logsetLogs] = useState([,
-    { id: 1action: 'Login 'Attempt', 'user: 'admin@company.'com', 'ip: '192.168.1.10o0'status: ''Success', 'time: '2 min ago' ,},;
-    { id: 2action: 'File 'Access', 'user: 'user@company.'com', 'ip: '192.168.1.10o1'status: ''Success', 'time: '5 min ago' ,},;
-    { id: 3action: 'Failed 'Login', 'user: 'unknown@external.'com', 'ip: '10.0.0.50'status: ''Blocked', 'time: '8 min ago' ,},;
+  const [logsetLogs] = useState([
+    { id: 1action: 'Login 'Attempt', 'user: 'admin@company.'com', 'ip: '192.168.1.10o0'status: ''Success', 'time: '2 min ago' };
+    { id: 2action: 'File 'Access', 'user: 'user@company.'com', 'ip: '192.168.1.10o1'status: ''Success', 'time: '5 min ago' };
+    { id: 3action: 'Failed 'Login', 'user: 'unknown@external.'com', 'ip: '10.0.0.50'status: ''Blocked', 'time: '8 min ago' };
   ]),
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setSecurityMetrics(prev => ({,
-        ...prev,;
-        blockedAttacks: prev.blockedAttacks + Math.floor(Math.random() * 3),;
-        lastScan: 'Just now',})),
-    }30o000),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const getThreatLevelColor = (level) => {,
-    switch (level) {,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSecurityMetrics(prev => ({
+        ...prev;
+        blockedAttacks: prev.blockedAttacks + Math.floor(Math.random() * 3);
+        lastScan: 'Just now'}))}30o000),
+    return () => clearInterval(interval)}[]),
+  const getThreatLevelColor = (level) => {
+    switch (level) {
       case 'Low': return 'text-green-60o0 bg-green-10o0',
       case 'Medium': return 'text-yellow-60o0 bg-yellow-10o0',
       case 'High': return 'text-red-60o0 bg-red-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    ,}
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
-,
-  const getStatusColor = (status) => {,
-    switch (status) {,
+  const getStatusColor = (status) => {
+    switch (status) {
       case 'Success': return 'text-green-60o0 bg-green-10o0',
       case 'Blocked': return 'text-red-60o0 bg-red-10o0',
       case 'Quarantined': return 'text-yellow-60o0 bg-yellow-10o0',
-      default: return 'text-gray-60o0 bg-gray-10o0',
-    ,}
+      default: return 'text-gray-60o0 bg-gray-10o0'}
   };
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-10o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-16">,
@@ -64,14 +52,14 @@ const SecurityDashboard = () => {,
             Real-time security monitoring and threat management for your infrastructure.,
           </p>,
         </div>,
-        {/* Security Metrics */,}
+        {/* Security Metrics */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
           <div className="bg-white p-6 rounded-xl shadow-lg">,
             <div className="flex items-center justify-between mb-4">,
               <div className="w-12 h-12 bg-red-10o0 rounded-lg flex items-center justify-center">,
                 <Shield className="w-6 h-6 text-red-60o0"  />,
               </div>,
-              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getThreatLevelColor(securityMetrics.threatLevel),}`}>,
+              <span className={`px-3 py-1 rounded-full text-sm font-medium ${getThreatLevelColor(securityMetrics.threatLevel)}`}>,
                 {securityMetrics.threatLevel}
               </span>,
             </div>,
@@ -110,14 +98,14 @@ const SecurityDashboard = () => {,
           </div>,
         </div>,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-          {/* Active Threats */,}
+          {/* Active Threats */}
           <div className="bg-white p-8 rounded-xl shadow-lg">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-6 flex items-center">,
               <AlertTriangle className="w-8 h-8 text-red-60o0 mr-3"  />,
               Recent Threats,
             </h3>,
             <div className="space-y-4">,
-              {threats.map((threat) => (,
+              {threats.map((threat) => (
                 <div key={threat.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">,
                   <div>,
                     <h4 className="font-semibold text-gray-90o0">{threat.type}</h4>,
@@ -131,8 +119,7 @@ const SecurityDashboard = () => {,
                       {threat.status}
                     </span>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Security Logs */}
@@ -142,7 +129,7 @@ const SecurityDashboard = () => {,
               Security Logs,
             </h3>,
             <div className="space-y-4">,
-              {logs.map((log) => (,
+              {logs.map((log) => (
                 <div key={log.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">,
                   <div>,
                     <h4 className="font-semibold text-gray-90o0">{log.action}</h4>,
@@ -152,8 +139,7 @@ const SecurityDashboard = () => {,
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(log.status)}`}>,
                     {log.status}
                   </span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -182,8 +168,5 @@ const SecurityDashboard = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default SecurityDashboard,
+    </section>)};
+export default SecurityDashboard;

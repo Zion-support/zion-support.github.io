@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Revolutionary AI 20o25 Automation - Zion Tech Group',;
+export const metadata = {
+  title: 'Revolutionary AI 20o25 Automation - Zion Tech Group';
   description:,
-    'Transform your business with revolutionary AI 20o25 automation. Achieve 20o00% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.',;
-  keywords: [,
-    'AI 20o25',;
-    'Revolutionary Automation',;
-    'Autonomous Systems',;
-    'Quantum AI',;
-    'Business Transformation',;
-    '20o00% ROI',;
-  ],;
+    'Transform your business with revolutionary AI 20o25 automation. Achieve 20o00% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.';
+  keywords: [
+    'AI 20o25';
+    'Revolutionary Automation';
+    'Autonomous Systems';
+    'Quantum AI';
+    'Business Transformation';
+    '20o00% ROI';
+  ];
 };
-,
-export default function RevolutionaryAI20o25AutomationPage() {,
-  return (,
+export default function RevolutionaryAI20o25AutomationPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Revolutionary AI 20o25 Automation - Zion Tech Group',
         description='Transform your business with revolutionary AI 20o25 automation. Achieve 20o00% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.',
         keywords='AI 20o25, Revolutionary Automation, Autonomous Systems, Quantum AI, Business Transformation, 20o00% ROI',
@@ -42,28 +40,26 @@ export default function RevolutionaryAI20o25AutomationPage() {,
               </h1>,
               <p className='text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed'>,
                 Transform your business with the most advanced AI automation,
-                breakthrough in history. Achieve{' ',}
+                breakthrough in history. Achieve{' '}
                 <strong className='text-yellow-40o0'>20o00% ROI</strong> with,
                 our revolutionary autonomous systems.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-                >,
+                  className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
                   Get Free Consultation,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
+                  className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                   View Success Stories,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Revolutionary Results */,}
+        {/* Revolutionary Results */}
         <section className='py-20 bg-gray-50'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -123,7 +119,7 @@ export default function RevolutionaryAI20o25AutomationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Revolutionary Features */,}
+        {/* Revolutionary Features */}
         <section className='py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -357,7 +353,7 @@ export default function RevolutionaryAI20o25AutomationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-4xl md:text-5xl font-bold mb-8'>,
@@ -368,23 +364,19 @@ export default function RevolutionaryAI20o25AutomationPage() {,
               20o25 automation breakthrough,
             </p>,
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-              >,
+                className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
                 Start Your Revolution,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-12 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='border-2 border-white text-white px-12 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 View Success Stories,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

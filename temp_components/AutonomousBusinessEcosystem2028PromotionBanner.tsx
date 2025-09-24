@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AutonomousBusinessEcosystem20o28PromotionBanner: React.FC = () => {,
-  return (,
+const AutonomousBusinessEcosystem20o28PromotionBanner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-emerald-90o0 to-teal-90o0 border border-emerald-50o0/30 rounded-2xl p-8 mb-8'>,
       <div className='absolute inset-0 bg-gradient-to-r from-emerald-50o0/10 via-teal-50o0/10 to-cyan-50o0/10 animate-pulse'></div>,
       <div className='relative'>,
@@ -36,16 +35,14 @@ const AutonomousBusinessEcosystem20o28PromotionBanner: React.FC = () => {,
             </div>,
           </div>,
           <div className='flex flex-col gap-4'>,
-            <Link,
+            <Link
               href='/autonomous-business-ecosystem-20o28',
-              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 hover:from-emerald-60o0 hover:to-teal-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-emerald-50o0/25 whitespace-nowrap',
-            >,
+              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 hover:from-emerald-60o0 hover:to-teal-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-emerald-50o0/25 whitespace-nowrap'>,
               Deploy Ecosystem,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap'>,
               Watch Demo,
             </Link>,
           </div>,
@@ -71,9 +68,5 @@ const AutonomousBusinessEcosystem20o28PromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousBusinessEcosystem20o28PromotionBanner,
-,
+    </div>)};
+export default AutonomousBusinessEcosystem20o28PromotionBanner;

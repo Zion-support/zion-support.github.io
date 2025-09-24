@@ -1,25 +1,25 @@
-export const FuturisticLoader = ({,
-  size = 'medium',;
-  text = 'Loading...',;
-  variant = 'matrix',;
-}) => {,
-  const sizeClasses = {,
-    small: 'w-8 h-8',;
-    medium: 'w-16 h-16',;
-    large: 'w-24 h-24',;
+export const FuturisticLoader = ({
+  size = 'medium';
+  text = 'Loading...';
+  variant = 'matrix';
+}) => {
+  const sizeClasses = {
+    small: 'w-8 h-8';
+    medium: 'w-16 h-16';
+    large: 'w-24 h-24';
   };
-  const textSizes = {,
-    small: 'text-sm',;
-    medium: 'text-lg',;
-    large: 'text-xl',;
+  const textSizes = {
+    small: 'text-sm';
+    medium: 'text-lg';
+    large: 'text-xl';
   };
-  const renderLoader = () => {,
-    switch (variant) {,
+  const renderLoader = () => {
+    switch (variant) {
       case 'matrix':,
-        return (,
+        return (
           <div className='relative'>,
             {/* Matrix Rain Effect */}
-            <div,
+            <div
               className={`${sizeClasses[size]} relative overflow-hidden rounded-lg bg-black/20 border border-cyan-50o0/30`}
             >,
               <div className='absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50o0/20 to-transparent animate-matrix-rain'></div>,
@@ -31,14 +31,13 @@ export const FuturisticLoader = ({,
             </div>,
             {/* Orbital Rings */}
             <div className='absolute inset-0 rounded-full border border-cyan-50o0/20 animate-spin'></div>,
-            <div,
+            <div
               className='absolute inset-0 rounded-full border border-cyan-50o0/10 animate-spin',
-              style={{ animationDirection: 'reverse', animationDuration: '3s' ,}}
+              style={{ animationDirection: 'reverse', animationDuration: '3s' }}
             ></div>,
-          </div>,
-        ),
+          </div>),
       case 'neural':,
-        return (,
+        return (
           <div className='relative'>,
             {/* Neural Network Nodes */}
             <div className={`${sizeClasses[size]} relative`}>,
@@ -50,11 +49,10 @@ export const FuturisticLoader = ({,
               <div className='absolute bottom-1/4 left-0 w-2 h-2 bg-green-40o0 rounded-full animate-pulse animation-delay-150o0'></div>,
               <div className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-red-40o0 rounded-full animate-pulse animation-delay-20o00'></div>,
               {/* Connecting Lines */}
-              <svg,
+              <svg
                 className='absolute inset-0 w-full h-full',
-                viewBox='0 0 10o0 10o0',
-              >,
-                <line,
+                viewBox='0 0 10o0 10o0'>,
+                <line
                   x1='50',
                   y1='50',
                   x2='50',
@@ -63,7 +61,7 @@ export const FuturisticLoader = ({,
                   strokeWidth='1',
                   className='animate-neural-network',
                 />,
-                <line,
+                <line
                   x1='50',
                   y1='50',
                   x2='80',
@@ -71,9 +69,9 @@ export const FuturisticLoader = ({,
                   stroke='rgba(147, 51, 234, 0.3)',
                   strokeWidth='1',
                   className='animate-neural-network',
-                  style={{ animationDelay: '0.5s' ,}}
+                  style={{ animationDelay: '0.5s' }}
                 />,
-                <line,
+                <line
                   x1='50',
                   y1='50',
                   x2='20',
@@ -81,9 +79,9 @@ export const FuturisticLoader = ({,
                   stroke='rgba(34, 197, 94, 0.3)',
                   strokeWidth='1',
                   className='animate-neural-network',
-                  style={{ animationDelay: '1s' ,}}
+                  style={{ animationDelay: '1s' }}
                 />,
-                <line,
+                <line
                   x1='50',
                   y1='50',
                   x2='50',
@@ -91,14 +89,13 @@ export const FuturisticLoader = ({,
                   stroke='rgba(239, 68, 68, 0.3)',
                   strokeWidth='1',
                   className='animate-neural-network',
-                  style={{ animationDelay: '1.5s' ,}}
+                  style={{ animationDelay: '1.5s' }}
                 />,
               </svg>,
             </div>,
-          </div>,
-        ),
+          </div>),
       case 'quantum':,
-        return (,
+        return (
           <div className='relative'>,
             {/* Quantum Particles */}
             <div className={`${sizeClasses[size]} relative`}>,
@@ -111,26 +108,25 @@ export const FuturisticLoader = ({,
               </div>,
               {/* Orbiting Particles */}
               <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cyan-40o0 rounded-full animate-cyber-spin'></div>,
-              <div,
+              <div
                 className='absolute right-0 top-1/2 transform translate-y-1/2 w-2 h-2 bg-blue-40o0 rounded-full animate-cyber-spin',
-                style={{ animationDelay: '0.5s' ,}}
+                style={{ animationDelay: '0.5s' }}
               ></div>,
-              <div,
+              <div
                 className='absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-40o0 rounded-full animate-cyber-spin',
-                style={{ animationDelay: '1s' ,}}
+                style={{ animationDelay: '1s' }}
               ></div>,
-              <div,
+              <div
                 className='absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-green-40o0 rounded-full animate-cyber-spin',
-                style={{ animationDelay: '1.5s' ,}}
+                style={{ animationDelay: '1.5s' }}
               ></div>,
             </div>,
-          </div>,
-        ),
+          </div>),
       case 'cyber':,
-        return (,
+        return (
           <div className='relative'>,
             {/* Cyber Grid */}
-            <div,
+            <div
               className={`${sizeClasses[size]} relative bg-cyber-grid rounded-lg border border-cyan-50o0/30`}
             >,
               <div className='absolute inset-0 bg-gradient-to-br from-cyan-50o0/10 to-transparent'></div>,
@@ -148,24 +144,21 @@ export const FuturisticLoader = ({,
               <div className='absolute bottom-1 right-1 w-1 h-1 bg-cyan-40o0 rounded-full animate-pulse animation-delay-10o00'></div>,
               <div className='absolute bottom-1 left-1 w-1 h-1 bg-cyan-40o0 rounded-full animate-pulse animation-delay-150o0'></div>,
             </div>,
-          </div>,
-        ),
+          </div>),
       default: ,
-        return (,
-          <div className={`${sizeClasses[size],} relative`}>,
+        return (
+          <div className={`${sizeClasses[size]} relative`}>,
             <div className='absolute inset-0 rounded-full border-4 border-cyan-50o0/30 border-t-cyan-50o0 animate-spin'></div>,
-            <div,
+            <div
               className='absolute inset-0 rounded-full border-4 border-blue-50o0/20 border-t-blue-50o0 animate-spin',
-              style={{ animationDirection: 'reverse', animationDuration: '2s' ,}}
+              style={{ animationDirection: 'reverse', animationDuration: '2s' }}
             ></div>,
-          </div>,
-        ),
-    }
+          </div>)}
   };
-  return (,
+  return (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       {renderLoader()}
-      {text && (,
+      {text && (
         <div className={`text-center ${textSizes[size]}`}>,
           <p className='text-cyan-40o0 font-medium animate-neon-pulse'>,
             {text}
@@ -175,10 +168,6 @@ export const FuturisticLoader = ({,
             <div className='w-1 h-1 bg-cyan-40o0 rounded-full animate-pulse animation-delay-20o0'></div>,
             <div className='w-1 h-1 bg-cyan-40o0 rounded-full animate-pulse animation-delay-40o0'></div>,
           </div>,
-        </div>,
-      )}
-    </div>,
-  ),
-};
-export default FuturisticLoader,
-,
+        </div>)}
+    </div>)};
+export default FuturisticLoader;

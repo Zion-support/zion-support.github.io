@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
-  return (,
+const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden'>,
-      {/* Quantum-inspired background animations */,}
+      {/* Quantum-inspired background animations */}
       <div className='absolute inset-0'>,
         <div className='absolute top-20 left-20 w-32 h-32 bg-cyan-40o0 rounded-full opacity-10 animate-pulse'></div>,
         <div className='absolute top-40 right-32 w-24 h-24 bg-purple-40o0 rounded-full opacity-15 animate-bounce'></div>,
@@ -16,7 +15,7 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Quantum badge */,}
+          {/* Quantum badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>,
               ⚛️ QUANTUM AI REVOLUTION 20o26,
@@ -29,10 +28,10 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
               Ultimate Business Revolution,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Transform your enterprise with quantum-neural intelligence.,
-            Experience 10o00x faster optimization, real-time financial modeling,;
+            Experience 10o00x faster optimization, real-time financial modeling;
             and revolutionary business capabilities.,
           </p>,
           {/* Quantum advantages */}
@@ -66,7 +65,7 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* Success metrics */,}
+          {/* Success metrics */}
           <div className='bg-white bg-opacity-10 rounded-2xl p-8 mb-10 backdrop-blur-sm max-w-4xl mx-auto'>,
             <h3 className='text-2xl font-bold mb-6'>,
               Proven Quantum AI Results,
@@ -98,22 +97,20 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-20o26-business-revolution-ultimate-guide',
-              className='bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-50o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-50o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Read Complete Guide →,
             </Link>,
-            <Link,
+            <Link
               href='/services/quantum-computing',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors'>,
               Start Quantum Transformation,
             </Link>,
           </div>,
-          {/* Trust indicators */,}
+          {/* Trust indicators */}
           <div className='mt-12 flex flex-col sm: flex-row items-center justify-center gap-8 text-sm opacity-70'>,
             <div className='flex items-center gap-2'>,
               <span className='w-2 h-2 bg-cyan-40o0 rounded-full'></span>,
@@ -130,9 +127,5 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumAI20o26BusinessRevolutionBanner,
-,
+    </section>)};
+export default QuantumAI20o26BusinessRevolutionBanner;

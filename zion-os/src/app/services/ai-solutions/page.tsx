@@ -1,8 +1,6 @@
 'use client',
-,
 import { useState } from 'react',
-,
-interface AIService {,
+interface AIService {
   id: string,
   name: string,
   description: string,
@@ -13,40 +11,34 @@ interface AIService {,
   contactLink: string,
   icon: string,
   features: string[],
-  integration: string[],
-,}
+  integration: string[]}
 ,
-export default function AISolutionsPage() {,
+export default function AISolutionsPage() {
   const [services] = useState<AIService[]>([]),
-,
-  return (,
+  return (
     <div className='container mx-auto px-4 py-12'>,
       <h1 className='text-3xl font-bold mb-6'>AI Solutions</h1>,
       <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
-        {services.map(service => (,
-          <div,
-            key={service.id,}
-            className='p-6 rounded-lg bg-white/5 border border-white/10',
-          >,
+        {services.map(service => (
+          <div
+            key={service.id}
+            className='p-6 rounded-lg bg-white/5 border border-white/10'>,
             <h2 className='text-xl font-semibold mb-2'>{service.name}</h2>,
             <p className='opacity-80 mb-4'>{service.description}</p>,
             {/* CTA */}
             <div className='space-y-3 pt-4 border-t border-white/10'>,
-              <a,
+              <a
                 href={service.contactLink}
-                className='w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all font-semibold',
-              >,
+                className='w-full block text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all font-semibold'>,
                 Get Started,
               </a>,
-              <a,
-                href={`https://ziontechgroup.com/services/${service.id,}`}
-                className='w-full block text-center text-blue-400 hover: text-blue-300 text-sm underline',
-              >,
+              <a
+                href={`https://ziontechgroup.com/services/${service.id}`}
+                className='w-full block text-center text-blue-400 hover: text-blue-300 text-sm underline'>,
                 Learn More,
               </a>,
             </div>,
-          </div>,
-        )),}
+          </div>))}
       </div>,
       {/* AI Capabilities Overview */}
       <div className='space-y-6 mt-12'>,
@@ -80,7 +72,5 @@ export default function AISolutionsPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

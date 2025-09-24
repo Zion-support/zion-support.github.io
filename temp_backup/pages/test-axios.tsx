@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TestAxiosPage() {,
-  return (,
+export default function TestAxiosPage() {
+  return (
     <>,
       <Head>,
         <title>Test Axios - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function TestAxiosPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

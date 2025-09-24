@@ -1,9 +1,8 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const Index: NextPage = () => {,
-  return (,
+const Index: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>Index - Zion Tech Solutions</title>,
@@ -14,9 +13,5 @@ const Index: NextPage = () => {,
         <p>Service details coming soon...</p>,
         <Link href='/services'>Back to Services</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default Index,
-,
+    </div>)};
+export default Index;

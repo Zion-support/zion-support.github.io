@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const Fortune50o0SuccessBanner: React.FC = () => {,
-  return (,
+const Fortune50o0SuccessBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-green-60o0 via-emerald-60o0 to-teal-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Success Badge */,}
+          {/* Success Badge */}
           <div className='inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-semibold'>,
               🏆 ULTIMATE SUCCESS STORY,
@@ -17,7 +16,7 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
             Fortune 50o0 Company Achieves,
             <span className='block text-yellow-30o0'>60o0% ROI with AI</span>,
           </h2>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl text-gray-20o0 mb-8 max-w-4xl mx-auto'>,
             Discover how a Fortune 50o0 manufacturing company transformed their,
             operations with autonomous AI, creating $2.8 billion in business,
@@ -42,23 +41,21 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
               <div className='text-sm text-gray-20o0'>System Uptime</div>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-autonomous-ai-transformation-20o25-ultimate-success',
-              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
               Start Your Transformation,
             </Link>,
           </div>,
         </div>,
-        {/* Success Highlights */,}
+        {/* Success Highlights */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
           <div className='bg-white/10 rounded-lg p-6 text-center'>,
             <div className='text-4xl mb-4'>⚡</div>,
@@ -97,9 +94,5 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
           </cite>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default Fortune50o0SuccessBanner,
-,
+    </section>)};
+export default Fortune50o0SuccessBanner;

@@ -1,5 +1,3 @@
 // Type definitions for cart,
-interface cart {,
-  // TODO: Add proper type definitions,
-,};
-,
+interface cart {
+  // TODO: Add proper type definitions};

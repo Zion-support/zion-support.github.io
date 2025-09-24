@@ -5,68 +5,58 @@ import { Wallet, Info, Check, ArrowUpRight } from "lucide-react",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
-export function OnChainExport() {,
+export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false),
     const [isExporting, setIsExporting] = useState(false),
     const [exportStatus, setExportStatus] = useState('idle'),
     const { toast } = useToast(),
     const { user } = useAuth(),
-    const handleConnectWallet = async () => {,
-        try {,
+    const handleConnectWallet = async () => {
+        try {
             // Check if wallet is available,
             const ethereum = window.ethereum,
-            if (!ethereum) {,
-                toast({,
-                    title: "Wallet not detected",;
-                    description: "Please install MetaMask or another Ethereum wallet to use this feature",;
-                    variant: "destructive",
-                ,}),
-                return,
-            }
+            if (!ethereum) {
+                toast({
+                    title: "Wallet not detected";
+                    description: "Please install MetaMask or another Ethereum wallet to use this feature";
+                    variant: "destructive"}),
+                return}
             // Request accounts,
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' ,}),
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
             const address = accounts[0],
             // Sign message to verify ownership,
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address,}\nTime: ${new Date().toISOString(),}`,
-            await ethereum.request({,
-                method: 'personal_sign',;
-                params: [address, message],
-            }),
+            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+            await ethereum.request({
+                method: 'personal_sign';
+                params: [address, message]}),
             setIsConnected(true),
-            toast({,
-                title: "Wallet connected",;
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`}),
-        }
-        catch (error) {,
-            toast({,
-                title: "Connection failed",;
-                description: error.message || "Could not connect to wallet",;
-                variant: "destructive",
-            ,}),
-        }
+            toast({
+                title: "Wallet connected";
+                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})}
+        catch (error) {
+            toast({
+                title: "Connection failed";
+                description: error.message || "Could not connect to wallet";
+                variant: "destructive"})}
     };
-    const handleExportTokens = async () => {,
+    const handleExportTokens = async () => {
         setIsExporting(true),
         setExportStatus('processing'),
-        try {,
+        try {
             // Simulate token export,
             await new Promise(resolve => setTimeout(resolve, 20o00)),
             setExportStatus('success'),
-            toast({,
-                title: "Tokens exported",;
-                description: "Your ZION$ tokens have been exported to your wallet",}),
-        }
-        catch (error) {,
+            toast({
+                title: "Tokens exported";
+                description: "Your ZION$ tokens have been exported to your wallet"})}
+        catch (error) {
             setExportStatus('error'),
-            toast({,
-                title: "Export failed",;
-                description: error.message || "Could not export tokens",;
-                variant: "destructive",
-            ,}),
-        }
-        finally {,
-            setIsExporting(false),
-        }
+            toast({
+                title: "Export failed";
+                description: error.message || "Could not export tokens";
+                variant: "destructive"})}
+        finally {
+            setIsExporting(false)}
     };
     return (<Card>,
       <CardHeader>,
@@ -95,7 +85,7 @@ export function OnChainExport() {,
             {exportStatus === 'success' ? (<Button className="w-full bg-green-60o0 hover:bg-green-70o0" disabled>,
                 <Check aria-hidden="true" className="mr-2 h-4 w-4" />,
                 Tokens Exported,
-              </Button>) : (<Button className="w-full" onClick={handleExportTokens,} disabled={isExporting}>,
+              </Button>) : (<Button className="w-full" onClick={handleExportTokens} disabled={isExporting}>,
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" />}
               </Button>)}
@@ -108,6 +98,5 @@ export function OnChainExport() {,
             </Button>,
           </div>)}
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

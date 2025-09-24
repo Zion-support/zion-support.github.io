@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function Revolutionary20o252026ServicesPage() {,
-  return (,
+export default function Revolutionary20o252026ServicesPage() {
+  return (
     <>,
       <Head>,
         <title>Revolutionary 20o25 20o26 Services - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='revolutionary 20o25 20o26 services page',
         />,
@@ -21,7 +20,5 @@ export default function Revolutionary20o252026ServicesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

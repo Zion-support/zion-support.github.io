@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TalentOnboardingPage() {,
-  return (,
+export default function TalentOnboardingPage() {
+  return (
     <>,
       <Head>,
         <title>Talent Onboarding - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function TalentOnboardingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

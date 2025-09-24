@@ -1,14 +1,13 @@
 import Link from 'next/link',
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward,
-export default function RevolutionaryContentShowcase20o25Banner() {,
-  const contentTypes = [,
-    { icon: BookOpename: "Articles"count: "150+"color: "blue" ,},;
-    { icon: Videoname: "Videos"count: "75+"color: "purple" ,},;
-    { icon: FileTextname: "Guides"count: "50+"color: "green" ,},;
-    { icon: Usersname: "Community"count: "20o0+"color: "yellow" ,}
+export default function RevolutionaryContentShowcase20o25Banner() {
+  const contentTypes = [
+    { icon: BookOpename: "Articles"count: "150+"color: "blue" };
+    { icon: Videoname: "Videos"count: "75+"color: "purple" };
+    { icon: FileTextname: "Guides"count: "50+"color: "green" };
+    { icon: Usersname: "Community"count: "20o0+"color: "yellow" }
   ],
-,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl p-8 mb-8">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
@@ -28,45 +27,39 @@ export default function RevolutionaryContentShowcase20o25Banner() {,
               Immerse yourself in 50o0+ pieces of premium AI content including breakthrough articles,
               video tutorialsimplementation guidesand community insights from industry experts.,
             </p>,
-            {/* Content Types */,}
+            {/* Content Types */}
             <div className="grid grid-cols-2 md: grid-cols-4 gap-3 mb-6">,
-              {contentTypes.map((typeindex) => {,
+              {contentTypes.map((typeindex) => {
                 const IconComponent = type.icon,
-                const colorClasses ={,
-                  blue: "text-blue-40o0 bg-blue-50o0/20",;
-                  purple: "text-purple-40o0 bg-purple-50o0/20",;
-                  green: "text-green-40o0 bg-green-50o0/20",;
-                  yellow: "text-yellow-40o0 bg-yellow-50o0/20",
-                ,};
-,
-                return (,
+                const colorClasses ={
+                  blue: "text-blue-40o0 bg-blue-50o0/20";
+                  purple: "text-purple-40o0 bg-purple-50o0/20";
+                  green: "text-green-40o0 bg-green-50o0/20";
+                  yellow: "text-yellow-40o0 bg-yellow-50o0/20"};
+                return (
                   <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>,
                     <div className="flex items-center">,
                       <IconComponent className="h-5 w-5 mr-2"  />,
                       <span className="text-sm font-medium">{type.name}</span>,
                     </div>,
                     <span className="text-sm font-bold">{type.count}</span>,
-                  </div>,
-                ),
-              })}
+                  </div>)})}
             </div>,
             <div className="flex flex-wrap gap-4">,
-              <Link,
+              <Link
                 href="/revolutionary-content-showcase-20o25",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full font-semibold hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full font-semibold hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl">,
                 Explore Content Library,
                 <ArrowRight className="ml-2 h-4 w-4"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/blog/ai-20o25-revolutionary-breakthroughs",
-                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-30o0">,
                 Latest Articles,
               </Link>,
             </div>,
           </div>,
-          {/* Visual Element */,}
+          {/* Visual Element */}
           <div className="flex-shrink-0 lg: ml-8">,
             <div className="relative">,
               <div className="w-64 h-64 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full flex items-center justify-center">,
@@ -76,17 +69,17 @@ export default function RevolutionaryContentShowcase20o25Banner() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Floating Content Icons */,}
+              {/* Floating Content Icons */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-40o0 rounded-full flex items-center justify-center animate-bounce">,
                 <Video className="h-4 w-4 text-white"  />,
               </div>,
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' ,}}>,
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>,
                 <FileText className="h-4 w-4 text-white"  />,
               </div>,
-              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' ,}}>,
+              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>,
                 <Users className="h-4 w-4 text-white"  />,
               </div>,
-              <div className="absolute top-1/4 -left-8 w-8 h-8 bg-pink-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1.5s' ,}}>,
+              <div className="absolute top-1/4 -left-8 w-8 h-8 bg-pink-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1.5s' }}>,
                 <TrendingUp className="h-4 w-4 text-white"  />,
               </div>,
             </div>,
@@ -137,6 +130,4 @@ export default function RevolutionaryContentShowcase20o25Banner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}

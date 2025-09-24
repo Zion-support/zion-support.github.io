@@ -1,5 +1,5 @@
-export default function UpdateDetailPage() {,
-  return (,
+export default function UpdateDetailPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='relative isolate px-6 pt-24 lg: px-8'>,
         <div className='mx-auto max-w-3xl py-12 lg:py-16'>,
@@ -25,16 +25,13 @@ export default function UpdateDetailPage() {,
             </p>,
           </div>,
           <div className='mt-10'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0'>,
               Reserve a seat,
             </a>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

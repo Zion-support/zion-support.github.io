@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ServiceComparisonPage() {,
-  return (,
+export default function ServiceComparisonPage() {
+  return (
     <>,
       <Head>,
         <title>Service Comparison - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ServiceComparisonPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

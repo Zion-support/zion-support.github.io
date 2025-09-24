@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function LeadershipPage() {,
-	return (,
+import React from 'react';
+export default function LeadershipPage() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>Leadership | Zion Tech Group</title>,
@@ -23,7 +22,5 @@ export default function LeadershipPage() {,
 				</div>,
 				<div className="mt-10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

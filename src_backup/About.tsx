@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO',
-,
-const About: React.FC = () => {,
-  return (,
+const About: React.FC = () => {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='About Us | Zion Tech Group',
         description='Learn about Zion Tech Group',
       />,
@@ -16,9 +15,5 @@ const About: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default About,
-,
+    </>)};
+export default About;

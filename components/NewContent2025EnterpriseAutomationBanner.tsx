@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o25EnterpriseAutomationBanner = () => {,
-  return (,
+const NewContent20o25EnterpriseAutomationBanner = () => {
+  return (
     <div className='bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16 px-4'>,
       <div className='max-w-7xl mx-auto text-center'>,
         <div className='mb-8'>,
@@ -41,23 +40,17 @@ const NewContent20o25EnterpriseAutomationBanner = () => {,
           </div>,
         </div>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             href='/ai-20o25-20o26-ultimate-breakthrough',
-            className='bg-gradient-to-r from-green-50o0 to-teal-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-teal-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-green-50o0 to-teal-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-teal-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
             Explore Automation,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-90o0 transition-all duration-30o0',
-          >,
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-90o0 transition-all duration-30o0'>,
             Get Started,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25EnterpriseAutomationBanner,
-,
+    </div>)};
+export default NewContent20o25EnterpriseAutomationBanner;

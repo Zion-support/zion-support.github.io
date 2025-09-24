@@ -2,10 +2,9 @@
 import React{ useState } from 'react',
 import Link from 'next/link',
 MenuXPhoneMailFacebookTwitterLinkedinInstagram,
-const Header = () => {,
+const Header = () => {
   const [isMenuOpensetIsMenuOpen] = useState(false),
-,
-  return (,
+  return (
     <header className="bg-white shadow-lg">,
       {/* Top Bar */}
       <div className="bg-blue-90o0 text-white py-2">,
@@ -33,7 +32,7 @@ const Header = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Main Navigation */,}
+      {/* Main Navigation */}
       <nav className="container mx-auto px-4">,
         <div className="flex justify-between items-center py-4">,
           {/* Logo */}
@@ -57,22 +56,22 @@ const Header = () => {,
             <Link href="/about" className="text-gray-70o0 hover:text-blue-60o0 font-medium">About</Link>,
             <Link href="/contact" className="text-gray-70o0 hover:text-blue-60o0 font-medium">Contact</Link>,
           </div>,
-          {/* CTA Button */,}
+          {/* CTA Button */}
           <div className="hidden md: block">,
             <Link href="/contact" className="bg-blue-60o0 text-white px-6 py-2 rounded-lg hover:bg-blue-70o0 transition-colors">,
               Get Started,
             </Link>,
           </div>,
-          {/* Mobile Menu Button */,}
-          <button,
+          {/* Mobile Menu Button */}
+          <button
             className="md: hidden",
-            onClick={() => setIsMenuOpen(!isMenuOpen),}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >,
             {isMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>,
         </div>,
         {/* Mobile Navigation */}
-        {isMenuOpen && (,
+        {isMenuOpen && (
           <div className="md: hidden pb-4">,
             <div className="flex flex-col space-y-4">,
               <Link href="/" className="text-gray-70o0 hover:text-blue-60o0 font-medium">Home</Link>,
@@ -87,11 +86,7 @@ const Header = () => {,
                 Get Started,
               </Link>,
             </div>,
-          </div>,
-        ),}
+          </div>)}
       </nav>,
-    </header>,
-  ),
-};
-,
-export default Header,
+    </header>)};
+export default Header;

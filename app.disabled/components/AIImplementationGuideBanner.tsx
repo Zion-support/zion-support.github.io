@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AIImplementationGuideBanner: React.FC = () => {,
-  return (,
+const AIImplementationGuideBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white/20 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-semibold'>📚 NEW RESOURCE</span>,
           </div>,
@@ -17,7 +16,7 @@ const AIImplementationGuideBanner: React.FC = () => {,
               Complete Framework for Success,
             </span>,
           </h2>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl text-gray-20o0 mb-8 max-w-4xl mx-auto'>,
             Get the comprehensive framework that has helped 50o0+ organizations,
             achieve $2.8 billion in business value. Download our complete guide,
@@ -47,23 +46,21 @@ const AIImplementationGuideBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/resources/ai-implementation-master-guide-20o25',
-              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Download Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               Get Implementation Help,
             </Link>,
           </div>,
         </div>,
-        {/* Success Stats */,}
+        {/* Success Stats */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 text-center'>,
           <div className='bg-white/10 rounded-lg p-6'>,
             <div className='text-2xl font-bold text-yellow-30o0'>50o0+</div>,
@@ -83,9 +80,5 @@ const AIImplementationGuideBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AIImplementationGuideBanner,
-,
+    </section>)};
+export default AIImplementationGuideBanner;

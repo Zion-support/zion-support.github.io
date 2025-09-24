@@ -1,113 +1,106 @@
 'use client',
-,
 import React, { useState } from 'react',
-import {,
-  Brain,;
-  Zap,;
-  TrendingUp,;
-  Clock,;
-  Users,;
-  ArrowRight,;
-  ExternalLink,;
-  ArrowRight,;
-  Brain,;
+import {
+  Brain;
+  Zap;
+  TrendingUp;
+  Clock;
+  Users;
+  ArrowRight;
+  ExternalLink;
+  ArrowRight;
+  Brain;
 } from 'lucide-react',
-,
-const NeuralInterfaceContentShowcase20o25 = () => {,
+const NeuralInterfaceContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const content = [,
-    {,
-      id: 'neural-interface-guide',;
-      type: 'blog',;
+  const content = [
+    {
+      id: 'neural-interface-guide';
+      type: 'blog';
       title:,
-        'AI 20o25: Neural Interface Revolution - Ultimate Enterprise Guide',;
+        'AI 20o25: Neural Interface Revolution - Ultimate Enterprise Guide';
       description:,
-        'Transform your business with brain-computer interfaces and neural AI integration. Complete implementation guide with 80o0% ROI.',;
-      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide',;
-      readingTime: '22 min read',;
-      metrics: {,
-        roi: '80o0%',;
-        savings: '$12.5M',;
-        productivity: '340%',;
-        accuracy: '99.8%',;
-      },;
-      tags: ['Neural Interfaces', 'AI Integration', 'Enterprise', 'ROI'],;
-      featured: true,;
-    },;
-    {,
-      id: 'neural-interface-case-study',;
-      type: 'case-study',;
+        'Transform your business with brain-computer interfaces and neural AI integration. Complete implementation guide with 80o0% ROI.';
+      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
+      readingTime: '22 min read';
+      metrics: {
+        roi: '80o0%';
+        savings: '$12.5M';
+        productivity: '340%';
+        accuracy: '99.8%';
+      };
+      tags: ['Neural Interfaces', 'AI Integration', 'Enterprise', 'ROI'];
+      featured: true;
+    };
+    {
+      id: 'neural-interface-case-study';
+      type: 'case-study';
       title:,
-        'Fortune 50o0 Neural Interface Success: $12.5M Annual Savings with 80o0% ROI',;
+        'Fortune 50o0 Neural Interface Success: $12.5M Annual Savings with 80o0% ROI';
       description:,
-        'Real-world implementation story from a global manufacturing giant. See how they achieved 80o0% ROI in 8 months.',;
-      url: '/case-studies/neural-interface-fortune-50o0-success-80o0-roi',;
-      readingTime: '15 min read',;
-      metrics: {,
-        roi: '80o0%',;
-        savings: '$12.5M',;
-        timeline: '8 months',;
-        productivity: '340%',;
-      },;
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'],;
-      featured: true,;
-    },;
-    {,
-      id: 'neural-interface-implementation',;
-      type: 'resource',;
+        'Real-world implementation story from a global manufacturing giant. See how they achieved 80o0% ROI in 8 months.';
+      url: '/case-studies/neural-interface-fortune-50o0-success-80o0-roi';
+      readingTime: '15 min read';
+      metrics: {
+        roi: '80o0%';
+        savings: '$12.5M';
+        timeline: '8 months';
+        productivity: '340%';
+      };
+      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'];
+      featured: true;
+    };
+    {
+      id: 'neural-interface-implementation';
+      type: 'resource';
       title:,
-        'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI',;
+        'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
       description:,
-        'Complete enterprise implementation framework for brain-computer interface technology. Step-by-step roadmap.',;
-      url: '/resources/neural-interface-implementation-master-guide-20o25',;
-      readingTime: '28 min read',;
-      metrics: {,
-        success: '98%',;
-        roi: '80o0%',;
-        timeline: '6-8 months',;
-        payback: '3.5 months',;
-      },;
-      tags: ['Implementation Guide', 'Strategy', 'Framework', 'Enterprise'],;
-      featured: true,;
-    },;
+        'Complete enterprise implementation framework for brain-computer interface technology. Step-by-step roadmap.';
+      url: '/resources/neural-interface-implementation-master-guide-20o25';
+      readingTime: '28 min read';
+      metrics: {
+        success: '98%';
+        roi: '80o0%';
+        timeline: '6-8 months';
+        payback: '3.5 months';
+      };
+      tags: ['Implementation Guide', 'Strategy', 'Framework', 'Enterprise'];
+      featured: true;
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', count: content.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Guides',;
-      count: content.filter(item => item.type === 'blog').length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
-      count: content.filter(item => item.type === 'case-study').length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Resources',;
-      count: content.filter(item => item.type === 'resource').length,;
-    },;
+  const categories = [
+    { id: 'all', label: 'All Content', count: content.length };
+    {
+      id: 'blog';
+      label: 'Guides';
+      count: content.filter(item => item.type === 'blog').length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
+      count: content.filter(item => item.type === 'case-study').length;
+    };
+    {
+      id: 'resource';
+      label: 'Resources';
+      count: content.filter(item => item.type === 'resource').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? content,
       : content.filter(item => item.type === activeCategory),
-,
-  const totalMetrics = {,
-    totalROI: '80o0%',;
-    totalSavings: '$12.5M',;
-    totalImplementations: '50o0+',;
-    successRate: '98%',;
+  const totalMetrics = {
+    totalROI: '80o0%';
+    totalSavings: '$12.5M';
+    totalImplementations: '50o0+';
+    successRate: '98%';
   };
-,
-  return (,
+  return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='flex items-center justify-center space-x-2 mb-4'>,
             <Brain className='w-8 h-8 text-purple-60o0' />,
@@ -126,7 +119,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
           <div className='bg-white rounded-xl p-6 text-center shadow-lg'>,
             <TrendingUp className='w-8 h-8 text-green-60o0 mx-auto mb-3' />,
             <div className='text-3xl font-bold text-gray-90o0 mb-1'>,
-              {totalMetrics.totalROI,}
+              {totalMetrics.totalROI}
             </div>,
             <div className='text-sm text-gray-60o0'>Average ROI</div>,
           </div>,
@@ -154,38 +147,34 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
         </div>,
         {/* Category Filter */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-60o0'}`}
             >,
               {category.label} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1',
-            >,
-              {/* Content Header */,}
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1'>,
+              {/* Content Header */}
               <div className='p-6'>,
                 <div className='flex items-center justify-between mb-4'>,
-                  <span,
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${,
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${
                       item.type === 'blog',
                         ? 'bg-blue-10o0 text-blue-80o0',
                         : item.type === 'case-study',
                           ? 'bg-green-10o0 text-green-80o0',
-                          : 'bg-purple-10o0 text-purple-80o0',
-                    }`}
+                          : 'bg-purple-10o0 text-purple-80o0'}`}
                   >,
                     {item.type === 'blog',
                       ? 'Guide',
@@ -193,11 +182,10 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
                         ? 'Case Study',
                         : 'Resource'}
                   </span>,
-                  {item.featured && (,
+                  {item.featured && (
                     <span className='px-3 py-1 bg-yellow-10o0 text-yellow-80o0 rounded-full text-xs font-medium'>,
                       Featured,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 line-clamp-2'>,
                   {item.title}
@@ -207,7 +195,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
                 </p>,
                 {/* Metrics */}
                 <div className='grid grid-cols-2 gap-3 mb-4'>,
-                  {Object.entries(item.metrics).map(([key, value]) => (,
+                  {Object.entries(item.metrics).map(([key, value]) => (
                     <div key={key} className='text-center'>,
                       <div className='text-lg font-bold text-gray-90o0'>,
                         {value}
@@ -215,19 +203,16 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
                       <div className='text-xs text-gray-60o0 capitalize'>,
                         {key.replace(/([A-Z])/g, ' $1')}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-4'>,
-                  {item.tags.map(tag => (,
-                    <span,
+                  {item.tags.map(tag => (
+                    <span
                       key={tag}
-                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 rounded text-xs',
-                    >,
+                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 rounded text-xs'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Reading Time */}
                 <div className='flex items-center text-sm text-gray-50o0 mb-4'>,
@@ -237,16 +222,14 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
               </div>,
               {/* CTA Button */}
               <div className='px-6 pb-6'>,
-                <a,
+                <a
                   href={item.url}
-                  className='w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0',
-                >,
+                  className='w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0'>,
                   Read More,
                   <ArrowRight className='w-4 h-4 ml-2' />,
                 </a>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action Section */}
         <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-center text-white'>,
@@ -259,17 +242,15 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
             implementation plan.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center justify-center px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='inline-flex items-center justify-center px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Schedule Free Assessment,
               <ExternalLink className='w-5 h-5 ml-2' />,
             </a>,
-            <a,
+            <a
               href='/services',
-              className='inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0'>,
               Explore Our Services,
             </a>,
           </div>,
@@ -293,9 +274,5 @@ const NeuralInterfaceContentShowcase20o25 = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NeuralInterfaceContentShowcase20o25,
-,
+    </div>)};
+export default NeuralInterfaceContentShowcase20o25;

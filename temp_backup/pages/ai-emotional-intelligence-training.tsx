@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AiEmotionalIntelligenceTrainingPage() {,
-  return (,
+export default function AiEmotionalIntelligenceTrainingPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Emotional Intelligence Training - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai emotional intelligence training page',
         />,
@@ -22,7 +21,5 @@ export default function AiEmotionalIntelligenceTrainingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

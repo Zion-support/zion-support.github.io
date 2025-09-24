@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26UltimateBreakthroughPromotionBanner() {,
-  return (,
+export default function AI20o26UltimateBreakthroughPromotionBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 py-12 px-4">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">,
@@ -62,22 +61,19 @@ export default function AI20o26UltimateBreakthroughPromotionBanner() {,
         </div>,
         <div className="text-center">,
           <div className="flex flex-wrap justify-center gap-4">,
-            <Link,
+            <Link
               href="/ai-20o26-ultimate-breakthrough-predictions",
-              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 hover:scale-10o5">,
               Explore Predictions,
             </Link>,
-            <Link,
+            <Link
               href="/quantum-computing-20o26-breakthrough",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 hover:scale-10o5">,
               Quantum Breakthrough,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies/ai-20o26-global-transformation-success",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 hover:scale-10o5">,
               View Success Story,
             </Link>,
           </div>,
@@ -86,6 +82,4 @@ export default function AI20o26UltimateBreakthroughPromotionBanner() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

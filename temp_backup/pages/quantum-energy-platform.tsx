@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-,
-export default function QuantumEnergyPlatformPage() {,
-  return (,
+export default function QuantumEnergyPlatformPage() {
+  return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>,
       <Head>,
         <title>Quantum Energy Platform | Zion Tech Group</title>,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-energy-platform',
         />,
-        <meta,
+        <meta
           name='description',
           content='Fusion and quantum energy simulations for next-generation power systems.',
         />,
@@ -24,7 +23,5 @@ export default function QuantumEnergyPlatformPage() {,
           systems. Contact: +1 30o2 464 0950 • kleber@ziontechgroup.com.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-,}
+    </UltraFuturisticBackground>)}
 ,

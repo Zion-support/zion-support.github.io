@@ -1,24 +1,20 @@
 import React{ useState } from 'react',
 import Head from 'next/head',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   SearchStarUsersTrendingUp,
-  DollarSignClockCheckCircleArrowRight,;
+  DollarSignClockCheckCircleArrowRight;
   RocketMonitorCpu,
-  ZapDatabaseCloudLockCode,;
-  SparklesTargetAwardLightbulb,
-} from 'lucide-react',
+  ZapDatabaseCloudLockCode;
+  SparklesTargetAwardLightbulb} from 'lucide-react',
 import { innovativeRealMicroSaasServices20o25 as allData } from '../data/20o25-innovative-real-micro-saas-services',
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
-,
-export default function EnhancedServicesShowcase20o25() {,
+export default function EnhancedServicesShowcase20o25() {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
   const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all'),
   const [sortBysetSortBy] = useState<string>('name'),
-,
   const allServices = allData,
-,
   // Dynamic category counts,
   const aiCount = allServices.filter(service => service.category.includes('AI')).length,
   const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length,
@@ -26,50 +22,42 @@ export default function EnhancedServicesShowcase20o25() {,
   const iotCount = allServices.filter(service => service.category.includes('IoT')).length,
   const spaceCount = allServices.filter(service => service.category.includes('Space')).length,
   const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length,
-,
-  const categories = [,
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length ,},;
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount ,},;
-    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️'count: quantumCount ,},;
-    { id: 'blockchain'name: 'Blockchain & Web3'icon: '⛓️'count: blockchainCount ,},;
-    { id: 'iot'name: 'IoT & Edge Computing'icon: '🌐'count: iotCount ,},;
-    { id: 'space'name: 'Space Technology'icon: '🚀'count: spaceCount ,},;
-    { id: 'security'name: 'Cybersecurity'icon: '🔒'count: cybersecurityCount ,}
+  const categories = [
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length };
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount };
+    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️'count: quantumCount };
+    { id: 'blockchain'name: 'Blockchain & Web3'icon: '⛓️'count: blockchainCount };
+    { id: 'iot'name: 'IoT & Edge Computing'icon: '🌐'count: iotCount };
+    { id: 'space'name: 'Space Technology'icon: '🚀'count: spaceCount };
+    { id: 'security'name: 'Cybersecurity'icon: '🔒'count: cybersecurityCount }
   ],
-,
-  const priceRanges = [,
-    { id: 'all'name: 'All Prices'range: 'All' ,},;
-    { id: 'low'name: 'Under $2K/month'range: 'Under $2K' ,},;
-    { id: 'medium'name: '$2K - $8K/month'range: '$2K - $8K' ,},;
-    { id: 'high'name: '$8K - $20K/month'range: '$8K - $20K' ,},;
-    { id: 'premium'name: '$20K+/month'range: '$20K+' ,}
+  const priceRanges = [
+    { id: 'all'name: 'All Prices'range: 'All' };
+    { id: 'low'name: 'Under $2K/month'range: 'Under $2K' };
+    { id: 'medium'name: '$2K - $8K/month'range: '$2K - $8K' };
+    { id: 'high'name: '$8K - $20K/month'range: '$8K - $20K' };
+    { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ],
-,
-  const sortOptions = [,
-    { id: 'name'name: 'Name A-Z' ,},;
-    { id: 'price-low'name: 'Price Low to High' ,},;
-    { id: 'price-high'name: 'Price High to Low' ,},;
-    { id: 'rating'name: 'Rating' ,},;
-    { id: 'customers'name: 'Customer Count' ,}
+  const sortOptions = [
+    { id: 'name'name: 'Name A-Z' };
+    { id: 'price-low'name: 'Price Low to High' };
+    { id: 'price-high'name: 'Price High to Low' };
+    { id: 'rating'name: 'Rating' };
+    { id: 'customers'name: 'Customer Count' }
   ],
-,
   // Filter and sort services,
-  const filteredServices = React.useMemo(() => {,
-    const parsePriceToNumber = (price: string | number): number => {,
+  const filteredServices = React.useMemo(() => {
+    const parsePriceToNumber = (price: string | number): number => {
       if (typeof price === 'number') return price,
-      if (typeof price === 'string') {,
+      if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g''),
         const parsed = parseFloat(match || '0'),
-        return isNaN(parsed) ? 0 : parsed,
-      ,}
-      return 0,
-    };
-,
-    let filtered = allServices.filter(service => {,
+        return isNaN(parsed) ? 0 : parsed}
+      return 0};
+    let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-,
       const matchesCategory = selectedCategory === 'all' ||,
                              (selectedCategory === 'ai' && service.category.includes('AI')) ||,
                              (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||,
@@ -77,18 +65,14 @@ export default function EnhancedServicesShowcase20o25() {,
                              (selectedCategory === 'iot' && service.category.includes('IoT')) ||,
                              (selectedCategory === 'space' && service.category.includes('Space')) ||,
                              (selectedCategory === 'security' && (service.category.includes('Security') || service.category.includes('Cybersecurity'))),
-,
       const matchesPrice = selectedPriceRange === 'all' ||,
                           (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 20o00) ||,
                           (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 20o00 && parsePriceToNumber(service.price) < 80o00) ||,
                           (selectedPriceRange === 'high' && parsePriceToNumber(service.price) >= 80o00 && parsePriceToNumber(service.price) < 20o000) ||,
                           (selectedPriceRange === 'premium' && parsePriceToNumber(service.price) >= 20o000),
-,
-      return matchesSearch && matchesCategory && matchesPrice,
-    }),
-,
+      return matchesSearch && matchesCategory && matchesPrice}),
     // Sort services,
-    switch (sortBy) {,
+    switch (sortBy) {
       case 'price-low':,
         filtered.sort((ab) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)),
         break,
@@ -102,35 +86,28 @@ export default function EnhancedServicesShowcase20o25() {,
         filtered.sort((ab) => b.customers - a.customers),
         break,
       default: ,
-        filtered.sort((ab) => a.name.localeCompare(b.name)),
-    ,}
+        filtered.sort((ab) => a.name.localeCompare(b.name))}
 ,
-    return filtered,
-  }[searchTermselectedCategoryselectedPriceRangesortByallServices]),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+    return filtered}[searchTermselectedCategoryselectedPriceRangesortByallServices]),
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0y: 20 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.5,
-      ,}
+  const itemVariants ={
+    hidden: { opacity: 0y: 20 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.5}
     }
   };
-,
-  return (,
-    <EnhancedFuturisticBackground,
+  return (
+    <EnhancedFuturisticBackground
       intensity="high",
       colorScheme="quantum",
       particleCount={30o0}
@@ -148,13 +125,13 @@ export default function EnhancedServicesShowcase20o25() {,
           <meta property="og:type" content="website"  />,
           <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-20o25"  />,
         </Head>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <div className="flex items-center justify-center mb-6">,
                 <Sparkles className="w-12 h-12 text-cyan-40o0 mr-4"  />,
@@ -169,10 +146,10 @@ export default function EnhancedServicesShowcase20o25() {,
               <p className="text-lg md:text-xl text-gray-40o0 mb-12 max-w-3xl mx-auto">,
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology,
               </p>,
-              {/* Service Statistics */,}
+              {/* Service Statistics */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
                 <div className="text-center p-6 bg-gray-80o0/40 border border-gray-70o0 rounded-2xl">,
-                  <div className="text-3xl font-bold text-cyan-40o0">{allServices.length,}</div>,
+                  <div className="text-3xl font-bold text-cyan-40o0">{allServices.length}</div>,
                   <div className="text-gray-40o0">Total Services</div>,
                 </div>,
                 <div className="text-center p-6 bg-gray-80o0/40 border border-gray-70o0 rounded-2xl">,
@@ -196,45 +173,42 @@ export default function EnhancedServicesShowcase20o25() {,
           <div className="max-w-7xl mx-auto">,
             <div className="bg-gray-80o0/40 border border-gray-70o0 rounded-2xl p-6">,
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">,
-                {/* Search */,}
+                {/* Search */}
                 <div className="relative">,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-                  <input,
+                  <input
                     type="text",
                     placeholder="Search services...",
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent",
                   />,
                 </div>,
-                {/* Category Filter */,}
-                <select,
+                {/* Category Filter */}
+                <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent">,
-                  {categories.map((category) => (,
-                    <option key={category.id,} value={category.id}>,
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>,
                       {category.name} ({category.count}),
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 {/* Price Range Filter */}
-                <select,
+                <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="px-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent">,
-                  {priceRanges.map((range) => (,
-                    <option key={range.id,} value={range.id}>,
+                  {priceRanges.map((range) => (
+                    <option key={range.id} value={range.id}>,
                       {range.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 {/* Sort Options */}
-                <select,
+                <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent">,
-                  {sortOptions.map((option) => (,
-                    <option key={option.id,} value={option.id}>,
+                  {sortOptions.map((option) => (
+                    <option key={option.id} value={option.id}>,
                       {option.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
               </div>,
             </div>,
@@ -244,28 +218,27 @@ export default function EnhancedServicesShowcase20o25() {,
         <section className="relative z-10 py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              variants={containerVariants,}
+              variants={containerVariants}
               initial="hidden",
               animate="visible" className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               <AnimatePresence>,
-                {filteredServices.map((service) => (,
+                {filteredServices.map((service) => (
                   <motion.div,
-                    key={service.id,}
+                    key={service.id}
                     variants={itemVariants}
                     layout className="group relative bg-gray-80o0/60 border border-gray-70o0 rounded-2xl p-6 hover: border-cyan-50o0/40 transition-all duration-30o0 hover:transform hover:scale-10o5">,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">,
                       <div className="text-3xl">{service.icon}</div>,
-                      {service.popular && (,
+                      {service.popular && (
                         <div className="flex items-center space-x-1 text-yellow-40o0 text-sm">,
                           <Star className="w-4 h-4 fill-current"  />,
                           <span>Popular</span>,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                     {/* Service Title and Description */}
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover: text-cyan-30o0 transition-colors">,
-                      {service.name,}
+                      {service.name}
                     </h3>,
                     <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">,
                       {service.description}
@@ -284,12 +257,11 @@ export default function EnhancedServicesShowcase20o25() {,
                     <div className="mb-6">,
                       <div className="text-sm text-gray-40o0 mb-2">Key Features: </div>,
                       <ul className="space-y-1">,
-                        {service.features.slice(0o3).map((featureindex) => (,
-                          <li key={index,} className="flex items-center text-sm text-gray-30o0">,
+                        {service.features.slice(0o3).map((featureindex) => (
+                          <li key={index} className="flex items-center text-sm text-gray-30o0">,
                             <CheckCircle className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />,
                             <span className="line-clamp-1">{feature}</span>,
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
                     </div>,
                     {/* Market Position */}
@@ -312,50 +284,48 @@ export default function EnhancedServicesShowcase20o25() {,
                     </div>,
                     {/* Action Buttons */}
                     <div className="flex gap-3">,
-                      <a,
+                      <a
                         href={service.link} ,
                         target="_blank",
                         rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center">,
                         Learn More,
                         <ArrowRight className="w-4 h-4 ml-2"  />,
                       </a>,
-                      <a,
+                      <a
                         href="/contact" className="flex-1 bg-gray-70o0/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-60o0/60 transition-all duration-30o0 border border-gray-60o0 hover:border-gray-50o0">,
                         Contact Us,
                       </a>,
                     </div>,
-                    {/* Contact Information */,}
+                    {/* Contact Information */}
                     <div className="mt-4 pt-4 border-t border-gray-70o0">,
                       <div className="text-xs text-gray-40o0 mb-2">Contact Information: </div>,
                       <div className="text-xs text-gray-30o0 space-y-1">,
-                        <div>📱 {service.contactInfo.mobile,}</div>,
+                        <div>📱 {service.contactInfo.mobile}</div>,
                         <div>✉️ {service.contactInfo.email}</div>,
                         <div>🌐 {service.contactInfo.website}</div>,
                       </div>,
                     </div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </AnimatePresence>,
             </motion.div>,
             {/* No Results Message */}
-            {filteredServices.length === 0 && (,
+            {filteredServices.length === 0 && (
               <motion.div,
-                initial={{ opacity: 0 ,}}
-                animate={{ opacity: 1 ,}} className="text-center py-16">,
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }} className="text-center py-16">,
                 <div className="text-6xl mb-4">🔍</div>,
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>,
                 <p className="text-gray-40o0">Try adjusting your search criteria or filters</p>,
-              </motion.div>,
-            )}
+              </motion.div>)}
           </div>,
         </section>,
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
@@ -363,7 +333,7 @@ export default function EnhancedServicesShowcase20o25() {,
               <p className="text-xl text-gray-30o0 mb-8">,
                 Join thousands of companies achieving breakthrough results with our revolutionary services,
               </p>,
-              {/* Contact Information */,}
+              {/* Contact Information */}
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
                 <div className="flex items-center justify-center space-x-3">,
                   <div className="w-12 h-12 bg-cyan-50o0/20 rounded-full flex items-center justify-center">,
@@ -384,14 +354,14 @@ export default function EnhancedServicesShowcase20o25() {,
                   <span className="text-lg text-white">364 E Main St STE 10o08 Middletown DE 19709</span>,
                 </div>,
               </div>,
-              {/* Action Buttons */,}
+              {/* Action Buttons */}
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-10o5 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-60o0 via-blue-50o0 to-blue-60o0 hover:from-blue-50o0 hover:via-blue-40o0 hover:to-blue-50o0 text-white shadow-lg hover:shadow-xl border border-blue-50o0/20 no-underline">,
                   <span className="relative">Start Your Transformation</span>,
                   <Rocket className="ml-2 w-6 h-6"  />,
                 </a>,
-                <a,
+                <a
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-10o5 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-70o0 via-gray-60o0 to-gray-70o0 hover:from-gray-60o0 hover:via-gray-50o0 hover:to-gray-60o0 text-white shadow-lg hover:shadow-xl border border-gray-50o0/20 no-underline">,
                   <span className="relative">View Pricing</span>,
                   <DollarSign className="ml-2 w-6 h-6"  />,
@@ -401,6 +371,4 @@ export default function EnhancedServicesShowcase20o25() {,
           </div>,
         </section>,
       </div>,
-    </EnhancedFuturisticBackground>,
-  ),
-,}
+    </EnhancedFuturisticBackground>)}

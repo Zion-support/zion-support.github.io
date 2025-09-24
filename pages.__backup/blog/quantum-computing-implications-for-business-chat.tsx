@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const QuantumComputingImplicationsForBusinessChat: NextPage = () => {,
-  return (,
+const QuantumComputingImplicationsForBusinessChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           QuantumComputingImplicationsForBusinessChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='QuantumComputingImplicationsForBusinessChat blog post',
         />,
@@ -19,9 +18,5 @@ const QuantumComputingImplicationsForBusinessChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default QuantumComputingImplicationsForBusinessChat,
-,
+    </div>)};
+export default QuantumComputingImplicationsForBusinessChat;

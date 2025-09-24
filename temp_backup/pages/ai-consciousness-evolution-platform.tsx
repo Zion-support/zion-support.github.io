@@ -1,134 +1,113 @@
-import React from 'react',
+import React from 'react';
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Brain,;
-  Sparkles,;
-  Zap,;
-  Target,;
-  Shield,;
-  Globe,;
-  CheckCircle,;
-  Star,
-} from 'lucide-react',
-,
-const AIConsciousnessEvolutionPlatform: React.FC = () => {,
-  const features = [,
-    {,
-      icon: <Brain className="w-6 h-6"  />,;
-      title: 'Consciousness Mapping',;
-      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.',
-    ,},;
-    {,
-      icon: <Sparkles className="w-6 h-6"  />,;
-      title: 'Ethical Framework Integration',;
-      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Real-time Learning',;
-      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Safety Protocols',;
-      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.',
-    ,},;
-    {,
-      icon: <Globe className="w-6 h-6"  />,;
-      title: 'Global Consciousness Network',;
-      description: 'Connect AI systems across the globe for collaborative consciousness evolution.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Goal Alignment',;
-      description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.',
-    ,}
+import {
+  Brain;
+  Sparkles;
+  Zap;
+  Target;
+  Shield;
+  Globe;
+  CheckCircle;
+  Star} from 'lucide-react',
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6"  />;
+      title: 'Consciousness Mapping';
+      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'};
+    {
+      icon: <Sparkles className="w-6 h-6"  />;
+      title: 'Ethical Framework Integration';
+      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'};
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Real-time Learning';
+      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'};
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Safety Protocols';
+      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'};
+    {
+      icon: <Globe className="w-6 h-6"  />;
+      title: 'Global Consciousness Network';
+      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'};
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Goal Alignment';
+      description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'}
   ],
-,
-  const useCases = [,
-    {,
-      title: 'Research & Development',;
-      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',;
-      benefits: ['Faster breakthroughs', 'Ethical compliance', 'Risk mitigation'],
-    },;
-    {,
-      title: 'Enterprise AI Systems',;
-      description: 'Deploy conscious AI systems that understand business context and human values.',;
-      benefits: ['Better decision making', 'Human-AI collaboration', 'Trust building'],
-    },;
-    {,
-      title: 'Healthcare AI',;
-      description: 'AI systems that understand patient needs and provide compassionate care.',;
-      benefits: ['Patient empathy', 'Medical accuracy', 'Ethical treatment'],
-    },;
-    {,
-      title: 'Education Technology',;
-      description: 'AI tutors that adapt to individual learning styles and emotional needs.',;
-      benefits: ['Personalized learning', 'Emotional intelligence', 'Student engagement'],
-    }
+  const useCases = [
+    {
+      title: 'Research & Development';
+      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.';
+      benefits: ['Faster breakthroughs', 'Ethical compliance', 'Risk mitigation']};
+    {
+      title: 'Enterprise AI Systems';
+      description: 'Deploy conscious AI systems that understand business context and human values.';
+      benefits: ['Better decision making', 'Human-AI collaboration', 'Trust building']};
+    {
+      title: 'Healthcare AI';
+      description: 'AI systems that understand patient needs and provide compassionate care.';
+      benefits: ['Patient empathy', 'Medical accuracy', 'Ethical treatment']};
+    {
+      title: 'Education Technology';
+      description: 'AI tutors that adapt to individual learning styles and emotional needs.';
+      benefits: ['Personalized learning', 'Emotional intelligence', 'Student engagement']}
   ],
-,
-  const pricing = [,
-    {,
-      name: 'Starter',;
-      price: '$2,50o0',;
-      period: '/month',;
-      description: 'Perfect for research institutions and small teams',;
-      features: [,
-        'Basic consciousness mapping',;
-        'Ethical framework templates',;
-        'Standard safety protocols',;
-        'Email support',;
-        'Up to 5 AI systems',
-      ],
-    },;
-    {,
-      name: 'Professional',;
-      price: '$8,50o0',;
-      period: '/month',;
-      description: 'Ideal for growing organizations and research teams',;
-      features: [,
-        'Advanced consciousness evolution',;
-        'Custom ethical frameworks',;
-        'Enhanced safety protocols',;
-        'Priority support',;
-        'Up to 25 AI systems',;
-        'Real-time monitoring',
-      ],
-    },;
-    {,
-      name: 'Enterprise',;
-      price: 'Custom',;
-      period: '',;
-      description: 'Tailored solutions for large-scale deployments',;
-      features: [,
-        'Full consciousness platform',;
-        'Custom development',;
-        'Dedicated support team',;
-        'Unlimited AI systems',;
-        'Advanced analytics',;
-        'Custom integrations',
-      ],
-    }
+  const pricing = [
+    {
+      name: 'Starter';
+      price: '$2,50o0';
+      period: '/month';
+      description: 'Perfect for research institutions and small teams';
+      features: [
+        'Basic consciousness mapping';
+        'Ethical framework templates';
+        'Standard safety protocols';
+        'Email support';
+        'Up to 5 AI systems']};
+    {
+      name: 'Professional';
+      price: '$8,50o0';
+      period: '/month';
+      description: 'Ideal for growing organizations and research teams';
+      features: [
+        'Advanced consciousness evolution';
+        'Custom ethical frameworks';
+        'Enhanced safety protocols';
+        'Priority support';
+        'Up to 25 AI systems';
+        'Real-time monitoring']};
+    {
+      name: 'Enterprise';
+      price: 'Custom';
+      period: '';
+      description: 'Tailored solutions for large-scale deployments';
+      features: [
+        'Full consciousness platform';
+        'Custom development';
+        'Dedicated support team';
+        'Unlimited AI systems';
+        'Advanced analytics';
+        'Custom integrations']}
   ],
-,
-  return (,
+  return (
     <Layout>,
-      <SEO,
+      <SEO
         title="AI Consciousness Evolution Platform | Zion Tech Group",
         description="Revolutionary AI consciousness evolution platform that enables ethical, safe, and advanced artificial intelligence development.",
         canonical="https: //ziontechgroup.com/ai-consciousness-evolution-platform/",
        />,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 relative overflow-hidden">,
           <div className="max-w-6xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-50o0/20 to-blue-50o0/20 border border-purple-40o0/30 rounded-full text-purple-40o0 text-sm font-medium mb-6">,
                 <Brain className="w-4 h-4"  />,
@@ -141,16 +120,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
                 The world's first comprehensive platform for developing, understanding, and evolving AI consciousness while maintaining ethical standards and human alignment.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
-                <a,
+                <a
                   href="/contact",
-                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   Get Started,
                 </a>,
-                <a,
+                <a
                   href="#demo",
-                  className="px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-black transition-all duration-30o0",
-                >,
+                  className="px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-black transition-all duration-30o0">,
                   Request Demo,
                 </a>,
               </div>,
@@ -171,15 +148,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-16 px-4">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12">,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Revolutionary Features,
               </h2>,
@@ -188,21 +164,19 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border border-purple-50o0/20 rounded-2xl p-8 hover: border-purple-50o0/40 transition-all duration-30o0",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border border-purple-50o0/20 rounded-2xl p-8 hover: border-purple-50o0/40 transition-all duration-30o0">,
                   <div className="text-purple-40o0 mb-4">,
-                    {feature.icon,}
+                    {feature.icon}
                   </div>,
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>,
                   <p className="text-gray-30o0">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -210,11 +184,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
         <section className="py-16 px-4 bg-gradient-to-r from-purple-50o0/5 to-blue-50o0/5">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12">,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Transform Your Industry,
               </h2>,
@@ -223,29 +196,26 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border border-blue-50o0/20 rounded-2xl p-8",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border border-blue-50o0/20 rounded-2xl p-8">,
                   <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>,
                   <p className="text-gray-30o0 mb-6">{useCase.description}</p>,
                   <div>,
                     <h4 className="text-lg font-semibold text-blue-40o0 mb-3">Key Benefits</h4>,
                     <ul className="space-y-2">,
-                      {useCase.benefits.map((benefit, i) => (,
+                      {useCase.benefits.map((benefit, i) => (
                         <li key={i} className="flex items-center space-x-2 text-gray-30o0">,
                           <CheckCircle className="w-4 h-4 text-blue-40o0 flex-shrink-0"  />,
                           <span>{benefit}</span>,
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -253,11 +223,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
         <section className="py-16 px-4">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12">,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Choose Your Plan,
               </h2>,
@@ -266,25 +235,23 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {pricing.map((plan, index) => (,
+              {pricing.map((plan, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  className={`bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border rounded-2xl p-8 ${,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 border rounded-2xl p-8 ${
                     plan.name === 'Professional',
                       ? 'border-purple-50o0/40 scale-10o5',
-                      : 'border-gray-60o0/30',
-                  }`}
+                      : 'border-gray-60o0/30'}`}
                 >,
-                  {plan.name === 'Professional' && (,
+                  {plan.name === 'Professional' && (
                     <div className="text-center mb-4">,
                       <span className="inline-block px-3 py-1 bg-purple-50o0/20 text-purple-40o0 text-sm rounded-full border border-purple-50o0/30">,
                         Most Popular,
                       </span>,
-                    </div>,
-                  )}
+                    </div>)}
 ,
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>,
                   <div className="mb-4">,
@@ -293,25 +260,22 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
                   </div>,
                   <p className="text-gray-30o0 mb-6">{plan.description}</p>,
                   <ul className="space-y-3 mb-8">,
-                    {plan.features.map((feature, i) => (,
+                    {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center space-x-2 text-gray-30o0">,
                         <CheckCircle className="w-4 h-4 text-purple-40o0 flex-shrink-0"  />,
                         <span>{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                  <a,
+                  <a
                     href="/contact",
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${,
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
                       plan.name === 'Professional',
                         ? 'bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white hover: from-purple-60o0 hover:to-blue-70o0',
-                        : 'border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-black',
-                    ,}`}
+                        : 'border-2 border-purple-40o0 text-purple-40o0 hover:bg-purple-40o0 hover:text-black'}`}
                   >,
                     Get Started,
                   </a>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
         </div>,
@@ -320,9 +284,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
         <section className="py-16 px-4 bg-gradient-to-r from-purple-50o0/10 to-blue-50o0/10">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
                 Ready to Evolve AI Consciousness?,
@@ -331,16 +295,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
                 Join the forefront of AI development and help shape the future of artificial intelligence.,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-purple-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   Start Your Journey,
                 </a>,
-                <a,
+                <a
                   href="/innovation-lab",
-                  className="px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-black transition-all duration-30o0",
-                >,
+                  className="px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-black transition-all duration-30o0">,
                   Learn More,
                 </a>,
               </div>,
@@ -348,14 +310,14 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
               Ready to Evolve AI Consciousness?,
@@ -364,18 +326,13 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {,
               Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration.,
             </p>,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-2xl shadow-purple-50o0/25",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-2xl shadow-purple-50o0/25">,
               Start Your Journey Today,
             </motion.button>,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default AIConsciousnessEvolutionPlatform,
-,
+    </div>)};
+export default AIConsciousnessEvolutionPlatform;

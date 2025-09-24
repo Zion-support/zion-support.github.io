@@ -1,38 +1,35 @@
-import React from 'react',
+import React from 'react';
 import { Button } from '@/components/ui/button',
 import { Card } from '@/components/ui/card',
 import { MapPin, Clock, CheckCircle2 } from 'lucide-react',
 import { FavoriteButton } from '@/components/FavoriteButton',
 import { useNavigate } from 'react-router-dom',
-const TalentCardComponent = ({,
-  talent,;
-  onBook,;
-  onMessage,;
-  isAuthenticated,;
-}) => {,
+const TalentCardComponent = ({
+  talent;
+  onBook;
+  onMessage;
+  isAuthenticated;
+}) => {
   const navigate = useNavigate(),
-  const handleMessage = e => {,
+  const handleMessage = e => {
     e.preventDefault(),
     e.stopPropagation(),
-    if (onMessage) {,
-      onMessage(talent),
-    } else {,
-      navigate(`/messages?talentId=${talent.id}`),
-    }
+    if (onMessage) {
+      onMessage(talent)} else {
+      navigate(`/messages?talentId=${talent.id}`)}
   };
-  const handleBook = e => {,
+  const handleBook = e => {
     e.preventDefault(),
     e.stopPropagation(),
-    if (onBook) {,
-      onBook(talent),
-    }
+    if (onBook) {
+      onBook(talent)}
   };
   // Extract skills - limit to 5 for display,
   const skills = talent.skills?.slice(0, 5) || [],
-  return (,
-    <Card,
+  return (
+    <Card
       className='overflow-hidden transition-all hover: shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple',
-      onClick={handleViewProfile,}
+      onClick={handleViewProfile}
       tabIndex={0}
     >,
       <div className='p-6'>,
@@ -40,24 +37,21 @@ const TalentCardComponent = ({,
           {/* Avatar */}
           <div className='relative mr-4'>,
             <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light'>,
-              {talent.profile_picture_url ? (,
-                <img,
+              {talent.profile_picture_url ? (
+                <img
                   loading='lazy',
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
                   className='w-full h-full object-cover',
-                />,
-              ) : (,
+                />) : (
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>,
                   {talent.full_name?.charAt(0) || 'T'}
-                </div>,
-              )}
+                </div>)}
             </div>,
-            {talent.is_verified && (,
+            {talent.is_verified && (
               <div className='absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full'>,
                 <CheckCircle2 className='w-5 h-5 text-zion-cyan' />,
-              </div>,
-            )}
+              </div>)}
           </div>,
           {/* Main Info */}
           <div className='flex-1'>,
@@ -65,7 +59,7 @@ const TalentCardComponent = ({,
               <h3 className='text-lg font-bold text-white'>,
                 {talent.full_name}
               </h3>,
-              <FavoriteButton,
+              <FavoriteButton
                 itemId={talent.id}
                 itemType='talent',
                 className='-mt-1',
@@ -76,79 +70,65 @@ const TalentCardComponent = ({,
             </p>,
             {/* Location & Availability */}
             <div className='mt-2 flex flex-wrap gap-3 text-sm'>,
-              {talent.location && (,
+              {talent.location && (
                 <div className='flex items-center text-zion-slate-light'>,
                   <MapPin className='h-4 w-4 mr-1' />,
                   <span>{talent.location}</span>,
-                </div>,
-              )}
-              {talent.availability_type && (,
+                </div>)}
+              {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>,
                   <Clock className='h-4 w-4 mr-1' />,
                   <span>{talent.availability_type}</span>,
-                </div>,
-              )}
+                </div>)}
             </div>,
           </div>,
         </div>,
         {/* Skills */}
-        {skills.length > 0 && (,
+        {skills.length > 0 && (
           <div className='mt-4'>,
             <div className='flex flex-wrap gap-2'>,
-              {skills.map((skill, index) => (,
-                <span,
+              {skills.map((skill, index) => (
+                <span
                   key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light',
-                >,
+                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'>,
                   {skill}
-                </span>,
-              ))}
-              {(talent.skills?.length || 0) > 5 && (,
+                </span>))}
+              {(talent.skills?.length || 0) > 5 && (
                 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>,
                   +{(talent.skills?.length || 0) - 5} more,
-                </span>,
-              )}
+                </span>)}
             </div>,
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Hourly Rate & Actions */}
         <div className='mt-5 flex items-center justify-between'>,
           <div>,
-            {talent.hourly_rate ? (,
+            {talent.hourly_rate ? (
               <div className='text-white font-bold'>,
                 ${talent.hourly_rate}
                 <span className='text-zion-slate-light font-normal'>/hr</span>,
-              </div>,
-            ) : (,
-              <div className='text-zion-slate-light'>Rate not specified</div>,
-            )}
+              </div>) : (
+              <div className='text-zion-slate-light'>Rate not specified</div>)}
           </div>,
           <div className='flex items-center gap-2'>,
-            {isAuthenticated && (,
-              <Button,
+            {isAuthenticated && (
+              <Button
                 size='sm',
                 variant='secondary',
                 onClick={handleBook}
-                className='bg-zion-purple hover: bg-zion-purple-light text-white',
-              >,
+                className='bg-zion-purple hover: bg-zion-purple-light text-white'>,
                 Book,
-              </Button>,
-            ),}
-            <Button,
+              </Button>)}
+            <Button
               size='sm',
               variant='ghost',
               onClick={handleMessage}
-              className='text-zion-cyan hover: text-white hover:bg-zion-blue-light',
-            >,
+              className='text-zion-cyan hover: text-white hover:bg-zion-blue-light'>,
               Message,
             </Button>,
           </div>,
         </div>,
       </div>,
-    </Card>,
-  ),
-,};
+    </Card>)};
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-,

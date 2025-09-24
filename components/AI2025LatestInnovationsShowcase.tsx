@@ -1,86 +1,71 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 ArrowRightSparklesBrainZapTargetTrendingUpUsersGlobe,
-const AI20o25LatestInnovationsShowcase = () => {,
+const AI20o25LatestInnovationsShowcase = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % innovations.length),
-    }50o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const innovations = [,
-    {,
-      id: 1,;
-      title: "Quantum-Neural AI Fusion",;
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",;
-      icon: Brain,;
-      stats: "10,0o00x faster processing",;
-      color: "from-purple-60o0 to-blue-60o0",
-    ,},;
-    {,
-      id: 2,;
-      title: "Autonomous Business Orchestration",;
-      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",;
-      icon: Target,;
-      stats: "95% efficiency increase",;
-      color: "from-green-60o0 to-teal-60o0",
-    ,},;
-    {,
-      id: 3,;
-      title: "Synthetic Intelligence Platforms",;
-      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",;
-      icon: Sparkles,;
-      stats: "Self-evolving capabilities",;
-      color: "from-orange-60o0 to-red-60o0",
-    ,},;
-    {,
-      id: 4,;
-      title: "Global Transformation Engine",;
-      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",;
-      icon: Globe,;
-      stats: "15,0o00% ROI average",;
-      color: "from-indigo-60o0 to-purple-60o0",
-    ,}
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % innovations.length)}50o00),
+    return () => clearInterval(interval)}[]),
+  const innovations = [
+    {
+      id: 1;
+      title: "Quantum-Neural AI Fusion";
+      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.";
+      icon: Brain;
+      stats: "10,0o00x faster processing";
+      color: "from-purple-60o0 to-blue-60o0"};
+    {
+      id: 2;
+      title: "Autonomous Business Orchestration";
+      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.";
+      icon: Target;
+      stats: "95% efficiency increase";
+      color: "from-green-60o0 to-teal-60o0"};
+    {
+      id: 3;
+      title: "Synthetic Intelligence Platforms";
+      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.";
+      icon: Sparkles;
+      stats: "Self-evolving capabilities";
+      color: "from-orange-60o0 to-red-60o0"};
+    {
+      id: 4;
+      title: "Global Transformation Engine";
+      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.";
+      icon: Globe;
+      stats: "15,0o00% ROI average";
+      color: "from-indigo-60o0 to-purple-60o0"}
   ],
-,
-  const features = [,
-    {,
-      icon: TrendingUp,;
-      title: "Exponential Growth",;
-      description: "Achieve unprecedented business growth with AI-driven strategies",
-    ,},;
-    {,
-      icon: Users,;
-      title: "Global Impact",;
-      description: "Transform organizations worldwide with our proven methodologies",
-    ,},;
-    {,
-      icon: Zap,;
-      title: "Lightning Fast",;
-      description: "Implement solutions in daysnot monthswith our rapid deployment",
-    ,}
+  const features = [
+    {
+      icon: TrendingUp;
+      title: "Exponential Growth";
+      description: "Achieve unprecedented business growth with AI-driven strategies"};
+    {
+      icon: Users;
+      title: "Global Impact";
+      description: "Transform organizations worldwide with our proven methodologies"};
+    {
+      icon: Zap;
+      title: "Lightning Fast";
+      description: "Implement solutions in daysnot monthswith our rapid deployment"}
   ],
-,
-  return (,
+  return (
     <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="container mx-auto px-4 relative z-10">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">,
             <Sparkles className="w-4 h-4"  />,
             Latest AI Innovations 20o25,
@@ -95,28 +80,27 @@ const AI20o25LatestInnovationsShowcase = () => {,
             Discover the most advanced AI technologies that are reshaping industries and creating unprecedented opportunities for growth and innovation.,
           </p>,
         </motion.div>,
-        {/* Main Innovation Showcase */,}
+        {/* Main Innovation Showcase */}
         <div className="relative mb-16">,
           <div className="relative h-96 md: h-[50o0px] rounded-2xl overflow-hidden">,
             <AnimatePresence mode="wait">,
               <motion.div,
-                key={currentSlide,}
-                initial={{ opacity: 0scale: 1.1 ,}}
-                animate={{ opacity: 1scale: 1 ,}}
-                exit={{ opacity: 0scale: 0.9 ,}}
-                transition={{ duration: 0.5 ,}}
-                className="absolute inset-0",
-              >,
+                key={currentSlide}
+                initial={{ opacity: 0scale: 1.1 }}
+                animate={{ opacity: 1scale: 1 }}
+                exit={{ opacity: 0scale: 0.9 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0">,
                 <div className={`h-full bg-gradient-to-br ${innovations[currentSlide].color} relative overflow-hidden`}>,
                   <div className="absolute inset-0 bg-black/20"></div>,
                   <div className="relative z-10 h-full flex items-center justify-center p-8">,
                     <div className="text-center text-white max-w-4xl">,
                       <innovations[currentSlide].icon className="w-16 h-16 mx-auto mb-6 opacity-90"  />,
                       <h3 className="text-3xl md: text-5xl font-bold mb-4">,
-                        {innovations[currentSlide].title,}
+                        {innovations[currentSlide].title}
                       </h3>,
                       <p className="text-lg md: text-xl mb-6 opacity-90">,
-                        {innovations[currentSlide].description,}
+                        {innovations[currentSlide].description}
                       </p>,
                       <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">,
                         <TrendingUp className="w-5 h-5"  />,
@@ -134,46 +118,40 @@ const AI20o25LatestInnovationsShowcase = () => {,
           </div>,
           {/* Navigation Dots */}
           <div className="flex justify-center gap-3 mt-6">,
-            {innovations.map((_index) => (,
-              <button,
+            {innovations.map((_index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-white scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                ,}`}
-              />,
-            ))}
+                    : 'bg-white/30 hover: bg-white/50'}`}
+              />))}
           </div>,
         </div>,
         {/* Features Grid */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.3 ,}}
-          className="grid md: grid-cols-3 gap-8 mb-16",
-        >,
-          {features.map((featureindex) => (,
-            <div,
-              key={index,}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover: bg-white/20 transition-all duration-30o0 group",
-            >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.3 }}
+          className="grid md: grid-cols-3 gap-8 mb-16">,
+          {features.map((featureindex) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover: bg-white/20 transition-all duration-30o0 group">,
               <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                 <feature.icon className="w-8 h-8 text-white"  />,
               </div>,
-              <h3 className="text-xl font-bold text-white mb-4">{feature.title,}</h3>,
+              <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>,
               <p className="text-gray-30o0">{feature.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="text-center">,
           <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 md: p-12">,
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">,
               Ready to Transform Your Business?,
@@ -193,8 +171,5 @@ const AI20o25LatestInnovationsShowcase = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o25LatestInnovationsShowcase,
+    </div>)};
+export default AI20o25LatestInnovationsShowcase;

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const RevolutionaryAI20o25Banner = () => {,
-  return (,
+const RevolutionaryAI20o25Banner = () => {
+  return (
     <div className='bg-gradient-to-r from-red-90o0 via-orange-90o0 to-yellow-90o0 text-white py-16 px-4'>,
       <div className='max-w-7xl mx-auto text-center'>,
         <div className='mb-8'>,
@@ -41,23 +40,17 @@ const RevolutionaryAI20o25Banner = () => {,
           </div>,
         </div>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             href='/ai-20o25-20o26-ultimate-breakthrough',
-            className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
             Explore Revolutionary AI,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-90o0 transition-all duration-30o0',
-          >,
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-90o0 transition-all duration-30o0'>,
             Start Your Transformation,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default RevolutionaryAI20o25Banner,
-,
+    </div>)};
+export default RevolutionaryAI20o25Banner;

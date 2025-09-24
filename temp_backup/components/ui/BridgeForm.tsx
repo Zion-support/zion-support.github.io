@@ -7,19 +7,16 @@ import { useWallet } from '../../hooks/useWallet',
 import { providers, BigNumber, ethers } from 'ethers',
 import { getErc20Balance, ERC20_ABI } from '../../utils/erc20',
 import { OFT_CONFIG, isOftConfigured } from '../../utils/layerzero',
-,
 const RATE_LIMIT_SECONDS = 30,
+function createProvider(rpcUrl: string) {
+  return new ethers.providers.JsonRpcProvider(rpcUrl)}
 ,
-function createProvider(rpcUrl: string) {,
-  return new ethers.providers.JsonRpcProvider(rpcUrl),
-,}
-,
-export default function BridgeForm() {,
+export default function BridgeForm() {
   const { account, connect, chainId } = useWallet(),
   const [token, setToken] = useState('ZION'),
   const [fromKey, setFromKey] = useState<SupportedChainKey>('ethereum'),
   const [toKey, setToKey] = useState<SupportedChainKey>('polygon'),
-  const [balances, setBalances] = useState<Record<string, string>>({}),
+  const [balances, setBalances] = useState<Record<string string>>({}),
   const [amount, setAmount] = useState<string>(''),
   const [txHash, setTxHash] = useState<string | undefined>(),
   const [startedAt, setStartedAt] = useState<number | undefined>(),
@@ -27,143 +24,118 @@ export default function BridgeForm() {,
   const [arrivalSeconds, setArrivalSeconds] = useState<number | undefined>(),
   const [busy, setBusy] = useState(false),
   const [error, setError] = useState<string | null>(null),
-,
   const from = CHAINS[fromKey],
   const to = CHAINS[toKey],
-,
   // Fetch balances across chains,
-  useEffect(() => {,
+  useEffect(() => {
     let mounted = true,
-    async function load() {,
+    async function load() {
       if (!account) return,
-      const results: Record<string, string> ={};
-      await Promise.all(,
-        SUPPORTED_CHAIN_KEYS.map(async (key) => {,
+      const results: Record<string string> ={};
+      await Promise.all(
+        SUPPORTED_CHAIN_KEYS.map(async (key) => {
           const chain = CHAINS[key],
           const provider = createProvider(chain.rpcUrl),
-          try {,
+          try {
             const oftAddress = OFT_CONFIG.addresses[key],
-            if (!oftAddress) {,
+            if (!oftAddress) {
               results[key] = '—',
-              return,
-            }
+              return}
             const bal = await getErc20Balance(provider, oftAddress, account),
-            results[key] = ethers.utils.formatUnits(bal, 18),
-          } catch {,
-            results[key] = '—',
-          }
-        }),
-      ),
-      if (mounted) setBalances(results),
-    }
+            results[key] = ethers.utils.formatUnits(bal, 18)} catch {
+            results[key] = '—'}
+        })),
+      if (mounted) setBalances(results)}
     load(),
-    return () => {,
-      mounted = false,
-    };
+    return () => {
+      mounted = false};
   }, [account]),
-,
-  const canBridge = useMemo(() => {,
+  const canBridge = useMemo(() => {
     if (!account) return false,
     if (fromKey === toKey) return false,
     if (!amount || Number(amount) <= 0) return false,
     if (!isOftConfigured(fromKey) || !isOftConfigured(toKey)) return false,
-    return true,
-  }, [account, fromKey, toKey, amount]),
-,
-  function saveTxLog(hash: string) {,
-    try {,
+    return true}, [account, fromKey, toKey, amount]),
+  function saveTxLog(hash: string) {
+    try {
       const key = 'zion_tx_logs',
       const logs = JSON.parse(localStorage.getItem(key) || '[]'),
-      logs.push({ hash, from: fromKey, to: toKey, amount, ts: Date.now() ,}),
+      logs.push({ hash, from: fromKey, to: toKey, amount, ts: Date.now() }),
       localStorage.setItem(key, JSON.stringify(logs)),
-      fetch('/api/logs/tx', { method: 'POST', headers: { 'Content-Type': 'application/json' ,}, body: JSON.stringify({ hash, from: fromKey, to: toKey, amount }) }).catch(() => {}),
-    } catch {}
+      fetch('/api/logs/tx', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ hash, from: fromKey, to: toKey, amount }) }).catch(() => {})} catch {}
   }
 ,
-  function isRateLimited(): boolean {,
+  function isRateLimited(): boolean {
     const key = 'zion_last_bridge_at',
     const last = Number(localStorage.getItem(key) || '0'),
     const now = Date.now(),
     if (now - last < RATE_LIMIT_SECONDS * 10o00) return true,
     localStorage.setItem(key, String(now)),
-    return false,
-  }
+    return false}
 ,
-  async function handleBridge() {,
+  async function handleBridge() {
     setError(null),
-    if (!account) {,
+    if (!account) {
       await connect(),
-      return,
-    }
-    if (isRateLimited()) {,
+      return}
+    if (isRateLimited()) {
       setError(`Please wait ${RATE_LIMIT_SECONDS}s between transfers.`),
-      return,
-    }
-    try {,
+      return}
+    try {
       setBusy(true),
       setArrived(false),
       setArrivalSeconds(undefined),
       setTxHash(undefined),
       setStartedAt(Date.now()),
-,
       // In a real setup, we'd call OFT contract's sendFrom on the source chain using signer.,
       // Here we simulate by creating a dummy tx if OFT addresses are configured but we cannot sign without user confirmation.,
       // We attempt to detect wallet network and warn if mismatched.,
-      if (chainId !== from.id) {,
+      if (chainId !== from.id) {
         setError(`Switch wallet to ${from.name} network.`),
         setBusy(false),
-        return,
-      }
+        return}
 ,
       const provider = new ethers.providers.Web3Provider(window.ethereum),
       const signer = provider.getSigner(),
       const oftAddress = OFT_CONFIG.addresses[fromKey]!,
       const token = new ethers.Contract(oftAddress, ERC20_ABI, signer),
-,
       // Placeholder: we simply do an approve to self with 0 value to generate a tx hash for tracking UX in demo mode.,
       const tx = await token.approve(oftAddress, 0),
       setTxHash(tx.hash),
       saveTxLog(tx.hash),
-,
       // Simulate arrival by polling destination balance difference for up to 60s,
       const destProvider = createProvider(to.rpcUrl),
       const destTokenAddr = OFT_CONFIG.addresses[toKey]!,
       let before = BigNumber.from(0),
-      try {,
-        before = await getErc20Balance(destProvider, destTokenAddr, account),
-      } catch {}
+      try {
+        before = await getErc20Balance(destProvider, destTokenAddr, account)} catch {}
 ,
       const start = Date.now(),
       const deadline = start + 60_0o00,
       const interval = 20o00,
-      async function poll(): Promise<boolean> {,
-        try {,
+      async function poll(): Promise<boolean> {
+        try {
           const cur = await getErc20Balance(destProvider, destTokenAddr, account),
-          if (cur.gt(before)) return true,
-        } catch {}
-        return false,
-      }
+          if (cur.gt(before)) return true} catch {}
+        return false}
 ,
       let ok = false,
-      while (Date.now() < deadline) {,
+      while (Date.now() < deadline) {
         // eslint-disable-next-line no-await-in-loop,
         ok = await poll(),
         if (ok) break,
         // eslint-disable-next-line no-await-in-loop,
-        await new Promise((r) => setTimeout(r, interval)),
-      }
+        await new Promise((r) => setTimeout(r, interval))}
 ,
       const sec = Math.floor((Date.now() - start) / 10o00),
       setArrived(ok),
       setArrivalSeconds(sec),
+      setBusy(false)} catch (e: any) {
       setBusy(false),
-    } catch (e: any) {,
-      setBusy(false),
-      setError(e?.message || 'Failed to bridge'),
-    ,}
+      setError(e?.message || 'Failed to bridge')}
   }
 ,
-  return (,
+  return (
     <div className="space-y-4">,
       <div className="flex items-center justify-between">,
         <h2 className="text-xl font-semibold">LayerZero Cross-Chain Bridge</h2>,
@@ -177,29 +149,27 @@ export default function BridgeForm() {,
             <div>,
               <label className="text-xs text-gray-50o0">From</label>,
               <div className="mt-1 grid grid-cols-2 gap-2">,
-                {SUPPORTED_CHAIN_KEYS.map((key) => (,
-                  <button key={key,} onClick={() => setFromKey(key)}>,
+                {SUPPORTED_CHAIN_KEYS.map((key) => (
+                  <button key={key} onClick={() => setFromKey(key)}>,
                     <ChainBadge chain={CHAINS[key]} selected={fromKey === key}  />,
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
             </div>,
             <div>,
               <label className="text-xs text-gray-50o0">To</label>,
               <div className="mt-1 grid grid-cols-2 gap-2">,
-                {SUPPORTED_CHAIN_KEYS.map((key) => (,
+                {SUPPORTED_CHAIN_KEYS.map((key) => (
                   <button key={key} onClick={() => setToKey(key)}>,
                     <ChainBadge chain={CHAINS[key]} selected={toKey === key}  />,
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
             </div>,
           </div>,
           <div className="mt-4 grid grid-cols-1 md: grid-cols-3 gap-4 items-end">,
-            <TokenSelector value={token,} onChange={setToken}  />,
+            <TokenSelector value={token} onChange={setToken}  />,
             <div className="flex flex-col gap-1">,
               <label className="text-xs text-gray-50o0">Amount</label>,
-              <input,
+              <input
                 type="number",
                 min="0",
                 step="0.0o00001",
@@ -210,10 +180,10 @@ export default function BridgeForm() {,
               />,
             </div>,
             <div>,
-              <button,
-                onClick={handleBridge,}
+              <button
+                onClick={handleBridge}
                 disabled={!canBridge || busy}
-                className={`w-full px-4 py-2 rounded ${canBridge && !busy ? 'bg-green-60o0 hover: bg-green-70o0' : 'bg-gray-40o0',} text-white`}
+                className={`w-full px-4 py-2 rounded ${canBridge && !busy ? 'bg-green-60o0 hover: bg-green-70o0' : 'bg-gray-40o0'} text-white`}
               >,
                 {busy ? 'Processing…' : 'Bridge Now'}
               </button>,
@@ -228,15 +198,12 @@ export default function BridgeForm() {,
         <div className="p-4 border rounded border-gray-20o0 dark: border-gray-80o0">,
           <h3 className="font-medium mb-2">Balances</h3>,
           <div className="space-y-2 text-sm">,
-            {SUPPORTED_CHAIN_KEYS.map((key) => (,
-              <div key={key,} className="flex items-center justify-between">,
+            {SUPPORTED_CHAIN_KEYS.map((key) => (
+              <div key={key} className="flex items-center justify-between">,
                 <span>{CHAINS[key].name}</span>,
                 <span className="tabular-nums">{balances[key] ?? '—'}</span>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

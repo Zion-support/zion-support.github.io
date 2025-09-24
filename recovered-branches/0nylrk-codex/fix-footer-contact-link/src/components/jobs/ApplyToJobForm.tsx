@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -14,76 +14,62 @@ import { AlertCircleFileTextLoader2 } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
-,
-interface ApplyToJobFormProps {,
+interface ApplyToJobFormProps {
   job: Job,
-  onSuccess?: () => void,
-,}
+  onSuccess?: () => void}
 ,
-export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {,
+export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
-  const { resumesisLoading: isResumesLoading ,} = useResume(),
+  const { resumesisLoading: isResumesLoading } = useResume(),
   const navigate = useNavigate(),
-,
   const [coverLettersetCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
   const [selectedResumeIdsetSelectedResumeId] = useState<string>(""),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [errorsetError] = useState<string | null>(null),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-,
-    if (!user) {,
+    if (!user) {
       toast.error("You must be logged in to apply"),
-      navigate("/login"{ state: { returnTo: `/jobs/${job.id,}` } }),
-      return,
-    }
+      navigate("/login"{ state: { returnTo: `/jobs/${job.id}` } }),
+      return}
 ,
-    if (!coverLetter.trim()) {,
+    if (!coverLetter.trim()) {
       setError("Please provide a cover letter"),
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
     setError(null),
-,
-    try {,
+    try {
       const success = await applyToJob(job.idcoverLetterselectedResumeId || undefined),
-,
-      if (success) {,
+      if (success) {
         toast.success("Your application has been submitted!"),
-        if (onSuccess) {,
-          onSuccess(),
-        }
+        if (onSuccess) {
+          onSuccess()}
       }
-    } catch (err: any) {,
+    } catch (err: any) {
       setError(err.message || "Failed to submit application"),
-      toast.error("Failed to submit application"),
-    ,} finally {,
-      setIsSubmitting(false),
-    }
+      toast.error("Failed to submit application")} finally {
+      setIsSubmitting(false)}
   };
-,
-  return (,
+  return (
     <form onSubmit={handleSubmit} className="space-y-6">,
       <div>,
-        <h3 className="text-lg font-medium mb-1">Apply to: {job.title,}</h3>,
+        <h3 className="text-lg font-medium mb-1">Apply to: {job.title}</h3>,
         <p className="text-sm text-muted-foreground mb-4">,
-          Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true ,})}
+          Posted {formatDistanceToNow(new Date(job.created_at){ addSuffix: true })}
         </p>,
       </div>,
-      {error && (,
+      {error && (
         <Alert variant="destructive">,
           <AlertCircle className="h-4 w-4" />,
           <AlertDescription>{error}</AlertDescription>,
-        </Alert>,
-      )}
+        </Alert>)}
 ,
       <div className="space-y-4">,
         <div>,
           <Label htmlFor="coverLetter">Cover Letter</Label>,
-          <Textarea,
+          <Textarea
             id="coverLetter",
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
@@ -97,13 +83,12 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {,
         </div>,
         <div>,
           <Label htmlFor="resume">Select Resume (Optional)</Label>,
-          {isResumesLoading ? (,
+          {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">,
               <Loader2 className="h-4 w-4 animate-spin" />,
               <span>Loading your resumes...</span>,
-            </div>,
-          ) : resumes && resumes.length > 0 ? (,
-            <Select,
+            </div>) : resumes && resumes.length > 0 ? (
+            <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
             >,
@@ -112,20 +97,18 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {,
               </SelectTrigger>,
               <SelectContent>,
                 <SelectItem value="">No resume</SelectItem>,
-                {resumes.map((resume) => (,
+                {resumes.map((resume) => (
                   <SelectItem key={resume.id} value={resume.id}>,
                     {resume.basic_info.title || "Untitled Resume"}
-                  </SelectItem>,
-                ))}
+                  </SelectItem>))}
               </SelectContent>,
-            </Select>,
-          ) : (,
+            </Select>) : (
             <div className="flex items-center justify-between mt-2 p-3 border rounded-md">,
               <div className="flex items-center gap-2">,
                 <FileText className="h-5 w-5 text-muted-foreground" />,
                 <span>No resumes found</span>,
               </div>,
-              <Button,
+              <Button
                 variant="outline",
                 size="sm",
                 type="button",
@@ -133,33 +116,27 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {,
               >,
                 Create Resume,
               </Button>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </div>,
       <div className="flex justify-end gap-2">,
-        <Button,
+        <Button
           type="button",
           variant="outline",
           disabled={isSubmitting}
-          onClick={() => {,
-            if (onSuccess) onSuccess(),
-          }}
+          onClick={() => {
+            if (onSuccess) onSuccess()}}
         >,
           Cancel,
         </Button>,
         <Button type="submit" disabled={isSubmitting}>,
-          {isSubmitting ? (,
+          {isSubmitting ? (
             <>,
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />,
               Submitting...,
-            </>,
-          ) : (,
-            "Submit Application",
-          )}
+            </>) : (
+            "Submit Application")}
         </Button>,
       </div>,
-    </form>,
-  ),
-}
+    </form>)}
 ,

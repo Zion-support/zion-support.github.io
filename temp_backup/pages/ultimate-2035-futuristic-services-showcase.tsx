@@ -2,75 +2,61 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
-  Rocket, Brain, Atom, Shield, Zap, Target, Users, Award, Clock,;
-  Heart, Lightbulb, Search, Filter, Grid, List, Globe, Sparkles,
-} from 'lucide-react',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Shield, Zap, Target, Users, Award, Clock;
+  Heart, Lightbulb, Search, Filter, Grid, List, Globe, Sparkles} from 'lucide-react',
 import { Layout } from '../components/layout/Layout',
 import { ultimateFuturisticServices20o25 } from '../data/20o25-ultimate-futuristic-services',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-const categories = [,
-  'All Services',;
-  'AI & Autonomous Systems',;
-  'Quantum & Cloud Infrastructure',;
-  'Space Technology & AI',;
-  'Neural Technology & AI',;
-  'Cybersecurity & AI',;
-  'Quantum Computing & Finance',;
-  'Healthcare & AI',;
-  'Manufacturing & AI',;
-  'Internet Security & Quantum',;
-  'Education & AI',
-],
-,
-const priceRanges = [,
-  'All Prices',;
-  'Under $1,0o00',;
-  '$1,0o00 - $2,0o00',;
-  '$2,0o00 - $3,0o00',;
-  '$3,0o00 - $5,0o00',;
-  'Over $5,0o00',
-],
-,
-export default function Ultimate20o35FuturisticServicesShowcase() {,
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+const categories = [
+  'All Services';
+  'AI & Autonomous Systems';
+  'Quantum & Cloud Infrastructure';
+  'Space Technology & AI';
+  'Neural Technology & AI';
+  'Cybersecurity & AI';
+  'Quantum Computing & Finance';
+  'Healthcare & AI';
+  'Manufacturing & AI';
+  'Internet Security & Quantum';
+  'Education & AI'],
+const priceRanges = [
+  'All Prices';
+  'Under $1,0o00';
+  '$1,0o00 - $2,0o00';
+  '$2,0o00 - $3,0o00';
+  '$3,0o00 - $5,0o00';
+  'Over $5,0o00'],
+export default function Ultimate20o35FuturisticServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices'),
   const [searchQuery, setSearchQuery] = useState(''),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-,
-  const filteredServices = ultimateFuturisticServices20o25.filter(service => {,
+  const filteredServices = ultimateFuturisticServices20o25.filter(service => {
     const categoryMatch = selectedCategory === 'All Services' || service.category === selectedCategory,
     const priceMatch = selectedPriceRange === 'All Prices' ||,
-      (selectedPriceRange === 'Under $1,0o00' && parseInt(service.price.replace(/[$,]/g, '')) < 10o00) ||,
-      (selectedPriceRange === '$1,0o00 - $2,0o00' && parseInt(service.price.replace(/[$,]/g, '')) >= 10o00 && parseInt(service.price.replace(/[$,]/g, '')) < 20o00) ||,
-      (selectedPriceRange === '$2,0o00 - $3,0o00' && parseInt(service.price.replace(/[$,]/g, '')) >= 20o00 && parseInt(service.price.replace(/[$,]/g, '')) < 30o00) ||,
-      (selectedPriceRange === '$3,0o00 - $5,0o00' && parseInt(service.price.replace(/[$,]/g, '')) >= 30o00 && parseInt(service.price.replace(/[$,]/g, '')) < 50o00) ||,
-      (selectedPriceRange === 'Over $5,0o00' && parseInt(service.price.replace(/[$,]/g, '')) >= 50o00),
+      (selectedPriceRange === 'Under $1,0o00' && parseInt(service.price.replace(/[$]/g, '')) < 10o00) ||,
+      (selectedPriceRange === '$1,0o00 - $2,0o00' && parseInt(service.price.replace(/[$]/g, '')) >= 10o00 && parseInt(service.price.replace(/[$]/g, '')) < 20o00) ||,
+      (selectedPriceRange === '$2,0o00 - $3,0o00' && parseInt(service.price.replace(/[$]/g, '')) >= 20o00 && parseInt(service.price.replace(/[$]/g, '')) < 30o00) ||,
+      (selectedPriceRange === '$3,0o00 - $5,0o00' && parseInt(service.price.replace(/[$]/g, '')) >= 30o00 && parseInt(service.price.replace(/[$]/g, '')) < 50o00) ||,
+      (selectedPriceRange === 'Over $5,0o00' && parseInt(service.price.replace(/[$]/g, '')) >= 50o00),
     const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
-,
-    return categoryMatch && priceMatch && searchMatch,
-  }),
-,
-  const getPriceRange = (price: string) => {,
-    const numPrice = parseInt(price.replace(/[$,]/g, '')),
+    return categoryMatch && priceMatch && searchMatch}),
+  const getPriceRange = (price: string) => {
+    const numPrice = parseInt(price.replace(/[$]/g, '')),
     if (numPrice < 10o00) return 'Under $1,0o00',
     if (numPrice < 20o00) return '$1,0o00 - $2,0o00',
     if (numPrice < 30o00) return '$2,0o00 - $3,0o00',
     if (numPrice < 50o00) return '$3,0o00 - $5,0o00',
-    return 'Over $5,0o00',
-  };
-,
-  return (,
+    return 'Over $5,0o00'};
+  return (
     <>,
       <Head>,
         <title>Ultimate 20o35 Futuristic Services Showcase | Zion Tech Group</title>,
@@ -83,7 +69,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-20o35-futuristic-services-showcase"  />,
       </Head>,
       <Layout>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">,
           {/* Futuristic Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-black">,
@@ -92,9 +78,9 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
           </div>,
           <div className="relative z-10 container mx-auto px-4 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h1 className="text-5xl lg: text-7xl font-bold mb-6">,
                 <span className="bg-gradient-to-r from-purple-40o0 via-pink-50o0 to-cyan-40o0 bg-clip-text text-transparent">,
@@ -104,7 +90,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                 <span className="text-white">Futuristic Services</span>,
               </h1>,
               <p className="text-xl lg:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8 leading-relaxed">,
-                Experience the future of technology with our revolutionary AI autonomous systems,;
+                Experience the future of technology with our revolutionary AI autonomous systems;
                 quantum computing platforms, space technology solutions, and neural interface developments,
               </p>,
               <div className="flex flex-wrap justify-center gap-4 mb-8">,
@@ -126,17 +112,15 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                 </div>,
               </div>,
               <div className="flex flex-col sm: flex-row items-center justify-center gap-4">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-purple-50o0/25",
-                >,
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-purple-50o0/25">,
                   <Phone className="w-5 h-5 mr-2"  />,
                   Get Started Today,
                 </Link>,
-                <Link,
+                <Link
                   href="#services",
-                  className="inline-flex items-center px-8 py-4 border border-purple-50o0/30 text-purple-30o0 font-semibold rounded-xl hover:bg-purple-50o0/10 transition-all duration-30o0",
-                >,
+                  className="inline-flex items-center px-8 py-4 border border-purple-50o0/30 text-purple-30o0 font-semibold rounded-xl hover:bg-purple-50o0/10 transition-all duration-30o0">,
                   <ArrowRight className="w-5 h-5 mr-2"  />,
                   Explore Services,
                 </Link>,
@@ -144,7 +128,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Search and Filters Section */,}
+        {/* Search and Filters Section */}
         <section className="py-12 bg-black/50 border-b border-purple-50o0/20">,
           <div className="container mx-auto px-4">,
             <div className="max-w-6xl mx-auto">,
@@ -152,7 +136,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
               <div className="mb-8">,
                 <div className="relative max-w-2xl mx-auto">,
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />,
-                  <input,
+                  <input
                     type="text",
                     placeholder="Search futuristic services...",
                     value={searchQuery}
@@ -161,55 +145,49 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                   />,
                 </div>,
               </div>,
-              {/* Filters */,}
+              {/* Filters */}
               <div className="flex flex-col lg: flex-row gap-6 items-start lg:items-center justify-between">,
                 <div className="flex flex-wrap gap-4">,
-                  {/* Category Filter */,}
+                  {/* Category Filter */}
                   <div className="flex items-center space-x-2">,
                     <Filter className="w-5 h-5 text-purple-40o0"  />,
-                    <select,
+                    <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="bg-gray-90o0/50 border border-purple-50o0/30 rounded-lg px-4 py-2 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0/50",
-                    >,
-                      {categories.map((category) => (,
-                        <option key={category,} value={category}>{category}</option>,
-                      ))}
+                      className="bg-gray-90o0/50 border border-purple-50o0/30 rounded-lg px-4 py-2 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0/50">,
+                      {categories.map((category) => (
+                        <option key={category} value={category}>{category}</option>))}
                     </select>,
                   </div>,
                   {/* Price Filter */}
                   <div className="flex items-center space-x-2">,
                     <TrendingUp className="w-5 h-5 text-purple-40o0"  />,
-                    <select,
+                    <select
                       value={selectedPriceRange}
                       onChange={(e) => setSelectedPriceRange(e.target.value)}
-                      className="bg-gray-90o0/50 border border-purple-50o0/30 rounded-lg px-4 py-2 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0/50",
-                    >,
-                      {priceRanges.map((range) => (,
-                        <option key={range,} value={range}>{range}</option>,
-                      ))}
+                      className="bg-gray-90o0/50 border border-purple-50o0/30 rounded-lg px-4 py-2 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0/50">,
+                      {priceRanges.map((range) => (
+                        <option key={range} value={range}>{range}</option>))}
                     </select>,
                   </div>,
                 </div>,
                 {/* View Mode Toggle */}
                 <div className="flex items-center space-x-2 bg-gray-90o0/50 border border-purple-50o0/30 rounded-lg p-1">,
-                  <button,
+                  <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-md transition-all duration-20o0 ${,
+                    className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-purple-50o0/20 text-purple-30o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    ,}`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <Grid className="w-5 h-5"  />,
                   </button>,
-                  <button,
+                  <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-md transition-all duration-20o0 ${,
+                    className={`p-2 rounded-md transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-purple-50o0/20 text-purple-30o0',
-                        : 'text-gray-40o0 hover: text-white',
-                    ,}`}
+                        : 'text-gray-40o0 hover: text-white'}`}
                   >,
                     <List className="w-5 h-5"  />,
                   </button>,
@@ -228,12 +206,11 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
         {/* Services Grid/List Section */}
         <section id="services" className="py-20 bg-black">,
           <div className="container mx-auto px-4">,
-            {filteredServices.length === 0 ? (,
+            {filteredServices.length === 0 ? (
               <motion.div,
-                initial={{ opacity: 0 ,}}
-                animate={{ opacity: 1 ,}}
-                className="text-center py-20",
-              >,
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20">,
                 <div className="w-24 h-24 bg-purple-50o0/20 border border-purple-50o0/30 rounded-full flex items-center justify-center mx-auto mb-6">,
                   <Search className="w-12 h-12 text-purple-40o0"  />,
                 </div>,
@@ -241,41 +218,37 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                 <p className="text-gray-40o0 mb-6">,
                   Try adjusting your search criteria or filters to find the perfect futuristic service for your needs.,
                 </p>,
-                <button,
-                  onClick={() => {,
+                <button
+                  onClick={() => {
                     setSearchQuery(''),
                     setSelectedCategory('All Services'),
-                    setSelectedPriceRange('All Prices'),
-                  }}
-                  className="px-6 py-3 bg-purple-50o0/20 border border-purple-50o0/30 text-purple-30o0 rounded-lg hover: bg-purple-50o0/30 transition-all duration-20o0",
-                >,
+                    setSelectedPriceRange('All Prices')}}
+                  className="px-6 py-3 bg-purple-50o0/20 border border-purple-50o0/30 text-purple-30o0 rounded-lg hover: bg-purple-50o0/30 transition-all duration-20o0">,
                   Clear Filters,
                 </button>,
-              </motion.div>,
-            ) : (,
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6',}>,
-                {filteredServices.map((service, index) => (,
+              </motion.div>) : (
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>,
+                {filteredServices.map((service, index) => (
                   <motion.div,
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                    className={viewMode === 'grid' ? 'group' : 'flex items-start space-x-6 p-6 bg-gray-90o0/50 border border-purple-50o0/20 rounded-2xl hover: border-purple-50o0/40 transition-all duration-30o0',}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={viewMode === 'grid' ? 'group' : 'flex items-start space-x-6 p-6 bg-gray-90o0/50 border border-purple-50o0/20 rounded-2xl hover: border-purple-50o0/40 transition-all duration-30o0'}
                   >,
-                    {viewMode === 'grid' ? (,
+                    {viewMode === 'grid' ? (
                       // Grid View,
                       <div className="bg-gradient-to-br from-gray-90o0 to-gray-80o0 border border-purple-50o0/20 rounded-2xl p-6 hover: border-purple-50o0/40 hover:from-gray-80o0 hover:to-gray-70o0 transition-all duration-30o0 h-full">,
                         <div className="flex items-start justify-between mb-4">,
-                          <div className="text-4xl">{service.icon,}</div>,
-                          {service.popular && (,
+                          <div className="text-4xl">{service.icon}</div>,
+                          {service.popular && (
                             <div className="flex items-center space-x-1 bg-yellow-50o0/20 border border-yellow-50o0/30 rounded-full px-3 py-1">,
                               <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />,
                               <span className="text-yellow-40o0 text-sm font-medium">Popular</span>,
-                            </div>,
-                          )}
+                            </div>)}
                         </div>,
                         <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-40o0 transition-colors duration-20o0">,
-                          {service.name,}
+                          {service.name}
                         </h3>,
                         <p className="text-gray-40o0 mb-4 line-clamp-2">,
                           {service.tagline}
@@ -285,42 +258,38 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                           <span className="text-gray-40o0">{service.period}</span>,
                         </div>,
                         <div className="space-y-2 mb-6">,
-                          {service.features.slice(0, 3).map((feature, idx) => (,
+                          {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center">,
                               <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />,
                               <span className="text-gray-30o0 text-sm">{feature}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                         <div className="flex items-center justify-between">,
                           <div className="flex items-center space-x-2 text-sm text-gray-40o0">,
                             <Users className="w-4 h-4"  />,
                             <span>{service.customers}+ customers</span>,
                           </div>,
-                          <Link,
+                          <Link
                             href={service.link}
-                            className="inline-flex items-center text-purple-40o0 hover: text-purple-30o0 transition-colors font-medium group-hover:translate-x-1 transition-transform duration-20o0",
-                          >,
+                            className="inline-flex items-center text-purple-40o0 hover: text-purple-30o0 transition-colors font-medium group-hover:translate-x-1 transition-transform duration-20o0">,
                             Learn More,
                             <ArrowRight className="w-4 h-4 ml-2"  />,
                           </Link>,
                         </div>,
-                      </div>,
-                    ) : (,
+                      </div>) : (
                       // List View,
                       <>,
-                        <div className="text-4xl flex-shrink-0">{service.icon,}</div>,
+                        <div className="text-4xl flex-shrink-0">{service.icon}</div>,
                         <div className="flex-1 min-w-0">,
                           <div className="flex items-start justify-between mb-2">,
                             <h3 className="text-xl font-bold text-white group-hover: text-purple-40o0 transition-colors duration-20o0">,
-                              {service.name,}
+                              {service.name}
                             </h3>,
-                            {service.popular && (,
+                            {service.popular && (
                               <div className="flex items-center space-x-1 bg-yellow-50o0/20 border border-yellow-50o0/30 rounded-full px-3 py-1">,
                                 <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />,
                                 <span className="text-yellow-40o0 text-sm font-medium">Popular</span>,
-                              </div>,
-                            )}
+                              </div>)}
                           </div>,
                           <p className="text-gray-40o0 mb-3">,
                             {service.description}
@@ -347,33 +316,28 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                                 {getPriceRange(service.price)}
                               </span>,
                             </div>,
-                            <Link,
+                            <Link
                               href={service.link}
-                              className="inline-flex items-center text-purple-40o0 hover: text-purple-30o0 transition-colors font-medium group-hover:translate-x-1 transition-transform duration-20o0",
-                            >,
+                              className="inline-flex items-center text-purple-40o0 hover: text-purple-30o0 transition-colors font-medium group-hover:translate-x-1 transition-transform duration-20o0">,
                               Learn More,
                               <ArrowRight className="w-4 h-4 ml-2"  />,
                             </Link>,
                           </div>,
                         </div>,
-                      </>,
-                    ),}
-                  </motion.div>,
-                ))}
-              </div>,
-            )}
+                      </>)}
+                  </motion.div>))}
+              </div>)}
           </div>,
         </section>,
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-b from-black to-purple-90o0/20">,
           <div className="container mx-auto px-4 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className="max-w-4xl mx-auto",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto">,
               <h2 className="text-4xl lg: text-6xl font-bold mb-6">,
                 <span className="bg-gradient-to-r from-purple-40o0 to-pink-50o0 bg-clip-text text-transparent">,
                   Ready to Experience,
@@ -389,7 +353,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">,
                 <div className="flex items-center space-x-3 text-gray-30o0">,
                   <Phone className="w-5 h-5 text-purple-40o0"  />,
-                  <span>{contactInfo.mobile,}</span>,
+                  <span>{contactInfo.mobile}</span>,
                 </div>,
                 <div className="flex items-center space-x-3 text-gray-30o0">,
                   <Mail className="w-5 h-5 text-purple-40o0"  />,
@@ -401,17 +365,15 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
                 </div>,
               </div>,
               <div className="flex flex-col sm: flex-row items-center justify-center gap-4">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-purple-50o0/25",
-                >,
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-purple-50o0/25">,
                   <Phone className="w-5 h-5 mr-2"  />,
                   Contact Us Today,
                 </Link>,
-                <Link,
+                <Link
                   href="/comprehensive-services-showcase-20o25",
-                  className="inline-flex items-center px-8 py-4 border border-purple-50o0/30 text-purple-30o0 font-semibold rounded-xl hover:bg-purple-50o0/10 transition-all duration-30o0",
-                >,
+                  className="inline-flex items-center px-8 py-4 border border-purple-50o0/30 text-purple-30o0 font-semibold rounded-xl hover:bg-purple-50o0/10 transition-all duration-30o0">,
                   <Globe className="w-5 h-5 mr-2"  />,
                   View All Services,
                 </Link>,
@@ -420,6 +382,4 @@ export default function Ultimate20o35FuturisticServicesShowcase() {,
           </div>,
         </section>,
       </Layout>,
-    </>,
-  ),
-,}
+    </>)}

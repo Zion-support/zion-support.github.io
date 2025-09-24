@@ -1,157 +1,152 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Bot,;
-  Brain,;
-  Cpu,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Rocket,;
-  Target,;
-  TrendingUp,;
-  Users,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Clock,;
-  DollarSign,;
-  Building2,;
-  Gauge,;
-  BarChart3,;
-  Settings,;
-  Workflow,;
+import {
+  Bot;
+  Brain;
+  Cpu;
+  Zap;
+  Shield;
+  Globe;
+  Rocket;
+  Target;
+  TrendingUp;
+  Users;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Award;
+  Clock;
+  DollarSign;
+  Building2;
+  Gauge;
+  BarChart3;
+  Settings;
+  Workflow;
 } from 'lucide-react',
-,
-const AutonomousBusinessOperationsPlatform = () => {,
-  const features = [,
-    {,
-      icon: Bot,;
-      title: 'AI Autonomous Management',;
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot;
+      title: 'AI Autonomous Management';
       description:,
-        'Fully autonomous business operations with intelligent decision-making',;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-    },;
-    {,
-      icon: Brain,;
-      title: 'Cognitive Business Intelligence',;
+        'Fully autonomous business operations with intelligent decision-making';
+      color: 'from-blue-50o0 to-cyan-50o0';
+    };
+    {
+      icon: Brain;
+      title: 'Cognitive Business Intelligence';
       description:,
-        'Advanced AI that understands and optimizes your business processes',;
-      color: 'from-purple-50o0 to-pink-50o0',;
-    },;
-    {,
-      icon: Workflow,;
-      title: 'Automated Workflows',;
+        'Advanced AI that understands and optimizes your business processes';
+      color: 'from-purple-50o0 to-pink-50o0';
+    };
+    {
+      icon: Workflow;
+      title: 'Automated Workflows';
       description:,
-        'Seamless automation of complex business processes and operations',;
-      color: 'from-emerald-50o0 to-teal-50o0',;
-    },;
-    {,
-      icon: Shield,;
-      title: 'Intelligent Security',;
-      description: 'AI-powered security monitoring and threat prevention',;
-      color: 'from-red-50o0 to-orange-50o0',;
-    },;
+        'Seamless automation of complex business processes and operations';
+      color: 'from-emerald-50o0 to-teal-50o0';
+    };
+    {
+      icon: Shield;
+      title: 'Intelligent Security';
+      description: 'AI-powered security monitoring and threat prevention';
+      color: 'from-red-50o0 to-orange-50o0';
+    };
   ],
-,
-  const capabilities = [,
-    '24/7 autonomous operation',;
-    'Real-time decision making',;
-    'Predictive analytics',;
-    'Process optimization',;
-    'Resource management',;
-    'Performance monitoring',;
-    'Risk assessment',;
-    'Compliance automation',;
+  const capabilities = [
+    '24/7 autonomous operation';
+    'Real-time decision making';
+    'Predictive analytics';
+    'Process optimization';
+    'Resource management';
+    'Performance monitoring';
+    'Risk assessment';
+    'Compliance automation';
   ],
-,
-  const industries = [,
-    {,
-      title: 'Manufacturing',;
+  const industries = [
+    {
+      title: 'Manufacturing';
       description:,
-        'Automated production lines, quality control, and supply chain management',;
-    },;
-    {,
-      title: 'Healthcare',;
+        'Automated production lines, quality control, and supply chain management';
+    };
+    {
+      title: 'Healthcare';
       description:,
-        'Patient care automation, medical device management, and administrative tasks',;
-    },;
-    {,
-      title: 'Finance',;
+        'Patient care automation, medical device management, and administrative tasks';
+    };
+    {
+      title: 'Finance';
       description:,
-        'Automated trading, risk management, and compliance monitoring',;
-    },;
-    {,
-      title: 'Retail',;
+        'Automated trading, risk management, and compliance monitoring';
+    };
+    {
+      title: 'Retail';
       description:,
-        'Inventory management, customer service, and sales optimization',;
-    },;
+        'Inventory management, customer service, and sales optimization';
+    };
   ],
-,
-  const benefits = [,
-    {,
-      icon: TrendingUp,;
-      title: 'Increased Efficiency',;
-      value: '30o0%',;
-      description: 'Boost in operational efficiency',;
-    },;
-    {,
-      icon: DollarSign,;
-      title: 'Cost Reduction',;
-      value: '40%',;
-      description: 'Reduction in operational costs',;
-    },;
-    {,
-      icon: Clock,;
-      title: 'Time Savings',;
-      value: '80%',;
-      description: 'Faster decision making',;
-    },;
-    {,
-      icon: Users,;
-      title: 'Team Productivity',;
-      value: '250%',;
-      description: 'Increase in team productivity',;
-    },;
+  const benefits = [
+    {
+      icon: TrendingUp;
+      title: 'Increased Efficiency';
+      value: '30o0%';
+      description: 'Boost in operational efficiency';
+    };
+    {
+      icon: DollarSign;
+      title: 'Cost Reduction';
+      value: '40%';
+      description: 'Reduction in operational costs';
+    };
+    {
+      icon: Clock;
+      title: 'Time Savings';
+      value: '80%';
+      description: 'Faster decision making';
+    };
+    {
+      icon: Users;
+      title: 'Team Productivity';
+      value: '250%';
+      description: 'Increase in team productivity';
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Autonomous Business Operations Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Revolutionary AI-powered autonomous business operations platform that manages your entire business with intelligent automation and decision-making capabilities.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='autonomous business, AI automation, business operations, intelligent automation, process optimization',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Autonomous Business Operations Platform - Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Revolutionary AI-powered autonomous business operations platform.',
         />,
         <meta property='og:type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/autonomous-business-operations-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20'></div>,
           <div className='relative max-w-7xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <div className='flex justify-center mb-6'>,
                 <div className='p-3 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full'>,
@@ -170,33 +165,30 @@ const AutonomousBusinessOperationsPlatform = () => {,
                 every aspect of your business.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0',
-                >,
+                  className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0'>,
                   Start Automation,
                   <ArrowRight className='ml-2 w-5 h-5' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='inline-flex items-center px-8 py-3 border border-blue-50o0 text-blue-40o0 font-semibold rounded-lg hover:bg-blue-50o0 hover:text-white transition-all duration-20o0',
-                >,
+                  className='inline-flex items-center px-8 py-3 border border-blue-50o0 text-blue-40o0 font-semibold rounded-lg hover:bg-blue-50o0 hover:text-white transition-all duration-20o0'>,
                   Learn More,
                 </Link>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text-center mb-16'>,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>,
                 Revolutionary Features,
               </h2>,
@@ -206,17 +198,16 @@ const AutonomousBusinessOperationsPlatform = () => {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 p-6 rounded-xl border border-slate-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0',
-                >,
-                  <div,
-                    className={`inline-flex p-3 bg-gradient-to-r ${feature.color,} rounded-lg mb-4`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 p-6 rounded-xl border border-slate-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0'>,
+                  <div
+                    className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}
                   >,
                     <feature.icon className='w-6 h-6 text-white' />,
                   </div>,
@@ -224,8 +215,7 @@ const AutonomousBusinessOperationsPlatform = () => {,
                     {feature.title}
                   </h3>,
                   <p className='text-gray-40o0'>{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -233,12 +223,11 @@ const AutonomousBusinessOperationsPlatform = () => {,
         <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-80o0/50 to-slate-90o0/50'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text-center mb-16'>,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>,
                 Advanced Capabilities,
               </h2>,
@@ -248,19 +237,17 @@ const AutonomousBusinessOperationsPlatform = () => {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {capabilities.map((capability, index) => (,
+              {capabilities.map((capability, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, x: -20 ,}}
-                  whileInView={{ opacity: 1, x: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  className='flex items-center space-x-3',
-                >,
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='flex items-center space-x-3'>,
                   <CheckCircle className='w-6 h-6 text-blue-40o0 flex-shrink-0' />,
                   <span className='text-gray-30o0'>{capability}</span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -268,12 +255,11 @@ const AutonomousBusinessOperationsPlatform = () => {,
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text-center mb-16'>,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>,
                 Measurable Results,
               </h2>,
@@ -282,15 +268,14 @@ const AutonomousBusinessOperationsPlatform = () => {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  className='text-center',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='text-center'>,
                   <div className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 p-6 rounded-xl border border-slate-70o0/50'>,
                     <div className='inline-flex p-3 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg mb-4'>,
                       <benefit.icon className='w-8 h-8 text-white' />,
@@ -305,8 +290,7 @@ const AutonomousBusinessOperationsPlatform = () => {,
                       {benefit.description}
                     </p>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -314,12 +298,11 @@ const AutonomousBusinessOperationsPlatform = () => {,
         <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-80o0/50 to-slate-90o0/50'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className='text-center mb-16'>,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>,
                 Industry Applications,
               </h2>,
@@ -329,23 +312,21 @@ const AutonomousBusinessOperationsPlatform = () => {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {industries.map((industry, index) => (,
+              {industries.map((industry, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 p-8 rounded-xl border border-slate-70o0/50',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 p-8 rounded-xl border border-slate-70o0/50'>,
                   <h3 className='text-2xl font-semibold text-white mb-4'>,
                     {industry.title}
                   </h3>,
                   <p className='text-gray-40o0 text-lg'>,
                     {industry.description}
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -353,10 +334,10 @@ const AutonomousBusinessOperationsPlatform = () => {,
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>,
                 Ready to Automate Your Business?,
@@ -366,17 +347,15 @@ const AutonomousBusinessOperationsPlatform = () => {,
                 operations today,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0 text-lg',
-                >,
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-semibold rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-20o0 text-lg'>,
                   Start Automation,
                   <Bot className='ml-2 w-6 h-6' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='inline-flex items-center px-8 py-4 border border-blue-50o0 text-blue-40o0 font-semibold rounded-lg hover:bg-blue-50o0 hover:text-white transition-all duration-20o0 text-lg',
-                >,
+                  className='inline-flex items-center px-8 py-4 border border-blue-50o0 text-blue-40o0 font-semibold rounded-lg hover:bg-blue-50o0 hover:text-white transition-all duration-20o0 text-lg'>,
                   Explore All Services,
                 </Link>,
               </div>,
@@ -384,9 +363,5 @@ const AutonomousBusinessOperationsPlatform = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default AutonomousBusinessOperationsPlatform,
-,
+    </>)};
+export default AutonomousBusinessOperationsPlatform;

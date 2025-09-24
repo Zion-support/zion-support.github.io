@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group',;
+    'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group';
   description:,
-    'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.',;
-  keywords: [,
-    'Fortune 50o0 transformation',;
-    'AI transformation',;
-    'enterprise AI',;
-    'digital transformation',;
-    'AI ROI',;
-    'Fortune 50o0',;
-  ],;
+    'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.';
+  keywords: [
+    'Fortune 50o0 transformation';
+    'AI transformation';
+    'enterprise AI';
+    'digital transformation';
+    'AI ROI';
+    'Fortune 50o0';
+  ];
 };
-,
-export default function EnterpriseTransformationPage() {,
-  return (,
+export default function EnterpriseTransformationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Fortune 10o0 $2.3B Revenue Transformation',
         description='The ultimate enterprise transformation success story. How a Fortune 10o0 company generated $2.3 billion in additional revenue through comprehensive AI implementation.',
         keywords='enterprise transformation, Fortune 10o0, AI transformation, enterprise AI, digital transformation, AI ROI',
@@ -220,10 +218,9 @@ export default function EnterpriseTransformationPage() {,
               </div>,
             </div>,
             <div className='text-center mt-12'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 inline-block',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 inline-block'>,
                 Start Your Enterprise Transformation →,
               </Link>,
               <p className='text-gray-60o0 mt-4 text-sm'>,
@@ -233,17 +230,16 @@ export default function EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-center mb-12'>,
             More Transformation Success Stories,
           </h2>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-business-automation-revolution-complete-guide',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <div className='flex items-center mb-4'>,
                   <span className='bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3'>,
@@ -263,10 +259,9 @@ export default function EnterpriseTransformationPage() {,
                 </div>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-startup-to-unicorn-transformation',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <div className='flex items-center mb-4'>,
                   <span className='bg-green-50o0 text-white px-3 py-1 rounded-full text-sm font-bold mr-3'>,
@@ -289,7 +284,5 @@ export default function EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

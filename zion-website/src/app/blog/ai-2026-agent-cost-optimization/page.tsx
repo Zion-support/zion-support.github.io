@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AgentCostOptimizationPage() {,
-  return (,
+import React from 'react';
+export default function AgentCostOptimizationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-16'>,
         <header>,
@@ -30,7 +29,5 @@ export default function AgentCostOptimizationPage() {,
           </p>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

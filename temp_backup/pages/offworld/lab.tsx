@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function LabPage() {,
-  return (,
+export default function LabPage() {
+  return (
     <>,
       <Head>,
         <title>Lab - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function LabPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

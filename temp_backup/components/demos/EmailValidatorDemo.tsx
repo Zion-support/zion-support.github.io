@@ -1,89 +1,72 @@
 import React, { useState } from 'react',
 import Card from '../ui/Card',
 import Button from '../ui/Button',
-import {,
-  Mail,;
-  CheckCircle,;
-  XCircle,;
-  AlertCircle,;
-  Info,;
-  Copy,;
-  ExternalLink,;
+import {
+  Mail;
+  CheckCircle;
+  XCircle;
+  AlertCircle;
+  Info;
+  Copy;
+  ExternalLink;
 } from 'lucide-react',
-,
-interface EmailValidationResult {,
+interface EmailValidationResult {
   email: string,
   isValid: boolean,
   score: number,
   suggestions: string[],
-  details: {,
+  details: {
     hasValidFormat: boolean,
     hasValidDomain: boolean,
     hasValidMX: boolean,
     isDisposable: boolean,
     isRoleBased: boolean,
-    isFreeProvider: boolean,
-  ,};
+    isFreeProvider: boolean};
 }
 ,
-export default function EmailValidatorDemo() {,
+export default function EmailValidatorDemo() {
   const [email, setEmail] = useState(''),
   const [result, setResult] = useState<EmailValidationResult | null>(null),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState(''),
-,
-  const validateEmail = async () => {,
-    if (!email.trim()) {,
+  const validateEmail = async () => {
+    if (!email.trim()) {
       setError('Please enter an email address'),
-      return,
-    }
+      return}
 ,
     setLoading(true),
     setError(''),
     setResult(null),
-,
-    try {,
-      const response = await fetch('/api/email-validator', {,
-        method: 'POST',;
-        headers: {,
-          'Content-Type': 'application/json',;
-        },;
-        body: JSON.stringify({ email: email.trim() ,}),;
+    try {
+      const response = await fetch('/api/email-validator', {
+        method: 'POST';
+        headers: {
+          'Content-Type': 'application/json';
+        };
+        body: JSON.stringify({ email: email.trim() });
       }),
-,
-      if (!response.ok) {,
-        throw new Error('Validation failed'),
-      }
+      if (!response.ok) {
+        throw new Error('Validation failed')}
 ,
       const data = await response.json(),
-      setResult(data),
-    } catch (err) {,
-      setError('Failed to validate email. Please try again.'),
-    } finally {,
-      setLoading(false),
-    }
+      setResult(data)} catch (err) {
+      setError('Failed to validate email. Please try again.')} finally {
+      setLoading(false)}
   };
-,
-  const copyToClipboard = (text: string) => {,
-    navigator.clipboard.writeText(text),
-  ,};
-,
-  const getScoreColor = (score: number) => {,
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)};
+  const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-40o0',
     if (score >= 60) return 'text-yellow-40o0',
     if (score >= 40) return 'text-orange-40o0',
-    return 'text-red-40o0',
-  ,};
-,
-  const getScoreLabel = (score: number) => {,
+    return 'text-red-40o0'};
+  const getScoreLabel = (score: number) => {
     if (score >= 80) return 'Excellent',
     if (score >= 60) return 'Good',
     if (score >= 40) return 'Fair',
     if (score >= 20) return 'Poor',
-    return 'Very Poor',
-  ,};
-,
-  return (,
+    return 'Very Poor'};
+  return (
     <Card className='max-w-4xl mx-auto'>,
       <div className='text-center mb-8'>,
         <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-50o0 to-cyan-60o0 flex items-center justify-center'>,
@@ -99,31 +82,29 @@ export default function EmailValidatorDemo() {,
       {/* Input Section */}
       <div className='mb-8'>,
         <div className='flex gap-3'>,
-          <input,
+          <input
             type='email',
             value={email}
             onChange={e => setEmail(e.target.value)}
             placeholder='Enter email address to validate...',
             className='flex-1 px-4 py-3 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent',
-            onKeyPress={e => e.key === 'Enter' && validateEmail(),}
+            onKeyPress={e => e.key === 'Enter' && validateEmail()}
           />,
-          <Button,
+          <Button
             onClick={validateEmail}
             disabled={loading}
-            className='px-6 py-3',
-          >,
+            className='px-6 py-3'>,
             {loading ? 'Validating...' : 'Validate'}
           </Button>,
         </div>,
-        {error && (,
+        {error && (
           <div className='mt-3 flex items-center text-red-40o0 text-sm'>,
             <AlertCircle className='w-4 h-4 mr-2' />,
             {error}
-          </div>,
-        )}
+          </div>)}
       </div>,
       {/* Results Section */}
-      {result && (,
+      {result && (
         <div className='space-y-6'>,
           {/* Summary */}
           <div className='bg-gray-80o0/50 rounded-lg p-6'>,
@@ -133,17 +114,16 @@ export default function EmailValidatorDemo() {,
               </h4>,
               <div className='flex items-center gap-2'>,
                 <span className='text-sm text-gray-40o0'>Score: </span>,
-                <span,
-                  className={`text-2xl font-bold ${getScoreColor(result.score),}`}
+                <span
+                  className={`text-2xl font-bold ${getScoreColor(result.score)}`}
                 >,
                   {result.score}/10o0,
                 </span>,
-                <span,
-                  className={`px-2 py-1 rounded-full text-xs font-medium ${,
+                <span
+                  className={`px-2 py-1 rounded-full text-xs font-medium ${
                     result.isValid,
                       ? 'bg-green-50o0/20 text-green-40o0 border border-green-50o0/30',
-                      : 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30',
-                  }`}
+                      : 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30'}`}
                 >,
                   {getScoreLabel(result.score)}
                 </span>,
@@ -151,11 +131,9 @@ export default function EmailValidatorDemo() {,
             </div>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
               <div className='flex items-center gap-3'>,
-                {result.isValid ? (,
-                  <CheckCircle className='w-5 h-5 text-green-40o0' />,
-                ) : (,
-                  <XCircle className='w-5 h-5 text-red-40o0' />,
-                ),}
+                {result.isValid ? (
+                  <CheckCircle className='w-5 h-5 text-green-40o0' />) : (
+                  <XCircle className='w-5 h-5 text-red-40o0' />)}
                 <span className='text-gray-30o0'>,
                   {result.isValid ? 'Valid Email' : 'Invalid Email'}
                 </span>,
@@ -179,72 +157,66 @@ export default function EmailValidatorDemo() {,
               <div className='space-y-3'>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>Format Valid</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.hasValidFormat,
                         ? 'text-green-40o0',
-                        : 'text-red-40o0',
-                    ,}
+                        : 'text-red-40o0'}
                   >,
                     {result.details.hasValidFormat ? '✓' : '✗'}
                   </span>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>Domain Valid</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.hasValidDomain,
                         ? 'text-green-40o0',
-                        : 'text-red-40o0',
-                    }
+                        : 'text-red-40o0'}
                   >,
                     {result.details.hasValidDomain ? '✓' : '✗'}
                   </span>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>MX Records</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.hasValidMX,
                         ? 'text-green-40o0',
-                        : 'text-red-40o0',
-                    }
+                        : 'text-red-40o0'}
                   >,
                     {result.details.hasValidMX ? '✓' : '✗'}
                   </span>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>Disposable</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.isDisposable,
                         ? 'text-red-40o0',
-                        : 'text-green-40o0',
-                    }
+                        : 'text-green-40o0'}
                   >,
                     {result.details.isDisposable ? 'Yes' : 'No'}
                   </span>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>Role-based</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.isRoleBased,
                         ? 'text-yellow-40o0',
-                        : 'text-green-40o0',
-                    }
+                        : 'text-green-40o0'}
                   >,
                     {result.details.isRoleBased ? 'Yes' : 'No'}
                   </span>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-gray-40o0'>Free Provider</span>,
-                  <span,
-                    className={,
+                  <span
+                    className={
                       result.details.isFreeProvider,
                         ? 'text-yellow-40o0',
-                        : 'text-green-40o0',
-                    }
+                        : 'text-green-40o0'}
                   >,
                     {result.details.isFreeProvider ? 'Yes' : 'No'}
                   </span>,
@@ -255,23 +227,19 @@ export default function EmailValidatorDemo() {,
               <h5 className='text-lg font-semibold text-white mb-4'>,
                 Suggestions,
               </h5>,
-              {result.suggestions.length > 0 ? (,
+              {result.suggestions.length > 0 ? (
                 <ul className='space-y-2'>,
-                  {result.suggestions.map((suggestion, index) => (,
-                    <li,
+                  {result.suggestions.map((suggestion, index) => (
+                    <li
                       key={index}
-                      className='flex items-start gap-2 text-sm text-gray-30o0',
-                    >,
+                      className='flex items-start gap-2 text-sm text-gray-30o0'>,
                       <Info className='w-4 h-4 text-blue-40o0 mt-0.5 flex-shrink-0' />,
                       {suggestion}
-                    </li>,
-                  ))}
-                </ul>,
-              ) : (,
+                    </li>))}
+                </ul>) : (
                 <p className='text-gray-40o0 text-sm'>,
                   No suggestions - email looks good!,
-                </p>,
-              )}
+                </p>)}
             </div>,
           </div>,
           {/* API Information */}
@@ -286,12 +254,11 @@ export default function EmailValidatorDemo() {,
                   <code className='flex-1 px-3 py-2 bg-gray-90o0 text-blue-40o0 rounded text-sm font-mono'>,
                     POST /api/email-validator,
                   </code>,
-                  <Button,
-                    onClick={() => copyToClipboard('POST /api/email-validator'),}
+                  <Button
+                    onClick={() => copyToClipboard('POST /api/email-validator')}
                     variant='ghost',
                     size='sm',
-                    className='px-3 py-2',
-                  >,
+                    className='px-3 py-2'>,
                     <Copy className='w-4 h-4' />,
                   </Button>,
                 </div>,
@@ -300,46 +267,40 @@ export default function EmailValidatorDemo() {,
                 <p className='text-sm text-gray-40o0 mb-2'>Request Body: </p>,
                 <div className='flex items-center gap-2'>,
                   <code className='flex-1 px-3 py-2 bg-gray-90o0 text-green-40o0 rounded text-sm font-mono'>,
-                    {JSON.stringify({ email: 'user@example.com' ,}, null, 2)}
+                    {JSON.stringify({ email: 'user@example.com' }, null, 2)}
                   </code>,
-                  <Button,
+                  <Button
                     onClick={() =>,
-                      copyToClipboard(,
-                        JSON.stringify({ email: 'user@example.com' ,}, null, 2),
-                      ),
-                    }
+                      copyToClipboard(
+                        JSON.stringify({ email: 'user@example.com' }, null, 2))}
                     variant='ghost',
                     size='sm',
-                    className='px-3 py-2',
-                  >,
+                    className='px-3 py-2'>,
                     <Copy className='w-4 h-4' />,
                   </Button>,
                 </div>,
               </div>,
               <div className='flex gap-3'>,
-                <Button,
+                <Button
                   href='/docs/email-validator',
                   variant='outline',
                   size='sm',
-                  className='border-blue-50o0/30 text-blue-40o0 hover: bg-blue-50o0/10',
-                >,
+                  className='border-blue-50o0/30 text-blue-40o0 hover: bg-blue-50o0/10'>,
                   <ExternalLink className='w-4 h-4 mr-2' />,
                   View Documentation,
                 </Button>,
-                <Button,
+                <Button
                   href='https://github.com/Zion-Holdings/zion.app',
                   variant='ghost',
                   size='sm',
-                  className='text-gray-40o0 hover:text-white',
-                >,
+                  className='text-gray-40o0 hover:text-white'>,
                   <ExternalLink className='w-4 h-4 mr-2' />,
                   GitHub Repository,
                 </Button>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),}
+        </div>)}
 ,
       {/* Features */}
       <div className='mt-8 pt-8 border-t border-gray-70o0'>,
@@ -371,7 +332,5 @@ export default function EmailValidatorDemo() {,
           </div>,
         </div>,
       </div>,
-    </Card>,
-  ),
-,}
+    </Card>)}
 ,

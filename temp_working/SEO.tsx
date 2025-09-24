@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async',
-interface SEOProps {,
+interface SEOProps {
   title: string,
   description: string,
   canonical?: string,
@@ -12,101 +12,100 @@ interface SEOProps {,
   section?: string,
   tags?: string[],
   noindex?: boolean,
-  nofollow?: boolean,
-,}
-export function SEO({,
-  title,;
-  description,;
-  canonical,;
-  url,;
-  image = '/images/zion-tech-group-og.jpg',;
-  type = 'website',;
-  publishedTime,;
-  modifiedTime,;
-  author = 'Zion Tech Group',;
-  section,;
-  tags = [],;
-  noindex = false,;
-  nofollow = false,;
-}: SEOProps) {,
+  nofollow?: boolean}
+export function SEO({
+  title;
+  description;
+  canonical;
+  url;
+  image = '/images/zion-tech-group-og.jpg';
+  type = 'website';
+  publishedTime;
+  modifiedTime;
+  author = 'Zion Tech Group';
+  section;
+  tags = [];
+  noindex = false;
+  nofollow = false;
+}: SEOProps) {
   const siteName = 'Zion Tech Group',
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`,
   const fullCanonical = canonical || window.location.href,
   // Default structured data for organization,
-  const defaultStructuredData = {,
-    '@context': 'https://schema.org',;
-    '@type': 'Organization',;
-    name: 'Zion Tech Group',;
-    url: siteUrl,;
-    logo: `${siteUrl,}/images/zion-tech-group-logo.png`,;
+  const defaultStructuredData = {
+    '@context': 'https://schema.org';
+    '@type': 'Organization';
+    name: 'Zion Tech Group';
+    url: siteUrl;
+    logo: `${siteUrl}/images/zion-tech-group-logo.png`;
     description:,
-      'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services',;
-    foundingDate: '20o20',;
-    address: {,
-      '@type': 'PostalAddress',;
-      addressCountry: 'US',;
-      addressLocality: 'Middletown',;
-      addressRegion: 'DE',;
-      postalCode: '19709',;
-      streetAddress: '364 E Main St STE 10o08',;
-    },;
-    contactPoint: {,
-      '@type': 'ContactPoint',;
-      telephone: '+1-80o0-ZION-TECH',;
-      contactType: 'customer service',;
-      email: 'info@ziontechgroup.com',;
-    },;
-    sameAs: [,
-      'https://linkedin.com/company/ziontechgroup',;
-      'https://twitter.com/ziontechgroup',;
-      'https://facebook.com/ziontechgroup',;
-      'https://instagram.com/ziontechgroup',;
-    ],;
-    serviceArea: {,
-      '@type': 'GeoCircle',;
-      geoMidpoint: {,
-        '@type': 'GeoCoordinates',;
-        latitude: 39.4496,;
-        longitude: -75.7163,;
-      },;
-      geoRadius: '50o000',;
-    },;
-    hasOfferCatalog: {,
-      '@type': 'OfferCatalog',;
-      name: 'Technology Services',;
-      itemListElement: [,
-        {,
-          '@type': 'Offer',;
-          itemOffered: {,
-            '@type': 'Service',;
-            name: 'AI & Analytics Solutions',;
+      'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services';
+    foundingDate: '20o20';
+    address: {
+      '@type': 'PostalAddress';
+      addressCountry: 'US';
+      addressLocality: 'Middletown';
+      addressRegion: 'DE';
+      postalCode: '19709';
+      streetAddress: '364 E Main St STE 10o08';
+    };
+    contactPoint: {
+      '@type': 'ContactPoint';
+      telephone: '+1-80o0-ZION-TECH';
+      contactType: 'customer service';
+      email: 'info@ziontechgroup.com';
+    };
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup';
+      'https://twitter.com/ziontechgroup';
+      'https://facebook.com/ziontechgroup';
+      'https://instagram.com/ziontechgroup';
+    ];
+    serviceArea: {
+      '@type': 'GeoCircle';
+      geoMidpoint: {
+        '@type': 'GeoCoordinates';
+        latitude: 39.4496;
+        longitude: -75.7163;
+      };
+      geoRadius: '50o000';
+    };
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog';
+      name: 'Technology Services';
+      itemListElement: [
+        {
+          '@type': 'Offer';
+          itemOffered: {
+            '@type': 'Service';
+            name: 'AI & Analytics Solutions';
             description:,
-              'Cutting-edge artificial intelligence and data analytics services',;
-          },;
-        },;
-        {,
-          '@type': 'Offer',;
-          itemOffered: {,
-            '@type': 'Service',;
-            name: 'Cybersecurity Services',;
-            description: 'Advanced security protocols and threat protection',;
-          },;
-        },;
-        {,
-          '@type': 'Offer',;
-          itemOffered: {,
-            '@type': 'Service',;
-            name: 'Cloud & DevOps',;
+              'Cutting-edge artificial intelligence and data analytics services';
+          };
+        };
+        {
+          '@type': 'Offer';
+          itemOffered: {
+            '@type': 'Service';
+            name: 'Cybersecurity Services';
+            description: 'Advanced security protocols and threat protection';
+          };
+        };
+        {
+          '@type': 'Offer';
+          itemOffered: {
+            '@type': 'Service';
+            name: 'Cloud & DevOps';
             description:,
-              'Scalable cloud infrastructure and development operations',;
-          },;
-        },;
-      ],;
-    },;
+              'Scalable cloud infrastructure and development operations';
+          };
+        };
+      ];
+    };
   };
   // Merge with custom structured data,
   const finalStructuredData = structuredData || defaultStructuredData,
-  return (,
+  return (
     <Helmet>,
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>,
@@ -116,29 +115,29 @@ export function SEO({,
       {/* Canonical URL */}
       <link rel='canonical' href={fullCanonical} />,
       {/* Robots Meta */}
-      <meta,
+      <meta
         name='robots',
         content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`}
       />,
       {/* Open Graph Meta Tags */}
-      <meta property='og: title' content={fullTitle,} />,
-      <meta property='og: description' content={description,} />,
-      <meta property='og: type' content={type,} />,
-      <meta property='og: title' content={title,} />,
-      <meta property='og: description' content={metaDescription,} />,
-      <meta property='og: url' content={fullUrl,} />,
-      <meta property='og: image' content={fullImageUrl,} />,
+      <meta property='og: title' content={fullTitle} />,
+      <meta property='og: description' content={description} />,
+      <meta property='og: type' content={type} />,
+      <meta property='og: title' content={title} />,
+      <meta property='og: description' content={metaDescription} />,
+      <meta property='og: url' content={fullUrl} />,
+      <meta property='og: image' content={fullImageUrl} />,
       <meta property='og: image:width' content='120o0' />,
       <meta property='og:image:height' content='630' />,
       <meta property='og:site_name' content='Zion Tech Group' />,
       <meta property='og:locale' content='en_US' />,
-      {/* Twitter Card Meta Tags */,}
+      {/* Twitter Card Meta Tags */}
       <meta name='twitter: card' content='summary_large_image' />,
       <meta name='twitter:site' content='@ziontechgroup' />,
       <meta name='twitter:creator' content='@ziontechgroup' />,
-      <meta name='twitter:title' content={fullTitle,} />,
-      <meta name='twitter: description' content={description,} />,
-      <meta name='twitter: image' content={image,} />,
+      <meta name='twitter:title' content={fullTitle} />,
+      <meta name='twitter: description' content={description} />,
+      <meta name='twitter: image' content={image} />,
       {/* Additional Meta Tags */}
       <meta name='author' content={author} />,
       <meta name='keywords' content={tags.join(', ')} />,
@@ -149,36 +148,33 @@ export function SEO({,
       </script>,
       <script type='application/ld+json'>{JSON.stringify(pageSchema)}</script>,
       {/* Additional structured data for articles */}
-      {type === 'article' && (,
+      {type === 'article' && (
         <script type='application/ld+json'>,
-          {JSON.stringify({,
-            '@context': 'https://schema.org',;
-            '@type': 'Article',;
-            headline: fullTitle,;
-            description: description,;
-            image: image,;
-            author: {,
-              '@type': 'Organization',;
-              name: author || siteName,;
-            },;
-            publisher: {,
-              '@type': 'Organization',;
-              name: siteName,;
-              logo: {,
-                '@type': 'ImageObject',;
-                url: 'https://ziontechgroup.com/images/zion-logo.png',;
-              },;
-            },;
-            datePublished: publishedTime,;
-            dateModified: modifiedTime,;
-            mainEntityOfPage: {,
-              '@type': 'WebPage',;
-              '@id': fullCanonical,;
-            },;
+          {JSON.stringify({
+            '@context': 'https://schema.org';
+            '@type': 'Article';
+            headline: fullTitle;
+            description: description;
+            image: image;
+            author: {
+              '@type': 'Organization';
+              name: author || siteName;
+            };
+            publisher: {
+              '@type': 'Organization';
+              name: siteName;
+              logo: {
+                '@type': 'ImageObject';
+                url: 'https://ziontechgroup.com/images/zion-logo.png';
+              };
+            };
+            datePublished: publishedTime;
+            dateModified: modifiedTime;
+            mainEntityOfPage: {
+              '@type': 'WebPage';
+              '@id': fullCanonical;
+            };
           })}
-        </script>,
-      )}
-    </Helmet>,
-  ),
-}
+        </script>)}
+    </Helmet>)}
 ,

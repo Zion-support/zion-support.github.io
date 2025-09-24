@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 const showTagline = router.pathname === '/',
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -9,159 +9,138 @@ const showTagline = router.pathname === '/',
   const router = useRouter(),
   const showTagline = router.pathname === '/',
   // Messaging context (unread message count),
-  const { unreadCount ,} = useMessaging(),
-  const openLoginModal = (returnToPath?: string) => {,
+  const { unreadCount } = useMessaging(),
+  const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu),
     // using router.push with shallow: true before this function is called.,
     // This function's main job is just to open the modal.,
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.,
-    setLoginOpen(true),
-  }
+    setLoginOpen(true)}
   const showTagline = router && router.pathname === '/',
-,
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const isMobile = useIsMobile(),;
-  const { t } = useTranslation(),;
-  const { user } = useAuth(),;
-  const isLoggedIn = useSelector((state: RootState) => state && state.auth.isLoggedIn),;
-  const router = useRouter(),;
-  const showTagline = router && router.pathname === '/',;
-,
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const { user } = useAuth();
+  const isLoggedIn = useSelector((state: RootState) => state && state.auth.isLoggedIn);
+  const router = useRouter();
+  const showTagline = router && router.pathname === '/';
   // Messaging context (unread message count),
-  const { unreadCount } = useMessaging(),;
-,
-  const openLoginModal = (returnToPath?: string) => {,
+  const { unreadCount } = useMessaging();
+  const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu),
     // using router && router.push with shallow: true before this function is called.,
     // This function's main job is just to open the modal.,
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.,
-    setLoginOpen(true),
-  },;
-,
-  return (,
+    setLoginOpen(true)};
+  return (
     <>,
-      <header,
+      <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
-        className ={cn(,
+        className ={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-50o0": mobileMenuOpen }
-        className={cn(,
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",;
+        className={cn(
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
           { "bg-red-50o0": mobileMenuOpen }
-,
-        )}
+)}
       >,
         <div className="container flex h-16 items-center px-4 sm: px-6">,
           <Logo  />,
-          {showTagline && (,
+          {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">,
-              {t('home.header_tagline'),}
-            </span>,
-          )}
+              {t('home.header_tagline')}
+            </span>)}
 ,
           <div className="ml-6 flex-1 hidden md: block">,
             <nav role="navigation" aria-label="Main navigation">,
-              <ResponsiveNavigation openLoginModal={openLoginModal,}  />,
+              <ResponsiveNavigation openLoginModal={openLoginModal}  />,
             </nav>,
           </div>,
-,
           {/* Mobile menu button */}
           <div className="md: hidden ml-auto mr-4">,
-            <button,
-              onClick ={() => setMobileMenuOpen(!mobileMenuOpen),}
+            <button
+              onClick ={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover: text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              aria-expanded ={mobileMenuOpen,}
+              aria-expanded ={mobileMenuOpen}
               aria-label ={t('general.toggle_mobile_menu')}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover: text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-              aria-expanded={mobileMenuOpen,}
+              aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-,
-            >,
+>,
               <span className="sr-only">{t('general.open_main_menu')}</span>,
-              {mobileMenuOpen ? (,
-                <X className="block h-6 w-6" aria-hidden="true"  />,
-              ) : (,
-                <Menu className="block h-6 w-6" aria-hidden="true"  />,
-              )}
+              {mobileMenuOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true"  />) : (
+                <Menu className="block h-6 w-6" aria-hidden="true"  />)}
 ,
             </button>,
           </div>,
-,
           <PointsBadge  />,
-          {!isLoggedIn && (,
+          {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center">,
-,
-              <Link,
+              <Link
                 href="/auth/login",
                 className="text-sm font-medium text-foreground/70 hover: text-foreground",
-                aria-label={t('auth.login'),}
+                aria-label={t('auth.login')}
                 data-testid="login-link",
-                onClick={(e) => {,
-                  e.preventDefault(),;
-                  // For the main login link, we might not have a specific returnTo beyond current page,;
+                onClick={(e) => {
+                  e.preventDefault();
+                  // For the main login link, we might not have a specific returnTo beyond current page;
                   // or we could default to dashboard.,
                   // For consistency with how sub-menus now set it:,
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath ,} }, undefined, { shallow: true ,}),
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router.asPath),
-                onClick={(e) => {,
-                  e && e.preventDefault(),;
-                  // For the main login link, we might not have a specific returnTo beyond current page,;
+                onClick={(e) => {
+                  e && e.preventDefault();
+                  // For the main login link, we might not have a specific returnTo beyond current page;
                   // or we could default to dashboard.,
                   // For consistency with how sub-menus now set it:,
-                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath ,} }, undefined, { shallow: true ,}),;
-                  openLoginModal(router && router.asPath),
-                }}
+                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true });
+                  openLoginModal(router && router.asPath)}}
               >,
                 {t('auth && auth.login')}
               </Link>,
-              <Link,
+              <Link
                 href="/signup",
                 className="ml-2 text-sm font-medium text-foreground/70 hover: text-foreground",
-                aria-label ={t('auth.signup'),}
+                aria-label ={t('auth.signup')}
                 aria-label={t('auth.signup')}
 ,
-                data-testid="signup-nav-link",
-              >,
+                data-testid="signup-nav-link">,
                 {t('auth.signup')}
               </Link>,
-            </div>,
-          )}
+            </div>)}
           {/* User avatar menu */}
-          {isLoggedIn && (,
+          {isLoggedIn && (
             <div className="ml-4">,
               <UserMenu  />,
-            </div>,
-          )}
+            </div>)}
 ,
         </div>,
       </header>,
-,
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (,
+      {mobileMenuOpen && (
         <div className="md: hidden fixed inset-0 z-60 pt-16">,
-          <div,
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm",
-            onClick ={() => setMobileMenuOpen(false),}
+            onClick ={() => setMobileMenuOpen(false)}
             aria-hidden="true",
           />,
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(10o0vh-4rem)] overflow-y-auto">,
-,
-            <MobileMenu,
+            <MobileMenu
             onClick={() => setMobileMenuOpen(false)}
 ,
             aria-hidden="true",
           />,
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(10o0vh-4rem)] overflow-y-auto">,
-            <MobileMenu,
+            <MobileMenu
               unreadCount={unreadCount} ,
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />,
           </div>,
         </div>,
-,
               unreadCount ={unreadCount}
               onClose ={() => setMobileMenuOpen(false)}
               openLoginModal ={openLoginModal}
@@ -174,15 +153,12 @@ const showTagline = router.pathname === '/',
             />,
           </div>,
         </div>,
-,
               unreadCount ={unreadCount}
               onClose ={() => setMobileMenuOpen(false)}
               openLoginModal ={openLoginModal}
             />,
           </div>,
-        </div>,
-,
-      )}
+        </div>)}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}  />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />,
@@ -193,11 +169,11 @@ const showTagline = router.pathname === '/',
       setCompanyDropdownOpen(false),
       setResourcesDropdownOpen(false)}
   }
-  const closeAllDropdowns = (...args: unknown[]): unknown => {,
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen (false),    setSolutionsDropdownOpen (false),
     setCompanyDropdownOpen (false),
     setResourcesDropdownOpen (false),
-    setActiveNav (null),}
+    setActiveNav (null)}
   return (),
     <>`,
       <header className={`sticky top - 0 z - 50 w - full transition - all duration - 30o0 ${        scrolled,
@@ -223,35 +199,35 @@ const showTagline = router.pathname === '/',
                 </span>,
               </Link>,
             </div>,
-            {/* Desktop Navigation */,}            <nav className="hidden lg: flex items - center space - x-8">,
+            {/* Desktop Navigation */}            <nav className="hidden lg: flex items - center space - x-8">,
               {navigation.map ((item) => (",
-                <div key={item.name,} className="relative">,
+                <div key={item.name} className="relative">,
                   {item.has_dropdown ? (",
                     <div className="relative">,
-                      <button,
-                        on_click={() => {,
+                      <button
+                        on_click={() => {
               <AnimatePresence>,
-                {active_dropdown === 'services' && (,
+                {active_dropdown === 'services' && (
                   <motion.div,
-                    initial={{ opacity: 0, coordinate_y: -10 ,}}
-                    animate={{ opacity: 1, coordinate_y: 0 ,}}
-                    exit={{ opacity: 0, coordinate_y: -10 ,}}
-                    transition={{ duration: 0.2 ,}}
+                    initial={{ opacity: 0, coordinate_y: -10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
+                    transition={{ duration: 0.2 }}
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">,
                     <div className="p - 4">,
                       <div className="grid grid - cols - 1 gap - 2">,
-                        {services.map ((service) => (,
-                          <Link,
+                        {services.map ((service) => (
+                          <Link
                             key={service.name}
                             to={service.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors group">,
-                            <div className={`w - 10 h - 10 bg - gradient - to - r ${service.color,} rounded - lg flex items - center justify - center mr - 3 group - hover: scale - 110 transition - transform`,}>,
+                            <div className={`w - 10 h - 10 bg - gradient - to - r ${service.color} rounded - lg flex items - center justify - center mr - 3 group - hover: scale - 110 transition - transform`}>,
                               <service.icon className="w - 5 h - 5 text - white"  />,
                             </div>,
                             <div>,
                               <div className="font - medium text - white group - hover: text - zion - cyan transition - colors">,
-                                {service.name,}
+                                {service.name}
                               </div>,
                               <div className="text - sm text - zion - slate - light">,
                                 {service.description}
@@ -264,11 +240,11 @@ const showTagline = router.pathname === '/',
       setCompanyDropdownOpen(false),
       setResourcesDropdownOpen(false)}
   };
-  const closeAllDropdowns = (...args: unknown[]): unknown => {,
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false),    setSolutionsDropdownOpen(false),
     setCompanyDropdownOpen(false),
     setResourcesDropdownOpen(false),
-    setActiveNav(null),};
+    setActiveNav(null)};
   return (),
     <>`,
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled,
@@ -294,38 +270,36 @@ const showTagline = router.pathname === '/',
                 </span>,
               </Link>,
             </div>,
-,
-            {/* Desktop Navigation */,}            <nav className="hidden lg: flex items-center space-x-8">,
+            {/* Desktop Navigation */}            <nav className="hidden lg: flex items-center space-x-8">,
               {navigation && navigation.map((item) => (",
-                <div key={item && item.name,} className="relative">,
+                <div key={item && item.name} className="relative">,
                   {item && item.hasDropdown ? (",
                     <div className="relative">,
-                      <button,
-                        onClick={() => {,
-,
+                      <button
+                        onClick={() => {
               <AnimatePresence>,
-                {activeDropdown === 'services' && (,
+                {activeDropdown === 'services' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {services && services.map((service) => (,
-                          <Link,
+                        {services && services.map((service) => (
+                          <Link
                             key={service && service.name}
                             to={service && service.href}
                             onClick={() => setActiveDropdown(null)}
 ,
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color,} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`,}>,
+                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`}>,
                               <service.icon className="w-5 h-5 text-white"  />,
                             </div>,
                             <div>,
                               <div className="font-medium text-white group-hover: text-zion-cyan transition-colors">,
-                                {service.name,}
+                                {service.name}
                               </div>,
                               <div className="text-sm text-zion-slate-light">,
                                 {service.description}
@@ -338,11 +312,11 @@ const showTagline = router.pathname === '/',
       setCompanyDropdownOpen(false),
       setResourcesDropdownOpen(false)}
   };
-  const closeAllDropdowns = (...args: unknown[]): unknown => {,
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false),    setSolutionsDropdownOpen(false),
     setCompanyDropdownOpen(false),
     setResourcesDropdownOpen(false),
-    setActiveNav(null),};
+    setActiveNav(null)};
   return (),
     <>`,
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled,
@@ -368,60 +342,54 @@ const showTagline = router.pathname === '/',
                 </span>,
               </Link>,
             </div>,
-,
-            {/* Desktop Navigation */,}            <nav className="hidden lg: flex items-center space-x-8">,
+            {/* Desktop Navigation */}            <nav className="hidden lg: flex items-center space-x-8">,
               {navigation && navigation.map((item) => (",
-                <div key={item && item.name,} className="relative">,
+                <div key={item && item.name} className="relative">,
                   {item && item.hasDropdown ? (",
                     <div className="relative">,
-                      <button,
-                        onClick={() => {,
-,
+                      <button
+                        onClick={() => {
               <AnimatePresence>,
-                {activeDropdown === 'services' && (,
+                {activeDropdown === 'services' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {services && services.map((service) => (,
-                          <Link,
+                        {services && services.map((service) => (
+                          <Link
                             key={service && service.name}
                             to={service && service.href}
                             onClick={() => setActiveDropdown(null)}
 ,
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color,} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`,}>,
+                            <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`}>,
                               <service && service.icon className="w-5 h-5 text-white"  />,
                             </div>,
                             <div>,
                               <div className="font-medium text-white group-hover: text-zion-cyan transition-colors">,
-                                {service && service.name,}
+                                {service && service.name}
                               </div>,
                               <div className="text-sm text-zion-slate-light">,
                                 {service && service.description}
                               </div>,
                             </div>,
-                          </Link>,
-                        ))}
+                          </Link>))}
                       </div>,
                     </div>,
-                  </motion && motion.div>,
-,
-                )}
+                  </motion && motion.div>)}
               </AnimatePresence>,
             </div>,
             {/* Solutions Dropdown */}
 ,
             <div className="relative dropdown-container">,
-,
-              <button,
+              <button
                 onClick={() => toggleDropdown('solutions')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10 transition-colors",
-                aria-expanded={activeDropdown === 'solutions',}
+                aria-expanded={activeDropdown === 'solutions'}
 ,
                               </div>,
                             </div>,
@@ -433,38 +401,38 @@ const showTagline = router.pathname === '/',
             </div>,
             {/* Solutions Dropdown */}
             <div className="relative dropdown - container">,
-              <button,
+              <button
                 on_click={() => toggle_dropdown ('solutions')}
                 className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover: text - zion - cyan hover:bg - zion - cyan / 10 transition - colors",
-                aria - expanded={active_dropdown === 'solutions',}
+                aria - expanded={active_dropdown === 'solutions'}
                 aria - haspopup="true">,
                 Solutions,
                 <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'solutions' ? 'rotate - 180' : ''}`}  />,
               </button>,
               <AnimatePresence>,
-                {active_dropdown === 'solutions' && (,
+                {active_dropdown === 'solutions' && (
                   <motion.div,
-                    initial={{ opacity: 0, coordinate_y: -10 ,}}
-                    animate={{ opacity: 1, coordinate_y: 0 ,}}
-                    exit={{ opacity: 0, coordinate_y: -10 ,}}
+                    initial={{ opacity: 0, coordinate_y: -10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
 ,
-                    transition={{ duration: 0.2 ,}}
+                    transition={{ duration: 0.2 }}
 ,
                     className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">,
                     <div className="p - 4">,
                       <div className="grid grid - cols - 1 gap - 2">,
-                        {solutions.map ((solution) => (,
-                          <Link,
+                        {solutions.map ((solution) => (
+                          <Link
                             key={solution.name}
                             to={solution.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors group">,
-                            <div className={`w - 10 h - 10 bg - gradient - to - r ${solution.color,} rounded - lg flex items - center justify - center mr - 3 group - hover: scale - 110 transition - transform`,}>,
+                            <div className={`w - 10 h - 10 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mr - 3 group - hover: scale - 110 transition - transform`}>,
                               <solution.icon className="w - 5 h - 5 text - white"  />,
                             </div>,
                             <div>,
                               <div className="font - medium text - white group - hover: text - zion - cyan transition - colors">,
-                                {solution.name,}
+                                {solution.name}
                               </div>,
                               <div className="text - sm text - zion - slate - light">,
                                 {solution.description}
@@ -473,31 +441,29 @@ const showTagline = router.pathname === '/',
                 Solutions,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'solutions' && (,
+                {activeDropdown === 'solutions' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {solutions && solutions.map((solution) => (,
-,
-                          <Link,
+                        {solutions && solutions.map((solution) => (
+                          <Link
                             key={solution && solution.name}
                             to={solution && solution.href}
                             onClick={() => setActiveDropdown(null)}
 ,
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
-                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color,} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`,}>,
+                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`}>,
                               <solution.icon className="w-5 h-5 text-white"  />,
                             </div>,
                             <div>,
                               <div className="font-medium text-white group-hover: text-zion-cyan transition-colors">,
-                                {solution.name,}
+                                {solution.name}
                               </div>,
                               <div className="text-sm text-zion-slate-light">,
                                 {solution.description}
@@ -506,52 +472,47 @@ const showTagline = router.pathname === '/',
                 Solutions,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'solutions' && (,
+                {activeDropdown === 'solutions' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {solutions && solutions.map((solution) => (,
-                          <Link,
+                        {solutions && solutions.map((solution) => (
+                          <Link
                             key={solution && solution.name}
                             to={solution && solution.href}
                             onClick={() => setActiveDropdown(null)}
 ,
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
-                            <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color,} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`,}>,
+                            <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mr-3 group-hover: scale-110 transition-transform`}>,
                               <solution && solution.icon className="w-5 h-5 text-white"  />,
                             </div>,
                             <div>,
                               <div className="font-medium text-white group-hover: text-zion-cyan transition-colors">,
-                                {solution && solution.name,}
+                                {solution && solution.name}
                               </div>,
                               <div className="text-sm text-zion-slate-light">,
                                 {solution && solution.description}
                               </div>,
                             </div>,
-                          </Link>,
-                        ))}
+                          </Link>))}
                       </div>,
                     </div>,
-                  </motion && motion.div>,
-,
-                )}
+                  </motion && motion.div>)}
               </AnimatePresence>,
             </div>,
             {/* Resources Dropdown */}
 ,
             <div className="relative dropdown-container">,
-,
-              <button,
+              <button
                 onClick={() => toggleDropdown('resources')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10 transition-colors",
-                aria-expanded={activeDropdown === 'resources',}
+                aria-expanded={activeDropdown === 'resources'}
 ,
                               </div>,
                             </div>,
@@ -563,54 +524,52 @@ const showTagline = router.pathname === '/',
             </div>,
             {/* Resources Dropdown */}
             <div className="relative dropdown - container">,
-              <button,
+              <button
                 on_click={() => toggle_dropdown ('resources')}
                 className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover: text - zion - cyan hover:bg - zion - cyan / 10 transition - colors",
-                aria - expanded={active_dropdown === 'resources',}
+                aria - expanded={active_dropdown === 'resources'}
                 aria - haspopup="true">,
                 Resources,
                 <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'resources' ? 'rotate - 180' : ''}`}  />,
               </button>,
               <AnimatePresence>,
-                {active_dropdown === 'resources' && (,
+                {active_dropdown === 'resources' && (
                   <motion.div,
-                    initial={{ opacity: 0, coordinate_y: -10 ,}}
-                    animate={{ opacity: 1, coordinate_y: 0 ,}}
-                    exit={{ opacity: 0, coordinate_y: -10 ,}}
+                    initial={{ opacity: 0, coordinate_y: -10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
 ,
-                    transition={{ duration: 0.2 ,}}
+                    transition={{ duration: 0.2 }}
 ,
                     className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">,
                     <div className="p - 4">,
                       <div className="grid grid - cols - 1 gap - 2">,
-                        {resources.map ((resource) => (,
-                          <Link,
+                        {resources.map ((resource) => (
+                          <Link
                             key={resource.name}
                             to={resource.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors group">,
                             <resource.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform"  />,
                             <span className="text - white group - hover:text - zion - cyan transition - colors">,
-                              {resource.name,}
+                              {resource.name}
 ,
                 aria-haspopup="true">,
                 Resources,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'resources' && (,
+                {activeDropdown === 'resources' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {resources && resources.map((resource) => (,
-,
-                          <Link,
+                        {resources && resources.map((resource) => (
+                          <Link
                             key={resource && resource.name}
                             to={resource && resource.href}
                             onClick={() => setActiveDropdown(null)}
@@ -618,25 +577,24 @@ const showTagline = router.pathname === '/',
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
                             <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />,
                             <span className="text-white group-hover:text-zion-cyan transition-colors">,
-                              {resource.name,}
+                              {resource.name}
 ,
                 aria-haspopup="true">,
                 Resources,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'resources' && (,
+                {activeDropdown === 'resources' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {resources && resources.map((resource) => (,
-                          <Link,
+                        {resources && resources.map((resource) => (
+                          <Link
                             key={resource && resource.name}
                             to={resource && resource.href}
                             onClick={() => setActiveDropdown(null)}
@@ -644,25 +602,21 @@ const showTagline = router.pathname === '/',
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
                             <resource && resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />,
                             <span className="text-white group-hover:text-zion-cyan transition-colors">,
-                              {resource && resource.name,}
+                              {resource && resource.name}
                             </span>,
-                          </Link>,
-                        ))}
+                          </Link>))}
                       </div>,
                     </div>,
-                  </motion && motion.div>,
-,
-                )}
+                  </motion && motion.div>)}
               </AnimatePresence>,
             </div>,
             {/* Company Dropdown */}
 ,
             <div className="relative dropdown-container">,
-,
-              <button,
+              <button
                 onClick={() => toggleDropdown('company')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10 transition-colors",
-                aria-expanded={activeDropdown === 'company',}
+                aria-expanded={activeDropdown === 'company'}
 ,
                             </span>,
                           </Link>))}
@@ -673,54 +627,52 @@ const showTagline = router.pathname === '/',
             </div>,
             {/* Company Dropdown */}
             <div className="relative dropdown - container">,
-              <button,
+              <button
                 on_click={() => toggle_dropdown ('company')}
                 className="flex items - center px - 3 py - 2 rounded - md text - sm font - medium text - zion - slate - light hover: text - zion - cyan hover:bg - zion - cyan / 10 transition - colors",
-                aria - expanded={active_dropdown === 'company',}
+                aria - expanded={active_dropdown === 'company'}
                 aria - haspopup="true">,
                 Company,
                 <ChevronDown className={`ml - 1 h - 4 w - 4 transition - transform ${active_dropdown === 'company' ? 'rotate - 180' : ''}`}  />,
               </button>,
               <AnimatePresence>,
-                {active_dropdown === 'company' && (,
+                {active_dropdown === 'company' && (
                   <motion.div,
-                    initial={{ opacity: 0, coordinate_y: -10 ,}}
-                    animate={{ opacity: 1, coordinate_y: 0 ,}}
-                    exit={{ opacity: 0, coordinate_y: -10 ,}}
+                    initial={{ opacity: 0, coordinate_y: -10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
 ,
-                    transition={{ duration: 0.2 ,}}
+                    transition={{ duration: 0.2 }}
 ,
                     className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">,
                     <div className="p - 4">,
                       <div className="grid grid - cols - 1 gap - 2">,
-                        {company.map ((item) => (,
-                          <Link,
+                        {company.map ((item) => (
+                          <Link
                             key={item.name}
                             to={item.href}
                             on_click={() => setActiveDropdown (null)}
                             className="flex items - center p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors group">,
                             <item.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform"  />,
                             <span className="text - white group - hover:text - zion - cyan transition - colors">,
-                              {item.name,}
+                              {item.name}
 ,
                 aria-haspopup="true">,
                 Company,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'company' && (,
+                {activeDropdown === 'company' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {company && company.map((item) => (,
-,
-                          <Link,
+                        {company && company.map((item) => (
+                          <Link
                             key={item && item.name}
                             to={item && item.href}
                             onClick={() => setActiveDropdown(null)}
@@ -728,25 +680,24 @@ const showTagline = router.pathname === '/',
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
                             <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />,
                             <span className="text-white group-hover:text-zion-cyan transition-colors">,
-                              {item.name,}
+                              {item.name}
 ,
                 aria-haspopup="true">,
                 Company,
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`}  />,
               </button>,
-,
               <AnimatePresence>,
-                {activeDropdown === 'company' && (,
+                {activeDropdown === 'company' && (
                   <motion&& motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -10 ,}}
-                    transition={{ duration: 0 && 0.2 ,}}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                     <div className="p-4">,
                       <div className="grid grid-cols-1 gap-2">,
-                        {company && company.map((item) => (,
-                          <Link,
+                        {company && company.map((item) => (
+                          <Link
                             key={item && item.name}
                             to={item && item.href}
                             onClick={() => setActiveDropdown(null)}
@@ -754,15 +705,12 @@ const showTagline = router.pathname === '/',
                             className="flex items-center p-3 rounded-lg hover: bg-zion-slate/50 transition-colors group">,
                             <item && item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform"  />,
                             <span className="text-white group-hover:text-zion-cyan transition-colors">,
-                              {item && item.name,}
+                              {item && item.name}
                             </span>,
-                          </Link>,
-                        ))}
+                          </Link>))}
                       </div>,
                     </div>,
-                  </motion && motion.div>,
-,
-                )}
+                  </motion && motion.div>)}
               </AnimatePresence>,
             </div>,
           </nav>,
@@ -779,203 +727,191 @@ const showTagline = router.pathname === '/',
             {/* Search */}
 ,
             <div className="relative hidden md: block">,
-              <form onSubmit={handleSearch,} className="relative">,
-,
-                <input,
+              <form onSubmit={handleSearch} className="relative">,
+                <input
                   type="text",
                   placeholder="Search...",
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => setSearchFocused(false)}
-                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-20o0 ${,
+                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-20o0 ${
                     searchFocused ? 'w-80' : '',
             <div className="relative hidden md:block">,
-              <form on_submit={handle_search,} className="relative">,
-                <input,
+              <form on_submit={handle_search} className="relative">,
+                <input
                   type="text",
                   placeholder="Search...",
                   value={search_query}
                   on_change={(e) => setSearchQuery (e.target.value)}
                   on_focus={() => setSearchFocused (true)}
                   on_blur={() => setSearchFocused (false)}
-                  className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus: outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 20o0 ${,
-                    search_focused ? 'w - 80' : '',
-,}`}
+                  className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus: outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 20o0 ${
+                    search_focused ? 'w - 80' : ''}`}
                 />,
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"  />,
               </form>,
             </div>,
             {/* User Menu */}
 ,
-            {user ? (,
+            {user ? (
               <div className="relative dropdown-container">,
-,
-                <button,
+                <button
                   onClick={() => toggleDropdown('user')}
                   className="flex items-center space-x-2 p-2 rounded-lg hover: bg-zion-cyan/10 transition-colors",
-                  aria-expanded={activeDropdown === 'user',}
+                  aria-expanded={activeDropdown === 'user'}
 ,
               <div className="relative dropdown - container">,
-                <button,
+                <button
                   on_click={() => toggle_dropdown ('user')}
                   className="flex items - center space - x-2 p - 2 rounded - lg hover: bg - zion - cyan / 10 transition - colors",
-                  aria - expanded={active_dropdown === 'user',}
+                  aria - expanded={active_dropdown === 'user'}
                   aria - haspopup="true">,
                   <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - full flex items - center justify - center">,
                     <User className="w - 4 h - 4 text - white"  />,
                   </div>,
-                  <span className="text - white text - sm hidden lg: block">{user.name,}</span>,
+                  <span className="text - white text - sm hidden lg: block">{user.name}</span>,
                   <ChevronDown className="w - 4 h - 4 text - zion - slate - light"  />,
                 </button>,
                 <AnimatePresence>,
-                  {active_dropdown === 'user' && (,
+                  {active_dropdown === 'user' && (
                     <motion.div,
-                      initial={{ opacity: 0, coordinate_y: -10 ,}}
-                      animate={{ opacity: 1, coordinate_y: 0 ,}}
-                      exit={{ opacity: 0, coordinate_y: -10 ,}}
+                      initial={{ opacity: 0, coordinate_y: -10 }}
+                      animate={{ opacity: 1, coordinate_y: 0 }}
+                      exit={{ opacity: 0, coordinate_y: -10 }}
 ,
-                      transition={{ duration: 0.2 ,}}
+                      transition={{ duration: 0.2 }}
 ,
                       className="absolute top - full right - 0 mt - 2 w - 48 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">,
                       <div className="p - 2">,
-                        <Link,
+                        <Link
                           to="/dashboard",
                           on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">,
                           <PanelLeft className="w - 4 h - 4 mr - 3"  />,
                           Dashboard,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/profile",
-                          on_click={() => setActiveDropdown (null),}
+                          on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">,
                           <User className="w - 4 h - 4 mr - 3"  />,
                           Profile,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/settings",
-                          on_click={() => setActiveDropdown (null),}
+                          on_click={() => setActiveDropdown (null)}
                           className="flex items - center w - full p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">,
                           <Settings className="w - 4 h - 4 mr - 3"  />,
                           Settings,
                         </Link>,
                         <hr className="border - zion - slate / 20 my - 2"  />,
-                        <button,
-                          on_click={() => {,
+                        <button
+                          on_click={() => {
                             logout (),
-                            setActiveDropdown (null),
-,}}
+                            setActiveDropdown (null)}}
 ,
                   aria-haspopup="true">,
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">,
                     <User className="w-4 h-4 text-white"  />,
                   </div>,
-                  <span className="text-white text-sm hidden lg: block">{user && user.name,}</span>,
+                  <span className="text-white text-sm hidden lg: block">{user && user.name}</span>,
                   <ChevronDown className="w-4 h-4 text-zion-slate-light"  />,
                 </button>,
-,
                 <AnimatePresence>,
-                  {activeDropdown === 'user' && (,
+                  {activeDropdown === 'user' && (
                     <motion&& motion.div,
-                      initial={{ opacity: 0, y: -10 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      exit={{ opacity: 0, y: -10 ,}}
-                      transition={{ duration: 0 && 0.2 ,}}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0 && 0.2 }}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                       <div className="p-2">,
-,
-                        <Link,
+                        <Link
                           to="/dashboard",
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <PanelLeft className="w-4 h-4 mr-3"  />,
                           Dashboard,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/profile",
-                          onClick={() => setActiveDropdown(null),}
+                          onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <User className="w-4 h-4 mr-3"  />,
                           Profile,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/settings",
-                          onClick={() => setActiveDropdown(null),}
+                          onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <Settings className="w-4 h-4 mr-3"  />,
                           Settings,
                         </Link>,
                         <hr className="border-zion-slate/20 my-2"  />,
-                        <button,
-                          onClick={() => {,
+                        <button
+                          onClick={() => {
                             logout(),
-                            setActiveDropdown(null),
-,}}
+                            setActiveDropdown(null)}}
 ,
                   aria-haspopup="true">,
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">,
                     <User className="w-4 h-4 text-white"  />,
                   </div>,
-                  <span className="text-white text-sm hidden lg: block">{user && user.name,}</span>,
+                  <span className="text-white text-sm hidden lg: block">{user && user.name}</span>,
                   <ChevronDown className="w-4 h-4 text-zion-slate-light"  />,
                 </button>,
-,
                 <AnimatePresence>,
-                  {activeDropdown === 'user' && (,
+                  {activeDropdown === 'user' && (
                     <motion&& motion.div,
-                      initial={{ opacity: 0, y: -10 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      exit={{ opacity: 0, y: -10 ,}}
-                      transition={{ duration: 0 && 0.2 ,}}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0 && 0.2 }}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">,
                       <div className="p-2">,
-                        <Link,
+                        <Link
                           to="/dashboard",
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <PanelLeft className="w-4 h-4 mr-3"  />,
                           Dashboard,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/profile",
-                          onClick={() => setActiveDropdown(null),}
+                          onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <User className="w-4 h-4 mr-3"  />,
                           Profile,
                         </Link>,
-                        <Link,
+                        <Link
                           to="/settings",
-                          onClick={() => setActiveDropdown(null),}
+                          onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <Settings className="w-4 h-4 mr-3"  />,
                           Settings,
                         </Link>,
                         <hr className="border-zion-slate/20 my-2"  />,
-                        <button,
-                          onClick={() => {,
+                        <button
+                          onClick={() => {
                             logout(),
-                            setActiveDropdown(null),
-,}}
+                            setActiveDropdown(null)}}
 ,
                           className="flex items-center w-full p-3 rounded-lg hover: bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">,
                           <LogOut className="w-4 h-4 mr-3"  />,
                           Logout,
                         </button>,
                       </div>,
-                    </motion && motion.div>,
-,
-                  ),}
+                    </motion && motion.div>)}
                 </AnimatePresence>,
-              </div>,
-            ))}
+              </div>))}
           </nav>,
                           className="flex items - center w - full p - 3 rounded - lg hover: bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">,
                           <LogOut className="w - 4 h - 4 mr - 3"  />,
                           Logout,
                         </button>,
                       </div>,
-                    </motion.div>),}
+                    </motion.div>)}
                 </AnimatePresence>,
               </div>))}
           </nav>,
@@ -983,253 +919,240 @@ const showTagline = router.pathname === '/',
           <div className="flex items - center space - x-4">,
             {/* Search */}
 ,
-            <form on_submit={handle_search} className="hidden md: flex relative">  const navigation = [,
-    { name: 'Home', href: '/', current: true ,},;
-    { name: 'About', href: '/about', current: false ,},;
-    { name: 'Contact', href: '/contact', current: false ,},;
+            <form on_submit={handle_search} className="hidden md: flex relative">  const navigation = [
+    { name: 'Home', href: '/', current: true };
+    { name: 'About', href: '/about', current: false };
+    { name: 'Contact', href: '/contact', current: false };
   ],
-  const services = [,
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' ,},;
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' ,},;
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' ,},;
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' ,},;
-    { name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' ,},;
-    { name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' ,},;
+  const services = [
+    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' };
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' };
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' };
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' };
+    { name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' };
+    { name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' };
   ],
-,
-  return (,
+  return (
     <>,
       <header className="sticky top - 0 z - 50 w - full border - b border - slate - 70o0 / 20 bg - slate - 90o0 / 95 backdrop - blur - md">,
         <div className="container flex h - 16 items - center px - 4 sm: px - 6">,
-          {/* Logo */,}
+          {/* Logo */}
 ,
-            <form onSubmit={handleSearch} className="hidden md: flex relative">  const navigation = [,
-    { name: 'Home', href: '/', current: true ,},;
-    { name: 'About', href: '/about', current: false ,},;
-    { name: 'Contact', href: '/contact', current: false ,},;
+            <form onSubmit={handleSearch} className="hidden md: flex relative">  const navigation = [
+    { name: 'Home', href: '/', current: true };
+    { name: 'About', href: '/about', current: false };
+    { name: 'Contact', href: '/contact', current: false };
   ],
-  const services = [,
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' ,},;
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' ,},;
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' ,},;
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' ,},;
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' ,},;
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' ,},;
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' };
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' };
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' };
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' };
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' };
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' };
   ],
-  return (,
+  return (
     <>,
       <header className="sticky top-0 z-50 w-full border-b border-slate-70o0/20 bg-slate-90o0/95 backdrop-blur-md">,
         <div className="container flex h-16 items-center px-4 sm: px-6">,
-          {/* Logo */,}
+          {/* Logo */}
           <div className="flex items-center">,
             <Link to="/" className="flex-shrink-0">,
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">,
           <div className="flex items - center">,
             <Link to="/" className="flex - shrink - 0">,
               <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 40o0 via - blue - 50o0 to - purple - 60o0 bg - clip - text text - transparent">,
-,
                 Zion Tech Group,
               </h1>,
             </Link>,
           </div>,
-,
           {/* Desktop Navigation */}
           <nav className="hidden md: flex ml-8 space-x-8">,
-            {navigation && navigation.map((item) => (,
-              <Link,
-                key={item && item.name,}
+            {navigation && navigation.map((item) => (
+              <Link
+                key={item && item.name}
                 to={item && item.href}
                 className="text-slate-30o0 hover: text-cyan-40o0 px-3 py-2 text-sm font-medium transition-colors duration-20o0">,
-                {item && item.name,}
-              </Link>,
-            ))}
+                {item && item.name}
+              </Link>))}
 ,
           {/* Desktop Navigation */}
 ,
           <nav className="hidden md: flex ml - 8 space - x-8">,
-            {navigation.map ((item) => (,
-              <Link,
-                key={item.name,}
+            {navigation.map ((item) => (
+              <Link
+                key={item.name}
 ,
             <div className="relative">,
-,
-              <button,
+              <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
 ,
                 className="flex items-center text-slate-30o0 hover: text-cyan-40o0 px-3 py-2 text-sm font-medium transition-colors duration-20o0">,
                 Services,
-                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-20o0 ${servicesDropdownOpen ? 'rotate-180' : '',}`}  />,
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-20o0 ${servicesDropdownOpen ? 'rotate-180' : ''}`}  />,
               </button>,
-              {servicesDropdownOpen && (,
-,
-                <div,
+              {servicesDropdownOpen && (
+                <div
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-80o0/95 border border-slate-70o0/50 rounded-lg shadow-xl backdrop-blur-md",
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
 ,
                 to={item.href}
                 className="text - slate - 30o0 hover: text - cyan - 40o0 px - 3 py - 2 text - sm font - medium transition - colors duration - 20o0">,
-                {item.name,}
+                {item.name}
               </Link>))}
             {/* Services Dropdown */}
             <div className="relative">,
-              <button,
+              <button
                 on_click={() => setServicesDropdownOpen (!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen (true)}
                 onMouseLeave={() => setServicesDropdownOpen (false)}
                 className="flex items - center text - slate - 30o0 hover: text - cyan - 40o0 px - 3 py - 2 text - sm font - medium transition - colors duration - 20o0">,
                 Services,
-                <ChevronDown className={`w - 4 h - 4 ml - 1 transition - transform duration - 20o0 ${servicesDropdownOpen ? 'rotate - 180' : '',}`}  />,
+                <ChevronDown className={`w - 4 h - 4 ml - 1 transition - transform duration - 20o0 ${servicesDropdownOpen ? 'rotate - 180' : ''}`}  />,
               </button>,
-              {servicesDropdownOpen && (,
-                <div,
+              {servicesDropdownOpen && (
+                <div
                   className="absolute top - full left - 0 mt - 2 w - 80 bg - slate - 80o0 / 95 border border - slate - 70o0 / 50 rounded - lg shadow - xl backdrop - blur - md",
                   onMouseEnter={() => setServicesDropdownOpen (true)}
                   onMouseLeave={() => setServicesDropdownOpen (false)}
                 >,
                   <div className="p - 4">,
                     <div className="grid grid - cols - 1 gap - 2">,
-                      {services.map ((service) => (,
-                        <Link,
+                      {services.map ((service) => (
+                        <Link
                           key={service.name}
                           to={service.href}
                           className="flex items - center p - 3 rounded - lg hover: bg - slate - 70o0 / 50 transition - colors duration - 20o0 group">,
                           <div className="flex - 1">,
                             <div className="text - white font - medium group - hover:text - cyan - 40o0 transition - colors">,
-,
-                              {service.name,}
+                              {service.name}
                             </div>,
                             <div className="text - sm text - gray - 40o0">,
                               {service.description}
-,
-                >,
+>,
                   <div className="p-4">,
                     <div className="grid grid-cols-1 gap-2">,
-                      {services && services.map((service) => (,
-                        <Link,
+                      {services && services.map((service) => (
+                        <Link
                           key={service && service.name}
                           to={service && service.href}
                           className="flex items-center p-3 rounded-lg hover: bg-slate-70o0/50 transition-colors duration-20o0 group">,
                           <div className="flex-1">,
                             <div className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">,
-                              {service && service.name,}
+                              {service && service.name}
                             </div>,
                             <div className="text-sm text-gray-40o0">,
                               {service && service.description}
                             </div>,
                           </div>,
-                        </Link>,
-                      ))}
+                        </Link>))}
                     </div>,
                     <div className="mt-4 pt-4 border-t border-slate-70o0/50">,
-                      <Link,
+                      <Link
                         to="/services",
                         className="block text-center text-cyan-40o0 hover: text-cyan-30o0 text-sm font-medium transition-colors">,
                             </div>,
                           </div>,
-                        </Link>)),}
+                        </Link>))}
                     </div>,
                     <div className="mt - 4 pt - 4 border - t border - slate - 70o0 / 50">,
-                      <Link,
+                      <Link
                         to="/services",
                         className="block text - center text - cyan - 40o0 hover: text - cyan - 30o0 text - sm font - medium transition - colors">,
-,
                         View All Services →,
                       </Link>,
                     </div>,
                   </div>,
-,
-                </div>,
-              ),}
+                </div>)}
             </div>,
           </nav>,
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md: flex ml-6 flex-1 max-w-md">,
-            <form onSubmit={handleSearch,} className="relative w-full">,
-              <input,
+            <form onSubmit={handleSearch} className="relative w-full">,
+              <input
                 type="text",
                 placeholder="Search...",
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-2 pl-10 bg-slate-80o0/50 border border-slate-70o0/50 rounded-lg text-white placeholder-slate-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0/50 focus:border-cyan-40o0",
               />,
-              <button,
+              <button
                 type="submit",
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-40o0 hover:text-cyan-40o0 transition-colors">,
                 <Search className="h-4 h-4"  />,
               <div className="hidden md:flex items-center space-x-3">,
-                <Link,
+                <Link
                   to="/login",
                   className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">,
                   Login,
                 </Link>,
-                <Link,
+                <Link
                   to="/signup",
                   className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">,
                   Get Started,
                 </Link>,
-              </div>,
-            ),}
+              </div>)}
 ,
                 </div>)}
             </div>,
           </nav>,
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md: flex ml - 6 flex - 1 max - w-md">,
-            <form on_submit={handle_search,} className="relative w - full">,
+            <form on_submit={handle_search} className="relative w - full">,
               />,
-              <button,
+              <button
                 type="submit",
                 className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 40o0 hover: text - cyan - 40o0 transition - colors">,
                 <Search className="h - 4 h - 4"  />,
               <div className="hidden md:flex items - center space - x-3">,
-                <Link,
+                <Link
                   to="/login",
                   className="px - 4 py - 2 text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">,
                   Login,
                 </Link>,
-                <Link,
+                <Link
                   to="/signup",
                   className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">,
                   Get Started,
                 </Link>,
-              </div>),}
+              </div>)}
           {/* Right side actions */}
           <div className="ml - 6 flex items - center space - x-4">,
             {/* Notifications */}
             <button className="p - 2 text - slate - 40o0 hover: text - cyan - 40o0 transition - colors">,
               <Bell className="h - 5 w - 5"  />,
             </button>,
-            {/* User menu */,}
+            {/* User menu */}
 ,
             <button className="p - 2 text - slate - 40o0 hover: text - cyan - 40o0 transition - colors">,
               <User className="h - 5 w - 5"  />,
             </button>,
-              {mobileMenuOpen ? (,
-                <X className="w - 6 h - 6 text - white"  />) : (,
+              {mobileMenuOpen ? (
+                <X className="w - 6 h - 6 text - white"  />) : (
                 <Menu className="w - 6 h - 6 text - zinc - 40o0"  />              className="md:hidden p - 2 text - slate - 40o0 hover:text - cyan - 40o0 transition - colors">,
-              {mobileMenuOpen ? (,
-                <X className="h - 5 w - 5"  />) : (,
+              {mobileMenuOpen ? (
+                <X className="h - 5 w - 5"  />) : (
                 <Menu className="h - 5 w - 5"  />,
-                <Menu className="w - 6 h - 6 text - white"  />),}
+                <Menu className="w - 6 h - 6 text - white"  />)}
             </button>,
           </div>,
         </div>,
       </div>,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {mobileMenuOpen && (,
+        {mobileMenuOpen && (
           <motion.div,
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0.3 ,}}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="lg: hidden bg-zion-slate-dark border-t border-zion-cyan/20">,
-            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */,}
+            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">,
-                <input,
+                <input
                   type="text",
                   placeholder="Search...",
                   value={searchQuery}
@@ -1238,52 +1161,50 @@ const showTagline = router.pathname === '/',
                 />,
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />,
               </form>,
-              {/* Mobile Navigation Links */,}
+              {/* Mobile Navigation Links */}
               <div className="space-y-2">,
-                {navigation.map((item) => (,
-                  <Link,
+                {navigation.map((item) => (
+                  <Link
                     key={item.name}
                     to={item.href}
                     onClick={closeMobileMenu}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${,
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item.current,
                         ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10',
-,}`}
+                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10'}`}
                   >,
                     {item.name}
-                  </Link>,
-                ))}
+                  </Link>))}
               </nav>,
               {/* Mobile Quick Actions */}
               <div className="mt-6 pt-6 border-t border-zinc-80o0/50">,
                 <div className="grid grid-cols-1 gap-3">,
-                  {quickActions.map((action) => (,
-                    <Link,
+                  {quickActions.map((action) => (
+                    <Link
                       key={action.name}
                       to={action.href}
                       className="btn-futuristic text-center">,
                       {action.name}        {/* Mobile Navigation */}
 ,
-        {mobileMenuOpen && (,
+        {mobileMenuOpen && (
           <div className="md: hidden">,
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0/95 border-t border-slate-70o0/20">,
-              {navigation.map((item) => (,
-                <Link,
-                  key={item.name,}
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
 ,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {mobileMenuOpen && (,
+        {mobileMenuOpen && (
           <motion&& motion.div,
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0 && 0.3 ,}}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0 && 0.3 }}
             className="lg: hidden bg-zion-slate-dark border-t border-zion-cyan/20">,
-            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */,}
+            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">,
-                <input,
+                <input
                   type="text",
                   placeholder="Search...",
                   value={searchQuery}
@@ -1292,169 +1213,151 @@ const showTagline = router.pathname === '/',
                 />,
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />,
               </form>,
-,
-              {/* Mobile Navigation Links */,}
+              {/* Mobile Navigation Links */}
               <div className="space-y-2">,
-                {navigation && navigation.map((item) => (,
-                  <Link,
+                {navigation && navigation.map((item) => (
+                  <Link
                     key={item && item.name}
                     to={item && item.href}
                     onClick={closeMobileMenu}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${,
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item && item.current,
                         ? 'text-zion-cyan bg-zion-cyan/10',
-                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10',
-,}`}>,
+                        : 'text-zion-slate-light hover: text-zion-cyan hover:bg-zion-cyan/10'}`}>,
                     {item && item.name}
-                  </Link>,
-                ))}
+                  </Link>))}
               </nav>,
-,
               {/* Mobile Quick Actions */}
               <div className="mt-6 pt-6 border-t border-zinc-80o0/50">,
                 <div className="grid grid-cols-1 gap-3">,
-                  {quickActions && quickActions.map((action) => (,
-                    <Link,
+                  {quickActions && quickActions.map((action) => (
+                    <Link
                       key={action && action.name}
                       to={action && action.href}
                       className="btn-futuristic text-center">,
                       {action && action.name}        {/* Mobile Navigation */}
-        {mobileMenuOpen && (,
+        {mobileMenuOpen && (
           <div className="md: hidden">,
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0/95 border-t border-slate-70o0/20">,
-              {navigation && navigation.map((item) => (,
-                <Link,
-                  key={item && item.name,}
+              {navigation && navigation.map((item) => (
+                <Link
+                  key={item && item.name}
                   to={item && item.href}
                   className="text-slate-30o0 hover: text-cyan-40o0 block px-3 py-2 text-base font-medium transition-colors duration-20o0",
-                  onClick={() => setMobileMenuOpen(false),}
+                  onClick={() => setMobileMenuOpen(false)}
                 >,
                   {item && item.name}
-                </Link>,
-,
-              ))}
+                </Link>))}
               {/* Mobile Services */}
 ,
               <div className="px-3 py-2">,
                 <div className="text-slate-40o0 text-sm font-medium mb-2">Services</div>,
                 <div className="space-y-1">,
-                  {services && services.map((service) => (,
-                    <Link,
+                  {services && services.map((service) => (
+                    <Link
                       key={service && service.name}
                       to={service && service.href}
                       className="block text-slate-30o0 hover: text-cyan-40o0 px-3 py-2 text-sm transition-colors duration-20o0",
-                      onClick={() => setMobileMenuOpen(false),}
+                      onClick={() => setMobileMenuOpen(false)}
                     >,
                       {service && service.name}
-                    </Link>,
-                  ))}
+                    </Link>))}
                 </div>,
               </div>,
               </div>,
-,
               {/* Mobile Services */}
               <div className="space-y-2">,
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">,
                   Services,
                 </div>,
-                {services.map((service) => (,
-                  <Link,
+                {services.map((service) => (
+                  <Link
                     key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover: text-zion-cyan transition-colors">,
-                    {service.name,}
-                  </Link>,
-                ))}
+                    {service.name}
+                  </Link>))}
               </div>,
               {/* Mobile Solutions */}
               <div className="space-y-2">,
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">,
                   Solutions,
                 </div>,
-                {solutions.map((solution) => (,
-                  <Link,
+                {solutions.map((solution) => (
+                  <Link
                     key={solution.name}
                     to={solution.href}
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover: text-zion-cyan transition-colors">,
-                    {solution.name,}
-                  </Link>,
-                ))}
+                    {solution.name}
+                  </Link>))}
               </div>,
               {/* Mobile Resources */}
               <div className="space-y-2">,
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">,
                   Resources,
                 </div>,
-                {resources.map((resource) => (,
-                  <Link,
+                {resources.map((resource) => (
+                  <Link
                     key={resource.name}
                     to={resource.href}
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover: text-zion-cyan transition-colors">,
-                    {resource.name,}
-                  </Link>,
-                ))}
+                    {resource.name}
+                  </Link>))}
               </div>,
               {/* Mobile Company */}
               <div className="space-y-2">,
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">,
                   Company,
                 </div>,
-                {company.map((item) => (,
-                  <Link,
+                {company.map((item) => (
+                  <Link
                     key={item.name}
                     to={item.href}
                     onClick={closeMobileMenu}
                     className="block px-6 py-2 text-zion-slate-light hover: text-zion-cyan transition-colors">,
-                    {item.name,}
-                  </Link>,
-                ))}
+                    {item.name}
+                  </Link>))}
               </div>,
               {/* Mobile Auth */}
-              {!user ? (,
+              {!user ? (
                 <div className="pt-4 border-t border-zion-slate/20">,
                   <div className="space-y-3">,
-                    <Link,
+                    <Link
                       to="/login",
                       onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover: bg-zion-cyan hover:text-white transition-colors">,
                       Login,
                     </Link>,
-                    <Link,
+                    <Link
                       to="/signup",
-                      onClick={closeMobileMenu,}
+                      onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors">,
                       Get Started,
                     </Link>,
                   </div>,
-                </div>,
-              ) : (,
+                </div>) : (
                 <div className="pt-4 border-t border-zion-slate/20">,
                   <div className="space-y-3">,
-                    <Link,
+                    <Link
                       to="/dashboard",
-                      onClick={closeMobileMenu,}
+                      onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors">,
                       Dashboard,
                     </Link>,
-                    <button,
-                      onClick={() => {,
+                    <button
+                      onClick={() => {
                         logout(),
-                        closeMobileMenu(),
-,}}
+                        closeMobileMenu()}}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover: bg-zion-cyan hover:text-white transition-colors">,
                       Logout,
                     </button>,
                   </div>,
-                </div>,
-              ),}
+                </div>)}
             </div>,
-          </motion && motion.div>,
-,
-        )}
+          </motion && motion.div>)}
 ,
       </AnimatePresence>,
-    </header>  ),
-}}}}}}}}}}}}}}}}}}}}}}}}))))))))))))))))))))))))))))))
+    </header>  )}}}}}}}}}}}}}}}}}}}}}}}}))))))))))))))))))))))))))))))

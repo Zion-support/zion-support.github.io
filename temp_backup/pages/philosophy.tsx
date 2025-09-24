@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PhilosophyPage() {,
-  return (,
+export default function PhilosophyPage() {
+  return (
     <>,
       <Head>,
         <title>Philosophy - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function PhilosophyPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

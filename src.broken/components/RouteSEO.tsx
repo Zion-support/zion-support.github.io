@@ -1,9 +1,7 @@
-export function RouteSEO() {,
-  return (,
+export function RouteSEO() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

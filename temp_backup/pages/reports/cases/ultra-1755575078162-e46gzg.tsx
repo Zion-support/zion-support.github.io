@@ -1,19 +1,18 @@
 import Head from 'next/head',
-,
-export default function UltraCasePage() {,
-  return (,
+export default function UltraCasePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Case Study: Instant feedback loops Success</title>,
-        <meta,
+        <meta
           name='description',
           content='Real-world case study demonstrating ultra-fast development success.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='case study, success story, development, ultra-fast, results',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/reports/cases/ultra-17555750o78162-e46gzg',
         />,
@@ -32,7 +31,7 @@ export default function UltraCasePage() {,
         <section className='mb-8'>,
           <h2 className='text-2xl font-bold mb-4'>✅ The Solution</h2>,
           <p className='text-white/80'>,
-            We implemented AI-powered automation to enhance system performance,;
+            We implemented AI-powered automation to enhance system performance;
             resulting in: ,
           </p>,
           <ul className='mt-4 space-y-2'>,
@@ -43,15 +42,12 @@ export default function UltraCasePage() {,
           </ul>,
         </section>,
         <section className='text-center'>,
-          <a,
+          <a
             href='https://ziontechgroup.com',
-            className='inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors',
-          >,
+            className='inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors'>,
             Read Full Case Study,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

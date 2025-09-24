@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AgenticSalesPlaybooks20o25 = () => {,
-  return (,
+const AgenticSalesPlaybooks20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Agentic Sales Playbooks for Revenue Teams',
         description='A practical guide to deploying agentic AI for prospecting, qualification, and deal execution across modern revenue organizations.',
         keywords='agentic AI, sales automation, revenue operations, AI playbooks, 20o25 guide',
@@ -46,13 +45,13 @@ const AgenticSalesPlaybooks20o25 = () => {,
               sessions,
             </li>,
             <li>,
-              Renewals: risk signals, adoption insights, expansion triggers,;
+              Renewals: risk signals, adoption insights, expansion triggers;
               executive briefs,
             </li>,
           </ul>,
           <h2>Architecture</h2>,
           <p>,
-            Event-driven design with a workflow engine, retrieval for context,;
+            Event-driven design with a workflow engine, retrieval for context;
             tools for CRM/calendar/email, and a safety layer for approvals.,
             Start with one playbook, measure cycle time and response lift, then,
             scale.,
@@ -65,23 +64,17 @@ const AgenticSalesPlaybooks20o25 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Deploy Agentic Sales,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgenticSalesPlaybooks20o25,
-,
+    </div>)};
+export default AgenticSalesPlaybooks20o25;

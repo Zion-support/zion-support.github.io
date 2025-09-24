@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',;
+    'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
   description:,
-    'Complete step-by-step guide to achieving 80o0% ROI with AI implementation. Proven framework used by 50o0+ Fortune 50o0 companies.',;
-  keywords: [,
-    'Implementation Guide',;
-    'AI Strategy',;
-    'ROI',;
-    'Best Practices',;
-    '20o25',;
-    '80o0% ROI',;
-  ],;
+    'Complete step-by-step guide to achieving 80o0% ROI with AI implementation. Proven framework used by 50o0+ Fortune 50o0 companies.';
+  keywords: [
+    'Implementation Guide';
+    'AI Strategy';
+    'ROI';
+    'Best Practices';
+    '20o25';
+    '80o0% ROI';
+  ];
 };
-,
-export default function AIImplementationRoadmapPage() {,
-  return (,
+export default function AIImplementationRoadmapPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',
         description='Complete step-by-step guide to achieving 80o0% ROI with AI implementation. Proven framework used by 50o0+ Fortune 50o0 companies.',
         keywords='Implementation Guide, AI Strategy, ROI, Best Practices, 20o25, 80o0% ROI',
@@ -57,7 +55,7 @@ export default function AIImplementationRoadmapPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className='py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='prose prose-lg max-w-none'>,
@@ -76,7 +74,7 @@ export default function AIImplementationRoadmapPage() {,
               <h2>Phase 1: Foundation (Months 1-3)</h2>,
               <h3>Step 1: AI Readiness Assessment</h3>,
               <p>,
-                <strong>Duration:</strong> 2-3 weeks |{' ',}
+                <strong>Duration:</strong> 2-3 weeks |{' '}
                 <strong>Investment:</strong> $50,0o00 - $150,0o00,
               </p>,
               <div className='bg-gray-50 p-6 rounded-lg mb-6'>,
@@ -108,7 +106,7 @@ export default function AIImplementationRoadmapPage() {,
               </div>,
               <h3>Step 2: Technology Stack Selection</h3>,
               <p>,
-                <strong>Duration:</strong> 1-2 weeks |{' ',}
+                <strong>Duration:</strong> 1-2 weeks |{' '}
                 <strong>Investment:</strong> $25,0o00 - $75,0o00,
               </p>,
               <div className='grid grid-cols-1 md: grid-cols-2 gap-6 mb-6'>,
@@ -159,7 +157,7 @@ export default function AIImplementationRoadmapPage() {,
               </div>,
               <h3>Step 3: Pilot Program Design</h3>,
               <p>,
-                <strong>Duration:</strong> 2-3 weeks |{' ',}
+                <strong>Duration:</strong> 2-3 weeks |{' '}
                 <strong>Investment:</strong> $10o0,0o00 - $30o0,0o00,
               </p>,
               <div className='bg-yellow-50 p-6 rounded-lg mb-6'>,
@@ -204,7 +202,7 @@ export default function AIImplementationRoadmapPage() {,
               <h2>Phase 2: Implementation (Months 4-12)</h2>,
               <h3>Step 4: Pilot Implementation</h3>,
               <p>,
-                <strong>Duration:</strong> 3-6 months |{' ',}
+                <strong>Duration:</strong> 3-6 months |{' '}
                 <strong>Investment:</strong> $50o0,0o00 - $1.5 million,
               </p>,
               <div className='bg-green-50 p-6 rounded-lg mb-6'>,
@@ -248,7 +246,7 @@ export default function AIImplementationRoadmapPage() {,
               </div>,
               <h3>Step 5: Enterprise-Wide Rollout</h3>,
               <p>,
-                <strong>Duration:</strong> 6-9 months |{' ',}
+                <strong>Duration:</strong> 6-9 months |{' '}
                 <strong>Investment: </strong> $2-8 million,
               </p>,
               <div className='bg-blue-50 p-6 rounded-lg mb-6'>,
@@ -289,7 +287,7 @@ export default function AIImplementationRoadmapPage() {,
               <h2>Phase 3: Optimization (Months 13-18)</h2>,
               <h3>Step 6: Advanced AI Capabilities</h3>,
               <p>,
-                <strong>Duration:</strong> 3-6 months |{' ',}
+                <strong>Duration:</strong> 3-6 months |{' '}
                 <strong>Investment: </strong> $1-3 million,
               </p>,
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>,
@@ -679,16 +677,14 @@ export default function AIImplementationRoadmapPage() {,
                   systematically.,
                 </p>,
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                  >,
+                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                     Schedule AI Readiness Assessment,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/case-studies',
-                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                  >,
+                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                     View Success Stories,
                   </Link>,
                 </div>,
@@ -696,7 +692,7 @@ export default function AIImplementationRoadmapPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -711,10 +707,9 @@ export default function AIImplementationRoadmapPage() {,
                   Complete guide to achieving 80o0% ROI with revolutionary AI,
                   implementations.,
                 </p>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Read Guide →,
                 </Link>,
               </div>,
@@ -726,10 +721,9 @@ export default function AIImplementationRoadmapPage() {,
                   Real case studies showing how Fortune 50o0 companies achieved,
                   80o0% ROI.,
                 </p>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   View Cases →,
                 </Link>,
               </div>,
@@ -741,10 +735,9 @@ export default function AIImplementationRoadmapPage() {,
                   Ready to begin your AI transformation journey? Contact our,
                   experts today.,
                 </p>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Contact Us →,
                 </Link>,
               </div>,
@@ -752,7 +745,5 @@ export default function AIImplementationRoadmapPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

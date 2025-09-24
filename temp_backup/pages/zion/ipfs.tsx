@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function IpfsPage() {,
-  return (,
+export default function IpfsPage() {
+  return (
     <>,
       <Head>,
         <title>Ipfs - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function IpfsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

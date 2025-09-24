@@ -1,62 +1,59 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agentic Guardrails Production Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agentic Guardrails Production Blueprint | Zion Tech Group';
   description:,
-    'Practical blueprint for shipping agentic systems to production with safety, reliability, and cost guardrails: policy-as-code, eval gates, and runtime controls.',;
-  keywords: [,
-    'agentic guardrails',;
-    'AI safety',;
-    'policy-as-code',;
-    'LLM evals',;
-    'runtime controls',;
-    'production AI',;
-    'observability',;
-  ],;
+    'Practical blueprint for shipping agentic systems to production with safety, reliability, and cost guardrails: policy-as-code, eval gates, and runtime controls.';
+  keywords: [
+    'agentic guardrails';
+    'AI safety';
+    'policy-as-code';
+    'LLM evals';
+    'runtime controls';
+    'production AI';
+    'observability';
+  ];
 };
-,
-const sections = [,
-  {,
-    title: 'Why Guardrails Matter Now',;
-    points: [,
-      'Increased autonomy introduces novel failure modes across safety, security, and cost leakage.',;
-      'Enterprises require deterministic controls layered with evaluation-driven confidence.',;
-      'Regulatory and brand risks demand auditable, repeatable safeguards.',;
-    ],;
-  },;
-  {,
-    title: 'Architecture Overview',;
-    points: [,
-      'Policy-as-code backbone with versioned controls and exemptions.',;
-      'Pre-deployment eval gates with scenario coverage and pass/fail thresholds.',;
-      'Runtime guardrails: input validation, tool permissioning, output filters, cost caps.',;
-      'Observability: traces, metrics, red-team events, and audit logs.',;
-    ],;
-  },;
-  {,
-    title: 'Implementation Playbook',;
-    points: [,
-      'Model risks: enumerate unsafe actions, data exfiltration, and hallucination impact.',;
-      'Define controls: allow/deny lists, rate limits, financial limits, PII handling.',;
-      'Instrument evals: regression suites, adversarial prompts, business KPI checks.',;
-      'Automate release: CI gates, rollout stages, and automatic rollback policies.',;
-    ],;
-  },;
-  {,
-    title: 'Operating at Scale',;
-    points: [,
-      'SLOs for quality, latency, and cost per request with alert thresholds.',;
-      'Continuous red teaming with synthetic data and human-in-the-loop review.',;
-      'Monthly governance reviews with exceptions and control updates.',;
-    ],;
-  },;
+const sections = [
+  {
+    title: 'Why Guardrails Matter Now';
+    points: [
+      'Increased autonomy introduces novel failure modes across safety, security, and cost leakage.';
+      'Enterprises require deterministic controls layered with evaluation-driven confidence.';
+      'Regulatory and brand risks demand auditable, repeatable safeguards.';
+    ];
+  };
+  {
+    title: 'Architecture Overview';
+    points: [
+      'Policy-as-code backbone with versioned controls and exemptions.';
+      'Pre-deployment eval gates with scenario coverage and pass/fail thresholds.';
+      'Runtime guardrails: input validation, tool permissioning, output filters, cost caps.';
+      'Observability: traces, metrics, red-team events, and audit logs.';
+    ];
+  };
+  {
+    title: 'Implementation Playbook';
+    points: [
+      'Model risks: enumerate unsafe actions, data exfiltration, and hallucination impact.';
+      'Define controls: allow/deny lists, rate limits, financial limits, PII handling.';
+      'Instrument evals: regression suites, adversarial prompts, business KPI checks.';
+      'Automate release: CI gates, rollout stages, and automatic rollback policies.';
+    ];
+  };
+  {
+    title: 'Operating at Scale';
+    points: [
+      'SLOs for quality, latency, and cost per request with alert thresholds.';
+      'Continuous red teaming with synthetic data and human-in-the-loop review.';
+      'Monthly governance reviews with exceptions and control updates.';
+    ];
+  };
 ],
-,
-const ArticlePage = () => {,
-  return (,
+const ArticlePage = () => {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agentic Guardrails Production Blueprint',
         description='Blueprint for productionizing agentic systems safely: policy-as-code, eval gates, and runtime controls.',
         keywords='agentic guardrails, AI safety, policy-as-code, LLM evals, runtime controls, production AI, observability',
@@ -83,18 +80,16 @@ const ArticlePage = () => {,
                 policy-as-code, evaluation gates, and runtime controls to reduce,
                 risk without blocking innovation.,
               </p>,
-              {sections.map((section, idx) => (,
+              {sections.map((section, idx) => (
                 <div key={idx} className='mt-10'>,
                   <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>,
                     {section.title}
                   </h2>,
                   <ul className='list-disc pl-6 text-gray-70o0 space-y-2'>,
-                    {section.points.map((point, i) => (,
-                      <li key={i}>{point}</li>,
-                    ))}
+                    {section.points.map((point, i) => (
+                      <li key={i}>{point}</li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             <div className='mt-10 p-6 bg-gray-50 rounded-xl'>,
               <h3 className='text-xl font-semibold mb-2'>Key Artifacts</h3>,
@@ -105,25 +100,19 @@ const ArticlePage = () => {,
               </ul>,
             </div>,
             <div className='mt-12 flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-evals-maturity-model',
-                className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-              >,
+                className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
                 Explore Evals Maturity Model,
               </Link>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-agent-observability-blueprint',
-                className='border-2 border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-              >,
+                className='border-2 border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
                 Read Agent Observability Blueprint,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default ArticlePage,
-,
+    </div>)};
+export default ArticlePage;

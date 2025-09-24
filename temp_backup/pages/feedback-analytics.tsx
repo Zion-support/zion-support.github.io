@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function FeedbackAnalyticsPage() {,
-  return (,
+export default function FeedbackAnalyticsPage() {
+  return (
     <>,
       <Head>,
         <title>Feedback Analytics - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function FeedbackAnalyticsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

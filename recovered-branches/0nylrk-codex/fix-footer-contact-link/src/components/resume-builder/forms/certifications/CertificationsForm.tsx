@@ -9,89 +9,71 @@ import { useResume } from '@/hooks/useResume',
 import { AlertDescription } from '@/components/ui/alert',
 import { zodResolver } from '@hookform/resolvers/zod',
 import { format } from 'date-fns',
-,
 import { CertificationsList } from './CertificationsList',
 import { CertificationFormFields } from './CertificationFormFields',
 import { CertificationFormValuescertificationSchema } from './types',
-,
-interface CertificationsFormProps {,
+interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
   onComplete: () => void,
-  onBack: () => void,
-,}
+  onBack: () => void}
 ,
-export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: CertificationsFormProps) {,
+export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: CertificationsFormProps) {
   const { addCertificationupdateCertificationdeleteCertificationisLoading } = useResume(),
   const [editingIdsetEditingId] = useState<string | null>(null),
   const [errorsetError] = useState<string | null>(null),
-,
   // Helper function to format dates as strings for form inputs,
-  const formatDateValue = (dateValue: string | Date | undefined): string => {,
+  const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd'),
-  ,};
-,
-  const form = useForm<CertificationFormValues>({,
-    resolver: zodResolver(certificationSchema),;
-    defaultValues: {,
-      name: '',;
-      issuing_organization: '',;
-      issue_date: '',;
-      expiration_date: '',;
-      credential_id: '',;
-      credential_url: '',}}),
-,
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {,
-    try {,
+    return format(dateValue'yyyy-MM-dd')};
+  const form = useForm<CertificationFormValues>({
+    resolver: zodResolver(certificationSchema);
+    defaultValues: {
+      name: '';
+      issuing_organization: '';
+      issue_date: '';
+      expiration_date: '';
+      credential_id: '';
+      credential_url: ''}}),
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+    try {
       setError(null),
       let success,
+      const certData: Certification = {
+        name: data.name;
+        issuing_organization: data.issuing_organization;
+        issue_date: data.issue_date || undefined;
+        expiration_date: data.expiration_date || undefined;
+        credential_id: data.credential_id;
+        credential_url: data.credential_url};
+      if (editingId) {
+        success = await updateCertification(editingIdcertData)} else {
+        success = await addCertification(resumeIdcertData)}
 ,
-      const certData: Certification = {,
-        name: data.name,;
-        issuing_organization: data.issuing_organization,;
-        issue_date: data.issue_date || undefined,;
-        expiration_date: data.expiration_date || undefined,;
-        credential_id: data.credential_id,;
-        credential_url: data.credential_url,};
-,
-      if (editingId) {,
-        success = await updateCertification(editingIdcertData),
-      } else {,
-        success = await addCertification(resumeIdcertData),
-      }
-,
-      if (success) {,
-        form.reset({,
-          name: '',;
-          issuing_organization: '',;
-          issue_date: '',;
-          expiration_date: '',;
-          credential_id: '',;
-          credential_url: '',}),
-        setEditingId(null),
-      }
-    } catch (err: any) {,
-      setError(err.message || 'An error occurred'),
-    ,}
+      if (success) {
+        form.reset({
+          name: '';
+          issuing_organization: '';
+          issue_date: '';
+          expiration_date: '';
+          credential_id: '';
+          credential_url: ''}),
+        setEditingId(null)}
+    } catch (err: any) {
+      setError(err.message || 'An error occurred')}
   };
-,
-  const handleEdit = (cert: Certification) => {,
+  const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!),
-    form.reset({,
-      ...cert,;
-      issue_date: formatDateValue(cert.issue_date),;
-      expiration_date: formatDateValue(cert.expiration_date),}),
+    form.reset({
+      ...cert;
+      issue_date: formatDateValue(cert.issue_date);
+      expiration_date: formatDateValue(cert.expiration_date)})};
+  const handleDelete = async (id: string) => {
+    if (confirm('Are you sure you want to delete this certification?')) {
+      await deleteCertification(id)}
   };
-,
-  const handleDelete = async (id: string) => {,
-    if (confirm('Are you sure you want to delete this certification?')) {,
-      await deleteCertification(id),
-    ,}
-  };
-,
-  return (,
+  return (
     <div className="space-y-6">,
       <div>,
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>,
@@ -99,13 +81,12 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
           Add any professional certificationslicensesor credentials you have earned.,
         </p>,
       </div>,
-      {certifications.length > 0 && (,
-        <CertificationsList,
+      {certifications.length > 0 && (
+        <CertificationsList
           certifications={certifications} ,
           onEdit={handleEdit} ,
           onDelete={handleDelete} ,
-        />,
-      )}
+        />)}
 ,
       <div className="bg-muted/40 p-6 rounded-lg">,
         <h3 className="text-md font-medium mb-4">,
@@ -117,22 +98,20 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 ,
             <div className="flex justify-between pt-2">,
-              <Button,
+              <Button
                 type="button",
                 variant="outline",
-                onClick={() => {,
-                  if (editingId) {,
+                onClick={() => {
+                  if (editingId) {
                     setEditingId(null),
-                    form.reset({,
-                      name: '',;
-                      issuing_organization: '',;
-                      issue_date: '',;
-                      expiration_date: '',;
-                      credential_id: '',;
-                      credential_url: '',}),
-                  } else {,
-                    onBack(),
-                  }
+                    form.reset({
+                      name: '';
+                      issuing_organization: '';
+                      issue_date: '';
+                      expiration_date: '';
+                      credential_id: '';
+                      credential_url: ''})} else {
+                    onBack()}
                 }}
               >,
                 {editingId ? 'Cancel' : 'Back'}
@@ -150,7 +129,5 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
           </form>,
         </Form>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

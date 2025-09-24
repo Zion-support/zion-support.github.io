@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AiSalesIntelligencePlatformPage() {,
-  return (,
+export default function AiSalesIntelligencePlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Sales Intelligence Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai sales intelligence platform page',
         />,
@@ -22,7 +21,5 @@ export default function AiSalesIntelligencePlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,132 +1,127 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Cloud,;
-  Shield,;
-  Zap,;
-  CheckCircle,;
-  ArrowRight,;
-  BarChart3,;
-  Users,;
-  Settings,;
-  Database,;
-  Globe,;
-  Lock,;
-  Smartphone,;
-  Brain,',
-} from 'lucide-react',
+import {
+  Cloud;
+  Shield;
+  Zap;
+  CheckCircle;
+  ArrowRight;
+  BarChart3;
+  Users;
+  Settings;
+  Database;
+  Globe;
+  Lock;
+  Smartphone;
+  Brain,'} from 'lucide-react',
 import Layout from "../../components/Layout",
-,
-const phases = [,
-  {,
-    title: 'Assessment & Planning',;
-    description: 'Comprehensive analysis of current infrastructure and migration strategy development.',;
-    icon: BarChart3,;
-    steps: [,,;
-      'Infrastructure audit,',;
-      'Workload analysis',',;
-      'Migration strategy',',;
-      'Risk assessment'',,;
-    ],},;
+const phases = [
+  {
+    title: 'Assessment & Planning';
+    description: 'Comprehensive analysis of current infrastructure and migration strategy development.';
+    icon: BarChart3;
+    steps: [;
+      'Infrastructure audit,';
+      'Workload analysis',';
+      'Migration strategy',';
+      'Risk assessment'';
+    ]};
   {}
-    title: 'Design & Architecture,',;
-    description: 'Cloud-native architecture design and security framework implementation.,',;
-    icon: Settings,;
-    steps: [,,;
-      'Cloud architecture design,',;
-      'Security framework',',;
-      'Scalability planning',',;
-      'Cost optimization'',,;
-    ],},;
+    title: 'Design & Architecture,';
+    description: 'Cloud-native architecture design and security framework implementation.,';
+    icon: Settings;
+    steps: [;
+      'Cloud architecture design,';
+      'Security framework',';
+      'Scalability planning',';
+      'Cost optimization'';
+    ]};
   {}
-    title: 'Migration Execution,',;
-    description: 'Phased migration with minimal downtime and comprehensive testing.,',;
-    icon: Cloud,;
-    steps: [,,;
-      'Data migration,',;
-      'Application migration',',;
-      'Testing & validation',',;
-      'Go-live support'',,;
-    ],},;
+    title: 'Migration Execution,';
+    description: 'Phased migration with minimal downtime and comprehensive testing.,';
+    icon: Cloud;
+    steps: [;
+      'Data migration,';
+      'Application migration',';
+      'Testing & validation',';
+      'Go-live support'';
+    ]};
   {}
-    title: 'Optimization,',;
-    description: 'Continuous monitoring and optimization for peak performance.,',;
-    icon: Zap,;
-    steps: [,,;
-      'Performance monitoring,',;
-      'Cost optimization',',;
-      'Security updates',',;
-      'Continuous improvement'',,;
-    ],}
-,],,;
-const services = [,
+    title: 'Optimization,';
+    description: 'Continuous monitoring and optimization for peak window.window.performance.,';
+    icon: Zap;
+    steps: [;
+      'Performance monitoring,';
+      'Cost optimization',';
+      'Security updates',';
+      'Continuous improvement'';
+    ]}
+];
+const services = [
   {}
-    title: 'AWS Migration,',;
-    description: 'Complete migration to Amazon Web Services with best practices and optimization.,',;
-    icon: Cloud,;
-    features: [,,;
-      'EC2 instance migration,',;
-      'RDS database migration',',;
-      'S3 storage migration',',;
-      'Lambda serverless functions'',,;
-    ],},;
+    title: 'AWS Migration,';
+    description: 'Complete migration to Amazon Web Services with best practices and optimization.,';
+    icon: Cloud;
+    features: [;
+      'EC2 instance migration,';
+      'RDS database migration',';
+      'S3 storage migration',';
+      'Lambda serverless functions'';
+    ]};
   {}
-    title: 'Azure Migration,',;
-    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',;
-    icon: Shield,;
-    features: [,,;
-      'Azure Virtual Machines,',;
-      'Azure SQL Database',',;
-      'Azure Storage migration',',;
-      'Azure Functions deployment'',,;
-    ],},;
+    title: 'Azure Migration,';
+    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,';
+    icon: Shield;
+    features: [;
+      'Azure Virtual Machines,';
+      'Azure SQL Database',';
+      'Azure Storage migration',';
+      'Azure Functions deployment'';
+    ]};
   {}
-    title: 'Google Cloud Migration,',;
-    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',;
-    icon: Brain,;
-    features: [,,;
-      'Compute Engine migration,',;
-      'Cloud SQL migration',',;
-      'Cloud Storage migration',',;
-      'Cloud Functions deployment'',,;
-    ],},;
+    title: 'Google Cloud Migration,';
+    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,';
+    icon: Brain;
+    features: [;
+      'Compute Engine migration,';
+      'Cloud SQL migration',';
+      'Cloud Storage migration',';
+      'Cloud Functions deployment'';
+    ]};
   {}
-    title: 'Multi-Cloud Strategy,',;
-    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',;
-    icon: Globe,;
-    features: [,,;
-      'Cross-cloud integration,',;
-      'Disaster recovery',',;
-      'Load balancing',',;
-      'Cost optimization'',,;
-    ],}
-,],,;
+    title: 'Multi-Cloud Strategy,';
+    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,';
+    icon: Globe;
+    features: [;
+      'Cross-cloud integration,';
+      'Disaster recovery',';
+      'Load balancing',';
+      'Cost optimization'';
+    ]}
+];
 const benefits = [],
   {'}
     title: 'Cost Reduction','',
     description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',',
-    icon: BarChart3,},;
+    icon: BarChart3};
   {'}
     title: 'Enhanced Security','',
     description: 'Enterprise-grade security with automated updates and monitoring.',',
-    icon: Shield,},;
+    icon: Shield};
   {'}
     title: 'Improved Scalability','',
     description: 'Scale resources up or down based on demand automatically.',',
-    icon: Zap,},;
+    icon: Zap};
   {'}
     title: 'Better Performance','',
-    description: 'Faster load times and improved application performance.',',
-    icon: Smartphone,}],
-],
-,
-export default function CloudMigrationPage() {,
-  return (,
-    <Layout,
+    description: 'Faster load times and improved application window.window.performance.',',
+    icon: Smartphone}]],
+export default function CloudMigrationPage() {
+  return (
+    <Layout
       title="Cloud Migration Solutions - Zion Tech Group",
       description="Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with our comprehensive cloud migration services.",
-      keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"",
-    >,
+      keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud services, infrastructure migration"">,
 </$1>,
       <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">",
 </div>,
@@ -142,11 +137,10 @@ export default function CloudMigrationPage() {,
           <div className="container mx-auto px-4 relative z-10">",
 </div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}",
-              className="text-center max-w-4xl mx-auto",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}",
+              className="text-center max-w-4xl mx-auto">,
 </motion>",
               <div className="flex items-center justify-center mb-6">",
 </div>,
@@ -178,12 +172,11 @@ export default function CloudMigrationPage() {,
 </section>,
           <div className="container mx-auto px-4">",
 </div>,
-            <motion.div,;
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}",
-              className="text-center mb-16",
-            >,
+            <motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}",
+              className="text-center mb-16">,
 </motion>",
               <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">",
 </h2>,
@@ -195,13 +188,12 @@ export default function CloudMigrationPage() {,
 ",
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
 </div>,
-                <motion.div,;
+                <motion.div;
                   key={phase.title}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}",
-                  className="text-center",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}",
+                  className="text-center">,
 </motion>",
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-60o0 rounded-full flex items-center justify-center mx-auto mb-6">",
 </div>,
@@ -218,8 +210,7 @@ export default function CloudMigrationPage() {,
 </CheckCircle>,
                       </li>,
                   </ul>,
-                </motion.div>),
-              ))};
+                </motion.div>)))};
             </div>,
           </div>,
         </section>,
@@ -228,11 +219,10 @@ export default function CloudMigrationPage() {,
           <div className="container mx-auto px-4">",
 </div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}",
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}",
+              className="text-center mb-16">,
 </motion>",
               <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">",
 </h2>,
@@ -244,13 +234,12 @@ export default function CloudMigrationPage() {,
 ",
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">",
 </div>,
-                <motion.div,;
+                <motion.div;
                   key={service.title}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}",
-                  className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 p-8",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}",
+                  className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 p-8">,
 </motion>",
                   <div className="flex items-center mb-6">",
 </div>,
@@ -259,7 +248,7 @@ export default function CloudMigrationPage() {,
                       <service.icon className="w-6 h-6 text-white"  />",
 </service>,
                     </div>,
-                    <h3 className="text-2xl font-bold text-gray-90o0">{service.title,}</h3>,
+                    <h3 className="text-2xl font-bold text-gray-90o0">{service.title}</h3>,
                   </div>,
                   ",
                   <p className="text-gray-60o0 mb-6 leading-relaxed">{service.description}</p>,
@@ -268,15 +257,14 @@ export default function CloudMigrationPage() {,
                     <h4 className="font-semibold text-gray-90o0 mb-3">Key Features: </h4>"",
                     <ul className="space-y-2">",
 </ul>",
-                        <li key={featureIndex,} className="flex items-center text-sm text-gray-60o0">",
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-60o0">",
 </li>",
                           <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />",
 </CheckCircle>,
                         </li>,
                     </ul>,
                   </div>,
-                </motion.div>,
-              ))};
+                </motion.div>))};
             </div>,
           </div>,
         </section>,
@@ -285,11 +273,10 @@ export default function CloudMigrationPage() {,
           <div className="container mx-auto px-4">",
 </div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}",
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}",
+              className="text-center mb-16">,
 </motion>",
               <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">",
 </h2>,
@@ -301,13 +288,12 @@ export default function CloudMigrationPage() {,
 ",
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">",
 </div>,
-                <motion.div,;
+                <motion.div;
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}",
-                  className="text-center",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}",
+                  className="text-center">,
 </motion>",
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-60o0 rounded-full flex items-center justify-center mx-auto mb-6">",
 </div>,
@@ -316,8 +302,7 @@ export default function CloudMigrationPage() {,
                   </div>,
                   <h3 className="text-xl font-bold text-gray-90o0 mb-4">{benefit.title}</h3>,
                   <p className="text-gray-60o0 leading-relaxed">{benefit.description}</p>,
-                </motion.div>,
-              ))};
+                </motion.div>))};
             </div>,
           </div>,
         </section>,
@@ -326,9 +311,9 @@ export default function CloudMigrationPage() {,
           <div className="container mx-auto px-4 text-center">",
 </div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}};
-              animate={{ opacity: 1, y: 0 ,}};
-              transition={{ duration: 0.8 ,}};
+              initial={{ opacity: 0, y: 20 }};
+              animate={{ opacity: 1, y: 0 }};
+              transition={{ duration: 0.8 }};
             >,
 </motion>",
               <h2 className="text-4xl md: text-5xl font-bold mb-6">",
@@ -350,6 +335,4 @@ export default function CloudMigrationPage() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}

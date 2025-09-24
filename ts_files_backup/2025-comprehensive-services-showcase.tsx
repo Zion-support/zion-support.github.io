@@ -1,12 +1,10 @@
 'use client',
-,
-import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO',
-,
-const ComprehensiveServicesShowcase2025 = () => {,
-  return (,
+const ComprehensiveServicesShowcase2025 = () => {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100'>,
-      <SEO,
+      <SEO
         title='2025 Comprehensive Services Showcase - Zion Tech Group',
         description='Discover our comprehensive portfolio of innovative micro SAASIT infrastructureand AI services. Transform your business with cutting-edge solutions.',
         keywords='micro SAASIT servicesAI servicesbusiness intelligenceautomationcloud infrastructure',
@@ -21,9 +19,5 @@ const ComprehensiveServicesShowcase2025 = () => {,
           </p>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default ComprehensiveServicesShowcase2025,
-,
+    </div>)};
+export default ComprehensiveServicesShowcase2025;

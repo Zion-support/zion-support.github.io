@@ -1,38 +1,35 @@
-import React from 'react',
+import React from 'react';
 
 import { createContextuseContextuseLayoutEffectuseState } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 type Theme = "dark" | "light" | "system",
-type ThemeProviderProps = {,
+type ThemeProviderProps = {
   children: React.ReactNode,
-  defaultTheme?: Theme,
-,}
+  defaultTheme?: Theme}
 ,
-type ThemeProviderState = {,
+type ThemeProviderState = {
   theme: Theme,
   setTheme: (theme: Theme) => void,
-  toggleTheme: () => void,
-,}
+  toggleTheme: () => void}
 ,
-const initialState: ThemeProviderState = {,
-  theme: "system",;
-  setTheme: () => null,;
-  toggleTheme: () => null,}
+const initialState: ThemeProviderState = {
+  theme: "system";
+  setTheme: () => null;
+  toggleTheme: () => null}
 ,
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState),
-export function ThemeProvider({,
-  children,;
-  defaultTheme = "system"}: ThemeProviderProps) {,
-  const [themesetTheme] = useState<Theme>(() => {,
+export function ThemeProvider({
+  children;
+  defaultTheme = "system"}: ThemeProviderProps) {
+  const [themesetTheme] = useState<Theme>(() => {
     const stored = safeStorage.getItem("theme") as Theme | null,
-    return stored || defaultTheme,
-  }),
-  const applyTheme = (t: Theme) => {,
+    return stored || defaultTheme}),
+  const applyTheme = (t: Theme) => {
     const root = window.document.documentElement,
     const body = window.document.body,
     root.classList.remove("light"dark"),
     body.classList.remove("light"dark"),
-    if (t === "system") {,
+    if (t === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)"),
         .matches,
         ? "dark",
@@ -41,52 +38,41 @@ export function ThemeProvider({,
       root.setAttribute("data-theme"systemTheme),
       body.classList.add(systemTheme),
       body.setAttribute("data-theme"systemTheme),
-      return,
-    ,}
+      return}
 ,
     root.classList.add(t),
     root.setAttribute("data-theme"t),
     body.classList.add(t),
-    body.setAttribute("data-theme"t),
-  }
+    body.setAttribute("data-theme"t)}
 ,
-  useLayoutEffect(() => {,
+  useLayoutEffect(() => {
     applyTheme(theme),
-    safeStorage.setItem("theme"theme),
-  }[theme]),
-  const setCurrentTheme = (newTheme: Theme) => {,
+    safeStorage.setItem("theme"theme)}[theme]),
+  const setCurrentTheme = (newTheme: Theme) => {
     safeStorage.setItem("theme"newTheme),
     applyTheme(newTheme),
-    setTheme(newTheme),
-  ,};
-,
-  const toggleTheme = () => {,
+    setTheme(newTheme)};
+  const toggleTheme = () => {
     let currentResolvedTheme = theme,
-    if (currentResolvedTheme === "system") {,
+    if (currentResolvedTheme === "system") {
       currentResolvedTheme = window.matchMedia("(prefers-color-scheme: dark)"),
         .matches,
         ? "dark",
-        : "light",
-    ,}
-    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark"),
-  };
-,
-  const value = {,
-    theme,;
-    setTheme: setCurrentTheme,;
+        : "light"}
+    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")};
+  const value = {
+    theme;
+    setTheme: setCurrentTheme;
     toggleTheme}
 ,
-  return (,
+  return (
     <ThemeProviderContext.Provider value={value}>,
       {children}
-    </ThemeProviderContext.Provider>,
-  ),
-}
+    </ThemeProviderContext.Provider>)}
 ,
-export const useTheme = () => {,
+export const useTheme = () => {
   const context = useContext(ThemeProviderContext),
   if (context === undefined),
     throw new Error("useTheme must be used within a ThemeProvider"),
-  return context,
-}
+  return context}
 ,

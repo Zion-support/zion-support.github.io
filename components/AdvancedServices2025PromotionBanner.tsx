@@ -1,48 +1,36 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const AdvancedServices20o25PromotionBanner: React.FC = () => {,
+const AdvancedServices20o25PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentServicesetCurrentService] = useState(0),
-,
-  const services = [,
-    {,
-      title: "AI Strategy Consulting",;
-      icon: "🤖",;
-      description: "Comprehensive AI strategy development",;
-      features: ["Strategic Planning"ROI Optimization"],;
-      color: "from-emerald-50o0 to-teal-60o0",
-    ,},;
-    {,
-      title: "Machine Learning Development",;
-      icon: "🧠",;
-      description: "Custom ML models and algorithms",;
-      features: ["Custom Models"Advanced Analytics"],;
-      color: "from-blue-50o0 to-indigo-60o0",
-    ,},;
-    {,
-      title: "Intelligent Automation",;
-      icon: "⚡",;
-      description: "End-to-end automation solutions",;
-      features: ["Process Automation"95% Efficiency Gain"],;
-      color: "from-purple-50o0 to-pink-60o0",
-    ,}
+  const services = [
+    {
+      title: "AI Strategy Consulting";
+      icon: "🤖";
+      description: "Comprehensive AI strategy development";
+      features: ["Strategic Planning"ROI Optimization"];
+      color: "from-emerald-50o0 to-teal-60o0"};
+    {
+      title: "Machine Learning Development";
+      icon: "🧠";
+      description: "Custom ML models and algorithms";
+      features: ["Custom Models"Advanced Analytics"];
+      color: "from-blue-50o0 to-indigo-60o0"};
+    {
+      title: "Intelligent Automation";
+      icon: "⚡";
+      description: "End-to-end automation solutions";
+      features: ["Process Automation"95% Efficiency Gain"];
+      color: "from-purple-50o0 to-pink-60o0"}
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
-    const interval = setInterval(() => {,
-      setCurrentService((prev) => (prev + 1) % services.length),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
+    const interval = setInterval(() => {
+      setCurrentService((prev) => (prev + 1) % services.length)}50o00),
+    return () => clearInterval(interval)}[]),
   if (!isVisible) return null,
-,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-purple-90o0 py-12">,
       {/* Animated background patterns */}
       <div className="absolute inset-0">,
@@ -61,13 +49,13 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {,
             Unlock the full potential of artificial intelligence with our comprehensive suite of premium services designed to accelerate your digital transformation and maximize ROI.,
           </p>,
         </div>,
-        {/* Service showcase */,}
+        {/* Service showcase */}
         <div className="mb-12">,
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover: border-white/40 transition-all duration-50o0">,
             <div className="flex flex-col lg:flex-row items-center gap-8">,
               <div className="flex-1">,
                 <div className="flex items-center gap-4 mb-6">,
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${services[currentService].color,} flex items-center justify-center text-3xl`}>,
+                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${services[currentService].color} flex items-center justify-center text-3xl`}>,
                     {services[currentService].icon}
                   </div>,
                   <h3 className="text-3xl font-bold text-white">,
@@ -78,18 +66,17 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {,
                   {services[currentService].description}
                 </p>,
                 <div className="flex flex-wrap gap-3 mb-6">,
-                  {services[currentService].features.map((featureindex) => (,
-                    <span,
+                  {services[currentService].features.map((featureindex) => (
+                    <span
                       key={index}
                       className={`px-4 py-2 bg-gradient-to-r ${services[currentService].color} text-white font-semibold rounded-full text-sm`}
                     >,
                       {feature}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
-                <Link,
+                <Link
                   href="/ai-20o25-advanced-services-showcase",
-                  className={`inline-block px-8 py-4 bg-gradient-to-r ${services[currentService].color} text-white font-bold text-lg rounded-full hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5`,}
+                  className={`inline-block px-8 py-4 bg-gradient-to-r ${services[currentService].color} text-white font-bold text-lg rounded-full hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5`}
                 >,
                   Explore Service →,
                 </Link>,
@@ -119,17 +106,15 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {,
         </div>,
         {/* Service dots indicator */}
         <div className="flex justify-center gap-3 mb-8">,
-          {services.map((_index) => (,
-            <button,
+          {services.map((_index) => (
+            <button
               key={index}
               onClick={() => setCurrentService(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentService,
                   ? 'bg-white scale-125',
-                  : 'bg-white/40 hover: bg-white/60',
-              ,}`}
-            />,
-          ))}
+                  : 'bg-white/40 hover: bg-white/60'}`}
+            />))}
         </div>,
         {/* Pricing preview */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12">,
@@ -155,16 +140,14 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {,
         {/* CTA */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-6 justify-center items-center mb-6">,
-            <Link,
+            <Link
               href="/contact",
-              className="px-10 py-5 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white font-bold text-xl rounded-full hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl",
-            >,
+              className="px-10 py-5 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white font-bold text-xl rounded-full hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl">,
               Request Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o25-advanced-services-showcase",
-              className="px-10 py-5 border-2 border-emerald-40o0 text-emerald-30o0 font-bold text-xl rounded-full hover:bg-emerald-40o0 hover:text-white transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="px-10 py-5 border-2 border-emerald-40o0 text-emerald-30o0 font-bold text-xl rounded-full hover:bg-emerald-40o0 hover:text-white transition-all duration-30o0 transform hover:scale-10o5">,
               View All Services,
             </Link>,
           </div>,
@@ -183,25 +166,19 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Floating elements */,}
+        {/* Floating elements */}
         <div className="absolute top-8 left-8 w-4 h-4 bg-emerald-40o0 rounded-full animate-ping opacity-75"></div>,
         <div className="absolute top-16 right-12 w-6 h-6 bg-blue-40o0 rounded-full animate-ping opacity-75 animation-delay-10o00"></div>,
         <div className="absolute bottom-8 left-1/3 w-3 h-3 bg-purple-40o0 rounded-full animate-ping opacity-75 animation-delay-20o00"></div>,
         <div className="absolute bottom-16 right-1/3 w-5 h-5 bg-yellow-40o0 rounded-full animate-ping opacity-75 animation-delay-30o00"></div>,
       </div>,
       <style jsx>{`,
-        .animation-delay-10o00 {,
-          animation-delay: 1s,
-        ,}
-        .animation-delay-20o00 {,
-          animation-delay: 2s,
-        ,}
-        .animation-delay-30o00 {,
-          animation-delay: 3s,
-        ,}
+        .animation-delay-10o00 {
+          animation-delay: 1s}
+        .animation-delay-20o00 {
+          animation-delay: 2s}
+        .animation-delay-30o00 {
+          animation-delay: 3s}
       `}</style>,
-    </div>,
-  ),
-};
-,
-export default AdvancedServices20o25PromotionBanner,
+    </div>)};
+export default AdvancedServices20o25PromotionBanner;

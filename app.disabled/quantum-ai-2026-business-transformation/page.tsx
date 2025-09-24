@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Quantum AI 20o26: The Ultimate Business Transformation Guide',;
+export const metadata = {
+  title: 'Quantum AI 20o26: The Ultimate Business Transformation Guide';
   description:,
-    'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.',;
-  keywords: [,
-    'Quantum Computing',;
-    'AI',;
-    'Business Transformation',;
-    '20o26 Trends',;
-    'Innovation',;
-  ],;
+    'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.';
+  keywords: [
+    'Quantum Computing';
+    'AI';
+    'Business Transformation';
+    '20o26 Trends';
+    'Innovation';
+  ];
 };
-,
-export default function QuantumAI20o26Page() {,
-  return (,
+export default function QuantumAI20o26Page() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Quantum AI 20o26: The Ultimate Business Transformation Guide',
         description='Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.',
         keywords='Quantum Computing, AI, Business Transformation, 20o26 Trends, Innovation',
@@ -40,23 +38,21 @@ export default function QuantumAI20o26Page() {,
                 and revolutionary capabilities.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='#content',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Read Full Guide,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Explore Quantum Solutions,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -87,7 +83,7 @@ export default function QuantumAI20o26Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <section id='content' className='py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='prose prose-lg max-w-none'>,
@@ -394,7 +390,7 @@ export default function QuantumAI20o26Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -406,23 +402,19 @@ export default function QuantumAI20o26Page() {,
               business results.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/services/quantum-technology',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Quantum Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

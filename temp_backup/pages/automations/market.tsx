@@ -1,14 +1,11 @@
 import Head from 'next/head',
 import market from '../../data/automation/market.json',
-,
-type Download = { package: string, downloads: number ,};
-,
-type Trending = { language: string, mentions: number ,};
-,
-export default function MarketAutomation() {,
+type Download = { package: string, downloads: number };
+type Trending = { language: string, mentions: number };
+export default function MarketAutomation() {
   const downloads = (market.metrics?.npmDownloads as Download[]) || [],
   const trending = (market.metrics?.githubTrending as Trending[]) || [],
-  return (,
+  return (
     <div>,
       <Head>,
         <title>Market Signals Watcher</title>,
@@ -21,35 +18,29 @@ export default function MarketAutomation() {,
         <div className='enhanced-card border border-gray-10o0 dark:border-gray-80o0'>,
           <div className='font-medium mb-2'>NPM Weekly Downloads</div>,
           <div className='space-y-1 text-sm'>,
-            {downloads.map((d, i) => (,
+            {downloads.map((d, i) => (
               <div key={i} className='flex items-center justify-between'>,
                 <span className='opacity-80'>{d.package}</span>,
                 <span className='tabular-nums'>,
                   {d.downloads.toLocaleString()}
                 </span>,
-              </div>,
-            ))}
-            {downloads.length === 0 && (,
-              <div className='opacity-60'>No data yet.</div>,
-            )}
+              </div>))}
+            {downloads.length === 0 && (
+              <div className='opacity-60'>No data yet.</div>)}
           </div>,
         </div>,
         <div className='enhanced-card border border-gray-10o0 dark: border-gray-80o0'>,
           <div className='font-medium mb-2'>GitHub Trending Languages</div>,
           <div className='space-y-1 text-sm'>,
-            {trending.map((t, i) => (,
+            {trending.map((t, i) => (
               <div key={i} className='flex items-center justify-between'>,
                 <span className='opacity-80'>{t.language}</span>,
                 <span className='tabular-nums'>{t.mentions}</span>,
-              </div>,
-            ))}
-            {trending.length === 0 && (,
-              <div className='opacity-60'>No data yet.</div>,
-            )}
+              </div>))}
+            {trending.length === 0 && (
+              <div className='opacity-60'>No data yet.</div>)}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

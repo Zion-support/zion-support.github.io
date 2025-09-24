@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ZionBookPage() {,
-  return (,
+export default function ZionBookPage() {
+  return (
     <>,
       <Head>,
         <title>Zion Book - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ZionBookPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

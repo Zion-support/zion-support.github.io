@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {,
-  return (,
+const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -132,30 +131,23 @@ const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/synthetic-intelligence-20o30-business-revolution',
-              className='bg-white text-emerald-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-emerald-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Read Full Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/synthetic-intelligence',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-colors text-lg'>,
               Explore Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-colors text-lg',
-            >,
+              className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-colors text-lg'>,
               Start Revolution,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default SyntheticIntelligence20o30PromotionBanner,
-,
+    </section>)};
+export default SyntheticIntelligence20o30PromotionBanner;

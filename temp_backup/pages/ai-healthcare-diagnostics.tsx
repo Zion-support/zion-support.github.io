@@ -1,16 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AIHealthcareDiagnosticsPage() {,
-  return (,
+export default function AIHealthcareDiagnosticsPage() {
+  return (
     <>,
       <Head>,
         <title>AI Healthcare Diagnostics | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='AI-powered diagnostics and clinical decision support.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-healthcare-diagnostics',
         />,
@@ -23,7 +22,5 @@ export default function AIHealthcareDiagnosticsPage() {,
           Decision support tools and AI diagnostics for healthcare providers.,
         </p>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

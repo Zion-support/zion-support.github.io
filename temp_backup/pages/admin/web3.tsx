@@ -1,34 +1,26 @@
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
-,
-export default function AdminWeb3Page() {,
+export default function AdminWeb3Page() {
   const [users, setUsers] = useState<,
-    { id: string, enabled: boolean, chain?: string ,}[],
-  >([]),
-,
-  useEffect(() => {,
+    { id: string, enabled: boolean, chain?: string }[]>([]),
+  useEffect(() => {
     const raw =,
       typeof window !== 'undefined',
         ? window.localStorage.getItem('zion-web3-users'),
         : null,
-    setUsers(raw ? JSON.parse(raw) : []),
-  }, []),
-,
-  const save = (list: any) => {,
+    setUsers(raw ? JSON.parse(raw) : [])}, []),
+  const save = (list: any) => {
     if (typeof window !== 'undefined'),
       window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),
-    setUsers(list),
+    setUsers(list)};
+  const metrics = {
+    total: users.length;
+    evm: users.filter(u => u.chain === 'evm').length;
+    sol: users.filter(u => u.chain === 'sol').length;
+    enabled: users.filter(u => u.enabled).length;
+    disabled: users.filter(u => !u.enabled).length;
   };
-,
-  const metrics = {,
-    total: users.length,;
-    evm: users.filter(u => u.chain === 'evm').length,;
-    sol: users.filter(u => u.chain === 'sol').length,;
-    enabled: users.filter(u => u.enabled).length,;
-    disabled: users.filter(u => !u.enabled).length,;
-  };
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Admin — Web3</title>,
@@ -38,37 +30,32 @@ export default function AdminWeb3Page() {,
         <div className='rounded-md border p-4'>,
           <div className='font-medium mb-2'>Usage Metrics</div>,
           <div className='text-sm text-gray-60o0'>,
-            Total: {metrics.total,} · EVM: {metrics.evm,} · Solana: {metrics.sol,}{' '}
-            · Enabled: {metrics.enabled,} · Disabled: {metrics.disabled,}
+            Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol}{' '}
+            · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}
           </div>,
         </div>,
         <div className='rounded-md border p-4'>,
           <div className='font-medium mb-2'>Users</div>,
-          {users.length === 0 && (,
-            <div className='text-sm text-gray-50o0'>No data yet</div>,
-          )}
+          {users.length === 0 && (
+            <div className='text-sm text-gray-50o0'>No data yet</div>)}
           <ul className='space-y-2'>,
-            {users.map((u, i) => (,
+            {users.map((u, i) => (
               <li key={i} className='flex items-center justify-between'>,
                 <div className='text-sm'>{u.id}</div>,
                 <label className='inline-flex items-center gap-2 text-sm'>,
                   <span>Web3</span>,
-                  <input,
+                  <input
                     type='checkbox',
                     checked={u.enabled}
-                    onChange={e => {,
+                    onChange={e => {
                       const next = users.slice(),
-                      next[i] = { ...u, enabled: e.target.checked ,};
-                      save(next),
-                    }}
+                      next[i] = { ...u, enabled: e.target.checked };
+                      save(next)}}
                   />,
                 </label>,
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GenesisPage() {,
-  return (,
+export default function GenesisPage() {
+  return (
     <>,
       <Head>,
         <title>Genesis - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function GenesisPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

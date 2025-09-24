@@ -1,70 +1,60 @@
 
 import { useState } from 'react',
-import {,
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,;
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu',
+  DropdownMenuSeparator;
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
 import { DialogContentDialogFooterDialogHeaderDialogTitle } from '@/components/ui/dialog',
 SaveChevronDownPlusLoader2,
 import { Resume } from '@/types/resume',
 import { useResume } from '@/hooks/useResume',
-,
-interface ResumeVersionSelectorProps {,
+interface ResumeVersionSelectorProps {
   currentResume: Resume,
-  onResumeChange: (resumeId: string) => void,
-,}
+  onResumeChange: (resumeId: string) => void}
 ,
-export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVersionSelectorProps) {,
+export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVersionSelectorProps) {
   const { createResumefetchResume } = useResume(),
   const [saveDialogOpensetSaveDialogOpen] = useState(false),
   const [newResumeTitlesetNewResumeTitle] = useState(''),
   const [existingResumesetExistingResumes] = useState<Resume[]>([]),
   const [isLoadingsetIsLoading] = useState(false),
-,
-  const handleCreateNewVersion = async () => {,
-    if (newResumeTitle.trim()) {,
+  const handleCreateNewVersion = async () => {
+    if (newResumeTitle.trim()) {
       setIsLoading(true),
-      const resumeId = await createResume({ title: newResumeTitle.trim() ,}),
-      if (resumeId) {,
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),
+      if (resumeId) {
         await fetchResume(resumeId),
         onResumeChange(resumeId),
         setSaveDialogOpen(false),
-        setNewResumeTitle(''),
-      }
-      setIsLoading(false),
-    }
+        setNewResumeTitle('')}
+      setIsLoading(false)}
   };
-,
-  return (,
+  return (
     <div className="flex items-center gap-2">,
       <span className="text-sm text-muted-foreground">Resume: </span>,
       <DropdownMenu>,
         <DropdownMenuTrigger asChild>,
           <Button variant="outline" size="sm" className="gap-2">,
-            {currentResume?.basic_info?.title || 'My Resume',}
+            {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />,
           </Button>,
         </DropdownMenuTrigger>,
         <DropdownMenuContent align="end">,
-          {existingResumes.map((resume) => (,
-            <DropdownMenuItem,
+          {existingResumes.map((resume) => (
+            <DropdownMenuItem
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
-              className="cursor-pointer",
-            >,
+              className="cursor-pointer">,
               {resume.basic_info.title}
-            </DropdownMenuItem>,
-          ))}
+            </DropdownMenuItem>))}
           <DropdownMenuSeparator />,
-          <DropdownMenuItem,
+          <DropdownMenuItem
             onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer",
-          >,
+            className="cursor-pointer">,
             <Plus className="h-4 w-4 mr-2" />,
             Save as new version,
           </DropdownMenuItem>,
@@ -76,24 +66,23 @@ export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVer
             <DialogTitle>Save as new resume version</DialogTitle>,
           </DialogHeader>,
           <div className="py-4">,
-            <Input,
-              value={newResumeTitle,}
+            <Input
+              value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
               placeholder="Enter resume title (e.g. DevOps Resume)",
             />,
           </div>,
           <DialogFooter>,
-            <Button,
+            <Button
               variant="outline",
               onClick={() => setSaveDialogOpen(false)}
             >,
               Cancel,
             </Button>,
-            <Button,
+            <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
-              className="gap-2",
-            >,
+              className="gap-2">,
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />,
               Save,
@@ -101,7 +90,5 @@ export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVer
           </DialogFooter>,
         </DialogContent>,
       </Dialog>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

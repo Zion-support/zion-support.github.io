@@ -1,23 +1,21 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Evaluation Playground | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Evaluation Playground | Zion Tech Group';
   description:,
-    'Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.',;
-  keywords: [,
-    'agent evaluations',;
-    'eval harness',;
-    'policy-as-code',;
-    'safety',;
-    'observability',;
-  ],;
+    'Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.';
+  keywords: [
+    'agent evaluations';
+    'eval harness';
+    'policy-as-code';
+    'safety';
+    'observability';
+  ];
 };
-,
-export default function AgentEvaluationPlaygroundPage() {,
-  return (,
+export default function AgentEvaluationPlaygroundPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Evaluation Playground',
         description='Hands-on templates and scenarios to prototype, run, and visualize agent evaluations safely.',
         keywords='agent evaluations, eval harness, policy-as-code, safety, observability',
@@ -61,21 +59,17 @@ export default function AgentEvaluationPlaygroundPage() {,
           </p>,
         </article>,
         <div className='mt-8 flex gap-4'>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-agent-evaluation-playground-overview',
-            className='bg-emerald-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-emerald-70o0',
-          >,
+            className='bg-emerald-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-emerald-70o0'>,
             Read Overview,
           </Link>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             ← Back to Content,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function BusinessProcessAutomation20o45Page() {,
-  return (,
+export default function BusinessProcessAutomation20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Business Process Automation 20o45 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='business process automation 20o45 page',
         />,
@@ -21,7 +20,5 @@ export default function BusinessProcessAutomation20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

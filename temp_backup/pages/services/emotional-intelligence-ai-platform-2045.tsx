@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function EmotionalIntelligenceAiPlatform20o45Page() {,
-  return (,
+export default function EmotionalIntelligenceAiPlatform20o45Page() {
+  return (
     <>,
       <Head>,
         <title>,
           Emotional Intelligence Ai Platform 20o45 - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='emotional intelligence ai platform 20o45 page',
         />,
@@ -23,7 +22,5 @@ export default function EmotionalIntelligenceAiPlatform20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

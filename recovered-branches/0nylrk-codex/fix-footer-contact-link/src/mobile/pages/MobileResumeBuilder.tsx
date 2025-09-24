@@ -1,14 +1,13 @@
 
 ,
-import React from "react",
+import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader",
 import {BottomNavigation} from "../components/common/BottomNavigation",
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder",
-,
-export function MobileResumeBuilder() {,
-  return (,
+export function MobileResumeBuilder() {
+  return (
     <div className="min-h-screen">,
-      <MobileHeader,
+      <MobileHeader
         title="Resume Builder",
         showBack,
       />,
@@ -16,30 +15,23 @@ export function MobileResumeBuilder() {,
         <ResumeBuilderComponent />,
       </main>,
       <BottomNavigation />,
-    </div>,
-  ),
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
+    </div>),
+import React from "react";;
+import { MobileHeader } from "../components/common/MobileHeader";
+import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
-export function MobileResumeBuilder() {,
-  return (,
+export function MobileResumeBuilder() {
+  return (
     <div className="min-h-screen">,
-      <MobileHeader,
+      <MobileHeader
         title="Resume Builder",
         showBack,
-,
       />,
-,
       <main className="py-4">,
         <ResumeBuilderComponent />,
       </main>,
-,
       <BottomNavigation />,
-    </div>,
-  ),
-,
-}
+    </div>)}
 ,
 import React from './react',
 import { MobileHeader } from '../components / common / MobileHeader',
@@ -48,10 +40,10 @@ import { MobileResumeBuilder, as, ResumeBuilderComponent } from '../components /
 export /**,
  * MobileResumeBuilder - Function description,
  */,
-function MobileResumeBuilder() {,
-  return (,
+function MobileResumeBuilder() {
+  return (
     <div className="min - h-screen">,
-      <MobileHeader,
+      <MobileHeader
         title="Resume Builder",
         show_back,
       />,
@@ -59,7 +51,5 @@ function MobileResumeBuilder() {,
         <ResumeBuilderComponent />,
       </main>,
       <BottomNavigation />,
-    </div>),
-}
-,
+    </div>)}
 }

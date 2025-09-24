@@ -62,68 +62,46 @@ import AI20o25UltimateBreakthroughBanner from '../components/AI20o25UltimateBrea
 import QuantumAI20o25BreakthroughPromotionBanner from '../components/QuantumAI20o25BreakthroughPromotionBanner',
 import AutonomousBusinessOperationsPromotionBanner from '../components/AutonomousBusinessOperationsPromotionBanner',
 import AI10o00ROISuccessStoryBanner from '../components/AI10o00ROISuccessStoryBanner',
-,
 // Import new advanced enhancement components,
-,
 // Import new 20o26 AI breakthrough promotional components,
-,
 // Import existing promotional banners,
-,
 // Import working components only,
-,
 // Lazy load heavy components,
 const ROICalculator = lazy(() => import('../components/ROICalculator')),
 const StructuredData = lazy(() => import('../components/StructuredData')),
-const PerformanceMetrics = lazy(,
-  () => import('../components/PerformanceMetrics'),
-),
+const PerformanceMetrics = lazy(
+  () => import('../components/PerformanceMetrics')),
 const TechnologyStack = lazy(() => import('../components/TechnologyStack')),
-,
 // Import key promotional components,
-,
 // Import comprehensive merged content banner,
-,
 // Import new 20o26 promotional components,
-,
 // Import new ultimate breakthrough promotional components,
-,
 // Import new AI 20o26 Revolution components,
-,
 // Import new content revolution components,
-,
 // Import new AI Content Revolution promotional components,
-,
 // Import new Quantum-Neural Fusion promotional components,
-,
 // Import new Ultimate Autonomous Business Revolution promotional components,
-,
 // Import new Ultimate AI Revolution promotional components,
-,
 // Import new AI 20o26 Future Predictions promotional components,
-,
 // Import new Ultimate Digital Transformation promotional components,
-,
 // Import new Ultimate Enterprise Transformation components,
 // Import new AI 20o25 Ultimate Breakthrough Revolution components,
-,
 // Import additional promotional components,
-,
 // Import new 20o25 breakthrough promotional components,
-,
-export default function HomePage() {,
-  return (,
+export default function HomePage() {
+  return (
     <EnhancedErrorBoundary>,
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-90o0 dark:to-gray-80o0'>,
-        <EnhancedSEO,
+        <EnhancedSEO
           title='AI-Powered Business Solutions - 20o26 Revolutionary Breakthrough',
           description='Discover the ultimate AI-powered business solutions with 80o0% ROI success stories. Revolutionary breakthrough technology for 20o26.',
-          keywords={[,
-            'AI',;
-            'business solutions',;
-            'ROI',;
-            '20o26',;
-            'breakthrough',;
-            'revolutionary',;
+          keywords={[
+            'AI';
+            'business solutions';
+            'ROI';
+            '20o26';
+            'breakthrough';
+            'revolutionary';
           ]}
         />,
         <Suspense fallback={<EnhancedLoadingSpinner variant='fullscreen' />}>,
@@ -167,7 +145,5 @@ export default function HomePage() {,
           <ComprehensiveContentShowcase20o26 />,
         </Suspense>,
       </div>,
-    </EnhancedErrorBoundary>,
-  ),
-}
+    </EnhancedErrorBoundary>)}
 ,

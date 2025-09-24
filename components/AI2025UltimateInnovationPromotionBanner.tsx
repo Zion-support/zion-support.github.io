@@ -1,55 +1,44 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
 ArrowRightZapBrainTrendingUpUsersAwardClock,
 import Link from 'next/link',
-,
-const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {,
+const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentStatsetCurrentStat] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentStat(prev => (prev + 1) % 3),
-    ,}30o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const stats = [,
-    { icon: TrendingUpvalue: "5,0o00%"label: "ROI Increase"color: "from-green-50o0 to-emerald-50o0" ,},;
-    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-50o0 to-cyan-50o0" ,},;
-    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-50o0 to-pink-50o0" ,}
+    const interval = setInterval(() => {
+      setCurrentStat(prev => (prev + 1) % 3)}30o00),
+    return () => clearInterval(interval)}[]),
+  const stats = [
+    { icon: TrendingUpvalue: "5,0o00%"label: "ROI Increase"color: "from-green-50o0 to-emerald-50o0" };
+    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-50o0 to-cyan-50o0" };
+    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-50o0 to-pink-50o0" }
   ],
-,
-  const features = [,
-    "Quantum-AI Fusion Technology",;
+  const features = [
+    "Quantum-AI Fusion Technology";
     "Autonomous Business Operations",
-    "Neural Interface Revolution",;
-    "Transcendent Intelligence",
-  ],
-,
-  return (,
+    "Neural Interface Revolution";
+    "Transcendent Intelligence"],
+  return (
     <motion.div,
-      initial={{ opacity: 0, y: 20 ,}}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-      transition={{ duration: 0.6 ,}}
-      className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 py-12",
-    >,
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+      transition={{ duration: 0.6 }}
+      className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 py-12">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="container mx-auto px-4 relative z-10">,
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1 text-center lg: text-left">,
             <motion.div,
-              initial={{ opacity: 0x: -30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 ,}}
-              transition={{ delay: 0.2duration: 0.6 ,}}
-              className="mb-4",
-            >,
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -30 }}
+              transition={{ delay: 0.2duration: 0.6 }}
+              className="mb-4">,
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">,
                 <Zap className="w-4 h-4"  />,
                 Limited Time Offer,
@@ -62,59 +51,52 @@ const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {,
                 Experience the future of artificial intelligence today.,
               </p>,
             </motion.div>,
-            {/* Features List */,}
+            {/* Features List */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-              transition={{ delay: 0.4duration: 0.6 ,}}
-              className="grid grid-cols-2 gap-2 mb-6",
-            >,
-              {features.map((featureindex) => (,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ delay: 0.4duration: 0.6 }}
+              className="grid grid-cols-2 gap-2 mb-6">,
+              {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2 text-gray-30o0">,
                   <div className="w-2 h-2 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full"></div>,
                   <span className="text-sm">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </motion.div>,
             {/* CTA Buttons */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-              transition={{ delay: 0.6duration: 0.6 ,}}
-              className="flex flex-col sm: flex-row gap-4",
-            >,
-              <Link,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ delay: 0.6duration: 0.6 }}
+              className="flex flex-col sm: flex-row gap-4">,
+              <Link
                 href="/ai-20o25-ultimate-breakthrough",
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Explore Now,
                 <ArrowRight className="w-4 h-4"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center justify-center gap-2 border-2 border-gray-40o0 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-30o0 hover:bg-gray-80o0/50 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center justify-center gap-2 border-2 border-gray-40o0 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-30o0 hover:bg-gray-80o0/50 transition-all duration-30o0">,
                 Get Started,
               </Link>,
             </motion.div>,
           </div>,
-          {/* Right Stats */,}
+          {/* Right Stats */}
           <motion.div,
-            initial={{ opacity: 0x: 30 ,}}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 ,}}
-            transition={{ delay: 0.3duration: 0.6 ,}}
-            className="flex-shrink-0",
-          >,
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 30 }}
+            transition={{ delay: 0.3duration: 0.6 }}
+            className="flex-shrink-0">,
             <div className="bg-gray-80o0/50 backdrop-blur-sm border border-gray-70o0 rounded-2xl p-8 min-w-[30o0px]">,
               <h3 className="text-xl font-bold text-white text-center mb-6">Proven Results</h3>,
               {/* Animated Stat */}
               <motion.div,
                 key={currentStat}
-                initial={{ opacity: 0scale: 0.8 ,}}
-                animate={{ opacity: 1scale: 1 ,}}
-                transition={{ duration: 0.5 ,}}
-                className="text-center mb-6",
-              >,
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-6">,
                 <div className={`inline-flex p-4 rounded-full bg-gradient-to-r ${stats[currentStat].color} mb-4`}>,
                   <stats[currentStat].icon className="w-8 h-8 text-white"  />,
                 </div>,
@@ -138,11 +120,10 @@ const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {,
               </div>,
               {/* Urgency Indicator */}
               <motion.div,
-                initial={{ opacity: 0 ,}}
-                animate={{ opacity: 1 ,}}
-                transition={{ delay: 1duration: 0.5 ,}}
-                className="mt-6 flex items-center justify-center gap-2 text-orange-40o0 text-sm",
-              >,
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1duration: 0.5 }}
+                className="mt-6 flex items-center justify-center gap-2 text-orange-40o0 text-sm">,
                 <Clock className="w-4 h-4"  />,
                 <span>Limited time offer - Act now!</span>,
               </motion.div>,
@@ -150,8 +131,5 @@ const AI20o25UltimateInnovationPromotionBanner: React.FC = () => {,
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-};
-,
-export default AI20o25UltimateInnovationPromotionBanner,
+    </motion.div>)};
+export default AI20o25UltimateInnovationPromotionBanner;

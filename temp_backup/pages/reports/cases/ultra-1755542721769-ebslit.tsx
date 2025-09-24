@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UltraCasePage() {,
-  return (,
+export default function UltraCasePage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Case Study: Real-time collaboration tools Success</title>,
@@ -32,17 +31,14 @@ export default function UltraCasePage() {,
           </ul>,
         </section>,
         <section className="text-center">,
-          <a,
+          <a
             href="https://ziontechgroup.com",
-            className="inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors",
-          >,
+            className="inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors">,
             Read Full Case Study,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

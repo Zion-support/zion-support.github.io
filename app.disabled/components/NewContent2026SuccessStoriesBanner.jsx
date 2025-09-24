@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o26SuccessStoriesBanner = () => {,
-  return (,
+const NewContent20o26SuccessStoriesBanner = () => {
+  return (
     <section className='py-8 bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex flex-col md:flex-row items-center justify-between gap-6'>,
@@ -32,24 +31,18 @@ const NewContent20o26SuccessStoriesBanner = () => {,
             </div>,
           </div>,
           <div className='shrink-0 flex flex-col gap-3'>,
-            <Link,
+            <Link
               href='/blog/ai-automation-success-stories-20o26',
-              className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center',
-            >,
+              className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center'>,
               Read Success Stories →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center',
-            >,
+              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center'>,
               Get Your Success Story,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o26SuccessStoriesBanner,
-,
+    </section>)};
+export default NewContent20o26SuccessStoriesBanner;

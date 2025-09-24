@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react',
 import Link from 'next/link',
-,
-export function ClientDashboard() {,
-  return (,
+export function ClientDashboard() {
+  return (
     <div className='space-y-6 px-4 pb-24'>,
       <section className='mt-4'>,
         <Button className='w-full py-6' size='lg'>,
@@ -40,9 +39,9 @@ export function ClientDashboard() {,
                   <span className='font-medium'>60%</span>,
                 </div>,
                 <div className='h-2 bg-primary/20 rounded-full overflow-hidden'>,
-                  <div,
+                  <div
                     className='h-full bg-primary rounded-full',
-                    style={{ width: '60%' ,}}
+                    style={{ width: '60%' }}
                   ></div>,
                 </div>,
               </div>,
@@ -185,7 +184,5 @@ export function ClientDashboard() {,
           </CardContent>,
         </Card>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

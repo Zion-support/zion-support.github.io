@@ -1,62 +1,57 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Code,;
-  Database, Globe, Shield, Cpu, Users2, Award,;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock,;
-  Server, Network, Monitor, Settings, RefreshCw,;
-  Play, Pause, AlertTriangle, CheckCircle2, Building,;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,;
-  Wallet, CreditCard, PiggyBank, Building2, Activity,;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio,;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,;
-  Calendar, Clock, Target, Users2, FileText2, PieChart,;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,;
-  TrendingUp, Shield, Globe, Database, Network, Server,;
-  HardDrive, Wifi, Lock, Activity, Gauge, Settings,;
-  Cloud, Database, Network, Monitor, Shield, Zap,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'Quantum Data Center | Zion Tech Group',;
-  description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.',;
-  keywords: 'quantum data center, quantum computing infrastructure, AI data center, quantum security, high-performance computing, data center automation',;
-  openGraph: {,
-    title: 'Quantum Data Center | Zion Tech Group',;
-    description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.',;
-    url: 'https://ziontechgroup.com/quantum-data-center',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-quantum-data-center.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'Quantum Data Center',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Quantum Data Center | Zion Tech Group',;
-    description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.',;
-    images: ['https://ziontechgroup.com/og-image-quantum-data-center.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/quantum-data-center',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-export default function QuantumDataCenter() {,
-  return (,
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Code;
+  Database, Globe, Shield, Cpu, Users2, Award;
+  CheckCircle, Target, BarChart3, TrendingUp, Lock;
+  Server, Network, Monitor, Settings, RefreshCw;
+  Play, Pause, AlertTriangle, CheckCircle2, Building;
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
+  Wallet, CreditCard, PiggyBank, Building2, Activity;
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
+  Film, Headphones, Camera, Gamepad2, Tv, Radio;
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
+  Calendar, Clock, Target, Users2, FileText2, PieChart;
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
+  TrendingUp, Shield, Globe, Database, Network, Server;
+  HardDrive, Wifi, Lock, Activity, Gauge, Settings;
+  Cloud, Database, Network, Monitor, Shield, Zap} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'Quantum Data Center | Zion Tech Group';
+  description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.';
+  keywords: 'quantum data center, quantum computing infrastructure, AI data center, quantum security, high-performance computing, data center automation';
+  openGraph: {
+    title: 'Quantum Data Center | Zion Tech Group';
+    description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.';
+    url: 'https://ziontechgroup.com/quantum-data-center';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-quantum-data-center.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'Quantum Data Center'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Quantum Data Center | Zion Tech Group';
+    description: 'Revolutionary quantum-powered data center infrastructure with AI-driven optimization, quantum security, and ultra-high performance computing.';
+    images: ['https://ziontechgroup.com/og-image-quantum-data-center.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/quantum-data-center'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+export default function QuantumDataCenter() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -75,24 +70,22 @@ export default function QuantumDataCenter() {,
               facilities featuring AI-driven optimization, quantum security, and ultra-high performance computing.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#features",
-                className="inline-flex items-center px-8 py-4 border border-cyan-50o0/30 rounded-xl font-semibold text-cyan-30o0 hover:bg-cyan-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-cyan-50o0/30 rounded-xl font-semibold text-cyan-30o0 hover:bg-cyan-50o0/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -162,7 +155,7 @@ export default function QuantumDataCenter() {,
           </div>,
         </div>,
       </section>,
-      {/* Data Center Capabilities Section */,}
+      {/* Data Center Capabilities Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -255,7 +248,7 @@ export default function QuantumDataCenter() {,
           </div>,
         </div>,
       </section>,
-      {/* Data Center Applications Section */,}
+      {/* Data Center Applications Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -351,7 +344,7 @@ export default function QuantumDataCenter() {,
               </div>,
               <h3 className="text-xl font-semibold mb-3">AI Optimization</h3>,
               <p className="text-gray-40o0">,
-                AI algorithms optimize resource allocation and system performance.,
+                AI algorithms optimize resource allocation and system window.window.performance.,
               </p>,
             </div>,
             <div className="text-center">,
@@ -375,7 +368,7 @@ export default function QuantumDataCenter() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases Section */,}
+      {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -454,24 +447,22 @@ export default function QuantumDataCenter() {,
             Experience the future of data center infrastructure with our revolutionary quantum platform.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Computing,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-cyan-50o0/30 rounded-xl font-semibold text-cyan-30o0 hover: bg-cyan-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-cyan-50o0/30 rounded-xl font-semibold text-cyan-30o0 hover: bg-cyan-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -483,14 +474,14 @@ export default function QuantumDataCenter() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-cyan-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-cyan-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -504,10 +495,9 @@ export default function QuantumDataCenter() {,
               <p className="text-gray-40o0 mb-6">,
                 Let's discuss your computing needs and how quantum infrastructure can transform your operations.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover: from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-xl font-semibold text-white hover: from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0">,
                 Schedule Consultation,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -515,7 +505,5 @@ export default function QuantumDataCenter() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

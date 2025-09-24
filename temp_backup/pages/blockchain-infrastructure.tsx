@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function BlockchainInfrastructurePage() {,
-  return (,
+export default function BlockchainInfrastructurePage() {
+  return (
     <>,
       <Head>,
         <title>Blockchain Infrastructure - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function BlockchainInfrastructurePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,12 +1,11 @@
 import Link from 'next/link',
 import { ArrowRight, Brain, Cloud, Shield, Zap } from 'lucide-react',
-export const metadata ={,
-  title: 'Zion Tech Group - AI & Technology Solutions',;
-  description: 'Transform your business with AI, cloud, and micro SaaS solutions.',
-}
+export const metadata ={
+  title: 'Zion Tech Group - AI & Technology Solutions';
+  description: 'Transform your business with AI, cloud, and micro SaaS solutions.'}
 ,
-export default function HomePage() {,
-  return (,
+export default function HomePage() {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <main className="relative">,
         <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 blur-3xl" aria-hidden="true"></div>,
@@ -60,10 +59,8 @@ export default function HomePage() {,
           </div>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
-      {/* New Promo: GTM Agents Blueprint (Sept 20o25) */,}
+    </div>)}
+      {/* New Promo: GTM Agents Blueprint (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-10o0">,
@@ -79,7 +76,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Agent Incident Response Playbook (Sept 20o25) */,}
+      {/* New Promo: Agent Incident Response Playbook (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-10o0">,
@@ -95,7 +92,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Failure Modes + Eval Runbook (Sept 20o25) */,}
+      {/* New Promo: Failure Modes + Eval Runbook (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-rose-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-rose-10o0">,
@@ -111,7 +108,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: September 20o25 fresh content */,}
+      {/* New Promo: September 20o25 fresh content */}
       <section className="py-8 bg-gradient-to-r from-indigo-50 to-purple-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-purple-10o0">,
@@ -127,7 +124,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Safe Tool Use Blueprint */,}
+      {/* New Promo: Safe Tool Use Blueprint */}
       <section className="py-8 bg-white">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-10o0">,
@@ -143,7 +140,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Operational Excellence + Operational Blueprint (Sept 20o25) */,}
+      {/* New Promo: Operational Excellence + Operational Blueprint (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-blue-50 to-indigo-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-10o0">,
@@ -159,7 +156,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Eval-Gated Autonomy + Evaluation Hub */,}
+      {/* New Promo: Eval-Gated Autonomy + Evaluation Hub */}
       <section className="py-8 bg-white">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-10o0">,
@@ -175,7 +172,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Real-Time Agent Debugger (Sept 20o25) */,}
+      {/* New Promo: Real-Time Agent Debugger (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-10o0">,
@@ -191,7 +188,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 20o25) */,}
+      {/* New Promo: Agent Risk Metrics + Governed Tool Use + Starter Kit (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-emerald-50 to-teal-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-emerald-10o0">,
@@ -208,7 +205,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* What's New dynamic section */,}
+      {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8}  />,
       {/* Quick new content spotlight */}
       <section className="py-6 bg-white">,
@@ -229,7 +226,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: GTM Agents Blueprint */,}
+      {/* New Promo: GTM Agents Blueprint */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-10o0">,
@@ -245,7 +242,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Promo: Change Management + Runbook Kit (Sept 20o25) */,}
+      {/* New Promo: Change Management + Runbook Kit (Sept 20o25) */}
       <section className="py-8 bg-gradient-to-r from-purple-50 to-blue-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-blue-10o0">,
@@ -261,7 +258,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* New Content Promo: Production Safety + Cost Optimization (Sept 20o25) */,}
+      {/* New Content Promo: Production Safety + Cost Optimization (Sept 20o25) */}
       <section className="py-6">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow border border-gray-10o0">,
@@ -279,7 +276,7 @@ export default function HomePage() {,
       </section>,
       <div className='min-h-screen bg-white'>,
         <WhatsNewStrip  />,
-        {/* Revolutionary Content Banner 20o26 - NEW FEATURED */,}
+        {/* Revolutionary Content Banner 20o26 - NEW FEATURED */}
         <RevolutionaryContentBanner20o26  />,
         {/* New Content Showcase 20o26 - NEW FEATURED */}
         <NewContentShowcase20o26  />,
@@ -287,7 +284,7 @@ export default function HomePage() {,
         <NewContent20o26UltimateBanner  />,
         {/* Ultimate Content Promotion 20o26 - NEW FEATURED */}
         <UltimateContentPromotion20o26  />,
-        {/* New Promo: Policy-as-Code Kit + Reliability Engineering */,}
+        {/* New Promo: Policy-as-Code Kit + Reliability Engineering */}
         <section className="py-8">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-10o0">,
@@ -303,7 +300,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Promo: New - Autonomous Revenue Blueprint + Agent Platform Ops */,}
+        {/* Promo: New - Autonomous Revenue Blueprint + Agent Platform Ops */}
         <section className="py-8">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md border border-gray-10o0">,
@@ -319,11 +316,11 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content 20o25 Ultimate Showcase Banner - FEATURED */,}
+        {/* New Content 20o25 Ultimate Showcase Banner - FEATURED */}
         <NewContent20o25UltimateShowcaseBanner  />,
         {/* New Multimodal Agents 20o25 Banner - NEW */}
         <NewMultimodalAgents20o25Banner  />,
-        {/* Promo: Fresh Content */,}
+        {/* Promo: Fresh Content */}
         <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">,
@@ -340,7 +337,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content 20o25 Analytics Revolution Banner - NEW FEATURED */,}
+        {/* New Content 20o25 Analytics Revolution Banner - NEW FEATURED */}
         <NewContent20o25AnalyticsRevolutionBanner  />,
         {/* New Content 20o26 Autonomous Revenue Agents Promo - NEW */}
         <NewAutonomousRevenueAgentsPromo  />,
@@ -371,7 +368,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content Promo: Risk Management & Compliance (20o26) */,}
+        {/* New Content Promo: Risk Management & Compliance (20o26) */}
         <section className="py-10 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">,
@@ -408,7 +405,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Analytics Content Showcase 20o25 - NEW FEATURED */,}
+        {/* Analytics Content Showcase 20o25 - NEW FEATURED */}
         <AnalyticsContentShowcase20o25  />,
         {/* New Content 20o25 Advanced Automation Banner - NEW FEATURED */}
         <NewContent20o25AdvancedAutomationBanner  />,
@@ -416,7 +413,7 @@ export default function HomePage() {,
         <AdvancedAutomationContentShowcase20o25  />,
         {/* Revolutionary AI Content 20o26 Banner - NEW FEATURED */}
         <RevolutionaryAIContent20o26Banner  />,
-        {/* Promo: New Article - Agents-On-Call Automation 20o26 */,}
+        {/* Promo: New Article - Agents-On-Call Automation 20o26 */}
         <section className="py-12 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">,
@@ -431,7 +428,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Promo: New Article - Autonomous Edge Blueprint 20o25 */,}
+        {/* Promo: New Article - Autonomous Edge Blueprint 20o25 */}
         <section className="py-12 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">,
@@ -448,7 +445,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* AI 20o26 Quantum Revolution Ultimate Banner - NEW FEATURED */,}
+        {/* AI 20o26 Quantum Revolution Ultimate Banner - NEW FEATURED */}
         <AI20o26QuantumRevolutionUltimateBanner  />,
         {/* New Content 20o26 Ultimate Showcase - NEW FEATURED */}
         <NewContent20o26UltimateShowcase  />,
@@ -472,7 +469,7 @@ export default function HomePage() {,
         <RevolutionaryAIContentBanner  />,
         {/* Enhanced Content Promotion Banner */}
         <EnhancedContentPromotionBanner  />,
-        {/* New Content Promo: LLM Evals Maturity Model 20o26 */,}
+        {/* New Content Promo: LLM Evals Maturity Model 20o26 */}
         <section className="py-6 bg-gradient-to-r from-blue-50 to-purple-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">,
@@ -485,7 +482,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Promo: Agent Observability Blueprint 20o26 */,}
+        {/* Promo: Agent Observability Blueprint 20o26 */}
         <section className="py-12 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">,
@@ -500,7 +497,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content Spotlight - September 20o25 */,}
+        {/* New Content Spotlight - September 20o25 */}
         <section className="py-12 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-2xl font-bold text-gray-90o0 mb-6">Just published</h2>,
@@ -538,7 +535,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Promo: New Article - Foundation Model Ops 20o26 */,}
+        {/* Promo: New Article - Foundation Model Ops 20o26 */}
         <section className="py-6 bg-gradient-to-r from-blue-50 to-purple-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">,
@@ -553,7 +550,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content Promo: Generative Agents Infrastructure Blueprint (20o25) */,}
+        {/* New Content Promo: Generative Agents Infrastructure Blueprint (20o25) */}
         <section className="py-6 bg-gradient-to-r from-indigo-50 to-purple-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">,
@@ -568,7 +565,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* New Content Promo: Autonomous Finance Control Plane (20o26) */,}
+        {/* New Content Promo: Autonomous Finance Control Plane (20o26) */}
         <section className="py-6 bg-gradient-to-r from-purple-50 to-pink-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white p-6 rounded-xl shadow-md">,
@@ -583,7 +580,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center">,
@@ -598,23 +595,21 @@ export default function HomePage() {,
                 Expert consulting and implementation services for enterprise success.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <Link,
+                <Link
                   href="/services",
-                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-                >,
+                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
                   Explore Services,
                 </Link>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors",
-                >,
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">,
                   Get Started,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Latest Content Showcase 20o25 - NEW FEATURED */,}
+        {/* Latest Content Showcase 20o25 - NEW FEATURED */}
         <LatestContentShowcase20o25  />,
         {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
@@ -639,7 +634,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Latest Services Showcase 20o26 - NEW FEATURED */,}
+        {/* Latest Services Showcase 20o26 - NEW FEATURED */}
         <LatestServicesShowcase20o26  />,
         {/* Latest Blog Content 20o26 - NEW FEATURED */}
         <LatestBlogContent20o26  />,
@@ -683,7 +678,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Promotion Banners */,}
+        {/* Content Promotion Banners */}
         <RevolutionaryContent20o26Banner  />,
         <UltimateContentShowcase20o26  />,
         <QuantumAIContentShowcase20o26  />,
@@ -712,33 +707,28 @@ export default function HomePage() {,
         <APIManagementSystem  />,
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..."  />}>,
-          <StructuredData,
+          <StructuredData
             type="Organization",
-            data={{,
-              name: "Zion Tech Group",;
-              description: "Transforming businesses through cutting-edge technology solutions",;
-              url: "https://zion.app",;
-              logo: "https://zion.app/images/zion-tech-group-logo.png",;
-              sameAs: [,
-                "https://twitter.com/ZionTechGroup",;
-                "https: //linkedin.com/company/zion-tech-group",
-              ],
-            ,}} ,
+            data={{
+              name: "Zion Tech Group";
+              description: "Transforming businesses through cutting-edge technology solutions";
+              url: "https://zion.app";
+              logo: "https://zion.app/images/zion-tech-group-logo.png";
+              sameAs: [
+                "https://twitter.com/ZionTechGroup";
+                "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
-          <StructuredData,
+          <StructuredData
             type="WebSite",
-            data={{,
-              name: "Zion Tech Group",;
-              url: "https://zion.app",;
-              potentialAction: {,
-                "@type": "SearchAction",;
-                "target": "https: //zion.app/search?q={search_term_string,}",;
-                "query-input": "required name=search_term_string",
-              }
+            data={{
+              name: "Zion Tech Group";
+              url: "https://zion.app";
+              potentialAction: {
+                "@type": "SearchAction";
+                "target": "https: //zion.app/search?q={search_term_string}";
+                "query-input": "required name=search_term_string"}
             }} ,
            />,
         </Suspense>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

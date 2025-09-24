@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Production Safety Checklist',;
+export const metadata = {
+  title: 'AI 20o26: Production Safety Checklist';
   description:,
-    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.',;
+    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-6 py-12 prose prose-purple'>,
       <h1>AI 20o26: Production Safety Checklist</h1>,
       <p>,
@@ -26,22 +24,18 @@ export default function Page() {,
       </ul>,
       <p>,
         See also the{' '}
-        <Link,
+        <Link
           href='/blog/ai-20o26-safe-tool-use-blueprint',
-          className='text-purple-60o0',
-        >,
+          className='text-purple-60o0'>,
           Safe Tool Use Blueprint,
         </Link>{' '}
         and the{' '}
-        <Link,
+        <Link
           href='/content/ai-20o26-evaluation-hub',
-          className='text-purple-60o0',
-        >,
+          className='text-purple-60o0'>,
           Evaluation Hub,
         </Link>,
         .,
       </p>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

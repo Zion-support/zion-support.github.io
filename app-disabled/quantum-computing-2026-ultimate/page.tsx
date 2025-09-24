@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import Card from '../../components/ui/Card',
-,
-export const metadata = {,
-  title: 'Quantum Computing 20o26 Ultimate - The Next Computing Revolution',;
+export const metadata = {
+  title: 'Quantum Computing 20o26 Ultimate - The Next Computing Revolution';
   description:,
-    'Explore the ultimate quantum computing breakthroughs of 20o26 that are revolutionizing computation, cryptography, and problem-solving capabilities.',;
-  keywords: [,
-    'quantum computing 20o26',;
-    'quantum supremacy',;
-    'quantum algorithms',;
-    'quantum cryptography',;
-    'quantum AI',;
-  ],;
+    'Explore the ultimate quantum computing breakthroughs of 20o26 that are revolutionizing computation, cryptography, and problem-solving capabilities.';
+  keywords: [
+    'quantum computing 20o26';
+    'quantum supremacy';
+    'quantum algorithms';
+    'quantum cryptography';
+    'quantum AI';
+  ];
 };
-,
-export default function QuantumComputing20o26Ultimate() {,
-  return (,
+export default function QuantumComputing20o26Ultimate() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-cyan-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
-      <SEO,
+      <SEO
         title='Quantum Computing 20o26 Ultimate - The Next Computing Revolution',
         description='Explore the ultimate quantum computing breakthroughs of 20o26 that are revolutionizing computation, cryptography, and problem-solving capabilities.',
         keywords='quantum computing 20o26, quantum supremacy, quantum algorithms, quantum cryptography, quantum AI',
@@ -40,23 +38,21 @@ export default function QuantumComputing20o26Ultimate() {,
               quantum computing is transforming every industry.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
                 Access Quantum Solutions,
               </Link>,
-              <Link,
+              <Link
                 href='/quantum-computing-revolution-20o25',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-90o0 transition-all',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-90o0 transition-all'>,
                 Explore Applications,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Breakthroughs Section */,}
+      {/* Quantum Breakthroughs Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -187,7 +183,7 @@ export default function QuantumComputing20o26Ultimate() {,
           </div>,
         </div>,
       </section>,
-      {/* Performance Metrics */,}
+      {/* Performance Metrics */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -213,7 +209,7 @@ export default function QuantumComputing20o26Ultimate() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold mb-6'>Enter the Quantum Era</h2>,
@@ -223,22 +219,18 @@ export default function QuantumComputing20o26Ultimate() {,
             technology of 20o26.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5'>,
               Get Quantum Access,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-computing-business-applications-20o25',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-90o0 transition-all'>,
               View Applications,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

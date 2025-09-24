@@ -1,48 +1,38 @@
-import React from 'react',
+import React from 'react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services',
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles, CheckCircle, Phone, Mail, MapPin } from 'lucide-react',
 import {motion} from 'framer-motion',
 import Link from 'next / link',
-import {,
+import {
 import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services',
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services',
 import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaverse - digital - reality - services',
-
-,
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props),
-    this.state = { hasError: false ,};
+    this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
-  render() {,
-    if (this.state.hasError) {,
-      return <div>Something went wrong.</div>,
-    }
-    return this.props.children,
-  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
+    return this.props.children}
 }
-,
 } from 'lucide-react',
-,
-,
-export default function UltraAdvancedHero2026() {,
+export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
-  const contactInfo = {,
+  const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  ,};
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,}
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
+  const containerVariants = {
+    hidden: { opacity: 0 }
   ArrowRight,
   Star,
   TrendingUp,
@@ -55,84 +45,75 @@ export default function UltraAdvancedHero2026() {,
   Phone,
   Mail,
   MapPin,
-,
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Globe,;
-  Sparkles,;
-  CheckCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-,
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Zap;
+  Brain;
+  Rocket;
+  Globe;
+  Sparkles;
+  CheckCircle;
+  Phone;
+  Mail;
+  MapPin;
 } from 'lucide-react',
 export default /**,
  * UltraAdvancedHero2026 - Function description,
  */,
-function UltraAdvancedHero2026() {,
+function UltraAdvancedHero2026() {
   const total_services =,
     aiAutonomousServices2026.length +,
     quantumSpaceTechServices2026.length +,
     metaverseDigitalRealityServices2026.length,
-,
-  const contact_info = {,
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',  }import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services',
+  const contact_info = {
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709'}import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services',
 export default /**,
  * UltraAdvancedHero2026 - Function description,
  */,
-function UltraAdvancedHero2026() {,
+function UltraAdvancedHero2026() {
   const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
+  const contact_info = {
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
-  const contact_info = {,
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  ,}
-,
-  const container_variants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
+  const container_variants = {
+    hidden: { opacity: 0 };
+    visible: {
       opacity: 1,
-      transition: {,
-  ,};
-,
-  const itemVariants = {,
-    hidden: { opacity: 0, y: 30 ,}
-    visible: {,
+      transition: {
+  };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
       opacity: 1,
       y: 0,
-      transition: {,
-        duration: 0.8,
-      ,}
+      transition: {
+        duration: 0.8}
     }
   }
-        duration: 0.8,;
-      },;
-    },;
-export default function UltraAdvancedHero2026() {,
+        duration: 0.8;
+      };
+    };
+export default function UltraAdvancedHero2026() {
   const totalServices =,
     aiAutonomousServices2026 && aiAutonomousServices2026.length +,
     quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length +,
     metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length,
-  const contactInfo = {,
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
-export default function UltraAdvancedHero2026() {,
+  const contactInfo = {
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup && ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709'};import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
+export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026 && aiAutonomousServices2026.length + quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length,
-  const contactInfo = {,
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  ,};
-,
-  return (,
+  const contactInfo = {
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup && ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709'};
+  return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,
       {/* Enhanced Background Effects */}
 ,
@@ -148,15 +129,14 @@ export default function UltraAdvancedHero2026() {,
       </div>,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
         <motion&& motion.div,
-          variants={containerVariants,}
+          variants={containerVariants}
           initial='hidden',
           animate='visible',
           className='space-y-8'>,
           {/* Badge */}
           <motion&& motion.div,
             variants={itemVariants}
-            className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30',
-          >,
+            className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>,
             <Sparkles className='w-5 h-5 text-purple-400' />,
             <span className='text-purple-300 text-sm font-medium'>,
               2026 Revolutionary Technology Solutions,
@@ -168,12 +148,10 @@ export default function UltraAdvancedHero2026() {,
               2026 Revolutionary Technology Solutions,
             </span>,
           </motion && motion.div>,
-,
           {/* Main Heading */}
           <motion&& motion.h1,
             variants={itemVariants}
-            className='text-5xl md: text-7xl lg:text-8xl font-black leading-tight',
-          >,
+            className='text-5xl md: text-7xl lg:text-8xl font-black leading-tight'>,
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>,
               The Future,
             </span>,
@@ -187,8 +165,7 @@ export default function UltraAdvancedHero2026() {,
             <br />,
             <span className='text-white'>is Now</span>,
           </motion && motion.h1>,
-,
-          {/* Subheading */,}
+          {/* Subheading */}
           <motion&& motion.p,
             variants={itemVariants}
             className='text-xl md: text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed'>,
@@ -202,30 +179,28 @@ export default function UltraAdvancedHero2026() {,
           </motion.p>,
             with our revolutionary solutions.,
           </motion && motion.p>,
-,
           {/* Service Statistics */}
           <motion&& motion.div,
             variants={itemVariants}
 ,
-        stagger_children: 0.1,;
-      },;
-    },  }        stagger_children: 0.1,
-      ,}
+        stagger_children: 0.1;
+      };
+    }}        stagger_children: 0.1}
     }
   }
 ,
-  const item_variants = {,
-    hidden: { opacity: 0, coordinate_y: 30 ,},;
-    visible: {,
-      opacity: 1,;
-      coordinate_y: 0,;
-      transition: {,
-        duration: 0.8,;
-      },;
-    },;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 30 };
+    visible: {
+      opacity: 1;
+      coordinate_y: 0;
+      transition: {
+        duration: 0.8;
+      };
+    };
   }
 ,
-  return (,
+  return (
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden'>,
       {/* Enhanced Background Effects */}
       <div className='absolute inset - 0'>,
@@ -240,16 +215,14 @@ export default function UltraAdvancedHero2026() {,
       </div>,
       <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center'>,
         <motion.div,
-          variants={container_variants,}
+          variants={container_variants}
           initial='hidden',
           animate='visible',
-          className='space - y-8',
-        >,
+          className='space - y-8'>,
           {/* Badge */}
           <motion.div,
             variants={item_variants}
-            className='inline - flex items - center space - x-2 bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 px - 4 py - 2 rounded - full border border - purple - 500 / 30',
-          >,
+            className='inline - flex items - center space - x-2 bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 px - 4 py - 2 rounded - full border border - purple - 500 / 30'>,
             <Sparkles className='w - 5 h - 5 text - purple - 400' />,
             <span className='text - purple - 300 text - sm font - medium'>,
               2026 Revolutionary Technology Solutions,
@@ -258,19 +231,17 @@ export default function UltraAdvancedHero2026() {,
           {/* Main Heading */}
           <motion.h1,
             variants={item_variants}
-            className='text - 5xl md: text - 7xl lg:text - 8xl font - black leading - tight',
-          >,
+            className='text - 5xl md: text - 7xl lg:text - 8xl font - black leading - tight'>,
             <span className='bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent'>,
               The Future,
             </span>,
             <br />,
             <span className='text - white'>is Now</span>,
           </motion.h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <motion.p,
             variants={item_variants}
-            className='text - xl md: text - 2xl lg:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed',
-          >,
+            className='text - xl md: text - 2xl lg:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed'>,
             Experience the most advanced AI, quantum computing, and metaverse,
             technologies ever created.,
             <span className='text - purple - 400 font - semibold'>,
@@ -282,12 +253,10 @@ export default function UltraAdvancedHero2026() {,
           {/* Service Statistics */}
           <motion.div,
             variants={item_variants}
-            className='grid grid - cols - 2 md: grid - cols - 4 gap - 6 max - w-4xl mx - auto',
-          >,
+            className='grid grid - cols - 2 md: grid - cols - 4 gap - 6 max - w-4xl mx - auto'>,
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>,
               <div className='text - 3xl font - bold text - purple - 400'>,
-,
-                {aiAutonomousServices2026.length,}
+                {aiAutonomousServices2026.length}
               </div>,
               <div className='text - gray - 300 text - sm'>,
                 AI Autonomous Services,
@@ -306,7 +275,7 @@ export default function UltraAdvancedHero2026() {,
             className='grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto'>,
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>,
               <div className='text-3xl font-bold text-purple-400'>,
-                {aiAutonomousServices2026 && aiAutonomousServices2026.length,}
+                {aiAutonomousServices2026 && aiAutonomousServices2026.length}
               </div>,
               <div className='text-gray-300 text-sm'>,
                 AI Autonomous Services,
@@ -327,12 +296,10 @@ export default function UltraAdvancedHero2026() {,
             <div className='text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl'>,
               <div className='text-3xl font-bold text-green-400'>∞</div>,
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>,
-          </motion && motion.div>,
-  };
-,
+          </motion && motion.div>};
           {/* Key Benefits */}
           <motion&& motion.div  }
-  return (,
+  return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background Effects */}
 ,
@@ -348,7 +315,7 @@ export default function UltraAdvancedHero2026() {,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
         <motion&& motion.div,
-          variants={containerVariants,}
+          variants={containerVariants}
           initial="hidden",
           animate="visible",
           className="space-y-8">,
@@ -360,8 +327,7 @@ export default function UltraAdvancedHero2026() {,
           {/* Main Heading */}
           <motion.h1,
             variants={itemVariants}
-            className="text-5xl md: text-7xl lg:text-8xl font-black leading-tight",
-          >,
+            className="text-5xl md: text-7xl lg:text-8xl font-black leading-tight">,
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">,
               The Future,
             </span>,
@@ -370,21 +336,19 @@ export default function UltraAdvancedHero2026() {,
               is Now,
             </span>,
           </motion.h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <motion.p,
             variants={itemVariants}
-            className="text-xl md: text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed",
-          >,
+            className="text-xl md: text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed">,
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created.,
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.,
           </motion.p>,
           {/* Service Statistics */}
           <motion.div,
             variants={itemVariants}
-            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto",
-          >,
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">,
             <div className="text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl">,
-              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length,}</div>,
+              <div className="text-3xl font-bold text-purple-400">{aiAutonomousServices2026.length}</div>,
               <div className="text-gray-300 text-sm">AI Autonomous Services</div>,
             </div>,
             <div className="text-center p-4 bg-gradient-to-br from-cyan-800/20 to-cyan-900/20 backdrop-blur-xl border border-cyan-500/20 rounded-2xl">,
@@ -403,8 +367,7 @@ export default function UltraAdvancedHero2026() {,
           {/* Key Benefits */}
           <motion.div,
             variants={itemVariants}
-            className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-5xl mx-auto',
-          >,
+            className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-5xl mx-auto'>,
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>,
               <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />,
               <span className='text-gray-200 font-medium'>,
@@ -416,11 +379,10 @@ export default function UltraAdvancedHero2026() {,
               <span className='text-gray-200 font-medium'>,
                 1000% ROI Guaranteed,
               </span>,
-          <motion && motion.div variants={itemVariants,} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">,
+          <motion && motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">,
             <Sparkles className="w-5 h-5 text-purple-400" />,
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>,
           </motion && motion.div>,
-,
             </div>,
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>,
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />,
@@ -430,8 +392,7 @@ export default function UltraAdvancedHero2026() {,
           </motion.div>,
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
-            className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-5xl mx-auto",
-          >,
+            className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-5xl mx-auto">,
             <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">,
               <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />,
               <span className="text-gray-200 font-medium">First-to-Market Technology</span>,
@@ -464,39 +425,34 @@ export default function UltraAdvancedHero2026() {,
                 24/7 Autonomous Operation,
               </span>            </div>,
           </motion && motion.div>,
-,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
 ,
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover: from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'>,
               <Rocket className='w-6 h-6 mr-3' />,
               Explore All Services,
               <ArrowRight className='w-6 h-6 ml-3' />,
             </Link>,
-,
-            <Link,
+            <Link
               href='/contact',
               className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>,
-              <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants,}
+              <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
 ,
           <motion.div,
             variants={itemVariants}
 ,
-            className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6",
-          >,
-            <Link,
+            className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">,
+            <Link
               href="/services",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl">,
               <Rocket className="w-6 h-6 mr-3" />,
               Explore All Services,
               <ArrowRight className="w-6 h-6 ml-3" />,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30",
-            >,
+              className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">,
               <Zap className="w-6 h-6 mr-3" />,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
 ,
               Get Started Today,
             </Link>,
@@ -506,8 +462,7 @@ export default function UltraAdvancedHero2026() {,
           <motion.div,
             variants={itemVariants}
 ,
-            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto",
-          >,
+            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto">,
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
               <div className="flex items-center space-x-3">,
@@ -516,7 +471,7 @@ export default function UltraAdvancedHero2026() {,
                 </div>,
                 <div>,
                   <div className="text-white font-semibold">Call Us</div>,
-                  <div className="text-purple-300">{contactInfo.phone,}</div>,
+                  <div className="text-purple-300">{contactInfo.phone}</div>,
                 </div>,
               </div>,
               <div className="flex items-center space-x-3">,
@@ -550,10 +505,9 @@ export default function UltraAdvancedHero2026() {,
                 </div>,
                 <div>,
                   <div className='text-white font-semibold'>Call Us</div>,
-                  <div className='text-purple-300'>{contactInfo && contactInfo.phone,}</div>,
+                  <div className='text-purple-300'>{contactInfo && contactInfo.phone}</div>,
                 </div>,
               </div>,
-,
               <div className='flex items-center space-x-3'>,
                 <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>,
                   <Mail className='w-6 h-6 text-white' />,
@@ -563,7 +517,6 @@ export default function UltraAdvancedHero2026() {,
                   <div className='text-cyan-300'>{contactInfo && contactInfo.email}</div>,
                 </div>,
               </div>,
-,
               <div className='flex items-center space-x-3'>,
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center'>,
                   <MapPin className='w-6 h-6 text-white' />,
@@ -573,8 +526,7 @@ export default function UltraAdvancedHero2026() {,
                   <div className='text-purple-300 text-sm'>,
                     {contactInfo && contactInfo.address}
                   </div>                </div>            variants={itemVariants}
-            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto",
-          >,
+            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto">,
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
               <div className="flex items-center space-x-3">,
@@ -583,10 +535,9 @@ export default function UltraAdvancedHero2026() {,
                 </div>,
                 <div>,
                   <div className="text-white font-semibold">Call Us</div>,
-                  <div className="text-purple-300">{contactInfo && contactInfo.phone,}</div>,
+                  <div className="text-purple-300">{contactInfo && contactInfo.phone}</div>,
                 </div>,
               </div>,
-,
               <div className="flex items-center space-x-3">,
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">,
                   <Mail className="w-6 h-6 text-white" />,
@@ -596,7 +547,6 @@ export default function UltraAdvancedHero2026() {,
                   <div className="text-cyan-300">{contactInfo && contactInfo.email}</div>,
                 </div>,
               </div>,
-,
               <div className="flex items-center space-x-3">,
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">,
                   <MapPin className="w-6 h-6 text-white" />,
@@ -608,13 +558,11 @@ export default function UltraAdvancedHero2026() {,
               </div>,
             </div>,
           </motion && motion.div>,
-,
           {/* Trust Indicators */}
 ,
           <motion.div,
             variants={itemVariants}
-            className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400",
-          >,
+            className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400">,
             <div className="flex items-center space-x-2">,
               <Star className="w-5 h-5 text-yellow-400 fill-current" />,
               <span>4.9/5 Rating</span>,
@@ -646,8 +594,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           </motion && motion.div>,
         </motion && motion.div>,
       </div>,
-,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
 ,
               </div>,
               <div className='text - gray - 300 text - sm'>Metaverse Services</div>,
@@ -659,7 +606,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           {/* Key Benefits */}
           <motion.div  }
 ,
-  return (,
+  return (
     <section className="relative min - h-screen flex items - center justify - center overflow - hidden">,
       {/* Enhanced Background Effects */}
       <div className="absolute inset - 0">,
@@ -674,11 +621,10 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
       </div>,
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">,
         <motion.div,
-          variants={container_variants,}
+          variants={container_variants}
           initial="hidden",
           animate="visible",
-          className="space - y-8",
-        >,
+          className="space - y-8">,
           {/* Badge */}
           <motion.div variants={item_variants} className="inline - flex items - center space - x-2 bg - gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 px - 4 py - 2 rounded - full border border - purple - 500 / 30">,
             <Sparkles className="w - 5 h - 5 text - purple - 400" />,
@@ -687,8 +633,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           {/* Main Heading */}
           <motion.h1,
             variants={item_variants}
-            className="text - 5xl md: text - 7xl lg:text - 8xl font - black leading - tight",
-          >,
+            className="text - 5xl md: text - 7xl lg:text - 8xl font - black leading - tight">,
             <span className="bg - gradient - to - r from - purple - 400 via - pink - 400 to - cyan - 400 bg - clip - text text - transparent">,
               The Future,
             </span>,
@@ -697,21 +642,19 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
               is Now,
             </span>,
           </motion.h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <motion.p,
             variants={item_variants}
-            className="text - xl md: text - 2xl lg:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed",
-          >,
+            className="text - xl md: text - 2xl lg:text - 3xl text - gray - 300 max - w-5xl mx - auto leading - relaxed">,
             Experience the most advanced AI, quantum computing, and metaverse technologies ever created.,
             <span className="text - purple - 400 font - semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.,
           </motion.p>,
           {/* Service Statistics */}
           <motion.div,
             variants={item_variants}
-            className="grid grid - cols - 2 md: grid - cols - 4 gap - 6 max - w-4xl mx - auto",
-          >,
+            className="grid grid - cols - 2 md: grid - cols - 4 gap - 6 max - w-4xl mx - auto">,
             <div className="text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl">,
-              <div className="text - 3xl font - bold text - purple - 400">{aiAutonomousServices2026.length,}</div>,
+              <div className="text - 3xl font - bold text - purple - 400">{aiAutonomousServices2026.length}</div>,
               <div className="text - gray - 300 text - sm">AI Autonomous Services</div>,
             </div>,
             <div className="text - center p - 4 bg - gradient - to - br from - cyan - 800 / 20 to - cyan - 900 / 20 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl">,
@@ -730,8 +673,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           {/* Key Benefits */}
           <motion.div,
             variants={item_variants}
-            className='grid grid - cols - 1 md: grid - cols - 3 gap - 6 max - w-5xl mx - auto',
-          >,
+            className='grid grid - cols - 1 md: grid - cols - 3 gap - 6 max - w-5xl mx - auto'>,
             <div className='flex items - center space - x-3 p - 4 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 backdrop - blur - xl border border - blue - 500 / 20 rounded - xl'>,
               <CheckCircle className='w - 6 h - 6 text - blue - 400 flex - shrink - 0' />,
               <span className='text - gray - 200 font - medium'>,
@@ -750,10 +692,9 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
                 24 / 7 Autonomous Operation,
               </span>            </div>,
           </motion.div>,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
           <motion.div            variants={item_variants}
-            className="grid grid - cols - 1 md: grid - cols - 3 gap - 6 max - w-5xl mx - auto",
-          >,
+            className="grid grid - cols - 1 md: grid - cols - 3 gap - 6 max - w-5xl mx - auto">,
             <div className="flex items - center space - x-3 p - 4 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 backdrop - blur - xl border border - blue - 500 / 20 rounded - xl">,
               <CheckCircle className="w - 6 h - 6 text - blue - 400 flex - shrink - 0" />,
               <span className="text - gray - 200 font - medium">First - to - Market Technology</span>,
@@ -767,47 +708,40 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
               <span className="text - gray - 200 font - medium">24 / 7 Autonomous Operation</span>,
             </div>,
           </motion.div>,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
           <motion.div,
             variants={item_variants}
-            className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6',
-          >,
-            <Link,
+            className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>,
+            <Link
               href='/services',
-              className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 via - pink - 600 to - cyan - 600 text - white font - bold text - lg rounded - 2xl hover:from - purple - 700 hover:via - pink - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl',
-            >,
+              className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 via - pink - 600 to - cyan - 600 text - white font - bold text - lg rounded - 2xl hover:from - purple - 700 hover:via - pink - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl'>,
               <Rocket className='w - 6 h - 6 mr - 3' />,
               Explore All Services,
               <ArrowRight className='w - 6 h - 6 ml - 3' />,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 300 font - bold text - lg rounded - 2xl hover:bg - purple - 500 / 10 hover:border - purple - 400 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30',
-            >,
-              <Zap className='w - 6 h - 6 mr - 3' />              Get Started Today            variants={item_variants,}
-            className="flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6",
-          >,
-            <Link,
+              className='inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 300 font - bold text - lg rounded - 2xl hover:bg - purple - 500 / 10 hover:border - purple - 400 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'>,
+              <Zap className='w - 6 h - 6 mr - 3' />              Get Started Today            variants={item_variants}
+            className="flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">,
+            <Link
               href="/services",
-              className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 via - pink - 600 to - cyan - 600 text - white font - bold text - lg rounded - 2xl hover:from - purple - 700 hover:via - pink - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl",
-            >,
+              className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 via - pink - 600 to - cyan - 600 text - white font - bold text - lg rounded - 2xl hover:from - purple - 700 hover:via - pink - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl">,
               <Rocket className="w - 6 h - 6 mr - 3" />,
               Explore All Services,
               <ArrowRight className="w - 6 h - 6 ml - 3" />,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 300 font - bold text - lg rounded - 2xl hover:bg - purple - 500 / 10 hover:border - purple - 400 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30",
-            >,
+              className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 300 font - bold text - lg rounded - 2xl hover:bg - purple - 500 / 10 hover:border - purple - 400 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30">,
               <Zap className="w - 6 h - 6 mr - 3" />,
               Get Started Today,
             </Link>,
           </motion.div>,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <motion.div,
             variants={item_variants}
-            className='mt - 12 p - 6 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - cyan - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl max - w-4xl mx - auto',
-          >,
+            className='mt - 12 p - 6 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - cyan - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl max - w-4xl mx - auto'>,
             <h3 className='text - 2xl font - bold text - white mb - 6'>,
               Ready to Transform Your Business?,
             </h3>,
@@ -818,7 +752,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
                 </div>,
                 <div>,
                   <div className='text - white font - semibold'>Call Us</div>,
-                  <div className='text - purple - 300'>{contact_info.phone,}</div>,
+                  <div className='text - purple - 300'>{contact_info.phone}</div>,
                 </div>,
               </div>,
               <div className='flex items - center space - x-3'>,
@@ -839,8 +773,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
                   <div className='text - purple - 300 text - sm'>,
                     {contact_info.address}
                   </div>                </div>            variants={item_variants}
-            className="mt - 12 p - 6 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - cyan - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl max - w-4xl mx - auto",
-          >,
+            className="mt - 12 p - 6 bg - gradient - to - r from - purple - 900 / 20 via - pink - 900 / 20 to - cyan - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl max - w-4xl mx - auto">,
             <h3 className="text - 2xl font - bold text - white mb - 6">Ready to Transform Your Business?</h3>,
             <div className="grid grid - cols - 1 md: grid - cols - 3 gap - 6">,
               <div className="flex items - center space - x-3">,
@@ -849,7 +782,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
                 </div>,
                 <div>,
                   <div className="text - white font - semibold">Call Us</div>,
-                  <div className="text - purple - 300">{contact_info.phone,}</div>,
+                  <div className="text - purple - 300">{contact_info.phone}</div>,
                 </div>,
               </div>,
               <div className="flex items - center space - x-3">,
@@ -875,8 +808,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           {/* Trust Indicators */}
           <motion.div,
             variants={item_variants}
-            className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-8 text - gray - 400',
-          >,
+            className='flex flex - col sm: flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-8 text - gray - 400'>,
             <div className='flex items - center space - x-2'>,
               <Star className='w - 5 h - 5 text - yellow - 400 fill - current' />              <span > 4.9 / 5 Rating</span>,
             </div>,
@@ -892,205 +824,164 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
           </motion.div>,
         </motion.div>,
       </div>,
-,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className='absolute inset-0 pointer-events-none'>,
         <motion&& motion.div,
-          animate={{,
-            coordinate_y: [0, -20, 0],;
-            rotate: [0, 5, 0],;
+          animate={{
+            coordinate_y: [0, -20, 0];
+            rotate: [0, 5, 0];
           }}
-          transition={{,
+          transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut',
-          ,}}
+            ease: 'easeInOut'}}
 ,
           className='absolute top-20 right-20 text-6xl opacity-20'>,
           🚀,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, 20, 0],
             rotate: [0, -5, 0],
-          className='absolute top - 20 right - 20 text - 6xl opacity - 20',
-        >,
-          ,
+          className='absolute top - 20 right - 20 text - 6xl opacity - 20'>,
         </motion.div>,
         <motion.div,
-          animate={{,
-            coordinate_y: [0, 20, 0],;
-            rotate: [0, -5, 0],;
+          animate={{
+            coordinate_y: [0, 20, 0];
+            rotate: [0, -5, 0];
           }}
-          transition={{,
+          transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-          ,}}
+            ease: 'easeInOut'}}
 ,
           className='absolute bottom-20 left-20 text-6xl opacity-20'>,
           ⚛️,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, -15, 0],
             rotate: [0, 3, 0],
-          className='absolute bottom - 20 left - 20 text - 6xl opacity - 20',
-        >,
-          ,
+          className='absolute bottom - 20 left - 20 text - 6xl opacity - 20'>,
         </motion.div>,
         <motion.div,
-          animate={{,
-            coordinate_y: [0, -15, 0],;
-            rotate: [0, 3, 0],;
+          animate={{
+            coordinate_y: [0, -15, 0];
+            rotate: [0, 3, 0];
           }}
-          transition={{,
+          transition={{
             duration: 7,
             repeat: Infinity,
-            ease: 'easeInOut',
-          ,}}
+            ease: 'easeInOut'}}
 ,
           className='absolute top-1/3 left-10 text-5xl opacity-20'>,
           🧠,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, 15, 0],
             rotate: [0, -3, 0],
-          className='absolute top - 1/3 left - 10 text - 5xl opacity - 20',
-        >,
-          ,
+          className='absolute top - 1/3 left - 10 text - 5xl opacity - 20'>,
         </motion.div>,
         <motion.div,
-          animate={{,
-            coordinate_y: [0, 15, 0],;
-            rotate: [0, -3, 0],;
+          animate={{
+            coordinate_y: [0, 15, 0];
+            rotate: [0, -3, 0];
           }}
-          transition={{,
+          transition={{
             duration: 9,
             repeat: Infinity,
-            ease: 'easeInOut',
-          ,}}
+            ease: 'easeInOut'}}
 ,
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, -20, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{,
+            rotate: [0, 5, 0]}}
+          transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut",
-          ,}}
+            ease: "easeInOut"}}
 ,
           className="absolute top-20 right-20 text-6xl opacity-20">,
           🚀,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, 20, 0],
-            rotate: [0, -5, 0],
-          }}
-          transition={{,
+            rotate: [0, -5, 0]}}
+          transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
-          ,}}
+            ease: "easeInOut"}}
 ,
           className="absolute bottom-20 left-20 text-6xl opacity-20">,
           ⚛️,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, -15, 0],
-            rotate: [0, 3, 0],
-          }}
-          transition={{,
+            rotate: [0, 3, 0]}}
+          transition={{
             duration: 7,
             repeat: Infinity,
-            ease: "easeInOut",
-          ,}}
+            ease: "easeInOut"}}
 ,
           className="absolute top-1/3 left-10 text-5xl opacity-20">,
           🧠,
         </motion && motion.div>,
         <motion&& motion.div,
-          animate={{,
+          animate={{
             y: [0, 15, 0],
-            rotate: [0, -3, 0],
-          }}
-          transition={{,
+            rotate: [0, -3, 0]}}
+          transition={{
             duration: 9,
             repeat: Infinity,
-            ease: "easeInOut",
-          ,}}
-          className="absolute bottom-1/3 right-10 text-5xl opacity-20",
-        >,
+            ease: "easeInOut"}}
+          className="absolute bottom-1/3 right-10 text-5xl opacity-20">,
           🌐,
         </motion.div>,
       </div>,
-    </section>,
-),  ),
-}
+    </section>))}
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div,
-          animate={{,
+          animate={{
             coordinate_y: [0, -20, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{,
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut",
-          ,}}
-          className="absolute top - 20 right - 20 text - 6xl opacity - 20",
-        >,
-          ,
+            rotate: [0, 5, 0]}}
+          transition={{
+            duration: 6;
+            repeat: Infinity;
+            ease: "easeInOut"}}
+          className="absolute top - 20 right - 20 text - 6xl opacity - 20">,
         </motion.div>,
         <motion.div,
-          animate={{,
+          animate={{
             coordinate_y: [0, 20, 0],
-            rotate: [0, -5, 0],
-          }}
-          transition={{,
-            duration: 8,;
-            repeat: Infinity,;
-            ease: "easeInOut",
-          ,}}
-          className="absolute bottom - 20 left - 20 text - 6xl opacity - 20",
-        >,
-          ,
+            rotate: [0, -5, 0]}}
+          transition={{
+            duration: 8;
+            repeat: Infinity;
+            ease: "easeInOut"}}
+          className="absolute bottom - 20 left - 20 text - 6xl opacity - 20">,
         </motion.div>,
         <motion.div,
-          animate={{,
+          animate={{
             coordinate_y: [0, -15, 0],
-            rotate: [0, 3, 0],
-          }}
-          transition={{,
-            duration: 7,;
-            repeat: Infinity,;
-            ease: "easeInOut",
-          ,}}
-          className="absolute top - 1/3 left - 10 text - 5xl opacity - 20",
-        >,
-          ,
+            rotate: [0, 3, 0]}}
+          transition={{
+            duration: 7;
+            repeat: Infinity;
+            ease: "easeInOut"}}
+          className="absolute top - 1/3 left - 10 text - 5xl opacity - 20">,
         </motion.div>,
         <motion.div,
-          animate={{,
+          animate={{
             coordinate_y: [0, 15, 0],
-            rotate: [0, -3, 0],
-          }}
-          transition={{,
-            duration: 9,;
-            repeat: Infinity,;
-            ease: "easeInOut",
-          ,}}
-          className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20",
-        >,
-          ,
+            rotate: [0, -3, 0]}}
+          transition={{
+            duration: 9;
+            repeat: Infinity;
+            ease: "easeInOut"}}
+          className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20">,
         </motion.div>,
       </div>,
-    </section>)),
-}
-,
-  ),
-,
+    </section>))}
+),

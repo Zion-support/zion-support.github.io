@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UnBridgePage() {,
-  return (,
+export default function UnBridgePage() {
+  return (
     <>,
       <Head>,
         <title>Un Bridge - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function UnBridgePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

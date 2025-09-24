@@ -1,86 +1,66 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { X, ArrowRight, TrendingUp, DollarSign, Zap, CheckCircle } from 'lucide-react',
-,
-const UltimateBusinessAutomation20o25Banner = () => {,
+const UltimateBusinessAutomation20o25Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isVisible, setIsVisible] = useState(true),
-,
-  const featuredContent = [,
-    {,
-      id: 'ultimate-business-automation-revolution',;
-      title: 'AI 20o25: The Ultimate Business Automation Revolution',;
-      description: 'Transform your enterprise with next-generation AI automation that delivers 15,0o00% ROI',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$85.2B',;
-        accuracy: '99.97%',;
-        automation: '98.7%',
-      ,},;
-      readingTime: '25 min read',;
-      isNew: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-ultimate-automation-success',;
-      title: 'Fortune 50o0 Ultimate Business Automation Success',;
-      description: '$85.2B Annual Savings - 15,0o00% ROI Success Story',;
-      type: 'case-study',;
-      url: '/case-studies/fortune-50o0-ultimate-business-automation-150o00-roi-success-story',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$85.2B',;
-        timeline: '18 months',;
-        satisfaction: '99.8%',
-      ,},;
-      readingTime: '18 min read',;
-      isNew: true,
-    ,},;
-    {,
-      id: 'ultimate-automation-implementation-guide',;
-      title: 'AI 20o25 Ultimate Business Automation Implementation Guide',;
-      description: 'Complete Roadmap to 15,0o00% ROI',;
-      type: 'resource',;
-      url: '/resources/ai-20o25-ultimate-business-automation-implementation-guide',;
-      metrics: {,
-        roi: '15,0o00%',;
-        timeline: '18 months',;
-        success: '99.7%',;
-        projects: '1,0o00+',
-      },;
-      readingTime: '35 min read',;
-      isNew: true,
-    ,}
+  const featuredContent = [
+    {
+      id: 'ultimate-business-automation-revolution';
+      title: 'AI 20o25: The Ultimate Business Automation Revolution';
+      description: 'Transform your enterprise with next-generation AI automation that delivers 15,0o00% ROI';
+      type: 'blog';
+      url: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$85.2B';
+        accuracy: '99.97%';
+        automation: '98.7%'};
+      readingTime: '25 min read';
+      isNew: true};
+    {
+      id: 'fortune-50o0-ultimate-automation-success';
+      title: 'Fortune 50o0 Ultimate Business Automation Success';
+      description: '$85.2B Annual Savings - 15,0o00% ROI Success Story';
+      type: 'case-study';
+      url: '/case-studies/fortune-50o0-ultimate-business-automation-150o00-roi-success-story';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$85.2B';
+        timeline: '18 months';
+        satisfaction: '99.8%'};
+      readingTime: '18 min read';
+      isNew: true};
+    {
+      id: 'ultimate-automation-implementation-guide';
+      title: 'AI 20o25 Ultimate Business Automation Implementation Guide';
+      description: 'Complete Roadmap to 15,0o00% ROI';
+      type: 'resource';
+      url: '/resources/ai-20o25-ultimate-business-automation-implementation-guide';
+      metrics: {
+        roi: '15,0o00%';
+        timeline: '18 months';
+        success: '99.7%';
+        projects: '1,0o00+'};
+      readingTime: '35 min read';
+      isNew: true}
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, []),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length)}, 50o00),
+    return () => clearInterval(timer)}, []),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimate-business-automation-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
+    localStorage.setItem('ultimate-business-automation-banner-dismissed', 'true')};
+  useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-business-automation-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = featuredContent[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -102,10 +82,9 @@ const UltimateBusinessAutomation20o25Banner = () => {,
               <span className="text-sm font-semibold">15,0o00% ROI GUARANTEED</span>,
             </div>,
           </div>,
-          <button,
+          <button
             onClick={handleDismiss}
-            className="text-white/70 hover: text-white transition-colors",
-          >,
+            className="text-white/70 hover: text-white transition-colors">,
             <X className="w-6 h-6"  />,
           </button>,
         </div>,
@@ -157,17 +136,15 @@ const UltimateBusinessAutomation20o25Banner = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
-              <Link,
+              <Link
                 href="/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough",
-                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center",
-              >,
+                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center">,
                 Read Ultimate Guide,
                 <ArrowRight className="w-5 h-5 ml-2"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 flex items-center justify-center",
-              >,
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 flex items-center justify-center">,
                 Get Free Consultation,
               </Link>,
             </div>,
@@ -180,15 +157,13 @@ const UltimateBusinessAutomation20o25Banner = () => {,
                   <span className="text-sm font-medium text-green-40o0">LIVE NOW</span>,
                 </div>,
                 <div className="flex space-x-1">,
-                  {featuredContent.map((_, index) => (,
-                    <button,
+                  {featuredContent.map((_, index) => (
+                    <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${,
-                        index === currentSlide ? 'bg-white' : 'bg-white/30',
-                      }`}
-                    />,
-                  ))}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/30'}`}
+                    />))}
                 </div>,
               </div>,
               <div className="space-y-3">,
@@ -197,11 +172,10 @@ const UltimateBusinessAutomation20o25Banner = () => {,
                     {currentContent.type === 'blog' ? '📝 Blog Post' :,
                      currentContent.type === 'case-study' ? '📊 Case Study' : '📚 Resource'}
                   </span>,
-                  {currentContent.isNew && (,
+                  {currentContent.isNew && (
                     <span className="bg-red-50o0 text-white text-xs px-2 py-1 rounded-full font-bold">,
                       NEW,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className="text-lg font-bold text-white leading-tight">,
                   {currentContent.title}
@@ -214,36 +188,33 @@ const UltimateBusinessAutomation20o25Banner = () => {,
                     <span>⏱️ {currentContent.readingTime}</span>,
                     <span>📈 {currentContent.metrics.roi} ROI</span>,
                   </div>,
-                  <Link,
+                  <Link
                     href={currentContent.url}
-                    className="text-yellow-40o0 hover: text-yellow-30o0 font-semibold text-sm flex items-center",
-                  >,
+                    className="text-yellow-40o0 hover: text-yellow-30o0 font-semibold text-sm flex items-center">,
                     Read More,
                     <ArrowRight className="w-4 h-4 ml-1"  />,
                   </Link>,
                 </div>,
               </div>,
             </div>,
-            {/* Additional Content Preview */,}
+            {/* Additional Content Preview */}
             <div className="grid grid-cols-1 gap-3">,
-              {featuredContent.slice(0, 2).map((content, index) => (,
-                <Link,
+              {featuredContent.slice(0, 2).map((content, index) => (
+                <Link
                   key={content.id}
                   href={content.url}
-                  className="bg-white/5 hover: bg-white/10 rounded-lg p-4 border border-white/10 transition-all duration-30o0 hover:border-white/20",
-                >,
+                  className="bg-white/5 hover: bg-white/10 rounded-lg p-4 border border-white/10 transition-all duration-30o0 hover:border-white/20">,
                   <div className="flex items-center justify-between">,
                     <div className="flex-1">,
                       <div className="flex items-center space-x-2 mb-1">,
                         <span className="text-xs font-medium text-blue-20o0 uppercase">,
                           {content.type === 'blog' ? '📝' :,
-                           content.type === 'case-study' ? '📊' : '📚',}
+                           content.type === 'case-study' ? '📊' : '📚'}
                         </span>,
-                        {content.isNew && (,
+                        {content.isNew && (
                           <span className="bg-red-50o0 text-white text-xs px-2 py-0.5 rounded-full font-bold">,
                             NEW,
-                          </span>,
-                        )}
+                          </span>)}
                       </div>,
                       <h4 className="text-sm font-semibold text-white leading-tight mb-1">,
                         {content.title}
@@ -255,30 +226,24 @@ const UltimateBusinessAutomation20o25Banner = () => {,
                     </div>,
                     <ArrowRight className="w-4 h-4 text-blue-40o0"  />,
                   </div>,
-                </Link>,
-              ))}
+                </Link>))}
             </div>,
           </div>,
         </div>,
         {/* Progress Indicator */}
         <div className="mt-8 flex justify-center">,
           <div className="flex space-x-2">,
-            {featuredContent.map((_, index) => (,
-              <button,
+            {featuredContent.map((_, index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   index === currentSlide,
                     ? 'bg-yellow-40o0 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',
-                ,}`}
-              />,
-            ))}
+                    : 'bg-white/30 hover: bg-white/50'}`}
+              />))}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default UltimateBusinessAutomation20o25Banner,
+    </div>)};
+export default UltimateBusinessAutomation20o25Banner;

@@ -1,14 +1,10 @@
 'use client',
-,
-import React from 'react',
-,
-export default function NewContent2025UltimateShowcaseBanner() {,
-  return null,
-}
+import React from 'react';
+export default function NewContent2025UltimateShowcaseBanner() {
+  return null}
 import Link from 'next/link',
-,
-export default function NewContent20o25UltimateShowcaseBanner() {,
-  return (,
+export default function NewContent20o25UltimateShowcaseBanner() {
+  return (
     <section className='py-12 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-8'>,
@@ -35,10 +31,9 @@ export default function NewContent20o25UltimateShowcaseBanner() {,
                   Breakthrough technologies and real-world impact of AI agents,
                   transforming enterprise operations.,
                 </p>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-enterprise-ai-agents-breakthrough',
-                  className='inline-block bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-block bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Read Article →,
                 </Link>,
               </div>,
@@ -55,10 +50,9 @@ export default function NewContent20o25UltimateShowcaseBanner() {,
                   Complete implementation guide for AI-driven hyperautomation,
                   across your enterprise.,
                 </p>,
-                <Link,
+                <Link
                   href='/blog/ai-20o26-hyperautomation-business-playbook',
-                  className='inline-block bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-block bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Playbook →,
                 </Link>,
               </div>,
@@ -82,7 +76,5 @@ export default function NewContent20o25UltimateShowcaseBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

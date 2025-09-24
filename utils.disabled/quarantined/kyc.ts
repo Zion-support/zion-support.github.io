@@ -41,7 +41,7 @@ export interface KycProfile {
   flags?: string[]; // e.g., ["mismatch","duplicate_ip"]
   lastUpdatedAt: string; // ISO
   createdAt: string; // ISO
-  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>;
+  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string unknown> }>;
 }
 
 export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {

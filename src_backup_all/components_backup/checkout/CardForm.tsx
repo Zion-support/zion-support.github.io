@@ -1,159 +1,135 @@
-import React from 'react',
+import React from 'react';
 import { useState, useEffect } from 'react',
 import { mutate } from 'swr',
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js',
 import { Button } from '@/components/ui/button',
 import { useAuth } from '@/hooks/useAuth',
-,
-interface Props {,
+interface Props {
   amount: number,
-  onSuccess: (intent: any) => void,
-,}
+  onSuccess: (intent: any) => void}
 ,
-export default function CardForm({ amount, onSuccess }: Props) {,
+export default function CardForm({ amount, onSuccess }: Props) {
   const stripe = useStripe(),
   const elements = useElements(),
   const { user } = useAuth(),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [isStripeElementReady, setIsStripeElementReady] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!stripe || !elements) return,
     setError(null),
     setLoading(true),
-    try {,
-      const res = await fetch('/api/create-payment-intent', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          amount,;
-          userId: user && typeof user !== 'boolean' ? user.id : undefined,;
-        }),;
+    try {
+      const res = await fetch('/api/create-payment-intent', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          amount;
+          userId: user && typeof user !== 'boolean' ? user.id : undefined;
+        });
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to create payment'),
-,
-      const result = await stripe.confirmCardPayment(,
-        data.clientSecret,;
-        {,
-          payment_method: {,
-            card: elements.getElement(CardElement)!,;
-            billing_details: {,
-              email: user && typeof user !== 'boolean' ? user.email : undefined,;
+      const result = await stripe.confirmCardPayment(
+        data.clientSecret;
+        {
+          payment_method: {
+            card: elements.getElement(CardElement)!;
+            billing_details: {
+              email: user && typeof user !== 'boolean' ? user.email : undefined;
               name: ,
                 user && typeof user !== 'boolean',
                   ? user.displayName,
-                  : undefined,;
-            },;
-          },;
-        },;
-        { handleActions: false ,}
+                  : undefined;
+            };
+          };
+        };
+        { handleActions: false }
       ),
-,
       if (result.error) throw new Error(result.error.message),
-,
       let intent = result.paymentIntent,
-      if (intent && intent.status === 'requires_action') {,
+      if (intent && intent.status === 'requires_action') {
         const confirmRes = await stripe.confirmCardPayment(data.clientSecret),
         if (confirmRes.error) throw new Error(confirmRes.error.message),
-        intent = confirmRes.paymentIntent,
-      }
+        intent = confirmRes.paymentIntent}
 ,
-      if (intent?.status === 'succeeded') {,
-        if (user && typeof user !== 'boolean' && user.id) {,
-          await fetch('/api/points/increment', {,
-            method: 'POST',;
-            headers: { 'Content-Type': 'application/json' ,},;
-            body: JSON.stringify({,
-              userId: user.id,;
-              amount: 50,;
-              reason: 'purchase',;
-            }),;
+      if (intent?.status === 'succeeded') {
+        if (user && typeof user !== 'boolean' && user.id) {
+          await fetch('/api/points/increment', {
+            method: 'POST';
+            headers: { 'Content-Type': 'application/json' };
+            body: JSON.stringify({
+              userId: user.id;
+              amount: 50;
+              reason: 'purchase';
+            });
           }),
-          mutate('user'),
-        }
-        console.log('Payment Success'),
-        onSuccess(result.paymentIntent),
-      }
-    } catch (err: any) {,
-      setError(err.message),
-    ,} finally {,
-      setLoading(false),
-    }
+          mutate('user')}
+        // // console.log('Payment Success'),
+        onSuccess(result.paymentIntent)}
+    } catch (err: any) {
+      setError(err.message)} finally {
+      setLoading(false)}
   };
-,
-  const handleTestPayment = async () => {,
+  const handleTestPayment = async () => {
     if (!stripe) return,
     setError(null),
     setLoading(true),
-    try {,
-      const res = await fetch('/api/create-payment-intent', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          amount,;
-          userId: user && typeof user !== 'boolean' ? user.id : undefined,;
-        }),;
+    try {
+      const res = await fetch('/api/create-payment-intent', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          amount;
+          userId: user && typeof user !== 'boolean' ? user.id : undefined;
+        });
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to create payment'),
-,
-      const result = await stripe.confirmCardPayment(data.clientSecret, {,
-        payment_method: 'pm_card_visa',;
+      const result = await stripe.confirmCardPayment(data.clientSecret, {
+        payment_method: 'pm_card_visa';
       }),
-,
       if (result.error) throw new Error(result.error.message),
-      if (result.paymentIntent?.status === 'succeeded') {,
-        if (user && typeof user !== 'boolean' && user.id) {,
-          await fetch('/api/points/increment', {,
-            method: 'POST',;
-            headers: { 'Content-Type': 'application/json' ,},;
-            body: JSON.stringify({,
-              userId: user.id,;
-              amount: 50,;
-              reason: 'purchase',;
-            }),;
+      if (result.paymentIntent?.status === 'succeeded') {
+        if (user && typeof user !== 'boolean' && user.id) {
+          await fetch('/api/points/increment', {
+            method: 'POST';
+            headers: { 'Content-Type': 'application/json' };
+            body: JSON.stringify({
+              userId: user.id;
+              amount: 50;
+              reason: 'purchase';
+            });
           }),
-          mutate('user'),
-        }
-        console.log('Payment Success'),
-        onSuccess(result.paymentIntent),
-      }
-    } catch (err: any) {,
-      setError(err.message),
-    ,} finally {,
-      setLoading(false),
-    }
+          mutate('user')}
+        // // console.log('Payment Success'),
+        onSuccess(result.paymentIntent)}
+    } catch (err: any) {
+      setError(err.message)} finally {
+      setLoading(false)}
   };
-,
-  return (,
+  return (
     <form onSubmit={handleSubmit} className='space-y-4'>,
-      <CardElement,
-        options={{ hidePostalCode: true ,}}
+      <CardElement
+        options={{ hidePostalCode: true }}
         onReady={() => setIsStripeElementReady(true)}
       />,
       {error && <p className='text-destructive text-sm'>{error}</p>}
-      <Button,
+      <Button
         type='submit',
         disabled={!stripe || loading || !isStripeElementReady}
-        className='w-full',
-      >,
+        className='w-full'>,
         {loading ? 'Processing...' : `Pay $${amount.toFixed(2)}`}
       </Button>,
-      {process.env.NODE_ENV === 'development' && (,
-        <Button,
+      {process.env.NODE_ENV === 'development' && (
+        <Button
           type='button',
           variant='outline',
           disabled={!stripe || loading}
           onClick={handleTestPayment}
-          className='w-full',
-        >,
+          className='w-full'>,
           Pay with test card 4242-4242-4242-4242,
-        </Button>,
-      )}
-    </form>,
-  ),
-}
+        </Button>)}
+    </form>)}
 ,

@@ -5,70 +5,55 @@ import { PdfExportButton } from '../PdfExportButton',
 import { Resume } from '@/types/resume',
 import { useState } from 'react',
 import { useIsMobile } from '@/hooks/use-mobile',
-,
-interface PreviewHeaderProps {,
+interface PreviewHeaderProps {
   resume: Resume,
-  onBack: () => void,
-,}
+  onBack: () => void}
 ,
-export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {,
+export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
   const [isPrintingsetIsPrinting] = useState(false),
   const isMobile = useIsMobile(),
-,
-  const handleBrowserPrint = () => {,
+  const handleBrowserPrint = () => {
     setIsPrinting(true),
-,
     // Inject print-specific CSS only for the duration of printing,
     const style = document.createElement('style'),
     style.innerHTML = `,
-      @media print {,
-        body * {,
-          visibility: hidden,
-        ,}
-        .print-section * {,
-          visibility: visible,
-        ,}
-        .print-section {,
+      @media print {
+        body * {
+          visibility: hidden}
+        .print-section * {
+          visibility: visible}
+        .print-section {
           position: absolute,
           left: 0,
           top: 0,
-          width: 100%,
-        ,}
-        .no-print {,
-          display: none !important,
-        ,}
+          width: 100%}
+        .no-print {
+          display: none !important}
       }
     `,
     document.head.appendChild(style),
-,
     // Trigger print dialog,
     window.print(),
-,
     // Remove the temporary style element after printing,
-    setTimeout(() => {,
+    setTimeout(() => {
       document.head.removeChild(style),
-      setIsPrinting(false),
-    }1000),
-  };
-,
-  return (,
+      setIsPrinting(false)}1000)};
+  return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>,
-      <Button,
+      <Button
         variant="outline",
         onClick={onBack} ,
-        className="gap-2 no-print",
-      >,
+        className="gap-2 no-print">,
         <ArrowLeft className="h-4 w-4" />,
         Back,
       </Button>,
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>,
         <PdfExportButton resume={resume} />,
-        <Button,
+        <Button
           variant="outline",
           onClick={handleBrowserPrint} ,
           disabled={isPrinting}
-          className="gap-2",
-        >,
+          className="gap-2">,
           <FileText className="h-4 w-4" />,
           Print,
         </Button>,
@@ -77,7 +62,5 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {,
           Add to Profile,
         </Button>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

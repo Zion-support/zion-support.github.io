@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UpdatePage() {,
-  return (,
+export default function UpdatePage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Autonomous Reference Architecture — Vision & Multimodal (20o25-08-18 13: 30 UTC)</title>,
@@ -11,11 +10,11 @@ export default function UpdatePage() {,
         <meta property="og:title" content="Autonomous Reference Architecture — Vision & Multimodal (20o25-08-18 13:30 UTC)"  />,
         <meta property="og:description" content="Innovative, useful guidance to decrease unit cost per request."  />,
         <meta name="twitter: card" content="summary_large_image"  />,
-        <script type="application/ld+json">{JSON.stringify({,
-          "@context": "https://schema.org",;
-          "@type": "Article",;
-          "headline": "${title}",;
-          "description": "${subtitle}",;
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org";
+          "@type": "Article";
+          "headline": "${title}";
+          "description": "${subtitle}";
           "author": { "@type": "Organization", "name": "Zion Tech Group" }
         })}</script>,
       </Head>,
@@ -30,9 +29,7 @@ export default function UpdatePage() {,
         </ul>,
         <p className="mt-6">Learn more at <a className="text-cyan-30o0 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">https://ziontechgroup.com</a>.</p>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

@@ -1,102 +1,95 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import { ultimateZionServices20o25 } from '../data/ultimate-zion-services-20o25',
-,
-const UltimateZionServicesShowcase: React.FC = () => {,
+const UltimateZionServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
-,
-  const categories = [,
-    {,
-      id: 'all',;
-      name: 'All Services',;
-      icon: '🌟',;
-      color: 'from-purple-60o0 to-pink-60o0',;
-    },;
-    {,
-      id: 'quantum-computing',;
-      name: 'Quantum Computing',;
-      icon: '⚛️',;
-      color: 'from-blue-60o0 to-cyan-60o0',;
-    },;
-    {,
-      id: 'blockchain-web3',;
-      name: 'Blockchain & Web3',;
-      icon: '🔗',;
-      color: 'from-green-60o0 to-emerald-60o0',;
-    },;
-    {,
-      id: 'space-tech',;
-      name: 'Space Technology',;
-      icon: '🛰️',;
-      color: 'from-indigo-60o0 to-purple-60o0',;
-    },;
-    {,
-      id: 'biotech-ai',;
-      name: 'Biotech & AI',;
-      icon: '🧬',;
-      color: 'from-red-60o0 to-pink-60o0',;
-    },;
-    {,
-      id: 'emerging-tech',;
-      name: 'Emerging Tech',;
-      icon: '🚀',;
-      color: 'from-orange-60o0 to-red-60o0',;
-    },;
-    {,
-      id: 'micro-saas',;
-      name: 'Micro SAAS',;
-      icon: '💻',;
-      color: 'from-blue-60o0 to-indigo-60o0',;
-    },;
-    {,
-      id: 'it-services',;
-      name: 'IT Services',;
-      icon: '🖥️',;
-      color: 'from-gray-60o0 to-slate-60o0',;
-    },;
+  const categories = [
+    {
+      id: 'all';
+      name: 'All Services';
+      icon: '🌟';
+      color: 'from-purple-60o0 to-pink-60o0';
+    };
+    {
+      id: 'quantum-computing';
+      name: 'Quantum Computing';
+      icon: '⚛️';
+      color: 'from-blue-60o0 to-cyan-60o0';
+    };
+    {
+      id: 'blockchain-web3';
+      name: 'Blockchain & Web3';
+      icon: '🔗';
+      color: 'from-green-60o0 to-emerald-60o0';
+    };
+    {
+      id: 'space-tech';
+      name: 'Space Technology';
+      icon: '🛰️';
+      color: 'from-indigo-60o0 to-purple-60o0';
+    };
+    {
+      id: 'biotech-ai';
+      name: 'Biotech & AI';
+      icon: '🧬';
+      color: 'from-red-60o0 to-pink-60o0';
+    };
+    {
+      id: 'emerging-tech';
+      name: 'Emerging Tech';
+      icon: '🚀';
+      color: 'from-orange-60o0 to-red-60o0';
+    };
+    {
+      id: 'micro-saas';
+      name: 'Micro SAAS';
+      icon: '💻';
+      color: 'from-blue-60o0 to-indigo-60o0';
+    };
+    {
+      id: 'it-services';
+      name: 'IT Services';
+      icon: '🖥️';
+      color: 'from-gray-60o0 to-slate-60o0';
+    };
   ],
-,
-  const filteredServices = ultimateZionServices20o25.filter(service => {,
+  const filteredServices = ultimateZionServices20o25.filter(service => {
     const matchesCategory =,
       selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-        delayChildren: 0.2,;
-      },;
-    },;
+    return matchesCategory && matchesSearch}),
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+        delayChildren: 0.2;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.5 ,},;
-    },;
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: { duration: 0.5 };
+    };
   };
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.h1,
             className='text-4xl md:text-6xl font-bold mb-6',
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >,
             Ultimate,
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0'>,
@@ -110,9 +103,9 @@ const UltimateZionServicesShowcase: React.FC = () => {,
           </motion.h1>,
           <motion.p,
             className='text-xl text-gray-30o0 mb-8 max-w-4xl mx-auto',
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.2 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >,
             Discover our revolutionary portfolio of cutting-edge micro SAAS,
             services, quantum computing solutions, blockchain innovations, space,
@@ -122,9 +115,9 @@ const UltimateZionServicesShowcase: React.FC = () => {,
           {/* Contact Information */}
           <motion.div,
             className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-4xl mx-auto border border-white/20',
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.4 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >,
             <h3 className='text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0'>,
               🚀 Ready to Transform Your Business?,
@@ -151,12 +144,11 @@ const UltimateZionServicesShowcase: React.FC = () => {,
                   🌐 Website,
                 </div>,
                 <div className='text-gray-30o0'>,
-                  <a,
+                  <a
                     href='https://ziontechgroup.com',
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='text-blue-40o0 hover:text-blue-30o0 transition-colors',
-                  >,
+                    className='text-blue-40o0 hover:text-blue-30o0 transition-colors'>,
                     ziontechgroup.com,
                   </a>,
                 </div>,
@@ -171,14 +163,14 @@ const UltimateZionServicesShowcase: React.FC = () => {,
               </div>,
             </div>,
           </motion.div>,
-          {/* Search and Filter */,}
+          {/* Search and Filter */}
           <motion.div,
             className='flex flex-col md: flex-row gap-4 justify-center items-center mb-12',
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.6 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >,
-            <input,
+            <input
               type='text',
               placeholder='Search revolutionary services...',
               value={searchTerm}
@@ -186,20 +178,18 @@ const UltimateZionServicesShowcase: React.FC = () => {,
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20 w-full md:w-80',
             />,
             <div className='flex flex-wrap gap-2'>,
-              {categories.map(category => (,
-                <button,
-                  key={category.id,}
+              {categories.map(category => (
+                <button
+                  key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-30o0 ${,
+                  className={`px-4 py-2 rounded-lg border transition-all duration-30o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 border-purple-40o0 text-white',
-                      : 'bg-white/10 border-white/20 text-gray-30o0 hover: bg-white/20 hover:border-white/40',
-                  ,}`}
+                      : 'bg-white/10 border-white/20 text-gray-30o0 hover: bg-white/20 hover:border-white/40'}`}
                 >,
                   <span className='mr-2'>{category.icon}</span>,
                   {category.name}
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </motion.div>,
         </div>,
@@ -209,21 +199,20 @@ const UltimateZionServicesShowcase: React.FC = () => {,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8',
-            variants={containerVariants,}
+            variants={containerVariants}
             initial='hidden',
             whileInView='visible',
-            viewport={{ once: true ,}}
+            viewport={{ once: true }}
           >,
-            {filteredServices.map((service, index) => (,
+            {filteredServices.map((service, index) => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 hover:transform hover:scale-10o5 group',
-              >,
-                {/* Service Header */,}
+                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 hover:transform hover:scale-10o5 group'>,
+                {/* Service Header */}
                 <div className='text-center mb-6'>,
-                  <div,
-                    className={`text-6xl mb-4 group-hover: scale-110 transition-transform duration-30o0`,}
+                  <div
+                    className={`text-6xl mb-4 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     {service.icon}
                   </div>,
@@ -254,25 +243,25 @@ const UltimateZionServicesShowcase: React.FC = () => {,
                     <div className='flex justify-between'>,
                       <span className='text-gray-40o0'>Monthly: </span>,
                       <span className='text-green-40o0 font-semibold'>,
-                        {service.pricing.monthly,}
+                        {service.pricing.monthly}
                       </span>,
                     </div>,
                     <div className='flex justify-between'>,
                       <span className='text-gray-40o0'>Yearly: </span>,
                       <span className='text-green-40o0 font-semibold'>,
-                        {service.pricing.yearly,}
+                        {service.pricing.yearly}
                       </span>,
                     </div>,
                     <div className='flex justify-between'>,
                       <span className='text-gray-40o0'>Market Price: </span>,
                       <span className='text-blue-40o0 font-semibold'>,
-                        {service.pricing.marketPrice,}
+                        {service.pricing.marketPrice}
                       </span>,
                     </div>,
                     <div className='flex justify-between'>,
                       <span className='text-gray-40o0'>Setup: </span>,
                       <span className='text-yellow-40o0 font-semibold'>,
-                        {service.pricing.setup,}
+                        {service.pricing.setup}
                       </span>,
                     </div>,
                   </div>,
@@ -288,15 +277,13 @@ const UltimateZionServicesShowcase: React.FC = () => {,
                     </p>,
                   </div>,
                   <div className='space-y-1'>,
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (,
-                      <div,
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                      <div
                         key={idx}
-                        className='flex items-center text-sm text-gray-30o0',
-                      >,
+                        className='flex items-center text-sm text-gray-30o0'>,
                         <span className='text-green-40o0 mr-2'>✓</span>,
                         {benefit}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 {/* Technology Stack */}
@@ -305,29 +292,26 @@ const UltimateZionServicesShowcase: React.FC = () => {,
                     🛠️ Technology Stack,
                   </h4>,
                   <div className='flex flex-wrap gap-2'>,
-                    {service.technology.slice(0, 4).map((tech, idx) => (,
-                      <span,
+                    {service.technology.slice(0, 4).map((tech, idx) => (
+                      <span
                         key={idx}
-                        className='px-2 py-1 bg-white/10 rounded text-xs text-gray-30o0',
-                      >,
+                        className='px-2 py-1 bg-white/10 rounded text-xs text-gray-30o0'>,
                         {tech}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
                 {/* Market Information */}
-                {service.marketSize && (,
+                {service.marketSize && (
                   <div className='mb-6'>,
                     <h4 className='text-purple-40o0 font-semibold mb-2'>,
                       🌍 Market Opportunity,
                     </h4>,
                     <div className='bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 rounded-lg p-3'>,
                       <p className='text-blue-40o0 text-sm font-semibold'>,
-                        Market Size: {service.marketSize,}
+                        Market Size: {service.marketSize}
                       </p>,
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 {/* Trial and Setup */}
                 <div className='flex justify-between items-center mb-6 text-sm'>,
@@ -355,27 +339,24 @@ const UltimateZionServicesShowcase: React.FC = () => {,
                     Contact us for a personalized demo,
                   </p>,
                 </div>,
-                {/* Contact Quick Access */,}
+                {/* Contact Quick Access */}
                 <div className='mt-4 text-center'>,
                   <div className='text-xs text-gray-40o0'>,
                     📞{' '}
-                    <a,
+                    <a
                       href='tel: +130o24640950',
-                      className='text-blue-40o0 hover:text-blue-30o0',
-                    >,
+                      className='text-blue-40o0 hover:text-blue-30o0'>,
                       +1 30o2 464 0950,
-                    </a>{' ',}
+                    </a>{' '}
                     | ✉️{' '}
-                    <a,
+                    <a
                       href='mailto: kleber@ziontechgroup.com',
-                      className='text-blue-40o0 hover:text-blue-30o0',
-                    >,
+                      className='text-blue-40o0 hover:text-blue-30o0'>,
                       kleber@ziontechgroup.com,
                     </a>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </motion.div>,
         </div>,
       </section>,
@@ -384,9 +365,9 @@ const UltimateZionServicesShowcase: React.FC = () => {,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
             className='bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-40o0/30',
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >,
             <h2 className='text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0'>,
               Ready to Lead the Future?,
@@ -411,9 +392,5 @@ const UltimateZionServicesShowcase: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default UltimateZionServicesShowcase,
-,
+    </div>)};
+export default UltimateZionServicesShowcase;

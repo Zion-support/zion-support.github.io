@@ -1,19 +1,18 @@
 import Head from 'next/head',
-,
-export default function UltraCasePage() {,
-  return (,
+export default function UltraCasePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Case Study: Lightning deployment pipelines Success</title>,
-        <meta,
+        <meta
           name='description',
           content='Real-world case study demonstrating ultra-fast development success.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='case study, success story, development, ultra-fast, results',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/reports/cases/ultra-17555750o61219-b0o4c8s',
         />,
@@ -43,15 +42,12 @@ export default function UltraCasePage() {,
           </ul>,
         </section>,
         <section className='text-center'>,
-          <a,
+          <a
             href='https://ziontechgroup.com',
-            className='inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors',
-          >,
+            className='inline-block bg-orange-60o0 hover:bg-orange-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors'>,
             Read Full Case Study,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

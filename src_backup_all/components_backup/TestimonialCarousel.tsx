@@ -1,9 +1,9 @@
-import {,
-  Carousel,;
-  CarouselContent,;
-  CarouselItem,;
-  CarouselNext,;
-  CarouselPrevious,;
+import {
+  Carousel;
+  CarouselContent;
+  CarouselItem;
+  CarouselNext;
+  CarouselPrevious;
 } from '@/components/ui/carousel',
 import { Card, CardContent, CardFooter } from '@/components/ui/card',
 import { Avatar } from '@/components/ui/avatar',
@@ -12,11 +12,9 @@ import { Quote } from 'lucide-react',
 import Link from 'next/link',
 import Image from 'next/image',
 import { CASE_STUDIES } from '@/data/case-studies',
-,
 const testimonials = CASE_STUDIES,
-,
-export function TestimonialCarousel() {,
-  return (,
+export function TestimonialCarousel() {
+  return (
     <section className='py-20 bg-zion-blue-dark'>,
       <div className='container mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -29,22 +27,21 @@ export function TestimonialCarousel() {,
           </p>,
         </div>,
         <div className='max-w-5xl mx-auto px-8'>,
-          <Carousel,
-            opts={{,
-              align: 'start',;
-              loop: true,;
+          <Carousel
+            opts={{
+              align: 'start';
+              loop: true;
             }}
-            className='w-full',
-          >,
+            className='w-full'>,
             <CarouselContent>,
-              {testimonials.map((testimonial, index) => (,
+              {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className='md: basis-1/1 lg:basis-1/1'>,
                   <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-30o0 flex flex-col'>,
                     <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>,
                       <div className='flex-shrink-0 flex flex-col items-center'>,
                         <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>,
-                          <Image,
-                            src={testimonial.avatar,}
+                          <Image
+                            src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
                             height={80}
@@ -53,7 +50,7 @@ export function TestimonialCarousel() {,
                         </Avatar>,
                         <div className='text-center md: text-left'>,
                           <p className='font-bold text-zion-cyan'>,
-                            {testimonial.author,}
+                            {testimonial.author}
                           </p>,
                           <p className='text-zion-slate-light text-sm'>,
                             {testimonial.role}
@@ -62,7 +59,7 @@ export function TestimonialCarousel() {,
                       </div>,
                       <div className='flex-1'>,
                         <div className='flex items-center gap-3 mb-4'>,
-                          <Image,
+                          <Image
                             src={testimonial.companyLogo}
                             alt={`${testimonial.company} logo`}
                             width={32}
@@ -81,19 +78,17 @@ export function TestimonialCarousel() {,
                       </div>,
                     </CardContent>,
                     <CardFooter className='p-6 pt-0'>,
-                      <Button,
+                      <Button
                         variant='link',
                         className='text-zion-cyan p-0',
-                        asChild,
-                      >,
+                        asChild>,
                         <Link href={`/case-studies/${testimonial.slug}`}>,
                           Read Case Study →,
                         </Link>,
                       </Button>,
                     </CardFooter>,
                   </Card>,
-                </CarouselItem>,
-              ))}
+                </CarouselItem>))}
             </CarouselContent>,
             <div className='flex justify-center mt-8 gap-2'>,
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />,
@@ -102,7 +97,5 @@ export function TestimonialCarousel() {,
           </Carousel>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

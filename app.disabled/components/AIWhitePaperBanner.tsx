@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AIWhitePaperBanner() {,
-  return (,
+export default function AIWhitePaperBanner() {
+  return (
     <section className='py-8 bg-gradient-to-r from-gray-90o0 via-slate-90o0 to-gray-90o0'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20'>,
@@ -16,7 +15,7 @@ export default function AIWhitePaperBanner() {,
                 AI Implementation White Paper 20o25,
               </h2>,
               <p className='text-gray-30o0 text-lg mb-4 max-w-2xl'>,
-                Comprehensive guide to enterprise AI implementation strategies,;
+                Comprehensive guide to enterprise AI implementation strategies;
                 best practices, and proven frameworks for successful,
                 transformation.,
               </p>,
@@ -36,23 +35,19 @@ export default function AIWhitePaperBanner() {,
               </div>,
             </div>,
             <div className='flex flex-col sm: flex-row gap-3 shrink-0'>,
-              <Link,
+              <Link
                 href='/ai-implementation-white-paper-20o25',
-                className='bg-white text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Read White Paper,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center',
-              >,
+                className='border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center'>,
                 Get Consultation,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

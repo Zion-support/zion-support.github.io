@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function InnovativeBusinessSolutionsPage() {,
-  return (,
+export default function InnovativeBusinessSolutionsPage() {
+  return (
     <>,
       <Head>,
         <title>Innovative Business Solutions | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Business transformation services across AI, automation, and cloud.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/innovative-business-solutions',
         />,
@@ -22,7 +21,5 @@ export default function InnovativeBusinessSolutionsPage() {,
           Programs designed to accelerate transformation outcomes.,
         </p>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

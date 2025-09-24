@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26ManufacturingSuccessBanner = () => {,
-  return (,
+const AI20o26ManufacturingSuccessBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-orange-60o0 via-red-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -143,37 +142,30 @@ const AI20o26ManufacturingSuccessBanner = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-global-manufacturing-transformation',
-              className='bg-white text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o26-enterprise-tools-suite',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors'>,
               Access ROI Calculator,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors'>,
               Start Your Transformation,
             </Link>,
           </div>,
           <p className='text-gray-30o0 text-sm'>,
             Join 20o0+ manufacturing companies transforming with AI •,
             <span className='text-yellow-40o0 font-semibold'>,
-              {' ',}
+              {' '}
               Free transformation assessment available,
             </span>,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o26ManufacturingSuccessBanner,
-,
+    </section>)};
+export default AI20o26ManufacturingSuccessBanner;

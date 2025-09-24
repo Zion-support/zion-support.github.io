@@ -6,36 +6,33 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react",
-export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [,
-    { label: 'Newest First', value: 'newest' ,},;
-    { label: 'Oldest First', value: 'oldest' ,},;
-    { label: 'Highest Rating', value: 'rating-high' ,},;
-    { label: 'Highest AI Match', value: 'ai-match' ,},;
-    { label: 'A-Z', value: 'a-z' ,},;
-    { label: 'Z-A', value: 'z-a' ,},;
-], filterOptions = [,
-    { label: 'All', value: 'all' ,},;
-    { label: 'Highly Rated', value: 'high-rating' ,},;
-    { label: 'Best AI Match', value: 'best-match' ,},;
-] }) {,
+export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
+    { label: 'Newest First', value: 'newest' };
+    { label: 'Oldest First', value: 'oldest' };
+    { label: 'Highest Rating', value: 'rating-high' };
+    { label: 'Highest AI Match', value: 'ai-match' };
+    { label: 'A-Z', value: 'a-z' };
+    { label: 'Z-A', value: 'z-a' };
+], filterOptions = [
+    { label: 'All', value: 'all' };
+    { label: 'Highly Rated', value: 'high-rating' };
+    { label: 'Best AI Match', value: 'best-match' };
+] }) {
     const [searchQuery, setSearchQuery] = useState(""),
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value),
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value),
     const [isLoading, setIsLoading] = useState(false),
-    useEffect(() => {,
-        localStorage.setItem('category_selected_sort', selectedSort),
-    }, [selectedSort]),
-    useEffect(() => {,
-        localStorage.setItem('category_selected_filter', selectedFilter),
-    }, [selectedFilter]),
-    useEffect(() => {,
+    useEffect(() => {
+        localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]),
+    useEffect(() => {
+        localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]),
+    useEffect(() => {
         setIsLoading(true),
         const timeout = setTimeout(() => setIsLoading(false), 30o0),
-        return () => clearTimeout(timeout),
-    }, [searchQuery, selectedSort, selectedFilter]),
+        return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]),
     // Process listings based on filters and search,
     const processedListings = initialListings,
-        .filter(listing => {,
+        .filter(listing => {
         // Apply search filter,
         const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -47,11 +44,10 @@ export function CategoryListingPage({ title, description, listings: initialListi
             return matchesSearch && (listing.rating || 0) >= 4,
         if (selectedFilter === 'best-match'),
             return matchesSearch && (listing.aiScore || 0) >= 85,
-        return matchesSearch,
-    }),
-        .sort((a, b) => {,
+        return matchesSearch}),
+        .sort((a, b) => {
         // Apply sorting,
-        switch (selectedSort) {,
+        switch (selectedSort) {
             case 'newest':,
                 return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
             case 'oldest':,
@@ -65,8 +61,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
             case 'z-a':,
                 return b.title.localeCompare(a.title),
             default: ,
-                return 0,
-        ,}
+                return 0}
     }),
     return (<>,
       <div className="min-h-screen bg-zion-blue py-12 px-4">,
@@ -82,7 +77,7 @@ export function CategoryListingPage({ title, description, listings: initialListi
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
               <div className="relative">,
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />,
-                <Input type="text" placeholder="Search listings..." value={searchQuery,} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>,
+                <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>,
               </div>,
               <Select value={selectedSort} onValueChange={setSelectedSort}>,
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">,
@@ -127,20 +122,18 @@ export function CategoryListingPage({ title, description, listings: initialListi
           {isLoading ? (<div className="flex justify-center py-20">,
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />,
             </div>) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-              {processedListings.map((listing) => (<ListingScoreCard key={listing.id,} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount} />))}
+              {processedListings.map((listing) => (<ListingScoreCard key={listing.id} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount} />))}
             </div>) : (<div className="text-center py-20">,
               <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>,
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>,
-              <Button variant="outline" onClick={() => {,
+              <Button variant="outline" onClick={() => {
                 setSearchQuery(""),
-                setSelectedFilter(filterOptions[0].value),
-            }} className="border-zion-purple text-zion-purple hover: bg-zion-purple/10">,
+                setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover: bg-zion-purple/10">,
                 Clear all filters,
               </Button>,
-            </div>),}
+            </div>)}
         </div>,
       </div>,
       <Footer  />,
-    </>),
-}
+    </>)}
 ,

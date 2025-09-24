@@ -1,126 +1,126 @@
 
 ,
-module.exports ={,
-  apps: [,
-    {,
-,}
-module.exports ={,
-    {,
-      name: "zion-app",;
-      name: "zion - app",;
-      script: "npm",;
-      args: "start",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: { NODE_ENV: "production", PORT: 30o00 ,},;
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,},;
-      watch: false,;
-      ignore_watch: ["node_modules", "logs", "*.log"],;
-      max_memory_restart: "1G",;
-      error_file: "./logs / err.log",;
-      out_file: "./logs / out.log",;
-      log_file: "./logs / combined.log",;
-      time: true,;
-      log_date_format: "YYYY - MM - DD HH:mm:ss Z",;
-      merge_logs: true,;
-      max_restarts: 10,;
-      min_uptime: "10s",;
-      restart_delay: 40o00,;
-      kill_timeout: 50o00,;
-      wait_ready: true,;
-      listen_timeout: 80o00,;
-      kill_retry_time: 10o0,},;
-    {,
-      name: "zion - dev",;
-      script: "npm",;
-      args: "run dev",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: { NODE_ENV: "development", PORT: 30o00 ,},;
-      watch: true,;
-      ignore_watch: ["node_modules", "logs", "*.log", ".next"],;
-      max_memory_restart: "512M",;
-      error_file: "./logs / dev - err.log",;
-      out_file: "./logs / dev - out.log",;
-      log_file: "./logs / dev - combined.log",;
-      time: true,;
-      log_date_format: "YYYY - MM - DD HH:mm:ss Z",;
-      merge_logs: true,;
-      max_restarts: 5,;
-      min_uptime: "5s",;
-      restart_delay: 20o00,},;
-    {,
-      name: "zion - build",;
-      script: "npm",;
-      args: "run build",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: { NODE_ENV: "production" ,},;
-      watch: false,;
-      max_memory_restart: "2G",;
-      error_file: "./logs / build - err.log",;
-      out_file: "./logs / build - out.log",;
-      log_file: "./logs / build - combined.log",;
-      time: true,;
-      log_date_format: "YYYY - MM - DD HH:mm:ss Z",;
-      merge_logs: true,;
-      max_restarts: 3,;
-      min_uptime: "30s",;
-      restart_delay: 50o00,},;
-    {,
-      name: "zion - lint",;
-      script: "npm",;
-      args: "run lint",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: { NODE_ENV: "development" ,},;
-      watch: false,;
-      max_memory_restart: "256M",;
-      error_file: "./logs / lint - err.log",;
-      out_file: "./logs / lint - out.log",;
-      log_file: "./logs / lint - combined.log",;
-      time: true,;
-      log_date_format: "YYYY - MM - DD HH:mm:ss Z",;
-      merge_logs: true,;
-      max_restarts: 2,;
-      min_uptime: "5s",;
-      restart_delay: 10o00,},;
-    {,
-      name: "zion - test",;
-      script: "npm",;
-      args: "test",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: { NODE_ENV: "test" ,},;
-      watch: false,;
-      max_memory_restart: "512M",;
-      error_file: "./logs / test - err.log",;
-      out_file: "./logs / test - out.log",;
-      log_file: "./logs / test - combined.log",;
-      time: true,;
-      log_date_format: "YYYY - MM - DD HH:mm:ss Z",;
-      merge_logs: true,;
-      max_restarts: 3,;
-      min_uptime: "10s",;
-      restart_delay: 20o00,},;
-  ],;
-  deploy: {,
-    production: {,
-      user: "ubuntu",;
-      host: "your - server.com",;
-      ref: "origin / main",;
-      repo: "git@github.com:your - username / your - repo.git",;
-      path: "/var / www / zion - app",;
-      "pre - deploy - local": "",;
+module.exports ={
+  apps: [
+    {
+}
+module.exports ={
+    {
+      name: "zion-app";
+      name: "zion - app";
+      script: "npm";
+      args: "start";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: { NODE_ENV: "production", PORT: 30o00 };
+      env_development: { NODE_ENV: "development", PORT: 30o00 };
+      watch: false;
+      ignore_watch: ["node_modules", "logs", "*.log"];
+      max_memory_restart: "1G";
+      error_file: "./logs / err.log";
+      out_file: "./logs / out.log";
+      log_file: "./logs / combined.log";
+      time: true;
+      log_date_format: "YYYY - MM - DD HH:mm:ss Z";
+      merge_logs: true;
+      max_restarts: 10;
+      min_uptime: "10s";
+      restart_delay: 40o00;
+      kill_timeout: 50o00;
+      wait_ready: true;
+      listen_timeout: 80o00;
+      kill_retry_time: 10o0};
+    {
+      name: "zion - dev";
+      script: "npm";
+      args: "run dev";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: { NODE_ENV: "development", PORT: 30o00 };
+      watch: true;
+      ignore_watch: ["node_modules", "logs", "*.log", ".next"];
+      max_memory_restart: "512M";
+      error_file: "./logs / dev - err.log";
+      out_file: "./logs / dev - out.log";
+      log_file: "./logs / dev - combined.log";
+      time: true;
+      log_date_format: "YYYY - MM - DD HH:mm:ss Z";
+      merge_logs: true;
+      max_restarts: 5;
+      min_uptime: "5s";
+      restart_delay: 20o00};
+    {
+      name: "zion - build";
+      script: "npm";
+      args: "run build";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: { NODE_ENV: "production" };
+      watch: false;
+      max_memory_restart: "2G";
+      error_file: "./logs / build - err.log";
+      out_file: "./logs / build - out.log";
+      log_file: "./logs / build - combined.log";
+      time: true;
+      log_date_format: "YYYY - MM - DD HH:mm:ss Z";
+      merge_logs: true;
+      max_restarts: 3;
+      min_uptime: "30s";
+      restart_delay: 50o00};
+    {
+      name: "zion - lint";
+      script: "npm";
+      args: "run lint";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: { NODE_ENV: "development" };
+      watch: false;
+      max_memory_restart: "256M";
+      error_file: "./logs / lint - err.log";
+      out_file: "./logs / lint - out.log";
+      log_file: "./logs / lint - combined.log";
+      time: true;
+      log_date_format: "YYYY - MM - DD HH:mm:ss Z";
+      merge_logs: true;
+      max_restarts: 2;
+      min_uptime: "5s";
+      restart_delay: 10o00};
+    {
+      name: "zion - test";
+      script: "npm";
+      args: "test";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: { NODE_ENV: "test" };
+      watch: false;
+      max_memory_restart: "512M";
+      error_file: "./logs / test - err.log";
+      out_file: "./logs / test - out.log";
+      log_file: "./logs / test - combined.log";
+      time: true;
+      log_date_format: "YYYY - MM - DD HH:mm:ss Z";
+      merge_logs: true;
+      max_restarts: 3;
+      min_uptime: "10s";
+      restart_delay: 20o00};
+  ];
+  deploy: {
+    production: {
+      user: "ubuntu";
+      host: "your - server.com";
+      ref: "origin / main";
+      repo: "git@github.com:your - username / your - repo.git";
+      path: "/var / www / zion - app";
+      "pre - deploy - local": "";
       "post - deploy":,
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env production",;
-      "pre - setup": ""},;
-    staging: {,
+        "npm install && npm run build && pm2 reload ecosystem.config.js --env production";
+      "pre - setup": ""};
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -129,43 +129,39 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
 ursor/integrate-build-improve-and-re-verify-8f7d,
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-,
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
 }
-module.exports ={,
-  apps: [,
+module.exports ={
+  apps: [
     // Main application,
-    {,
-      name: "zion - app",;
-      script: "npm",;
-      args: "start",;
-      cwd: "./",;
-      instances: 1,;
-      exec_mode: "fork",;
-      env: {,
+    {
+      name: "zion - app";
+      script: "npm";
+      args: "start";
+      cwd: "./";
+      instances: 1;
+      exec_mode: "fork";
+      env: {
         NODE_ENV: "production",
-        PORT: 30o00,
-      ,}
-      env_development: {,
+        PORT: 30o00}
+      env_development: {
         NODE_ENV: "development",
-        PORT: 30o00,
-      ,}
+        PORT: 30o00}
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -181,20 +177,18 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
+      kill_retry_time: 10o0}
     // Development server,
-    {,
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: {,
+      env: {
         NODE_ENV: "development",
-        PORT: 30o00,
-      ,}
+        PORT: 30o00}
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -206,19 +200,17 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
     // Build process,
-    {,
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: {,
-        NODE_ENV: "production",
-      ,}
+      env: {
+        NODE_ENV: "production"}
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -229,19 +221,17 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
+      restart_delay: 50o00}
     // Linting process,
-    {,
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: {,
-        NODE_ENV: "development",
-      ,}
+      env: {
+        NODE_ENV: "development"}
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -252,19 +242,17 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
+      restart_delay: 10o00}
     // Testing process,
-    {,
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: {,
-        NODE_ENV: "test",
-      ,}
+      env: {
+        NODE_ENV: "test"}
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -275,11 +263,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -288,9 +275,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -299,21 +285,20 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 }
-module.exports ={,
-  apps: [,
-    {,
+module.exports ={
+  apps: [
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production", PORT: 30o00 ,}
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "production", PORT: 30o00 }
+      env_development: { NODE_ENV: "development", PORT: 30o00 }
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -329,16 +314,15 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
-    {,
+      kill_retry_time: 10o0}
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "development", PORT: 30o00 }
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -350,16 +334,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
-    {,
+      restart_delay: 20o00}
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production" ,}
+      env: { NODE_ENV: "production" }
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -370,16 +353,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
-    {,
+      restart_delay: 50o00}
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development" ,}
+      env: { NODE_ENV: "development" }
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -390,16 +372,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
-    {,
+      restart_delay: 10o00}
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "test" ,}
+      env: { NODE_ENV: "test" }
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -410,11 +391,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -423,9 +403,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -434,21 +413,20 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 }
-module.exports ={,
-  apps: [,
-    {,
+module.exports ={
+  apps: [
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production", PORT: 30o00 ,}
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "production", PORT: 30o00 }
+      env_development: { NODE_ENV: "development", PORT: 30o00 }
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -464,16 +442,15 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
-    {,
+      kill_retry_time: 10o0}
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "development", PORT: 30o00 }
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -485,16 +462,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
-    {,
+      restart_delay: 20o00}
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production" ,}
+      env: { NODE_ENV: "production" }
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -505,16 +481,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
-    {,
+      restart_delay: 50o00}
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development" ,}
+      env: { NODE_ENV: "development" }
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -525,16 +500,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
-    {,
+      restart_delay: 10o00}
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "test" ,}
+      env: { NODE_ENV: "test" }
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -545,11 +519,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -558,9 +531,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -569,21 +541,20 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 }
-module.exports ={,
-  apps: [,
-    {,
+module.exports ={
+  apps: [
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production", PORT: 30o00 ,}
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "production", PORT: 30o00 }
+      env_development: { NODE_ENV: "development", PORT: 30o00 }
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -599,16 +570,15 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
-    {,
+      kill_retry_time: 10o0}
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "development", PORT: 30o00 }
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -620,16 +590,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
-    {,
+      restart_delay: 20o00}
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production" ,}
+      env: { NODE_ENV: "production" }
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -640,16 +609,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
-    {,
+      restart_delay: 50o00}
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development" ,}
+      env: { NODE_ENV: "development" }
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -660,16 +628,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
-    {,
+      restart_delay: 10o00}
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "test" ,}
+      env: { NODE_ENV: "test" }
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -680,11 +647,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -693,9 +659,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -704,21 +669,20 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 }
-module.exports ={,
-  apps: [,
-    {,
+module.exports ={
+  apps: [
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production", PORT: 30o00 ,}
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "production", PORT: 30o00 }
+      env_development: { NODE_ENV: "development", PORT: 30o00 }
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -734,16 +698,15 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
-    {,
+      kill_retry_time: 10o0}
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "development", PORT: 30o00 }
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -755,16 +718,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
-    {,
+      restart_delay: 20o00}
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production" ,}
+      env: { NODE_ENV: "production" }
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -775,16 +737,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
-    {,
+      restart_delay: 50o00}
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development" ,}
+      env: { NODE_ENV: "development" }
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -795,16 +756,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
-    {,
+      restart_delay: 10o00}
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "test" ,}
+      env: { NODE_ENV: "test" }
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -815,11 +775,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -828,9 +787,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -839,21 +797,20 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    ,}
+      "pre-setup": ""}
   }
 }
-module.exports ={,
-  apps: [,
-    {,
+module.exports ={
+  apps: [
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production", PORT: 30o00 ,}
-      env_development: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "production", PORT: 30o00 }
+      env_development: { NODE_ENV: "development", PORT: 30o00 }
       watch: false,
       ignore_watch: ["node_modules", "logs", "*.log"],
       max_memory_restart: "1G",
@@ -869,16 +826,15 @@ module.exports ={,
       kill_timeout: 50o00,
       wait_ready: true,
       listen_timeout: 80o00,
-      kill_retry_time: 10o0,
-    ,}
-    {,
+      kill_retry_time: 10o0}
+    {
       name: "zion-dev",
       script: "npm",
       args: "run dev",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development", PORT: 30o00 ,}
+      env: { NODE_ENV: "development", PORT: 30o00 }
       watch: true,
       ignore_watch: ["node_modules", "logs", "*.log", ".next"],
       max_memory_restart: "512M",
@@ -890,16 +846,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 5,
       min_uptime: "5s",
-      restart_delay: 20o00,
-    ,}
-    {,
+      restart_delay: 20o00}
+    {
       name: "zion-build",
       script: "npm",
       args: "run build",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "production" ,}
+      env: { NODE_ENV: "production" }
       watch: false,
       max_memory_restart: "2G",
       error_file: "./logs/build-err.log",
@@ -910,16 +865,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "30s",
-      restart_delay: 50o00,
-    ,}
-    {,
+      restart_delay: 50o00}
+    {
       name: "zion-lint",
       script: "npm",
       args: "run lint",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "development" ,}
+      env: { NODE_ENV: "development" }
       watch: false,
       max_memory_restart: "256M",
       error_file: "./logs/lint-err.log",
@@ -930,16 +884,15 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 2,
       min_uptime: "5s",
-      restart_delay: 10o00,
-    ,}
-    {,
+      restart_delay: 10o00}
+    {
       name: "zion-test",
       script: "npm",
       args: "test",
       cwd: "./",
       instances: 1,
       exec_mode: "fork",
-      env: { NODE_ENV: "test" ,}
+      env: { NODE_ENV: "test" }
       watch: false,
       max_memory_restart: "512M",
       error_file: "./logs/test-err.log",
@@ -950,11 +903,10 @@ module.exports ={,
       merge_logs: true,
       max_restarts: 3,
       min_uptime: "10s",
-      restart_delay: 20o00,
-    ,}
+      restart_delay: 20o00}
   ],
-  deploy: {,
-    production: {,
+  deploy: {
+    production: {
       user: "ubuntu",
       host: "your-server.com",
       ref: "origin/main",
@@ -963,9 +915,8 @@ module.exports ={,
       "pre-deploy-local": "",
       "post-deploy":,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env production",
-      "pre-setup": "",
-    ,}
-    staging: {,
+      "pre-setup": ""}
+    staging: {
       user: "ubuntu",
       host: "staging-server.com",
       ref: "origin/develop",
@@ -973,45 +924,43 @@ module.exports ={,
       path: "/var/www/zion-app-staging",
       "pre-deploy-local": "",
       "post-deploy":,
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",;
+        "npm install && npm run build && pm2 reload ecosystem.config.js --env staging";
       "pre-setup": ""}}};
 origin/automation-improvements-final,
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
 ursor/fix-lint-push-and-merge-to-main-ae4e,
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
-module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 ,},env_development: { NODE_ENV: 'development',PORT: 30o00 ,},watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 ,},{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 ,},watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 ,},{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' ,},watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 ,},{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' ,},watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 ,},{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' ,},watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 ,} ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
+module.exports ={ apps: [ { name: 'zion-app',script: 'npm',args: 'start',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production',PORT: 30o00 },env_development: { NODE_ENV: 'development',PORT: 30o00 },watch: false,ignore_watch: ['node_modules','logs','*.log'],max_memory_restart: '1G',error_file: './logs/err.log',out_file: './logs/out.log',log_file: './logs/combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 10,min_uptime: '10s',restart_delay: 40o00,kill_timeout: 50o00,wait_ready: true,listen_timeout: 80o00,kill_retry_time: 10o0 },{ name: 'zion-dev',script: 'npm',args: 'run dev',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development',PORT: 30o00 },watch: true,ignore_watch: ['node_modules','logs','*.log','.next'],max_memory_restart: '512M',error_file: './logs/dev-err.log',out_file: './logs/dev-out.log',log_file: './logs/dev-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 5,min_uptime: '5s',restart_delay: 20o00 },{ name: 'zion-build',script: 'npm',args: 'run build',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'production' },watch: false,max_memory_restart: '2G',error_file: './logs/build-err.log',out_file: './logs/build-out.log',log_file: './logs/build-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '30s',restart_delay: 50o00 },{ name: 'zion-lint',script: 'npm',args: 'run lint',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'development' },watch: false,max_memory_restart: '256M',error_file: './logs/lint-err.log',out_file: './logs/lint-out.log',log_file: './logs/lint-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 2,min_uptime: '5s',restart_delay: 10o00 },{ name: 'zion-test',script: 'npm',args: 'test',cwd: './',instances: 1,exec_mode: 'fork',env: { NODE_ENV: 'test' },watch: false,max_memory_restart: '512M',error_file: './logs/test-err.log',out_file: './logs/test-out.log',log_file: './logs/test-combined.log',time: true,log_date_format: 'YYYY-MM-DD HH:mm:ss Z',merge_logs: true,max_restarts: 3,min_uptime: '10s',restart_delay: 20o00 } ],deploy: { production: { user: 'ubuntu',host: 'your-server.com',ref: 'origin/main',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production','pre-setup': '' },staging: { user: 'ubuntu',host: 'staging-server.com',ref: 'origin/develop',repo: 'git@github.com:your-username/your-repo.git',path: '/var/www/zion-app-staging','pre-deploy-local': '','post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env staging','pre-setup': '' } } };
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 origin/automation-improvements-final,
         "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",
-      "pre-setup": "",
-    }
+      "pre-setup": ""}
   }
 }
 ,
-      host: "your - server.com",;
-      ref: "origin / main",;
-      repo: "git@github.com:your - username / your - repo.git",;
-      path: "/var / www / zion - app",;
-      "pre - deploy - local": "",;
+      host: "your - server.com";
+      ref: "origin / main";
+      repo: "git@github.com:your - username / your - repo.git";
+      path: "/var / www / zion - app";
+      "pre - deploy - local": "";
       "post - deploy":,
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env production",;
-      "pre - setup": ""},;
-    staging: {,
-      user: "ubuntu",;
-      host: "staging - server.com",;
-      ref: "origin / develop",;
-      repo: "git@github.com:your - username / your - repo.git",;
-      path: "/var / www / zion - app - staging",;
-      "pre - deploy - local": "",;
+        "npm install && npm run build && pm2 reload ecosystem.config.js --env production";
+      "pre - setup": ""};
+    staging: {
+      user: "ubuntu";
+      host: "staging - server.com";
+      ref: "origin / develop";
+      repo: "git@github.com:your - username / your - repo.git";
+      path: "/var / www / zion - app - staging";
+      "pre - deploy - local": "";
       "post - deploy":,
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env staging",;
+        "npm install && npm run build && pm2 reload ecosystem.config.js --env staging";
       "pre - setup": ""}}}
-,
 ,

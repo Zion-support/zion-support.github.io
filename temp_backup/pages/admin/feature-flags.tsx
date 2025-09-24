@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function FeatureFlagsPage() {,
-  return (,
+export default function FeatureFlagsPage() {
+  return (
     <>,
       <Head>,
         <title>Feature Flags - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function FeatureFlagsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

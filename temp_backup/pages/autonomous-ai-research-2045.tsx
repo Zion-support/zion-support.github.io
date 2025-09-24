@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AutonomousAiResearch20o45Page() {,
-  return (,
+export default function AutonomousAiResearch20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Autonomous Ai Research 20o45 - Zion Tech Group</title>,
@@ -18,7 +17,5 @@ export default function AutonomousAiResearch20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

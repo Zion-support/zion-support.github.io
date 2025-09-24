@@ -1,100 +1,77 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-,
-interface EngagementData {,
+interface EngagementData {
   visitors: number,
   timeOnSite: number,
   bounceRate: number,
-  conversionRate: number,
-,}
+  conversionRate: number}
 ,
-export default function InteractiveEngagementWidget() {,
+export default function InteractiveEngagementWidget() {
   const [isVisiblesetIsVisible] = useState(false),
-  const [engagementDatasetEngagementData] = useState<EngagementData>({,
-    visitors: 0,;
-    timeOnSite: 0,;
-    bounceRate: 0,;
-    conversionRate: 0,
-  ,}),
+  const [engagementDatasetEngagementData] = useState<EngagementData>({
+    visitors: 0;
+    timeOnSite: 0;
+    bounceRate: 0;
+    conversionRate: 0}),
   const [currentTestimonialsetCurrentTestimonial] = useState(0),
-,
-  const testimonials = [,
-    {,
-      name: "Sarah Johnson",;
-      company: "TechCorp Inc.",;
-      role: "CEO",;
-      content: "Zion Tech 'Group', 's AI solutions increased our efficiency by 40o0% and ROI by 2,50o0% in just 6 months!",;
-      rating: 5,
-    ,},;
-    {,
-      name: "Michael Chen",;
-      company: "InnovateLabs",;
-      role: "CTO",;
-      content: "The breakthrough technologies they implemented transformed our entire operation. Absolutely revolutionary!",;
-      rating: 5,
-    ,},;
-    {,
-      name: "Emily Rodriguez",;
-      company: "FutureTech Solutions",;
-      role: "VP of Operations",;
-      content: "We achieved 10,0o00% ROI using their AI 20o25 breakthrough solutions. Game-changing results!",;
-      rating: 5,
-    ,}
+  const testimonials = [
+    {
+      name: "Sarah Johnson";
+      company: "TechCorp Inc.";
+      role: "CEO";
+      content: "Zion Tech 'Group', 's AI solutions increased our efficiency by 40o0% and ROI by 2,50o0% in just 6 months!";
+      rating: 5};
+    {
+      name: "Michael Chen";
+      company: "InnovateLabs";
+      role: "CTO";
+      content: "The breakthrough technologies they implemented transformed our entire operation. Absolutely revolutionary!";
+      rating: 5};
+    {
+      name: "Emily Rodriguez";
+      company: "FutureTech Solutions";
+      role: "VP of Operations";
+      content: "We achieved 10,0o00% ROI using their AI 20o25 breakthrough solutions. Game-changing results!";
+      rating: 5}
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Simulate real-time data updates,
-    const interval = setInterval(() => {,
-      setEngagementData((prev: EngagementData) => ({,
-        visitors: prev.visitors + Math.floor(Math.random() * 3) + 1,;
-        timeOnSite: Math.max(0prev.timeOnSite + (Math.random() - 0.5) * 10),;
-        bounceRate: Math.max(0Math.min(10o0prev.bounceRate + (Math.random() - 0.5) * 2)),;
-        conversionRate: Math.max(0Math.min(10o0prev.conversionRate + (Math.random() - 0.5) * 1)),
-      ,})),
-    }20o00),
-,
+    const interval = setInterval(() => {
+      setEngagementData((prev: EngagementData) => ({
+        visitors: prev.visitors + Math.floor(Math.random() * 3) + 1;
+        timeOnSite: Math.max(0prev.timeOnSite + (Math.random() - 0.5) * 10);
+        bounceRate: Math.max(0Math.min(10o0prev.bounceRate + (Math.random() - 0.5) * 2));
+        conversionRate: Math.max(0Math.min(10o0prev.conversionRate + (Math.random() - 0.5) * 1))}))}20o00),
     // Rotate testimonials,
-    const testimonialInterval = setInterval(() => {,
-      setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length),
-    ,}50o00),
-,
-    return () => {,
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length)}50o00),
+    return () => {
       clearInterval(interval),
-      clearInterval(testimonialInterval),
-    };
+      clearInterval(testimonialInterval)};
   }[testimonials.length]),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Show widget after 3 seconds,
-    const timer = setTimeout(() => {,
-      setIsVisible(true),
-    }30o00),
-,
-    return () => clearTimeout(timer),
-  }[]),
-,
+    const timer = setTimeout(() => {
+      setIsVisible(true)}30o00),
+    return () => clearTimeout(timer)}[]),
   if (!isVisible) return null,
-,
-  return (,
+  return (
     <motion.div,
-      initial={{ opacity: 0, y: 50 ,}}
-      animate={{ opacity: 1, y: 0 ,}}
-      exit={{ opacity: 0, y: 50 ,}}
-      className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-20o0 p-4 max-w-sm z-40",
-    >,
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-20o0 p-4 max-w-sm z-40">,
       <div className="flex justify-between items-center mb-3">,
         <h3 className="text-sm font-bold text-gray-80o0">Live Engagement</h3>,
-        <button,
+        <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-40o0 hover: text-gray-60o0 text-xs",
-        >,
+          className="text-gray-40o0 hover: text-gray-60o0 text-xs">,
           ✕,
         </button>,
       </div>,
-      {/* Real-time metrics */,}
+      {/* Real-time metrics */}
       <div className="grid grid-cols-2 gap-3 mb-4">,
         <div className="text-center">,
           <div className="text-lg font-bold text-blue-60o0">{engagementData.visitors.toLocaleString()}</div>,
@@ -118,10 +95,10 @@ export default function InteractiveEngagementWidget() {,
         <AnimatePresence mode="wait">,
           <motion.div,
             key={currentTestimonial}
-            initial={{ opacity: 0x: 20 ,}}
-            animate={{ opacity: 1x: 0 ,}}
-            exit={{ opacity: 0x: -20 ,}}
-            transition={{ duration: 0.3 ,}}
+            initial={{ opacity: 0x: 20 }}
+            animate={{ opacity: 1x: 0 }}
+            exit={{ opacity: 0x: -20 }}
+            transition={{ duration: 0.3 }}
           >,
             <div className="text-xs text-gray-60o0 mb-2">,
               "{testimonials[currentTestimonial].content}",
@@ -136,9 +113,8 @@ export default function InteractiveEngagementWidget() {,
                 </div>,
               </div>,
               <div className="flex">,
-                {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (,
-                  <span key={i} className="text-yellow-40o0 text-xs">★</span>,
-                ))}
+                {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (
+                  <span key={i} className="text-yellow-40o0 text-xs">★</span>))}
               </div>,
             </div>,
           </motion.div>,
@@ -147,9 +123,7 @@ export default function InteractiveEngagementWidget() {,
       {/* Call to action */}
       <div className="mt-3 pt-3 border-t">,
         <button className="w-full bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white text-xs py-2 px-3 rounded-md hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-20o0">,
-          Join {engagementData.visitors.toLocaleString(),}+ Successful Clients,
+          Join {engagementData.visitors.toLocaleString()}+ Successful Clients,
         </button>,
       </div>,
-    </motion.div>,
-  ),
-}
+    </motion.div>)}

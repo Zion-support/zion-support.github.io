@@ -3,23 +3,20 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Input } from '@/components/ui/input',
 import { Textarea } from '@/components/ui/textarea',
-import {,
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
+import {
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue;
 } from '@/components/ui/select',
 import { Label } from '@/components/ui/label',
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react',
-,
 type ResumeStep = 'basics' | 'experience' | 'education' | 'skills',
-,
-export function MobileResumeBuilder() {,
+export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>('basics'),
-,
-  const renderStepContent = () => {,
-    switch (currentStep) {,
+  const renderStepContent = () => {
+    switch (currentStep) {
       case 'basics':,
         return <BasicsStep />,
       case 'experience':,
@@ -29,35 +26,33 @@ export function MobileResumeBuilder() {,
       case 'skills':,
         return <SkillsStep />,
       default: ,
-        return <BasicsStep />,
-    ,}
+        return <BasicsStep />}
   };
-,
-  return (,
+  return (
     <div className='space-y-6 px-4 pb-24'>,
       <div className='flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar'>,
-        <Button,
+        <Button
           variant={currentStep === 'basics' ? 'default' : 'outline'}
           className='flex-1 rounded-full',
           onClick={() => setCurrentStep('basics')}
         >,
           Basics,
         </Button>,
-        <Button,
+        <Button
           variant={currentStep === 'experience' ? 'default' : 'outline'}
           className='flex-1 rounded-full',
           onClick={() => setCurrentStep('experience')}
         >,
           Experience,
         </Button>,
-        <Button,
+        <Button
           variant={currentStep === 'education' ? 'default' : 'outline'}
           className='flex-1 rounded-full',
           onClick={() => setCurrentStep('education')}
         >,
           Education,
         </Button>,
-        <Button,
+        <Button
           variant={currentStep === 'skills' ? 'default' : 'outline'}
           className='flex-1 rounded-full',
           onClick={() => setCurrentStep('skills')}
@@ -73,17 +68,15 @@ export function MobileResumeBuilder() {,
       <Button variant='default' className='w-full' size='lg'>,
         Save & Preview,
       </Button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BasicsStep() {,
-  return (,
+function BasicsStep() {
+  return (
     <Card>,
       <CardContent className='p-4 space-y-4'>,
         <div className='space-y-2'>,
           <Label htmlFor='title'>Resume Title</Label>,
-          <Input,
+          <Input
             id='title',
             name='title',
             placeholder='e.g. Senior Frontend Developer',
@@ -91,7 +84,7 @@ function BasicsStep() {,
         </div>,
         <div className='space-y-2'>,
           <Label htmlFor='fullName'>Full Name</Label>,
-          <Input,
+          <Input
             id='fullName',
             name='fullName',
             placeholder='Your full name',
@@ -100,7 +93,7 @@ function BasicsStep() {,
         </div>,
         <div className='space-y-2'>,
           <Label htmlFor='email'>Email Address</Label>,
-          <Input,
+          <Input
             id='email',
             name='email',
             type='email',
@@ -110,7 +103,7 @@ function BasicsStep() {,
         </div>,
         <div className='space-y-2'>,
           <Label htmlFor='phone'>Phone Number</Label>,
-          <Input,
+          <Input
             id='phone',
             name='phone',
             placeholder='Your phone number',
@@ -119,7 +112,7 @@ function BasicsStep() {,
         </div>,
         <div className='space-y-2'>,
           <Label htmlFor='location'>Location</Label>,
-          <Input,
+          <Input
             id='location',
             name='location',
             placeholder='City, Country',
@@ -128,50 +121,41 @@ function BasicsStep() {,
         </div>,
         <div className='space-y-2'>,
           <Label htmlFor='summary'>Professional Summary</Label>,
-          <Textarea,
+          <Textarea
             id='summary',
             placeholder='Write a brief summary about yourself',
             rows={4}
           />,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,
-function ExperienceStep() {,
-  const [experiences, setExperiences] = useState([{ id: '1' ,}]),
-,
-  const addExperience = () => {,
+function ExperienceStep() {
+  const [experiences, setExperiences] = useState([{ id: '1' }]),
+  const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
-    setExperiences([...experiences, { id: newId ,}]),
-  };
-,
-  const removeExperience = (id: string) => {,
-    setExperiences(experiences.filter(exp => exp.id !== id)),
-  ,};
-,
-  return (,
+    setExperiences([...experiences, { id: newId }])};
+  const removeExperience = (id: string) => {
+    setExperiences(experiences.filter(exp => exp.id !== id))};
+  return (
     <div className='space-y-4'>,
-      {experiences.map((exp, index) => (,
+      {experiences.map((exp, index) => (
         <Card key={exp.id}>,
           <CardContent className='p-4 space-y-4'>,
             <div className='flex justify-between items-center'>,
               <h3 className='font-medium'>Work Experience {index + 1}</h3>,
-              {experiences.length > 1 && (,
-                <Button,
+              {experiences.length > 1 && (
+                <Button
                   variant='ghost',
                   size='icon',
                   onClick={() => removeExperience(exp.id)}
-                  aria-label='Remove experience',
-                >,
+                  aria-label='Remove experience'>,
                   <Trash2 className='h-5 w-5 text-destructive' />,
-                </Button>,
-              )}
+                </Button>)}
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>,
-              <Input,
+              <Input
                 id={`title-${exp.id}`}
                 placeholder='e.g. Frontend Developer',
               />,
@@ -187,7 +171,7 @@ function ExperienceStep() {,
               </div>,
               <div className='space-y-2'>,
                 <Label htmlFor={`endDate-${exp.id}`}>End Date</Label>,
-                <Input,
+                <Input
                   id={`endDate-${exp.id}`}
                   type='month',
                   placeholder='Present',
@@ -196,74 +180,64 @@ function ExperienceStep() {,
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor={`description-${exp.id}`}>Description</Label>,
-              <Textarea,
+              <Textarea
                 id={`description-${exp.id}`}
                 placeholder='Describe your responsibilities and achievements',
                 rows={3}
               />,
             </div>,
           </CardContent>,
-        </Card>,
-      ))}
+        </Card>))}
 ,
-      <Button,
+      <Button
         variant='outline',
         className='w-full gap-2',
         onClick={addExperience}
       >,
         <Plus className='h-4 w-4' /> Add Another Experience,
       </Button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function EducationStep() {,
-  const [educations, setEducations] = useState([{ id: '1' ,}]),
-,
-  const addEducation = () => {,
+function EducationStep() {
+  const [educations, setEducations] = useState([{ id: '1' }]),
+  const addEducation = () => {
     const newId = (educations.length + 1).toString(),
-    setEducations([...educations, { id: newId ,}]),
-  };
-,
-  const removeEducation = (id: string) => {,
-    setEducations(educations.filter(edu => edu.id !== id)),
-  ,};
-,
-  return (,
+    setEducations([...educations, { id: newId }])};
+  const removeEducation = (id: string) => {
+    setEducations(educations.filter(edu => edu.id !== id))};
+  return (
     <div className='space-y-4'>,
-      {educations.map((edu, index) => (,
+      {educations.map((edu, index) => (
         <Card key={edu.id}>,
           <CardContent className='p-4 space-y-4'>,
             <div className='flex justify-between items-center'>,
               <h3 className='font-medium'>Education {index + 1}</h3>,
-              {educations.length > 1 && (,
-                <Button,
+              {educations.length > 1 && (
+                <Button
                   variant='ghost',
                   size='icon',
                   onClick={() => removeEducation(edu.id)}
-                  aria-label='Remove education',
-                >,
+                  aria-label='Remove education'>,
                   <Trash2 className='h-5 w-5 text-destructive' />,
-                </Button>,
-              )}
+                </Button>)}
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>,
-              <Input,
+              <Input
                 id={`institution-${edu.id}`}
                 placeholder='School or university name',
               />,
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor={`degree-${edu.id}`}>Degree</Label>,
-              <Input,
+              <Input
                 id={`degree-${edu.id}`}
                 placeholder='e.g. Bachelor of Science',
               />,
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>,
-              <Input,
+              <Input
                 id={`fieldOfStudy-${edu.id}`}
                 placeholder='e.g. Computer Science',
               />,
@@ -275,7 +249,7 @@ function EducationStep() {,
               </div>,
               <div className='space-y-2'>,
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>,
-                <Input,
+                <Input
                   id={`eduEndDate-${edu.id}`}
                   type='month',
                   placeholder='Present',
@@ -283,56 +257,43 @@ function EducationStep() {,
               </div>,
             </div>,
           </CardContent>,
-        </Card>,
-      ))}
+        </Card>))}
 ,
       <Button variant='outline' className='w-full gap-2' onClick={addEducation}>,
         <Plus className='h-4 w-4' /> Add Another Education,
       </Button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function SkillsStep() {,
-  const [skills, setSkills] = useState([,
-    { id: '1', name: '', proficiency: 'beginner' ,},;
+function SkillsStep() {
+  const [skills, setSkills] = useState([
+    { id: '1', name: '', proficiency: 'beginner' };
   ]),
-,
-  const addSkill = () => {,
+  const addSkill = () => {
     const newId = (skills.length + 1).toString(),
-    setSkills([...skills, { id: newId, name: '', proficiency: 'beginner' ,}]),
-  };
-,
-  const removeSkill = (id: string) => {,
-    setSkills(skills.filter(skill => skill.id !== id)),
-  ,};
-,
-  const updateSkill = (id: string, field: string, value: string) => {,
-    setSkills(,
+    setSkills([...skills, { id: newId, name: '', proficiency: 'beginner' }])};
+  const removeSkill = (id: string) => {
+    setSkills(skills.filter(skill => skill.id !== id))};
+  const updateSkill = (id: string, field: string, value: string) => {
+    setSkills(
       skills.map(skill =>,
-        skill.id === id ? { ...skill, [field]: value } : skill,
-      ),
-    ),
-  };
-,
-  return (,
+        skill.id === id ? { ...skill, [field]: value } : skill))};
+  return (
     <div className='space-y-4'>,
       <Card>,
         <CardContent className='p-4'>,
           <div className='space-y-4'>,
-            {skills.map(skill => (,
+            {skills.map(skill => (
               <div key={skill.id} className='flex items-center gap-2'>,
-                <Input,
+                <Input
                   placeholder='Skill (e.g. JavaScript, Figma)',
                   value={skill.name}
                   onChange={e => updateSkill(skill.id, 'name', e.target.value)}
                   className='flex-1',
                 />,
-                <Select,
+                <Select
                   value={skill.proficiency}
                   onValueChange={value =>,
-                    updateSkill(skill.id, 'proficiency', value),
-                  }
+                    updateSkill(skill.id, 'proficiency', value)}
                 >,
                   <SelectTrigger className='w-[130px]'>,
                     <SelectValue placeholder='Level' />,
@@ -344,20 +305,17 @@ function SkillsStep() {,
                     <SelectItem value='expert'>Expert</SelectItem>,
                   </SelectContent>,
                 </Select>,
-                {skills.length > 1 && (,
-                  <Button,
+                {skills.length > 1 && (
+                  <Button
                     variant='ghost',
                     size='icon',
                     onClick={() => removeSkill(skill.id)}
-                    aria-label='Remove skill',
-                  >,
+                    aria-label='Remove skill'>,
                     <Trash2 className='h-4 w-4 text-destructive' />,
-                  </Button>,
-                )}
-              </div>,
-            ))}
+                  </Button>)}
+              </div>))}
 ,
-            <Button,
+            <Button
               variant='outline',
               className='w-full gap-2',
               onClick={addSkill}
@@ -394,7 +352,5 @@ function SkillsStep() {,
           </div>,
         </CardContent>,
       </Card>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

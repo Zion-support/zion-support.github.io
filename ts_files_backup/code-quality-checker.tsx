@@ -4,130 +4,113 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 CodeCheckCircleAlertTriangleZapBarChart3ArrowRightPlayShieldClockTrendingUp,
-export default function CodeQualityCheckerPage() {,
+export default function CodeQualityCheckerPage() {
   const [isAnalyzingsetIsAnalyzing] = useState(false),
   const [analysisResultsetAnalysisResults] = useState(null),
   const [codeInputsetCodeInput] = useState(''),
-,
-  const features = [,
-    {,
-      icon: <Code className="w-8 h-8 text-white" />,;
-      title: 'Multi-Language Support',;
-      description: 'Support for JavaScriptTypeScriptPythonJavaC++Goand many more programming languages.',;
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',;
-      gradient: 'from-teal-400 to-cyan-500',},;
-    {,
-      icon: <CheckCircle className="w-8 h-8 text-white" />,;
-      title: 'Code Quality Metrics',;
-      description: 'Comprehensive analysis including complexitymaintainabilitytest coverageand security vulnerabilities.',;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
-      gradient: 'from-green-400 to-emerald-500',},;
-    {,
-      icon: <Zap className="w-8 h-8 text-white" />,;
-      title: 'Real-Time Analysis',;
-      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',;
-      gradient: 'from-orange-400 to-red-500',},;
-    {,
-      icon: <Shield className="w-8 h-8 text-white" />,;
-      title: 'Security Scanning',;
-      description: 'Automated detection of security vulnerabilitiesdependency issuesand best practice violations.',;
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
-      gradient: 'from-purple-400 to-indigo-500',}],
-,
-  const supportedLanguages = [,
-    { name: 'JavaScript/'TypeScript', 'icon: '⚡'features: ['ESLint 'rules', 'TypeScript 'checks', 'React best practices'] },;
-    { name: ''Python', 'icon: '🐍'features: ['PEP 8 'compliance', 'Type 'hints', 'Security scanning'] },;
-    { name: ''Java', 'icon: '☕'features: ['PMD 'rules', 'Checkstyle'SonarQube integration'] },;
-    { name: 'C++'icon: '⚙️'features: ['Clang-'tidy', 'Static 'analysis', 'Memory leak detection'] },;
-    { name: ''Go', 'icon: '🟢'features: ['Golangci-'lint', 'Go 'vet', 'Performance analysis'] },;
+  const features = [
+    {
+      icon: <Code className="w-8 h-8 text-white" />;
+      title: 'Multi-Language Support';
+      description: 'Support for JavaScriptTypeScriptPythonJavaC++Goand many more programming languages.';
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
+      gradient: 'from-teal-400 to-cyan-500'};
+    {
+      icon: <CheckCircle className="w-8 h-8 text-white" />;
+      title: 'Code Quality Metrics';
+      description: 'Comprehensive analysis including complexitymaintainabilitytest coverageand security vulnerabilities.';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      gradient: 'from-green-400 to-emerald-500'};
+    {
+      icon: <Zap className="w-8 h-8 text-white" />;
+      title: 'Real-Time Analysis';
+      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.';
+      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      gradient: 'from-orange-400 to-red-500'};
+    {
+      icon: <Shield className="w-8 h-8 text-white" />;
+      title: 'Security Scanning';
+      description: 'Automated detection of security vulnerabilitiesdependency issuesand best practice violations.';
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
+      gradient: 'from-purple-400 to-indigo-500'}],
+  const supportedLanguages = [
+    { name: 'JavaScript/'TypeScript', 'icon: '⚡'features: ['ESLint 'rules', 'TypeScript 'checks', 'React best practices'] };
+    { name: ''Python', 'icon: '🐍'features: ['PEP 8 'compliance', 'Type 'hints', 'Security scanning'] };
+    { name: ''Java', 'icon: '☕'features: ['PMD 'rules', 'Checkstyle'SonarQube integration'] };
+    { name: 'C++'icon: '⚙️'features: ['Clang-'tidy', 'Static 'analysis', 'Memory leak detection'] };
+    { name: ''Go', 'icon: '🟢'features: ['Golangci-'lint', 'Go 'vet', 'Performance analysis'] };
     { name: ''PHP', 'icon: '🐘'features: [', 'PHPStan', 'PHP CS 'Fixer', 'Security analysis'] }
   ],
-,
-  const pricing = [,
-    {,
-      name: 'Developer',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for individual developers and small projects',;
-      features: [,
-        '100 code analyses/month',;
-        'Basic quality metrics',;
-        '5 programming languages',;
-        'Email support',;
-        'Basic reporting',;
-        'Community rules',
-      ],;
-      popular: false,
-    ,},;
-    {,
-      name: 'Team',;
-      price: '$79',;
-      period: '/month',;
-      description: 'Ideal for development teams and growing companies',;
-      features: [,
-        '500 code analyses/month',;
-        'Advanced quality metrics',;
-        'All programming languages',;
-        'Priority support',;
-        'Advanced reporting',;
-        'Custom rules',;
-        'Team collaboration',;
-        'API access',
-      ],;
-      popular: true,
-    ,},;
-    {,
-      name: 'Enterprise',;
-      price: '$199',;
-      period: '/month',;
-      description: 'For large organizations with complex codebases',;
-      features: [,
-        'Unlimited analyses',;
-        'Enterprise metrics',;
-        'Custom language support',;
-        '24/7 dedicated support',;
-        'Custom reporting',;
-        'White-label options',;
-        'On-premise deployment',;
-        'Custom integrations',
-      ],;
-      popular: false,
-    ,}
+  const pricing = [
+    {
+      name: 'Developer';
+      price: '$29';
+      period: '/month';
+      description: 'Perfect for individual developers and small projects';
+      features: [
+        '100 code analyses/month';
+        'Basic quality metrics';
+        '5 programming languages';
+        'Email support';
+        'Basic reporting';
+        'Community rules'];
+      popular: false};
+    {
+      name: 'Team';
+      price: '$79';
+      period: '/month';
+      description: 'Ideal for development teams and growing companies';
+      features: [
+        '500 code analyses/month';
+        'Advanced quality metrics';
+        'All programming languages';
+        'Priority support';
+        'Advanced reporting';
+        'Custom rules';
+        'Team collaboration';
+        'API access'];
+      popular: true};
+    {
+      name: 'Enterprise';
+      price: '$199';
+      period: '/month';
+      description: 'For large organizations with complex codebases';
+      features: [
+        'Unlimited analyses';
+        'Enterprise metrics';
+        'Custom language support';
+        '24/7 dedicated support';
+        'Custom reporting';
+        'White-label options';
+        'On-premise deployment';
+        'Custom integrations'];
+      popular: false}
   ],
-,
-  const handleAnalyzeCode = async () => {,
+  const handleAnalyzeCode = async () => {
     if (!codeInput.trim()) return,
-,
     setIsAnalyzing(true),
     // Simulate code analysis,
-    setTimeout(() => {,
-      setAnalysisResults({,
-        language: 'JavaScript',;
-        qualityScore: 85,;
-        issues: [,
-          { type: ''warning', 'message: 'Consider using const instead of let for variables that are not 'reassigned', 'line: 5severity: 'medium' ,},;
-          { type: ''info', 'message: 'Function is quite long (25 lines). Consider breaking it into smaller 'functions', 'line: 12severity: 'low' ,},;
-          { type: ''error', 'message: 'Missing semicolon at end of 'statement', 'line: 18severity: 'high' ,}
-        ],;
-        metrics: {,
-          complexity: 'Medium',;
-          maintainability: 'Good',;
-          testCoverage: '85%',;
-          securityScore: '92%',
-        ,},;
-        recommendations: [,
-          'Use const for immutable variables to improve code clarity',;
-          'Break down large functions into smallermore focused functions',;
-          'Add proper error handling for better robustness',;
-          'Consider adding JSDoc comments for better documentation',
-        ],
-      }),
-      setIsAnalyzing(false),
-    }3000),
-  };
-,
-  return (,
+    setTimeout(() => {
+      setAnalysisResults({
+        language: 'JavaScript';
+        qualityScore: 85;
+        issues: [
+          { type: ''warning', 'message: 'Consider using const instead of let for variables that are not 'reassigned', 'line: 5severity: 'medium' };
+          { type: ''info', 'message: 'Function is quite long (25 lines). Consider breaking it into smaller 'functions', 'line: 12severity: 'low' };
+          { type: ''error', 'message: 'Missing semicolon at end of 'statement', 'line: 18severity: 'high' }
+        ];
+        metrics: {
+          complexity: 'Medium';
+          maintainability: 'Good';
+          testCoverage: '85%';
+          securityScore: '92%'};
+        recommendations: [
+          'Use const for immutable variables to improve code clarity';
+          'Break down large functions into smallermore focused functions';
+          'Add proper error handling for better robustness';
+          'Consider adding JSDoc comments for better documentation']}),
+      setIsAnalyzing(false)}3000)};
+  return (
     <>,
       <Head>,
         <title>Code Quality Checker - Zion Tech Group | Professional Code Analysis & Improvement Tool</title>,
@@ -136,7 +119,7 @@ export default function CodeQualityCheckerPage() {,
         <meta property="og:description" content="Professional code quality analysis tool with multi-language support and security scanning." />,
         <meta name="twitter:card" content="summary_large_image" />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">,
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0.08),transparent_50%)]" />,
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0.06),transparent_50%)]" />,
@@ -155,52 +138,48 @@ export default function CodeQualityCheckerPage() {,
           </p>,
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">,
-            <textarea,
+            <textarea
               placeholder="Paste your code here for analysis... (Supports JavaScriptTypeScriptPythonJavaC++GoPHPand more)",
               value={codeInput}
               onChange={(e) => setCodeInput(e.target.value)}
               className="w-full h-32 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent font-mono text-sm",
             />,
-            <Button,
-              onClick={handleAnalyzeCode,}
+            <Button
+              onClick={handleAnalyzeCode}
               size="lg",
               className="w-full mt-4 bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700 text-white shadow-2xl hover-glow",
-              disabled={isAnalyzing || !codeInput.trim(),}
+              disabled={isAnalyzing || !codeInput.trim()}
             >,
-              {isAnalyzing ? (,
+              {isAnalyzing ? (
                 <>,
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />,
                   Analyzing Code...,
-                </>,
-              ) : (,
+                </>) : (
                 <>,
                   <Play className="w-5 h-5 mr-2" />,
                   Analyze Code Quality,
-                </>,
-              )}
+                </>)}
             </Button>,
           </div>,
           <div className="flex flex-col sm: flex-row gap-6 justify-center">,
-            <Button,
+            <Button
               href="#pricing",
               variant="outline",
               size="lg",
-              className="border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl",
-            >,
+              className="border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl">,
               View Pricing,
             </Button>,
-            <Button,
+            <Button
               href="/contact",
               variant="outline",
               size="lg",
-              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl",
-            >,
+              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl">,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="section-padding bg-gradient-cursor-accent">,
         <div className="container-cursor">,
           <div className="text-center mb-20">,
@@ -212,18 +191,18 @@ export default function CodeQualityCheckerPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {features.map((featureindex) => (,
-              <Card,
-                key={index,}
+            {features.map((featureindex) => (
+              <Card
+                key={index}
                 className="card-hover group border-gradient-teal",
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
                 <div className="flex items-start space-x-6">,
                   <div className="relative">,
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`,}>,
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-300`}>,
                       {feature.icon}
                     </div>,
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`,} />,
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-300 blur-sm`} />,
                   </div>,
                   <div className="flex-1">,
                     <h3 className="text-2xl font-bold mb-4 text-white">,
@@ -234,8 +213,7 @@ export default function CodeQualityCheckerPage() {,
                     </p>,
                   </div>,
                 </div>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -251,31 +229,29 @@ export default function CodeQualityCheckerPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {supportedLanguages.map((languageindex) => (,
-              <Card,
-                key={index,}
+            {supportedLanguages.map((languageindex) => (
+              <Card
+                key={index}
                 className="card-hover border-gradient-teal",
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
                 <div className="text-center mb-4">,
                   <div className="text-4xl mb-3">{language.icon}</div>,
                   <h3 className="text-xl font-bold text-white mb-3">{language.name}</h3>,
                 </div>,
                 <ul className="space-y-2">,
-                  {language.features.map((featureIndex) => (,
+                  {language.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">,
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
       {/* Demo Analysis Results */}
-      {analysisResults && (,
+      {analysisResults && (
         <section className="section-padding bg-gradient-cursor-accent">,
           <div className="container-cursor">,
             <div className="text-center mb-12">,
@@ -287,13 +263,13 @@ export default function CodeQualityCheckerPage() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-8">,
-              {/* Quality Score */,}
+              {/* Quality Score */}
               <Card className="border-gradient-teal text-center">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>,
                 <div className="text-6xl font-bold text-teal-400 mb-4">{analysisResults.qualityScore}/100</div>,
                 <div className="w-32 h-32 mx-auto mb-6">,
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">,
-                    <path,
+                    <path
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831",
                       fill="none",
                       stroke="currentColor",
@@ -309,23 +285,19 @@ export default function CodeQualityCheckerPage() {,
               <Card className="border-gradient-teal">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>,
                 <div className="space-y-3">,
-                  {analysisResults.issues.map((issueindex) => (,
+                  {analysisResults.issues.map((issueindex) => (
                     <div key={index} className="flex items-start space-x-3">,
-                      {issue.type === 'error' ? (,
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />,
-                      ) : issue.type === 'warning' ? (,
-                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />,
-                      ) : (,
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />,
-                      )}
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />)}
                       <div>,
                         <span className="text-gray-300 text-sm">{issue.message}</span>,
                         <div className="text-xs text-gray-500 mt-1">,
-                          Line {issue.line} • Severity: {issue.severity,}
+                          Line {issue.line} • Severity: {issue.severity}
                         </div>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </Card>,
               {/* Quality Metrics */}
@@ -356,17 +328,15 @@ export default function CodeQualityCheckerPage() {,
             <Card className="border-gradient-teal">,
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>,
               <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
-                {analysisResults.recommendations.map((recindex) => (,
-                  <div key={index,} className="flex items-start space-x-3">,
+                {analysisResults.recommendations.map((recindex) => (
+                  <div key={index} className="flex items-start space-x-3">,
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />,
                     <span className="text-gray-300">{rec}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </Card>,
           </div>,
-        </section>,
-      )}
+        </section>)}
 ,
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">,
@@ -380,19 +350,18 @@ export default function CodeQualityCheckerPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricing.map((planindex) => (,
-              <Card,
-                key={index,}
+            {pricing.map((planindex) => (
+              <Card
+                key={index}
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className="text-center mb-8">,
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>,
@@ -403,23 +372,21 @@ export default function CodeQualityCheckerPage() {,
                   <p className="text-gray-400">{plan.description}</p>,
                 </div>,
                 <ul className="space-y-4 mb-8">,
-                  {plan.features.map((featureIndex) => (,
+                  {plan.features.map((featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">,
                       <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <Button,
+                <Button
                   href="/contact",
                   size="lg",
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600',} text-white`}
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover: from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >,
                   Get Started,
                   <ArrowRight className="w-5 h-5 ml-2" />,
                 </Button>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -434,26 +401,22 @@ export default function CodeQualityCheckerPage() {,
             Join thousands of developers using our code quality checker to write bettersaferand more maintainable code.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-6 justify-center">,
-            <Button,
+            <Button
               href="/contact",
               size="lg",
-              className="bg-white text-teal-600 hover:bg-gray-100 shadow-2xl",
-            >,
+              className="bg-white text-teal-600 hover:bg-gray-100 shadow-2xl">,
               Start Free Trial,
               <ArrowRight className="w-5 h-5 ml-2" />,
             </Button>,
-            <Button,
+            <Button
               href="/contact",
               variant="outline",
               size="lg",
-              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl",
-            >,
+              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl">,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

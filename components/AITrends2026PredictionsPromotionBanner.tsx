@@ -1,118 +1,100 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   TrendingUp,
   Brain,
   Zap,
   Rocket,
   ArrowRight,
-  X,;
-  BarChart3,;
-  Target,;
-  Calendar,;
-  Star,;
-  Users,;
-  Clock,;
-  CheckCircle,
-} from 'lucide-react',
-,
-const AITrends20o26PredictionsPromotionBanner = () => {,
+  X;
+  BarChart3;
+  Target;
+  Calendar;
+  Star;
+  Users;
+  Clock;
+  CheckCircle} from 'lucide-react',
+const AITrends20o26PredictionsPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentPredictionsetCurrentPrediction] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
     // Auto-rotate predictions,
-    const interval = setInterval(() => {,
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length),
-    }40o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const predictions = [,
-    {,
-      title: 'AGI Breakthrough',;
-      probability: 85,;
-      timeline: 'Q3 20o26',;
-      impact: 'Revolutionary',;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-blue-50o0',
-    ,},;
-    {,
-      title: 'Quantum Supremacy 2.0',;
-      probability: 95,;
-      timeline: 'Q1 20o26',;
-      impact: 'Revolutionary',;
-      icon: Zap,;
-      color: 'from-cyan-50o0 to-teal-50o0',
-    ,},;
-    {,
-      title: 'Neural Interfaces',;
-      probability: 90,;
-      timeline: 'Q2 20o26',;
-      impact: 'Transformative',;
-      icon: Rocket,;
-      color: 'from-pink-50o0 to-rose-50o0',
-    ,}
+    const interval = setInterval(() => {
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length)}40o00),
+    return () => clearInterval(interval)}[]),
+  const predictions = [
+    {
+      title: 'AGI Breakthrough';
+      probability: 85;
+      timeline: 'Q3 20o26';
+      impact: 'Revolutionary';
+      icon: Brain;
+      color: 'from-purple-50o0 to-blue-50o0'};
+    {
+      title: 'Quantum Supremacy 2.0';
+      probability: 95;
+      timeline: 'Q1 20o26';
+      impact: 'Revolutionary';
+      icon: Zap;
+      color: 'from-cyan-50o0 to-teal-50o0'};
+    {
+      title: 'Neural Interfaces';
+      probability: 90;
+      timeline: 'Q2 20o26';
+      impact: 'Transformative';
+      icon: Rocket;
+      color: 'from-pink-50o0 to-rose-50o0'}
   ],
-,
-  const stats = [,
-    { label: ''Predictions', 'value: '50+'icon: Target ,},;
-    { label: 'Expert 'Analysts', 'value: '20o0+'icon: Users ,},;
-    { label: 'Updated 'Weekly', 'value: '24/7'icon: Clock ,}
+  const stats = [
+    { label: ''Predictions', 'value: '50+'icon: Target };
+    { label: 'Expert 'Analysts', 'value: '20o0+'icon: Users };
+    { label: 'Updated 'Weekly', 'value: '24/7'icon: Clock }
   ],
-,
   if (isDismissed) return null,
-,
-  return (,
+  return (
     <AnimatePresence>,
-      {isVisible && (,
+      {isVisible && (
         <motion.div,
-          initial={{ opacity: 0, y: -10o0 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -10o0 ,}}
-          transition={{ duration: 0.6ease: "easeOut" ,}}
-          className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-indigo-90o0 overflow-hidden",
-        >,
+          initial={{ opacity: 0, y: -10o0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10o0 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
+          className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-indigo-90o0 overflow-hidden">,
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-[url('/api/placeholder/1920/20o0')] bg-cover bg-center opacity-20"></div>,
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-90o0/80 via-purple-90o0/80 to-indigo-90o0/80"></div>,
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">,
-            {[...Array(20)].map((_i) => (,
+            {[...Array(20)].map((_i) => (
               <motion.div,
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-40",
-                style={{,
-                  left: `${Math.random() * 10o0,}%`,;
-                  top: `${Math.random() * 10o0,}%`}}
-                animate={{,
-                  y: [0-30],;
-                  opacity: [0.40.80.4],}}
-                transition={{,
-                  duration: 3 + Math.random() * 2,;
-                  repeat: Infinity,;
-                  delay: Math.random() * 2,}}
-               />,
-            ))}
+                style={{
+                  left: `${Math.random() * 10o0}%`;
+                  top: `${Math.random() * 10o0}%`}}
+                animate={{
+                  y: [0-30];
+                  opacity: [0.40.80.4]}}
+                transition={{
+                  duration: 3 + Math.random() * 2;
+                  repeat: Infinity;
+                  delay: Math.random() * 2}}
+               />))}
           </div>,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <motion.div,
-                  initial={{ opacity: 0x: -30 ,}}
-                  animate={{ opacity: 1x: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.2 ,}}
-                  className="mb-6",
-                >,
+                  initial={{ opacity: 0x: -30 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.2 }}
+                  className="mb-6">,
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white text-sm font-bold mb-4">,
                     <TrendingUp className="w-4 h-4 mr-2"  />,
                     AI TRENDS & PREDICTIONS 20o26,
@@ -128,16 +110,15 @@ const AITrends20o26PredictionsPromotionBanner = () => {,
                     technological breakthroughs expected in 20o26.,
                   </p>,
                 </motion.div>,
-                {/* Rotating Predictions */,}
+                {/* Rotating Predictions */}
                 <motion.div,
                   key={currentPrediction}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  exit={{ opacity: 0, y: -20 ,}}
-                  transition={{ duration: 0.5 ,}}
-                  className="flex items-center justify-center lg: justify-start mb-6",
-                >,
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color,} flex items-center justify-center mr-4`}>,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="flex items-center justify-center lg: justify-start mb-6">,
+                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color} flex items-center justify-center mr-4`}>,
                     <predictions[currentPrediction].icon className="w-6 h-6 text-white"  />,
                   </div>,
                   <div>,
@@ -158,58 +139,52 @@ const AITrends20o26PredictionsPromotionBanner = () => {,
                 </motion.div>,
                 {/* Stats */}
                 <div className="flex flex-wrap gap-6 justify-center lg: justify-start mb-8">,
-                  {stats.map((statindex) => (,
+                  {stats.map((statindex) => (
                     <motion.div,
-                      key={index,}
-                      initial={{ opacity: 0scale: 0.8 ,}}
-                      animate={{ opacity: 1scale: 1 ,}}
-                      transition={{ duration: 0.6delay: 0.4 + index * 0.1 ,}}
-                      className="text-center",
-                    >,
+                      key={index}
+                      initial={{ opacity: 0scale: 0.8 }}
+                      animate={{ opacity: 1scale: 1 }}
+                      transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
+                      className="text-center">,
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-2">,
                         <stat.icon className="w-6 h-6 text-indigo-40o0"  />,
                       </div>,
                       <div className="text-2xl font-bold text-white">{stat.value}</div>,
                       <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                    </motion.div>,
-                  ))}
+                    </motion.div>))}
                 </div>,
                 {/* Action Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start">,
-                  <Link,
+                  <Link
                     href="/ai-trends-20o26",
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white font-bold rounded-full hover:from-indigo-70o0 hover:to-purple-70o0 transition-all duration-30o0 shadow-lg hover:shadow-indigo-50o0/25 group",
-                  >,
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white font-bold rounded-full hover:from-indigo-70o0 hover:to-purple-70o0 transition-all duration-30o0 shadow-lg hover:shadow-indigo-50o0/25 group">,
                     <BarChart3 className="w-5 h-5 mr-2"  />,
                     View Predictions,
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />,
                   </Link>,
-                  <Link,
+                  <Link
                     href="/newsletter-signup",
-                    className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20",
-                  >,
+                    className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20">,
                     <Users className="w-5 h-5 mr-2"  />,
                     Get Updates,
                   </Link>,
                 </div>,
               </div>,
-              {/* Right Content - Prediction Cards */,}
+              {/* Right Content - Prediction Cards */}
               <motion.div,
-                initial={{ opacity: 0x: 30 ,}}
-                animate={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: 0.4 ,}}
-                className="flex-shrink-0 w-full lg: w-96",
-              >,
+                initial={{ opacity: 0x: 30 }}
+                animate={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="flex-shrink-0 w-full lg: w-96">,
                 <div className="grid grid-cols-1 gap-4">,
-                  {predictions.map((predictionindex) => (,
+                  {predictions.map((predictionindex) => (
                     <motion.div,
-                      key={index,}
-                      initial={{ opacity: 0, y: 20 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      transition={{ duration: 0.6delay: 0.6 + index * 0.1 ,}}
-                      className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover: border-white/40 transition-all duration-30o0 ${,
-                        currentPrediction === index ? 'ring-2 ring-indigo-40o0 ring-opacity-50' : '',
-                      ,}`}
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
+                      className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover: border-white/40 transition-all duration-30o0 ${
+                        currentPrediction === index ? 'ring-2 ring-indigo-40o0 ring-opacity-50' : ''}`}
                     >,
                       <div className="flex items-center justify-between mb-3">,
                         <div className="flex items-center">,
@@ -233,23 +208,17 @@ const AITrends20o26PredictionsPromotionBanner = () => {,
                         </div>,
                         <Star className="w-4 h-4 text-yellow-40o0"  />,
                       </div>,
-                    </motion.div>,
-                  ))}
+                    </motion.div>))}
                 </div>,
               </motion.div>,
             </div>,
           </div>,
           {/* Dismiss Button */}
-          <button,
+          <button
             onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 w-8 h-8 bg-white/10 hover: bg-white/20 rounded-full flex items-center justify-center transition-colors duration-20o0",
-          >,
+            className="absolute top-4 right-4 w-8 h-8 bg-white/10 hover: bg-white/20 rounded-full flex items-center justify-center transition-colors duration-20o0">,
             <X className="w-4 h-4 text-white"  />,
           </button>,
-        </motion.div>,
-      ),}
-    </AnimatePresence>,
-  ),
-};
-,
-export default AITrends20o26PredictionsPromotionBanner,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default AITrends20o26PredictionsPromotionBanner;

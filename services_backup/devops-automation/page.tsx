@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'DevOps Automation | Zion Tech Group',;
+export const metadata = {
+  title: 'DevOps Automation | Zion Tech Group';
   description:,
-    'Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.',;
+    'Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.';
 };
-,
-export default function DevOpsAutomationPage() {,
-  return (,
+export default function DevOpsAutomationPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,32 +23,32 @@ export default function DevOpsAutomationPage() {,
             Our DevOps Services,
           </h2>,
           <div className='space-y-4'>,
-            <FeatureItem,
+            <FeatureItem
               icon='🔄',
               title='CI/CD Pipeline Setup',
               description='Complete continuous integration and deployment pipelines using Jenkins, GitLab CI, GitHub Actions, or Azure DevOps.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🏗️',
               title='Infrastructure as Code',
               description='Automate infrastructure provisioning and management using Terraform, Ansible, or CloudFormation.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🐳',
               title='Container Orchestration',
               description='Kubernetes deployment and management, Docker containerization, and microservices architecture implementation.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Monitoring & Observability',
               description='Comprehensive monitoring setup with Prometheus, Grafana, ELK stack, and custom dashboards.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔒',
               title='Security Integration',
               description='DevSecOps practices including security scanning, compliance automation, and vulnerability management.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='⚡',
               title='Performance Optimization',
               description='Application performance monitoring, database optimization, and infrastructure scaling strategies.',
@@ -60,47 +58,47 @@ export default function DevOpsAutomationPage() {,
         <div>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$3,50o0',
               period='one-time',
               description='Basic DevOps setup for small teams',
-              features={[,
-                'CI/CD pipeline setup',;
-                'Basic monitoring configuration',;
-                'Docker containerization',;
-                'Documentation and training',;
-                '30-day support',;
+              features={[
+                'CI/CD pipeline setup';
+                'Basic monitoring configuration';
+                'Docker containerization';
+                'Documentation and training';
+                '30-day support';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$8,50o0',
               period='one-time',
               description='Comprehensive DevOps transformation',
-              features={[,
-                'Full CI/CD implementation',;
-                'Infrastructure as Code',;
-                'Kubernetes deployment',;
-                'Advanced monitoring setup',;
-                'Security integration',;
-                '90-day support',;
+              features={[
+                'Full CI/CD implementation';
+                'Infrastructure as Code';
+                'Kubernetes deployment';
+                'Advanced monitoring setup';
+                'Security integration';
+                '90-day support';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$18,0o00',
               period='one-time',
               description='Complete DevOps platform for large organizations',
-              features={[,
-                'Multi-environment setup',;
-                'Custom tooling development',;
-                'Advanced security automation',;
-                'Performance optimization',;
-                'Team training and mentoring',;
-                '6-month support',;
+              features={[
+                'Multi-environment setup';
+                'Custom tooling development';
+                'Advanced security automation';
+                'Performance optimization';
+                'Team training and mentoring';
+                '6-month support';
               ]}
               popular={false}
             />,
@@ -112,22 +110,22 @@ export default function DevOpsAutomationPage() {,
           Our DevOps Process,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
-          <StepCard,
+          <StepCard
             step='1',
             title='Assessment',
             description='Analyze your current development workflow, infrastructure, and identify automation opportunities.',
           />,
-          <StepCard,
+          <StepCard
             step='2',
             title='Design',
             description='Design custom DevOps architecture and automation workflows tailored to your needs.',
           />,
-          <StepCard,
+          <StepCard
             step='3',
             title='Implementation',
             description='Build and deploy CI/CD pipelines, monitoring systems, and infrastructure automation.',
           />,
-          <StepCard,
+          <StepCard
             step='4',
             title='Optimization',
             description='Monitor performance, optimize workflows, and provide ongoing support and improvements.',
@@ -251,16 +249,14 @@ export default function DevOpsAutomationPage() {,
           accelerate your development process.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -268,54 +264,47 @@ export default function DevOpsAutomationPage() {,
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   plan: string,
   price: string,
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-blue-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -323,34 +312,28 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map(feature => (,
+        {features.map(feature => (
           <li key={feature} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function StepCard({,
-  step,;
-  title,;
-  description,;
-}: {,
+function StepCard({
+  step;
+  title;
+  description;
+}: {
   step: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <div className='w-12 h-12 bg-blue-60o0 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>,
         {step}
       </div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

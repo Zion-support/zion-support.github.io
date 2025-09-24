@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SearchPage() {,
-  return (,
+export default function SearchPage() {
+  return (
     <>,
       <Head>,
         <title>Search - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function SearchPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

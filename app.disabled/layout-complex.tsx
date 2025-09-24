@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import './globals.css',
 import '../styles/optimizations.css',
@@ -10,20 +10,17 @@ import EnhancedSEO from '../components/EnhancedSEO',
 import AdvancedPerformanceMonitor20o26 from '../components/AdvancedPerformanceMonitor20o26',
 import UltimateAIAssistant20o26 from '../components/UltimateAIAssistant20o26',
 import PerformanceOptimizations from '../components/PerformanceOptimizations',
-,
-export const metadata ={,
-  title: 'Zion Tech Group - AI & Technology Solutions',;
+export const metadata ={
+  title: 'Zion Tech Group - AI & Technology Solutions';
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'};
-,
-function Header() {,
-  return (,
+function Header() {
+  return (
     <header className="border-b border-gray-20o0 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">,
       <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">,
-        <Link,
+        <Link
           href="/",
           className="font-bold text-lg text-gray-90o0 hover: text-blue-60o0 transition-colors focus-visible:focus",
-          aria-label="Zion Tech Group - Home",
-        >,
+          aria-label="Zion Tech Group - Home">,
           Zion Tech Group,
         </Link>,
         <div className="hidden md:flex gap-6">,
@@ -34,7 +31,7 @@ function Header() {,
                 BREAKTHROUGH,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -125,7 +122,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -184,7 +181,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -228,7 +225,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -293,7 +290,7 @@ function Header() {,
                 SINGULARITY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -355,7 +352,7 @@ function Header() {,
                 ULTIMATE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -395,7 +392,7 @@ function Header() {,
                 TRANSCENDENT,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -435,7 +432,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -475,7 +472,7 @@ function Header() {,
                 FUTURE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -512,7 +509,7 @@ function Header() {,
                 FUTURE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -555,7 +552,7 @@ function Header() {,
                 NEW,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -875,7 +872,7 @@ function Header() {,
             <button className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus font-semibold relative flex items-center">,
               Content Library,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -997,10 +994,9 @@ function Header() {,
               </div>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href="/ai-services-20o25",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus font-semibold relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus font-semibold relative">,
             AI Services,
             <span className="absolute -top-2 -right-2 bg-green-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               NEW,
@@ -1013,7 +1009,7 @@ function Header() {,
                 BREAKTHROUGH,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-20o0 opacity-0 invisible group-hover: opacity-10o0 group-hover:visible transition-all duration-20o0 z-50">,
@@ -1040,133 +1036,115 @@ function Header() {,
               </div>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href="/blog",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative">,
             Blog,
             <span className="absolute -top-2 -right-2 bg-blue-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               NEW,
             </span>,
           </Link>,
-          <Link,
+          <Link
             href="/case-studies",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative">,
             Case Studies,
             <span className="absolute -top-2 -right-2 bg-green-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               NEW,
             </span>,
           </Link>,
-          <Link,
+          <Link
             href="/resources",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative">,
             Resources,
             <span className="absolute -top-2 -right-2 bg-green-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               NEW,
             </span>,
           </Link>,
-          <Link,
+          <Link
             href="/content-showcase",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus relative">,
             Content Showcase,
             <span className="absolute -top-2 -right-2 bg-purple-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               NEW,
             </span>,
           </Link>,
-          <Link,
+          <Link
             href="/webinars",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
             Webinars,
           </Link>,
-          <Link,
+          <Link
             href="/ai-implementation-guide-20o25",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus font-semibold relative",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus font-semibold relative">,
             AI Guide,
             <span className="absolute -top-2 -right-2 bg-blue-50o0 text-white text-xs px-2 py-1 rounded-full animate-pulse">,
               ESSENTIAL,
             </span>,
           </Link>,
-          <Link,
+          <Link
             href="/webinars",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
             Webinars,
           </Link>,
-          <Link,
+          <Link
             href="/services",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
             Services,
           </Link>,
-          <Link,
+          <Link
             href="/contact",
-            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-          >,
+            className="text-gray-70o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
             Contact,
           </Link>,
         </div>,
-        {/* Mobile menu button */,}
-        <button,
+        {/* Mobile menu button */}
+        <button
           className="md: hidden p-2 rounded-md hover:bg-gray-10o0 transition-colors focus-visible:focus",
           aria-label="Toggle menu",
-          aria-expanded="false",
-        >,
+          aria-expanded="false">,
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">,
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M4 6h16M4 12h16M4 18h16"  />,
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />,
           </svg>,
         </button>,
       </nav>,
-    </header>,
-  ),
-}
+    </header>)}
 ,
-function Footer() {,
-  return (,
+function Footer() {
+  return (
     <footer className="border-t border-gray-20o0 mt-10 py-6 bg-gray-50">,
       <div className="max-w-6xl mx-auto px-4">,
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6">,
           <div>,
             <h3 className="font-semibold text-gray-90o0 mb-3">Services</h3>,
             <div className="space-y-2">,
-              <Link,
+              <Link
                 href="/services",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 All Services,
               </Link>,
-              <Link,
+              <Link
                 href="/services/micro-saas",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Micro SaaS,
               </Link>,
-              <Link,
+              <Link
                 href="/services/ai-services",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 AI Services,
               </Link>,
-              <Link,
+              <Link
                 href="/ai-services-20o25",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 AI Services 20o25,
               </Link>,
-              <Link,
+              <Link
                 href="/quantum-computing-solutions",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Quantum Computing,
               </Link>,
-              <Link,
+              <Link
                 href="/services/it-services",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 IT Services,
               </Link>,
             </div>,
@@ -1174,24 +1152,21 @@ function Footer() {,
           <div>,
             <h3 className="font-semibold text-gray-90o0 mb-3">Company</h3>,
             <div className="space-y-2">,
-              <Link,
+              <Link
                 href="/",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Home,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Contact,
               </Link>,
-              <a,
+              <a
                 href="https://ziontechgroup.com",
                 className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
                 target="_blank",
-                rel="noopener noreferrer",
-              >,
+                rel="noopener noreferrer">,
                 Main Site,
               </a>,
             </div>,
@@ -1199,28 +1174,24 @@ function Footer() {,
           <div>,
             <h3 className="font-semibold text-gray-90o0 mb-3">Resources</h3>,
             <div className="space-y-2">,
-              <Link,
+              <Link
                 href="/resources",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 All Resources,
               </Link>,
-              <Link,
+              <Link
                 href="/ai-implementation-guide-20o25",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 AI Implementation Guide,
               </Link>,
-              <Link,
+              <Link
                 href="/blog",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Blog,
               </Link>,
-              <Link,
+              <Link
                 href="/case-studies",
-                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus",
-              >,
+                className="block text-gray-60o0 hover:text-blue-60o0 transition-colors focus-visible:focus">,
                 Case Studies,
               </Link>,
             </div>,
@@ -1230,10 +1201,9 @@ function Footer() {,
             <div className="text-sm text-gray-60o0 space-y-1">,
               <div>Mobile: +1 30o2 464 0950</div>,
               <div>,
-                Email: <a,
+                Email: <a
                   href="mailto:kleber@ziontechgroup.com",
-                  className="hover:text-blue-60o0 transition-colors focus-visible:focus",
-                >,
+                  className="hover:text-blue-60o0 transition-colors focus-visible:focus">,
                   kleber@ziontechgroup.com,
                 </a>,
               </div>,
@@ -1245,68 +1215,59 @@ function Footer() {,
           </div>,
         </div>,
         <div className="border-t border-gray-20o0 mt-6 pt-4 text-xs text-gray-50o0 text-center">,
-          © {new Date().getFullYear(),} Zion Tech Group. All rights reserved.,
+          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.,
         </div>,
       </div>,
-    </footer>,
-  ),
-}
+    </footer>)}
 ,
-export default function RootLayout({,
-  children}: {,
-  children: React.ReactNode,
-,}) {,
-  return (,
+export default function RootLayout({
+  children}: {
+  children: React.ReactNode}) {
+  return (
     <html lang="en" className="scroll-smooth">,
       <head>,
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https: //fonts.googleapis.com"  />,
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />,
-        {/* DNS prefetch for performance */,}
+        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com"  />,
         <link rel="dns-prefetch" href="//www.googletagmanager.com"  />,
         {/* Performance Optimizations */}
         <PerformanceOptimizations  />,
         {/* Structured Data */}
-        <script,
+        <script
           type="application/ld+json",
-          dangerouslySetInnerHTML={{,
-            __html: JSON.stringify({,
-              "@context": "https://schema.org",;
-              "@type": "Organization",;
-              "name": "Zion Tech Group",;
-              "url": "https://zion.tech",;
-              "logo": "https://zion.tech/logo.png",;
-              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.",;
-              "foundingDate": "20o20",;
-              "founders": [,
-                {,
-                  "@type": "Person",;
-                  "name": "Zion Tech Group Founders",
-                }
-              ],;
-              "address": {,
-                "@type": "PostalAddress",;
-                "addressCountry": "US",
-              },;
-              "contactPoint": {,
-                "@type": "ContactPoint",;
-                "telephone": "+1-555-ZION-TECH",;
-                "contactType": "customer service",;
-                "availableLanguage": "English",
-              },;
-              "sameAs": [,
-                "https://twitter.com/ziontechgroup",;
-                "https://linkedin.com/company/zion-tech-group",;
-                "https: //github.com/zion-tech-group",
-              ],;
-              "offers": {,
-                "@type": "Offer",;
-                "description": "AI Solutions and Technology Services",;
-                "category": "Technology Services",
-              }
-            }),
-          }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org";
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "url": "https://zion.tech";
+              "logo": "https://zion.tech/logo.png";
+              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.";
+              "foundingDate": "20o20";
+              "founders": [
+                {
+                  "@type": "Person";
+                  "name": "Zion Tech Group Founders"}
+              ];
+              "address": {
+                "@type": "PostalAddress";
+                "addressCountry": "US"};
+              "contactPoint": {
+                "@type": "ContactPoint";
+                "telephone": "+1-555-ZION-TECH";
+                "contactType": "customer service";
+                "availableLanguage": "English"};
+              "sameAs": [
+                "https://twitter.com/ziontechgroup";
+                "https://linkedin.com/company/zion-tech-group";
+                "https: //github.com/zion-tech-group"];
+              "offers": {
+                "@type": "Offer";
+                "description": "AI Solutions and Technology Services";
+                "category": "Technology Services"}
+            })}}
          />,
         {/* Additional SEO meta tags */}
         <meta name="format-detection" content="telephone=no"  />,
@@ -1327,13 +1288,12 @@ export default function RootLayout({,
               <AdvancedPerformanceMonitor20o26  />,
               <UltimateAIAssistant20o26  />,
               {/* Skip to main content for accessibility */}
-              <a,
+              <a
                 href="#main-content",
-                className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded z-50",
-              >,
+                className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded z-50">,
                 Skip to main content,
               </a>,
-              {/* Enhanced Navigation */,}
+              {/* Enhanced Navigation */}
               <EnhancedNavigation  />,
               {/* New Content Banner */}
               <NewContentBanner  />,
@@ -1388,6 +1348,4 @@ export default function RootLayout({,
           </PerformanceMonitor>,
         </div>,
       </body>,
-    </html>,
-  ),
-,}
+    </html>)}

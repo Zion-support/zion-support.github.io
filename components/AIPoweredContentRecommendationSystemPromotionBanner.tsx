@@ -1,106 +1,91 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Brain,
   Sparkles,
   TrendingUp,
   Target,
   Users,
   Clock,
-  Star,;
-  ArrowRight,;
-  BookOpen,;
-  Play,;
-  Download,;
-  Share2,;
-  Heart,;
-  Eye,;
-  Tag,;
-  Calendar,;
-  User,;
-  Zap,;
-  Cpu,;
-  Globe,;
-  Database,;
-  Cloud,;
-  Shield,;
-  CheckCircle,;
-  AlertCircle,;
-  RefreshCw,;
-  Filter,;
-  Search,;
-  Settings,;
-  BarChart3,;
-  Activity,;
-  Lightbulb,;
-  Rocket,;
-  Award,;
-  ThumbsUp,
-} from 'lucide-react',
-,
-const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
+  Star;
+  ArrowRight;
+  BookOpen;
+  Play;
+  Download;
+  Share2;
+  Heart;
+  Eye;
+  Tag;
+  Calendar;
+  User;
+  Zap;
+  Cpu;
+  Globe;
+  Database;
+  Cloud;
+  Shield;
+  CheckCircle;
+  AlertCircle;
+  RefreshCw;
+  Filter;
+  Search;
+  Settings;
+  BarChart3;
+  Activity;
+  Lightbulb;
+  Rocket;
+  Award;
+  ThumbsUp} from 'lucide-react',
+const AIPoweredContentRecommendationSystemPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const features = [,
-    'AI-Powered Personalization',;
-    'Real-Time Content Analysis',;
-    'Smart Recommendation Engine',;
-    'Behavioral Pattern Recognition',;
-    'Engagement Optimization',;
-    'Cross-Platform Content Discovery',
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const features = [
+    'AI-Powered Personalization';
+    'Real-Time Content Analysis';
+    'Smart Recommendation Engine';
+    'Behavioral Pattern Recognition';
+    'Engagement Optimization';
+    'Cross-Platform Content Discovery'],
+  const stats = [
+    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target };
+    { value: '98.7%'label: ''Personalization', 'icon: Users };
+    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp };
+    { value: '1,247'label: 'Content 'Matched', 'icon: Database }
   ],
-,
-  const stats = [,
-    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target ,},;
-    { value: '98.7%'label: ''Personalization', 'icon: Users ,},;
-    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp ,},;
-    { value: '1,247'label: 'Content 'Matched', 'icon: Database ,}
+  const recommendationTypes = [
+    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' };
+    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' };
+    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' };
+    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' };
+    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' };
+    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
   ],
-,
-  const recommendationTypes = [,
-    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' ,},;
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' ,},;
-    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' ,},;
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' ,},;
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' ,},;
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' ,}
+  const aiCapabilities = [
+    {
+      title: 'Neural Pattern Recognition';
+      description: 'Advanced AI algorithms analyze your reading patterns and preferences';
+      icon: Brain;
+      accuracy: '94.2%'};
+    {
+      title: 'Behavioral Analysis';
+      description: 'Machine learning models understand your content consumption habits';
+      icon: Users;
+      accuracy: '98.7%'};
+    {
+      title: 'Content Optimization';
+      description: 'AI continuously optimizes recommendations based on engagement data';
+      icon: TrendingUp;
+      accuracy: '+67%'};
+    {
+      title: 'Real-Time Processing';
+      description: 'Instant content analysis and recommendation generation';
+      icon: Zap;
+      accuracy: '<10o0ms'}
   ],
-,
-  const aiCapabilities = [,
-    {,
-      title: 'Neural Pattern Recognition',;
-      description: 'Advanced AI algorithms analyze your reading patterns and preferences',;
-      icon: Brain,;
-      accuracy: '94.2%',
-    ,},;
-    {,
-      title: 'Behavioral Analysis',;
-      description: 'Machine learning models understand your content consumption habits',;
-      icon: Users,;
-      accuracy: '98.7%',
-    ,},;
-    {,
-      title: 'Content Optimization',;
-      description: 'AI continuously optimizes recommendations based on engagement data',;
-      icon: TrendingUp,;
-      accuracy: '+67%',
-    ,},;
-    {,
-      title: 'Real-Time Processing',;
-      description: 'Instant content analysis and recommendation generation',;
-      icon: Zap,;
-      accuracy: '<10o0ms',
-    ,}
-  ],
-,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">,
@@ -114,11 +99,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-12",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12">,
           <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">,
             <Brain className="w-4 h-4 mr-2"  />,
             AI-Powered Intelligence,
@@ -146,32 +130,29 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
             </button>,
           </div>,
         </motion.div>,
-        {/* AI Stats */,}
+        {/* AI Stats */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.2 ,}}
-          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12",
-        >,
-          {stats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
+          {stats.map((statindex) => (
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">,
                 <stat.icon className="w-8 h-8 text-white"  />,
               </div>,
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
               <div className="text-blue-10o0 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* AI Capabilities */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12",
-        >,
-          {aiCapabilities.map((capabilityindex) => (,
-            <div key={index,} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
+          {aiCapabilities.map((capabilityindex) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center mb-4">,
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">,
                   <capability.icon className="w-6 h-6 text-white"  />,
@@ -182,18 +163,16 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
                 </div>,
               </div>,
               <p className="text-blue-10o0 text-sm">{capability.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* Features Grid */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12",
-        >,
-          {features.map((featureindex) => (,
-            <div key={index,} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">,
+          {features.map((featureindex) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center mb-3">,
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3">,
                   <CheckCircle className="w-5 h-5 text-white"  />,
@@ -203,39 +182,35 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
               <p className="text-blue-10o0 text-sm">,
                 Advanced AI capabilities that revolutionize how you discover and engage with content.,
               </p>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* Content Types Showcase */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 0.8 ,}}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">,
           <div className="text-center mb-8">,
             <h2 className="text-2xl font-bold text-white mb-2">AI-Powered Content Discovery</h2>,
             <p className="text-blue-10o0">Intelligent recommendations across all content types</p>,
           </div>,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
-            {recommendationTypes.map((typeindex) => (,
-              <div key={index,} className="text-center group">,
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-50o0/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-30o0`,}>,
+            {recommendationTypes.map((typeindex) => (
+              <div key={index} className="text-center group">,
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-${type.color}-50o0/20 rounded-2xl mb-3 group-hover: scale-110 transition-transform duration-30o0`}>,
                   <type.icon className="w-8 h-8 text-white"  />,
                 </div>,
                 <div className="text-white font-semibold text-sm mb-1">{type.label}</div>,
                 <div className="text-blue-20o0 text-xs">{type.count} items</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </motion.div>,
         {/* AI Demo Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 1.0 ,}}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
+          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12">,
           <div className="text-center mb-8">,
             <h2 className="text-2xl font-bold text-white mb-2">See AI in Action</h2>,
             <p className="text-blue-10o0">Watch how our AI analyzes your preferences and generates recommendations</p>,
@@ -278,21 +253,21 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
                   <span className="text-white font-bold">98.7%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-green-40o0 to-blue-40o0 h-2 rounded-full" style={{width: '98.7%',}}></div>,
+                  <div className="bg-gradient-to-r from-green-40o0 to-blue-40o0 h-2 rounded-full" style={{width: '98.7%'}}></div>,
                 </div>,
                 <div className="flex justify-between items-center">,
                   <span className="text-blue-10o0">Content Match Rate</span>,
                   <span className="text-white font-bold">94.2%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 h-2 rounded-full" style={{width: '94.2%',}}></div>,
+                  <div className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 h-2 rounded-full" style={{width: '94.2%'}}></div>,
                 </div>,
                 <div className="flex justify-between items-center">,
                   <span className="text-blue-10o0">Engagement Boost</span>,
                   <span className="text-white font-bold">+67%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-2">,
-                  <div className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 h-2 rounded-full" style={{width: '67%',}}></div>,
+                  <div className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 h-2 rounded-full" style={{width: '67%'}}></div>,
                 </div>,
               </div>,
             </div>,
@@ -300,11 +275,10 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
         </motion.div>,
         {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 1.2 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.2 }}
+          className="text-center">,
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
             <h3 className="text-2xl font-bold text-white mb-4">,
               Ready to Experience AI-Powered Content Discovery?,
@@ -328,8 +302,5 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIPoweredContentRecommendationSystemPromotionBanner,
+    </div>)};
+export default AIPoweredContentRecommendationSystemPromotionBanner;

@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Quantum Computing Breakthroughs 20o30: Revolutionary AI | Zion Tech Group',;
+    'Quantum Computing Breakthroughs 20o30: Revolutionary AI | Zion Tech Group';
   description:,
-    'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 20o30.',;
-  keywords: [,
-    'quantum computing',;
-    'quantum AI',;
-    'quantum cryptography',;
-    'quantum algorithms',;
-    'quantum supremacy',;
-    'future computing',;
-  ],;
+    'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 20o30.';
+  keywords: [
+    'quantum computing';
+    'quantum AI';
+    'quantum cryptography';
+    'quantum algorithms';
+    'quantum supremacy';
+    'future computing';
+  ];
 };
-,
-export default function QuantumComputingPage() {,
-  return (,
+export default function QuantumComputingPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Quantum Computing Breakthroughs 20o30: Revolutionary AI',
         description='Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 20o30.',
         keywords='quantum computing, quantum AI, quantum cryptography, quantum algorithms, quantum supremacy, future computing',
@@ -46,7 +44,7 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Supremacy Stats */,}
+        {/* Quantum Supremacy Stats */}
         <section className='py-16 bg-white'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -77,14 +75,14 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Breakthroughs */,}
+        {/* Key Breakthroughs */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
               Revolutionary Quantum Breakthroughs,
             </h2>,
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
-              {/* Quantum AI */,}
+              {/* Quantum AI */}
               <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-indigo-50o0'>,
                 <div className='flex items-center mb-6'>,
                   <div className='text-4xl mr-4'>🧠</div>,
@@ -133,14 +131,13 @@ export default function QuantumComputingPage() {,
                     </div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href='/quantum-ai-systems',
-                  className='inline-block mt-6 text-indigo-60o0 font-semibold hover: text-indigo-80o0',
-                >,
+                  className='inline-block mt-6 text-indigo-60o0 font-semibold hover: text-indigo-80o0'>,
                   Explore Quantum AI →,
                 </Link>,
               </div>,
-              {/* Quantum Cryptography */,}
+              {/* Quantum Cryptography */}
               <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-purple-50o0'>,
                 <div className='flex items-center mb-6'>,
                   <div className='text-4xl mr-4'>🔐</div>,
@@ -149,7 +146,7 @@ export default function QuantumComputingPage() {,
                   </h3>,
                 </div>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Unbreakable encryption based on quantum mechanics principles,;
+                  Unbreakable encryption based on quantum mechanics principles;
                   providing absolute security for digital communications and,
                   data protection.,
                 </p>,
@@ -189,14 +186,13 @@ export default function QuantumComputingPage() {,
                     </div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href='/quantum-cryptography',
-                  className='inline-block mt-6 text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='inline-block mt-6 text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn About Quantum Security →,
                 </Link>,
               </div>,
-              {/* Quantum Simulation */,}
+              {/* Quantum Simulation */}
               <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-blue-50o0'>,
                 <div className='flex items-center mb-6'>,
                   <div className='text-4xl mr-4'>🧪</div>,
@@ -205,7 +201,7 @@ export default function QuantumComputingPage() {,
                   </h3>,
                 </div>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Simulating quantum systems with unprecedented accuracy,;
+                  Simulating quantum systems with unprecedented accuracy;
                   revolutionizing drug discovery, materials science, and climate,
                   modeling.,
                 </p>,
@@ -244,14 +240,13 @@ export default function QuantumComputingPage() {,
                     </div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href='/quantum-simulation',
-                  className='inline-block mt-6 text-blue-60o0 font-semibold hover: text-blue-80o0',
-                >,
+                  className='inline-block mt-6 text-blue-60o0 font-semibold hover: text-blue-80o0'>,
                   Discover Quantum Simulation →,
                 </Link>,
               </div>,
-              {/* Quantum Networking */,}
+              {/* Quantum Networking */}
               <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-green-50o0'>,
                 <div className='flex items-center mb-6'>,
                   <div className='text-4xl mr-4'>🌐</div>,
@@ -299,17 +294,16 @@ export default function QuantumComputingPage() {,
                     </div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href='/quantum-internet',
-                  className='inline-block mt-6 text-green-60o0 font-semibold hover: text-green-80o0',
-                >,
+                  className='inline-block mt-6 text-green-60o0 font-semibold hover: text-green-80o0'>,
                   Explore Quantum Internet →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Applications Timeline */,}
+        {/* Applications Timeline */}
         <section className='py-16 bg-white'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -441,7 +435,7 @@ export default function QuantumComputingPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className='py-16 bg-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
@@ -452,23 +446,19 @@ export default function QuantumComputingPage() {,
               consulting and implementation services.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-70o0 hover:to-purple-70o0 transition-colors',
-              >,
+                className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-70o0 hover:to-purple-70o0 transition-colors'>,
                 Start Quantum Journey,
               </Link>,
-              <Link,
+              <Link
                 href='/services/quantum-computing',
-                className='border-2 border-indigo-60o0 text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-60o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-indigo-60o0 text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-60o0 hover:text-white transition-colors'>,
                 Explore Quantum Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

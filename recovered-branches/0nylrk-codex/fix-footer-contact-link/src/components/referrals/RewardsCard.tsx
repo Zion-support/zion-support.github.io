@@ -2,15 +2,13 @@ import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/c
 import { ReferralReward } from '@/types/referrals',
 import { formatDate } from '@/utils/referralUtils',
 import { BadgeDollarSignBadge } from 'lucide-react',
-,
-interface RewardsCardProps {,
+interface RewardsCardProps {
   rewards: ReferralReward[],
-  isLoading: boolean,
-,}
+  isLoading: boolean}
 ,
-export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {,
-  if (isLoading) {,
-    return (,
+export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {
+  if (isLoading) {
+    return (
       <Card>,
         <CardHeader>,
           <CardTitle className='flex items-center gap-2'>,
@@ -26,12 +24,10 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {,
             <div className='h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent' />,
           </div>,
         </CardContent>,
-      </Card>,
-    ),
-  }
+      </Card>)}
 ,
-  if (rewards.length === 0) {,
-    return (,
+  if (rewards.length === 0) {
+    return (
       <Card>,
         <CardHeader>,
           <CardTitle className='flex items-center gap-2'>,
@@ -50,11 +46,9 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {,
             </p>,
           </div>,
         </CardContent>,
-      </Card>,
-    ),
-  }
+      </Card>)}
 ,
-  return (,
+  return (
     <Card>,
       <CardHeader>,
         <CardTitle className='flex items-center gap-2'>,
@@ -67,20 +61,17 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {,
       </CardHeader>,
       <CardContent>,
         <div className='space-y-4'>,
-          {rewards.map(rewardindex => (,
-            <div,
+          {rewards.map(rewardindex => (
+            <div
               key={reward.id}
-              className={`flex justify-between items-start ${,
-                index !== rewards.length - 1 ? 'border-b pb-3' : '',
-              }`}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? 'border-b pb-3' : ''}`}
             >,
               <div>,
                 <div className='flex items-center gap-2'>,
-                  {reward.reward_type === 'credit' ? (,
-                    <BadgeDollarSign className='h-4 w-4 text-green-600' />,
-                  ) : (,
-                    <Badge className='h-4 w-4 text-blue-600' />,
-                  )}
+                  {reward.reward_type === 'credit' ? (
+                    <BadgeDollarSign className='h-4 w-4 text-green-600' />) : (
+                    <Badge className='h-4 w-4 text-blue-600' />)}
                   <p className='font-medium'>,
                     {reward.reward_type === 'credit',
                       ? `$${reward.amount?.toFixed(2)} Credit`,
@@ -90,17 +81,13 @@ export function RewardsCard({ rewardsisLoading }: RewardsCardProps) {,
                 <p className='text-xs text-muted-foreground mt-1'>,
                   Earned on {formatDate(reward.created_at)}
                 </p>,
-                {reward.expires_at && (,
+                {reward.expires_at && (
                   <p className='text-xs text-muted-foreground'>,
                     Expires on {formatDate(reward.expires_at)}
-                  </p>,
-                )}
+                  </p>)}
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

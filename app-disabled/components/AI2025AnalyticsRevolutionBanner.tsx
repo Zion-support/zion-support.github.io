@@ -1,67 +1,50 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const AI20o25AnalyticsRevolutionBanner: React.FC = () => {,
+const AI20o25AnalyticsRevolutionBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isDismissed, setIsDismissed] = useState(false),
-,
-  const contentPieces = [,
-    {,
-      id: 'ai-analytics-revolution',;
-      title: 'AI 20o25: The Advanced Analytics Revolution - Ultimate Enterprise Guide',;
-      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI analytics. Complete implementation guide with real success stories.',;
-      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide',;
-      type: 'Blog Post',;
-      metrics: {,
-        roi: '60o0%',;
-        savings: '$2.8B',;
-        accuracy: '99.7%',;
-        speed: '340%',
-      ,},;
-      readTime: '18 min read',
-    ,},;
-    {,
-      id: 'fortune-50o0-analytics-case',;
-      title: 'Fortune 50o0 AI Analytics Transformation: $2.8B Annual Savings with 60o0% ROI',;
-      description: 'How a $20o0B Fortune 50o0 company achieved 60o0% ROI and $2.8B annual savings through advanced AI analytics implementation.',;
-      url: '/case-studies/fortune-50o0-ai-analytics-transformation-60o0-percent-roi',;
-      type: 'Case Study',;
-      metrics: {,
-        roi: '60o0%',;
-        savings: '$2.8B',;
-        uptime: '99.7%',;
-        adoption: '95%',
-      ,},;
-      readTime: '15 min read',
-    ,}
+  const contentPieces = [
+    {
+      id: 'ai-analytics-revolution';
+      title: 'AI 20o25: The Advanced Analytics Revolution - Ultimate Enterprise Guide';
+      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI analytics. Complete implementation guide with real success stories.';
+      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide';
+      type: 'Blog Post';
+      metrics: {
+        roi: '60o0%';
+        savings: '$2.8B';
+        accuracy: '99.7%';
+        speed: '340%'};
+      readTime: '18 min read'};
+    {
+      id: 'fortune-50o0-analytics-case';
+      title: 'Fortune 50o0 AI Analytics Transformation: $2.8B Annual Savings with 60o0% ROI';
+      description: 'How a $20o0B Fortune 50o0 company achieved 60o0% ROI and $2.8B annual savings through advanced AI analytics implementation.';
+      url: '/case-studies/fortune-50o0-ai-analytics-transformation-60o0-percent-roi';
+      type: 'Case Study';
+      metrics: {
+        roi: '60o0%';
+        savings: '$2.8B';
+        uptime: '99.7%';
+        adoption: '95%'};
+      readTime: '15 min read'}
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     const dismissed = localStorage.getItem('ai-analytics-banner-dismissed'),
-    if (dismissed) {,
+    if (dismissed) {
       setIsDismissed(true),
-      return,
-    }
+      return}
 ,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % contentPieces.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, []),
-,
-  const handleDismiss = () => {,
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % contentPieces.length)}, 50o00),
+    return () => clearInterval(timer)}, []),
+  const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ai-analytics-banner-dismissed', 'true'),
-  };
-,
+    localStorage.setItem('ai-analytics-banner-dismissed', 'true')};
   if (isDismissed) return null,
-,
   const currentContent = contentPieces[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-70o0 text-white py-8 overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">,
@@ -70,7 +53,7 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="flex items-center justify-between">,
           <div className="flex-1">,
-            {/* Header */,}
+            {/* Header */}
             <div className="flex items-center mb-4">,
               <div className="bg-white bg-opacity-20 rounded-full px-4 py-1 mr-4">,
                 <span className="text-sm font-bold">🚀 NEW AI ANALYTICS CONTENT</span>,
@@ -81,36 +64,34 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {,
             </div>,
             {/* Content */}
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">,
-              {/* Main Content */,}
+              {/* Main Content */}
               <div className="lg: col-span-2">,
                 <div className="flex items-start space-x-2 mb-2">,
                   <span className="bg-white bg-opacity-20 text-xs font-semibold px-2 py-1 rounded">,
-                    {currentContent.type,}
+                    {currentContent.type}
                   </span>,
                   <span className="text-xs text-blue-20o0">{currentContent.readTime}</span>,
                 </div>,
                 <h3 className="text-xl md: text-2xl font-bold mb-3 leading-tight">,
-                  {currentContent.title,}
+                  {currentContent.title}
                 </h3>,
                 <p className="text-base md: text-lg opacity-90 mb-4 leading-relaxed">,
-                  {currentContent.description,}
+                  {currentContent.description}
                 </p>,
                 <div className="flex flex-wrap gap-3 mb-4">,
-                  <Link,
+                  <Link
                     href={currentContent.url}
-                    className="bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover: bg-blue-50 transition-colors",
-                  >,
+                    className="bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover: bg-blue-50 transition-colors">,
                     Read Full Guide,
                   </Link>,
-                  <Link,
+                  <Link
                     href="/contact",
-                    className="border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-                  >,
+                    className="border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
                     Get Consultation,
                   </Link>,
                 </div>,
               </div>,
-              {/* Metrics */,}
+              {/* Metrics */}
               <div className="bg-white bg-opacity-10 rounded-lg p-4">,
                 <h4 className="font-bold mb-3 text-center">Success Metrics</h4>,
                 <div className="grid grid-cols-2 gap-3 text-center">,
@@ -136,17 +117,15 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {,
             {/* Progress Indicators */}
             <div className="flex items-center justify-between mt-4">,
               <div className="flex space-x-2">,
-                {contentPieces.map((_, index) => (,
-                  <button,
+                {contentPieces.map((_, index) => (
+                  <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${,
+                    className={`w-3 h-3 rounded-full transition-all ${
                       index === currentSlide,
                         ? 'bg-white',
-                        : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-                    ,}`}
-                  />,
-                ))}
+                        : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
+                  />))}
               </div>,
               <div className="text-sm opacity-75">,
                 {currentSlide + 1} of {contentPieces.length}
@@ -154,19 +133,15 @@ const AI20o25AnalyticsRevolutionBanner: React.FC = () => {,
             </div>,
           </div>,
           {/* Dismiss Button */}
-          <button,
+          <button
             onClick={handleDismiss}
             className="ml-4 text-white hover: text-gray-20o0 transition-colors",
-            aria-label="Dismiss banner",
-          >,
+            aria-label="Dismiss banner">,
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
             </svg>,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o25AnalyticsRevolutionBanner,
+    </div>)};
+export default AI20o25AnalyticsRevolutionBanner;

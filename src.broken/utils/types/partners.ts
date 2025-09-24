@@ -3,21 +3,17 @@ export type UseCaseType =,
   | 'Workforce Development',
   | 'Token Integration',
   | 'Custom Marketplace Instance',
-,
 export type PartnerStatus = 'pending' | 'approved' | 'rejected',
-,
-export interface PartnerPointOfContact {,
+export interface PartnerPointOfContact {
   name: string,
   email: string,
-  phone?: string,
-,}
+  phone?: string}
 ,
-export interface PartnerBrand {,
+export interface PartnerBrand {
   primaryColorHex?: string,
-  logoUrl?: string,
-}
+  logoUrl?: string}
 ,
-export interface PartnerRecord {,
+export interface PartnerRecord {
   id: string,
   name: string,
   entityType: string, // e.g., Government, Bank, University, Company,
@@ -27,10 +23,9 @@ export interface PartnerRecord {,
   status: PartnerStatus,
   apiKeyId?: string,
   createdAt: string,
-  updatedAt: string,
-,}
+  updatedAt: string}
 ,
-export interface ApiKeyRecord {,
+export interface ApiKeyRecord {
   id: string,
   partnerId: string,
   key: string,
@@ -38,31 +33,27 @@ export interface ApiKeyRecord {,
   createdAt: string,
   lastUsedAt?: string,
   rateLimitPerMinute?: number, // default 60,
-  monthlyQuota?: number, // optional cap,
-,}
+  monthlyQuota?: number, // optional cap}
 ,
-export interface UsageEntry {,
+export interface UsageEntry {
   timestamp: string, // ISO,
   partnerId: string,
   apiKeyId: string,
   endpoint: string,
   statusCode: number,
-  latencyMs?: number,
-,}
+  latencyMs?: number}
 ,
-export interface UsageSummary {,
+export interface UsageSummary {
   totalRequests: number,
-  byEndpoint: Record<string, number>,
-  byMonth: Record<string, number>, // YYYY-MM => count,
-}
+  byEndpoint: Record<string number>,
+  byMonth: Record<string number>, // YYYY-MM => count}
 ,
-export interface JwtPayload {,
+export interface JwtPayload {
   sub: string, // partnerId,
   apiKeyId: string,
   name: string,
   entityType: string,
   useCaseType: UseCaseType,
   iat: number,
-  exp: number,
-,}
+  exp: number}
 ,

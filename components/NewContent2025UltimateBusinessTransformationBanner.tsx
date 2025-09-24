@@ -1,16 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-import {,
-  ArrowRightIcon,;
-  ChartBarIcon,;
-  CogIcon,;
-  RocketLaunchIcon,;
+import {
+  ArrowRightIcon;
+  ChartBarIcon;
+  CogIcon;
+  RocketLaunchIcon;
 } from '@heroicons/react/24/outline',
-,
-const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {,
-  return (,
+const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 bg-black/20'>,
         <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/10 to-blue-60o0/10'></div>,
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/ai-pattern.svg')] opacity-10"></div>,
@@ -32,7 +31,7 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {,
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover how Fortune 50o0 companies achieve{' ',}
+            Discover how Fortune 50o0 companies achieve{' '}
             <strong>$50o0M+ ROI</strong> through AI transformation. Complete,
             enterprise guide with implementation strategies, case studies, and,
             proven results.,
@@ -102,22 +101,20 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-ultimate-business-transformation-complete-guide',
-              className='group bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='group bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               <span className='flex items-center justify-center'>,
                 Read Complete Guide,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
               </span>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-ai-transformation-success-story',
-              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span className='flex items-center justify-center'>,
                 View Success Story,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
@@ -130,9 +127,5 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o25UltimateBusinessTransformationBanner,
-,
+    </section>)};
+export default NewContent20o25UltimateBusinessTransformationBanner;

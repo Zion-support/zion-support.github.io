@@ -1,10 +1,9 @@
 import { useState } from 'react',
 import { Conversation, Message } from '@/types/messaging',
-,
 /**,
  * Hook to manage messaging state,
  */,
-export function useConversationState() {,
+export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]),
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),
   const [conversations, setConversations] = useState<Conversation[]>([]),
@@ -12,21 +11,20 @@ export function useConversationState() {,
   const [activeConversation, setActiveConversation] =,
     useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false),
-,
-  return {,
+  return {
     // State,
-    messages,;
-    setMessages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    setIsLoading,;
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading;
+    setIsLoading;
   };
 }
 ,

@@ -1,25 +1,19 @@
 "use client",
 import React{ useState } from 'react',
-,
-export default function AdvancedNewsletterSignup() {,
+export default function AdvancedNewsletterSignup() {
   const [emailsetEmail] = useState(''),
   const [isSubscribedsetIsSubscribed] = useState(false),
   const [isLoadingsetIsLoading] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
-,
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
-,
     setIsSubscribed(true),
     setIsLoading(false),
-    setEmail(', '),
-  };
-,
-  if (isSubscribed) {,
-    return (,
+    setEmail(', ')};
+  if (isSubscribed) {
+    return (
       <div className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 rounded-2xl p-8 text-center">,
         <div className="text-6xl mb-4">🎉</div>,
         <h3 className="text-2xl font-bold text-white mb-2">Welcome to the AI Revolution!</h3>,
@@ -29,11 +23,9 @@ export default function AdvancedNewsletterSignup() {,
         <div className="text-sm text-green-20o0">,
           Get ready for insights that will transform your business!,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className="bg-gradient-to-br from-blue-60o0 via-purple-60o0 to-indigo-70o0 rounded-2xl p-8 relative overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10"></div>,
@@ -63,32 +55,29 @@ export default function AdvancedNewsletterSignup() {,
             </span>,
           </div>,
         </div>,
-        <form onSubmit={handleSubmit,} className="max-w-md mx-auto">,
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">,
           <div className="flex flex-col sm: flex-row gap-3 mb-6">,
-            <input,
+            <input
               type="email",
-              value={email,}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address",
               className="flex-1 px-4 py-3 rounded-lg border-0 focus: ring-2 focus:ring-white/50 focus:outline-none text-gray-90o0 placeholder-gray-50o0",
               required,
             />,
-            <button,
+            <button
               type="submit",
-              disabled={isLoading,}
-              className="px-8 py-3 bg-white text-purple-60o0 font-bold rounded-lg hover: bg-gray-10o0 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center",
-            >,
-              {isLoading ? (,
+              disabled={isLoading}
+              className="px-8 py-3 bg-white text-purple-60o0 font-bold rounded-lg hover: bg-gray-10o0 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">,
+              {isLoading ? (
                 <>,
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-purple-60o0" xmlns="http://www.w3.org/20o00/svg" fill="none" viewBox="0 0 24 24">,
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>,
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0o18-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0o14 12H0c0 3.0o42 1.135 5.824 3 7.938l3-2.647z"></path>,
                   </svg>,
                   Subscribing...,
-                </>,
-              ) : (,
-                'Subscribe Now',
-              ),}
+                </>) : (
+                'Subscribe Now')}
             </button>,
           </div>,
           <div className="text-center text-blue-20o0 text-sm">,
@@ -109,6 +98,4 @@ export default function AdvancedNewsletterSignup() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

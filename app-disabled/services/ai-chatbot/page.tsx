@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-chatbot - Zion Tech Group',;
-  description: 'Professional ai-chatbot solutions for your business needs.',;
-  keywords: 'ai-chatbot, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'ai-chatbot - Zion Tech Group';
+  description: 'Professional ai-chatbot solutions for your business needs.';
+  keywords: 'ai-chatbot, services, business, technology';
 };
-export default function AiChatbotPage() {,
-  return (,
+export default function AiChatbotPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function AiChatbotPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

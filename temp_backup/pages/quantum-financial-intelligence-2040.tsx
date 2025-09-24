@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QuantumFinancialIntelligence20o40Page() {,
-  return (,
+export default function QuantumFinancialIntelligence20o40Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Financial Intelligence 20o40 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quantum financial intelligence 20o40 page',
         />,
@@ -21,7 +20,5 @@ export default function QuantumFinancialIntelligence20o40Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

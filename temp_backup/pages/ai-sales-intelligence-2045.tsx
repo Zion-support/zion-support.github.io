@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiSalesIntelligence20o45Page() {,
-  return (,
+export default function AiSalesIntelligence20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Sales Intelligence 20o45 - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function AiSalesIntelligence20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

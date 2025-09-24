@@ -1,35 +1,32 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  CalendarIcon,;
-  ClockIcon,;
-  TagIcon,;
-  DocumentTextIcon,;
-  ChartBarIcon,;
-  CheckCircleIcon,;
+import {
+  ArrowLeftIcon;
+  CalendarIcon;
+  ClockIcon;
+  TagIcon;
+  DocumentTextIcon;
+  ChartBarIcon;
+  CheckCircleIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25 Implementation Ultimate Framework: Complete Roadmap to 1,20o0% ROI',;
+    'AI 20o25 Implementation Ultimate Framework: Complete Roadmap to 1,20o0% ROI';
   description:,
-    'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,20o0% ROI within 18 months. Based on analysis of 50o0+ successful implementations.',;
+    'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,20o0% ROI within 18 months. Based on analysis of 50o0+ successful implementations.';
   keywords:,
-    'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 20o25',;
+    'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 20o25';
 };
-,
-export default function AI20o25ImplementationFrameworkPage() {,
-  return (,
+export default function AI20o25ImplementationFrameworkPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/resources',
-              className='flex items-center text-white/80 hover:text-white transition-colors',
-            >,
+              className='flex items-center text-white/80 hover:text-white transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Resources,
             </Link>,
@@ -96,7 +93,7 @@ export default function AI20o25ImplementationFrameworkPage() {,
                   align with business objectives,
                 </li>,
                 <li>,
-                  <strong>Phased Implementation</strong>: Systematic,;
+                  <strong>Phased Implementation</strong>: Systematic;
                   risk-managed approach,
                 </li>,
                 <li>,
@@ -681,23 +678,19 @@ export default function AI20o25ImplementationFrameworkPage() {,
               1,20o0% ROI and join the AI revolution.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-              >,
+                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
                 Get AI Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/resources',
-                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors'>,
                 View All Resources,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

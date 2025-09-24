@@ -1,27 +1,26 @@
 import { Link } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
-import {,
+import {
 import { Badge } from '@/components/ui/badge',
 import { ADVANCED_SERVICES } from '@/data/advancedServices',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  Brain,;
-  Shield,;
-  Users,;
-  TrendingUp,;
-  ArrowRight,;
-  Star,;
+  Brain;
+  Shield;
+  Users;
+  TrendingUp;
+  ArrowRight;
+  Star;
 } from 'lucide-react',
 // Featured services for the showcase,
-const FEATURED_SERVICES = ADVANCED_SERVICES.filter(,
-  service => service.featured,
-).slice(0, 6),
-export function AdvancedServicesShowcase() {,
-  return (,
+const FEATURED_SERVICES = ADVANCED_SERVICES.filter(
+  service => service.featured).slice(0, 6),
+export function AdvancedServicesShowcase() {
+  return (
     <section className='py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple'>,
       <div className='container mx-auto px-4'>,
         {/* Header */}
@@ -30,7 +29,7 @@ export function AdvancedServicesShowcase() {,
             Advanced AI & IT Solutions,
           </h2>,
           <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>,
-            Transform your business with cutting-edge artificial intelligence,;
+            Transform your business with cutting-edge artificial intelligence;
             cybersecurity, and digital transformation services. Expert solutions,
             designed for the modern enterprise.,
           </p>,
@@ -76,17 +75,16 @@ export function AdvancedServicesShowcase() {,
             </div>,
           </div>,
         </div>,
-        {/* Featured Services Grid */,}
+        {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {FEATURED_SERVICES.map(service => (,
-            <Card,
-              key={service.id,}
-              className='bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-cyan transition-all duration-30o0 hover:scale-10o5',
-            >,
+          {FEATURED_SERVICES.map(service => (
+            <Card
+              key={service.id}
+              className='bg-zion-blue-dark border-zion-blue-light text-white hover: border-zion-cyan transition-all duration-30o0 hover:scale-10o5'>,
               <CardHeader>,
                 <div className='flex items-start justify-between mb-2'>,
                   <CardTitle className='text-lg text-white line-clamp-2'>,
-                    {service.title,}
+                    {service.title}
                   </CardTitle>,
                   <Badge className='bg-zion-cyan text-zion-blue text-xs'>,
                     Featured,
@@ -107,7 +105,7 @@ export function AdvancedServicesShowcase() {,
                   </div>,
                   <div className='flex items-center gap-2 text-zion-cyan'>,
                     <Brain className='w-4 h-4' />,
-                    <span>AI Score: {service.aiScore,}</span>,
+                    <span>AI Score: {service.aiScore}</span>,
                   </div>,
                 </div>,
                 {/* Price */}
@@ -122,23 +120,20 @@ export function AdvancedServicesShowcase() {,
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2'>,
-                  {service.tags.slice(0, 2).map((tag, index) => (,
-                    <Badge,
+                  {service.tags.slice(0, 2).map((tag, index) => (
+                    <Badge
                       key={index}
                       variant='secondary',
-                      className='bg-zion-blue-light text-zion-blue text-xs',
-                    >,
+                      className='bg-zion-blue-light text-zion-blue text-xs'>,
                       {tag}
-                    </Badge>,
-                  ))}
+                    </Badge>))}
                 </div>,
                 {/* CTA */}
                 <Button className='w-full bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold'>,
                   Learn More,
                 </Button>,
               </CardContent>,
-            </Card>,
-          )),}
+            </Card>))}
         </div>,
         {/* Service Categories Overview */}
         <div className='text-center mb-12'>,
@@ -176,7 +171,7 @@ export function AdvancedServicesShowcase() {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className='text-center'>,
           <div className='bg-zion-blue-dark rounded-2xl p-8 border border-zion-blue-light max-w-4xl mx-auto'>,
             <h3 className='text-2xl font-bold text-white mb-4'>,
@@ -188,36 +183,33 @@ export function AdvancedServicesShowcase() {,
               forward.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4 mb-6'>,
-              <Button,
+              <Button
                 size='lg',
-                className='bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold',
-              >,
+                className='bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold'>,
                 Get Free Consultation,
               </Button>,
               <Link to='/advanced-services'>,
-                <Button,
+                <Button
                   size='lg',
                   variant='outline',
-                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue',
-                >,
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'>,
                   View All Services,
                   <ArrowRight className='w-4 h-4 ml-2' />,
                 </Button>,
               </Link>,
             </div>,
-            {/* Contact Info */,}
+            {/* Contact Info */}
             <div className='text-zion-slate-light text-sm'>,
               <p>Call us: +1 30o2 464 0950 | Email: kleber@ziontechgroup.com</p>,
               <p className='mt-1'>,
                 Address: 364 E Main St STE 10o08, Middletown DE 19709,
               </p>,
               <p className='mt-2'>,
-                <a,
+                <a
                   href='https: //ziontechgroup.com',
                   target='_blank',
                   rel='noopener noreferrer',
-                  className='text-zion-cyan hover:text-zion-cyan-dark',
-                >,
+                  className='text-zion-cyan hover:text-zion-cyan-dark'>,
                   ziontechgroup.com,
                 </a>,
               </p>,
@@ -225,7 +217,5 @@ export function AdvancedServicesShowcase() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

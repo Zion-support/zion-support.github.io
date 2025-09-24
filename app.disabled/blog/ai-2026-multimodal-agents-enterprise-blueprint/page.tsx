@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group';
   description:,
-    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.',;
-  keywords: [,
-    'multimodal agents',;
-    'enterprise ai',;
-    'ai agents',;
-    'governance',;
-    'roi',;
-  ],;
+    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.';
+  keywords: [
+    'multimodal agents';
+    'enterprise ai';
+    'ai agents';
+    'governance';
+    'roi';
+  ];
 };
-,
-const MultimodalAgentsBlueprintPage = () => {,
-  return (,
+const MultimodalAgentsBlueprintPage = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Multimodal Agents Enterprise Blueprint',
         description='Blueprint to design and scale multimodal agents with measurable ROI and strong governance.',
         keywords='multimodal agents, enterprise ai, ai agents, governance, roi',
@@ -51,24 +49,18 @@ const MultimodalAgentsBlueprintPage = () => {,
             </ul>,
           </div>,
           <div className='mt-10 flex flex-col sm: flex-row gap-4'>,
-            <Link,
+            <Link
               href='/resources/ai-20o26-enterprise-multimodal-agents-blueprint',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
               Download Full Blueprint,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-agent-observability-blueprint',
-              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Agent Observability,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default MultimodalAgentsBlueprintPage,
-,
+    </div>)};
+export default MultimodalAgentsBlueprintPage;

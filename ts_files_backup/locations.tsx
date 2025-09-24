@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function LocationsPage() {,
-	return (,
+export default function LocationsPage() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>Locations | Zion Tech Group</title>,
@@ -18,7 +17,5 @@ export default function LocationsPage() {,
 				</div>,
 				<p className="text-slate-300">Call <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>)}
 ,

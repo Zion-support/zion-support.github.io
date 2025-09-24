@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Chatbot Builder | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Chatbot Builder | Zion Tech Group';
   description:,
-    'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.',;
+    'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.';
 };
-,
-export default function AIChatbotBuilderPage() {,
-  return (,
+export default function AIChatbotBuilderPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       <div className='text-center mb-12'>,
         <h1 className='text-5xl font-bold text-gray-90o0 mb-6'>,
@@ -20,34 +18,34 @@ export default function AIChatbotBuilderPage() {,
         </p>,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
-        <FeatureCard,
+        <FeatureCard
           title='No-Code Builder',
-          details={[,
-            'Drag-and-drop interface',;
-            'Pre-built conversation flows',;
-            'Multi-language support',;
-            'Visual flow designer',;
-            'Template library',;
+          details={[
+            'Drag-and-drop interface';
+            'Pre-built conversation flows';
+            'Multi-language support';
+            'Visual flow designer';
+            'Template library';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='AI Intelligence',
-          details={[,
-            'GPT-4 integration',;
-            'Context-aware responses',;
-            'Sentiment analysis',;
-            'Intent recognition',;
-            'Learning from conversations',;
+          details={[
+            'GPT-4 integration';
+            'Context-aware responses';
+            'Sentiment analysis';
+            'Intent recognition';
+            'Learning from conversations';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Integration & Analytics',
-          details={[,
-            'CRM integration (Salesforce, HubSpot)',;
-            'Live chat handoff',;
-            'Conversation analytics',;
-            'Performance metrics',;
-            'A/B testing tools',;
+          details={[
+            'CRM integration (Salesforce, HubSpot)';
+            'Live chat handoff';
+            'Conversation analytics';
+            'Performance metrics';
+            'A/B testing tools';
           ]}
         />,
       </div>,
@@ -61,124 +59,109 @@ export default function AIChatbotBuilderPage() {,
           required - just drag, drop, and deploy.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors',
-          >,
+            className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-orange-60o0 text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-orange-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-orange-60o0 text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-orange-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
-function FeatureCard({ title, details }: { title: string, details: string[] ,}) {,
-  return (,
+function FeatureCard({ title, details }: { title: string, details: string[] }) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover: shadow-md transition-shadow'>,
-      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title,}</h3>,
+      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2 text-gray-60o0'>,
-        {details.map((detail, index) => (,
+        {details.map((detail, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-orange-50o0 mr-2'>•</span> {detail}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingSection() {,
-  return (,
+function PricingSection() {
+  return (
     <div className='mb-12'>,
       <h2 className='text-3xl font-bold text-center text-gray-90o0 mb-8'>,
         Pricing Plans,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <PricingPlan,
+        <PricingPlan
           name='Starter',
           price='$29/mo',
-          features={[,
-            'Up to 1,0o00 conversations/month',;
-            'Basic AI responses',;
-            'Email support',;
-            'Standard integrations',;
-            'Basic analytics',;
+          features={[
+            'Up to 1,0o00 conversations/month';
+            'Basic AI responses';
+            'Email support';
+            'Standard integrations';
+            'Basic analytics';
           ]}
         />,
-        <PricingPlan,
+        <PricingPlan
           name='Professional',
           price='$99/mo',
-          features={[,
-            'Up to 10,0o00 conversations/month',;
-            'Advanced AI with context',;
-            'Priority support',;
-            'All integrations',;
-            'Advanced analytics & A/B testing',;
+          features={[
+            'Up to 10,0o00 conversations/month';
+            'Advanced AI with context';
+            'Priority support';
+            'All integrations';
+            'Advanced analytics & A/B testing';
           ]}
           featured={true}
         />,
-        <PricingPlan,
+        <PricingPlan
           name='Enterprise',
           price='$299/mo',
-          features={[,
-            'Unlimited conversations',;
-            'Custom AI training',;
-            'Dedicated support',;
-            'White-label solution',;
-            'Custom integrations & SLA',;
+          features={[
+            'Unlimited conversations';
+            'Custom AI training';
+            'Dedicated support';
+            'White-label solution';
+            'Custom integrations & SLA';
           ]}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingPlan({,
-  name,;
-  price,;
-  features,;
-  featured = false,;
-}: {,
+function PricingPlan({
+  name;
+  price;
+  features;
+  featured = false;
+}: {
   name: string,
   price: string,
   features: string[],
-  featured?: boolean,
-,}) {,
-  return (,
-    <div,
-      className={`border rounded-xl p-6 ${,
+  featured?: boolean}) {
+  return (
+    <div
+      className={`border rounded-xl p-6 ${
         featured,
           ? 'border-orange-50o0 bg-orange-50 shadow-lg',
-          : 'border-gray-20o0 bg-white shadow-sm',
-      }`}
+          : 'border-gray-20o0 bg-white shadow-sm'}`}
     >,
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-gray-90o0 mb-4'>{price}</div>,
       <ul className='space-y-2 text-gray-60o0 mb-6'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-orange-50o0 mr-2'>✓</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${,
+        className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured,
             ? 'bg-orange-60o0 text-white hover:bg-orange-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,193 +1,165 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   TrendingUp,
   Users,
   DollarSign,
   Clock,
   Target,
-  CheckCircle,;
-  ArrowRight,;
-  Play,;
-  ExternalLink,;
-  Star,;
-  Building2,;
-  Zap,;
-  BarChart3,;
-  Award,;
-  Quote,
-} from 'lucide-react',
-,
-const InteractiveCaseStudiesShowcase20o25 = () => {,
+  CheckCircle;
+  ArrowRight;
+  Play;
+  ExternalLink;
+  Star;
+  Building2;
+  Zap;
+  BarChart3;
+  Award;
+  Quote} from 'lucide-react',
+const InteractiveCaseStudiesShowcase20o25 = () => {
   const [activeStudysetActiveStudy] = useState(0),
   const [filtersetFilter] = useState('all'),
   const [isPlayingsetIsPlaying] = useState(false),
-,
-  const industries = [,
-    { id: ''all', 'name: 'All 'Industries', 'count: 12 ,},;
-    { id: ''finance', 'name: ''Finance', 'count: 3 ,},;
-    { id: ''healthcare', 'name: ''Healthcare', 'count: 2 ,},;
-    { id: ''retail', 'name: ''Retail', 'count: 2 ,},;
-    { id: ''manufacturing', 'name: ''Manufacturing', 'count: 2 ,},;
-    { id: ''technology', 'name: ''Technology', 'count: 3 ,}
+  const industries = [
+    { id: ''all', 'name: 'All 'Industries', 'count: 12 };
+    { id: ''finance', 'name: ''Finance', 'count: 3 };
+    { id: ''healthcare', 'name: ''Healthcare', 'count: 2 };
+    { id: ''retail', 'name: ''Retail', 'count: 2 };
+    { id: ''manufacturing', 'name: ''Manufacturing', 'count: 2 };
+    { id: ''technology', 'name: ''Technology', 'count: 3 }
   ],
-,
-  const caseStudies = [,
-    {,
-      id: 1,;
-      company: 'Global Finance Corp',;
-      industry: 'finance',;
-      title: 'AI-Powered Risk Assessment Revolution',;
-      challenge: 'Manual risk assessment processes were taking 3-5 days per applicationcausing delays and customer dissatisfaction.',;
-      solution: 'Implemented AI-driven risk assessment system with real-time data analysis and predictive modeling.',;
-      results: {,
-        timeReduction: '85%',;
-        costSavings: '$2.3M',;
-        accuracy: '94%',;
-        customerSatisfaction: '98%',
-      ,},;
-      testimonial: {,
-        text: "The AI transformation has been incredible. 'We', 've reduced processing time by 85% while improving accuracy significantly.",;
-        author: "Sarah Chen",;
-        position: "Chief Risk Officer",;
-        avatar: "/api/placeholder/60/60",
-      ,},;
-      technologies: ['Machine 'Learning', 'Natural Language 'Processing', 'Predictive Analytics'],;
-      duration: '6 months',;
-      teamSize: '12',;
-      image: '/api/placeholder/60o0/40o0',;
-      video: '/api/placeholder/video',;
-      featured: true,
-    ,},;
-    {,
-      id: 2,;
-      company: 'MedTech Solutions',;
-      industry: 'healthcare',;
-      title: 'AI-Driven Patient Care Optimization',;
-      challenge: 'Patient care coordination was fragmented across multiple systemsleading to delays and missed appointments.',;
-      solution: 'Deployed AI-powered care coordination platform with intelligent scheduling and patient monitoring.',;
-      results: {,
-        timeReduction: '70%',;
-        costSavings: '$1.8M',;
-        accuracy: '96%',;
-        customerSatisfaction: '95%',
-      ,},;
-      testimonial: {,
-        text: "Our patient outcomes have improved dramatically. The AI system helps us provide more personalized care.",;
-        author: "Dr. Michael Rodriguez",;
-        position: "Chief Medical Officer",;
-        avatar: "/api/placeholder/60/60",
-      ,},;
-      technologies: ['AI/'ML', 'IoT 'Integration', 'Real-time Analytics'],;
-      duration: '8 months',;
-      teamSize: '15',;
-      image: '/api/placeholder/60o0/40o0',;
-      video: '/api/placeholder/video',;
-      featured: false,
-    ,},;
-    {,
-      id: 3,;
-      company: 'RetailMax',;
-      industry: 'retail',;
-      title: 'Intelligent Inventory Management',;
-      challenge: 'Inventory management was causing stockouts and overstock situationsimpacting revenue and customer satisfaction.',;
-      solution: 'Implemented AI-powered demand forecasting and automated inventory optimization system.',;
-      results: {,
-        timeReduction: '60%',;
-        costSavings: '$3.1M',;
-        accuracy: '92%',;
-        customerSatisfaction: '97%',
-      ,},;
-      testimonial: {,
-        text: "The AI system has revolutionized our inventory management. 'We', 've eliminated stockouts and reduced waste significantly.",;
-        author: "Jennifer Park",;
-        position: "VP of Operations",;
-        avatar: "/api/placeholder/60/60",
-      ,},;
-      technologies: ['Demand 'Forecasting', 'Supply Chain 'AI', 'Real-time Analytics'],;
-      duration: '5 months',;
-      teamSize: '10',;
-      image: '/api/placeholder/60o0/40o0',;
-      video: '/api/placeholder/video',;
-      featured: true,
-    ,},;
-    {,
-      id: 4,;
-      company: 'ManufacturingPro',;
-      industry: 'manufacturing',;
-      title: 'Predictive Maintenance Revolution',;
-      challenge: 'Unexpected equipment failures were causing production delays and expensive emergency repairs.',;
-      solution: 'Deployed AI-powered predictive maintenance system with IoT sensors and machine learning algorithms.',;
-      results: {,
-        timeReduction: '90%',;
-        costSavings: '$4.2M',;
-        accuracy: '98%',;
-        customerSatisfaction: '99%',
-      ,},;
-      testimonial: {,
-        text: "Predictive maintenance has been a game-changer. 'We', 've virtually eliminated unplanned downtime.",;
-        author: "Robert Kim",;
-        position: "Plant Manager",;
-        avatar: "/api/placeholder/60/60",
-      ,},;
-      technologies: [', 'IoT', 'Machine 'Learning', 'Predictive Analytics'],;
-      duration: '7 months',;
-      teamSize: '18',;
-      image: '/api/placeholder/60o0/40o0',;
-      video: '/api/placeholder/video',;
-      featured: false,
-    ,}
+  const caseStudies = [
+    {
+      id: 1;
+      company: 'Global Finance Corp';
+      industry: 'finance';
+      title: 'AI-Powered Risk Assessment Revolution';
+      challenge: 'Manual risk assessment processes were taking 3-5 days per applicationcausing delays and customer dissatisfaction.';
+      solution: 'Implemented AI-driven risk assessment system with real-time data analysis and predictive modeling.';
+      results: {
+        timeReduction: '85%';
+        costSavings: '$2.3M';
+        accuracy: '94%';
+        customerSatisfaction: '98%'};
+      testimonial: {
+        text: "The AI transformation has been incredible. 'We', 've reduced processing time by 85% while improving accuracy significantly.";
+        author: "Sarah Chen";
+        position: "Chief Risk Officer";
+        avatar: "/api/placeholder/60/60"};
+      technologies: ['Machine 'Learning', 'Natural Language 'Processing', 'Predictive Analytics'];
+      duration: '6 months';
+      teamSize: '12';
+      image: '/api/placeholder/60o0/40o0';
+      video: '/api/placeholder/video';
+      featured: true};
+    {
+      id: 2;
+      company: 'MedTech Solutions';
+      industry: 'healthcare';
+      title: 'AI-Driven Patient Care Optimization';
+      challenge: 'Patient care coordination was fragmented across multiple systemsleading to delays and missed appointments.';
+      solution: 'Deployed AI-powered care coordination platform with intelligent scheduling and patient monitoring.';
+      results: {
+        timeReduction: '70%';
+        costSavings: '$1.8M';
+        accuracy: '96%';
+        customerSatisfaction: '95%'};
+      testimonial: {
+        text: "Our patient outcomes have improved dramatically. The AI system helps us provide more personalized care.";
+        author: "Dr. Michael Rodriguez";
+        position: "Chief Medical Officer";
+        avatar: "/api/placeholder/60/60"};
+      technologies: ['AI/'ML', 'IoT 'Integration', 'Real-time Analytics'];
+      duration: '8 months';
+      teamSize: '15';
+      image: '/api/placeholder/60o0/40o0';
+      video: '/api/placeholder/video';
+      featured: false};
+    {
+      id: 3;
+      company: 'RetailMax';
+      industry: 'retail';
+      title: 'Intelligent Inventory Management';
+      challenge: 'Inventory management was causing stockouts and overstock situationsimpacting revenue and customer satisfaction.';
+      solution: 'Implemented AI-powered demand forecasting and automated inventory optimization system.';
+      results: {
+        timeReduction: '60%';
+        costSavings: '$3.1M';
+        accuracy: '92%';
+        customerSatisfaction: '97%'};
+      testimonial: {
+        text: "The AI system has revolutionized our inventory management. 'We', 've eliminated stockouts and reduced waste significantly.";
+        author: "Jennifer Park";
+        position: "VP of Operations";
+        avatar: "/api/placeholder/60/60"};
+      technologies: ['Demand 'Forecasting', 'Supply Chain 'AI', 'Real-time Analytics'];
+      duration: '5 months';
+      teamSize: '10';
+      image: '/api/placeholder/60o0/40o0';
+      video: '/api/placeholder/video';
+      featured: true};
+    {
+      id: 4;
+      company: 'ManufacturingPro';
+      industry: 'manufacturing';
+      title: 'Predictive Maintenance Revolution';
+      challenge: 'Unexpected equipment failures were causing production delays and expensive emergency repairs.';
+      solution: 'Deployed AI-powered predictive maintenance system with IoT sensors and machine learning algorithms.';
+      results: {
+        timeReduction: '90%';
+        costSavings: '$4.2M';
+        accuracy: '98%';
+        customerSatisfaction: '99%'};
+      testimonial: {
+        text: "Predictive maintenance has been a game-changer. 'We', 've virtually eliminated unplanned downtime.";
+        author: "Robert Kim";
+        position: "Plant Manager";
+        avatar: "/api/placeholder/60/60"};
+      technologies: [', 'IoT', 'Machine 'Learning', 'Predictive Analytics'];
+      duration: '7 months';
+      teamSize: '18';
+      image: '/api/placeholder/60o0/40o0';
+      video: '/api/placeholder/video';
+      featured: false}
   ],
-,
   const filteredStudies = filter === 'all',
     ? caseStudies,
     : caseStudies.filter(study => study.industry === filter),
-,
   const currentStudy = filteredStudies[activeStudy],
-,
-  useEffect(() => {,
-    if (isPlaying) {,
-      const interval = setInterval(() => {,
-        setActiveStudy((prev) => (prev + 1) % filteredStudies.length),
-      }50o00),
-      return () => clearInterval(interval),
-    }
+  useEffect(() => {
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setActiveStudy((prev) => (prev + 1) % filteredStudies.length)}50o00),
+      return () => clearInterval(interval)}
   }[isPlayingfilteredStudies.length]),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { y: 20opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,
-      ,}
+  const itemVariants ={
+    hidden: { y: 20opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5}
     }
   };
-,
-  return (,
+  return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 bg-green-10o0 text-green-80o0 rounded-full text-sm font-medium mb-6">,
             <Award className="w-4 h-4 mr-2"  />,
             Success Stories,
@@ -203,43 +175,38 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
             See the measurable impact on their business.,
           </p>,
         </motion.div>,
-        {/* Industry Filter */,}
+        {/* Industry Filter */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.2 ,}}
-          className="flex flex-wrap justify-center gap-4 mb-12",
-        >,
-          {industries.map((industry) => (,
-            <button,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12">,
+          {industries.map((industry) => (
+            <button
               key={industry.id}
-              onClick={() => {,
+              onClick={() => {
                 setFilter(industry.id),
-                setActiveStudy(0),
-              }}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${,
+                setActiveStudy(0)}}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                 filter === industry.id,
                   ? 'bg-green-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
             >,
               {industry.name}
               <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
                 {industry.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </motion.div>,
         {/* Main Content */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-start">,
-          {/* Case Study Details */,}
+          {/* Case Study Details */}
           <motion.div,
             key={currentStudy?.id}
-            initial={{ opacity: 0x: -30 ,}}
-            animate={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.5 ,}}
-            className="space-y-8",
-          >,
+            initial={{ opacity: 0x: -30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8">,
             {/* Company Header */}
             <div className="flex items-start justify-between">,
               <div>,
@@ -256,12 +223,11 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
                   {currentStudy?.company}
                 </p>,
               </div>,
-              {currentStudy?.featured && (,
+              {currentStudy?.featured && (
                 <div className="flex items-center px-3 py-1 bg-yellow-10o0 text-yellow-80o0 rounded-full text-sm font-medium">,
                   <Star className="w-4 h-4 mr-1"  />,
                   Featured,
-                </div>,
-              )}
+                </div>)}
             </div>,
             {/* Challenge & Solution */}
             <div className="space-y-6">,
@@ -286,7 +252,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
             </div>,
             {/* Results Grid */}
             <div className="grid grid-cols-2 gap-4">,
-              {Object.entries(currentStudy?.results || {}).map(([keyvalue]) => (,
+              {Object.entries(currentStudy?.results || {}).map(([keyvalue]) => (
                 <div key={key} className="bg-white p-4 rounded-xl border border-gray-10o0">,
                   <div className="text-2xl font-bold text-green-60o0 mb-1">,
                     {value}
@@ -294,8 +260,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
                   <div className="text-sm text-gray-60o0 capitalize">,
                     {key.replace(/([A-Z])/g' $1').trim()}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Technologies */}
             <div>,
@@ -303,14 +268,12 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
                 Technologies Used,
               </h4>,
               <div className="flex flex-wrap gap-2">,
-                {currentStudy?.technologies.map((techindex) => (,
-                  <span,
+                {currentStudy?.technologies.map((techindex) => (
+                  <span
                     key={index}
-                    className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium",
-                  >,
+                    className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium">,
                     {tech}
-                  </span>,
-                ))}
+                  </span>))}
               </div>,
             </div>,
             {/* Project Details */}
@@ -328,11 +291,10 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
           {/* Visual Content */}
           <motion.div,
             key={`visual-${currentStudy?.id}`}
-            initial={{ opacity: 0x: 30 ,}}
-            animate={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.5delay: 0.2 ,}}
-            className="space-y-6",
-          >,
+            initial={{ opacity: 0x: 30 }}
+            animate={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.5delay: 0.2 }}
+            className="space-y-6">,
             {/* Image/Video */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">,
               <div className="aspect-video bg-gradient-to-br from-blue-10o0 to-purple-10o0 flex items-center justify-center">,
@@ -344,11 +306,10 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
                 </div>,
               </div>,
               <div className="absolute top-4 right-4">,
-                <button,
+                <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover: bg-white transition-colors",
-                >,
-                  <Play className={`w-5 h-5 ${isPlaying ? 'text-red-50o0' : 'text-gray-70o0',}`}  />,
+                  className="bg-white/90 backdrop-blur-sm p-3 rounded-full hover: bg-white transition-colors">,
+                  <Play className={`w-5 h-5 ${isPlaying ? 'text-red-50o0' : 'text-gray-70o0'}`}  />,
                 </button>,
               </div>,
             </div>,
@@ -359,7 +320,7 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
                 "{currentStudy?.testimonial.text}",
               </p>,
               <div className="flex items-center">,
-                <img,
+                <img
                   src={currentStudy?.testimonial.avatar}
                   alt={currentStudy?.testimonial.author}
                   className="w-12 h-12 rounded-full mr-4",
@@ -378,44 +339,38 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
         </div>,
         {/* Navigation */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.4 ,}}
-          className="flex items-center justify-center mt-12 space-x-4",
-        >,
-          <button,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
+          className="flex items-center justify-center mt-12 space-x-4">,
+          <button
             onClick={() => setActiveStudy(Math.max(0activeStudy - 1))}
             disabled={activeStudy === 0}
-            className="p-3 rounded-full bg-white border border-gray-20o0 hover: bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
-          >,
+            className="p-3 rounded-full bg-white border border-gray-20o0 hover: bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,
             <ArrowRight className="w-5 h-5 text-gray-60o0 rotate-180"  />,
           </button>,
           <div className="flex space-x-2">,
-            {filteredStudies.map((_index) => (,
-              <button,
-                key={index,}
+            {filteredStudies.map((_index) => (
+              <button
+                key={index}
                 onClick={() => setActiveStudy(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${,
-                  index === activeStudy ? 'bg-green-60o0' : 'bg-gray-30o0',
-                }`}
-              />,
-            ))}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === activeStudy ? 'bg-green-60o0' : 'bg-gray-30o0'}`}
+              />))}
           </div>,
-          <button,
+          <button
             onClick={() => setActiveStudy(Math.min(filteredStudies.length - 1activeStudy + 1))}
             disabled={activeStudy === filteredStudies.length - 1}
-            className="p-3 rounded-full bg-white border border-gray-20o0 hover: bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
-          >,
+            className="p-3 rounded-full bg-white border border-gray-20o0 hover: bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">,
             <ArrowRight className="w-5 h-5 text-gray-60o0"  />,
           </button>,
         </motion.div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.6 ,}}
-          className="text-center mt-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
+          className="text-center mt-16">,
           <div className="bg-gradient-to-r from-green-60o0 to-blue-60o0 rounded-2xl p-8 text-white">,
             <h3 className="text-2xl font-bold mb-4">,
               Ready to Create Your Success Story?,
@@ -436,8 +391,5 @@ const InteractiveCaseStudiesShowcase20o25 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default InteractiveCaseStudiesShowcase20o25,
+    </div>)};
+export default InteractiveCaseStudiesShowcase20o25;

@@ -2,69 +2,55 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain,;
-  Sparkles, Atom, Target, Microscope, Search, Filter,;
-  ExternalLink, Users, Clock, BarChart3, Award,
-} from 'lucide-react',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain;
+  Sparkles, Atom, Target, Microscope, Search, Filter;
+  ExternalLink, Users, Clock, BarChart3, Award} from 'lucide-react',
 import Button from '../components/ui/Button',
 import UltraFuturisticBackground20o35 from '../components/ui/UltraFuturisticBackground20o35',
 import UltraFuturisticNavigation20o33 from '../components/layout/UltraFuturisticNavigation20o33',
 import UltraFuturisticFooter20o34 from '../components/layout/UltraFuturisticFooter20o34',
 import { realMicroSaasServices20o25, microSaasCategories } from '../data/20o25-real-micro-saas-expansion',
-,
-export default function EnhancedMicroSaasShowcase() {,
+export default function EnhancedMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState(''),
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
-,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
   const filteredServices = realMicroSaasServices20o25,
     .filter(service =>,
       (selectedCategory === 'all' || service.category === selectedCategory) &&,
       (searchQuery === '' ||,
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-        service.category.toLowerCase().includes(searchQuery.toLowerCase())),
-    ),
-    .sort((a, b) => {,
-      if (sortBy === 'price') {,
-        return a.pricing.starter.price - b.pricing.starter.price,
-      } else if (sortBy === 'category') {,
-        return a.category.localeCompare(b.category),
-      }
-      return a.name.localeCompare(b.name),
-    }),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+        service.category.toLowerCase().includes(searchQuery.toLowerCase()))),
+    .sort((a, b) => {
+      if (sortBy === 'price') {
+        return a.pricing.starter.price - b.pricing.starter.price} else if (sortBy === 'category') {
+        return a.category.localeCompare(b.category)}
+      return a.name.localeCompare(b.name)}),
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0, y: 20 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.6,
-      ,}
+  const itemVariants ={
+    hidden: { opacity: 0, y: 20 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.6}
     }
   };
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Enhanced Micro SAAS Showcase 20o25 | Zion Tech Group - Revolutionary Business Automation Solutions</title>,
@@ -78,7 +64,7 @@ export default function EnhancedMicroSaasShowcase() {,
         <meta property="og:url" content="https://ziontechgroup.com/enhanced-micro-saas-showcase"  />,
         <meta property="og:type" content="website"  />,
         <meta property="og:site_name" content="Zion Tech Group"  />,
-        {/* Twitter Card */,}
+        {/* Twitter Card */}
         <meta name="twitter: card" content="summary_large_image"  />,
         <meta name="twitter:title" content="Enhanced Micro SAAS Showcase 20o25 | Zion Tech Group"  />,
         <meta name="twitter:description" content="Revolutionary micro SAAS services for business automation and growth."  />,
@@ -86,26 +72,24 @@ export default function EnhancedMicroSaasShowcase() {,
       </Head>,
       <UltraFuturisticBackground20o35>,
         <UltraFuturisticNavigation20o33  />,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center pt-32">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
-            {/* Animated Badge */,}
+            {/* Animated Badge */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0 text-lg font-medium mb-8 backdrop-blur-sm",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0 text-lg font-medium mb-8 backdrop-blur-sm">,
               <Star className="w-5 h-5 mr-2 text-cyan-40o0"  />,
               20o25 Enhanced Micro SAAS Revolution,
             </motion.div>,
             {/* Main Heading */}
             <motion.h1,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.1 ,}}
-              className="text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">,
               <span className="bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent">,
                 Real,
               </span>,
@@ -116,23 +100,21 @@ export default function EnhancedMicroSaasShowcase() {,
                 Solutions,
               </span>,
             </motion.h1>,
-            {/* Subheading */,}
+            {/* Subheading */}
             <motion.p,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
-              className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed">,
               Transform your business with our comprehensive collection of market-ready micro SAAS services.,
               From AI-powered automation to comprehensive business solutions, we deliver real ROI and measurable results.,
             </motion.p>,
             {/* Stats */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.3 ,}}
-              className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">,
               <div className="text-center">,
                 <div className="text-3xl md:text-4xl font-bold text-cyan-40o0 mb-2">10+</div>,
                 <div className="text-gray-30o0 text-sm">Service Categories</div>,
@@ -150,44 +132,40 @@ export default function EnhancedMicroSaasShowcase() {,
                 <div className="text-gray-30o0 text-sm">Uptime Guarantee</div>,
               </div>,
             </motion.div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.4 ,}}
-              className="flex flex-col sm: flex-row gap-6 justify-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-col sm: flex-row gap-6 justify-center">,
               <motion.a,
                 href="#services",
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-cyan-50o0/25",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-cyan-50o0/25">,
                 <span>Explore Services</span>,
                 <ArrowRight className="w-6 h-6"  />,
               </motion.a>,
               <motion.a,
-                href={`tel:${contactInfo.mobile,}`}
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0",
-              >,
+                href={`tel:${contactInfo.mobile}`}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0">,
                 <span>Get Started</span>,
                 <Phone className="w-6 h-6"  />,
               </motion.a>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section id="services" className="py-20 relative">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-            {/* Section Header */,}
+            {/* Section Header */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">,
                   Revolutionary,
@@ -198,18 +176,17 @@ export default function EnhancedMicroSaasShowcase() {,
                 Discover our comprehensive collection of market-ready micro SAAS solutions designed to transform your business operations and drive growth.,
               </p>,
             </motion.div>,
-            {/* Filters and Search */,}
+            {/* Filters and Search */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className="mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-12">,
               <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-                {/* Search */,}
+                {/* Search */}
                 <div className="relative flex-1 max-w-md">,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-                  <input,
+                  <input
                     type="text",
                     placeholder="Search services...",
                     value={searchQuery}
@@ -217,26 +194,23 @@ export default function EnhancedMicroSaasShowcase() {,
                     className="w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-50o0/30 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-cyan-40o0 focus:ring-2 focus:ring-cyan-50o0/20",
                   />,
                 </div>,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div className="flex items-center space-x-4">,
-                  <select,
+                  <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-black/30 border border-cyan-50o0/30 rounded-lg text-white focus: outline-none focus:border-cyan-40o0",
-                  >,
+                    className="px-4 py-3 bg-black/30 border border-cyan-50o0/30 rounded-lg text-white focus: outline-none focus:border-cyan-40o0">,
                     <option value="all">All Categories</option>,
-                    {microSaasCategories.map((category) => (,
-                      <option key={category.name,} value={category.name}>,
+                    {microSaasCategories.map((category) => (
+                      <option key={category.name} value={category.name}>,
                         {category.icon} {category.name}
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                   {/* Sort */}
-                  <select,
+                  <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-                    className="px-4 py-3 bg-black/30 border border-cyan-50o0/30 rounded-lg text-white focus: outline-none focus:border-cyan-40o0",
-                  >,
+                    className="px-4 py-3 bg-black/30 border border-cyan-50o0/30 rounded-lg text-white focus: outline-none focus:border-cyan-40o0">,
                     <option value="name">Sort by Name</option>,
                     <option value="price">Sort by Price</option>,
                     <option value="category">Sort by Category</option>,
@@ -244,25 +218,23 @@ export default function EnhancedMicroSaasShowcase() {,
                 </div>,
               </div>,
             </motion.div>,
-            {/* Services Grid */,}
+            {/* Services Grid */}
             <motion.div,
               variants={containerVariants}
               initial="hidden",
               whileInView="visible",
-              className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8",
-            >,
-              {filteredServices.map((service, index) => (,
+              className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">,
+              {filteredServices.map((service, index) => (
                 <motion.div,
                   key={service.id}
                   variants={itemVariants}
-                  className="group relative bg-gradient-to-br from-black/40 to-purple-90o0/20 border border-cyan-50o0/30 rounded-2xl p-6 hover: border-cyan-40o0/60 transition-all duration-30o0 hover:shadow-2xl hover:shadow-cyan-50o0/20 backdrop-blur-sm",
-                >,
-                  {/* Service Header */,}
+                  className="group relative bg-gradient-to-br from-black/40 to-purple-90o0/20 border border-cyan-50o0/30 rounded-2xl p-6 hover: border-cyan-40o0/60 transition-all duration-30o0 hover:shadow-2xl hover:shadow-cyan-50o0/20 backdrop-blur-sm">,
+                  {/* Service Header */}
                   <div className="mb-6">,
                     <div className="flex items-start justify-between mb-4">,
                       <div className="flex-1">,
                         <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-30o0 transition-colors">,
-                          {service.name,}
+                          {service.name}
                         </h3>,
                         <p className="text-sm text-cyan-40o0 font-medium">{service.category}</p>,
                       </div>,
@@ -279,17 +251,15 @@ export default function EnhancedMicroSaasShowcase() {,
                       Key Features,
                     </h4>,
                     <div className="space-y-2">,
-                      {service.features.slice(0, 4).map((feature, idx) => (,
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-30o0">,
                           <CheckCircle className="w-4 h-4 mr-2 text-green-40o0 flex-shrink-0"  />,
                           <span>{feature}</span>,
-                        </div>,
-                      ))}
-                      {service.features.length > 4 && (,
+                        </div>))}
+                      {service.features.length > 4 && (
                         <div className="text-sm text-cyan-40o0 font-medium">,
                           +{service.features.length - 4} more features,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                   </div>,
                   {/* Pricing */}
@@ -310,79 +280,71 @@ export default function EnhancedMicroSaasShowcase() {,
                       Key Benefits,
                     </h4>,
                     <div className="space-y-2">,
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (,
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <div key={idx} className="text-sm text-gray-30o0">,
                           • {benefit}
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   {/* Market Info */}
                   <div className="mb-6 grid grid-cols-2 gap-4 text-sm">,
                     <div>,
                       <span className="text-gray-40o0">Market Size: </span>,
-                      <div className="text-cyan-40o0 font-medium">{service.marketSize,}</div>,
+                      <div className="text-cyan-40o0 font-medium">{service.marketSize}</div>,
                     </div>,
                     <div>,
                       <span className="text-gray-40o0">Use Cases: </span>,
-                      <div className="text-purple-40o0 font-medium">{service.useCases.length,}+</div>,
+                      <div className="text-purple-40o0 font-medium">{service.useCases.length}+</div>,
                     </div>,
                   </div>,
                   {/* Action Buttons */}
                   <div className="flex space-x-3">,
                     <motion.a,
                       href={service.website}
-                      whileHover={{ scale: 1.0o5 ,}}
-                      whileTap={{ scale: 0.95 ,}}
-                      className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 text-sm",
-                    >,
+                      whileHover={{ scale: 1.0o5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 text-sm">,
                       <span>Learn More</span>,
                       <ExternalLink className="w-4 h-4 ml-2"  />,
                     </motion.a>,
                     <motion.a,
-                      href={`tel:${service.contact,}`}
-                      whileHover={{ scale: 1.0o5 ,}}
-                      whileTap={{ scale: 0.95 ,}}
-                      className="inline-flex items-center justify-center px-4 py-3 bg-black/50 border border-cyan-50o0/50 text-cyan-30o0 font-medium rounded-lg hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0 text-sm",
-                    >,
+                      href={`tel:${service.contact}`}
+                      whileHover={{ scale: 1.0o5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center justify-center px-4 py-3 bg-black/50 border border-cyan-50o0/50 text-cyan-30o0 font-medium rounded-lg hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0 text-sm">,
                       <Phone className="w-4 h-4"  />,
                     </motion.a>,
                   </div>,
-                  {/* Hover Effect Overlay */,}
+                  {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-60o0/5 rounded-2xl opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 pointer-events-none"  />,
-                </motion.div>,
-              )),}
+                </motion.div>))}
             </motion.div>,
             {/* No Results */}
-            {filteredServices.length === 0 && (,
+            {filteredServices.length === 0 && (
               <motion.div,
-                initial={{ opacity: 0 ,}}
-                animate={{ opacity: 1 ,}}
-                className="text-center py-20",
-              >,
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-20">,
                 <div className="text-6xl mb-4">🔍</div>,
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
                 <p className="text-gray-30o0 mb-6">Try adjusting your search criteria or category filter</p>,
-                <button,
-                  onClick={() => {,
+                <button
+                  onClick={() => {
                     setSearchQuery(''),
-                    setSelectedCategory('all'),
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0",
-                >,
+                    setSelectedCategory('all')}}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0">,
                   Clear Filters,
                 </button>,
-              </motion.div>,
-            ),}
+              </motion.div>)}
           </div>,
         </section>,
         {/* Contact Section */}
         <section className="py-20 relative">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
@@ -393,7 +355,7 @@ export default function EnhancedMicroSaasShowcase() {,
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
                 <div className="flex items-center justify-center space-x-3 p-4 bg-black/30 border border-cyan-50o0/20 rounded-lg">,
                   <Phone className="w-5 h-5 text-cyan-40o0"  />,
-                  <span className="text-white">{contactInfo.mobile,}</span>,
+                  <span className="text-white">{contactInfo.mobile}</span>,
                 </div>,
                 <div className="flex items-center justify-center space-x-3 p-4 bg-black/30 border border-cyan-50o0/20 rounded-lg">,
                   <Mail className="w-5 h-5 text-cyan-40o0"  />,
@@ -406,20 +368,18 @@ export default function EnhancedMicroSaasShowcase() {,
               </div>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0",
-                >,
+                  href={`tel:${contactInfo.mobile}`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0">,
                   <Phone className="w-6 h-6"  />,
                   <span>Call Now</span>,
                 </motion.a>,
                 <motion.a,
-                  href={`mailto:${contactInfo.email,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0",
-                >,
+                  href={`mailto:${contactInfo.email}`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover: bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0">,
                   <Mail className="w-6 h-6"  />,
                   <span>Email Us</span>,
                 </motion.a>,
@@ -429,6 +389,4 @@ export default function EnhancedMicroSaasShowcase() {,
         </section>,
         <UltraFuturisticFooter20o34  />,
               </UltraFuturisticBackground20o35>,
-    </>,
-  ),
-,}
+    </>)}

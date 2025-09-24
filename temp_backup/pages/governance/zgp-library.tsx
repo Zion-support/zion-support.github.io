@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ZgpLibraryPage() {,
-  return (,
+export default function ZgpLibraryPage() {
+  return (
     <>,
       <Head>,
         <title>Zgp Library - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ZgpLibraryPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

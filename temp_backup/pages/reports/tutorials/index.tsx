@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TutorialsIndex() {,
-  return (,
+export default function TutorialsIndex() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Tutorials | Zion Tech Group</title>,
@@ -21,9 +20,7 @@ export default function TutorialsIndex() {,
           </div>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

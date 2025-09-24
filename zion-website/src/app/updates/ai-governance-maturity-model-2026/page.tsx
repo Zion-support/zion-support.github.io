@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AIGovernanceMaturityModel20o26Page() {,
-  return (,
+import React from 'react';
+export default function AIGovernanceMaturityModel20o26Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <div className='mb-4 flex items-center gap-3 text-xs text-gray-40o0'>,
@@ -14,7 +13,7 @@ export default function AIGovernanceMaturityModel20o26Page() {,
           AI Governance Maturity Model (20o26 Preview),
         </h1>,
         <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
-          A staged model to assess and improve AI governance across policy,;
+          A staged model to assess and improve AI governance across policy;
           controls, telemetry, and org operating rhythm. Includes scorecards and,
           example roadmaps.,
         </p>,
@@ -33,7 +32,5 @@ export default function AIGovernanceMaturityModel20o26Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

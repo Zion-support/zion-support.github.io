@@ -1,35 +1,34 @@
-import React from 'react',
-import {,
-  Shield,;
-  CheckCircle,;
-  Zap,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Lock,;
-  Users,;
+import React from 'react';
+import {
+  Shield;
+  CheckCircle;
+  Zap;
+  Brain;
+  Atom;
+  Globe;
+  Lock;
+  Users;
 } from 'lucide-react',
-,
-const QuantumComplianceAutomationPage: React.FC = () => {,
-  return (,
+const QuantumComplianceAutomationPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>Quantum Compliance Automation - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Automate compliance with Zion Tech Group's quantum-powered solutions. AI-driven compliance monitoring, automated reporting, and regulatory adherence.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='quantum compliance, compliance automation, regulatory compliance, AI compliance, Zion Tech Group',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-compliance-automation',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -40,7 +39,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {,
             </h1>,
             <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
               Next-generation compliance automation powered by quantum,
-              computing, providing intelligent monitoring, automated reporting,;
+              computing, providing intelligent monitoring, automated reporting;
               and regulatory adherence.,
             </p>,
           </div>,
@@ -75,7 +74,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {,
                   AI-Powered Analysis,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Intelligent automation that continuously monitors, analyzes,;
+                  Intelligent automation that continuously monitors, analyzes;
                   and reports on compliance requirements.,
                 </p>,
               </div>,
@@ -105,7 +104,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {,
                     Regulatory Monitoring,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Continuous monitoring of regulatory changes, requirements,;
+                    Continuous monitoring of regulatory changes, requirements;
                     and compliance obligations across jurisdictions.,
                   </p>,
                 </div>,
@@ -483,7 +482,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Get Started */,}
+        {/* Get Started */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -527,9 +526,5 @@ const QuantumComplianceAutomationPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default QuantumComplianceAutomationPage,
-,
+    </>)};
+export default QuantumComplianceAutomationPage;

@@ -1,186 +1,161 @@
 import { injectAxe, checkA11y } from '@axe-core/playwright',
 // Accessibility test utilities,
-export const a11yTestUtils = {,
+export const a11yTestUtils = {
   // Run accessibility tests,
-  runA11yTests: async page => {,
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: true,;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
+    await checkA11y(page, null, {
+      detailedReport: true;
+      detailedReportOptions: { html: true };
+    })};
   // Check color contrast,
-  checkColorContrast: async page => {,
-    const contrastIssues = await page.evaluate(() => {,
+  checkColorContrast: async page => {
+    const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
       const issues = [],
-      elements.forEach(element => {,
+      elements.forEach(element => {
         const styles = window.getComputedStyle(element),
         const color = styles.color,
         const backgroundColor = styles.backgroundColor,
-,
         // Simple contrast check (would need more sophisticated implementation),
-        if (color && backgroundColor) {,
-          // Add contrast calculation logic here,
-        ,}
+        if (color && backgroundColor) {
+          // Add contrast calculation logic here}
       }),
-      return issues,
-    }),
-    return contrastIssues,
-  },;
+      return issues}),
+    return contrastIssues};
 };
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: 'true',;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
-    const contrastIssues = await page.evaluate(() => {,
+    await checkA11y(page, null, {
+      detailedReport: 'true';
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
+    const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
       const issues = [],
-      elements.forEach(element => {,
+      elements.forEach(element => {
         const styles = window.getComputedStyle(element),
         const color = styles.color,
         const backgroundColor = styles.backgroundColor,
-        if (color && backgroundColor) {,
-        ,}
+        if (color && backgroundColor) {
+        }
       }),
-      return issues,
-    }),
-    return contrastIssues,
-  },;
+      return issues}),
+    return contrastIssues};
 };
-,
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: true,;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
-    const contrastIssues = await page.evaluate(() => {,
+    await checkA11y(page, null, {
+      detailedReport: true;
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
+    const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
       const issues = [],
-      elements.forEach(element => {,
+      elements.forEach(element => {
         const styles = window.getComputedStyle(element),
         const color = styles.color,
         const backgroundColor = styles.backgroundColor,
-        if (color && backgroundColor) {,
-        ,}
+        if (color && backgroundColor) {
+        }
       }),
-      return issues,
-    }),
-    return contrastIssues,
-  },;
+      return issues}),
+    return contrastIssues};
 };
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: true,;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
-    const contrastIssues = await page.evaluate(() => {,
+    await checkA11y(page, null, {
+      detailedReport: true;
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
+    const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
       const issues = [],
-      elements.forEach(element => {,
+      elements.forEach(element => {
         const styles = window.getComputedStyle(element),
         const color = styles.color,
         const backgroundColor = styles.backgroundColor,
-        if (color && backgroundColor) {,
-        ,}
+        if (color && backgroundColor) {
+        }
       }),
-      return issues,
-    }),
-    return contrastIssues,
-  },;
+      return issues}),
+    return contrastIssues};
 };
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: 'true',;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
+    await checkA11y(page, null, {
+      detailedReport: 'true';
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
-      page.evaluate(() => {,
+      page.evaluate(() => {
         const elements = document && document.querySelectorAll('*'),
         const issues = [],
         elements &&,
-          elements.forEach(element => {,
+          elements.forEach(element => {
             const styles = window && window.getComputedStyle(element),
             const color = styles && styles.color,
             const backgroundColor = styles && styles.backgroundColor,
-            if (color && backgroundColor) {,
-            ,}
+            if (color && backgroundColor) {
+            }
           }),
-        return issues,
-      }),
-    return contrastIssues,
-  },;
+        return issues}),
+    return contrastIssues};
 };
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: true,;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
+    await checkA11y(page, null, {
+      detailedReport: true;
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
-      page.evaluate(() => {,
+      page.evaluate(() => {
         const elements = document && document.querySelectorAll('*'),
         const issues = [],
         elements &&,
-          elements.forEach(element => {,
+          elements.forEach(element => {
             const styles = window && window.getComputedStyle(element),
             const color = styles && styles.color,
             const backgroundColor = styles && styles.backgroundColor,
-            if (color && backgroundColor) {,
-            ,}
+            if (color && backgroundColor) {
+            }
           }),
-        return issues,
-      }),
-    return contrastIssues,
-  },;
+        return issues}),
+    return contrastIssues};
 };
-export const a11yTestUtils = {,
-  runA11yTests: async page => {,
+export const a11yTestUtils = {
+  runA11yTests: async page => {
     await injectAxe(page),
-    await checkA11y(page, null, {,
-      detailedReport: true,;
-      detailedReportOptions: { html: true ,},;
-    }),
-  },;
-  checkColorContrast: async page => {,
+    await checkA11y(page, null, {
+      detailedReport: true;
+      detailedReportOptions: { html: true };
+    })};
+  checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
-      page.evaluate(() => {,
+      page.evaluate(() => {
         const elements = document && document.querySelectorAll('*'),
         const issues = [],
         elements &&,
-          elements.forEach(element => {,
+          elements.forEach(element => {
             const styles = window && window.getComputedStyle(element),
             const color = styles && styles.color,
             const backgroundColor = styles && styles.backgroundColor,
-            if (color && backgroundColor) {,
-            ,}
+            if (color && backgroundColor) {
+            }
           }),
-        return issues,
-      }),
-    return contrastIssues,
-  },;
+        return issues}),
+    return contrastIssues};
 };
-,

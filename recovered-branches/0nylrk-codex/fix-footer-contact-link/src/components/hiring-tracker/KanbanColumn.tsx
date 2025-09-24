@@ -3,25 +3,23 @@ import { JobApplication } from '@/types/jobs',
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 import { CandidateCard } from './CandidateCard',
-,
-interface KanbanColumnProps {,
+interface KanbanColumnProps {
   id: string,
   title: string,
   description: string,
   applications: JobApplication[],
-  count: number,
-,}
+  count: number}
 ,
-export function KanbanColumn({,
-  id,;
-  title,;
-  description,;
-  applications,;
-  count,;
-}: KanbanColumnProps) {,
+export function KanbanColumn({
+  id;
+  title;
+  description;
+  applications;
+  count;
+}: KanbanColumnProps) {
   // Add color based on column type,
-  const getBadgeVariant = (columnId: string) => {,
-    switch (columnId) {,
+  const getBadgeVariant = (columnId: string) => {
+    switch (columnId) {
       case 'new':,
         return 'secondary',
       case 'shortlisted':,
@@ -33,23 +31,19 @@ export function KanbanColumn({,
       case 'rejected':,
         return 'destructive',
       default:,
-        return 'outline',
-    ,}
+        return 'outline'}
   };
-,
-  const getColumnBgColor = (columnId: string) => {,
-    switch (columnId) {,
+  const getColumnBgColor = (columnId: string) => {
+    switch (columnId) {
       case 'hired':,
         return 'bg-green-50',
       case 'rejected':,
         return 'bg-red-50',
       default:,
-        return 'bg-muted/30',
-    ,}
+        return 'bg-muted/30'}
   };
-,
-  return (,
-    <Card,
+  return (
+    <Card
       className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}
     >,
       <CardHeader className='pb-2'>,
@@ -61,33 +55,27 @@ export function KanbanColumn({,
       </CardHeader>,
       <CardContent className='flex-grow p-3 overflow-y-auto'>,
         <Droppable droppableId={id}>,
-          {provided => (,
-            <div,
+          {provided => (
+            <div
               ref={provided.innerRef}
               {...provided.droppableProps}
-              className='min-h-full space-y-2',
-            >,
-              {applications.map(applicationindex => (,
-                <CandidateCard,
+              className='min-h-full space-y-2'>,
+              {applications.map(applicationindex => (
+                <CandidateCard
                   key={application.id}
                   application={application}
                   index={index}
-                />,
-              ))}
+                />))}
               {provided.placeholder}
 ,
-              {applications.length === 0 && (,
+              {applications.length === 0 && (
                 <div className='h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4'>,
                   <p className='text-center text-sm text-muted-foreground'>,
                     Drag candidates here,
                   </p>,
-                </div>,
-              )}
-            </div>,
-          )}
+                </div>)}
+            </div>)}
         </Droppable>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

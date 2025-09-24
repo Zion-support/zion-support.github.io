@@ -1,9 +1,8 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const MobileAppDevelopmentChat: NextPage = () => {,
-  return (,
+const MobileAppDevelopmentChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>,
@@ -14,9 +13,5 @@ const MobileAppDevelopmentChat: NextPage = () => {,
         <p>Service details coming soon...</p>,
         <Link href='/services'>Back to Services</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default MobileAppDevelopmentChat,
-,
+    </div>)};
+export default MobileAppDevelopmentChat;

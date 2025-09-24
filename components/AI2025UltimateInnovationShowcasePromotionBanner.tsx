@@ -1,9 +1,8 @@
 import Link from 'next/link',
-,
-const AI20o25UltimateInnovationShowcasePromotionBanner = () => {,
-  return (,
+const AI20o25UltimateInnovationShowcasePromotionBanner = () => {
+  return (
     <section className='relative py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 overflow-hidden'>,
-      {/* Background Effects */,}
+      {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20'></div>,
       <div className='absolute inset-0'>,
         <div className='absolute top-10 left-10 w-20 h-20 bg-purple-50o0/30 rounded-full blur-xl animate-pulse'></div>,
@@ -25,26 +24,24 @@ const AI20o25UltimateInnovationShowcasePromotionBanner = () => {,
             Witness the most revolutionary AI breakthroughs reshaping our world.,
             From quantum neural fusion to autonomous consciousness systems -,
             <span className='text-yellow-40o0 font-semibold'>,
-              {' ',}
+              {' '}
               the future is here,
             </span>,
             .,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-innovation-showcase',
-              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Explore Breakthroughs →,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-innovation-showcase#quantum-breakthroughs',
-              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0'>,
               Quantum AI Fusion,
             </Link>,
           </div>,
-          {/* Feature Highlights */,}
+          {/* Feature Highlights */}
           <div className='grid md: grid-cols-3 gap-6 mt-12'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>,
               <div className='text-purple-40o0 text-3xl mb-3'>⚛️</div>,
@@ -77,7 +74,7 @@ const AI20o25UltimateInnovationShowcasePromotionBanner = () => {,
               </p>,
             </div>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mt-12 pt-8 border-t border-white/20'>,
             <div className='text-center'>,
               <div className='text-3xl md:text-4xl font-bold text-yellow-40o0 mb-2'>,
@@ -110,9 +107,5 @@ const AI20o25UltimateInnovationShowcasePromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25UltimateInnovationShowcasePromotionBanner,
-,
+    </section>)};
+export default AI20o25UltimateInnovationShowcasePromotionBanner;

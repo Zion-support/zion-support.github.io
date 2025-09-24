@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Runbook Starter Kit | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Runbook Starter Kit | Zion Tech Group';
   description:,
-    'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.',;
+    'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.';
 };
-,
-export default function AgentRunbookStarterKit20o26Page() {,
-  return (,
+export default function AgentRunbookStarterKit20o26Page() {
+  return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agent Runbook Starter Kit,
@@ -34,24 +32,20 @@ export default function AgentRunbookStarterKit20o26Page() {,
           </li>,
         </ol>,
         <p>,
-          Related resources: {' ',}
-          <Link,
+          Related resources: {' '}
+          <Link
             className='text-purple-70o0 font-semibold',
-            href='/content/ai-20o26-agent-incident-response-playbook',
-          >,
+            href='/content/ai-20o26-agent-incident-response-playbook'>,
             Incident Response Playbook,
           </Link>{' '}
           and{' '}
-          <Link,
+          <Link
             className='text-purple-70o0 font-semibold',
-            href='/content/ai-20o26-operational-guardrails',
-          >,
+            href='/content/ai-20o26-operational-guardrails'>,
             Operational Guardrails,
           </Link>,
           .,
         </p>,
       </div>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

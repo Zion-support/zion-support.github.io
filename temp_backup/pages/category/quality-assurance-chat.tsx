@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QualityAssuranceChatPage() {,
-  return (,
+export default function QualityAssuranceChatPage() {
+  return (
     <>,
       <Head>,
         <title>Quality Assurance Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function QualityAssuranceChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

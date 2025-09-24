@@ -2,112 +2,84 @@
 // Mock database utility,
 import fs from 'fs',
 import path from 'path',
-function getFilePath(fileName: string): string {,
-  return path.join(process.cwd(), 'data', fileName),
-}
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', fileName)}
 ,
-export function readJsonFile<T>(filePath: string, defaultValue: T): T {,
-  try {,
-    if (fs.existsSync(filePath)) {,
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+  try {
+    if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8'),
-      return JSON.parse(content),
-    }
-  } catch (error) {,
-    console.error('Error reading file:', error),
-  }
-  return default_value,
-}
+      return JSON.parse(content)}
+  } catch (error) {
+    console.error('Error reading file:', error)}
+  return default_value}
 ,
-export function writeJsonFile<T>(fileName: string, data: T): void {,
-export function writeJsonFile<T>(fileName: string, data: T): void {,
-,
+export function writeJsonFile<T>(fileName: string, data: T): void {
+export function writeJsonFile<T>(fileName: string, data: T): void {
   const filePath = getFilePath(fileName),
-  const tmpPath = `${filePath,}.tmp`,
+  const tmpPath = `${filePath}.tmp`,
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8'),
-  fs.renameSync(tmpPath, filePath),
-}
+  fs.renameSync(tmpPath, filePath)}
 ,
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {,
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []),
   items && items.push(item),
-  writeJsonFile<T[]>(fileName, items),
-,
-}
+  writeJsonFile<T[]>(fileName, items)}
 ,
 // Database utilities,
-export interface DatabaseConfig {,
+export interface DatabaseConfig {
   host: string,
   port: number,
   database: string,
   username: string,
   password: string,
-  ssl?: boolean,
-,}
-export interface QueryResult<T = any> {,
+  ssl?: boolean}
+export interface QueryResult<T = any> {
   rows: T[],
   rowCount: number,
-  fields: any[],
-,}
-export class DatabaseManager {,
+  fields: any[]}
+export class DatabaseManager {
   private config: DatabaseConfig,
-  constructor(config: DatabaseConfig) {,
-    this.config = config,
-  ,}
-  async connect(): Promise<void> {,
+  constructor(config: DatabaseConfig) {
+    this.config = config}
+  async connect(): Promise<void> {
     // Mock connection - in production, this would establish a real database connection,
-    console.log('Connected to database'),
-  }
-  async disconnect(): Promise<void> {,
+    // // console.log('Connected to database')}
+  async disconnect(): Promise<void> {
     // Mock disconnection - in production, this would close the database connection,
-    console.log('Disconnected from database'),
-  }
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {,
+    // // console.log('Disconnected from database')}
+  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
     // Mock query execution - in production, this would execute real SQL,
-    console.log('Executing query:', sql, params),
-    return {,
-      rows: [],;
-      rowCount: 0,;
-      fields: [],
-    ,};
+    // // console.log('Executing query:', sql, params),
+    return {
+      rows: [];
+      rowCount: 0;
+      fields: []};
   }
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {,
+  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
     // Mock transaction - in production, this would wrap the callback in a real transaction,
-    try {,
-      return await callback(this),
-    } catch (error) {,
-      throw error,
-    }
-    if (fs.existsSync(filePath)) {,
+    try {
+      return await callback(this)} catch (error) {
+      throw error}
+    if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8'),
-      return JSON.parse(content),
-    }
-  } catch (error) {,
-    console.error('Error reading file:', error),
-  }
-  return defaultValue,
-}
-export function writeJsonFile < T>(file_name: string, data: T): void {,
+      return JSON.parse(content)}
+  } catch (error) {
+    console.error('Error reading file:', error)}
+  return defaultValue}
+export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name),
-  const tmp_path = `${file_path,}.tmp`,
+  const tmp_path = `${file_path}.tmp`,
   fs.writeFileSync (tmp_path, JSON.stringify (data, null, 2), 'utf - 8'),
-  fs.rename_sync (tmp_path, file_path),
-}
-export function appendToJsonArrayFile < T>(file_name: string, item: T): void {,
+  fs.rename_sync (tmp_path, file_path)}
+export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
   const items = readJsonFile < T[]>(file_name, []),
   items.push (item),
-  writeJsonFile < T[]>(file_name, items),
-}
+  writeJsonFile < T[]>(file_name, items)}
 ,
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {,
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []),
   items.push(item),
-  writeJsonFile<T[]>(fileName, items),
-}
-,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee,
-}
-,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+  writeJsonFile<T[]>(fileName, items)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

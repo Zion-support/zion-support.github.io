@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function StateOfAIGovernance20o26PreviewPage() {,
-  return (,
+import React from 'react';
+export default function StateOfAIGovernance20o26PreviewPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <p className='text-sm text-blue-30o0'>Report • 20o25-09-15</p>,
@@ -30,7 +29,5 @@ export default function StateOfAIGovernance20o26PreviewPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

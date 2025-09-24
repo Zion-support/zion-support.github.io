@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SystemAdministrationChatPage() {,
-  return (,
+export default function SystemAdministrationChatPage() {
+  return (
     <>,
       <Head>,
         <title>System Administration Chat - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function SystemAdministrationChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

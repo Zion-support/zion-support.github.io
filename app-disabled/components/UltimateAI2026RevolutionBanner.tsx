@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function UltimateAI20o26RevolutionBanner() {,
-  return (,
+export default function UltimateAI20o26RevolutionBanner() {
+  return (
     <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -21,7 +20,7 @@ export default function UltimateAI20o26RevolutionBanner() {,
             Next-Generation Autonomous Business Systems,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover the revolutionary autonomous business systems that achieved{' ',}
+            Discover the revolutionary autonomous business systems that achieved{' '}
             <strong className='text-yellow-30o0'>2,40o0% ROI</strong> and,
             <strong className='text-green-30o0'>,
               {' '}
@@ -98,22 +97,19 @@ export default function UltimateAI20o26RevolutionBanner() {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-next-generation-autonomous-business-revolution-ultimate-guide',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📖 Read Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-global-autonomous-transformation-ultimate-success-story',
-              className='bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-green-30o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-green-40o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-green-30o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📊 View Success Story,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               🚀 Start Transformation,
             </Link>,
           </div>,
@@ -123,7 +119,5 @@ export default function UltimateAI20o26RevolutionBanner() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

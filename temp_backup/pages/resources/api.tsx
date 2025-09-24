@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ApiPage() {,
-  return (,
+export default function ApiPage() {
+  return (
     <>,
       <Head>,
         <title>Api - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ApiPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

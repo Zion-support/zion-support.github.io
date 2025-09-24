@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Code,
@@ -11,160 +10,142 @@ import {,
   Shield,
   Globe,
   Smartphone,
-  Database,;
-  Cpu,;
-  Network,;
-  Bot,;
-  Sparkles,;
-  ArrowRight,;
-  Star,;
-  Users,;
-  TrendingUp,;
-  CheckCircle,;
-  Play,;
-  Download,;
-  ExternalLink,
-} from 'lucide-react',
-,
-const UltimateAIToolsShowcase20o25 = () => {,
+  Database;
+  Cpu;
+  Network;
+  Bot;
+  Sparkles;
+  ArrowRight;
+  Star;
+  Users;
+  TrendingUp;
+  CheckCircle;
+  Play;
+  Download;
+  ExternalLink} from 'lucide-react',
+const UltimateAIToolsShowcase20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const [hoveredToolsetHoveredTool] = useState(null),
   const [searchQuerysetSearchQuery] = useState(''),
-,
-  const categories = [,
-    { id: ''all', 'name: 'All 'Tools', 'icon: Sparklescount: 24 ,},;
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8 ,},;
-    { id: ''analytics', 'name: ''Analytics', 'icon: BarChart3count: 6 ,},;
-    { id: ''development', 'name: ''Development', 'icon: Codecount: 5 ,},;
-    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 3 ,},;
-    { id: ''mobile', 'name: ''Mobile', 'icon: Smartphonecount: 2 ,}
+  const categories = [
+    { id: ''all', 'name: 'All 'Tools', 'icon: Sparklescount: 24 };
+    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8 };
+    { id: ''analytics', 'name: ''Analytics', 'icon: BarChart3count: 6 };
+    { id: ''development', 'name: ''Development', 'icon: Codecount: 5 };
+    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 3 };
+    { id: ''mobile', 'name: ''Mobile', 'icon: Smartphonecount: 2 }
   ],
-,
-  const aiTools = [,
-    {,
-      id: 1,;
-      name: 'Neural Code Generator',;
-      category: 'development',;
-      description: 'AI-powered code generation that understands context and creates production-ready code',;
-      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time collaboration'],;
-      rating: 4.9,;
-      users: '12.5K',;
-      price: 'Free',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'Most Popular',;
-      demo: true,;
-      download: true,
-    ,},;
-    {,
-      id: 2,;
-      name: 'Smart Analytics Pro',;
-      category: 'analytics',;
-      description: 'Advanced AI analytics platform with predictive insights and automated reporting',;
-      features: ['Predictive 'analytics', 'Automated 'insights', 'Custom dashboards'],;
-      rating: 4.8,;
-      users: '8.2K',;
-      price: '$99/mo',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'Enterprise',;
-      demo: true,;
-      download: false,
-    ,},;
-    {,
-      id: 3,;
-      name: 'AutoWorkflow Engine',;
-      category: 'automation',;
-      description: 'Intelligent workflow automation that learns from your processes and optimizes them',;
-      features: ['Process 'learning', 'Smart 'optimization', 'Integration hub'],;
-      rating: 4.7,;
-      users: '15.3K',;
-      price: '$49/mo',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'Trending',;
-      demo: true,;
-      download: true,
-    ,},;
-    {,
-      id: 4,;
-      name: 'Quantum Security Suite',;
-      category: 'security',;
-      description: 'Next-generation security powered by quantum computing principles',;
-      features: ['Quantum 'encryption', 'Threat 'detection', 'Zero-trust architecture'],;
-      rating: 4.9,;
-      users: '5.1K',;
-      price: '$199/mo',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'Cutting Edge',;
-      demo: true,;
-      download: false,
-    ,},;
-    {,
-      id: 5,;
-      name: 'Mobile AI Assistant',;
-      category: 'mobile',;
-      description: 'Personal AI assistant that works across all your mobile devices',;
-      features: ['Cross-platform 'sync', 'Voice 'commands', 'Smart scheduling'],;
-      rating: 4.6,;
-      users: '22.7K',;
-      price: 'Free',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'New',;
-      demo: true,;
-      download: true,
-    ,},;
-    {,
-      id: 6,;
-      name: 'Data Intelligence Hub',;
-      category: 'analytics',;
-      description: 'Transform raw data into actionable insights with AI-powered analysis',;
-      features: ['Real-time 'processing', 'Natural language 'queries', 'Visual insights'],;
-      rating: 4.8,;
-      users: '9.8K',;
-      price: '$79/mo',;
-      image: '/api/placeholder/40o0/30o0',;
-      badge: 'Popular',;
-      demo: true,;
-      download: true,
-    ,}
+  const aiTools = [
+    {
+      id: 1;
+      name: 'Neural Code Generator';
+      category: 'development';
+      description: 'AI-powered code generation that understands context and creates production-ready code';
+      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time collaboration'];
+      rating: 4.9;
+      users: '12.5K';
+      price: 'Free';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'Most Popular';
+      demo: true;
+      download: true};
+    {
+      id: 2;
+      name: 'Smart Analytics Pro';
+      category: 'analytics';
+      description: 'Advanced AI analytics platform with predictive insights and automated reporting';
+      features: ['Predictive 'analytics', 'Automated 'insights', 'Custom dashboards'];
+      rating: 4.8;
+      users: '8.2K';
+      price: '$99/mo';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'Enterprise';
+      demo: true;
+      download: false};
+    {
+      id: 3;
+      name: 'AutoWorkflow Engine';
+      category: 'automation';
+      description: 'Intelligent workflow automation that learns from your processes and optimizes them';
+      features: ['Process 'learning', 'Smart 'optimization', 'Integration hub'];
+      rating: 4.7;
+      users: '15.3K';
+      price: '$49/mo';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'Trending';
+      demo: true;
+      download: true};
+    {
+      id: 4;
+      name: 'Quantum Security Suite';
+      category: 'security';
+      description: 'Next-generation security powered by quantum computing principles';
+      features: ['Quantum 'encryption', 'Threat 'detection', 'Zero-trust architecture'];
+      rating: 4.9;
+      users: '5.1K';
+      price: '$199/mo';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'Cutting Edge';
+      demo: true;
+      download: false};
+    {
+      id: 5;
+      name: 'Mobile AI Assistant';
+      category: 'mobile';
+      description: 'Personal AI assistant that works across all your mobile devices';
+      features: ['Cross-platform 'sync', 'Voice 'commands', 'Smart scheduling'];
+      rating: 4.6;
+      users: '22.7K';
+      price: 'Free';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'New';
+      demo: true;
+      download: true};
+    {
+      id: 6;
+      name: 'Data Intelligence Hub';
+      category: 'analytics';
+      description: 'Transform raw data into actionable insights with AI-powered analysis';
+      features: ['Real-time 'processing', 'Natural language 'queries', 'Visual insights'];
+      rating: 4.8;
+      users: '9.8K';
+      price: '$79/mo';
+      image: '/api/placeholder/40o0/30o0';
+      badge: 'Popular';
+      demo: true;
+      download: true}
   ],
-,
-  const filteredTools = aiTools.filter(tool => {,
+  const filteredTools = aiTools.filter(tool => {
     const matchesCategory = activeCategory === 'all' || tool.category === activeCategory,
     const matchesSearch = tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+    return matchesCategory && matchesSearch}),
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { y: 20opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,
-      ,}
+  const itemVariants ={
+    hidden: { y: 20opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5}
     }
   };
-,
-  return (,
+  return (
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium mb-6">,
             <Brain className="w-4 h-4 mr-2"  />,
             AI Tools Showcase 20o25,
@@ -180,44 +161,41 @@ const UltimateAIToolsShowcase20o25 = () => {,
             createand innovate in 20o25.,
           </p>,
         </motion.div>,
-        {/* Search and Filter */,}
+        {/* Search and Filter */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.2 ,}}
-          className="mb-12",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          className="mb-12">,
           <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative w-full lg: w-96">,
-              <input,
+              <input
                 type="text",
                 placeholder="Search AI tools...",
-                value={searchQuery,}
+                value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pl-12 bg-white border border-gray-20o0 rounded-xl focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-all duration-20o0",
               />,
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
-              {categories.map((category) => (,
-                <button,
+              {categories.map((category) => (
+                <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${,
+                  className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-20o0 ${
                     activeCategory === category.id,
                       ? 'bg-blue-60o0 text-white shadow-lg',
-                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                  ,}`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0'}`}
                 >,
                   <category.icon className="w-4 h-4 mr-2"  />,
                   {category.name}
                   <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
                     {category.count}
                   </span>,
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </div>,
         </motion.div>,
@@ -226,30 +204,28 @@ const UltimateAIToolsShowcase20o25 = () => {,
           variants={containerVariants}
           initial="hidden",
           whileInView="visible",
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-        >,
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
           <AnimatePresence>,
-            {filteredTools.map((tool) => (,
+            {filteredTools.map((tool) => (
               <motion.div,
-                key={tool.id,}
+                key={tool.id}
                 variants={itemVariants}
                 layout,
                 className="group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0",
-                onHoverStart={() => setHoveredTool(tool.id),}
+                onHoverStart={() => setHoveredTool(tool.id)}
                 onHoverEnd={() => setHoveredTool(null)}
               >,
                 {/* Tool Image */}
                 <div className="relative h-48 bg-gradient-to-br from-blue-10o0 to-purple-10o0 overflow-hidden">,
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20"  />,
                   <div className="absolute top-4 right-4">,
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${,
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                       tool.badge === 'Most Popular' ? 'bg-green-10o0 text-green-80o0' :,
                       tool.badge === 'Enterprise' ? 'bg-purple-10o0 text-purple-80o0' :,
                       tool.badge === 'Trending' ? 'bg-orange-10o0 text-orange-80o0' :,
                       tool.badge === 'Cutting Edge' ? 'bg-red-10o0 text-red-80o0' :,
                       tool.badge === 'New' ? 'bg-blue-10o0 text-blue-80o0' :,
-                      'bg-gray-10o0 text-gray-80o0',
-                    }`}>,
+                      'bg-gray-10o0 text-gray-80o0'}`}>,
                       {tool.badge}
                     </span>,
                   </div>,
@@ -263,7 +239,7 @@ const UltimateAIToolsShowcase20o25 = () => {,
                 <div className="p-6">,
                   <div className="flex items-start justify-between mb-4">,
                     <h3 className="text-xl font-bold text-gray-90o0 group-hover: text-blue-60o0 transition-colors">,
-                      {tool.name,}
+                      {tool.name}
                     </h3>,
                     <div className="flex items-center text-yellow-50o0">,
                       <Star className="w-4 h-4 fill-current"  />,
@@ -275,12 +251,11 @@ const UltimateAIToolsShowcase20o25 = () => {,
                   </p>,
                   {/* Features */}
                   <div className="space-y-2 mb-6">,
-                    {tool.features.slice(0o2).map((featureindex) => (,
+                    {tool.features.slice(0o2).map((featureindex) => (
                       <div key={index} className="flex items-center text-sm text-gray-60o0">,
                         <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />,
                         {feature}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-6">,
@@ -298,28 +273,25 @@ const UltimateAIToolsShowcase20o25 = () => {,
                       <Play className="w-4 h-4 mr-2"  />,
                       Demo,
                     </button>,
-                    {tool.download && (,
+                    {tool.download && (
                       <button className="px-4 py-2 border border-gray-20o0 text-gray-70o0 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center justify-center">,
                         <Download className="w-4 h-4 mr-2"  />,
                         Download,
-                      </button>,
-                    ),}
+                      </button>)}
                     <button className="px-4 py-2 border border-gray-20o0 text-gray-70o0 rounded-lg font-medium hover: bg-gray-50 transition-colors">,
                       <ExternalLink className="w-4 h-4"  />,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </AnimatePresence>,
         </motion.div>,
         {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.4 ,}}
-          className="text-center mt-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
+          className="text-center mt-16">,
           <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">,
             <h3 className="text-2xl font-bold mb-4">,
               Ready to Transform Your Business?,
@@ -340,8 +312,5 @@ const UltimateAIToolsShowcase20o25 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateAIToolsShowcase20o25,
+    </div>)};
+export default UltimateAIToolsShowcase20o25;

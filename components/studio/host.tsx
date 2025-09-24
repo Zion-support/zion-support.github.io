@@ -1,11 +1,8 @@
 import React, { useState } from 'react',
-,
-type PersonaConfig = {,
+type PersonaConfig = {
   voice: string,
-  language: string,
-,};
-,
-type Episode = {,
+  language: string};
+type Episode = {
   id: string,
   title: string,
   questions: string[],
@@ -13,91 +10,75 @@ type Episode = {,
   youtubeDescription: string,
   spotifyDescription: string,
   transcript: string,
-  audio?: {,
+  audio?: {
     mp3Url?: string,
     wavUrl?: string,
-    mp4Url?: string,
-  ,};
+    mp4Url?: string};
 };
-,
-export default function StudioHostPage() {,
-  const [persona, setPersona] = useState<PersonaConfig>({,
-    voice: 'Visionary',;
-    language: 'English',;
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+    voice: 'Visionary';
+    language: 'English';
   }),
   const [inviteeName, setInviteeName] = useState(''),
   const [inviteeBio, setInviteeBio] = useState(''),
   const [topic, setTopic] = useState(''),
-  const [operatorPrompt, setOperatorPrompt] = useState(,
-    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.',
-  ),
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'),
   const [generating, setGenerating] = useState(false),
   const [episode, setEpisode] = useState<Episode | null>(null),
   const [synthesizing, setSynthesizing] = useState(false),
   const [publishing, setPublishing] = useState(false),
-,
-  const handleGenerate = async () => {,
+  const handleGenerate = async () => {
     setGenerating(true),
-    try {,
-      const res = await fetch('/api/podcast/generate', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          persona,;
-          invitee: { name: inviteeName, bio: inviteeBio ,},;
-          topic,;
-          operatorPrompt,;
-        }),;
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          persona;
+          invitee: { name: inviteeName, bio: inviteeBio };
+          topic;
+          operatorPrompt;
+        });
       }),
       const data = await res.json(),
-      setEpisode(data.episode),
-    } catch (e) {,
+      setEpisode(data.episode)} catch (e) {
       console.error(e),
-      alert('Failed to generate episode'),
-    } finally {,
-      setGenerating(false),
-    }
+      alert('Failed to generate episode')} finally {
+      setGenerating(false)}
   };
-,
-  const handleSynthesize = async () => {,
+  const handleSynthesize = async () => {
     if (!episode) return,
     setSynthesizing(true),
-    try {,
-      const res = await fetch('/api/podcast/synthesize', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({ episodeId: episode.id ,}),;
+    try {
+      const res = await fetch('/api/podcast/synthesize', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ episodeId: episode.id });
       }),
       const data = await res.json(),
-      setEpisode({ ...episode, audio: data.audio ,}),
-    } catch (e) {,
+      setEpisode({ ...episode, audio: data.audio })} catch (e) {
       console.error(e),
-      alert('Failed to synthesize audio'),
-    } finally {,
-      setSynthesizing(false),
-    }
+      alert('Failed to synthesize audio')} finally {
+      setSynthesizing(false)}
   };
-,
-  const handlePublish = async () => {,
+  const handlePublish = async () => {
     if (!episode) return,
     setPublishing(true),
-    try {,
-      const res = await fetch('/api/podcast/publish', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({ episodeId: episode.id ,}),;
+    try {
+      const res = await fetch('/api/podcast/publish', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ episodeId: episode.id });
       }),
       const data = await res.json(),
-      alert('Episode published successfully!'),
-    } catch (e) {,
+      alert('Episode published successfully!')} catch (e) {
       console.error(e),
-      alert('Failed to publish episode'),
-    } finally {,
-      setPublishing(false),
-    }
+      alert('Failed to publish episode')} finally {
+      setPublishing(false)}
   };
-,
-  return (,
+  return (
     <div className='space-y-8'>,
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>,
       <section className='space-y-4'>,
@@ -107,11 +88,11 @@ export default function StudioHostPage() {,
             <label className='block text-sm font-medium' htmlFor='voice-select'>,
               Voice,
             </label>,
-            <select,
+            <select
               id='voice-select',
               className='mt-1 w-full border rounded p-2',
-              value={persona.voice,}
-              onChange={e => setPersona({ ...persona, voice: e.target.value ,})}
+              value={persona.voice}
+              onChange={e => setPersona({ ...persona, voice: e.target.value })}
             >,
               <option value='Visionary'>Visionary</option>,
               <option value='Technical'>Technical</option>,
@@ -119,19 +100,17 @@ export default function StudioHostPage() {,
             </select>,
           </div>,
           <div>,
-            <label,
+            <label
               className='block text-sm font-medium',
-              htmlFor='language-select',
-            >,
+              htmlFor='language-select'>,
               Language,
             </label>,
-            <select,
+            <select
               id='language-select',
               className='mt-1 w-full border rounded p-2',
               value={persona.language}
               onChange={e =>,
-                setPersona({ ...persona, language: e.target.value ,}),
-              }
+                setPersona({ ...persona, language: e.target.value })}
             >,
               <option value='English'>English</option>,
               <option value='Spanish'>Spanish</option>,
@@ -142,7 +121,7 @@ export default function StudioHostPage() {,
             <label className='block text-sm font-medium' htmlFor='invitee-name'>,
               Invitee Name,
             </label>,
-            <input,
+            <input
               id='invitee-name',
               type='text',
               className='mt-1 w-full border rounded p-2',
@@ -155,7 +134,7 @@ export default function StudioHostPage() {,
             <label className='block text-sm font-medium' htmlFor='topic'>,
               Topic,
             </label>,
-            <input,
+            <input
               id='topic',
               type='text',
               className='mt-1 w-full border rounded p-2',
@@ -166,16 +145,15 @@ export default function StudioHostPage() {,
           </div>,
         </div>,
         <div className='md: col-span-3'>,
-          <label,
+          <label
             className='block text-sm font-medium',
-            htmlFor='operator-prompt',
-          >,
+            htmlFor='operator-prompt'>,
             Operator Prompt,
           </label>,
-          <textarea,
+          <textarea
             id='operator-prompt',
             className='mt-1 w-full border rounded p-2',
-            rows={3,}
+            rows={3}
             value={operatorPrompt}
             onChange={e => setOperatorPrompt(e.target.value)}
             placeholder='Enter your operator prompt',
@@ -185,7 +163,7 @@ export default function StudioHostPage() {,
           <label className='block text-sm font-medium' htmlFor='invitee-bio'>,
             Invitee Bio,
           </label>,
-          <textarea,
+          <textarea
             id='invitee-bio',
             className='mt-1 w-full border rounded p-2',
             rows={3}
@@ -194,26 +172,25 @@ export default function StudioHostPage() {,
             placeholder='Enter invitee bio',
           />,
         </div>,
-        <button,
+        <button
           className='px-4 py-2 bg-blue-60o0 text-white rounded hover: bg-blue-70o0 disabled:opacity-50',
-          onClick={handleGenerate,}
+          onClick={handleGenerate}
           disabled={generating}
         >,
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>,
       </section>,
-      {episode && (,
+      {episode && (
         <section className='space-y-4'>,
           <h2 className='text-xl font-semibold'>Episode Draft</h2>,
           <div className='border rounded p-4 space-y-3'>,
-            <p className='text-sm text-gray-60o0'>ID: {episode.id,}</p>,
+            <p className='text-sm text-gray-60o0'>ID: {episode.id}</p>,
             <h3 className='text-lg font-bold'>{episode.title}</h3>,
             <div>,
               <h4 className='font-semibold'>Questions</h4>,
               <ol className='list-decimal list-inside space-y-1'>,
-                {episode.questions?.map((q: string, idx: number) => (,
-                  <li key={idx,}>{q}</li>,
-                ))}
+                {episode.questions?.map((q: string, idx: number) => (
+                  <li key={idx}>{q}</li>))}
               </ol>,
             </div>,
             <div>,
@@ -239,59 +216,49 @@ export default function StudioHostPage() {,
               </pre>,
             </div>,
             <div className='flex gap-2'>,
-              <button,
+              <button
                 className='px-4 py-2 bg-purple-60o0 text-white rounded hover: bg-purple-70o0 disabled:opacity-50',
-                onClick={handleSynthesize,}
+                onClick={handleSynthesize}
                 disabled={synthesizing}
               >,
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>,
-              <button,
+              <button
                 className='px-4 py-2 bg-gray-80o0 text-white rounded hover: bg-gray-90o0 disabled:opacity-50',
-                onClick={handlePublish,}
+                onClick={handlePublish}
                 disabled={publishing}
               >,
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>,
             </div>,
-            {episode.audio && (,
+            {episode.audio && (
               <div className='space-y-2'>,
                 <h4 className='font-semibold'>Audio Files</h4>,
                 <div className='flex gap-2'>,
-                  {episode.audio.mp3Url && (,
-                    <a,
+                  {episode.audio.mp3Url && (
+                    <a
                       href={episode.audio.mp3Url}
                       className='text-blue-60o0 underline hover: text-blue-80o0',
-                      download,
-                    >,
+                      download>,
                       Download MP3,
-                    </a>,
-                  ),}
-                  {episode.audio.wavUrl && (,
-                    <a,
+                    </a>)}
+                  {episode.audio.wavUrl && (
+                    <a
                       href={episode.audio.wavUrl}
                       className='text-blue-60o0 underline hover: text-blue-80o0',
-                      download,
-                    >,
+                      download>,
                       Download WAV,
-                    </a>,
-                  ),}
-                  {episode.audio.mp4Url && (,
-                    <a,
+                    </a>)}
+                  {episode.audio.mp4Url && (
+                    <a
                       href={episode.audio.mp4Url}
                       className='text-blue-60o0 underline hover: text-blue-80o0',
-                      download,
-                    >,
+                      download>,
                       Download MP4,
-                    </a>,
-                  ),}
+                    </a>)}
                 </div>,
-              </div>,
-            )}
+              </div>)}
           </div>,
-        </section>,
-      )}
-    </div>,
-  ),
-}
+        </section>)}
+    </div>)}
 ,

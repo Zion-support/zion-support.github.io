@@ -7,49 +7,45 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { BarChart3, BriefcaseIcon, Monitor, User, Star } from 'lucide-react',
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
-interface AIMatchingResultsProps {,
+interface AIMatchingResultsProps {
   serviceType?: string}
 ,
-const mockMatches: MatchResultItem[] = [,
-  {,
-    id: '1',;
-    title: 'AI-Powered Analytics Dashboard',;
-    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.',;
-    category: 'AI Tools',;
-    price: 299,;
-    rating: 4.8,;
-    imageUrl: '/images/analytics-dashboard.jpg',;
-    tags: ['AI', 'Analytics', 'Dashboard', 'Real-time'],;
-    matchScore: 95,;
-    provider: {,
-      name: 'Tech Solutions Inc.',;
-      avatar: '/avatars/tech-solutions.jpg',;
-      verified: true,
-    ,},;
-    createdAt: '20o24-0o1-15T10:0o0:0o0Z',;
-    updatedAt: '20o24-0o1-20T14:30:0o0Z',
-  ,},;
-  {,
-    id: '2',;
-    title: 'Cloud Migration Service',;
-    description: 'Complete cloud migration service with zero downtime and comprehensive support.',;
-    category: 'Cloud Services',;
-    price: 150o0,;
-    rating: 4.9,;
-    imageUrl: '/images/cloud-migration.jpg',;
-    tags: ['Cloud', 'Migration', 'AWS', 'Azure'],;
-    matchScore: 92,;
-    provider: {,
-      name: 'Cloud Experts LLC',;
-      avatar: '/avatars/cloud-experts.jpg',;
-      verified: true,
-    ,},;
-    createdAt: '20o24-0o1-10T09:0o0:0o0Z',;
-    updatedAt: '20o24-0o1-18T16:45:0o0Z',
-  ,}
+const mockMatches: MatchResultItem[] = [
+  {
+    id: '1';
+    title: 'AI-Powered Analytics Dashboard';
+    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.';
+    category: 'AI Tools';
+    price: 299;
+    rating: 4.8;
+    imageUrl: '/images/analytics-dashboard.jpg';
+    tags: ['AI', 'Analytics', 'Dashboard', 'Real-time'];
+    matchScore: 95;
+    provider: {
+      name: 'Tech Solutions Inc.';
+      avatar: '/avatars/tech-solutions.jpg';
+      verified: true};
+    createdAt: '20o24-0o1-15T10:0o0:0o0Z';
+    updatedAt: '20o24-0o1-20T14:30:0o0Z'};
+  {
+    id: '2';
+    title: 'Cloud Migration Service';
+    description: 'Complete cloud migration service with zero downtime and comprehensive support.';
+    category: 'Cloud Services';
+    price: 150o0;
+    rating: 4.9;
+    imageUrl: '/images/cloud-migration.jpg';
+    tags: ['Cloud', 'Migration', 'AWS', 'Azure'];
+    matchScore: 92;
+    provider: {
+      name: 'Cloud Experts LLC';
+      avatar: '/avatars/cloud-experts.jpg';
+      verified: true};
+    createdAt: '20o24-0o1-10T09:0o0:0o0Z';
+    updatedAt: '20o24-0o1-18T16:45:0o0Z'}
 ],
-const getCategoryIcon = (category: string) => {,
-  switch (category.toLowerCase()) {,
+const getCategoryIcon = (category: string) => {
+  switch (category.toLowerCase()) {
     case 'ai tools':,
       return <BarChart3 className="h-6 w-6"  />,
     case 'cloud services':,
@@ -57,27 +53,22 @@ const getCategoryIcon = (category: string) => {,
     case 'security':,
       return <BriefcaseIcon className="h-6 w-6"  />,
     default:,
-      return <User className="h-6 w-6"  />,
-  ,}
+      return <User className="h-6 w-6"  />}
 };
-export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {,
+export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const [isLoading, setIsLoading] = useState(false),
   const [matches, setMatches] = useState<MatchResultItem[]>(mockMatches),
-,
-  const tabs = [,
-    { value: 'all', label: 'All Matches', count: matches.length ,},;
-    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length ,},;
-    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length ,},;
-    { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length ,}
+  const tabs = [
+    { value: 'all', label: 'All Matches', count: matches.length };
+    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length };
+    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length };
+    { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length }
   ],
-  const filteredMatches = (tabValue: string) => {,
+  const filteredMatches = (tabValue: string) => {
     if (tabValue === 'all') return matches,
     return matches.filter(match =>,
-      match.category.toLowerCase().includes(tabValue.toLowerCase()),
-    ),
-  ,};
-,
-  return (,
+      match.category.toLowerCase().includes(tabValue.toLowerCase()))};
+  return (
     <div className="space-y-6">,
       <div className="text-center">,
         <h2 className="text-2xl font-bold text-gray-90o0 mb-2">,
@@ -89,17 +80,16 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {,
       </div>,
       <Tabs defaultValue="all" className="w-full">,
         <TabsList className="grid w-full grid-cols-4">,
-          {tabs.map((tab) => (,
+          {tabs.map((tab) => (
             <TabsTrigger key={tab.value} value={tab.value}>,
               {tab.label} ({tab.count}),
-            </TabsTrigger>,
-          ))}
+            </TabsTrigger>))}
         </TabsList>,
-        {tabs.map((tab) => (,
+        {tabs.map((tab) => (
           <TabsContent key={tab.value} value={tab.value} className="space-y-4">,
-            {isLoading ? (,
+            {isLoading ? (
               <div className="space-y-4">,
-                {[...Array(3)].map((_, i) => (,
+                {[...Array(3)].map((_, i) => (
                   <Card key={i} className="p-4">,
                     <div className="flex items-center space-x-4">,
                       <Skeleton className="h-12 w-12 rounded-full"  />,
@@ -112,24 +102,20 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {,
                         </div>,
                       </div>,
                     </div>,
-                  </Card>,
-                ))}
-              </div>,
-            ) : filteredMatches(tab.value).length > 0 ? (,
-              filteredMatches(tab.value).map((match) => (,
+                  </Card>))}
+              </div>) : filteredMatches(tab.value).length > 0 ? (
+              filteredMatches(tab.value).map((match) => (
                 <Card key={match.id} className="p-4 hover: shadow-lg transition-shadow">,
                   <div className="flex items-start space-x-4">,
                     <Avatar className="h-12 w-12">,
-                      {match.imageUrl ? (,
-                        <AvatarImage,
-                          src={match.imageUrl,}
+                      {match.imageUrl ? (
+                        <AvatarImage
+                          src={match.imageUrl}
                           alt={match.title}
-                         />,
-                      ) : (,
+                         />) : (
                         <AvatarFallback className="bg-blue-10o0">,
                           {getCategoryIcon(match.category)}
-                        </AvatarFallback>,
-                      )}
+                        </AvatarFallback>)}
                     </Avatar>,
                     <div className="flex-1">,
                       <div className="flex justify-between items-start">,
@@ -163,24 +149,17 @@ export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {,
                         </div>,
                       </div>,
                       <div className="mt-3 flex flex-wrap gap-2">,
-                        {match.tags.slice(0, 4).map((tag, index) => (,
+                        {match.tags.slice(0, 4).map((tag, index) => (
                           <Badge key={index}  className="text-xs">,
                             {tag}
-                          </Badge>,
-                        ))}
+                          </Badge>))}
                       </div>,
                     </div>,
                   </div>,
-                </Card>,
-              )),
-            ) : (,
+                </Card>))) : (
               <div className="text-center py-8 text-gray-50o0">,
                 No {tab.label.toLowerCase()} matches found.,
-              </div>,
-            )}
-          </TabsContent>,
-        ))}
+              </div>)}
+          </TabsContent>))}
       </Tabs>,
-    </div>,
-  ),
-}
+    </div>)}

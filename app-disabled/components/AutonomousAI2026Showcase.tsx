@@ -1,11 +1,10 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AutonomousAI20o26Showcase: React.FC = () => {,
-  return (,
+const AutonomousAI20o26Showcase: React.FC = () => {
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-green-40o0 to-blue-50o0 text-black px-4 py-2 rounded-full text-sm font-bold mb-4'>,
             🤖 NEW: Autonomous AI Agents 20o26,
@@ -22,9 +21,9 @@ const AutonomousAI20o26Showcase: React.FC = () => {,
             reductions.,
           </p>,
         </div>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {/* Strategic Planning Agents */,}
+          {/* Strategic Planning Agents */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20'>,
             <div className='text-4xl mb-4'>🎯</div>,
             <h3 className='text-xl font-bold mb-3'>,
@@ -46,7 +45,7 @@ const AutonomousAI20o26Showcase: React.FC = () => {,
             <div className='text-4xl mb-4'>⚙️</div>,
             <h3 className='text-xl font-bold mb-3'>Operational Management</h3>,
             <p className='text-gray-30o0 mb-4'>,
-              Self-optimizing agents that manage processes, allocate resources,;
+              Self-optimizing agents that manage processes, allocate resources;
               and ensure peak operational efficiency.,
             </p>,
             <div className='text-sm text-green-40o0 font-semibold'>,
@@ -147,53 +146,43 @@ const AutonomousAI20o26Showcase: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-autonomous-ai-agents-enterprise-revolution',
-              className='bg-gradient-to-r from-green-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-50o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-green-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-green-50o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Learn About Autonomous AI →,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/autonomous-ai-transformation-20o26',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 transform hover:scale-10o5'>,
               View Case Studies,
             </Link>,
           </div>,
           <div className='flex flex-wrap justify-center gap-6 text-sm text-gray-30o0'>,
-            <Link,
+            <Link
               href='/services/autonomous-ai',
-              className='hover:text-green-40o0 transition-colors',
-            >,
+              className='hover:text-green-40o0 transition-colors'>,
               Autonomous AI Services,
             </Link>,
-            <Link,
+            <Link
               href='/tools/autonomous-ai-readiness-assessment',
-              className='hover:text-green-40o0 transition-colors',
-            >,
+              className='hover:text-green-40o0 transition-colors'>,
               Readiness Assessment,
             </Link>,
-            <Link,
+            <Link
               href='/resources/autonomous-ai-implementation-guide',
-              className='hover:text-green-40o0 transition-colors',
-            >,
+              className='hover:text-green-40o0 transition-colors'>,
               Implementation Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='hover:text-green-40o0 transition-colors',
-            >,
+              className='hover:text-green-40o0 transition-colors'>,
               Schedule Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousAI20o26Showcase,
-,
+    </section>)};
+export default AutonomousAI20o26Showcase;

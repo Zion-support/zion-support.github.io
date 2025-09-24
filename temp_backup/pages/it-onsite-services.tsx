@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ItOnsiteServicesPage() {,
-  return (,
+export default function ItOnsiteServicesPage() {
+  return (
     <>,
       <Head>,
         <title>It Onsite Services - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ItOnsiteServicesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

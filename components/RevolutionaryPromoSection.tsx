@@ -1,73 +1,63 @@
 "use client",
 'use client',
-,
 import React{ useState } from 'react',
 import Link from 'next/link',
-,
-export default function RevolutionaryPromoSection() {,
+export default function RevolutionaryPromoSection() {
   const [hoveredCardsetHoveredCard] = useState<number | null>(null),
-,
-  const promoItems = [,
-    {,
-      id: 1,;
-      title: "🚀 AI 20o25 Ultimate Content Revolution",;
-      description: "Revolutionary breakthroughs in AI technology delivering unprecedented ROI",;
-      link: "/ai-20o25-ultimate-content-revolution",;
-      badge: "BREAKTHROUGH",;
-      gradient: "from-red-50o0 to-pink-50o0",;
-      stats: "2,50o0-5,0o00% ROI",
-    },;
-    {,
-      id: 2,;
-      title: "⚛️ Quantum-Neural Fusion Technology",;
-      description: "Advanced quantum computing integrated with neural networks",;
-      link: "/blog/ai-20o26-quantum-neural-fusion-breakthrough",;
-      badge: "REVOLUTIONARY",;
-      gradient: "from-purple-50o0 to-indigo-50o0",;
-      stats: "15,0o00% ROI",
-    },;
-    {,
-      id: 3,;
-      title: "🔮 AI 20o25 Revolutionary Trends & Predictions",;
-      description: "Expert insights into the future of artificial intelligence",;
-      link: "/blog/ai-20o25-revolutionary-trends-predictions",;
-      badge: "TRENDS",;
-      gradient: "from-blue-50o0 to-cyan-50o0",;
-      stats: "95% Probability",
-    ,},;
-    {,
-      id: 4,;
-      title: "🤖 Autonomous Operations Mastery",;
-      description: "Self-managing AI systems with 99.9% accuracy",;
-      link: "/ai-20o25-autonomous-operations-showcase",;
-      badge: "NEW",;
-      gradient: "from-green-50o0 to-emerald-50o0",;
-      stats: "10,0o00x Faster",
-    },;
-    {,
-      id: 5,;
-      title: "🏆 Global Enterprise Success Stories",;
-      description: "Real-world transformations with extraordinary results",;
-      link: "/case-studies/ai-20o25-global-transformation-breakthrough",;
-      badge: "SUCCESS",;
-      gradient: "from-orange-50o0 to-red-50o0",;
-      stats: "10,0o00% ROI",
-    },;
-    {,
-      id: 6,;
-      title: "🧠 Consciousness AI Technology",;
-      description: "Next-generation AI with consciousness capabilities",;
-      link: "/blog/ai-20o30-transcendent-intelligence",;
-      badge: "FUTURE",;
-      gradient: "from-indigo-50o0 to-purple-50o0",;
-      stats: "∞ ROI",
-    ,}
+  const promoItems = [
+    {
+      id: 1;
+      title: "🚀 AI 20o25 Ultimate Content Revolution";
+      description: "Revolutionary breakthroughs in AI technology delivering unprecedented ROI";
+      link: "/ai-20o25-ultimate-content-revolution";
+      badge: "BREAKTHROUGH";
+      gradient: "from-red-50o0 to-pink-50o0";
+      stats: "2,50o0-5,0o00% ROI"};
+    {
+      id: 2;
+      title: "⚛️ Quantum-Neural Fusion Technology";
+      description: "Advanced quantum computing integrated with neural networks";
+      link: "/blog/ai-20o26-quantum-neural-fusion-breakthrough";
+      badge: "REVOLUTIONARY";
+      gradient: "from-purple-50o0 to-indigo-50o0";
+      stats: "15,0o00% ROI"};
+    {
+      id: 3;
+      title: "🔮 AI 20o25 Revolutionary Trends & Predictions";
+      description: "Expert insights into the future of artificial intelligence";
+      link: "/blog/ai-20o25-revolutionary-trends-predictions";
+      badge: "TRENDS";
+      gradient: "from-blue-50o0 to-cyan-50o0";
+      stats: "95% Probability"};
+    {
+      id: 4;
+      title: "🤖 Autonomous Operations Mastery";
+      description: "Self-managing AI systems with 99.9% accuracy";
+      link: "/ai-20o25-autonomous-operations-showcase";
+      badge: "NEW";
+      gradient: "from-green-50o0 to-emerald-50o0";
+      stats: "10,0o00x Faster"};
+    {
+      id: 5;
+      title: "🏆 Global Enterprise Success Stories";
+      description: "Real-world transformations with extraordinary results";
+      link: "/case-studies/ai-20o25-global-transformation-breakthrough";
+      badge: "SUCCESS";
+      gradient: "from-orange-50o0 to-red-50o0";
+      stats: "10,0o00% ROI"};
+    {
+      id: 6;
+      title: "🧠 Consciousness AI Technology";
+      description: "Next-generation AI with consciousness capabilities";
+      link: "/blog/ai-20o30-transcendent-intelligence";
+      badge: "FUTURE";
+      gradient: "from-indigo-50o0 to-purple-50o0";
+      stats: "∞ ROI"}
   ],
-,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-purple-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white px-6 py-3 rounded-full font-bold text-lg mb-6 shadow-lg">,
             <span>🚀</span>,
@@ -81,14 +71,13 @@ export default function RevolutionaryPromoSection() {,
             Explore revolutionary AI technologiesbreakthrough predictionsand success stories that are transforming industries worldwide,
           </p>,
         </div>,
-        {/* Promotional Cards Grid */,}
+        {/* Promotional Cards Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          {promoItems.map((itemindex) => (,
-            <div,
-              key={item.id,}
-              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-20o0 transition-all duration-50o0 transform hover: scale-10o5 hover:shadow-2xl ${,
-                hoveredCard === item.id ? 'ring-4 ring-purple-50o0/50' : '',
-              ,}`}
+          {promoItems.map((itemindex) => (
+            <div
+              key={item.id}
+              className={`relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-20o0 transition-all duration-50o0 transform hover: scale-10o5 hover:shadow-2xl ${
+                hoveredCard === item.id ? 'ring-4 ring-purple-50o0/50' : ''}`}
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >,
@@ -117,9 +106,9 @@ export default function RevolutionaryPromoSection() {,
                 <p className="text-gray-60o0 mb-6 leading-relaxed">,
                   {item.description}
                 </p>,
-                <Link,
+                <Link
                   href={item.link}
-                  className={`inline-flex items-center space-x-2 bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5 w-full justify-center`,}
+                  className={`inline-flex items-center space-x-2 bg-gradient-to-r ${item.gradient} text-white px-6 py-3 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5 w-full justify-center`}
                 >,
                   <span>Explore Now</span>,
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
@@ -128,11 +117,9 @@ export default function RevolutionaryPromoSection() {,
                 </Link>,
               </div>,
               {/* Hover effect overlay */}
-              {hoveredCard === item.id && (,
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 pointer-events-none"></div>,
-              )}
-            </div>,
-          ))}
+              {hoveredCard === item.id && (
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 pointer-events-none"></div>)}
+            </div>))}
         </div>,
         {/* Bottom CTA */}
         <div className="text-center mt-12">,
@@ -144,22 +131,18 @@ export default function RevolutionaryPromoSection() {,
               Discover how revolutionary AI technologies can transform your business and deliver unprecedented results,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-              >,
+                className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
                 🎯 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href="/webinars/ai-20o25-revolutionary-breakthroughs",
-                className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg border border-white/30",
-              >,
+                className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg border border-white/30">,
                 🔥 Watch Webinar,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function ZeroTrustNetworkArchitecturePlatformPage() {,
-  return (,
+export default function ZeroTrustNetworkArchitecturePlatformPage() {
+  return (
     <>,
       <Head>,
         <title>,
           Zero Trust Network Architecture Platform - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='zero trust network architecture platform page',
         />,
@@ -23,7 +22,5 @@ export default function ZeroTrustNetworkArchitecturePlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,61 +1,49 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Award,
   TrendingUp,
   Users,
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Quote,;
-  Target,;
-  Zap,
-} from 'lucide-react',
-,
-const AI20o25SuccessStoriesPromotionBanner = () => {,
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Quote;
+  Target;
+  Zap} from 'lucide-react',
+const AI20o25SuccessStoriesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentTestimonialsetCurrentTestimonial] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
-    }30o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const testimonials = [,
-    {,
-      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",;
-      company: "TechCorp Solutions",;
-      industry: "Manufacturing",;
-      result: "20o0% efficiency increase",
-    ,},;
-    {,
-      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",;
-      company: "FinanceFlow Inc",;
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}30o00),
+    return () => clearInterval(interval)}[]),
+  const testimonials = [
+    {
+      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.";
+      company: "TechCorp Solutions";
+      industry: "Manufacturing";
+      result: "20o0% efficiency increase"};
+    {
+      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.";
+      company: "FinanceFlow Inc";
       industry: "Financial Services",
-      result: "99.8% accuracy rate",
-    ,},;
-    {,
-      quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.",;
-      company: "HealthTech Partners",;
-      industry: "Healthcare",;
-      result: "30o0% faster analysis",
-    ,}
+      result: "99.8% accuracy rate"};
+    {
+      quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.";
+      company: "HealthTech Partners";
+      industry: "Healthcare";
+      result: "30o0% faster analysis"}
   ],
-,
-  const stats = [,
-    { icon: TrendingUpvalue: "340%"label: "Average ROI" ,},;
-    { icon: Usersvalue: "850+"label: "Companies Served" ,},;
-    { icon: Starvalue: "98%"label: "Success Rate" ,},;
-    { icon: Targetvalue: "55%"label: "Cost Reduction" ,}
+  const stats = [
+    { icon: TrendingUpvalue: "340%"label: "Average ROI" };
+    { icon: Usersvalue: "850+"label: "Companies Served" };
+    { icon: Starvalue: "98%"label: "Success Rate" };
+    { icon: Targetvalue: "55%"label: "Cost Reduction" }
   ],
-,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-pink-90o0 relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -65,13 +53,12 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <motion.div,
-            initial={{ opacity: 0x: -50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8 ,}}
-            className="space-y-8",
-          >,
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="space-y-8">,
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30">,
               <Award className="w-5 h-5 text-yellow-40o0 mr-2"  />,
@@ -88,7 +75,7 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
                 See the measurable impact and transformation stories from our clients.,
               </p>,
             </div>,
-            {/* Key Benefits */,}
+            {/* Key Benefits */}
             <div className="space-y-4">,
               <div className="flex items-center space-x-3">,
                 <CheckCircle className="w-6 h-6 text-green-40o0"  />,
@@ -110,30 +97,27 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
             {/* CTA Buttons */}
             <div className="flex flex-col sm: flex-row gap-4 pt-4">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl flex items-center justify-center",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl flex items-center justify-center">,
                 View Success Stories,
                 <ArrowRight className="w-5 h-5 ml-2"  />,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover: bg-white/10 transition-all duration-30o0 flex items-center justify-center",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-white/30 text-white font-semibold rounded-xl hover: bg-white/10 transition-all duration-30o0 flex items-center justify-center">,
                 <Target className="w-5 h-5 mr-2"  />,
                 Start Your Story,
               </motion.button>,
             </div>,
           </motion.div>,
-          {/* Right Content - Testimonial & Stats */,}
+          {/* Right Content - Testimonial & Stats */}
           <motion.div,
-            initial={{ opacity: 0x: 50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            className="space-y-8",
-          >,
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="space-y-8">,
             {/* Testimonial Card */}
             <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20 backdrop-blur-sm">,
               <div className="flex items-start space-x-4 mb-6">,
@@ -145,11 +129,10 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
                 <div className="flex-1">,
                   <motion.p,
                     key={currentTestimonial}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.5 ,}}
-                    className="text-gray-30o0 text-lg italic mb-4",
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-gray-30o0 text-lg italic mb-4">,
                     "{testimonials[currentTestimonial].quote}",
                   </motion.p>,
                   <div className="flex items-center justify-between">,
@@ -165,43 +148,38 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
               </div>,
               {/* Testimonial Indicators */}
               <div className="flex justify-center space-x-2">,
-                {testimonials.map((_index) => (,
-                  <div,
+                {testimonials.map((_index) => (
+                  <div
                     key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-30o0 ${,
-                      index === currentTestimonial ? 'bg-purple-40o0 w-8' : 'bg-white/30',
-                    }`}
-                   />,
-                ))}
+                    className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                      index === currentTestimonial ? 'bg-purple-40o0 w-8' : 'bg-white/30'}`}
+                   />))}
               </div>,
             </div>,
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">,
-              {stats.map((statindex) => (,
+              {stats.map((statindex) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0scale: 0.8 ,}}
-                  animate={isVisible ? { opacity: 1scale: 1 ,} : {}}
-                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 ,}}
-                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center",
-                >,
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
+                  className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-4 border border-white/20 text-center">,
                   <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 mb-3">,
                     <stat.icon className="w-5 h-5 text-purple-30o0"  />,
                   </div>,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
         </div>,
         {/* Bottom CTA */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="text-center mt-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="text-center mt-16">,
           <div className="bg-gradient-to-r from-purple-50o0/10 to-pink-50o0/10 rounded-xl p-6 border border-purple-50o0/20">,
             <p className="text-gray-30o0 mb-4">,
               Join 850+ companies already achieving remarkable results with AI,
@@ -215,8 +193,5 @@ const AI20o25SuccessStoriesPromotionBanner = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25SuccessStoriesPromotionBanner,
+    </section>)};
+export default AI20o25SuccessStoriesPromotionBanner;

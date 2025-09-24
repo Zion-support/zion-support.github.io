@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DashboardPage() {,
-  return (,
+export default function DashboardPage() {
+  return (
     <>,
       <Head>,
         <title>Dashboard - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function DashboardPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group';
   description:,
-    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.',;
+    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.';
 };
-,
-export default function AutonomousOpsPlaybook20o26() {,
-  return (,
+export default function AutonomousOpsPlaybook20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Ops Playbook',
         description='Deploy autonomous operations with agentic workflows, signals mesh, and policy-as-code guardrails.',
         keywords='autonomous ops, playbook, AI agents, event-driven, guardrails',
@@ -50,16 +48,13 @@ export default function AutonomousOpsPlaybook20o26() {,
             <p className='mb-2 font-semibold text-purple-80o0'>,
               Need expert help?,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-real-time-retrieval-architectures',
-              className='text-purple-70o0 font-semibold hover: text-purple-90o0',
-            >,
+              className='text-purple-70o0 font-semibold hover: text-purple-90o0'>,
               Read Real-Time RAG →,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

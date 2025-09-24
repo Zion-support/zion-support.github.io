@@ -1,14 +1,13 @@
-import React from 'react',
-interface ErrorFallbackProps {,
+import React from 'react';
+interface ErrorFallbackProps {
   error: Error,
-  resetErrorBoundary: () => void,
-,}
+  resetErrorBoundary: () => void}
 ,
-export const ErrorFallback: React.FC<ErrorFallbackProps> = ({,
-  error,;
-  resetErrorBoundary,;
-}) => {,
-  return (,
+export const ErrorFallback: React.FC<ErrorFallbackProps> = ({
+  error;
+  resetErrorBoundary;
+}) => {
+  return (
     <div className='min-h-screen bg-gray-50 flex items-center justify-center px-4'>,
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>,
         <div className='text-red-50o0 text-6xl mb-4'>⚠️</div>,
@@ -20,32 +19,26 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({,
           the page.,
         </p>,
         <div className='space-y-3'>,
-          <button,
+          <button
             onClick={resetErrorBoundary}
-            className='w-full bg-blue-60o0 text-white px-4 py-2 rounded-lg hover: bg-blue-70o0 transition-colors',
-          >,
+            className='w-full bg-blue-60o0 text-white px-4 py-2 rounded-lg hover: bg-blue-70o0 transition-colors'>,
             Try Again,
           </button>,
-          <button,
-            onClick={() => (window.location.href = '/'),}
-            className='w-full bg-gray-20o0 text-gray-80o0 px-4 py-2 rounded-lg hover: bg-gray-30o0 transition-colors',
-          >,
+          <button
+            onClick={() => (window.location.href = '/')}
+            className='w-full bg-gray-20o0 text-gray-80o0 px-4 py-2 rounded-lg hover: bg-gray-30o0 transition-colors'>,
             Go Home,
           </button>,
         </div>,
-        {process.env.NODE_ENV === 'development' && (,
+        {process.env.NODE_ENV === 'development' && (
           <details className='mt-6 text-left'>,
             <summary className='cursor-pointer text-sm text-gray-50o0 hover:text-gray-70o0'>,
               Error Details (Development),
             </summary>,
             <pre className='mt-2 text-xs text-red-60o0 bg-red-50 p-3 rounded overflow-auto'>,
-              {error.message,}
+              {error.message}
               {error.stack}
             </pre>,
-          </details>,
-        )}
+          </details>)}
       </div>,
-    </div>,
-  ),
-};
-,
+    </div>)};

@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'mobile-app-development - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'mobile-app-development - Zion Tech Group';
   description:,
-    'Professional mobile-app-development solutions for your business needs.',;
-  keywords: 'mobile-app-development, services, business, technology',;
+    'Professional mobile-app-development solutions for your business needs.';
+  keywords: 'mobile-app-development, services, business, technology';
 };
-export default function MobileAppDevelopmentPage() {,
-  return (,
+export default function MobileAppDevelopmentPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function MobileAppDevelopmentPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

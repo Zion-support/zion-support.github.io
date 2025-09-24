@@ -1,57 +1,43 @@
 "use client",
-,
-import React from "react",
-,
-export default function NewContent2025AdvancedAutomationBanner() {,
-  return null,
-}
-const NewContent20o25AdvancedAutomationBanner = () => {,
+import React from "react";
+export default function NewContent2025AdvancedAutomationBanner() {
+  return null}
+const NewContent20o25AdvancedAutomationBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [currentSlide, setCurrentSlide] = useState(0),
-,
-  const content = [,
-    {,
-      title: "AI 20o25: Advanced Automation Revolution",;
-      subtitle: "Ultimate Enterprise Guide",;
-      metrics: "60o0% ROI • $2.8M Savings • 340% Productivity",;
-      description: "Transform your business with next-generation AI automation solutions",;
-      link: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide",;
-      type: "blog",;
-      readingTime: "18 min read",
-    ,},;
-    {,
-      title: "Fortune 50o0 AI Automation Success",;
-      subtitle: "$3.2B Annual Savings with 60o0% ROI",;
-      metrics: "60o0% ROI • $3.2B Savings • 98% Success Rate",;
-      description: "How a global manufacturing giant transformed operations with AI automation",;
-      link: "/case-studies/ai-automation-fortune-50o0-success-60o0-roi",;
-      type: "case-study",;
-      readingTime: "12 min read",
-    ,},;
-    {,
-      title: "AI Automation Implementation Master Guide",;
-      subtitle: "From Strategy to 60o0% ROI",;
-      metrics: "98% Success Rate • 3.2 Month Payback • 50o0+ Implementations",;
-      description: "The complete blueprint for enterprise AI automation success",;
-      link: "/resources/ai-automation-implementation-master-guide-20o25",;
-      type: "resource",;
-      readingTime: "25 min read",
-    ,}
+  const content = [
+    {
+      title: "AI 20o25: Advanced Automation Revolution";
+      subtitle: "Ultimate Enterprise Guide";
+      metrics: "60o0% ROI • $2.8M Savings • 340% Productivity";
+      description: "Transform your business with next-generation AI automation solutions";
+      link: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide";
+      type: "blog";
+      readingTime: "18 min read"};
+    {
+      title: "Fortune 50o0 AI Automation Success";
+      subtitle: "$3.2B Annual Savings with 60o0% ROI";
+      metrics: "60o0% ROI • $3.2B Savings • 98% Success Rate";
+      description: "How a global manufacturing giant transformed operations with AI automation";
+      link: "/case-studies/ai-automation-fortune-50o0-success-60o0-roi";
+      type: "case-study";
+      readingTime: "12 min read"};
+    {
+      title: "AI Automation Implementation Master Guide";
+      subtitle: "From Strategy to 60o0% ROI";
+      metrics: "98% Success Rate • 3.2 Month Payback • 50o0+ Implementations";
+      description: "The complete blueprint for enterprise AI automation success";
+      link: "/resources/ai-automation-implementation-master-guide-20o25";
+      type: "resource";
+      readingTime: "25 min read"}
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % content.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, [content.length]),
-,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 50o00),
+    return () => clearInterval(timer)}, [content.length]),
   if (!isVisible) return null,
-,
   const currentContent = content[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -67,14 +53,13 @@ const NewContent20o25AdvancedAutomationBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         <div className="flex items-center justify-between">,
-          {/* Close Button */,}
-          <button,
+          {/* Close Button */}
+          <button
             onClick={() => setIsVisible(false)}
             className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors z-10",
-            aria-label="Close banner",
-          >,
+            aria-label="Close banner">,
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
             </svg>,
           </button>,
           {/* Content */}
@@ -86,7 +71,7 @@ const NewContent20o25AdvancedAutomationBanner = () => {,
             {/* Main Content */}
             <div className="space-y-4">,
               <h2 className="text-3xl md: text-4xl font-bold leading-tight">,
-                {currentContent.title,}
+                {currentContent.title}
               </h2>,
               <p className="text-xl text-blue-20o0 font-semibold">,
                 {currentContent.subtitle}
@@ -108,28 +93,26 @@ const NewContent20o25AdvancedAutomationBanner = () => {,
               </p>,
               {/* CTA Buttons */}
               <div className="flex flex-col sm: flex-row gap-4 pt-4">,
-                <Link,
-                  href={currentContent.link,}
-                  className="inline-flex items-center bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-                >,
+                <Link
+                  href={currentContent.link}
+                  className="inline-flex items-center bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
                   Read Now,
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M9 5l7 7-7 7"  />,
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />,
                   </svg>,
                 </Link>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-90o0 transition-colors",
-                >,
+                  className="inline-flex items-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-90o0 transition-colors">,
                   Get Free Assessment,
                 </Link>,
               </div>,
             </div>,
           </div>,
-          {/* Visual Element */,}
+          {/* Visual Element */}
           <div className="hidden lg: block flex-shrink-0">,
             <div className="relative">,
-              {/* AI Automation Visualization */,}
+              {/* AI Automation Visualization */}
               <div className="w-80 h-64 bg-gradient-to-br from-purple-60o0/20 to-blue-60o0/20 rounded-2xl backdrop-blur-sm border border-white/20 p-6">,
                 <div className="space-y-4">,
                   {/* Process Flow */}
@@ -138,18 +121,18 @@ const NewContent20o25AdvancedAutomationBanner = () => {,
                     <span className="text-sm font-medium">Process Automation</span>,
                   </div>,
                   <div className="flex items-center space-x-2">,
-                    <div className="w-3 h-3 bg-blue-40o0 rounded-full animate-pulse" style={{ animationDelay: '0.5s' ,}}></div>,
+                    <div className="w-3 h-3 bg-blue-40o0 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>,
                     <span className="text-sm font-medium">AI Decision Making</span>,
                   </div>,
                   <div className="flex items-center space-x-2">,
-                    <div className="w-3 h-3 bg-purple-40o0 rounded-full animate-pulse" style={{ animationDelay: '1s' ,}}></div>,
+                    <div className="w-3 h-3 bg-purple-40o0 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>,
                     <span className="text-sm font-medium">Predictive Analytics</span>,
                   </div>,
                   {/* ROI Chart */}
                   <div className="mt-6">,
                     <div className="text-xs text-gray-30o0 mb-2">ROI Progress</div>,
                     <div className="w-full bg-gray-70o0 rounded-full h-2">,
-                      <div className="bg-gradient-to-r from-green-40o0 to-blue-50o0 h-2 rounded-full animate-pulse" style={{ width: '60o0%', maxWidth: '10o0%' ,}}></div>,
+                      <div className="bg-gradient-to-r from-green-40o0 to-blue-50o0 h-2 rounded-full animate-pulse" style={{ width: '60o0%', maxWidth: '10o0%' }}></div>,
                     </div>,
                     <div className="text-xs text-green-40o0 mt-1">60o0% ROI Achieved</div>,
                   </div>,
@@ -163,21 +146,15 @@ const NewContent20o25AdvancedAutomationBanner = () => {,
         </div>,
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-8">,
-          {content.map((_, index) => (,
-            <button,
+          {content.map((_, index) => (
+            <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${,
-                index === currentSlide ? 'bg-white' : 'bg-white/30',
-              }`}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'}`}
               aria-label={`Go to slide ${index + 1}`}
-            />,
-          ))}
+            />))}
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default NewContent20o25AdvancedAutomationBanner,
-,
+    </div>)};
+export default NewContent20o25AdvancedAutomationBanner;

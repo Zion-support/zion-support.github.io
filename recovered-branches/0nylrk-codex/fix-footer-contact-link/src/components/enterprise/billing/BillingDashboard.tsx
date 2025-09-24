@@ -4,9 +4,8 @@ import { PaymentMethods } from './PaymentMethods',
 import { InvoiceHistory } from './InvoiceHistory',
 import { UsageOverview } from './UsageOverview',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-,
-export function BillingDashboard() {,
-  return (,
+export function BillingDashboard() {
+  return (
     <div className='container mx-auto max-w-7xl py-8 px-4 md: px-6'>,
       <BillingHeader />,
       <Tabs defaultValue='subscription' className='mt-8'>,
@@ -29,7 +28,5 @@ export function BillingDashboard() {,
           <UsageOverview />,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

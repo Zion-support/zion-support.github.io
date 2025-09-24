@@ -1,5 +1,5 @@
-export default function AboutPage() {,
-  return (,
+export default function AboutPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-blue-60o0 to-indigo-70o0 text-white py-20'>,
@@ -13,7 +13,7 @@ export default function AboutPage() {,
           </p>,
         </div>,
       </section>,
-      {/* Company Overview */,}
+      {/* Company Overview */}
 ,
       <section className='py-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -23,14 +23,14 @@ export default function AboutPage() {,
                 Leading the AI Revolution,
               </h2>,
               <p className='text-lg text-gray-60o0 mb-6'>,
-                Founded with a vision to democratize advanced AI technology,;
+                Founded with a vision to democratize advanced AI technology;
                 Zion Tech Group has been at the forefront of innovation in,
                 artificial intelligence, quantum computing, and autonomous,
                 systems.,
               </p>,
               <p className='text-lg text-gray-60o0 mb-6'>,
                 Our mission is to empower businesses of all sizes with,
-                cutting-edge technology solutions that drive growth, efficiency,;
+                cutting-edge technology solutions that drive growth, efficiency;
                 and competitive advantage in an increasingly digital world.,
               </p>,
               <p className='text-lg text-gray-60o0'>,
@@ -43,13 +43,12 @@ export default function AboutPage() {,
               <div className='space-y-6'>,
                 <div className='flex items-center space-x-4'>,
                   <div className='w-12 h-12 bg-blue-10o0 rounded-lg flex items-center justify-center'>,
-                    <svg,
+                    <svg
                       className='w-6 h-6 text-blue-60o0',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -68,13 +67,12 @@ export default function AboutPage() {,
                 </div>,
                 <div className='flex items-center space-x-4'>,
                   <div className='w-12 h-12 bg-green-10o0 rounded-lg flex items-center justify-center'>,
-                    <svg,
+                    <svg
                       className='w-6 h-6 text-green-60o0',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -93,13 +91,12 @@ export default function AboutPage() {,
                 </div>,
                 <div className='flex items-center space-x-4'>,
                   <div className='w-12 h-12 bg-purple-10o0 rounded-lg flex items-center justify-center'>,
-                    <svg,
+                    <svg
                       className='w-6 h-6 text-purple-60o0',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -136,16 +133,15 @@ export default function AboutPage() {,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
             <div className='text-center'>,
               <div className='w-16 h-16 bg-blue-10o0 rounded-full flex items-center justify-center mx-auto mb-6'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-blue-60o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                   />,
                 </svg>,
@@ -160,13 +156,12 @@ export default function AboutPage() {,
             </div>,
             <div className='text-center'>,
               <div className='w-16 h-16 bg-green-10o0 rounded-full flex items-center justify-center mx-auto mb-6'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-green-60o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -184,13 +179,12 @@ export default function AboutPage() {,
             </div>,
             <div className='text-center'>,
               <div className='w-16 h-16 bg-purple-10o0 rounded-full flex items-center justify-center mx-auto mb-6'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-purple-60o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -243,7 +237,7 @@ export default function AboutPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Leadership Team */,}
+      {/* Leadership Team */}
       <section className='py-20 bg-gray-50'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -310,22 +304,18 @@ export default function AboutPage() {,
             with AI and technology?,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='/contact',
-              className='bg-white text-blue-60o0 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get in Touch,
             </a>,
-            <a,
+            <a
               href='/careers',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
               View Careers,
             </a>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

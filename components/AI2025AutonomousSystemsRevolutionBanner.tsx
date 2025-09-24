@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {,
-  return (,
+const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {
+  return (
     <section className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden">,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-blue-50o0 rounded-full opacity-20 animate-pulse"></div>,
       <div className="absolute top-32 right-20 w-16 h-16 bg-purple-50o0 rounded-full opacity-20 animate-bounce"></div>,
       <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-50o0 rounded-full opacity-20 animate-ping"></div>,
@@ -27,7 +26,7 @@ const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">,
-          {/* Key Benefits */,}
+          {/* Key Benefits */}
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">,
             <div className="text-3xl mb-4">🤖</div>,
             <h3 className="text-xl font-bold mb-3">Self-Evolving Neural Networks</h3>,
@@ -72,19 +71,17 @@ const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {,
             <div className="text-sm text-blue-20o0">Cost Savings</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-6">,
-            <Link,
+            <Link
               href="/blog/ai-20o25-enterprise-autonomous-systems-revolution-ultimate-guide",
-              className="bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Read Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href="/services/ai-automation",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Get Implementation Support,
             </Link>,
           </div>,
@@ -93,8 +90,5 @@ const AI20o25AutonomousSystemsRevolutionBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25AutonomousSystemsRevolutionBanner,
+    </section>)};
+export default AI20o25AutonomousSystemsRevolutionBanner;

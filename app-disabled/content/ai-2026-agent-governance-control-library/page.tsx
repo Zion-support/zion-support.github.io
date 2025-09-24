@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Agent Governance Control Library',;
+export const metadata = {
+  title: 'AI 20o26: Agent Governance Control Library';
   description:,
-    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.',;
+    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.';
 };
-,
-export default function AgentGovernanceControlLibraryPage() {,
-  return (,
+export default function AgentGovernanceControlLibraryPage() {
+  return (
     <main className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <header className='mb-10'>,
         <div className='text-sm font-semibold text-purple-70o0 mb-2'>,
@@ -62,20 +61,16 @@ export default function AgentGovernanceControlLibraryPage() {,
         </article>,
       </section>,
       <footer className='mt-12 flex flex-wrap gap-3'>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-agent-safety-runbooks',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
           Agent Safety Runbooks,
         </Link>,
-        <Link,
+        <Link
           href='/content/ai-20o26-policy-as-code-starter-kit',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Policy‑as‑Code Starter Kit,
         </Link>,
       </footer>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const EnterpriseKnowledgeAgentPlatform20o25 = () => {,
-  return (,
+const EnterpriseKnowledgeAgentPlatform20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Enterprise Knowledge Agent Platform (20o25)',
         description='How enterprises are deploying knowledge-grounded AI agents with retrieval, actions, and governance to drive measurable business outcomes.',
         keywords='enterprise ai agents, rags, retrieval augmented generation, ai governance, agent actions, 20o25',
@@ -71,23 +70,17 @@ const EnterpriseKnowledgeAgentPlatform20o25 = () => {,
           </ul>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Plan Your Agent Rollout,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EnterpriseKnowledgeAgentPlatform20o25,
-,
+    </div>)};
+export default EnterpriseKnowledgeAgentPlatform20o25;

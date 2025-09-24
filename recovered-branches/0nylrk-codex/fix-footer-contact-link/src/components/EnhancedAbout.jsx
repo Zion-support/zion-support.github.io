@@ -1,146 +1,128 @@
 import { motion } from 'framer-motion',
 import { Link } from 'react-router-dom',
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react',
-export const EnhancedAbout = () => {,
-    const companyValues = [,
-        {,
-            icon: Brain,;
-            title: 'Innovation First',;
-            description: 'We push the boundaries of what\'s possible with cutting-edge technology',;
-            color: 'zion-cyan',
-        ,},;
-        {,
-            icon: Shield,;
-            title: 'Trust & Security',;
-            description: 'Building secure, reliable solutions that protect our clients\' data',;
-            color: 'zion-purple',
-        ,},;
-        {,
-            icon: Users,;
-            title: 'Client Partnership',;
-            description: 'Long-term relationships built on trust, transparency, and results',;
-            color: 'zion-cyan',
-        ,},;
-        {,
-            icon: Rocket,;
-            title: 'Excellence',;
-            description: 'Delivering exceptional quality in every project we undertake',;
-            color: 'zion-purple',
-        ,}
+export const EnhancedAbout = () => {
+    const companyValues = [
+        {
+            icon: Brain;
+            title: 'Innovation First';
+            description: 'We push the boundaries of what\'s possible with cutting-edge technology';
+            color: 'zion-cyan'};
+        {
+            icon: Shield;
+            title: 'Trust & Security';
+            description: 'Building secure, reliable solutions that protect our clients\' data';
+            color: 'zion-purple'};
+        {
+            icon: Users;
+            title: 'Client Partnership';
+            description: 'Long-term relationships built on trust, transparency, and results';
+            color: 'zion-cyan'};
+        {
+            icon: Rocket;
+            title: 'Excellence';
+            description: 'Delivering exceptional quality in every project we undertake';
+            color: 'zion-purple'}
     ],
-    const teamMembers = [,
-        {,
-            name: 'Kleber',;
-            role: 'CEO & Founder',;
-            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'],;
-            avatar: '👨‍💼',
-        ,},;
-        {,
-            name: 'AI Team',;
-            role: 'Machine Learning Engineers',;
-            expertise: ['Deep Learning', 'NLP', 'Computer Vision'],;
-            avatar: '🤖',
-        ,},;
-        {,
-            name: 'DevOps Team',;
-            role: 'Cloud & Infrastructure',;
-            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'],;
-            avatar: '☁️',
-        ,},;
-        {,
-            name: 'Security Team',;
-            role: 'Cybersecurity Experts',;
-            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'],;
-            avatar: '🔒',
-        ,}
+    const teamMembers = [
+        {
+            name: 'Kleber';
+            role: 'CEO & Founder';
+            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'];
+            avatar: '👨‍💼'};
+        {
+            name: 'AI Team';
+            role: 'Machine Learning Engineers';
+            expertise: ['Deep Learning', 'NLP', 'Computer Vision'];
+            avatar: '🤖'};
+        {
+            name: 'DevOps Team';
+            role: 'Cloud & Infrastructure';
+            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'];
+            avatar: '☁️'};
+        {
+            name: 'Security Team';
+            role: 'Cybersecurity Experts';
+            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'];
+            avatar: '🔒'}
     ],
-    const milestones = [,
-        {,
-            year: '20o20',;
-            title: 'Company Founded',;
-            description: 'Zion Tech Group established with a vision for AI-driven innovation',;
-            achievement: 'First AI solution deployed',
-        ,},;
-        {,
-            year: '20o21',;
-            title: 'AI Breakthrough',;
-            description: 'Developed proprietary machine learning algorithms',;
-            achievement: '10+ enterprise clients onboarded',
-        ,},;
-        {,
-            year: '20o22',;
-            title: 'Cloud Expansion',;
-            description: 'Launched comprehensive cloud and DevOps services',;
-            achievement: '50+ successful cloud migrations',
-        ,},;
-        {,
-            year: '20o23',;
-            title: 'Global Reach',;
-            description: 'Expanded services to international markets',;
-            achievement: '10o0+ projects completed',
-        ,},;
-        {,
-            year: '20o24',;
-            title: 'Industry Leader',;
-            description: 'Recognized as a top technology solutions provider',;
-            achievement: '95% client satisfaction rate',
-        ,}
+    const milestones = [
+        {
+            year: '20o20';
+            title: 'Company Founded';
+            description: 'Zion Tech Group established with a vision for AI-driven innovation';
+            achievement: 'First AI solution deployed'};
+        {
+            year: '20o21';
+            title: 'AI Breakthrough';
+            description: 'Developed proprietary machine learning algorithms';
+            achievement: '10+ enterprise clients onboarded'};
+        {
+            year: '20o22';
+            title: 'Cloud Expansion';
+            description: 'Launched comprehensive cloud and DevOps services';
+            achievement: '50+ successful cloud migrations'};
+        {
+            year: '20o23';
+            title: 'Global Reach';
+            description: 'Expanded services to international markets';
+            achievement: '10o0+ projects completed'};
+        {
+            year: '20o24';
+            title: 'Industry Leader';
+            description: 'Recognized as a top technology solutions provider';
+            achievement: '95% client satisfaction rate'}
     ],
-    const containerVariants ={,
-        hidden: { opacity: 0 ,},;
-        visible: {,
-            opacity: 1,;
-            transition: {,
-                staggerChildren: 0.1,
-            ,}
+    const containerVariants ={
+        hidden: { opacity: 0 };
+        visible: {
+            opacity: 1;
+            transition: {
+                staggerChildren: 0.1}
         }
     };
-    const itemVariants ={,
-        hidden: { y: 20, opacity: 0 ,},;
-        visible: {,
-            y: 0,;
-            opacity: 1,;
-            transition: {,
-                duration: 0.6,;
-                ease: "easeOut",
-            ,}
+    const itemVariants ={
+        hidden: { y: 20, opacity: 0 };
+        visible: {
+            y: 0;
+            opacity: 1;
+            transition: {
+                duration: 0.6;
+                ease: "easeOut"}
         }
     };
-    const cardVariants ={,
-        hidden: { scale: 0.9, opacity: 0 ,},;
-        visible: {,
-            scale: 1,;
-            opacity: 1,;
-            transition: {,
-                duration: 0.5,;
-                ease: "easeOut",
-            ,}
-        },;
-        hover: {,
-            scale: 1.0o2,;
-            y: -5,;
-            transition: {,
-                duration: 0.3,;
-                ease: "easeOut",
-            ,}
+    const cardVariants ={
+        hidden: { scale: 0.9, opacity: 0 };
+        visible: {
+            scale: 1;
+            opacity: 1;
+            transition: {
+                duration: 0.5;
+                ease: "easeOut"}
+        };
+        hover: {
+            scale: 1.0o2;
+            y: -5;
+            transition: {
+                duration: 0.3;
+                ease: "easeOut"}
         }
     };
-    const timelineVariants ={,
-        hidden: { opacity: 0, x: -50 ,},;
-        visible: {,
-            opacity: 1,;
-            x: 0,;
-            transition: {,
-                duration: 0.8,;
-                ease: "easeOut",
-            ,}
+    const timelineVariants ={
+        hidden: { opacity: 0, x: -50 };
+        visible: {
+            opacity: 1;
+            x: 0;
+            transition: {
+                duration: 0.8;
+                ease: "easeOut"}
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
-        <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
-          <motion.h1 className="text-4xl md: text-6xl font-bold mb-6" variants={itemVariants,}>,
+        <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
+          <motion.h1 className="text-4xl md: text-6xl font-bold mb-6" variants={itemVariants}>,
             About{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-cyan-40o0">,
               Zion Tech Group,
@@ -150,7 +132,7 @@ export const EnhancedAbout = () => {,
             Leading the future of technology innovation through AI-powered solutions, cloud expertise, and digital transformation.,
             We help businesses thrive in the digital age.,
           </motion.p>,
-          <motion.div className="flex flex-col sm: flex-row gap-4 justify-center" variants={itemVariants,}>,
+          <motion.div className="flex flex-col sm: flex-row gap-4 justify-center" variants={itemVariants}>,
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 group">,
               Get Started,
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />,
@@ -161,10 +143,10 @@ export const EnhancedAbout = () => {,
           </motion.div>,
         </motion.div>,
       </section>,
-      {/* Mission & Vision */,}
+      {/* Mission & Vision */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
             <motion.div variants={itemVariants}>,
               <div className="mb-6">,
                 <Target className="h-16 w-16 text-zion-cyan mb-4" />,
@@ -195,7 +177,7 @@ export const EnhancedAbout = () => {,
       {/* Company Values */}
       <section className="py-16 bg-gradient-to-r from-blue-90o0/50 to-cyan-90o0/50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-          <motion.div className="text-center mb-16" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+          <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
               Our Core Values,
             </h2>,
@@ -203,10 +185,10 @@ export const EnhancedAbout = () => {,
               The principles that guide everything we do,
             </p>,
           </motion.div>,
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
-            {companyValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 group" variants={cardVariants,} whileHover="hover">,
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
+            {companyValues.map((value, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 group" variants={cardVariants} whileHover="hover">,
                 <div className="text-4xl mb-4 flex justify-center">,
-                  <value.icon className={`h-16 w-16 text-${value.color} group-hover: scale-110 transition-transform duration-30o0`,} />,
+                  <value.icon className={`h-16 w-16 text-${value.color} group-hover: scale-110 transition-transform duration-30o0`} />,
                 </div>,
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>,
                 <p className="text-gray-30o0 text-center">{value.description}</p>,
@@ -217,7 +199,7 @@ export const EnhancedAbout = () => {,
       {/* Team Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          <motion.div className="text-center mb-16" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+          <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
               Our Expert Team,
             </h2>,
@@ -225,8 +207,8 @@ export const EnhancedAbout = () => {,
               Meet the talented professionals driving innovation,
             </p>,
           </motion.div>,
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
-            {teamMembers.map((member, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 group" variants={cardVariants,} whileHover="hover">,
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
+            {teamMembers.map((member, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 group" variants={cardVariants} whileHover="hover">,
                 <div className="text-6xl mb-4 flex justify-center">{member.avatar}</div>,
                 <h3 className="text-xl font-semibold text-white mb-2 text-center">{member.name}</h3>,
                 <p className="text-zion-cyan text-center mb-4">{member.role}</p>,
@@ -243,7 +225,7 @@ export const EnhancedAbout = () => {,
       {/* Company Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-90o0/50 to-cyan-90o0/50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-          <motion.div className="text-center mb-16" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+          <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
               Our Journey,
             </h2>,
@@ -252,9 +234,9 @@ export const EnhancedAbout = () => {,
             </p>,
           </motion.div>,
           <div className="relative">,
-            {/* Timeline Line */,}
+            {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-zion-cyan to-zion-purple"></div>,
-            <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+            <motion.div className="space-y-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
               {milestones.map((milestone, index) => (<motion.div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`} variants={timelineVariants}>,
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-slate-90o0"></div>,
@@ -275,7 +257,7 @@ export const EnhancedAbout = () => {,
       {/* Stats Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
             <motion.div className="text-center" variants={itemVariants}>,
               <div className="text-4xl font-bold text-zion-cyan mb-2">10o0+</div>,
               <div className="text-gray-30o0">Projects Completed</div>,
@@ -297,7 +279,7 @@ export const EnhancedAbout = () => {,
       </section>,
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-90o0/50 to-cyan-90o0/50">,
-        <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+        <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
             Ready to Work with Us?,
           </h2>,
@@ -315,6 +297,4 @@ export const EnhancedAbout = () => {,
           </div>,
         </motion.div>,
       </section>,
-    </div>),
-,};
-,
+    </div>)};

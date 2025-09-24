@@ -1,53 +1,42 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Brain, Atom, Shield, Target, Rocket, Globe, Cpu,;
-  ArrowRight, Check, Star, TrendingUp, Users, Zap,;
-  Phone, Mail, MapPin, ExternalLink,
-} from 'lucide-react',
-,
+import {
+  Brain, Atom, Shield, Target, Rocket, Globe, Cpu;
+  ArrowRight, Check, Star, TrendingUp, Users, Zap;
+  Phone, Mail, MapPin, ExternalLink} from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o37Services } from '../data/innovative-20o37-services',
 import { advanced20o38Services } from '../data/advanced-20o38-services',
 import { revolutionary20o39Services } from '../data/revolutionary-20o39-services',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-const containerVariants ={,
-  hidden: { opacity: 0 ,},;
-  visible: {,
-    opacity: 1,;
-    transition: {,
-      staggerChildren: 0.1,
-    ,}
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+const containerVariants ={
+  hidden: { opacity: 0 };
+  visible: {
+    opacity: 1;
+    transition: {
+      staggerChildren: 0.1}
   }
 };
-,
-const itemVariants ={,
-  hidden: { y: 20, opacity: 0 ,},;
-  visible: {,
-    y: 0,;
-    opacity: 1,;
-    transition: {,
-      duration: 0.5,
-    ,}
+const itemVariants ={
+  hidden: { y: 20, opacity: 0 };
+  visible: {
+    y: 0;
+    opacity: 1;
+    transition: {
+      duration: 0.5}
   }
 };
-,
-export default function ComprehensiveServicesShowcase20o37() {,
-  const allServices = [,
-    ...innovative20o37Services,;
-    ...advanced20o38Services,;
-    ...revolutionary20o39Services,
-  ],
-,
-  const getCategoryIcon = (category: string) => {,
-    switch (category) {,
+export default function ComprehensiveServicesShowcase20o37() {
+  const allServices = [
+    ...innovative20o37Services;
+    ...advanced20o38Services;
+    ...revolutionary20o39Services],
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
       case 'AI & Personal Development':,
       case 'AI & Consciousness':,
         return <Brain className="w-6 h-6"  />,
@@ -74,11 +63,9 @@ export default function ComprehensiveServicesShowcase20o37() {,
       case 'Quantum & Space':,
         return <Rocket className="w-6 h-6"  />,
       default:,
-        return <Target className="w-6 h-6"  />,
-    ,}
+        return <Target className="w-6 h-6"  />}
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <Head>,
         <title>Comprehensive Services Showcase 20o37 - Zion Tech Group</title>,
@@ -89,9 +76,9 @@ export default function ComprehensiveServicesShowcase20o37() {,
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
               <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
@@ -101,40 +88,38 @@ export default function ComprehensiveServicesShowcase20o37() {,
               <span className="text-white">Services Portfolio</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Experience the future of technology with our comprehensive suite of AI consciousness,;
+              Experience the future of technology with our comprehensive suite of AI consciousness;
               quantum computing, autonomous systems, and cutting-edge innovations,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0">,
                 Explore Services,
                 <ArrowRight className="w-5 h-5"  />,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="border-2 border-purple-40o0 text-purple-40o0 px-8 py-4 rounded-full font-semibold text-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-purple-40o0 text-purple-40o0 px-8 py-4 rounded-full font-semibold text-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0">,
                 Contact Sales,
               </motion.button>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Contact Bar */,}
+      {/* Contact Bar */}
       <section className="bg-gradient-to-r from-purple-80o0 to-indigo-80o0 py-6">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col md:flex-row justify-between items-center text-white">,
             <div className="flex items-center gap-4 mb-4 md:mb-0">,
               <Phone className="w-5 h-5"  />,
-              <span>{contactInfo.mobile,}</span>,
+              <span>{contactInfo.mobile}</span>,
             </div>,
             <div className="flex items-center gap-4 mb-4 md: mb-0">,
               <Mail className="w-5 h-5"  />,
-              <span>{contactInfo.email,}</span>,
+              <span>{contactInfo.email}</span>,
             </div>,
             <div className="flex items-center gap-4">,
               <MapPin className="w-5 h-5"  />,
@@ -147,19 +132,17 @@ export default function ComprehensiveServicesShowcase20o37() {,
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial="hidden",
             whileInView="visible",
-            viewport={{ once: true ,}}
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-          >,
-            {allServices.map((service, index) => (,
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+            {allServices.map((service, index) => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className="bg-gradient-to-br from-slate-80o0 to-slate-90o0 rounded-2xl p-8 border border-slate-70o0 hover: border-purple-50o0 transition-all duration-30o0 hover:transform hover:scale-10o5",
-              >,
-                {/* Service Header */,}
+                className="bg-gradient-to-br from-slate-80o0 to-slate-90o0 rounded-2xl p-8 border border-slate-70o0 hover: border-purple-50o0 transition-all duration-30o0 hover:transform hover:scale-10o5">,
+                {/* Service Header */}
                 <div className="flex items-start justify-between mb-6">,
                   <div className="flex items-center gap-3">,
                     <div className="text-4xl">{service.icon}</div>,
@@ -168,11 +151,10 @@ export default function ComprehensiveServicesShowcase20o37() {,
                       <p className="text-gray-40o0 text-sm">{service.category}</p>,
                     </div>,
                   </div>,
-                  {service.popular && (,
+                  {service.popular && (
                     <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold">,
                       Popular,
-                    </div>,
-                  )}
+                    </div>)}
                 </div>,
                 {/* Tagline */}
                 <p className="text-gray-30o0 mb-4">{service.tagline}</p>,
@@ -188,12 +170,11 @@ export default function ComprehensiveServicesShowcase20o37() {,
                     Key Features,
                   </h4>,
                   <ul className="space-y-2">,
-                    {service.features.slice(0, 4).map((feature, idx) => (,
+                    {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="text-gray-40o0 text-sm flex items-start gap-2">,
                         <div className="w-1.5 h-1.5 bg-purple-40o0 rounded-full mt-2 flex-shrink-0"></div>,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 {/* Market Info */}
@@ -201,17 +182,17 @@ export default function ComprehensiveServicesShowcase20o37() {,
                   <div className="flex items-center gap-2 text-sm">,
                     <TrendingUp className="w-4 h-4 text-green-40o0"  />,
                     <span className="text-gray-40o0">Market Size: </span>,
-                    <span className="text-white">{service.marketSize,}</span>,
+                    <span className="text-white">{service.marketSize}</span>,
                   </div>,
                   <div className="flex items-center gap-2 text-sm">,
                     <Users className="w-4 h-4 text-blue-40o0"  />,
                     <span className="text-gray-40o0">Customers: </span>,
-                    <span className="text-white">{service.customers,}+</span>,
+                    <span className="text-white">{service.customers}+</span>,
                   </div>,
                   <div className="flex items-center gap-2 text-sm">,
                     <Star className="w-4 h-4 text-yellow-40o0"  />,
                     <span className="text-gray-40o0">Rating: </span>,
-                    <span className="text-white">{service.rating,}/5 ({service.reviews} reviews)</span>,
+                    <span className="text-white">{service.rating}/5 ({service.reviews} reviews)</span>,
                   </div>,
                 </div>,
                 {/* ROI */}
@@ -222,23 +203,21 @@ export default function ComprehensiveServicesShowcase20o37() {,
                 {/* CTA */}
                 <div className="flex gap-3">,
                   <motion.button,
-                    whileHover={{ scale: 1.0o2 ,}}
-                    whileTap={{ scale: 0.98 ,}}
-                    className="flex-1 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-indigo-70o0 transition-all duration-30o0",
-                  >,
+                    whileHover={{ scale: 1.0o2 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="flex-1 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-indigo-70o0 transition-all duration-30o0">,
                     Get Started,
                   </motion.button>,
                   <motion.button,
-                    whileHover={{ scale: 1.0o2 ,}}
-                    whileTap={{ scale: 0.98 ,}}
+                    whileHover={{ scale: 1.0o2 }}
+                    whileTap={{ scale: 0.98 }}
                     className="bg-slate-70o0 text-white p-3 rounded-lg hover: bg-slate-60o0 transition-all duration-30o0",
                     onClick={() => window.open(service.link, '_blank')}
                   >,
                     <ExternalLink className="w-4 h-4"  />,
                   </motion.button>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
         </div>,
       </section>,
@@ -246,10 +225,10 @@ export default function ComprehensiveServicesShowcase20o37() {,
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-90o0 to-indigo-90o0">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Ready to Transform Your Business?,
@@ -260,32 +239,30 @@ export default function ComprehensiveServicesShowcase20o37() {,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2 hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0">,
                 Schedule Consultation,
                 <ArrowRight className="w-5 h-5"  />,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover: bg-white hover:text-purple-90o0 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover: bg-white hover:text-purple-90o0 transition-all duration-30o0">,
                 Download Brochure,
               </motion.button>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Footer */,}
+      {/* Footer */}
       <footer className="bg-slate-90o0 py-12 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             <div>,
               <h3 className="text-white font-bold text-lg mb-4">Zion Tech Group</h3>,
               <p className="text-gray-40o0 text-sm">,
-                Leading the future of technology with innovative AI, quantum computing,;
+                Leading the future of technology with innovative AI, quantum computing;
                 and autonomous systems solutions.,
               </p>,
             </div>,
@@ -329,6 +306,4 @@ export default function ComprehensiveServicesShowcase20o37() {,
           </div>,
         </div>,
       </footer>,
-    </div>,
-  ),
-,}
+    </div>)}

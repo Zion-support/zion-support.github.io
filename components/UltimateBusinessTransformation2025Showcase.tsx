@@ -1,10 +1,9 @@
 import Link from 'next/link',
-,
-const UltimateBusinessTransformation20o25Showcase = () => {,
-  return (,
+const UltimateBusinessTransformation20o25Showcase = () => {
+  return (
     <section className='bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white py-20'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-black rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-bold'>,
@@ -45,9 +44,9 @@ const UltimateBusinessTransformation20o25Showcase = () => {,
             <div className='text-lg text-gray-30o0'>Productivity Boost</div>,
           </div>,
         </div>,
-        {/* Transformation Modules */,}
+        {/* Transformation Modules */}
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 mb-16'>,
-          {/* AI-Powered Automation */,}
+          {/* AI-Powered Automation */}
           <div className='bg-gradient-to-br from-cyan-90o0 to-blue-90o0 rounded-3xl p-8 border border-cyan-40o0 border-opacity-30'>,
             <div className='flex items-center mb-6'>,
               <div className='text-4xl mr-4'>🤖</div>,
@@ -192,16 +191,14 @@ const UltimateBusinessTransformation20o25Showcase = () => {,
             Transformation 20o25 solutions.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/ultimate-business-transformation-20o25',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-cyan-50o0 hover:to-blue-50o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-cyan-50o0 hover:to-blue-50o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Start Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/transformation-case-studies',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-30o0'>,
               View Case Studies,
             </Link>,
           </div>,
@@ -223,9 +220,5 @@ const UltimateBusinessTransformation20o25Showcase = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimateBusinessTransformation20o25Showcase,
-,
+    </section>)};
+export default UltimateBusinessTransformation20o25Showcase;

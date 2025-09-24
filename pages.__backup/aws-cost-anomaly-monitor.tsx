@@ -1,8 +1,7 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
-export default function AwsCostAnomalyMonitorPage() {,
-  return (,
+export default function AwsCostAnomalyMonitorPage() {
+  return (
     <Layout>,
       <Head>,
         <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>,
@@ -14,9 +13,8 @@ export default function AwsCostAnomalyMonitorPage() {,
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">AWS Cost Anomaly Monitor</h1>,
           <p className="text-slate-30o0">Continuous anomaly detection with budget guardrailsSlack alertsroot-cause hintsand savings recommendations.</p>,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
-            {[ 'Anomaly detection & budgets'Slack triage workflows'Service/tag breakdowns'Monthly savings report' ].map((f) => (,
-              <div key={f,} className="p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0">{f}</div>,
-            ))}
+            {[ 'Anomaly detection & budgets'Slack triage workflows'Service/tag breakdowns'Monthly savings report' ].map((f) => (
+              <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0">{f}</div>))}
           </div>,
           <div className="flex gap-3">,
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-60o0 to-blue-70o0 text-white">Start from $199/mo</a>,
@@ -24,7 +22,5 @@ export default function AwsCostAnomalyMonitorPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

@@ -1,15 +1,14 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NewContent20o25UltimateBanner: React.FC = () => {,
-  return (,
+const NewContent20o25UltimateBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         />,
       </div>,
@@ -22,13 +21,13 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
             Revolutionary AI Content,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto'>,
-            Discover the latest breakthrough content on AI automation mastery,;
+            Discover the latest breakthrough content on AI automation mastery;
             quantum AI revolution, and Fortune 50o0 transformations that are,
             reshaping industries worldwide.,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
-          {/* Featured Blog Post */,}
+          {/* Featured Blog Post */}
           <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-4xl mb-4'>🤖</div>,
             <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>,
@@ -49,14 +48,13 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
                 98% Success,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-advanced-automation-mastery-ultimate-guide',
-              className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0'>,
               Read Guide →,
             </Link>,
           </div>,
-          {/* Quantum AI Content */,}
+          {/* Quantum AI Content */}
           <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-4xl mb-4'>⚛️</div>,
             <h3 className='text-2xl font-bold mb-4 text-cyan-40o0'>,
@@ -77,14 +75,13 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
                 Revolutionary,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-20o26-revolutionary-breakthrough-complete-guide',
-              className='inline-flex items-center bg-gradient-to-r from-cyan-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-purple-70o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center bg-gradient-to-r from-cyan-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-70o0 hover:to-purple-70o0 transition-all duration-30o0'>,
               Explore Breakthrough →,
             </Link>,
           </div>,
-          {/* Case Study */,}
+          {/* Case Study */}
           <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-4xl mb-4'>🏆</div>,
             <h3 className='text-2xl font-bold mb-4 text-green-40o0'>,
@@ -105,15 +102,14 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
                 Industry Leader,
               </span>,
             </div>,
-            <Link,
+            <Link
               href='/case-studies/quantum-ai-fortune-50o0-transformation-20o26-ultimate-success',
-              className='inline-flex items-center bg-gradient-to-r from-green-60o0 to-yellow-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center bg-gradient-to-r from-green-60o0 to-yellow-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-70o0 hover:to-yellow-70o0 transition-all duration-30o0'>,
               Read Case Study →,
             </Link>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20'>,
             <h3 className='text-3xl font-bold mb-4 text-yellow-40o0'>,
@@ -124,22 +120,20 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
               Fortune 50o0 clients.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-60o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0'>,
                 Explore Our Services,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mt-12'>,
           <div className='text-center'>,
             <div className='text-3xl font-bold text-yellow-40o0 mb-2'>,
@@ -161,9 +155,5 @@ const NewContent20o25UltimateBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o25UltimateBanner,
-,
+    </section>)};
+export default NewContent20o25UltimateBanner;

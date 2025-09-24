@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight,;
-  Brain, Rocket, Target, Atom, Shield,;
-  DollarSign, BarChart3, Globe, Grid, Heart, Database,;
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,;
-  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2,;
-  Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,;
-  Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,
-} from 'lucide-react',
-,
-interface NavigationItem {,
+import {
+  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+  Brain, Rocket, Target, Atom, Shield;
+  DollarSign, BarChart3, Globe, Grid, Heart, Database;
+  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
+  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
+  Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
+  Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon} from 'lucide-react',
+interface NavigationItem {
   name: string,
   href: string,
   icon?: React.ReactNode,
@@ -21,242 +19,206 @@ interface NavigationItem {,
   title?: string,
   featured?: boolean,
   category?: string,
-  color?: string,
-,}
+  color?: string}
 ,
-const navigationItems: NavigationItem[] = [,
-  {,
-    name: 'Innovative Services 20o25',;
-    href: '/20o25-innovative-services-showcase-v2',;
-    icon: <Rocket className="w-5 h-5"  />,;
-    description: 'Cutting-edge AI, quantum, and IT solutions',;
-    badge: 'New 20o25',;
-    category: 'services',;
-    color: 'from-emerald-50o0 to-cyan-50o0',;
-    children: [,
-      {,
-        name: 'AI Autonomous Ecosystem',;
-        href: '/20o25-innovative-services-showcase-v2',;
-        description: 'Revolutionary AI autonomous solutions',;
-        icon: <Brain className="w-4 h-4"  />,;
-        color: 'from-purple-50o0 to-pink-50o0',;
-        featured: true,
-      ,},;
-      {,
-        name: 'Quantum & Emerging Tech',;
-        href: '/20o25-innovative-services-showcase-v2',;
-        description: 'Quantum computing and breakthrough technologies',;
-        icon: <Atom className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',;
-        featured: true,
-      ,},;
-      {,
-        name: 'IT Infrastructure V2',;
-        href: '/20o25-innovative-services-showcase-v2',;
-        description: 'Advanced IT infrastructure solutions',;
-        icon: <Cpu className="w-4 h-4"  />,;
-        color: 'from-emerald-50o0 to-teal-50o0',
-      ,}
-    ],
-  },;
-  {,
-    name: 'Revolutionary Services 20o46',;
-    href: '/services',;
-    icon: <Sparkles className="w-5 h-5"  />,;
-    description: 'Future-defining technology solutions',;
-    badge: '20o46',;
-    category: 'services',;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    children: [,
-      {,
-        name: 'All Services',;
-        href: '/services',;
-        description: 'Complete revolutionary services overview',;
-        icon: <Grid className="w-4 h-4"  />,;
-        featured: true,
-      ,},;
-      {,
-        name: 'AI Consciousness Evolution 20o46',;
-        href: '/ai-consciousness-evolution-platform-20o46',;
-        description: 'Next-generation AI consciousness',;
-        icon: <Brain className="w-4 h-4"  />,;
-        color: 'from-purple-50o0 to-pink-50o0',;
-        featured: true,
-      ,},;
-      {,
-        name: 'Quantum AI Neural Networks 20o46',;
-        href: '/quantum-ai-neural-network-platform-20o46',;
-        description: 'Quantum-powered AI neural networks',;
-        icon: <Atom className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',;
-        featured: true,
-      ,}
-    ],
-  },;
-  {,
-    name: 'AI & Consciousness',;
-    href: '/ai-services',;
-    icon: <Brain className="w-5 h-5"  />,;
-    description: 'Advanced AI consciousness solutions',;
-    badge: '20o46',;
-    category: 'ai',;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    children: [,
-      {,
-        name: 'AI Consciousness Evolution',;
-        href: '/ai-consciousness-evolution-platform-20o46',;
-        description: 'Next-generation AI consciousness platform',;
-        icon: <Brain className="w-4 h-4"  />,;
-        color: 'from-purple-50o0 to-pink-50o0',
-      ,},;
-      {,
-        name: 'AI Autonomous Business Intelligence',;
-        href: '/autonomous-ai-business-intelligence-platform-20o46',;
-        description: 'Fully autonomous AI business intelligence',;
-        icon: <BarChart3 className="w-4 h-4"  />,;
-        color: 'from-emerald-50o0 to-teal-50o0',
-      ,},;
-      {,
-        name: 'AI Content Factory Pro',;
-        href: '/ai-autonomous-content-factory-pro-20o25',;
-        description: 'Autonomous AI content creation',;
-        icon: <FileText className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      ,}
-    ],
-  },;
-  {,
-    name: 'Quantum Technology',;
-    href: '/quantum-technology',;
-    icon: <Atom className="w-5 h-5"  />,;
-    description: 'Quantum computing and technology solutions',;
-    badge: '20o46',;
-    category: 'quantum',;
-    color: 'from-blue-50o0 to-indigo-50o0',;
-    children: [,
-      {,
-        name: 'Quantum AI Neural Networks',;
-        href: '/quantum-ai-neural-network-platform-20o46',;
-        description: 'Quantum-powered AI neural networks',;
-        icon: <Atom className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      ,},;
-      {,
-        name: 'Quantum Cybersecurity Intelligence',;
-        href: '/quantum-cybersecurity-intelligence-platform-20o46',;
-        description: 'Quantum-resistant security with AI',;
-        icon: <Shield className="w-4 h-4"  />,;
-        color: 'from-red-50o0 to-orange-50o0',
-      ,},;
-      {,
-        name: 'Quantum AI Fusion Platform',;
-        href: '/quantum-ai-neural-network-fusion-platform-20o25',;
-        description: 'Quantum-AI hybrid computing',;
-        icon: <Zap className="w-4 h-4"  />,;
-        color: 'from-purple-50o0 to-pink-50o0',
-      ,}
-    ],
-  },;
-  {,
-    name: 'IT Infrastructure',;
-    href: '/it-infrastructure',;
-    icon: <Cpu className="w-5 h-5"  />,;
-    description: 'Advanced IT infrastructure solutions',;
-    badge: '20o25',;
-    category: 'it',;
-    color: 'from-emerald-50o0 to-teal-50o0',;
-    children: [,
-      {,
-        name: 'Autonomous DevOps Intelligence',;
-        href: '/autonomous-devops-intelligence-platform-20o25',;
-        description: 'AI-powered DevOps optimization',;
-        icon: <Code className="w-4 h-4"  />,;
-        color: 'from-emerald-50o0 to-teal-50o0',
-      ,},;
-      {,
-        name: 'Edge Computing Orchestration',;
-        href: '/edge-computing-orchestration-platform-20o25',;
-        description: 'Edge computing optimization platform',;
-        icon: <Network className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      ,},;
-      {,
-        name: 'Multi-Cloud Management',;
-        href: '/multi-cloud-management-intelligence-platform-20o25',;
-        description: 'AI-powered multi-cloud management',;
-        icon: <Cloud className="w-4 h-4"  />,;
-        color: 'from-purple-50o0 to-pink-50o0',
-      ,}
-    ],
-  },;
-  {,
-    name: 'Space Technology',;
-    href: '/space-technology',;
-    icon: <Rocket className="w-5 h-5"  />,;
-    description: 'Space exploration and technology solutions',;
-    badge: '20o46',;
-    category: 'space',;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    children: [,
-      {,
-        name: 'Space Resource Intelligence',;
-        href: '/space-resource-intelligence-platform-20o25',;
-        description: 'AI-powered space resource discovery',;
-        icon: <Globe className="w-4 h-4"  />,;
-        color: 'from-indigo-50o0 to-purple-50o0',
-      ,},;
-      {,
-        name: 'Space Mining Automation',;
-        href: '/space-mining-automation-platform',;
-        description: 'Automated space mining operations',;
-        icon: <Rocket className="w-4 h-4"  />,;
-        color: 'from-blue-50o0 to-cyan-50o0',
-      ,}
-    ],
-  }
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'Innovative Services 20o25';
+    href: '/20o25-innovative-services-showcase-v2';
+    icon: <Rocket className="w-5 h-5"  />;
+    description: 'Cutting-edge AI, quantum, and IT solutions';
+    badge: 'New 20o25';
+    category: 'services';
+    color: 'from-emerald-50o0 to-cyan-50o0';
+    children: [
+      {
+        name: 'AI Autonomous Ecosystem';
+        href: '/20o25-innovative-services-showcase-v2';
+        description: 'Revolutionary AI autonomous solutions';
+        icon: <Brain className="w-4 h-4"  />;
+        color: 'from-purple-50o0 to-pink-50o0';
+        featured: true};
+      {
+        name: 'Quantum & Emerging Tech';
+        href: '/20o25-innovative-services-showcase-v2';
+        description: 'Quantum computing and breakthrough technologies';
+        icon: <Atom className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0';
+        featured: true};
+      {
+        name: 'IT Infrastructure V2';
+        href: '/20o25-innovative-services-showcase-v2';
+        description: 'Advanced IT infrastructure solutions';
+        icon: <Cpu className="w-4 h-4"  />;
+        color: 'from-emerald-50o0 to-teal-50o0'}
+    ]};
+  {
+    name: 'Revolutionary Services 20o46';
+    href: '/services';
+    icon: <Sparkles className="w-5 h-5"  />;
+    description: 'Future-defining technology solutions';
+    badge: '20o46';
+    category: 'services';
+    color: 'from-purple-50o0 to-pink-50o0';
+    children: [
+      {
+        name: 'All Services';
+        href: '/services';
+        description: 'Complete revolutionary services overview';
+        icon: <Grid className="w-4 h-4"  />;
+        featured: true};
+      {
+        name: 'AI Consciousness Evolution 20o46';
+        href: '/ai-consciousness-evolution-platform-20o46';
+        description: 'Next-generation AI consciousness';
+        icon: <Brain className="w-4 h-4"  />;
+        color: 'from-purple-50o0 to-pink-50o0';
+        featured: true};
+      {
+        name: 'Quantum AI Neural Networks 20o46';
+        href: '/quantum-ai-neural-network-platform-20o46';
+        description: 'Quantum-powered AI neural networks';
+        icon: <Atom className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0';
+        featured: true}
+    ]};
+  {
+    name: 'AI & Consciousness';
+    href: '/ai-services';
+    icon: <Brain className="w-5 h-5"  />;
+    description: 'Advanced AI consciousness solutions';
+    badge: '20o46';
+    category: 'ai';
+    color: 'from-purple-50o0 to-pink-50o0';
+    children: [
+      {
+        name: 'AI Consciousness Evolution';
+        href: '/ai-consciousness-evolution-platform-20o46';
+        description: 'Next-generation AI consciousness platform';
+        icon: <Brain className="w-4 h-4"  />;
+        color: 'from-purple-50o0 to-pink-50o0'};
+      {
+        name: 'AI Autonomous Business Intelligence';
+        href: '/autonomous-ai-business-intelligence-platform-20o46';
+        description: 'Fully autonomous AI business intelligence';
+        icon: <BarChart3 className="w-4 h-4"  />;
+        color: 'from-emerald-50o0 to-teal-50o0'};
+      {
+        name: 'AI Content Factory Pro';
+        href: '/ai-autonomous-content-factory-pro-20o25';
+        description: 'Autonomous AI content creation';
+        icon: <FileText className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0'}
+    ]};
+  {
+    name: 'Quantum Technology';
+    href: '/quantum-technology';
+    icon: <Atom className="w-5 h-5"  />;
+    description: 'Quantum computing and technology solutions';
+    badge: '20o46';
+    category: 'quantum';
+    color: 'from-blue-50o0 to-indigo-50o0';
+    children: [
+      {
+        name: 'Quantum AI Neural Networks';
+        href: '/quantum-ai-neural-network-platform-20o46';
+        description: 'Quantum-powered AI neural networks';
+        icon: <Atom className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0'};
+      {
+        name: 'Quantum Cybersecurity Intelligence';
+        href: '/quantum-cybersecurity-intelligence-platform-20o46';
+        description: 'Quantum-resistant security with AI';
+        icon: <Shield className="w-4 h-4"  />;
+        color: 'from-red-50o0 to-orange-50o0'};
+      {
+        name: 'Quantum AI Fusion Platform';
+        href: '/quantum-ai-neural-network-fusion-platform-20o25';
+        description: 'Quantum-AI hybrid computing';
+        icon: <Zap className="w-4 h-4"  />;
+        color: 'from-purple-50o0 to-pink-50o0'}
+    ]};
+  {
+    name: 'IT Infrastructure';
+    href: '/it-infrastructure';
+    icon: <Cpu className="w-5 h-5"  />;
+    description: 'Advanced IT infrastructure solutions';
+    badge: '20o25';
+    category: 'it';
+    color: 'from-emerald-50o0 to-teal-50o0';
+    children: [
+      {
+        name: 'Autonomous DevOps Intelligence';
+        href: '/autonomous-devops-intelligence-platform-20o25';
+        description: 'AI-powered DevOps optimization';
+        icon: <Code className="w-4 h-4"  />;
+        color: 'from-emerald-50o0 to-teal-50o0'};
+      {
+        name: 'Edge Computing Orchestration';
+        href: '/edge-computing-orchestration-platform-20o25';
+        description: 'Edge computing optimization platform';
+        icon: <Network className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0'};
+      {
+        name: 'Multi-Cloud Management';
+        href: '/multi-cloud-management-intelligence-platform-20o25';
+        description: 'AI-powered multi-cloud management';
+        icon: <Cloud className="w-4 h-4"  />;
+        color: 'from-purple-50o0 to-pink-50o0'}
+    ]};
+  {
+    name: 'Space Technology';
+    href: '/space-technology';
+    icon: <Rocket className="w-5 h-5"  />;
+    description: 'Space exploration and technology solutions';
+    badge: '20o46';
+    category: 'space';
+    color: 'from-indigo-50o0 to-purple-50o0';
+    children: [
+      {
+        name: 'Space Resource Intelligence';
+        href: '/space-resource-intelligence-platform-20o25';
+        description: 'AI-powered space resource discovery';
+        icon: <Globe className="w-4 h-4"  />;
+        color: 'from-indigo-50o0 to-purple-50o0'};
+      {
+        name: 'Space Mining Automation';
+        href: '/space-mining-automation-platform';
+        description: 'Automated space mining operations';
+        icon: <Rocket className="w-4 h-4"  />;
+        color: 'from-blue-50o0 to-cyan-50o0'}
+    ]}
 ],
-,
-const UltraFuturisticNavigation20o47: React.FC = () => {,
+const UltraFuturisticNavigation20o47: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
-,
-  useEffect(() => {,
-    const handleScroll = () => {,
-      setIsScrolled(window.scrollY > 20),
-    };
-,
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
-,
-  const toggleDropdown = (name: string) => {,
-    setActiveDropdown(activeDropdown === name ? null : name),
-  ,};
-,
-  const closeDropdown = () => {,
-    setActiveDropdown(null),
-  };
-,
-  return (,
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name)};
+  const closeDropdown = () => {
+    setActiveDropdown(null)};
+  return (
     <>,
       {/* Background Blur Effect */}
-      <div className={`fixed inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-30o0 ${,
-        isOpen ? 'opacity-10o0 z-40' : 'opacity-0 pointer-events-none',
-      }`} onClick={() => setIsOpen(false)} />,
+      <div className={`fixed inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-30o0 ${
+        isOpen ? 'opacity-10o0 z-40' : 'opacity-0 pointer-events-none'}`} onClick={() => setIsOpen(false)} />,
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${,
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled,
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20',
-          : 'bg-transparent',
-      }`}>,
+          : 'bg-transparent'}`}>,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex items-center justify-between h-20">,
-            {/* Logo */,}
+            {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">,
               <motion.div,
                 className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center shadow-lg group-hover: shadow-cyan-50o0/50 transition-all duration-30o0",
-                whileHover={{ scale: 1.0o5, rotate: 5 ,}}
+                whileHover={{ scale: 1.0o5, rotate: 5 }}
               >,
                 <Brain className="w-7 h-7 text-white"  />,
               </motion.div>,
@@ -265,33 +227,30 @@ const UltraFuturisticNavigation20o47: React.FC = () => {,
                 <div className="text-xs text-cyan-40o0">Innovating the Future</div>,
               </div>,
             </Link>,
-            {/* Desktop Navigation */,}
+            {/* Desktop Navigation */}
             <div className="hidden lg: flex items-center space-x-8">,
-              {navigationItems.map((item) => (,
-                <div key={item.name,} className="relative group">,
-                  <button,
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">,
+                  <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0 group-hover:text-cyan-40o0",
-                  >,
-                    {item.icon,}
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0 group-hover:text-cyan-40o0">,
+                    {item.icon}
                     <span className="font-medium">{item.name}</span>,
-                    {item.badge && (,
+                    {item.badge && (
                       <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">,
                         {item.badge}
-                      </span>,
-                    )}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${,
-                      activeDropdown === item.name ? 'rotate-180' : '',
-                    }`}  />,
+                      </span>)}
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''}`}  />,
                   </button>,
                   {/* Dropdown Menu */}
                   <AnimatePresence>,
-                    {activeDropdown === item.name && (,
+                    {activeDropdown === item.name && (
                       <motion.div,
-                        initial={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                        animate={{ opacity: 1, y: 0, scale: 1 ,}}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                        transition={{ duration: 0.2 ,}}
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10 overflow-hidden",
                         onMouseLeave={closeDropdown}
                       >,
@@ -301,15 +260,14 @@ const UltraFuturisticNavigation20o47: React.FC = () => {,
                             <p className="text-sm text-gray-40o0">{item.description}</p>,
                           </div>,
                           <div className="space-y-2">,
-                            {item.children?.map((child) => (,
-                              <Link,
+                            {item.children?.map((child) => (
+                              <Link
                                 key={child.name}
                                 href={child.href}
-                                className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-20o0 group ${,
+                                className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-20o0 group ${
                                   child.featured,
                                     ? 'bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20',
-                                    : 'hover: bg-gray-80o0/50',
-                                ,}`}
+                                    : 'hover: bg-gray-80o0/50'}`}
                                 onClick={closeDropdown}
                               >,
                                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-60o0 to-gray-70o0'} flex items-center justify-center`}>,
@@ -317,35 +275,31 @@ const UltraFuturisticNavigation20o47: React.FC = () => {,
                                 </div>,
                                 <div className="flex-1">,
                                   <div className="text-sm font-medium text-white group-hover: text-cyan-40o0 transition-colors duration-20o0">,
-                                    {child.name,}
+                                    {child.name}
                                   </div>,
                                   <div className="text-xs text-gray-40o0">{child.description}</div>,
                                 </div>,
-                                {child.featured && (,
-                                  <Star className="w-4 h-4 text-yellow-40o0"  />,
-                                )}
-                              </Link>,
-                            ))}
+                                {child.featured && (
+                                  <Star className="w-4 h-4 text-yellow-40o0"  />)}
+                              </Link>))}
                           </div>,
                         </div>,
-                      </motion.div>,
-                    )}
+                      </motion.div>)}
                   </AnimatePresence>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Right Side Actions */}
             <div className="hidden lg: flex items-center space-x-4">,
-              {/* Search */,}
+              {/* Search */}
               <button className="p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0">,
                 <Search className="w-5 h-5"  />,
               </button>,
-              {/* Notifications */,}
+              {/* Notifications */}
               <button className="p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0 relative">,
                 <Bell className="w-5 h-5"  />,
                 <span className="absolute top-0 right-0 w-2 h-2 bg-red-50o0 rounded-full"></span>,
               </button>,
-              {/* User Menu */,}
+              {/* User Menu */}
               <div className="relative group">,
                 <button className="flex items-center space-x-2 p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0">,
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center">,
@@ -369,92 +323,79 @@ const UltraFuturisticNavigation20o47: React.FC = () => {,
                   </div>,
                 </div>,
               </div>,
-              {/* CTA Button */,}
-              <Link,
+              {/* CTA Button */}
+              <Link
                 href="/contact",
-                className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-xl font-medium hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25",
-              >,
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-xl font-medium hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25">,
                 Get Started,
               </Link>,
             </div>,
-            {/* Mobile Menu Button */,}
-            <button,
+            {/* Mobile Menu Button */}
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg: hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0",
-            >,
-              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />,}
+              className="lg: hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">,
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>,
           </div>,
         </div>,
       </nav>,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, x: '10o0%' ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            exit={{ opacity: 0, x: '10o0%' ,}}
-            transition={{ duration: 0.3 ,}}
-            className="fixed top-0 right-0 h-full w-80 bg-gray-90o0/95 backdrop-blur-xl z-50 border-l border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10",
-          >,
+            initial={{ opacity: 0, x: '10o0%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '10o0%' }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-0 right-0 h-full w-80 bg-gray-90o0/95 backdrop-blur-xl z-50 border-l border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10">,
             <div className="p-6">,
               <div className="flex items-center justify-between mb-8">,
                 <div className="text-xl font-bold text-white">Menu</div>,
-                <button,
+                <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0",
-                >,
+                  className="p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0">,
                   <X className="w-6 h-6"  />,
                 </button>,
               </div>,
               <div className="space-y-4">,
-                {navigationItems.map((item) => (,
-                  <div key={item.name,}>,
-                    <button,
+                {navigationItems.map((item) => (
+                  <div key={item.name}>,
+                    <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="w-full flex items-center justify-between p-3 text-left text-gray-30o0 hover: text-white transition-colors duration-20o0",
-                    >,
+                      className="w-full flex items-center justify-between p-3 text-left text-gray-30o0 hover: text-white transition-colors duration-20o0">,
                       <div className="flex items-center space-x-3">,
-                        {item.icon,}
+                        {item.icon}
                         <span>{item.name}</span>,
                       </div>,
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${,
-                        activeDropdown === item.name ? 'rotate-180' : '',
-                      }`}  />,
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''}`}  />,
                     </button>,
-                    {activeDropdown === item.name && (,
+                    {activeDropdown === item.name && (
                       <div className="ml-6 space-y-2">,
-                        {item.children?.map((child) => (,
-                          <Link,
+                        {item.children?.map((child) => (
+                          <Link
                             key={child.name}
                             href={child.href}
                             className="block p-2 text-sm text-gray-40o0 hover: text-white transition-colors duration-20o0",
-                            onClick={() => setIsOpen(false),}
+                            onClick={() => setIsOpen(false)}
                           >,
                             {child.name}
-                          </Link>,
-                        ))}
-                      </div>,
-                    )}
-                  </div>,
-                ))}
+                          </Link>))}
+                      </div>)}
+                  </div>))}
 ,
                 <div className="pt-6 border-t border-gray-70o0">,
-                  <Link,
+                  <Link
                     href="/contact",
                     className="block w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-3 rounded-xl font-medium text-center hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0",
-                    onClick={() => setIsOpen(false),}
+                    onClick={() => setIsOpen(false)}
                   >,
                     Get Started,
                   </Link>,
                 </div>,
               </div>,
             </div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
-    </>,
-  ),
-};
-,
-export default UltraFuturisticNavigation20o47,
+    </>)};
+export default UltraFuturisticNavigation20o47;

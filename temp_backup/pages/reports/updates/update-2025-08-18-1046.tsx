@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UpdatePage() {,
-  return (,
+export default function UpdatePage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Autonomous Update — 20o25-08-18 10: 46</title>,
@@ -26,9 +25,7 @@ export default function UpdatePage() {,
           <p className="text-white/80">Dive deeper on <a className="text-cyan-30o0 underline" href="https: //ziontechgroup.com" target="_blank" rel="noopener">ziontechgroup.com</a>.</p>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

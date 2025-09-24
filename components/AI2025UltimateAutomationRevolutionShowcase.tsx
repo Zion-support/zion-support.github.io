@@ -1,97 +1,91 @@
 'use client',
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const AI20o25UltimateAutomationRevolutionShowcase = () => {,
+const AI20o25UltimateAutomationRevolutionShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 'ultimate-automation-revolution',;
+  const contentItems = [
+    {
+      id: 'ultimate-automation-revolution';
       title:,
-        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',;
-      type: 'blog',;
-      category: 'automation',;
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',;
-      metrics: {,
-        roi: '50,0o00%',;
-        savings: '$2.8B+',;
-        efficiency: '2,50o0%',;
-        accuracy: '99.97%',;
-      },;
+        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough';
+      type: 'blog';
+      category: 'automation';
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
+      metrics: {
+        roi: '50,0o00%';
+        savings: '$2.8B+';
+        efficiency: '2,50o0%';
+        accuracy: '99.97%';
+      };
       description:,
-        'Transform your business with revolutionary AI automation that delivers unprecedented returns',;
-      readingTime: '25 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'fortune-50o0-success-story',;
+        'Transform your business with revolutionary AI automation that delivers unprecedented returns';
+      readingTime: '25 min read';
+      featured: true;
+    };
+    {
+      id: 'fortune-50o0-success-story';
       title:,
-        'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',;
-      type: 'case-study',;
-      category: 'success-story',;
-      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',;
-      metrics: {,
-        roi: '50,0o00%',;
-        savings: '$2.8B',;
-        timeline: '18 months',;
-        accuracy: '99.97%',;
-      },;
+        'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI';
+      type: 'case-study';
+      category: 'success-story';
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
+      metrics: {
+        roi: '50,0o00%';
+        savings: '$2.8B';
+        timeline: '18 months';
+        accuracy: '99.97%';
+      };
       description:,
-        'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation',;
-      readingTime: '22 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'implementation-ultimate-guide',;
+        'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation';
+      readingTime: '22 min read';
+      featured: true;
+    };
+    {
+      id: 'implementation-ultimate-guide';
       title:,
-        'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',;
-      type: 'resource',;
-      category: 'implementation',;
-      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi',;
-      metrics: {,
-        roi: '50,0o00%',;
-        success: '94%',;
-        timeline: '12-18 months',;
-        guide: 'Complete',;
-      },;
+        'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI';
+      type: 'resource';
+      category: 'implementation';
+      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi';
+      metrics: {
+        roi: '50,0o00%';
+        success: '94%';
+        timeline: '12-18 months';
+        guide: 'Complete';
+      };
       description:,
-        'The definitive guide to achieving unprecedented returns through revolutionary AI automation',;
-      readingTime: '45 min read',;
-      featured: true,;
-    },;
+        'The definitive guide to achieving unprecedented returns through revolutionary AI automation';
+      readingTime: '45 min read';
+      featured: true;
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'automation',;
-      name: 'AI Automation',;
-      count: contentItems.filter(item => item.category === 'automation').length,;
-    },;
-    {,
-      id: 'success-story',;
-      name: 'Success Stories',;
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length };
+    {
+      id: 'automation';
+      name: 'AI Automation';
+      count: contentItems.filter(item => item.category === 'automation').length;
+    };
+    {
+      id: 'success-story';
+      name: 'Success Stories';
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length,;
-    },;
-    {,
-      id: 'implementation',;
-      name: 'Implementation',;
+        .length;
+    };
+    {
+      id: 'implementation';
+      name: 'Implementation';
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length,;
-    },;
+        .length;
+    };
   ],
-,
   const filteredItems =,
     selectedCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.category === selectedCategory),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -99,12 +93,10 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    ,}
+        return '📄'}
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study':,
@@ -112,14 +104,12 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
-,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-10o0 text-purple-80o0 mb-4'>,
             🚀 AI 20o25 ULTIMATE AUTOMATION REVOLUTION,
@@ -135,40 +125,36 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
         </div>,
         {/* Category filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${,
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 selectedCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredItems.map((item, index) => (,
-            <div,
+          {filteredItems.map((item, index) => (
+            <div
               key={item.id}
-              className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
-                item.featured ? 'ring-2 ring-purple-50o0' : '',
-              ,}`}
+              className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
+                item.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured badge */}
-              {item.featured && (,
+              {item.featured && (
                 <div className='absolute -top-2 -right-2 bg-yellow-40o0 text-black px-3 py-1 rounded-full text-xs font-bold'>,
                   FEATURED,
-                </div>,
-              )}
+                </div>)}
 ,
               <div className='p-6'>,
                 {/* Type badge */}
                 <div className='flex items-center justify-between mb-4'>,
-                  <span,
+                  <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                   >,
                     {getTypeIcon(item.type)}{' '}
@@ -203,23 +189,21 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
                 </div>,
                 {/* Call to action */}
                 <div className='space-y-3'>,
-                  <Link,
+                  <Link
                     href={item.url}
-                    className='w-full inline-flex items-center justify-center px-4 py-3 bg-purple-60o0 text-white font-semibold rounded-lg hover: bg-purple-70o0 transition-colors',
-                  >,
-                    Read Full{' ',}
+                    className='w-full inline-flex items-center justify-center px-4 py-3 bg-purple-60o0 text-white font-semibold rounded-lg hover: bg-purple-70o0 transition-colors'>,
+                    Read Full{' '}
                     {item.type === 'blog',
                       ? 'Article',
                       : item.type === 'case-study',
                         ? 'Case Study',
                         : 'Guide'}
-                    <svg,
+                    <svg
                       className='ml-2 w-4 h-4',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -227,18 +211,15 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
                       />,
                     </svg>,
                   </Link>,
-                  {item.type === 'case-study' && (,
-                    <Link,
+                  {item.type === 'case-study' && (
+                    <Link
                       href='/consultation',
-                      className='w-full inline-flex items-center justify-center px-4 py-2 border-2 border-purple-60o0 text-purple-60o0 font-semibold rounded-lg hover: bg-purple-50 transition-colors',
-                    >,
+                      className='w-full inline-flex items-center justify-center px-4 py-2 border-2 border-purple-60o0 text-purple-60o0 font-semibold rounded-lg hover: bg-purple-50 transition-colors'>,
                       Get Your Custom ROI Analysis,
-                    </Link>,
-                  ),}
+                    </Link>)}
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Bottom CTA section */}
         <div className='mt-16 text-center'>,
@@ -251,18 +232,16 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
               returns with AI automation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/consultation',
-                className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-lg hover:bg-gray-10o0 transition-colors',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-lg hover:bg-gray-10o0 transition-colors'>,
                 Get Your 50,0o00% ROI Roadmap,
-                <svg,
+                <svg
                   className='ml-2 w-5 h-5',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -270,16 +249,15 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
                   />,
                 </svg>,
               </Link>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover: bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover: bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore AI Automation Services,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Success metrics */,}
+        {/* Success metrics */}
         <div className='mt-16 grid grid-cols-1 md: grid-cols-4 gap-8'>,
           <div className='text-center'>,
             <div className='text-4xl font-bold text-purple-60o0 mb-2'>,
@@ -303,9 +281,5 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25UltimateAutomationRevolutionShowcase,
-,
+    </section>)};
+export default AI20o25UltimateAutomationRevolutionShowcase;

@@ -1,11 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
 // Using an explicit empty object type for props to satisfy lint rules,
 type Props = Record<stringnever>,
-,
-const ServicePage: NextPage<Props> = () => {,
-  return (,
+const ServicePage: NextPage<Props> = () => {
+  return (
     <>,
       <Head>,
         <title>Instagram Content Scheduler - Zion Tech Group</title>,
@@ -20,7 +18,4 @@ const ServicePage: NextPage<Props> = () => {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,};
-,
+    </>)};

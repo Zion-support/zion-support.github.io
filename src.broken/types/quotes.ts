@@ -1,5 +1,3 @@
 // Type definitions for quotes,
-interface quotes {,
-  // TODO: Add proper type definitions,
-,};
-,
+interface quotes {
+  // TODO: Add proper type definitions};

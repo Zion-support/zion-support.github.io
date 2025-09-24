@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AutonomousEnterpriseRevolutionBanner20o26: React.FC = () => {,
-  return (,
+const AutonomousEnterpriseRevolutionBanner20o26: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-16 relative overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
         <div className='absolute inset-0 bg-gradient-to-r from-green-40o0 to-emerald-50o0 transform rotate-12 scale-150'></div>,
         <div className='absolute inset-0 bg-gradient-to-l from-teal-40o0 to-cyan-50o0 transform -rotate-12 scale-150'></div>,
@@ -70,16 +69,14 @@ const AutonomousEnterpriseRevolutionBanner20o26: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-autonomous-enterprise-revolution-complete-guide',
-              className='bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/autonomous-enterprise',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all duration-30o0 backdrop-blur-sm'>,
               Start Transformation,
             </Link>,
           </div>,
@@ -90,9 +87,5 @@ const AutonomousEnterpriseRevolutionBanner20o26: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousEnterpriseRevolutionBanner20o26,
-,
+    </section>)};
+export default AutonomousEnterpriseRevolutionBanner20o26;

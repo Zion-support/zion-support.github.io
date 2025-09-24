@@ -1,147 +1,141 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-import {,
-  Brain,;
-  Zap,;
-  TrendingUp,;
-  ArrowRight,;
-  Star,;
-  Clock,;
-  Users,;
-  Award,;
+import {
+  Brain;
+  Zap;
+  TrendingUp;
+  ArrowRight;
+  Star;
+  Clock;
+  Users;
+  Award;
 } from 'lucide-react',
-,
-const AdvancedContentShowcase20o25 = () => {,
+const AdvancedContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const content = [,
-    {,
-      id: 'neural-interface',;
-      title: 'Neural Interface Revolution',;
+  const content = [
+    {
+      id: 'neural-interface';
+      title: 'Neural Interface Revolution';
       description:,
-        'Fortune 50o0 companies achieve 750% ROI through revolutionary brain-computer interface technology.',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough',;
-      metrics: {,
-        roi: '750%',;
-        savings: '$4.2B',;
-        accuracy: '99.9%',;
-        satisfaction: '99.7%',;
-      },;
-      readingTime: '18 min read',;
-      featured: true,;
-      category: 'breakthrough',;
-      icon: Brain,;
-      color: 'from-purple-60o0 to-indigo-60o0',;
-    },;
-    {,
-      id: 'autonomous-agents',;
-      title: 'Autonomous AI Agents Revolution',;
+        'Fortune 50o0 companies achieve 750% ROI through revolutionary brain-computer interface technology.';
+      type: 'blog';
+      url: '/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough';
+      metrics: {
+        roi: '750%';
+        savings: '$4.2B';
+        accuracy: '99.9%';
+        satisfaction: '99.7%';
+      };
+      readingTime: '18 min read';
+      featured: true;
+      category: 'breakthrough';
+      icon: Brain;
+      color: 'from-purple-60o0 to-indigo-60o0';
+    };
+    {
+      id: 'autonomous-agents';
+      title: 'Autonomous AI Agents Revolution';
       description:,
-        'Revolutionary autonomous AI agents achieving 90o0% ROI through self-managing systems.',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution',;
-      metrics: {,
-        roi: '90o0%',;
-        savings: '$5.8B',;
-        automation: '95%',;
-        satisfaction: '99.9%',;
-      },;
-      readingTime: '20 min read',;
-      featured: true,;
-      category: 'breakthrough',;
-      icon: Zap,;
-      color: 'from-blue-60o0 to-cyan-60o0',;
-    },;
-    {,
-      id: 'predictive-analytics',;
-      title: 'Advanced Predictive Analytics Revolution',;
+        'Revolutionary autonomous AI agents achieving 90o0% ROI through self-managing systems.';
+      type: 'blog';
+      url: '/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution';
+      metrics: {
+        roi: '90o0%';
+        savings: '$5.8B';
+        automation: '95%';
+        satisfaction: '99.9%';
+      };
+      readingTime: '20 min read';
+      featured: true;
+      category: 'breakthrough';
+      icon: Zap;
+      color: 'from-blue-60o0 to-cyan-60o0';
+    };
+    {
+      id: 'predictive-analytics';
+      title: 'Advanced Predictive Analytics Revolution';
       description:,
-        'AI-powered forecasting and intelligent insights delivering 650% ROI.',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-advanced-predictive-analytics-revolution',;
-      metrics: {,
-        roi: '650%',;
-        savings: '$3.6B',;
-        accuracy: '99.8%',;
-        satisfaction: '99.5%',;
-      },;
-      readingTime: '22 min read',;
-      featured: true,;
-      category: 'intelligence',;
-      icon: TrendingUp,;
-      color: 'from-green-60o0 to-emerald-60o0',;
-    },;
-    {,
-      id: 'neural-interface-case-study',;
-      title: 'Neural Interface Fortune 50o0 Success',;
+        'AI-powered forecasting and intelligent insights delivering 650% ROI.';
+      type: 'blog';
+      url: '/blog/ai-20o25-advanced-predictive-analytics-revolution';
+      metrics: {
+        roi: '650%';
+        savings: '$3.6B';
+        accuracy: '99.8%';
+        satisfaction: '99.5%';
+      };
+      readingTime: '22 min read';
+      featured: true;
+      category: 'intelligence';
+      icon: TrendingUp;
+      color: 'from-green-60o0 to-emerald-60o0';
+    };
+    {
+      id: 'neural-interface-case-study';
+      title: 'Neural Interface Fortune 50o0 Success';
       description:,
-        'How a Fortune 50o0 company achieved 850% ROI with brain-computer integration.',;
-      type: 'case-study',;
-      url: '/case-studies/ai-20o25-neural-interface-fortune-50o0-success-story',;
-      metrics: {,
-        roi: '850%',;
-        savings: '$3.2B',;
-        efficiency: '97%',;
-        satisfaction: '99.8%',;
-      },;
-      readingTime: '16 min read',;
-      featured: true,;
-      category: 'success',;
-      icon: Award,;
-      color: 'from-orange-60o0 to-red-60o0',;
-    },;
-    {,
-      id: 'autonomous-systems-case-study',;
-      title: 'Autonomous Systems Enterprise Success',;
+        'How a Fortune 50o0 company achieved 850% ROI with brain-computer integration.';
+      type: 'case-study';
+      url: '/case-studies/ai-20o25-neural-interface-fortune-50o0-success-story';
+      metrics: {
+        roi: '850%';
+        savings: '$3.2B';
+        efficiency: '97%';
+        satisfaction: '99.8%';
+      };
+      readingTime: '16 min read';
+      featured: true;
+      category: 'success';
+      icon: Award;
+      color: 'from-orange-60o0 to-red-60o0';
+    };
+    {
+      id: 'autonomous-systems-case-study';
+      title: 'Autonomous Systems Enterprise Success';
       description:,
-        '$2.8B company achieves 1,20o0% ROI with self-managing operations.',;
-      type: 'case-study',;
-      url: '/case-studies/ai-20o25-autonomous-systems-enterprise-transformation-success',;
-      metrics: {,
-        roi: '1,20o0%',;
-        savings: '$4.2B',;
-        automation: '98%',;
-        satisfaction: '99.9%',;
-      },;
-      readingTime: '18 min read',;
-      featured: true,;
-      category: 'success',;
-      icon: Users,;
-      color: 'from-teal-60o0 to-blue-60o0',;
-    },;
+        '$2.8B company achieves 1,20o0% ROI with self-managing operations.';
+      type: 'case-study';
+      url: '/case-studies/ai-20o25-autonomous-systems-enterprise-transformation-success';
+      metrics: {
+        roi: '1,20o0%';
+        savings: '$4.2B';
+        automation: '98%';
+        satisfaction: '99.9%';
+      };
+      readingTime: '18 min read';
+      featured: true;
+      category: 'success';
+      icon: Users;
+      color: 'from-teal-60o0 to-blue-60o0';
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Content', count: content.length ,},;
-    {,
-      id: 'breakthrough',;
-      name: 'Breakthrough Technology',;
-      count: content.filter(c => c.category === 'breakthrough').length,;
-    },;
-    {,
-      id: 'intelligence',;
-      name: 'AI Intelligence',;
-      count: content.filter(c => c.category === 'intelligence').length,;
-    },;
-    {,
-      id: 'success',;
-      name: 'Success Stories',;
-      count: content.filter(c => c.category === 'success').length,;
-    },;
+  const categories = [
+    { id: 'all', name: 'All Content', count: content.length };
+    {
+      id: 'breakthrough';
+      name: 'Breakthrough Technology';
+      count: content.filter(c => c.category === 'breakthrough').length;
+    };
+    {
+      id: 'intelligence';
+      name: 'AI Intelligence';
+      count: content.filter(c => c.category === 'intelligence').length;
+    };
+    {
+      id: 'success';
+      name: 'Success Stories';
+      count: content.filter(c => c.category === 'success').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? content,
       : content.filter(item => item.category === activeCategory),
-,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4'>,
             <Star className='w-5 h-5 mr-2' />,
@@ -155,36 +149,33 @@ const AdvancedContentShowcase20o25 = () => {,
             unprecedented ROI through cutting-edge implementations.,
           </p>,
         </div>,
-        {/* Category Filters */,}
+        {/* Category Filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${,
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-20o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md'}`}
             >,
               {category.name}
               <span className='ml-2 text-sm opacity-75'>,
                 ({category.count}),
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {filteredContent.map(item => {,
+          {filteredContent.map(item => {
             const IconComponent = item.icon,
-            return (,
-              <div,
-                key={item.id,}
-                className='group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0',
-              >,
-                {/* Header */,}
-                <div,
+            return (
+              <div
+                key={item.id}
+                className='group bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 overflow-hidden border border-gray-10o0'>,
+                {/* Header */}
+                <div
                   className={`bg-gradient-to-r ${item.color} p-6 text-white relative overflow-hidden`}
                 >,
                   <div className='absolute inset-0 bg-white/10 backdrop-blur-sm'></div>,
@@ -196,11 +187,10 @@ const AdvancedContentShowcase20o25 = () => {,
                           {item.type === 'blog' ? 'Blog Post' : 'Case Study'}
                         </span>,
                       </div>,
-                      {item.featured && (,
+                      {item.featured && (
                         <div className='bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded-full text-xs font-bold'>,
                           FEATURED,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                     <h3 className='text-xl font-bold mb-2 line-clamp-2'>,
                       {item.title}
@@ -213,7 +203,7 @@ const AdvancedContentShowcase20o25 = () => {,
                 {/* Metrics */}
                 <div className='p-6'>,
                   <div className='grid grid-cols-2 gap-4 mb-4'>,
-                    {Object.entries(item.metrics).map(([key, value]) => (,
+                    {Object.entries(item.metrics).map(([key, value]) => (
                       <div key={key} className='text-center'>,
                         <div className='text-2xl font-bold text-gray-90o0'>,
                           {value}
@@ -221,8 +211,7 @@ const AdvancedContentShowcase20o25 = () => {,
                         <div className='text-xs text-gray-50o0 uppercase tracking-wide'>,
                           {key.replace('_', ' ')}
                         </div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   <div className='flex items-center justify-between text-sm text-gray-50o0 mb-4'>,
                     <div className='flex items-center space-x-1'>,
@@ -234,17 +223,14 @@ const AdvancedContentShowcase20o25 = () => {,
                       <span>5.0</span>,
                     </div>,
                   </div>,
-                  <Link,
+                  <Link
                     href={item.url}
-                    className='group/btn w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center space-x-2',
-                  >,
+                    className='group/btn w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center space-x-2'>,
                     <span>Read More</span>,
                     <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform' />,
                   </Link>,
                 </div>,
-              </div>,
-            ),
-          ,})}
+              </div>)})}
         </div>,
         {/* Success Metrics Summary */}
         <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
@@ -278,20 +264,15 @@ const AdvancedContentShowcase20o25 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center mt-12'>,
-          <Link,
+          <Link
             href='/contact',
-            className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 shadow-lg hover:shadow-xl',
-          >,
+            className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 shadow-lg hover:shadow-xl'>,
             <span>Start Your AI Transformation</span>,
             <ArrowRight className='ml-2 w-5 h-5' />,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AdvancedContentShowcase20o25,
-,
+    </section>)};
+export default AdvancedContentShowcase20o25;

@@ -1,14 +1,12 @@
 "use client",
 import React{ useEffect } from 'react',
 import Head from 'next/head',
-,
-export default function InstagramRedirect() {,
-	useEffect(() => {,
-		if (typeof window !== 'undefined') {,
-			window.location.replace('https: //instagram.com/ziontechgroup'),
-		,}
+export default function InstagramRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //instagram.com/ziontechgroup')}
 	}[]),
-	return (,
+	return (
 		<>,
 			<Head>,
 				<title>Instagram | Zion Tech Group</title>,
@@ -21,6 +19,4 @@ export default function InstagramRedirect() {,
 					Continue to Instagram,
 				</a>,
 			</div>,
-		</>,
-	),
-,}
+		</>)}

@@ -1,5 +1,5 @@
-export default function SAASServicesPage() {,
-  return (,
+export default function SAASServicesPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <section className='py-20 text-center'>,
         <h1 className='text-4xl font-bold'>SaaS Services</h1>,
@@ -7,7 +7,5 @@ export default function SAASServicesPage() {,
           End‑to‑end SaaS design, development, and operations.,
         </p>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

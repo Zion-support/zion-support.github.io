@@ -1,19 +1,18 @@
-import {,
-  Brain,;
-  Search,;
-  BookOpen,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  Globe,;
-  ArrowRight,;
-  Cpu,;
-  Database,;
-  Network,;
+import {
+  Brain;
+  Search;
+  BookOpen;
+  Zap;
+  TrendingUp;
+  Users;
+  Globe;
+  ArrowRight;
+  Cpu;
+  Database;
+  Network;
 } from 'lucide-react',
-,
-export default function AIAutonomousResearchAssistant() {,
-  return (,
+export default function AIAutonomousResearchAssistant() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <div className='container mx-auto px-4 py-16'>,
         <div className='text-center mb-16'>,
@@ -65,7 +64,5 @@ export default function AIAutonomousResearchAssistant() {,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

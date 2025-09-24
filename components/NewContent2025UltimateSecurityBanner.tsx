@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o25UltimateSecurityBanner = () => {,
-  return (,
+const NewContent20o25UltimateSecurityBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-red-60o0 via-purple-60o0 to-blue-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -88,16 +87,14 @@ const NewContent20o25UltimateSecurityBanner = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-cybersecurity-revolution-ultimate-guide',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Read Full Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-security',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
               Get AI Security Solutions,
             </Link>,
           </div>,
@@ -106,9 +103,5 @@ const NewContent20o25UltimateSecurityBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o25UltimateSecurityBanner,
-,
+    </section>)};
+export default NewContent20o25UltimateSecurityBanner;

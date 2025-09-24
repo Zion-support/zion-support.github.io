@@ -1,102 +1,86 @@
 "use client",
 'use client',
-,
 import React{ useState } from 'react',
 import Link from 'next/link',
-,
-const AutonomousOperationsContentShowcase: React.FC = () => {,
+const AutonomousOperationsContentShowcase: React.FC = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 'autonomous-business-operations-revolution',;
-      type: 'blog',;
-      title: 'AI 20o25: The Autonomous Business Operations Revolution',;
-      subtitle: '$5.2T Market Transformation',;
-      description: 'Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.',;
-      metrics: {,
-        roi: '750%',;
-        savings: '$8.5M',;
-        efficiency: '95%',;
-        market: '$5.2T',
-      ,},;
-      tags: ['Autonomous 'Operations', 'AI 'Revolution', 'Enterprise'ROI'],;
-      readingTime: '22 min read',;
-      url: '/blog/ai-20o25-autonomous-business-operations-revolution',;
-      featured: true,;
-      category: 'blog',
-    ,},;
-    {,
-      id: 'fortune-10o0-autonomous-operations-success',;
-      type: 'case-study',;
-      title: 'Fortune 10o0 Autonomous Operations Success',;
-      subtitle: '$12.8B Annual Savings with 890% ROI',;
-      description: 'See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations implementation.',;
-      metrics: {,
-        roi: '890%',;
-        savings: '$12.8B',;
-        efficiency: '156%',;
-        uptime: '99.97%',
-      ,},;
-      tags: ['Fortune 10o0'Case 'Study', 'Manufacturing'Success Story'],;
-      readingTime: '18 min read',;
-      url: '/case-studies/fortune-10o0-autonomous-operations-890-roi-success',;
-      featured: true,;
-      category: 'case-study',
-    ,},;
-    {,
-      id: 'autonomous-operations-implementation-guide',;
-      type: 'resource',;
-      title: 'Autonomous Operations Implementation Guide',;
-      subtitle: 'From Strategy to 890% ROI',;
-      description: 'Complete roadmap for implementing autonomous operations with proven strategiesframeworksand best practices.',;
-      metrics: {,
-        roi: '890%',;
-        success: '98%',;
-        payback: '1.4 months',;
-        implementations: '50o0+',
-      ,},;
-      tags: ['Implementation 'Guide', 'Strategy', 'Framework', 'Best Practices'],;
-      readingTime: '35 min read',;
-      url: '/resources/autonomous-operations-implementation-guide-20o25',;
-      featured: true,;
-      category: 'resource',
-    ,}
+  const contentItems = [
+    {
+      id: 'autonomous-business-operations-revolution';
+      type: 'blog';
+      title: 'AI 20o25: The Autonomous Business Operations Revolution';
+      subtitle: '$5.2T Market Transformation';
+      description: 'Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.';
+      metrics: {
+        roi: '750%';
+        savings: '$8.5M';
+        efficiency: '95%';
+        market: '$5.2T'};
+      tags: ['Autonomous 'Operations', 'AI 'Revolution', 'Enterprise'ROI'];
+      readingTime: '22 min read';
+      url: '/blog/ai-20o25-autonomous-business-operations-revolution';
+      featured: true;
+      category: 'blog'};
+    {
+      id: 'fortune-10o0-autonomous-operations-success';
+      type: 'case-study';
+      title: 'Fortune 10o0 Autonomous Operations Success';
+      subtitle: '$12.8B Annual Savings with 890% ROI';
+      description: 'See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations implementation.';
+      metrics: {
+        roi: '890%';
+        savings: '$12.8B';
+        efficiency: '156%';
+        uptime: '99.97%'};
+      tags: ['Fortune 10o0'Case 'Study', 'Manufacturing'Success Story'];
+      readingTime: '18 min read';
+      url: '/case-studies/fortune-10o0-autonomous-operations-890-roi-success';
+      featured: true;
+      category: 'case-study'};
+    {
+      id: 'autonomous-operations-implementation-guide';
+      type: 'resource';
+      title: 'Autonomous Operations Implementation Guide';
+      subtitle: 'From Strategy to 890% ROI';
+      description: 'Complete roadmap for implementing autonomous operations with proven strategiesframeworksand best practices.';
+      metrics: {
+        roi: '890%';
+        success: '98%';
+        payback: '1.4 months';
+        implementations: '50o0+'};
+      tags: ['Implementation 'Guide', 'Strategy', 'Framework', 'Best Practices'];
+      readingTime: '35 min read';
+      url: '/resources/autonomous-operations-implementation-guide-20o25';
+      featured: true;
+      category: 'resource'}
   ],
-,
-  const categories = [,
-    { id: ''all', 'label: 'All 'Content', 'count: contentItems.length ,},;
-    { id: ''blog', 'label: 'Blog 'Posts', 'count: contentItems.filter(item => item.category === 'blog').length ,},;
-    { id: 'case-'study', 'label: 'Case 'Studies', 'count: contentItems.filter(item => item.category === 'case-study').length ,},;
-    { id: ''resource', 'label: ''Resources', 'count: contentItems.filter(item => item.category === 'resource').length ,}
+  const categories = [
+    { id: ''all', 'label: 'All 'Content', 'count: contentItems.length };
+    { id: ''blog', 'label: 'Blog 'Posts', 'count: contentItems.filter(item => item.category === 'blog').length };
+    { id: 'case-'study', 'label: 'Case 'Studies', 'count: contentItems.filter(item => item.category === 'case-study').length };
+    { id: ''resource', 'label: ''Resources', 'count: contentItems.filter(item => item.category === 'resource').length }
   ],
-,
   const filteredContent = activeCategory === 'all',
     ? contentItems,
     : contentItems.filter(item => item.category === activeCategory),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
-      default: return '📄',
-    ,}
+      default: return '📄'}
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog': return 'from-blue-50o0 to-blue-60o0',
       case 'case-study': return 'from-green-50o0 to-green-60o0',
       case 'resource': return 'from-purple-50o0 to-purple-60o0',
-      default: return 'from-gray-50o0 to-gray-60o0',
-    ,}
+      default: return 'from-gray-50o0 to-gray-60o0'}
   };
-,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-purple-10o0 text-purple-80o0 rounded-full px-6 py-2 mb-4">,
             <span className="text-sm font-medium">🚀 NEW AUTONOMOUS OPERATIONS CONTENT</span>,
@@ -108,28 +92,25 @@ const AutonomousOperationsContentShowcase: React.FC = () => {,
             Discover the latest insightsuccess storiesand implementation strategies for autonomous business operations that deliver 890% ROI.,
           </p>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">,
-          {categories.map((category) => (,
-            <button,
+          {categories.map((category) => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-purple-50 hover:text-purple-70o0 border border-gray-20o0'}`}
             >,
               {category.label}
-              <span className={`ml-2 px-2 py-1 rounded-full text-xs ${,
+              <span className={`ml-2 px-2 py-1 rounded-full text-xs ${
                 activeCategory === category.id,
                   ? 'bg-white/20 text-white',
-                  : 'bg-purple-10o0 text-purple-70o0',
-              }`}>,
+                  : 'bg-purple-10o0 text-purple-70o0'}`}>,
                 {category.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Success Metrics Summary */}
         <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,
@@ -150,25 +131,23 @@ const AutonomousOperationsContentShowcase: React.FC = () => {,
             <div className="text-gray-60o0 font-medium">System Uptime</div>,
           </div>,
         </div>,
-        {/* Content Grid */,}
+        {/* Content Grid */}
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
-          {filteredContent.map((item) => (,
-            <div,
-              key={item.id,}
-              className="bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden",
-            >,
-              {/* Header with type indicator */,}
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden">,
+              {/* Header with type indicator */}
               <div className={`bg-gradient-to-r ${getTypeColor(item.type)} p-4`}>,
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center space-x-2">,
                     <span className="text-2xl">{getTypeIcon(item.type)}</span>,
                     <span className="text-white font-semibold capitalize">{item.type.replace('-' ')}</span>,
                   </div>,
-                  {item.featured && (,
+                  {item.featured && (
                     <div className="bg-yellow-40o0 text-yellow-90o0 px-3 py-1 rounded-full text-xs font-bold">,
                       FEATURED,
-                    </div>,
-                  )}
+                    </div>)}
                 </div>,
               </div>,
               {/* Content */}
@@ -184,23 +163,20 @@ const AutonomousOperationsContentShowcase: React.FC = () => {,
                 </p>,
                 {/* Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-4">,
-                  {Object.entries(item.metrics).map(([keyvalue]) => (,
+                  {Object.entries(item.metrics).map(([keyvalue]) => (
                     <div key={key} className="bg-gray-50 p-3 rounded-lg text-center">,
                       <div className="text-lg font-bold text-gray-90o0">{value}</div>,
                       <div className="text-xs text-gray-60o0 capitalize">{key.replace(/([A-Z])/g' $1')}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">,
-                  {item.tags.slice(0o3).map((tag) => (,
-                    <span,
+                  {item.tags.slice(0o3).map((tag) => (
+                    <span
                       key={tag}
-                      className="bg-purple-10o0 text-purple-70o0 px-2 py-1 rounded text-xs font-medium",
-                    >,
+                      className="bg-purple-10o0 text-purple-70o0 px-2 py-1 rounded text-xs font-medium">,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Footer */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-20o0">,
@@ -210,19 +186,17 @@ const AutonomousOperationsContentShowcase: React.FC = () => {,
                     </svg>,
                     {item.readingTime}
                   </div>,
-                  <Link,
+                  <Link
                     href={item.url}
-                    className="inline-flex items-center px-4 py-2 bg-purple-60o0 text-white font-semibold rounded-lg hover: bg-purple-70o0 transition-colors text-sm",
-                  >,
+                    className="inline-flex items-center px-4 py-2 bg-purple-60o0 text-white font-semibold rounded-lg hover: bg-purple-70o0 transition-colors text-sm">,
                     Read More,
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
                     </svg>,
                   </Link>,
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className="mt-12 text-center">,
@@ -234,27 +208,22 @@ const AutonomousOperationsContentShowcase: React.FC = () => {,
               Join the revolution 'that', 's delivering 890% ROI and $12.8B savings to enterprise leaders worldwide.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/services/autonomous-operations",
-                className="inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors">,
                 <span>Get Expert Consultation</span>,
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
                 </svg>,
               </Link>,
-              <Link,
+              <Link
                 href="/resources/autonomous-operations-implementation-guide-20o25",
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-60o0 transition-colors",
-              >,
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-60o0 transition-colors">,
                 <span>Download Implementation Guide</span>,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousOperationsContentShowcase,
+    </section>)};
+export default AutonomousOperationsContentShowcase;

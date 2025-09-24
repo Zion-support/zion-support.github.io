@@ -1,389 +1,379 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Menu,;
-  ChevronDown,;
-  Search,;
-  Brain,;
-  Rocket,;
-  Shield,;
-  Zap,;
-  Globe,;
-  Star,;
-  Users,;
-  Target,;
-  Atom,;
-  BarChart3,;
-  Settings,;
-  Palette,;
-  BookOpen,;
-  GraduationCap,;
-  Heart,;
-  Truck,;
-  DollarSign,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Wifi,;
-  ShieldCheck,;
-  Code,;
-  Layers,;
+import {
+  Menu;
+  ChevronDown;
+  Search;
+  Brain;
+  Rocket;
+  Shield;
+  Zap;
+  Globe;
+  Star;
+  Users;
+  Target;
+  Atom;
+  BarChart3;
+  Settings;
+  Palette;
+  BookOpen;
+  GraduationCap;
+  Heart;
+  Truck;
+  DollarSign;
+  Lock;
+  Cpu;
+  Database;
+  Cloud;
+  Wifi;
+  ShieldCheck;
+  Code;
+  Layers;
 } from 'lucide-react',
-,
-interface NavigationItem {,
+interface NavigationItem {
   name: string,
   href: string,
   icon?: React.ReactNode,
   description?: string,
   children?: NavigationItem[],
   badge?: string,
-  color?: string,
-,}
+  color?: string}
 ,
-const navigationItems: NavigationItem[] = [,
-  {,
-    name: 'AI & Consciousness',;
-    href: '/services#ai-consciousness',;
-    icon: <Brain className='w-5 h-5' />,;
-    description: 'Revolutionary AI consciousness and emotional intelligence',;
-    badge: 'New',;
-    color: 'from-cyan-50o0 to-blue-50o0',;
-    children: [,
-      {,
-        name: 'AI Consciousness Evolution',;
-        href: '/ai-consciousness-evolution-20o29',;
-        description: 'Emotional intelligence and self-awareness',;
-        badge: 'Revolutionary',;
-      },;
-      {,
-        name: 'Quantum AI Fusion',;
-        href: '/quantum-ai-fusion',;
-        description: 'Quantum-AI hybrid computing',;
-        badge: 'Cutting-Edge',;
-      },;
-      {,
-        name: 'Autonomous AI Ecosystem',;
-        href: '/autonomous-ai-ecosystem',;
-        description: 'Self-managing AI systems',;
-        badge: 'Innovative',;
-      },;
-      {,
-        name: 'AI Ethics & Governance',;
-        href: '/ai-ethics-governance',;
-        description: 'Ethical AI frameworks',;
-        badge: 'Essential',;
-      },;
-      {,
-        name: 'AI Content Generator Pro',;
-        href: '/ai-content-generator',;
-        description: 'Professional AI content creation',;
-        badge: 'Popular',;
-      },;
-      {,
-        name: 'AI Meeting Transcriber',;
-        href: '/ai-meeting-transcriber',;
-        description: 'AI-powered meeting transcription',;
-        badge: 'Efficient',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Quantum & Emerging Tech',;
-    href: '/services#quantum-emerging',;
-    icon: <Atom className='w-5 h-5' />,;
-    description: 'Quantum computing and breakthrough technologies',;
-    badge: 'Hot',;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    children: [,
-      {,
-        name: 'Quantum Financial Trading',;
-        href: '/quantum-financial-trading-platform',;
-        description: 'Quantum-powered algorithmic trading',;
-        badge: 'Premium',;
-      },;
-      {,
-        name: 'Quantum Networking Platform',;
-        href: '/quantum-networking-platform',;
-        description: 'Quantum-secure communication',;
-        badge: 'Secure',;
-      },;
-      {,
-        name: 'Quantum Cybersecurity Suite',;
-        href: '/quantum-cybersecurity-suite',;
-        description: 'Quantum-resistant security',;
-        badge: 'Future-Proof',;
-      },;
-      {,
-        name: 'Quantum Data Analytics',;
-        href: '/quantum-data-analytics-platform',;
-        description: 'Quantum-powered big data analytics',;
-        badge: 'Fast',;
-      },;
-      {,
-        name: 'Space Mining Platform',;
-        href: '/space-mining-platform',;
-        description: 'Asteroid mining and space resources',;
-        badge: 'Space',;
-      },;
-      {,
-        name: 'Brain-Computer Interface',;
-        href: '/brain-computer-interface',;
-        description: 'Neural interface technology',;
-        badge: 'Advanced',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Enterprise IT',;
-    href: '/services#enterprise-it',;
-    icon: <Shield className='w-5 h-5' />,;
-    description: 'Enterprise solutions and infrastructure',;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    children: [,
-      {,
-        name: 'AI-Powered DevOps',;
-        href: '/ai-powered-devops-automation',;
-        description: 'Intelligent development automation',;
-        badge: 'Efficient',;
-      },;
-      {,
-        name: 'Blockchain Enterprise Platform',;
-        href: '/blockchain-enterprise-platform',;
-        description: 'Enterprise blockchain solutions',;
-        badge: 'Secure',;
-      },;
-      {,
-        name: 'Quantum Data Center',;
-        href: '/quantum-data-center',;
-        description: 'Next-gen data centers',;
-        badge: 'Future',;
-      },;
-      {,
-        name: '5G Private Network Solutions',;
-        href: '/5g-private-network-solutions',;
-        description: 'Advanced 5G infrastructure',;
-        badge: 'Fast',;
-      },;
-      {,
-        name: 'Zero Trust Security Platform',;
-        href: '/zero-trust-security-platform',;
-        description: 'Advanced cybersecurity',;
-        badge: 'Secure',;
-      },;
-      {,
-        name: 'Autonomous IT Operations',;
-        href: '/autonomous-it-operations',;
-        description: 'Self-managing IT systems',;
-        badge: 'Smart',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Micro SAAS',;
-    href: '/services#micro-saas',;
-    icon: <Target className='w-5 h-5' />,;
-    description: 'Innovative business solutions',;
-    badge: 'Popular',;
-    color: 'from-orange-50o0 to-red-50o0',;
-    children: [,
-      {,
-        name: 'AI Customer Success Platform',;
-        href: '/ai-customer-success-platform',;
-        description: 'Predictive customer success',;
-        badge: 'Smart',;
-      },;
-      {,
-        name: 'AI Sales Automation',;
-        href: '/ai-powered-sales-automation',;
-        description: 'Intelligent sales process automation',;
-        badge: 'Efficient',;
-      },;
-      {,
-        name: 'CyberShield Pro',;
-        href: '/cyber-shield-pro',;
-        description: 'Comprehensive cybersecurity',;
-        badge: 'Secure',;
-      },;
-      {,
-        name: 'DataVault Hub',;
-        href: '/data-vault-hub',;
-        description: 'Secure data management',;
-        badge: 'Safe',;
-      },;
-      {,
-        name: 'DevOps Automation Studio',;
-        href: '/devops-automation-studio',;
-        description: 'Development automation',;
-        badge: 'Fast',;
-      },;
-      {,
-        name: 'AI Meeting Transcriber Pro',;
-        href: '/ai-meeting-transcriber',;
-        description: 'Meeting transcription',;
-        badge: 'Accurate',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Financial Technology',;
-    href: '/services#financial-technology',;
-    icon: <DollarSign className='w-5 h-5' />,;
-    description: 'Quantum and AI-powered financial solutions',;
-    color: 'from-green-50o0 to-emerald-60o0',;
-    children: [,
-      {,
-        name: 'Quantum Trading Platform',;
-        href: '/quantum-financial-trading-platform',;
-        description: 'Ultra-fast quantum trading',;
-        badge: 'Premium',;
-      },;
-      {,
-        name: 'AI Risk Management',;
-        href: '/ai-risk-management',;
-        description: 'Intelligent risk assessment',;
-        badge: 'Smart',;
-      },;
-      {,
-        name: 'Blockchain Finance',;
-        href: '/blockchain-finance',;
-        description: 'Decentralized finance solutions',;
-        badge: 'Modern',;
-      },;
-      {,
-        name: 'Quantum Portfolio Optimization',;
-        href: '/quantum-portfolio-optimization',;
-        description: 'Quantum-powered investment strategies',;
-        badge: 'Advanced',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Customer Success',;
-    href: '/services#customer-success',;
-    icon: <Users className='w-5 h-5' />,;
-    description: 'AI-powered customer success and retention',;
-    color: 'from-blue-50o0 to-indigo-60o0',;
-    children: [,
-      {,
-        name: 'AI Customer Success Platform',;
-        href: '/ai-customer-success-platform',;
-        description: 'Predictive customer success',;
-        badge: 'Smart',;
-      },;
-      {,
-        name: 'Customer Health Monitoring',;
-        href: '/customer-health-monitoring',;
-        description: 'Real-time customer insights',;
-        badge: 'Proactive',;
-      },;
-      {,
-        name: 'Churn Prevention AI',;
-        href: '/churn-prevention-ai',;
-        description: 'AI-powered retention strategies',;
-        badge: 'Effective',;
-      },;
-      {,
-        name: 'Customer Journey Optimization',;
-        href: '/customer-journey-optimization',;
-        description: 'Optimize customer experiences',;
-        badge: 'Smooth',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Space & Metaverse',;
-    href: '/services#space-metaverse',;
-    icon: <Rocket className='w-5 h-5' />,;
-    description: 'Space exploration and virtual worlds',;
-    color: 'from-pink-50o0 to-rose-50o0',;
-    children: [,
-      {,
-        name: 'Space Technology AI Platform',;
-        href: '/space-technology-ai-platform',;
-        description: 'AI-powered space operations',;
-        badge: 'Space',;
-      },;
-      {,
-        name: 'Metaverse Development Studio',;
-        href: '/metaverse-development-studio-pro',;
-        description: '3D world building tools',;
-        badge: 'Creative',;
-      },;
-      {,
-        name: 'Virtual Event Hologram Platform',;
-        href: '/virtual-event-hologram-platform',;
-        description: 'Holographic events',;
-        badge: 'Immersive',;
-      },;
-      {,
-        name: 'Space Colonization Services',;
-        href: '/space-colonization-services',;
-        description: 'Interplanetary infrastructure',;
-        badge: 'Future',;
-      },;
-    ],;
-  },;
-  {,
-    name: 'Healthcare & Biotech',;
-    href: '/services#healthcare-biotech',;
-    icon: <Heart className='w-5 h-5' />,;
-    description: 'Advanced healthcare solutions',;
-    color: 'from-red-50o0 to-pink-50o0',;
-    children: [,
-      {,
-        name: 'AI Biotech Platform',;
-        href: '/ai-powered-biotech-platform',;
-        description: 'AI-powered drug discovery',;
-        badge: 'Life-Saving',;
-      },;
-      {,
-        name: 'Quantum Medical Imaging',;
-        href: '/quantum-medical-imaging',;
-        description: 'Quantum-enhanced diagnostics',;
-        badge: 'Precise',;
-      },;
-      {,
-        name: 'Personalized Medicine AI',;
-        href: '/personalized-medicine-ai',;
-        description: 'AI-driven treatment plans',;
-        badge: 'Personal',;
-      },;
-      {,
-        name: 'Biotech Research Automation',;
-        href: '/biotech-research-automation',;
-        description: 'Automated research workflows',;
-        badge: 'Fast',;
-      },;
-    ],;
-  },;
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'AI & Consciousness';
+    href: '/services#ai-consciousness';
+    icon: <Brain className='w-5 h-5' />;
+    description: 'Revolutionary AI consciousness and emotional intelligence';
+    badge: 'New';
+    color: 'from-cyan-50o0 to-blue-50o0';
+    children: [
+      {
+        name: 'AI Consciousness Evolution';
+        href: '/ai-consciousness-evolution-20o29';
+        description: 'Emotional intelligence and self-awareness';
+        badge: 'Revolutionary';
+      };
+      {
+        name: 'Quantum AI Fusion';
+        href: '/quantum-ai-fusion';
+        description: 'Quantum-AI hybrid computing';
+        badge: 'Cutting-Edge';
+      };
+      {
+        name: 'Autonomous AI Ecosystem';
+        href: '/autonomous-ai-ecosystem';
+        description: 'Self-managing AI systems';
+        badge: 'Innovative';
+      };
+      {
+        name: 'AI Ethics & Governance';
+        href: '/ai-ethics-governance';
+        description: 'Ethical AI frameworks';
+        badge: 'Essential';
+      };
+      {
+        name: 'AI Content Generator Pro';
+        href: '/ai-content-generator';
+        description: 'Professional AI content creation';
+        badge: 'Popular';
+      };
+      {
+        name: 'AI Meeting Transcriber';
+        href: '/ai-meeting-transcriber';
+        description: 'AI-powered meeting transcription';
+        badge: 'Efficient';
+      };
+    ];
+  };
+  {
+    name: 'Quantum & Emerging Tech';
+    href: '/services#quantum-emerging';
+    icon: <Atom className='w-5 h-5' />;
+    description: 'Quantum computing and breakthrough technologies';
+    badge: 'Hot';
+    color: 'from-purple-50o0 to-pink-50o0';
+    children: [
+      {
+        name: 'Quantum Financial Trading';
+        href: '/quantum-financial-trading-platform';
+        description: 'Quantum-powered algorithmic trading';
+        badge: 'Premium';
+      };
+      {
+        name: 'Quantum Networking Platform';
+        href: '/quantum-networking-platform';
+        description: 'Quantum-secure communication';
+        badge: 'Secure';
+      };
+      {
+        name: 'Quantum Cybersecurity Suite';
+        href: '/quantum-cybersecurity-suite';
+        description: 'Quantum-resistant security';
+        badge: 'Future-Proof';
+      };
+      {
+        name: 'Quantum Data Analytics';
+        href: '/quantum-data-analytics-platform';
+        description: 'Quantum-powered big data analytics';
+        badge: 'Fast';
+      };
+      {
+        name: 'Space Mining Platform';
+        href: '/space-mining-platform';
+        description: 'Asteroid mining and space resources';
+        badge: 'Space';
+      };
+      {
+        name: 'Brain-Computer Interface';
+        href: '/brain-computer-interface';
+        description: 'Neural interface technology';
+        badge: 'Advanced';
+      };
+    ];
+  };
+  {
+    name: 'Enterprise IT';
+    href: '/services#enterprise-it';
+    icon: <Shield className='w-5 h-5' />;
+    description: 'Enterprise solutions and infrastructure';
+    color: 'from-green-50o0 to-emerald-50o0';
+    children: [
+      {
+        name: 'AI-Powered DevOps';
+        href: '/ai-powered-devops-automation';
+        description: 'Intelligent development automation';
+        badge: 'Efficient';
+      };
+      {
+        name: 'Blockchain Enterprise Platform';
+        href: '/blockchain-enterprise-platform';
+        description: 'Enterprise blockchain solutions';
+        badge: 'Secure';
+      };
+      {
+        name: 'Quantum Data Center';
+        href: '/quantum-data-center';
+        description: 'Next-gen data centers';
+        badge: 'Future';
+      };
+      {
+        name: '5G Private Network Solutions';
+        href: '/5g-private-network-solutions';
+        description: 'Advanced 5G infrastructure';
+        badge: 'Fast';
+      };
+      {
+        name: 'Zero Trust Security Platform';
+        href: '/zero-trust-security-platform';
+        description: 'Advanced cybersecurity';
+        badge: 'Secure';
+      };
+      {
+        name: 'Autonomous IT Operations';
+        href: '/autonomous-it-operations';
+        description: 'Self-managing IT systems';
+        badge: 'Smart';
+      };
+    ];
+  };
+  {
+    name: 'Micro SAAS';
+    href: '/services#micro-saas';
+    icon: <Target className='w-5 h-5' />;
+    description: 'Innovative business solutions';
+    badge: 'Popular';
+    color: 'from-orange-50o0 to-red-50o0';
+    children: [
+      {
+        name: 'AI Customer Success Platform';
+        href: '/ai-customer-success-platform';
+        description: 'Predictive customer success';
+        badge: 'Smart';
+      };
+      {
+        name: 'AI Sales Automation';
+        href: '/ai-powered-sales-automation';
+        description: 'Intelligent sales process automation';
+        badge: 'Efficient';
+      };
+      {
+        name: 'CyberShield Pro';
+        href: '/cyber-shield-pro';
+        description: 'Comprehensive cybersecurity';
+        badge: 'Secure';
+      };
+      {
+        name: 'DataVault Hub';
+        href: '/data-vault-hub';
+        description: 'Secure data management';
+        badge: 'Safe';
+      };
+      {
+        name: 'DevOps Automation Studio';
+        href: '/devops-automation-studio';
+        description: 'Development automation';
+        badge: 'Fast';
+      };
+      {
+        name: 'AI Meeting Transcriber Pro';
+        href: '/ai-meeting-transcriber';
+        description: 'Meeting transcription';
+        badge: 'Accurate';
+      };
+    ];
+  };
+  {
+    name: 'Financial Technology';
+    href: '/services#financial-technology';
+    icon: <DollarSign className='w-5 h-5' />;
+    description: 'Quantum and AI-powered financial solutions';
+    color: 'from-green-50o0 to-emerald-60o0';
+    children: [
+      {
+        name: 'Quantum Trading Platform';
+        href: '/quantum-financial-trading-platform';
+        description: 'Ultra-fast quantum trading';
+        badge: 'Premium';
+      };
+      {
+        name: 'AI Risk Management';
+        href: '/ai-risk-management';
+        description: 'Intelligent risk assessment';
+        badge: 'Smart';
+      };
+      {
+        name: 'Blockchain Finance';
+        href: '/blockchain-finance';
+        description: 'Decentralized finance solutions';
+        badge: 'Modern';
+      };
+      {
+        name: 'Quantum Portfolio Optimization';
+        href: '/quantum-portfolio-optimization';
+        description: 'Quantum-powered investment strategies';
+        badge: 'Advanced';
+      };
+    ];
+  };
+  {
+    name: 'Customer Success';
+    href: '/services#customer-success';
+    icon: <Users className='w-5 h-5' />;
+    description: 'AI-powered customer success and retention';
+    color: 'from-blue-50o0 to-indigo-60o0';
+    children: [
+      {
+        name: 'AI Customer Success Platform';
+        href: '/ai-customer-success-platform';
+        description: 'Predictive customer success';
+        badge: 'Smart';
+      };
+      {
+        name: 'Customer Health Monitoring';
+        href: '/customer-health-monitoring';
+        description: 'Real-time customer insights';
+        badge: 'Proactive';
+      };
+      {
+        name: 'Churn Prevention AI';
+        href: '/churn-prevention-ai';
+        description: 'AI-powered retention strategies';
+        badge: 'Effective';
+      };
+      {
+        name: 'Customer Journey Optimization';
+        href: '/customer-journey-optimization';
+        description: 'Optimize customer experiences';
+        badge: 'Smooth';
+      };
+    ];
+  };
+  {
+    name: 'Space & Metaverse';
+    href: '/services#space-metaverse';
+    icon: <Rocket className='w-5 h-5' />;
+    description: 'Space exploration and virtual worlds';
+    color: 'from-pink-50o0 to-rose-50o0';
+    children: [
+      {
+        name: 'Space Technology AI Platform';
+        href: '/space-technology-ai-platform';
+        description: 'AI-powered space operations';
+        badge: 'Space';
+      };
+      {
+        name: 'Metaverse Development Studio';
+        href: '/metaverse-development-studio-pro';
+        description: '3D world building tools';
+        badge: 'Creative';
+      };
+      {
+        name: 'Virtual Event Hologram Platform';
+        href: '/virtual-event-hologram-platform';
+        description: 'Holographic events';
+        badge: 'Immersive';
+      };
+      {
+        name: 'Space Colonization Services';
+        href: '/space-colonization-services';
+        description: 'Interplanetary infrastructure';
+        badge: 'Future';
+      };
+    ];
+  };
+  {
+    name: 'Healthcare & Biotech';
+    href: '/services#healthcare-biotech';
+    icon: <Heart className='w-5 h-5' />;
+    description: 'Advanced healthcare solutions';
+    color: 'from-red-50o0 to-pink-50o0';
+    children: [
+      {
+        name: 'AI Biotech Platform';
+        href: '/ai-powered-biotech-platform';
+        description: 'AI-powered drug discovery';
+        badge: 'Life-Saving';
+      };
+      {
+        name: 'Quantum Medical Imaging';
+        href: '/quantum-medical-imaging';
+        description: 'Quantum-enhanced diagnostics';
+        badge: 'Precise';
+      };
+      {
+        name: 'Personalized Medicine AI';
+        href: '/personalized-medicine-ai';
+        description: 'AI-driven treatment plans';
+        badge: 'Personal';
+      };
+      {
+        name: 'Biotech Research Automation';
+        href: '/biotech-research-automation';
+        description: 'Automated research workflows';
+        badge: 'Fast';
+      };
+    ];
+  };
 ],
-,
-export default function UltraFuturisticNavigation20o35() {,
+export default function UltraFuturisticNavigation20o35() {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
-,
-  useEffect(() => {,
-    const handleScroll = () => {,
-      setIsScrolled(window.scrollY > 20),
-    };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
-,
-  const toggleDropdown = (name: string) => {,
-    setActiveDropdown(activeDropdown === name ? null : name),
-  ,};
-,
-  return (,
-    <nav,
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${,
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name)};
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
         isScrolled,
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10',
-          : 'bg-transparent',
-      }`}
+          : 'bg-transparent'}`}
     >,
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border-b border-cyan-50o0/30'>,
@@ -408,7 +398,7 @@ export default function UltraFuturisticNavigation20o35() {,
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex items-center justify-between h-20'>,
-          {/* Logo */,}
+          {/* Logo */}
           <Link href='/' className='flex items-center space-x-3 group'>,
             <div className='relative'>,
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0'>,
@@ -425,174 +415,147 @@ export default function UltraFuturisticNavigation20o35() {,
               </div>,
             </div>,
           </Link>,
-          {/* Desktop Navigation */,}
+          {/* Desktop Navigation */}
           <div className='hidden lg: flex items-center space-x-8'>,
-            {navigationItems.map(item => (,
-              <div key={item.name,} className='relative group'>,
-                <button,
+            {navigationItems.map(item => (
+              <div key={item.name} className='relative group'>,
+                <button
                   onClick={() => toggleDropdown(item.name)}
-                  className='flex items-center space-x-2 px-4 py-2 text-white hover: text-cyan-30o0 transition-colors duration-30o0 group-hover:scale-10o5',
-                >,
-                  {item.icon,}
+                  className='flex items-center space-x-2 px-4 py-2 text-white hover: text-cyan-30o0 transition-colors duration-30o0 group-hover:scale-10o5'>,
+                  {item.icon}
                   <span className='font-medium'>{item.name}</span>,
-                  {item.badge && (,
+                  {item.badge && (
                     <span className='px-2 py-1 text-xs bg-gradient-to-r from-pink-50o0 to-rose-50o0 text-white rounded-full'>,
                       {item.badge}
-                    </span>,
-                  )}
-                  <ChevronDown,
-                    className={`w-4 h-4 transition-transform duration-30o0 ${,
-                      activeDropdown === item.name ? 'rotate-180' : '',
-                    }`}
+                    </span>)}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-30o0 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''}`}
                   />,
                 </button>,
                 {/* Dropdown */}
                 <AnimatePresence>,
-                  {activeDropdown === item.name && (,
+                  {activeDropdown === item.name && (
                     <motion.div,
-                      initial={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                      animate={{ opacity: 1, y: 0, scale: 1 ,}}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                      transition={{ duration: 0.2 ,}}
-                      className='absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-2xl shadow-2xl shadow-cyan-50o0/20 overflow-hidden',
-                    >,
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className='absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl border border-cyan-50o0/20 rounded-2xl shadow-2xl shadow-cyan-50o0/20 overflow-hidden'>,
                       <div className='p-4'>,
                         <div className='text-sm text-gray-40o0 mb-3'>,
                           {item.description}
                         </div>,
                         <div className='space-y-2'>,
-                          {item.children?.map(child => (,
-                            <Link,
+                          {item.children?.map(child => (
+                            <Link
                               key={child.name}
                               href={child.href}
-                              className='flex items-center justify-between p-3 rounded-xl hover: bg-gray-80o0/50 transition-colors duration-20o0 group',
-                            >,
+                              className='flex items-center justify-between p-3 rounded-xl hover: bg-gray-80o0/50 transition-colors duration-20o0 group'>,
                               <div className='flex-1'>,
                                 <div className='text-white font-medium group-hover:text-cyan-30o0 transition-colors duration-20o0'>,
-                                  {child.name,}
+                                  {child.name}
                                 </div>,
                                 <div className='text-sm text-gray-40o0'>,
                                   {child.description}
                                 </div>,
                               </div>,
-                              {child.badge && (,
+                              {child.badge && (
                                 <span className='px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 text-cyan-30o0 rounded-full'>,
                                   {child.badge}
-                                </span>,
-                              )}
-                            </Link>,
-                          ))}
+                                </span>)}
+                            </Link>))}
                         </div>,
                       </div>,
-                    </motion.div>,
-                  )}
+                    </motion.div>)}
                 </AnimatePresence>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           {/* CTA Buttons */}
           <div className='hidden lg: flex items-center space-x-4'>,
-            <Link,
+            <Link
               href='/services',
-              className='px-6 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0 font-medium',
-            >,
+              className='px-6 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0 font-medium'>,
               Services,
             </Link>,
-            <Link,
+            <Link
               href='/pricing',
-              className='px-6 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0 font-medium',
-            >,
+              className='px-6 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0 font-medium'>,
               Pricing,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl font-medium hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25',
-            >,
+              className='px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl font-medium hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25'>,
               Get Started,
             </Link>,
           </div>,
-          {/* Mobile Menu Button */,}
-          <button,
+          {/* Mobile Menu Button */}
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            className='lg: hidden p-2 text-white hover:text-cyan-30o0 transition-colors duration-30o0',
-          >,
+            className='lg: hidden p-2 text-white hover:text-cyan-30o0 transition-colors duration-30o0'>,
             <Menu className='w-6 h-6' />,
           </button>,
         </div>,
       </div>,
-      {/* Mobile Menu */,}
+      {/* Mobile Menu */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0.3 ,}}
-            className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-cyan-50o0/20',
-          >,
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-cyan-50o0/20'>,
             <div className='px-4 py-6 space-y-4'>,
-              {navigationItems.map(item => (,
-                <div key={item.name,}>,
-                  <button,
+              {navigationItems.map(item => (
+                <div key={item.name}>,
+                  <button
                     onClick={() => toggleDropdown(item.name)}
-                    className='flex items-center justify-between w-full px-4 py-3 text-white hover: text-cyan-30o0 transition-colors duration-30o0',
-                  >,
+                    className='flex items-center justify-between w-full px-4 py-3 text-white hover: text-cyan-30o0 transition-colors duration-30o0'>,
                     <div className='flex items-center space-x-3'>,
-                      {item.icon,}
+                      {item.icon}
                       <span className='font-medium'>{item.name}</span>,
-                      {item.badge && (,
+                      {item.badge && (
                         <span className='px-2 py-1 text-xs bg-gradient-to-r from-pink-50o0 to-rose-50o0 text-white rounded-full'>,
                           {item.badge}
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
-                    <ChevronDown,
-                      className={`w-4 h-4 transition-transform duration-30o0 ${,
-                        activeDropdown === item.name ? 'rotate-180' : '',
-                      }`}
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-30o0 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''}`}
                     />,
                   </button>,
-                  {activeDropdown === item.name && (,
+                  {activeDropdown === item.name && (
                     <div className='ml-8 mt-2 space-y-2'>,
-                      {item.children?.map(child => (,
-                        <Link,
+                      {item.children?.map(child => (
+                        <Link
                           key={child.name}
                           href={child.href}
-                          className='block px-4 py-2 text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0',
-                        >,
-                          {child.name,}
-                        </Link>,
-                      ))}
-                    </div>,
-                  )}
-                </div>,
-              ))}
+                          className='block px-4 py-2 text-gray-30o0 hover: text-cyan-30o0 transition-colors duration-20o0'>,
+                          {child.name}
+                        </Link>))}
+                    </div>)}
+                </div>))}
 ,
               <div className='pt-4 border-t border-gray-70o0/50 space-y-3'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='block px-4 py-3 text-white hover: text-cyan-30o0 transition-colors duration-30o0',
-                >,
+                  className='block px-4 py-3 text-white hover: text-cyan-30o0 transition-colors duration-30o0'>,
                   All Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/pricing',
-                  className='block px-4 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0',
-                >,
+                  className='block px-4 py-3 text-white hover:text-cyan-30o0 transition-colors duration-30o0'>,
                   Pricing,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='block px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl text-center font-medium',
-                >,
+                  className='block px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl text-center font-medium'>,
                   Get Started,
                 </Link>,
               </div>,
             </div>,
-          </motion.div>,
-        ),}
+          </motion.div>)}
       </AnimatePresence>,
-    </nav>,
-  ),
-}
+    </nav>)}
 ,

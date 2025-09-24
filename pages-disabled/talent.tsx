@@ -1,76 +1,68 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react',
-,
-export default function Talent() {,
-  const openPositions = [,
-    {,
-      id: 1,;
-      title: "Senior AI/ML Engineer",;
-      department: "Engineering",;
-      location: "San Francisco, CA",;
-      type: "Full-time",;
-      experience: "5+ years",;
-      description: "Lead the development of cutting-edge AI solutions and machine learning models.",
-,},;
-    {,
-      id: 2,;
-      title: "Cloud Solutions Architect",;
-      department: "Engineering",;
-      location: "Remote",;
-      type: "Full-time",;
-      experience: "7+ years",;
-      description: "Design and implement scalable cloud architectures for enterprise clients.",
-,},;
-    {,
-      id: 3,;
-      title: "Full Stack Developer",;
-      department: "Engineering",;
-      location: "San Francisco, CA",;
-      type: "Full-time",;
-      experience: "3+ years",;
-      description: "Build modern web applications using React, Node.js, and cloud technologies.",
-},;
-    {,
-      id: 4,;
-      title: "DevOps Engineer",;
-      department: "Engineering",;
-      location: "Remote",;
-      type: "Full-time",;
-      experience: "4+ years",;
-      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability.",
-},;
-    {,
-      id: 5,;
-      title: "Business Development Manager",;
-      department: "Sales",;
-      location: "San Francisco, CA",;
-      type: "Full-time",;
-      experience: "5+ years",;
-      description: "Drive growth by building relationships with enterprise clients and partners.",
-,},;
-    {,
-      id: 6,;
-      title: "UX/UI Designer",;
-      department: "Design",;
-      location: "Remote",;
-      type: "Full-time",;
-      experience: "3+ years",;
-      description: "Create intuitive and beautiful user experiences for our digital products.",
-,}
+export default function Talent() {
+  const openPositions = [
+    {
+      id: 1;
+      title: "Senior AI/ML Engineer";
+      department: "Engineering";
+      location: "San Francisco, CA";
+      type: "Full-time";
+      experience: "5+ years";
+      description: "Lead the development of cutting-edge AI solutions and machine learning models."};
+    {
+      id: 2;
+      title: "Cloud Solutions Architect";
+      department: "Engineering";
+      location: "Remote";
+      type: "Full-time";
+      experience: "7+ years";
+      description: "Design and implement scalable cloud architectures for enterprise clients."};
+    {
+      id: 3;
+      title: "Full Stack Developer";
+      department: "Engineering";
+      location: "San Francisco, CA";
+      type: "Full-time";
+      experience: "3+ years";
+      description: "Build modern web applications using React, Node.js, and cloud technologies."};
+    {
+      id: 4;
+      title: "DevOps Engineer";
+      department: "Engineering";
+      location: "Remote";
+      type: "Full-time";
+      experience: "4+ years";
+      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."};
+    {
+      id: 5;
+      title: "Business Development Manager";
+      department: "Sales";
+      location: "San Francisco, CA";
+      type: "Full-time";
+      experience: "5+ years";
+      description: "Drive growth by building relationships with enterprise clients and partners."};
+    {
+      id: 6;
+      title: "UX/UI Designer";
+      department: "Design";
+      location: "Remote";
+      type: "Full-time";
+      experience: "3+ years";
+      description: "Create intuitive and beautiful user experiences for our digital products."}
   ],
-  const benefits = [,
-    "Competitive salary and equity",;
-    "Comprehensive health insurance",;
-    "Flexible work arrangements",;
-    "Professional development budget",;
-    "Latest technology and tools",;
-    "Team building events",;
-    "Unlimited PTO",;
-    "40o1(k) matching",
-  ],
-  return (,
+  const benefits = [
+    "Competitive salary and equity";
+    "Comprehensive health insurance";
+    "Flexible work arrangements";
+    "Professional development budget";
+    "Latest technology and tools";
+    "Team building events";
+    "Unlimited PTO";
+    "40o1(k) matching"],
+  return (
     <>,
       <Head>,
         <title>Join Our Team — Zion Tech Group</title>,
@@ -78,7 +70,7 @@ export default function Talent() {,
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,
         <link rel="canonical" href="https: //ziontechgroup.com/talent"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -97,7 +89,7 @@ export default function Talent() {,
           </div>,
         </div>,
       </section>,
-      {/* Why Join Us */,}
+      {/* Why Join Us */}
       <section className="py-24 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -139,7 +131,7 @@ export default function Talent() {,
           </div>,
         </div>,
       </section>,
-      {/* Benefits */,}
+      {/* Benefits */}
       <section className="bg-gray-50 py-24 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -151,12 +143,11 @@ export default function Talent() {,
             </p>,
           </div>,
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">,
-            {benefits.map((benefit, index) => (,
+            {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">,
                 <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 flex-shrink-0"  />,
                 <span className="text-gray-70o0">{benefit}</span>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -172,11 +163,11 @@ export default function Talent() {,
             </p>,
           </div>,
           <div className="space-y-6">,
-            {openPositions.map((position) => (,
-              <div key={position.id,} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
+            {openPositions.map((position) => (
+              <div key={position.id} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">,
                   <div className="flex-1">,
-                    <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{position.title,}</h3>,
+                    <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{position.title}</h3>,
                     <p className="text-gray-60o0 mb-4">{position.description}</p>,
                     <div className="flex flex-wrap gap-4 text-sm text-gray-50o0">,
                       <div className="flex items-center">,
@@ -197,17 +188,15 @@ export default function Talent() {,
                     </div>,
                   </div>,
                   <div className="mt-4 lg: mt-0 lg:ml-6">,
-                    <Link,
-                      href={`/talent/${position.id,}`}
-                      className="inline-flex items-center px-6 py-3 bg-blue-60o0 text-white rounded-lg font-medium hover: bg-blue-70o0 transition-colors",
-                    >,
+                    <Link
+                      href={`/talent/${position.id}`}
+                      className="inline-flex items-center px-6 py-3 bg-blue-60o0 text-white rounded-lg font-medium hover: bg-blue-70o0 transition-colors">,
                       Apply Now,
                       <ArrowRight className="h-4 w-4 ml-2"  />,
                     </Link>,
                   </div>,
                 </div>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -220,14 +209,11 @@ export default function Talent() {,
           <p className="text-xl text-blue-10o0 mb-8">,
             We're always looking for exceptional talent. Send us your resume and let's talk about how you can contribute to our mission.,
           </p>,
-          <Link,
+          <Link
             href="/contact",
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-60o0 bg-white hover:bg-gray-50 transition-colors",
-          >,
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-60o0 bg-white hover:bg-gray-50 transition-colors">,
             Get in Touch,
           </Link>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}

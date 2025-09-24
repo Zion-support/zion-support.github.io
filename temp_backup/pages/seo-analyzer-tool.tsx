@@ -3,181 +3,156 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react',
-,
-export default function SEOAnalyzerToolPage() {,
+export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false),
   const [analysisResults, setAnalysisResults] = useState(null),
   const [url, setUrl] = useState(''),
-,
-  const features = [,
-    {,
-      icon: <Search className="w-8 h-8 text-white"  />,;
-      title: 'Comprehensive SEO Analysis',;
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',;
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',;
-      gradient: 'from-green-40o0 to-emerald-50o0',},;
-    {,
-      icon: <Target className="w-8 h-8 text-white"  />,;
-      title: 'Keyword Research',;
-      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',;
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',;
-      gradient: 'from-blue-40o0 to-cyan-50o0',},;
-    {,
-      icon: <BarChart3 className="w-8 h-8 text-white"  />,;
-      title: 'Competitive Analysis',;
-      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',;
-      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',;
-      gradient: 'from-purple-40o0 to-indigo-50o0',},;
-    {,
-      icon: <Zap className="w-8 h-8 text-white"  />,;
-      title: 'AI-Powered Insights',;
-      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',;
-      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',;
-      gradient: 'from-orange-40o0 to-red-50o0',},;
+  const features = [
+    {
+      icon: <Search className="w-8 h-8 text-white"  />;
+      title: 'Comprehensive SEO Analysis';
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
+      gradient: 'from-green-40o0 to-emerald-50o0'};
+    {
+      icon: <Target className="w-8 h-8 text-white"  />;
+      title: 'Keyword Research';
+      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.';
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
+      gradient: 'from-blue-40o0 to-cyan-50o0'};
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white"  />;
+      title: 'Competitive Analysis';
+      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.';
+      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0';
+      gradient: 'from-purple-40o0 to-indigo-50o0'};
+    {
+      icon: <Zap className="w-8 h-8 text-white"  />;
+      title: 'AI-Powered Insights';
+      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.';
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0';
+      gradient: 'from-orange-40o0 to-red-50o0'};
   ],
-,
-  const seoFactors = [,
-    {,
-      category: 'On-Page SEO',;
-      factors: [,
-        'Title tags optimization',;
-        'Meta descriptions',;
-        'Header structure (H1, H2, H3)',;
-        'Content quality and length',;
-        'Internal linking structure',;
-        'Image optimization (alt tags)',
-      ],;
-      icon: '📝',;
-      color: 'text-green-40o0',
-    ,},;
-    {,
-      category: 'Technical SEO',;
-      factors: [,
-        'Page load speed',;
-        'Mobile responsiveness',;
-        'XML sitemap',;
-        'Robots.txt configuration',;
-        'SSL certificate',;
-        'Core Web Vitals',
-      ],;
-      icon: '⚙️',;
-      color: 'text-blue-40o0',
-    ,},;
-    {,
-      category: 'Content SEO',;
-      factors: [,
-        'Keyword density',;
-        'Content relevance',;
-        'Readability scores',;
-        'Content freshness',;
-        'Multimedia optimization',;
-        'Schema markup',
-      ],;
-      icon: '📊',;
-      color: 'text-purple-40o0',
-    ,},;
-    {,
-      category: 'Local SEO',;
-      factors: [,
-        'Google My Business',;
-        'Local citations',;
-        'Review management',;
-        'Local keyword targeting',;
-        'Location-based content',;
-        'Local link building',
-      ],;
-      icon: '📍',;
-      color: 'text-orange-40o0',
-    ,}
+  const seoFactors = [
+    {
+      category: 'On-Page SEO';
+      factors: [
+        'Title tags optimization';
+        'Meta descriptions';
+        'Header structure (H1, H2, H3)';
+        'Content quality and length';
+        'Internal linking structure';
+        'Image optimization (alt tags)'];
+      icon: '📝';
+      color: 'text-green-40o0'};
+    {
+      category: 'Technical SEO';
+      factors: [
+        'Page load speed';
+        'Mobile responsiveness';
+        'XML sitemap';
+        'Robots.txt configuration';
+        'SSL certificate';
+        'Core Web Vitals'];
+      icon: '⚙️';
+      color: 'text-blue-40o0'};
+    {
+      category: 'Content SEO';
+      factors: [
+        'Keyword density';
+        'Content relevance';
+        'Readability scores';
+        'Content freshness';
+        'Multimedia optimization';
+        'Schema markup'];
+      icon: '📊';
+      color: 'text-purple-40o0'};
+    {
+      category: 'Local SEO';
+      factors: [
+        'Google My Business';
+        'Local citations';
+        'Review management';
+        'Local keyword targeting';
+        'Location-based content';
+        'Local link building'];
+      icon: '📍';
+      color: 'text-orange-40o0'}
   ],
-,
-  const pricing = [,
-    {,
-      name: 'Starter',;
-      price: '$39',;
-      period: '/month',;
-      description: 'Perfect for small businesses and bloggers',;
-      features: [,
-        '10 website analyses/month',;
-        'Basic SEO metrics',;
-        'Keyword research (10o0 keywords)',;
-        'On-page SEO analysis',;
-        'Email support',;
-        'Basic reporting',
-      ],;
-      popular: false,
-    ,},;
-    {,
-      name: 'Professional',;
-      price: '$89',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and agencies',;
-      features: [,
-        '50 website analyses/month',;
-        'Advanced SEO metrics',;
-        'Keyword research (50o0 keywords)',;
-        'Competitive analysis',;
-        'Priority support',;
-        'Advanced reporting',;
-        'API access',;
-        'Team collaboration',
-      ],;
-      popular: true,
-    ,},;
-    {,
-      name: 'Enterprise',;
-      price: '$249',;
-      period: '/month',;
-      description: 'For large organizations and SEO agencies',;
-      features: [,
-        'Unlimited analyses',;
-        'Enterprise SEO metrics',;
-        'Unlimited keyword research',;
-        'Advanced competitive analysis',;
-        '24/7 dedicated support',;
-        'Custom reporting',;
-        'White-label options',;
-        'Custom integrations',
-      ],;
-      popular: false,
-    ,}
+  const pricing = [
+    {
+      name: 'Starter';
+      price: '$39';
+      period: '/month';
+      description: 'Perfect for small businesses and bloggers';
+      features: [
+        '10 website analyses/month';
+        'Basic SEO metrics';
+        'Keyword research (10o0 keywords)';
+        'On-page SEO analysis';
+        'Email support';
+        'Basic reporting'];
+      popular: false};
+    {
+      name: 'Professional';
+      price: '$89';
+      period: '/month';
+      description: 'Ideal for growing businesses and agencies';
+      features: [
+        '50 website analyses/month';
+        'Advanced SEO metrics';
+        'Keyword research (50o0 keywords)';
+        'Competitive analysis';
+        'Priority support';
+        'Advanced reporting';
+        'API access';
+        'Team collaboration'];
+      popular: true};
+    {
+      name: 'Enterprise';
+      price: '$249';
+      period: '/month';
+      description: 'For large organizations and SEO agencies';
+      features: [
+        'Unlimited analyses';
+        'Enterprise SEO metrics';
+        'Unlimited keyword research';
+        'Advanced competitive analysis';
+        '24/7 dedicated support';
+        'Custom reporting';
+        'White-label options';
+        'Custom integrations'];
+      popular: false}
   ],
-,
-  const handleAnalyzeSEO = async () => {,
+  const handleAnalyzeSEO = async () => {
     if (!url.trim()) return,
-,
     setIsAnalyzing(true),
     // Simulate SEO analysis,
-    setTimeout(() => {,
-      setAnalysisResults({,
-        url: url,;
-        overallScore: 78,;
-        onPageScore: 82,;
-        technicalScore: 75,;
-        contentScore: 80,;
-        mobileScore: 85,;
-        issues: [,
-          { type: 'error', message: 'Missing meta description', priority: 'high' ,},;
-          { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' ,},;
-          { type: 'info', message: 'Consider adding more internal links', priority: 'low' ,}
-        ],;
-        recommendations: [,
-          'Optimize meta descriptions for better click-through rates',;
-          'Improve page load speed by optimizing images',;
-          'Add more relevant internal links to improve site structure',;
-          'Implement schema markup for rich snippets',
-        ],;
-        keywords: [,
-          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' ,},;
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' ,},;
-          { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' ,}
-        ],
-      }),
-      setIsAnalyzing(false),
-    }, 40o00),
-  };
-,
-  return (,
+    setTimeout(() => {
+      setAnalysisResults({
+        url: url;
+        overallScore: 78;
+        onPageScore: 82;
+        technicalScore: 75;
+        contentScore: 80;
+        mobileScore: 85;
+        issues: [
+          { type: 'error', message: 'Missing meta description', priority: 'high' };
+          { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' };
+          { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
+        ];
+        recommendations: [
+          'Optimize meta descriptions for better click-through rates';
+          'Improve page load speed by optimizing images';
+          'Add more relevant internal links to improve site structure';
+          'Implement schema markup for rich snippets'];
+        keywords: [
+          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' };
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' };
+          { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
+        ]}),
+      setIsAnalyzing(false)}, 40o00)};
+  return (
     <>,
       <Head>,
         <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>,
@@ -186,7 +161,7 @@ export default function SEOAnalyzerToolPage() {,
         <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations."  />,
         <meta name="twitter:card" content="summary_large_image"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">,
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]"  />,
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.0o6),transparent_50%)]"  />,
@@ -200,60 +175,56 @@ export default function SEOAnalyzerToolPage() {,
             SEO Analyzer Tool,
           </h1>,
           <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed mb-12">,
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights,;
+            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights;
             keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.,
           </p>,
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">,
             <div className="flex flex-col sm: flex-row gap-4">,
-              <input,
+              <input
                 type="url",
                 placeholder="Enter your website URL (e.g., https: //example.com)",
-                value={url,}
+                value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 className="flex-1 px-6 py-4 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-green-50o0 focus:border-transparent",
               />,
-              <Button,
-                onClick={handleAnalyzeSEO,}
+              <Button
+                onClick={handleAnalyzeSEO}
                 size="lg",
                 className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 hover: from-green-60o0 hover:to-emerald-70o0 text-white shadow-2xl hover-glow whitespace-nowrap",
-                disabled={isAnalyzing || !url.trim(),}
+                disabled={isAnalyzing || !url.trim()}
               >,
-                {isAnalyzing ? (,
+                {isAnalyzing ? (
                   <>,
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"  />,
                     Analyzing...,
-                  </>,
-                ) : (,
+                  </>) : (
                   <>,
                     <Search className="w-5 h-5 mr-2"  />,
                     Analyze SEO,
-                  </>,
-                )}
+                  </>)}
               </Button>,
             </div>,
           </div>,
           <div className="flex flex-col sm: flex-row gap-6 justify-center">,
-            <Button,
+            <Button
               href="#pricing",
               variant="outline",
               size="lg",
-              className="border-green-50o0 text-green-40o0 hover:bg-green-50o0 hover:text-white shadow-2xl",
-            >,
+              className="border-green-50o0 text-green-40o0 hover:bg-green-50o0 hover:text-white shadow-2xl">,
               View Pricing,
             </Button>,
-            <Button,
+            <Button
               href="/contact",
               variant="outline",
               size="lg",
-              className="border-gray-50o0 text-gray-40o0 hover:bg-gray-50o0 hover:text-white shadow-2xl",
-            >,
+              className="border-gray-50o0 text-gray-40o0 hover:bg-gray-50o0 hover:text-white shadow-2xl">,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="section-padding bg-gradient-cursor-accent">,
         <div className="container-cursor">,
           <div className="text-center mb-20">,
@@ -265,18 +236,18 @@ export default function SEOAnalyzerToolPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {features.map((feature, index) => (,
-              <Card,
+            {features.map((feature, index) => (
+              <Card
                 key={index}
                 className="card-hover group border-gradient-green",
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
                 <div className="flex items-start space-x-6">,
                   <div className="relative">,
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-30o0`,}>,
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature.color} shadow-xl group-hover: scale-110 transition-transform duration-30o0`}>,
                       {feature.icon}
                     </div>,
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-30o0 blur-sm`,}  />,
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover: opacity-20 transition-opacity duration-30o0 blur-sm`}  />,
                   </div>,
                   <div className="flex-1">,
                     <h3 className="text-2xl font-bold mb-4 text-white">,
@@ -287,8 +258,7 @@ export default function SEOAnalyzerToolPage() {,
                     </p>,
                   </div>,
                 </div>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -304,31 +274,29 @@ export default function SEOAnalyzerToolPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {seoFactors.map((category, index) => (,
-              <Card,
+            {seoFactors.map((category, index) => (
+              <Card
                 key={index}
                 className="card-hover border-gradient-green",
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
                 <div className="flex items-center mb-6">,
                   <div className="text-3xl mr-4">{category.icon}</div>,
                   <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>,
                 </div>,
                 <ul className="space-y-3">,
-                  {category.factors.map((factor, factorIndex) => (,
+                  {category.factors.map((factor, factorIndex) => (
                     <li key={factorIndex} className="flex items-center text-gray-30o0">,
                       <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />,
                       {factor}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
       {/* Demo Analysis Results */}
-      {analysisResults && (,
+      {analysisResults && (
         <section className="section-padding bg-gradient-cursor-accent">,
           <div className="container-cursor">,
             <div className="text-center mb-12">,
@@ -340,13 +308,13 @@ export default function SEOAnalyzerToolPage() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-8">,
-              {/* Overall Score */,}
+              {/* Overall Score */}
               <Card className="border-gradient-green text-center">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>,
                 <div className="text-6xl font-bold text-green-40o0 mb-4">{analysisResults.overallScore}/10o0</div>,
                 <div className="w-32 h-32 mx-auto mb-6">,
                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">,
-                    <path,
+                    <path
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831",
                       fill="none",
                       stroke="currentColor",
@@ -384,21 +352,17 @@ export default function SEOAnalyzerToolPage() {,
               <Card className="border-gradient-green">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>,
                 <div className="space-y-3">,
-                  {analysisResults.issues.map((issue, index) => (,
+                  {analysisResults.issues.map((issue, index) => (
                     <div key={index} className="flex items-start space-x-3">,
-                      {issue.type === 'error' ? (,
-                        <AlertTriangle className="w-5 h-5 text-red-40o0 mt-1 flex-shrink-0"  />,
-                      ) : issue.type === 'warning' ? (,
-                        <AlertTriangle className="w-5 h-5 text-yellow-40o0 mt-1 flex-shrink-0"  />,
-                      ) : (,
-                        <CheckCircle className="w-5 h-5 text-blue-40o0 mt-1 flex-shrink-0"  />,
-                      )}
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-40o0 mt-1 flex-shrink-0"  />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-40o0 mt-1 flex-shrink-0"  />) : (
+                        <CheckCircle className="w-5 h-5 text-blue-40o0 mt-1 flex-shrink-0"  />)}
                       <div>,
                         <span className="text-gray-30o0">{issue.message}</span>,
-                        <div className="text-xs text-gray-50o0 mt-1">Priority: {issue.priority,}</div>,
+                        <div className="text-xs text-gray-50o0 mt-1">Priority: {issue.priority}</div>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </Card>,
             </div>,
@@ -407,41 +371,37 @@ export default function SEOAnalyzerToolPage() {,
               <Card className="border-gradient-green">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>,
                 <div className="space-y-3">,
-                  {analysisResults.recommendations.map((rec, index) => (,
+                  {analysisResults.recommendations.map((rec, index) => (
                     <div key={index} className="flex items-start space-x-3">,
                       <CheckCircle className="w-5 h-5 text-green-40o0 mt-1 flex-shrink-0"  />,
                       <span className="text-gray-30o0">{rec}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </Card>,
               <Card className="border-gradient-green">,
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>,
                 <div className="space-y-4">,
-                  {analysisResults.keywords.map((keyword, index) => (,
+                  {analysisResults.keywords.map((keyword, index) => (
                     <div key={index} className="border-b border-gray-70o0 pb-3 last: border-b-0">,
                       <div className="flex justify-between items-center mb-2">,
-                        <span className="font-semibold text-white">{keyword.keyword,}</span>,
-                        <span className="text-sm text-gray-40o0">Volume: {keyword.volume,}</span>,
+                        <span className="font-semibold text-white">{keyword.keyword}</span>,
+                        <span className="text-sm text-gray-40o0">Volume: {keyword.volume}</span>,
                       </div>,
                       <div className="flex justify-between items-center">,
-                        <span className="text-sm text-gray-40o0">Difficulty: {keyword.difficulty,}</span>,
-                        <span className={`px-2 py-1 rounded text-xs ${,
+                        <span className="text-sm text-gray-40o0">Difficulty: {keyword.difficulty}</span>,
+                        <span className={`px-2 py-1 rounded text-xs ${
                           keyword.difficulty === 'low' ? 'bg-green-50o0/20 text-green-40o0' :,
                           keyword.difficulty === 'medium' ? 'bg-yellow-50o0/20 text-yellow-40o0' :,
-                          'bg-red-50o0/20 text-red-40o0',
-                        }`}>,
+                          'bg-red-50o0/20 text-red-40o0'}`}>,
                           {keyword.difficulty}
                         </span>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </Card>,
             </div>,
           </div>,
-        </section>,
-      )}
+        </section>)}
 ,
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-gradient-cursor">,
@@ -455,19 +415,18 @@ export default function SEOAnalyzerToolPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricing.map((plan, index) => (,
-              <Card,
+            {pricing.map((plan, index) => (
+              <Card
                 key={index}
                 className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-50o0 scale-10o5' : ''}`}
-                style={{ animationDelay: `${index * 0.1,}s` }}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white px-4 py-2 rounded-full text-sm font-medium">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className="text-center mb-8">,
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>,
@@ -478,23 +437,21 @@ export default function SEOAnalyzerToolPage() {,
                   <p className="text-gray-40o0">{plan.description}</p>,
                 </div>,
                 <ul className="space-y-4 mb-8">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-30o0">,
                       <CheckCircle className="w-5 h-5 text-green-40o0 mr-3 flex-shrink-0"  />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <Button,
+                <Button
                   href="/contact",
                   size="lg",
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-50o0 to-emerald-60o0 hover: from-green-60o0 hover:to-emerald-70o0' : 'bg-gray-70o0 hover:bg-gray-60o0',} text-white`}
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-50o0 to-emerald-60o0 hover: from-green-60o0 hover:to-emerald-70o0' : 'bg-gray-70o0 hover:bg-gray-60o0'} text-white`}
                 >,
                   Get Started,
                   <ArrowRight className="w-5 h-5 ml-2"  />,
                 </Button>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -509,25 +466,21 @@ export default function SEOAnalyzerToolPage() {,
             Join thousands of businesses using our SEO analyzer to improve their search rankings and drive more organic traffic.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-6 justify-center">,
-            <Button,
+            <Button
               href="/contact",
               size="lg",
-              className="bg-white text-green-60o0 hover:bg-gray-10o0 shadow-2xl",
-            >,
+              className="bg-white text-green-60o0 hover:bg-gray-10o0 shadow-2xl">,
               Start Free Trial,
               <ArrowRight className="w-5 h-5 ml-2"  />,
             </Button>,
-            <Button,
+            <Button
               href="/contact",
               variant="outline",
               size="lg",
-              className="border-white text-white hover:bg-white hover:text-green-60o0 shadow-2xl",
-            >,
+              className="border-white text-white hover:bg-white hover:text-green-60o0 shadow-2xl">,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}

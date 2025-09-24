@@ -1,59 +1,54 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function CaseStudyPage() {,
+export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
-,
   // This would typically come from a database or API,
   // For now, we'll show a generic case study page,
-  const caseStudy = {,
-    id: id as string,;
+  const caseStudy = {
+    id: id as string;
     title: ,
       'Case Study: ' +,
-      (id as string)?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),;
-    company: 'Client Company',;
-    industry: 'Technology',;
+      (id as string)?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    company: 'Client Company';
+    industry: 'Technology';
     challenge:,
-      'The client faced significant challenges with manual processes and inefficient workflows that were limiting their growth potential.',;
+      'The client faced significant challenges with manual processes and inefficient workflows that were limiting their growth potential.';
     solution:,
-      'We implemented a comprehensive AI automation solution that streamlined operations and improved efficiency across all departments.',;
-    results: [,
-      '40% increase in operational efficiency',;
-      '60% reduction in processing time',;
-      '85% improvement in accuracy',;
-      'Significant cost savings',;
-    ],;
-    duration: '6 months',;
+      'We implemented a comprehensive AI automation solution that streamlined operations and improved efficiency across all departments.';
+    results: [
+      '40% increase in operational efficiency';
+      '60% reduction in processing time';
+      '85% improvement in accuracy';
+      'Significant cost savings';
+    ];
+    duration: '6 months';
     description:,
-      'A comprehensive case study demonstrating the transformative impact of AI automation on business operations.',;
+      'A comprehensive case study demonstrating the transformative impact of AI automation on business operations.';
   };
-,
-  if (!id) {,
-    return (,
+  if (!id) {
+    return (
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white flex items-center justify-center'>,
         <div className='text-center'>,
           <h1 className='text-2xl font-bold mb-4'>Loading...</h1>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <>,
       <Head>,
         <title>{caseStudy.title} | Zion Tech Group</title>,
         <meta name='description' content={caseStudy.description} />,
-        <meta property='og: title' content={caseStudy.title,} />,
-        <meta property='og: description' content={caseStudy.description,} />,
+        <meta property='og: title' content={caseStudy.title} />,
+        <meta property='og: description' content={caseStudy.description} />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                 ← Back to Case Studies,
               </Link>,
             </nav>,
@@ -61,7 +56,7 @@ export default function CaseStudyPage() {,
               <header className='mb-12 text-center'>,
                 <div className='flex items-center gap-3 justify-center mb-4'>,
                   <span className='px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30'>,
-                    {caseStudy.industry,}
+                    {caseStudy.industry}
                   </span>,
                   <span className='text-white/60 text-sm'>,
                     {caseStudy.duration}
@@ -79,13 +74,13 @@ export default function CaseStudyPage() {,
                   Client Overview,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  <strong>Company: </strong> {caseStudy.company,}
+                  <strong>Company: </strong> {caseStudy.company}
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  <strong>Industry: </strong> {caseStudy.industry,}
+                  <strong>Industry: </strong> {caseStudy.industry}
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  <strong>Project Duration: </strong> {caseStudy.duration,}
+                  <strong>Project Duration: </strong> {caseStudy.duration}
                 </p>,
               </section>,
               <section className='mb-12'>,
@@ -105,15 +100,13 @@ export default function CaseStudyPage() {,
                   Results & Impact,
                 </h2>,
                 <ul className='space-y-3'>,
-                  {caseStudy.results.map((result, index) => (,
-                    <li,
+                  {caseStudy.results.map((result, index) => (
+                    <li
                       key={index}
-                      className='text-white/90 flex items-center gap-3',
-                    >,
+                      className='text-white/90 flex items-center gap-3'>,
                       <div className='w-2 h-2 bg-green-40o0 rounded-full'></div>,
                       {result}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
               </section>,
               <section className='mb-12'>,
@@ -123,7 +116,7 @@ export default function CaseStudyPage() {,
                 <p className='text-white/90 mb-4'>,
                   This case study demonstrates the transformative power of AI,
                   automation when properly implemented. The results speak for,
-                  themselves, showing significant improvements in efficiency,;
+                  themselves, showing significant improvements in efficiency;
                   accuracy, and cost savings.,
                 </p>,
                 <p className='text-white/90'>,
@@ -139,16 +132,14 @@ export default function CaseStudyPage() {,
                 Ready to Get Started?,
               </h3>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0',
-                >,
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0'>,
                   Contact Us,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0',
-                >,
+                  className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0'>,
                   View All Case Studies,
                 </Link>,
               </div>,
@@ -156,7 +147,5 @@ export default function CaseStudyPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

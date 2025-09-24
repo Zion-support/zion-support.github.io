@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function PitchGeneratorPage() {,
-  return (,
+export default function PitchGeneratorPage() {
+  return (
     <>,
       <Head>,
         <title>Pitch Generator - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function PitchGeneratorPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

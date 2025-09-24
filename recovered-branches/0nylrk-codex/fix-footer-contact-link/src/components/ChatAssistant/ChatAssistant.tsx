@@ -4,76 +4,57 @@ import { ChatInput } from './ChatInput',
 import { AvatarFallbackAvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
-,
-export interface Message {,
+export interface Message {
   id: string,
   role: 'user' | 'assistant',
   message: string,
   timestamp: Date,
-  read?: boolean,
-,}
+  read?: boolean}
 ,
-export interface ChatAssistantProps {,
+export interface ChatAssistantProps {
   isOpen: boolean,
   onClose: () => void,
-  recipient: {,
+  recipient: {
     id: string,
     name: string,
     avatarUrl?: string,
-    role?: string,
-  ,};
+    role?: string};
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: stringconversationId?: string) => Promise<void>,
-  contextHeader?: ReactNode,
-,}
+  contextHeader?: ReactNode}
 ,
-export function ChatAssistant({,
-  isOpen,;
-  onClose,;
-  recipient,;
-  conversationId,;
-  initialMessages = [],;
-  onSendMessage,;
-  contextHeader,
-}: ChatAssistantProps) {,
+export function ChatAssistant({
+  isOpen;
+  onClose;
+  recipient;
+  conversationId;
+  initialMessages = [];
+  onSendMessage;
+  contextHeader}: ChatAssistantProps) {
   const [messagesetMessages] = useState<Message[]>(initialMessages),
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
-,
-  useEffect(() => {,
-    if (initialMessages.length > 0) {,
-      setMessages(initialMessages),
-    }
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)}
   }[initialMessages]),
-,
-  useEffect(() => {,
-    scrollToBottom(),
-  }[messages]),
-,
-  const scrollToBottom = () => {,
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' ,}),
-  };
-,
-  const handleSendMessage = async (message: string) => {,
+  useEffect(() => {
+    scrollToBottom()}[messages]),
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+  const handleSendMessage = async (message: string) => {
     if (!message.trim()) return,
-,
     // Add user message to the chat,
-    const newMessage: Message = {,
-      id: Date.now().toString(),;
-      role: 'user',;
-      message,;
-      timestamp: new Date(),
-    ,};
-,
+    const newMessage: Message = {
+      id: Date.now().toString();
+      role: 'user';
+      message;
+      timestamp: new Date()};
     setMessages((prev: Message[]) => [...prevnewMessage]),
-,
     // Send message to recipient via the provided handler,
-    await onSendMessage(messageconversationId),
-  ,};
-,
+    await onSendMessage(messageconversationId)};
   if (!isOpen) return null,
-,
-  return (,
+  return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">,
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">,
         {/* Header */}
@@ -87,42 +68,37 @@ export function ChatAssistant({,
             </Avatar>,
             <div>,
               <div className="font-medium text-white">{recipient.name}</div>,
-              {recipient.role && (,
-                <div className="text-xs text-zion-slate">{recipient.role}</div>,
-              )}
+              {recipient.role && (
+                <div className="text-xs text-zion-slate">{recipient.role}</div>)}
             </div>,
           </div>,
-          <Button,
+          <Button
             variant="ghost",
             size="icon",
             className="text-white hover: bg-zion-purple/10 rounded-full",
-            onClick={onClose,}
+            onClick={onClose}
           >,
             <X className="h-5 w-5" />,
           </Button>,
         </div>,
         {/* Context Header (Optional) */}
-        {contextHeader && (,
+        {contextHeader && (
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">,
             {contextHeader}
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">,
-          {messages.length === 0 ? (,
+          {messages.length === 0 ? (
             <div className="text-center text-zion-slate py-8">,
               <p>Start a conversation with {recipient.name}</p>,
-            </div>,
-          ) : (,
-            messages.map((msg) => (,
-              <ChatMessage,
+            </div>) : (
+            messages.map((msg) => (
+              <ChatMessage
                 key={msg.id} ,
                 role={msg.role}
                 message={msg.message}
-              />,
-            )),
-          )}
+              />)))}
           <div ref={messagesEndRef} />,
         </div>,
         {/* Input */}
@@ -130,7 +106,5 @@ export function ChatAssistant({,
           <ChatInput onSend={handleSendMessage} />,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

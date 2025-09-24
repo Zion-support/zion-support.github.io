@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function BackupPage() {,
-  return (,
+export default function BackupPage() {
+  return (
     <>,
       <Head>,
         <title>Backup - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function BackupPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function AgentOrchestrationToolkitV2Page() {,
-  return (,
+import React from 'react';
+export default function AgentOrchestrationToolkitV2Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
         <div className='mb-8'>,
@@ -35,7 +34,5 @@ export default function AgentOrchestrationToolkitV2Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

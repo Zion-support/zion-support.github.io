@@ -10,34 +10,29 @@ import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard",
 import {PartnerResources} from "@/components/partners/PartnerResources",
 import {useAuth} from "@/hooks/useAuth",
 import {useNavigate} from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",;
-import { useState } from "react",;
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
-import { PartnerResources } from "@/components/partners/PartnerResources",;
-
-,
-export default function Partners() {,
-,
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react";
+import { useState } from "react";
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
+import { PartnerResources } from "@/components/partners/PartnerResources";
+export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
-,
   const navigate = useNavigate(),
-,
-export default function Partners() {,
-  const [activeTab, setActiveTab] = useState("overview"),;
-  const { user, isAuthenticated } = useAuth(),;
-  const navigate = useNavigate(),;
+export default function Partners() {
+  const [activeTab, setActiveTab] = useState("overview");
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
   // If not authenticated, display partner program info and signup CTA,
-  if (!isAuthenticated) {,
-    return (,
+  if (!isAuthenticated) {
+    return (
       <div className="container max-w-6xl py-10">,
         <div className="text-center mb-8">,
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>,
@@ -142,35 +137,33 @@ export default function Partners() {,
           </div>,
         </div>,
         <div className="flex justify-center gap-4">,
-          <Button,
+          <Button
             size="lg",
             className="bg-zion-purple hover:bg-zion-purple-dark",
-            onClick={() => navigate('/signup'),}
+            onClick={() => navigate('/signup')}
           >,
             Apply to Join,
           </Button>,
-          <Button,
+          <Button
             size="lg",
             variant="outline",
             className="text-zion-cyan border-zion-cyan",
-          <Button,
+          <Button
             size="lg",
             variant="outline",
             className="text-zion-cyan border-zion-cyan",
-export default function Partners() {,
-  const [activeTab, setActiveTab] = useState("overview"),;
+export default function Partners() {
+  const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
-,
   // If not authenticated, display partner program info and signup CTA,
-  if (!isAuthenticated) {,
-    return (,
+  if (!isAuthenticated) {
+    return (
       <div className="container max-w-6xl py-10">,
         <div className="text-center mb-8">,
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>,
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>,
         </div>,
-,
         <div className="grid md: grid-cols-2 gap-8 mb-12">,
           <Card className="bg-zion-blue-dark border-zion-blue-light">,
             <CardHeader>,
@@ -201,7 +194,6 @@ export default function Partners() {,
               </div>,
             </CardContent>,
           </Card>,
-,
           <Card className="bg-zion-blue-dark border-zion-blue-light">,
             <CardHeader>,
               <CardTitle className="text-white">For AI Organizations</CardTitle>,
@@ -232,7 +224,6 @@ export default function Partners() {,
             </CardContent>,
           </Card>,
         </div>,
-,
         <div className="text-center mb-12">,
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>,
           <div className="grid md:grid-cols-3 gap-6">,
@@ -247,7 +238,6 @@ export default function Partners() {,
                 <p>Sign up and get approved as a Zion AI partner with your own dashboard</p>,
               </CardContent>,
             </Card>,
-,
             <Card className="bg-zion-blue-dark border-zion-blue-light">,
               <CardHeader className="text-center pb-2">,
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">,
@@ -259,7 +249,6 @@ export default function Partners() {,
                 <p>Generate custom referral links and promote to your audience</p>,
               </CardContent>,
             </Card>,
-,
             <Card className="bg-zion-blue-dark border-zion-blue-light">,
               <CardHeader className="text-center pb-2">,
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">,
@@ -273,32 +262,26 @@ export default function Partners() {,
             </Card>,
           </div>,
         </div>,
-,
         <div className="flex justify-center gap-4">,
-          <Button,
+          <Button
             size="lg",
             className="bg-zion-purple hover:bg-zion-purple-dark",
-            onClick={() => navigate('/signup'),}
+            onClick={() => navigate('/signup')}
           >,
             Apply to Join,
           </Button>,
-,
-          <Button,
+          <Button
             size="lg",
             variant="outline",
-            className="text-zion-cyan border-zion-cyan",
-,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+            className="text-zion-cyan border-zion-cyan">>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
             onClick={() => navigate('/login')}
           >,
             Partner Login,
           </Button>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-          <Button,
+          <Button
             size="lg",
             variant="outline",
             className="text-zion-cyan border-zion-cyan",
@@ -307,13 +290,10 @@ export default function Partners() {,
             Partner Login,
           </Button>,
         </div>,
-      </div>,
-    ),
-  }
-,
+      </div>)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   // Authenticated user view - Partner Dashboard,
-  return (,
+  return (
     <div className="container max-w-7xl py-10">,
       <div className="flex flex-col md: flex-row justify-between items-start md:items-center gap-4 mb-8">,
         <div>,
@@ -321,7 +301,7 @@ export default function Partners() {,
           <p className="text-zion-slate-light">Manage your referral links and track your performance</p>,
         </div>,
         <div className="flex gap-2">,
-          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print(),}>,
+          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>,
             <FileDown className="h-4 w-4" />,
             Export CSV,
           </Button>,
@@ -348,7 +328,7 @@ export default function Partners() {,
               <CardDescription>Track your earnings and manage payouts</CardDescription>,
             </CardHeader>,
             <CardContent>,
-              {/* This will be implemented later */,}
+              {/* This will be implemented later */}
               <p className="text-zion-slate-light">Earnings tracking and payout requests will be available soon.</p>,
             </CardContent>,
           </Card>,
@@ -360,11 +340,6 @@ export default function Partners() {,
           <PartnerResources />,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),
+    </div>)}
 }
-}
-,
-,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

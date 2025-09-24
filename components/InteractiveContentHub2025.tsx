@@ -1,105 +1,90 @@
 "use client",
 'use client',
-,
 import React{ useState } from 'react',
 import Link from 'next/link',
-import {,
+import {
   Play,
   BookOpen,
   Code,
   BarChart3,
   Users,
   Lightbulb,
-  ChevronRight,;
-  Clock,;
-  Star,;
-  TrendingUp,
-} from 'lucide-react',
-,
-const InteractiveContentHub20o25 = () => {,
+  ChevronRight;
+  Clock;
+  Star;
+  TrendingUp} from 'lucide-react',
+const InteractiveContentHub20o25 = () => {
   const [activeTabsetActiveTab] = useState('tutorials'),
-,
-  const contentCategories = [,
-    {,
-      id: 'tutorials',;
-      name: 'Tutorials',;
-      icon: BookOpen,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      count: 150,
-    ,},;
-    {,
-      id: 'demos',;
-      name: 'Live Demos',;
-      icon: Play,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      count: 45,
-    ,},;
-    {,
-      id: 'code',;
-      name: 'Code Examples',;
-      icon: Code,;
-      color: 'from-green-50o0 to-teal-50o0',;
-      count: 20o0,
-    ,},;
-    {,
-      id: 'analytics',;
-      name: 'Analytics',;
-      icon: BarChart3,;
-      color: 'from-orange-50o0 to-red-50o0',;
-      count: 75,
-    ,}
+  const contentCategories = [
+    {
+      id: 'tutorials';
+      name: 'Tutorials';
+      icon: BookOpen;
+      color: 'from-blue-50o0 to-cyan-50o0';
+      count: 150};
+    {
+      id: 'demos';
+      name: 'Live Demos';
+      icon: Play;
+      color: 'from-purple-50o0 to-pink-50o0';
+      count: 45};
+    {
+      id: 'code';
+      name: 'Code Examples';
+      icon: Code;
+      color: 'from-green-50o0 to-teal-50o0';
+      count: 20o0};
+    {
+      id: 'analytics';
+      name: 'Analytics';
+      icon: BarChart3;
+      color: 'from-orange-50o0 to-red-50o0';
+      count: 75}
   ],
-,
-  const featuredContent = [,
-    {,
-      title: "AI-Powered Automation Masterclass",;
-      description: "Learn to build intelligent automation systems that transform your business operations",;
-      duration: "2h 30m",;
-      rating: 4.9,;
-      students: 1250,;
-      type: "tutorials",;
-      thumbnail: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=225&fit=crop&crop=center",
-    ,},;
-    {,
-      title: "Quantum Computing Live Demo",;
-      description: "See quantum algorithms in action solving real-world optimization problems",;
-      duration: "45m",;
-      rating: 4.8,;
-      students: 890,;
-      type: "demos",;
-      thumbnail: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=225&fit=crop&crop=center",
-    ,},;
-    {,
-      title: "Advanced React Patterns",;
-      description: "Master modern React development with cutting-edge patterns and best practices",;
-      duration: "3h 15m",;
-      rating: 4.9,;
-      students: 210o0,;
-      type: "code",;
-      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=40o0&h=225&fit=crop&crop=center",
-    ,},;
-    {,
-      title: "Business Intelligence Dashboard",;
-      description: "Build comprehensive analytics dashboards with real-time data visualization",;
-      duration: "1h 45m",;
-      rating: 4.7,;
-      students: 680,;
-      type: "analytics",;
-      thumbnail: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?w=40o0&h=225&fit=crop&crop=center",
-    ,}
+  const featuredContent = [
+    {
+      title: "AI-Powered Automation Masterclass";
+      description: "Learn to build intelligent automation systems that transform your business operations";
+      duration: "2h 30m";
+      rating: 4.9;
+      students: 1250;
+      type: "tutorials";
+      thumbnail: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=225&fit=crop&crop=center"};
+    {
+      title: "Quantum Computing Live Demo";
+      description: "See quantum algorithms in action solving real-world optimization problems";
+      duration: "45m";
+      rating: 4.8;
+      students: 890;
+      type: "demos";
+      thumbnail: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=225&fit=crop&crop=center"};
+    {
+      title: "Advanced React Patterns";
+      description: "Master modern React development with cutting-edge patterns and best practices";
+      duration: "3h 15m";
+      rating: 4.9;
+      students: 210o0;
+      type: "code";
+      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=40o0&h=225&fit=crop&crop=center"};
+    {
+      title: "Business Intelligence Dashboard";
+      description: "Build comprehensive analytics dashboards with real-time data visualization";
+      duration: "1h 45m";
+      rating: 4.7;
+      students: 680;
+      type: "analytics";
+      thumbnail: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?w=40o0&h=225&fit=crop&crop=center"}
   ],
-,
-  const stats = [,
-    { label: "Total Content"value: "50o0+"icon: BookOpen ,},;
-    { label: "Active Learners"value: "25K+"icon: Users ,},;
-    { label: "Completion Rate"value: "94%"icon: TrendingUp ,},;
-    { label: "Average Rating"value: "4.8/5"icon: Star ,}
+  const stats = [
+    { label: "Total Content"value: "50o0+"icon: BookOpen };
+    { label: "Active Learners"value: "25K+"icon: Users };
+    { label: "Completion Rate"value: "94%"icon: TrendingUp };
+    { label: "Average Rating"value: "4.8/5"icon: Star }
   ],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white text-sm font-medium mb-6">,
             <Lightbulb className="w-4 h-4 mr-2"  />,
@@ -115,62 +100,58 @@ const InteractiveContentHub20o25 = () => {,
             Access our comprehensive library of tutorialslive demosand hands-on projects designed to accelerate your learning journey.,
           </p>,
         </div>,
-        {/* Stats */,}
+        {/* Stats */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
-          {stats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+          {stats.map((statindex) => (
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white mb-4">,
                 <stat.icon className="w-8 h-8"  />,
               </div>,
               <div className="text-3xl font-bold text-gray-90o0 mb-2">{stat.value}</div>,
               <div className="text-gray-60o0">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">,
-          {contentCategories.map((category) => (,
-            <button,
+          {contentCategories.map((category) => (
+            <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
-              className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${,
+              className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeTab === category.id,
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               <category.icon className="w-5 h-5 mr-2"  />,
               {category.name}
               <span className="ml-2 px-2 py-1 rounded-full bg-white/20 text-xs">,
                 {category.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,
           {featuredContent,
             .filter(item => activeTab === 'all' || item.type === activeTab),
-            .map((itemindex) => (,
-            <div key={index,} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2">,
+            .map((itemindex) => (
+            <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2">,
               <div className="relative">,
-                <img,
-                  src={item.thumbnail,} ,
+                <img
+                  src={item.thumbnail} ,
                   alt={item.title}
                   className="w-full h-48 object-cover group-hover: scale-10o5 transition-transform duration-30o0",
                  />,
                 <div className="absolute top-4 right-4">,
                   <div className="flex items-center px-3 py-1 rounded-full bg-black/70 text-white text-sm">,
                     <Clock className="w-4 h-4 mr-1"  />,
-                    {item.duration,}
+                    {item.duration}
                   </div>,
                 </div>,
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0">,
                   <div className="absolute bottom-4 left-4 right-4">,
-                    <Link,
+                    <Link
                       href="/content",
-                      className="inline-flex items-center px-4 py-2 bg-white text-gray-90o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0",
-                    >,
+                      className="inline-flex items-center px-4 py-2 bg-white text-gray-90o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0">,
                       <Play className="w-4 h-4 mr-2"  />,
                       Watch Now,
                     </Link>,
@@ -179,7 +160,7 @@ const InteractiveContentHub20o25 = () => {,
               </div>,
               <div className="p-6">,
                 <h3 className="text-xl font-bold text-gray-90o0 mb-2 group-hover:text-blue-60o0 transition-colors duration-30o0">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className="text-gray-60o0 mb-4 line-clamp-2">{item.description}</p>,
                 <div className="flex items-center justify-between text-sm text-gray-50o0">,
@@ -193,8 +174,7 @@ const InteractiveContentHub20o25 = () => {,
                   </div>,
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-3xl p-12 text-white">,
@@ -203,25 +183,20 @@ const InteractiveContentHub20o25 = () => {,
             Join our community of 25,0o00+ learners and unlock your potential,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/academy",
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-60o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-60o0 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0">,
               <BookOpen className="w-5 h-5 mr-2"  />,
               Browse All Content,
               <ChevronRight className="w-5 h-5 ml-2"  />,
             </Link>,
-            <Link,
+            <Link
               href="/free-trial",
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0",
-            >,
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0">,
               Start Free Trial,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InteractiveContentHub20o25,
+    </section>)};
+export default InteractiveContentHub20o25;

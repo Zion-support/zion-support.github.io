@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function BlogPostPage() {,
-  return (,
+import React from 'react';
+export default function BlogPostPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -18,7 +17,7 @@ export default function BlogPostPage() {,
           <h2>Why Autonomous Procurement</h2>,
           <p>,
             Procurement spans complex, policy-laden workflows ripe for,
-            automation. With retrieval-grounded agents, contract understanding,;
+            automation. With retrieval-grounded agents, contract understanding;
             and evaluation gates, organizations can accelerate cycles while,
             strengthening controls.,
           </p>,
@@ -29,7 +28,7 @@ export default function BlogPostPage() {,
               lineage,
             </li>,
             <li>,
-              Agent skills: RFP generation, vendor matching, clause analysis,;
+              Agent skills: RFP generation, vendor matching, clause analysis;
               approval routing,
             </li>,
             <li>,
@@ -48,7 +47,5 @@ export default function BlogPostPage() {,
           </ul>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

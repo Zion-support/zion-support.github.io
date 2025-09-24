@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AutonomousEdgeComputingNetworkPage() {,
-  return (,
+export default function AutonomousEdgeComputingNetworkPage() {
+  return (
     <>,
       <Head>,
         <title>Autonomous Edge Computing Network - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='autonomous edge computing network page',
         />,
@@ -21,7 +20,5 @@ export default function AutonomousEdgeComputingNetworkPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

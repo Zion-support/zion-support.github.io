@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MobileAppDevelopmentChatPage() {,
-  return (,
+export default function MobileAppDevelopmentChatPage() {
+  return (
     <>,
       <Head>,
         <title>Mobile App Development Chat - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function MobileAppDevelopmentChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,52 +1,50 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  User,;
-  Clock,;
-  TrendingUp,;
-  DollarSign,;
-  Zap,;
-  CheckCircle,;
-  Award,;
+import {
+  ArrowLeft;
+  Calendar;
+  User;
+  Clock;
+  TrendingUp;
+  DollarSign;
+  Zap;
+  CheckCircle;
+  Award;
 } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',;
+    'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings';
   description:,
-    'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.',;
-  keywords: [,
-    'Manufacturing',;
-    'Quantum AI',;
-    'Optimization',;
-    'ROI Success',;
-    'AI 20o25',;
-  ],;
-  openGraph: {,
+    'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.';
+  keywords: [
+    'Manufacturing';
+    'Quantum AI';
+    'Optimization';
+    'ROI Success';
+    'AI 20o25';
+  ];
+  openGraph: {
     title:,
-      'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',;
+      'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings';
     description:,
-      'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'Manufacturing',;
-      'Quantum AI',;
-      'Optimization',;
-      'ROI Success',;
-      'AI 20o25',;
-    ],;
-  },;
+      'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'Manufacturing';
+      'Quantum AI';
+      'Optimization';
+      'ROI Success';
+      'AI 20o25';
+    ];
+  };
 };
-,
-export default function ManufacturingTransformationPage() {,
-  return (,
+export default function ManufacturingTransformationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',
         description='Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.',
         keywords='Manufacturing, Quantum AI, Optimization, ROI Success, AI 20o25',
@@ -55,10 +53,9 @@ export default function ManufacturingTransformationPage() {,
       {/* Header */}
       <header className='bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
-          <Link,
+          <Link
             href='/case-studies',
-            className='inline-flex items-center text-white hover:text-gray-20o0 mb-6 transition-colors',
-          >,
+            className='inline-flex items-center text-white hover:text-gray-20o0 mb-6 transition-colors'>,
             <ArrowLeft className='w-4 h-4 mr-2' />,
             Back to Case Studies,
           </Link>,
@@ -85,27 +82,25 @@ export default function ManufacturingTransformationPage() {,
             implementation of quantum-powered AI optimization systems.,
           </p>,
           <div className='flex flex-wrap gap-2'>,
-            {[,
-              'Manufacturing',;
-              'Quantum AI',;
-              'Optimization',;
-              'ROI Success',;
-              'AI 20o25',;
-            ].map(tag => (,
-              <span,
+            {[
+              'Manufacturing';
+              'Quantum AI';
+              'Optimization';
+              'ROI Success';
+              'AI 20o25';
+            ].map(tag => (
+              <span
                 key={tag}
-                className='bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm',
-              >,
+                className='bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm'>,
                 #{tag}
-              </span>,
-            ))}
+              </span>))}
           </div>,
         </div>,
       </header>,
       {/* Article Content */}
       <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='prose prose-lg max-w-none'>,
-          {/* Executive Summary */,}
+          {/* Executive Summary */}
           <div className='bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-12'>,
             <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>,
               Executive Summary,
@@ -133,7 +128,7 @@ export default function ManufacturingTransformationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Company Background */,}
+          {/* Company Background */}
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6 mt-12'>,
             Company Background,
           </h2>,
@@ -274,7 +269,7 @@ export default function ManufacturingTransformationPage() {,
               </ul>,
             </div>,
           </div>,
-          {/* Results */,}
+          {/* Results */}
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6 mt-12'>,
             Implementation Results,
           </h2>,
@@ -407,7 +402,7 @@ export default function ManufacturingTransformationPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Key Success Factors */,}
+          {/* Key Success Factors */}
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6 mt-12'>,
             Key Success Factors,
           </h2>,
@@ -455,33 +450,30 @@ export default function ManufacturingTransformationPage() {,
               expertise can deliver similar results for your organization.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Schedule Manufacturing Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/resources/ai-implementation-master-guide-20o25-complete',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center'>,
                 Download Implementation Guide,
               </Link>,
             </div>,
           </div>,
         </div>,
       </article>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className='bg-gray-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h3 className='text-2xl font-bold text-gray-90o0 mb-8'>,
             Related Case Studies,
           </h3>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story',
-              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow',
-            >,
+              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'>,
               <h4 className='font-bold text-gray-90o0 mb-2'>,
                 Fortune 50o0 AI Transformation,
               </h4>,
@@ -489,10 +481,9 @@ export default function ManufacturingTransformationPage() {,
                 Another Fortune 50o0 success story with AI implementation,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-transformation-50o0-roi-success-story',
-              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow',
-            >,
+              className='bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow'>,
               <h4 className='font-bold text-gray-90o0 mb-2'>,
                 50o0% ROI Success Story,
               </h4>,
@@ -503,7 +494,5 @@ export default function ManufacturingTransformationPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

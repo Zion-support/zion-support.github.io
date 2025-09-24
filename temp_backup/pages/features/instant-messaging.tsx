@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function InstantMessagingPage() {,
-  return (,
+export default function InstantMessagingPage() {
+  return (
     <>,
       <Head>,
         <title>Instant Messaging - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function InstantMessagingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

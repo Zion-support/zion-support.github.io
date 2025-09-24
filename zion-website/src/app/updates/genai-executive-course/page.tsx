@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function GenAIExecutiveCoursePage() {,
-  return (,
+import React from 'react';
+export default function GenAIExecutiveCoursePage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <p className='text-sm text-blue-40o0'>Course</p>,
@@ -15,7 +14,7 @@ export default function GenAIExecutiveCoursePage() {,
         </p>,
         <div className='mt-8 space-y-4 text-gray-30o0'>,
           <p>,
-            Learn how to evaluate AI opportunities, set measurable objectives,;
+            Learn how to evaluate AI opportunities, set measurable objectives;
             and build cross-functional operating models. Includes governance,
             templates, risk registers, and success metrics.,
           </p>,
@@ -26,15 +25,12 @@ export default function GenAIExecutiveCoursePage() {,
           </ul>,
         </div>,
         <div className='mt-10'>,
-          <a,
+          <a
             href='/contact',
-            className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0',
-          >,
+            className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0'>,
             Request syllabus,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumDatabase20o43Page() {,
-  return (,
+export default function QuantumDatabase20o43Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Database 20o43 - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function QuantumDatabase20o43Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

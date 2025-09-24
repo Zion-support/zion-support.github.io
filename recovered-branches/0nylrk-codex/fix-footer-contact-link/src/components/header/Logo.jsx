@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom',
-export const Logo = () => {,
-  return (,
+export const Logo = () => {
+  return (
     <Link to='/' className='flex items-center group'>,
       <div className='flex items-center space-x-2'>,
         {/* Icon */}
@@ -10,7 +10,7 @@ export const Logo = () => {,
           </div>,
           <div className='absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-pulse'></div>,
         </div>,
-        {/* Text */,}
+        {/* Text */}
         <div className='flex flex-col'>,
           <div className='text-xl font-bold text-white leading-tight'>,
             {isWhitelabel ? brandName : 'ZION'}
@@ -21,7 +21,4 @@ export const Logo = () => {,
         </div>,
       </div>,
       <div className='text-xs lg: text-sm text-gray-30o0 font-medium'>Group</div>,
-    </Link>,
-  ),
-,};
-,
+    </Link>)};

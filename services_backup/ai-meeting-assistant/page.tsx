@@ -1,20 +1,18 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Meeting Assistant | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Meeting Assistant | Zion Tech Group';
   description:,
-    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',;
+    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.';
 };
-,
-export default function AIMeetingAssistantPage() {,
-  return (,
+export default function AIMeetingAssistantPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Meeting Assistant,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Transform your meetings with AI-powered transcription, action items,;
+          Transform your meetings with AI-powered transcription, action items;
           and intelligent insights. Never miss important details and make every,
           meeting more productive.,
         </p>,
@@ -25,32 +23,32 @@ export default function AIMeetingAssistantPage() {,
             Key Features,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               icon='🎤',
               title='Real-time Transcription',
               description='Live transcription with 99% accuracy in 50+ languages with speaker identification',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📝',
               title='Smart Action Items',
               description='Automatically extract and assign action items with due dates and responsible parties',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🧠',
               title='AI-Powered Summaries',
               description='Intelligent meeting summaries highlighting key decisions, topics, and outcomes',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Meeting Analytics',
               description='Insights on meeting effectiveness, participation, and time management',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔍',
               title='Search & Discovery',
               description='Search across all meeting transcripts and find specific topics or decisions instantly',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📱',
               title='Multi-Platform Support',
               description='Works with Zoom, Teams, Google Meet, and in-person meetings',
@@ -60,47 +58,47 @@ export default function AIMeetingAssistantPage() {,
         <div>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               title='Basic',
               price='$19',
               period='per month',
               description='Perfect for individuals and small teams',
-              features={[,
-                'Up to 10 hours/month',;
-                'Basic transcription',;
-                'Action item extraction',;
-                'Meeting summaries',;
-                'Email support',;
+              features={[
+                'Up to 10 hours/month';
+                'Basic transcription';
+                'Action item extraction';
+                'Meeting summaries';
+                'Email support';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               title='Professional',
               price='$49',
               period='per month',
               description='Ideal for growing teams and departments',
-              features={[,
-                'Up to 50 hours/month',;
-                'Advanced AI features',;
-                'Meeting analytics',;
-                'Custom integrations',;
-                'Priority support',;
-                'Team collaboration',;
+              features={[
+                'Up to 50 hours/month';
+                'Advanced AI features';
+                'Meeting analytics';
+                'Custom integrations';
+                'Priority support';
+                'Team collaboration';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               title='Enterprise',
               price='$149',
               period='per month',
               description='For large organizations with advanced needs',
-              features={[,
-                'Unlimited hours',;
-                'Custom AI models',;
-                'Advanced analytics',;
-                '24/7 support',;
-                'Custom integrations',;
-                'Compliance features',;
+              features={[
+                'Unlimited hours';
+                'Custom AI models';
+                'Advanced analytics';
+                '24/7 support';
+                'Custom integrations';
+                'Compliance features';
               ]}
               popular={false}
             />,
@@ -164,32 +162,32 @@ export default function AIMeetingAssistantPage() {,
           Use Cases,
         </h2>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-          <UseCaseCard,
+          <UseCaseCard
             icon='💼',
             title='Executive Meetings',
             description='Board meetings, strategy sessions, and leadership discussions with detailed action tracking',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='👥',
             title='Team Standups',
             description='Daily standups, sprint planning, and retrospectives with progress tracking',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🎓',
             title='Training Sessions',
             description='Employee training, workshops, and educational content with knowledge extraction',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🤝',
             title='Client Meetings',
             description='Sales calls, project updates, and client consultations with follow-up automation',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🔬',
             title='Research Interviews',
             description='User interviews, market research, and feedback sessions with insight extraction',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='⚖️',
             title='Legal Proceedings',
             description='Legal consultations, depositions, and compliance meetings with accurate documentation',
@@ -197,54 +195,47 @@ export default function AIMeetingAssistantPage() {,
         </div>,
       </div>,
       <CTA />,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  title,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  title;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   title: string,
   price: string,
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-green-50o0 bg-green-50' : 'border-gray-20o0 bg-white'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-green-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{title}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -252,55 +243,46 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-green-50o0 mr-3'>✓</span>,
             <span className='text-gray-70o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <button,
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${,
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-green-60o0 text-white hover: bg-green-70o0',
-            : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'}`}
       >,
         Start Free Trial,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PlatformCard({ name, icon }: { name: string, icon: string ,}) {,
-  return (,
+function PlatformCard({ name, icon }: { name: string, icon: string }) {
+  return (
     <div className='text-center p-4 border border-gray-20o0 rounded-lg hover: border-green-30o0 transition-colors'>,
-      <div className='text-3xl mb-2'>{icon,}</div>,
+      <div className='text-3xl mb-2'>{icon}</div>,
       <div className='text-sm font-medium text-gray-70o0'>{name}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function UseCaseCard({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function UseCaseCard({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center p-6 border border-gray-20o0 rounded-lg hover: border-green-30o0 transition-colors'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function CTA() {,
-  return (,
+function CTA() {
+  return (
     <div className='bg-gradient-to-r from-green-50 to-blue-50 border border-green-20o0 rounded-xl p-8 text-center'>,
       <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
         Ready to Transform Your Meetings?,
@@ -311,16 +293,14 @@ function CTA() {,
         tools.,
       </p>,
       <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-        <a,
+        <a
           href='tel:+130o24640950',
-          className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors',
-        >,
+          className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'>,
           Call +1 30o2 464 0950,
         </a>,
-        <a,
+        <a
           href='mailto:kleber@ziontechgroup.com',
-          className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors',
-        >,
+          className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors'>,
           Email Us,
         </a>,
       </div>,
@@ -328,7 +308,5 @@ function CTA() {,
         <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

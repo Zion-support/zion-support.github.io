@@ -1,5 +1,5 @@
-export default function AIBusinessIntelligencePage() {,
-  return (,
+export default function AIBusinessIntelligencePage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <section className='py-20'>,
         <div className='max-w-5xl mx-auto px-4'>,
@@ -11,7 +11,5 @@ export default function AIBusinessIntelligencePage() {,
           </p>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

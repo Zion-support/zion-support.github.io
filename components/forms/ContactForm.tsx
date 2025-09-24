@@ -1,88 +1,68 @@
 "use client",
 'use client',
-,
 import React{ useState } from 'react',
 import { motion } from 'framer-motion',
 MailPhoneMapPinSendCheckCircleAlertCircle,
-const ContactForm: React.FC = () => {,
-  const [formDatasetFormData] = useState({,
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    message: '',
-  ,}),
+const ContactForm: React.FC = () => {
+  const [formDatasetFormData] = useState({
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
+    message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<,
-    'idle' | 'success' | 'error',
-  >('idle'),
-,
+    'idle' | 'success' | 'error'>('idle'),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
-,
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    setFormData({,
-      ...formData,;
-      [e.target.name]: e.target.value,
-    }),
-  };
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData;
+      [e.target.name]: e.target.value})};
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-,
     // Simulate API call,
-    try {,
+    try {
       await new Promise(resolve => setTimeout(resolve2000)),
       setSubmitStatus('success'),
-      setFormData({,
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        message: '',
-      ,}),
-    } catch (error) {,
-      setSubmitStatus('error'),
-    } finally {,
-      setIsSubmitting(false),
-    }
+      setFormData({
+        name: '';
+        email: '';
+        company: '';
+        phone: '';
+        service: '';
+        message: ''})} catch (error) {
+      setSubmitStatus('error')} finally {
+      setIsSubmitting(false)}
   };
-,
-  const services = [,
-    'AI Development',;
-    'Cloud Architecture',;
-    'Digital Transformation',;
-    'IoT Platforms',;
-    'Blockchain Solutions',;
-    'Data Analytics',;
-    'Other',
+  const services = [
+    'AI Development';
+    'Cloud Architecture';
+    'Digital Transformation';
+    'IoT Platforms';
+    'Blockchain Solutions';
+    'Data Analytics';
+    'Other'],
+  const contactInfo = [
+    {
+      icon: Mail;
+      title: 'Email Us';
+      content: 'contact@ziontechgroup.com';
+      href: 'mailto:contact@ziontechgroup.com'};
+    {
+      icon: Phone;
+      title: 'Call Us';
+      content: '+1 (555) 123-4567';
+      href: 'tel:+15551234567'};
+    {
+      icon: MapPin;
+      title: 'Visit Us';
+      content: '123 Tech StreetInnovation CityIC 12345';
+      href: '#'}
   ],
-,
-  const contactInfo = [,
-    {,
-      icon: Mail,;
-      title: 'Email Us',;
-      content: 'contact@ziontechgroup.com',;
-      href: 'mailto:contact@ziontechgroup.com',
-    ,},;
-    {,
-      icon: Phone,;
-      title: 'Call Us',;
-      content: '+1 (555) 123-4567',;
-      href: 'tel:+15551234567',
-    ,},;
-    {,
-      icon: MapPin,;
-      title: 'Visit Us',;
-      content: '123 Tech StreetInnovation CityIC 12345',;
-      href: '#',
-    ,}
-  ],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">,
       {/* Background Elements */}
       <div className="absolute inset-0">,
@@ -92,12 +72,11 @@ const ContactForm: React.FC = () => {,
       <div className="relative container mx-auto px-4">,
         {/* Section Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          viewport={{ once: true ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16">,
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">,
             Let&apos,s Start a,
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">,
@@ -110,14 +89,13 @@ const ContactForm: React.FC = () => {,
           </p>,
         </motion.div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <motion.div,
-            initial={{ opacity: 0x: -30 ,}}
-            whileInView={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            viewport={{ once: true ,}}
-            className="space-y-8",
-          >,
+            initial={{ opacity: 0x: -30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-8">,
             <div>,
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>,
               <p className="text-gray-300 leading-relaxed mb-8">,
@@ -127,36 +105,33 @@ const ContactForm: React.FC = () => {,
             </div>,
             {/* Contact Details */}
             <div className="space-y-6">,
-              {contactInfo.map((infoindex) => (,
+              {contactInfo.map((infoindex) => (
                 <motion.a,
                   key={info.title}
                   href={info.href}
-                  initial={{ opacity: 0x: -20 ,}}
-                  whileInView={{ opacity: 1x: 0 ,}}
-                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 ,}}
-                  viewport={{ once: true ,}}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover: border-blue-500/30 transition-all duration-300 group",
-                >,
+                  initial={{ opacity: 0x: -20 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover: border-blue-500/30 transition-all duration-300 group">,
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">,
                     <info.icon className="w-6 h-6 text-white" />,
                   </div>,
                   <div>,
-                    <h4 className="text-lg font-semibold text-white mb-1">{info.title,}</h4>,
+                    <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>,
                     <p className="text-gray-300 group-hover: text-blue-400 transition-colors duration-300">,
-                      {info.content,}
+                      {info.content}
                     </p>,
                   </div>,
-                </motion.a>,
-              ))}
+                </motion.a>))}
             </div>,
             {/* Additional Info */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6">,
               <h4 className="text-lg font-semibold text-white mb-3">Why Choose Zion Tech?</h4>,
               <ul className="space-y-2 text-gray-300">,
                 <li className="flex items-center space-x-2">,
@@ -180,42 +155,38 @@ const ContactForm: React.FC = () => {,
           </motion.div>,
           {/* Contact Form */}
           <motion.div,
-            initial={{ opacity: 0x: 30 ,}}
-            whileInView={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.8delay: 0.4 ,}}
-            viewport={{ once: true ,}}
-            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8",
-          >,
-            {submitStatus === 'success' ? (,
+            initial={{ opacity: 0x: 30 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">,
+            {submitStatus === 'success' ? (
               <motion.div,
-                initial={{ opacity: 0scale: 0.8 ,}}
-                animate={{ opacity: 1scale: 1 ,}}
-                className="text-center py-12",
-              >,
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={{ opacity: 1scale: 1 }}
+                className="text-center py-12">,
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />,
                 <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>,
                 <p className="text-gray-300 mb-6">,
                   Thank you for reaching out. Our team will get back to you within 24 hours.,
                 </p>,
-                <button,
+                <button
                   onClick={() => setSubmitStatus('idle')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300",
-                >,
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">,
                   Send Another Message,
                 </button>,
-              </motion.div>,
-            ) : (,
-              <form onSubmit={handleSubmit,} className="space-y-6">,
+              </motion.div>) : (
+              <form onSubmit={handleSubmit} className="space-y-6">,
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
                   <div>,
                     <label htmlFor="name" className="block text-white font-medium mb-2">,
                       Full Name *,
                     </label>,
-                    <input,
+                    <input
                       type="text",
                       id="name",
                       name="name",
-                      value={formData.name,}
+                      value={formData.name}
                       onChange={handleChange}
                       required,
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors",
@@ -226,11 +197,11 @@ const ContactForm: React.FC = () => {,
                     <label htmlFor="email" className="block text-white font-medium mb-2">,
                       Email Address *,
                     </label>,
-                    <input,
+                    <input
                       type="email",
                       id="email",
                       name="email",
-                      value={formData.email,}
+                      value={formData.email}
                       onChange={handleChange}
                       required,
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors",
@@ -243,11 +214,11 @@ const ContactForm: React.FC = () => {,
                     <label htmlFor="company" className="block text-white font-medium mb-2">,
                       Company,
                     </label>,
-                    <input,
+                    <input
                       type="text",
                       id="company",
                       name="company",
-                      value={formData.company,}
+                      value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors",
                       placeholder="Enter company name",
@@ -257,11 +228,11 @@ const ContactForm: React.FC = () => {,
                     <label htmlFor="phone" className="block text-white font-medium mb-2">,
                       Phone Number,
                     </label>,
-                    <input,
+                    <input
                       type="tel",
                       id="phone",
                       name="phone",
-                      value={formData.phone,}
+                      value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-500 transition-colors",
                       placeholder="Enter phone number",
@@ -272,26 +243,24 @@ const ContactForm: React.FC = () => {,
                   <label htmlFor="service" className="block text-white font-medium mb-2">,
                     Service of Interest,
                   </label>,
-                  <select,
+                  <select
                     id="service",
                     name="service",
-                    value={formData.service,}
+                    value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus: outline-none focus:border-blue-500 transition-colors",
-                  >,
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus: outline-none focus:border-blue-500 transition-colors">,
                     <option value="">Select a service</option>,
-                    {services.map((service) => (,
-                      <option key={service,} value={service} className="bg-gray-800 text-white">,
+                    {services.map((service) => (
+                      <option key={service} value={service} className="bg-gray-800 text-white">,
                         {service}
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                 </div>,
                 <div>,
                   <label htmlFor="message" className="block text-white font-medium mb-2">,
                     Message *,
                   </label>,
-                  <textarea,
+                  <textarea
                     id="message",
                     name="message",
                     value={formData.message}
@@ -302,42 +271,32 @@ const ContactForm: React.FC = () => {,
                     placeholder="Tell us about your project or inquiry...",
                   />,
                 </div>,
-                {submitStatus === 'error' && (,
+                {submitStatus === 'error' && (
                   <motion.div,
-                    initial={{ opacity: 0, y: -10 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4",
-                  >,
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4">,
                     <AlertCircle className="w-5 h-5" />,
                     <span>Something went wrong. Please try again.</span>,
-                  </motion.div>,
-                )}
+                  </motion.div>)}
 ,
-                <button,
+                <button
                   type="submit",
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2",
-                >,
-                  {isSubmitting ? (,
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2">,
+                  {isSubmitting ? (
                     <>,
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />,
                       <span>Sending...</span>,
-                    </>,
-                  ) : (,
+                    </>) : (
                     <>,
                       <Send className="w-5 h-5" />,
                       <span>Send Message</span>,
-                    </>,
-                  ),}
+                    </>)}
                 </button>,
-              </form>,
-            )}
+              </form>)}
           </motion.div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default ContactForm,
-,
+    </section>)};
+export default ContactForm;

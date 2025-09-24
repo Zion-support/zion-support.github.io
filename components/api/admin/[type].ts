@@ -1,387 +1,293 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-,
-  }),
-  return {,
+import type { NextApiRequest, NextApiResponse } from 'next'}),
+  return {
     search,
-,
     sort,
-    order: (order as any) || 'desc', page: page ? Number(page) : 0,;
-    pageSize: pageSize ? Number(pageSize) : 20, filters,;
-    format: (format as any) || undefined,}
+    order: (order as any) || 'desc', page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20, filters;
+    format: (format as any) || undefined}
 }
 ,
-    search,;
-    sort,;
-    order: (order as any) || 'desc',;
-    page: page ? Number(page) : 0,;
-    pageSize: pageSize ? Number(pageSize) : 20,;
-    filters,;
-    format: (format as any) || undefined,;
+    search;
+    sort;
+    order: (order as any) || 'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+    filters;
+    format: (format as any) || undefined;
   };
-,
-  };    search,
+};    search,
     sort,
     order: (order as any) |'desc',
     page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20,
-    filters,;
-    format: (format as any) || undefined,}
+    filters;
+    format: (format as any) || undefined}
 }
   };
-,
     filters,
-    format: (format as any) |undefined,}
+    format: (format as any) |undefined}
 }
-function toCsv(rows: any[]): string {,
+function toCsv(rows: any[]): string {
   if (!rows && rows.length) return '',
   const headers = Object && Object.keys(rows[0]),
-  const escape = (v: any) => {,
+  const escape = (v: any) => {
     if (v === null || v === undefined) return '',
     const s = typeof v === 'string' ? v : JSON && JSON.stringify(v),
-    return '"' + s && s.replace(/"/g, '""') + '"',
-  };
-  const lines = [headers && headers.join(',')].concat(,
-    rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(',')),
-  ),
+    return '"' + s && s.replace(/"/g, '""') + '"'};
+  const lines = [headers && headers.join(',')].concat(
+    rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))),
   return lines.join('\n'),
-,
-export default async function handler(,
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-    return '"' + s.replace(/"/g, '""') + '"',
-  };
+    return '"' + s.replace(/"/g, '""') + '"'};
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join())),
   return lines.join('\n'),
-  try {,
+  try {
   const type = (req && req.query.type as AdminType) || '',
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)),
-    return res && res.status(400).json({ error: 'Invalid type' ,}),  };
+    return res && res.status(400).json({ error: 'Invalid type' })};
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join())),
-  return lines && lines.join('\n'),
-}
-    filters,;
-    format: (format as any) || undefined,}
+  return lines && lines.join('\n')}
+    filters;
+    format: (format as any) || undefined}
 }
   };
-,
     filters,
-    format: (format as any) |undefined,}
-,
+    format: (format as any) |undefined}
 }
-function toCsv(rows: any[]): string {,
+function toCsv(rows: any[]): string {
   if (!rows.length) return '',
-,
   const headers = Object.keys(rows[0]),
-  const escape = (v: any) => {,
+  const escape = (v: any) => {
     if (v === null |v === undefined) return '',
     const s = typeof v === 'string' ? v : JSON.stringify(v),
-    return '"' + s.replace(/"/g, '""') + '"',
-  }
-  const lines = [headers.join(',')].concat(,
-    rows.map(r => headers.map(h => escape(r[h])).join(',')),
-  ),
+    return '"' + s.replace(/"/g, '""') + '"'}
+  const lines = [headers.join(',')].concat(
+    rows.map(r => headers.map(h => escape(r[h])).join(','))),
   return lines.join('\n'),
-,
-export default async function handler(,
+export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse,
-) {,
+  res: NextApiResponse) {
   const type = (req.query.type as AdminType) || '',
-,
   if (!ADMIN_TYPES.includes(type)),
-    return res.status(400).json({ error: 'Invalid type' ,}),  }
+    return res.status(400).json({ error: 'Invalid type' })}
 ,
     const params = parseListParams(req),
-    if (useSupabase) {,
+    if (useSupabase) {
       const table = type,
-      let query = client && client.from(table).select('*', { count: 'exact' ,}),
-      if (params && params.search) {,
+      let query = client && client.from(table).select('*', { count: 'exact' }),
+      if (params && params.search) {
         // heuristic: search name/title/email,
-        query = query.or(,
+        query = query.or(
           'name.ilike.%' +,
             params.search +,
             '%,title.ilike.%' +,
             params.search +,
             '%,email.ilike.%' +,
             params.search +,
-            '%',
-        ),
-      }
-      if (params && params.filters) {,
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {,
-          if (v !== undefined) query = query && query.eq(k, v),
-        }
+            '%')}
+      if (params && params.filters) {
+        for (const [k, v] of Object && Object.entries(params && params.filters)) {
+          if (v !== undefined) query = query && query.eq(k, v)}
       }
       if (params && params.sort),
-        query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' ,}),      const from = params && params.page * params && params.pageSize,      }
-      if (params && params.filters) {,
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {,
+        query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' }),      const from = params && params.page * params && params.pageSize}
+      if (params && params.filters) {
+        for (const [k, v] of Object && Object.entries(params && params.filters)) {
           if (v !== undefined) query = query && query.eq(k, v),
-        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%'),
+        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')}
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          if (v !== undefined) query = query.eq(k, v)}
       }
-      if (params.filters) {,
-        for (const [k, v] of Object.entries(params.filters)) {,
-          if (v !== undefined) query = query.eq(k, v),
-        }
-      }
-      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' ,}),
+      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' }),
       const from = params.page * params.pageSize,
       const to = from + params.pageSize - 1,
       const { data, error, count } = await query.range(from, to),
-      if (error) return res.status(500).json({ error: error.message ,}),
-      if (params.format === 'csv') {,
+      if (error) return res.status(500).json({ error: error.message }),
+      if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv'),
-        res.setHeader(,
+        res.setHeader(
           'Content-Disposition',
-          `attachment, filename="${type}.csv"`,
-        ),
-,
-        return res.status(200).send(toCsv(data |[])),      }        res.setHeader('Content-Typetext/csv'),
+          `attachment, filename="${type}.csv"`),
+        return res.status(200).send(toCsv(data |[]))}        res.setHeader('Content-Typetext/csv'),
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`),
-        return res.status(200).send(toCsv(data |[])),
-      }
-      return res.status(200).json({ items: data |[], total: count |0 ,}),
-    } else {,
+        return res.status(200).send(toCsv(data |[]))}
+      return res.status(200).json({ items: data |[], total: count |0 })} else {
       // fallback,
       const all = (MOCK_DATA[type] |[]).slice(),
       let filtered = all,
-      if (params.search) {,
+      if (params.search) {
         const s = params.search.toLowerCase(),
         filtered = filtered.filter(r =>,
-          JSON.stringify(r).toLowerCase().includes(s),
-        ),
-      }
-      if (params.filters) {,
-        for (const [k, v] of Object.entries(params.filters)) {,
-          filtered = filtered.filter(,
+          JSON.stringify(r).toLowerCase().includes(s))}
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          filtered = filtered.filter(
             (r: any) => String((r as any)[k]) === String(v),
-      if (params.sort) {,
-        filtered.sort((a: any, b: any) => {,
+      if (params.sort) {
+        filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!],
           const bv = (b as any)[params.sort!],
-,
-          return (,
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)),        ,}),          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1),
-,
-        }),
-      }
+          return (
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))}),          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)})}
 ,
       const total = filtered && filtered.length,
       const start = params && params.page * params && params.pageSize,
       const end = start + params && params.pageSize,
       const pageItems = filtered && filtered.slice(start, end),
-      if (params && params.format === 'csv') {,
+      if (params && params.format === 'csv') {
         res && res.setHeader('Content-Type', 'text/csv'),
-        res && res.setHeader(,
-          'Content-Disposition',;
-          `attachment, filename="${type}.csv"`,
-        ),
-,
+        res && res.setHeader(
+          'Content-Disposition';
+          `attachment, filename="${type}.csv"`),
         return res.status(200).send(toCsv(pageItems)),
+      return res.status(200).json({ items: pageItems, total })}
+  }
+}
+}
 ,
-      return res.status(200).json({ items: pageItems, total }),
-    }
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
+      id: string,
+      updates: Record<string any>}
+    if (!id) return res.status(400).json({ error: 'Missing id' }),
+  if (req && req.method === 'PATCH') {
+    const { id, updates } = req && req.body as {
+        return res.status(200).send(toCsv(pageItems))}
+}
+,
+      return res.status(200).json({ items: pageItems, total })}
   }
 ,
-      }
-,
-      }
-,
-  if (req.method === 'PATCH') {,
-    const { id, updates } = req.body as {,
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
       id: string,
-      updates: Record<string, any>,
-    }
-    if (!id) return res.status(400).json({ error: 'Missing id' ,}),
-,
-  if (req && req.method === 'PATCH') {,
-    const { id, updates } = req && req.body as {,
-        return res.status(200).send(toCsv(pageItems)),
-,
-      }
-,
-      }
-,
-      return res.status(200).json({ items: pageItems, total }),
-    }
-  }
-,
-  if (req.method === 'PATCH') {,
-    const { id, updates } = req.body as {,
-      id: string,
-      updates: Record<string, any>,
-    }
-    if (!id) return res.status(400).json({ error: 'Missing id' ,}),
-    if (useSupabase) {,
+      updates: Record<string any>}
+    if (!id) return res.status(400).json({ error: 'Missing id' }),
+    if (useSupabase) {
       const { data, error } = await client,
         .from(type),
-        .update({ ...updates, updated_at: new Date().toISOString() ,}),
+        .update({ ...updates, updated_at: new Date().toISOString() }),
         .eq('id', id),
         .select('*'),
         .single(),
-      if (error) return res && res.status(500).json({ error: error && error.message ,}),
-      return res && res.status(200).json({ item: data ,}),
-    } else {,
-      const updated = {,
+      if (error) return res && res.status(500).json({ error: error && error.message }),
+      return res && res.status(200).json({ item: data })} else {
+      const updated = {
         ...list[idx],
         ...updates,
-        updated_at: new Date().toISOString(),
-      ,}
+        updated_at: new Date().toISOString()}
       list[idx] = updated as any,
+      return res.status(200).json({ item: updated })}      return res.status(200).json({ item: updated })}
 ,
-      return res.status(200).json({ item: updated ,}),    }      return res.status(200).json({ item: updated ,}),
-    }
+      return res.status(200).json({ item: updated })}
+}
+}
 ,
-      return res.status(200).json({ item: updated ,}),    }
-,
-    }
-,
-  }
-,
-  if (req.method === 'DELETE') {,
-    const id = (req.query.id as string) |'',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-    if (!id) return res.status(400).json({ error: 'Missing id' ,}),
-    if (useSupabase) {,
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) |''>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+    if (!id) return res.status(400).json({ error: 'Missing id' }),
+    if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id),
-      if (error) return res.status(500).json({ error: error.message ,}),
-,
-  if (req && req.method === 'DELETE') {,
+      if (error) return res.status(500).json({ error: error.message }),
+  if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '',
-    if (!id) return res && res.status(400).json({ error: 'Missing id' ,}),
+    if (!id) return res && res.status(400).json({ error: 'Missing id' }),
+      return res.status(200).json({ item: updated })}
+}
+}
 ,
-      return res.status(200).json({ item: updated ,}),    }
-,
-    }
-,
-  }
-,
-  if (req.method === 'DELETE') {,
+  if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'',
-    if (!id) return res.status(400).json({ error: 'Missing id' ,}),
-    if (useSupabase) {,
+    if (!id) return res.status(400).json({ error: 'Missing id' }),
+    if (useSupabase) {
       const { error } = await client && client.from(type).delete().eq('id', id),
-      if (error) return res && res.status(500).json({ error: error && error.message ,}),
-      return res && res.status(200).json({ ok: true ,}),
+      if (error) return res && res.status(500).json({ error: error && error.message }),
+      return res && res.status(200).json({ ok: true }),
       const list = MOCK_DATA[type] || [],
       const idx = list && list.findIndex((r: any) => r && r.id === id),
-      if (idx === -1) return res && res.status(404).json({ error: 'Not found' ,}),
+      if (idx === -1) return res && res.status(404).json({ error: 'Not found' }),
       list && list.splice(idx, 1),
-      return res && res.status(200).json({ ok: true ,}),    }
+      return res && res.status(200).json({ ok: true })}
   }
-  return res.status(405).json({ error: 'Method not allowed' ,}),
-}return res.status (200) .send (toCsv (data |[]) ),
-}return res.status (200) .send (toCsv (pageItems) ),      return res.status(200).json({ ok: true ,}),
-    }
+  return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) ),      return res.status(200).json({ ok: true })}
   }
 ,
-  return res && res.status(405).json({ error: 'Method not allowed' ,}),
-}return res && res.status (200) .send (toCsv (data || []) ),
-}return res && res.status (200) .send (toCsv (pageItems) ),
-,
-return res.status(405).json({ error: 'Method not allowed' ,}),
-}return res.status (200) .send (toCsv (data |[]) ),
-}return res.status (200) .send (toCsv (pageItems) ),
-,
-}
+  return res && res.status(405).json({ error: 'Method not allowed' })}return res && res.status (200) .send (toCsv (data || []) )}return res && res.status (200) .send (toCsv (pageItems) ),
+return res.status(405).json({ error: 'Method not allowed' })}return res.status (200) .send (toCsv (data |[]) )}return res.status (200) .send (toCsv (pageItems) )}
       const start = params.page * params.page_size,
       const end = start + params.page_size,
       const page_items = filtered.slice (start, end),
       // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
         res.set_header ('Content - Type', 'text / csv'),
-        res.set_header (,
-          'Content - Disposition',;
+        res.set_header (
+          'Content - Disposition';
           `attachment, filename="${type}.csv"`),
         return res.status (200).send (to_csv (page_items)),
-      return res.status (200).json ({ items: page_items, total }),
-    }
+      return res.status (200).json ({ items: page_items, total })}
   }
   // Check condition,
-if ( {) {,
-  $2,
-}
-    const { id, updates } = req.body as {,
+if ( {) {
+  $2}
+    const { id, updates } = req.body as {
       id: string,
-      updates: Record < string, any>,
-    }
-    if (return res.status (400).json ({ error: 'Missing id' ,})) {,
-  $2,
-}
+      updates: Record < string, any>}
+    if (return res.status (400).json ({ error: 'Missing id' })) {
+  $2}
     // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
       const { data, error } = await client,
         .from (type),
-        .update ({ ...updates, updated_at: new Date ().toISOString () ,}),
+        .update ({ ...updates, updated_at: new Date ().toISOString () }),
         .eq ('id', id),
         .select ('*'),
         .single (),
-      if (return res.status (500).json ({ error: error.message ,})) {,
-  $2,
-}
-      return res.status (200).json ({ item: data ,}),
-    } else {,
+      if (return res.status (500).json ({ error: error.message })) {
+  $2}
+      return res.status (200).json ({ item: data })} else {
       const list = MOCK_DATA[type] || [],
-      const idx = list.find_index ((r: any) => r.id === id),;
-      if (return res.status (404).json ({ error: 'Not found' ,})) {,
-  $2,
-}
-      const updated = {,
-        ...list[idx],;
-        ...updates,;
-        updated_at: new Date ().toISOString (),;
+      const idx = list.find_index ((r: any) => r.id === id);
+      if (return res.status (404).json ({ error: 'Not found' })) {
+  $2}
+      const updated = {
+        ...list[idx];
+        ...updates;
+        updated_at: new Date ().toISOString ();
       }
       list[idx] = updated as any,
-      return res.status (200).json ({ item: updated ,}),    }      return res.status (200).json ({ item: updated ,}),
-    }
+      return res.status (200).json ({ item: updated })}      return res.status (200).json ({ item: updated })}
   }
   // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
     const id = (req.query.id as string) || '',
-    if (return res.status (400).json ({ error: 'Missing id' ,})) {,
-  $2,
-}
+    if (return res.status (400).json ({ error: 'Missing id' })) {
+  $2}
     // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
       const { error } = await client.from (type).delete ().eq ('id', id),
-      if (return res.status (500).json ({ error: error.message ,})) {,
-  $2,
-}
-      return res.status (200).json ({ ok: true ,}),
+      if (return res.status (500).json ({ error: error.message })) {
+  $2}
+      return res.status (200).json ({ ok: true }),
       const list = MOCK_DATA[type] || [],
       const idx = list.find_index ((r: any) => r.id === id),
-      if (return res.status (404).json ({ error: 'Not found' ,})) {,
-  $2,
-}
+      if (return res.status (404).json ({ error: 'Not found' })) {
+  $2}
       list.splice (idx, 1),
-      return res.status (200).json ({ ok: true ,}),    }
+      return res.status (200).json ({ ok: true })}
   }
-  return res.status (405).json ({ error: 'Method not allowed' ,}),
-,
-}return res.status (200) .send (to_csv (data || []) ),
-}return res.status (200) .send (to_csv (page_items) ),      return res.status (200).json ({ ok: true ,}),
-    }
+  return res.status (405).json ({ error: 'Method not allowed' })}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),      return res.status (200).json ({ ok: true })}
   }
-return res.status (405).json ({ error: 'Method not allowed' ,}),
-,
-}return res.status (200) .send (to_csv (data || []) ),
-}return res.status (200) .send (to_csv (page_items) ),
-      return res.status(200).json({ items: pageItems, total }),
-    }
+return res.status (405).json ({ error: 'Method not allowed' })}return res.status (200) .send (to_csv (data || []) )}return res.status (200) .send (to_csv (page_items) ),
+      return res.status(200).json({ items: pageItems, total })}
   }
 ,
-  if (req.method === 'PATCH') {,
+  if (req.method === 'PATCH') {
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

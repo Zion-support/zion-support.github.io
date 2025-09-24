@@ -1,9 +1,8 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const CloudMigrationServicesChat: NextPage = () => {,
-  return (,
+const CloudMigrationServicesChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>,
@@ -14,9 +13,5 @@ const CloudMigrationServicesChat: NextPage = () => {,
         <p>Service details coming soon...</p>,
         <Link href='/services'>Back to Services</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default CloudMigrationServicesChat,
-,
+    </div>)};
+export default CloudMigrationServicesChat;

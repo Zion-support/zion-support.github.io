@@ -1,44 +1,37 @@
 
 import React{ useState } from "react",
 import { Button } from "@/components/ui/button",
-import {,
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription,;
-  DialogOverlay,
-} from "@/components/ui/dialog",
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
+  DialogOverlay} from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
-,
-interface RaiseDisputeButtonProps {,
+interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
-  className?: string,
-,}
+  className?: string}
 ,
-export function RaiseDisputeButton({,
+export function RaiseDisputeButton({
   projectId,
   milestoneId,
   variant = "outline",
-  size,;
-  className,
-}: RaiseDisputeButtonProps) {,
+  size;
+  className}: RaiseDisputeButtonProps) {
   const [isDialogOpensetIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
-,
-  const handleDisputeCreated = (disputeId: string) => {,
+  const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
-    navigate(`/dashboard/disputes/${disputeId,}`),
-  };
-,
-  return (,
+    navigate(`/dashboard/disputes/${disputeId}`)};
+  return (
     <>,
-      <Button,
+      <Button
         variant={variant} ,
         size={size} ,
         className={className} ,
@@ -55,15 +48,13 @@ export function RaiseDisputeButton({,
               Please provide details about the issue you're experiencing with this project.,
             </DialogDescription>,
           </DialogHeader>,
-          <DisputeForm,
-            projectId={projectId,}
+          <DisputeForm
+            projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
           />,
         </DialogContent>,
       </Dialog>,
-    </>,
-  ),
-}
+    </>)}
 ,

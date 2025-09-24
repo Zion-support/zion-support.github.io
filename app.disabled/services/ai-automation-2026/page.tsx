@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
-  title: 'AI Automation Services 20o26 - Zion Tech Group',;
+export const metadata = {
+  title: 'AI Automation Services 20o26 - Zion Tech Group';
   description:,
-    'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.',;
-  keywords: [,
-    'AI automation services',;
-    'business automation',;
-    'AI implementation',;
-    'process automation',;
-    'AI consulting',;
-    'enterprise automation',;
-  ],;
+    'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.';
+  keywords: [
+    'AI automation services';
+    'business automation';
+    'AI implementation';
+    'process automation';
+    'AI consulting';
+    'enterprise automation';
+  ];
 };
-,
-export default function AIAutomationServices20o26() {,
-  return (,
+export default function AIAutomationServices20o26() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI Automation Services 20o26 - Transform Your Business',
         description='Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation.',
         keywords='AI automation services, business automation, AI implementation, process automation, AI consulting, enterprise automation',
@@ -44,23 +42,21 @@ export default function AIAutomationServices20o26() {,
                 transformation.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get AI Automation Quote,
                 </Link>,
-                <Link,
+                <Link
                   href='/blog/ai-automation-success-stories-20o26',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   View Success Stories,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Key Results */,}
+        {/* Key Results */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -94,14 +90,14 @@ export default function AIAutomationServices20o26() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
+        {/* Services Overview */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
               Our AI Automation Services,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {/* Service 1 */,}
+              {/* Service 1 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>🤖</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -117,14 +113,13 @@ export default function AIAutomationServices20o26() {,
                   <li>Data entry automation</li>,
                   <li>Approval workflows</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 2 */,}
+              {/* Service 2 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>🧠</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -140,14 +135,13 @@ export default function AIAutomationServices20o26() {,
                   <li>Resource optimization</li>,
                   <li>Performance monitoring</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 3 */,}
+              {/* Service 3 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>💬</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -163,14 +157,13 @@ export default function AIAutomationServices20o26() {,
                   <li>Sentiment analysis</li>,
                   <li>Multi-language support</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 4 */,}
+              {/* Service 4 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>📊</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -186,21 +179,20 @@ export default function AIAutomationServices20o26() {,
                   <li>Real-time analytics</li>,
                   <li>Custom dashboards</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 5 */,}
+              {/* Service 5 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>🔍</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
                   Computer Vision,
                 </h3>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Implement visual recognition systems for quality control,;
+                  Implement visual recognition systems for quality control;
                   security, and process monitoring.,
                 </p>,
                 <ul className='list-disc list-inside text-gray-60o0 space-y-2 mb-6'>,
@@ -209,14 +201,13 @@ export default function AIAutomationServices20o26() {,
                   <li>Facial recognition</li>,
                   <li>Document scanning</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 6 */,}
+              {/* Service 6 */}
               <div className='bg-white p-8 rounded-xl shadow-lg border border-gray-20o0'>,
                 <div className='text-4xl mb-4'>⚡</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -232,17 +223,16 @@ export default function AIAutomationServices20o26() {,
                   <li>API automation</li>,
                   <li>System orchestration</li>,
                 </ul>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Process */,}
+        {/* Implementation Process */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -299,7 +289,7 @@ export default function AIAutomationServices20o26() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Stories Preview */,}
+        {/* Success Stories Preview */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -347,16 +337,15 @@ export default function AIAutomationServices20o26() {,
               </div>,
             </div>,
             <div className='text-center mt-8'>,
-              <Link,
+              <Link
                 href='/blog/ai-automation-success-stories-20o26',
-                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors',
-              >,
+                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors'>,
                 Read All Success Stories →,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className='py-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-4'>,
@@ -367,23 +356,19 @@ export default function AIAutomationServices20o26() {,
               automation.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Free AI Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-ultimate-business-transformation',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Read Transformation Guide,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>)}
 ,

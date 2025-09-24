@@ -1,258 +1,213 @@
 import MainLayout from '../src/components/layout/MainLayout',
 import { motion } from 'framer-motion',
-import {,
-  Accessibility,;
-  Eye,;
-  Ear,;
-  Hand,;
-  Brain,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  Users,;
-  Shield,;
-  Zap,;
-  Heart,
-} from 'lucide-react',
-,
-const accessibilityFeatures = [,
-  {,
-    icon: Eye,;
-    title: "Visual Accessibility",;
-    description: "High contrast themes, scalable fonts, and screen reader compatibility",;
-    features: [,
-      "WCAG 2.1 AA compliant color contrast",;
-      "Scalable text up to 20o0% without loss of functionality",;
-      "Alt text for all images and media",;
-      "Focus indicators for keyboard navigation",;
-      "Screen reader compatibility",;
-      "High contrast mode",;
-      "Text scaling options",;
-      "Alternative text for images",;
-      "Keyboard navigation",
-    ],
-  },;
-  {,
-    icon: Ear,;
-    title: "Audio Accessibility",;
-    description: "Captions, transcripts, and audio descriptions for multimedia content",;
-    features: [,
-      "Closed captions for all video content",;
-      "Audio descriptions for visual content",;
-      "Transcript files for audio content",;
-      "Visual indicators for audio alerts",
-    ],
-  },;
-  {,
-    category: "Audio Accessibility",;
-    features: [,
-      "Closed captions",;
-      "Visual alerts",;
-      "Text alternatives for audio",;
-      "Sign language support",;
-      "Volume controls",;
-      "Audio descriptions",
-    ],
-  },;
-  {,
-    title: "Motor Accessibility",;
-    description: "Features to support users with motor impairments",;
-    icon: Hand,;
-    title: "Motor Accessibility",;
-    description: "Keyboard navigation and customizable interaction methods",;
-    features: [,
-      "Full keyboard navigation support",;
-      "Customizable click targets",;
-      "Drag and drop alternatives",;
-      "Timeout extensions and controls",
-    ],
-  },;
-  {,
-    category: "Motor Accessibility",;
-    features: [,
-      "Keyboard-only navigation",;
-      "Voice control",;
-      "Large click targets",;
-      "Customizable timing",;
-      "Switch navigation",;
-      "Gesture alternatives",
-    ],
-  },;
-  {,
-    title: "Cognitive Accessibility",;
-    description: "Features to support users with cognitive impairments",;
-    icon: Brain,;
-    title: "Cognitive Accessibility",;
-    description: "Clear navigation, consistent layouts, and simplified interfaces",;
-    features: [,
-      "Consistent navigation patterns",;
-      "Clear and simple language",;
-      "Error prevention and recovery",;
-      "Customizable interface complexity",;
-      "Clear navigation",;
-      "Consistent layout",;
-      "Error prevention",;
-      "Progress indicators",;
-      "Help and support",;
-      "Customizable interface",
-    ],
-  }
+import {
+  Accessibility;
+  Eye;
+  Ear;
+  Hand;
+  Brain;
+  CheckCircle;
+  ArrowRight;
+  Globe;
+  Users;
+  Shield;
+  Zap;
+  Heart} from 'lucide-react',
+const accessibilityFeatures = [
+  {
+    icon: Eye;
+    title: "Visual Accessibility";
+    description: "High contrast themes, scalable fonts, and screen reader compatibility";
+    features: [
+      "WCAG 2.1 AA compliant color contrast";
+      "Scalable text up to 20o0% without loss of functionality";
+      "Alt text for all images and media";
+      "Focus indicators for keyboard navigation";
+      "Screen reader compatibility";
+      "High contrast mode";
+      "Text scaling options";
+      "Alternative text for images";
+      "Keyboard navigation"]};
+  {
+    icon: Ear;
+    title: "Audio Accessibility";
+    description: "Captions, transcripts, and audio descriptions for multimedia content";
+    features: [
+      "Closed captions for all video content";
+      "Audio descriptions for visual content";
+      "Transcript files for audio content";
+      "Visual indicators for audio alerts"]};
+  {
+    category: "Audio Accessibility";
+    features: [
+      "Closed captions";
+      "Visual alerts";
+      "Text alternatives for audio";
+      "Sign language support";
+      "Volume controls";
+      "Audio descriptions"]};
+  {
+    title: "Motor Accessibility";
+    description: "Features to support users with motor impairments";
+    icon: Hand;
+    title: "Motor Accessibility";
+    description: "Keyboard navigation and customizable interaction methods";
+    features: [
+      "Full keyboard navigation support";
+      "Customizable click targets";
+      "Drag and drop alternatives";
+      "Timeout extensions and controls"]};
+  {
+    category: "Motor Accessibility";
+    features: [
+      "Keyboard-only navigation";
+      "Voice control";
+      "Large click targets";
+      "Customizable timing";
+      "Switch navigation";
+      "Gesture alternatives"]};
+  {
+    title: "Cognitive Accessibility";
+    description: "Features to support users with cognitive impairments";
+    icon: Brain;
+    title: "Cognitive Accessibility";
+    description: "Clear navigation, consistent layouts, and simplified interfaces";
+    features: [
+      "Consistent navigation patterns";
+      "Clear and simple language";
+      "Error prevention and recovery";
+      "Customizable interface complexity";
+      "Clear navigation";
+      "Consistent layout";
+      "Error prevention";
+      "Progress indicators";
+      "Help and support";
+      "Customizable interface"]}
 ],
-,
-const complianceStandards = [,
-  {,
-    name: "WCAG 2.1 AA",;
-    description: "Web Content Accessibility Guidelines Level AA compliance",;
-    status: "Compliant",;
-    icon: Award,
-  ,},;
-  {,
-    name: "Section 508",;
-    description: "US Federal accessibility requirements",;
-    status: "Compliant",;
-    icon: FileText,
-  ,},;
-  {,
-    name: "ADA",;
-    description: "Americans with Disabilities Act compliance",;
-    status: "Compliant",;
-    icon: Users,
-  ,},;
-  {,
-    name: "EN 30o1 549",;
-    description: "European accessibility standard",;
-    status: "Compliant",;
-    icon: Globe,
-  ,}
+const complianceStandards = [
+  {
+    name: "WCAG 2.1 AA";
+    description: "Web Content Accessibility Guidelines Level AA compliance";
+    status: "Compliant";
+    icon: Award};
+  {
+    name: "Section 508";
+    description: "US Federal accessibility requirements";
+    status: "Compliant";
+    icon: FileText};
+  {
+    name: "ADA";
+    description: "Americans with Disabilities Act compliance";
+    status: "Compliant";
+    icon: Users};
+  {
+    name: "EN 30o1 549";
+    description: "European accessibility standard";
+    status: "Compliant";
+    icon: Globe}
 ],
-,
-export default function AccessibilityPage() {,
-  const accessibilityFeatures = [,
-    {,
-      title: 'Screen Reader Compatibility',;
-      description: 'Our website is fully compatible with screen readers and assistive technologies',;
-      icon: Ear,;
-      features: [,
-        'Semantic HTML structure',;
-        'Alt text for all images',;
-        'Proper heading hierarchy',;
-        'ARIA labels and descriptions',
-      ],
-    },;
-    {,
-      title: 'Keyboard Navigation',;
-      description: 'Complete website functionality accessible via keyboard only',;
-      icon: Hand,;
-      features: [,
-        'Tab navigation support',;
-        'Skip links for main content',;
-        'Focus indicators',;
-        'Keyboard shortcuts',
-      ],
-    },;
-    {,
-      title: 'Visual Accessibility',;
-      description: 'High contrast and customizable visual elements for better visibility',;
-      icon: Eye,;
-      features: [,
-        'High contrast color schemes',;
-        'Resizable text up to 20o0%',;
-        'Color-blind friendly palettes',;
-        'Clear visual hierarchy',
-      ],
-    },;
-    {,
-      title: 'Cognitive Accessibility',;
-      description: 'Clear, simple language and intuitive navigation for all users',;
-      icon: Brain,;
-      features: [,
-        'Plain language content',;
-        'Consistent navigation',;
-        'Clear error messages',;
-        'Logical content flow',
-      ],
-    }
+export default function AccessibilityPage() {
+  const accessibilityFeatures = [
+    {
+      title: 'Screen Reader Compatibility';
+      description: 'Our website is fully compatible with screen readers and assistive technologies';
+      icon: Ear;
+      features: [
+        'Semantic HTML structure';
+        'Alt text for all images';
+        'Proper heading hierarchy';
+        'ARIA labels and descriptions']};
+    {
+      title: 'Keyboard Navigation';
+      description: 'Complete website functionality accessible via keyboard only';
+      icon: Hand;
+      features: [
+        'Tab navigation support';
+        'Skip links for main content';
+        'Focus indicators';
+        'Keyboard shortcuts']};
+    {
+      title: 'Visual Accessibility';
+      description: 'High contrast and customizable visual elements for better visibility';
+      icon: Eye;
+      features: [
+        'High contrast color schemes';
+        'Resizable text up to 20o0%';
+        'Color-blind friendly palettes';
+        'Clear visual hierarchy']};
+    {
+      title: 'Cognitive Accessibility';
+      description: 'Clear, simple language and intuitive navigation for all users';
+      icon: Brain;
+      features: [
+        'Plain language content';
+        'Consistent navigation';
+        'Clear error messages';
+        'Logical content flow']}
   ],
-,
-  const complianceStandards = [,
-    {,
-      standard: 'WCAG 2.1 AA',;
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,
-    ,},;
-    {,
-      standard: 'Section 508',;
-      description: 'U.S. federal accessibility requirements compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,
-    ,},;
-    {,
-      standard: 'ADA Compliance',;
-      description: 'Americans with Disabilities Act compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,
-    ,},;
-    {,
-      standard: 'EN 30o1 549',;
-      description: 'European accessibility standard compliance',;
-      status: 'Compliant',;
-      icon: CheckCircle,
-    ,}
+  const complianceStandards = [
+    {
+      standard: 'WCAG 2.1 AA';
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance';
+      status: 'Compliant';
+      icon: CheckCircle};
+    {
+      standard: 'Section 508';
+      description: 'U.S. federal accessibility requirements compliance';
+      status: 'Compliant';
+      icon: CheckCircle};
+    {
+      standard: 'ADA Compliance';
+      description: 'Americans with Disabilities Act compliance';
+      status: 'Compliant';
+      icon: CheckCircle};
+    {
+      standard: 'EN 30o1 549';
+      description: 'European accessibility standard compliance';
+      status: 'Compliant';
+      icon: CheckCircle}
   ],
-,
-  const accessibilityTools = [,
-    {,
-      name: 'Screen Reader Testing',;
-      description: 'Regular testing with NVDA, JAWS, and VoiceOver',;
-      icon: Ear,
-    ,},;
-    {,
-      name: 'Keyboard Testing',;
-      description: 'Comprehensive keyboard-only navigation testing',;
-      icon: Hand,
-    ,},;
-    {,
-      name: 'Color Contrast Analysis',;
-      description: 'Automated and manual color contrast verification',;
-      icon: Eye,
-    ,},;
-    {,
-      name: 'User Testing',;
-      description: 'Regular testing with users with disabilities',;
-      icon: Users,
-    ,}
+  const accessibilityTools = [
+    {
+      name: 'Screen Reader Testing';
+      description: 'Regular testing with NVDA, JAWS, and VoiceOver';
+      icon: Ear};
+    {
+      name: 'Keyboard Testing';
+      description: 'Comprehensive keyboard-only navigation testing';
+      icon: Hand};
+    {
+      name: 'Color Contrast Analysis';
+      description: 'Automated and manual color contrast verification';
+      icon: Eye};
+    {
+      name: 'User Testing';
+      description: 'Regular testing with users with disabilities';
+      icon: Users}
   ],
-,
-  const accessibilityCommitments = [,
-    {,
-      title: 'Continuous Improvement',;
-      description: 'We regularly audit and improve our accessibility features',;
-      icon: Zap,
-    ,},;
-    {,
-      title: 'User Feedback',;
-      description: 'We actively seek and incorporate feedback from users with disabilities',;
-      icon: Heart,
-    ,},;
-    {,
-      title: 'Training & Awareness',;
-      description: 'Our team receives regular accessibility training and education',;
-      icon: Brain,
-    ,},;
-    {,
-      title: 'Compliance Monitoring',;
-      description: 'Ongoing monitoring to ensure continued compliance with standards',;
-      icon: Shield,
-    ,}
+  const accessibilityCommitments = [
+    {
+      title: 'Continuous Improvement';
+      description: 'We regularly audit and improve our accessibility features';
+      icon: Zap};
+    {
+      title: 'User Feedback';
+      description: 'We actively seek and incorporate feedback from users with disabilities';
+      icon: Heart};
+    {
+      title: 'Training & Awareness';
+      description: 'Our team receives regular accessibility training and education';
+      icon: Brain};
+    {
+      title: 'Compliance Monitoring';
+      description: 'Ongoing monitoring to ensure continued compliance with standards';
+      icon: Shield}
   ],
-,
-  return (,
-    <Layout,
+  return (
+    <Layout
       title="Accessibility Statement - Zion Tech Group",
       description="Learn about our commitment to web accessibility and how we ensure our website is accessible to all users, including those with disabilities.",
-      keywords="accessibility, WCAG, ADA compliance, screen reader, keyboard navigation, inclusive design",
-    >,
+      keywords="accessibility, WCAG, ADA compliance, screen reader, keyboard navigation, inclusive design">,
       <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden">,
@@ -262,11 +217,10 @@ export default function AccessibilityPage() {,
           </div>,
           <div className="container mx-auto px-4 relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <p className="text-xl md: text-2xl text-gray-30o0 mb-8">,
                 Building technology that works for everyone, regardless of ability,
               </p>,
@@ -277,10 +231,10 @@ export default function AccessibilityPage() {,
         <section className="py-16 bg-white">,
           <div className="container mx-auto px-4">,
               <motion.div,
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >,
                 <h2 className="text-3xl font-bold text-gray-90o0 mb-6">,
                   Accessibility Features,
@@ -298,10 +252,10 @@ export default function AccessibilityPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-6">,
                 Compliance Standards,
@@ -313,14 +267,14 @@ export default function AccessibilityPage() {,
             </motion.div>,
             <div className="max-w-4xl mx-auto">,
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-                {complianceStandards.map((standard, index) => (,
+                {complianceStandards.map((standard, index) => (
                   <motion.div,
                     key={standard.standard}
                     className="bg-gray-50 rounded-lg p-6",
-                    initial={{ opacity: 0, y: 30 ,}}
-                    whileInView={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                    viewport={{ once: true ,}}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >,
                     <div className="flex items-center justify-between mb-4">,
                       <h3 className="text-xl font-bold text-gray-90o0">{standard.standard}</h3>,
@@ -330,8 +284,7 @@ export default function AccessibilityPage() {,
                       </div>,
                     </div>,
                     <p className="text-gray-60o0">{standard.description}</p>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </div>,
@@ -341,10 +294,10 @@ export default function AccessibilityPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-6">,
                 Testing & Validation,
@@ -356,14 +309,14 @@ export default function AccessibilityPage() {,
             </motion.div>,
             <div className="max-w-6xl mx-auto">,
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-                {accessibilityTools.map((tool, index) => (,
+                {accessibilityTools.map((tool, index) => (
                   <motion.div,
                     key={tool.name}
                     className="bg-white rounded-lg shadow-lg p-6 text-center",
-                    initial={{ opacity: 0, y: 30 ,}}
-                    whileInView={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                    viewport={{ once: true ,}}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                   >,
                     <div className="bg-indigo-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                       <tool.icon className="w-8 h-8 text-indigo-60o0"  />,
@@ -372,8 +325,7 @@ export default function AccessibilityPage() {,
                       {tool.name}
                     </h3>,
                     <p className="text-gray-60o0 text-sm">{tool.description}</p>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </div>,
@@ -383,10 +335,10 @@ export default function AccessibilityPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-6">,
                 Contact & Feedback,
@@ -402,7 +354,7 @@ export default function AccessibilityPage() {,
                   <div>,
                     <h3 className="text-xl font-bold text-gray-90o0 mb-4">Report an Issue</h3>,
                     <p className="text-gray-60o0 mb-4">,
-                      If you encounter any accessibility issues on our website,;
+                      If you encounter any accessibility issues on our website;
                       please contact us and we will work to resolve them promptly.,
                     </p>,
                     <div className="space-y-2 text-sm text-gray-60o0">,
@@ -427,15 +379,15 @@ export default function AccessibilityPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white">,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold mb-6">,
                 Committed to Accessibility,
@@ -445,16 +397,14 @@ export default function AccessibilityPage() {,
                 If you have any questions or need assistance, please don't hesitate to contact us.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="px-8 py-4 bg-white text-indigo-60o0 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold",
-                >,
+                  className="px-8 py-4 bg-white text-indigo-60o0 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold">,
                   Contact Us,
                 </a>,
-                <a,
+                <a
                   href="/help",
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 font-semibold",
-                >,
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 font-semibold">,
                   Get Help,
                 </a>,
               </div>,
@@ -462,6 +412,4 @@ export default function AccessibilityPage() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}

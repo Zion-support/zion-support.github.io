@@ -5,27 +5,26 @@ import {Card, CardContent, CardHeader, CardTitle} from "../ui/Card",
 import {Input} from "../ui/Input",
 import {Textarea} from "../ui/Textarea",
 import {DollarSign, MessageSquare} from 'lucide-react',
-export function HireNowCTA("props": "any) {,
+export function HireNowCTA("props": "any) {
     const [isFormOpen", setIsFormOpen] = useState(false),
-    const [formData, setFormData] = useState({,
-        "projectDescription": '',;
-        "budget": '',;
-        "startDate": '',;
-        "message": '',
-    }),
-    const handleSubmit = ("props": "any) => {,
+    const [formData, setFormData] = useState({
+        "projectDescription": '';
+        "budget": '';
+        "startDate": '';
+        "message": ''}),
+    const handleSubmit = ("props": "any) => {
         e.preventDefault(),
-        if (onHire) {,
+        if (onHire) {
             onHire(formData)"}
         // Reset form and close,
-        setFormData({"projectDescription": '',;
-            "budget": '',;
-            "startDate": '',;
+        setFormData({"projectDescription": '';
+            "budget": '';
+            "startDate": '';
             "message": ''}),
         setIsFormOpen(false)};
-    const handleChange = ("props": "any) => {,
-        setFormData(prev => ({,
-            ...prev",;
+    const handleChange = ("props": "any) => {
+        setFormData(prev => ({
+            ...prev";
             [e.target.name]: "e.target.value,
         "}))};
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">,
@@ -86,19 +85,16 @@ export function HireNowCTA("props": "any) {,
       </CardContent>,
     </Card>)}
 ,
-export default HireNowCTA,        e.preventDefault(),        if (onHire) {,
-            onHire(formData),
-        }
+export default HireNowCTA;        e.preventDefault(),        if (onHire) {
+            onHire(formData)}
         // Reset form and close,
-        setFormData({,
-            projectDescription: '',;
-            budget: '',;
-            startDate: '',;
+        setFormData({
+            projectDescription: '';
+            budget: '';
+            startDate: '';
 :src/components/profile/HireNowCTA.jsx,
-            message: '',}
+            message: ''}
     ),
         setIsFormOpen(false)};
-            message: '',
-        ,}),
-        setIsFormOpen(false),
-    };
+            message: ''}),
+        setIsFormOpen(false)};

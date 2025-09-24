@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiConsciousnessEvolution20o44Page() {,
-  return (,
+export default function AiConsciousnessEvolution20o44Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Consciousness Evolution 20o44 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai consciousness evolution 20o44 page',
         />,
@@ -21,7 +20,5 @@ export default function AiConsciousnessEvolution20o44Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

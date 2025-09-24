@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiPoweredSalesCoaching20o45Page() {,
-  return (,
+export default function AiPoweredSalesCoaching20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Powered Sales Coaching 20o45 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai powered sales coaching 20o45 page',
         />,
@@ -21,7 +20,5 @@ export default function AiPoweredSalesCoaching20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

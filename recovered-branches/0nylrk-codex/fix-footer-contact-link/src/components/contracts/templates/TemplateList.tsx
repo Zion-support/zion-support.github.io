@@ -4,72 +4,59 @@ import { Loader2EditTrashStarOff } from 'lucide-react',
 import { useContractTemplates } from '@/hooks/useContractTemplates',
 import { CardContent } from '@/components/ui/card',
 import { Separator } from '@/components/ui/separator',
-import {,
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle,;
+import {
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle;
 } from '@/components/ui/alert-dialog',
 import { useState } from 'react',
-,
-interface TemplateListProps {,
+interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
-  onEdit: (template: ContractTemplate) => void,
-,}
+  onEdit: (template: ContractTemplate) => void}
 ,
-export function TemplateList({,
-  templates,;
-  isLoading,;
-  onSelect,;
-  onEdit,;
-}: TemplateListProps) {,
+export function TemplateList({
+  templates;
+  isLoading;
+  onSelect;
+  onEdit;
+}: TemplateListProps) {
   const [templateToDeletesetTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplatesetDefaultTemplate } = useContractTemplates(),
-,
-  const handleDeleteClick = (templateId: string) => {,
-    setTemplateToDelete(templateId),
-  ,};
-,
-  const handleDeleteConfirm = async () => {,
-    if (templateToDelete) {,
+  const handleDeleteClick = (templateId: string) => {
+    setTemplateToDelete(templateId)};
+  const handleDeleteConfirm = async () => {
+    if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete),
-      setTemplateToDelete(null),
-    }
+      setTemplateToDelete(null)}
   };
-,
-  const handleSetDefault = async (templateId: string) => {,
-    await setDefaultTemplate.mutateAsync(templateId),
-  ,};
-,
-  if (isLoading) {,
-    return (,
+  const handleSetDefault = async (templateId: string) => {
+    await setDefaultTemplate.mutateAsync(templateId)};
+  if (isLoading) {
+    return (
       <div className='flex justify-center items-center py-8'>,
         <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (!templates.length) {,
-    return (,
+  if (!templates.length) {
+    return (
       <div className='text-center py-8'>,
         <p className='text-muted-foreground'>No templates found.</p>,
         <p className='text-sm text-muted-foreground'>,
           Save a contract as a template to reuse it later.,
         </p>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className='space-y-3'>,
-      {templates.map(template => (,
-        <Card,
+      {templates.map(template => (
+        <Card
           key={template.id}
           className={template.is_default ? 'border-zion-purple' : ''}
         >,
@@ -78,39 +65,36 @@ export function TemplateList({,
               <div className='space-y-1'>,
                 <div className='flex items-center gap-2'>,
                   <h3 className='font-medium'>{template.title}</h3>,
-                  {template.is_default && (,
+                  {template.is_default && (
                     <span className='bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full'>,
                       Default,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <p className='text-xs text-muted-foreground'>,
-                  Last updated: {' ',}
+                  Last updated: {' '}
                   {new Date(template.updated_at).toLocaleDateString()}
                 </p>,
               </div>,
               <div className='flex items-center gap-2'>,
-                <Button,
+                <Button
                   variant='ghost',
                   size='icon',
                   onClick={() => onEdit(template)}
                 >,
                   <Edit className='h-4 w-4' />,
                 </Button>,
-                {!template.is_default ? (,
-                  <Button,
+                {!template.is_default ? (
+                  <Button
                     variant='ghost',
                     size='icon',
                     onClick={() => handleSetDefault(template.id)}
                   >,
                     <Star className='h-4 w-4' />,
-                  </Button>,
-                ) : (,
+                  </Button>) : (
                   <Button variant='ghost' size='icon' disabled>,
                     <StarOff className='h-4 w-4' />,
-                  </Button>,
-                )}
-                <Button,
+                  </Button>)}
+                <Button
                   variant='ghost',
                   size='icon',
                   onClick={() => handleDeleteClick(template.id)}
@@ -120,18 +104,16 @@ export function TemplateList({,
               </div>,
             </div>,
             <Separator className='my-3' />,
-            <Button,
+            <Button
               onClick={() => onSelect(template)}
               variant='outline',
-              className='w-full',
-            >,
+              className='w-full'>,
               Use This Template,
             </Button>,
           </CardContent>,
-        </Card>,
-      ))}
+        </Card>))}
 ,
-      <AlertDialog,
+      <AlertDialog
         open={!!templateToDelete}
         onOpenChange={() => setTemplateToDelete(null)}
       >,
@@ -145,16 +127,14 @@ export function TemplateList({,
           </AlertDialogHeader>,
           <AlertDialogFooter>,
             <AlertDialogCancel>Cancel</AlertDialogCancel>,
-            <AlertDialogAction,
+            <AlertDialogAction
               className='bg-destructive text-destructive-foreground hover: bg-destructive/90',
-              onClick={handleDeleteConfirm,}
+              onClick={handleDeleteConfirm}
             >,
               Delete,
             </AlertDialogAction>,
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

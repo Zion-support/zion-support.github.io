@@ -1,32 +1,25 @@
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
-,
-interface PortfolioItem {,
+interface PortfolioItem {
   title: string,
-  description: string,
-,}
+  description: string}
 ,
-interface PortfolioListProps {,
-  projects: PortfolioItem[],
-,}
+interface PortfolioListProps {
+  projects: PortfolioItem[]}
 ,
-export function PortfolioList({ projects }: PortfolioListProps) {,
+export function PortfolioList({ projects }: PortfolioListProps) {
   if (!projects.length) return null,
-,
-  return (,
+  return (
     <Card className='bg-zion-blue-dark border-zion-blue-light text-white mb-6'>,
       <CardHeader>,
         <CardTitle>Portfolio</CardTitle>,
       </CardHeader>,
       <CardContent>,
         <ul className='space-y-2 list-disc ml-5'>,
-          {projects.map(pi => (,
+          {projects.map(pi => (
             <li key={i}>,
               <span className='font-medium'>{p.title}:</span> {p.description}
-            </li>,
-          ))}
+            </li>))}
         </ul>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

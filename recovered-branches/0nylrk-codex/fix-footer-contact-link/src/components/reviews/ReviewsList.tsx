@@ -1,18 +1,16 @@
 
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
-,
-interface ReviewsListProps {,
+interface ReviewsListProps {
   reviews: Review[],
   isLoading: boolean,
-  onReportReview: (reviewId: stringreason: string) => Promise<boolean>,
-,}
+  onReportReview: (reviewId: stringreason: string) => Promise<boolean>}
 ,
-export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps) {,
-  if (isLoading) {,
-    return (,
+export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps) {
+  if (isLoading) {
+    return (
       <div className="space-y-4">,
-        {Array(3).fill(0).map((_i) => (,
+        {Array(3).fill(0).map((_i) => (
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">,
             <div className="flex items-center gap-3 mb-3">,
               <div className="h-10 w-10 rounded-full bg-muted"></div>,
@@ -26,33 +24,25 @@ export function ReviewsList({ reviewsisLoadingonReportReview }: ReviewsListProps
               <div className="h-6 w-16 bg-muted rounded"></div>,
               <div className="h-6 w-16 bg-muted rounded"></div>,
             </div>,
-          </div>,
-        ))}
-      </div>,
-    ),
-  }
+          </div>))}
+      </div>)}
 ,
-  if (reviews.length === 0) {,
-    return (,
+  if (reviews.length === 0) {
+    return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">,
         <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>,
         <p className="text-muted-foreground">,
           Once reviews are submitted and approvedthey will appear here.,
         </p>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className="space-y-4">,
-      {reviews.map((review) => (,
-        <ReviewCard,
+      {reviews.map((review) => (
+        <ReviewCard
           key={review.id} ,
           review={review} ,
           onReport={onReportReview} ,
-        />,
-      ))}
-    </div>,
-  ),
-}
+        />))}
+    </div>)}
 ,

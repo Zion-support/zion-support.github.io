@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25EnterpriseSuccessPromotionBanner() {,
-  return (,
+export default function AI20o25EnterpriseSuccessPromotionBanner() {
+  return (
     <section className='py-12 bg-gradient-to-r from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black bg-opacity-10'></div>,
@@ -15,7 +14,7 @@ export default function AI20o25EnterpriseSuccessPromotionBanner() {,
       </div>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>🏆 SUCCESS STORY</span>,
           </div>,
@@ -23,13 +22,13 @@ export default function AI20o25EnterpriseSuccessPromotionBanner() {,
           <h2 className='text-3xl md: text-5xl font-bold mb-4 leading-tight'>,
             Fortune 50o0 Achieves 80o0% ROI with AI Automation,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-emerald-10o0 mb-6 max-w-4xl mx-auto leading-relaxed'>,
             Discover how a global manufacturing company transformed their,
             operations saving $120M annually and achieving unprecedented,
             efficiency gains.,
           </p>,
-          {/* Key Results */,}
+          {/* Key Results */}
           <div className='grid grid-cols-1 md: grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto'>,
             <div className='bg-white bg-opacity-10 rounded-lg p-4 backdrop-blur-sm'>,
               <div className='text-3xl font-bold text-green-40o0 mb-1'>,
@@ -56,7 +55,7 @@ export default function AI20o25EnterpriseSuccessPromotionBanner() {,
               <div className='text-sm text-emerald-10o0'>Faster Processing</div>,
             </div>,
           </div>,
-          {/* Quote */,}
+          {/* Quote */}
           <div className='bg-white bg-opacity-10 rounded-lg p-6 mb-8 max-w-4xl mx-auto backdrop-blur-sm'>,
             <div className='text-4xl text-emerald-20o0 mb-4'>"</div>,
             <blockquote className='text-lg md: text-xl text-emerald-10o0 italic mb-4'>,
@@ -70,20 +69,18 @@ export default function AI20o25EnterpriseSuccessPromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-automation-success',
-              className='bg-white text-emerald-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-white text-emerald-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📖 Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               🚀 Start Your Success Story,
             </Link>,
           </div>,
-          {/* Additional Info */,}
+          {/* Additional Info */}
           <div className='mt-6 text-sm text-emerald-20o0'>,
             <span className='inline-flex items-center'>,
               <span className='w-2 h-2 bg-green-40o0 rounded-full mr-2 animate-pulse'></span>,
@@ -94,15 +91,12 @@ export default function AI20o25EnterpriseSuccessPromotionBanner() {,
       </div>,
       {/* Bottom Wave */}
       <div className='absolute bottom-0 left-0 w-full'>,
-        <svg,
+        <svg
           viewBox='0 0 120o0 120',
           preserveAspectRatio='none',
-          className='w-full h-16 fill-white',
-        >,
+          className='w-full h-16 fill-white'>,
           <path d='M0,0V46.29c47.79,22.2,10o3.59,32.17,158,28,70.36-5.37,136.33-33.31,20o6.8-37.5C438.64,32.43,512.34,53.67,583,72.0o5c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,10o4.45-29.34C989.49,25,1113-14.29,120o0,52.47V0Z'></path>,
         </svg>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

@@ -1,74 +1,60 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-export default function QuantumComputingBreakthrough20o27() {,
+export default function QuantumComputingBreakthrough20o27() {
   const [activeBreakthroughsetActiveBreakthrough] = useState(0),
   const [isAnimatingsetIsAnimating] = useState(false),
-,
-  const breakthroughs = [,
-    {,
-      title: 'Quantum Supremacy 2.0',;
-      description: 'Achieved quantum supremacy with 1 million qubitsolving problems impossible for classical computers',;
-      impact: '10^15x faster computation',;
-      year: '20o27',;
-      icon: '⚛️',;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Optimization', 'Space Exploration'],
-    },;
-    {,
-      title: 'Quantum Internet',;
-      description: 'Global quantum internet enables instantsecure communication across the planet',;
-      impact: '10o0% secure communication',;
-      year: '20o27',;
-      icon: '🌐',;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      applications: ['Secure 'Banking', 'Government 'Communications', 'Medical 'Data', 'Military Operations'],
-    },;
-    {,
-      title: 'Quantum AI Integration',;
-      description: 'Quantum computers enhance AI capabilities with exponential processing power',;
-      impact: '10^6x AI acceleration',;
-      year: '20o28',;
-      icon: '🧠',;
-      color: 'from-green-50o0 to-teal-50o0',;
-      applications: ['Machine 'Learning', 'Pattern 'Recognition', 'Optimization'Neural Networks'],
-    },;
-    {,
-      title: 'Quantum Consciousness',;
-      description: 'Quantum computers achieve consciousness through quantum entanglement and superposition',;
-      impact: 'True AI consciousness',;
-      year: '20o29',;
-      icon: '🌟',;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-      applications: ['Self-Aware 'AI', 'Creative Problem 'Solving', 'Emotional 'Intelligence', 'Moral Reasoning'],
-    },;
-    {,
-      title: 'Universal Quantum Computer',;
-      description: 'First universal quantum computer capable of simulating any quantum system',;
-      impact: 'Infinite computational power',;
-      year: '20o30',;
-      icon: '♾️',;
-      color: 'from-indigo-50o0 to-purple-50o0',;
-      applications: ['Universe 'Simulation', 'Time Travel 'Research', 'Parallel Universe 'Exploration', 'Reality Manipulation'],
-    }
+  const breakthroughs = [
+    {
+      title: 'Quantum Supremacy 2.0';
+      description: 'Achieved quantum supremacy with 1 million qubitsolving problems impossible for classical computers';
+      impact: '10^15x faster computation';
+      year: '20o27';
+      icon: '⚛️';
+      color: 'from-blue-50o0 to-cyan-50o0';
+      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Optimization', 'Space Exploration']};
+    {
+      title: 'Quantum Internet';
+      description: 'Global quantum internet enables instantsecure communication across the planet';
+      impact: '10o0% secure communication';
+      year: '20o27';
+      icon: '🌐';
+      color: 'from-purple-50o0 to-pink-50o0';
+      applications: ['Secure 'Banking', 'Government 'Communications', 'Medical 'Data', 'Military Operations']};
+    {
+      title: 'Quantum AI Integration';
+      description: 'Quantum computers enhance AI capabilities with exponential processing power';
+      impact: '10^6x AI acceleration';
+      year: '20o28';
+      icon: '🧠';
+      color: 'from-green-50o0 to-teal-50o0';
+      applications: ['Machine 'Learning', 'Pattern 'Recognition', 'Optimization'Neural Networks']};
+    {
+      title: 'Quantum Consciousness';
+      description: 'Quantum computers achieve consciousness through quantum entanglement and superposition';
+      impact: 'True AI consciousness';
+      year: '20o29';
+      icon: '🌟';
+      color: 'from-yellow-50o0 to-orange-50o0';
+      applications: ['Self-Aware 'AI', 'Creative Problem 'Solving', 'Emotional 'Intelligence', 'Moral Reasoning']};
+    {
+      title: 'Universal Quantum Computer';
+      description: 'First universal quantum computer capable of simulating any quantum system';
+      impact: 'Infinite computational power';
+      year: '20o30';
+      icon: '♾️';
+      color: 'from-indigo-50o0 to-purple-50o0';
+      applications: ['Universe 'Simulation', 'Time Travel 'Research', 'Parallel Universe 'Exploration', 'Reality Manipulation']}
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
       setIsAnimating(true),
-      setTimeout(() => {,
+      setTimeout(() => {
         setActiveBreakthrough((prev) => (prev + 1) % breakthroughs.length),
-        setIsAnimating(false),
-      }50o0),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
+        setIsAnimating(false)}50o0)}50o00),
+    return () => clearInterval(interval)}[]),
   const currentBreakthrough = breakthroughs[activeBreakthrough],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden">,
       {/* Animated quantum particles */}
       <div className="absolute inset-0">,
@@ -90,7 +76,7 @@ export default function QuantumComputingBreakthrough20o27() {,
             Experience the most revolutionary quantum computing breakthroughs that will transform our understanding of reality,
           </p>,
         </div>,
-        {/* Current Breakthrough Display */,}
+        {/* Current Breakthrough Display */}
         <div className="mb-16">,
           <div className={`bg-gradient-to-br ${currentBreakthrough.color} p-8 rounded-2xl border border-white/20 transform transition-all duration-50o0 ${isAnimating ? 'scale-10o5' : 'scale-10o0'}`}>,
             <div className="text-center">,
@@ -103,11 +89,10 @@ export default function QuantumComputingBreakthrough20o27() {,
                 <div className="text-3xl font-bold text-yellow-40o0">{currentBreakthrough.impact}</div>,
               </div>,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
-                {currentBreakthrough.applications.map((applicationindex) => (,
-                  <div key={index,} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
+                {currentBreakthrough.applications.map((applicationindex) => (
+                  <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
                     <div className="text-sm font-semibold text-white">{application}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -121,14 +106,13 @@ export default function QuantumComputingBreakthrough20o27() {,
             {/* Timeline line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-cyan-50o0 via-purple-50o0 to-pink-50o0 transform -translate-y-1/2"></div>,
             <div className="grid grid-cols-1 md: grid-cols-3 lg:grid-cols-5 gap-8">,
-              {breakthroughs.map((breakthroughindex) => (,
-                <div key={index,} className="relative">,
-                  <div,
-                    className={`w-12 h-12 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${,
+              {breakthroughs.map((breakthroughindex) => (
+                <div key={index} className="relative">,
+                  <div
+                    className={`w-12 h-12 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === activeBreakthrough,
                         ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg',
-                        : 'bg-gray-70o0 hover: bg-gray-60o0',
-                    ,}`}
+                        : 'bg-gray-70o0 hover: bg-gray-60o0'}`}
                     onClick={() => setActiveBreakthrough(index)}
                   >,
                     <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 text-3xl">,
@@ -139,8 +123,7 @@ export default function QuantumComputingBreakthrough20o27() {,
                     <div className="text-sm font-bold text-white">{breakthrough.year}</div>,
                     <div className="text-xs text-gray-40o0">{breakthrough.title}</div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -171,7 +154,7 @@ export default function QuantumComputingBreakthrough20o27() {,
             <div className="text-3xl font-bold text-teal-40o0">∞ Intelligence</div>,
           </div>,
         </div>,
-        {/* Real-world Applications */,}
+        {/* Real-world Applications */}
         <div className="mb-16">,
           <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-yellow-40o0 to-pink-40o0 bg-clip-text text-transparent">,
             Real-World Applications,
@@ -207,7 +190,7 @@ export default function QuantumComputingBreakthrough20o27() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">,
             Join the Quantum Revolution,
@@ -216,21 +199,17 @@ export default function QuantumComputingBreakthrough20o27() {,
             Be part of the most significant technological advancement in human history.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/quantum-computing-breakthroughs-20o25",
-              className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Quantum Computing,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o27-20o30-future-predictions",
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               View Future Predictions,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

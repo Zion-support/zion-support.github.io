@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Neural Networks 20o25 - Advanced AI Learning | Zion Tech Group',;
+export const metadata = {
+  title: 'Neural Networks 20o25 - Advanced AI Learning | Zion Tech Group';
   description:,
-    'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.',;
-  keywords: [,
-    'neural networks',;
-    'deep learning',;
-    'machine learning',;
-    'AI education',;
-    'neural network tutorials',;
-  ],;
+    'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.';
+  keywords: [
+    'neural networks';
+    'deep learning';
+    'machine learning';
+    'AI education';
+    'neural network tutorials';
+  ];
 };
-,
-export default function NeuralNetworksPage() {,
-  return (,
+export default function NeuralNetworksPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Neural Networks 20o25 - Advanced AI Learning',
         description='Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.',
         keywords='neural networks, deep learning, machine learning, AI education, neural network tutorials',
@@ -35,22 +33,20 @@ export default function NeuralNetworksPage() {,
             Experience AI that thinks like humans.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/neural-networks/learning-path',
-              className='bg-white text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Start Learning Path,
             </Link>,
-            <Link,
+            <Link
               href='/neural-networks/interactive-demo',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-60o0 transition-colors'>,
               Try Interactive Demo,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -66,10 +62,9 @@ export default function NeuralNetworksPage() {,
                 Multi-layered neural networks with advanced backpropagation,
                 algorithms.,
               </p>,
-              <Link,
+              <Link
                 href='/neural-networks/deep-learning',
-                className='text-orange-60o0 font-semibold hover:text-orange-80o0',
-              >,
+                className='text-orange-60o0 font-semibold hover:text-orange-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -82,10 +77,9 @@ export default function NeuralNetworksPage() {,
                 Memory-based networks for sequential data processing and time,
                 series analysis.,
               </p>,
-              <Link,
+              <Link
                 href='/neural-networks/recurrent',
-                className='text-orange-60o0 font-semibold hover:text-orange-80o0',
-              >,
+                className='text-orange-60o0 font-semibold hover:text-orange-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -98,10 +92,9 @@ export default function NeuralNetworksPage() {,
                 Vision-based networks for image and video recognition with,
                 spatial hierarchies.,
               </p>,
-              <Link,
+              <Link
                 href='/neural-networks/convolutional',
-                className='text-orange-60o0 font-semibold hover:text-orange-80o0',
-              >,
+                className='text-orange-60o0 font-semibold hover:text-orange-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -114,17 +107,16 @@ export default function NeuralNetworksPage() {,
                 Attention-based networks for natural language processing and,
                 sequence modeling.,
               </p>,
-              <Link,
+              <Link
                 href='/neural-networks/transformers',
-                className='text-orange-60o0 font-semibold hover:text-orange-80o0',
-              >,
+                className='text-orange-60o0 font-semibold hover:text-orange-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='bg-gradient-to-r from-orange-50 to-red-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -134,15 +126,12 @@ export default function NeuralNetworksPage() {,
             Join thousands of developers and researchers learning neural,
             networks with our comprehensive curriculum.,
           </p>,
-          <Link,
+          <Link
             href='/neural-networks/community',
-            className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors',
-          >,
+            className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors'>,
             Join Learning Community,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

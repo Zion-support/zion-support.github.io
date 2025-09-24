@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-export default function LocationsPage() {,
-	return (,
+import React from 'react';;
+import Head from 'next/head';
+export default function LocationsPage() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>Locations | Zion Tech Group</title>,
@@ -16,6 +16,4 @@ export default function LocationsPage() {,
 				</div>,
 				<p className="text-slate-30o0">Call <a className="text-cyan-40o0" href="tel: +130o24640950">+1 30o2 464 0950</a> or email <a className="text-cyan-40o0" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>)}

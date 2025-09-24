@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o26QuantumNeuralFusionPromotionBanner: React.FC = () => {,
-  return (,
+const AI20o26QuantumNeuralFusionPromotionBanner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 py-12 px-4 sm:px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center'>,
@@ -20,29 +19,26 @@ const AI20o26QuantumNeuralFusionPromotionBanner: React.FC = () => {,
             power and unprecedented intelligence.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-quantum-neural-fusion',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold rounded-full transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold rounded-full transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Explore Quantum AI,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white hover: bg-white hover:text-gray-90o0 text-white font-semibold rounded-full transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white hover: bg-white hover:text-gray-90o0 text-white font-semibold rounded-full transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Quantum Access,
             </Link>,
           </div>,
@@ -66,9 +62,5 @@ const AI20o26QuantumNeuralFusionPromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o26QuantumNeuralFusionPromotionBanner,
-,
+    </div>)};
+export default AI20o26QuantumNeuralFusionPromotionBanner;

@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousVehicleAiPlatformPage() {,
-  return (,
+export default function AiAutonomousVehicleAiPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Vehicle Ai Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai autonomous vehicle ai platform page',
         />,
@@ -21,7 +20,5 @@ export default function AiAutonomousVehicleAiPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

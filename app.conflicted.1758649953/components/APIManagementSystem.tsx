@@ -1,6 +1,4 @@
 'use client',
-,
-export default function APIManagementSystem() {,
-  return null,
-}
+export default function APIManagementSystem() {
+  return null}
 ,

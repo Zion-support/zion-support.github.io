@@ -1,16 +1,14 @@
 import Link from 'next/link',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services',;
+    'Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services';
   description:,
-    "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
+    "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
   keywords:,
-    'enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions',;
+    'enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions';
 };
-,
-export default function EnterpriseITPage() {,
-  return (,
+export default function EnterpriseITPage() {
+  return (
     <div className='min-h-screen'>,
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
@@ -35,7 +33,7 @@ export default function EnterpriseITPage() {,
                   Modernize Your Enterprise Infrastructure,
                 </h2>,
                 <p className='text-gray-30o0 text-lg mb-6 leading-relaxed'>,
-                  In today's digital-first world, enterprises need agile,;
+                  In today's digital-first world, enterprises need agile;
                   scalable, and secure IT infrastructure to compete and thrive.,
                   Our comprehensive solutions help organizations modernize their,
                   technology stack while maintaining operational excellence.,
@@ -72,13 +70,12 @@ export default function EnterpriseITPage() {,
               </div>,
               <div className='relative'>,
                 <div className='w-full h-80 bg-gradient-to-br from-blue-50o0/20 to-indigo-50o0/20 rounded-xl flex items-center justify-center'>,
-                  <svg,
+                  <svg
                     className='w-32 h-32 text-blue-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
                       strokeWidth={2}
@@ -104,19 +101,18 @@ export default function EnterpriseITPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {/* Cloud Migration & Strategy */,}
+            {/* Cloud Migration & Strategy */}
             <div className='card group hover: bg-blue-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-blue-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-blue-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M3 15a4 4 0 0o04 4h9a5 5 0 10-.1-9.999 5.0o02 5.0o02 0 10-9.78 2.096A4.0o01 4.0o01 0 0o03 15z',
                   />,
                 </svg>,
@@ -125,7 +121,7 @@ export default function EnterpriseITPage() {,
                 Cloud Migration & Strategy,
               </h3>,
               <p className='text-gray-40o0 mb-4'>,
-                Seamless migration to cloud platforms with strategic planning,;
+                Seamless migration to cloud platforms with strategic planning;
                 cost optimization, and performance tuning.,
               </p>,
               <ul className='space-y-2 mb-6 text-sm text-gray-40o0'>,
@@ -134,29 +130,27 @@ export default function EnterpriseITPage() {,
                 <li>• Multi-cloud strategy</li>,
                 <li>• Cost optimization</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/cloud-migration',
-                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium',
-              >,
+                className='text-blue-40o0 hover: text-blue-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
-            {/* DevOps & Automation */,}
+            {/* DevOps & Automation */}
             <div className='card group hover: bg-green-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-green-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-green-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0o02.573 1.0o66c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0o01.0o65 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0o0-1.0o66 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0o0-2.572 1.0o65c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0o0-2.573-1.0o66c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0o0-1.0o65-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0o01.0o66-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.0o7 2.572-1.0o65z',
                   />,
-                  <path,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -177,26 +171,24 @@ export default function EnterpriseITPage() {,
                 <li>• Container orchestration</li>,
                 <li>• Automated testing</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/devops-automation',
-                className='text-green-40o0 hover: text-green-30o0 text-sm font-medium',
-              >,
+                className='text-green-40o0 hover: text-green-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
-            {/* Infrastructure Management */,}
+            {/* Infrastructure Management */}
             <div className='card group hover: bg-purple-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-purple-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-purple-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M19 11H5m14 0a2 2 0 0o12 2v6a2 2 0 0o1-2 2H5a2 2 0 0o1-2-2v-6a2 2 0 0o12-2m14 0V9a2 2 0 0o0-2-2M5 11V9a2 2 0 0o12-2m0 0V5a2 2 0 0o12-2h6a2 2 0 0o12 2v2M7 7h10',
                   />,
                 </svg>,
@@ -215,26 +207,24 @@ export default function EnterpriseITPage() {,
                 <li>• Performance optimization</li>,
                 <li>• Capacity planning</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/infrastructure-management',
-                className='text-purple-40o0 hover: text-purple-30o0 text-sm font-medium',
-              >,
+                className='text-purple-40o0 hover: text-purple-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
-            {/* Data Management */,}
+            {/* Data Management */}
             <div className='card group hover: bg-indigo-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-indigo-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-indigo-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4',
                   />,
                 </svg>,
@@ -250,26 +240,24 @@ export default function EnterpriseITPage() {,
                 <li>• Data analytics</li>,
                 <li>• Master data management</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/data-management',
-                className='text-indigo-40o0 hover: text-indigo-30o0 text-sm font-medium',
-              >,
+                className='text-indigo-40o0 hover: text-indigo-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
-            {/* Security & Compliance */,}
+            {/* Security & Compliance */}
             <div className='card group hover: bg-red-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-red-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-red-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 12l2 2 4-4m5.618-4.0o16A11.955 11.955 0 0o112 2.944a11.955 11.955 0 0o1-8.618 3.0o4A12.0o2 12.0o2 0 0o03 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.0o3 9-11.622 0-1.0o42-.133-2.0o52-.382-3.0o16z',
                   />,
                 </svg>,
@@ -287,26 +275,24 @@ export default function EnterpriseITPage() {,
                 <li>• Threat detection & response</li>,
                 <li>• Security training</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/security-compliance',
-                className='text-red-40o0 hover: text-red-30o0 text-sm font-medium',
-              >,
+                className='text-red-40o0 hover: text-red-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
-            {/* Managed Services */,}
+            {/* Managed Services */}
             <div className='card group hover: bg-yellow-50o0/10 transition-colors'>,
               <div className='w-16 h-16 bg-yellow-50o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-50o0/30'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-yellow-40o0',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M17 20h5v-2a3 3 0 0o0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0o15.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.0o02 5.0o02 0 0o19.288 0M15 7a3 3 0 11-6 0 3 3 0 0o16 0zm6 3a2 2 0 11-4 0 2 2 0 0o14 0zM7 10a2 2 0 11-4 0 2 2 0 0o04 0z',
                   />,
                 </svg>,
@@ -322,17 +308,16 @@ export default function EnterpriseITPage() {,
                 <li>• Help desk support</li>,
                 <li>• Performance optimization</li>,
               </ul>,
-              <Link,
+              <Link
                 href='/enterprise-it/managed-services',
-                className='text-yellow-40o0 hover: text-yellow-30o0 text-sm font-medium',
-              >,
+                className='text-yellow-40o0 hover: text-yellow-30o0 text-sm font-medium'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack */,}
+      {/* Technology Stack */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-60o0/10 to-indigo-60o0/10'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='text-center mb-16'>,
@@ -384,7 +369,7 @@ export default function EnterpriseITPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Digital Transformation Process */,}
+      {/* Digital Transformation Process */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='text-center mb-16'>,
@@ -412,7 +397,7 @@ export default function EnterpriseITPage() {,
               </div>,
               <h3 className='text-xl font-semibold mb-3'>Strategy</h3>,
               <p className='text-gray-40o0'>,
-                Develop transformation roadmap with clear milestones, timelines,;
+                Develop transformation roadmap with clear milestones, timelines;
                 and success metrics.,
               </p>,
             </div>,
@@ -472,7 +457,7 @@ export default function EnterpriseITPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <div className='card bg-gradient-to-r from-blue-60o0/20 to-indigo-60o0/20 border-blue-50o0/30'>,
@@ -487,17 +472,14 @@ export default function EnterpriseITPage() {,
               <Link href='/contact' className='btn-primary text-lg px-8 py-4'>,
                 Start Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='btn-secondary text-lg px-8 py-4',
-              >,
+                className='btn-secondary text-lg px-8 py-4'>,
                 View Case Studies,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

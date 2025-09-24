@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousEdgeBlueprint20o25 = () => {,
-  return (,
+const AutonomousEdgeBlueprint20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Autonomous Edge Blueprint',
         description='A practical blueprint for deploying autonomous AI systems at the edge in 20o25.',
         keywords='autonomous edge, edge AI, 20o25 blueprint, AI agents',
@@ -50,23 +49,17 @@ const AutonomousEdgeBlueprint20o25 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Plan Your Edge Rollout,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousEdgeBlueprint20o25,
-,
+    </div>)};
+export default AutonomousEdgeBlueprint20o25;

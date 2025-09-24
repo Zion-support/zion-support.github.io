@@ -1,5 +1,3 @@
 // Type definitions for listings,
-interface listings {,
-  // TODO: Add proper type definitions,
-,};
-,
+interface listings {
+  // TODO: Add proper type definitions};

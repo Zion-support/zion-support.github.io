@@ -1,72 +1,70 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Users,;
-  MessageCircle,;
-  FileText,;
-  Calendar,;
-  CheckCircle,;
-  Clock,;
-  AlertCircle,;
-  Plus,;
-  Search,;
-  Filter,;
-  Download,;
-  Share2,;
-  Edit,;
-  Trash2,;
-  Eye,;
-  Star,;
-  Award,;
-  Zap,;
-  Brain,;
-  Cloud,;
-  Shield,;
-  Globe,;
-  Database,;
-  Server,;
-  Lock,;
-  Unlock,;
-  Wifi,;
-  Smartphone,;
-  Monitor,;
-  Tablet,;
-  Video,;
-  Phone,;
-  Mail,;
-  Send,;
-  Paperclip,;
-  Image,;
-  File,;
-  Folder,;
-  Tag,;
-  UserPlus,;
-  Settings,;
-  Bell,;
-  Heart,;
-  ThumbsUp,;
-  ThumbsDown,;
-  Reply,;
-  Forward,;
-  Archive,;
-  Pin,;
-  Bookmark,;
-  Link,;
-  Copy,;
-  MoreHorizontal,;
-  ChevronDown,;
-  ChevronUp,;
-  ArrowRight,;
-  ArrowLeft,;
-  RefreshCw,;
-  TrendingUp,;
-  Activity,;
-  Target,;
-  BarChart3,;
-  PieChart,
-} from 'lucide-react',
-,
-interface TeamMember {,
+import {
+  Users;
+  MessageCircle;
+  FileText;
+  Calendar;
+  CheckCircle;
+  Clock;
+  AlertCircle;
+  Plus;
+  Search;
+  Filter;
+  Download;
+  Share2;
+  Edit;
+  Trash2;
+  Eye;
+  Star;
+  Award;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Globe;
+  Database;
+  Server;
+  Lock;
+  Unlock;
+  Wifi;
+  Smartphone;
+  Monitor;
+  Tablet;
+  Video;
+  Phone;
+  Mail;
+  Send;
+  Paperclip;
+  Image;
+  File;
+  Folder;
+  Tag;
+  UserPlus;
+  Settings;
+  Bell;
+  Heart;
+  ThumbsUp;
+  ThumbsDown;
+  Reply;
+  Forward;
+  Archive;
+  Pin;
+  Bookmark;
+  Link;
+  Copy;
+  MoreHorizontal;
+  ChevronDown;
+  ChevronUp;
+  ArrowRight;
+  ArrowLeft;
+  RefreshCw;
+  TrendingUp;
+  Activity;
+  Target;
+  BarChart3;
+  PieChart} from 'lucide-react',
+interface TeamMember {
   id: string,
   name: string,
   role: string,
@@ -76,10 +74,9 @@ interface TeamMember {,
   lastSeen: string,
   skills: string[],
   projects: string[],
-  availability: 'available' | 'busy' | 'unavailable',
-,}
+  availability: 'available' | 'busy' | 'unavailable'}
 ,
-interface Project {,
+interface Project {
   id: string,
   name: string,
   description: string,
@@ -92,10 +89,9 @@ interface Project {,
   tasks: Task[],
   budget: number,
   client: string,
-  tags: string[],
-,}
+  tags: string[]}
 ,
-interface Task {,
+interface Task {
   id: string,
   title: string,
   description: string,
@@ -107,30 +103,27 @@ interface Task {,
   actualHours: number,
   dependencies: string[],
   tags: string[],
-  comments: Comment[],
-,}
+  comments: Comment[]}
 ,
-interface Comment {,
+interface Comment {
   id: string,
   author: string,
   content: string,
   timestamp: string,
   likes: number,
-  replies: Comment[],
-,}
+  replies: Comment[]}
 ,
-interface Message {,
+interface Message {
   id: string,
   sender: string,
   content: string,
   timestamp: string,
   type: 'text' | 'file' | 'image' | 'link',
   attachments?: string[],
-  reactions: { type: string, count: number ,}[],
-  isRead: boolean,
-,}
+  reactions: { type: string, count: number }[],
+  isRead: boolean}
 ,
-interface FileItem {,
+interface FileItem {
   id: string,
   name: string,
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',
@@ -141,24 +134,21 @@ interface FileItem {,
   tags: string[],
   sharedWith: string[],
   permissions: 'view' | 'edit' | 'admin',
-  version: string,
-,}
+  version: string}
 ,
-interface TeamCollaborationToolsProps {,
+interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean,
   showProjects?: boolean,
   showCommunication?: boolean,
   showFileSharing?: boolean,
-  maxItems?: number,
-}
+  maxItems?: number}
 ,
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
-  showTeamMembers = true,;
-  showProjects = true,;
-  showCommunication = true,;
-  showFileSharing = true,;
-  maxItems = 20,
-}) => {,
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
+  showTeamMembers = true;
+  showProjects = true;
+  showCommunication = true;
+  showFileSharing = true;
+  maxItems = 20}) => {
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team'),
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]),
   const [projects, setProjects] = useState<Project[]>([]),
@@ -170,272 +160,235 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
   const [selectedStatus, setSelectedStatus] = useState<string>('all'),
-,
   // Sample data,
-  useEffect(() => {,
-    const sampleTeamMembers: TeamMember[] = [,
-      {,
-        id: '1',;
-        name: 'Sarah Johnson',;
-        role: 'Senior AI Engineer',;
-        department: 'Engineering',;
-        avatar: 'SJ',;
-        status: 'online',;
-        lastSeen: '2 minutes ago',;
-        skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'],;
-        projects: ['AI Platform Development', 'ML Model Optimization'],;
-        availability: 'available',
-      ,},;
-      {,
-        id: '2',;
-        name: 'Michael Chen',;
-        role: 'Cloud Architect',;
-        department: 'IT Operations',;
-        avatar: 'MC',;
-        status: 'busy',;
-        lastSeen: '15 minutes ago',;
-        skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'],;
-        projects: ['Cloud Migration', 'Infrastructure Modernization'],;
-        availability: 'busy',
-      ,},;
-      {,
-        id: '3',;
-        name: 'David Kim',;
-        role: 'Cybersecurity Specialist',;
-        department: 'Security',;
-        avatar: 'DK',;
-        status: 'online',;
-        lastSeen: '1 minute ago',;
-        skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'],;
-        projects: ['Security Audit', 'Threat Intelligence'],;
-        availability: 'available',
-      ,},;
-      {,
-        id: '4',;
-        name: 'Lisa Thompson',;
-        role: 'Project Manager',;
-        department: 'Management',;
-        avatar: 'LT',;
-        status: 'away',;
-        lastSeen: '1 hour ago',;
-        skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'],;
-        projects: ['Digital Transformation', 'Process Optimization'],;
-        availability: 'unavailable',
-      ,},;
-      {,
-        id: '5',;
-        name: 'Alex Wong',;
-        role: 'DevOps Engineer',;
-        department: 'Engineering',;
-        avatar: 'AW',;
-        status: 'online',;
-        lastSeen: '5 minutes ago',;
-        skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'],;
-        projects: ['CI/CD Pipeline', 'Infrastructure as Code'],;
-        availability: 'available',
-      ,}
+  useEffect(() => {
+    const sampleTeamMembers: TeamMember[] = [
+      {
+        id: '1';
+        name: 'Sarah Johnson';
+        role: 'Senior AI Engineer';
+        department: 'Engineering';
+        avatar: 'SJ';
+        status: 'online';
+        lastSeen: '2 minutes ago';
+        skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'];
+        projects: ['AI Platform Development', 'ML Model Optimization'];
+        availability: 'available'};
+      {
+        id: '2';
+        name: 'Michael Chen';
+        role: 'Cloud Architect';
+        department: 'IT Operations';
+        avatar: 'MC';
+        status: 'busy';
+        lastSeen: '15 minutes ago';
+        skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'];
+        projects: ['Cloud Migration', 'Infrastructure Modernization'];
+        availability: 'busy'};
+      {
+        id: '3';
+        name: 'David Kim';
+        role: 'Cybersecurity Specialist';
+        department: 'Security';
+        avatar: 'DK';
+        status: 'online';
+        lastSeen: '1 minute ago';
+        skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'];
+        projects: ['Security Audit', 'Threat Intelligence'];
+        availability: 'available'};
+      {
+        id: '4';
+        name: 'Lisa Thompson';
+        role: 'Project Manager';
+        department: 'Management';
+        avatar: 'LT';
+        status: 'away';
+        lastSeen: '1 hour ago';
+        skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'];
+        projects: ['Digital Transformation', 'Process Optimization'];
+        availability: 'unavailable'};
+      {
+        id: '5';
+        name: 'Alex Wong';
+        role: 'DevOps Engineer';
+        department: 'Engineering';
+        avatar: 'AW';
+        status: 'online';
+        lastSeen: '5 minutes ago';
+        skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'];
+        projects: ['CI/CD Pipeline', 'Infrastructure as Code'];
+        availability: 'available'}
     ],
-,
-    const sampleProjects: Project[] = [,
-      {,
-        id: '1',;
-        name: 'AI Platform Development',;
-        description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',;
-        status: 'active',;
-        priority: 'high',;
-        progress: 65,;
-        startDate: '20o24-0o1-0o1',;
-        endDate: '20o24-0o6-30',;
-        teamMembers: ['Sarah Johnson', 'Alex Wong'],;
-        tasks: [],;
-        budget: 50o0000,;
-        client: 'TechCorp Inc.',;
-        tags: ['AI', 'Machine Learning', 'Platform'],
-      },;
-      {,
-        id: '2',;
-        name: 'Cloud Migration',;
-        description: 'Migrating legacy systems to cloud infrastructure with zero downtime',;
-        status: 'active',;
-        priority: 'critical',;
-        progress: 45,;
-        startDate: '20o24-0o2-0o1',;
-        endDate: '20o24-08-31',;
-        teamMembers: ['Michael Chen', 'Alex Wong'],;
-        tasks: [],;
-        budget: 750o000,;
-        client: 'Global Enterprises',;
-        tags: ['Cloud', 'Migration', 'Infrastructure'],
-      },;
-      {,
-        id: '3',;
-        name: 'Security Audit',;
-        description: 'Comprehensive security assessment and vulnerability remediation',;
-        status: 'review',;
-        priority: 'high',;
-        progress: 90,;
-        startDate: '20o24-0o1-15',;
-        endDate: '20o24-0o3-15',;
-        teamMembers: ['David Kim'],;
-        tasks: [],;
-        budget: 150o000,;
-        client: 'SecureBank',;
-        tags: ['Security', 'Audit', 'Compliance'],
-      }
+    const sampleProjects: Project[] = [
+      {
+        id: '1';
+        name: 'AI Platform Development';
+        description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities';
+        status: 'active';
+        priority: 'high';
+        progress: 65;
+        startDate: '20o24-0o1-0o1';
+        endDate: '20o24-0o6-30';
+        teamMembers: ['Sarah Johnson', 'Alex Wong'];
+        tasks: [];
+        budget: 50o0000;
+        client: 'TechCorp Inc.';
+        tags: ['AI', 'Machine Learning', 'Platform']};
+      {
+        id: '2';
+        name: 'Cloud Migration';
+        description: 'Migrating legacy systems to cloud infrastructure with zero downtime';
+        status: 'active';
+        priority: 'critical';
+        progress: 45;
+        startDate: '20o24-0o2-0o1';
+        endDate: '20o24-08-31';
+        teamMembers: ['Michael Chen', 'Alex Wong'];
+        tasks: [];
+        budget: 750o000;
+        client: 'Global Enterprises';
+        tags: ['Cloud', 'Migration', 'Infrastructure']};
+      {
+        id: '3';
+        name: 'Security Audit';
+        description: 'Comprehensive security assessment and vulnerability remediation';
+        status: 'review';
+        priority: 'high';
+        progress: 90;
+        startDate: '20o24-0o1-15';
+        endDate: '20o24-0o3-15';
+        teamMembers: ['David Kim'];
+        tasks: [];
+        budget: 150o000;
+        client: 'SecureBank';
+        tags: ['Security', 'Audit', 'Compliance']}
     ],
-,
-    const sampleMessages: Message[] = [,
-      {,
-        id: '1',;
-        sender: 'Sarah Johnson',;
-        content: 'Great progress on the AI model training! The accuracy has improved significantly.',;
-        timestamp: '2 minutes ago',;
-        type: 'text',;
-        reactions: [{ type: 'thumbsUp', count: 3 ,}],;
-        isRead: true,
-      ,},;
-      {,
-        id: '2',;
-        sender: 'Michael Chen',;
-        content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',;
-        timestamp: '15 minutes ago',;
-        type: 'text',;
-        reactions: [{ type: 'check', count: 2 ,}],;
-        isRead: false,
-      ,},;
-      {,
-        id: '3',;
-        sender: 'David Kim',;
-        content: 'Security vulnerabilities identified and patched. Report ready for review.',;
-        timestamp: '1 hour ago',;
-        type: 'text',;
-        reactions: [{ type: 'star', count: 1 ,}],;
-        isRead: true,
-      ,}
+    const sampleMessages: Message[] = [
+      {
+        id: '1';
+        sender: 'Sarah Johnson';
+        content: 'Great progress on the AI model training! The accuracy has improved significantly.';
+        timestamp: '2 minutes ago';
+        type: 'text';
+        reactions: [{ type: 'thumbsUp', count: 3 }];
+        isRead: true};
+      {
+        id: '2';
+        sender: 'Michael Chen';
+        content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.';
+        timestamp: '15 minutes ago';
+        type: 'text';
+        reactions: [{ type: 'check', count: 2 }];
+        isRead: false};
+      {
+        id: '3';
+        sender: 'David Kim';
+        content: 'Security vulnerabilities identified and patched. Report ready for review.';
+        timestamp: '1 hour ago';
+        type: 'text';
+        reactions: [{ type: 'star', count: 1 }];
+        isRead: true}
     ],
-,
-    const sampleFiles: FileItem[] = [,
-      {,
-        id: '1',;
-        name: 'AI_Platform_Architecture.pdf',;
-        type: 'document',;
-        size: 2.5,;
-        uploadedBy: 'Sarah Johnson',;
-        uploadDate: '20o24-0o1-15',;
-        lastModified: '20o24-0o1-15',;
-        tags: ['Architecture', 'AI', 'Documentation'],;
-        sharedWith: ['Michael Chen', 'Alex Wong'],;
-        permissions: 'edit',;
-        version: '1.2',
-      ,},;
-      {,
-        id: '2',;
-        name: 'Cloud_Migration_Plan.xlsx',;
-        type: 'document',;
-        size: 1.8,;
-        uploadedBy: 'Michael Chen',;
-        uploadDate: '20o24-0o1-14',;
-        lastModified: '20o24-0o1-14',;
-        tags: ['Migration', 'Cloud', 'Planning'],;
-        sharedWith: ['Sarah Johnson', 'David Kim'],;
-        permissions: 'view',;
-        version: '2.1',
-      ,},;
-      {,
-        id: '3',;
-        name: 'Security_Audit_Report.docx',;
-        type: 'document',;
-        size: 3.2,;
-        uploadedBy: 'David Kim',;
-        uploadDate: '20o24-0o1-13',;
-        lastModified: '20o24-0o1-13',;
-        tags: ['Security', 'Audit', 'Report'],;
-        sharedWith: ['Lisa Thompson'],;
-        permissions: 'view',;
-        version: '1.0',
-      ,}
+    const sampleFiles: FileItem[] = [
+      {
+        id: '1';
+        name: 'AI_Platform_Architecture.pdf';
+        type: 'document';
+        size: 2.5;
+        uploadedBy: 'Sarah Johnson';
+        uploadDate: '20o24-0o1-15';
+        lastModified: '20o24-0o1-15';
+        tags: ['Architecture', 'AI', 'Documentation'];
+        sharedWith: ['Michael Chen', 'Alex Wong'];
+        permissions: 'edit';
+        version: '1.2'};
+      {
+        id: '2';
+        name: 'Cloud_Migration_Plan.xlsx';
+        type: 'document';
+        size: 1.8;
+        uploadedBy: 'Michael Chen';
+        uploadDate: '20o24-0o1-14';
+        lastModified: '20o24-0o1-14';
+        tags: ['Migration', 'Cloud', 'Planning'];
+        sharedWith: ['Sarah Johnson', 'David Kim'];
+        permissions: 'view';
+        version: '2.1'};
+      {
+        id: '3';
+        name: 'Security_Audit_Report.docx';
+        type: 'document';
+        size: 3.2;
+        uploadedBy: 'David Kim';
+        uploadDate: '20o24-0o1-13';
+        lastModified: '20o24-0o1-13';
+        tags: ['Security', 'Audit', 'Report'];
+        sharedWith: ['Lisa Thompson'];
+        permissions: 'view';
+        version: '1.0'}
     ],
-,
     setTeamMembers(sampleTeamMembers),
     setProjects(sampleProjects),
     setMessages(sampleMessages),
-    setFiles(sampleFiles),
-  }, []),
-,
+    setFiles(sampleFiles)}, []),
   // Get status color and icon,
-  const getStatusDisplay = (status: string) => {,
-    switch (status) {,
-      case 'online': return { color: 'text-green-40o0 bg-green-40o0/20', icon: <div className="w-2 h-2 bg-green-40o0 rounded-full"></div> ,};
-      case 'away': return { color: 'text-yellow-40o0 bg-yellow-40o0/20', icon: <div className="w-2 h-2 bg-yellow-40o0 rounded-full"></div> ,};
-      case 'busy': return { color: 'text-red-40o0 bg-red-40o0/20', icon: <div className="w-2 h-2 bg-red-40o0 rounded-full"></div> ,};
-      case 'offline': return { color: 'text-zinc-40o0 bg-zinc-40o0/20', icon: <div className="w-2 h-2 bg-zinc-40o0 rounded-full"></div> ,};
-      default: return { color: 'text-zinc-40o0 bg-zinc-40o0/20', icon: <div className="w-2 h-2 bg-zinc-40o0 rounded-full"></div> ,};
+  const getStatusDisplay = (status: string) => {
+    switch (status) {
+      case 'online': return { color: 'text-green-40o0 bg-green-40o0/20', icon: <div className="w-2 h-2 bg-green-40o0 rounded-full"></div> };
+      case 'away': return { color: 'text-yellow-40o0 bg-yellow-40o0/20', icon: <div className="w-2 h-2 bg-yellow-40o0 rounded-full"></div> };
+      case 'busy': return { color: 'text-red-40o0 bg-red-40o0/20', icon: <div className="w-2 h-2 bg-red-40o0 rounded-full"></div> };
+      case 'offline': return { color: 'text-zinc-40o0 bg-zinc-40o0/20', icon: <div className="w-2 h-2 bg-zinc-40o0 rounded-full"></div> };
+      default: return { color: 'text-zinc-40o0 bg-zinc-40o0/20', icon: <div className="w-2 h-2 bg-zinc-40o0 rounded-full"></div> };
     }
   };
-,
   // Get project status color,
-  const getProjectStatusColor = (status: string) => {,
-    switch (status) {,
+  const getProjectStatusColor = (status: string) => {
+    switch (status) {
       case 'planning': return 'text-blue-40o0 bg-blue-40o0/20',
       case 'active': return 'text-green-40o0 bg-green-40o0/20',
       case 'review': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'completed': return 'text-purple-40o0 bg-purple-40o0/20',
       case 'on-hold': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    ,}
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
-,
   // Get priority color,
-  const getPriorityColor = (priority: string) => {,
-    switch (priority) {,
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
       case 'low': return 'text-green-40o0 bg-green-40o0/20',
       case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20',
       case 'high': return 'text-orange-40o0 bg-orange-40o0/20',
       case 'critical': return 'text-red-40o0 bg-red-40o0/20',
-      default: return 'text-zinc-40o0 bg-zinc-40o0/20',
-    ,}
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20'}
   };
-,
   // Get file type icon,
-  const getFileTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getFileTypeIcon = (type: string) => {
+    switch (type) {
       case 'document': return <FileText className="w-5 h-5"  />,
       case 'image': return <Image className="w-5 h-5"  />,
       case 'video': return <Video className="w-5 h-5"  />,
       case 'audio': return <File className="w-5 h-5"  />,
       case 'archive': return <Folder className="w-5 h-5"  />,
-      default: return <File className="w-5 h-5"  />,
-    ,}
+      default: return <File className="w-5 h-5"  />}
   };
-,
   // Format file size,
-  const formatFileSize = (size: number) => {,
-    if (size < 1) return `${(size * 10o24).toFixed(0),} KB`,
+  const formatFileSize = (size: number) => {
+    if (size < 1) return `${(size * 10o24).toFixed(0)} KB`,
     if (size < 10o24) return `${size.toFixed(1)} MB`,
-    return `${(size / 10o24).toFixed(1)} GB`,
-  };
-,
+    return `${(size / 10o24).toFixed(1)} GB`};
   // Handle project selection,
-  const handleProjectSelect = (project: Project) => {,
-    setSelectedProject(project),
-  ,};
-,
+  const handleProjectSelect = (project: Project) => {
+    setSelectedProject(project)};
   // Handle message reactions,
-  const handleMessageReaction = (messageId: string, reactionType: string) => {,
-    setMessages(prev => prev.map(msg => {,
-      if (msg.id === messageId) {,
+  const handleMessageReaction = (messageId: string, reactionType: string) => {
+    setMessages(prev => prev.map(msg => {
+      if (msg.id === messageId) {
         const existingReaction = msg.reactions.find(r => r.type === reactionType),
-        if (existingReaction) {,
-          existingReaction.count += 1,
-        ,} else {,
-          msg.reactions.push({ type: reactionType, count: 1 ,}),
-        }
+        if (existingReaction) {
+          existingReaction.count += 1} else {
+          msg.reactions.push({ type: reactionType, count: 1 })}
       }
-      return msg,
-    })),
-  };
-,
-  return (,
+      return msg}))};
+  return (
     <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
       <div className="text-center mb-8">,
@@ -445,72 +398,65 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
       {/* Tab Navigation */}
       <div className="flex items-center justify-center mb-8">,
         <div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">,
-          {[,
-            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> ,},;
-            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> ,},;
-            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> ,},;
-            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> ,}
-          ].map((tab) => (,
-            <button,
+          {[
+            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> };
+            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> };
+            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> };
+            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }
+          ].map((tab) => (
+            <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-30o0 ${,
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-30o0 ${
                 activeTab === tab.id,
                   ? 'bg-zion-cyan text-white',
-                  : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50',
-              ,}`}
+                  : 'text-zinc-40o0 hover: text-white hover:bg-zinc-80o0/50'}`}
             >,
               {tab.icon}
               {tab.label}
-            </button>,
-          ))}
+            </button>))}
         </div>,
       </div>,
       {/* Team Members Tab */}
-      {activeTab === 'team' && showTeamMembers && (,
+      {activeTab === 'team' && showTeamMembers && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          className="space-y-6",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6">,
           {/* Team Stats */}
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>,
               <div className="text-zinc-40o0">Total Members</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.1 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-green-40o0 mb-2">,
                 {teamMembers.filter(m => m.status === 'online').length}
               </div>,
               <div className="text-zinc-40o0">Online Now</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.2 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-blue-40o0 mb-2">,
                 {teamMembers.filter(m => m.availability === 'available').length}
               </div>,
               <div className="text-zinc-40o0">Available</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.3 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-zion-cyan mb-2">,
                 {Array.from(new Set(teamMembers.map(m => m.department))).length}
               </div>,
@@ -519,15 +465,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
           </div>,
           {/* Team Members Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {teamMembers.map((member, index) => (,
+            {teamMembers.map((member, index) => (
               <motion.div,
                 key={member.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: index * 0.1 ,}}
-                className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0",
-              >,
-                {/* Member Header */,}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0">,
+                {/* Member Header */}
                 <div className="flex items-center gap-4 mb-4">,
                   <div className="relative">,
                     <div className="w-16 h-16 bg-zinc-80o0 rounded-full flex items-center justify-center text-zion-cyan font-semibold text-lg">,
@@ -548,11 +493,10 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>,
                     {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
                   </span>,
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${,
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     member.availability === 'available' ? 'text-green-40o0 bg-green-40o0/20' :,
                     member.availability === 'busy' ? 'text-yellow-40o0 bg-yellow-40o0/20' :,
-                    'text-red-40o0 bg-red-40o0/20',
-                  }`}>,
+                    'text-red-40o0 bg-red-40o0/20'}`}>,
                     {member.availability.charAt(0).toUpperCase() + member.availability.slice(1)}
                   </span>,
                 </div>,
@@ -560,36 +504,32 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                 <div className="mb-4">,
                   <h4 className="text-sm font-medium text-zinc-30o0 mb-2">Skills</h4>,
                   <div className="flex flex-wrap gap-2">,
-                    {member.skills.slice(0, 3).map((skill) => (,
-                      <span,
+                    {member.skills.slice(0, 3).map((skill) => (
+                      <span
                         key={skill}
-                        className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full",
-                      >,
+                        className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">,
                         {skill}
-                      </span>,
-                    ))}
-                    {member.skills.length > 3 && (,
+                      </span>))}
+                    {member.skills.length > 3 && (
                       <span className="px-2 py-1 bg-zinc-80o0/50 text-zinc-40o0 text-xs rounded-full">,
                         +{member.skills.length - 3} more,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                 </div>,
                 {/* Projects */}
                 <div className="mb-4">,
                   <h4 className="text-sm font-medium text-zinc-30o0 mb-2">Active Projects</h4>,
                   <div className="space-y-1">,
-                    {member.projects.slice(0, 2).map((project) => (,
+                    {member.projects.slice(0, 2).map((project) => (
                       <div key={project} className="text-xs text-zinc-40o0">,
                         • {project}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 {/* Actions */}
                 <div className="flex items-center justify-between pt-4 border-t border-zinc-70o0/50">,
                   <div className="text-xs text-zinc-50o0">,
-                    Last seen: {member.lastSeen,}
+                    Last seen: {member.lastSeen}
                   </div>,
                   <div className="flex items-center gap-2">,
                     <button className="p-2 text-zinc-40o0 hover: text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">,
@@ -603,57 +543,50 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
-        </motion.div>,
-      )}
+        </motion.div>)}
 ,
       {/* Projects Tab */}
-      {activeTab === 'projects' && showProjects && (,
+      {activeTab === 'projects' && showProjects && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          className="space-y-6",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6">,
           {/* Project Stats */}
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>,
               <div className="text-zinc-40o0">Total Projects</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.1 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-green-40o0 mb-2">,
                 {projects.filter(p => p.status === 'active').length}
               </div>,
               <div className="text-zinc-40o0">Active</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.2 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-blue-40o0 mb-2">,
                 {projects.filter(p => p.status === 'completed').length}
               </div>,
               <div className="text-zinc-40o0">Completed</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.3 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-zion-cyan mb-2">,
                 ${(projects.reduce((sum, p) => sum + p.budget, 0) / 10o00000).toFixed(1)}M,
               </div>,
@@ -662,14 +595,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
           </div>,
           {/* Projects List */}
           <div className="space-y-6">,
-            {projects.map((project, index) => (,
+            {projects.map((project, index) => (
               <motion.div,
                 key={project.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: index * 0.1 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0 cursor-pointer",
-                onClick={() => handleProjectSelect(project),}
+                onClick={() => handleProjectSelect(project)}
               >,
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">,
@@ -700,7 +633,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                     </button>,
                   </div>,
                 </div>,
-                {/* Progress Bar */,}
+                {/* Progress Bar */}
                 <div className="mb-4">,
                   <div className="flex items-center justify-between mb-2">,
                     <span className="text-sm text-zinc-30o0">Progress</span>,
@@ -708,9 +641,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                   </div>,
                   <div className="w-full bg-zinc-70o0 rounded-full h-2">,
                     <motion.div,
-                      initial={{ width: 0 ,}}
-                      animate={{ width: `${project.progress,}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 ,}}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${project.progress}%` }}
+                      transition={{ duration: 1, delay: index * 0.1 }}
                       className="h-2 bg-zion-cyan rounded-full",
                      />,
                   </div>,
@@ -720,7 +653,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                   <div className="p-3 bg-zinc-80o0/30 rounded-lg">,
                     <div className="text-sm text-zinc-40o0 mb-1">Timeline</div>,
                     <div className="text-white font-medium text-sm">,
-                      {new Date(project.startDate).toLocaleDateString(),} - {new Date(project.endDate).toLocaleDateString()}
+                      {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
                     </div>,
                   </div>,
                   <div className="p-3 bg-zinc-80o0/30 rounded-lg">,
@@ -734,65 +667,56 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                 </div>,
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">,
-                  {project.tags.map((tag) => (,
-                    <span,
+                  {project.tags.map((tag) => (
+                    <span
                       key={tag}
-                      className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full",
-                    >,
+                      className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
           {/* Add Project Button */}
           <div className="text-center">,
-            <button,
+            <button
               onClick={() => setShowProjectForm(true)}
-              className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto",
-            >,
+              className="px-8 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/80 transition-colors flex items-center gap-2 mx-auto">,
               <Plus className="w-5 h-5"  />,
               Add New Project,
             </button>,
           </div>,
-        </motion.div>,
-      ),}
+        </motion.div>)}
 ,
       {/* Communication Tab */}
-      {activeTab === 'communication' && showCommunication && (,
+      {activeTab === 'communication' && showCommunication && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          className="space-y-6",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6">,
           {/* Communication Stats */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>,
               <div className="text-zinc-40o0">Total Messages</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.1 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-green-40o0 mb-2">,
                 {messages.filter(m => m.isRead).length}
               </div>,
               <div className="text-zinc-40o0">Read</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.2 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-blue-40o0 mb-2">,
                 {messages.filter(m => !m.isRead).length}
               </div>,
@@ -801,15 +725,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
           </div>,
           {/* Messages */}
           <div className="space-y-4">,
-            {messages.map((message, index) => (,
+            {messages.map((message, index) => (
               <motion.div,
                 key={message.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: index * 0.1 ,}}
-                className={`p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0 ${,
-                  !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : '',
-                ,}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className={`p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0 ${
+                  !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''}`}
               >,
                 <div className="flex items-start gap-4">,
                   <div className="w-10 h-10 bg-zinc-80o0 rounded-full flex items-center justify-center text-zion-cyan font-semibold">,
@@ -819,27 +742,24 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                     <div className="flex items-center gap-3 mb-2">,
                       <h4 className="font-semibold text-white">{message.sender}</h4>,
                       <span className="text-xs text-zinc-50o0">{message.timestamp}</span>,
-                      {!message.isRead && (,
+                      {!message.isRead && (
                         <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">,
                           New,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     <p className="text-zinc-30o0 mb-3">{message.content}</p>,
                     {/* Reactions */}
                     <div className="flex items-center gap-2">,
-                      {message.reactions.map((reaction, idx) => (,
-                        <button,
+                      {message.reactions.map((reaction, idx) => (
+                        <button
                           key={idx}
                           onClick={() => handleMessageReaction(message.id, reaction.type)}
-                          className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full hover: bg-zinc-70o0/50 transition-colors",
-                        >,
-                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"  />,}
+                          className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full hover: bg-zinc-70o0/50 transition-colors">,
+                          {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1"  />}
                           {reaction.type === 'check' && <CheckCircle className="w-3 h-3 inline mr-1"  />}
                           {reaction.type === 'star' && <Star className="w-3 h-3 inline mr-1"  />}
                           {reaction.count}
-                        </button>,
-                      ))}
+                        </button>))}
                     </div>,
                   </div>,
                   <div className="flex items-center gap-2">,
@@ -854,14 +774,13 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
           {/* New Message Input */}
           <div className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl">,
             <div className="flex items-center gap-3">,
               <div className="flex-1">,
-                <input,
+                <input
                   type="text",
                   placeholder="Type your message...",
                   className="w-full px-4 py-3 bg-zinc-80o0/50 border border-zinc-60o0/50 rounded-lg text-white placeholder-zinc-40o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent",
@@ -876,54 +795,48 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
               </button>,
             </div>,
           </div>,
-        </motion.div>,
-      ),}
+        </motion.div>)}
 ,
       {/* File Sharing Tab */}
-      {activeTab === 'files' && showFileSharing && (,
+      {activeTab === 'files' && showFileSharing && (
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          className="space-y-6",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6">,
           {/* File Stats */}
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>,
               <div className="text-zinc-40o0">Total Files</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.1 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-green-40o0 mb-2">,
                 {files.filter(f => f.type === 'document').length}
               </div>,
               <div className="text-zinc-40o0">Documents</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.2 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-blue-40o0 mb-2">,
                 {files.filter(f => f.type === 'image').length}
               </div>,
               <div className="text-zinc-40o0">Images</div>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ delay: 0.3 ,}}
-              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
               <div className="text-3xl font-bold text-zion-cyan mb-2">,
                 {formatFileSize(files.reduce((sum, f) => sum + f.size, 0))}
               </div>,
@@ -932,36 +845,33 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
           </div>,
           {/* Files List */}
           <div className="space-y-4">,
-            {files.map((file, index) => (,
+            {files.map((file, index) => (
               <motion.div,
                 key={file.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: index * 0.1 ,}}
-                className="p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover: bg-zinc-90o0/50 transition-all duration-30o0">,
                 <div className="flex items-center gap-4">,
                   <div className="p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan">,
-                    {getFileTypeIcon(file.type),}
+                    {getFileTypeIcon(file.type)}
                   </div>,
                   <div className="flex-1">,
                     <h4 className="font-semibold text-white mb-1">{file.name}</h4>,
                     <div className="flex items-center gap-4 text-sm text-zinc-40o0">,
-                      <span>Size: {formatFileSize(file.size),}</span>,
-                      <span>Uploaded by: {file.uploadedBy,}</span>,
-                      <span>Version: {file.version,}</span>,
-                      <span>Modified: {new Date(file.lastModified).toLocaleDateString(),}</span>,
+                      <span>Size: {formatFileSize(file.size)}</span>,
+                      <span>Uploaded by: {file.uploadedBy}</span>,
+                      <span>Version: {file.version}</span>,
+                      <span>Modified: {new Date(file.lastModified).toLocaleDateString()}</span>,
                     </div>,
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mt-2">,
-                      {file.tags.map((tag) => (,
-                        <span,
+                      {file.tags.map((tag) => (
+                        <span
                           key={tag}
-                          className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full",
-                        >,
+                          className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                   <div className="flex items-center gap-2">,
@@ -976,8 +886,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
           {/* Upload Files */}
           <div className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center">,
@@ -990,8 +899,5 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({,
               </button>,
             </div>,
           </div>,
-        </motion.div>,
-      ),}
-    </div>,
-  ),
-};
+        </motion.div>)}
+    </div>)};

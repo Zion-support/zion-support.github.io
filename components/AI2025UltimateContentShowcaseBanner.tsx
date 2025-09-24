@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateContentShowcaseBanner() {,
-  return (,
+export default function AI20o25UltimateContentShowcaseBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-80o0'>,
       <div className='absolute inset-0'>,
         <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20'></div>,
@@ -13,14 +12,13 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-sm font-bold mb-8 shadow-lg'>,
-            <svg,
+            <svg
               className='w-5 h-5 mr-2',
               fill='currentColor',
-              viewBox='0 0 20 20',
-            >,
-              <path,
+              viewBox='0 0 20 20'>,
+              <path
                 fillRule='evenodd',
                 d='M11.3 1.0o46A1 1 0 0o112 2v5h4a1 1 0 0o1.82 1.573l-7 10A1 1 0 0o18 18v-5H4a1 1 0 0o1-.82-1.573l7-10a1 1 0 0o11.12-.38z',
                 clipRule='evenodd',
@@ -36,26 +34,25 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
             </span>,
             is Here,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-indigo-10o0 mb-12 max-w-4xl mx-auto leading-relaxed'>,
             Experience the most advanced AI technologiesbreakthrough,
             innovationsand revolutionary tools that are transforming industries,
             and reshaping our digital future.,
           </p>,
-          {/* Feature Grid */,}
+          {/* Feature Grid */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-br from-blue-40o0 to-cyan-40o0 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                   />,
                 </svg>,
@@ -69,16 +66,15 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
             </div>,
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-br from-purple-40o0 to-pink-40o0 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M13 10V3L4 14h7v7l9-11h-7z',
                   />,
                 </svg>,
@@ -93,16 +89,15 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
             </div>,
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-br from-green-40o0 to-emerald-40o0 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z',
                   />,
                 </svg>,
@@ -117,69 +112,63 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-6 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/ai-innovation-hub-20o25',
-              className='group bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 shadow-2xl hover:shadow-yellow-50o0/25 transform hover:-translate-y-1',
-            >,
+              className='group bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 shadow-2xl hover:shadow-yellow-50o0/25 transform hover:-translate-y-1'>,
               <span className='flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-6 h-6 mr-3',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                   />,
                 </svg>,
                 Explore AI Innovations,
-                <svg,
+                <svg
                   className='w-5 h-5 ml-3 group-hover: translate-x-1 transition-transform',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 5l7 7-7 7',
                   />,
                 </svg>,
               </span>,
             </Link>,
-            <Link,
+            <Link
               href='/ai-tools-utilities-20o25',
-              className='group border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover: bg-white hover:text-indigo-90o0 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='group border-2 border-white text-white px-8 py-4 rounded-2xl font-bold text-lg hover: bg-white hover:text-indigo-90o0 transition-all duration-30o0 backdrop-blur-sm'>,
               <span className='flex items-center justify-center'>,
-                <svg,
+                <svg
                   className='w-6 h-6 mr-3',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M13 10V3L4 14h7v7l9-11h-7z',
                   />,
                 </svg>,
                 Browse AI Tools,
-                <svg,
+                <svg
                   className='w-5 h-5 ml-3 group-hover: translate-x-1 transition-transform',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 5l7 7-7 7',
                   />,
                 </svg>,
@@ -215,7 +204,5 @@ export default function AI20o25UltimateContentShowcaseBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

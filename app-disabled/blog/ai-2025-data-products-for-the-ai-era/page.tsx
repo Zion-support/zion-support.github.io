@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const DataProductsForTheAIEra20o25 = () => {,
-  return (,
+const DataProductsForTheAIEra20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Data Products for the AI Era',
         description='Blueprint for building reliable, reusable, and monetizable data products that power enterprise AI.',
         keywords='data products, feature store, governance, metadata, MDM, AI platforms',
@@ -26,7 +25,7 @@ const DataProductsForTheAIEra20o25 = () => {,
         <div className='prose prose-lg max-w-none'>,
           <h2>What is a Data Product?</h2>,
           <p>,
-            A data product is a managed, reusable asset with clear ownership,;
+            A data product is a managed, reusable asset with clear ownership;
             SLAs, quality metrics, documentation, and access patterns. Treat,
             data like an API with versioned schemas and contracts.,
           </p>,
@@ -51,28 +50,22 @@ const DataProductsForTheAIEra20o25 = () => {,
           </p>,
           <h2>Business Outcomes</h2>,
           <p>,
-            Accelerated AI delivery, reduced duplication, improved reliability,;
+            Accelerated AI delivery, reduced duplication, improved reliability;
             and the ability to monetize internal and external data services.,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Build Your Data Platform,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default DataProductsForTheAIEra20o25,
-,
+    </div>)};
+export default DataProductsForTheAIEra20o25;

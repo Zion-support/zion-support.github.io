@@ -1,16 +1,14 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
 import { Shield, Lock, Eye, FileText, Calendar, Mail } from 'lucide-react',
 import { SEO } from '@/components/SEO',
 import { Header } from '@/components/header/Header',
 import { Footer } from '@/components/Footer',
-,
-export default function PrivacyPage() {,
+export default function PrivacyPage() {
   const lastUpdated = '2024-01-15',
-,
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Privacy Policy',
         description='Learn how Zion Tech Group protects your privacy and handles your personal information in accordance with applicable laws and regulations.',
         keywords='privacy policy, data protection, GDPR, CCPA, Zion Tech Group',
@@ -21,9 +19,9 @@ export default function PrivacyPage() {,
         <section className='relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <div className='w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6'>,
                 <Shield className='w-10 h-10 text-white' />,
@@ -38,7 +36,7 @@ export default function PrivacyPage() {,
               <div className='flex flex-wrap justify-center gap-4 mt-8 text-sm text-zion-slate-light'>,
                 <span className='flex items-center gap-2'>,
                   <Calendar className='w-4 h-4 text-zion-cyan' />,
-                  Last Updated: {new Date(lastUpdated).toLocaleDateString(),}
+                  Last Updated: {new Date(lastUpdated).toLocaleDateString()}
                 </span>,
                 <span className='flex items-center gap-2'>,
                   <Lock className='w-4 h-4 text-zion-cyan' />,
@@ -56,11 +54,10 @@ export default function PrivacyPage() {,
         <section className='py-20 px-6 bg-zion-blue'>,
           <div className='max-w-4xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8'>,
               <div className='prose prose-invert max-w-none'>,
                 <h2 className='text-3xl font-bold text-white mb-6'>,
                   Information We Collect,
@@ -230,13 +227,13 @@ export default function PrivacyPage() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 px-6 bg-gradient-to-r from-zion-purple to-zion-cyan'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Questions About Privacy?,
@@ -246,10 +243,9 @@ export default function PrivacyPage() {,
                 Contact us if you need clarification on any aspect of our,
                 privacy practices.,
               </p>,
-              <a,
+              <a
                 href='/contact',
-                className='bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover: bg-zion-slate-light transition-all duration-300 inline-flex items-center gap-2',
-              >,
+                className='bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover: bg-zion-slate-light transition-all duration-300 inline-flex items-center gap-2'>,
                 <span>Contact Us</span>,
                 <Mail className='w-5 h-5' />,
               </a>,
@@ -258,7 +254,5 @@ export default function PrivacyPage() {,
         </section>,
       </main>,
       <Footer />,
-    </>,
-  ),
-,}
+    </>)}
 ,

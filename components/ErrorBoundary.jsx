@@ -1,58 +1,50 @@
 'use client',
-,
 import { Component } from 'react',
-,
-class ErrorBoundary extends Component {,
-  constructor(props) {,
+class ErrorBoundary extends Component {
+  constructor(props) {
     super(props),
-    this.state = {,
-      hasError: false,;
-      error: null,;
-      errorInfo: null,;
+    this.state = {
+      hasError: false;
+      error: null;
+      errorInfo: null;
     };
   }
 ,
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 ,
-  componentDidCatch(error, errorInfo) {,
-    this.setState({,
-      error: error,;
-      errorInfo: errorInfo,;
+  componentDidCatch(error, errorInfo) {
+    this.setState({
+      error: error;
+      errorInfo: errorInfo;
     }),
-,
     // Log error to monitoring service,
     console.error('ErrorBoundary caught an error:', error, errorInfo),
-,
     // In production, send to error tracking service,
-    if (process.env.NODE_ENV === 'production') {,
+    if (process.env.NODE_ENV === 'production') {
       // Example: Sentry, LogRocket, etc.,
-      // errorTrackingService.captureException(error, { extra: errorInfo ,}),
-    }
+      // errorTrackingService.captureException(error, { extra: errorInfo })}
   }
 ,
-  handleRetry = () => {,
-    this.setState({,
-      hasError: false,;
-      error: null,;
-      errorInfo: null,;
-    }),
-  };
-,
-  render() {,
-    if (this.state.hasError) {,
-      return (,
+  handleRetry = () => {
+    this.setState({
+      hasError: false;
+      error: null;
+      errorInfo: null;
+    })};
+  render() {
+    if (this.state.hasError) {
+      return (
         <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>,
           <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center'>,
             <div className='w-16 h-16 bg-red-10o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
-              <svg,
+              <svg
                 className='w-8 h-8 text-red-60o0',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
                   strokeWidth={2}
@@ -67,49 +59,41 @@ class ErrorBoundary extends Component {,
               We apologize for the inconvenience. An unexpected error occurred,
               while loading this page.,
             </p>,
-            {process.env.NODE_ENV === 'development' && this.state.error && (,
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className='bg-red-50 border border-red-20o0 rounded-lg p-4 mb-6 text-left'>,
                 <h3 className='font-semibold text-red-80o0 mb-2'>,
                   Error Details: ,
                 </h3>,
                 <pre className='text-sm text-red-70o0 whitespace-pre-wrap overflow-auto max-h-32'>,
-                  {this.state.error.toString(),}
+                  {this.state.error.toString()}
                   {this.state.errorInfo.componentStack}
                 </pre>,
-              </div>,
-            )}
+              </div>)}
 ,
             <div className='flex flex-col sm: flex-row gap-3 justify-center'>,
-              <button,
-                onClick={this.handleRetry,}
-                className='bg-blue-60o0 text-white px-6 py-2 rounded-lg hover: bg-blue-70o0 transition-colors duration-20o0 font-medium',
-              >,
+              <button
+                onClick={this.handleRetry}
+                className='bg-blue-60o0 text-white px-6 py-2 rounded-lg hover: bg-blue-70o0 transition-colors duration-20o0 font-medium'>,
                 Try Again,
               </button>,
-              <button,
-                onClick={() => (window.location.href = '/'),}
-                className='bg-gray-60o0 text-white px-6 py-2 rounded-lg hover: bg-gray-70o0 transition-colors duration-20o0 font-medium',
-              >,
+              <button
+                onClick={() => (window.location.href = '/')}
+                className='bg-gray-60o0 text-white px-6 py-2 rounded-lg hover: bg-gray-70o0 transition-colors duration-20o0 font-medium'>,
                 Go Home,
               </button>,
             </div>,
             <div className='mt-6 text-sm text-gray-50o0'>,
               <p>If this problem persists, please contact our support team.</p>,
-              <a,
+              <a
                 href='mailto: support@ziontechgroup.com',
-                className='text-blue-60o0 hover:text-blue-80o0 underline',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0 underline'>,
                 support@ziontechgroup.com,
               </a>,
             </div>,
           </div>,
-        </div>,
-      ),
-    ,}
+        </div>)}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
 ,
-export default ErrorBoundary,
-,
+export default ErrorBoundary;

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ContactPage() {,
-  return (,
+export default function ContactPage() {
+  return (
     <>,
       <Head>,
         <title>Contact — Zion Tech Group</title>,
@@ -13,47 +12,43 @@ export default function ContactPage() {,
           <h1 className='text-3xl font-bold mb-4'>Contact Us</h1>,
           <div className='space-y-2 text-gray-70o0'>,
             <p>,
-              Mobile:{' ',}
+              Mobile:{' '}
               <a className='text-blue-70o0' href='tel: +130o24640950'>,
                 +1 30o2 464 0950,
               </a>,
             </p>,
             <p>,
-              Email:{' ',}
-              <a,
+              Email:{' '}
+              <a
                 className='text-blue-70o0',
-                href='mailto: klebe r@ziontechgroup.com',
-              >,
+                href='mailto: klebe r@ziontechgroup.com'>,
                 kleber@ziontechgroup.com,
               </a>,
             </p>,
             <p>Address: 364 E Main St STE 10o08 Middletown DE 19709</p>,
           </div>,
           <form className='mt-8 grid gap-4'>,
-            <input,
+            <input
               className='border rounded px-3 py-2',
               placeholder='Your name',
             />,
-            <input,
+            <input
               className='border rounded px-3 py-2',
               type='email',
               placeholder='Your email',
             />,
-            <textarea,
+            <textarea
               className='border rounded px-3 py-2',
-              rows={5,}
+              rows={5}
               placeholder='How can we help?',
             />,
-            <button,
+            <button
               className='bg-blue-60o0 text-white px-4 py-2 rounded hover: b g-blue-70o0',
-              type='button',
-            >,
+              type='button'>,
               Send,
             </button>,
           </form>,
         </section>,
       </main>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function GroundedGenerationBlueprintPage() {,
-  return (,
+import React from 'react';
+export default function GroundedGenerationBlueprintPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <p className='text-sm text-gray-30o0'>,
@@ -12,7 +11,7 @@ export default function GroundedGenerationBlueprintPage() {,
         </h1>,
         <div className='prose prose-invert prose-lg mt-8 max-w-none'>,
           <p>,
-            Reduce hallucinations by constraining models to cited evidence,;
+            Reduce hallucinations by constraining models to cited evidence;
             robust retrieval, and eval gates with objective rubrics.,
           </p>,
           <h2>Core components</h2>,
@@ -29,7 +28,5 @@ export default function GroundedGenerationBlueprintPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

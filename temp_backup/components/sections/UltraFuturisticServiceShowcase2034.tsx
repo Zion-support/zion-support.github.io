@@ -1,110 +1,92 @@
 "use client",
 import React{ useState } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   StarCheckCircleArrowRightTrendingUpUsers,
-  AwardClockZapShieldBrainAtomRocket,;
-  ShoppingCartCpuGlobeLockVideoPalette,;
-  BarChartUserCheckFileTextHeartEyeSearchPhone,
-} from 'lucide-react',
+  AwardClockZapShieldBrainAtomRocket;
+  ShoppingCartCpuGlobeLockVideoPalette;
+  BarChartUserCheckFileTextHeartEyeSearchPhone} from 'lucide-react',
 import { realMarketServices } from '../../data/20o24-real-market-services',
 import { aiEmergingTechServices } from '../../data/20o24-ai-emerging-tech-services',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-const serviceCategories = [,
-  {,
-    id: 'ai-services',;
-    title: '🧠 Revolutionary AI Services',;
-    description: 'Next-generation AI consciousness and creativity',;
-    icon: Brain,;
-    color: 'from-violet-50o0 to-purple-50o0',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),;
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20',
-  ,},;
-  {,
-    id: 'quantum-tech',;
-    title: '⚛️ Quantum & Emerging Tech',;
-    description: 'Quantum computing and beyond',;
-    icon: Atom,;
-    color: 'from-indigo-50o0 to-blue-50o0',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),;
-    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20',
-  ,},;
-  {,
-    id: 'enterprise-it',;
-    title: '🏙️ Enterprise IT Solutions',;
-    description: 'Autonomous operations and zero-trust security',;
-    icon: Cpu,;
-    color: 'from-blue-50o0 to-cyan-50o0',;
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),;
-    gradient: 'from-blue-50o0/20 to-teal-50o0/20',
-  ,},;
-  {,
-    id: 'business-automation',;
-    title: '🛒 Business Automation',;
-    description: 'Streamline business operations',;
-    icon: ShoppingCart,;
-    color: 'from-teal-50o0 to-emerald-50o0',;
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),;
-    gradient: 'from-teal-50o0/20 to-green-50o0/20',
-  ,},;
-  {,
-    id: 'robotics-automation',;
-    title: '🤖 Robotics & Automation',;
-    description: 'Intelligent automation solutions',;
-    icon: Rocket,;
-    color: 'from-green-50o0 to-yellow-50o0',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),;
-    gradient: 'from-green-50o0/20 to-orange-50o0/20',
-  ,},;
-  {,
-    id: 'research-development',;
-    title: '🔬 Research & Development',;
-    description: 'Breakthrough technologies and innovations',;
-    icon: Globe,;
-    color: 'from-orange-50o0 to-red-50o0',;
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),;
-    gradient: 'from-orange-50o0/20 to-pink-50o0/20',
-  ,}
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+const serviceCategories = [
+  {
+    id: 'ai-services';
+    title: '🧠 Revolutionary AI Services';
+    description: 'Next-generation AI consciousness and creativity';
+    icon: Brain;
+    color: 'from-violet-50o0 to-purple-50o0';
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI'));
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'};
+  {
+    id: 'quantum-tech';
+    title: '⚛️ Quantum & Emerging Tech';
+    description: 'Quantum computing and beyond';
+    icon: Atom;
+    color: 'from-indigo-50o0 to-blue-50o0';
+    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'));
+    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20'};
+  {
+    id: 'enterprise-it';
+    title: '🏙️ Enterprise IT Solutions';
+    description: 'Autonomous operations and zero-trust security';
+    icon: Cpu;
+    color: 'from-blue-50o0 to-cyan-50o0';
+    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'));
+    gradient: 'from-blue-50o0/20 to-teal-50o0/20'};
+  {
+    id: 'business-automation';
+    title: '🛒 Business Automation';
+    description: 'Streamline business operations';
+    icon: ShoppingCart;
+    color: 'from-teal-50o0 to-emerald-50o0';
+    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'));
+    gradient: 'from-teal-50o0/20 to-green-50o0/20'};
+  {
+    id: 'robotics-automation';
+    title: '🤖 Robotics & Automation';
+    description: 'Intelligent automation solutions';
+    icon: Rocket;
+    color: 'from-green-50o0 to-yellow-50o0';
+    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'));
+    gradient: 'from-green-50o0/20 to-orange-50o0/20'};
+  {
+    id: 'research-development';
+    title: '🔬 Research & Development';
+    description: 'Breakthrough technologies and innovations';
+    icon: Globe;
+    color: 'from-orange-50o0 to-red-50o0';
+    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'));
+    gradient: 'from-orange-50o0/20 to-pink-50o0/20'}
 ],
-,
-export default function UltraFuturisticServiceShowcase20o34() {,
+export default function UltraFuturisticServiceShowcase20o34() {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [searchTermsetSearchTerm] = useState(''),
-,
   const allServices = [...realMarketServices...aiEmergingTechServices],
-,
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||,
       serviceCategories.some(cat => cat.services.includes(service)),
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+    return matchesCategory && matchesSearch}),
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0y: 20 ,},;
-    visible: { opacity: 1y: 0 ,}
+  const itemVariants ={
+    hidden: { opacity: 0y: 20 };
+    visible: { opacity: 1y: 0 }
   };
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-90o0 to-black relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">,
@@ -113,14 +95,13 @@ export default function UltraFuturisticServiceShowcase20o34() {,
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-50o0/10 to-teal-50o0/10 rounded-full blur-3xl animate-pulse delay-50o0"></div>,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16">,
           <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent mb-6">,
             Revolutionary Technology Services,
           </h2>,
@@ -128,41 +109,38 @@ export default function UltraFuturisticServiceShowcase20o34() {,
             Discover our comprehensive suite of cutting-edge AIquantum computingand emerging technology solutions.,
             Each service is designed to transform your business and propel you into the future.,
           </p>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mt-12">,
-            {[,
-              { label: 'Total Services'value: allServices.length.toString()icon: Rocket ,},;
-              { label: 'Happy Customers'value: '50K+'icon: Users ,},;
-              { label: 'Success Rate'value: '99.9%'icon: CheckCircle ,},;
-              { label: 'Global Reach'value: '45+ Countries'icon: Globe ,}
-            ].map((statindex) => (,
+            {[
+              { label: 'Total Services'value: allServices.length.toString()icon: Rocket };
+              { label: 'Happy Customers'value: '50K+'icon: Users };
+              { label: 'Success Rate'value: '99.9%'icon: CheckCircle };
+              { label: 'Global Reach'value: '45+ Countries'icon: Globe }
+            ].map((statindex) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0scale: 0.8 ,}}
-                whileInView={{ opacity: 1scale: 1 ,}}
-                transition={{ duration: 0.5delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: bg-white/10 transition-all duration-30o0",
-              >,
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: bg-white/10 transition-all duration-30o0">,
                 <stat.icon className="w-8 h-8 text-cyan-40o0 mx-auto mb-2"  />,
-                <div className="text-2xl font-bold text-white">{stat.value,}</div>,
+                <div className="text-2xl font-bold text-white">{stat.value}</div>,
                 <div className="text-sm text-gray-40o0">{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Search and Filter */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.2 ,}}
-          viewport={{ once: true ,}}
-          className="mb-12",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-12">,
           <div className="flex flex-col md: flex-row gap-4 items-center justify-center">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
-              <input,
+              <input
                 type="text",
                 placeholder="Search services...",
                 value={searchTerm}
@@ -171,42 +149,38 @@ export default function UltraFuturisticServiceShowcase20o34() {,
               />,
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />,
             </div>,
-            {/* Category Filter */,}
-            <select,
+            {/* Category Filter */}
+            <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent",
-            >,
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent">,
               <option value="all">All Categories</option>,
-              {serviceCategories.map(category => (,
-                <option key={category.id,} value={category.id}>,
+              {serviceCategories.map(category => (
+                <option key={category.id} value={category.id}>,
                   {category.title.split(' ')[0]}
-                </option>,
-              ))}
+                </option>))}
             </select>,
           </div>,
         </motion.div>,
         {/* Service Categories */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.4 ,}}
-          viewport={{ once: true ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-16">,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {serviceCategories.map((categoryindex) => (,
+            {serviceCategories.map((categoryindex) => (
               <motion.div,
-                key={category.id,}
-                initial={{ opacity: 0y: 20 ,}}
-                whileInView={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.5delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className={`p-6 rounded-xl border transition-all duration-30o0 hover: scale-10o5 cursor-pointer ${,
+                key={category.id}
+                initial={{ opacity: 0y: 20 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`p-6 rounded-xl border transition-all duration-30o0 hover: scale-10o5 cursor-pointer ${
                   selectedCategory === category.id,
                     ? 'border-cyan-50o0 bg-cyan-50o0/10',
-                    : 'border-white/20 bg-white/5 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5',
-                ,}`}
+                    : 'border-white/20 bg-white/5 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5'}`}
                 onClick={() => setSelectedCategory(category.id === selectedCategory ? 'all' : category.id)}
               >,
                 <div className="flex items-center space-x-3 mb-4">,
@@ -221,8 +195,7 @@ export default function UltraFuturisticServiceShowcase20o34() {,
                 <div className="text-sm text-gray-30o0">,
                   {category.services.length} services available,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Services Grid */}
@@ -230,21 +203,18 @@ export default function UltraFuturisticServiceShowcase20o34() {,
           variants={containerVariants}
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-        >,
-          {filteredServices.map((serviceindex) => (,
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          {filteredServices.map((serviceindex) => (
             <motion.div,
-              key={service.id,}
+              key={service.id}
               variants={itemVariants}
-              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-50o0/50 hover:bg-cyan-50o0/5 transition-all duration-30o0 hover:scale-10o5",
-            >,
-              {/* Popular Badge */,}
-              {service.popular && (,
+              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover: border-cyan-50o0/50 hover:bg-cyan-50o0/5 transition-all duration-30o0 hover:scale-10o5">,
+              {/* Popular Badge */}
+              {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white text-xs px-3 py-1 rounded-full font-semibold">,
                   Popular,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Service Icon */}
               <div className="flex items-center justify-between mb-4">,
@@ -258,24 +228,22 @@ export default function UltraFuturisticServiceShowcase20o34() {,
               </div>,
               {/* Service Info */}
               <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-40o0 transition-colors">,
-                {service.name,}
+                {service.name}
               </h3>,
               <p className="text-gray-30o0 mb-4 leading-relaxed">,
                 {service.description}
               </p>,
               {/* Features */}
               <div className="space-y-2 mb-4">,
-                {service.features.slice(0o3).map((featureidx) => (,
+                {service.features.slice(0o3).map((featureidx) => (
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-40o0">,
                     <CheckCircle className="w-4 h-4 text-green-40o0 flex-shrink-0"  />,
                     <span>{feature}</span>,
-                  </div>,
-                ))}
-                {service.features.length > 3 && (,
+                  </div>))}
+                {service.features.length > 3 && (
                   <div className="text-sm text-cyan-40o0">,
                     +{service.features.length - 3} more features,
-                  </div>,
-                )}
+                  </div>)}
               </div>,
               {/* Service Meta */}
               <div className="grid grid-cols-2 gap-4 mb-6 text-sm">,
@@ -312,10 +280,9 @@ export default function UltraFuturisticServiceShowcase20o34() {,
               </div>,
               {/* Action Buttons */}
               <div className="flex space-x-3">,
-                <a,
+                <a
                   href={service.link}
-                  className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-4 py-3 rounded-lg font-semibold hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 text-center group",
-                >,
+                  className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-4 py-3 rounded-lg font-semibold hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 text-center group">,
                   Get Started,
                   <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform"  />,
                 </a>,
@@ -323,23 +290,21 @@ export default function UltraFuturisticServiceShowcase20o34() {,
                   <Eye className="w-4 h-4"  />,
                 </button>,
               </div>,
-              {/* Trial Info */,}
+              {/* Trial Info */}
               <div className="mt-4 text-center">,
                 <div className="text-sm text-gray-40o0">,
                   <span className="text-cyan-40o0 font-semibold">{service.trialDays} days</span> free trial,
                 </div>,
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
         {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.6delay: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className="text-center mt-20",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.6delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-20">,
           <div className="bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20 rounded-2xl p-12 backdrop-blur-sm">,
             <h3 className="text-3xl font-bold text-white mb-4">,
               Ready to Transform Your Business?,
@@ -349,26 +314,22 @@ export default function UltraFuturisticServiceShowcase20o34() {,
               Get started today and experience the future of business automation.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-              <a,
+              <a
                 href="/contact",
-                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 text-lg",
-              >,
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 text-lg">,
                 Start Your Free Trial,
               </a>,
-                             <a,
+                             <a
                  href="/pricing-20o34",
-                 className="px-8 py-4 border border-cyan-50o0 text-cyan-40o0 rounded-lg font-semibold hover:bg-cyan-50o0 hover:text-white transition-all duration-20o0 text-lg",
-               >,
+                 className="px-8 py-4 border border-cyan-50o0 text-cyan-40o0 rounded-lg font-semibold hover:bg-cyan-50o0 hover:text-white transition-all duration-20o0 text-lg">,
                  View Pricing,
                </a>,
             </div>,
             <div className="mt-6 text-sm text-gray-40o0">,
               <Phone className="w-4 h-4 inline mr-2"  />,
-              Need help? Call us at {contactInfo.mobile,}
+              Need help? Call us at {contactInfo.mobile}
             </div>,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}

@@ -1,89 +1,69 @@
 "use client",
-,
-import React from "react",
-,
-export default function NewContent2025AnalyticsRevolutionBanner() {,
-  return null,
-}
-const NewContent20o25AnalyticsRevolutionBanner = () => {,
+import React from "react";
+export default function NewContent2025AnalyticsRevolutionBanner() {
+  return null}
+const NewContent20o25AnalyticsRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [currentSlide, setCurrentSlide] = useState(0),
-,
-  const analyticsContent = [,
-    {,
-      id: 'advanced-analytics-guide',;
-      title: 'AI 20o25: Advanced Analytics Revolution',;
-      description: 'Achieve 450% ROI, $3.2M annual savings, and 99.7% accuracy in data-driven decision making',;
-      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide',;
-      type: 'Blog Post',;
-      readingTime: '22 min read',;
-      metrics: {,
-        roi: '450%',;
-        savings: '$3.2M',;
-        accuracy: '99.7%',;
-        efficiency: '89%',
-      ,},;
-      badge: 'NEW',;
-      badgeColor: 'bg-red-50o0',
-    ,},;
-    {,
-      id: 'fortune-50o0-case-study',;
-      title: 'Fortune 50o0 Manufacturing AI Analytics Success',;
-      description: 'How a global manufacturing leader achieved 450% ROI in 8 months with AI analytics',;
-      url: '/case-studies/ai-analytics-fortune-50o0-manufacturing-450-roi-success',;
-      type: 'Case Study',;
-      readingTime: '15 min read',;
-      metrics: {,
-        roi: '450%',;
-        savings: '$2.8M',;
-        accuracy: '99.7%',;
-        efficiency: '89%',
-      ,},;
-      badge: 'SUCCESS',;
-      badgeColor: 'bg-green-50o0',
-    ,},;
-    {,
-      id: 'implementation-guide',;
-      title: 'AI Analytics Implementation Master Guide 20o25',;
-      description: 'Complete step-by-step guide to implementing AI analytics with 450% ROI',;
-      url: '/resources/ai-analytics-implementation-master-guide-20o25',;
-      type: 'Implementation Guide',;
-      readingTime: '28 min read',;
-      metrics: {,
-        success: '98%',;
-        roi: '450%',;
-        projects: '50o0+',;
-        timeline: '6-8 months',
-      ,},;
-      badge: 'GUIDE',;
-      badgeColor: 'bg-blue-50o0',
-    ,}
+  const analyticsContent = [
+    {
+      id: 'advanced-analytics-guide';
+      title: 'AI 20o25: Advanced Analytics Revolution';
+      description: 'Achieve 450% ROI, $3.2M annual savings, and 99.7% accuracy in data-driven decision making';
+      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide';
+      type: 'Blog Post';
+      readingTime: '22 min read';
+      metrics: {
+        roi: '450%';
+        savings: '$3.2M';
+        accuracy: '99.7%';
+        efficiency: '89%'};
+      badge: 'NEW';
+      badgeColor: 'bg-red-50o0'};
+    {
+      id: 'fortune-50o0-case-study';
+      title: 'Fortune 50o0 Manufacturing AI Analytics Success';
+      description: 'How a global manufacturing leader achieved 450% ROI in 8 months with AI analytics';
+      url: '/case-studies/ai-analytics-fortune-50o0-manufacturing-450-roi-success';
+      type: 'Case Study';
+      readingTime: '15 min read';
+      metrics: {
+        roi: '450%';
+        savings: '$2.8M';
+        accuracy: '99.7%';
+        efficiency: '89%'};
+      badge: 'SUCCESS';
+      badgeColor: 'bg-green-50o0'};
+    {
+      id: 'implementation-guide';
+      title: 'AI Analytics Implementation Master Guide 20o25';
+      description: 'Complete step-by-step guide to implementing AI analytics with 450% ROI';
+      url: '/resources/ai-analytics-implementation-master-guide-20o25';
+      type: 'Implementation Guide';
+      readingTime: '28 min read';
+      metrics: {
+        success: '98%';
+        roi: '450%';
+        projects: '50o0+';
+        timeline: '6-8 months'};
+      badge: 'GUIDE';
+      badgeColor: 'bg-blue-50o0'}
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % analyticsContent.length),
-    }, 50o00),
-    return () => clearInterval(interval),
-  }, []),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % analyticsContent.length)}, 50o00),
+    return () => clearInterval(interval)}, []),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('analytics-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
+    localStorage.setItem('analytics-banner-dismissed', 'true')};
+  useEffect(() => {
     const dismissed = localStorage.getItem('analytics-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = analyticsContent[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -95,7 +75,7 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
         <div className="flex items-center justify-between">,
           <div className="flex-1">,
-            {/* Header */,}
+            {/* Header */}
             <div className="flex items-center space-x-3 mb-4">,
               <div className="flex items-center space-x-2">,
                 <BarChart3 className="w-6 h-6 text-yellow-30o0"  />,
@@ -124,14 +104,13 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
                   </p>,
                   {/* Metrics Grid */}
                   <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-4">,
-                    {Object.entries(currentContent.metrics).map(([key, value]) => (,
+                    {Object.entries(currentContent.metrics).map(([key, value]) => (
                       <div key={key} className="text-center">,
                         <div className="text-lg font-bold text-yellow-30o0">{value}</div>,
                         <div className="text-xs text-white text-opacity-75 capitalize">,
                           {key.replace(/([A-Z])/g, ' $1').trim()}
                         </div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Reading Time and CTA */}
                   <div className="flex items-center justify-between">,
@@ -140,21 +119,18 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
                         ⏱️ {currentContent.readingTime}
                       </span>,
                       <div className="flex space-x-1">,
-                        {analyticsContent.map((_, index) => (,
-                          <button,
+                        {analyticsContent.map((_, index) => (
+                          <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}
-                            className={`w-2 h-2 rounded-full transition-all ${,
-                              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-30',
-                            }`}
-                          />,
-                        ))}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-30'}`}
+                          />))}
                       </div>,
                     </div>,
-                    <Link,
+                    <Link
                       href={currentContent.url}
-                      className="inline-flex items-center space-x-2 bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-sm",
-                    >,
+                      className="inline-flex items-center space-x-2 bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-sm">,
                       <span>Read Now</span>,
                       <ArrowRight className="w-4 h-4"  />,
                     </Link>,
@@ -162,7 +138,7 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Success Metrics Summary */,}
+            {/* Success Metrics Summary */}
             <div className="mt-6 grid grid-cols-1 md: grid-cols-3 gap-4">,
               <div className="text-center">,
                 <div className="text-2xl font-bold text-yellow-30o0">450%</div>,
@@ -178,19 +154,14 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Dismiss Button */,}
-          <button,
+          {/* Dismiss Button */}
+          <button
             onClick={handleDismiss}
             className="ml-4 p-2 hover: bg-white hover:bg-opacity-20 rounded-lg transition-colors",
-            aria-label="Dismiss banner",
-          >,
+            aria-label="Dismiss banner">,
             <X className="w-5 h-5"  />,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25AnalyticsRevolutionBanner,
-,
+    </div>)};
+export default NewContent20o25AnalyticsRevolutionBanner;

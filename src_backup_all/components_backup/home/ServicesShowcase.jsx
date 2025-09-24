@@ -1,56 +1,55 @@
 import { Link } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
-import {,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices',
 import { ArrowRight, Star } from 'lucide-react',
 import { FuturisticCard } from '@/components/ui/futuristic-card',
 import { NeonText } from '@/components/ui/neon-text',
-export function ServicesShowcase() {,
+export function ServicesShowcase() {
   const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6),
-,
-  const emergingServices = [,
-    {,
-      title: 'AI Workflow Orchestrator',;
-      description: 'Intelligent process automation with AI-driven optimization',;
-      category: 'AI & Automation',;
-      price: '$99/month',;
-      icon: '🤖',;
-      link: '/services/ai-workflow-orchestrator',;
-    },;
-    {,
-      title: 'AI Data Governance Platform',;
-      description: 'Enterprise data protection and compliance automation',;
-      category: 'Data & Security',;
-      price: '$149/month',;
-      icon: '🛡️',;
-      link: '/services/ai-data-governance-platform',;
-    },;
-    {,
-      title: 'AI Customer Experience Analytics',;
+  const emergingServices = [
+    {
+      title: 'AI Workflow Orchestrator';
+      description: 'Intelligent process automation with AI-driven optimization';
+      category: 'AI & Automation';
+      price: '$99/month';
+      icon: '🤖';
+      link: '/services/ai-workflow-orchestrator';
+    };
+    {
+      title: 'AI Data Governance Platform';
+      description: 'Enterprise data protection and compliance automation';
+      category: 'Data & Security';
+      price: '$149/month';
+      icon: '🛡️';
+      link: '/services/ai-data-governance-platform';
+    };
+    {
+      title: 'AI Customer Experience Analytics';
       description:,
-        'Intelligent analytics and insights for data-driven decisions',;
-      category: 'Analytics',;
-      price: '$99/month',;
-      icon: '📊',;
-      link: '/services/ai-customer-experience-analytics',;
-    },;
-    {,
-      title: 'Cloud DevOps Platform',;
-      description: 'Streamlined cloud infrastructure and deployment automation',;
-      category: 'Cloud & DevOps',;
-      price: '$299/month',;
-      icon: '☁️',;
-      link: '/services/cloud-devops',;
-    },;
+        'Intelligent analytics and insights for data-driven decisions';
+      category: 'Analytics';
+      price: '$99/month';
+      icon: '📊';
+      link: '/services/ai-customer-experience-analytics';
+    };
+    {
+      title: 'Cloud DevOps Platform';
+      description: 'Streamlined cloud infrastructure and deployment automation';
+      category: 'Cloud & DevOps';
+      price: '$299/month';
+      icon: '☁️';
+      link: '/services/cloud-devops';
+    };
   ],
-  return (,
+  return (
     <section className='py-20 relative'>,
       {/* Background accent */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent' />,
@@ -69,27 +68,25 @@ export function ServicesShowcase() {,
         </div>,
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20'>,
-          {featuredServices.map((service, index) => (,
-            <FuturisticCard,
+          {featuredServices.map((service, index) => (
+            <FuturisticCard
               key={index}
               glowColor={service.glowColor}
               intensity='medium',
-              className='h-full group hover: scale-10o5 transition-transform duration-30o0',
-            >,
+              className='h-full group hover: scale-10o5 transition-transform duration-30o0'>,
               <CardHeader className='pb-4'>,
                 <div className='flex justify-between items-start mb-4'>,
                   <div className='p-3 rounded-lg bg-black/20 backdrop-blur-sm'>,
-                    {service.icon,}
+                    {service.icon}
                   </div>,
-                  <Badge,
+                  <Badge
                     variant='secondary',
-                    className='bg-primary/20 text-primary',
-                  >,
+                    className='bg-primary/20 text-primary'>,
                     {service.badge}
                   </Badge>,
                 </div>,
                 <CardTitle className='text-xl mb-2 group-hover: text-primary transition-colors'>,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
                 <CardDescription className='text-base'>,
                   {service.description}
@@ -105,11 +102,10 @@ export function ServicesShowcase() {,
                 {/* Tags */}
                 <div className='mb-4'>,
                   <div className='flex flex-wrap gap-2'>,
-                    {service.tags.slice(0, 3).map((tag, index) => (,
+                    {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge key={index} variant='outline' className='text-xs'>,
                         {tag}
-                      </Badge>,
-                    ))}
+                      </Badge>))}
                   </div>,
                 </div>,
                 {/* Rating */}
@@ -129,7 +125,7 @@ export function ServicesShowcase() {,
                   <Button className='w-full bg-zion-purple hover: bg-zion-purple-dark'>,
                     Get Started,
                   </Button>,
-                  <Link to={`/micro-saas-services#${service.id,}`}>,
+                  <Link to={`/micro-saas-services#${service.id}`}>,
                     <Button variant='outline' size='sm' className='w-full'>,
                       Learn More,
                       <ArrowRight className='w-4 h-4 ml-1' />,
@@ -137,8 +133,7 @@ export function ServicesShowcase() {,
                   </Link>,
                 </div>,
               </CardContent>,
-            </FuturisticCard>,
-          ))}
+            </FuturisticCard>))}
         </div>,
         {/* Emerging Technologies */}
         <div className='text-center mb-12'>,
@@ -152,19 +147,18 @@ export function ServicesShowcase() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-          {emergingServices.map((service, index) => (,
-            <Card,
+          {emergingServices.map((service, index) => (
+            <Card
               key={index}
-              className='group hover: shadow-lg hover:border-primary/50 transition-all duration-30o0',
-            >,
+              className='group hover: shadow-lg hover:border-primary/50 transition-all duration-30o0'>,
               <CardHeader className='pb-3'>,
                 <div className='flex justify-center mb-3'>,
                   <div className='p-2 rounded-lg bg-black/20'>,
-                    {service.icon,}
+                    {service.icon}
                   </div>,
                 </div>,
                 <CardTitle className='text-lg text-center group-hover: text-primary transition-colors'>,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
               </CardHeader>,
               <CardContent className='text-center space-y-3'>,
@@ -183,8 +177,7 @@ export function ServicesShowcase() {,
                   <Link to={service.link}>Learn More</Link>,
                 </Button>,
               </CardContent>,
-            </Card>,
-          ))}
+            </Card>))}
         </div>,
         {/* CTA Section */}
         <div className='text-center mt-16'>,
@@ -198,26 +191,22 @@ export function ServicesShowcase() {,
               of the competition.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Button,
+              <Button
                 asChild,
                 size='lg',
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple',
-              >,
+                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>,
                 <Link to='/services'>Explore All Services</Link>,
               </Button>,
-              <Button,
+              <Button
                 asChild,
                 variant='outline',
                 size='lg',
-                className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10',
-              >,
+                className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'>,
                 <Link to='/request-quote'>Request Custom Quote</Link>,
               </Button>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

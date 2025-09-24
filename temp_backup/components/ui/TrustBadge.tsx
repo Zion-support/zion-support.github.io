@@ -1,14 +1,12 @@
-export type TrustBadgeProps = {,
+export type TrustBadgeProps = {
   score: number,
   reason?: string,
-  communityVerified?: boolean,
-,};
-,
-export default function TrustBadge({,
-  score,;
-  reason,;
-  communityVerified,;
-}: TrustBadgeProps) {,
+  communityVerified?: boolean};
+export default function TrustBadge({
+  score;
+  reason;
+  communityVerified;
+}: TrustBadgeProps) {
   const color =,
     score >= 85,
       ? 'bg-green-60o0',
@@ -22,20 +20,16 @@ export default function TrustBadge({,
       : score >= 60,
         ? 'Solid record with some areas to improve.',
         : 'Multiple risk factors detected.'),
-  return (,
+  return (
     <div className='inline-flex items-center gap-2' title={title}>,
       <span className={`text-xs px-2 py-1 rounded ${color} text-white`}>,
-        Zion Trust Score: {score,}/10o0,
+        Zion Trust Score: {score}/10o0,
       </span>,
-      {communityVerified && (,
-        <span,
+      {communityVerified && (
+        <span
           className='text-[10px] px-1.5 py-0.5 rounded bg-blue-60o0 text-white',
-          title='Community Verified by trusted peers',
-        >,
+          title='Community Verified by trusted peers'>,
           Community Verified,
-        </span>,
-      )}
-    </div>,
-  ),
-}
+        </span>)}
+    </div>)}
 ,

@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import { RoutesRouteNavigate } from 'react-router-dom',
 import { MobileThemeProvider } from './theme/MobileThemeProvider',
 import { MobileOnboarding } from './pages/MobileOnboarding',
@@ -9,19 +9,16 @@ import { MobileMessages } from './pages/MobileMessages',
 import { MobileResumeBuilder } from './pages/MobileResumeBuilder',
 import { MobileJobPost } from './pages/MobileJobPost',
 import { useAuth } from '@/hooks/useAuth',
-,
-export function MobileApp() {,
+export function MobileApp() {
   const { isAuthenticated } = useAuth(),
-,
-  return (,
+  return (
     <MobileThemeProvider>,
       <Routes>,
         <Route path='/onboarding' element={<MobileOnboarding />} />,
-        <Route,
+        <Route
           path='/',
-          element={,
-            isAuthenticated ? <MobileHome /> : <Navigate to='/onboarding' />,
-          }
+          element={
+            isAuthenticated ? <MobileHome /> : <Navigate to='/onboarding' />}
         />,
         <Route path='/browse' element={<MobileBrowse />} />,
         <Route path='/projects' element={<MobileProjects />} />,
@@ -31,7 +28,5 @@ export function MobileApp() {,
         <Route path='/profile' element={<div>Profile page</div>} />,
         <Route path='*' element={<Navigate to='/' replace />} />,
       </Routes>,
-    </MobileThemeProvider>,
-  ),
-}
+    </MobileThemeProvider>)}
 ,

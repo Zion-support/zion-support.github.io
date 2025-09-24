@@ -1,8 +1,7 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Globe,
@@ -10,130 +9,109 @@ import {,
   Database,
   Shield,
   Rocket,
-  Star,;
-  TrendingUp,;
-  Users,;
-  Lightbulb,;
-  Target,;
-  CheckCircle,;
-  ArrowRight,;
-  Calendar,;
-  BarChart3,;
-  Network,;
-  Atom,
-} from 'lucide-react',
-,
-const AI20o26_20o30UltimatePredictionsShowcase = () => {,
+  Star;
+  TrendingUp;
+  Users;
+  Lightbulb;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Calendar;
+  BarChart3;
+  Network;
+  Atom} from 'lucide-react',
+const AI20o26_20o30UltimatePredictionsShowcase = () => {
   const [activeTabsetActiveTab] = useState('overview'),
   const [currentPredictionsetCurrentPrediction] = useState(0),
-,
-  const predictions = [,
-    {,
-      year: '20o26',;
-      title: 'Neural Interface Revolution',;
-      description: 'Direct brain-computer interfaces become commercially viablenabling thought-controlled computing and enhanced cognitive capabilities.',;
-      impact: 'Transform human-computer interaction forever',;
-      technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'],;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-pink-50o0',
-    ,},;
-    {,
-      year: '20o27',;
-      title: 'Quantum AI Fusion',;
-      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilitiesrevolutionizing cryptography and optimization.',;
-      impact: 'Solve previously impossible computational challenges',;
-      technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'],;
-      icon: Atom,;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    ,},;
-    {,
-      year: '20o28',;
-      title: 'Autonomous Everything',;
-      description: 'AI systems achieve full autonomy across industriesfrom self-managing cities to completely automated supply chains.',;
-      impact: 'Eliminate human intervention in routine operations',;
-      technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'],;
-      icon: Cpu,;
-      color: 'from-green-50o0 to-emerald-50o0',
-    ,},;
-    {,
-      year: '20o29',;
-      title: 'Emotional AI Mastery',;
-      description: 'AI achieves true emotional intelligenceunderstanding and responding to human emotions with unprecedented accuracy.',;
-      impact: 'Revolutionize human-AI relationships and therapy',;
-      technologies: ['Emotional AI'Empathetic Computing'AI Therapy'],;
-      icon: Users,;
-      color: 'from-orange-50o0 to-red-50o0',
-    ,},;
-    {,
-      year: '20o30',;
-      title: 'Consciousness Integration',;
-      description: 'AI systems develop forms of consciousnessleading to new ethical frameworks and collaborative human-AI societies.',;
-      impact: 'Redefine what it means to be conscious and intelligent',;
-      technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'],;
-      icon: Lightbulb,;
-      color: 'from-yellow-50o0 to-orange-50o0',
-    ,}
+  const predictions = [
+    {
+      year: '20o26';
+      title: 'Neural Interface Revolution';
+      description: 'Direct brain-computer interfaces become commercially viablenabling thought-controlled computing and enhanced cognitive capabilities.';
+      impact: 'Transform human-computer interaction forever';
+      technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'];
+      icon: Brain;
+      color: 'from-purple-50o0 to-pink-50o0'};
+    {
+      year: '20o27';
+      title: 'Quantum AI Fusion';
+      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilitiesrevolutionizing cryptography and optimization.';
+      impact: 'Solve previously impossible computational challenges';
+      technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'];
+      icon: Atom;
+      color: 'from-blue-50o0 to-cyan-50o0'};
+    {
+      year: '20o28';
+      title: 'Autonomous Everything';
+      description: 'AI systems achieve full autonomy across industriesfrom self-managing cities to completely automated supply chains.';
+      impact: 'Eliminate human intervention in routine operations';
+      technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'];
+      icon: Cpu;
+      color: 'from-green-50o0 to-emerald-50o0'};
+    {
+      year: '20o29';
+      title: 'Emotional AI Mastery';
+      description: 'AI achieves true emotional intelligenceunderstanding and responding to human emotions with unprecedented accuracy.';
+      impact: 'Revolutionize human-AI relationships and therapy';
+      technologies: ['Emotional AI'Empathetic Computing'AI Therapy'];
+      icon: Users;
+      color: 'from-orange-50o0 to-red-50o0'};
+    {
+      year: '20o30';
+      title: 'Consciousness Integration';
+      description: 'AI systems develop forms of consciousnessleading to new ethical frameworks and collaborative human-AI societies.';
+      impact: 'Redefine what it means to be conscious and intelligent';
+      technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'];
+      icon: Lightbulb;
+      color: 'from-yellow-50o0 to-orange-50o0'}
   ],
-,
-  const keyTrends = [,
-    {,
-      category: 'Technology',;
-      trends: [,
-        'Neural interfaces become mainstream',;
-        'Quantum AI solves complex problems',;
-        'Autonomous systems manage entire cities',;
-        'AI achieves emotional intelligence',;
-        'Consciousness becomes programmable',
-      ],
-    },;
-    {,
-      category: 'Business',;
-      trends: [,
-        'Complete automation of routine tasks',;
-        'AI-driven decision making at scale',;
-        'New business models emerge',;
-        'Human-AI collaboration becomes standard',;
-        'Ethical AI becomes competitive advantage',
-      ],
-    },;
-    {,
-      category: 'Society',;
-      trends: [,
-        'Universal basic income becomes necessary',;
-        'Education system completely transforms',;
-        'New forms of human-AI relationships',;
-        'Consciousness rights become legal issue',;
-        'Post-scarcity economy emerges',
-      ],
-    }
+  const keyTrends = [
+    {
+      category: 'Technology';
+      trends: [
+        'Neural interfaces become mainstream';
+        'Quantum AI solves complex problems';
+        'Autonomous systems manage entire cities';
+        'AI achieves emotional intelligence';
+        'Consciousness becomes programmable']};
+    {
+      category: 'Business';
+      trends: [
+        'Complete automation of routine tasks';
+        'AI-driven decision making at scale';
+        'New business models emerge';
+        'Human-AI collaboration becomes standard';
+        'Ethical AI becomes competitive advantage']};
+    {
+      category: 'Society';
+      trends: [
+        'Universal basic income becomes necessary';
+        'Education system completely transforms';
+        'New forms of human-AI relationships';
+        'Consciousness rights become legal issue';
+        'Post-scarcity economy emerges']}
   ],
-,
-  const stats = [,
-    { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp ,},;
-    { label: 'Job Transformation'value: '80%'icon: Users ,},;
-    { label: 'Productivity Increase'value: '30o0%'icon: BarChart3 ,},;
-    { label: 'New Industries'value: '50+'icon: Network ,}
+  const stats = [
+    { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp };
+    { label: 'Job Transformation'value: '80%'icon: Users };
+    { label: 'Productivity Increase'value: '30o0%'icon: BarChart3 };
+    { label: 'New Industries'value: '50+'icon: Network }
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length),
-    }50o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  return (,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length)}50o00),
+    return () => clearInterval(interval)}[]),
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20"  />,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
           <motion.div,
-            initial={{ opacity: 0y: 20 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center">,
             <h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">,
               AI 20o26-20o30,
             </h1>,
@@ -144,19 +122,17 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
               Explore the revolutionary AI breakthroughs that will reshape our world over the next five years,
             </p>,
             <div className="flex flex-wrap justify-center gap-4 mb-12">,
-              {stats.map((statindex) => (,
+              {stats.map((statindex) => (
                 <motion.div,
-                  key={index,}
-                  initial={{ opacity: 0scale: 0.8 ,}}
-                  animate={{ opacity: 1scale: 1 ,}}
-                  transition={{ delay: index * 0.1duration: 0.5 ,}}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center min-w-[150px]",
-                >,
+                  key={index}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  transition={{ delay: index * 0.1duration: 0.5 }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center min-w-[150px]">,
                   <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-40o0"  />,
                   <div className="text-3xl font-bold text-white">{stat.value}</div>,
                   <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
         </div>,
@@ -164,11 +140,10 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
       {/* Predictions Carousel */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
         <motion.div,
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 0.5duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5duration: 0.8 }}
+          className="text-center mb-16">,
           <h3 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">,
             Revolutionary Predictions,
           </h3>,
@@ -179,17 +154,16 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
         <div className="relative">,
           <AnimatePresence mode="wait">,
             <motion.div,
-              key={currentPrediction,}
-              initial={{ opacity: 0x: 10o0 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              exit={{ opacity: 0x: -10o0 ,}}
-              transition={{ duration: 0.5 ,}}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md: p-12",
-            >,
+              key={currentPrediction}
+              initial={{ opacity: 0x: 10o0 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -10o0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md: p-12">,
               <div className="flex flex-col lg:flex-row items-center gap-8">,
                 <div className="flex-1">,
                   <div className="flex items-center gap-4 mb-6">,
-                    <div className={`p-4 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color,}`}>,
+                    <div className={`p-4 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color}`}>,
                       <predictions[currentPrediction].icon className="w-8 h-8 text-white"  />,
                     </div>,
                     <div>,
@@ -202,43 +176,38 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
                   </p>,
                   <div className="mb-6">,
                     <div className="text-lg font-semibold text-cyan-40o0 mb-3">Impact: </div>,
-                    <p className="text-lg text-white">{predictions[currentPrediction].impact,}</p>,
+                    <p className="text-lg text-white">{predictions[currentPrediction].impact}</p>,
                   </div>,
                   <div className="flex flex-wrap gap-2">,
-                    {predictions[currentPrediction].technologies.map((techindex) => (,
-                      <span,
+                    {predictions[currentPrediction].technologies.map((techindex) => (
+                      <span
                         key={index}
-                        className="px-4 py-2 bg-purple-50o0/20 text-purple-30o0 rounded-full text-sm font-medium",
-                      >,
+                        className="px-4 py-2 bg-purple-50o0/20 text-purple-30o0 rounded-full text-sm font-medium">,
                         {tech}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
               </div>,
             </motion.div>,
           </AnimatePresence>,
           <div className="flex justify-center mt-8 gap-2">,
-            {predictions.map((_index) => (,
-              <button,
+            {predictions.map((_index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentPrediction(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                  index === currentPrediction ? 'bg-purple-50o0 w-8' : 'bg-white/30',
-                }`}
-              />,
-            ))}
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                  index === currentPrediction ? 'bg-purple-50o0 w-8' : 'bg-white/30'}`}
+              />))}
           </div>,
         </div>,
       </div>,
       {/* Key Trends Section */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          animate={{ opacity: 1y: 0 ,}}
-          transition={{ delay: 0.7duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 0.7duration: 0.8 }}
+          className="text-center mb-16">,
           <h3 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-green-40o0 to-cyan-40o0 bg-clip-text text-transparent">,
             Key Trends by Category,
           </h3>,
@@ -247,37 +216,33 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
           </p>,
         </motion.div>,
         <div className="grid md:grid-cols-3 gap-8">,
-          {keyTrends.map((categoryIndex) => (,
+          {keyTrends.map((categoryIndex) => (
             <motion.div,
-              key={categoryIndex,}
-              initial={{ opacity: 0y: 20 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ delay: 0.8 + categoryIndex * 0.1duration: 0.5 ,}}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6",
-            >,
+              key={categoryIndex}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ delay: 0.8 + categoryIndex * 0.1duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6">,
               <h4 className="text-2xl font-bold text-white mb-6 text-center">,
                 {category.category}
               </h4>,
               <ul className="space-y-3">,
-                {category.trends.map((trendIndex) => (,
+                {category.trends.map((trendIndex) => (
                   <li key={trendIndex} className="flex items-start gap-3">,
                     <CheckCircle className="w-5 h-5 text-green-40o0 mt-0.5 flex-shrink-0"  />,
                     <span className="text-gray-30o0">{trend}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </div>,
       </div>,
       {/* Call to Action */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          animate={{ opacity: 1y: 0 ,}}
-          transition={{ delay: 1duration: 0.8 ,}}
-          className="text-center bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-2xl p-12",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          animate={{ opacity: 1y: 0 }}
+          transition={{ delay: 1duration: 0.8 }}
+          className="text-center bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-2xl p-12">,
           <h3 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent">,
             Ready for the Future?,
           </h3>,
@@ -296,8 +261,5 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o26_20o30UltimatePredictionsShowcase,
+    </div>)};
+export default AI20o26_20o30UltimatePredictionsShowcase;

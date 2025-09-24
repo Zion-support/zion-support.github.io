@@ -1,199 +1,194 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Shield,;
-  Lock,;
-  Eye,;
-  AlertTriangle,;
-  Cpu,;
-  Globe,;
-  Cloud,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Clock,;
-  Target,;
-  Zap,;
-  Users,;
-  BarChart3,;
-  Settings,;
-  Server,;
+import {
+  Shield;
+  Lock;
+  Eye;
+  AlertTriangle;
+  Cpu;
+  Globe;
+  Cloud;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Clock;
+  Target;
+  Zap;
+  Users;
+  BarChart3;
+  Settings;
+  Server;
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
-,
-const contactInfo = {,
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const serviceHighlights = [,
-  {,
-    title: 'Zero Trust Security',;
+const serviceHighlights = [
+  {
+    title: 'Zero Trust Security';
     description:,
-      'Never trust, always verify - Advanced zero trust implementation',;
-    icon: Shield,;
-    color: 'from-red-500 to-pink-600',;
-    features: [,
-      'Continuous verification',;
-      'Micro-segmentation',;
-      'Adaptive controls',;
-      'Real-time monitoring',;
-    ],;
-  },;
-  {,
-    title: 'AI Threat Intelligence',;
-    description: 'Predict and prevent cyber threats with AI intelligence',;
-    icon: Eye,;
-    color: 'from-indigo-500 to-purple-600',;
-    features: [,
-      'Real-time detection',;
-      'Predictive analytics',;
-      'Automated response',;
-      'Global intelligence',;
-    ],;
-  },;
-  {,
-    title: 'Cloud Security Posture',;
+      'Never trust, always verify - Advanced zero trust implementation';
+    icon: Shield;
+    color: 'from-red-500 to-pink-600';
+    features: [
+      'Continuous verification';
+      'Micro-segmentation';
+      'Adaptive controls';
+      'Real-time monitoring';
+    ];
+  };
+  {
+    title: 'AI Threat Intelligence';
+    description: 'Predict and prevent cyber threats with AI intelligence';
+    icon: Eye;
+    color: 'from-indigo-500 to-purple-600';
+    features: [
+      'Real-time detection';
+      'Predictive analytics';
+      'Automated response';
+      'Global intelligence';
+    ];
+  };
+  {
+    title: 'Cloud Security Posture';
     description:,
-      'Secure your cloud infrastructure with comprehensive posture management',;
-    icon: Cloud,;
-    color: 'from-blue-500 to-cyan-600',;
-    features: [,
-      'Multi-cloud support',;
-      'Continuous compliance',;
-      'Automated remediation',;
-      'Risk management',;
-    ],;
-  },;
-  {,
-    title: 'DevSecOps Security',;
-    description: 'Integrate security into your DevOps pipeline seamlessly',;
-    icon: Cpu,;
-    color: 'from-green-500 to-emerald-600',;
-    features: [,
-      'CI/CD integration',;
-      'Automated testing',;
-      'Vulnerability scanning',;
-      'Compliance automation',;
-    ],;
-  },;
-  {,
-    title: 'IoT Security Platform',;
-    description: 'Secure your IoT ecosystem with comprehensive protection',;
-    icon: Server,;
-    color: 'from-purple-500 to-violet-600',;
-    features: [,
-      'Device authentication',;
-      'Network monitoring',;
-      'Threat detection',;
-      'Secure updates',;
-    ],;
-  },;
+      'Secure your cloud infrastructure with comprehensive posture management';
+    icon: Cloud;
+    color: 'from-blue-500 to-cyan-600';
+    features: [
+      'Multi-cloud support';
+      'Continuous compliance';
+      'Automated remediation';
+      'Risk management';
+    ];
+  };
+  {
+    title: 'DevSecOps Security';
+    description: 'Integrate security into your DevOps pipeline seamlessly';
+    icon: Cpu;
+    color: 'from-green-500 to-emerald-600';
+    features: [
+      'CI/CD integration';
+      'Automated testing';
+      'Vulnerability scanning';
+      'Compliance automation';
+    ];
+  };
+  {
+    title: 'IoT Security Platform';
+    description: 'Secure your IoT ecosystem with comprehensive protection';
+    icon: Server;
+    color: 'from-purple-500 to-violet-600';
+    features: [
+      'Device authentication';
+      'Network monitoring';
+      'Threat detection';
+      'Secure updates';
+    ];
+  };
 ],
-,
-const benefits = [,
-  {,
-    title: '99.9% Threat Detection',;
+const benefits = [
+  {
+    title: '99.9% Threat Detection';
     description:,
-      'Advanced AI algorithms detect threats before they impact your business',;
-    icon: Shield,;
-    color: 'text-red-400',;
-  },;
-  {,
-    title: '450% ROI Improvement',;
+      'Advanced AI algorithms detect threats before they impact your business';
+    icon: Shield;
+    color: 'text-red-400';
+  };
+  {
+    title: '450% ROI Improvement';
     description:,
-      'Significant returns through reduced security incidents and compliance costs',;
-    icon: BarChart3,;
-    color: 'text-blue-400',;
-  },;
-  {,
-    title: '24/7 Security Monitoring',;
-    description: 'Round-the-clock protection with automated incident response',;
-    icon: Clock,;
-    color: 'text-purple-400',;
-  },;
-  {,
-    title: 'Zero False Positives',;
+      'Significant returns through reduced security incidents and compliance costs';
+    icon: BarChart3;
+    color: 'text-blue-400';
+  };
+  {
+    title: '24/7 Security Monitoring';
+    description: 'Round-the-clock protection with automated incident response';
+    icon: Clock;
+    color: 'text-purple-400';
+  };
+  {
+    title: 'Zero False Positives';
     description:,
-      'AI-powered analysis eliminates false alarms and alert fatigue',;
-    icon: CheckCircle,;
-    color: 'text-green-400',;
-  },;
+      'AI-powered analysis eliminates false alarms and alert fatigue';
+    icon: CheckCircle;
+    color: 'text-green-400';
+  };
 ],
-,
-export default function CybersecurityServices() {,
-  return (,
+export default function CybersecurityServices() {
+  return (
     <Layout>,
       <Head>,
         <title>,
           Cybersecurity Services - Zion Tech Group | Next-Generation Security,
           Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Protect your business with our advanced cybersecurity services. Zero trust security, AI threat intelligence, cloud security posture, and comprehensive protection for modern enterprises.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='cybersecurity, zero trust security, AI threat intelligence, cloud security, DevSecOps, IoT security, Zion Tech Group',
         />,
         <meta name='author' content='Zion Tech Group' />,
         <meta name='robots' content='index, follow' />,
         {/* Open Graph */}
-        <meta,
+        <meta
           property='og: title',
           content='Cybersecurity Services - Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Next-generation cybersecurity solutions for modern enterprises.',
         />,
         <meta property='og:type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/cybersecurity-services',
         />,
-        <meta,
+        <meta
           property='og:image',
           content='https://ziontechgroup.com/og-image.jpg',
         />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta name='twitter: card' content='summary_large_image' />,
-        <meta,
+        <meta
           name='twitter:title',
           content='Cybersecurity Services - Zion Tech Group',
         />,
-        <meta,
+        <meta
           name='twitter:description',
           content='Next-generation cybersecurity solutions for modern enterprises.',
         />,
-        <meta,
+        <meta
           name='twitter:image',
           content='https://ziontechgroup.com/twitter-image.jpg',
         />,
-        {/* Contact Information */,}
+        {/* Contact Information */}
         <meta name='contact: mobile' content='+1 302 464 0950' />,
         <meta name='contact:email' content='kleber@ziontechgroup.com' />,
-        <meta,
+        <meta
           name='contact:address',
           content='364 E Main St STE 1008 Middletown DE 19709',
         />,
         <meta name='contact:website' content='https://ziontechgroup.com' />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>,
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>,
         <div className='relative z-10 container mx-auto px-4 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='max-w-4xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='max-w-4xl mx-auto'>,
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8'>,
               <Shield className='w-5 h-5 text-red-400' />,
               <span className='text-red-400 font-medium'>,
@@ -228,38 +223,36 @@ export default function CybersecurityServices() {,
             </div>,
           </motion.div>,
         </div>,
-        {/* Floating Elements */,}
+        {/* Floating Elements */}
         <div className='absolute top-20 left-10 opacity-20 animate-float'>,
           <div className='w-4 h-4 bg-red-400 rounded-full'></div>,
         </div>,
-        <div,
+        <div
           className='absolute top-40 right-20 opacity-30 animate-float',
-          style={{ animationDelay: '1s' ,}}
+          style={{ animationDelay: '1s' }}
         >,
           <div className='w-6 h-6 bg-pink-400 rounded-full'></div>,
         </div>,
-        <div,
+        <div
           className='absolute bottom-40 left-20 opacity-25 animate-float',
-          style={{ animationDelay: '2s' ,}}
+          style={{ animationDelay: '2s' }}
         >,
           <div className='w-3 h-3 bg-purple-400 rounded-full'></div>,
         </div>,
       </section>,
       {/* Service Highlights */}
-      <section,
+      <section
         id='services',
-        className='py-20 bg-gradient-to-b from-black to-gray-900',
-      >,
+        className='py-20 bg-gradient-to-b from-black to-gray-900'>,
         <div className='container mx-auto px-4'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Cybersecurity{' ',}
+              Cybersecurity{' '}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>,
                 Services,
               </span>,
@@ -270,17 +263,16 @@ export default function CybersecurityServices() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {serviceHighlights.map((service, index) => (,
+            {serviceHighlights.map((service, index) => (
               <motion.div,
                 key={service.title}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='futuristic-card p-6 group hover: scale-105 transition-all duration-300',
-              >,
-                <div,
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color,} p-4 mb-6 group-hover: scale-110 transition-transform duration-300`,}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='futuristic-card p-6 group hover: scale-105 transition-all duration-300'>,
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover: scale-110 transition-transform duration-300`}
                 >,
                   <service.icon className='w-full h-full text-white' />,
                 </div>,
@@ -291,18 +283,15 @@ export default function CybersecurityServices() {,
                   {service.description}
                 </p>,
                 <ul className='space-y-2'>,
-                  {service.features.map((feature, featureIndex) => (,
-                    <li,
+                  {service.features.map((feature, featureIndex) => (
+                    <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300',
-                    >,
+                      className='flex items-center text-gray-300'>,
                       <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />,
                       <span>{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -310,14 +299,13 @@ export default function CybersecurityServices() {,
       <section className='py-20 bg-black'>,
         <div className='container mx-auto px-4'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Our{' ',}
+              Our{' '}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>,
                 Security,
               </span>{' '}
@@ -329,15 +317,14 @@ export default function CybersecurityServices() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
-            {advancedCybersecurityServices2025.map((service, index) => (,
+            {advancedCybersecurityServices2025.map((service, index) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='animated-border',
-              >,
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='animated-border'>,
                 <div className='h-full'>,
                   <div className='flex items-start justify-between mb-4'>,
                     <div className='flex items-center space-x-3'>,
@@ -351,11 +338,10 @@ export default function CybersecurityServices() {,
                         </p>,
                       </div>,
                     </div>,
-                    {service.popular && (,
+                    {service.popular && (
                       <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>,
                         Popular,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <p className='text-gray-300 mb-4 leading-relaxed'>,
                     {service.description}
@@ -368,12 +354,11 @@ export default function CybersecurityServices() {,
                       </span>,
                     </div>,
                     <div className='flex items-center space-x-1'>,
-                      {[...Array(5)].map((_, i) => (,
-                        <Star,
+                      {[...Array(5)].map((_, i) => (
+                        <Star
                           key={i}
                           className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
-                        />,
-                      ))}
+                        />))}
                       <span className='text-gray-400 text-sm ml-2'>,
                         ({service.reviews}),
                       </span>,
@@ -396,33 +381,28 @@ export default function CybersecurityServices() {,
                   <div className='flex flex-wrap gap-2 mb-6'>,
                     {service.features,
                       .slice(0, 4),
-                      .map((feature, featureIndex) => (,
-                        <span,
+                      .map((feature, featureIndex) => (
+                        <span
                           key={featureIndex}
-                          className='bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm',
-                        >,
+                          className='bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm'>,
                           {feature}
-                        </span>,
-                      ))}
+                        </span>))}
                   </div>,
                   <div className='flex items-center justify-between'>,
-                    <Link,
+                    <Link
                       href={service.link}
-                      className='text-red-400 hover: text-red-300 font-medium flex items-center space-x-2 group',
-                    >,
+                      className='text-red-400 hover: text-red-300 font-medium flex items-center space-x-2 group'>,
                       <span>Learn More</span>,
                       <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />,
                     </Link>,
-                    <Link,
+                    <Link
                       href='/contact',
-                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105',
-                    >,
+                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'>,
                       Get Protected,
                     </Link>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -430,14 +410,13 @@ export default function CybersecurityServices() {,
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='container mx-auto px-4'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Why Choose{' ',}
+              Why Choose{' '}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>,
                 Our Security,
               </span>,
@@ -447,17 +426,16 @@ export default function CybersecurityServices() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {benefits.map((benefit, index) => (,
+            {benefits.map((benefit, index) => (
               <motion.div,
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center group',
-              >,
-                <div,
-                  className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover: scale-110 transition-transform duration-300`,}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center group'>,
+                <div
+                  className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover: scale-110 transition-transform duration-300`}
                 >,
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />,
                 </div>,
@@ -467,8 +445,7 @@ export default function CybersecurityServices() {,
                 <p className='text-gray-300 leading-relaxed'>,
                   {benefit.description}
                 </p>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -476,14 +453,13 @@ export default function CybersecurityServices() {,
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>,
         <div className='container mx-auto px-4 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='max-w-4xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='max-w-4xl mx-auto'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
-              Ready to{' ',}
+              Ready to{' '}
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>,
                 Secure,
               </span>{' '}
@@ -501,10 +477,9 @@ export default function CybersecurityServices() {,
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />,
                 </button>,
               </Link>,
-              <Link,
+              <Link
                 href='/comprehensive-services-showcase-2025',
-                className='group',
-              >,
+                className='group'>,
                 <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>,
                   <span>View All Services</span>,
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />,
@@ -530,7 +505,5 @@ export default function CybersecurityServices() {,
           </motion.div>,
         </div>,
       </section>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}
 ,

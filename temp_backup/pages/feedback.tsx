@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function FeedbackPage() {,
-  return (,
+export default function FeedbackPage() {
+  return (
     <>,
       <Head>,
         <title>Feedback - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function FeedbackPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

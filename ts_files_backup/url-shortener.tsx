@@ -4,74 +4,50 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 LinkCopyBarChart3ArrowRightRefreshCwCheckCircleExternalLinkQrCodeSettingsTrash2,
-export default function URLShortenerPage() {,
+export default function URLShortenerPage() {
   const [longUrlsetLongUrl] = useState(''),
   const [customAliasetCustomAlias] = useState(''),
   const [shortenedUrlsetShortenedUrls] = useState<any[]>([]),
   const [isShorteningsetIsShortening] = useState(false),
   const [showQRsetShowQR] = useState<string | null>(null),
-,
-  const generateShortUrl = async () => {,
+  const generateShortUrl = async () => {
     if (!longUrl.trim()) return,
-,
     setIsShortening(true),
-,
     // Simulate API call delay,
     await new Promise(resolve => setTimeout(resolve1000)),
-,
     const alias = customAlias.trim() || generateRandomAlias(),
-    const shortUrl = `https: //zion.tech/${alias,}`,
-,
-    const newShortUrl = {,
-      id: Date.now(),;
-      longUrl: longUrl.trim(),;
-      shortUrl,;
-      alias,;
-      clicks: 0,;
-      createdAt: new Date().toISOString(),;
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl),}`,
-    };
-,
+    const shortUrl = `https: //zion.tech/${alias}`,
+    const newShortUrl = {
+      id: Date.now();
+      longUrl: longUrl.trim();
+      shortUrl;
+      alias;
+      clicks: 0;
+      createdAt: new Date().toISOString();
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`};
     setShortenedUrls(prev => [newShortUrl...prev]),
     setLongUrl(', '),
     setCustomAlias(', '),
-    setIsShortening(false),
-  };
-,
-  const generateRandomAlias = () => {,
+    setIsShortening(false)};
+  const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
     let result = ', ',
-    for (let i = 0, i < 6, i++) {,
-      result += chars.charAt(Math.floor(Math.random() * chars.length)),
-    }
-    return result,
-  };
-,
-  const copyToClipboard = (text: string) => {,
-    navigator.clipboard.writeText(text),
-  ,};
-,
-  const incrementClicks = (id: number) => {,
+    for (let i = 0, i < 6, i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length))}
+    return result};
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)};
+  const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>,
       prev.map(url =>,
-        url.id === id ? { ...urlclicks: url.clicks + 1 ,} : url,
-      ),
-    ),
-  };
-,
-  const deleteUrl = (id: number) => {,
-    setShortenedUrls(prev => prev.filter(url => url.id !== id)),
-  ,};
-,
-  const getTotalClicks = () => {,
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0),
-  };
-,
-  const getTotalUrls = () => {,
-    return shortenedUrls.length,
-  };
-,
-  return (,
+        url.id === id ? { ...urlclicks: url.clicks + 1 } : url))};
+  const deleteUrl = (id: number) => {
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))};
+  const getTotalClicks = () => {
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)};
+  const getTotalUrls = () => {
+    return shortenedUrls.length};
+  return (
     <>,
       <Head>,
         <title>URL Shortener - Zion Tech Group</title>,
@@ -79,7 +55,7 @@ export default function URLShortenerPage() {,
         <meta property="og: title" content="URL Shortener - Zion Tech Group" />,
         <meta property="og:description" content="Professional URL shortening service with analytics and QR code generation." />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div className="mb-8">,
@@ -97,7 +73,7 @@ export default function URLShortenerPage() {,
           </p>,
         </div>,
       </section>,
-      {/* URL Shortening Tool */,}
+      {/* URL Shortening Tool */}
       <section className="py-20 bg-gray-900">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -109,7 +85,7 @@ export default function URLShortenerPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-            {/* Input Form */,}
+            {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">,
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">,
                 <Link className="w-6 h-6 mr-3 text-orange-400" />,
@@ -121,7 +97,7 @@ export default function URLShortenerPage() {,
                   <label className="block text-sm font-medium text-gray-300 mb-2">,
                     Long URL,
                   </label>,
-                  <input,
+                  <input
                     type="url",
                     value={longUrl}
                     onChange={(e) => setLongUrl(e.target.value)}
@@ -129,7 +105,7 @@ export default function URLShortenerPage() {,
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent",
                   />,
                 </div>,
-                {/* Custom Alias */,}
+                {/* Custom Alias */}
                 <div>,
                   <label className="block text-sm font-medium text-gray-300 mb-2">,
                     Custom Alias (Optional),
@@ -138,7 +114,7 @@ export default function URLShortenerPage() {,
                     <span className="inline-flex items-center px-3 py-3 bg-gray-600 border border-gray-500 rounded-l-lg text-gray-300 text-sm">,
                       zion.tech/,
                     </span>,
-                    <input,
+                    <input
                       type="text",
                       value={customAlias}
                       onChange={(e) => setCustomAlias(e.target.value)}
@@ -150,22 +126,19 @@ export default function URLShortenerPage() {,
                     Leave empty for auto-generated alias,
                   </p>,
                 </div>,
-                <Button,
-                  onClick={generateShortUrl,}
+                <Button
+                  onClick={generateShortUrl}
                   disabled={!longUrl.trim() || isShortening}
-                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover: from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed",
-                >,
-                  {isShortening ? (,
+                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover: from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed">,
+                  {isShortening ? (
                     <>,
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />,
                       Creating Short URL...,
-                    </>,
-                  ) : (,
+                    </>) : (
                     <>,
                       <Link className="w-5 h-5 mr-2" />,
                       Create Short URL,
-                    </>,
-                  ),}
+                    </>)}
                 </Button>,
                 <div className="text-sm text-gray-400">,
                   <p>• Professionalbranded short URLs</p>,
@@ -196,17 +169,16 @@ export default function URLShortenerPage() {,
                     <div className="text-sm text-gray-400">Total Clicks</div>,
                   </div>,
                 </div>,
-                {shortenedUrls.length === 0 ? (,
+                {shortenedUrls.length === 0 ? (
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">,
                     <div className="text-6xl mb-4">📊</div>,
                     <p className="text-gray-400">,
                       Your URL statistics will appear here. Create your first short URL to get started.,
                     </p>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div className="space-y-3">,
                     <h4 className="text-lg font-semibold text-white mb-3">Recent URLs</h4>,
-                    {shortenedUrls.slice(03).map((url) => (,
+                    {shortenedUrls.slice(03).map((url) => (
                       <div key={url.id} className="p-3 bg-gray-700 rounded-lg">,
                         <div className="flex items-center justify-between">,
                           <div className="flex-1 min-w-0">,
@@ -223,17 +195,15 @@ export default function URLShortenerPage() {,
                             </div>,
                           </div>,
                         </div>,
-                      </div>,
-                    ))}
-                  </div>,
-                )}
+                      </div>))}
+                  </div>)}
               </div>,
             </Card>,
           </div>,
         </div>,
       </section>,
       {/* Shortened URLs List */}
-      {shortenedUrls.length > 0 && (,
+      {shortenedUrls.length > 0 && (
         <section className="py-20 bg-gray-800">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -245,16 +215,16 @@ export default function URLShortenerPage() {,
               </p>,
             </div>,
             <div className="space-y-4">,
-              {shortenedUrls.map((url) => (,
-                <Card key={url.id,} className="p-6 bg-gray-700 border border-gray-600">,
+              {shortenedUrls.map((url) => (
+                <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">,
                   <div className="grid grid-cols-1 lg: grid-cols-3 gap-6">,
-                    {/* URL Info */,}
+                    {/* URL Info */}
                     <div className="lg: col-span-2">,
                       <div className="flex items-start justify-between mb-4">,
                         <div className="flex-1">,
                           <div className="flex items-center space-x-3 mb-2">,
                             <h3 className="text-xl font-bold text-white">,
-                              {url.shortUrl,}
+                              {url.shortUrl}
                             </h3>,
                             <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">,
                               Active,
@@ -264,8 +234,8 @@ export default function URLShortenerPage() {,
                             {url.longUrl}
                           </p>,
                           <div className="flex items-center space-x-4 mt-3 text-sm text-gray-400">,
-                            <span>Created: {new Date(url.createdAt).toLocaleDateString(),}</span>,
-                            <span>Alias: {url.alias,}</span>,
+                            <span>Created: {new Date(url.createdAt).toLocaleDateString()}</span>,
+                            <span>Alias: {url.alias}</span>,
                           </div>,
                         </div>,
                       </div>,
@@ -279,50 +249,46 @@ export default function URLShortenerPage() {,
                         <div className="text-xs text-gray-400">Total Clicks</div>,
                       </div>,
                       <div className="flex space-x-2">,
-                        <Button,
+                        <Button
                           onClick={() => copyToClipboard(url.shortUrl)}
                           variant="outline",
                           size="sm",
-                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600",
-                        >,
+                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600">,
                           <Copy className="w-4 h-4 mr-2" />,
                           Copy,
                         </Button>,
-                        <Button,
-                          onClick={() => incrementClicks(url.id),}
+                        <Button
+                          onClick={() => incrementClicks(url.id)}
                           variant="outline",
                           size="sm",
-                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600",
-                        >,
+                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600">,
                           <ExternalLink className="w-4 h-4 mr-2" />,
                           Visit,
                         </Button>,
                       </div>,
                       <div className="flex space-x-2">,
-                        <Button,
-                          onClick={() => setShowQR(showQR === url.id ? null : url.id),}
+                        <Button
+                          onClick={() => setShowQR(showQR === url.id ? null : url.id)}
                           variant="outline",
                           size="sm",
-                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600",
-                        >,
+                          className="flex-1 border-gray-600 text-gray-300 hover: bg-gray-600">,
                           <QrCode className="w-4 h-4 mr-2" />,
                           QR Code,
                         </Button>,
-                        <Button,
-                          onClick={() => deleteUrl(url.id),}
+                        <Button
+                          onClick={() => deleteUrl(url.id)}
                           variant="outline",
                           size="sm",
-                          className="border-red-600 text-red-400 hover: bg-red-600 hover:text-white",
-                        >,
+                          className="border-red-600 text-red-400 hover: bg-red-600 hover:text-white">,
                           <Trash2 className="w-4 h-4" />,
                         </Button>,
                       </div>,
                     </div>,
                   </div>,
-                  {/* QR Code */,}
-                  {showQR === url.id && (,
+                  {/* QR Code */}
+                  {showQR === url.id && (
                     <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">,
-                      <img,
+                      <img
                         src={url.qrCode} ,
                         alt="QR Code",
                         className="mx-auto mb-3 w-32 h-32",
@@ -330,14 +296,11 @@ export default function URLShortenerPage() {,
                       <p className="text-sm text-gray-400">,
                         Scan this QR code to visit the shortened URL,
                       </p>,
-                    </div>,
-                  )}
-                </Card>,
-              ))}
+                    </div>)}
+                </Card>))}
             </div>,
           </div>,
-        </section>,
-      )}
+        </section>)}
 ,
       {/* Features */}
       <section className="py-20 bg-gray-900">,
@@ -396,7 +359,7 @@ export default function URLShortenerPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className="py-20 bg-gray-800">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -459,7 +422,7 @@ export default function URLShortenerPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">,
@@ -469,26 +432,22 @@ export default function URLShortenerPage() {,
             Join thousands of businesses using our professional URL shortening service to improve their link management.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Button,
+            <Button
               href="/contact",
               size="lg",
-              className="bg-white text-orange-600 hover:bg-gray-100",
-            >,
+              className="bg-white text-orange-600 hover:bg-gray-100">,
               Get Started Today,
               <ArrowRight className="w-5 h-5 ml-2" />,
             </Button>,
-            <Button,
+            <Button
               href="/pricing",
               variant="outline",
               size="lg",
-              className="border-white text-white hover:bg-white hover:text-orange-600",
-            >,
+              className="border-white text-white hover:bg-white hover:text-orange-600">,
               View Pricing,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}
 ,

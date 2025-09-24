@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {,
-  return (,
+const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-violet-90o0 via-purple-90o0 to-fuchsia-90o0 text-white py-16 relative overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
         <div className='absolute inset-0 bg-gradient-to-r from-violet-40o0 to-purple-50o0 transform rotate-12 scale-150'></div>,
         <div className='absolute inset-0 bg-gradient-to-l from-fuchsia-40o0 to-pink-50o0 transform -rotate-12 scale-150'></div>,
@@ -100,16 +99,14 @@ const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-neural-breakthrough-ultimate-guide',
-              className='bg-gradient-to-r from-violet-50o0 to-fuchsia-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-60o0 hover:to-fuchsia-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-violet-50o0 to-fuchsia-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-60o0 hover:to-fuchsia-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/quantum-computing',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-90o0 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-90o0 transition-all duration-30o0 backdrop-blur-sm'>,
               Explore Quantum Solutions,
             </Link>,
           </div>,
@@ -120,9 +117,5 @@ const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumNeuralBreakthroughBanner20o26,
-,
+    </section>)};
+export default QuantumNeuralBreakthroughBanner20o26;

@@ -1,38 +1,31 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const QuantumComputingRevolution20o25Banner = () => {,
+const QuantumComputingRevolution20o25Banner = () => {
   const [isVisible, setIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }, []),
-,
-  return (,
+  useEffect(() => {
+    setIsVisible(true)}, []),
+  return (
     <section className="relative bg-gradient-to-br from-cyan-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden">,
       {/* Quantum field background */}
       <div className="absolute inset-0">,
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10"></div>,
         <div className="absolute top-0 left-0 w-full h-full">,
-          {[...Array(20)].map((_, i) => (,
-            <div,
+          {[...Array(20)].map((_, i) => (
+            <div
               key={i}
               className={`absolute w-1 h-1 bg-cyan-40o0 rounded-full animate-ping`}
-              style={{,
-                left: `${Math.random() * 10o0,}%`,;
-                top: `${Math.random() * 10o0,}%`,;
-                animationDelay: `${Math.random() * 3,}s`,;
-                animationDuration: `${2 + Math.random() * 2,}s`,
-              }}
-            ></div>,
-          ))}
+              style={{
+                left: `${Math.random() * 10o0}%`;
+                top: `${Math.random() * 10o0}%`;
+                animationDelay: `${Math.random() * 3}s`;
+                animationDuration: `${2 + Math.random() * 2}s`}}
+            ></div>))}
         </div>,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">,
-        <div className={`text-center transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10',}`}>,
+        <div className={`text-center transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>,
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm border border-cyan-40o0/30">,
             <span className="text-sm font-medium">⚛️ QUANTUM COMPUTING REVOLUTION 20o25</span>,
           </div>,
@@ -82,23 +75,18 @@ const QuantumComputingRevolution20o25Banner = () => {,
             </div>,
           </div>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/quantum-computing-20o25",
-              className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href="/quantum-demo",
-              className="border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-4 rounded-lg font-semibold hover:bg-cyan-40o0 hover:text-gray-90o0 transition-all duration-30o0",
-            >,
+              className="border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-4 rounded-lg font-semibold hover:bg-cyan-40o0 hover:text-gray-90o0 transition-all duration-30o0">,
               Try Quantum Demo,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumComputingRevolution20o25Banner,
+    </section>)};
+export default QuantumComputingRevolution20o25Banner;

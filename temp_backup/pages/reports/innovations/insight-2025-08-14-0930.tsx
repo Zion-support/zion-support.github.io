@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function InsightPage() {,
-  return (,
+export default function InsightPage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Playbook: FinOps for AI</title>,
         <meta name='description' content='Patterns to accelerate delivery.' />,
         <meta property='og:title' content='Playbook: FinOps for AI' />,
-        <meta,
+        <meta
           property='og:description',
           content='Patterns to accelerate delivery.',
         />,
@@ -24,18 +23,15 @@ export default function InsightPage() {,
         </ul>,
         <p className='mt-6'>,
           More at{' '}
-          <a,
+          <a
             className='text-cyan-30o0 underline',
             href='https: //ziontechgroup.com',
             target='_blank',
-            rel='noopener',
-          >,
+            rel='noopener'>,
             ziontechgroup.com,
           </a>,
           .,
         </p>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

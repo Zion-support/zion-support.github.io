@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ForumPage() {,
-  return (,
+export default function ForumPage() {
+  return (
     <>,
       <Head>,
         <title>Forum - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ForumPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

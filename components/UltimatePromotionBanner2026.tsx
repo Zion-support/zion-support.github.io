@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const UltimatePromotionBanner20o26 = () => {,
-  return (,
+const UltimatePromotionBanner20o26 = () => {
+  return (
     <section className='bg-gradient-to-r from-yellow-40o0 via-orange-50o0 to-red-50o0 text-white py-16 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -25,16 +24,14 @@ const UltimatePromotionBanner20o26 = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mt-8'>,
-            <Link,
+            <Link
               href='/ultimate-package-20o26',
-              className='bg-white text-orange-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-white text-orange-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Ultimate Package,
             </Link>,
-            <Link,
+            <Link
               href='/ultimate-package/details',
-              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               View Package Details,
             </Link>,
           </div>,
@@ -63,9 +60,5 @@ const UltimatePromotionBanner20o26 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimatePromotionBanner20o26,
-,
+    </section>)};
+export default UltimatePromotionBanner20o26;

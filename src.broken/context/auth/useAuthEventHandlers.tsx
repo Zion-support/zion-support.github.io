@@ -1,9 +1,7 @@
-export function useAuthEventHandlers() {,
-  return (,
+export function useAuthEventHandlers() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

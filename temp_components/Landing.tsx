@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function Landing() {,
-  return (,
+export default function Landing() {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       {/* Futuristic animated background */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>,
@@ -40,7 +39,7 @@ export default function Landing() {,
           </div>,
         </nav>,
       </header>,
-      {/* Hero */,}
+      {/* Hero */}
       <main className='relative z-10'>,
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md: pt-16 md:pb-24'>,
           <div className='text-center'>,
@@ -77,31 +76,28 @@ export default function Landing() {,
                   Explore Automations,
                 </a>,
               </Link>,
-              <a,
+              <a
                 href='/site-health/workflows/autonomous-meta.yml',
                 target='_blank',
                 rel='noopener',
-                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10',
-              >,
+                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10'>,
                 Live Meta Factory,
               </a>,
             </div>,
-            {/* Futuristic info strip */,}
+            {/* Futuristic info strip */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm: grid-cols-4'>,
-              {[,
-                ['24/7', 'Autonomous'],;
-                ['Main', 'Direct Sync'],;
-                ['0 Ops', 'Cloud‑Native'],;
-                ['Safety', 'Guardrails'],;
-              ].map(([k, v]) => (,
-                <div,
+              {[
+                ['24/7', 'Autonomous'];
+                ['Main', 'Direct Sync'];
+                ['0 Ops', 'Cloud‑Native'];
+                ['Safety', 'Guardrails'];
+              ].map(([k, v]) => (
+                <div
                   key={k}
-                  className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left',
-                >,
+                  className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'>,
                   <div className='text-lg font-bold text-white'>{k}</div>,
                   <div className='text-xs text-white/70'>{v}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -111,41 +107,39 @@ export default function Landing() {,
             Features,
           </h2>,
           <div className='mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3'>,
-            {[,
-              {,
-                title: 'Self‑Improving',;
-                desc: 'Agents continuously analyze, invent, and evolve automations.',;
-              },;
-              {,
-                title: 'Repo Sync',;
-                desc: 'Changes are committed and pushed automatically to main.',;
-              },;
-              {,
-                title: 'Zero Ops',;
-                desc: 'Runs fully in the cloud—no servers or manual intervention.',;
-              },;
-              {,
-                title: 'Safety‑First',;
-                desc: 'Conservative edits with logs, reports, and guardrails.',;
-              },;
-              {,
-                title: 'Scalable',;
-                desc: 'Generates domain‑specific factories on demand.',;
-              },;
-              {,
-                title: 'Observability',;
-                desc: 'Dashboards, reports, and GitHub Actions artifacts.',;
-              },;
-            ].map(f => (,
-              <article,
+            {[
+              {
+                title: 'Self‑Improving';
+                desc: 'Agents continuously analyze, invent, and evolve automations.';
+              };
+              {
+                title: 'Repo Sync';
+                desc: 'Changes are committed and pushed automatically to main.';
+              };
+              {
+                title: 'Zero Ops';
+                desc: 'Runs fully in the cloud—no servers or manual intervention.';
+              };
+              {
+                title: 'Safety‑First';
+                desc: 'Conservative edits with logs, reports, and guardrails.';
+              };
+              {
+                title: 'Scalable';
+                desc: 'Generates domain‑specific factories on demand.';
+              };
+              {
+                title: 'Observability';
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.';
+              };
+            ].map(f => (
+              <article
                 key={f.title}
-                className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover: border-cyan-40o0/30',
-              >,
+                className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover: border-cyan-40o0/30'>,
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0' />,
-                <h3 className='text-lg font-semibold'>{f.title,}</h3>,
+                <h3 className='text-lg font-semibold'>{f.title}</h3>,
                 <p className='mt-1 text-sm text-white/75'>{f.desc}</p>,
-              </article>,
-            ))}
+              </article>))}
           </div>,
         </section>,
         {/* Capabilities */}
@@ -154,29 +148,27 @@ export default function Landing() {,
             Capabilities,
           </h2>,
           <div className='mt-6 grid grid-cols-1 gap-5 md: grid-cols-3'>,
-            {[,
-              {,
-                title: 'Code Quality & Refactors',;
-                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',;
-              },;
-              {,
-                title: 'Performance & A11y',;
-                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',;
-              },;
-              {,
-                title: 'Content & SEO',;
-                desc: 'Curates content, updates promotions, and tunes metadata for reach.',;
-              },;
-            ].map(c => (,
-              <article,
+            {[
+              {
+                title: 'Code Quality & Refactors';
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.';
+              };
+              {
+                title: 'Performance & A11y';
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.';
+              };
+              {
+                title: 'Content & SEO';
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.';
+              };
+            ].map(c => (
+              <article
                 key={c.title}
-                className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl',
-              >,
+                className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl'>,
                 <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-40o0/10 blur-2xl' />,
                 <h3 className='text-lg font-semibold'>{c.title}</h3>,
                 <p className='mt-1 text-sm text-white/75'>{c.desc}</p>,
-              </article>,
-            ))}
+              </article>))}
           </div>,
         </section>,
         {/* Benefits */}
@@ -185,20 +177,18 @@ export default function Landing() {,
             Benefits,
           </h2>,
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md: grid-cols-2'>,
-            {[,
-              '24/7 progress without human intervention',;
-              'Rapid feedback loop with safe, incremental edits',;
-              'Continuous delivery directly to main branch',;
-              'Fewer regressions via layered checks and reports',;
-            ].map(b => (,
-              <div,
+            {[
+              '24/7 progress without human intervention';
+              'Rapid feedback loop with safe, incremental edits';
+              'Continuous delivery directly to main branch';
+              'Fewer regressions via layered checks and reports';
+            ].map(b => (
+              <div
                 key={b}
-                className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md',
-              >,
+                className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'>,
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-40o0 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />,
                 <span className='text-sm text-white/80'>{b}</span>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </section>,
         {/* Tech strip */}
@@ -208,21 +198,19 @@ export default function Landing() {,
               Powered by modern cloud and AI tooling,
             </p>,
             <div className='mt-4 flex flex-wrap items-center justify-center gap-6'>,
-              {[,
-                'Next.js',;
-                'TypeScript',;
-                'Tailwind',;
-                'Framer Motion',;
-                'Supabase',;
-                'Netlify',;
-              ].map(t => (,
-                <span,
+              {[
+                'Next.js';
+                'TypeScript';
+                'Tailwind';
+                'Framer Motion';
+                'Supabase';
+                'Netlify';
+              ].map(t => (
+                <span
                   key={t}
-                  className='rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.0o6)]',
-                >,
+                  className='rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.0o6)]'>,
                   {t}
-                </span>,
-              ))}
+                </span>))}
             </div>,
           </div>,
         </section>,
@@ -250,7 +238,7 @@ export default function Landing() {,
             </div>,
           </div>,
         </section>,
-        {/* Explore more */,}
+        {/* Explore more */}
         <section className='mx-auto max-w-7xl px-6 pb-16'>,
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>,
             Explore more,
@@ -315,7 +303,5 @@ export default function Landing() {,
           </div>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25UltimateContentRevolutionBanner = () => {,
-  return (,
+const AI20o25UltimateContentRevolutionBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black bg-opacity-20'></div>,
@@ -12,7 +11,7 @@ const AI20o25UltimateContentRevolutionBanner = () => {,
       <div className='absolute bottom-20 left-1/4 w-12 h-12 bg-indigo-50o0 rounded-full opacity-25 animate-pulse'></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-bold'>🚀 NEW BREAKTHROUGH</span>,
           </div>,
@@ -20,7 +19,7 @@ const AI20o25UltimateContentRevolutionBanner = () => {,
           <h1 className='text-4xl md: text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-20o0 to-blue-20o0 bg-clip-text text-transparent'>,
             AI 20o25 Ultimate Content Revolution,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-20o0'>,
             The breakthrough 'that', 's transforming businesses worldwide with,
             <span className='text-yellow-40o0 font-bold'> 5,0o00% ROI</span> and,
@@ -48,27 +47,24 @@ const AI20o25UltimateContentRevolutionBanner = () => {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-ultimate-content-revolution-50o00-roi-success',
-              className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               View Success Story,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-ultimate-content-revolution-breakthrough',
-              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-30o0 border border-white/30',
-            >,
+              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all duration-30o0 border border-white/30'>,
               Read Full Article,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Get Started Now,
             </Link>,
           </div>,
         </div>,
-        {/* Feature Highlights */,}
+        {/* Feature Highlights */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
             <div className='text-4xl mb-4'>🧠</div>,
@@ -99,7 +95,7 @@ const AI20o25UltimateContentRevolutionBanner = () => {,
             </p>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className='mt-16 text-center'>,
           <p className='text-sm text-gray-40o0 mb-4'>,
             Trusted by Fortune 50o0 companies worldwide,
@@ -113,9 +109,5 @@ const AI20o25UltimateContentRevolutionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25UltimateContentRevolutionBanner,
-,
+    </section>)};
+export default AI20o25UltimateContentRevolutionBanner;

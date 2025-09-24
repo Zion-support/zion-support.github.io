@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner() {,
-  return (,
+export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner() {
+  return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-green-60o0 via-emerald-60o0 to-teal-60o0 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -47,21 +46,19 @@ export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner(
             </div>,
           </div>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/case-studies/ai-20o26-enterprise-transformation-50o000-roi",
-              className="bg-white text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-white text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-60o0 transition-all duration-30o0",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-60o0 transition-all duration-30o0">,
               Start Your Transformation,
             </Link>,
           </div>,
         </div>,
-        {/* Before vs After Preview */,}
+        {/* Before vs After Preview */}
         <div className="mt-12 grid grid-cols-1 md: grid-cols-2 gap-8">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
             <h3 className="text-xl font-bold text-white mb-4">Before AI Implementation</h3>,
@@ -106,7 +103,7 @@ export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner(
             </div>,
           </div>,
         </div>,
-        {/* Implementation Highlights */,}
+        {/* Implementation Highlights */}
         <div className="mt-8 grid grid-cols-1 md: grid-cols-3 gap-6">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">,
             <div className="text-3xl mb-3">🧠</div>,
@@ -125,6 +122,4 @@ export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner(
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

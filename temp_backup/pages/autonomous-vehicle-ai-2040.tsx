@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AutonomousVehicleAi20o40Page() {,
-  return (,
+export default function AutonomousVehicleAi20o40Page() {
+  return (
     <>,
       <Head>,
         <title>Autonomous Vehicle Ai 20o40 - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function AutonomousVehicleAi20o40Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

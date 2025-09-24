@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI Code Assistant | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Code Assistant | Zion Tech Group';
   description:,
-    'Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 30o0% with our AI-powered coding assistant.',;
+    'Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 30o0% with our AI-powered coding assistant.';
 };
-,
-export default function AICodeAssistantPage() {,
-  return (,
+export default function AICodeAssistantPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       {/* Hero Section */}
       <section className='text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-10o0 rounded-lg mb-16'>,
@@ -18,90 +17,88 @@ export default function AICodeAssistantPage() {,
           practices with 24/7 AI-powered support.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Get Started - $99/month,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Schedule Demo,
           </a>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className='py-16'>,
         <h2 className='text-3xl font-bold text-center text-gray-90o0 mb-12'>,
           Powerful AI Features,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          <FeatureCard,
+          <FeatureCard
             icon='🤖',
             title='Intelligent Code Generation',
             description='Generate production-ready code in any language with context-aware suggestions and best practices.',
-            features={[,
-              'Multi-language support (Python, JavaScript, Java, C++, Go, Rust)',;
-              'Context-aware code completion',;
-              'Function and class generation',;
-              'API integration code',;
+            features={[
+              'Multi-language support (Python, JavaScript, Java, C++, Go, Rust)';
+              'Context-aware code completion';
+              'Function and class generation';
+              'API integration code';
             ]}
           />,
-          <FeatureCard,
+          <FeatureCard
             icon='🐛',
             title='Smart Debugging',
             description='Automatically identify and fix bugs with AI-powered analysis and suggested solutions.',
-            features={[,
-              'Real-time error detection',;
-              'Performance bottleneck identification',;
-              'Memory leak detection',;
-              'Security vulnerability scanning',;
+            features={[
+              'Real-time error detection';
+              'Performance bottleneck identification';
+              'Memory leak detection';
+              'Security vulnerability scanning';
             ]}
           />,
-          <FeatureCard,
+          <FeatureCard
             icon='⚡',
             title='Code Optimization',
             description='Automatically optimize your code for performance, readability, and maintainability.',
-            features={[,
-              'Performance optimization suggestions',;
-              'Code refactoring recommendations',;
-              'Best practice enforcement',;
-              'Documentation generation',;
+            features={[
+              'Performance optimization suggestions';
+              'Code refactoring recommendations';
+              'Best practice enforcement';
+              'Documentation generation';
             ]}
           />,
-          <FeatureCard,
+          <FeatureCard
             icon='📚',
             title='Learning Assistant',
             description='Learn new technologies and frameworks with personalized AI tutoring and examples.',
-            features={[,
-              'Interactive coding tutorials',;
-              'Technology-specific guidance',;
-              'Code explanation and comments',;
-              'Learning path recommendations',;
+            features={[
+              'Interactive coding tutorials';
+              'Technology-specific guidance';
+              'Code explanation and comments';
+              'Learning path recommendations';
             ]}
           />,
-          <FeatureCard,
+          <FeatureCard
             icon='🔧',
             title='IDE Integration',
             description='Seamlessly integrate with your favorite development environment and tools.',
-            features={[,
-              'VS Code extension',;
-              'IntelliJ IDEA plugin',;
-              'Vim/Neovim support',;
-              'Command-line interface',;
+            features={[
+              'VS Code extension';
+              'IntelliJ IDEA plugin';
+              'Vim/Neovim support';
+              'Command-line interface';
             ]}
           />,
-          <FeatureCard,
+          <FeatureCard
             icon='🛡️',
             title='Security & Compliance',
             description='Ensure your code meets security standards and compliance requirements.',
-            features={[,
-              'Security vulnerability scanning',;
-              'Compliance checking (SOC2, GDPR, HIPAA)',;
-              'Code quality metrics',;
-              'Automated testing suggestions',;
+            features={[
+              'Security vulnerability scanning';
+              'Compliance checking (SOC2, GDPR, HIPAA)';
+              'Code quality metrics';
+              'Automated testing suggestions';
             ]}
           />,
         </div>,
@@ -112,47 +109,47 @@ export default function AICodeAssistantPage() {,
           Simple, Transparent Pricing,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <PricingCard,
+          <PricingCard
             name='Starter',
             price='$99',
             period='month',
             description='Perfect for individual developers and small teams',
-            features={[,
-              'Up to 10,0o00 code generations/month',;
-              '5 programming languages',;
-              'Basic debugging assistance',;
-              'Email support',;
-              'VS Code integration',;
+            features={[
+              'Up to 10,0o00 code generations/month';
+              '5 programming languages';
+              'Basic debugging assistance';
+              'Email support';
+              'VS Code integration';
             ]}
             popular={false}
           />,
-          <PricingCard,
+          <PricingCard
             name='Professional',
             price='$299',
             period='month',
             description='Ideal for growing development teams',
-            features={[,
-              'Up to 50,0o00 code generations/month',;
-              'All programming languages',;
-              'Advanced debugging & optimization',;
-              'Priority support',;
-              'All IDE integrations',;
-              'Team collaboration features',;
+            features={[
+              'Up to 50,0o00 code generations/month';
+              'All programming languages';
+              'Advanced debugging & optimization';
+              'Priority support';
+              'All IDE integrations';
+              'Team collaboration features';
             ]}
             popular={true}
           />,
-          <PricingCard,
+          <PricingCard
             name='Enterprise',
             price='$999',
             period='month',
             description='For large organizations with advanced needs',
-            features={[,
-              'Unlimited code generations',;
-              'Custom AI model training',;
-              'On-premise deployment',;
-              '24/7 dedicated support',;
-              'Custom integrations',;
-              'Security & compliance tools',;
+            features={[
+              'Unlimited code generations';
+              'Custom AI model training';
+              'On-premise deployment';
+              '24/7 dedicated support';
+              'Custom integrations';
+              'Security & compliance tools';
             ]}
             popular={false}
           />,
@@ -169,7 +166,7 @@ export default function AICodeAssistantPage() {,
               Proven Results,
             </h3>,
             <div className='space-y-4'>,
-              <StatItem,
+              <StatItem
                 number='30o0%',
                 label='Increase in Developer Productivity',
               />,
@@ -207,7 +204,7 @@ export default function AICodeAssistantPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-16 bg-blue-60o0 rounded-lg text-white text-center'>,
         <h2 className='text-3xl font-bold mb-4'>,
           Ready to Supercharge Your Development?,
@@ -217,16 +214,14 @@ export default function AICodeAssistantPage() {,
           experience with our AI assistant.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-          >,
+            className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-          >,
+            className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -234,64 +229,56 @@ export default function AICodeAssistantPage() {,
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureCard({,
-  icon,;
-  title,;
-  description,;
-  features,;
-}: {,
+function FeatureCard({
+  icon;
+  title;
+  description;
+  features;
+}: {
   icon: string,
   title: string,
   description: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='bg-white p-6 rounded-lg shadow-md border border-gray-20o0'>,
       <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='text-sm text-gray-60o0 flex items-center'>,
             <span className='w-1.5 h-1.5 bg-blue-50o0 rounded-full mr-2'></span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  name,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  name;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   name: string,
   price: string,
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`bg-white p-8 rounded-lg shadow-md border-2 ${popular ? 'border-blue-50o0' : 'border-gray-20o0'} relative`}
     >,
-      {popular && (,
+      {popular && (
         <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>,
           <span className='bg-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold'>,
             Most Popular,
           </span>,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>{name}</h3>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <div className='mb-6'>,
@@ -299,32 +286,26 @@ function PricingCard({,
         <span className='text-gray-60o0'>/{period}</span>,
       </div>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-green-50o0 mr-3'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <button,
-        className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${,
+      <button
+        className={`w-full mt-6 py-3 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function StatItem({ number, label }: { number: string, label: string ,}) {,
-  return (,
+function StatItem({ number, label }: { number: string, label: string }) {
+  return (
     <div className='flex items-center justify-between'>,
       <span className='text-3xl font-bold text-blue-60o0'>{number}</span>,
       <span className='text-gray-60o0'>{label}</span>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

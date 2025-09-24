@@ -1,14 +1,10 @@
 'use client',
-,
-import React from 'react',
-,
-export default function RevolutionaryContent2026Banner() {,
-  return null,
-}
+import React from 'react';
+export default function RevolutionaryContent2026Banner() {
+  return null}
 import Link from 'next/link',
-,
-const RevolutionaryContent20o26Banner: React.FC = () => {,
-  return (,
+const RevolutionaryContent20o26Banner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-red-90o0 via-purple-90o0 to-pink-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -32,10 +28,9 @@ const RevolutionaryContent20o26Banner: React.FC = () => {,
             <p className='text-gray-30o0 mb-4'>,
               Experience 10,0o00x faster processing of complex problems.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-neural-networks-breakthrough',
-              className='text-yellow-40o0 font-semibold',
-            >,
+              className='text-yellow-40o0 font-semibold'>,
               Read Article →,
             </Link>,
           </div>,
@@ -45,10 +40,9 @@ const RevolutionaryContent20o26Banner: React.FC = () => {,
             <p className='text-gray-30o0 mb-4'>,
               Self-managing systems that operate without intervention.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-autonomous-enterprise-systems',
-              className='text-yellow-40o0 font-semibold',
-            >,
+              className='text-yellow-40o0 font-semibold'>,
               Read Article →,
             </Link>,
           </div>,
@@ -58,18 +52,13 @@ const RevolutionaryContent20o26Banner: React.FC = () => {,
             <p className='text-gray-30o0 mb-4'>,
               Fortune 50o0 companies saving billions with quantum AI.,
             </p>,
-            <Link,
+            <Link
               href='/case-studies/quantum-ai-implementation-success-20o26',
-              className='text-yellow-40o0 font-semibold',
-            >,
+              className='text-yellow-40o0 font-semibold'>,
               View Case Study →,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default RevolutionaryContent20o26Banner,
-,
+    </section>)};
+export default RevolutionaryContent20o26Banner;

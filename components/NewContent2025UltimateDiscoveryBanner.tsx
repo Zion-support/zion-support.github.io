@@ -1,50 +1,47 @@
 'use client',
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const NewContent20o25UltimateDiscoveryBanner = () => {,
+const NewContent20o25UltimateDiscoveryBanner = () => {
   const [isExpanded, setIsExpanded] = useState(false),
-,
-  const newContent = [,
-    {,
-      title: 'AI 20o25 Ultimate Content Revolution',;
+  const newContent = [
+    {
+      title: 'AI 20o25 Ultimate Content Revolution';
       description:,
-        'Transform your business with revolutionary AI-powered content strategies',;
-      type: 'Blog Post',;
-      roi: '50o00%',;
-      link: '/blog/ai-20o25-ultimate-content-revolution',;
-      featured: true,;
-    },;
-    {,
-      title: 'AI Content Revolution: 50o00% ROI Success',;
-      description: 'Real Fortune 50o0 case study showing unprecedented results',;
-      type: 'Case Study',;
-      roi: '50o00%',;
-      link: '/case-studies/ai-20o25-content-revolution-50o00-roi-success',;
-      featured: true,;
-    },;
-    {,
-      title: 'AI 20o25 Enterprise Automation Revolution',;
-      description: 'Complete guide to enterprise AI automation implementation',;
-      type: 'Guide',;
-      roi: '10,0o00%',;
-      link: '/blog/ai-20o25-enterprise-automation-revolution',;
-      featured: false,;
-    },;
-    {,
-      title: 'Quantum AI 20o26 Business Transformation',;
-      description: 'Next-generation quantum AI solutions for business',;
-      type: 'Future Tech',;
-      roi: '15,0o00%',;
-      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide',;
-      featured: false,;
-    },;
+        'Transform your business with revolutionary AI-powered content strategies';
+      type: 'Blog Post';
+      roi: '50o00%';
+      link: '/blog/ai-20o25-ultimate-content-revolution';
+      featured: true;
+    };
+    {
+      title: 'AI Content Revolution: 50o00% ROI Success';
+      description: 'Real Fortune 50o0 case study showing unprecedented results';
+      type: 'Case Study';
+      roi: '50o00%';
+      link: '/case-studies/ai-20o25-content-revolution-50o00-roi-success';
+      featured: true;
+    };
+    {
+      title: 'AI 20o25 Enterprise Automation Revolution';
+      description: 'Complete guide to enterprise AI automation implementation';
+      type: 'Guide';
+      roi: '10,0o00%';
+      link: '/blog/ai-20o25-enterprise-automation-revolution';
+      featured: false;
+    };
+    {
+      title: 'Quantum AI 20o26 Business Transformation';
+      description: 'Next-generation quantum AI solutions for business';
+      type: 'Future Tech';
+      roi: '15,0o00%';
+      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide';
+      featured: false;
+    };
   ],
-,
-  return (,
+  return (
     <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>🚀 NEW CONTENT 20o25</span>,
@@ -61,59 +58,55 @@ const NewContent20o25UltimateDiscoveryBanner = () => {,
         <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mb-8'>,
           {newContent,
             .filter(item => item.featured),
-            .map((item, index) => (,
-              <Link,
+            .map((item, index) => (
+              <Link
                 key={index}
                 href={item.link}
-                className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover: bg-opacity-20 transition-all duration-30o0 group',
-              >,
+                className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 hover: bg-opacity-20 transition-all duration-30o0 group'>,
                 <div className='flex items-start justify-between mb-4'>,
                   <div className='bg-white bg-opacity-20 rounded-full px-4 py-1 text-sm font-medium'>,
-                    {item.type,}
+                    {item.type}
                   </div>,
                   <div className='bg-green-50o0 text-white rounded-full px-4 py-1 text-sm font-bold'>,
                     {item.roi} ROI,
                   </div>,
                 </div>,
                 <h3 className='text-2xl font-bold mb-3 group-hover: text-yellow-30o0 transition-colors'>,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className='text-lg opacity-90 mb-4'>{item.description}</p>,
                 <div className='flex items-center text-yellow-30o0 font-semibold'>,
                   Read More →,
                 </div>,
-              </Link>,
-            ))}
+              </Link>))}
         </div>,
         {/* Expandable Content Section */}
         <div className='text-center'>,
-          <button,
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className='bg-white bg-opacity-20 hover: bg-opacity-30 rounded-full px-8 py-3 font-semibold transition-all duration-30o0 mb-8',
-          >,
-            {isExpanded ? 'Show Less' : 'Discover More Content',}{' '}
+            className='bg-white bg-opacity-20 hover: bg-opacity-30 rounded-full px-8 py-3 font-semibold transition-all duration-30o0 mb-8'>,
+            {isExpanded ? 'Show Less' : 'Discover More Content'}{' '}
             {isExpanded ? '↑' : '↓'}
           </button>,
-          {isExpanded && (,
+          {isExpanded && (
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn'>,
               {newContent,
                 .filter(item => !item.featured),
-                .map((item, index) => (,
-                  <Link,
+                .map((item, index) => (
+                  <Link
                     key={index}
                     href={item.link}
-                    className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover: bg-opacity-20 transition-all duration-30o0 group',
-                  >,
+                    className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover: bg-opacity-20 transition-all duration-30o0 group'>,
                     <div className='flex items-start justify-between mb-3'>,
                       <div className='bg-white bg-opacity-20 rounded-full px-3 py-1 text-xs font-medium'>,
-                        {item.type,}
+                        {item.type}
                       </div>,
                       <div className='bg-green-50o0 text-white rounded-full px-3 py-1 text-xs font-bold'>,
                         {item.roi} ROI,
                       </div>,
                     </div>,
                     <h4 className='text-lg font-bold mb-2 group-hover: text-yellow-30o0 transition-colors'>,
-                      {item.title,}
+                      {item.title}
                     </h4>,
                     <p className='text-sm opacity-90 mb-3'>,
                       {item.description}
@@ -121,10 +114,8 @@ const NewContent20o25UltimateDiscoveryBanner = () => {,
                     <div className='flex items-center text-yellow-30o0 text-sm font-semibold'>,
                       Explore →,
                     </div>,
-                  </Link>,
-                ))}
-            </div>,
-          )}
+                  </Link>))}
+            </div>)}
         </div>,
         {/* Call to Action */}
         <div className='text-center mt-12'>,
@@ -137,16 +128,14 @@ const NewContent20o25UltimateDiscoveryBanner = () => {,
               revolution with unprecedented results.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Services,
               </Link>,
             </div>,
@@ -154,23 +143,16 @@ const NewContent20o25UltimateDiscoveryBanner = () => {,
         </div>,
       </div>,
       <style jsx>{`,
-        @keyframes fadeIn {,
-          from {,
+        @keyframes fadeIn {
+          from {
             opacity: 0,
-            transform: translateY(20px),
-          ,}
-          to {,
+            transform: translateY(20px)}
+          to {
             opacity: 1,
-            transform: translateY(0),
-          ,}
+            transform: translateY(0)}
         }
-        .animate-fadeIn {,
-          animation: fadeIn 0.5s ease-out,
-        ,}
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out}
       `}</style>,
-    </div>,
-  ),
-};
-,
-export default NewContent20o25UltimateDiscoveryBanner,
-,
+    </div>)};
+export default NewContent20o25UltimateDiscoveryBanner;

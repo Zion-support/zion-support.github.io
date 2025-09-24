@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'CI/CD Pipeline Builder | Zion Tech Group',;
+export const metadata = {
+  title: 'CI/CD Pipeline Builder | Zion Tech Group';
   description:,
-    'Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.',;
+    'Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.';
 };
-,
-export default function CICDPipelineBuilderPage() {,
-  return (,
+export default function CICDPipelineBuilderPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,27 +23,27 @@ export default function CICDPipelineBuilderPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='Visual Pipeline Designer',
               description='Drag-and-drop interface to create complex CI/CD pipelines without coding, with pre-built templates for common workflows.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Intelligent Deployment Strategies',
               description='AI-powered deployment strategies including blue-green, canary, and rolling deployments with automatic rollback triggers.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Multi-Cloud Support',
               description='Deploy to AWS, Azure, GCP, or on-premise with unified pipeline management and cross-cloud monitoring.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Automated Testing Integration',
               description='Seamlessly integrate unit tests, integration tests, security scans, and performance tests into your pipeline.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Real-time Monitoring',
               description='Comprehensive monitoring and alerting for pipeline health, deployment success rates, and performance metrics.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Security & Compliance',
               description='Built-in security scanning, compliance checks, and audit trails for enterprise-grade deployments.',
             />,
@@ -56,43 +54,43 @@ export default function CICDPipelineBuilderPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$79/month',
               description='Perfect for small teams and simple deployments',
-              features={[,
-                'Up to 5 pipelines',;
-                'Basic deployment strategies',;
-                'Single cloud support',;
-                'Email support',;
-                'Basic monitoring',;
+              features={[
+                'Up to 5 pipelines';
+                'Basic deployment strategies';
+                'Single cloud support';
+                'Email support';
+                'Basic monitoring';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$199/month',
               description='Ideal for growing development teams',
-              features={[,
-                'Up to 25 pipelines',;
-                'Advanced deployment strategies',;
-                'Multi-cloud support',;
-                'Priority support',;
-                'Advanced monitoring',;
-                'Custom integrations',;
+              features={[
+                'Up to 25 pipelines';
+                'Advanced deployment strategies';
+                'Multi-cloud support';
+                'Priority support';
+                'Advanced monitoring';
+                'Custom integrations';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$499/month',
               description='For large organizations with complex deployment needs',
-              features={[,
-                'Unlimited pipelines',;
-                'Custom deployment strategies',;
-                '24/7 dedicated support',;
-                'On-premise deployment',;
-                'Advanced security features',;
-                'SLA guarantees',;
-                'Custom training',;
+              features={[
+                'Unlimited pipelines';
+                'Custom deployment strategies';
+                '24/7 dedicated support';
+                'On-premise deployment';
+                'Advanced security features';
+                'SLA guarantees';
+                'Custom training';
               ]}
             />,
           </div>,
@@ -103,15 +101,15 @@ export default function CICDPipelineBuilderPage() {,
           Why Choose Our CI/CD Pipeline Builder?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='10x Faster Deployments',
             description='Automated pipeline creation and intelligent deployment strategies reduce deployment time from hours to minutes.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='99.9% Uptime Guarantee',
             description='Intelligent rollback mechanisms and comprehensive monitoring ensure maximum uptime and reliability.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Zero-Downtime Deployments',
             description='Advanced deployment strategies ensure your applications remain available during updates and releases.',
           />,
@@ -126,16 +124,14 @@ export default function CICDPipelineBuilderPage() {,
           that adapt to your needs and scale with your growth.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -144,26 +140,22 @@ export default function CICDPipelineBuilderPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-purple-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -174,49 +166,40 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-purple-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-purple-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

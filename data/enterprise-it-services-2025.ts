@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants',
-,
-export interface EnterpriseITService20o25 {,
+export interface EnterpriseITService20o25 {
   id: string,
   name: string,
   tagline: string,
@@ -27,422 +26,419 @@ export interface EnterpriseITService20o25 {,
   marketSize: string,
   growthRate: string,
   variant: ServiceVariant,
-  contactInfo: {,
+  contactInfo: {
     mobile: string,
     email: string,
     address: string,
-    website: string,
-  ,};
+    website: string};
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
   customers: number,
   rating: number,
-  reviews: number,
-,}
+  reviews: number}
 ,
-export const enterpriseITServices20o25: EnterpriseITService20o25[] = [,
+export const enterpriseITServices20o25: EnterpriseITService20o25[] = [
   // Zero Trust Network Architecture,
-  {,
-    id: 'zero-trust-network-architecture',;
-    name: 'Zero Trust Network Architecture',;
-    tagline: 'Advanced network security for the modern enterprise',;
-    price: 'Custom pricing',;
-    period: '',;
+  {
+    id: 'zero-trust-network-architecture';
+    name: 'Zero Trust Network Architecture';
+    tagline: 'Advanced network security for the modern enterprise';
+    price: 'Custom pricing';
+    period: '';
     description:,
-      'Comprehensive zero trust network architecture that provides enterprise-grade security through continuous verification and least-privilege access control.',;
-    features: [,
-      'Continuous identity verification',;
-      'Least-privilege access control',;
-      'Micro-segmentation and network isolation',;
-      'Real-time threat detection and response',;
-      'Multi-factor authentication (MFA)',;
-      'Identity and access management (IAM)',;
-      'Network traffic monitoring and analysis',;
-      'Automated security policy enforcement',;
-      'Compliance and audit reporting',;
-      '24/7 security monitoring and support',;
-    ],;
-    popular: true,;
-    icon: '🛡️',;
-    color: 'from-red-50o0 to-pink-60o0',;
-    textColor: 'text-red-40o0',;
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture',;
+      'Comprehensive zero trust network architecture that provides enterprise-grade security through continuous verification and least-privilege access control.';
+    features: [
+      'Continuous identity verification';
+      'Least-privilege access control';
+      'Micro-segmentation and network isolation';
+      'Real-time threat detection and response';
+      'Multi-factor authentication (MFA)';
+      'Identity and access management (IAM)';
+      'Network traffic monitoring and analysis';
+      'Automated security policy enforcement';
+      'Compliance and audit reporting';
+      '24/7 security monitoring and support';
+    ];
+    popular: true;
+    icon: '🛡️';
+    color: 'from-red-50o0 to-pink-60o0';
+    textColor: 'text-red-40o0';
+    link: 'https://ziontechgroup.com/zero-trust-network-architecture';
     marketPosition:,
-      'Competitive with Palo Alto Networks ($50o00/month), Cisco ($40o00/month), and Fortinet ($350o0/month). Our advantage: More comprehensive zero trust implementation, cloud-native architecture, and flexible pricing.',;
+      'Competitive with Palo Alto Networks ($50o00/month), Cisco ($40o00/month), and Fortinet ($350o0/month). Our advantage: More comprehensive zero trust implementation, cloud-native architecture, and flexible pricing.';
     targetAudience:,
-      'Large enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies',;
-    trialDays: 30,;
-    setupTime: '2-4 weeks',;
-    category: 'Enterprise Security',;
-    realService: true,;
-    technology: [,
-      'Kubernetes',;
-      'Docker',;
-      'Terraform',;
-      'AWS',;
-      'Azure',;
-      'Google Cloud',;
-      'Security frameworks',;
-    ],;
-    integrations: [,
-      'Active Directory',;
-      'LDAP',;
-      'SAML',;
-      'OAuth',;
-      'SIEM systems',;
-      'Security platforms',;
-    ],;
-    useCases: [,
-      'Enterprise network security',;
-      'Cloud security',;
-      'Compliance and governance',;
-      'Threat detection and response',;
-      'Identity management',;
-    ],;
-    roi: 'Average customer reduces security incidents by 80% and achieves 30o0% ROI through improved security posture.',;
-    competitors: [,
-      'Palo Alto Networks',;
-      'Cisco',;
-      'Fortinet',;
-      'Check Point',;
-      'Juniper Networks',;
-    ],;
-    marketSize: '$45.8B market',;
-    growthRate: '280% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
-    realImplementation: true,;
+      'Large enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Technology companies';
+    trialDays: 30;
+    setupTime: '2-4 weeks';
+    category: 'Enterprise Security';
+    realService: true;
+    technology: [
+      'Kubernetes';
+      'Docker';
+      'Terraform';
+      'AWS';
+      'Azure';
+      'Google Cloud';
+      'Security frameworks';
+    ];
+    integrations: [
+      'Active Directory';
+      'LDAP';
+      'SAML';
+      'OAuth';
+      'SIEM systems';
+      'Security platforms';
+    ];
+    useCases: [
+      'Enterprise network security';
+      'Cloud security';
+      'Compliance and governance';
+      'Threat detection and response';
+      'Identity management';
+    ];
+    roi: 'Average customer reduces security incidents by 80% and achieves 30o0% ROI through improved security posture.';
+    competitors: [
+      'Palo Alto Networks';
+      'Cisco';
+      'Fortinet';
+      'Check Point';
+      'Juniper Networks';
+    ];
+    marketSize: '$45.8B market';
+    growthRate: '280% annual growth';
+    variant: 'enterprise-futuristic';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
+    realImplementation: true;
     implementationDetails:,
-      'Production-ready zero trust platform with comprehensive security features, cloud deployment, and enterprise-grade support.',;
-    launchDate: '20o24-0o1-0o1',;
-    customers: 85,;
-    rating: 4.9,;
-    reviews: 65,;
-  },;
+      'Production-ready zero trust platform with comprehensive security features, cloud deployment, and enterprise-grade support.';
+    launchDate: '20o24-0o1-0o1';
+    customers: 85;
+    rating: 4.9;
+    reviews: 65;
+  };
   // Edge Computing Orchestration,
-  {,
-    id: 'edge-computing-orchestration',;
-    name: 'Edge Computing Orchestration',;
-    tagline: 'Distributed computing management for edge infrastructure',;
-    price: 'Custom pricing',;
-    period: '',;
+  {
+    id: 'edge-computing-orchestration';
+    name: 'Edge Computing Orchestration';
+    tagline: 'Distributed computing management for edge infrastructure';
+    price: 'Custom pricing';
+    period: '';
     description:,
-      'Advanced edge computing orchestration platform that manages distributed computing resources across edge locations for optimal performance and efficiency.',;
-    features: [,
-      'Distributed edge node management',;
-      'Intelligent workload distribution',;
-      'Edge-to-cloud synchronization',;
-      'Real-time performance optimization',;
-      'Edge security and compliance',;
-      'Automated scaling and load balancing',;
-      'Edge analytics and monitoring',;
-      'Multi-cloud edge integration',;
-      'Edge application deployment',;
-      'API for edge system integration',;
-    ],;
-    popular: true,;
-    icon: '🌐',;
-    color: 'from-blue-50o0 to-indigo-60o0',;
-    textColor: 'text-blue-40o0',;
-    link: 'https://ziontechgroup.com/edge-computing-orchestration',;
+      'Advanced edge computing orchestration platform that manages distributed computing resources across edge locations for optimal performance and efficiency.';
+    features: [
+      'Distributed edge node management';
+      'Intelligent workload distribution';
+      'Edge-to-cloud synchronization';
+      'Real-time performance optimization';
+      'Edge security and compliance';
+      'Automated scaling and load balancing';
+      'Edge analytics and monitoring';
+      'Multi-cloud edge integration';
+      'Edge application deployment';
+      'API for edge system integration';
+    ];
+    popular: true;
+    icon: '🌐';
+    color: 'from-blue-50o0 to-indigo-60o0';
+    textColor: 'text-blue-40o0';
+    link: 'https://ziontechgroup.com/edge-computing-orchestration';
     marketPosition:,
-      'Competitive with AWS Greengrass ($20o00/month), Microsoft Azure IoT Edge ($150o0/month), and Google Cloud IoT Edge ($180o0/month). Our advantage: More comprehensive orchestration, multi-cloud support, and flexible pricing.',;
+      'Competitive with AWS Greengrass ($20o00/month), Microsoft Azure IoT Edge ($150o0/month), and Google Cloud IoT Edge ($180o0/month). Our advantage: More comprehensive orchestration, multi-cloud support, and flexible pricing.';
     targetAudience:,
-      'IoT companies, Edge computing providers, Telecommunications, Manufacturing companies, Retail chains, Smart city developers',;
-    trialDays: 21,;
-    setupTime: '1-2 weeks',;
-    category: 'Edge Computing',;
-    realService: true,;
-    technology: [,
-      'Kubernetes',;
-      'Docker',;
-      'Terraform',;
-      'AWS',;
-      'Azure',;
-      'Google Cloud',;
-      'Edge computing frameworks',;
-    ],;
-    integrations: [,
-      'IoT platforms',;
-      'Cloud services',;
-      'Edge devices',;
-      'Monitoring tools',;
-      'Security platforms',;
-    ],;
-    useCases: [,
-      'IoT edge management',;
-      'Edge application deployment',;
-      'Distributed computing',;
-      'Edge analytics',;
-      'Edge security',;
-    ],;
-    roi: 'Average customer achieves 40o0% ROI through improved edge performance and reduced latency.',;
-    competitors: [,
-      'AWS Greengrass',;
-      'Microsoft Azure IoT Edge',;
-      'Google Cloud IoT Edge',;
-      'IBM Edge Application Manager',;
-      'VMware Edge',;
-    ],;
-    marketSize: '$32.7B market',;
-    growthRate: '320% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
-    realImplementation: true,;
+      'IoT companies, Edge computing providers, Telecommunications, Manufacturing companies, Retail chains, Smart city developers';
+    trialDays: 21;
+    setupTime: '1-2 weeks';
+    category: 'Edge Computing';
+    realService: true;
+    technology: [
+      'Kubernetes';
+      'Docker';
+      'Terraform';
+      'AWS';
+      'Azure';
+      'Google Cloud';
+      'Edge computing frameworks';
+    ];
+    integrations: [
+      'IoT platforms';
+      'Cloud services';
+      'Edge devices';
+      'Monitoring tools';
+      'Security platforms';
+    ];
+    useCases: [
+      'IoT edge management';
+      'Edge application deployment';
+      'Distributed computing';
+      'Edge analytics';
+      'Edge security';
+    ];
+    roi: 'Average customer achieves 40o0% ROI through improved edge performance and reduced latency.';
+    competitors: [
+      'AWS Greengrass';
+      'Microsoft Azure IoT Edge';
+      'Google Cloud IoT Edge';
+      'IBM Edge Application Manager';
+      'VMware Edge';
+    ];
+    marketSize: '$32.7B market';
+    growthRate: '320% annual growth';
+    variant: 'enterprise-futuristic';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
+    realImplementation: true;
     implementationDetails:,
-      'Production-ready edge orchestration platform with comprehensive management, monitoring, and deployment tools.',;
-    launchDate: '20o24-0o2-0o1',;
-    customers: 120,;
-    rating: 4.8,;
-    reviews: 90,;
-  },;
+      'Production-ready edge orchestration platform with comprehensive management, monitoring, and deployment tools.';
+    launchDate: '20o24-0o2-0o1';
+    customers: 120;
+    rating: 4.8;
+    reviews: 90;
+  };
   // 5G Private Network Solutions,
-  {,
-    id: '5g-private-network-solutions',;
-    name: '5G Private Network Solutions',;
-    tagline: 'High-speed private networks for enterprise applications',;
-    price: 'Custom pricing',;
-    period: '',;
+  {
+    id: '5g-private-network-solutions';
+    name: '5G Private Network Solutions';
+    tagline: 'High-speed private networks for enterprise applications';
+    price: 'Custom pricing';
+    period: '';
     description:,
-      'Comprehensive 5G private network solutions that provide enterprise-grade connectivity, security, and performance for mission-critical applications.',;
-    features: [,
-      'Private 5G network deployment',;
-      'Network slicing and virtualization',;
-      'Ultra-low latency connectivity',;
-      'High-bandwidth data transmission',;
-      'Network security and isolation',;
-      'Quality of service (QoS) management',;
-      'Network monitoring and analytics',;
-      'Automated network optimization',;
-      'Multi-site network management',;
-      'API for network integration',;
-    ],;
-    popular: true,;
-    icon: '📡',;
-    color: 'from-green-50o0 to-emerald-60o0',;
-    textColor: 'text-green-40o0',;
-    link: 'https://ziontechgroup.com/5g-private-network-solutions',;
+      'Comprehensive 5G private network solutions that provide enterprise-grade connectivity, security, and performance for mission-critical applications.';
+    features: [
+      'Private 5G network deployment';
+      'Network slicing and virtualization';
+      'Ultra-low latency connectivity';
+      'High-bandwidth data transmission';
+      'Network security and isolation';
+      'Quality of service (QoS) management';
+      'Network monitoring and analytics';
+      'Automated network optimization';
+      'Multi-site network management';
+      'API for network integration';
+    ];
+    popular: true;
+    icon: '📡';
+    color: 'from-green-50o0 to-emerald-60o0';
+    textColor: 'text-green-40o0';
+    link: 'https://ziontechgroup.com/5g-private-network-solutions';
     marketPosition:,
-      'Competitive with Ericsson ($80o00/month), Nokia ($70o00/month), and Huawei ($60o00/month). Our advantage: More flexible deployment options, cloud-native architecture, and competitive pricing.',;
+      'Competitive with Ericsson ($80o00/month), Nokia ($70o00/month), and Huawei ($60o00/month). Our advantage: More flexible deployment options, cloud-native architecture, and competitive pricing.';
     targetAudience:,
-      'Manufacturing companies, Healthcare organizations, Transportation companies, Energy companies, Smart city developers, Defense contractors',;
-    trialDays: 45,;
-    setupTime: '4-6 weeks',;
-    category: '5G Networks',;
-    realService: true,;
-    technology: [,
-      '5G NR',;
-      'Network virtualization',;
-      'SDN/NFV',;
-      'Cloud computing',;
-      'Network security',;
-      'Monitoring tools',;
-    ],;
-    integrations: [,
-      '5G equipment',;
-      'Network management systems',;
-      'Security platforms',;
-      'Monitoring tools',;
-      'Enterprise systems',;
-    ],;
-    useCases: [,
-      'Industrial automation',;
-      'Telemedicine',;
-      'Autonomous vehicles',;
-      'Smart manufacturing',;
-      'Edge computing',;
-    ],;
-    roi: 'Average customer achieves 50o0% ROI through improved connectivity and operational efficiency.',;
-    competitors: ['Ericsson', 'Nokia', 'Huawei', 'Samsung', 'ZTE'],;
-    marketSize: '$28.9B market',;
-    growthRate: '350% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
-    realImplementation: true,;
+      'Manufacturing companies, Healthcare organizations, Transportation companies, Energy companies, Smart city developers, Defense contractors';
+    trialDays: 45;
+    setupTime: '4-6 weeks';
+    category: '5G Networks';
+    realService: true;
+    technology: [
+      '5G NR';
+      'Network virtualization';
+      'SDN/NFV';
+      'Cloud computing';
+      'Network security';
+      'Monitoring tools';
+    ];
+    integrations: [
+      '5G equipment';
+      'Network management systems';
+      'Security platforms';
+      'Monitoring tools';
+      'Enterprise systems';
+    ];
+    useCases: [
+      'Industrial automation';
+      'Telemedicine';
+      'Autonomous vehicles';
+      'Smart manufacturing';
+      'Edge computing';
+    ];
+    roi: 'Average customer achieves 50o0% ROI through improved connectivity and operational efficiency.';
+    competitors: ['Ericsson', 'Nokia', 'Huawei', 'Samsung', 'ZTE'];
+    marketSize: '$28.9B market';
+    growthRate: '350% annual growth';
+    variant: 'enterprise-futuristic';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
+    realImplementation: true;
     implementationDetails:,
-      'Production-ready 5G private network platform with comprehensive deployment, management, and optimization tools.',;
-    launchDate: '20o24-0o1-15',;
-    customers: 65,;
-    rating: 4.9,;
-    reviews: 45,;
-  },;
+      'Production-ready 5G private network platform with comprehensive deployment, management, and optimization tools.';
+    launchDate: '20o24-0o1-15';
+    customers: 65;
+    rating: 4.9;
+    reviews: 45;
+  };
   // Blockchain Infrastructure Platform,
-  {,
-    id: 'blockchain-infrastructure-platform',;
-    name: 'Blockchain Infrastructure Platform',;
-    tagline: 'Secure blockchain solutions for enterprise applications',;
-    price: 'Custom pricing',;
-    period: '',;
+  {
+    id: 'blockchain-infrastructure-platform';
+    name: 'Blockchain Infrastructure Platform';
+    tagline: 'Secure blockchain solutions for enterprise applications';
+    price: 'Custom pricing';
+    period: '';
     description:,
-      'Enterprise-grade blockchain infrastructure platform that provides secure, scalable, and compliant blockchain solutions for various business applications.',;
-    features: [,
-      'Multi-blockchain support',;
-      'Smart contract development and deployment',;
-      'Consensus mechanism optimization',;
-      'Blockchain security and compliance',;
-      'Scalability and performance optimization',;
-      'Interoperability between blockchains',;
-      'Blockchain analytics and monitoring',;
-      'Automated governance and compliance',;
-      'API for blockchain integration',;
-      '24/7 technical support',;
-    ],;
-    popular: true,;
-    icon: '⛓️',;
-    color: 'from-purple-50o0 to-violet-60o0',;
-    textColor: 'text-purple-40o0',;
-    link: 'https://ziontechgroup.com/blockchain-infrastructure-platform',;
+      'Enterprise-grade blockchain infrastructure platform that provides secure, scalable, and compliant blockchain solutions for various business applications.';
+    features: [
+      'Multi-blockchain support';
+      'Smart contract development and deployment';
+      'Consensus mechanism optimization';
+      'Blockchain security and compliance';
+      'Scalability and performance optimization';
+      'Interoperability between blockchains';
+      'Blockchain analytics and monitoring';
+      'Automated governance and compliance';
+      'API for blockchain integration';
+      '24/7 technical support';
+    ];
+    popular: true;
+    icon: '⛓️';
+    color: 'from-purple-50o0 to-violet-60o0';
+    textColor: 'text-purple-40o0';
+    link: 'https://ziontechgroup.com/blockchain-infrastructure-platform';
     marketPosition:,
-      'Competitive with ConsenSys ($50o00/month), R3 Corda ($40o00/month), and Hyperledger ($30o00/month). Our advantage: More comprehensive blockchain support, cloud deployment, and flexible pricing.',;
+      'Competitive with ConsenSys ($50o00/month), R3 Corda ($40o00/month), and Hyperledger ($30o00/month). Our advantage: More comprehensive blockchain support, cloud deployment, and flexible pricing.';
     targetAudience:,
-      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Real estate companies, Energy companies',;
-    trialDays: 30,;
-    setupTime: '2-3 weeks',;
-    category: 'Blockchain',;
-    realService: true,;
-    technology: [,
-      'Ethereum',;
-      'Hyperledger',;
-      'Polkadot',;
-      'Cosmos',;
-      'Smart contracts',;
-      'Cloud computing',;
-    ],;
-    integrations: [,
-      'Enterprise systems',;
-      'Cloud platforms',;
-      'Payment gateways',;
-      'Identity systems',;
-      'IoT platforms',;
-    ],;
-    useCases: [,
-      'Supply chain tracking',;
-      'Digital identity management',;
-      'Smart contracts',;
-      'Tokenization',;
-      'Decentralized finance',;
-    ],;
-    roi: 'Average customer achieves 60o0% ROI through improved transparency and operational efficiency.',;
-    competitors: [,
-      'ConsenSys',;
-      'R3 Corda',;
-      'Hyperledger',;
-      'IBM Blockchain',;
-      'Microsoft Azure Blockchain',;
-    ],;
-    marketSize: '$39.7B market',;
-    growthRate: '420% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
-    realImplementation: true,;
+      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Real estate companies, Energy companies';
+    trialDays: 30;
+    setupTime: '2-3 weeks';
+    category: 'Blockchain';
+    realService: true;
+    technology: [
+      'Ethereum';
+      'Hyperledger';
+      'Polkadot';
+      'Cosmos';
+      'Smart contracts';
+      'Cloud computing';
+    ];
+    integrations: [
+      'Enterprise systems';
+      'Cloud platforms';
+      'Payment gateways';
+      'Identity systems';
+      'IoT platforms';
+    ];
+    useCases: [
+      'Supply chain tracking';
+      'Digital identity management';
+      'Smart contracts';
+      'Tokenization';
+      'Decentralized finance';
+    ];
+    roi: 'Average customer achieves 60o0% ROI through improved transparency and operational efficiency.';
+    competitors: [
+      'ConsenSys';
+      'R3 Corda';
+      'Hyperledger';
+      'IBM Blockchain';
+      'Microsoft Azure Blockchain';
+    ];
+    marketSize: '$39.7B market';
+    growthRate: '420% annual growth';
+    variant: 'enterprise-futuristic';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
+    realImplementation: true;
     implementationDetails:,
-      'Production-ready blockchain platform with comprehensive infrastructure, development tools, and enterprise support.',;
-    launchDate: '20o24-0o2-15',;
-    customers: 95,;
-    rating: 4.8,;
-    reviews: 70,;
-  },;
+      'Production-ready blockchain platform with comprehensive infrastructure, development tools, and enterprise support.';
+    launchDate: '20o24-0o2-15';
+    customers: 95;
+    rating: 4.8;
+    reviews: 70;
+  };
   // AI Autonomous Business Platform,
-  {,
-    id: 'ai-autonomous-business-platform',;
-    name: 'AI Autonomous Business Platform',;
-    tagline: 'Run your business with AI automation',;
-    price: 'Custom pricing',;
-    period: '',;
+  {
+    id: 'ai-autonomous-business-platform';
+    name: 'AI Autonomous Business Platform';
+    tagline: 'Run your business with AI automation';
+    price: 'Custom pricing';
+    period: '';
     description:,
-      'Revolutionary AI platform that automates business operations, decision-making, and customer interactions to create truly autonomous business systems.',;
-    features: [,
-      'AI-powered business process automation',;
-      'Autonomous decision-making systems',;
-      'Intelligent customer service automation',;
-      'Predictive business analytics',;
-      'Automated resource optimization',;
-      'AI-driven marketing automation',;
-      'Intelligent supply chain management',;
-      'Automated financial management',;
-      'AI-powered risk assessment',;
-      'Comprehensive business intelligence',;
-    ],;
-    popular: true,;
-    icon: '🤖',;
-    color: 'from-cyan-50o0 to-blue-60o0',;
-    textColor: 'text-cyan-40o0',;
-    link: 'https://ziontechgroup.com/ai-autonomous-business-platform',;
+      'Revolutionary AI platform that automates business operations, decision-making, and customer interactions to create truly autonomous business systems.';
+    features: [
+      'AI-powered business process automation';
+      'Autonomous decision-making systems';
+      'Intelligent customer service automation';
+      'Predictive business analytics';
+      'Automated resource optimization';
+      'AI-driven marketing automation';
+      'Intelligent supply chain management';
+      'Automated financial management';
+      'AI-powered risk assessment';
+      'Comprehensive business intelligence';
+    ];
+    popular: true;
+    icon: '🤖';
+    color: 'from-cyan-50o0 to-blue-60o0';
+    textColor: 'text-cyan-40o0';
+    link: 'https://ziontechgroup.com/ai-autonomous-business-platform';
     marketPosition:,
-      'Competitive with UiPath ($30o00/month), Automation Anywhere ($250o0/month), and Blue Prism ($40o00/month). Our advantage: AI-powered automation, comprehensive business integration, and flexible pricing.',;
+      'Competitive with UiPath ($30o00/month), Automation Anywhere ($250o0/month), and Blue Prism ($40o00/month). Our advantage: AI-powered automation, comprehensive business integration, and flexible pricing.';
     targetAudience:,
-      'Large enterprises, Manufacturing companies, Retail chains, Financial institutions, Healthcare organizations, Technology companies',;
-    trialDays: 45,;
-    setupTime: '3-4 weeks',;
-    category: 'AI Automation',;
-    realService: true,;
-    technology: [,
-      'Python',;
-      'TensorFlow',;
-      'PyTorch',;
-      'Machine learning',;
-      'RPA',;
-      'Cloud computing',;
-    ],;
-    integrations: [,
-      'ERP systems',;
-      'CRM platforms',;
-      'Business intelligence tools',;
-      'Cloud services',;
-      'IoT platforms',;
-    ],;
-    useCases: [,
-      'Business process automation',;
-      'Customer service automation',;
-      'Marketing automation',;
-      'Supply chain optimization',;
-      'Financial automation',;
-    ],;
-    roi: 'Average customer achieves 80o0% ROI through comprehensive business automation and optimization.',;
-    competitors: [,
-      'UiPath',;
-      'Automation Anywhere',;
-      'Blue Prism',;
-      'Pega',;
-      'Appian',;
-    ],;
-    marketSize: '$52.3B market',;
-    growthRate: '380% annual growth',;
-    variant: 'enterprise-futuristic',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
-    realImplementation: true,;
+      'Large enterprises, Manufacturing companies, Retail chains, Financial institutions, Healthcare organizations, Technology companies';
+    trialDays: 45;
+    setupTime: '3-4 weeks';
+    category: 'AI Automation';
+    realService: true;
+    technology: [
+      'Python';
+      'TensorFlow';
+      'PyTorch';
+      'Machine learning';
+      'RPA';
+      'Cloud computing';
+    ];
+    integrations: [
+      'ERP systems';
+      'CRM platforms';
+      'Business intelligence tools';
+      'Cloud services';
+      'IoT platforms';
+    ];
+    useCases: [
+      'Business process automation';
+      'Customer service automation';
+      'Marketing automation';
+      'Supply chain optimization';
+      'Financial automation';
+    ];
+    roi: 'Average customer achieves 80o0% ROI through comprehensive business automation and optimization.';
+    competitors: [
+      'UiPath';
+      'Automation Anywhere';
+      'Blue Prism';
+      'Pega';
+      'Appian';
+    ];
+    marketSize: '$52.3B market';
+    growthRate: '380% annual growth';
+    variant: 'enterprise-futuristic';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
+    realImplementation: true;
     implementationDetails:,
-      'Production-ready AI business platform with comprehensive automation, intelligence, and optimization tools.',;
-    launchDate: '20o24-0o1-0o1',;
-    customers: 150,;
-    rating: 4.9,;
-    reviews: 110,;
-  },;
+      'Production-ready AI business platform with comprehensive automation, intelligence, and optimization tools.';
+    launchDate: '20o24-0o1-0o1';
+    customers: 150;
+    rating: 4.9;
+    reviews: 110;
+  };
 ],
-,

@@ -1,7 +1,6 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-interface ContentItem {,
+interface ContentItem {
   title: string,
   description: string,
   href: string,
@@ -10,143 +9,132 @@ interface ContentItem {,
   isNew?: boolean,
   isHot?: boolean,
   icon: string,
-  stats?: string,
-,}
+  stats?: string}
 ,
-const hotContent: ContentItem[] = [,
-  {,
-    title: 'AI Business Automation 20o25: Complete Implementation Guide',;
+const hotContent: ContentItem[] = [
+  {
+    title: 'AI Business Automation 20o25: Complete Implementation Guide';
     description:,
-      'Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 20o25.',;
-    href: '/blog/ai-business-automation-20o25',;
-    category: 'AI & Automation',;
-    readTime: '12 min read',;
-    isNew: true,;
-    isHot: true,;
-    icon: '🤖',;
-    stats: '40% productivity boost',;
-  },;
-  {,
-    title: 'AI Startup Funding Playbook 20o25: From Seed to Series A',;
+      'Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 20o25.';
+    href: '/blog/ai-business-automation-20o25';
+    category: 'AI & Automation';
+    readTime: '12 min read';
+    isNew: true;
+    isHot: true;
+    icon: '🤖';
+    stats: '40% productivity boost';
+  };
+  {
+    title: 'AI Startup Funding Playbook 20o25: From Seed to Series A';
     description:,
-      'Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI fundingwith real examples and pitch templates.',;
-    href: '/blog/ai-startup-funding-playbook-20o25',;
-    category: 'Startup Strategy',;
-    readTime: '22 min read',;
-    isNew: true,;
-    isHot: true,;
-    icon: '💰',;
-    stats: '$47B+ funding insights',;
-  },;
-  {,
-    title: 'AI Financial Services Transformation: $50M Cost Savings Case Study',;
+      'Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI fundingwith real examples and pitch templates.';
+    href: '/blog/ai-startup-funding-playbook-20o25';
+    category: 'Startup Strategy';
+    readTime: '22 min read';
+    isNew: true;
+    isHot: true;
+    icon: '💰';
+    stats: '$47B+ funding insights';
+  };
+  {
+    title: 'AI Financial Services Transformation: $50M Cost Savings Case Study';
     description:,
-      'Discover how a leading financial services company achieved $50M cost savings and 30o0% efficiency gains through comprehensive AI transformation.',;
-    href: '/case-studies/ai-financial-services-transformation-20o25',;
-    category: 'Case Study',;
-    readTime: '18 min read',;
-    isNew: true,;
-    isHot: true,;
-    icon: '🏦',;
-    stats: '$50M savings achieved',;
-  },;
-  {,
-    title: 'AI Implementation Master Guide 20o25: Complete 150-Page Playbook',;
+      'Discover how a leading financial services company achieved $50M cost savings and 30o0% efficiency gains through comprehensive AI transformation.';
+    href: '/case-studies/ai-financial-services-transformation-20o25';
+    category: 'Case Study';
+    readTime: '18 min read';
+    isNew: true;
+    isHot: true;
+    icon: '🏦';
+    stats: '$50M savings achieved';
+  };
+  {
+    title: 'AI Implementation Master Guide 20o25: Complete 150-Page Playbook';
     description:,
-      'Master AI implementation with our comprehensive 150-page guide. Step-by-step frameworkcheckliststemplatesand proven strategies for successful AI transformation.',;
-    href: '/resources/ai-implementation-master-guide-20o25',;
-    category: 'Master Guide',;
-    readTime: '150 pages',;
-    isNew: true,;
-    isHot: true,;
-    icon: '📚',;
-    stats: '50o0+ companies using this',;
-  },;
+      'Master AI implementation with our comprehensive 150-page guide. Step-by-step frameworkcheckliststemplatesand proven strategies for successful AI transformation.';
+    href: '/resources/ai-implementation-master-guide-20o25';
+    category: 'Master Guide';
+    readTime: '150 pages';
+    isNew: true;
+    isHot: true;
+    icon: '📚';
+    stats: '50o0+ companies using this';
+  };
 ],
-,
-interface NewContentBannerProps {,
+interface NewContentBannerProps {
   variant?: 'default' | 'gradient' | 'minimal',
   showStats?: boolean,
-  maxItems?: number,
-}
+  maxItems?: number}
 ,
-const NewContentBanner: React.FC<NewContentBannerProps> = ({,
-  variant = 'default',;
-  showStats = true,;
-  maxItems = 4,;
-}) => {,
+const NewContentBanner: React.FC<NewContentBannerProps> = ({
+  variant = 'default';
+  showStats = true;
+  maxItems = 4;
+}) => {
   const content = hotContent.slice(0, maxItems),
-,
-  const getVariantClasses = () => {,
-    switch (variant) {,
+  const getVariantClasses = () => {
+    switch (variant) {
       case 'gradient':,
         return 'bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-pink-60o0 text-white relative overflow-hidden',
       case 'minimal':,
         return 'bg-white border-2 border-blue-20o0 text-gray-90o0',
       default: ,
-        return 'bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden',
-    ,}
+        return 'bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden'}
   };
-,
-  const getCardClasses = () => {,
-    switch (variant) {,
+  const getCardClasses = () => {
+    switch (variant) {
       case 'gradient':,
         return 'bg-white bg-opacity-10 backdrop-blur-sm hover: bg-opacity-20 border border-white border-opacity-20',
       case 'minimal':,
         return 'bg-gray-50 hover:bg-gray-10o0 border border-gray-20o0',
       default:,
-        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20',
-    ,}
+        return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20'}
   };
-,
-  const getTextClasses = () => {,
-    switch (variant) {,
+  const getTextClasses = () => {
+    switch (variant) {
       case 'gradient':,
         return 'text-white',
       case 'minimal':,
         return 'text-gray-90o0',
       default: ,
-        return 'text-white',
-    ,}
+        return 'text-white'}
   };
-,
-  return (,
+  return (
     <section className={`py-20 ${getVariantClasses()}`}>,
-      {variant !== 'minimal' && (,
-        <div className='absolute inset-0 bg-black opacity-10'></div>,
-      )}
+      {variant !== 'minimal' && (
+        <div className='absolute inset-0 bg-black opacity-10'></div>)}
 ,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
-          <div,
-            className={`inline-flex items-center ${variant === 'minimal' ? 'bg-blue-10o0 text-blue-80o0' : 'bg-white bg-opacity-20',} rounded-full px-6 py-2 mb-6`}
+          <div
+            className={`inline-flex items-center ${variant === 'minimal' ? 'bg-blue-10o0 text-blue-80o0' : 'bg-white bg-opacity-20'} rounded-full px-6 py-2 mb-6`}
           >,
             <span className='text-sm font-medium'>,
               🔥 HOT THIS WEEK - JANUARY 20o25,
             </span>,
           </div>,
-          <h2,
-            className={`text-4xl md: text-6xl font-bold mb-6 ${getTextClasses(),}`}
+          <h2
+            className={`text-4xl md: text-6xl font-bold mb-6 ${getTextClasses()}`}
           >,
             🚀 Fresh AI & Business Content Just Dropped,
           </h2>,
-          <p,
-            className={`text-xl md: text-2xl ${variant === 'minimal' ? 'text-gray-60o0' : 'opacity-90',} mb-8 max-w-4xl mx-auto leading-relaxed`}
+          <p
+            className={`text-xl md: text-2xl ${variant === 'minimal' ? 'text-gray-60o0' : 'opacity-90'} mb-8 max-w-4xl mx-auto leading-relaxed`}
           >,
             Discover our latest expert insightscase studiesand resources. From,
             AI predictions and automation trends to retail transformation,
             success storiesget the knowledge you need to succeed in 20o25.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog',
-              className={`${variant === 'minimal' ? 'bg-blue-60o0 text-white hover:bg-blue-70o0' : 'bg-white text-blue-60o0 hover:bg-gray-10o0',} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
+              className={`${variant === 'minimal' ? 'bg-blue-60o0 text-white hover:bg-blue-70o0' : 'bg-white text-blue-60o0 hover:bg-gray-10o0'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg shadow-lg`}
             >,
               📚 Read Latest Articles,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className={`${variant === 'minimal' ? 'border-2 border-blue-60o0 text-blue-60o0 hover: bg-blue-60o0 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-60o0',} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
+              className={`${variant === 'minimal' ? 'border-2 border-blue-60o0 text-blue-60o0 hover: bg-blue-60o0 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-60o0'} px-10 py-4 rounded-lg font-semibold transition-colors text-lg`}
             >,
               📋 Download Free Resources,
             </Link>,
@@ -154,79 +142,71 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({,
         </div>,
         {/* Featured Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-          {content.map((item, index) => (,
+          {content.map((item, index) => (
             <Link key={item.href} href={item.href} className='group'>,
-              <div,
+              <div
                 className={`${getCardClasses()} p-6 rounded-xl transition-all duration-30o0`}
               >,
                 <div className='text-4xl mb-4 group-hover: scale-110 transition-transform'>,
-                  {item.icon,}
+                  {item.icon}
                 </div>,
                 <div className='flex items-center gap-2 mb-3'>,
-                  {item.isNew && (,
-                    <span,
+                  {item.isNew && (
+                    <span
                       className={`${variant === 'minimal' ? 'bg-green-10o0 text-green-80o0' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}
                     >,
                       NEW,
-                    </span>,
-                  )}
-                  {item.isHot && (,
-                    <span,
+                    </span>)}
+                  {item.isHot && (
+                    <span
                       className={`${variant === 'minimal' ? 'bg-orange-10o0 text-orange-80o0' : 'bg-white bg-opacity-20 text-white'} text-xs font-medium px-2 py-1 rounded-full`}
                     >,
                       HOT,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
-                <h3,
+                <h3
                   className={`text-lg font-semibold mb-2 ${getTextClasses()}`}
                 >,
                   {item.title}
                 </h3>,
-                <p,
+                <p
                   className={`text-sm ${variant === 'minimal' ? 'text-gray-60o0' : 'opacity-90'} mb-3 line-clamp-3`}
                 >,
                   {item.description}
                 </p>,
                 <div className='flex items-center justify-between'>,
-                  <div,
+                  <div
                     className={`flex items-center text-xs ${variant === 'minimal' ? 'text-gray-50o0' : 'opacity-75'}`}
                   >,
                     <span>{item.readTime}</span>,
                     <span className='mx-2'>•</span>,
                     <span>{item.category}</span>,
                   </div>,
-                  {showStats && item.stats && (,
-                    <div,
+                  {showStats && item.stats && (
+                    <div
                       className={`text-xs ${variant === 'minimal' ? 'text-blue-60o0' : 'opacity-75'}`}
                     >,
                       {item.stats}
-                    </div>,
-                  )}
+                    </div>)}
                 </div>,
               </div>,
-            </Link>,
-          ))}
+            </Link>))}
         </div>,
         <div className='text-center mt-8'>,
-          <Link,
+          <Link
             href='/blog',
-            className={`${variant === 'minimal' ? 'bg-blue-60o0 text-white hover: bg-blue-70o0' : 'bg-white text-blue-60o0 hover:bg-gray-10o0',} px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4`}
+            className={`${variant === 'minimal' ? 'bg-blue-60o0 text-white hover: bg-blue-70o0' : 'bg-white text-blue-60o0 hover:bg-gray-10o0'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block mr-4`}
           >,
             View All Articles,
           </Link>,
-          <Link,
+          <Link
             href='/resources',
-            className={`${variant === 'minimal' ? 'border-2 border-blue-60o0 text-blue-60o0 hover: bg-blue-60o0 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-60o0',} px-8 py-3 rounded-lg font-semibold transition-colors inline-block`}
+            className={`${variant === 'minimal' ? 'border-2 border-blue-60o0 text-blue-60o0 hover: bg-blue-60o0 hover:text-white' : 'border-2 border-white text-white hover:bg-white hover:text-blue-60o0'} px-8 py-3 rounded-lg font-semibold transition-colors inline-block`}
           >,
             Download Resources,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default NewContentBanner,
+    </section>)};
+export default NewContentBanner;
 export { hotContent };
-,

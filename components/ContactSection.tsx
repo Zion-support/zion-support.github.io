@@ -1,12 +1,10 @@
-import React from 'react',
+import React from 'react';
 MailPhoneMapPin,
+interface ContactSectionProps {
+  className?: string}
 ,
-interface ContactSectionProps {,
-  className?: string,
-}
-,
-const ContactSection: React.FC<ContactSectionProps> = ({ className ,}) => {,
-  return (,
+const ContactSection: React.FC<ContactSectionProps> = ({ className }) => {
+  return (
     <section className={`py-16 bg-gray-50 ${className || ', '}`}>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -44,9 +42,5 @@ const ContactSection: React.FC<ContactSectionProps> = ({ className ,}) => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default ContactSection,
-,
+    </section>)};
+export default ContactSection;

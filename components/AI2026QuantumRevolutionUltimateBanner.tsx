@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26QuantumRevolutionUltimateBanner = () => {,
-  return (,
+const AI20o26QuantumRevolutionUltimateBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-cyan-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-30'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 to-indigo-50o0/10'></div>,
@@ -21,16 +20,14 @@ const AI20o26QuantumRevolutionUltimateBanner = () => {,
             revolutionary AI capabilities.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-quantum-revolution',
-              className='bg-white text-cyan-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-white text-cyan-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-computing/demo',
-              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Watch Quantum Demo,
             </Link>,
           </div>,
@@ -68,9 +65,5 @@ const AI20o26QuantumRevolutionUltimateBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26QuantumRevolutionUltimateBanner,
-,
+    </section>)};
+export default AI20o26QuantumRevolutionUltimateBanner;

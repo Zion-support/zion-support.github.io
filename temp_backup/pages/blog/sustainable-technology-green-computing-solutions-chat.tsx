@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SustainableTechnologyGreenComputingSolutionsChatPage() {,
-  return (,
+export default function SustainableTechnologyGreenComputingSolutionsChatPage() {
+  return (
     <>,
       <Head>,
         <title>Sustainable Technology Green Computing Solutions Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function SustainableTechnologyGreenComputingSolutionsChatPage() {
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

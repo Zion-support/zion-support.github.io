@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function Page() {,
-  return (,
+import React from 'react';
+export default function Page() {
+  return (
     <div className='min-h-screen bg-black'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -22,13 +21,11 @@ export default function Page() {,
           </ul>,
           <h2>Approach</h2>,
           <p>,
-            We layered BM25 with dense embeddings and lightweight re-ranking,;
+            We layered BM25 with dense embeddings and lightweight re-ranking;
             instrumented retrieval telemetry, and used canary evals to validate,
             performance before rollout.,
           </p>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

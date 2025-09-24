@@ -1,13 +1,12 @@
 import React, { useState } from 'react',
 import { Button } from '@/components/ui/button',
-export function WaitlistSection() {,
+export function WaitlistSection() {
   const [email, setEmail] = useState(''),
-  const handleSubmit = e => {,
+  const handleSubmit = e => {
     e.preventDefault(),
     // Handle waitlist signup,
-    console.log('Waitlist signup:', email),
-  };
-  return (,
+    // // console.log('Waitlist signup:', email)};
+  return (
     <section className='py-16 bg-gradient-to-r from-zion-purple to-zion-cyan'>,
       <div className='container mx-auto px-4 text-center'>,
         <h2 className='text-3xl font-bold text-white mb-4'>,
@@ -17,7 +16,7 @@ export function WaitlistSection() {,
           Be among the first to experience the future of AI marketplace,
         </p>,
         <form onSubmit={handleSubmit} className='max-w-md mx-auto flex gap-4'>,
-          <input,
+          <input
             type='email',
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -25,15 +24,12 @@ export function WaitlistSection() {,
             className='flex-1 px-4 py-3 rounded-lg border-0 focus: ring-2 focus:ring-white',
             required,
           />,
-          <Button,
+          <Button
             type='submit',
-            className='bg-white text-zion-purple hover:bg-gray-10o0',
-          >,
+            className='bg-white text-zion-purple hover:bg-gray-10o0'>,
             Join,
           </Button>,
         </form>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

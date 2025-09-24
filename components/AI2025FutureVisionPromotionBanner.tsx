@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25FutureVisionPromotionBanner = () => {,
-  return (,
+const AI20o25FutureVisionPromotionBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-violet-90o0 via-purple-90o0 to-fuchsia-90o0 text-white py-20 overflow-hidden'>,
       {/* Animated Background Elements */}
       <div className='absolute inset-0 opacity-20'>,
@@ -26,14 +25,14 @@ const AI20o25FutureVisionPromotionBanner = () => {,
         </div>,
         {/* Future Vision Cards */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {/* Neural Consciousness */,}
+          {/* Neural Consciousness */}
           <div className='bg-gradient-to-br from-blue-90o0 to-indigo-90o0 rounded-2xl p-8 border border-blue-40o0 border-opacity-30 hover: border-opacity-60 transition-all duration-30o0 transform hover:scale-10o5'>,
             <div className='text-5xl mb-6 text-center'>🧠</div>,
             <h3 className='text-2xl font-bold mb-4 text-center'>,
               Neural Consciousness,
             </h3>,
             <p className='text-gray-30o0 mb-6 text-center'>,
-              AI systems that achieve true consciousness and self-awareness,;
+              AI systems that achieve true consciousness and self-awareness;
               revolutionizing human-AI collaboration.,
             </p>,
             <div className='text-center'>,
@@ -74,7 +73,7 @@ const AI20o25FutureVisionPromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Synthetic Reality */,}
+          {/* Synthetic Reality */}
           <div className='bg-gradient-to-br from-orange-90o0 to-red-90o0 rounded-2xl p-8 border border-orange-40o0 border-opacity-30 hover: border-opacity-60 transition-all duration-30o0 transform hover:scale-10o5'>,
             <div className='text-5xl mb-6 text-center'>🌐</div>,
             <h3 className='text-2xl font-bold mb-4 text-center'>,
@@ -90,7 +89,7 @@ const AI20o25FutureVisionPromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Post-Human Intelligence */,}
+          {/* Post-Human Intelligence */}
           <div className='bg-gradient-to-br from-cyan-90o0 to-blue-90o0 rounded-2xl p-8 border border-cyan-40o0 border-opacity-30 hover: border-opacity-60 transition-all duration-30o0 transform hover:scale-10o5'>,
             <div className='text-5xl mb-6 text-center'>🌟</div>,
             <h3 className='text-2xl font-bold mb-4 text-center'>,
@@ -106,7 +105,7 @@ const AI20o25FutureVisionPromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Universal Translation */,}
+          {/* Universal Translation */}
           <div className='bg-gradient-to-br from-pink-90o0 to-rose-90o0 rounded-2xl p-8 border border-pink-40o0 border-opacity-30 hover: border-opacity-60 transition-all duration-30o0 transform hover:scale-10o5'>,
             <div className='text-5xl mb-6 text-center'>🌍</div>,
             <h3 className='text-2xl font-bold mb-4 text-center'>,
@@ -139,7 +138,7 @@ const AI20o25FutureVisionPromotionBanner = () => {,
                     AI Singularity Achievement,
                   </h4>,
                   <p className='text-gray-30o0'>,
-                    AI systems will achieve technological singularity,;
+                    AI systems will achieve technological singularity;
                     surpassing human intelligence in all domains.,
                   </p>,
                 </div>,
@@ -185,7 +184,7 @@ const AI20o25FutureVisionPromotionBanner = () => {,
                 <div>,
                   <h4 className='text-xl font-bold mb-2'>Predictive Reality</h4>,
                   <p className='text-gray-30o0'>,
-                    AI will predict future events with near-perfect accuracy,;
+                    AI will predict future events with near-perfect accuracy;
                     transforming decision-making.,
                   </p>,
                 </div>,
@@ -214,24 +213,18 @@ const AI20o25FutureVisionPromotionBanner = () => {,
             technologies.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-future-vision',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Future Vision,
             </Link>,
-            <Link,
+            <Link
               href='/future-predictions-20o25',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-xl hover:bg-white hover:text-black transition-all duration-30o0'>,
               View Predictions,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25FutureVisionPromotionBanner,
-,
+    </section>)};
+export default AI20o25FutureVisionPromotionBanner;

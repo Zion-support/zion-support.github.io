@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function HelpPage() {,
-  return (,
+export default function HelpPage() {
+  return (
     <>,
       <Head>,
         <title>Help - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function HelpPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

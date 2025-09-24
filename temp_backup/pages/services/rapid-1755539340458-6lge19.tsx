@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ServicePage() {,
-  return (,
+export default function ServicePage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Machine Learning - Zion Tech Group</title>,
@@ -43,17 +42,14 @@ export default function ServicePage() {,
           <p className="text-white/75 mb-4">,
             Ready to transform your business with machine learning?,
           </p>,
-          <a,
+          <a
             href="https: //ziontechgroup.com/contact",
-            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors",
-          >,
+            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors">,
             Get Started Today,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/services/rapid-1755539347154-xzj546" className="internal-link">Related Content</Link>,
 <Link href="/services/rapid-1755539353529-war86k" className="internal-link">Related Content</Link>,

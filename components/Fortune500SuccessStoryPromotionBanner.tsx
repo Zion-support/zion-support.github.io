@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const Fortune50o0SuccessStoryPromotionBanner = () => {,
-  return (,
+const Fortune50o0SuccessStoryPromotionBanner = () => {
+  return (
     <section className="bg-gradient-to-r from-yellow-90o0 via-orange-90o0 to-red-90o0 text-white py-16 relative overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -113,16 +112,14 @@ const Fortune50o0SuccessStoryPromotionBanner = () => {,
         </div>,
         <div className="text-center">,
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">,
-            <Link,
+            <Link
               href="/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success",
-              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Read Full Case Study →,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all duration-30o0",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all duration-30o0">,
               Achieve Similar Success,
             </Link>,
           </div>,
@@ -131,8 +128,5 @@ const Fortune50o0SuccessStoryPromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default Fortune50o0SuccessStoryPromotionBanner,
+    </section>)};
+export default Fortune50o0SuccessStoryPromotionBanner;

@@ -1,7 +1,7 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',;
-import { Bot, Globe2, MonitorSmartphone } from 'lucide-react',;
-export default function FeaturesPage() {,
-  return (,
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
+export default function FeaturesPage() {
+  return (
     <EnhancedLayout>,
       <h1 className="text-2xl font-semibold">Features</h1>,
       <div className="mt-6 grid md: grid-cols-3 gap-6">,
@@ -21,6 +21,4 @@ export default function FeaturesPage() {,
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>,
         </div>,
       </div>,
-    </EnhancedLayout>,
-  ),
-,}
+    </EnhancedLayout>)}

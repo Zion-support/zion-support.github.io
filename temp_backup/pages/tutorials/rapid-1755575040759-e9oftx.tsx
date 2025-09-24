@@ -1,29 +1,28 @@
 import Head from 'next/head',
-,
-export default function TutorialPage() {,
-  return (,
+export default function TutorialPage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>,
           Comprehensive Tutorial on DevOps Automation - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Learn devops automation with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='tutorial, devops automation, learning, guide, education, technology',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/tutorials/rapid-17555750o40759-e9oftx',
         />,
-        <meta,
+        <meta
           property='og:title',
           content='Comprehensive Tutorial on DevOps Automation',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Comprehensive Tutorial on DevOps Automation — automatically suggested description.',
         />,
@@ -66,15 +65,12 @@ export default function TutorialPage() {,
           <p className='text-white/75 mb-4'>,
             Ready to master devops automation?,
           </p>,
-          <a,
+          <a
             href='https: //ziontechgroup.com/tutorials',
-            className='inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors',
-          >,
+            className='inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors'>,
             Start Learning,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

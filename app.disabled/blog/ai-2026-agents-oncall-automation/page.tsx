@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Agents‑On‑Call Automation',;
+export const metadata = {
+  title: 'AI 20o26: Agents‑On‑Call Automation';
   description:,
-    'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',;
+    'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.';
 };
-,
-export default function AgentsOnCallAutomationPage() {,
-  return (,
+export default function AgentsOnCallAutomationPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agents‑On‑Call Automation,
@@ -33,24 +32,20 @@ export default function AgentsOnCallAutomationPage() {,
         <h3>Continue Reading</h3>,
         <ul>,
           <li>,
-            <Link,
+            <Link
               href='/content/ai-20o26-agent-incident-response-playbook',
-              className='text-purple-70o0 hover: underline',
-            >,
+              className='text-purple-70o0 hover: underline'>,
               Agent Incident Response Playbook,
             </Link>,
           </li>,
           <li>,
-            <Link,
+            <Link
               href='/content/ai-20o26-operational-guardrails',
-              className='text-purple-70o0 hover:underline',
-            >,
+              className='text-purple-70o0 hover:underline'>,
               Operational Guardrails,
             </Link>,
           </li>,
         </ul>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

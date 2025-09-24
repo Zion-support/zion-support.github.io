@@ -1,42 +1,39 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  ShareIcon,;
-  BookmarkIcon,;
+import {
+  ArrowLeftIcon;
+  ShareIcon;
+  BookmarkIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide | Zion Tech Group',;
+    'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide | Zion Tech Group';
   description:,
-    'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',;
-  keywords: [,
-    'Quantum Computing',;
-    'AI Revolution',;
-    'Enterprise Technology',;
-    'Quantum AI',;
-    'Future Computing',;
-  ],;
-  openGraph: {,
-    title: 'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide',;
+    'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
+  keywords: [
+    'Quantum Computing';
+    'AI Revolution';
+    'Enterprise Technology';
+    'Quantum AI';
+    'Future Computing';
+  ];
+  openGraph: {
+    title: 'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide';
     description:,
-      'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',;
-    images: ['/images/quantum-ai-revolution-20o25.jpg'],;
-  },;
+      'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
+    images: ['/images/quantum-ai-revolution-20o25.jpg'];
+  };
 };
-,
-export default function QuantumAIRevolution20o25Guide() {,
-  return (,
+export default function QuantumAIRevolution20o25Guide() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/blog',
-              className='flex items-center text-white/80 hover:text-white transition-colors',
-            >,
+              className='flex items-center text-white/80 hover:text-white transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Blog,
             </Link>,
@@ -51,7 +48,7 @@ export default function QuantumAIRevolution20o25Guide() {,
           </h1>,
           <p className='text-xl opacity-90 mb-8 leading-relaxed'>,
             Discover how quantum computing and AI are revolutionizing enterprise,
-            operations. Complete guide to quantum AI implementation, benefits,;
+            operations. Complete guide to quantum AI implementation, benefits;
             and future opportunities.,
           </p>,
           <div className='flex flex-wrap gap-4 text-sm'>,
@@ -512,23 +509,19 @@ export default function QuantumAIRevolution20o25Guide() {,
               success.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-indigo-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-indigo-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Get Quantum Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services/quantum-ai-consulting',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors text-center'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumRevolution20o25Banner() {,
-  return (,
+export default function QuantumRevolution20o25Banner() {
+  return (
     <section className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -9,7 +8,7 @@ export default function QuantumRevolution20o25Banner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black rounded-full px-6 py-2 mb-6 font-semibold">,
             <span className="mr-2">⚛️</span>,
             QUANTUM REVOLUTION 20o25,
@@ -18,11 +17,11 @@ export default function QuantumRevolution20o25Banner() {,
           <h2 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">,
             Quantum Computing Revolution,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className="text-xl md: text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
             Harness the power of quantum computing to solve problems that were previously impossible. Experience exponential speedups and breakthrough capabilities.,
           </p>,
-          {/* Key Features */,}
+          {/* Key Features */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-10">,
             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-white border-opacity-20">,
               <div className="text-3xl mb-3">🔬</div>,
@@ -40,22 +39,20 @@ export default function QuantumRevolution20o25Banner() {,
               <p className="text-sm opacity-80">Solve complex optimization problems with quantum speedup</p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/quantum-computing-revolution-20o25",
-              className="bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-purple-30o0 transition-all transform hover:scale-10o5 shadow-lg">,
               Explore Quantum Solutions →,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-90o0 transition-colors">,
               Get Quantum Access,
             </Link>,
           </div>,
-          {/* Performance Metrics */,}
+          {/* Performance Metrics */}
           <div className="mt-12 grid grid-cols-2 md: grid-cols-4 gap-6">,
             <div className="text-center">,
               <div className="text-3xl font-bold text-cyan-40o0 mb-1">10^15</div>,
@@ -76,6 +73,4 @@ export default function QuantumRevolution20o25Banner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

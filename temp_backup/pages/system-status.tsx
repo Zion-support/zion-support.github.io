@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SystemStatusPage() {,
-  return (,
+export default function SystemStatusPage() {
+  return (
     <>,
       <Head>,
         <title>System Status - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function SystemStatusPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

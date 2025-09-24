@@ -1,50 +1,41 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   ArrowRight,
   Star,
-  Sparkles,;
-  TrendingUp,;
-  Clock,;
-  CheckCircle,;
-  Rocket,;
-  Cpu,;
-  Globe,
-} from 'lucide-react',
-,
-const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
+  Sparkles;
+  TrendingUp;
+  Clock;
+  CheckCircle;
+  Rocket;
+  Cpu;
+  Globe} from 'lucide-react',
+const AI20o30FuturePredictionsUltimatePromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const predictions = [,
-    "Artificial General Intelligence (AGI)",;
-    "Quantum AI Supremacy",;
-    "Neural Interface Revolution",;
-    "Consciousness Upload",
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const predictions = [
+    "Artificial General Intelligence (AGI)";
+    "Quantum AI Supremacy";
+    "Neural Interface Revolution";
+    "Consciousness Upload"],
+  const timeline = [
+    { year: "20o25"event: "Quantum AI Integration" };
+    { year: "20o26"event: "Neural Interface Breakthrough" };
+    { year: "20o27"event: "Autonomous Everything" };
+    { year: "20o28"event: "AGI Development" };
+    { year: "20o29"event: "Consciousness Upload" };
+    { year: "20o30"event: "AI-Human Hybrid Society" }
   ],
-,
-  const timeline = [,
-    { year: "20o25"event: "Quantum AI Integration" ,},;
-    { year: "20o26"event: "Neural Interface Breakthrough" ,},;
-    { year: "20o27"event: "Autonomous Everything" ,},;
-    { year: "20o28"event: "AGI Development" ,},;
-    { year: "20o29"event: "Consciousness Upload" ,},;
-    { year: "20o30"event: "AI-Human Hybrid Society" ,}
-  ],
-,
-  return (,
+  return (
     <motion.div,
       className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-indigo-90o0 py-20 px-4",
-      initial={{ opacity: 0y: 50 ,}}
-      animate={isVisible ? { opacity: 1y: 0 ,} : { opacity: 0y: 50 ,}}
-      transition={{ duration: 0.8 ,}}
+      initial={{ opacity: 0y: 50 }}
+      animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 50 }}
+      transition={{ duration: 0.8 }}
     >,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/10 via-blue-60o0/10 to-indigo-60o0/10"  />,
@@ -56,12 +47,12 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto">,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-16 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <motion.div,
             className="space-y-8",
-            initial={{ opacity: 0x: -50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: -50 ,}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -50 }}
+            transition={{ duration: 0.8delay: 0.2 }}
           >,
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold">,
               <Star className="w-4 h-4"  />,
@@ -70,7 +61,7 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
             <h1 className="text-5xl md: text-6xl font-bold text-white leading-tight">,
               The Future of,
               <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
-                {" ",}Artificial Intelligence,
+                {" "}Artificial Intelligence,
               </span>,
               <br  />,
               <span className="text-3xl md: text-4xl text-gray-30o0">,
@@ -83,32 +74,31 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
               Discover what the future holds for humanity and technology.,
             </p>,
             <div className="space-y-4">,
-              {predictions.map((predictionindex) => (,
+              {predictions.map((predictionindex) => (
                 <motion.div,
-                  key={index,}
+                  key={index}
                   className="flex items-center gap-3",
-                  initial={{ opacity: 0x: -20 ,}}
-                  animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: -20 ,}}
-                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 ,}}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -20 }}
+                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 >,
                   <CheckCircle className="w-6 h-6 text-green-40o0 flex-shrink-0"  />,
                   <span className="text-gray-30o0 text-lg">{prediction}</span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
               <motion.button,
                 className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center gap-3 group",
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 Explore Predictions,
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-2 transition-transform"  />,
               </motion.button>,
               <motion.button,
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-30o0",
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 Download Report,
               </motion.button>,
@@ -127,20 +117,20 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
           {/* Right Content - Timeline Visual */}
           <motion.div,
             className="relative",
-            initial={{ opacity: 0x: 50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: 50 ,}}
-            transition={{ duration: 0.8delay: 0.4 ,}}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
           >,
             <div className="relative">,
               {/* Timeline */}
               <div className="space-y-6">,
-                {timeline.map((itemindex) => (,
+                {timeline.map((itemindex) => (
                   <motion.div,
                     key={index}
                     className="flex items-center gap-4",
-                    initial={{ opacity: 0x: 50 ,}}
-                    animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: 50 ,}}
-                    transition={{ duration: 0.6delay: 0.6 + index * 0.1 ,}}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+                    transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
                   >,
                     <div className="flex-shrink-0">,
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl flex items-center justify-center">,
@@ -155,44 +145,40 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
                         </div>,
                       </div>,
                     </div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
               {/* Floating Elements */}
               <motion.div,
                 className="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full blur-xl opacity-60",
-                animate={{,
-                  y: [0-20],;
-                  scale: [1.1],}}
-                transition={{,
-                  duration: 4,;
-                  repeat: Infinity,;
-                  ease: "easeInOut",
-                ,}}
+                animate={{
+                  y: [0-20];
+                  scale: [1.1]}}
+                transition={{
+                  duration: 4;
+                  repeat: Infinity;
+                  ease: "easeInOut"}}
                />,
               <motion.div,
                 className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full blur-xl opacity-60",
-                animate={{,
-                  y: [0o20],;
-                  scale: [1.21],}}
-                transition={{,
-                  duration: 3,;
-                  repeat: Infinity,;
-                  ease: "easeInOut",;
-                  delay: 1,
-                ,}}
+                animate={{
+                  y: [0o20];
+                  scale: [1.21]}}
+                transition={{
+                  duration: 3;
+                  repeat: Infinity;
+                  ease: "easeInOut";
+                  delay: 1}}
                />,
               <motion.div,
                 className="absolute top-1/2 -right-4 w-16 h-16 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full blur-xl opacity-60",
-                animate={{,
-                  x: [0o20],;
-                  scale: [1.1],}}
-                transition={{,
-                  duration: 5,;
-                  repeat: Infinity,;
-                  ease: "easeInOut",;
-                  delay: 2,
-                ,}}
+                animate={{
+                  x: [0o20];
+                  scale: [1.1]}}
+                transition={{
+                  duration: 5;
+                  repeat: Infinity;
+                  ease: "easeInOut";
+                  delay: 2}}
                />,
             </div>,
           </motion.div>,
@@ -200,34 +186,30 @@ const AI20o30FuturePredictionsUltimatePromotionBanner = () => {,
         {/* Bottom Stats */}
         <motion.div,
           className="mt-16 grid grid-cols-1 md: grid-cols-4 gap-8",
-          initial={{ opacity: 0y: 50 ,}}
-          animate={isVisible ? { opacity: 1y: 0 ,} : { opacity: 0y: 50 ,}}
-          transition={{ duration: 0.8delay: 0.8 ,}}
+          initial={{ opacity: 0y: 50 }}
+          animate={isVisible ? { opacity: 1y: 0 } : { opacity: 0y: 50 }}
+          transition={{ duration: 0.8delay: 0.8 }}
         >,
-          {[,
-            { icon: Brainlabel: "AGI Development"value: "85%" ,},;
-            { icon: Cpulabel: "Quantum AI"value: "90%" ,},;
-            { icon: Zaplabel: "Neural Interface"value: "75%" ,},;
-            { icon: Globelabel: "Global Impact"value: "10o0%" ,}
-          ].map((statindex) => (,
+          {[
+            { icon: Brainlabel: "AGI Development"value: "85%" };
+            { icon: Cpulabel: "Quantum AI"value: "90%" };
+            { icon: Zaplabel: "Neural Interface"value: "75%" };
+            { icon: Globelabel: "Global Impact"value: "10o0%" }
+          ].map((statindex) => (
             <motion.div,
               key={index}
               className="text-center",
-              initial={{ opacity: 0scale: 0.8 ,}}
-              animate={isVisible ? { opacity: 1scale: 1 ,} : { opacity: 0scale: 0.8 ,}}
-              transition={{ duration: 0.6delay: 1 + index * 0.1 ,}}
+              initial={{ opacity: 0scale: 0.8 }}
+              animate={isVisible ? { opacity: 1scale: 1 } : { opacity: 0scale: 0.8 }}
+              transition={{ duration: 0.6delay: 1 + index * 0.1 }}
             >,
               <div className="w-16 h-16 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl flex items-center justify-center mx-auto mb-4">,
                 <stat.icon className="w-8 h-8 text-white"  />,
               </div>,
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
               <div className="text-gray-30o0">{stat.label}</div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
       </div>,
-    </motion.div>,
-  ),
-};
-,
-export default AI20o30FuturePredictionsUltimatePromotionBanner,
+    </motion.div>)};
+export default AI20o30FuturePredictionsUltimatePromotionBanner;

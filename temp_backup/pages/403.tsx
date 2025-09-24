@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function Error40o3() {,
-  return (,
+export default function Error40o3() {
+  return (
     <>,
       <Head>,
         <title>40o3 - Zion App</title>,
@@ -16,7 +15,5 @@ export default function Error40o3() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

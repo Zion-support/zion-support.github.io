@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function InternationalPage() {,
-  return (,
+export default function InternationalPage() {
+  return (
     <>,
       <Head>,
         <title>International - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function InternationalPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

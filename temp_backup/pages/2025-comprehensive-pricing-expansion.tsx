@@ -1,79 +1,73 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check,;
-  Star,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Building,;
-  Target,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Grid,;
+import {
+  Check;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowRight;
+  Brain;
+  Building;
+  Target;
+  Zap;
+  Shield;
+  Globe;
+  Grid;
 } from 'lucide-react',
-,
 // Import our new service data,
 import { innovativeMicroSaasExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
 import { innovativeITInfrastructureExpansion } from '../data/20o25-innovative-it-infrastructure-expansion',
 import { innovativeAIServicesExpansion } from '../data/20o25-innovative-ai-services-expansion',
-,
 // Create unified services array,
-const allNewServices = [,
-  ...innovativeMicroSaasExpansionV2,;
-  ...innovativeITInfrastructureExpansion,;
-  ...innovativeAIServicesExpansion,;
+const allNewServices = [
+  ...innovativeMicroSaasExpansionV2;
+  ...innovativeITInfrastructureExpansion;
+  ...innovativeAIServicesExpansion;
 ],
-,
-const serviceCategories = [,
-  {,
-    id: 'micro-saas',;
-    name: 'Micro SAAS Solutions',;
-    icon: <Target className='w-6 h-6' />,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    services: innovativeMicroSaasExpansionV2,;
-  },;
-  {,
-    id: 'it-infrastructure',;
-    name: 'IT Infrastructure',;
-    icon: <Building className='w-6 h-6' />,;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    services: innovativeITInfrastructureExpansion,;
-  },;
-  {,
-    id: 'ai-services',;
-    name: 'AI Services',;
-    icon: <Brain className='w-6 h-6' />,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    services: innovativeAIServicesExpansion,;
-  },;
+const serviceCategories = [
+  {
+    id: 'micro-saas';
+    name: 'Micro SAAS Solutions';
+    icon: <Target className='w-6 h-6' />;
+    color: 'from-green-50o0 to-emerald-50o0';
+    services: innovativeMicroSaasExpansionV2;
+  };
+  {
+    id: 'it-infrastructure';
+    name: 'IT Infrastructure';
+    icon: <Building className='w-6 h-6' />;
+    color: 'from-indigo-50o0 to-purple-50o0';
+    services: innovativeITInfrastructureExpansion;
+  };
+  {
+    id: 'ai-services';
+    name: 'AI Services';
+    icon: <Brain className='w-6 h-6' />;
+    color: 'from-purple-50o0 to-pink-50o0';
+    services: innovativeAIServicesExpansion;
+  };
 ],
-,
-export default function ComprehensivePricingExpansion20o25() {,
+export default function ComprehensivePricingExpansion20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedService, setSelectedService] = useState<any>(null),
-,
   const filteredServices =,
     selectedCategory === 'all',
       ? allNewServices,
       : serviceCategories.find(cat => cat.id === selectedCategory)?.services ||,
         [],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='20o25 Comprehensive Pricing Expansion - Zion Tech Group',
         description='Explore our latest innovative services pricing. Micro SAAS, IT infrastructure, and AI services with competitive pricing and exceptional value.',
-        keywords={[,
-          'pricing',;
-          'micro SAAS pricing',;
-          'IT infrastructure pricing',;
-          'AI services pricing',;
-          'Zion Tech Group',;
+        keywords={[
+          'pricing';
+          'micro SAAS pricing';
+          'IT infrastructure pricing';
+          'AI services pricing';
+          'Zion Tech Group';
         ]}
         image='/og-image.svg',
       />,
@@ -82,33 +76,30 @@ export default function ComprehensivePricingExpansion20o25() {,
         <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20' />,
         <div className='relative max-w-7xl mx-auto text-center'>,
           <motion.h1,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-4xl md: text-6xl font-bold text-white mb-6',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-4xl md: text-6xl font-bold text-white mb-6'>,
             20o25 Comprehensive,
             <span className='block bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
               Pricing Expansion,
             </span>,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto'>,
             Discover competitive pricing for our latest innovative services.,
             Transform your business with cutting-edge solutions at exceptional,
             value.,
           </motion.p>,
           {/* Contact Information */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto'>,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-center'>,
               <div className='flex flex-col items-center'>,
                 <Phone className='w-6 h-6 text-blue-40o0 mb-2' />,
@@ -135,37 +126,34 @@ export default function ComprehensivePricingExpansion20o25() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Category Filter */,}
+      {/* Category Filter */}
       <section className='py-8 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='flex flex-wrap gap-4 justify-center'>,
-            <button,
-              onClick={() => setSelectedCategory('all'),}
-              className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-20o0 ${,
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-20o0 ${
                 selectedCategory === 'all',
                   ? 'bg-gradient-to-r from-gray-50o0 to-slate-50o0 text-white shadow-lg',
-                  : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-              ,}`}
+                  : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
             >,
               <Grid className='w-5 h-5 inline mr-2' />,
               All Services,
             </button>,
-            {serviceCategories.map(category => (,
-              <button,
+            {serviceCategories.map(category => (
+              <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-20o0 ${,
+                className={`px-6 py-3 rounded-xl text-sm font-medium transition-all duration-20o0 ${
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r ' +,
                       category.color +,
                       ' text-white shadow-lg',
-                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                ,}`}
+                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {category.icon}
                 <span className='ml-2'>{category.name}</span>,
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
       </section>,
@@ -173,17 +161,16 @@ export default function ComprehensivePricingExpansion20o25() {,
       <section className='py-12 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='grid gap-8 lg:grid-cols-2 xl:grid-cols-3'>,
-            {filteredServices.map((service, index) => (,
+            {filteredServices.map((service, index) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                className='bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl',
-              >,
-                {/* Service Header */,}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl'>,
+                {/* Service Header */}
                 <div className='text-center mb-6'>,
-                  <div,
+                  <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl mx-auto mb-4`}
                   >,
                     {service.icon}
@@ -227,19 +214,17 @@ export default function ComprehensivePricingExpansion20o25() {,
                     Key Features: ,
                   </h4>,
                   <div className='space-y-2'>,
-                    {service.features.slice(0, 5).map((feature, idx) => (,
+                    {service.features.slice(0, 5).map((feature, idx) => (
                       <div key={idx} className='flex items-center gap-2'>,
                         <Check className='w-4 h-4 text-green-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>,
                           {feature}
                         </span>,
-                      </div>,
-                    ))}
-                    {service.features.length > 5 && (,
+                      </div>))}
+                    {service.features.length > 5 && (
                       <div className='text-blue-40o0 text-sm text-center pt-2'>,
                         +{service.features.length - 5} more features,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                 </div>,
                 {/* Market Info */}
@@ -248,13 +233,13 @@ export default function ComprehensivePricingExpansion20o25() {,
                     <div>,
                       <p className='text-gray-40o0'>Market Size: </p>,
                       <p className='text-white font-medium'>,
-                        {service.marketSize,}
+                        {service.marketSize}
                       </p>,
                     </div>,
                     <div>,
                       <p className='text-gray-40o0'>Growth Rate: </p>,
                       <p className='text-white font-medium'>,
-                        {service.growthRate,}
+                        {service.growthRate}
                       </p>,
                     </div>,
                   </div>,
@@ -264,7 +249,7 @@ export default function ComprehensivePricingExpansion20o25() {,
                   <p className='text-green-40o0 text-sm font-medium mb-2'>,
                     ROI Benefits: ,
                   </p>,
-                  <p className='text-green-30o0 text-xs'>{service.roi,}</p>,
+                  <p className='text-green-30o0 text-xs'>{service.roi}</p>,
                 </div>,
                 {/* Setup Info */}
                 <div className='mb-6 p-3 bg-blue-50o0/10 border border-blue-50o0/20 rounded-lg'>,
@@ -272,36 +257,33 @@ export default function ComprehensivePricingExpansion20o25() {,
                     <div>,
                       <p className='text-gray-40o0'>Setup Time: </p>,
                       <p className='text-white font-medium'>,
-                        {service.setupTime,}
+                        {service.setupTime}
                       </p>,
                     </div>,
                     <div>,
                       <p className='text-gray-40o0'>Customers: </p>,
                       <p className='text-white font-medium'>,
-                        {service.customers.toLocaleString(),}
+                        {service.customers.toLocaleString()}
                       </p>,
                     </div>,
                   </div>,
                 </div>,
                 {/* CTA Buttons */}
                 <div className='space-y-3'>,
-                  <a,
+                  <a
                     href={service.link}
-                    className='w-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-6 py-3 rounded-xl text-center font-medium hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2',
-                  >,
+                    className='w-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-6 py-3 rounded-xl text-center font-medium hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2'>,
                     Learn More,
                     <ArrowRight className='w-4 h-4' />,
                   </a>,
-                  <a,
-                    href={`mailto:${service.contactInfo.email,}?subject=Pricing Inquiry for ${service.name}`}
-                    className='w-full bg-white/10 backdrop-blur-lg border border-white/20 text-white px-6 py-3 rounded-xl text-center font-medium hover: bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2',
-                  >,
+                  <a
+                    href={`mailto:${service.contactInfo.email}?subject=Pricing Inquiry for ${service.name}`}
+                    className='w-full bg-white/10 backdrop-blur-lg border border-white/20 text-white px-6 py-3 rounded-xl text-center font-medium hover: bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2'>,
                     <Mail className='w-4 h-4' />,
                     Get Quote,
                   </a>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -309,12 +291,11 @@ export default function ComprehensivePricingExpansion20o25() {,
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10'>,
             <h2 className='text-3xl font-bold text-white text-center mb-8'>,
               Pricing Comparison by Category,
             </h2>,
@@ -340,25 +321,21 @@ export default function ComprehensivePricingExpansion20o25() {,
                   </tr>,
                 </thead>,
                 <tbody>,
-                  {serviceCategories.map((category, index) => {,
+                  {serviceCategories.map((category, index) => {
                     const services = category.services,
                     const prices = services.map(s =>,
-                      parseInt(s.price.replace('$', '')),
-                    ),
-                    const avgPrice = Math.round(,
-                      prices.reduce((a, b) => a + b, 0) / prices.length,
-                    ),
+                      parseInt(s.price.replace('$', ''))),
+                    const avgPrice = Math.round(
+                      prices.reduce((a, b) => a + b, 0) / prices.length),
                     const minPrice = Math.min(...prices),
                     const maxPrice = Math.max(...prices),
-,
-                    return (,
-                      <tr,
+                    return (
+                      <tr
                         key={category.id}
-                        className='border-b border-white/10',
-                      >,
+                        className='border-b border-white/10'>,
                         <td className='py-4 px-4'>,
                           <div className='flex items-center gap-3'>,
-                            <div,
+                            <div
                               className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}
                             >,
                               {category.icon}
@@ -379,17 +356,14 @@ export default function ComprehensivePricingExpansion20o25() {,
                         </td>,
                         <td className='py-4 px-4'>,
                           <div className='flex items-center gap-1'>,
-                            {[...Array(5)].map((_, i) => (,
-                              <Star,
+                            {[...Array(5)].map((_, i) => (
+                              <Star
                                 key={i}
                                 className={`w-4 h-4 ${i < 4 ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`}
-                              />,
-                            ))}
+                              />))}
                           </div>,
                         </td>,
-                      </tr>,
-                    ),
-                  })}
+                      </tr>)})}
                 </tbody>,
               </table>,
             </div>,
@@ -400,12 +374,11 @@ export default function ComprehensivePricingExpansion20o25() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20'>,
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>,
               Ready to Get Started?,
             </h2>,
@@ -415,17 +388,15 @@ export default function ComprehensivePricingExpansion20o25() {,
               pricing.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='mailto:kleber@ziontechgroup.com?subject=Pricing Consultation Request',
-                className='bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2',
-              >,
+                className='bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2'>,
                 <Mail className='w-5 h-5' />,
                 Get Free Pricing Consultation,
               </a>,
-              <a,
+              <a
                 href='tel:+130o24640950',
-                className='bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2',
-              >,
+                className='bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2'>,
                 <Phone className='w-5 h-5' />,
                 Call for Immediate Pricing,
               </a>,
@@ -433,7 +404,5 @@ export default function ComprehensivePricingExpansion20o25() {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

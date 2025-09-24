@@ -1,101 +1,93 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Search,;
-  Grid,;
-  List,;
-  Star,;
-  Check,;
-  ArrowRight,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Globe,;
-  Cloud,;
-  Network,;
+import {
+  Search;
+  Grid;
+  List;
+  Star;
+  Check;
+  ArrowRight;
+  Brain;
+  Atom;
+  Shield;
+  Globe;
+  Cloud;
+  Network;
 } from 'lucide-react',
-,
 // Import our new service data,
 import { innovative20o25Q4NewServices } from '../data/innovative-20o25-q4-new-services',
 import { emergingTech20o25Innovations } from '../data/emerging-tech-20o25-innovations',
-,
-const contact = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contact = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
 // Combine all services,
-const allServices = [,
-  ...innovative20o25Q4NewServices,;
-  ...emergingTech20o25Innovations,;
+const allServices = [
+  ...innovative20o25Q4NewServices;
+  ...emergingTech20o25Innovations;
 ],
-,
-const categories = [,
-  {,
-    id: 'all',;
-    name: 'All Services',;
-    icon: <Grid className='w-6 h-6' />,;
-    color: 'from-gray-50o0 to-slate-50o0',;
-    description: 'Complete portfolio of innovative services',;
-  },;
-  {,
-    id: 'ai-business',;
-    name: 'AI & Business',;
-    icon: <Brain className='w-6 h-6' />,;
-    color: 'from-blue-50o0 to-purple-50o0',;
-    description: 'AI-powered business solutions and intelligence',;
-  },;
-  {,
-    id: 'cybersecurity',;
-    name: 'Cybersecurity',;
-    icon: <Shield className='w-6 h-6' />,;
-    color: 'from-red-50o0 to-orange-50o0',;
-    description: 'Advanced security and threat intelligence',;
-  },;
-  {,
-    id: 'cloud-devops',;
-    name: 'Cloud & DevOps',;
-    icon: <Cloud className='w-6 h-6' />,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    description: 'Cloud optimization and autonomous DevOps',;
-  },;
-  {,
-    id: 'emerging-tech',;
-    name: 'Emerging Tech',;
-    icon: <Atom className='w-6 h-6' />,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    description: 'Space technology, quantum computing, and more',;
-  },;
-  {,
-    id: 'blockchain-iot',;
-    name: 'Blockchain & IoT',;
-    icon: <Network className='w-6 h-6' />,;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    description: 'Blockchain solutions and IoT platforms',;
-  },;
+const categories = [
+  {
+    id: 'all';
+    name: 'All Services';
+    icon: <Grid className='w-6 h-6' />;
+    color: 'from-gray-50o0 to-slate-50o0';
+    description: 'Complete portfolio of innovative services';
+  };
+  {
+    id: 'ai-business';
+    name: 'AI & Business';
+    icon: <Brain className='w-6 h-6' />;
+    color: 'from-blue-50o0 to-purple-50o0';
+    description: 'AI-powered business solutions and intelligence';
+  };
+  {
+    id: 'cybersecurity';
+    name: 'Cybersecurity';
+    icon: <Shield className='w-6 h-6' />;
+    color: 'from-red-50o0 to-orange-50o0';
+    description: 'Advanced security and threat intelligence';
+  };
+  {
+    id: 'cloud-devops';
+    name: 'Cloud & DevOps';
+    icon: <Cloud className='w-6 h-6' />;
+    color: 'from-green-50o0 to-emerald-50o0';
+    description: 'Cloud optimization and autonomous DevOps';
+  };
+  {
+    id: 'emerging-tech';
+    name: 'Emerging Tech';
+    icon: <Atom className='w-6 h-6' />;
+    color: 'from-purple-50o0 to-pink-50o0';
+    description: 'Space technology, quantum computing, and more';
+  };
+  {
+    id: 'blockchain-iot';
+    name: 'Blockchain & IoT';
+    icon: <Network className='w-6 h-6' />;
+    color: 'from-indigo-50o0 to-purple-50o0';
+    description: 'Blockchain solutions and IoT platforms';
+  };
 ],
-,
-export default function ServicesAdvertising20o25() {,
+export default function ServicesAdvertising20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-,
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     const matchesCategory =,
       selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-,
-  return (,
+    return matchesCategory && matchesSearch}),
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='Innovative Services 20o25 - Zion Tech Group',
         description='Discover our cutting-edge micro SAAS services, IT solutions, and AI platforms. Transform your business with our innovative technology solutions.',
         keywords='micro SAAS, AI services, cybersecurity, cloud optimization, blockchain, IoT, quantum computing, space technology',
@@ -104,9 +96,9 @@ export default function ServicesAdvertising20o25() {,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-5xl md: text-7xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
@@ -114,22 +106,20 @@ export default function ServicesAdvertising20o25() {,
               </span>,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
-              Transform your business with our cutting-edge micro SAAS services,;
+              Transform your business with our cutting-edge micro SAAS services;
               AI-powered solutions, and emerging technology platforms. Stay,
               ahead of the competition with Zion Tech Group.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-              <a,
-                href={`tel:${contact.mobile,}`}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-full hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <a
+                href={`tel:${contact.mobile}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-full hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Phone className='w-5 h-5 mr-2' />,
-                Call {contact.mobile,}
+                Call {contact.mobile}
               </a>,
-              <a,
-                href={`mailto: ${contact.email,}`}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <a
+                href={`mailto: ${contact.email}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Mail className='w-5 h-5 mr-2' />,
                 Email Us,
               </a>,
@@ -137,14 +127,14 @@ export default function ServicesAdvertising20o25() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Contact Bar */,}
+      {/* Contact Bar */}
       <section className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-4'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex flex-col sm:flex-row justify-between items-center text-white'>,
             <div className='flex items-center space-x-6 mb-4 sm:mb-0'>,
               <div className='flex items-center'>,
                 <Phone className='w-5 h-5 mr-2' />,
-                <span className='font-semibold'>{contact.mobile,}</span>,
+                <span className='font-semibold'>{contact.mobile}</span>,
               </div>,
               <div className='flex items-center'>,
                 <Mail className='w-5 h-5 mr-2' />,
@@ -162,10 +152,10 @@ export default function ServicesAdvertising20o25() {,
       <section className='py-8 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between'>,
-            {/* Search */,}
+            {/* Search */}
             <div className='relative flex-1 max-w-md'>,
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-              <input,
+              <input
                 type='text',
                 placeholder='Search services...',
                 value={searchTerm}
@@ -173,25 +163,23 @@ export default function ServicesAdvertising20o25() {,
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent',
               />,
             </div>,
-            {/* View Mode Toggle */,}
+            {/* View Mode Toggle */}
             <div className='flex items-center space-x-2'>,
-              <button,
+              <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-colors ${,
+                className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'grid',
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                ,}`}
+                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
-              <button,
+              <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-colors ${,
+                className={`p-2 rounded-lg transition-colors ${
                   viewMode === 'list',
                     ? 'bg-blue-60o0 text-white',
-                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                ,}`}
+                    : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -200,22 +188,20 @@ export default function ServicesAdvertising20o25() {,
           {/* Category Filters */}
           <div className='mt-8'>,
             <div className='flex flex-wrap gap-4'>,
-              {categories.map(category => (,
-                <button,
+              {categories.map(category => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-30o0 transform hover: scale-10o5 ${,
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-30o0 transform hover: scale-10o5 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' +,
                         category.color +,
                         ' text-white shadow-lg',
-                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20',
-                  ,}`}
+                      : 'bg-white/10 text-gray-30o0 hover:bg-white/20'}`}
                 >,
                   {category.icon}
                   <span>{category.name}</span>,
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </div>,
         </div>,
@@ -227,35 +213,33 @@ export default function ServicesAdvertising20o25() {,
             <h2 className='text-3xl font-bold text-white mb-2'>,
               {selectedCategory === 'all',
                 ? 'All Services',
-                : categories.find(c => c.id === selectedCategory)?.name,}
+                : categories.find(c => c.id === selectedCategory)?.name}
             </h2>,
             <p className='text-gray-40o0'>,
               {filteredServices.length} services available,
             </p>,
           </div>,
-          {viewMode === 'grid' ? (,
+          {viewMode === 'grid' ? (
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {filteredServices.map((service, index) => (,
+              {filteredServices.map((service, index) => (
                 <motion.div,
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='group relative',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='group relative'>,
                   <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl'>,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>,
                       <div className='text-3xl'>{service.icon}</div>,
-                      {service.popular && (,
+                      {service.popular && (
                         <span className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full'>,
                           POPULAR,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     {/* Service Info */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover: text-blue-40o0 transition-colors'>,
-                      {service.name,}
+                      {service.name}
                     </h3>,
                     <p className='text-gray-30o0 text-sm mb-4 line-clamp-2'>,
                       {service.description}
@@ -285,55 +269,49 @@ export default function ServicesAdvertising20o25() {,
                         KEY FEATURES,
                       </h4>,
                       <div className='space-y-2'>,
-                        {service.features.slice(0, 3).map((feature, idx) => (,
-                          <div,
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div
                             key={idx}
-                            className='flex items-center text-sm text-gray-30o0',
-                          >,
+                            className='flex items-center text-sm text-gray-30o0'>,
                             <Check className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                             <span className='line-clamp-1'>{feature}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     {/* Market Info */}
                     <div className='mb-6 space-y-2'>,
                       <div className='text-xs text-gray-40o0'>,
-                        <span className='font-semibold'>Market Position: </span>{' ',}
+                        <span className='font-semibold'>Market Position: </span>{' '}
                         {'marketPosition' in service,
                           ? service.marketPosition,
                           : ''}
                       </div>,
                       <div className='text-xs text-gray-40o0'>,
-                        <span className='font-semibold'>ROI: </span>{' ',}
+                        <span className='font-semibold'>ROI: </span>{' '}
                         {service.roi}
                       </div>,
                     </div>,
                     {/* CTA Button */}
-                    <a,
+                    <a
                       href={service.link}
-                      className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 group-hover:shadow-lg',
-                    >,
+                      className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 group-hover:shadow-lg'>,
                       Learn More,
                       <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />,
                     </a>,
                   </div>,
-                </motion.div>,
-              )),}
-            </div>,
-          ) : (,
+                </motion.div>))}
+            </div>) : (
             <div className='space-y-6'>,
-              {filteredServices.map((service, index) => (,
+              {filteredServices.map((service, index) => (
                 <motion.div,
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 ,}}
-                  animate={{ opacity: 1, x: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='group',
-                >,
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='group'>,
                   <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-30o0'>,
                     <div className='flex flex-col lg:flex-row gap-6'>,
-                      {/* Service Icon and Basic Info */,}
+                      {/* Service Icon and Basic Info */}
                       <div className='flex-shrink-0'>,
                         <div className='text-4xl mb-4'>{service.icon}</div>,
                         <div className='text-center'>,
@@ -354,11 +332,10 @@ export default function ServicesAdvertising20o25() {,
                               {service.rating}
                             </span>,
                           </div>,
-                          {service.popular && (,
+                          {service.popular && (
                             <span className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full'>,
                               POPULAR,
-                            </span>,
-                          )}
+                            </span>)}
                         </div>,
                       </div>,
                       {/* Service Details */}
@@ -366,7 +343,7 @@ export default function ServicesAdvertising20o25() {,
                         <div className='flex items-start justify-between mb-4'>,
                           <div>,
                             <h3 className='text-2xl font-bold text-white mb-2 group-hover: text-blue-40o0 transition-colors'>,
-                              {service.name,}
+                              {service.name}
                             </h3>,
                             <p className='text-gray-30o0 mb-4'>,
                               {service.description}
@@ -382,15 +359,13 @@ export default function ServicesAdvertising20o25() {,
                             <div className='space-y-2'>,
                               {service.features,
                                 .slice(0, 4),
-                                .map((feature, idx) => (,
-                                  <div,
+                                .map((feature, idx) => (
+                                  <div
                                     key={idx}
-                                    className='flex items-center text-sm text-gray-30o0',
-                                  >,
+                                    className='flex items-center text-sm text-gray-30o0'>,
                                     <Check className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                                     <span>{feature}</span>,
-                                  </div>,
-                                ))}
+                                  </div>))}
                             </div>,
                           </div>,
                           <div>,
@@ -401,17 +376,17 @@ export default function ServicesAdvertising20o25() {,
                               <div>,
                                 <span className='font-semibold'>,
                                   Market Position:  ,
-                                </span>{' ',}
+                                </span>{' '}
                                 {'marketPosition' in service,
                                   ? service.marketPosition,
                                   : ''}
                               </div>,
                               <div>,
-                                <span className='font-semibold'>ROI: </span>{' ',}
+                                <span className='font-semibold'>ROI: </span>{' '}
                                 {service.roi}
                               </div>,
                               <div>,
-                                <span className='font-semibold'>Category: </span>{' ',}
+                                <span className='font-semibold'>Category: </span>{' '}
                                 {service.category}
                               </div>,
                             </div>,
@@ -428,17 +403,14 @@ export default function ServicesAdvertising20o25() {,
                                 ? service.technology,
                                 : 'techStack' in service,
                                   ? service.techStack,
-                                  : [],
-                              ),
+                                  : []),
                                 .slice(0, 4),
-                                .map((tech, idx) => (,
-                                  <span,
+                                .map((tech, idx) => (
+                                  <span
                                     key={idx}
-                                    className='px-2 py-1 bg-blue-60o0/20 text-blue-30o0 text-xs rounded',
-                                  >,
+                                    className='px-2 py-1 bg-blue-60o0/20 text-blue-30o0 text-xs rounded'>,
                                     {tech}
-                                  </span>,
-                                ))}
+                                  </span>))}
                             </div>,
                           </div>,
                           <div>,
@@ -448,14 +420,12 @@ export default function ServicesAdvertising20o25() {,
                             <div className='flex flex-wrap gap-2'>,
                               {service.useCases,
                                 .slice(0, 3),
-                                .map((useCase, idx) => (,
-                                  <span,
+                                .map((useCase, idx) => (
+                                  <span
                                     key={idx}
-                                    className='px-2 py-1 bg-purple-60o0/20 text-purple-30o0 text-xs rounded',
-                                  >,
+                                    className='px-2 py-1 bg-purple-60o0/20 text-purple-30o0 text-xs rounded'>,
                                     {useCase}
-                                  </span>,
-                                ))}
+                                  </span>))}
                             </div>,
                           </div>,
                         </div>,
@@ -464,13 +434,12 @@ export default function ServicesAdvertising20o25() {,
                           <div className='text-sm text-gray-40o0'>,
                             <span className='font-semibold'>,
                               Target Audience:  ,
-                            </span>{' ',}
+                            </span>{' '}
                             {service.targetAudience}
                           </div>,
-                          <a,
+                          <a
                             href={service.link}
-                            className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-                          >,
+                            className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                             Learn More,
                             <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />,
                           </a>,
@@ -478,20 +447,18 @@ export default function ServicesAdvertising20o25() {,
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>,
-              )),}
-            </div>,
-          )}
+                </motion.div>))}
+            </div>)}
         </div>,
       </section>,
       {/* Contact CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Ready to Transform Your Business?,
@@ -502,29 +469,26 @@ export default function ServicesAdvertising20o25() {,
               competition.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>,
-              <a,
-                href={`tel:${contact.mobile,}`}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-full hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <a
+                href={`tel:${contact.mobile}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-full hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Phone className='w-5 h-5 mr-2' />,
-                Call {contact.mobile,}
+                Call {contact.mobile}
               </a>,
-              <a,
-                href={`mailto: ${contact.email,}`}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <a
+                href={`mailto: ${contact.email}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-full hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <Mail className='w-5 h-5 mr-2' />,
-                Email {contact.email,}
+                Email {contact.email}
               </a>,
             </div>,
             <div className='mt-8 text-gray-40o0'>,
               <p>,
-                Visit us at: {' ',}
-                <a,
+                Visit us at: {' '}
+                <a
                   href={contact.website}
-                  className='text-blue-40o0 hover: text-blue-30o0 underline',
-                >,
-                  {contact.website,}
+                  className='text-blue-40o0 hover: text-blue-30o0 underline'>,
+                  {contact.website}
                 </a>,
               </p>,
               <p className='mt-2'>{contact.address}</p>,
@@ -545,10 +509,9 @@ export default function ServicesAdvertising20o25() {,
                 solutions, and emerging technology platforms.,
               </p>,
               <div className='flex space-x-4'>,
-                <a,
+                <a
                   href='#',
-                  className='text-gray-40o0 hover: text-white transition-colors',
-                >,
+                  className='text-gray-40o0 hover: text-white transition-colors'>,
                   <Globe className='w-5 h-5' />,
                 </a>,
               </div>,
@@ -558,7 +521,7 @@ export default function ServicesAdvertising20o25() {,
                 Contact Info,
               </h3>,
               <div className='space-y-2 text-gray-40o0'>,
-                <p>📱 {contact.mobile,}</p>,
+                <p>📱 {contact.mobile}</p>,
                 <p>✉️ {contact.email}</p>,
                 <p>📍 {contact.address}</p>,
               </div>,
@@ -566,28 +529,24 @@ export default function ServicesAdvertising20o25() {,
             <div>,
               <h3 className='text-xl font-bold text-white mb-4'>Quick Links</h3>,
               <div className='space-y-2'>,
-                <a,
+                <a
                   href='/services',
-                  className='block text-gray-40o0 hover: text-white transition-colors',
-                >,
+                  className='block text-gray-40o0 hover: text-white transition-colors'>,
                   All Services,
                 </a>,
-                <a,
+                <a
                   href='/about',
-                  className='block text-gray-40o0 hover:text-white transition-colors',
-                >,
+                  className='block text-gray-40o0 hover:text-white transition-colors'>,
                   About Us,
                 </a>,
-                <a,
+                <a
                   href='/contact',
-                  className='block text-gray-40o0 hover:text-white transition-colors',
-                >,
+                  className='block text-gray-40o0 hover:text-white transition-colors'>,
                   Contact,
                 </a>,
-                <a,
+                <a
                   href='/blog',
-                  className='block text-gray-40o0 hover:text-white transition-colors',
-                >,
+                  className='block text-gray-40o0 hover:text-white transition-colors'>,
                   Blog,
                 </a>,
               </div>,
@@ -598,62 +557,51 @@ export default function ServicesAdvertising20o25() {,
           </div>,
         </div>,
       </footer>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 // Missing icon components,
-const Phone = ({ className }: { className?: string }) => (,
-  <svg,
+const Phone = ({ className }: { className?: string }) => (
+  <svg
     className={className}
     fill='none',
     stroke='currentColor',
-    viewBox='0 0 24 24',
-  >,
-    <path,
+    viewBox='0 0 24 24'>,
+    <path
       strokeLinecap='round',
       strokeLinejoin='round',
       strokeWidth={2}
       d='M3 5a2 2 0 0o12-2h3.28a1 1 0 0o1.948.684l1.498 4.493a1 1 0 0o1-.50o2 1.21l-2.257 1.13a11.0o42 11.0o42 0 0o05.516 5.516l1.13-2.257a1 1 0 0o11.21-.50o2l4.493 1.498a1 1 0 0o1.684.949V19a2 2 0 0o1-2 2h-1C9.716 21 3 14.284 3 6V5z',
     />,
-  </svg>,
-),
-,
-const Mail = ({ className }: { className?: string }) => (,
-  <svg,
+  </svg>),
+const Mail = ({ className }: { className?: string }) => (
+  <svg
     className={className}
     fill='none',
     stroke='currentColor',
-    viewBox='0 0 24 24',
-  >,
-    <path,
+    viewBox='0 0 24 24'>,
+    <path
       strokeLinecap='round',
       strokeLinejoin='round',
       strokeWidth={2}
       d='M3 8l7.89 4.26a2 2 0 0o02.22 0L21 8M5 19h14a2 2 0 0o02-2V7a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z',
     />,
-  </svg>,
-),
-,
-const MapPin = ({ className }: { className?: string }) => (,
-  <svg,
+  </svg>),
+const MapPin = ({ className }: { className?: string }) => (
+  <svg
     className={className}
     fill='none',
     stroke='currentColor',
-    viewBox='0 0 24 24',
-  >,
-    <path,
+    viewBox='0 0 24 24'>,
+    <path
       strokeLinecap='round',
       strokeLinejoin='round',
       strokeWidth={2}
       d='M17.657 16.657L13.414 20.9a1.998 1.998 0 0o1-2.827 0l-4.244-4.243a8 8 0 1111.314 0z',
     />,
-    <path,
+    <path
       strokeLinecap='round',
       strokeLinejoin='round',
       strokeWidth={2}
       d='M15 11a3 3 0 11-6 0 3 3 0 0o16 0z',
     />,
-  </svg>,
-),
-,
+  </svg>),

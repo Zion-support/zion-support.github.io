@@ -1,8 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function DocumentationPage() {,
-  return (,
+export default function DocumentationPage() {
+  return (
     <>,
       <Head>,
         <title>Documentation — Zion Tech Group</title>,
@@ -39,7 +38,7 @@ export default function DocumentationPage() {,
               Troubleshooting,
             </a>,
           </nav>,
-          {/* Getting Started Section */,}
+          {/* Getting Started Section */}
           <section id="getting-started" className="mx-auto max-w-7xl px-6 pb-16 mb-16">,
             <h2 className="text-3xl font-bold text-white text-center mb-12">Getting Started</h2>,
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
@@ -95,18 +94,16 @@ export default function DocumentationPage() {,
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">,
                 <h3 className="text-2xl font-bold text-white mb-6">Prerequisites</h3>,
                 <div className="space-y-4">,
-                  {[,
-                    'Node.js 18+ or Python 3.8+',;
-                    'Linux, macOS, or Windows',;
-                    'Minimum 2GB RAM',;
-                    'Network access to Zion Tech Group APIs',;
-                    'Admin/root access to your infrastructure',
-                  ].map((prereq, index) => (,
+                  {[
+                    'Node.js 18+ or Python 3.8+';
+                    'Linux, macOS, or Windows';
+                    'Minimum 2GB RAM';
+                    'Network access to Zion Tech Group APIs';
+                    'Admin/root access to your infrastructure'].map((prereq, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>,
                       <span className="text-white/80">{prereq}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="mt-8 p-4 bg-cyan-50o0/10 border border-cyan-40o0/20 rounded-lg">,
                   <h4 className="text-cyan-40o0 font-semibold mb-2">💡 Pro Tip</h4>,
@@ -179,59 +176,53 @@ export default function DocumentationPage() {,
           <section id="tutorials" className="mx-auto max-w-7xl px-6 pb-16 mb-16">,
             <h2 className="text-3xl font-bold text-white text-center mb-12">Tutorials & Guides</h2>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {[,
-                {,
-                  title: 'Setting Up Your First AI Agent',;
-                  description: 'Learn how to configure and deploy your first autonomous AI agent.',;
-                  duration: '15 min',;
-                  difficulty: 'Beginner',;
-                  icon: '🤖',;
-                  color: 'from-cyan-40o0 to-blue-50o0',
-                ,},;
-                {,
-                  title: 'Creating Custom Automation Rules',;
-                  description: 'Build intelligent automation workflows tailored to your infrastructure.',;
-                  duration: '25 min',;
-                  difficulty: 'Intermediate',;
-                  icon: '⚡',;
-                  color: 'from-fuchsia-40o0 to-purple-50o0',
-                ,},;
-                {,
-                  title: 'Building Custom Dashboards',;
-                  description: 'Create personalized monitoring dashboards with real-time data.',;
-                  duration: '20 min',;
-                  difficulty: 'Intermediate',;
-                  icon: '📊',;
-                  color: 'from-blue-40o0 to-indigo-50o0',
-                ,},;
-                {,
-                  title: 'Integrating with External Tools',;
-                  description: 'Connect Zion Tech Group with your existing DevOps toolchain.',;
-                  duration: '30 min',;
-                  difficulty: 'Advanced',;
-                  icon: '🔗',;
-                  color: 'from-yellow-40o0 to-orange-50o0',
-                ,},;
-                {,
-                  title: 'Security Best Practices',;
-                  description: 'Implement security best practices for your autonomous systems.',;
-                  duration: '20 min',;
-                  difficulty: 'Intermediate',;
-                  icon: '🔒',;
-                  color: 'from-green-40o0 to-emerald-50o0',
-                ,},;
-                {,
-                  title: 'Performance Optimization',;
-                  description: 'Optimize your infrastructure performance using AI insights.',;
-                  duration: '35 min',;
-                  difficulty: 'Advanced',;
-                  icon: '🚀',;
-                  color: 'from-purple-40o0 to-pink-50o0',
-                ,}
-              ].map((tutorial, index) => (,
+              {[
+                {
+                  title: 'Setting Up Your First AI Agent';
+                  description: 'Learn how to configure and deploy your first autonomous AI agent.';
+                  duration: '15 min';
+                  difficulty: 'Beginner';
+                  icon: '🤖';
+                  color: 'from-cyan-40o0 to-blue-50o0'};
+                {
+                  title: 'Creating Custom Automation Rules';
+                  description: 'Build intelligent automation workflows tailored to your infrastructure.';
+                  duration: '25 min';
+                  difficulty: 'Intermediate';
+                  icon: '⚡';
+                  color: 'from-fuchsia-40o0 to-purple-50o0'};
+                {
+                  title: 'Building Custom Dashboards';
+                  description: 'Create personalized monitoring dashboards with real-time data.';
+                  duration: '20 min';
+                  difficulty: 'Intermediate';
+                  icon: '📊';
+                  color: 'from-blue-40o0 to-indigo-50o0'};
+                {
+                  title: 'Integrating with External Tools';
+                  description: 'Connect Zion Tech Group with your existing DevOps toolchain.';
+                  duration: '30 min';
+                  difficulty: 'Advanced';
+                  icon: '🔗';
+                  color: 'from-yellow-40o0 to-orange-50o0'};
+                {
+                  title: 'Security Best Practices';
+                  description: 'Implement security best practices for your autonomous systems.';
+                  duration: '20 min';
+                  difficulty: 'Intermediate';
+                  icon: '🔒';
+                  color: 'from-green-40o0 to-emerald-50o0'};
+                {
+                  title: 'Performance Optimization';
+                  description: 'Optimize your infrastructure performance using AI insights.';
+                  duration: '35 min';
+                  difficulty: 'Advanced';
+                  icon: '🚀';
+                  color: 'from-purple-40o0 to-pink-50o0'}
+              ].map((tutorial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover: border-cyan-40o0/30 transition-all duration-30o0">,
                   <div className="flex items-center justify-between mb-4">,
-                    <div className={`w-12 h-12 bg-gradient-to-br ${tutorial.color,} rounded-xl flex items-center justify-center`}>,
+                    <div className={`w-12 h-12 bg-gradient-to-br ${tutorial.color} rounded-xl flex items-center justify-center`}>,
                       <span className="text-xl">{tutorial.icon}</span>,
                     </div>,
                     <div className="text-right">,
@@ -244,8 +235,7 @@ export default function DocumentationPage() {,
                   <button className="w-full px-4 py-2 bg-white/10 text-white text-sm font-medium rounded-lg border border-white/20 hover: bg-white/20 transition-all duration-20o0">,
                     Start Tutorial,
                   </button>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </section>,
           {/* Examples Section */}
@@ -260,14 +250,14 @@ export default function DocumentationPage() {,
                   <div className="text-yellow-40o0">new</div> <span className="text-white">ZionTechGroup({</span>,
                   <div className="text-white ml-4">apiKey: </div>,
                   <div className="text-green-40o0">'your-api-key'</div>,
-                  <div className="text-white">,}),</div>,
+                  <div className="text-white">}),</div>,
                   <br  />,
                   <div className="text-gray-40o0 mb-2">// Get system metrics</div>,
                   <div className="text-blue-40o0">const</div> <span className="text-white">metrics = </span>,
                   <div className="text-blue-40o0">await</div> <span className="text-white">zionClient.metrics.get({</span>,
                   <div className="text-white ml-4">serverId: </div>,
                   <div className="text-green-40o0">'server-123'</div>,
-                  <div className="text-white">,}),</div>,
+                  <div className="text-white">}),</div>,
                 </div>,
               </div>,
               <div>,
@@ -292,7 +282,7 @@ export default function DocumentationPage() {,
                   <div className="text-white">,</div>,
                   <div className="text-white ml-4">action: </div>,
                   <div className="text-green-40o0">'scale-up'</div>,
-                  <div className="text-white">,})</div>,
+                  <div className="text-white">})</div>,
                 </div>,
               </div>,
             </div>,
@@ -308,7 +298,7 @@ export default function DocumentationPage() {,
                     <div className="text-white ml-4">zion-agent:</div>,
                     <div className="text-white ml-8">image: ziontech/agent:latest</div>,
                     <div className="text-white ml-8">environment:</div>,
-                    <div className="text-white ml-12">- API_KEY=${ZION_API_KEY,}</div>,
+                    <div className="text-white ml-12">- API_KEY=${ZION_API_KEY}</div>,
                   </div>,
                 </div>,
                 <div>,
@@ -326,42 +316,38 @@ export default function DocumentationPage() {,
               </div>,
             </div>,
           </section>,
-          {/* Troubleshooting Section */,}
+          {/* Troubleshooting Section */}
           <section id="troubleshooting" className="mx-auto max-w-7xl px-6 pb-16 mb-16">,
             <h2 className="text-3xl font-bold text-white text-center mb-12">Troubleshooting</h2>,
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">,
                 <h3 className="text-xl font-semibold text-yellow-40o0 mb-4">Common Issues</h3>,
                 <div className="space-y-4">,
-                  {[,
-                    'Agent not connecting to API',;
-                    'High memory usage',;
-                    'Slow response times',;
-                    'Authentication errors',;
-                    'Missing metrics data',
-                  ].map((issue, index) => (,
+                  {[
+                    'Agent not connecting to API';
+                    'High memory usage';
+                    'Slow response times';
+                    'Authentication errors';
+                    'Missing metrics data'].map((issue, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-yellow-40o0 rounded-full"></div>,
                       <span className="text-white/80 text-sm">{issue}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">,
                 <h3 className="text-xl font-semibold text-green-40o0 mb-4">Quick Fixes</h3>,
                 <div className="space-y-4">,
-                  {[,
-                    'Check network connectivity',;
-                    'Verify API key validity',;
-                    'Restart the agent service',;
-                    'Check system resources',;
-                    'Review error logs',
-                  ].map((fix, index) => (,
+                  {[
+                    'Check network connectivity';
+                    'Verify API key validity';
+                    'Restart the agent service';
+                    'Check system resources';
+                    'Review error logs'].map((fix, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>,
                       <span className="text-white/80 text-sm">{fix}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -392,7 +378,7 @@ export default function DocumentationPage() {,
               </div>,
             </div>,
           </section>,
-          {/* CTA Section */,}
+          {/* CTA Section */}
           <section className="mx-auto max-w-4xl px-6 pb-16">,
             <div className="bg-gradient-to-r from-cyan-50o0/20 to-fuchsia-50o0/20 backdrop-blur-xl rounded-3xl p-12 text-center border border-white/20">,
               <h2 className="text-3xl font-bold text-white mb-6">,
@@ -413,6 +399,4 @@ export default function DocumentationPage() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

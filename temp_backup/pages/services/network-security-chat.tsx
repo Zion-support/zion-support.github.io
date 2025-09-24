@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function NetworkSecurityChatPage() {,
-  return (,
+export default function NetworkSecurityChatPage() {
+  return (
     <>,
       <Head>,
         <title>Network Security Chat - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function NetworkSecurityChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

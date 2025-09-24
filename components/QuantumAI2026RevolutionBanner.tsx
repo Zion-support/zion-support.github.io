@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumAI20o26RevolutionBanner() {,
-  return (,
+export default function QuantumAI20o26RevolutionBanner() {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 py-16 px-4'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='text-center'>,
@@ -19,22 +18,18 @@ export default function QuantumAI20o26RevolutionBanner() {,
             that will reshape the world.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-ai-20o26-revolution',
-              className='bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5'>,
               Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all'>,
               Join the Revolution,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

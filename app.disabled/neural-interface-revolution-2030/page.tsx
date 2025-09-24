@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Neural Interface Revolution 20o30: Brain-Computer Integration | Zion Tech Group',;
+    'Neural Interface Revolution 20o30: Brain-Computer Integration | Zion Tech Group';
   description:,
-    'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 20o30.',;
-  keywords: [,
-    'neural interfaces',;
-    'brain computer interface',;
-    'BCI',;
-    'neural implants',;
-    'thought control',;
-    'cognitive enhancement',;
-  ],;
+    'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 20o30.';
+  keywords: [
+    'neural interfaces';
+    'brain computer interface';
+    'BCI';
+    'neural implants';
+    'thought control';
+    'cognitive enhancement';
+  ];
 };
-,
-export default function NeuralInterfacePage() {,
-  return (,
+export default function NeuralInterfacePage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Neural Interface Revolution 20o30: Brain-Computer Integration',
         description='Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 20o30.',
         keywords='neural interfaces, brain computer interface, BCI, neural implants, thought control, cognitive enhancement',
@@ -77,14 +75,14 @@ export default function NeuralInterfacePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Neural Interface Types */,}
+        {/* Neural Interface Types */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
               Types of Neural Interfaces,
             </h2>,
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
-              {/* Non-Invasive Interfaces */,}
+              {/* Non-Invasive Interfaces */}
               <div className='bg-white p-8 rounded-xl shadow-lg border-l-4 border-cyan-50o0'>,
                 <div className='flex items-center mb-6'>,
                   <div className='text-4xl mr-4'>🎧</div>,
@@ -204,7 +202,7 @@ export default function NeuralInterfacePage() {,
               Revolutionary Applications,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-              {/* Thought Control */,}
+              {/* Thought Control */}
               <div className='bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl'>,
                 <div className='text-4xl mb-4'>🎮</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -259,7 +257,7 @@ export default function NeuralInterfacePage() {,
                   Medical Restoration,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Restore lost functions for patients with paralysis, blindness,;
+                  Restore lost functions for patients with paralysis, blindness;
                   or neurological disorders through neural bypass technology.,
                 </p>,
                 <ul className='text-sm text-gray-60o0 space-y-2'>,
@@ -291,7 +289,7 @@ export default function NeuralInterfacePage() {,
                   Neural Virtual Reality,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Direct neural VR experiences that feel completely real,;
+                  Direct neural VR experiences that feel completely real;
                   bypassing traditional sensory input systems.,
                 </p>,
                 <ul className='text-sm text-gray-60o0 space-y-2'>,
@@ -451,7 +449,7 @@ export default function NeuralInterfacePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className='py-16 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -462,23 +460,19 @@ export default function NeuralInterfacePage() {,
               interface technologies.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-cyan-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-cyan-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Neural Journey,
               </Link>,
-              <Link,
+              <Link
                 href='/services/neural-interfaces',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-60o0 transition-colors'>,
                 Explore Neural Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

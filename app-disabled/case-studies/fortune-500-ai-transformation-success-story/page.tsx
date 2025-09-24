@@ -1,46 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  ShareIcon,;
-  BookmarkIcon,;
-  ChartBarIcon,;
-  CurrencyDollarIcon,;
-  TrophyIcon,;
+import {
+  ArrowLeftIcon;
+  ShareIcon;
+  BookmarkIcon;
+  ChartBarIcon;
+  CurrencyDollarIcon;
+  TrophyIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement | Zion Tech Group',;
+    'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement | Zion Tech Group';
   description:,
-    'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',;
-  keywords: [,
-    'Fortune 50o0',;
-    'AI Transformation',;
-    'ROI Success',;
-    'Manufacturing',;
-    'Enterprise AI',;
-  ],;
-  openGraph: {,
+    'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
+  keywords: [
+    'Fortune 50o0';
+    'AI Transformation';
+    'ROI Success';
+    'Manufacturing';
+    'Enterprise AI';
+  ];
+  openGraph: {
     title:,
-      'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement',;
+      'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement';
     description:,
-      'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',;
-    images: ['/images/fortune-50o0-ai-success.jpg'],;
-  },;
+      'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
+    images: ['/images/fortune-50o0-ai-success.jpg'];
+  };
 };
-,
-export default function Fortune50o0AITransformationSuccessStory() {,
-  return (,
+export default function Fortune50o0AITransformationSuccessStory() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='flex items-center text-white/80 hover:text-white transition-colors',
-            >,
+              className='flex items-center text-white/80 hover:text-white transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Case Studies,
             </Link>,
@@ -53,9 +50,9 @@ export default function Fortune50o0AITransformationSuccessStory() {,
             Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement,
           </h1>,
           <p className='text-xl opacity-90 mb-8 leading-relaxed'>,
-            Discover how a Fortune 50o0 manufacturing company achieved{' ',}
+            Discover how a Fortune 50o0 manufacturing company achieved{' '}
             <strong>$50o0M ROI</strong> in just 18 months through comprehensive,
-            AI transformation. Complete case study with implementation details,;
+            AI transformation. Complete case study with implementation details;
             challenges overcome, and measurable results.,
           </p>,
           <div className='flex flex-wrap gap-4 text-sm'>,
@@ -516,28 +513,24 @@ export default function Fortune50o0AITransformationSuccessStory() {,
             </h2>,
             <p className='text-lg mb-6 opacity-90'>,
               This Fortune 50o0 company's success demonstrates the massive,
-              potential of enterprise AI implementation. With proper strategy,;
+              potential of enterprise AI implementation. With proper strategy;
               execution, and support, any organization can achieve similar,
               results.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-green-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services/enterprise-ai-transformation',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors text-center'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

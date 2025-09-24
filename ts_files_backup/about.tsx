@@ -2,24 +2,21 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-import React from 'react',
+import React from 'react';
 MailPhoneMapPinShieldCheckRocketSparklesGlobeCpuBrain,
-export default function AboutPage() {,
-	const contactInfo = {,
-		mobile: '+1 302 464 0950',;
-		email: 'kleber@ziontechgroup.com',;
-		address: '364 E Main St STE 1008 Middletown DE 19709',;
-		website: 'https://ziontechgroup.com',
-	,};
-,
-	const pillars = [,
-		{ title: 'AI-first 'Engineering', 'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' ,},;
-		{ title: 'Platform and 'SRE', 'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' ,},;
-		{ title: 'Quantum R&'D', 'icon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' ,},;
-		{ title: 'Global 'Delivery', 'icon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' ,}
+export default function AboutPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950';
+		email: 'kleber@ziontechgroup.com';
+		address: '364 E Main St STE 1008 Middletown DE 19709';
+		website: 'https://ziontechgroup.com'};
+	const pillars = [
+		{ title: 'AI-first 'Engineering', 'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' };
+		{ title: 'Platform and 'SRE', 'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' };
+		{ title: 'Quantum R&'D', 'icon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' };
+		{ title: 'Global 'Delivery', 'icon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' }
 	],
-,
-	return (,
+	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">,
 			<Head>,
 				<title>About Us - Zion Tech Group</title>,
@@ -59,27 +56,26 @@ export default function AboutPage() {,
 						</Card>,
 					</div>,
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">,
-						{pillars.map((p) => (,
-							<Card key={p.title,} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">,
+						{pillars.map((p) => (
+							<Card key={p.title} className="bg-gradient-to-br from-gray-900/70 to-black/80 border border-gray-700/40 p-6">,
 								<div className="flex items-center gap-3 mb-3 text-white">{p.icon}<span className="font-semibold">{p.title}</span></div>,
 								<p className="text-gray-300 text-sm">{p.desc}</p>,
-							</Card>,
-						))}
+							</Card>))}
 					</div>,
 					<Card className="bg-gradient-to-br from-gray-900/80 to-black/90 border border-gray-700/50 backdrop-blur-xl p-8">,
 						<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
 							<div className="flex items-center gap-3 text-cyan-400">,
 								<Phone className="w-5 h-5" />,
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`} className="hover: text-white">{contactInfo.mobile,}</a>,
+								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`} className="hover: text-white">{contactInfo.mobile}</a>,
 							</div>,
 							<div className="flex items-center gap-3 text-purple-400">,
 								<Mail className="w-5 h-5" />,
-								<a href={`mailto: ${contactInfo.email,}`} className="hover: text-white">{contactInfo.email,}</a>,
+								<a href={`mailto: ${contactInfo.email}`} className="hover: text-white">{contactInfo.email}</a>,
 							</div>,
 							<div className="flex items-center gap-3 text-green-400">,
 								<MapPin className="w-5 h-5" />,
-								<a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`} target="_blank" rel="noopener noreferrer" className="hover: text-white">,
-									{contactInfo.address,}
+								<a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover: text-white">,
+									{contactInfo.address}
 								</a>,
 							</div>,
 						</div>,
@@ -89,61 +85,53 @@ export default function AboutPage() {,
 					</Card>,
 				</div>,
 			</section>,
-		</UltraFuturisticBackground>,
-	),
-}
+		</UltraFuturisticBackground>)}
 ,
 =======,
-,
-export default function AboutPage() {,
-  const values = [,
-    {,
-      icon: '🚀',;
-      title: 'Innovation',;
-      description: 'Constantly pushing boundaries and exploring new frontiers in technology',;
-      color: 'text-cyan-400',;
-      gradient: 'from-cyan-400 to-blue-500',},;
-    {,
-      icon: '🤖',;
-      title: 'Autonomy',;
-      description: 'Building systems that can operate independently and make intelligent decisions',;
-      color: 'text-fuchsia-400',;
-      gradient: 'from-fuchsia-400 to-purple-500',},;
-    {,
-      icon: '🌍',;
-      title: 'Impact',;
-      description: 'Creating technology that makes a positive difference in the world',;
-      color: 'text-green-400',;
-      gradient: 'from-green-400 to-emerald-500',}],
-,
-  const services = [,
-    {,
-      title: 'AI Development',;
-      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.',;
-      icon: '🧠',;
-      color: 'text-cyan-400',;
-      gradient: 'from-cyan-400 to-blue-500',},;
-    {,
-      title: 'Automation Systems',;
-      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.',;
-      icon: '⚙️',;
-      color: 'text-fuchsia-400',;
-      gradient: 'from-fuchsia-400 to-purple-500',}],
-,
-  const achievements = [,
-    { number: '600+'label: ''Services', 'color: 'text-cyan-400' ,},;
-    { number: '1000%'label: ''ROI', 'color: 'text-fuchsia-400' ,},;
-    { number: '24/7'label: ''Support', 'color: 'text-green-400' ,},;
-    { number: '99.9%'label: ''SLA', 'color: 'text-blue-400' ,}],
-,
-  const contactInfo = {,
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
+export default function AboutPage() {
+  const values = [
+    {
+      icon: '🚀';
+      title: 'Innovation';
+      description: 'Constantly pushing boundaries and exploring new frontiers in technology';
+      color: 'text-cyan-400';
+      gradient: 'from-cyan-400 to-blue-500'};
+    {
+      icon: '🤖';
+      title: 'Autonomy';
+      description: 'Building systems that can operate independently and make intelligent decisions';
+      color: 'text-fuchsia-400';
+      gradient: 'from-fuchsia-400 to-purple-500'};
+    {
+      icon: '🌍';
+      title: 'Impact';
+      description: 'Creating technology that makes a positive difference in the world';
+      color: 'text-green-400';
+      gradient: 'from-green-400 to-emerald-500'}],
+  const services = [
+    {
+      title: 'AI Development';
+      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.';
+      icon: '🧠';
+      color: 'text-cyan-400';
+      gradient: 'from-cyan-400 to-blue-500'};
+    {
+      title: 'Automation Systems';
+      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.';
+      icon: '⚙️';
+      color: 'text-fuchsia-400';
+      gradient: 'from-fuchsia-400 to-purple-500'}],
+  const achievements = [
+    { number: '600+'label: ''Services', 'color: 'text-cyan-400' };
+    { number: '1000%'label: ''ROI', 'color: 'text-fuchsia-400' };
+    { number: '24/7'label: ''Support', 'color: 'text-green-400' };
+    { number: '99.9%'label: ''SLA', 'color: 'text-blue-400' }],
+  const contactInfo = {
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  return (
       {/* Mission & Vision */}
     <>,
       <Head>,
@@ -211,17 +199,16 @@ export default function AboutPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-            {values.map((valueindex) => (,
-              <Card key={index,} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1,}s` }}>,
+            {values.map((valueindex) => (
+              <Card key={index} className="card-hover text-center group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>,
                 <div className="relative">,
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover: scale-110 transition-transform duration-300`,}>,
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover: scale-110 transition-transform duration-300`}>,
                     {value.icon}
                   </div>,
                 </div>,
                 <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>,
                 <p className="text-gray-400 leading-relaxed">{value.description}</p>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -234,11 +221,11 @@ export default function AboutPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
-            {services.map((serviceindex) => (,
-              <Card key={index,} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1,}s` }}>,
+            {services.map((serviceindex) => (
+              <Card key={index} className="card-hover group border-gradient-blue" style={{ animationDelay: `${index * 0.1}s` }}>,
                 <div className="flex items-start space-x-6">,
                   <div className="relative">,
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover: scale-110 transition-transform duration-300`,}>,
+                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover: scale-110 transition-transform duration-300`}>,
                       {service.icon}
                     </div>,
                   </div>,
@@ -247,20 +234,18 @@ export default function AboutPage() {,
                     <p className="text-gray-400 leading-relaxed">{service.description}</p>,
                   </div>,
                 </div>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
       <section className="section-padding bg-gradient-cursor">,
         <div className="container-cursor">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
-            {achievements.map((achievementindex) => (,
-              <div key={index,} className="text-center group">,
-                <div className={`text-4xl md: text-5xl font-bold mb-3 ${achievement.color,} group-hover: scale-110 transition-transform duration-300`,}>{achievement.number}</div>,
-                <div className="text-gray-400 text-sm md: text-base font-medium">{achievement.label,}</div>,
-              </div>,
-            ))}
+            {achievements.map((achievementindex) => (
+              <div key={index} className="text-center group">,
+                <div className={`text-4xl md: text-5xl font-bold mb-3 ${achievement.color} group-hover: scale-110 transition-transform duration-300`}>{achievement.number}</div>,
+                <div className="text-gray-400 text-sm md: text-base font-medium">{achievement.label}</div>,
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -276,7 +261,7 @@ export default function AboutPage() {,
             <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl">Explore Services</Button>,
           </div>,
         </div>,
-        {/* Contact Section */,}
+        {/* Contact Section */}
         <section className="section-padding bg-gradient-cursor-accent">,
           <div className="container-cursor">,
             <div className="text-center mb-16">,
@@ -289,7 +274,7 @@ export default function AboutPage() {,
               <Card className="text-center p-8 bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30">,
                 <div className="text-4xl mb-4">📞</div>,
                 <h3 className="text-2xl font-bold text-white mb-2">Call Us</h3>,
-                <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile,}</p>,
+                <p className="text-blue-400 font-semibold text-lg">{contactInfo.mobile}</p>,
                 <p className="text-gray-400 text-sm mt-2">Available 24/7 for urgent inquiries</p>,
               </Card>,
               <Card className="text-center p-8 bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30">,
@@ -307,7 +292,7 @@ export default function AboutPage() {,
             </div>,
             <div className="text-center">,
               <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold text-lg mb-6">,
-                🌐 Visit our website: {contactInfo.website,}
+                🌐 Visit our website: {contactInfo.website}
               </div>,
               <p className="text-gray-400 text-lg">,
                 Start your 21-day free trial today and experience the future of technology,
@@ -316,7 +301,5 @@ export default function AboutPage() {,
           </div>,
         </section>,
       </section>,
-    </>,
-  ),
-}
+    </>)}
 ,

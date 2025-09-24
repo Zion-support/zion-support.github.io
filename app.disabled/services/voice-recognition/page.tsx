@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'voice-recognition - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'voice-recognition - Zion Tech Group';
   description:,
-    'Professional voice-recognition solutions for your business needs.',;
-  keywords: 'voice-recognition, services, business, technology',;
+    'Professional voice-recognition solutions for your business needs.';
+  keywords: 'voice-recognition, services, business, technology';
 };
-export default function VoiceRecognitionPage() {,
-  return (,
+export default function VoiceRecognitionPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function VoiceRecognitionPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

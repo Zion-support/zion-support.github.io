@@ -1,4 +1,4 @@
-import React from "react",
+import React from "react";
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard",
@@ -6,16 +6,16 @@ import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
-import React from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
+import React from "react";;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 import React from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -24,32 +24,26 @@ import { use_auth } from '@/hooks / use_auth',
 import { Navigate } from './react-router-dom',
 import { SEO } from '@/components / SEO',
 import { ProtectedRoute } from '@/components / ProtectedRoute',
-
-,
-export default function EnterpriseBilling() {,
+export default function EnterpriseBilling() {
   const { user } = useAuth(),
-,
-export default function EnterpriseBilling() {,
+export default function EnterpriseBilling() {
   const { user } = useAuth(),
   // Check if user has billing permissions,
   // Check if user has billing permissions,
   const hasBillingAccess = user?.role === "enterprise_admin" || ,
                           (user?.permissions && user && user.permissions.includes('billing_access')),
-,
-  if (!hasBillingAccess) {,
+  if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />,
-,
-export default function EnterpriseBilling() {,
-  const { user } = useAuth(),;
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
   // Check if user has billing permissions,
   const hasBillingAccess = user?.role === "enterprise_admin" ||,
-                          (user?.permissions && user.permissions.includes('billing_access')),;
-  if (!hasBillingAccess) {,
-    return <Navigate to="/unauthorized" />,
-  }
-  return (,
+                          (user?.permissions && user.permissions.includes('billing_access'));
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />}
+  return (
     <ProtectedRoute>,
-      <SEO,
+      <SEO
         title="Enterprise Billing - Zion AI Marketplace",
         description="Manage your subscription, view invoice history, and download billing statements.",
       />,
@@ -58,21 +52,18 @@ export default function EnterpriseBilling() {,
         <BillingDashboard />,
       </main>,
       <Footer />,
-    </ProtectedRoute>,
-  ),
-export default function EnterpriseBilling() {,
+    </ProtectedRoute>),
+export default function EnterpriseBilling() {
   const { user } = useAuth(),
   // Check if user has billing permissions,
   const hasBillingAccess = user?.role === "enterprise_admin" ||,
                           (user?.permissions && user.permissions.includes('billing_access')),
-  if (!hasBillingAccess) {,
-    return <Navigate to="/unauthorized" />,
-  }
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />}
 ,
-  return (,
-,
+  return (
     <ProtectedRoute>,
-      <SEO,
+      <SEO
         title="Enterprise Billing - Zion AI Marketplace",
         description="Manage your subscription, view invoice history, and download billing statements.",
       />,
@@ -81,19 +72,9 @@ export default function EnterpriseBilling() {,
         <BillingDashboard />,
       </main>,
       <Footer />,
-    </ProtectedRoute>,
-  ),
-,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
-}
+    </ProtectedRoute>)>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 export default /**,
  * EnterpriseBilling - Function description,
  */,
-function EnterpriseBilling() {,
-  const { user } = use_auth (),
-,
-,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}}}}
+function EnterpriseBilling() {
+  const { user } = use_auth ()>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}

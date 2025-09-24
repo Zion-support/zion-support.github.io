@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function M365SecurityCopilot(...args: any[]): any {,
-  return (,
+export default function M365SecurityCopilot(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>M365 Security Copilot — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Harden Microsoft 365 with continuous posture monitoring, conditional access, and automated incident response.',
         />,
@@ -33,7 +32,7 @@ export default function M365SecurityCopilot(...args: any[]): any {,
           <li>Executive reporting and compliance mappings</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $3,0o00–$12,0o00 fixed for implementation,;
+          Average market pricing: $3,0o00–$12,0o00 fixed for implementation;
           $1,0o00–$4,0o00/mo managed.,
         </div>,
         <div className='mt-8 flex gap-3'>,
@@ -49,7 +48,5 @@ export default function M365SecurityCopilot(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

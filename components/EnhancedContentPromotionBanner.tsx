@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const EnhancedContentPromotionBanner = () => {,
-  return (,
+const EnhancedContentPromotionBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white py-20'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -77,16 +76,14 @@ const EnhancedContentPromotionBanner = () => {,
                 your journey today.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='inline-flex items-center justify-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
+                  className='inline-flex items-center justify-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                   Explore Services →,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-60o0 transition-all duration-30o0',
-                >,
+                  className='inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-emerald-60o0 transition-all duration-30o0'>,
                   Get Free Consultation,
                 </Link>,
               </div>,
@@ -120,9 +117,5 @@ const EnhancedContentPromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default EnhancedContentPromotionBanner,
-,
+    </section>)};
+export default EnhancedContentPromotionBanner;

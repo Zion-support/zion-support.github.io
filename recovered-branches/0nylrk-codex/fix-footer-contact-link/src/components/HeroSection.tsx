@@ -1,11 +1,10 @@
 import { Button } from '@/components/ui/button',
 import { GradientHeading } from '@/components/GradientHeading',
 import { Link } from 'react-router-dom',
-,
-export function HeroSection() {,
-  return (,
+export function HeroSection() {
+  return (
     <section className='relative overflow-hidden py-20 md: py-32'>,
-      {/* Background gradient effect */,}
+      {/* Background gradient effect */}
       <div className='absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80'></div>,
       {/* Animated floating particles */}
       <div className='absolute inset-0'>,
@@ -23,24 +22,20 @@ export function HeroSection() {,
           artificial intelligence. Publishconnectand thrive — all in one place.,
         </p>,
         <div className='flex flex-col sm:flex-row justify-center gap-4'>,
-          <Button,
+          <Button
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6',
             size='lg',
-            asChild,
-          >,
+            asChild>,
             <Link to='/signup'>Join Zion Now</Link>,
           </Button>,
-          <Button,
+          <Button
             variant='outline',
             className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6',
             size='lg',
-            asChild,
-          >,
+            asChild>,
             <Link to='/marketplace'>Explore Marketplace</Link>,
           </Button>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CategoriesPage() {,
-  return (,
+export default function CategoriesPage() {
+  return (
     <>,
       <Head>,
         <title>Categories - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function CategoriesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,16 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { useFeatureFlags } from '@/context/FeatureFlagContext',
-,
-interface FeatureFlagProps {,
+interface FeatureFlagProps {
   name: string,
-  children: React.ReactNode,
-,}
+  children: React.ReactNode}
 ,
-export function FeatureFlag({ namechildren }: FeatureFlagProps) {,
+export function FeatureFlag({ namechildren }: FeatureFlagProps) {
   const { isEnabled } = useFeatureFlags(),
   if (!isEnabled(name)) return null,
-  return <>{children}</>,
-}
+  return <>{children}</>}
 ,
-export default FeatureFlag,
-,
+export default FeatureFlag;

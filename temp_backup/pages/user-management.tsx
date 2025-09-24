@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UserManagementPage() {,
-  return (,
+export default function UserManagementPage() {
+  return (
     <>,
       <Head>,
         <title>User Management - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function UserManagementPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

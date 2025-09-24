@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function [country]Page() {,
-  return (,
+export default function [country]Page() {
+  return (
     <>,
       <Head>,
         <title>[Country] - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function [country]Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

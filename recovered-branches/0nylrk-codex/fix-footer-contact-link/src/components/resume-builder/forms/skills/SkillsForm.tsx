@@ -8,49 +8,38 @@ import { SkillsFormProps } from './types',
 import { SkillsList } from './SkillsList',
 import { AddSkillForm } from './AddSkillForm',
 import { BulkAddSkills } from './BulkAddSkills',
-,
-export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) {,
+export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) {
   const { addSkilldeleteSkillfetchResume } = useResume(),
   const [errorsetError] = useState<string | null>(null),
   const [localSkillsetLocalSkills] = useState<Skill[]>(skills),
-,
-  const handleAddSkill = async (data: Skill) => {,
-    try {,
+  const handleAddSkill = async (data: Skill) => {
+    try {
       setError(null),
       const success = await addSkill(resumeIdata),
-      if (success) {,
+      if (success) {
         // Refresh the skills list,
-        await refreshSkills(),
-      ,}
-      return success,
-    } catch (err: any) {,
+        await refreshSkills()}
+      return success} catch (err: any) {
       setError(err.message || 'An error occurred'),
-      return false,
-    ,}
+      return false}
   };
-,
-  const handleDeleteSkill = async (id: stringcategory: string = 'Other') => {,
-    if (confirm('Are you sure you want to delete this skill?')) {,
+  const handleDeleteSkill = async (id: stringcategory: string = 'Other') => {
+    if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id),
-      if (success) {,
+      if (success) {
         // Update local state,
-        setLocalSkills(localSkills.filter(skill => skill.id !== id)),
-      ,}
+        setLocalSkills(localSkills.filter(skill => skill.id !== id))}
     }
   };
-,
-  const refreshSkills = async () => {,
-    try {,
+  const refreshSkills = async () => {
+    try {
       const resumeData = await fetchResume(resumeId),
-      if (resumeData && resumeData.skills) {,
-        setLocalSkills(resumeData.skills),
-      }
-    } catch (err: any) {,
-      setError(err.message || 'Failed to refresh skills'),
-    ,}
+      if (resumeData && resumeData.skills) {
+        setLocalSkills(resumeData.skills)}
+    } catch (err: any) {
+      setError(err.message || 'Failed to refresh skills')}
   };
-,
-  return (,
+  return (
     <div className="space-y-6">,
       <div>,
         <h2 className="text-xl font-semibold mb-2">Skills</h2>,
@@ -77,7 +66,5 @@ export function SkillsForm({ resumeIdskillsonCompleteonBack }: SkillsFormProps) 
           Next,
         </Button>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

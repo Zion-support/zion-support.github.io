@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumConsciousnessBreakthrough20o30PromotionBanner: React.FC = () => {,
-  return (,
+const QuantumConsciousnessBreakthrough20o30PromotionBanner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-purple-90o0 border border-indigo-50o0/30 rounded-2xl p-8 mb-8'>,
       <div className='absolute inset-0 bg-gradient-to-r from-indigo-50o0/10 via-purple-50o0/10 to-pink-50o0/10 animate-pulse'></div>,
       <div className='relative'>,
@@ -35,16 +34,14 @@ const QuantumConsciousnessBreakthrough20o30PromotionBanner: React.FC = () => {,
             </div>,
           </div>,
           <div className='flex flex-col gap-4'>,
-            <Link,
+            <Link
               href='/quantum-consciousness-breakthrough-20o30',
-              className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 hover:from-indigo-60o0 hover:to-purple-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-purple-50o0/25 whitespace-nowrap',
-            >,
+              className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 hover:from-indigo-60o0 hover:to-purple-60o0 text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-purple-50o0/25 whitespace-nowrap'>,
               Witness the Moment,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-pink-40o0 text-pink-40o0 hover:bg-pink-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap',
-            >,
+              className='border-2 border-pink-40o0 text-pink-40o0 hover:bg-pink-40o0 hover:text-white font-bold py-3 px-8 rounded-full text-center transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap'>,
               Experience Consciousness,
             </Link>,
           </div>,
@@ -70,9 +67,5 @@ const QuantumConsciousnessBreakthrough20o30PromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default QuantumConsciousnessBreakthrough20o30PromotionBanner,
-,
+    </div>)};
+export default QuantumConsciousnessBreakthrough20o30PromotionBanner;

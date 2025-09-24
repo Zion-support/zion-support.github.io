@@ -1,112 +1,86 @@
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-,
-interface UltraAdvancedFuturisticMatrixBackgroundProps {,
+interface UltraAdvancedFuturisticMatrixBackgroundProps {
   children: React.ReactNode,
   className?: string,
   intensity?: 'low' | 'medium' | 'high',
-  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural',
-,}
+  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural'}
 ,
-const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticMatrixBackgroundProps> = ({,
-  children,;
-  className = '',;
-  intensity = 'medium',;
-  colorScheme = 'quantum',
-}) => {,
+const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticMatrixBackgroundProps> = ({
+  children;
+  className = '';
+  intensity = 'medium';
+  colorScheme = 'quantum'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
-,
-  const colorSchemes ={,
-    quantum: {,
-      primary: '#0o0ffff',;
-      secondary: '#ff0o0ff',;
-      accent: '#ffff0o0',;
-      background: 'rgba(0, 0, 0, 0.8)',;
-      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080'],
-    },;
-    cyberpunk: {,
-      primary: '#ff0o080',;
-      secondary: '#0o0ffff',;
-      accent: '#ffff0o0',;
-      background: 'rgba(20, 0, 40, 0.9)',;
-      particles: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff40o00', '#80o00ff'],
-    },;
-    holographic: {,
-      primary: '#0o0ffff',;
-      secondary: '#ff0o0ff',;
-      accent: '#ffff0o0',;
-      background: 'rgba(0, 20, 40, 0.85)',;
-      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff80', '#ff80o00'],
-    },;
-    neural: {,
-      primary: '#0o0ff80',;
-      secondary: '#ff0o080',;
-      accent: '#ffff0o0',;
-      background: 'rgba(0, 40, 20, 0.9)',;
-      particles: ['#0o0ff80', '#ff0o080', '#ffff0o0', '#0o0ffff', '#ff80o00'],
-    }
+  const colorSchemes ={
+    quantum: {
+      primary: '#0o0ffff';
+      secondary: '#ff0o0ff';
+      accent: '#ffff0o0';
+      background: 'rgba(0, 0, 0, 0.8)';
+      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080']};
+    cyberpunk: {
+      primary: '#ff0o080';
+      secondary: '#0o0ffff';
+      accent: '#ffff0o0';
+      background: 'rgba(20, 0, 40, 0.9)';
+      particles: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff40o00', '#80o00ff']};
+    holographic: {
+      primary: '#0o0ffff';
+      secondary: '#ff0o0ff';
+      accent: '#ffff0o0';
+      background: 'rgba(0, 20, 40, 0.85)';
+      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff80', '#ff80o00']};
+    neural: {
+      primary: '#0o0ff80';
+      secondary: '#ff0o080';
+      accent: '#ffff0o0';
+      background: 'rgba(0, 40, 20, 0.9)';
+      particles: ['#0o0ff80', '#ff0o080', '#ffff0o0', '#0o0ffff', '#ff80o00']}
   };
-,
-  const intensitySettings ={,
-    low: { particleCount: 50, speed: 0.5, size: 2 ,},;
-    medium: { particleCount: 10o0, speed: 1, size: 3 ,},;
-    high: { particleCount: 20o0, speed: 1.5, size: 4 ,}
+  const intensitySettings ={
+    low: { particleCount: 50, speed: 0.5, size: 2 };
+    medium: { particleCount: 10o0, speed: 1, size: 3 };
+    high: { particleCount: 20o0, speed: 1.5, size: 4 }
   };
-,
-  useEffect(() => {,
+  useEffect(() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
-,
     const ctx = canvas.getContext('2d'),
     if (!ctx) return,
-,
-    const resizeCanvas = () => {,
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight,
-    };
-,
+      canvas.height = window.innerHeight};
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
-,
     const colors = colorSchemes[colorScheme],
     const settings = intensitySettings[intensity],
-,
     // Matrix rain effect,
-    const matrixRain = () => {,
+    const matrixRain = () => {
       const characters = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',
       const fontSize = 14,
       const columns = canvas.width / fontSize,
       const drops: number[] = [],
+      for (let i = 0, i < columns, i++) {
+        drops[i] = 1}
 ,
-      for (let i = 0, i < columns, i++) {,
-        drops[i] = 1,
-      ,}
-,
-      const draw = () => {,
+      const draw = () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)',
         ctx.fillRect(0, 0, canvas.width, canvas.height),
-,
         ctx.fillStyle = colors.primary,
         ctx.font = `${fontSize}px monospace`,
-,
-        for (let i = 0, i < drops.length, i++) {,
+        for (let i = 0, i < drops.length, i++) {
           const text = characters[Math.floor(Math.random() * characters.length)],
           ctx.fillText(text, i * fontSize, drops[i] * fontSize),
-,
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {,
-            drops[i] = 0,
-          }
-          drops[i]++,
-        }
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0}
+          drops[i]++}
       };
-,
       const interval = setInterval(draw, 50),
-      return () => clearInterval(interval),
-    };
-,
+      return () => clearInterval(interval)};
     // Particle system,
-    class Particle {,
+    class Particle {
       x: number,
       y: number,
       vx: number,
@@ -115,8 +89,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       color: string,
       life: number,
       maxLife: number,
-,
-      constructor() {,
+      constructor() {
         this.x = Math.random() * canvas.width,
         this.y = Math.random() * canvas.height,
         this.vx = (Math.random() - 0.5) * settings.speed,
@@ -124,66 +97,54 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         this.size = Math.random() * settings.size + 1,
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)],
         this.life = Math.random() * 10o0,
-        this.maxLife = 10o0,
-      ,}
+        this.maxLife = 10o0}
 ,
-      update() {,
+      update() {
         this.x += this.vx,
         this.y += this.vy,
         this.life--,
-,
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1,
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1,
-      }
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1}
 ,
-      draw() {,
-        if (ctx) {,
+      draw() {
+        if (ctx) {
           const alpha = this.life / this.maxLife,
           ctx.globalAlpha = alpha,
           ctx.fillStyle = this.color,
           ctx.beginPath(),
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2),
-          ctx.fill(),
-        }
+          ctx.fill()}
       }
     }
 ,
     const particles: Particle[] = [],
-    for (let i = 0, i < settings.particleCount, i++) {,
-      particles.push(new Particle()),
-    ,}
+    for (let i = 0, i < settings.particleCount, i++) {
+      particles.push(new Particle())}
 ,
-    const animate = () => {,
+    const animate = () => {
       ctx.fillStyle = colors.background,
       ctx.fillRect(0, 0, canvas.width, canvas.height),
-,
       // Update and draw particles,
-      particles.forEach((particle, index) => {,
+      particles.forEach((particle, index) => {
         particle.update(),
         particle.draw(),
-,
-        if (particle.life <= 0) {,
-          particles[index] = new Particle(),
-        }
+        if (particle.life <= 0) {
+          particles[index] = new Particle()}
       }),
-,
       // Draw connecting lines between nearby particles,
       ctx.strokeStyle = colors.secondary,
       ctx.lineWidth = 0.5,
       ctx.globalAlpha = 0.3,
-,
-      for (let i = 0, i < particles.length, i++) {,
-        for (let j = i + 1, j < particles.length, j++) {,
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
           const dx = particles[i].x - particles[j].x,
           const dy = particles[i].y - particles[j].y,
           const distance = Math.sqrt(dx * dx + dy * dy),
-,
-          if (distance < 10o0) {,
+          if (distance < 10o0) {
             ctx.beginPath(),
             ctx.moveTo(particles[i].x, particles[i].y),
             ctx.lineTo(particles[j].x, particles[j].y),
-            ctx.stroke(),
-          }
+            ctx.stroke()}
         }
       }
 ,
@@ -191,39 +152,30 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       ctx.strokeStyle = colors.accent,
       ctx.lineWidth = 1,
       ctx.globalAlpha = 0.6,
-,
-      for (let i = 0, i < particles.length, i += 2) {,
-        if (particles[i] && particles[i + 1]) {,
+      for (let i = 0, i < particles.length, i += 2) {
+        if (particles[i] && particles[i + 1]) {
           ctx.beginPath(),
           ctx.moveTo(particles[i].x, particles[i].y),
           ctx.lineTo(particles[i + 1].x, particles[i + 1].y),
-          ctx.stroke(),
-        }
+          ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate),
-    };
-,
+      animationRef.current = requestAnimationFrame(animate)};
     animate(),
-,
     // Start matrix rain,
     const stopMatrix = matrixRain(),
-,
-    return () => {,
-      if (animationRef.current) {,
-        cancelAnimationFrame(animationRef.current),
-      }
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)}
       stopMatrix(),
-      window.removeEventListener('resize', resizeCanvas),
-    };
+      window.removeEventListener('resize', resizeCanvas)};
   }, [intensity, colorScheme]),
-,
-  return (,
+  return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
-      <canvas,
+      <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0",
-        style={{ background: 'transparent' ,}}
+        style={{ background: 'transparent' }}
        />,
       {/* Holographic overlay */}
       <div className="absolute inset-0 z-10 pointer-events-none">,
@@ -232,19 +184,16 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         {/* Scanning lines effect */}
         <motion.div,
           className="absolute inset-0",
-          animate={{,
-            background: [,
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)',;
-              'linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%)',;
-              'linear-gradient(90deg, transparent 0%, rgba(255, 255, 0, 0.1) 50%, transparent 10o0%)',;
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)',
-            ],
-          }}
-          transition={{,
-            duration: 4,;
-            repeat: Infinity,;
-            ease: "linear",
-          ,}}
+          animate={{
+            background: [
+              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)';
+              'linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%)';
+              'linear-gradient(90deg, transparent 0%, rgba(255, 255, 0, 0.1) 50%, transparent 10o0%)';
+              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)']}}
+          transition={{
+            duration: 4;
+            repeat: Infinity;
+            ease: "linear"}}
          />,
       </div>,
       {/* Content */}
@@ -253,49 +202,39 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       </div>,
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 z-5 pointer-events-none">,
-        {[...Array(6)].map((_, i) => (,
+        {[...Array(6)].map((_, i) => (
           <motion.div,
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-60",
-            animate={{,
-              x: [0, 10o0, 0],;
-              y: [0, -10o0, 0],;
-              scale: [1, 1.5, 1],;
-              opacity: [0.6, 1, 0.6],
-            }}
-            transition={{,
-              duration: 8 + i * 2,;
-              repeat: Infinity,;
-              ease: "easeInOut",;
-              delay: i * 0.5,
-            ,}}
-            style={{,
-              left: `${20 + i * 15,}%`,;
-              top: `${30 + i * 10,}%`,
-            }}
-           />,
-        ))}
+            animate={{
+              x: [0, 10o0, 0];
+              y: [0, -10o0, 0];
+              scale: [1, 1.5, 1];
+              opacity: [0.6, 1, 0.6]}}
+            transition={{
+              duration: 8 + i * 2;
+              repeat: Infinity;
+              ease: "easeInOut";
+              delay: i * 0.5}}
+            style={{
+              left: `${20 + i * 15}%`;
+              top: `${30 + i * 10}%`}}
+           />))}
       </div>,
       {/* Energy field effect */}
       <div className="absolute inset-0 z-5 pointer-events-none">,
         <motion.div,
           className="absolute inset-0",
-          animate={{,
-            boxShadow: [,
-              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)',;
-              'inset 0 0 20o0px rgba(255, 0, 255, 0.1)',;
-              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)',
-            ],
-          }}
-          transition={{,
-            duration: 6,;
-            repeat: Infinity,;
-            ease: "easeInOut",
-          ,}}
+          animate={{
+            boxShadow: [
+              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)';
+              'inset 0 0 20o0px rgba(255, 0, 255, 0.1)';
+              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)']}}
+          transition={{
+            duration: 6;
+            repeat: Infinity;
+            ease: "easeInOut"}}
          />,
       </div>,
-    </div>,
-  ),
-};
-,
-export default UltraAdvancedFuturisticMatrixBackground,
+    </div>)};
+export default UltraAdvancedFuturisticMatrixBackground;

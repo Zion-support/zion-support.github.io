@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function StoryPage() {,
-  return (,
+export default function StoryPage() {
+  return (
     <>,
       <Head>,
         <title>Story - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function StoryPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,7 +1,7 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-import {,
+import {
   ArrowRight,
   Zap,
   Brain,
@@ -9,66 +9,53 @@ import {,
   Target,
   TrendingUp,
   Shield,
-  Cpu,;
-  BarChart3,;
-  Code,;
-  Database,;
-  Network,;
-  Cloud,
-} from 'lucide-react',
-,
-const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {,
+  Cpu;
+  BarChart3;
+  Code;
+  Database;
+  Network;
+  Cloud} from 'lucide-react',
+const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentToolsetCurrentTool] = useState(0),
-,
-  const tools = [,
-    {,
-      name: 'Quantum Neural Optimizer',;
-      description: '10,0o00x faster processing',;
-      icon: Brain,;
-      color: 'from-blue-50o0 to-cyan-50o0',
-    ,},;
-    {,
-      name: 'AutoPilot Manager',;
-      description: '24/7 autonomous operations',;
-      icon: Rocket,;
-      color: 'from-purple-50o0 to-pink-50o0',
-    ,},;
-    {,
-      name: 'Market Predictor Pro',;
-      description: '98.5% accuracy predictions',;
-      icon: BarChart3,;
-      color: 'from-green-50o0 to-emerald-50o0',
-    ,},;
-    {,
-      name: 'Threat Detection AI',;
-      description: '99.9% security coverage',;
-      icon: Shield,;
-      color: 'from-red-50o0 to-orange-50o0',
-    ,}
+  const tools = [
+    {
+      name: 'Quantum Neural Optimizer';
+      description: '10,0o00x faster processing';
+      icon: Brain;
+      color: 'from-blue-50o0 to-cyan-50o0'};
+    {
+      name: 'AutoPilot Manager';
+      description: '24/7 autonomous operations';
+      icon: Rocket;
+      color: 'from-purple-50o0 to-pink-50o0'};
+    {
+      name: 'Market Predictor Pro';
+      description: '98.5% accuracy predictions';
+      icon: BarChart3;
+      color: 'from-green-50o0 to-emerald-50o0'};
+    {
+      name: 'Threat Detection AI';
+      description: '99.9% security coverage';
+      icon: Shield;
+      color: 'from-red-50o0 to-orange-50o0'}
   ],
-,
-  const categories = [,
-    { name: 'Quantum 'Computing', 'icon: Cpucount: '12 tools' ,},;
-    { name: 'Autonomous 'Operations', 'icon: Rocketcount: '8 tools' ,},;
-    { name: 'Neural 'Interfaces', 'icon: Braincount: '6 tools' ,},;
-    { name: 'Predictive 'Analytics', 'icon: BarChart3count: '10 tools' ,},;
-    { name: 'Process 'Automation', 'icon: Zapcount: '15 tools' ,},;
-    { name: ''Cybersecurity', 'icon: Shieldcount: '9 tools' ,}
+  const categories = [
+    { name: 'Quantum 'Computing', 'icon: Cpucount: '12 tools' };
+    { name: 'Autonomous 'Operations', 'icon: Rocketcount: '8 tools' };
+    { name: 'Neural 'Interfaces', 'icon: Braincount: '6 tools' };
+    { name: 'Predictive 'Analytics', 'icon: BarChart3count: '10 tools' };
+    { name: 'Process 'Automation', 'icon: Zapcount: '15 tools' };
+    { name: ''Cybersecurity', 'icon: Shieldcount: '9 tools' }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentTool((prev) => (prev + 1) % tools.length),
-    }250o0),
-    return () => clearInterval(interval),
-  }[]),
-,
+    const interval = setInterval(() => {
+      setCurrentTool((prev) => (prev + 1) % tools.length)}250o0),
+    return () => clearInterval(interval)}[]),
   const currentToolData = tools[currentTool],
   const IconComponent = currentToolData.icon,
-,
-  return (,
+  return (
     <div className={`relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-4'}`}>,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/10 via-purple-60o0/10 to-cyan-60o0/10 animate-pulse"></div>,
@@ -87,7 +74,7 @@ const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {,
       </div>,
       <div className="relative px-6 py-8">,
         <div className="flex flex-col lg: flex-row items-center justify-between gap-8">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1 text-center lg: text-left">,
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">,
               <Database className="h-5 w-5 text-green-40o0"  />,
@@ -105,7 +92,7 @@ const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {,
               Discover our complete suite of 60+ AI tools across 6 powerful categories.,
               From quantum computing to neural networkstransform your business with cutting-edge technology.,
             </p>,
-            {/* Tool Carousel */,}
+            {/* Tool Carousel */}
             <div className="flex items-center gap-4 mb-6">,
               <div className={`p-3 bg-gradient-to-r ${currentToolData.color} rounded-xl border border-white/20`}>,
                 <IconComponent className="h-6 w-6 text-white"  />,
@@ -116,40 +103,35 @@ const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-3">,
-              <Link,
+              <Link
                 href="/ai-tools-comprehensive-showcase-20o26",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white font-semibold rounded-lg transition-all duration-20o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white font-semibold rounded-lg transition-all duration-20o0 transform hover:scale-10o5">,
                 Explore All Tools,
                 <ArrowRight className="ml-2 h-4 w-4"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-20o0",
-              >,
+                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-20o0">,
                 Start Free Trial,
               </Link>,
             </div>,
           </div>,
-          {/* Right Visual */,}
+          {/* Right Visual */}
           <div className="flex-shrink-0">,
             <div className="relative">,
               <div className="w-80 h-80 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-2xl border border-white/20 p-6">,
                 {/* Category Grid */}
                 <div className="grid grid-cols-3 gap-3 h-full">,
-                  {categories.map((categoryindex) => {,
+                  {categories.map((categoryindex) => {
                     const CategoryIcon = category.icon,
-                    return (,
-                      <div,
+                    return (
+                      <div
                         key={index}
-                        className="bg-gradient-to-br from-blue-40o0/20 to-purple-40o0/20 rounded-lg p-3 border border-white/10 flex flex-col items-center justify-center text-center hover: border-blue-40o0/50 transition-all duration-30o0",
-                      >,
+                        className="bg-gradient-to-br from-blue-40o0/20 to-purple-40o0/20 rounded-lg p-3 border border-white/10 flex flex-col items-center justify-center text-center hover: border-blue-40o0/50 transition-all duration-30o0">,
                         <CategoryIcon className="h-6 w-6 text-white mb-2"  />,
-                        <div className="text-xs text-white font-semibold">{category.name,}</div>,
+                        <div className="text-xs text-white font-semibold">{category.name}</div>,
                         <div className="text-xs text-gray-40o0">{category.count}</div>,
-                      </div>,
-                    ),
-                  })}
+                      </div>)})}
                 </div>,
                 {/* Central Hub */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">,
@@ -193,8 +175,5 @@ const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIToolsComprehensiveShowcase20o26PromotionBanner,
+    </div>)};
+export default AIToolsComprehensiveShowcase20o26PromotionBanner;

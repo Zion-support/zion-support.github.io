@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o25AutonomousRevolutionBanner = () => {,
-  return (,
+const NewContent20o25AutonomousRevolutionBanner = () => {
+  return (
     <div className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 bg-black/20'></div>,
@@ -13,7 +12,7 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white text-sm font-bold mb-6 animate-bounce'>,
             🚀 JUST RELEASED - BREAKTHROUGH CONTENT,
           </div>,
@@ -25,11 +24,11 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
             <br />,
             <span className='text-white'>BUSINESS REVOLUTION</span>,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl lg:text-3xl mb-8 text-gray-20o0 font-light'>,
             Revolutionary AI Systems Delivering,
             <span className='font-bold text-yellow-40o0'>,
-              {' ',}
+              {' '}
               2,50o0-15,0o00% ROI,
             </span>,
             <br />,
@@ -73,10 +72,9 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
                 <p className='text-sm text-gray-20o0 mb-4'>,
                   Complete roadmap to 15,0o00% ROI with AI 20o25 systems,
                 </p>,
-                <Link,
+                <Link
                   href='/resources/ai-20o25-ultimate-implementation-master-guide',
-                  className='inline-block bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-block bg-white text-purple-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors'>,
                   Read Guide →,
                 </Link>,
               </div>,
@@ -88,10 +86,9 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
                 <p className='text-sm text-gray-20o0 mb-4'>,
                   Fortune 10o0 company achieves unprecedented results,
                 </p>,
-                <Link,
+                <Link
                   href='/case-studies/ai-20o25-global-automation-breakthrough',
-                  className='inline-block bg-white text-green-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-block bg-white text-green-60o0 px-4 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors'>,
                   View Case Study →,
                 </Link>,
               </div>,
@@ -103,31 +100,28 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
                 <p className='text-sm text-gray-20o0 mb-4'>,
                   Deep dive into autonomous business transformation,
                 </p>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-autonomous-business-revolution',
-                  className='inline-block bg-white text-red-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-block bg-white text-red-60o0 px-4 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Read Article →,
                 </Link>,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-content-revolution',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all transform hover:scale-10o5 shadow-2xl'>,
               🚀 Explore All New Content,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/30 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/30 transition-all transform hover:scale-10o5'>,
               💬 Get Expert Consultation,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-12 pt-8 border-t border-white/20'>,
             <div className='flex flex-col md: flex-row justify-center items-center gap-8 text-sm text-gray-30o0'>,
               <div className='flex items-center gap-2'>,
@@ -150,9 +144,5 @@ const NewContent20o25AutonomousRevolutionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25AutonomousRevolutionBanner,
-,
+    </div>)};
+export default NewContent20o25AutonomousRevolutionBanner;

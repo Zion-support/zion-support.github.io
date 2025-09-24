@@ -1,15 +1,15 @@
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
-import {,
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-  DropdownMenuSeparator,;
-  DropdownMenuLabel,;
-  DropdownMenuRadioGroup,;
-  DropdownMenuRadioItem,;
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+  DropdownMenuSeparator;
+  DropdownMenuLabel;
+  DropdownMenuRadioGroup;
+  DropdownMenuRadioItem;
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues,
 import { FileTextChevronDownLoader2Download } from '@/components/icons',
@@ -17,32 +17,24 @@ import { Resume } from '@/types/resume',
 import { exportResumeToPDFExportOptions } from '@/utils/pdfExport',
 import { toast } from '@/hooks/use-toast',
 import { FontFamily } from '@/utils/pdf/fontConfig',
+interface PdfExportButtonProps {
+  resume: Resume}
 ,
-interface PdfExportButtonProps {,
-  resume: Resume,
-,}
-,
-export function PdfExportButton({ resume }: PdfExportButtonProps) {,
+export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExportingsetIsExporting] = useState(false),
   const [themesetTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfoliosetIncludePortfolio] = useState(true),
   const [fontFamilysetFontFamily] = useState<FontFamily>('default'),
-,
-  const handleExport = async () => {,
+  const handleExport = async () => {
     if (isExporting) return,
-,
     setIsExporting(true),
-,
-    try {,
-      const options: ExportOptions = {,
-        theme,;
-        includePortfolio,;
-        maxProjects: 3,;
-        fontFamily,
-      };
-,
+    try {
+      const options: ExportOptions = {
+        theme;
+        includePortfolio;
+        maxProjects: 3;
+        fontFamily};
       const pdfBlob = await exportResumeToPDF(resumeoptions),
-,
       // Create download link and trigger download,
       const url = URL.createObjectURL(pdfBlob),
       const link = document.createElement('a'),
@@ -50,39 +42,30 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {,
       link.download = `${resume.basic_info.title || 'Resume'}.pdf`,
       document.body.appendChild(link),
       link.click(),
-,
       // Clean up,
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
-,
-      toast({,
-        title: "Success!",;
-        description: "Your resume has been downloaded as a PDF.",}),
-    } catch (error) {,
+      toast({
+        title: "Success!";
+        description: "Your resume has been downloaded as a PDF."})} catch (error) {
       console.error('Error exporting PDF: 'error),
-      toast({,
-        title: "Export failed",;
-        description: "There was an error exporting your resume to PDF.",;
-        variant: "destructive",
-      ,}),
-    } finally {,
-      setIsExporting(false),
-    }
+      toast({
+        title: "Export failed";
+        description: "There was an error exporting your resume to PDF.";
+        variant: "destructive"})} finally {
+      setIsExporting(false)}
   };
-,
-  return (,
+  return (
     <DropdownMenu>,
       <DropdownMenuTrigger asChild>,
-        <Button,
+        <Button
           variant="outline",
           className="gap-2",
           disabled={isExporting}
         >,
-          {isExporting ? (,
-            <Loader2 className="h-4 w-4 animate-spin" />,
-          ) : (,
-            <FileText className="h-4 w-4" />,
-          )}
+          {isExporting ? (
+            <Loader2 className="h-4 w-4 animate-spin" />) : (
+            <FileText className="h-4 w-4" />)}
           Export PDF,
           <ChevronDown className="h-4 w-4" />,
         </Button>,
@@ -104,7 +87,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {,
           <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>,
         </DropdownMenuRadioGroup>,
         <DropdownMenuSeparator />,
-        <DropdownMenuCheckboxItem,
+        <DropdownMenuCheckboxItem
           checked={includePortfolio}
           onCheckedChange={setIncludePortfolio}
         >,
@@ -116,7 +99,5 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {,
           Download PDF,
         </DropdownMenuItem>,
       </DropdownMenuContent>,
-    </DropdownMenu>,
-  ),
-}
+    </DropdownMenu>)}
 ,

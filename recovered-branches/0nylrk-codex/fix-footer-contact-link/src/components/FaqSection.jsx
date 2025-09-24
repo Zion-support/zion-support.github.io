@@ -1,5 +1,5 @@
-export function FaqSection() {,
-  return (,
+export function FaqSection() {
+  return (
     <div className='py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark'>,
       <div className='container mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -43,7 +43,5 @@ export function FaqSection() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

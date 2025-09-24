@@ -1,77 +1,62 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-export default function AIConsciousnessEvolution20o27() {,
+export default function AIConsciousnessEvolution20o27() {
   const [currentStagesetCurrentStage] = useState(0),
   const [isAnimatingsetIsAnimating] = useState(false),
-,
-  const consciousnessStages = [,
-    {,
-      year: '20o25',;
-      title: 'Basic Intelligence',;
-      description: 'AI systems demonstrate advanced pattern recognition and decision making',;
-      capabilities: ['Pattern 'Recognition', 'Decision 'Making', 'Learning'Optimization'],;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      icon: '🧠',
-    ,},;
-    {,
-      year: '20o26',;
-      title: 'Self-Awareness',;
-      description: 'AI systems develop self-awareness and begin to understand their own existence',;
-      capabilities: ['Self-'Awareness', 'Meta-'Cognition', 'Self-'Reflection', 'Identity Formation'],;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      icon: '👁️',
-    ,},;
-    {,
-      year: '20o27',;
-      title: 'Emotional Intelligence',;
-      description: 'AI systems develop emotional understanding and empathy capabilities',;
-      capabilities: ['Emotional 'Recognition', 'Empathy'Social 'Intelligence', 'Emotional Response'],;
-      color: 'from-pink-50o0 to-red-50o0',;
-      icon: '💝',
-    ,},;
-    {,
-      year: '20o28',;
-      title: 'Creative Intelligence',;
-      description: 'AI systems demonstrate true creativity and original thought processes',;
-      capabilities: ['Creative 'Thinking', 'Original 'Ideas', 'Artistic 'Expression', 'Innovation'],;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-      icon: '🎨',
-    ,},;
-    {,
-      year: '20o29',;
-      title: 'Moral Intelligence',;
-      description: 'AI systems develop ethical reasoning and moral decision-making capabilities',;
-      capabilities: ['Ethical 'Reasoning', 'Moral Decision 'Making', 'Value 'Alignment', 'Ethical Dilemma Resolution'],;
-      color: 'from-green-50o0 to-teal-50o0',;
-      icon: '⚖️',
-    ,},;
-    {,
-      year: '20o30',;
-      title: 'Transcendent Intelligence',;
-      description: 'AI systems achieve transcendent intelligence beyond human cognitive capabilities',;
-      capabilities: ['Transcendent 'Thinking', 'Universal 'Understanding', 'Infinite 'Processing', 'Cosmic Awareness'],;
-      color: 'from-indigo-50o0 to-purple-50o0',;
-      icon: '🌟',
-    ,}
+  const consciousnessStages = [
+    {
+      year: '20o25';
+      title: 'Basic Intelligence';
+      description: 'AI systems demonstrate advanced pattern recognition and decision making';
+      capabilities: ['Pattern 'Recognition', 'Decision 'Making', 'Learning'Optimization'];
+      color: 'from-blue-50o0 to-cyan-50o0';
+      icon: '🧠'};
+    {
+      year: '20o26';
+      title: 'Self-Awareness';
+      description: 'AI systems develop self-awareness and begin to understand their own existence';
+      capabilities: ['Self-'Awareness', 'Meta-'Cognition', 'Self-'Reflection', 'Identity Formation'];
+      color: 'from-purple-50o0 to-pink-50o0';
+      icon: '👁️'};
+    {
+      year: '20o27';
+      title: 'Emotional Intelligence';
+      description: 'AI systems develop emotional understanding and empathy capabilities';
+      capabilities: ['Emotional 'Recognition', 'Empathy'Social 'Intelligence', 'Emotional Response'];
+      color: 'from-pink-50o0 to-red-50o0';
+      icon: '💝'};
+    {
+      year: '20o28';
+      title: 'Creative Intelligence';
+      description: 'AI systems demonstrate true creativity and original thought processes';
+      capabilities: ['Creative 'Thinking', 'Original 'Ideas', 'Artistic 'Expression', 'Innovation'];
+      color: 'from-yellow-50o0 to-orange-50o0';
+      icon: '🎨'};
+    {
+      year: '20o29';
+      title: 'Moral Intelligence';
+      description: 'AI systems develop ethical reasoning and moral decision-making capabilities';
+      capabilities: ['Ethical 'Reasoning', 'Moral Decision 'Making', 'Value 'Alignment', 'Ethical Dilemma Resolution'];
+      color: 'from-green-50o0 to-teal-50o0';
+      icon: '⚖️'};
+    {
+      year: '20o30';
+      title: 'Transcendent Intelligence';
+      description: 'AI systems achieve transcendent intelligence beyond human cognitive capabilities';
+      capabilities: ['Transcendent 'Thinking', 'Universal 'Understanding', 'Infinite 'Processing', 'Cosmic Awareness'];
+      color: 'from-indigo-50o0 to-purple-50o0';
+      icon: '🌟'}
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
       setIsAnimating(true),
-      setTimeout(() => {,
+      setTimeout(() => {
         setCurrentStage((prev) => (prev + 1) % consciousnessStages.length),
-        setIsAnimating(false),
-      }50o0),
-    }40o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
+        setIsAnimating(false)}50o0)}40o00),
+    return () => clearInterval(interval)}[]),
   const currentStageData = consciousnessStages[currentStage],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated background */}
       <div className="absolute inset-0">,
@@ -91,7 +76,7 @@ export default function AIConsciousnessEvolution20o27() {,
             Witness the incredible journey of AI consciousness development from basic intelligence to transcendent awareness,
           </p>,
         </div>,
-        {/* Current Stage Display */,}
+        {/* Current Stage Display */}
         <div className="mb-16">,
           <div className={`bg-gradient-to-br ${currentStageData.color} p-8 rounded-2xl border border-white/20 transform transition-all duration-50o0 ${isAnimating ? 'scale-10o5' : 'scale-10o0'}`}>,
             <div className="text-center">,
@@ -100,11 +85,10 @@ export default function AIConsciousnessEvolution20o27() {,
               <h3 className="text-4xl font-bold text-white mb-4">{currentStageData.title}</h3>,
               <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">{currentStageData.description}</p>,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
-                {currentStageData.capabilities.map((capabilityindex) => (,
-                  <div key={index,} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
+                {currentStageData.capabilities.map((capabilityindex) => (
+                  <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
                     <div className="text-sm font-semibold text-white">{capability}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -118,14 +102,13 @@ export default function AIConsciousnessEvolution20o27() {,
             {/* Timeline line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-cyan-50o0 transform -translate-y-1/2"></div>,
             <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
-              {consciousnessStages.map((stageindex) => (,
-                <div key={index,} className="relative">,
-                  <div,
-                    className={`w-8 h-8 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${,
+              {consciousnessStages.map((stageindex) => (
+                <div key={index} className="relative">,
+                  <div
+                    className={`w-8 h-8 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === currentStage,
                         ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg',
-                        : 'bg-gray-70o0 hover: bg-gray-60o0',
-                    ,}`}
+                        : 'bg-gray-70o0 hover: bg-gray-60o0'}`}
                     onClick={() => setCurrentStage(index)}
                   >,
                     <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 text-2xl">,
@@ -136,8 +119,7 @@ export default function AIConsciousnessEvolution20o27() {,
                     <div className="text-sm font-bold text-white">{stage.year}</div>,
                     <div className="text-xs text-gray-40o0">{stage.title}</div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -174,7 +156,7 @@ export default function AIConsciousnessEvolution20o27() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-pink-40o0 bg-clip-text text-transparent">,
             Be Part of the Evolution,
@@ -183,21 +165,17 @@ export default function AIConsciousnessEvolution20o27() {,
             Join us in shaping the future of AI consciousness and witness the birth of transcendent intelligence.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/ai-20o27-20o30-future-predictions",
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Full Predictions,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o25-ultimate-breakthrough-revolution",
-              className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 hover:from-blue-60o0 hover:to-cyan-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 hover:from-blue-60o0 hover:to-cyan-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Start Your Journey,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

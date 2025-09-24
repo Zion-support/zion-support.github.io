@@ -1,48 +1,45 @@
-export const metadata = {,
-  title: 'Careers - Zion Tech Group',;
+export const metadata = {
+  title: 'Careers - Zion Tech Group';
   description:,
-    'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
+    'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords:,
-    'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',;
+    'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs';
 };
-,
-export default function CareersPage() {,
-  const openPositions = [,
-    {,
-      title: 'Senior AI Research Engineer',;
-      department: 'Research & Development',;
-      location: 'Remote / Global',;
-      type: 'Full-time',;
+export default function CareersPage() {
+  const openPositions = [
+    {
+      title: 'Senior AI Research Engineer';
+      department: 'Research & Development';
+      location: 'Remote / Global';
+      type: 'Full-time';
       description:,
-        'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',;
-      requirements: [,
-        'PhD in Computer Science, AI, or related field',;
-        '5+ years experience in AI research',;
-        'Expertise in machine learning and neural networks',;
-        'Familiarity with quantum computing concepts',;
-      ],;
-    },;
+        'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.';
+      requirements: [
+        'PhD in Computer Science, AI, or related field';
+        '5+ years experience in AI research';
+        'Expertise in machine learning and neural networks';
+        'Familiarity with quantum computing concepts';
+      ];
+    };
   ],
-,
-  const benefits = [,
-    {,
-      title: 'Remote First',;
-      description: 'Work from anywhere in the world with our distributed team.',;
-      icon: '🌍',;
-    },;
-    {,
-      title: 'Cutting-Edge Technology',;
-      description: 'Work with the latest AI and quantum technologies.',;
-      icon: '🚀',;
-    },;
-    {,
-      title: 'Flexible Hours',;
-      description: "Work when you're most productive with flexible scheduling.",;
-      icon: '⏰',;
-    },;
+  const benefits = [
+    {
+      title: 'Remote First';
+      description: 'Work from anywhere in the world with our distributed team.';
+      icon: '🌍';
+    };
+    {
+      title: 'Cutting-Edge Technology';
+      description: 'Work with the latest AI and quantum technologies.';
+      icon: '🚀';
+    };
+    {
+      title: 'Flexible Hours';
+      description: "Work when you're most productive with flexible scheduling.";
+      icon: '⏰';
+    };
   ],
-,
-  return (,
+  return (
     <div className='space-y-16'>,
       {/* Hero Section */}
       <section className='text-center py-16'>,
@@ -61,15 +58,14 @@ export default function CareersPage() {,
       <section className='py-16'>,
         <h2 className='text-3xl font-bold text-center mb-12'>Open Positions</h2>,
         <div className='space-y-6'>,
-          {openPositions.map((position, index) => (,
-            <div,
+          {openPositions.map((position, index) => (
+            <div
               key={index}
-              className='p-6 rounded-lg border border-white/10 hover: border-white/20 transition-all duration-20o0',
-            >,
+              className='p-6 rounded-lg border border-white/10 hover: border-white/20 transition-all duration-20o0'>,
               <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4'>,
                 <div>,
                   <h3 className='text-xl font-semibold mb-2'>,
-                    {position.title,}
+                    {position.title}
                   </h3>,
                   <div className='flex flex-wrap gap-4 text-sm opacity-70'>,
                     <span>{position.department}</span>,
@@ -83,17 +79,15 @@ export default function CareersPage() {,
                   Apply Now,
                 </button>,
               </div>,
-              <p className='opacity-80 mb-4'>{position.description,}</p>,
+              <p className='opacity-80 mb-4'>{position.description}</p>,
               <div>,
                 <h4 className='font-semibold mb-2'>Requirements: </h4>,
                 <ul className='list-disc list-inside space-y-1 text-sm opacity-70'>,
-                  {position.requirements.map((req, reqIndex) => (,
-                    <li key={reqIndex}>{req}</li>,
-                  ))}
+                  {position.requirements.map((req, reqIndex) => (
+                    <li key={reqIndex}>{req}</li>))}
                 </ul>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </section>,
       {/* Benefits */}
@@ -102,13 +96,12 @@ export default function CareersPage() {,
           Why Work With Us,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {benefits.map((benefit, index) => (,
+          {benefits.map((benefit, index) => (
             <div key={index} className='text-center p-6'>,
               <div className='text-4xl mb-4'>{benefit.icon}</div>,
               <h3 className='text-xl font-semibold mb-3'>{benefit.title}</h3>,
               <p className='opacity-80 text-sm'>{benefit.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </section>,
       {/* Company Culture */}
@@ -123,7 +116,7 @@ export default function CareersPage() {,
               complex problems.,
             </p>,
             <p className='opacity-80 leading-relaxed'>,
-              From AI consciousness research to quantum computing breakthroughs,;
+              From AI consciousness research to quantum computing breakthroughs;
               we're not afraid to tackle the most challenging problems in,
               technology.,
             </p>,
@@ -152,21 +145,17 @@ export default function CareersPage() {,
           operations.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='/contact',
-            className='px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0',
-          >,
+            className='px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0'>,
             Contact Us,
           </a>,
-          <a,
+          <a
             href='mailto:careers@ziontechgroup.com',
-            className='px-8 py-4 border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-all duration-20o0',
-          >,
+            className='px-8 py-4 border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-all duration-20o0'>,
             Send Resume,
           </a>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

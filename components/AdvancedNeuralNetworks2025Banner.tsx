@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AdvancedNeuralNetworks20o25Banner = () => {,
-  return (,
+const AdvancedNeuralNetworks20o25Banner = () => {
+  return (
     <section className='bg-gradient-to-r from-orange-60o0 via-red-60o0 to-pink-60o0 text-white py-20 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-orange-50o0/20 to-pink-50o0/20'></div>,
@@ -21,16 +20,14 @@ const AdvancedNeuralNetworks20o25Banner = () => {,
             Experience AI that thinks like humans.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25/neural-networks',
-              className='bg-white text-orange-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-white text-orange-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Neural Networks,
             </Link>,
-            <Link,
+            <Link
               href='/neural-networks/demo',
-              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Try Neural Demo,
             </Link>,
           </div>,
@@ -66,9 +63,5 @@ const AdvancedNeuralNetworks20o25Banner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AdvancedNeuralNetworks20o25Banner,
-,
+    </section>)};
+export default AdvancedNeuralNetworks20o25Banner;

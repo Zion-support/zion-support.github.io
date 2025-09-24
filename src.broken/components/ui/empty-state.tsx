@@ -1,10 +1,7 @@
-import React from 'react',
-,
-export export export default function empty-state()   {,
-  return (,
+import React from 'react';
+export export export default function empty-state()   {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}

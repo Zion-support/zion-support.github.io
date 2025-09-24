@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AdminDashboardPage() {,
-  return (,
+export default function AdminDashboardPage() {
+  return (
     <>,
       <Head>,
         <title>Admin Dashboard - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function AdminDashboardPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

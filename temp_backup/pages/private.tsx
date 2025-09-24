@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function PrivatePage() {,
-  return (,
+export default function PrivatePage() {
+  return (
     <>,
       <Head>,
         <title>Private - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function PrivatePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

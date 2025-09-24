@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AgentObservability20o25Page() {,
-  return (,
+import React from 'react';
+export default function AgentObservability20o25Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-16 lg: px-8'>,
         <div className='mb-6 flex items-center gap-3 text-xs text-gray-40o0'>,
@@ -31,15 +30,12 @@ export default function AgentObservability20o25Page() {,
           </p>,
         </div>,
         <div className='mt-10'>,
-          <a,
+          <a
             href='/contact',
-            className='text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0',
-          >,
+            className='text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0'>,
             Request briefing →,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

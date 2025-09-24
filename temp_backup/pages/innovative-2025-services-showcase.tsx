@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function Innovative2025ServicesShowcasePage() {,
-  return (,
+export default function Innovative2025ServicesShowcasePage() {
+  return (
     <>,
       <Head>,
         <title>Innovative 2025 Services Showcase - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='innovative 2025 services showcase page',
         />,
@@ -22,7 +21,5 @@ export default function Innovative2025ServicesShowcasePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

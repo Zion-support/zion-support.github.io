@@ -26,69 +26,58 @@ import { industryRealServices } from '../data/industry-real-services',
 import { professionalServices } from '../data/professional-services',
 import { realEnterpriseServices20o25 } from '../data/real-enterprise-services-20o25',
 import { realImplementationServices20o25 } from '../data/real-implementation-services-20o25',
-,
-export default function ServiceFallbackPage() {,
+export default function ServiceFallbackPage() {
   const router = useRouter(),
   const slug = (router.query.slug as string) || '',
-,
-  const service = useMemo(() => {,
+  const service = useMemo(() => {
     if (!slug) return undefined,
-    const all: any[] = ([] as any[]).concat(,
-      enhancedRealMicroSaasServices as any,;
-      extraServices as any,;
-      additionalEnhancedServices as any,;
-      innovativeAIServices as any,;
-      quantumSpaceServices as any,;
-      enterpriseITServices as any,;
-      newRealServices as any,;
-      marketReadyServices as any,;
-      realMarketServices as any,;
-      new20o25Services as any,;
-      newRealInnovations as any,;
-      emergingTechnologyServices as any,;
-      comprehensiveITSolutions as any,;
-      marketValidatedServices as any,;
-      curatedMarketServices as any,;
-      cuttingEdgeITServices as any,;
-      nextGenerationAIServices as any,;
-      nextGenAIServices as any,;
-      industryRealServices as any,;
-      professionalServices as any,;
-      realEnterpriseServices20o25 as any,;
-      realImplementationServices20o25 as any,
-    ),
-    const byLink = all.find(s => {,
-      try {,
+    const all: any[] = ([] as any[]).concat(
+      enhancedRealMicroSaasServices as any;
+      extraServices as any;
+      additionalEnhancedServices as any;
+      innovativeAIServices as any;
+      quantumSpaceServices as any;
+      enterpriseITServices as any;
+      newRealServices as any;
+      marketReadyServices as any;
+      realMarketServices as any;
+      new20o25Services as any;
+      newRealInnovations as any;
+      emergingTechnologyServices as any;
+      comprehensiveITSolutions as any;
+      marketValidatedServices as any;
+      curatedMarketServices as any;
+      cuttingEdgeITServices as any;
+      nextGenerationAIServices as any;
+      nextGenAIServices as any;
+      industryRealServices as any;
+      professionalServices as any;
+      realEnterpriseServices20o25 as any;
+      realImplementationServices20o25 as any),
+    const byLink = all.find(s => {
+      try {
         const url = new URL(s.link),
-        return (,
+        return (
           url.pathname.replace(/^\/+|\/+$/g, '') ===,
-          slug.replace(/^\/+|\/+$/g, ''),
-        ),
-      } catch {,
-        return false,
-      }
+          slug.replace(/^\/+|\/+$/g, ''))} catch {
+        return false}
     }),
     if (byLink) return byLink,
-,
     const normalized = slug.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-    return all.find(s => {,
+    return all.find(s => {
       const idMatch =,
         (s.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized,
       const nameMatch =,
         (s.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized,
-      return idMatch || nameMatch,
-    }),
-  }, [slug]),
-,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+      return idMatch || nameMatch})}, [slug]),
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  if (!service) {,
-    return (,
+  if (!service) {
+    return (
       <UltraFuturisticBackground>,
         <Head>,
           <title>Service Not Found | Zion Tech Group</title>,
@@ -102,18 +91,15 @@ export default function ServiceFallbackPage() {,
             This service link is no longer available. Explore our full catalog,
             of services.,
           </p>,
-          <Button,
+          <Button
             href='/services',
-            className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl',
-          >,
+            className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl'>,
             Browse Services,
           </Button>,
         </div>,
-      </UltraFuturisticBackground>,
-    ),
-  ,}
+      </UltraFuturisticBackground>)}
 ,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>Service Not Found | Zion Tech Group</title>,
@@ -129,145 +115,122 @@ export default function ServiceFallbackPage() {,
             of innovative services and solutions.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-6 py-3 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 font-semibold'>,
               Browse Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold',
-            >,
+              className='border border-gray-60o0 text-gray-20o0 px-6 py-3 rounded-xl hover:border-gray-50o0 hover:text-white transition-all duration-30o0 font-semibold'>,
               Contact Us,
             </Link>,
           </div>,
           <div className='mt-12 text-left'>,
-            <Link,
+            <Link
               href='/',
-              className='inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors',
-            >,
+              className='inline-flex items-center gap-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4' />,
               Back to Home,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}
 ,
 // Static export support: generate root-level pages for service slugs,
 type Svc = (typeof enhancedRealMicroSaasServices)[number],
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[];
+    additionalEnhancedServices as Svc[];
+    innovativeAIServices as Svc[];
+    quantumSpaceServices as Svc[];
+    enterpriseITServices as Svc[];
+    newRealServices as Svc[];
+    marketReadyServices as Svc[];
+    nextGenerationAIServices as Svc[];
+    emergingTechnologyServices as Svc[];
+    comprehensiveITSolutions as Svc[];
+    marketValidatedServices as Svc[];
+    newRealInnovations as Svc[];
+    realMarketServices as Svc[];
+    realImplementationServices20o25 as unknown as Svc[])}
 ,
-function collectAllServices(): Svc[] {,
-  return enhancedRealMicroSaasServices.concat(,
-    extraServices as Svc[],;
-    additionalEnhancedServices as Svc[],;
-    innovativeAIServices as Svc[],;
-    quantumSpaceServices as Svc[],;
-    enterpriseITServices as Svc[],;
-    newRealServices as Svc[],;
-    marketReadyServices as Svc[],;
-    nextGenerationAIServices as Svc[],;
-    emergingTechnologyServices as Svc[],;
-    comprehensiveITSolutions as Svc[],;
-    marketValidatedServices as Svc[],;
-    newRealInnovations as Svc[],;
-    realMarketServices as Svc[],;
-    realImplementationServices20o25 as unknown as Svc[],
-  ),
-}
-,
-function normalizeSlug(value: string): string {,
+function normalizeSlug(value: string): string {
   return value,
     .toLowerCase(),
     .replace(/[^a-z0-9]+/g, '-'),
-    .replace(/(^-|-$)/g, ''),
-}
+    .replace(/(^-|-$)/g, '')}
 ,
-function extractRootSlugFromLink(link?: string): string | null {,
+function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null,
-  try {,
+  try {
     const url = new URL(link),
     const p = url.pathname.replace(/^\/+|\/+$/g, ''),
     if (p && !p.includes('/')) return p,
-    return null,
-  } catch {,
-    return null,
-  }
+    return null} catch {
+    return null}
 }
 ,
-function getExistingRootPageSlugs(): Set<string> {,
+function getExistingRootPageSlugs(): Set<string> {
   const pagesDir = path.join(process.cwd(), 'pages'),
-  const entries = fs.readdirSync(pagesDir, { withFileTypes: true ,}),
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
   const slugs = new Set<string>(),
-  for (const entry of entries) {,
-    if (entry.isFile()) {,
+  for (const entry of entries) {
+    if (entry.isFile()) {
       const m = entry.name.match(/^(?!_|[).+\.(tsx|ts|jsx|js)$/),
-      if (m) {,
+      if (m) {
         const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/, ''),
-        if (base !== 'index' && base !== '40o4' && base !== '50o0') {,
-          slugs.add(base),
-        }
+        if (base !== 'index' && base !== '40o4' && base !== '50o0') {
+          slugs.add(base)}
       }
     }
   }
-  return slugs,
-}
+  return slugs}
 ,
-export const getStaticPaths: GetStaticPaths = async () => {,
+export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices(),
   const candidateSlugs = new Set<string>(),
-,
   // Exclude any slugs that already have an explicit top-level page or folder under /pages,
   const pagesDir = path.join(process.cwd(), 'pages'),
   const existingRoutes = new Set<string>(),
-  const entries = fs.readdirSync(pagesDir, { withFileTypes: true ,}),
-  for (const entry of entries) {,
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+  for (const entry of entries) {
     // Skip private and special files,
     if (entry.name.startsWith('_')) continue,
     if (entry.name === 'api') continue,
     if (entry.name === 'reports') continue,
     if (entry.name === 'services') continue,
     if (entry.name === '[slug].tsx' || entry.name === 'index.tsx') continue,
-,
-    if (entry.isDirectory()) {,
+    if (entry.isDirectory()) {
       existingRoutes.add(entry.name),
-      continue,
-    }
-    if (entry.isFile()) {,
+      continue}
+    if (entry.isFile()) {
       const match = entry.name.match(/^(.*)\.(tsx|ts|js|jsx)$/),
-      if (match) {,
-        existingRoutes.add(match[1]),
-      }
+      if (match) {
+        existingRoutes.add(match[1])}
     }
   }
 ,
-  for (const s of services) {,
+  for (const s of services) {
     const fromLink = extractRootSlugFromLink((s as any).link),
-    if (fromLink) {,
-      candidateSlugs.add(fromLink),
-    } else if (s.id) {,
-      candidateSlugs.add(normalizeSlug(s.id)),
-    } else if (s.name) {,
-      candidateSlugs.add(normalizeSlug(s.name)),
-    }
+    if (fromLink) {
+      candidateSlugs.add(fromLink)} else if (s.id) {
+      candidateSlugs.add(normalizeSlug(s.id))} else if (s.name) {
+      candidateSlugs.add(normalizeSlug(s.name))}
   }
 ,
   const existingRootPages = getExistingRootPageSlugs(),
-  const filtered = Array.from(candidateSlugs).filter(,
-    slug => !existingRootPages.has(slug),
-  ),
-,
-  return {,
-    paths: filtered.map(slug => ({ params: { slug ,} })),;
-    fallback: true,;
+  const filtered = Array.from(candidateSlugs).filter(
+    slug => !existingRootPages.has(slug)),
+  return {
+    paths: filtered.map(slug => ({ params: { slug } }));
+    fallback: true;
   };
 };
-,
-export const getStaticProps: GetStaticProps = async ({ params ,}) => {,
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.,
-  return { props: {,} };
+  return { props: {} };
 };
-,]
+]

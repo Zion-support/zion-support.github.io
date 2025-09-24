@@ -4,53 +4,45 @@ import { Button  } from './ui/button',
 import { Badge  } from './ui/badge',
 import { Progress  } from './ui/progress',
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from './ui/tabs',
-import { User,;
-  Settings,;
-  Palette,;
-  Eye,;
-  MousePointer,;
-  Smartphone,;
-  Monitor,;
-  Zap,;
-  Heart,;
-  Star,;
-  MessageCircle,;
-  TrendingUp,;
-  Accessibility,;
-  Languages,
- } from 'lucide-react.ts',
-,
-interface UserPreference {,
+import { User;
+  Settings;
+  Palette;
+  Eye;
+  MousePointer;
+  Smartphone;
+  Monitor;
+  Zap;
+  Heart;
+  Star;
+  MessageCircle;
+  TrendingUp;
+  Accessibility;
+  Languages} from 'lucide-react.ts',
+interface UserPreference {
   id: string,
   name: string,
   value: string | boolean | number,
   type: 'boolean' | 'string' | 'number' | 'select',
   options?: string[],
   category: 'appearance' | 'accessibility' | 'performance' | 'language',
-  description: string,
+  description: string}
 ,
-,}
-,
-interface UserActivity {,
+interface UserActivity {
   id: string,
   action: string,
   timestamp: Date,
   duration?: number,
   success: boolean,
-  category: 'navigation' | 'interaction' | 'search' | 'purchase',
+  category: 'navigation' | 'interaction' | 'search' | 'purchase'}
 ,
-,}
-,
-interface AccessibilityFeature {,
+interface AccessibilityFeature {
   id: string,
   name: string,
   enabled: boolean,
   description: string,
-  impact: 'high' | 'medium' | 'low',
+  impact: 'high' | 'medium' | 'low'}
 ,
-,}
-,
-const InteractiveUserExperience: React.FC = (): JSX.Element => {,
+const InteractiveUserExperience: React.FC = (): JSX.Element => {
   const [preferences, setPreferences] = useState<any>([]),
   const [userActivities, setUserActivities] = useState<any>([]),
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<any>([]),
@@ -58,157 +50,130 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
   const [fontSize, setFontSize] = useState(16),
   const [contrast, setContrast] = useState('normal'),
   const [language, setLanguage] = useState('en'),
-,
   // Initialize user preferences,
-  useEffect(() => {,
-    const initialPreferences: UserPreference[] = [,
-      {,
-        id: any'1',;
-        name: 'Theme',;
-        value: 'light',;
-        type: 'select',;
-        options: ['light', 'dark', 'auto'],;
-        category: 'appearance',;
-        description: 'Choose your preferred color theme',
-      ,},;
-      {,
-        id: '2',;
-        name: 'Font Size',;
-        value: 16,;
-        type: 'number',;
-        category: 'accessibility',;
-        description: 'Adjust text size for better readability',
-      ,},;
-      {,
-        id: '3',;
-        name: 'High Contrast',;
-        value: false,;
-        type: 'boolean',;
-        category: 'accessibility',;
-        description: 'Enable high contrast mode for better visibility',
-      ,},;
-      {,
-        id: '4',;
-        name: 'Reduced Motion',;
-        value: false,;
-        type: 'boolean',;
-        category: 'accessibility',;
-        description: 'Reduce animations for users with motion sensitivity',
-      ,},;
-      {,
-        id: '5',;
-        name: 'Language',;
-        value: 'en',;
-        type: 'select',;
-        options: ['en', 'es', 'fr', 'de', 'zh'],;
-        category: 'language',;
-        description: 'Select your preferred language',
-      ,},;
-      {,
-        id: '6',;
-        name: 'Auto-save',;
-        value: true,;
-        type: 'boolean',;
-        category: 'performance',;
-        description: 'Automatically save your work',
-      ,}
+  useEffect(() => {
+    const initialPreferences: UserPreference[] = [
+      {
+        id: any'1';
+        name: 'Theme';
+        value: 'light';
+        type: 'select';
+        options: ['light', 'dark', 'auto'];
+        category: 'appearance';
+        description: 'Choose your preferred color theme'};
+      {
+        id: '2';
+        name: 'Font Size';
+        value: 16;
+        type: 'number';
+        category: 'accessibility';
+        description: 'Adjust text size for better readability'};
+      {
+        id: '3';
+        name: 'High Contrast';
+        value: false;
+        type: 'boolean';
+        category: 'accessibility';
+        description: 'Enable high contrast mode for better visibility'};
+      {
+        id: '4';
+        name: 'Reduced Motion';
+        value: false;
+        type: 'boolean';
+        category: 'accessibility';
+        description: 'Reduce animations for users with motion sensitivity'};
+      {
+        id: '5';
+        name: 'Language';
+        value: 'en';
+        type: 'select';
+        options: ['en', 'es', 'fr', 'de', 'zh'];
+        category: 'language';
+        description: 'Select your preferred language'};
+      {
+        id: '6';
+        name: 'Auto-save';
+        value: true;
+        type: 'boolean';
+        category: 'performance';
+        description: 'Automatically save your work'}
     ],
-,
-    setPreferences(initialPreferences),
-  }, []),
-,
+    setPreferences(initialPreferences)}, []),
   // Initialize accessibility features,
-  useEffect(()  => {,
-    const features: AccessibilityFeature[] = [,
-      {,
-        id: any'1',;
-        name: 'Screen Reader Support',;
-        enabled: true,;
-        description: 'Full compatibility with screen readers and assistive technologies',;
-        impact: 'high',
-      ,},;
-      {,
-        id: '2',;
-        name: 'Keyboard Navigation',;
-        enabled: true,;
-        description: 'Complete keyboard accessibility for all interactive elements',;
-        impact: 'high',
-      ,},;
-      {,
-        id: '3',;
-        name: 'Focus Indicators',;
-        enabled: true,;
-        description: 'Clear visual indicators for keyboard focus',;
-        impact: 'medium',
-      ,},;
-      {,
-        id: '4',;
-        name: 'Color Blind Support',;
-        enabled: true,;
-        description: 'Alternative color schemes and patterns for color-blind users',;
-        impact: 'medium',
-      ,},;
-      {,
-        id: '5',;
-        name: 'Voice Commands',;
-        enabled: false,;
-        description: 'Voice-activated navigation and controls',;
-        impact: 'low',
-      ,}
+  useEffect(()  => {
+    const features: AccessibilityFeature[] = [
+      {
+        id: any'1';
+        name: 'Screen Reader Support';
+        enabled: true;
+        description: 'Full compatibility with screen readers and assistive technologies';
+        impact: 'high'};
+      {
+        id: '2';
+        name: 'Keyboard Navigation';
+        enabled: true;
+        description: 'Complete keyboard accessibility for all interactive elements';
+        impact: 'high'};
+      {
+        id: '3';
+        name: 'Focus Indicators';
+        enabled: true;
+        description: 'Clear visual indicators for keyboard focus';
+        impact: 'medium'};
+      {
+        id: '4';
+        name: 'Color Blind Support';
+        enabled: true;
+        description: 'Alternative color schemes and patterns for color-blind users';
+        impact: 'medium'};
+      {
+        id: '5';
+        name: 'Voice Commands';
+        enabled: false;
+        description: 'Voice-activated navigation and controls';
+        impact: 'low'}
     ],
-,
-    setAccessibilityFeatures(features),
-  }, []),
-,
+    setAccessibilityFeatures(features)}, []),
   // Simulate user activities,
-  useEffect(()  => {,
-    const activities: UserActivity[] = [,
-      {,
-        id: '1',;
-        action: 'Visited Services Page',;
-        timestamp: new Date(Date.now() - 30o0000),;
-        duration: 45,;
-        success: true,;
-        category: 'navigation',
-      ,},;
-      {,
-        id: '2',;
-        action: 'Searched for AI Services',;
-        timestamp: new Date(Date.now() - 60o0000),;
-        duration: 12,;
-        success: true,;
-        category: 'search',
-      ,},;
-      {,
-        id: '3',;
-        action: 'Contacted Support',;
-        timestamp: new Date(Date.now() - 90o0000),;
-        duration: 180,;
-        success: true,;
-        category: 'interaction',
-      ,},;
-      {,
-        id: '4',;
-        action: 'Downloaded Whitepaper',;
-        timestamp: new Date(Date.now() - 120o0000),;
-        duration: 8,;
-        success: true,;
-        category: 'interaction',
-      ,}
+  useEffect(()  => {
+    const activities: UserActivity[] = [
+      {
+        id: '1';
+        action: 'Visited Services Page';
+        timestamp: new Date(Date.now() - 30o0000);
+        duration: 45;
+        success: true;
+        category: 'navigation'};
+      {
+        id: '2';
+        action: 'Searched for AI Services';
+        timestamp: new Date(Date.now() - 60o0000);
+        duration: 12;
+        success: true;
+        category: 'search'};
+      {
+        id: '3';
+        action: 'Contacted Support';
+        timestamp: new Date(Date.now() - 90o0000);
+        duration: 180;
+        success: true;
+        category: 'interaction'};
+      {
+        id: '4';
+        action: 'Downloaded Whitepaper';
+        timestamp: new Date(Date.now() - 120o0000);
+        duration: 8;
+        success: true;
+        category: 'interaction'}
     ],
-,
-    setUserActivities(activities),
-  }, []),
-,
-  const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {,
+    setUserActivities(activities)}, []),
+  const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
     setPreferences(prev => prev.map(pref =>,
-      pref.id === id ? { ...pref, value } : pref,
-    )),
-,
+      pref.id === id ? { ...pref, value } : pref)),
     // Apply preference changes,
     const preference = preferences.find(p => p.id === id),
-    if (preference) {,
-      switch (preference.name) {,
+    if (preference) {
+      switch (preference.name) {
         case 'Theme':,
           setCurrentTheme(value as string),
           document.documentElement.setAttribute('data-theme', value as string),
@@ -224,53 +189,38 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
         case 'Language':,
           setLanguage(value as string),
           // Here you would typically change the app language,
-          break,
-      }
+          break}
     }
   }, [preferences]),
-,
-  const toggleAccessibilityFeature = useCallback((id: anystring)  => {,
+  const toggleAccessibilityFeature = useCallback((id: anystring)  => {
     setAccessibilityFeatures(prev => prev.map(feature =>,
-      feature.id === id ? { ...feature, enabled: !feature.enabled ,} : feature,
-    )),
-  }, []),
-,
-  const getActivityIcon = (category: anyUserActivity['category'])  => {,
-    switch (category) {,
+      feature.id === id ? { ...feature, enabled: !feature.enabled } : feature))}, []),
+  const getActivityIcon = (category: anyUserActivity['category'])  => {
+    switch (category) {
       case 'navigation': return <MousePointer className="h-4 w-4"  />,
       case 'interaction': return <User className="h-4 w-4"  />,
       case 'search': return <Eye className="h-4 w-4"  />,
       case 'purchase': return <Heart className="h-4 w-4"  />,
-      default: return <User className="h-4 w-4"  />,
-    ,}
+      default: return <User className="h-4 w-4"  />}
   };
-,
-  const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {,
-    switch (impact) {,
+  const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {
+    switch (impact) {
       case 'high': return 'bg-red-50o0',
       case 'medium': return 'bg-yellow-50o0',
       case 'low': return 'bg-blue-50o0',
-      default: return 'bg-gray-50o0',
-    ,}
+      default: return 'bg-gray-50o0'}
   };
-,
-  const getSuccessRate = () => {,
+  const getSuccessRate = () => {
     const total = userActivities.length,
     const successful = userActivities.filter(activity => activity.success).length,
-    return total > 0 ? (successful / total) * 10o0 : 0,
-  };
-,
-  const getAverageDuration = () => {,
+    return total > 0 ? (successful / total) * 10o0 : 0};
+  const getAverageDuration = () => {
     const activitiesWithDuration = userActivities.filter(activity => activity.duration),
     if (activitiesWithDuration.length === 0) return 0,
-,
     const totalDuration = activitiesWithDuration.reduce((sum, activity) =>,
-      sum + (activity.duration || 0), 0,
-    ),
-    return totalDuration / activitiesWithDuration.length,
-  };
-,
-  return (,
+      sum + (activity.duration || 0), 0),
+    return totalDuration / activitiesWithDuration.length};
+  return (
     <div className="space-y-6">,
       <Tabs defaultValue="preferences" className="w-full">,
         <TabsList className="grid w-full grid-cols-4">,
@@ -302,7 +252,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
             </CardHeader>,
             <CardContent>,
               <div className="space-y-4">,
-                {preferences.map((preference) => (,
+                {preferences.map((preference) => (
                   <div key={preference.id} className="border rounded-lg p-4">,
                     <div className="flex items-start justify-between">,
                       <div className="flex-1">,
@@ -313,42 +263,35 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
                         <Badge variant="outline">{preference.category}</Badge>,
                       </div>,
                       <div className="ml-4">,
-                        {preference.type === 'boolean' && (,
-                          <Button,
+                        {preference.type === 'boolean' && (
+                          <Button
                             variant={preference.value ? 'default' : 'outline'}
                             onClick={() => updatePreference(preference.id, !preference.value)}
-                            size="sm",
-                          >,
+                            size="sm">,
                             {preference.value ? 'Enabled' : 'Disabled'}
-                          </Button>,
-                        )}
-                        {preference.type === 'select' && preference.options && (,
-                          <select,
+                          </Button>)}
+                        {preference.type === 'select' && preference.options && (
+                          <select
                             value={preference.value as string}
                             onChange={(e) => updatePreference(preference.id, e.target.value)}
-                            className="border rounded px-3 py-2 text-sm",
-                          >,
-                            {preference.options.map((option) => (,
+                            className="border rounded px-3 py-2 text-sm">,
+                            {preference.options.map((option) => (
                               <option key={option} value={option}>,
                                 {option.charAt(0).toUpperCase() + option.slice(1)}
-                              </option>,
-                            ))}
-                          </select>,
-                        )}
-                        {preference.type === 'number' && (,
-                          <input,
+                              </option>))}
+                          </select>)}
+                        {preference.type === 'number' && (
+                          <input
                             type="range",
                             min="12",
                             max="24",
                             value={preference.value as number}
                             onChange={(e) => updatePreference(preference.id, parseInt(e.target.value))}
                             className="w-24",
-                          />,
-                        )}
+                          />)}
                       </div>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </CardContent>,
           </Card>,
@@ -364,7 +307,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
             </CardHeader>,
             <CardContent>,
               <div className="space-y-4">,
-                {accessibilityFeatures.map((feature) => (,
+                {accessibilityFeatures.map((feature) => (
                   <div key={feature.id} className="border rounded-lg p-4">,
                     <div className="flex items-start justify-between">,
                       <div className="flex-1">,
@@ -378,17 +321,15 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
                           {feature.description}
                         </p>,
                       </div>,
-                      <Button,
+                      <Button
                         variant={feature.enabled ? 'default' : 'outline'}
                         onClick={() => toggleAccessibilityFeature(feature.id)}
                         size="sm",
-                        className="ml-4",
-                      >,
+                        className="ml-4">,
                         {feature.enabled ? 'Enabled' : 'Disabled'}
                       </Button>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </CardContent>,
           </Card>,
@@ -425,7 +366,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
             </CardContent>,
           </Card>,
         </TabsContent>,
-        {/* Analytics Tab */,}
+        {/* Analytics Tab */}
         <TabsContent value="analytics" className="space-y-6">,
           <Card>,
             <CardHeader>,
@@ -438,7 +379,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">,
                 <div className="text-center">,
                   <div className="text-3xl font-bold text-blue-60o0">,
-                    {userActivities.length,}
+                    {userActivities.length}
                   </div>,
                   <div className="text-sm text-gray-60o0">Total Actions</div>,
                 </div>,
@@ -457,7 +398,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
               </div>,
               <div className="space-y-4">,
                 <h4 className="font-semibold">Recent Activities</h4>,
-                {userActivities.map((activity) => (,
+                {userActivities.map((activity) => (
                   <div key={activity.id} className="border rounded-lg p-3">,
                     <div className="flex items-center justify-between">,
                       <div className="flex items-center gap-3">,
@@ -470,18 +411,16 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
                         </div>,
                       </div>,
                       <div className="flex items-center gap-2">,
-                        {activity.duration && (,
+                        {activity.duration && (
                           <Badge variant="outline">,
                             {activity.duration}s,
-                          </Badge>,
-                        )}
+                          </Badge>)}
                         <Badge variant={activity.success ? 'default' : 'destructive'}>,
                           {activity.success ? 'Success' : 'Failed'}
                         </Badge>,
                       </div>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </CardContent>,
           </Card>,
@@ -499,14 +438,12 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
               <div className="space-y-6">,
                 <div className="text-center">,
                   <div className="flex items-center justify-center gap-1 mb-2">,
-                    {[1, 2, 3, 4, 5].map((star) => (,
-                      <Star,
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star
                         key={star}
-                        className={`h-6 w-6 ${,
-                          star <= 4 ? 'text-yellow-40o0 fill-current' : 'text-gray-30o0',
-                        }`}
-                       />,
-                    ))}
+                        className={`h-6 w-6 ${
+                          star <= 4 ? 'text-yellow-40o0 fill-current' : 'text-gray-30o0'}`}
+                       />))}
                   </div>,
                   <div className="text-2xl font-bold">4.2/5.0</div>,
                   <div className="text-sm text-gray-60o0">Based on 127 reviews</div>,
@@ -542,15 +479,10 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {,
           </Card>,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),
-,};
-,
+    </div>)};
 // Add missing Tablet icon component,
-const Tablet: React.FC<{ className?: string ,}> = ({ className }) => (,
+const Tablet: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.0o1M8 21h8a2 2 0 0o02-2V5a2 2 0 0o0-2-2H8a2 2 0 0o0-2 2v14a2 2 0 0o02 2z"  />,
-  </svg>,
-),
-,
-export default InteractiveUserExperience,
+  </svg>),
+export default InteractiveUserExperience;

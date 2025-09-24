@@ -1,8 +1,7 @@
 import Link from 'next/link',
 AtomZapCpuBrainTargetGlobeShieldRocket,
-,
-const QuantumComputingBreakthrough20o30 = () => {,
-  return (,
+const QuantumComputingBreakthrough20o30 = () => {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       {/* Hero Section */}
       <div className='container mx-auto px-6 py-20'>,
@@ -75,7 +74,7 @@ const QuantumComputingBreakthrough20o30 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Applications Grid */,}
+        {/* Applications Grid */}
         <div className='bg-gradient-to-r from-indigo-80o0/30 to-purple-80o0/30 backdrop-blur-sm rounded-3xl p-12 mb-20 border border-indigo-50o0/30'>,
           <div className='text-center mb-12'>,
             <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
@@ -161,7 +160,7 @@ const QuantumComputingBreakthrough20o30 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Performance Metrics */,}
+        {/* Performance Metrics */}
         <div className='bg-gradient-to-r from-purple-80o0/30 to-indigo-80o0/30 backdrop-blur-sm rounded-3xl p-12 mb-20 border border-purple-50o0/30'>,
           <div className='text-center mb-12'>,
             <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
@@ -225,24 +224,18 @@ const QuantumComputingBreakthrough20o30 = () => {,
             advantage with the world's most advanced quantum computing solutions,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-cyan-30o0 hover:to-purple-30o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-cyan-30o0 hover:to-purple-30o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Start Quantum Journey,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-computing-20o30',
-              className='border-2 border-cyan-40o0 text-cyan-40o0 px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-40o0 px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0'>,
               Explore Solutions,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default QuantumComputingBreakthrough20o30,
-,
+    </div>)};
+export default QuantumComputingBreakthrough20o30;

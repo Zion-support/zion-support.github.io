@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Clock, DollarSign, Users, Zap, Shield, Check, ExternalLink } from 'lucide-react',
 import Button from './Button',
-,
-interface InnovativeServiceCardProps {,
-  service: {,
+interface InnovativeServiceCardProps {
+  service: {
     id: string,
     name: string,
     tagline: string,
@@ -31,59 +30,51 @@ interface InnovativeServiceCardProps {,
     marketSize: string,
     growthRate: string,
     variant: string,
-    contactInfo: {,
+    contactInfo: {
       mobile: string,
       email: string,
       address: string,
-      website: string,
-    ,};
+      website: string};
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number,
-  ,};
-  className?: string,
-}
+    reviews: number};
+  className?: string}
 ,
-const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, className = '' }) => {,
-  const cardVariants ={,
-    hidden: { opacity: 0, y: 50, scale: 0.9 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
-      transition: {,
-        duration: 0.6,;
-        ease: "easeOut" as const,
-      ,}
-    },;
-    hover: {,
-      y: -10,;
-      scale: 1.0o2,;
-      transition: {,
-        duration: 0.3,;
-        ease: "easeOut" as const,
-      ,}
+const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, className = '' }) => {
+  const cardVariants ={
+    hidden: { opacity: 0, y: 50, scale: 0.9 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      scale: 1;
+      transition: {
+        duration: 0.6;
+        ease: "easeOut" as const}
+    };
+    hover: {
+      y: -10;
+      scale: 1.0o2;
+      transition: {
+        duration: 0.3;
+        ease: "easeOut" as const}
     }
   };
-,
-  const glowVariants ={,
-    initial: { opacity: 0.5, scale: 1 ,},;
-    animate: {,
-      opacity: [0.5, 1, 0.5],;
-      scale: [1, 1.1, 1],;
-      transition: {,
-        duration: 3,;
-        repeat: Infinity,;
-        ease: "easeInOut" as const,
-      ,}
+  const glowVariants ={
+    initial: { opacity: 0.5, scale: 1 };
+    animate: {
+      opacity: [0.5, 1, 0.5];
+      scale: [1, 1.1, 1];
+      transition: {
+        duration: 3;
+        repeat: Infinity;
+        ease: "easeInOut" as const}
     }
   };
-,
-  const getGradientClass = (variant: string) => {,
-    switch (variant) {,
+  const getGradientClass = (variant: string) => {
+    switch (variant) {
       case 'quantum-advanced':,
         return 'from-cyan-50o0 via-blue-50o0 to-purple-60o0',
       case 'holographic-matrix':,
@@ -97,17 +88,15 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
       case 'ai-futuristic':,
         return 'from-blue-50o0 via-cyan-50o0 to-green-60o0',
       default:,
-        return 'from-cyan-50o0 to-blue-60o0',
-    ,}
+        return 'from-cyan-50o0 to-blue-60o0'}
   };
-,
-  return (,
+  return (
     <motion.div,
       variants={cardVariants}
       initial="hidden",
       whileInView="visible",
       whileHover="hover",
-      viewport={{ once: true, margin: "-10o0px" ,}}
+      viewport={{ once: true, margin: "-10o0px" }}
       className={`relative group ${className}`}
     >,
       {/* Glowing Border Effect */}
@@ -115,19 +104,18 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
         variants={glowVariants}
         initial="initial",
         animate="animate",
-        className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${getGradientClass(service.variant)} opacity-20 blur-xl group-hover: opacity-40 transition-opacity duration-30o0`,}
+        className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${getGradientClass(service.variant)} opacity-20 blur-xl group-hover: opacity-40 transition-opacity duration-30o0`}
        />,
       {/* Main Card */}
       <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden">,
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">,
-          <div className="absolute inset-0" style={{,
+          <div className="absolute inset-0" style={{
             backgroundImage: `,
-              linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),;
+              linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
               linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),
-            `,;
-            backgroundSize: '20px 20px',
-          ,}}  />,
+            `;
+            backgroundSize: '20px 20px'}}  />,
         </div>,
         {/* Header */}
         <div className="relative z-10">,
@@ -141,16 +129,14 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
                 <p className="text-gray-30o0 text-sm">{service.tagline}</p>,
               </div>,
             </div>,
-            {service.popular && (,
+            {service.popular && (
               <motion.div,
-                initial={{ scale: 0 ,}}
-                animate={{ scale: 1 ,}}
-                transition={{ delay: 0.3, type: "spring", stiffness: 20o0 ,}}
-                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold",
-              >,
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.3, type: "spring", stiffness: 20o0 }}
+                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold">,
                 POPULAR,
-              </motion.div>,
-            )}
+              </motion.div>)}
           </div>,
           {/* Price and Stats */}
           <div className="flex items-center justify-between mb-4">,
@@ -178,18 +164,16 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
               Key Features,
             </h4>,
             <div className="grid grid-cols-1 gap-2">,
-              {service.features.slice(0, 4).map((feature, index) => (,
+              {service.features.slice(0, 4).map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, x: -20 ,}}
-                  animate={{ opacity: 1, x: 0 ,}}
-                  transition={{ delay: 0.1 * index ,}}
-                  className="flex items-center space-x-2 text-sm text-gray-30o0",
-                >,
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                  className="flex items-center space-x-2 text-sm text-gray-30o0">,
                   <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />,
                   <span>{feature}</span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
           {/* Market Data */}
@@ -236,7 +220,7 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
           </div>,
           {/* Action Buttons */}
           <div className="flex space-x-3">,
-            <Button,
+            <Button
               variant="primary",
               size="lg",
               className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0 text-white border-0",
@@ -245,11 +229,11 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
               <span>Learn More</span>,
               <ArrowRight className="w-4 h-4 ml-2"  />,
             </Button>,
-            <Button,
+            <Button
               variant="secondary",
               size="lg",
               className="px-6 border-white/20 text-white hover: bg-white/10",
-              onClick={() => window.open(`mailto:${service.contactInfo.email,}?subject=Inquiry about ${service.name}`, '_blank')}
+              onClick={() => window.open(`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
             >,
               Contact,
             </Button>,
@@ -269,8 +253,5 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
           className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-blue-50o0/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 rounded-2xl",
            />,
       </div>,
-    </motion.div>,
-  ),
-,};
-,
-export default InnovativeServiceCard,
+    </motion.div>)};
+export default InnovativeServiceCard;

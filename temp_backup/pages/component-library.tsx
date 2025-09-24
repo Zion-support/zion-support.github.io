@@ -2,69 +2,67 @@ import Head from 'next/head',
 import Link from 'next/link',
 import Breadcrumbs from '../components/Breadcrumbs',
 import RelatedContent from '../components/RelatedContent',
-,
-export default function ComponentLibrary() {,
-  const components = [,
-    {,
-      name: 'Pagination',;
+export default function ComponentLibrary() {
+  const components = [
+    {
+      name: 'Pagination';
       description:,
-        'Advanced pagination with customizable styling and accessibility features',;
-      usage: 'Use for navigating through large datasets or content lists',;
-      props: ['currentPage', 'totalPages', 'onPageChange', 'className'],;
-      category: 'Navigation',;
-    },;
-    {,
-      name: 'Form',;
+        'Advanced pagination with customizable styling and accessibility features';
+      usage: 'Use for navigating through large datasets or content lists';
+      props: ['currentPage', 'totalPages', 'onPageChange', 'className'];
+      category: 'Navigation';
+    };
+    {
+      name: 'Form';
       description:,
-        'Reusable form component with built-in validation and state management',;
-      usage: 'Perfect for contact forms, search forms, and data input',;
-      props: ['onSubmit', 'className'],;
-      category: 'Input',;
-    },;
-    {,
-      name: 'Modal',;
+        'Reusable form component with built-in validation and state management';
+      usage: 'Perfect for contact forms, search forms, and data input';
+      props: ['onSubmit', 'className'];
+      category: 'Input';
+    };
+    {
+      name: 'Modal';
       description:,
-        'Accessible modal component with backdrop and keyboard navigation',;
-      usage: 'Display important information, confirmations, or forms',;
-      props: ['isOpen', 'onClose', 'title', 'children', 'className'],;
-      category: 'Overlay',;
-    },;
-    {,
-      name: 'Card',;
+        'Accessible modal component with backdrop and keyboard navigation';
+      usage: 'Display important information, confirmations, or forms';
+      props: ['isOpen', 'onClose', 'title', 'children', 'className'];
+      category: 'Overlay';
+    };
+    {
+      name: 'Card';
       description:,
-        'Content card component for displaying structured information',;
+        'Content card component for displaying structured information';
       usage:,
-        'Showcase content, products, or information in a consistent layout',;
-      props: ['title', 'description', 'image', 'className'],;
-      category: 'Layout',;
-    },;
-    {,
-      name: 'Button',;
+        'Showcase content, products, or information in a consistent layout';
+      props: ['title', 'description', 'image', 'className'];
+      category: 'Layout';
+    };
+    {
+      name: 'Button';
       description:,
-        'Versatile button component with multiple variants and states',;
-      usage: 'Primary actions, form submissions, and interactive elements',;
-      props: [,
-        'children',;
-        'variant',;
-        'onClick',;
-        'type',;
-        'disabled',;
-        'className',;
-      ],;
-      category: 'Interactive',;
-    },;
+        'Versatile button component with multiple variants and states';
+      usage: 'Primary actions, form submissions, and interactive elements';
+      props: [
+        'children';
+        'variant';
+        'onClick';
+        'type';
+        'disabled';
+        'className';
+      ];
+      category: 'Interactive';
+    };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Component Library | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Comprehensive component library with documentation, examples, and usage guidelines.',
         />,
         <meta property='og: title' content='Component Library' />,
-        <meta,
+        <meta
           property='og:description',
           content='Component Library — automatically suggested description.',
         />,
@@ -80,11 +78,10 @@ export default function ComponentLibrary() {,
           </p>,
         </div>,
         <div className='space-y-8'>,
-          {components.map(component => (,
-            <div,
+          {components.map(component => (
+            <div
               key={component.name}
-              className='bg-slate-90o0/50 border border-white/10 rounded-lg p-8',
-            >,
+              className='bg-slate-90o0/50 border border-white/10 rounded-lg p-8'>,
               <div className='flex items-start justify-between mb-6'>,
                 <div>,
                   <div className='flex items-center gap-3 mb-2'>,
@@ -97,38 +94,32 @@ export default function ComponentLibrary() {,
                     {component.description}
                   </p>,
                 </div>,
-                <Link,
+                <Link
                   href={`/components/${component.name.toLowerCase()}-demo`}
-                  className='bg-cyan-50o0 hover: bg-cyan-60o0 text-white px-4 py-2 rounded-lg transition-colors',
-                >,
+                  className='bg-cyan-50o0 hover: bg-cyan-60o0 text-white px-4 py-2 rounded-lg transition-colors'>,
                   View Demo,
                 </Link>,
               </div>,
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>,
                 <div>,
                   <h4 className='font-semibold mb-2 text-cyan-40o0'>Usage</h4>,
-                  <p className='text-white/80'>{component.usage,}</p>,
+                  <p className='text-white/80'>{component.usage}</p>,
                 </div>,
                 <div>,
                   <h4 className='font-semibold mb-2 text-cyan-40o0'>Props</h4>,
                   <div className='flex flex-wrap gap-2'>,
-                    {component.props.map(prop => (,
-                      <span,
+                    {component.props.map(prop => (
+                      <span
                         key={prop}
-                        className='px-2 py-1 bg-slate-80o0 text-white/80 text-sm rounded',
-                      >,
+                        className='px-2 py-1 bg-slate-80o0 text-white/80 text-sm rounded'>,
                         {prop}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <RelatedContent currentPage='components' />,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

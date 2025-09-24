@@ -2,20 +2,18 @@
 import React, { useState, useEffect, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Menu, ChevronDown, X, Phone, Mail, MapPin,;
-  Rocket, BookOpen,;
-  DollarSign, BarChart3, Star,;
-  Cpu,;
-  Search, Grid,;
-  Zap,;
-  FileText,;
-  Award,;
-  HelpCircle,;
-  BookOpenCheck,
-} from 'lucide-react',
-,
-interface NavigationItem {,
+import {
+  Menu, ChevronDown, X, Phone, Mail, MapPin;
+  Rocket, BookOpen;
+  DollarSign, BarChart3, Star;
+  Cpu;
+  Search, Grid;
+  Zap;
+  FileText;
+  Award;
+  HelpCircle;
+  BookOpenCheck} from 'lucide-react',
+interface NavigationItem {
   name: string,
   href: string,
   icon?: React.ReactNode,
@@ -24,246 +22,200 @@ interface NavigationItem {,
   badge?: string,
   title?: string,
   featured?: boolean,
-  category?: string,
-,}
+  category?: string}
 ,
-interface UltraFuturisticNavigation20o36Props {,
+interface UltraFuturisticNavigation20o36Props {
   onMenuToggle?: () => void,
-  isMenuOpen?: boolean,
-}
+  isMenuOpen?: boolean}
 ,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-function normalizeHref(href: string): string {,
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+function normalizeHref(href: string): string {
   if (!href) return href,
-  if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {,
-    return href,
-  ,}
+  if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+    return href}
   if (!href.startsWith('/')) return href,
   const hasQueryOrHash = href.includes('?') || href.includes('#'),
   if (hasQueryOrHash) return href,
-  return href.endsWith('/') ? href : href + '/',
-}
+  return href.endsWith('/') ? href : href + '/'}
 ,
-const navigationItems: NavigationItem[] = [,
-  {,
-    name: 'Services',;
-    href: '/services',;
-    icon: <Rocket className="w-5 h-5"  />,;
-    description: 'Complete technology solutions',;
-    badge: 'Main',;
-    category: 'services',;
-    children: [,
-      {,
-        name: 'All Services',;
-        href: '/services',;
-        description: 'Complete services overview',;
-        icon: <Grid className="w-4 h-4"  />,;
-        featured: true,
-      ,},;
-      {,
-        name: 'AI & Machine Learning',;
-        href: '/ai-services',;
-        description: 'Advanced AI solutions',;
-        icon: <Cpu className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Quantum Technology',;
-        href: '/quantum-services',;
-        description: 'Quantum computing solutions',;
-        icon: <Cpu className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Space Technology',;
-        href: '/space-technology',;
-        description: 'Space exploration solutions',;
-        icon: <Rocket className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'IT Solutions',;
-        href: '/it-services',;
-        description: 'Enterprise IT infrastructure',;
-        icon: <Shield className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Specialized Solutions',;
-        href: '/solutions',;
-        description: 'Industry-specific solutions',;
-        icon: <Star className="w-4 h-4"  />,
-      ,}
-    ],
-  },;
-  {,
-    name: 'Showcase & Pricing',;
-    href: '/comprehensive-services-showcase-20o25',;
-    icon: <Star className="w-5 h-5"  />,;
-    description: 'Services portfolio & pricing',;
-    badge: 'Showcase',;
-    children: [,
-      {,
-        name: '20o25 Services Showcase',;
-        href: '/comprehensive-services-showcase-20o25',;
-        description: 'Complete 20o25 services overview',;
-        icon: <Star className="w-4 h-4"  />,;
-        featured: true,
-      ,},;
-      {,
-        name: 'Pricing Plans',;
-        href: '/revolutionary-20o25-pricing',;
-        description: 'Transparent pricing structure',;
-        icon: <DollarSign className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Market Pricing',;
-        href: '/market-pricing',;
-        description: 'Market price references',;
-        icon: <BarChart3 className="w-4 h-4"  />,
-      ,}
-    ],
-  },;
-  {,
-    name: 'Company',;
-    href: '/about',;
-    icon: <Star className="w-5 h-5"  />,;
-    description: 'About Zion Tech Group',;
-    category: 'company',;
-    children: [,
-      {,
-        name: 'About Us',;
-        href: '/about',;
-        description: 'Company information',;
-        icon: <Star className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Contact',;
-        href: '/contact',;
-        description: 'Get in touch',;
-        icon: <Mail className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Partners',;
-        href: '/partners',;
-        description: 'Partnership opportunities',;
-        icon: <Star className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Investors',;
-        href: '/investors',;
-        description: 'Investment information',;
-        icon: <DollarSign className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Careers',;
-        href: '/careers',;
-        description: 'Join our team',;
-        icon: <Star className="w-4 h-4"  />,
-      ,}
-    ],
-  },;
-  {,
-    name: 'Resources',;
-    href: '/resources',;
-    icon: <BookOpen className="w-5 h-5"  />,;
-    description: 'Knowledge & documentation',;
-    children: [,
-      {,
-        name: 'Documentation',;
-        href: '/docs',;
-        description: 'Technical documentation',;
-        icon: <FileText className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'White Papers',;
-        href: '/white-papers',;
-        description: 'Industry insights',;
-        icon: <FileText className="w-4 h-4"  />,
-      ,},;
-      {,
-        name: 'Webinars',;
-        href: '/webinars',;
-        description: 'Educational content',;
-        icon: <Video className="w-4 h-4"  />,
-      ,}
-    ],
-  }
+const navigationItems: NavigationItem[] = [
+  {
+    name: 'Services';
+    href: '/services';
+    icon: <Rocket className="w-5 h-5"  />;
+    description: 'Complete technology solutions';
+    badge: 'Main';
+    category: 'services';
+    children: [
+      {
+        name: 'All Services';
+        href: '/services';
+        description: 'Complete services overview';
+        icon: <Grid className="w-4 h-4"  />;
+        featured: true};
+      {
+        name: 'AI & Machine Learning';
+        href: '/ai-services';
+        description: 'Advanced AI solutions';
+        icon: <Cpu className="w-4 h-4"  />};
+      {
+        name: 'Quantum Technology';
+        href: '/quantum-services';
+        description: 'Quantum computing solutions';
+        icon: <Cpu className="w-4 h-4"  />};
+      {
+        name: 'Space Technology';
+        href: '/space-technology';
+        description: 'Space exploration solutions';
+        icon: <Rocket className="w-4 h-4"  />};
+      {
+        name: 'IT Solutions';
+        href: '/it-services';
+        description: 'Enterprise IT infrastructure';
+        icon: <Shield className="w-4 h-4"  />};
+      {
+        name: 'Specialized Solutions';
+        href: '/solutions';
+        description: 'Industry-specific solutions';
+        icon: <Star className="w-4 h-4"  />}
+    ]};
+  {
+    name: 'Showcase & Pricing';
+    href: '/comprehensive-services-showcase-20o25';
+    icon: <Star className="w-5 h-5"  />;
+    description: 'Services portfolio & pricing';
+    badge: 'Showcase';
+    children: [
+      {
+        name: '20o25 Services Showcase';
+        href: '/comprehensive-services-showcase-20o25';
+        description: 'Complete 20o25 services overview';
+        icon: <Star className="w-4 h-4"  />;
+        featured: true};
+      {
+        name: 'Pricing Plans';
+        href: '/revolutionary-20o25-pricing';
+        description: 'Transparent pricing structure';
+        icon: <DollarSign className="w-4 h-4"  />};
+      {
+        name: 'Market Pricing';
+        href: '/market-pricing';
+        description: 'Market price references';
+        icon: <BarChart3 className="w-4 h-4"  />}
+    ]};
+  {
+    name: 'Company';
+    href: '/about';
+    icon: <Star className="w-5 h-5"  />;
+    description: 'About Zion Tech Group';
+    category: 'company';
+    children: [
+      {
+        name: 'About Us';
+        href: '/about';
+        description: 'Company information';
+        icon: <Star className="w-4 h-4"  />};
+      {
+        name: 'Contact';
+        href: '/contact';
+        description: 'Get in touch';
+        icon: <Mail className="w-4 h-4"  />};
+      {
+        name: 'Partners';
+        href: '/partners';
+        description: 'Partnership opportunities';
+        icon: <Star className="w-4 h-4"  />};
+      {
+        name: 'Investors';
+        href: '/investors';
+        description: 'Investment information';
+        icon: <DollarSign className="w-4 h-4"  />};
+      {
+        name: 'Careers';
+        href: '/careers';
+        description: 'Join our team';
+        icon: <Star className="w-4 h-4"  />}
+    ]};
+  {
+    name: 'Resources';
+    href: '/resources';
+    icon: <BookOpen className="w-5 h-5"  />;
+    description: 'Knowledge & documentation';
+    children: [
+      {
+        name: 'Documentation';
+        href: '/docs';
+        description: 'Technical documentation';
+        icon: <FileText className="w-4 h-4"  />};
+      {
+        name: 'White Papers';
+        href: '/white-papers';
+        description: 'Industry insights';
+        icon: <FileText className="w-4 h-4"  />};
+      {
+        name: 'Webinars';
+        href: '/webinars';
+        description: 'Educational content';
+        icon: <Video className="w-4 h-4"  />}
+    ]}
 ],
-,
-const UltraFuturisticNavigation20o36: React.FC = () => {,
+const UltraFuturisticNavigation20o36: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(''),
   const [isSearchOpen, setIsSearchOpen] = useState(false),
   const searchRef = useRef<HTMLDivElement>(null),
   const mobileMenuRef = useRef<HTMLDivElement>(null),
-,
   // Close mobile menu when clicking outside,
-  useEffect(() => {,
-    const handleClickOutside = (event: MouseEvent) => {,
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {,
-        setIsOpen(false),
-      ,}
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
+        setIsOpen(false)}
     };
-,
     document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
-  }, []),
-,
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Close search when clicking outside,
-  useEffect(() => {,
-    const handleClickOutside = (event: MouseEvent) => {,
-      if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {,
-        setIsSearchOpen(false),
-      ,}
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
+        setIsSearchOpen(false)}
     };
-,
     document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
-  }, []),
-,
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle escape key,
-  useEffect(() => {,
-    const handleEscape = (event: KeyboardEvent) => {,
-      if (event.key === 'Escape') {,
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
         setIsOpen(false),
         setActiveDropdown(null),
-        setIsSearchOpen(false),
-      ,}
+        setIsSearchOpen(false)}
     };
-,
     document.addEventListener('keydown', handleEscape),
-    return () => document.removeEventListener('keydown', handleEscape),
-  }, []),
-,
+    return () => document.removeEventListener('keydown', handleEscape)}, []),
   // Filter navigation items based on search,
   const filteredItems = navigationItems.filter(item =>,
     item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     item.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     item.children?.some(child =>,
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-      child.description?.toLowerCase().includes(searchQuery.toLowerCase()),
-    ),
-  ),
-,
-  return (,
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${,
+      child.description?.toLowerCase().includes(searchQuery.toLowerCase()))),
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled,
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-80o0/50',
-        : 'bg-transparent',
-    }`}>,
+        : 'bg-transparent'}`}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="flex justify-between items-center h-20">,
-          {/* Logo */,}
+          {/* Logo */}
           <motion.div,
-            initial={{ opacity: 0, x: -20 ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            transition={{ duration: 0.6 ,}}
-            className="flex-shrink-0",
-          >,
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-shrink-0">,
             <Link href="/" className="flex items-center space-x-2 group">,
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0">,
                 <Sparkles className="w-6 h-6 text-white"  />,
@@ -273,77 +225,67 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
               </span>,
             </Link>,
           </motion.div>,
-          {/* Desktop Navigation */,}
+          {/* Desktop Navigation */}
           <div className="hidden lg: flex items-center space-x-8">,
-            {navigationItems.map((item, index) => (,
+            {navigationItems.map((item, index) => (
               <motion.div,
                 key={item.name}
-                initial={{ opacity: 0, y: -20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className="relative group",
-              >,
-                <button,
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative group">,
+                <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0 group-hover:text-cyan-40o0",
-                >,
-                  {item.icon,}
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0 group-hover:text-cyan-40o0">,
+                  {item.icon}
                   <span className="font-medium">{item.name}</span>,
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${,
-                    activeDropdown === item.name ? 'rotate-180' : '',
-                  }`}  />,
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
+                    activeDropdown === item.name ? 'rotate-180' : ''}`}  />,
                 </button>,
                 {/* Desktop Dropdown */}
-                {item.children && (,
+                {item.children && (
                   <AnimatePresence>,
-                    {activeDropdown === item.name && (,
+                    {activeDropdown === item.name && (
                       <motion.div,
                         initial="hidden",
                         animate="visible",
                         exit="hidden",
                         variants={dropdownVariants}
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl z-50",
-                      >,
+                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl z-50">,
                         <div className="p-4">,
                           <div className="grid grid-cols-1 gap-2">,
-                            {item.children.map((child) => (,
-                              <Link,
+                            {item.children.map((child) => (
+                              <Link
                                 key={child.name}
                                 href={normalizeHref(child.href)}
                                 className="group flex items-start space-x-3 p-3 rounded-lg hover: bg-white/5 transition-all duration-20o0",
-                                onClick={() => setActiveDropdown(null),}
+                                onClick={() => setActiveDropdown(null)}
                               >,
                                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform">,
-                                  {child.icon,}
+                                  {child.icon}
                                 </div>,
                                 <div className="flex-1 min-w-0">,
                                   <div className="flex items-center space-x-2">,
                                     <span className="text-sm font-medium text-white group-hover: text-cyan-40o0 transition-colors">,
-                                      {child.name,}
+                                      {child.name}
                                     </span>,
-                                    {child.featured && (,
+                                    {child.featured && (
                                       <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-full">,
                                         Featured,
-                                      </span>,
-                                    )}
+                                      </span>)}
                                   </div>,
-                                  {child.description && (,
+                                  {child.description && (
                                     <p className="text-xs text-gray-40o0 mt-1 line-clamp-2">,
                                       {child.description}
-                                    </p>,
-                                  )}
+                                    </p>)}
                                 </div>,
                                 <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover: text-cyan-40o0 transition-colors"  />,
-                              </Link>,
-                            )),}
+                              </Link>))}
                           </div>,
                         </div>,
-                      </motion.div>,
-                    )}
-                  </AnimatePresence>,
-                )}
-              </div>,
-            ))}
+                      </motion.div>)}
+                  </AnimatePresence>)}
+              </div>))}
           </div>,
           {/* Desktop CTA Buttons */}
           <div className="hidden lg: flex lg:items-center lg:space-x-4">,
@@ -358,10 +300,10 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
               </button>,
             </Link>,
           </div>,
-          {/* Mobile Menu Button */,}
-          <button,
+          {/* Mobile Menu Button */}
+          <button
             className="lg: hidden p-2 text-white hover:text-cyan-40o0 transition-colors",
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen),}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu",
             aria-expanded={mobileMenuOpen}
           >,
@@ -371,52 +313,48 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
       </div>,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {mobileMenuOpen && (,
+        {mobileMenuOpen && (
           <motion.div,
-            initial={{ opacity: 0, x: '10o0%' ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            exit={{ opacity: 0, x: '10o0%' ,}}
-            transition={{ type: 'tween', duration: 0.3 ,}}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg: hidden overflow-y-auto",
-          >,
+            initial={{ opacity: 0, x: '10o0%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '10o0%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg: hidden overflow-y-auto">,
             <div className="p-6">,
-              {/* Mobile Menu Header */,}
+              {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-8">,
                 <div className="flex items-center space-x-3">,
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-lg"></div>,
                   <span className="text-white font-bold text-lg">ZionTech Group</span>,
                 </div>,
-                <button,
+                <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-2 text-white hover: text-cyan-40o0 transition-colors",
-                  aria-label="Close mobile menu",
-                >,
+                  aria-label="Close mobile menu">,
                   <X className="w-6 h-6"  />,
                 </button>,
               </div>,
-              {/* Mobile Search */,}
+              {/* Mobile Search */}
               <div className="mb-6">,
-                <EnhancedSearch,
-                  onSearch={(query) => {,
+                <EnhancedSearch
+                  onSearch={(query) => {
                     // Handle search - could navigate to search results page,
-                    window.location.href = `/services?search=${encodeURIComponent(query)}`,
-                  }}
-                  onResultSelect={(result) => {,
+                    window.location.href = `/services?search=${encodeURIComponent(query)}`}}
+                  onResultSelect={(result) => {
                     // Handle result selection - navigate to the service page,
                     window.location.href = result.slug,
-                    setMobileMenuOpen(false),
-                  }}
+                    setMobileMenuOpen(false)}}
                   placeholder="Search services...",
                   showFilters={false}
                 />,
               </div>,
               {/* Mobile Navigation Items */}
               <div className="space-y-4">,
-                {navigationItems.map((item) => (,
+                {navigationItems.map((item) => (
                   <div key={item.name}>,
-                    <button,
+                    <button
                       className="w-full flex items-center justify-between p-3 text-left text-white hover: bg-white/5 rounded-lg transition-colors",
-                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name),}
+                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
                       aria-expanded={activeDropdown === item.name}
                     >,
                       <div className="p-4">,
@@ -425,84 +363,75 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
                           <p className="text-sm text-gray-40o0">{item.description}</p>,
                         </div>,
                         <div className="space-y-2">,
-                          {item.children?.map((child) => (,
-                            <Link,
+                          {item.children?.map((child) => (
+                            <Link
                               key={child.name}
                               href={normalizeHref(child.href)}
                               onClick={closeAllDropdowns}
-                              className="flex items-center space-x-3 p-3 rounded-xl hover: bg-gray-80o0/50 transition-all duration-20o0 group",
-                            >,
+                              className="flex items-center space-x-3 p-3 rounded-xl hover: bg-gray-80o0/50 transition-all duration-20o0 group">,
                               <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 rounded-lg flex items-center justify-center">,
-                                {child.icon,}
+                                {child.icon}
                               </div>,
                               <div className="flex-1">,
                                 <div className="flex items-center space-x-2">,
                                   <span className="font-medium text-white group-hover: text-cyan-40o0 transition-colors">,
-                                    {child.name,}
+                                    {child.name}
                                   </span>,
-                                  {child.featured && (,
+                                  {child.featured && (
                                     <span className="px-2 py-1 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-xs text-white rounded-full">,
                                       Featured,
-                                    </span>,
-                                  )}
+                                    </span>)}
                                 </div>,
                                 <p className="text-sm text-gray-40o0">{child.description}</p>,
                               </div>,
                               <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover: text-cyan-40o0 transition-colors"  />,
-                            </Link>,
-                          )),}
+                            </Link>))}
                         </div>,
                       </div>,
-                    </motion.div>,
-                  )}
+                    </motion.div>)}
                 </AnimatePresence>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
           {/* CTA Buttons */}
           <div className="hidden lg: flex items-center space-x-4">,
             <motion.button,
-              initial={{ opacity: 0, scale: 0.9 ,}}
-              animate={{ opacity: 1, scale: 1 ,}}
-              transition={{ duration: 0.6, delay: 0.4 ,}}
-              className="px-6 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0",
-            >,
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="px-6 py-2 text-gray-30o0 hover: text-white transition-colors duration-20o0">,
               <Search className="w-5 h-5"  />,
             </motion.button>,
             <motion.button,
-              initial={{ opacity: 0, scale: 0.9 ,}}
-              animate={{ opacity: 1, scale: 1 ,}}
-              transition={{ duration: 0.6, delay: 0.5 ,}}
-              className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25",
-            >,
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25">,
               Get Started,
             </motion.button>,
           </div>,
-          {/* Mobile menu button */,}
+          {/* Mobile menu button */}
           <motion.button,
-            initial={{ opacity: 0, scale: 0.9 ,}}
-            animate={{ opacity: 1, scale: 1 ,}}
-            transition={{ duration: 0.6, delay: 0.6 ,}}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg: hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-gray-80o0 transition-colors duration-20o0",
-          >,
-            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />,}
+            className="lg: hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-gray-80o0 transition-colors duration-20o0">,
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </motion.button>,
         </div>,
         {/* Search Bar */}
         <AnimatePresence>,
-          {isSearchOpen && (,
+          {isSearchOpen && (
             <motion.div,
               ref={searchRef}
-              initial={{ opacity: 0, height: 0 ,}}
-              animate={{ opacity: 1, height: 'auto' ,}}
-              exit={{ opacity: 0, height: 0 ,}}
-              transition={{ duration: 0.2 ,}}
-              className="py-4 border-t border-cyan-40o0/20",
-            >,
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="py-4 border-t border-cyan-40o0/20">,
               <div className="relative">,
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />,
-                <input,
+                <input
                   type="text",
                   placeholder="Search services, solutions, and more...",
                   value={searchQuery}
@@ -511,19 +440,18 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
                   aria-label="Search",
                 />,
               </div>,
-              {/* Search Results */,}
-              {searchQuery && (,
+              {/* Search Results */}
+              {searchQuery && (
                 <div className="mt-4 max-h-96 overflow-y-auto">,
                   <div className="grid gap-2">,
-                    {filteredItems.map((item) => (,
+                    {filteredItems.map((item) => (
                       <div key={item.name} className="p-3 bg-white/5 rounded-lg border border-cyan-40o0/20">,
-                        <Link,
+                        <Link
                           href={normalizeHref(item.href)}
                           className="block text-white hover: text-cyan-40o0 transition-colors",
-                          onClick={() => {,
+                          onClick={() => {
                             setIsSearchOpen(false),
-                            setSearchQuery(''),
-                          ,}}
+                            setSearchQuery('')}}
                         >,
                           <div className="flex items-center space-x-3">,
                             {item.icon}
@@ -533,41 +461,37 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
                             </div>,
                           </div>,
                         </Link>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              )}
-            </motion.div>,
-          )}
+                </div>)}
+            </motion.div>)}
         </AnimatePresence>,
       </div>,
       {/* Enhanced Mobile Menu */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
             ref={mobileMenuRef}
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0.3 ,}}
-            className="lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50",
-          >,
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50">,
             <div className="px-4 py-6 space-y-6">,
-              {/* Contact Info */,}
+              {/* Contact Info */}
               <div className="bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-40o0/20 rounded-lg p-4">,
                 <h3 className="text-sm font-medium text-cyan-40o0 mb-3">Contact Information</h3>,
                 <div className="space-y-2 text-sm text-gray-30o0">,
                   <div className="flex items-center space-x-2">,
                     <Phone className="w-4 h-4 text-cyan-40o0"  />,
-                    <a href={`tel: ${contactInfo.mobile,}`} className="hover: text-cyan-40o0 transition-colors">,
-                      {contactInfo.mobile,}
+                    <a href={`tel: ${contactInfo.mobile}`} className="hover: text-cyan-40o0 transition-colors">,
+                      {contactInfo.mobile}
                     </a>,
                   </div>,
                   <div className="flex items-center space-x-2">,
                     <Mail className="w-4 h-4 text-cyan-40o0"  />,
-                    <a href={`mailto: ${contactInfo.email,}`} className="hover: text-cyan-40o0 transition-colors">,
-                      {contactInfo.email,}
+                    <a href={`mailto: ${contactInfo.email}`} className="hover: text-cyan-40o0 transition-colors">,
+                      {contactInfo.email}
                     </a>,
                   </div>,
                   <div className="flex items-start space-x-2">,
@@ -577,45 +501,38 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
                 </div>,
               </div>,
               {/* Navigation Items */}
-              {navigationItems.map((item) => (,
+              {navigationItems.map((item) => (
                 <div key={item.name} className="space-y-2">,
-                  <button,
+                  <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-30o0 hover: text-white hover:bg-gray-80o0/50 rounded-xl transition-all duration-20o0",
-                  >,
+                    className="flex items-center justify-between w-full p-3 text-left text-gray-30o0 hover: text-white hover:bg-gray-80o0/50 rounded-xl transition-all duration-20o0">,
                     <div className="flex items-center space-x-3">,
-                      {item.icon,}
+                      {item.icon}
                       <span className="font-medium">{item.name}</span>,
                     </div>,
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${,
-                      activeDropdown === item.name ? 'rotate-180' : '',
-                    }`}  />,
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''}`}  />,
                   </button>,
                   <AnimatePresence>,
-                    {activeDropdown === item.name && (,
+                    {activeDropdown === item.name && (
                       <motion.div,
-                        initial={{ opacity: 0, height: 0 ,}}
-                        animate={{ opacity: 1, height: 'auto' ,}}
-                        exit={{ opacity: 0, height: 0 ,}}
-                        transition={{ duration: 0.2 ,}}
-                        className="ml-8 space-y-2",
-                      >,
-                        {item.children?.map((child) => (,
-                          <Link,
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="ml-8 space-y-2">,
+                        {item.children?.map((child) => (
+                          <Link
                             key={child.name}
                             href={normalizeHref(child.href)}
                             onClick={closeAllDropdowns}
-                            className="flex items-center space-x-3 p-3 text-gray-40o0 hover: text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0",
-                          >,
-                            {child.icon,}
+                            className="flex items-center space-x-3 p-3 text-gray-40o0 hover: text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0">,
+                            {child.icon}
                             <span>{child.name}</span>,
-                          </Link>,
-                        ))}
-                      </motion.div>,
-                    )}
+                          </Link>))}
+                      </motion.div>)}
                   </AnimatePresence>,
-                </div>,
-              ))}
+                </div>))}
 ,
               <div className="pt-4 border-t border-gray-70o0/50">,
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0">,
@@ -623,11 +540,7 @@ const UltraFuturisticNavigation20o36: React.FC = () => {,
                 </button>,
               </div>,
             </div>,
-          </motion.div>,
-        ),}
+          </motion.div>)}
       </AnimatePresence>,
-    </>,
-  ),
-};
-,
-export default UltraFuturisticNavigation20o36,
+    </>)};
+export default UltraFuturisticNavigation20o36;

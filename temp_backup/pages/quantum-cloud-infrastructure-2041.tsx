@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QuantumCloudInfrastructure20o41Page() {,
-  return (,
+export default function QuantumCloudInfrastructure20o41Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Cloud Infrastructure 20o41 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quantum cloud infrastructure 20o41 page',
         />,
@@ -21,7 +20,5 @@ export default function QuantumCloudInfrastructure20o41Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

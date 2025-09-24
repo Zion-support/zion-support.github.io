@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-copilots - Zion Tech Group',;
-  description: 'Professional ai-copilots solutions for your business needs.',;
-  keywords: 'ai-copilots, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'ai-copilots - Zion Tech Group';
+  description: 'Professional ai-copilots solutions for your business needs.';
+  keywords: 'ai-copilots, services, business, technology';
 };
-export default function AiCopilotsPage() {,
-  return (,
+export default function AiCopilotsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function AiCopilotsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

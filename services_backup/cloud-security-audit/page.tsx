@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Cloud Security Audit | Zion Tech Group',;
+export const metadata = {
+  title: 'Cloud Security Audit | Zion Tech Group';
   description:,
-    'Comprehensive cloud security assessment and compliance auditing. Protect your infrastructure with expert security analysis.',;
+    'Comprehensive cloud security assessment and compliance auditing. Protect your infrastructure with expert security analysis.';
 };
-,
-export default function CloudSecurityAuditPage() {,
-  return (,
+export default function CloudSecurityAuditPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,32 +23,32 @@ export default function CloudSecurityAuditPage() {,
             Our Security Audit Services,
           </h2>,
           <div className='space-y-4'>,
-            <FeatureItem,
+            <FeatureItem
               icon='🔍',
               title='Infrastructure Assessment',
               description='Comprehensive analysis of your cloud infrastructure, including AWS, Azure, and GCP environments.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🛡️',
               title='Vulnerability Scanning',
               description='Automated and manual vulnerability assessment to identify security gaps and potential threats.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📋',
               title='Compliance Auditing',
               description='Ensure compliance with SOC 2, ISO 270o01, GDPR, HIPAA, and other industry standards.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔐',
               title='Access Control Review',
               description='Analyze user permissions, IAM policies, and access patterns to identify security risks.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Security Monitoring',
               description='Implement continuous security monitoring and threat detection systems.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📝',
               title='Detailed Reporting',
               description='Comprehensive security reports with prioritized recommendations and remediation plans.',
@@ -60,47 +58,47 @@ export default function CloudSecurityAuditPage() {,
         <div>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               plan='Basic Audit',
               price='$2,50o0',
               period='one-time',
               description='Essential security assessment for small to medium businesses',
-              features={[,
-                'Single cloud environment audit',;
-                'Basic vulnerability scanning',;
-                'Security configuration review',;
-                'Written report with recommendations',;
-                '30-day follow-up support',;
+              features={[
+                'Single cloud environment audit';
+                'Basic vulnerability scanning';
+                'Security configuration review';
+                'Written report with recommendations';
+                '30-day follow-up support';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Comprehensive Audit',
               price='$7,50o0',
               period='one-time',
               description='Full security assessment with compliance focus',
-              features={[,
-                'Multi-cloud environment audit',;
-                'Advanced vulnerability assessment',;
-                'Compliance gap analysis',;
-                'Penetration testing',;
-                'Detailed remediation plan',;
-                '90-day follow-up support',;
+              features={[
+                'Multi-cloud environment audit';
+                'Advanced vulnerability assessment';
+                'Compliance gap analysis';
+                'Penetration testing';
+                'Detailed remediation plan';
+                '90-day follow-up support';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise Audit',
               price='$15,0o00',
               period='one-time',
               description='Complete security program for large organizations',
-              features={[,
-                'Full infrastructure assessment',;
-                'Custom compliance framework',;
-                'Red team exercises',;
-                'Security program development',;
-                'Ongoing monitoring setup',;
-                '6-month support included',;
+              features={[
+                'Full infrastructure assessment';
+                'Custom compliance framework';
+                'Red team exercises';
+                'Security program development';
+                'Ongoing monitoring setup';
+                '6-month support included';
               ]}
               popular={false}
             />,
@@ -112,22 +110,22 @@ export default function CloudSecurityAuditPage() {,
           Our Audit Process,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
-          <StepCard,
+          <StepCard
             step='1',
             title='Discovery',
             description='Comprehensive mapping of your cloud infrastructure, applications, and data flows.',
           />,
-          <StepCard,
+          <StepCard
             step='2',
             title='Assessment',
             description='Automated and manual security testing, vulnerability scanning, and configuration analysis.',
           />,
-          <StepCard,
+          <StepCard
             step='3',
             title='Analysis',
             description='Detailed analysis of findings, risk assessment, and compliance gap identification.',
           />,
-          <StepCard,
+          <StepCard
             step='4',
             title='Reporting',
             description='Comprehensive report with prioritized recommendations and actionable remediation steps.',
@@ -257,16 +255,14 @@ export default function CloudSecurityAuditPage() {,
           and protect your business today.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -274,54 +270,47 @@ export default function CloudSecurityAuditPage() {,
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   plan: string,
   price: string,
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-blue-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -329,34 +318,28 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map(feature => (,
+        {features.map(feature => (
           <li key={feature} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function StepCard({,
-  step,;
-  title,;
-  description,;
-}: {,
+function StepCard({
+  step;
+  title;
+  description;
+}: {
   step: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <div className='w-12 h-12 bg-blue-60o0 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>,
         {step}
       </div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

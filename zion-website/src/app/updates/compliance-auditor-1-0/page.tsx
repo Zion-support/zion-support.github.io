@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function ComplianceAuditor10Page() {,
-  return (,
+import React from 'react';
+export default function ComplianceAuditor10Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <div className='mb-4 flex items-center gap-3 text-xs text-gray-40o0'>,
@@ -14,7 +13,7 @@ export default function ComplianceAuditor10Page() {,
           Compliance Auditor v1.0,
         </h1>,
         <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
-          Automated compliance checks for AI systems with policy-as-code,;
+          Automated compliance checks for AI systems with policy-as-code;
           evidence collection, and exportable reports.,
         </p>,
         <div className='mt-8 prose prose-invert prose-lg max-w-none'>,
@@ -31,7 +30,5 @@ export default function ComplianceAuditor10Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

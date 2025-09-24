@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiContentIntelligencePlatformPage() {,
-  return (,
+export default function AiContentIntelligencePlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Content Intelligence Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai content intelligence platform page',
         />,
@@ -21,7 +20,5 @@ export default function AiContentIntelligencePlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -29,10 +29,7 @@ export function buildZionSourceMap(): SourceNode[] {
 			children: [
 				{ name: 'components', path: '/src/components', type: 'directory' },
 				{ name: 'pages', path: '/src/pages', type: 'directory' },
-				{ name: 'utils', path: '/src/utils', type: 'directory' },
-			],
-		},
-	];
+				{ name: 'utils', path: '/src/utils', type: 'directory' }]}];
 }
 
 function markExistenceRecursive(node: SourceNode): SourceNode {
@@ -95,7 +92,7 @@ export interface SourcePosition {
 }
 
 export class SourceMapManager {
-	private sourceMaps: Map<string, SourceMapInfo> = new Map();
+	private sourceMaps: Map<string SourceMapInfo> = new Map();
 
 	addSourceMap(filePath: string, sourceMap: SourceMapInfo): void {
 		this.sourceMaps.set(filePath, sourceMap);
@@ -120,7 +117,7 @@ export class SourceMapManager {
 		return null;
 	}
 
-	getAllSourceMaps(): Map<string, SourceMapInfo> {
+	getAllSourceMaps(): Map<string SourceMapInfo> {
 		return new Map(this.sourceMaps);
 	}
 

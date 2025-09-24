@@ -1,9 +1,9 @@
 import { useState } from 'react',
-import {,
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
 } from '@/components/ui/dialog',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { Button } from '@/components/ui/button',
@@ -13,61 +13,49 @@ import { ContractForm, ContractFormValues } from './components/ContractForm',
 import { ContractPreview } from './components/ContractPreview',
 import { TemplateManager } from './templates/TemplateManager',
 import { SmartContractBuilder } from './SmartContractBuilder',
-,
-interface ContractBuilderProps {,
+interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
   talent: TalentProfile,
   clientName: string,
-  onContractGenerated?: (contractContent: string) => void,
-,}
+  onContractGenerated?: (contractContent: string) => void}
 ,
-export function ContractBuilder({,
-  isOpen,;
-  onClose,;
-  talent,;
-  clientName,;
-  onContractGenerated,;
-}: ContractBuilderProps) {,
+export function ContractBuilder({
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated;
+}: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>('form'),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(,
-    null,
-  ),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(,
-    undefined,
-  ),
+  const [generatedContract, setGeneratedContract] = useState<string | null>(
+    null),
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
   const [showSmartContractBuilder, setShowSmartContractBuilder] =,
     useState(false),
-,
-  const handleLoadTemplate = (templateData: ContractFormValues) => {,
-    setFormValues(templateData),
-  ,};
-,
-  const handleContractGenerated = (contract: string) => {,
+  const handleLoadTemplate = (templateData: ContractFormValues) => {
+    setFormValues(templateData)};
+  const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract),
     setActiveTab('preview'),
-    if (onContractGenerated) {,
-      onContractGenerated(contract),
-    ,}
+    if (onContractGenerated) {
+      onContractGenerated(contract)}
   };
-,
-  if (showSmartContractBuilder) {,
-    return (,
-      <SmartContractBuilder,
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
         isOpen={isOpen}
-        onClose={() => {,
+        onClose={() => {
           setShowSmartContractBuilder(false),
-          onClose(),
-        }}
+          onClose()}}
         talent={talent}
         clientName={clientName}
         onContractGenerated={onContractGenerated}
-      />,
-    ),
-  }
+      />)}
 ,
-  return (,
+  return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className='max-w-4xl max-h-[90vh] overflow-y-auto'>,
         <DialogHeader>,
@@ -82,16 +70,15 @@ export function ContractBuilder({,
               </TabsTrigger>,
             </TabsList>,
             <div className='flex gap-2'>,
-              <Button,
+              <Button
                 variant='outline',
                 size='sm',
                 onClick={() => setTemplateManagerOpen(true)}
-                className='flex gap-1',
-              >,
+                className='flex gap-1'>,
                 <Save className='h-4 w-4' />,
                 Templates,
               </Button>,
-              <Button,
+              <Button
                 variant='secondary',
                 size='sm',
                 onClick={() => setShowSmartContractBuilder(true)}
@@ -101,7 +88,7 @@ export function ContractBuilder({,
             </div>,
           </div>,
           <TabsContent value='form' className='pt-4'>,
-            <ContractForm,
+            <ContractForm
               talent={talent}
               clientName={clientName}
               initialValues={formValues}
@@ -110,24 +97,21 @@ export function ContractBuilder({,
             />,
           </TabsContent>,
           <TabsContent value='preview' className='pt-4'>,
-            {generatedContract && (,
-              <ContractPreview,
+            {generatedContract && (
+              <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
                 onClose={onClose}
                 status='ready',
-              />,
-            )}
+              />)}
           </TabsContent>,
         </Tabs>,
-        <TemplateManager,
+        <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
         />,
       </DialogContent>,
-    </Dialog>,
-  ),
-}
+    </Dialog>)}
 ,

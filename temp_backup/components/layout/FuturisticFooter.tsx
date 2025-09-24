@@ -1,129 +1,122 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Twitter,;
-  Linkedin,;
-  Github,;
-  Facebook,;
-  Instagram,;
-  Youtube,;
-  ArrowUp,;
-  Zap,;
-  Shield,;
-  Users,;
-  Award,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Twitter;
+  Linkedin;
+  Github;
+  Facebook;
+  Instagram;
+  Youtube;
+  ArrowUp;
+  Zap;
+  Shield;
+  Users;
+  Award;
 } from 'lucide-react',
-,
-export default function FuturisticFooter() {,
-  const scrollToTop = () => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
+export default function FuturisticFooter() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
   const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [,
-    {,
-      title: 'Services',;
-      links: [,
-        { name: 'AI & Automation', href: '/services#ai' ,},;
-        { name: 'Cloud Infrastructure', href: '/services#cloud' ,},;
-        { name: 'Security & Compliance', href: '/services#security' ,},;
-        { name: 'Data Analytics', href: '/services#analytics' ,},;
-        { name: 'DevOps & CI/CD', href: '/services#devops' ,},;
-        { name: 'Digital Transformation', href: '/services#digital' ,},;
-      ],;
-    },;
-    {,
-      title: 'Micro SaaS',;
-      links: [,
-        {,
-          name: 'Content & Marketing',;
-          href: '/micro-saas?category=Content+%26+Marketing',;
-        },;
-        {,
-          name: 'Development & DevOps',;
-          href: '/micro-saas?category=Development+%26+DevOps',;
-        },;
-        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' ,},;
-        {,
-          name: 'Analytics & Data',;
-          href: '/micro-saas?category=Analytics+%26+Data',;
-        },;
-        {,
-          name: 'AI & Machine Learning',;
-          href: '/micro-saas?category=AI+%26+Machine+Learning',;
-        },;
-        {,
-          name: 'Emerging Technologies',;
-          href: '/micro-saas?category=Emerging+Technologies',;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Company',;
-      links: [,
-        { name: 'About Us', href: '/about' ,},;
-        { name: 'Our Team', href: '/about#team' ,},;
-        { name: 'Careers', href: '/careers' ,},;
-        { name: 'Press & Media', href: '/press' ,},;
-        { name: 'Partnerships', href: '/partnerships' ,},;
-        { name: 'Investor Relations', href: '/investors' ,},;
-      ],;
-    },;
-    {,
-      title: 'Resources',;
-      links: [,
-        { name: 'Documentation', href: '/docs' ,},;
-        { name: 'API Reference', href: '/api' ,},;
-        { name: 'Blog', href: '/blog' ,},;
-        { name: 'Case Studies', href: '/case-studies' ,},;
-        { name: 'Webinars', href: '/webinars' ,},;
-        { name: 'Support Center', href: '/support' ,},;
-      ],;
-    },;
+  const footerSections = [
+    {
+      title: 'Services';
+      links: [
+        { name: 'AI & Automation', href: '/services#ai' };
+        { name: 'Cloud Infrastructure', href: '/services#cloud' };
+        { name: 'Security & Compliance', href: '/services#security' };
+        { name: 'Data Analytics', href: '/services#analytics' };
+        { name: 'DevOps & CI/CD', href: '/services#devops' };
+        { name: 'Digital Transformation', href: '/services#digital' };
+      ];
+    };
+    {
+      title: 'Micro SaaS';
+      links: [
+        {
+          name: 'Content & Marketing';
+          href: '/micro-saas?category=Content+%26+Marketing';
+        };
+        {
+          name: 'Development & DevOps';
+          href: '/micro-saas?category=Development+%26+DevOps';
+        };
+        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' };
+        {
+          name: 'Analytics & Data';
+          href: '/micro-saas?category=Analytics+%26+Data';
+        };
+        {
+          name: 'AI & Machine Learning';
+          href: '/micro-saas?category=AI+%26+Machine+Learning';
+        };
+        {
+          name: 'Emerging Technologies';
+          href: '/micro-saas?category=Emerging+Technologies';
+        };
+      ];
+    };
+    {
+      title: 'Company';
+      links: [
+        { name: 'About Us', href: '/about' };
+        { name: 'Our Team', href: '/about#team' };
+        { name: 'Careers', href: '/careers' };
+        { name: 'Press & Media', href: '/press' };
+        { name: 'Partnerships', href: '/partnerships' };
+        { name: 'Investor Relations', href: '/investors' };
+      ];
+    };
+    {
+      title: 'Resources';
+      links: [
+        { name: 'Documentation', href: '/docs' };
+        { name: 'API Reference', href: '/api' };
+        { name: 'Blog', href: '/blog' };
+        { name: 'Case Studies', href: '/case-studies' };
+        { name: 'Webinars', href: '/webinars' };
+        { name: 'Support Center', href: '/support' };
+      ];
+    };
   ],
-,
-  const socialLinks = [,
-    {,
-      name: 'Twitter',;
-      href: 'https://twitter.com/ziontechgroup',;
-      icon: Twitter,;
-    },;
-    {,
-      name: 'LinkedIn',;
-      href: 'https://linkedin.com/company/ziontechgroup',;
-      icon: Linkedin,;
-    },;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github ,},;
-    {,
-      name: 'Facebook',;
-      href: 'https://facebook.com/ziontechgroup',;
-      icon: Facebook,;
-    },;
-    {,
-      name: 'Instagram',;
-      href: 'https://instagram.com/ziontechgroup',;
-      icon: Instagram,;
-    },;
-    {,
-      name: 'YouTube',;
-      href: 'https://youtube.com/@ziontechgroup',;
-      icon: Youtube,;
-    },;
+  const socialLinks = [
+    {
+      name: 'Twitter';
+      href: 'https://twitter.com/ziontechgroup';
+      icon: Twitter;
+    };
+    {
+      name: 'LinkedIn';
+      href: 'https://linkedin.com/company/ziontechgroup';
+      icon: Linkedin;
+    };
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
+    {
+      name: 'Facebook';
+      href: 'https://facebook.com/ziontechgroup';
+      icon: Facebook;
+    };
+    {
+      name: 'Instagram';
+      href: 'https://instagram.com/ziontechgroup';
+      icon: Instagram;
+    };
+    {
+      name: 'YouTube';
+      href: 'https://youtube.com/@ziontechgroup';
+      icon: Youtube;
+    };
   ],
-,
-  const stats = [,
-    { icon: Zap, value: '48+', label: 'Micro SaaS Services' ,},;
-    { icon: Users, value: '50o0+', label: 'Happy Clients' ,},;
-    { icon: Shield, value: '99.9%', label: 'Uptime SLA' ,},;
-    { icon: Award, value: '24/7', label: 'Support Available' ,},;
+  const stats = [
+    { icon: Zap, value: '48+', label: 'Micro SaaS Services' };
+    { icon: Users, value: '50o0+', label: 'Happy Clients' };
+    { icon: Shield, value: '99.9%', label: 'Uptime SLA' };
+    { icon: Award, value: '24/7', label: 'Support Available' };
   ],
-,
-  return (,
+  return (
     <footer className='bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white relative overflow-hidden'>,
       {/* Background effects */}
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]' />,
@@ -133,23 +126,21 @@ export default function FuturisticFooter() {,
         <section className='py-16 border-b border-gray-70o0/50'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>,
-              {stats.map((stat, index) => (,
+              {stats.map((stat, index) => (
                 <motion.div,
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className='text-center group',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className='text-center group'>,
                   <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0'>,
                     <stat.icon className='w-8 h-8 text-cyan-40o0' />,
                   </div>,
                   <div className='text-3xl font-bold text-white mb-2'>,
-                    {stat.value,}
+                    {stat.value}
                   </div>,
                   <div className='text-gray-40o0'>{stat.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -157,7 +148,7 @@ export default function FuturisticFooter() {,
         <div className='py-16'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>,
-              {/* Company Info */,}
+              {/* Company Info */}
               <div className='lg: col-span-2'>,
                 <div className='flex items-center space-x-3 mb-6'>,
                   <div className='w-12 h-12 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center text-white font-bold text-2xl'>,
@@ -195,26 +186,23 @@ export default function FuturisticFooter() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Footer Links */,}
-              {footerSections.map(section => (,
+              {/* Footer Links */}
+              {footerSections.map(section => (
                 <div key={section.title}>,
                   <h3 className='text-lg font-semibold text-white mb-6'>,
                     {section.title}
                   </h3>,
                   <ul className='space-y-3'>,
-                    {section.links.map(link => (,
+                    {section.links.map(link => (
                       <li key={link.name}>,
-                        <Link,
+                        <Link
                           href={link.href}
-                          className='text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0',
-                        >,
-                          {link.name,}
+                          className='text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0'>,
+                          {link.name}
                         </Link>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -222,30 +210,28 @@ export default function FuturisticFooter() {,
         <div className='py-8 border-t border-gray-70o0/50'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>,
-              {/* Copyright */,}
+              {/* Copyright */}
               <div className='text-gray-40o0 text-sm'>,
                 © {currentYear} Zion Tech Group. All rights reserved. |,
                 <Link href='/privacy' className='hover: text-cyan-40o0 ml-2'>,
                   Privacy Policy,
-                </Link>{' ',}
+                </Link>{' '}
                 |,
                 <Link href='/terms' className='hover: text-cyan-40o0 ml-2'>,
                   Terms of Service,
                 </Link>,
               </div>,
-              {/* Social Links */,}
+              {/* Social Links */}
               <div className='flex items-center space-x-4'>,
-                {socialLinks.map(social => (,
-                  <a,
+                {socialLinks.map(social => (
+                  <a
                     key={social.name}
                     href={social.href}
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='w-10 h-10 bg-gray-80o0/50 hover: bg-cyan-50o0/20 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-cyan-40o0 transition-all duration-30o0 hover:scale-110',
-                  >,
+                    className='w-10 h-10 bg-gray-80o0/50 hover: bg-cyan-50o0/20 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-cyan-40o0 transition-all duration-30o0 hover:scale-110'>,
                     <social.icon className='w-5 h-5' />,
-                  </a>,
-                )),}
+                  </a>))}
               </div>,
             </div>,
           </div>,
@@ -255,12 +241,10 @@ export default function FuturisticFooter() {,
       <motion.button,
         onClick={scrollToTop}
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-110 z-40',
-        whileHover={{ scale: 1.1 ,}}
-        whileTap={{ scale: 0.9 ,}}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >,
         <ArrowUp className='w-6 h-6' />,
       </motion.button>,
-    </footer>,
-  ),
-}
+    </footer>)}
 ,

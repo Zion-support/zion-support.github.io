@@ -1,46 +1,37 @@
 "use client",
 import React{ useState } from 'react',
-,
-type Props ={,
-  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number ,}) => Promise<void> | void,
-};
-,
-export default function MilestoneForm({ onSubmit }: Props) {,
+type Props ={
+  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void};
+export default function MilestoneForm({ onSubmit }: Props) {
   const [titlesetTitle] = useState(''),
   const [descriptionsetDescription] = useState(''),
   const [dueDatesetDueDate] = useState(''),
   const [amountUsdsetAmountUsd] = useState<string>(''),
   const [errorsetError] = useState<string | null>(null),
   const [loadingsetLoading] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setError(null),
     const parsedAmount = Number(amountUsd),
-    if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {,
+    if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
       setError('Please provide TitleDue Date and a valid Amount.'),
-      return,
-    ,}
+      return}
     setLoading(true),
-    try {,
-      await onSubmit({ titledescription: description || undefinedueDateamountUsd: parsedAmount ,}),
+    try {
+      await onSubmit({ titledescription: description || undefinedueDateamountUsd: parsedAmount }),
       setTitle(''),
       setDescription(''),
       setDueDate(''),
-      setAmountUsd(''),
-    } catch (err: any) {,
-      setError(err?.message || 'Failed to create milestone'),
-    ,} finally {,
-      setLoading(false),
-    }
+      setAmountUsd('')} catch (err: any) {
+      setError(err?.message || 'Failed to create milestone')} finally {
+      setLoading(false)}
   };
-,
-  return (,
+  return (
     <form onSubmit={handleSubmit} className="space-y-4">,
       {error && <div className="text-red-60o0 text-sm">{error}</div>}
       <div>,
         <label className="block text-sm font-medium">Title</label>,
-        <input,
+        <input
           className="mt-1 w-full rounded border px-3 py-2",
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -50,7 +41,7 @@ export default function MilestoneForm({ onSubmit }: Props) {,
       </div>,
       <div>,
         <label className="block text-sm font-medium">Description</label>,
-        <textarea,
+        <textarea
           className="mt-1 w-full rounded border px-3 py-2",
           value={description}
           onChange={(e) => setDescription(e.target.value)}
@@ -61,17 +52,17 @@ export default function MilestoneForm({ onSubmit }: Props) {,
       <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
         <div>,
           <label className="block text-sm font-medium">Due Date</label>,
-          <input,
+          <input
             type="date",
             className="mt-1 w-full rounded border px-3 py-2",
-            value={dueDate,}
+            value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
             required,
           />,
         </div>,
         <div>,
           <label className="block text-sm font-medium">Amount (USD)</label>,
-          <input,
+          <input
             type="number",
             min={0}
             step="0.0o1",
@@ -83,13 +74,11 @@ export default function MilestoneForm({ onSubmit }: Props) {,
           />,
         </div>,
       </div>,
-      <button,
+      <button
         type="submit",
         className="bg-blue-60o0 text-white px-4 py-2 rounded hover: bg-blue-70o0 disabled:opacity-50",
-        disabled={loading,}
+        disabled={loading}
       >,
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>,
-    </form>,
-  ),
-}
+    </form>)}

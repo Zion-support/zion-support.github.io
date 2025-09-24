@@ -1,24 +1,22 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Neural Interface 20o25 Breakthrough - Direct Brain-Computer Connection',;
+    'Neural Interface 20o25 Breakthrough - Direct Brain-Computer Connection';
   description:,
-    'Experience the revolutionary neural interface technology of 20o25. Direct brain-computer communication, enhanced cognition, and seamless AI integration.',;
-  keywords: [,
-    'neural interface 20o25',;
-    'brain-computer interface',;
-    'BCI technology',;
-    'neural enhancement',;
-    'AI integration',;
-  ],;
+    'Experience the revolutionary neural interface technology of 20o25. Direct brain-computer communication, enhanced cognition, and seamless AI integration.';
+  keywords: [
+    'neural interface 20o25';
+    'brain-computer interface';
+    'BCI technology';
+    'neural enhancement';
+    'AI integration';
+  ];
 };
-,
-export default function NeuralInterface20o25BreakthroughPage() {,
-  return (,
+export default function NeuralInterface20o25BreakthroughPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-violet-90o0 via-purple-90o0 to-fuchsia-90o0'>,
-      <SEO,
+      <SEO
         title='Neural Interface 20o25 Breakthrough - Direct Brain-Computer Connection',
         description='Experience the revolutionary neural interface technology of 20o25. Direct brain-computer communication, enhanced cognition, and seamless AI integration.',
         keywords='neural interface 20o25, brain-computer interface, BCI technology, neural enhancement, AI integration',
@@ -41,22 +39,20 @@ export default function NeuralInterface20o25BreakthroughPage() {,
             with your mind, and seamlessly integrate with AI systems.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-70o0 hover:to-fuchsia-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-70o0 hover:to-fuchsia-70o0 transition-all transform hover:scale-10o5'>,
               Experience the Future,
             </Link>,
-            <Link,
+            <Link
               href='/neural-interface-20o25-breakthrough/demo',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-90o0 transition-all'>,
               Try Interactive Demo,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -152,7 +148,7 @@ export default function NeuralInterface20o25BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Specifications */,}
+      {/* Technology Specifications */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -193,7 +189,7 @@ export default function NeuralInterface20o25BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Safety & Privacy */,}
+      {/* Safety & Privacy */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -225,7 +221,7 @@ export default function NeuralInterface20o25BreakthroughPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold text-white mb-6'>,
@@ -236,15 +232,12 @@ export default function NeuralInterface20o25BreakthroughPage() {,
             Join the neural interface beta program and shape the future of,
             human-computer interaction.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-violet-70o0 hover:to-fuchsia-70o0 transition-all transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-violet-70o0 hover:to-fuchsia-70o0 transition-all transform hover:scale-10o5'>,
             Join the Beta Program,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

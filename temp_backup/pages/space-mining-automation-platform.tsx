@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function SpaceMiningAutomationPlatformPage() {,
-  return (,
+export default function SpaceMiningAutomationPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Space Mining Automation Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='space mining automation platform page',
         />,
@@ -21,7 +20,5 @@ export default function SpaceMiningAutomationPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

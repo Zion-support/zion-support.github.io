@@ -1,89 +1,69 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { X, Brain, Zap, TrendingUp, ArrowRight, Star, ArrowRight, Brain } from 'lucide-react',
-,
-const NeuralInterfaceRevolutionBanner20o25 = () => {,
+const NeuralInterfaceRevolutionBanner20o25 = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [currentSlide, setCurrentSlide] = useState(0),
-,
-  const content = [,
-    {,
-      id: 'neural-interface-revolution',;
-      title: 'AI 20o25: The Neural Interface Revolution',;
-      subtitle: 'Ultimate Enterprise Guide to 750% ROI',;
-      description: 'Transform your business with brain-computer integration. Companies achieving 750% ROI within 18 months.',;
-      metrics: {,
-        roi: '750%',;
-        savings: '$4.2M',;
-        productivity: '156%',;
-        accuracy: '99.7%',
-      ,},;
-      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide',;
-      type: 'blog',;
-      readingTime: '22 min read',;
-      featured: true,
-    ,},;
-    {,
-      id: 'neural-interface-fortune-50o0',;
-      title: 'Fortune 50o0 Neural Interface Transformation',;
-      subtitle: '$2.8B Company Achieves 850% ROI',;
-      description: 'See how a Fortune 50o0 manufacturing giant achieved 850% ROI with brain-computer integration.',;
-      metrics: {,
-        roi: '850%',;
-        savings: '$67M',;
-        efficiency: '94%',;
-        satisfaction: '98%',
-      ,},;
-      url: '/case-studies/neural-interface-fortune-50o0-transformation-20o25',;
-      type: 'case-study',;
-      readingTime: '18 min read',;
-      featured: true,
-    ,},;
-    {,
-      id: 'neural-interface-implementation',;
-      title: 'Neural Interface Implementation Master Guide',;
-      subtitle: 'From Strategy to 850% ROI',;
-      description: 'Complete implementation framework for achieving 850% ROI with neural interface technology.',;
-      metrics: {,
-        roi: '850%',;
-        success: '94%',;
-        timeline: '15 months',;
-        savings: '$4.2M',
-      ,},;
-      url: '/resources/neural-interface-implementation-master-guide-20o25',;
-      type: 'resource',;
-      readingTime: '35 min read',;
-      featured: true,
-    ,}
+  const content = [
+    {
+      id: 'neural-interface-revolution';
+      title: 'AI 20o25: The Neural Interface Revolution';
+      subtitle: 'Ultimate Enterprise Guide to 750% ROI';
+      description: 'Transform your business with brain-computer integration. Companies achieving 750% ROI within 18 months.';
+      metrics: {
+        roi: '750%';
+        savings: '$4.2M';
+        productivity: '156%';
+        accuracy: '99.7%'};
+      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
+      type: 'blog';
+      readingTime: '22 min read';
+      featured: true};
+    {
+      id: 'neural-interface-fortune-50o0';
+      title: 'Fortune 50o0 Neural Interface Transformation';
+      subtitle: '$2.8B Company Achieves 850% ROI';
+      description: 'See how a Fortune 50o0 manufacturing giant achieved 850% ROI with brain-computer integration.';
+      metrics: {
+        roi: '850%';
+        savings: '$67M';
+        efficiency: '94%';
+        satisfaction: '98%'};
+      url: '/case-studies/neural-interface-fortune-50o0-transformation-20o25';
+      type: 'case-study';
+      readingTime: '18 min read';
+      featured: true};
+    {
+      id: 'neural-interface-implementation';
+      title: 'Neural Interface Implementation Master Guide';
+      subtitle: 'From Strategy to 850% ROI';
+      description: 'Complete implementation framework for achieving 850% ROI with neural interface technology.';
+      metrics: {
+        roi: '850%';
+        success: '94%';
+        timeline: '15 months';
+        savings: '$4.2M'};
+      url: '/resources/neural-interface-implementation-master-guide-20o25';
+      type: 'resource';
+      readingTime: '35 min read';
+      featured: true}
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % content.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, [content.length]),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 50o00),
+    return () => clearInterval(timer)}, [content.length]),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('neural-interface-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
+    localStorage.setItem('neural-interface-banner-dismissed', 'true')};
+  useEffect(() => {
     const dismissed = localStorage.getItem('neural-interface-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = content[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -110,7 +90,7 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {,
                 </div>,
               </div>,
               <h2 className="text-2xl md:text-3xl font-bold mb-2">,
-                {currentContent.title,}
+                {currentContent.title}
               </h2>,
               <p className="text-lg text-blue-20o0 mb-4">,
                 {currentContent.subtitle}
@@ -121,7 +101,7 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {,
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-6">,
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">,
-                  <div className="text-2xl font-bold text-green-40o0">{currentContent.metrics.roi,}</div>,
+                  <div className="text-2xl font-bold text-green-40o0">{currentContent.metrics.roi}</div>,
                   <div className="text-xs text-gray-30o0">ROI</div>,
                 </div>,
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">,
@@ -138,25 +118,23 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {,
                 </div>,
               </div>,
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
-                  href={currentContent.url,}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5",
-                >,
+                <Link
+                  href={currentContent.url}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5">,
                   <Zap className="h-5 w-5 mr-2"  />,
-                  Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide',}
+                  Read {currentContent.type === 'blog' ? 'Article' : currentContent.type === 'case-study' ? 'Case Study' : 'Guide'}
                   <ArrowRight className="h-4 w-4 ml-2"  />,
                 </Link>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-90o0 transition-all duration-20o0",
-                >,
+                  className="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-90o0 transition-all duration-20o0">,
                   Get Neural Interface Consultation,
                 </Link>,
               </div>,
               <div className="mt-4 flex items-center space-x-4 text-sm text-gray-30o0">,
                 <span className="flex items-center">,
                   <TrendingUp className="h-4 w-4 mr-1"  />,
-                  {currentContent.readingTime,}
+                  {currentContent.readingTime}
                 </span>,
                 <span className="px-2 py-1 bg-white/20 rounded-full text-xs">,
                   {currentContent.type === 'blog' ? 'Blog Post' : currentContent.type === 'case-study' ? 'Case Study' : 'Resource'}
@@ -189,29 +167,23 @@ const NeuralInterfaceRevolutionBanner20o25 = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Progress Indicators */,}
+          {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 mt-6">,
-            {content.map((_, index) => (,
-              <button,
+            {content.map((_, index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-20o0 ${,
-                  index === currentSlide ? 'bg-white' : 'bg-white/30',
-                }`}
-              />,
-            ))}
+                className={`w-3 h-3 rounded-full transition-all duration-20o0 ${
+                  index === currentSlide ? 'bg-white' : 'bg-white/30'}`}
+              />))}
           </div>,
         </div>,
         {/* Dismiss Button */}
-        <button,
+        <button
           onClick={handleDismiss}
-          className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors",
-        >,
+          className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors">,
           <X className="h-6 w-6"  />,
         </button>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NeuralInterfaceRevolutionBanner20o25,
+    </div>)};
+export default NeuralInterfaceRevolutionBanner20o25;

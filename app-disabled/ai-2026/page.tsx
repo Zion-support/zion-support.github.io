@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26 - Future AI Technologies | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26 - Future AI Technologies | Zion Tech Group';
   description:,
-    'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',;
-  keywords: [,
-    'AI 20o26',;
-    'future AI',;
-    'quantum AI',;
-    'revolutionary technology',;
-    'artificial general intelligence',;
-  ],;
+    'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.';
+  keywords: [
+    'AI 20o26';
+    'future AI';
+    'quantum AI';
+    'revolutionary technology';
+    'artificial general intelligence';
+  ];
 };
-,
-export default function AI20o26Page() {,
-  return (,
+export default function AI20o26Page() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26 - Future AI Technologies',
         description='Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
         keywords='AI 20o26, future AI, quantum AI, revolutionary technology, artificial general intelligence',
@@ -35,22 +33,20 @@ export default function AI20o26Page() {,
             with technology.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26/quantum-revolution',
-              className='bg-white text-violet-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-violet-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26/revolutionary-content',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-violet-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-violet-60o0 transition-colors'>,
               View Revolutionary Content,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -66,10 +62,9 @@ export default function AI20o26Page() {,
                 Quantum-enhanced artificial intelligence with exponential,
                 computational power.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o26/quantum-ai',
-                className='text-violet-60o0 font-semibold hover:text-violet-80o0',
-              >,
+                className='text-violet-60o0 font-semibold hover:text-violet-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -82,10 +77,9 @@ export default function AI20o26Page() {,
                 Artificial General Intelligence approaching human-level,
                 reasoning and understanding.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o26/agi-systems',
-                className='text-violet-60o0 font-semibold hover:text-violet-80o0',
-              >,
+                className='text-violet-60o0 font-semibold hover:text-violet-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -98,10 +92,9 @@ export default function AI20o26Page() {,
                 Direct brain-computer interfaces for seamless human-AI,
                 collaboration.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o26/neural-interfaces',
-                className='text-violet-60o0 font-semibold hover:text-violet-80o0',
-              >,
+                className='text-violet-60o0 font-semibold hover:text-violet-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -114,17 +107,16 @@ export default function AI20o26Page() {,
                 Advanced prediction models with 99.9% accuracy for complex,
                 future scenarios.,
               </p>,
-              <Link,
+              <Link
                 href='/ai-20o26/predictive-ai',
-                className='text-violet-60o0 font-semibold hover:text-violet-80o0',
-              >,
+                className='text-violet-60o0 font-semibold hover:text-violet-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='bg-gradient-to-r from-violet-50 to-purple-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -134,15 +126,12 @@ export default function AI20o26Page() {,
             Join the pioneers who are shaping the future of artificial,
             intelligence and technology.,
           </p>,
-          <Link,
+          <Link
             href='/ai-20o26/early-access',
-            className='bg-violet-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-70o0 transition-colors',
-          >,
+            className='bg-violet-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-violet-70o0 transition-colors'>,
             Request Early Access,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

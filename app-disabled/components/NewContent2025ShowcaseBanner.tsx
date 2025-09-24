@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-export default function NewContent20o25ShowcaseBanner() {,
-  return (,
+export default function NewContent20o25ShowcaseBanner() {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         />,
       </div>,
@@ -26,7 +25,7 @@ export default function NewContent20o25ShowcaseBanner() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
-          {/* Featured Blog Post */,}
+          {/* Featured Blog Post */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20'>,
             <div className='text-4xl mb-4'>🤖</div>,
             <h3 className='text-xl font-bold mb-4'>,
@@ -36,21 +35,19 @@ export default function NewContent20o25ShowcaseBanner() {,
               Learn how autonomous AI systems are revolutionizing business,
               operations with unprecedented efficiency and ROI.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-autonomous-business-revolution-ultimate',
-              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Read Article,
-              <svg,
+              <svg
                 className='ml-2 w-4 h-4',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -66,21 +63,19 @@ export default function NewContent20o25ShowcaseBanner() {,
               See how a Fortune 10o0 company achieved 450% ROI and $75M annual,
               savings through comprehensive AI transformation.,
             </p>,
-            <Link,
+            <Link
               href='/case-studies/enterprise-ai-transformation-20o25-ultimate-success-story',
-              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors',
-            >,
+              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors'>,
               View Case Study,
-              <svg,
+              <svg
                 className='ml-2 w-4 h-4',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -96,21 +91,19 @@ export default function NewContent20o25ShowcaseBanner() {,
               Complete roadmap for implementing autonomous AI systems with,
               step-by-step instructions and best practices.,
             </p>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-autonomous-systems-implementation-guide',
-              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors',
-            >,
+              className='inline-flex items-center bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors'>,
               Get Guide,
-              <svg,
+              <svg
                 className='ml-2 w-4 h-4',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -136,25 +129,21 @@ export default function NewContent20o25ShowcaseBanner() {,
             <div className='text-sm text-gray-20o0'>Autonomous Operations</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center mt-12'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Start Your AI Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors text-lg'>,
               Explore All Resources,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

@@ -1,80 +1,71 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-export default function TechnologyInsightsPage() {,
-  const technologyTrends = [,
-    {,
-      id: 'quantum-computing',;
-      title: 'Quantum Computing in 20o25',;
-      description: 'Exploring the latest developments in quantum computing and their implications for AI and automation.',;
-      category: 'Emerging Tech',;
-      readTime: '15 min read',;
-      featured: true,
-    ,},;
-    {,
-      id: 'edge-ai',;
-      title: 'Edge AI Revolution',;
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',;
-      category: 'AI/ML',;
-      readTime: '12 min read',;
-      featured: false,
-    ,},;
-    {,
-      id: 'autonomous-vehicles',;
-      title: 'Autonomous Vehicle Technology',;
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.',;
-      category: 'Autonomy',;
-      readTime: '18 min read',;
-      featured: false,
-    ,}
-  ],;
-  const researchAreas = [,
-    {,
-      title: 'Autonomous Systems Research',;
-      description: 'Pioneering research in building truly autonomous systems that can operate independently.',;
-      focus: ['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'],;
-      icon: '🔬',
-    ,},;
-    {,
-      title: 'AI Ethics & Governance',;
-      description: 'Research into responsible AI development and ethical considerations for autonomous systems.',;
-      focus: ['Ethical AIBias Detection', 'TransparencyAccountability'],;
-      icon: '⚖️',
-    ,},;
-    {,
-      title: 'Human-AI Collaboration',;
-      description: 'Exploring how humans and AI can work together effectively and safely.',;
-      focus: ['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'],;
-      icon: '🤝',
-    ,}
-  ],;
-  const whitepapers = [,
-    {,
-      id: 'autonomous-systems-whitepaper',;
-      title: 'The Future of Autonomous Systems',;
-      description: 'A comprehensive analysis of autonomous technology trends and implementation strategies.',;
-      pages: '45',;
-      category: 'Technology',;
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf',
-    ,},;
-    {,
-      id: 'ai-ethics-framework',;
-      title: 'AI Ethics Framework for Business',;
-      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',;
-      pages: '32',;
-      category: 'Ethics',;
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf',
-    ,},;
-    {,
-      id: 'automation-roi-guide',;
-      title: 'Automation ROI Guide',;
-      description: 'How to calculate and maximize return on investment for automation initiatives.',;
-      pages: '28',;
-      category: 'Business',;
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf',
-    ,}
-  ],;
-  return (,
+import React from 'react';;
+import Head from 'next/head';
+import Link from 'next/link';
+export default function TechnologyInsightsPage() {
+  const technologyTrends = [
+    {
+      id: 'quantum-computing';
+      title: 'Quantum Computing in 20o25';
+      description: 'Exploring the latest developments in quantum computing and their implications for AI and automation.';
+      category: 'Emerging Tech';
+      readTime: '15 min read';
+      featured: true};
+    {
+      id: 'edge-ai';
+      title: 'Edge AI Revolution';
+      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.';
+      category: 'AI/ML';
+      readTime: '12 min read';
+      featured: false};
+    {
+      id: 'autonomous-vehicles';
+      title: 'Autonomous Vehicle Technology';
+      description: 'The current state and future of autonomous vehicle technology and its broader applications.';
+      category: 'Autonomy';
+      readTime: '18 min read';
+      featured: false}
+  ];
+  const researchAreas = [
+    {
+      title: 'Autonomous Systems Research';
+      description: 'Pioneering research in building truly autonomous systems that can operate independently.';
+      focus: ['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'];
+      icon: '🔬'};
+    {
+      title: 'AI Ethics & Governance';
+      description: 'Research into responsible AI development and ethical considerations for autonomous systems.';
+      focus: ['Ethical AIBias Detection', 'TransparencyAccountability'];
+      icon: '⚖️'};
+    {
+      title: 'Human-AI Collaboration';
+      description: 'Exploring how humans and AI can work together effectively and safely.';
+      focus: ['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'];
+      icon: '🤝'}
+  ];
+  const whitepapers = [
+    {
+      id: 'autonomous-systems-whitepaper';
+      title: 'The Future of Autonomous Systems';
+      description: 'A comprehensive analysis of autonomous technology trends and implementation strategies.';
+      pages: '45';
+      category: 'Technology';
+      downloadUrl: '/whitepapers/autonomous-systems-future.pdf'};
+    {
+      id: 'ai-ethics-framework';
+      title: 'AI Ethics Framework for Business';
+      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.';
+      pages: '32';
+      category: 'Ethics';
+      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'};
+    {
+      id: 'automation-roi-guide';
+      title: 'Automation ROI Guide';
+      description: 'How to calculate and maximize return on investment for automation initiatives.';
+      pages: '28';
+      category: 'Business';
+      downloadUrl: '/whitepapers/automation-roi-guide.pdf'}
+  ];
+  return (
     <>,
       <Head>,
         <title>Technology Insights | Zion Tech Group - Research & Innovation</title>,
@@ -98,50 +89,46 @@ export default function TechnologyInsightsPage() {,
             <div className="mb-16">,
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-40o0">Latest Technology Trends</h2>,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-                {technologyTrends.map((trend, index) => (,
+                {technologyTrends.map((trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover: bg-white/15 transition-all duration-30o0">,
                     <div className="flex items-center justify-between mb-4">,
-                      <span className="px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full">{trend.category,}</span>,
+                      <span className="px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full">{trend.category}</span>,
                       <span className="text-white/60 text-sm">{trend.readTime}</span>,
                     </div>,
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>,
                     <p className="text-white/70 mb-4">{trend.description}</p>,
-                    <Link,
+                    <Link
                       href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors",
-                    >,
+                      className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors">,
                       Read More <span className="ml-1">→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </div>,
             {/* Research Areas */}
             <div className="mb-16">,
               <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-40o0">Research Focus Areas</h2>,
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-                {researchAreas.map((area, index) => (,
+                {researchAreas.map((area, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">,
                     <div className="text-4xl mb-4">{area.icon}</div>,
                     <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>,
                     <p className="text-white/70 mb-4">{area.description}</p>,
                     <ul className="space-y-2">,
-                      {area.focus.map((focus, focusIndex) => (,
+                      {area.focus.map((focus, focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">,
                           <span className="text-cyan-40o0 mr-2">•</span>,
                           {focus}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Whitepapers */}
             <div className="mb-16">,
               <h2 className="text-3xl font-bold mb-8 text-center text-green-40o0">Research Whitepapers</h2>,
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-                {whitepapers.map((paper, index) => (,
+                {whitepapers.map((paper, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">,
                     <div className="flex items-center justify-between mb-3">,
                       <span className="px-3 py-1 bg-blue-40o0/20 text-blue-40o0 text-sm rounded-full">{paper.category}</span>,
@@ -149,14 +136,12 @@ export default function TechnologyInsightsPage() {,
                     </div>,
                     <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>,
                     <p className="text-white/70 mb-4">{paper.description}</p>,
-                    <Link,
+                    <Link
                       href={paper.downloadUrl}
-                      className="inline-flex items-center text-fuchsia-40o0 hover: text-fuchsia-30o0 transition-colors",
-                    >,
+                      className="inline-flex items-center text-fuchsia-40o0 hover: text-fuchsia-30o0 transition-colors">,
                       Download PDF <span className="ml-1">→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </div>,
             {/* Innovation Lab */}
@@ -167,7 +152,7 @@ export default function TechnologyInsightsPage() {,
                   <div>,
                     <h3 className="text-2xl font-bold mb-4 text-cyan-40o0">Cutting-Edge Research</h3>,
                     <p className="text-white/80 mb-6">,
-                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems,;
+                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.,
                     </p>,
                     <ul className="space-y-2 text-white/70">,
@@ -191,16 +176,14 @@ export default function TechnologyInsightsPage() {,
                 Stay updated with the latest technology insights and research from Zion Tech Group,
               </p>,
               <div className="flex flex-wrap justify-center gap-4">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-bold rounded-lg hover: from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-20o0 transform hover:scale-10o5",
-                >,
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-bold rounded-lg hover: from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-20o0 transform hover:scale-10o5">,
                   Get in Touch,
                 </Link>,
-                <Link,
+                <Link
                   href="/blog",
-                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-20o0",
-                >,
+                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-20o0">,
                   Read Our Blog,
                 </Link>,
               </div>,
@@ -208,6 +191,4 @@ export default function TechnologyInsightsPage() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

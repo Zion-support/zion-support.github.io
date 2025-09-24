@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const Fortune50o0SuccessBanner: React.FC = () => {,
-  return (,
+const Fortune50o0SuccessBanner: React.FC = () => {
+  return (
     <div className='bg-gradient-to-r from-green-60o0 via-emerald-60o0 to-teal-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>🏆 SUCCESS STORY</span>,
           </div>,
@@ -17,7 +16,7 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
               Achieves 340% ROI,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl opacity-90 mb-8 max-w-4xl mx-auto'>,
             See how a leading manufacturer reduced costs by{' '}
             <span className='font-bold'>45%</span> and increased efficiency by{' '}
@@ -44,7 +43,7 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
             <div className='text-sm opacity-80'>Downtime Reduction</div>,
           </div>,
         </div>,
-        {/* Key Achievements */,}
+        {/* Key Achievements */}
         <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mb-12'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6'>,
             <h3 className='text-xl font-bold mb-4'>🎯 What We Achieved</h3>,
@@ -89,23 +88,21 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
             </ul>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-6'>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-ai-success-story',
-              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors'>,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
               Start Your Success Story,
             </Link>,
           </div>,
-          {/* Testimonial */,}
+          {/* Testimonial */}
           <blockquote className='max-w-3xl mx-auto text-lg italic opacity-90'>,
             "Working with Zion Tech Group transformed our business beyond our,
             expectations. The 340% ROI we achieved in just 18 months exceeded,
@@ -116,9 +113,5 @@ const Fortune50o0SuccessBanner: React.FC = () => {,
           </blockquote>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default Fortune50o0SuccessBanner,
-,
+    </div>)};
+export default Fortune50o0SuccessBanner;

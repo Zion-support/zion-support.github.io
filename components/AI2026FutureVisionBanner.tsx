@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26FutureVisionBanner = () => {,
-  return (,
+const AI20o26FutureVisionBanner = () => {
+  return (
     <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0 bg-black opacity-30'></div>,
@@ -27,20 +26,18 @@ const AI20o26FutureVisionBanner = () => {,
             innovations today.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center mb-16'>,
-            <Link,
+            <Link
               href='/ai-20o26-future-vision',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-50o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-110 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-50o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-110 shadow-2xl'>,
               Explore Future Vision →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0 transform hover:scale-110',
-            >,
+              className='border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0 transform hover:scale-110'>,
               Join the Revolution,
             </Link>,
           </div>,
-          {/* Future Technologies Grid */,}
+          {/* Future Technologies Grid */}
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mt-20'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
               <div className='text-5xl mb-6'>🌌</div>,
@@ -73,9 +70,5 @@ const AI20o26FutureVisionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26FutureVisionBanner,
-,
+    </section>)};
+export default AI20o26FutureVisionBanner;

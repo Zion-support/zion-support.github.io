@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Trustworthy AI Operations 20o26 | Zion Tech Group',;
+export const metadata = {
+  title: 'Trustworthy AI Operations 20o26 | Zion Tech Group';
   description:,
-    'Practical operating model for safe, reliable, and auditable AI systems in production.',;
+    'Practical operating model for safe, reliable, and auditable AI systems in production.';
 };
-,
-export default function TrustworthyAIOperations20o26() {,
-  return (,
+export default function TrustworthyAIOperations20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Trustworthy AI Operations 20o26',
         description='Operating model for reliable AI: policy-as-code, evals-as-code, guardrails, and incident response.',
         keywords='AI operations, trust, safety, evals-as-code, policy-as-code, incident response',
@@ -61,23 +59,19 @@ export default function TrustworthyAIOperations20o26() {,
               Related reads,
             </p>,
             <div className='flex flex-wrap gap-4'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-production-guardrails-for-autonomous-agents',
-                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0'>,
                 Production Guardrails →,
               </Link>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-autonomous-compliance',
-                className='text-emerald-70o0 font-semibold hover:text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover:text-emerald-90o0'>,
                 Autonomous Compliance →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

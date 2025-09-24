@@ -1,26 +1,24 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide',;
+    'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide';
   description:,
-    'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.',;
-  keywords: [,
-    'quantum computing',;
-    'business applications',;
-    'AI',;
-    'innovation',;
-    'technology',;
-    '20o25',;
-  ],;
+    'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.';
+  keywords: [
+    'quantum computing';
+    'business applications';
+    'AI';
+    'innovation';
+    'technology';
+    '20o25';
+  ];
 };
-,
-export default function QuantumComputingBusinessApplicationsPage() {,
-  return (,
+export default function QuantumComputingBusinessApplicationsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide',
         description='Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.',
         keywords='quantum computing, business applications, AI, innovation, technology, 20o25',
@@ -44,23 +42,21 @@ export default function QuantumComputingBusinessApplicationsPage() {,
               implementation strategies for enterprise success.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Quantum Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
                 Explore Quantum Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Content Preview */,}
+      {/* Content Preview */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='prose prose-lg max-w-none'>,
@@ -76,7 +72,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
             <p>,
               Companies leveraging quantum computing are seeing{' '}
               <strong>10o00x performance improvements</strong>,{' '}
-              <strong>90% reduction in complex problem-solving time</strong>,;
+              <strong>90% reduction in complex problem-solving time</strong>;
               and <strong>$50o0M+ in new revenue opportunities</strong>. This,
               isn't the future – it's happening now.,
             </p>,
@@ -84,8 +80,8 @@ export default function QuantumComputingBusinessApplicationsPage() {,
             <p>,
               Quantum computing harnesses the principles of quantum mechanics to,
               process information in ways that classical computers cannot.,
-              Unlike traditional bits that exist in either 0 or 1 states,;
-              quantum bits (qubits) can exist in multiple states simultaneously,;
+              Unlike traditional bits that exist in either 0 or 1 states;
+              quantum bits (qubits) can exist in multiple states simultaneously;
               enabling exponential computational power.,
             </p>,
             <h3>🏢 Real-World Business Applications</h3>,
@@ -161,7 +157,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
                     <strong>Market Size:</strong> $2.8 trillion by 20o30,
                   </li>,
                   <li>,
-                    <strong>Quantum Applications:</strong> Drug discovery,;
+                    <strong>Quantum Applications:</strong> Drug discovery;
                     personalized medicine, genomics,
                   </li>,
                   <li>,
@@ -236,16 +232,14 @@ export default function QuantumComputingBusinessApplicationsPage() {,
                 competitors get ahead.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0',
-                >,
+                  className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0'>,
                   Get Quantum Assessment,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='border-2 border-indigo-50o0 text-indigo-50o0 px-8 py-4 rounded-lg font-bold hover:bg-indigo-50o0 hover:text-white transition-all duration-30o0',
-                >,
+                  className='border-2 border-indigo-50o0 text-indigo-50o0 px-8 py-4 rounded-lg font-bold hover:bg-indigo-50o0 hover:text-white transition-all duration-30o0'>,
                   Explore Quantum Services,
                 </Link>,
               </div>,
@@ -253,7 +247,5 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function UltimateRedundancy() {,
-  return (,
+export default function UltimateRedundancy() {
+  return (
     <>,
       <Head>,
         <title>Ultimate Redundancy — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Multi‑layer redundancy, self‑healing, and fault tolerance.',
         />,
@@ -33,7 +32,5 @@ export default function UltimateRedundancy() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

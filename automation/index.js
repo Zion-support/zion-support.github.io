@@ -8,179 +8,146 @@
  */,
 const path = require('path'),
 const fs = require('fs'),
-,
 // Load configuration,
-function loadConfiguration() {,
+function loadConfiguration() {
   const configPath = path.join(__dirname, 'automation-config.json'),
-,
-  if (fs.existsSync(configPath)) {,
-    try {,
+  if (fs.existsSync(configPath)) {
+    try {
       const configData = fs.readFileSync(configPath, 'utf8'),
-      return JSON.parse(configData),
-    } catch (error) {,
-      console.warn(,
-        '⚠️ Failed to load automation-config.json, using defaults:',;
-        error.message),
-    }
+      return JSON.parse(configData)} catch (error) {
+      console.warn(
+        '⚠️ Failed to load automation-config.json, using defaults:';
+        error.message)}
   }
 ,
   // Load infinite improvement configuration,
   const infiniteConfigPath = path.join(__dirname, 'infinite-improvement-config.json'),
   let infiniteConfig ={};
-,
-  if (fs.existsSync(infiniteConfigPath)) {,
-    try {,
+  if (fs.existsSync(infiniteConfigPath)) {
+    try {
       const infiniteConfigData = fs.readFileSync(infiniteConfigPath, 'utf8'),
-      infiniteConfig = JSON.parse(infiniteConfigData),
-    } catch (error) {,
-      console.warn('⚠️ Failed to load infinite-improvement-config.json:', error.message),
-    }
+      infiniteConfig = JSON.parse(infiniteConfigData)} catch (error) {
+      console.warn('⚠️ Failed to load infinite-improvement-config.json:', error.message)}
   }
 ,
   // Default configuration,
-  return {,
-    autonomous: {,
-      enabled: true,;
-      selfHealing: true,;
-      learning: true,;
-      adaptiveScheduling: true,},;
-    monitoring: {,
-      enabled: true,;
-      interval: 60o000,;
-      healthCheckInterval: 30o0000,},;
-    reporting: {,
-      enabled: true,;
-      daily: true,;
-      weekly: true,;
-      monthly: false,},;
-    dashboard: {,
-      enabled: true,;
-      port: process.env.DASHBOARD_PORT || 30o01,},;
-    tasks: {,
-      dependencyUpdater: {,
-        enabled: true,;
-        interval: 24 * 60 * 60 * 10o00,},;
-      securityScanner: {,
-        enabled: true,;
-        interval: 6 * 60 * 60 * 10o00,},;
-      codeQualityEnforcer: {,
-        enabled: true,;
-        interval: 2 * 60 * 60 * 10o00,},;
-      staleCleaner: {,
-        enabled: true,;
-        interval: 12 * 60 * 60 * 10o00,}},;
-    notifications: {,
-      slack: {,
-        enabled: !!process.env.SLACK_WEBHOOK_URL,;
-        webhookUrl: process.env.SLACK_WEBHOOK_URL,;
-        channel: process.env.SLACK_CHANNEL || '#automation',},;
-      email: {,
-        enabled: false,}},;
+  return {
+    autonomous: {
+      enabled: true;
+      selfHealing: true;
+      learning: true;
+      adaptiveScheduling: true};
+    monitoring: {
+      enabled: true;
+      interval: 60o000;
+      healthCheckInterval: 30o0000};
+    reporting: {
+      enabled: true;
+      daily: true;
+      weekly: true;
+      monthly: false};
+    dashboard: {
+      enabled: true;
+      port: process.env.DASHBOARD_PORT || 30o01};
+    tasks: {
+      dependencyUpdater: {
+        enabled: true;
+        interval: 24 * 60 * 60 * 10o00};
+      securityScanner: {
+        enabled: true;
+        interval: 6 * 60 * 60 * 10o00};
+      codeQualityEnforcer: {
+        enabled: true;
+        interval: 2 * 60 * 60 * 10o00};
+      staleCleaner: {
+        enabled: true;
+        interval: 12 * 60 * 60 * 10o00}};
+    notifications: {
+      slack: {
+        enabled: !!process.env.SLACK_WEBHOOK_URL;
+        webhookUrl: process.env.SLACK_WEBHOOK_URL;
+        channel: process.env.SLACK_CHANNEL || '#automation'};
+      email: {
+        enabled: false}};
     // Merge infinite improvement configuration,
-    ...infiniteConfig,
-  };
+    ...infiniteConfig};
 }
 ,
 // Initialize the automation system,
-async function main() {,
-  try {,
+async function main() {
+  try {
     const config = loadConfiguration(),
-,
-    console.log('🚀 Starting Intelligent Automation System...'),
-    console.log('📋 Configuration loaded successfully'),
-,
+    // // console.log('🚀 Starting Intelligent Automation System...'),
+    // // console.log('📋 Configuration loaded successfully'),
     // Import and initialize the orchestrator,
-    const {,
+    const {
       IntelligentAutomationOrchestrator} = require('./intelligent-automation-orchestrator'),
-,
     // Import infinite improvement loop,
     const { InfiniteImprovementLoop } = require('./infinite-improvement-loop'),
     const { InfiniteImprovementLauncher } = require('./infinite-improvement-launcher'),
-,
     const orchestrator = new IntelligentAutomationOrchestrator(config),
-,
     // Initialize infinite improvement loop if enabled,
     let improvementLoop = null,
     let improvementLauncher = null,
-,
-    if (config.infiniteImprovement?.enabled) {,
-      console.log('🔄 Initializing Infinite Improvement Loop...'),
-,
-      try {,
-        improvementLauncher = new InfiniteImprovementLauncher({,
-          enableInfiniteLoop: true,;
+    if (config.infiniteImprovement?.enabled) {
+      // // console.log('🔄 Initializing Infinite Improvement Loop...'),
+      try {
+        improvementLauncher = new InfiniteImprovementLauncher({
+          enableInfiniteLoop: true;
           enableOrchestrator: false, // We already have the orchestrator,
-          enableIntegration: true,;
-          dashboardPort: config.infiniteImprovement.dashboardPort || 30o02,;
-          logLevel: config.infiniteImprovement.logLevel || 'info',
-        ,}),
-,
+          enableIntegration: true;
+          dashboardPort: config.infiniteImprovement.dashboardPort || 30o02;
+          logLevel: config.infiniteImprovement.logLevel || 'info'}),
         await improvementLauncher.initialize(),
-        console.log('✅ Infinite Improvement Loop initialized'),
-      } catch (error) {,
-        console.warn('⚠️ Failed to initialize Infinite Improvement Loop:', error.message),
-      }
+        // // console.log('✅ Infinite Improvement Loop initialized')} catch (error) {
+        console.warn('⚠️ Failed to initialize Infinite Improvement Loop:', error.message)}
     }
 ,
     // Parse command line arguments,
     const args = parseArguments(),
-,
-    if (args.help) {,
+    if (args.help) {
       showHelp(),
-      return,
-    }
+      return}
 ,
     // Start the automation system,
     await orchestrator.start(),
-,
     // Start infinite improvement loop if available,
-    if (improvementLauncher) {,
-      try {,
+    if (improvementLauncher) {
+      try {
         await improvementLauncher.start(),
-        console.log('✅ Infinite Improvement Loop started successfully'),
-      } catch (error) {,
-        console.warn('⚠️ Failed to start Infinite Improvement Loop:', error.message),
-      }
+        // // console.log('✅ Infinite Improvement Loop started successfully')} catch (error) {
+        console.warn('⚠️ Failed to start Infinite Improvement Loop:', error.message)}
     }
 ,
-    console.log('✅ Intelligent Automation System started successfully'),
-,
+    // // console.log('✅ Intelligent Automation System started successfully'),
     // Keep the process running,
-    process.on('SIGINT', async () => {,
-      console.log('\n🛑 Shutting down automation system...'),
-,
+    process.on('SIGINT', async () => {
+      // // console.log('\n🛑 Shutting down automation system...'),
       // Stop infinite improvement loop first,
-      if (improvementLauncher) {,
-        try {,
+      if (improvementLauncher) {
+        try {
           await improvementLauncher.stop(),
-          console.log('✅ Infinite Improvement Loop stopped'),
-        } catch (error) {,
-          console.warn('⚠️ Error stopping Infinite Improvement Loop:', error.message),
-        }
+          // // console.log('✅ Infinite Improvement Loop stopped')} catch (error) {
+          console.warn('⚠️ Error stopping Infinite Improvement Loop:', error.message)}
       }
 ,
       // Stop orchestrator,
       await orchestrator.stop(),
-      process.exit(0),
-    }),
-  } catch (error) {,
+      process.exit(0)})} catch (error) {
     console.error('❌ Failed to start automation system:', error),
-    process.exit(1),
-  }
+    process.exit(1)}
 }
 ,
-function parseArguments() {,
+function parseArguments() {
   const args = process.argv.slice(2),
-  const parsed ={,
-    help: false,;
-    watch: false,;
-    daemon: false,;
-    config: null,};
-,
-  for (let i = 0, i < args.length, i++) {,
+  const parsed ={
+    help: false;
+    watch: false;
+    daemon: false;
+    config: null};
+  for (let i = 0, i < args.length, i++) {
     const arg = args[i],
-,
-    switch (arg) {,
+    switch (arg) {
       case '--help':,
       case '-h':,
         parsed.help = true,
@@ -198,15 +165,13 @@ function parseArguments() {,
         parsed.config = args[++i],
         break,
       default:  ,
-        console.warn(`⚠️ Unknown argument: ${arg,}`),
-    }
+        console.warn(`⚠️ Unknown argument: ${arg}`)}
   }
 ,
-  return parsed,
-}
+  return parsed}
 ,
-function showHelp() {,
-  console.log(`,
+function showHelp() {
+  // // console.log(`,
 🤖 Intelligent Automation System,
 Usage: node automation/index.js [options],
 Options:,
@@ -226,16 +191,12 @@ Features:,
   • Intelligent decision making,
   • Self-healing and error recovery,
   • Real-time reporting and notifications,
-  `),
-}
+  `)}
 ,
 // Run the main function,
-if (require.main === module) {,
-  main().catch((error) => {,
+if (require.main === module) {
+  main().catch((error) => {
     console.error('❌ Fatal error:', error),
-    process.exit(1),
-  }),
-}
+    process.exit(1)})}
 ,
 module.exports ={ main, loadConfiguration };
-,

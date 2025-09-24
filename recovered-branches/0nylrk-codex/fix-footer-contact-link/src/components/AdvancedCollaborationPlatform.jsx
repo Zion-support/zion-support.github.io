@@ -1,129 +1,129 @@
 import React, { useState, useRef } from 'react',
-import {,
-  Users,;
-  Video,;
-  Mic,;
-  MicOff,;
-  VideoOff,;
-  MessageSquare,;
-  FileText,;
-  Monitor,;
-  X,;
-  Maximize2,;
-  Minimize2,;
-  Plus,;
-  MoreVertical,;
-  PhoneOff,;
-  ScreenShare,;
-  Square,;
-  Hand,;
-  Clock,;
-  CheckCircle,;
-  UserPlus,;
+import {
+  Users;
+  Video;
+  Mic;
+  MicOff;
+  VideoOff;
+  MessageSquare;
+  FileText;
+  Monitor;
+  X;
+  Maximize2;
+  Minimize2;
+  Plus;
+  MoreVertical;
+  PhoneOff;
+  ScreenShare;
+  Square;
+  Hand;
+  Clock;
+  CheckCircle;
+  UserPlus;
 } from 'lucide-react',
-const mockParticipants = [,
-  {,
-    id: '1',;
-    name: 'Sarah Johnson',;
+const mockParticipants = [
+  {
+    id: '1';
+    name: 'Sarah Johnson';
     avatar:,
-      'https://images.unsplash.com/photo-1494790o108755-2616b612b786?auto=format&fit=crop&w=10o0&h=10o0',;
-    isHost: true,;
-    isMuted: false,;
-    isVideoOff: false,;
-    isScreenSharing: false,;
-    hasRaisedHand: false,;
-    status: 'online',;
-    joinTime: '20o24-0o1-15T10:0o0:0o0.0o00Z',;
-  },;
-  {,
-    id: '2',;
-    name: 'Michael Chen',;
+      'https://images.unsplash.com/photo-1494790o108755-2616b612b786?auto=format&fit=crop&w=10o0&h=10o0';
+    isHost: true;
+    isMuted: false;
+    isVideoOff: false;
+    isScreenSharing: false;
+    hasRaisedHand: false;
+    status: 'online';
+    joinTime: '20o24-0o1-15T10:0o0:0o0.0o00Z';
+  };
+  {
+    id: '2';
+    name: 'Michael Chen';
     avatar:,
-      'https://images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?auto=format&fit=crop&w=10o0&h=10o0',;
-    isHost: false,;
-    isMuted: true,;
-    isVideoOff: false,;
-    isScreenSharing: false,;
-    hasRaisedHand: true,;
-    status: 'online',;
-    joinTime: '20o24-0o1-15T10:0o2:0o0.0o00Z',;
-  },;
-  {,
-    id: '3',;
-    name: 'Emily Rodriguez',;
+      'https://images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?auto=format&fit=crop&w=10o0&h=10o0';
+    isHost: false;
+    isMuted: true;
+    isVideoOff: false;
+    isScreenSharing: false;
+    hasRaisedHand: true;
+    status: 'online';
+    joinTime: '20o24-0o1-15T10:0o2:0o0.0o00Z';
+  };
+  {
+    id: '3';
+    name: 'Emily Rodriguez';
     avatar:,
-      'https://images.unsplash.com/photo-14387616810o33-6461ffad8d80?auto=format&fit=crop&w=10o0&h=10o0',;
-    isHost: false,;
-    isMuted: false,;
-    isVideoOff: true,;
-    isScreenSharing: false,;
-    hasRaisedHand: false,;
-    status: 'away',;
-    joinTime: '20o24-0o1-15T10:0o5:0o0.0o00Z',;
-  },;
+      'https://images.unsplash.com/photo-14387616810o33-6461ffad8d80?auto=format&fit=crop&w=10o0&h=10o0';
+    isHost: false;
+    isMuted: false;
+    isVideoOff: true;
+    isScreenSharing: false;
+    hasRaisedHand: false;
+    status: 'away';
+    joinTime: '20o24-0o1-15T10:0o5:0o0.0o00Z';
+  };
 ],
-const mockChatMessages = [,
-  {,
-    id: '1',;
-    senderId: '1',;
-    senderName: 'Sarah Johnson',;
-    message: 'Welcome everyone to our quarterly review meeting!',;
-    timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z',;
-    type: 'text',;
-    reactions: [],;
-  },;
-  {,
-    id: '2',;
-    senderId: '2',;
-    senderName: 'Michael Chen',;
-    message: 'Thanks Sarah! I have some questions about the Q4 metrics.',;
-    timestamp: '20o24-0o1-15T10:0o1:0o0.0o00Z',;
-    type: 'text',;
-    reactions: [{ emoji: '👍', count: 2 ,}],;
-  },;
-  {,
-    id: '3',;
-    senderId: '1',;
-    senderName: 'Sarah Johnson',;
-    message: "Perfect! I'll share the presentation now.",;
-    timestamp: '20o24-0o1-15T10:0o2:0o0.0o00Z',;
-    type: 'text',;
-    reactions: [],;
-  },;
+const mockChatMessages = [
+  {
+    id: '1';
+    senderId: '1';
+    senderName: 'Sarah Johnson';
+    message: 'Welcome everyone to our quarterly review meeting!';
+    timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z';
+    type: 'text';
+    reactions: [];
+  };
+  {
+    id: '2';
+    senderId: '2';
+    senderName: 'Michael Chen';
+    message: 'Thanks Sarah! I have some questions about the Q4 metrics.';
+    timestamp: '20o24-0o1-15T10:0o1:0o0.0o00Z';
+    type: 'text';
+    reactions: [{ emoji: '👍', count: 2 }];
+  };
+  {
+    id: '3';
+    senderId: '1';
+    senderName: 'Sarah Johnson';
+    message: "Perfect! I'll share the presentation now.";
+    timestamp: '20o24-0o1-15T10:0o2:0o0.0o00Z';
+    type: 'text';
+    reactions: [];
+  };
 ],
-const mockDocuments = [,
-  {,
-    id: '1',;
-    name: 'Q4_20o24_Review.pptx',;
-    type: 'presentation',;
-    size: '2.4 MB',;
-    lastModified: '20o24-0o1-15T09:30:0o0.0o00Z',;
-    sharedBy: 'Sarah Johnson',;
-    permissions: 'edit',;
-  },;
-  {,
-    id: '2',;
-    name: 'Financial_Report_Q4.xlsx',;
-    type: 'spreadsheet',;
-    size: '1.8 MB',;
-    lastModified: '20o24-0o1-15T08:45:0o0.0o00Z',;
-    sharedBy: 'Michael Chen',;
-    permissions: 'view',;
-  },;
+const mockDocuments = [
+  {
+    id: '1';
+    name: 'Q4_20o24_Review.pptx';
+    type: 'presentation';
+    size: '2.4 MB';
+    lastModified: '20o24-0o1-15T09:30:0o0.0o00Z';
+    sharedBy: 'Sarah Johnson';
+    permissions: 'edit';
+  };
+  {
+    id: '2';
+    name: 'Financial_Report_Q4.xlsx';
+    type: 'spreadsheet';
+    size: '1.8 MB';
+    lastModified: '20o24-0o1-15T08:45:0o0.0o00Z';
+    sharedBy: 'Michael Chen';
+    permissions: 'view';
+  };
 ],
-const mockMeetings = [,
-  {,
-    id: '1',;
-    title: 'Q4 20o24 Review Meeting',;
-    startTime: '20o24-0o1-15T10:0o0:0o0.0o00Z',;
-    endTime: '20o24-0o1-15T11:30:0o0.0o00Z',;
-    participants: 3,;
-    status: 'active',;
-    recording: true,;
-    password: 'Q4Review20o24',;
-  },;
+const mockMeetings = [
+  {
+    id: '1';
+    title: 'Q4 20o24 Review Meeting';
+    startTime: '20o24-0o1-15T10:0o0:0o0.0o00Z';
+    endTime: '20o24-0o1-15T11:30:0o0.0o00Z';
+    participants: 3;
+    status: 'active';
+    recording: true;
+    password: 'Q4Review20o24';
+  };
 ],
-export function AdvancedCollaborationPlatform() {,
+export function AdvancedCollaborationPlatform() {
   const [isOpen, setIsOpen] = useState(false),
   const [isMinimized, setIsMinimized] = useState(false),
   const [isFullscreen, setIsFullscreen] = useState(false),
@@ -141,89 +141,69 @@ export function AdvancedCollaborationPlatform() {,
   const [meetings, setMeetings] = useState(mockMeetings),
   const [searchQuery, setSearchQuery] = useState(''),
   const containerRef = useRef(null),
-  const toggleMute = () => {,
+  const toggleMute = () => {
     setIsMuted(!isMuted),
     setParticipants(prev =>,
-      prev.map(p => (p.id === '1' ? { ...p, isMuted: !isMuted ,} : p)),
-    ),
-  };
-  const toggleVideo = () => {,
+      prev.map(p => (p.id === '1' ? { ...p, isMuted: !isMuted } : p)))};
+  const toggleVideo = () => {
     setIsVideoOff(!isVideoOff),
     setParticipants(prev =>,
-      prev.map(p => (p.id === '1' ? { ...p, isVideoOff: !isVideoOff ,} : p)),
-    ),
-  };
-  const toggleScreenShare = () => {,
+      prev.map(p => (p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p)))};
+  const toggleScreenShare = () => {
     setIsScreenSharing(!isScreenSharing),
     setParticipants(prev =>,
       prev.map(p =>,
-        p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing ,} : p,
-      ),
-    ),
-  };
-  const toggleRecording = () => {,
-    setIsRecording(!isRecording),
-  };
-  const sendChatMessage = () => {,
-    if (chatMessage.trim()) {,
-      const newMessage = {,
-        id: Date.now().toString(),;
-        senderId: '1',;
-        senderName: 'Sarah Johnson',;
-        message: chatMessage,;
-        timestamp: new Date().toISOString(),;
-        type: 'text',;
-        reactions: [],;
+        p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
+  const toggleRecording = () => {
+    setIsRecording(!isRecording)};
+  const sendChatMessage = () => {
+    if (chatMessage.trim()) {
+      const newMessage = {
+        id: Date.now().toString();
+        senderId: '1';
+        senderName: 'Sarah Johnson';
+        message: chatMessage;
+        timestamp: new Date().toISOString();
+        type: 'text';
+        reactions: [];
       };
       setChatMessages(prev => [...prev, newMessage]),
-      setChatMessage(''),
-    }
+      setChatMessage('')}
   };
-  const raiseHand = () => {,
+  const raiseHand = () => {
     setParticipants(prev =>,
       prev.map(p =>,
-        p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand ,} : p,
-      ),
-    ),
-  };
+        p.id === '1' ? { ...p, hasRaisedHand: !p.hasRaisedHand } : p))};
   const filteredParticipants = participants.filter(p =>,
-    p.name.toLowerCase().includes(searchQuery.toLowerCase()),
-  ),
+    p.name.toLowerCase().includes(searchQuery.toLowerCase())),
   const filteredDocuments = documents.filter(d =>,
-    d.name.toLowerCase().includes(searchQuery.toLowerCase()),
-  ),
-  if (!isOpen) {,
-    return (,
-      <button,
+    d.name.toLowerCase().includes(searchQuery.toLowerCase())),
+  if (!isOpen) {
+    return (
+      <button
         onClick={() => setIsOpen(true)}
         className='fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40',
-        title='Open Collaboration Platform',
-      >,
+        title='Open Collaboration Platform'>,
         <Users className='w-6 h-6' />,
-      </button>,
-    ),
-  ,}
-  if (isMinimized) {,
-    return (,
+      </button>)}
+  if (isMinimized) {
+    return (
       <div className='fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50'>,
         <div className='flex items-center gap-2 p-3'>,
           <Users className='w-5 h-5 text-zion-emerald' />,
           <span className='text-sm font-medium text-zion-slate'>,
             Collaboration,
           </span>,
-          <button,
-            onClick={() => setIsMinimized(false),}
-            className='ml-auto p-1 hover: bg-zion-slate-light rounded',
-          >,
+          <button
+            onClick={() => setIsMinimized(false)}
+            className='ml-auto p-1 hover: bg-zion-slate-light rounded'>,
             <Maximize2 className='w-4 h-4' />,
           </button>,
         </div>,
-      </div>,
-    ),
-  ,}
-  return (,
-    <div,
-      className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]',}`}
+      </div>)}
+  return (
+    <div
+      className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`}
       ref={containerRef}
     >,
       {/* Header */}
@@ -240,31 +220,26 @@ export function AdvancedCollaborationPlatform() {,
           </div>,
         </div>,
         <div className='flex items-center gap-2'>,
-          <button,
+          <button
             onClick={() => setIsMinimized(true)}
-            className='p-2 hover: bg-white/10 rounded-lg transition-colors',
-          >,
+            className='p-2 hover: bg-white/10 rounded-lg transition-colors'>,
             <Minimize2 className='w-4 h-4' />,
           </button>,
-          <button,
-            onClick={() => setIsFullscreen(!isFullscreen),}
-            className='p-2 hover: bg-white/10 rounded-lg transition-colors',
-          >,
-            {isFullscreen ? (,
-              <Minimize2 className='w-4 h-4' />,
-            ) : (,
-              <Maximize2 className='w-4 h-4' />,
-            ),}
+          <button
+            onClick={() => setIsFullscreen(!isFullscreen)}
+            className='p-2 hover: bg-white/10 rounded-lg transition-colors'>,
+            {isFullscreen ? (
+              <Minimize2 className='w-4 h-4' />) : (
+              <Maximize2 className='w-4 h-4' />)}
           </button>,
-          <button,
+          <button
             onClick={() => setIsOpen(false)}
-            className='p-2 hover: bg-white/10 rounded-lg transition-colors',
-          >,
+            className='p-2 hover: bg-white/10 rounded-lg transition-colors'>,
             <X className='w-4 h-4' />,
           </button>,
         </div>,
       </div>,
-      {/* Meeting Controls */,}
+      {/* Meeting Controls */}
       <div className='bg-zion-slate-light/50 p-4 border-b border-zion-slate-light'>,
         <div className='flex items-center justify-between'>,
           <div className='flex items-center gap-4'>,
@@ -275,73 +250,64 @@ export function AdvancedCollaborationPlatform() {,
               Live,
             </span>,
             <span className='text-sm text-zion-slate-light'>,
-              {participants.length,} participants,
+              {participants.length} participants,
             </span>,
           </div>,
           <div className='flex items-center gap-2'>,
-            <button,
+            <button
               onClick={raiseHand}
-              className={`p-3 rounded-full transition-colors ${,
+              className={`p-3 rounded-full transition-colors ${
                 participants.find(p => p.id === '1')?.hasRaisedHand,
                   ? 'bg-yellow-50o0 text-white',
-                  : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',
-              ,}`}
-              title='Raise Hand',
-            >,
+                  : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
+              title='Raise Hand'>,
               <Hand className='w-4 h-4' />,
             </button>,
-            <button,
+            <button
               onClick={toggleMute}
-              className={`p-3 rounded-full transition-colors ${isMuted ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',}`}
+              className={`p-3 rounded-full transition-colors ${isMuted ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
               title={isMuted ? 'Unmute' : 'Mute'}
             >,
-              {isMuted ? (,
-                <MicOff className='w-4 h-4' />,
-              ) : (,
-                <Mic className='w-4 h-4' />,
-              )}
+              {isMuted ? (
+                <MicOff className='w-4 h-4' />) : (
+                <Mic className='w-4 h-4' />)}
             </button>,
-            <button,
+            <button
               onClick={toggleVideo}
-              className={`p-3 rounded-full transition-colors ${isVideoOff ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',}`}
+              className={`p-3 rounded-full transition-colors ${isVideoOff ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
               title={isVideoOff ? 'Turn on video' : 'Turn off video'}
             >,
-              {isVideoOff ? (,
-                <VideoOff className='w-4 h-4' />,
-              ) : (,
-                <Video className='w-4 h-4' />,
-              )}
+              {isVideoOff ? (
+                <VideoOff className='w-4 h-4' />) : (
+                <Video className='w-4 h-4' />)}
             </button>,
-            <button,
+            <button
               onClick={toggleScreenShare}
-              className={`p-3 rounded-full transition-colors ${isScreenSharing ? 'bg-zion-cyan text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',}`}
+              className={`p-3 rounded-full transition-colors ${isScreenSharing ? 'bg-zion-cyan text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
               title={isScreenSharing ? 'Stop sharing' : 'Share screen'}
             >,
-              {isScreenSharing ? (,
-                <Square className='w-4 h-4' />,
-              ) : (,
-                <ScreenShare className='w-4 h-4' />,
-              )}
+              {isScreenSharing ? (
+                <Square className='w-4 h-4' />) : (
+                <ScreenShare className='w-4 h-4' />)}
             </button>,
-            <button,
+            <button
               onClick={toggleRecording}
-              className={`p-3 rounded-full transition-colors ${isRecording ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate',}`}
+              className={`p-3 rounded-full transition-colors ${isRecording ? 'bg-red-50o0 text-white' : 'bg-zion-slate-light hover: bg-zion-slate-light/70 text-zion-slate'}`}
               title={isRecording ? 'Stop recording' : 'Start recording'}
             >,
-              <div,
+              <div
                 className={`w-3 h-3 rounded-full ${isRecording ? 'bg-white' : 'bg-zion-slate'}`}
               />,
             </button>,
-            <button,
+            <button
               className='p-3 bg-red-50o0 text-white rounded-full hover: bg-red-60o0 transition-colors',
-              title='End call',
-            >,
+              title='End call'>,
               <PhoneOff className='w-4 h-4' />,
             </button>,
           </div>,
         </div>,
       </div>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <div className='flex h-[calc(10o0%-140px)]'>,
         {/* Main Meeting Area */}
         <div className='flex-1 p-4'>,
@@ -361,13 +327,12 @@ export function AdvancedCollaborationPlatform() {,
               </div>,
               {/* Participant Videos */}
               <div className='grid grid-cols-2 gap-3'>,
-                {participants.slice(0, 4).map(participant => (,
-                  <div,
+                {participants.slice(0, 4).map(participant => (
+                  <div
                     key={participant.id}
-                    className='bg-zion-slate-light/30 rounded-lg p-3',
-                  >,
+                    className='bg-zion-slate-light/30 rounded-lg p-3'>,
                     <div className='flex items-center gap-2 mb-2'>,
-                      <img,
+                      <img
                         src={participant.avatar}
                         alt={participant.name}
                         className='w-8 h-8 rounded-full',
@@ -375,58 +340,50 @@ export function AdvancedCollaborationPlatform() {,
                       <span className='text-sm font-medium text-zion-slate'>,
                         {participant.name}
                       </span>,
-                      {participant.isHost && (,
+                      {participant.isHost && (
                         <span className='px-2 py-1 bg-zion-emerald text-white text-xs rounded-full'>,
                           Host,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     <div className='flex items-center gap-2 text-xs text-zion-slate-light'>,
                       {participant.isMuted && <MicOff className='w-3 h-3' />}
-                      {participant.isVideoOff && (,
-                        <VideoOff className='w-3 h-3' />,
-                      )}
-                      {participant.isScreenSharing && (,
-                        <Monitor className='w-3 h-3' />,
-                      )}
-                      {participant.hasRaisedHand && (,
-                        <Hand className='w-3 h-3 text-yellow-50o0' />,
-                      )}
+                      {participant.isVideoOff && (
+                        <VideoOff className='w-3 h-3' />)}
+                      {participant.isScreenSharing && (
+                        <Monitor className='w-3 h-3' />)}
+                      {participant.hasRaisedHand && (
+                        <Hand className='w-3 h-3 text-yellow-50o0' />)}
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Right Sidebar */}
             <div className='space-y-4'>,
               {/* Tabs */}
               <div className='flex border-b border-zion-slate-light'>,
-                {[,
-                  { id: 'meeting', label: 'Meeting', icon: Video ,},;
-                  { id: 'chat', label: 'Chat', icon: MessageSquare ,},;
-                  { id: 'documents', label: 'Documents', icon: FileText ,},;
-                  { id: 'participants', label: 'Participants', icon: Users ,},;
-                ].map(tab => {,
+                {[
+                  { id: 'meeting', label: 'Meeting', icon: Video };
+                  { id: 'chat', label: 'Chat', icon: MessageSquare };
+                  { id: 'documents', label: 'Documents', icon: FileText };
+                  { id: 'participants', label: 'Participants', icon: Users };
+                ].map(tab => {
                   const Icon = tab.icon,
-                  return (,
-                    <button,
+                  return (
+                    <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
-                      className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${,
+                      className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${
                         activeTab === tab.id,
                           ? 'border-zion-emerald text-zion-emerald bg-zion-emerald/5',
-                          : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20',
-                      ,}`}
+                          : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20'}`}
                     >,
                       <Icon className='w-4 h-4' />,
                       {tab.label}
-                    </button>,
-                  ),
-                })}
+                    </button>)})}
               </div>,
               {/* Tab Content */}
               <div className='h-80 overflow-y-auto'>,
-                {activeTab === 'meeting' && (,
+                {activeTab === 'meeting' && (
                   <div className='space-y-4'>,
                     <div className='bg-gradient-to-r from-zion-emerald/10 to-zion-blue/10 p-4 rounded-xl border border-zion-emerald/20'>,
                       <h4 className='font-semibold text-zion-slate mb-2'>,
@@ -466,17 +423,15 @@ export function AdvancedCollaborationPlatform() {,
                         </button>,
                       </div>,
                     </div>,
-                  </div>,
-                ),}
+                  </div>)}
 ,
-                {activeTab === 'chat' && (,
+                {activeTab === 'chat' && (
                   <div className='space-y-4'>,
                     <div className='space-y-3'>,
-                      {chatMessages.map(message => (,
-                        <div,
+                      {chatMessages.map(message => (
+                        <div
                           key={message.id}
-                          className='bg-zion-slate-light/30 p-3 rounded-lg',
-                        >,
+                          className='bg-zion-slate-light/30 p-3 rounded-lg'>,
                           <div className='flex items-center gap-2 mb-1'>,
                             <span className='font-medium text-zion-slate text-sm'>,
                               {message.senderName}
@@ -488,23 +443,19 @@ export function AdvancedCollaborationPlatform() {,
                           <p className='text-sm text-zion-slate'>,
                             {message.message}
                           </p>,
-                          {message.reactions.length > 0 && (,
+                          {message.reactions.length > 0 && (
                             <div className='flex gap-1 mt-2'>,
-                              {message.reactions.map((reaction, index) => (,
-                                <span,
+                              {message.reactions.map((reaction, index) => (
+                                <span
                                   key={index}
-                                  className='px-2 py-1 bg-white dark: bg-zion-slate rounded-full text-xs',
-                                >,
-                                  {reaction.emoji,} {reaction.count}
-                                </span>,
-                              ))}
-                            </div>,
-                          )}
-                        </div>,
-                      ))}
+                                  className='px-2 py-1 bg-white dark: bg-zion-slate rounded-full text-xs'>,
+                                  {reaction.emoji} {reaction.count}
+                                </span>))}
+                            </div>)}
+                        </div>))}
                     </div>,
                     <div className='flex gap-2'>,
-                      <input,
+                      <input
                         type='text',
                         value={chatMessage}
                         onChange={e => setChatMessage(e.target.value)}
@@ -512,20 +463,18 @@ export function AdvancedCollaborationPlatform() {,
                         placeholder='Type a message...',
                         className='flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark: bg-zion-slate text-zion-slate text-sm',
                       />,
-                      <button,
-                        onClick={sendChatMessage,}
-                        className='px-4 py-2 bg-zion-emerald text-white rounded-lg hover: bg-zion-emerald/90 transition-colors',
-                      >,
+                      <button
+                        onClick={sendChatMessage}
+                        className='px-4 py-2 bg-zion-emerald text-white rounded-lg hover: bg-zion-emerald/90 transition-colors'>,
                         Send,
                       </button>,
                     </div>,
-                  </div>,
-                ),}
+                  </div>)}
 ,
-                {activeTab === 'documents' && (,
+                {activeTab === 'documents' && (
                   <div className='space-y-4'>,
                     <div className='flex items-center gap-2'>,
-                      <input,
+                      <input
                         type='text',
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
@@ -537,40 +486,36 @@ export function AdvancedCollaborationPlatform() {,
                       </button>,
                     </div>,
                     <div className='space-y-2'>,
-                      {filteredDocuments.map(document => (,
-                        <div,
-                          key={document.id,}
-                          className='bg-zion-slate-light/30 p-3 rounded-lg hover: bg-zion-slate-light/50 transition-colors',
-                        >,
+                      {filteredDocuments.map(document => (
+                        <div
+                          key={document.id}
+                          className='bg-zion-slate-light/30 p-3 rounded-lg hover: bg-zion-slate-light/50 transition-colors'>,
                           <div className='flex items-center gap-3'>,
                             <div className='w-10 h-10 bg-zion-emerald/20 rounded-lg flex items-center justify-center'>,
                               <FileText className='w-5 h-5 text-zion-emerald' />,
                             </div>,
                             <div className='flex-1'>,
                               <h5 className='font-medium text-zion-slate text-sm'>,
-                                {document.name,}
+                                {document.name}
                               </h5>,
                               <p className='text-xs text-zion-slate-light'>,
                                 {document.size} •{' '}
-                                {new Date(,
-                                  document.lastModified,
-                                ).toLocaleDateString()}
+                                {new Date(
+                                  document.lastModified).toLocaleDateString()}
                               </p>,
                             </div>,
                             <button className='p-1 hover: bg-zion-slate-light rounded'>,
                               <MoreVertical className='w-4 h-4 text-zion-slate-light' />,
                             </button>,
                           </div>,
-                        </div>,
-                      )),}
+                        </div>))}
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
-                {activeTab === 'participants' && (,
+                {activeTab === 'participants' && (
                   <div className='space-y-4'>,
                     <div className='flex items-center gap-2'>,
-                      <input,
+                      <input
                         type='text',
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
@@ -582,13 +527,12 @@ export function AdvancedCollaborationPlatform() {,
                       </button>,
                     </div>,
                     <div className='space-y-2'>,
-                      {filteredParticipants.map(participant => (,
-                        <div,
-                          key={participant.id,}
-                          className='bg-zion-slate-light/30 p-3 rounded-lg',
-                        >,
+                      {filteredParticipants.map(participant => (
+                        <div
+                          key={participant.id}
+                          className='bg-zion-slate-light/30 p-3 rounded-lg'>,
                           <div className='flex items-center gap-3'>,
-                            <img,
+                            <img
                               src={participant.avatar}
                               alt={participant.name}
                               className='w-10 h-10 rounded-full',
@@ -599,39 +543,32 @@ export function AdvancedCollaborationPlatform() {,
                               </h5>,
                               <p className='text-xs text-zion-slate-light'>,
                                 Joined{' '}
-                                {new Date(,
-                                  participant.joinTime,
-                                ).toLocaleTimeString()}
+                                {new Date(
+                                  participant.joinTime).toLocaleTimeString()}
                               </p>,
                             </div>,
                             <div className='flex items-center gap-1'>,
-                              {participant.isHost && (,
+                              {participant.isHost && (
                                 <span className='px-2 py-1 bg-zion-emerald text-white text-xs rounded-full'>,
                                   Host,
-                                </span>,
-                              )}
-                              <span,
-                                className={`w-2 h-2 rounded-full ${,
+                                </span>)}
+                              <span
+                                className={`w-2 h-2 rounded-full ${
                                   participant.status === 'online',
                                     ? 'bg-green-50o0',
                                     : participant.status === 'away',
                                       ? 'bg-yellow-50o0',
-                                      : 'bg-red-50o0',
-                                }`}
+                                      : 'bg-red-50o0'}`}
                               />,
                             </div>,
                           </div>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
               </div>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

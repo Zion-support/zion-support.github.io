@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function Post() {,
-  return (,
+import React from 'react';
+export default function Post() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-20'>,
         <a href='/news' className='text-sm text-blue-40o0'>,
@@ -15,7 +14,7 @@ export default function Post() {,
           <p>,
             Today we are unveiling Zion AI Platform 2.0 with significant,
             improvements across performance, observability, and enterprise,
-            readiness. Customers can expect up to 3x faster inference,;
+            readiness. Customers can expect up to 3x faster inference;
             first-class tracing with OpenTelemetry, and expanded role-based,
             access controls.,
           </p>,
@@ -30,7 +29,5 @@ export default function Post() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

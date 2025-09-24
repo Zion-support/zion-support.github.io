@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25AdvancedAutomationMasteryPromotionBanner() {,
-  return (,
+export default function AI20o25AdvancedAutomationMasteryPromotionBanner() {
+  return (
     <section className='py-8 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black bg-opacity-10'></div>,
@@ -43,22 +42,19 @@ export default function AI20o25AdvancedAutomationMasteryPromotionBanner() {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-advanced-automation-mastery',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📚 Read Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-automation-success',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               🏆 View Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-implementation-toolkit',
-              className='bg-yellow-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:bg-yellow-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-yellow-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:bg-yellow-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               🛠️ Get Toolkit,
             </Link>,
           </div>,
@@ -68,7 +64,5 @@ export default function AI20o25AdvancedAutomationMasteryPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

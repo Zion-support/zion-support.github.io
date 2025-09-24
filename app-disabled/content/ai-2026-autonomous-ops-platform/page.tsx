@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Operations Platform | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Operations Platform | Zion Tech Group';
   description:,
-    'A practical guide to build an autonomous, outcome-driven operations platform with AI agents, event-driven architecture, and human-in-the-loop controls.',;
+    'A practical guide to build an autonomous, outcome-driven operations platform with AI agents, event-driven architecture, and human-in-the-loop controls.';
 };
-,
-export default function AutonomousOpsPlatform20o26() {,
-  return (,
+export default function AutonomousOpsPlatform20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Operations Platform',
         description='Build an autonomous, outcome-driven operations platform with AI agents, EDA, and human-in-the-loop controls.',
         keywords='autonomous operations, AI agents, event-driven, HITL, orchestration',
@@ -52,16 +50,13 @@ export default function AutonomousOpsPlatform20o26() {,
             <p className='mb-2 font-semibold text-purple-80o0'>,
               Want implementation support?,
             </p>,
-            <Link,
+            <Link
               href='/contact',
-              className='text-purple-70o0 font-semibold hover: text-purple-90o0',
-            >,
+              className='text-purple-70o0 font-semibold hover: text-purple-90o0'>,
               Speak with an architect →,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Neural Interface Revolution 20o25 - Brain-Computer Integration | Zion Tech Group',;
+    'Neural Interface Revolution 20o25 - Brain-Computer Integration | Zion Tech Group';
   description:,
-    'Experience the neural interface revolution of 20o25. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.',;
-  keywords: [,
-    'neural interface',;
-    'brain-computer interface',;
-    'BCI',;
-    'neural technology',;
-    'consciousness integration',;
-    'AI interaction',;
-  ],;
+    'Experience the neural interface revolution of 20o25. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.';
+  keywords: [
+    'neural interface';
+    'brain-computer interface';
+    'BCI';
+    'neural technology';
+    'consciousness integration';
+    'AI interaction';
+  ];
 };
-,
-export default function NeuralInterfaceRevolution20o25Page() {,
-  return (,
+export default function NeuralInterfaceRevolution20o25Page() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-green-90o0 via-teal-90o0 to-blue-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4'>,
@@ -36,22 +34,20 @@ export default function NeuralInterfaceRevolution20o25Page() {,
             human-machine integration.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-40o0 to-blue-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-green-30o0 hover:to-blue-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-green-40o0 to-blue-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-green-30o0 hover:to-blue-30o0 transition-all transform hover:scale-10o5'>,
               Experience Neural Tech,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-colors'>,
               View Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Neural Capabilities */,}
+      {/* Neural Capabilities */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -64,7 +60,7 @@ export default function NeuralInterfaceRevolution20o25Page() {,
                 Direct Thought Control,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Control devices and applications directly with your thoughts,;
+                Control devices and applications directly with your thoughts;
                 eliminating the need for physical interfaces and enabling,
                 unprecedented speed.,
               </p>,
@@ -76,7 +72,7 @@ export default function NeuralInterfaceRevolution20o25Page() {,
                 Consciousness Integration,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Seamlessly integrate AI systems with human consciousness,;
+                Seamlessly integrate AI systems with human consciousness;
                 creating hybrid intelligence that combines human creativity with,
                 machine precision.,
               </p>,
@@ -153,7 +149,7 @@ export default function NeuralInterfaceRevolution20o25Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -176,7 +172,7 @@ export default function NeuralInterfaceRevolution20o25Page() {,
                   Education & Training,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Instant knowledge transfer, immersive learning experiences,;
+                  Instant knowledge transfer, immersive learning experiences;
                   and skill acquisition through direct neural pathways.,
                 </p>,
               </div>,
@@ -185,7 +181,7 @@ export default function NeuralInterfaceRevolution20o25Page() {,
                   Creative Industries,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Direct translation of creative thoughts into digital media,;
+                  Direct translation of creative thoughts into digital media;
                   AI-assisted artistic creation, and collaborative creative,
                   processes.,
                 </p>,
@@ -234,22 +230,18 @@ export default function NeuralInterfaceRevolution20o25Page() {,
             integration. Transform how you interact with technology forever.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-40o0 to-blue-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-green-30o0 hover:to-blue-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-green-40o0 to-blue-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-green-30o0 hover:to-blue-30o0 transition-all transform hover:scale-10o5'>,
               Start Neural Journey,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-90o0 transition-colors'>,
               View Neural Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

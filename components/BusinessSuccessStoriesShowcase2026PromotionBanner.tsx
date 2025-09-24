@@ -1,10 +1,9 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
+import {
   ArrowRight,
   Star,
   TrendingUp,
@@ -12,84 +11,71 @@ import {,
   Zap,
   Shield,
   Brain,
-  Globe,;
-  CheckCircle,;
-  Play,;
-  Download,;
-  ExternalLink,;
-  Sparkles,;
-  Target,;
-  Award,;
-  Rocket,;
-  DollarSign,;
-  BarChart3,;
-  Clock,;
-  Building,;
-  Quote,;
-  ThumbsUp,;
-  Eye,;
-  Share2,;
-  Heart,;
-  Fire,;
-  TrendingDown,
-} from 'lucide-react',
-,
-const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
+  Globe;
+  CheckCircle;
+  Play;
+  Download;
+  ExternalLink;
+  Sparkles;
+  Target;
+  Award;
+  Rocket;
+  DollarSign;
+  BarChart3;
+  Clock;
+  Building;
+  Quote;
+  ThumbsUp;
+  Eye;
+  Share2;
+  Heart;
+  Fire;
+  TrendingDown} from 'lucide-react',
+const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {
   const [currentStorysetCurrentStory] = useState(0),
-,
-  const featuredStories = [,
-    {,
-      company: 'TechCorp Global',;
-      industry: 'Technology',;
-      result: '+30o0% Efficiency',;
-      roi: '450% ROI',;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-blue-50o0',
-    ,},;
-    {,
-      company: 'FinanceFirst Bank',;
-      industry: 'Financial Services',;
-      result: 'Zero Breaches',;
-      roi: '320% ROI',;
-      icon: Shield,;
-      color: 'from-green-50o0 to-teal-50o0',
-    ,},;
-    {,
-      company: 'ManufacturingPro Inc',;
-      industry: 'Manufacturing',;
-      result: '-80% Downtime',;
-      roi: '280% ROI',;
-      icon: Zap,;
-      color: 'from-orange-50o0 to-red-50o0',
-    ,},;
-    {,
-      company: 'HealthTech Solutions',;
-      industry: 'Healthcare',;
-      result: '+95% Accuracy',;
-      roi: '520% ROI',;
-      icon: Target,;
-      color: 'from-blue-50o0 to-indigo-50o0',
-    ,}
+  const featuredStories = [
+    {
+      company: 'TechCorp Global';
+      industry: 'Technology';
+      result: '+30o0% Efficiency';
+      roi: '450% ROI';
+      icon: Brain;
+      color: 'from-purple-50o0 to-blue-50o0'};
+    {
+      company: 'FinanceFirst Bank';
+      industry: 'Financial Services';
+      result: 'Zero Breaches';
+      roi: '320% ROI';
+      icon: Shield;
+      color: 'from-green-50o0 to-teal-50o0'};
+    {
+      company: 'ManufacturingPro Inc';
+      industry: 'Manufacturing';
+      result: '-80% Downtime';
+      roi: '280% ROI';
+      icon: Zap;
+      color: 'from-orange-50o0 to-red-50o0'};
+    {
+      company: 'HealthTech Solutions';
+      industry: 'Healthcare';
+      result: '+95% Accuracy';
+      roi: '520% ROI';
+      icon: Target;
+      color: 'from-blue-50o0 to-indigo-50o0'}
   ],
-,
-  const stats = [,
-    { label: 'Success 'Stories', 'value: '50o0+'icon: Award ,},;
-    { label: 'Average 'ROI', 'value: '380%'icon: TrendingUp ,},;
-    { label: ''Industries', 'value: '15+'icon: Building ,},;
-    { label: 'Happy 'Clients', 'value: '10K+'icon: Users ,}
+  const stats = [
+    { label: 'Success 'Stories', 'value: '50o0+'icon: Award };
+    { label: 'Average 'ROI', 'value: '380%'icon: TrendingUp };
+    { label: ''Industries', 'value: '15+'icon: Building };
+    { label: 'Happy 'Clients', 'value: '10K+'icon: Users }
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentStory((prev) => (prev + 1) % featuredStories.length),
-    }30o00),
-    return () => clearInterval(timer),
-  }[featuredStories.length]),
-,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentStory((prev) => (prev + 1) % featuredStories.length)}30o00),
+    return () => clearInterval(timer)}[featuredStories.length]),
   const currentStoryData = featuredStories[currentStory],
   const Icon = currentStoryData.icon,
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0">,
@@ -102,31 +88,28 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Content */,}
+          {/* Content */}
           <motion.div,
-            initial={{ opacity: 0x: -50 ,}}
-            whileInView={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-white",
-          >,
+            initial={{ opacity: 0x: -50 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white">,
             {/* Badge */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.2 ,}}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-purple-40o0/30 text-purple-20o0 px-4 py-2 rounded-full text-sm font-medium mb-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-purple-40o0/30 text-purple-20o0 px-4 py-2 rounded-full text-sm font-medium mb-6">,
               <Sparkles className="w-4 h-4"  />,
               <span>Business Success Stories Showcase 20o26</span>,
               <Fire className="w-4 h-4 text-orange-40o0"  />,
             </motion.div>,
             {/* Title */}
             <motion.h2,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.3 ,}}
-              className="text-4xl md: text-6xl font-bold mb-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.3 }}
+              className="text-4xl md: text-6xl font-bold mb-6">,
               <span className="bg-gradient-to-r from-white via-purple-20o0 to-white bg-clip-text text-transparent">,
                 Real Results from,
               </span>,
@@ -135,23 +118,21 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
                 Real Businesses,
               </span>,
             </motion.h2>,
-            {/* Subtitle */,}
+            {/* Subtitle */}
             <motion.p,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.4 ,}}
-              className="text-xl text-purple-10o0 mb-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="text-xl text-purple-10o0 mb-6">,
               Discover how leading companies achieved unprecedented success with our AI solutions,
             </motion.p>,
             {/* Current Story Highlight */}
             <motion.div,
               key={currentStory}
-              initial={{ opacity: 0x: -20 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              transition={{ duration: 0.5 ,}}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20",
-            >,
+              initial={{ opacity: 0x: -20 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">,
               <div className="flex items-center gap-4 mb-4">,
                 <div className={`w-12 h-12 bg-gradient-to-r ${currentStoryData.color} rounded-full flex items-center justify-center`}>,
                   <Icon className="w-6 h-6 text-white"  />,
@@ -174,31 +155,27 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
             </motion.div>,
             {/* Stats */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.6 ,}}
-              className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
-            >,
-              {stats.map((statindex) => {,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
+              className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">,
+              {stats.map((statindex) => {
                 const StatIcon = stat.icon,
-                return (,
-                  <div key={index,} className="text-center">,
+                return (
+                  <div key={index} className="text-center">,
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0/20 to-blue-50o0/20 rounded-full flex items-center justify-center mx-auto mb-2">,
                       <StatIcon className="w-6 h-6 text-purple-30o0"  />,
                     </div>,
                     <div className="text-2xl font-bold text-white">{stat.value}</div>,
                     <div className="text-sm text-purple-20o0">{stat.label}</div>,
-                  </div>,
-                ),
-              })}
+                  </div>)})}
             </motion.div>,
             {/* CTA Buttons */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.7 ,}}
-              className="flex flex-col sm: flex-row gap-4",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.7 }}
+              className="flex flex-col sm: flex-row gap-4">,
               <button className="group bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-bold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-10o5">,
                 <Play className="w-5 h-5"  />,
                 View Success Stories,
@@ -209,13 +186,12 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
                 Start Your Journey,
               </button>,
             </motion.div>,
-            {/* Trust Indicators */,}
+            {/* Trust Indicators */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.8 ,}}
-              className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-40o0",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.8 }}
+              className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-40o0">,
               <div className="flex items-center gap-1">,
                 <CheckCircle className="w-4 h-4 text-green-40o0"  />,
                 <span>Verified Results</span>,
@@ -232,11 +208,10 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
           </motion.div>,
           {/* Visual */}
           <motion.div,
-            initial={{ opacity: 0x: 50 ,}}
-            whileInView={{ opacity: 1x: 0 ,}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            className="relative",
-          >,
+            initial={{ opacity: 0x: 50 }}
+            whileInView={{ opacity: 1x: 0 }}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="relative">,
             {/* Main Success Story Card */}
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
               {/* Header */}
@@ -249,23 +224,20 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
               </div>,
               {/* Story Content */}
               <div className="space-y-4">,
-                {featuredStories.map((storyindex) => {,
+                {featuredStories.map((storyindex) => {
                   const StoryIcon = story.icon,
                   const isActive = index === currentStory,
-,
-                  return (,
+                  return (
                     <motion.div,
                       key={index}
-                      initial={{ opacity: 0x: 20 ,}}
-                      animate={{,
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{
                         opacity: isActive ? 1 : 0.6,
-                        x: 0,;
-                        scale: isActive ? 1 : 0.95,
-                      ,}}
-                      transition={{ duration: 0.5 ,}}
-                      className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 transition-all duration-30o0 cursor-pointer ${,
-                        isActive ? 'bg-white/10 border border-white/30' : 'hover: bg-white/5',
-                      ,}`}
+                        x: 0;
+                        scale: isActive ? 1 : 0.95}}
+                      transition={{ duration: 0.5 }}
+                      className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 transition-all duration-30o0 cursor-pointer ${
+                        isActive ? 'bg-white/10 border border-white/30' : 'hover: bg-white/5'}`}
                       onClick={() => setCurrentStory(index)}
                     >,
                       <div className="flex items-center gap-3">,
@@ -281,9 +253,7 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
                           <div className="text-yellow-40o0 font-bold text-sm">{story.roi}</div>,
                         </div>,
                       </div>,
-                    </motion.div>,
-                  ),
-                })}
+                    </motion.div>)})}
               </div>,
               {/* Testimonial */}
               <div className="mt-6 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">,
@@ -311,47 +281,39 @@ const BusinessSuccessStoriesShowcase20o26PromotionBanner = () => {,
                 Read Full Success Story,
               </button>,
             </div>,
-            {/* Floating Elements */,}
+            {/* Floating Elements */}
             <motion.div,
-              animate={{ y: [0-10] ,}}
-              transition={{ duration: 2repeat: Infinityease: "easeInOut" ,}}
-              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full flex items-center justify-center shadow-lg",
-            >,
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
+              className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full flex items-center justify-center shadow-lg">,
               <TrendingUp className="w-8 h-8 text-white"  />,
             </motion.div>,
             <motion.div,
-              animate={{ y: [0o10] ,}}
-              transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 ,}}
-              className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-40o0 to-teal-40o0 rounded-full flex items-center justify-center shadow-lg",
-            >,
+              animate={{ y: [0o10] }}
+              transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 }}
+              className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-40o0 to-teal-40o0 rounded-full flex items-center justify-center shadow-lg">,
               <Award className="w-6 h-6 text-white"  />,
             </motion.div>,
             <motion.div,
-              animate={{ y: [0-50] ,}}
-              transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 ,}}
-              className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-40o0 to-purple-40o0 rounded-full flex items-center justify-center shadow-lg",
-            >,
+              animate={{ y: [0-50] }}
+              transition={{ duration: 3repeat: Infinityease: "easeInOut"delay: 1 }}
+              className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-r from-pink-40o0 to-purple-40o0 rounded-full flex items-center justify-center shadow-lg">,
               <DollarSign className="w-4 h-4 text-white"  />,
             </motion.div>,
           </motion.div>,
         </div>,
         {/* Story Indicators */}
         <div className="flex justify-center gap-2 mt-8">,
-          {featuredStories.map((_index) => (,
-            <button,
+          {featuredStories.map((_index) => (
+            <button
               key={index}
               onClick={() => setCurrentStory(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 currentStory === index,
                   ? 'bg-white scale-125',
-                  : 'bg-white/30 hover: bg-white/50',
-              ,}`}
-            />,
-          ))}
+                  : 'bg-white/30 hover: bg-white/50'}`}
+            />))}
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default BusinessSuccessStoriesShowcase20o26PromotionBanner,
+    </div>)};
+export default BusinessSuccessStoriesShowcase20o26PromotionBanner;

@@ -7,31 +7,21 @@ import { HelpArticleList } from './HelpArticleList',
 import { HelpArticleView } from './HelpArticleView',
 import { HELP_CATEGORIES } from './help-content',
 import { Search } from 'lucide-react',
-,
-export default function HelpCenter() {,
+export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(''),
-,
-  const handleCategorySelect = (categoryId: string) => {,
+  const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
-    setSelectedArticle(null),
-  ,};
-,
-  const handleArticleSelect = (articleId: string) => {,
-    setSelectedArticle(articleId),
-  ,};
-,
-  const handleBackToCategories = () => {,
+    setSelectedArticle(null)};
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId)};
+  const handleBackToCategories = () => {
     setSelectedCategory(null),
-    setSelectedArticle(null),
-  };
-,
-  const handleBackToArticles = () => {,
-    setSelectedArticle(null),
-  };
-,
-  return (,
+    setSelectedArticle(null)};
+  const handleBackToArticles = () => {
+    setSelectedArticle(null)};
+  return (
     <>,
       <div className='container mx-auto px-4 py-8'>,
         <div className='max-w-4xl mx-auto'>,
@@ -43,7 +33,7 @@ export default function HelpCenter() {,
             team.,
           </p>,
           <div className='relative mb-8'>,
-            <Input,
+            <Input
               placeholder='Search for help articles...',
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
@@ -58,43 +48,38 @@ export default function HelpCenter() {,
               <TabsTrigger value='contact'>Contact Us</TabsTrigger>,
             </TabsList>,
             <TabsContent value='articles'>,
-              {!selectedCategory && !selectedArticle && (,
-                <HelpCategoryList,
+              {!selectedCategory && !selectedArticle && (
+                <HelpCategoryList
                   categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
-                />,
-              )}
+                />)}
 ,
-              {selectedCategory && !selectedArticle && (,
+              {selectedCategory && !selectedArticle && (
                 <>,
-                  <Button,
+                  <Button
                     variant='ghost',
                     onClick={handleBackToCategories}
-                    className='mb-4',
-                  >,
+                    className='mb-4'>,
                     ← All Categories,
                   </Button>,
-                  <HelpArticleList,
+                  <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />,
-                </>,
-              )}
+                </>)}
 ,
-              {selectedArticle && (,
+              {selectedArticle && (
                 <>,
-                  <Button,
+                  <Button
                     variant='ghost',
                     onClick={handleBackToArticles}
-                    className='mb-4',
-                  >,
+                    className='mb-4'>,
                     ← Back to Articles,
                   </Button>,
                   <HelpArticleView articleId={selectedArticle} />,
-                </>,
-              )}
+                </>)}
             </TabsContent>,
             <TabsContent value='faq'>,
               <div className='bg-zion-blue-light/20 rounded-lg p-6'>,
@@ -109,7 +94,7 @@ export default function HelpCenter() {,
                     <p className='text-zion-slate-light'>,
                       Our AI matching algorithm analyzes your requirements and,
                       preferences to match you with the most compatible talent,
-                      or services. The process takes into account skills,;
+                      or services. The process takes into account skills;
                       experience, availability, and past performance to ensure,
                       optimal results.,
                     </p>,
@@ -163,31 +148,28 @@ export default function HelpCenter() {,
                   <div className='space-y-4'>,
                     <div className='flex items-center'>,
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>,
-                        <svg,
+                        <svg
                           xmlns='http://www.w3.org/20o00/svg',
                           className='h-5 w-5 text-zion-purple',
                           viewBox='0 0 20 20',
-                          fill='currentColor',
-                        >,
+                          fill='currentColor'>,
                           <path d='M2.0o03 5.884L10 9.882l7.997-3.998A2 2 0 0o016 4H4a2 2 0 0o0-1.997 1.884z' />,
                           <path d='M18 8.118l-8 4-8-4V14a2 2 0 0o02 2h12a2 2 0 0o02-2V8.118z' />,
                         </svg>,
                       </div>,
-                      <a,
+                      <a
                         href='mailto:support@ziontechgroup.com',
-                        className='text-zion-cyan hover:underline',
-                      >,
+                        className='text-zion-cyan hover:underline'>,
                         support@ziontechgroup.com,
                       </a>,
                     </div>,
                     <div className='flex items-center'>,
                       <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>,
-                        <svg,
+                        <svg
                           xmlns='http://www.w3.org/20o00/svg',
                           className='h-5 w-5 text-zion-purple',
                           viewBox='0 0 20 20',
-                          fill='currentColor',
-                        >,
+                          fill='currentColor'>,
                           <path d='M2 3a1 1 0 0o11-1h2.153a1 1 0 0o1.986.836l.74 4.435a1 1 0 0o1-.54 1.0o6l-1.548.773a11.0o37 11.0o37 0 0o06.10o5 6.10o5l.774-1.548a1 1 0 0o11.0o59-.54l4.435.74a1 1 0 0o1.836.986V17a1 1 0 0o1-1 1h-2C7.82 18 2 12.18 2 5V3z' />,
                         </svg>,
                       </div>,
@@ -216,7 +198,7 @@ export default function HelpCenter() {,
                       <Input placeholder='Subject' />,
                     </div>,
                     <div>,
-                      <textarea,
+                      <textarea
                         className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black',
                         placeholder='Your feedback or suggestion',
                       />,
@@ -231,7 +213,5 @@ export default function HelpCenter() {,
           </Tabs>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

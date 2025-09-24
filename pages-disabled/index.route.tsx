@@ -3,61 +3,56 @@ import Link from 'next/link',
 import ModernLayout from '../components/layout/ModernLayout',
 import { ArrowRight, Zap, Brain, Cloud, Shield } from 'lucide-react',
 import { motion } from 'framer-motion',
-,
-export default function Home() {,
-  const features = [,
-    {,
-      icon: Zap,;
-      title: 'Micro SaaS Solutions',;
-      description: 'Ready-to-deploy SaaS platforms for common business needs',;
-      href: '/services#micro-saas',;
-    },;
-    {,
-      icon: Brain,;
-      title: 'AI & Machine Learning',;
+export default function Home() {
+  const features = [
+    {
+      icon: Zap;
+      title: 'Micro SaaS Solutions';
+      description: 'Ready-to-deploy SaaS platforms for common business needs';
+      href: '/services#micro-saas';
+    };
+    {
+      icon: Brain;
+      title: 'AI & Machine Learning';
       description:,
-        'Custom AI solutions to automate and optimize your operations',;
-      href: '/services#ai-solutions',;
-    },;
-    {,
-      icon: Cloud,;
-      title: 'Cloud Architecture',;
-      description: 'Scalable cloud solutions and migration strategies',;
-      href: '/services#cloud-solutions',;
-    },;
-    {,
-      icon: Shield,;
-      title: 'Cybersecurity',;
-      description: 'Zero Trust implementation and security hardening',;
-      href: '/services#cybersecurity',;
-    },;
+        'Custom AI solutions to automate and optimize your operations';
+      href: '/services#ai-solutions';
+    };
+    {
+      icon: Cloud;
+      title: 'Cloud Architecture';
+      description: 'Scalable cloud solutions and migration strategies';
+      href: '/services#cloud-solutions';
+    };
+    {
+      icon: Shield;
+      title: 'Cybersecurity';
+      description: 'Zero Trust implementation and security hardening';
+      href: '/services#cybersecurity';
+    };
   ],
-,
-  const stats = [,
-    { number: '50+', label: 'Projects Delivered' ,},;
-    { number: '24/7', label: 'Support Available' ,},;
-    { number: '99.9%', label: 'Uptime SLA' ,},;
-    { number: '48hrs', label: 'Response Time' ,},;
+  const stats = [
+    { number: '50+', label: 'Projects Delivered' };
+    { number: '24/7', label: 'Support Available' };
+    { number: '99.9%', label: 'Uptime SLA' };
+    { number: '48hrs', label: 'Response Time' };
   ],
-,
-  return (,
-    <ModernLayout,
+  return (
+    <ModernLayout
       title='Zion Tech Group — Micro SaaS, IT and AI Services',
       description='Micro SaaS services, IT solutions, and AI platforms to accelerate your roadmap.',
-      canonical='https: //ziontechgroup.com',
-    >,
-      {/* Hero Section */,}
+      canonical='https: //ziontechgroup.com'>,
+      {/* Hero Section */}
       <section className='relative overflow-hidden bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
         <div className='absolute inset-0 bg-black/20'></div>,
         <div className='relative mx-auto max-w-7xl px-6 py-24 lg: py-32 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='space-y-8',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='space-y-8'>,
             <h1 className='text-5xl lg: text-7xl font-extrabold leading-tight'>,
-              Build Faster with{' ',}
+              Build Faster with{' '}
               <span className='bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
                 Intelligent Services,
               </span>,
@@ -67,47 +62,42 @@ export default function Home() {,
               outcomes with proven playbooks and references.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              <Link,
+              <Link
                 href='/services',
-                className='group rounded-xl bg-white text-slate-90o0 px-8 py-4 font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0 flex items-center space-x-2',
-              >,
+                className='group rounded-xl bg-white text-slate-90o0 px-8 py-4 font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0 flex items-center space-x-2'>,
                 <span>Explore Services</span>,
                 <ArrowRight className='h-5 w-5 group-hover:translate-x-1 transition-transform' />,
               </Link>,
-              <Link,
+              <Link
                 href='/services-advertising',
-                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0',
-              >,
+                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'>,
                 See Market Pricing,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0',
-              >,
+                className='rounded-xl border-2 border-white/20 px-8 py-4 font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'>,
                 Contact Us,
               </Link>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <section className='py-16 bg-white'>,
         <div className='mx-auto max-w-7xl px-6'>,
           <div className='grid grid-cols-2 lg: grid-cols-4 gap-8'>,
-            {stats.map((stat, index) => (,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='text-center'>,
                 <div className='text-4xl lg: text-5xl font-bold text-blue-60o0 mb-2'>,
-                  {stat.number,}
+                  {stat.number}
                 </div>,
                 <div className='text-gray-60o0 font-medium'>{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -124,30 +114,27 @@ export default function Home() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <motion.div,
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-all duration-20o0 group',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-all duration-20o0 group'>,
                 <div className='h-12 w-12 bg-blue-10o0 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-20o0 transition-colors'>,
                   <feature.icon className='h-6 w-6 text-blue-60o0' />,
                 </div>,
                 <h3 className='text-xl font-semibold text-gray-90o0 mb-2'>,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>{feature.description}</p>,
-                <Link,
+                <Link
                   href={feature.href}
-                  className='text-blue-60o0 font-medium hover: text-blue-70o0 transition-colors inline-flex items-center space-x-1',
-                >,
+                  className='text-blue-60o0 font-medium hover: text-blue-70o0 transition-colors inline-flex items-center space-x-1'>,
                   <span>Learn more</span>,
                   <ArrowRight className='h-4 w-4' />,
                 </Link>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -162,22 +149,18 @@ export default function Home() {,
             roadmap and drive innovation.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold text-lg hover: bg-gray-10o0 transition-all duration-20o0'>,
               Get Started Today,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0',
-            >,
+              className='border-2 border-white/20 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-20o0'>,
               View All Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </ModernLayout>,
-  ),
-,}
+    </ModernLayout>)}
 ,

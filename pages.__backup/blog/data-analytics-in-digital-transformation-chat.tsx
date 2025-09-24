@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const DataAnalyticsInDigitalTransformationChat: NextPage = () => {,
-  return (,
+const DataAnalyticsInDigitalTransformationChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           DataAnalyticsInDigitalTransformationChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='DataAnalyticsInDigitalTransformationChat blog post',
         />,
@@ -19,9 +18,5 @@ const DataAnalyticsInDigitalTransformationChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default DataAnalyticsInDigitalTransformationChat,
-,
+    </div>)};
+export default DataAnalyticsInDigitalTransformationChat;

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateBreakthroughRevolutionPromotionBanner() {,
-  return (,
+export default function AI20o25UltimateBreakthroughRevolutionPromotionBanner() {
+  return (
     <section className="relative py-16 px-4 bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-red-60o0 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -44,21 +43,19 @@ export default function AI20o25UltimateBreakthroughRevolutionPromotionBanner() {
             </div>,
           </div>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/ai-20o25-ultimate-breakthrough-revolution",
-              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Breakthroughs,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0">,
               Get Free Consultation,
             </Link>,
           </div>,
         </div>,
-        {/* Featured Content Preview */,}
+        {/* Featured Content Preview */}
         <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
             <div className="text-3xl mb-3">🧠</div>,
@@ -86,6 +83,4 @@ export default function AI20o25UltimateBreakthroughRevolutionPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}

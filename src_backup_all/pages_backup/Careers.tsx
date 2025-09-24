@@ -1,30 +1,27 @@
 // Benefits list,
-  const benefits = [,
-    {,
-      title: "Flexible Work",;
-      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",;
-      icon: (,
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+  const benefits = [
+    {
+      title: "Flexible Work";
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.";
+      icon: (
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props),
-    this.state ={ hasError: false ,};
+    this.state ={ hasError: false };
   }
 ,
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 ,
-  componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
 ,
-  render() {,
-    if (this.state.hasError) {,
-      return <div>Something went wrong.</div>,
-    }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
 import { SEO } from '@/components/SEO',
 import { GradientHeading } from '@/components/GradientHeading',
@@ -33,144 +30,131 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import Link from 'next/link',
 import { CAREER_JOBS } from '@/data/careersJobs',
-,
-export default function Careers() {,
+export default function Careers() {
   const applyEmail = 'careers@ziontechgroup && ziontechgroup.com',
   const jobs = CAREER_JOBS,
-,
   const whyWork =,
     'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.',
-,
   // Benefits list,
-  const benefits = [,
-    {,
-      title: 'Flexible Work',;
+  const benefits = [
+    {
+      title: 'Flexible Work';
       description:,
-        'Remote-first culture with flexible hours to support your productivity and work-life balance.',;
-      icon: (,
-        <svg,
+        'Remote-first culture with flexible hours to support your productivity and work-life balance.';
+      icon: (
+        <svg
           className='w-10 h-10 text-zion-cyan',
           fill='none',
           stroke='currentColor',
           viewBox='0 0 24 24',
           xmlns='http://www && www.w3.org/20o00/svg'>,
-          <path,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
-            strokeWidth={2,}
-            d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0o01 1h3m10-11l2 2m-2-2v10a1 1 0 0o1-1 1h-3m-6 0a1 1 0 0o01-1v-4a1 1 0 0o11-1h2a1 1 0 0o11 1v4a1 1 0 0o01 1m-6 0h6',
-    },;
-    {,
-      title: "Health & Wellness",;
-      description: "Comprehensive health insurance and wellness programs to keep you at your best.",;
-      icon: (,
+            strokeWidth={2}
+            d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0o01 1h3m10-11l2 2m-2-2v10a1 1 0 0o1-1 1h-3m-6 0a1 1 0 0o01-1v-4a1 1 0 0o11-1h2a1 1 0 0o11 1v4a1 1 0 0o01 1m-6 0h6'};
+    {
+      title: "Health & Wellness";
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.";
+      icon: (
            />,
-        </svg>,
-      ),;
-    },;
-    {,
-      title: 'Health & Wellness',;
+        </svg>);
+    };
+    {
+      title: 'Health & Wellness';
       description:,
-        'Comprehensive health insurance and wellness programs to keep you at your best.',;
-      icon: (,
-        <svg,
+        'Comprehensive health insurance and wellness programs to keep you at your best.';
+      icon: (
+        <svg
           className='w-10 h-10 text-zion-purple',
           fill='none',
           stroke='currentColor',
           viewBox='0 0 24 24',
           xmlns='http://www && www.w3.org/20o00/svg'>,
-          <path,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
-            strokeWidth={2,}
-,
-    },;
-    {,
-      title: "Continuous Learning",;
-      description: "Education stipends and dedicated learning time to help you grow professionally.",;
-      icon: (,
+            strokeWidth={2}
+};
+    {
+      title: "Continuous Learning";
+      description: "Education stipends and dedicated learning time to help you grow professionally.";
+      icon: (
             d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 0o00 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 0o0-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 0o0-6 && 6.364 0z',
            />,
-        </svg>,
-      ),;
-    },;
-    {,
-      title: 'Continuous Learning',;
+        </svg>);
+    };
+    {
+      title: 'Continuous Learning';
       description:,
-        'Education stipends and dedicated learning time to help you grow professionally.',;
-      icon: (,
-        <svg,
+        'Education stipends and dedicated learning time to help you grow professionally.';
+      icon: (
+        <svg
           className='w-10 h-10 text-zion-cyan',
           fill='none',
           stroke='currentColor',
           viewBox='0 0 24 24',
           xmlns='http://www && www.w3.org/20o00/svg'>,
-          <path,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
-            strokeWidth={2,}
-,
-    },;
-    {,
-      title: "Competitive Compensation",;
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",;
-      icon: (,
+            strokeWidth={2}
+};
+    {
+      title: "Competitive Compensation";
+      description: "Salary packages that recognize your value, plus equity options to share in our success.";
+      icon: (
             d='M12 6 && 6.253v13m0-13C10 && 13C10.832 5 && 5.477 9 && 9.246 5 7 && 7.5 5S4 && 5S4.168 5 && 5.477 3 6 && 6.253v13C4.168 18 && 18.477 5 && 5.754 18 7 && 7.5 18s3 && 18s3.332.477 4 && 4.5 1 && 1.253m0-13C13 && 13C13.168 5 && 5.477 14 && 14.754 5 16 && 16.5 5c1 && 5c1.747 0 3 && 3.332.477 4 && 4.5 1 && 1.253v13C19.832 18 && 18.477 18 && 18.247 18 16 && 16.5 18c-1 && 1.746 0-3 && 3.332.477-4 && 4.5 1 && 1.253',
            />,
-        </svg>,
-      ),;
-    },;
-    {,
-      title: 'Competitive Compensation',;
+        </svg>);
+    };
+    {
+      title: 'Competitive Compensation';
       description:,
-        'Salary packages that recognize your value, plus equity options to share in our success.',;
-      icon: (,
-        <svg,
+        'Salary packages that recognize your value, plus equity options to share in our success.';
+      icon: (
+        <svg
           className='w-10 h-10 text-zion-purple',
           fill='none',
           stroke='currentColor',
           viewBox='0 0 24 24',
           xmlns='http://www && www.w3.org/20o00/svg'>,
-          <path,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
-            strokeWidth={2,}
-,
-    },;
-    {,
-      title: "Impactful Projects",;
-      description: "Contribute to innovations that make advanced technology accessible worldwide.",;
-      icon: (,
+            strokeWidth={2}
+};
+    {
+      title: "Impactful Projects";
+      description: "Contribute to innovations that make advanced technology accessible worldwide.";
+      icon: (
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.40o2 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.40o2-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0o118 0z',
            />,
-        </svg>,
-      ),;
-    },;
-    {,
-      title: 'Impactful Projects',;
+        </svg>);
+    };
+    {
+      title: 'Impactful Projects';
       description:,
-        'Contribute to innovations that make advanced technology accessible worldwide.',;
-      icon: (,
-        <svg,
+        'Contribute to innovations that make advanced technology accessible worldwide.';
+      icon: (
+        <svg
           className='w-10 h-10 text-zion-cyan',
           fill='none',
           stroke='currentColor',
           viewBox='0 0 24 24',
           xmlns='http://www && www.w3.org/20o00/svg'>,
-          <path,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
-            strokeWidth={2,}
+            strokeWidth={2}
             d='M13 10V3L4 14h7v7l9-11h-7z',
            />,
-        </svg>,
-      ),;
-    },;
+        </svg>);
+    };
   ],
-,
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Careers at Zion - Join Our Team',
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.",
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs",
@@ -201,18 +185,17 @@ export default function Careers() {,
               Help us build the future of AI and technology,
             </p>,
           </div>,
-,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>,
             <div>,
               <h2 className='text-3xl font-bold text-white mb-6'>,
                 Why Work at Zion?,
               </h2>,
               <p className='text-zion-slate-light text-lg whitespace-pre-line'>,
-                {whyWork,}
+                {whyWork}
               </p>,
             </div>,
             <div className='rounded-lg overflow-hidden relative w-full h-full'>,
-              <img,
+              <img
                 src="https: //images.unsplash.com/photo-15220o71820o081-0o09f0o129c71c?auto=format&fit=crop&w=80o0&h=60o0&q=80",
                 alt="Team collaboration",
                 className="object-cover",
@@ -224,8 +207,8 @@ export default function Careers() {,
               Our Benefits,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-              {benefits.map((benefit, index) => (,
-                <div,
+              {benefits.map((benefit, index) => (
+                <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>,
                   <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit && benefit.icon}
@@ -235,11 +218,10 @@ export default function Careers() {,
                   </h3>,
                   <p className='text-zion-slate-light'>{benefit && benefit.description}</p>,
                 </div>,
-,
           <div className="mb-24">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">,
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">,
                     {benefit.icon}
@@ -248,22 +230,19 @@ export default function Careers() {,
                   Operations,
                 </TabsTrigger>,
               </TabsList>,
-,
-              {Object && Object.entries(jobs).map(([department, jobList]) => (,
-,
-                <TabsContent,
+              {Object && Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent
                   key={department}
                   value={department}
                   className='space-y-6'>,
-                  {jobList && jobList.map((job, index) => (,
-                    <Card,
+                  {jobList && jobList.map((job, index) => (
+                    <Card
                       key={index}
-                      className='bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors',
-                    >,
+                      className='bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors'>,
                       <CardContent className='p-6'>,
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>,
                             <h3 className='text-xl font-bold text-white mb-2'>,
-                              {job.title,}
+                              {job.title}
                             </h3>,
                             <div className='flex flex-wrap gap-2 mb-4'>,
                               <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>,
@@ -284,14 +263,14 @@ export default function Careers() {,
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>,
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>,
               </TabsList>,
-              {Object.entries(jobs).map(([department, jobList]) => (,
+              {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">,
-                  {jobList.map((job, index) => (,
+                  {jobList.map((job, index) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors">,
                       <CardContent className="p-6">,
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">,
                           <div>,
-                            <h3 className="text-xl font-bold text-white mb-2">{job.title,}</h3>,
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>,
                             <div className="flex flex-wrap gap-2 mb-4">,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>,
@@ -299,10 +278,10 @@ export default function Careers() {,
                             </div>,
                             <p className="text-zion-slate-light mb-4">{job.description}</p>,
                           </div>,
-                          <Button,
+                          <Button
                             asChild,
                             className='w-full md: w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>,
-                            <Link href={`/careers/${job && job.id,}`}>,
+                            <Link href={`/careers/${job && job.id}`}>,
 import { SEO } from '@/components / SEO',
 import { GradientHeading } from '@/components / GradientHeading',
 import { Button } from '@/components / ui / button',
@@ -313,12 +292,11 @@ import { CAREER_JOBS } from '@/data / careers_jobs',
 export default /**,
  * Careers - Function description,
  */,
-function Careers() {,
+function Careers() {
   const apply_email = 'careers@ziontechgroup.com',
   const jobs = CAREER_JOBS,
   const why_work =,
     'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real - world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.',
-,
           <div className="mb-24">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>,
             <Tabs defaultValue="engineering" className="w-full">,
@@ -328,81 +306,71 @@ function Careers() {,
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>,
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>,
               </TabsList>,
-              {Object.entries(jobs).map(([department, jobList]) => (,
+              {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">,
-                  {jobList.map((job, index) => (,
+                  {jobList.map((job, index) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors">,
                       <CardContent className="p-6">,
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">,
                           <div>,
-                            <h3 className="text-xl font-bold text-white mb-2">{job.title,}</h3>,
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>,
                             <div className="flex flex-wrap gap-2 mb-4">,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>,
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import Link from "next/link",;
-import { CAREER_JOBS } from "@/data/careersJobs",;
-export default function Careers() {,
-  const applyEmail = "careers@ziontechgroup.com",;
-  const jobs = CAREER_JOBS,;
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+export default function Careers() {
+  const applyEmail = "careers@ziontechgroup.com";
+  const jobs = CAREER_JOBS;
   const whyWork =,
-    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
+    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.";
   // Benefits list,
-  const benefits = [,
-    {,
-      title: "Flexible Work",;
-      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",;
-      icon: (,
+  const benefits = [
+    {
+      title: "Flexible Work";
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.";
+      icon: (
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/20o00/svg">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0o01 1h3m10-11l2 2m-2-2v10a1 1 0 0o1-1 1h-3m-6 0a1 1 0 0o01-1v-4a1 1 0 0o11-1h2a1 1 0 0o11 1v4a1 1 0 0o01 1m-6 0h6"  />,
-        </svg>,
-      ),
-    },;
-    {,
-      title: "Health & Wellness",;
-      description: "Comprehensive health insurance and wellness programs to keep you at your best.",;
-      icon: (,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0o01 1h3m10-11l2 2m-2-2v10a1 1 0 0o1-1 1h-3m-6 0a1 1 0 0o01-1v-4a1 1 0 0o11-1h2a1 1 0 0o11 1v4a1 1 0 0o01 1m-6 0h6"  />,
+        </svg>)};
+    {
+      title: "Health & Wellness";
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.";
+      icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/20o00/svg">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z"  />,
-        </svg>,
-      ),
-    },;
-    {,
-      title: "Continuous Learning",;
-      description: "Education stipends and dedicated learning time to help you grow professionally.",;
-      icon: (,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z"  />,
+        </svg>)};
+    {
+      title: "Continuous Learning";
+      description: "Education stipends and dedicated learning time to help you grow professionally.";
+      icon: (
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/20o00/svg">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"  />,
-        </svg>,
-      ),
-    },;
-    {,
-      title: "Competitive Compensation",;
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",;
-      icon: (,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"  />,
+        </svg>)};
+    {
+      title: "Competitive Compensation";
+      description: "Salary packages that recognize your value, plus equity options to share in our success.";
+      icon: (
         <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/20o00/svg">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0o118 0z"  />,
-        </svg>,
-      ),
-    },;
-    {,
-      title: "Impactful Projects",;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0o118 0z"  />,
+        </svg>)};
+    {
+      title: "Impactful Projects";
       description: "Contribute to innovations that make advanced technology accessible worldwide.",
-      icon: (,
+      icon: (
         <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/20o00/svg">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 10V3L4 14h7v7l9-11h-7z"  />,
-        </svg>,
-      ),
-    }
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />,
+        </svg>)}
   ],
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Careers at Zion - Join Our Team",
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.",
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs",
@@ -420,11 +388,11 @@ export default function Careers() {,
             <div>,
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>,
               <p className="text-zion-slate-light text-lg whitespace-pre-line">,
-                {whyWork,}
+                {whyWork}
               </p>,
             </div>,
             <div className="rounded-lg overflow-hidden relative w-full h-full">,
-              <img,
+              <img
                 src="https: //images.unsplash.com/photo-15220o71820o081-0o09f0o129c71c?auto=format&fit=crop&w=80o0&h=60o0&q=80",
                 alt="Team collaboration",
                 className="object-cover",
@@ -434,15 +402,14 @@ export default function Careers() {,
           <div className="mb-24">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">,
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">,
                     {benefit.icon}
                   </div>,
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>,
                   <p className="text-zion-slate-light">{benefit.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           <div className="mb-24">,
@@ -454,14 +421,14 @@ export default function Careers() {,
                 <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>,
                 <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>,
               </TabsList>,
-              {Object.entries(jobs).map(([department, jobList]) => (,
+              {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent key={department} value={department} className="space-y-6">,
-                  {jobList.map((job, index) => (,
+                  {jobList.map((job, index) => (
                     <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-colors">,
                       <CardContent className="p-6">,
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between">,
                           <div>,
-                            <h3 className="text-xl font-bold text-white mb-2">{job.title,}</h3>,
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>,
                             <div className="flex flex-wrap gap-2 mb-4">,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>,
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>,
@@ -469,20 +436,19 @@ export default function Careers() {,
                             </div>,
                             <p className="text-zion-slate-light mb-4">{job.description}</p>,
                           </div>,
-                          <Button,
+                          <Button
                             asChild,
-                            className="w-full md: w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple",
-                          >,
-                            <Link href={`/careers/${job.id,}`}>,
+                            className="w-full md: w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">,
+                            <Link href={`/careers/${job.id}`}>,
                               View Details,
                             </Link>,
                           </Button>,
                         </div>,
                       </CardContent>,
                     </Card>,
-import React from 'react',
+import React from 'react';
 import { SEO } from '../components/SEO',
-const Careers: React.FC = () => {,
+const Careers: React.FC = () => {
   return(<>,
       <SEO title="Careers - Zion Tech Group"  />,
       <div className="min-h-screen bg-white py-20">,
@@ -491,15 +457,10 @@ const Careers: React.FC = () => {,
           <p className="text-lg text-gray-60o0">Content coming soon...</p>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,
-export default Careers,
+export default Careers}
 }
-,
-}
-,
 ,
                     </Card>))}
                 </TabsContent>))}
@@ -513,26 +474,24 @@ export default Careers,
               We're always looking for talented individuals who are passionate,
               about AI and technology. Send us your resume and let's start a,
               conversation. You can also apply directly by emailing us at,
-              <a,
-                href={`mailto:${apply_email,}`}
-                className='text - zion - cyan hover: text - zion - purple transition - colors',
-              >,
-                {apply_email,}
+              <a
+                href={`mailto:${apply_email}`}
+                className='text - zion - cyan hover: text - zion - purple transition - colors'>,
+                {apply_email}
               </a>,
               .,
             </p>,
-            <Button,
+            <Button
               as_child,
-              className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple',
-            >,
-              <a href={`mailto:${apply_email,}`}>Send General Application</a>,
+              className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple'>,
+              <a href={`mailto:${apply_email}`}>Send General Application</a>,
             </Button>,
           </div>,
         </div>,
       </main>,
     </>),
 import { SEO } from '../components / SEO',
-const Careers: React.FC = () => {,
+const Careers: React.FC = () => {
   return (<>,
       <SEO title="Careers - Zion Tech Group"  />,
       <div className="min - h-screen bg - white py - 20">,
@@ -541,9 +500,6 @@ const Careers: React.FC = () => {,
           <p className="text - lg text - gray - 60o0">Content coming soon...</p>,
         </div>,
       </div>,
-    </>),
-,}
-export default Careers,
-}
-,
+    </>)}
+export default Careers}
 }}}}}}}}}))))))))))))))))))))))]

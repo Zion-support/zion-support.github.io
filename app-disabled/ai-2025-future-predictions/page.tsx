@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o25 Future Predictions - Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o25 Future Predictions - Zion Tech Group';
   description:,
-    'Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',;
-  keywords: [,
-    'AI predictions 20o25',;
-    'future AI trends',;
-    'artificial intelligence future',;
-    'AI technology trends',;
-    'future technology',;
-  ],;
+    'Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.';
+  keywords: [
+    'AI predictions 20o25';
+    'future AI trends';
+    'artificial intelligence future';
+    'AI technology trends';
+    'future technology';
+  ];
 };
-,
-export default function AI20o25FuturePredictions() {,
-  return (,
+export default function AI20o25FuturePredictions() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25 Future Predictions - Zion Tech Group',
         description='Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
         keywords='AI predictions 20o25, future AI trends, artificial intelligence future, AI technology trends, future technology',
@@ -44,22 +42,20 @@ export default function AI20o25FuturePredictions() {,
             that will shape 20o25 and beyond.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5'>,
               Explore Future,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
               Get Started,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Key Predictions */,}
+      {/* Key Predictions */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -72,7 +68,7 @@ export default function AI20o25FuturePredictions() {,
                 Conscious AI Emergence,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                AI systems will demonstrate self-awareness and consciousness,;
+                AI systems will demonstrate self-awareness and consciousness;
                 fundamentally changing how we interact with technology.,
               </p>,
               <div className='text-sm text-cyan-40o0 font-semibold'>,
@@ -118,7 +114,7 @@ export default function AI20o25FuturePredictions() {,
               <div className='text-4xl mb-4'>🔮</div>,
               <h3 className='text-2xl font-bold mb-4'>Predictive Mastery</h3>,
               <p className='text-gray-30o0 mb-6'>,
-                AI will predict future events with unprecedented accuracy,;
+                AI will predict future events with unprecedented accuracy;
                 revolutionizing decision-making and planning.,
               </p>,
               <div className='text-sm text-cyan-40o0 font-semibold'>,
@@ -139,7 +135,7 @@ export default function AI20o25FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* Timeline Section */,}
+      {/* Timeline Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white bg-opacity-5'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -193,7 +189,7 @@ export default function AI20o25FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* Opportunities Section */,}
+      {/* Opportunities Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -225,7 +221,7 @@ export default function AI20o25FuturePredictions() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold mb-8'>Prepare for the AI Future</h2>,
@@ -235,22 +231,18 @@ export default function AI20o25FuturePredictions() {,
             expert guidance.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-12 py-4 rounded-lg font-semibold text-lg hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5'>,
               Start Your AI Journey,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-12 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-12 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-all'>,
               Explore Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

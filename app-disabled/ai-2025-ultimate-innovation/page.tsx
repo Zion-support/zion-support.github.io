@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group',;
+    'AI 20o25 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group';
   description:,
-    'Discover the ultimate AI innovations of 20o25. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.',;
-  keywords: [,
-    'AI 20o25',;
-    'artificial intelligence',;
-    'machine learning',;
-    'autonomous systems',;
-    'business transformation',;
-    'innovation',;
-  ],;
+    'Discover the ultimate AI innovations of 20o25. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.';
+  keywords: [
+    'AI 20o25';
+    'artificial intelligence';
+    'machine learning';
+    'autonomous systems';
+    'business transformation';
+    'innovation';
+  ];
 };
-,
-export default function AI20o25UltimateInnovationPage() {,
-  return (,
+export default function AI20o25UltimateInnovationPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4'>,
@@ -32,26 +30,24 @@ export default function AI20o25UltimateInnovationPage() {,
           </h1>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Experience the revolutionary breakthroughs in artificial,
-            intelligence that are reshaping the future of business, technology,;
+            intelligence that are reshaping the future of business, technology;
             and human potential.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-yellow-40o0 to-pink-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-30o0 hover:to-pink-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-pink-40o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-yellow-30o0 hover:to-pink-30o0 transition-all transform hover:scale-10o5'>,
               Get Started Today,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Innovation Highlights */,}
+      {/* Innovation Highlights */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -127,7 +123,7 @@ export default function AI20o25UltimateInnovationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-20 px-4'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl md: text-5xl font-bold mb-6'>,
@@ -138,22 +134,18 @@ export default function AI20o25UltimateInnovationPage() {,
             20o25 innovations to achieve unprecedented success.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-yellow-40o0 to-pink-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-yellow-30o0 hover:to-pink-30o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-pink-40o0 text-black px-10 py-4 rounded-lg font-semibold text-lg hover:from-yellow-30o0 hover:to-pink-30o0 transition-all transform hover:scale-10o5'>,
               Start Your AI Journey,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-colors'>,
               View Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Sparkles,
   Zap,
   Brain,
@@ -11,135 +10,118 @@ import {,
   Target,
   TrendingUp,
   Users,
-  Award,;
-  ChevronRight,;
-  Play,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  Shield,;
-  Lightbulb,;
-  BarChart3,
-} from 'lucide-react',
-,
-const UltimateContentRevolution20o26 = () => {,
+  Award;
+  ChevronRight;
+  Play;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Globe;
+  Shield;
+  Lightbulb;
+  BarChart3} from 'lucide-react',
+const UltimateContentRevolution20o26 = () => {
   const [activeTabsetActiveTab] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const contentSections = [,
-    {,
-      id: 'ai-breakthroughs',;
-      title: 'AI Breakthroughs 20o26',;
-      icon: Brain,;
-      color: 'from-purple-60o0 to-pink-60o0',;
-      content: {,
-        headline: 'Revolutionary AI Technologies That Will Transform Your Business',;
-        description: 'Discover the latest AI innovations that are reshaping industries and creating unprecedented opportunities for growth.',;
-        features: [,
-          'Neural Interface Integration',;
-          'Quantum-Enhanced Machine Learning',;
-          'Autonomous Decision Making Systems',;
-          'Predictive Analytics 2.0',;
-          'Emotional Intelligence AI',;
-          'Real-time Language Processing',
-        ],;
-        stats: [,
-          { label: 'ROI 'Increase', 'value: '340%'icon: TrendingUp ,},;
-          { label: 'Efficiency 'Gain', 'value: '85%'icon: Zap ,},;
-          { label: 'Cost 'Reduction', 'value: '60%'icon: Target ,}
-        ],
-      }
-    },;
-    {,
-      id: 'quantum-computing',;
-      title: 'Quantum Computing Revolution',;
-      icon: Zap,;
-      color: 'from-cyan-60o0 to-blue-60o0',;
-      content: {,
-        headline: 'Quantum Supremacy in Business Applications',;
-        description: 'Harness the power of quantum computing to solve complex problems and unlock new possibilities.',;
-        features: [,
-          'Quantum Machine Learning',;
-          'Cryptographic Security',;
-          'Optimization Algorithms',;
-          'Simulation Capabilities',;
-          'Quantum Networking',;
-          'Error Correction Systems',
-        ],;
-        stats: [,
-          { label: 'Processing 'Speed', 'value: '10o00'x', 'icon: Zap ,},;
-          { label: 'Security 'Level', 'value: '99.9%'icon: Shield ,},;
-          { label: 'Problem 'Solving', 'value: '∞'icon: Brain ,}
-        ],
-      }
-    },;
-    {,
-      id: 'automation',;
-      title: 'Intelligent Automation',;
-      icon: Rocket,;
-      color: 'from-orange-60o0 to-red-60o0',;
-      content: {,
-        headline: 'Autonomous Systems That Work 24/7',;
-        description: 'Deploy intelligent automation solutions that never sleep and continuously optimize your operations.',;
-        features: [,
-          'Process Automation',;
-          'Intelligent Monitoring',;
-          'Predictive Maintenance',;
-          'Resource Optimization',;
-          'Quality Assurance',;
-          'Customer Service Bots',
-        ],;
-        stats: [,
-          { label: ''Uptime', 'value: '99.9%'icon: CheckCircle ,},;
-          { label: 'Cost 'Savings', 'value: '75%'icon: TrendingUp ,},;
-          { label: 'Error 'Reduction', 'value: '95%'icon: Target ,}
-        ],
-      }
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const contentSections = [
+    {
+      id: 'ai-breakthroughs';
+      title: 'AI Breakthroughs 20o26';
+      icon: Brain;
+      color: 'from-purple-60o0 to-pink-60o0';
+      content: {
+        headline: 'Revolutionary AI Technologies That Will Transform Your Business';
+        description: 'Discover the latest AI innovations that are reshaping industries and creating unprecedented opportunities for growth.';
+        features: [
+          'Neural Interface Integration';
+          'Quantum-Enhanced Machine Learning';
+          'Autonomous Decision Making Systems';
+          'Predictive Analytics 2.0';
+          'Emotional Intelligence AI';
+          'Real-time Language Processing'];
+        stats: [
+          { label: 'ROI 'Increase', 'value: '340%'icon: TrendingUp };
+          { label: 'Efficiency 'Gain', 'value: '85%'icon: Zap };
+          { label: 'Cost 'Reduction', 'value: '60%'icon: Target }
+        ]}
+    };
+    {
+      id: 'quantum-computing';
+      title: 'Quantum Computing Revolution';
+      icon: Zap;
+      color: 'from-cyan-60o0 to-blue-60o0';
+      content: {
+        headline: 'Quantum Supremacy in Business Applications';
+        description: 'Harness the power of quantum computing to solve complex problems and unlock new possibilities.';
+        features: [
+          'Quantum Machine Learning';
+          'Cryptographic Security';
+          'Optimization Algorithms';
+          'Simulation Capabilities';
+          'Quantum Networking';
+          'Error Correction Systems'];
+        stats: [
+          { label: 'Processing 'Speed', 'value: '10o00'x', 'icon: Zap };
+          { label: 'Security 'Level', 'value: '99.9%'icon: Shield };
+          { label: 'Problem 'Solving', 'value: '∞'icon: Brain }
+        ]}
+    };
+    {
+      id: 'automation';
+      title: 'Intelligent Automation';
+      icon: Rocket;
+      color: 'from-orange-60o0 to-red-60o0';
+      content: {
+        headline: 'Autonomous Systems That Work 24/7';
+        description: 'Deploy intelligent automation solutions that never sleep and continuously optimize your operations.';
+        features: [
+          'Process Automation';
+          'Intelligent Monitoring';
+          'Predictive Maintenance';
+          'Resource Optimization';
+          'Quality Assurance';
+          'Customer Service Bots'];
+        stats: [
+          { label: ''Uptime', 'value: '99.9%'icon: CheckCircle };
+          { label: 'Cost 'Savings', 'value: '75%'icon: TrendingUp };
+          { label: 'Error 'Reduction', 'value: '95%'icon: Target }
+        ]}
     }
   ],
-,
-  const testimonials = [,
-    {,
-      name: 'Sarah Chen',;
-      role: 'CTOTechCorp',;
-      company: 'Fortune 50o0',;
-      content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.',;
-      avatar: '/api/placeholder/64/64',;
-      rating: 5,
-    ,},;
-    {,
-      name: 'Michael Rodriguez',;
-      role: 'CEOInnovateLabs',;
-      company: 'Startup',;
-      content: 'The quantum computing integration transformed our data processing capabilities completely.',;
-      avatar: '/api/placeholder/64/64',;
-      rating: 5,
-    ,},;
-    {,
-      name: 'Dr. Emily Watson',;
-      role: 'Head of R&D',;
-      company: 'Global Corp',;
-      content: 'Revolutionary technology that delivered results beyond our wildest expectations.',;
-      avatar: '/api/placeholder/64/64',;
-      rating: 5,
-    ,}
+  const testimonials = [
+    {
+      name: 'Sarah Chen';
+      role: 'CTOTechCorp';
+      company: 'Fortune 50o0';
+      content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.';
+      avatar: '/api/placeholder/64/64';
+      rating: 5};
+    {
+      name: 'Michael Rodriguez';
+      role: 'CEOInnovateLabs';
+      company: 'Startup';
+      content: 'The quantum computing integration transformed our data processing capabilities completely.';
+      avatar: '/api/placeholder/64/64';
+      rating: 5};
+    {
+      name: 'Dr. Emily Watson';
+      role: 'Head of R&D';
+      company: 'Global Corp';
+      content: 'Revolutionary technology that delivered results beyond our wildest expectations.';
+      avatar: '/api/placeholder/64/64';
+      rating: 5}
   ],
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.6 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-bold px-4 py-2 rounded-full mb-6 animate-pulse">,
             <Sparkles className="w-4 h-4 mr-2"  />,
             REVOLUTIONARY CONTENT 20o26,
@@ -152,66 +134,60 @@ const UltimateContentRevolution20o26 = () => {,
             that are reshaping the future of business and technology.,
           </p>,
         </motion.div>,
-        {/* Content Tabs */,}
+        {/* Content Tabs */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8delay: 0.2 ,}}
-          className="mb-12",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className="mb-12">,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
-            {contentSections.map((sectionindex) => (,
-              <button,
+            {contentSections.map((sectionindex) => (
+              <button
                 key={section.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${,
+                className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                   activeTab === index,
                     ? `bg-gradient-to-r ${section.color} text-white shadow-lg scale-10o5`,
-                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',
-                ,}`}
+                    : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
               >,
                 <section.icon className="w-5 h-5"  />,
                 {section.title}
-              </button>,
-            ))}
+              </button>))}
           </div>,
           {/* Tab Content */}
           <AnimatePresence mode="wait">,
             <motion.div,
               key={activeTab}
-              initial={{ opacity: 0x: 20 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              exit={{ opacity: 0x: -20 ,}}
-              transition={{ duration: 0.5 ,}}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10",
-            >,
+              initial={{ opacity: 0x: 20 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">,
               <div className="grid lg: grid-cols-2 gap-8">,
                 <div>,
                   <h3 className="text-3xl font-bold mb-4 text-white">,
-                    {contentSections[activeTab].content.headline,}
+                    {contentSections[activeTab].content.headline}
                   </h3>,
                   <p className="text-lg text-gray-30o0 mb-6">,
                     {contentSections[activeTab].content.description}
                   </p>,
                   <div className="grid grid-cols-2 gap-4 mb-6">,
-                    {contentSections[activeTab].content.stats.map((statindex) => (,
+                    {contentSections[activeTab].content.stats.map((statindex) => (
                       <div key={index} className="bg-white/10 rounded-lg p-4 text-center">,
                         <stat.icon className="w-8 h-8 mx-auto mb-2 text-purple-40o0"  />,
                         <div className="text-2xl font-bold text-white">{stat.value}</div>,
                         <div className="text-sm text-gray-40o0">{stat.label}</div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 <div>,
                   <h4 className="text-xl font-semibold mb-4 text-white">Key Features</h4>,
                   <div className="space-y-3">,
-                    {contentSections[activeTab].content.features.map((featureindex) => (,
+                    {contentSections[activeTab].content.features.map((featureindex) => (
                       <div key={index} className="flex items-center gap-3">,
                         <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />,
                         <span className="text-gray-30o0">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               </div>,
@@ -220,25 +196,23 @@ const UltimateContentRevolution20o26 = () => {,
         </motion.div>,
         {/* Testimonials */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="mb-16">,
           <h2 className="text-3xl font-bold text-center mb-12 text-white">,
             What Industry Leaders Are Saying,
           </h2>,
           <div className="grid md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonialindex) => (,
+            {testimonials.map((testimonialindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5delay: 0.1 * index ,}}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10",
-              >,
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5delay: 0.1 * index }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">,
                 <div className="flex items-center gap-4 mb-4">,
-                  <img,
+                  <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full",
@@ -250,21 +224,18 @@ const UltimateContentRevolution20o26 = () => {,
                 </div>,
                 <p className="text-gray-30o0 mb-4">"{testimonial.content}"</p>,
                 <div className="flex items-center gap-1">,
-                  {[...Array(testimonial.rating)].map((_i) => (,
-                    <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />,
-                  ))}
+                  {[...Array(testimonial.rating)].map((_i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />))}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="text-center bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-12",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="text-center bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-12">,
           <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">,
             Ready to Transform Your Business?,
           </h2>,
@@ -283,8 +254,5 @@ const UltimateContentRevolution20o26 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContentRevolution20o26,
+    </div>)};
+export default UltimateContentRevolution20o26;

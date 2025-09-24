@@ -1,78 +1,70 @@
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react',
-const LinkHealthMonitor = () => {,
+const LinkHealthMonitor = () => {
     const [isOpen, setIsOpen] = useState(false),
     const [isMonitoring, setIsMonitoring] = useState(false),
     const [linkStatuses, setLinkStatuses] = useState([]),
     const [report, setReport] = useState(null),
     const [selectedFilter, setSelectedFilter] = useState('all'),
     // Sample data based on the analysis report,
-    const sampleLinks = [,
-        {,
-            url: 'https://linkedin.com/company/ziontechgroup',;
-            status: 'broken',;
-            statusCode: 40o4,;
-            responseTime: 120o0,;
-            lastChecked: new Date(),;
-            parentPage: 'Homepage',;
-            linkText: 'LinkedIn',
-        ,},;
-        {,
-            url: 'https://twitter.com/ziontechgroup',;
-            status: 'external',;
-            statusCode: 20o0,;
-            responseTime: 80o0,;
-            lastChecked: new Date(),;
-            parentPage: 'Homepage',;
-            linkText: 'Twitter',
-        ,},;
-        {,
-            url: 'tel:+1 30o2 464 0950',;
-            status: 'healthy',;
-            statusCode: 20o0,;
-            responseTime: 50,;
-            lastChecked: new Date(),;
-            parentPage: 'Contact',;
-            linkText: 'Phone Number',
-        ,},;
-        {,
-            url: 'mailto:kleber@ziontechgroup.com',;
-            status: 'healthy',;
-            statusCode: 20o0,;
-            responseTime: 50,;
-            lastChecked: new Date(),;
-            parentPage: 'Contact',;
-            linkText: 'Email',
-        ,}
+    const sampleLinks = [
+        {
+            url: 'https://linkedin.com/company/ziontechgroup';
+            status: 'broken';
+            statusCode: 40o4;
+            responseTime: 120o0;
+            lastChecked: new Date();
+            parentPage: 'Homepage';
+            linkText: 'LinkedIn'};
+        {
+            url: 'https://twitter.com/ziontechgroup';
+            status: 'external';
+            statusCode: 20o0;
+            responseTime: 80o0;
+            lastChecked: new Date();
+            parentPage: 'Homepage';
+            linkText: 'Twitter'};
+        {
+            url: 'tel:+1 30o2 464 0950';
+            status: 'healthy';
+            statusCode: 20o0;
+            responseTime: 50;
+            lastChecked: new Date();
+            parentPage: 'Contact';
+            linkText: 'Phone Number'};
+        {
+            url: 'mailto:kleber@ziontechgroup.com';
+            status: 'healthy';
+            statusCode: 20o0;
+            responseTime: 50;
+            lastChecked: new Date();
+            parentPage: 'Contact';
+            linkText: 'Email'}
     ],
-    useEffect(() => {,
+    useEffect(() => {
         setLinkStatuses(sampleLinks),
-        generateReport(sampleLinks),
-    }, []),
-    const generateReport = (links) => {,
+        generateReport(sampleLinks)}, []),
+    const generateReport = (links) => {
         const totalLinks = links.length,
         const healthyLinks = links.filter(l => l.status === 'healthy').length,
         const brokenLinks = links.filter(l => l.status === 'broken').length,
         const externalLinks = links.filter(l => l.status === 'external').length,
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks,
-        setReport({,
-            totalLinks,;
-            healthyLinks,;
-            brokenLinks,;
-            externalLinks,;
-            averageResponseTime: avgResponseTime,;
-            lastUpdated: new Date(),
-        ,}),
-    };
-    const startMonitoring = async () => {,
+        setReport({
+            totalLinks;
+            healthyLinks;
+            brokenLinks;
+            externalLinks;
+            averageResponseTime: avgResponseTime;
+            lastUpdated: new Date()})};
+    const startMonitoring = async () => {
         setIsMonitoring(true),
         // Simulate link checking,
         await new Promise(resolve => setTimeout(resolve, 20o00)),
-        setIsMonitoring(false),
-    };
-    const getStatusIcon = (status) => {,
-        switch (status) {,
+        setIsMonitoring(false)};
+    const getStatusIcon = (status) => {
+        switch (status) {
             case 'healthy':,
                 return <CheckCircle className="w-4 h-4 text-green-40o0" />,
             case 'broken':,
@@ -80,11 +72,10 @@ const LinkHealthMonitor = () => {,
             case 'external':,
                 return <ExternalLink className="w-4 h-4 text-blue-40o0" />,
             default: ,
-                return <RefreshCw className="w-4 h-4 text-yellow-40o0" />,
-        ,}
+                return <RefreshCw className="w-4 h-4 text-yellow-40o0" />}
     };
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'healthy':,
                 return 'text-green-40o0',
             case 'broken':,
@@ -92,22 +83,20 @@ const LinkHealthMonitor = () => {,
             case 'external':,
                 return 'text-blue-40o0',
             default: ,
-                return 'text-yellow-40o0',
-        ,}
+                return 'text-yellow-40o0'}
     };
-    const filteredLinks = linkStatuses.filter(link => {,
+    const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all'),
             return true,
-        return link.status === selectedFilter,
-    }),
+        return link.status === selectedFilter}),
     return (<>,
       {/* Floating Action Button */}
-      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110" whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}}>,
+      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
         <Link className="w-6 h-6" />,
       </motion.button>,
       {/* Modal */}
-      {isOpen && (<motion.div initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} exit={{ opacity: 0 ,}} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>,
-          <motion.div initial={{ scale: 0.9, opacity: 0 ,}} animate={{ scale: 1, opacity: 1 ,}} exit={{ scale: 0.9, opacity: 0 ,}} className="bg-gray-90o0 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>,
+      {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>,
+          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-gray-90o0 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>,
             {/* Header */}
             <div className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 p-6 text-white">,
               <div className="flex items-center justify-between">,
@@ -123,12 +112,12 @@ const LinkHealthMonitor = () => {,
                 Monitor and maintain the health of all website links,
               </p>,
             </div>,
-            {/* Content */,}
+            {/* Content */}
             <div className="p-6 space-y-6">,
               {/* Summary Cards */}
               {report && (<div className="grid grid-cols-1 md: grid-cols-4 gap-4">,
                   <div className="bg-gray-80o0 rounded-lg p-4 text-center">,
-                    <div className="text-2xl font-bold text-white">{report.totalLinks,}</div>,
+                    <div className="text-2xl font-bold text-white">{report.totalLinks}</div>,
                     <div className="text-gray-40o0 text-sm">Total Links</div>,
                   </div>,
                   <div className="bg-green-90o0/20 border border-green-50o0/20 rounded-lg p-4 text-center">,
@@ -150,27 +139,27 @@ const LinkHealthMonitor = () => {,
                 <div className="flex space-x-2">,
                   <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all',
                 ? 'bg-cyan-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     All Links,
                   </button>,
                   <button onClick={() => setSelectedFilter('broken')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'broken',
                 ? 'bg-red-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     Broken,
                   </button>,
                   <button onClick={() => setSelectedFilter('external')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'external',
                 ? 'bg-blue-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     External,
                   </button>,
                   <button onClick={() => setSelectedFilter('healthy')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'healthy',
                 ? 'bg-green-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     Healthy,
                   </button>,
                 </div>,
                 <button onClick={startMonitoring} disabled={isMonitoring} className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-lg font-medium hover: from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">,
-                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin" />) : (<Zap className="w-4 h-4" />),}
+                  {isMonitoring ? (<RefreshCw className="w-4 h-4 animate-spin" />) : (<Zap className="w-4 h-4" />)}
                   <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>,
                 </button>,
               </div>,
@@ -201,7 +190,7 @@ const LinkHealthMonitor = () => {,
                       {filteredLinks.map((link, index) => (<tr key={index} className="hover: bg-gray-70o0/50 transition-colors">,
                           <td className="px-6 py-4 whitespace-nowrap">,
                             <div className="flex items-center space-x-2">,
-                              {getStatusIcon(link.status),}
+                              {getStatusIcon(link.status)}
                               <span className={`text-sm font-medium ${getStatusColor(link.status)}`}>,
                                 {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
                               </span>,
@@ -210,11 +199,11 @@ const LinkHealthMonitor = () => {,
                           <td className="px-6 py-4 whitespace-nowrap">,
                             <div className="max-w-xs truncate">,
                               <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-cyan-40o0 hover: text-cyan-30o0 transition-colors flex items-center space-x-1">,
-                                <span className="truncate">{link.url,}</span>,
+                                <span className="truncate">{link.url}</span>,
                                 <ExternalLink className="w-3 h-3" />,
                               </a>,
                               {link.linkText && (<div className="text-xs text-gray-40o0 mt-1">,
-                                  Text: {link.linkText,}
+                                  Text: {link.linkText}
                                 </div>)}
                             </div>,
                           </td>,
@@ -248,7 +237,5 @@ const LinkHealthMonitor = () => {,
             </div>,
           </motion.div>,
         </motion.div>)}
-    </>),
-};
-export default LinkHealthMonitor,
-,
+    </>)};
+export default LinkHealthMonitor;

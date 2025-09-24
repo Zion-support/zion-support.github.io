@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function _middlewarePage() {,
-  return (,
+export default function _middlewarePage() {
+  return (
     <>,
       <Head>,
         <title>_middleware - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function _middlewarePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

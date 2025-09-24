@@ -1,131 +1,126 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Leaf,;
-  TrendingDown,;
-  Globe,;
-  Zap,;
-  Target,;
-  Shield,;
-  CheckCircle,;
-  Star,;
-  BarChart3,;
-  Lock,;
-  Smartphone,;
-  Monitor,;
-  Award,;
-  MessageCircle,;
-  Cpu,;
+import {
+  Leaf;
+  TrendingDown;
+  Globe;
+  Zap;
+  Target;
+  Shield;
+  CheckCircle;
+  Star;
+  BarChart3;
+  Lock;
+  Smartphone;
+  Monitor;
+  Award;
+  MessageCircle;
+  Cpu;
 } from 'lucide-react',
-,
-export default function AISustainabilityPlatform() {,
-  const features = [,
-    {,
-      icon: <Leaf className='w-6 h-6' />,;
-      title: 'Environmental Impact Analysis',;
+export default function AISustainabilityPlatform() {
+  const features = [
+    {
+      icon: <Leaf className='w-6 h-6' />;
+      title: 'Environmental Impact Analysis';
       description:,
-        'AI-powered analysis of environmental impact with real-time monitoring and predictive modeling.',;
-    },;
-    {,
-      icon: <TrendingDown className='w-6 h-6' />,;
-      title: 'Carbon Footprint Management',;
+        'AI-powered analysis of environmental impact with real-time monitoring and predictive modeling.';
+    };
+    {
+      icon: <TrendingDown className='w-6 h-6' />;
+      title: 'Carbon Footprint Management';
       description:,
-        'Comprehensive carbon footprint tracking and reduction strategies with AI optimization.',;
-    },;
-    {,
-      icon: <Target className='w-6 h-6' />,;
-      title: 'Sustainability Metrics',;
+        'Comprehensive carbon footprint tracking and reduction strategies with AI optimization.';
+    };
+    {
+      icon: <Target className='w-6 h-6' />;
+      title: 'Sustainability Metrics';
       description:,
-        'Advanced sustainability metrics and KPIs with automated reporting and insights.',;
-    },;
-    {,
-      icon: <Zap className='w-6 h-6' />,;
-      title: 'Energy Optimization',;
+        'Advanced sustainability metrics and KPIs with automated reporting and insights.';
+    };
+    {
+      icon: <Zap className='w-6 h-6' />;
+      title: 'Energy Optimization';
       description:,
-        'AI-driven energy optimization and renewable energy integration strategies.',;
-    },;
-    {,
-      icon: <Shield className='w-6 h-6' />,;
-      title: 'Compliance Monitoring',;
+        'AI-driven energy optimization and renewable energy integration strategies.';
+    };
+    {
+      icon: <Shield className='w-6 h-6' />;
+      title: 'Compliance Monitoring';
       description:,
-        'Automated sustainability compliance monitoring and regulatory reporting.',;
-    },;
-    {,
-      icon: <Globe className='w-6 h-6' />,;
-      title: 'Supply Chain Sustainability',;
+        'Automated sustainability compliance monitoring and regulatory reporting.';
+    };
+    {
+      icon: <Globe className='w-6 h-6' />;
+      title: 'Supply Chain Sustainability';
       description:,
-        'End-to-end supply chain sustainability tracking and optimization.',;
-    },;
+        'End-to-end supply chain sustainability tracking and optimization.';
+    };
   ],
-,
-  const benefits = [,
-    'Reduce carbon footprint by 60%',;
-    'Improve energy efficiency by 80%',;
-    'Increase sustainability score by 70%',;
-    'Reduce compliance costs by 50%',;
-    'Accelerate sustainability goals by 200%',;
-    'Enhance brand reputation by 150%',;
-    'Scale sustainability operations',;
-    'Future-proof business operations',;
+  const benefits = [
+    'Reduce carbon footprint by 60%';
+    'Improve energy efficiency by 80%';
+    'Increase sustainability score by 70%';
+    'Reduce compliance costs by 50%';
+    'Accelerate sustainability goals by 200%';
+    'Enhance brand reputation by 150%';
+    'Scale sustainability operations';
+    'Future-proof business operations';
   ],
-,
-  const useCases = [,
-    'Carbon Tracking',;
-    'Energy Optimization',;
-    'Supply Chain',;
-    'Compliance Reporting',;
-    'Sustainability Metrics',;
-    'Environmental Impact',;
-    'Renewable Energy',;
-    'Waste Management',;
-    'Water Conservation',;
-    'Green Building',;
-    'ESG Reporting',;
-    'Climate Action',;
+  const useCases = [
+    'Carbon Tracking';
+    'Energy Optimization';
+    'Supply Chain';
+    'Compliance Reporting';
+    'Sustainability Metrics';
+    'Environmental Impact';
+    'Renewable Energy';
+    'Waste Management';
+    'Water Conservation';
+    'Green Building';
+    'ESG Reporting';
+    'Climate Action';
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>AI Sustainability Platform | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Drive sustainability with AI-powered environmental impact analysis, carbon management, and energy optimization.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI sustainability platform, environmental impact, carbon footprint, energy optimization, sustainability metrics, green technology',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='AI Sustainability Platform | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Drive sustainability with AI-powered environmental impact analysis.',
         />,
         <meta property='og:type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/ai-sustainability-platform',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/ai-sustainability-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-black text-white'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative pt-32 pb-20 overflow-hidden'>,
           <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-emerald-900/20 to-teal-900/20'></div>,
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'>,
               <div className='flex items-center justify-center mb-6'>,
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4'>,
                   <Leaf className='w-8 h-8 text-white' />,
@@ -141,32 +136,29 @@ export default function AISustainabilityPlatform() {,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold text-lg hover: from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg shadow-green-500/25',
-                >,
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold text-lg hover: from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg shadow-green-500/25'>,
                   Start Free Trial,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className='px-8 py-4 border-2 border-green-500/30 text-green-400 rounded-xl font-semibold text-lg hover: bg-green-500/10 transition-all duration-200',
-                >,
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='px-8 py-4 border-2 border-green-500/30 text-green-400 rounded-xl font-semibold text-lg hover: bg-green-500/10 transition-all duration-200'>,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Revolutionary Sustainability Features,
               </h2>,
@@ -177,16 +169,15 @@ export default function AISustainabilityPlatform() {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover: border-green-500/30 transition-all duration-300 group',
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover: border-green-500/30 transition-all duration-300 group'>,
                   <div className='w-14 h-14 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>,
-                    <div className='text-green-400'>{feature.icon,}</div>,
+                    <div className='text-green-400'>{feature.icon}</div>,
                   </div>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
                     {feature.title}
@@ -194,8 +185,7 @@ export default function AISustainabilityPlatform() {,
                   <p className='text-gray-400 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -203,37 +193,34 @@ export default function AISustainabilityPlatform() {,
         <section className='py-20 bg-black'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Transform Sustainability,
               </h2>,
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-                Experience revolutionary improvements in environmental impact,;
+                Experience revolutionary improvements in environmental impact;
                 energy efficiency, and sustainability metrics with our,
                 AI-powered platform.,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover: border-green-500/30 transition-all duration-300 group',
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover: border-green-500/30 transition-all duration-300 group'>,
                   <div className='flex items-center space-x-3'>,
                     <CheckCircle className='w-5 h-5 text-green-400' />,
                     <span className='text-white font-medium text-sm'>,
-                      {benefit,}
+                      {benefit}
                     </span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -241,11 +228,10 @@ export default function AISustainabilityPlatform() {,
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Sustainability Solutions for Every Need,
               </h2>,
@@ -256,22 +242,20 @@ export default function AISustainabilityPlatform() {,
               </p>,
             </motion.div>,
             <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover: border-green-500/30 transition-all duration-300 group text-center',
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover: border-green-500/30 transition-all duration-300 group text-center'>,
                   <div className='w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>,
                     <Cpu className='w-6 h-6 text-green-400' />,
                   </div>,
                   <span className='text-white font-medium text-sm'>,
-                    {useCase,}
+                    {useCase}
                   </span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -279,9 +263,9 @@ export default function AISustainabilityPlatform() {,
         <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-teal-900/20'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Ready to Transform Sustainability?,
@@ -293,17 +277,15 @@ export default function AISustainabilityPlatform() {,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold text-lg hover: from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg shadow-green-500/25',
-                >,
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold text-lg hover: from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-lg shadow-green-500/25'>,
                   Get Started Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.05 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className='px-8 py-4 border-2 border-green-500/30 text-green-400 rounded-xl font-semibold text-lg hover: bg-green-500/10 transition-all duration-200',
-                >,
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='px-8 py-4 border-2 border-green-500/30 text-green-400 rounded-xl font-semibold text-lg hover: bg-green-500/10 transition-all duration-200'>,
                   Contact Sales,
                 </motion.button>,
               </div>,
@@ -311,7 +293,5 @@ export default function AISustainabilityPlatform() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

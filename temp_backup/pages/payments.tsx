@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PaymentsPage() {,
-  return (,
+export default function PaymentsPage() {
+  return (
     <>,
       <Head>,
         <title>Payments - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function PaymentsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

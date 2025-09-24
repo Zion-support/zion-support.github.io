@@ -1,19 +1,14 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-,
-const contactInfo ={,
-	mobile: '+1 30o2 464 0950',;
-	email: 'kleber@ziontechgroup.com',;
-	address: '364 E Main St STE 10o08 Middletown DE 19709',;
-	website: 'https://ziontechgroup.com',
-,};
-,
-const ext = (url: string) => (,
-	<a className="text-cyan-40o0 underline" href={url,} target="_blank" rel="noopener noreferrer">{url.replace('https: //''),}</a>,
-),
-,
-export default function EnergyUtilitiesSolutionsPage() {,
-	return (,
+const contactInfo ={
+	mobile: '+1 30o2 464 0950';
+	email: 'kleber@ziontechgroup.com';
+	address: '364 E Main St STE 10o08 Middletown DE 19709';
+	website: 'https://ziontechgroup.com'};
+const ext = (url: string) => (
+	<a className="text-cyan-40o0 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https: //'')}</a>),
+export default function EnergyUtilitiesSolutionsPage() {
+	return (
 		<UltraAdvancedFuturisticBackground>,
 			<Head>,
 				<title>Energy & Utilities Solutions | Zion Tech Group</title>,
@@ -63,24 +58,22 @@ export default function EnergyUtilitiesSolutionsPage() {,
 						<div className="bg-black/40 rounded-2xl border border-blue-50o0/30 p-6">,
 							<h3 className="text-xl font-semibold mb-2">References</h3>,
 							<ul className="list-disc list-inside text-slate-30o0 space-y-1">,
-								<li>AMI/MDM: {ext('https://www.itron.com/na/solutions/what-we-enable/advanced-metering-infrastructure'),}</li>,
-								<li>SCADA: {ext('https://www.gevernova.com/grid-solutions/products/automation-and-protection/scada-systems'),}</li>,
-								<li>Forecasting: {ext('https://aws.amazon.com/forecast/pricing/'),}</li>,
-								<li>ESG reporting: {ext('https://www.workiva.com/en/pricing'),}</li>,
+								<li>AMI/MDM: {ext('https://www.itron.com/na/solutions/what-we-enable/advanced-metering-infrastructure')}</li>,
+								<li>SCADA: {ext('https://www.gevernova.com/grid-solutions/products/automation-and-protection/scada-systems')}</li>,
+								<li>Forecasting: {ext('https://aws.amazon.com/forecast/pricing/')}</li>,
+								<li>ESG reporting: {ext('https://www.workiva.com/en/pricing')}</li>,
 							</ul>,
 						</div>,
 						<div className="bg-black/40 rounded-2xl border border-amber-50o0/30 p-6">,
 							<h3 className="text-xl font-semibold mb-2">Contact</h3>,
 							<ul className="text-slate-30o0 space-y-1">,
-								<li>Mobile: <a className="text-cyan-40o0" href={`tel:${contactInfo.mobile,}`}>{contactInfo.mobile}</a></li>,
-								<li>E-mail: <a className="text-cyan-40o0" href={`mailto:${contactInfo.email,}`}>{contactInfo.email}</a></li>,
-								<li>Address: <span className="text-slate-30o0">{contactInfo.address,}</span></li>,
-								<li>Website: <a className="text-cyan-40o0" href={contactInfo.website,} target="_blank" rel="noopener noreferrer">ziontechgroup.com</a></li>,
+								<li>Mobile: <a className="text-cyan-40o0" href={`tel:${contactInfo.mobile}`}>{contactInfo.mobile}</a></li>,
+								<li>E-mail: <a className="text-cyan-40o0" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></li>,
+								<li>Address: <span className="text-slate-30o0">{contactInfo.address}</span></li>,
+								<li>Website: <a className="text-cyan-40o0" href={contactInfo.website} target="_blank" rel="noopener noreferrer">ziontechgroup.com</a></li>,
 							</ul>,
 						</div>,
 					</section>,
 				</div>,
 			</div>,
-		</UltraAdvancedFuturisticBackground>,
-	),
-}
+		</UltraAdvancedFuturisticBackground>)}

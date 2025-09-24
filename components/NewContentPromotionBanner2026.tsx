@@ -1,27 +1,26 @@
 import Link from 'next/link',
-,
-const NewContentPromotionBanner20o26 = () => {,
-  return (,
+const NewContentPromotionBanner20o26 = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-r from-violet-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-16'>,
       {/* Animated background particles */}
       <div className='absolute inset-0'>,
         <div className='absolute top-1/4 left-1/6 w-2 h-2 bg-white rounded-full opacity-60 animate-ping'></div>,
-        <div,
+        <div
           className='absolute top-3/4 right-1/6 w-3 h-3 bg-yellow-30o0 rounded-full opacity-60 animate-ping',
-          style={{ animationDelay: '1s' ,}}
+          style={{ animationDelay: '1s' }}
         ></div>,
-        <div,
+        <div
           className='absolute bottom-1/4 left-1/3 w-2 h-2 bg-cyan-30o0 rounded-full opacity-60 animate-ping',
-          style={{ animationDelay: '2s' ,}}
+          style={{ animationDelay: '2s' }}
         ></div>,
-        <div,
+        <div
           className='absolute top-1/2 right-1/3 w-3 h-3 bg-pink-30o0 rounded-full opacity-60 animate-ping',
-          style={{ animationDelay: '0.5s' ,}}
+          style={{ animationDelay: '0.5s' }}
         ></div>,
       </div>,
       <div className='relative max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>🆕 NEW CONTENT ALERT</span>,
           </div>,
@@ -32,7 +31,7 @@ const NewContentPromotionBanner20o26 = () => {,
               AI 20o26 Revolution,
             </span>,
           </h2>,
-          {/* Description */,}
+          {/* Description */}
           <p className='text-lg md: text-xl opacity-90 mb-8 max-w-3xl mx-auto'>,
             Explore groundbreaking AI technologies including Neural,
             Superintelligence, Quantum-Neural Fusion, and Autonomous Business,
@@ -58,22 +57,20 @@ const NewContentPromotionBanner20o26 = () => {,
               <p className='text-xs opacity-80'>Self-managing business AI</p>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-revolution',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore AI 20o26 →,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26-revolution/demo',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0'>,
               Try Interactive Demo,
             </Link>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='mt-8 grid grid-cols-2 md: grid-cols-4 gap-4 text-center'>,
             <div>,
               <div className='text-2xl font-bold text-yellow-40o0'>10o00%</div>,
@@ -94,9 +91,5 @@ const NewContentPromotionBanner20o26 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContentPromotionBanner20o26,
-,
+    </section>)};
+export default NewContentPromotionBanner20o26;

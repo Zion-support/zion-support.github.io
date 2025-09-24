@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'Multimodal Agents in the Enterprise (20o25) | Zion Tech Group',;
+export const metadata = {
+  title: 'Multimodal Agents in the Enterprise (20o25) | Zion Tech Group';
   description:,
-    'Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.',;
+    'Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.';
 };
-,
-export default function MultimodalAgentsEnterprise20o25Page() {,
-  return (,
+export default function MultimodalAgentsEnterprise20o25Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <div className='mb-6 text-sm text-purple-70o0 font-semibold'>,
         Enterprise AI,
@@ -41,20 +40,16 @@ export default function MultimodalAgentsEnterprise20o25Page() {,
         </p>,
       </div>,
       <div className='mt-10 flex gap-4'>,
-        <Link,
+        <Link
           href='/contact',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Start a Pilot,
         </Link>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-multimodal-agents-enterprise-blueprint',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Read the 20o26 Blueprint,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

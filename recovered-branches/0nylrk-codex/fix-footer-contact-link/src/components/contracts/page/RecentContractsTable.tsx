@@ -1,57 +1,49 @@
 import { Button } from '@/components/ui/button',
-,
-interface Contract {,
+interface Contract {
   id: string,
   title: string,
   client: string,
   talent: string,
   date: string,
-  isSmartContract: boolean,
-,}
+  isSmartContract: boolean}
 ,
-interface RecentContractsTableProps {,
+interface RecentContractsTableProps {
   contracts: Contract[],
-  onViewContract: (contractId: string) => void,
-,}
+  onViewContract: (contractId: string) => void}
 ,
-export function RecentContractsTable({,
-  contractsonViewContract,;
-}: RecentContractsTableProps) {,
-  return (,
+export function RecentContractsTable({
+  contractsonViewContract;
+}: RecentContractsTableProps) {
+  return (
     <>,
       <h2 className='text-2xl font-bold mb-4'>Recent Contracts</h2>,
       <div className='overflow-x-auto rounded-md border'>,
         <table className='min-w-full divide-y divide-border'>,
           <thead className='bg-muted'>,
             <tr>,
-              <th,
+              <th
                 scope='col',
-                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider',
-              >,
+                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider'>,
                 Contract Title,
               </th>,
-              <th,
+              <th
                 scope='col',
-                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider',
-              >,
+                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider'>,
                 Client,
               </th>,
-              <th,
+              <th
                 scope='col',
-                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider',
-              >,
+                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider'>,
                 Talent,
               </th>,
-              <th,
+              <th
                 scope='col',
-                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider',
-              >,
+                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider'>,
                 Date,
               </th>,
-              <th,
+              <th
                 scope='col',
-                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider',
-              >,
+                className='px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider'>,
                 Type,
               </th>,
               <th scope='col' className='relative px-6 py-3'>,
@@ -60,7 +52,7 @@ export function RecentContractsTable({,
             </tr>,
           </thead>,
           <tbody className='bg-card divide-y divide-border'>,
-            {contracts.map(contract => (,
+            {contracts.map(contract => (
               <tr key={contract.id}>,
                 <td className='px-6 py-4 whitespace-nowrap text-sm'>,
                   {contract.title}
@@ -75,18 +67,16 @@ export function RecentContractsTable({,
                   {new Date(contract.date).toLocaleDateString()}
                 </td>,
                 <td className='px-6 py-4 whitespace-nowrap text-sm'>,
-                  {contract.isSmartContract ? (,
+                  {contract.isSmartContract ? (
                     <span className='inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs'>,
                       Smart Contract,
-                    </span>,
-                  ) : (,
+                    </span>) : (
                     <span className='inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs'>,
                       Standard,
-                    </span>,
-                  )}
+                    </span>)}
                 </td>,
                 <td className='px-6 py-4 whitespace-nowrap text-right text-sm'>,
-                  <Button,
+                  <Button
                     variant='ghost',
                     size='sm',
                     onClick={() => onViewContract(contract.id)}
@@ -94,12 +84,9 @@ export function RecentContractsTable({,
                     View,
                   </Button>,
                 </td>,
-              </tr>,
-            ))}
+              </tr>))}
           </tbody>,
         </table>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

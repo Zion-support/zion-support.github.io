@@ -1,18 +1,16 @@
-import React from 'react',
+import React from 'react';
 import './globals.css',
 import type { ReactNode } from 'react',
 import { AuthProvider } from '@/contexts/AuthContext',
 import { Metadata } from 'next',
-,
-export const metadata = {,
-  title: 'Zion OS - Launch Sovereign AI-Powered Digital Economies',;
-  description: 'Unified deployment protocol for Zion ecosystems.',;
+export const metadata = {
+  title: 'Zion OS - Launch Sovereign AI-Powered Digital Economies';
+  description: 'Unified deployment protocol for Zion ecosystems.';
   keywords:,
-    'AI, blockchain, digital economy, marketplace, governance, deployment, Zion',;
+    'AI, blockchain, digital economy, marketplace, governance, deployment, Zion';
 };
-,
-export default function RootLayout({ children }: { children: ReactNode ,}) {,
-  return (,
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
     <html lang='en'>,
       <body className='min-h-screen bg-[var(--bg)] text-[var(--fg)]'>,
         <nav className='border-b border-white/10 sticky top-0 z-50 bg-zinc-90o0/80 backdrop-blur-md'>,
@@ -30,44 +28,39 @@ export default function RootLayout({ children }: { children: ReactNode ,}) {,
               </div>,
               <div className='hidden md:block'>,
                 <div className='ml-10 flex items-baseline space-x-8'>,
-                  <a,
+                  <a
                     href='/',
-                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                  >,
+                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>,
                     Home,
                   </a>,
-                  <a,
+                  <a
                     href='/multiverse/launch',
-                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                  >,
+                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>,
                     Launch,
                   </a>,
-                  <a,
+                  <a
                     href='/admin/instances',
-                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                  >,
+                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>,
                     Instances,
                   </a>,
-                  <a,
+                  <a
                     href='/admin/os-deploy',
-                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                  >,
+                    className='text-white/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>,
                     Admin,
                   </a>,
                 </div>,
               </div>,
               <div className='md:hidden'>,
                 <button className='text-white/80 hover:text-white p-2'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M4 6h16M4 12h16M4 18h16',
                     />,
                   </svg>,
@@ -101,26 +94,23 @@ export default function RootLayout({ children }: { children: ReactNode ,}) {,
                 <h3 className='text-white font-semibold mb-4'>Platform</h3>,
                 <ul className='space-y-2 text-white/70'>,
                   <li>,
-                    <a,
+                    <a
                       href='/multiverse/launch',
-                      className='hover:text-white transition-colors',
-                    >,
+                      className='hover:text-white transition-colors'>,
                       Launch Wizard,
                     </a>,
                   </li>,
                   <li>,
-                    <a,
+                    <a
                       href='/admin/instances',
-                      className='hover:text-white transition-colors',
-                    >,
+                      className='hover:text-white transition-colors'>,
                       Manage Instances,
                     </a>,
                   </li>,
                   <li>,
-                    <a,
+                    <a
                       href='/admin/os-deploy',
-                      className='hover:text-white transition-colors',
-                    >,
+                      className='hover:text-white transition-colors'>,
                       Admin Panel,
                     </a>,
                   </li>,
@@ -153,7 +143,5 @@ export default function RootLayout({ children }: { children: ReactNode ,}) {,
           </div>,
         </footer>,
       </body>,
-    </html>,
-  ),
-,}
+    </html>)}
 ,

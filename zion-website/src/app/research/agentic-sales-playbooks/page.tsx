@@ -1,13 +1,11 @@
-import React from 'react',
-,
-export const metadata = {,
-  title: 'AI 20o25: Agentic Sales Playbooks for Revenue Teams',;
+import React from 'react';
+export const metadata = {
+  title: 'AI 20o25: Agentic Sales Playbooks for Revenue Teams';
   description:,
-    'Deploy agentic AI to scale prospecting, personalize outreach, and accelerate pipeline—safely and measurably.',;
+    'Deploy agentic AI to scale prospecting, personalize outreach, and accelerate pipeline—safely and measurably.';
 };
-,
-export default function AgenticSalesPlaybooksPage() {,
-  return (,
+export default function AgenticSalesPlaybooksPage() {
+  return (
     <div className='mx-auto max-w-3xl px-6 py-20'>,
       <header className='mb-10'>,
         <p className='text-sm text-gray-40o0'>,
@@ -36,7 +34,7 @@ export default function AgenticSalesPlaybooksPage() {,
             tailored openers,
           </li>,
           <li>,
-            Meeting Prep: agent compiles research, suggests discovery questions,;
+            Meeting Prep: agent compiles research, suggests discovery questions;
             builds a mutual action plan,
           </li>,
           <li>,
@@ -44,13 +42,13 @@ export default function AgenticSalesPlaybooksPage() {,
             sessions,
           </li>,
           <li>,
-            Renewals: risk signals, adoption insights, expansion triggers,;
+            Renewals: risk signals, adoption insights, expansion triggers;
             executive briefs,
           </li>,
         </ul>,
         <h2>Architecture</h2>,
         <p>,
-          Event-driven design with a workflow engine, retrieval for context,;
+          Event-driven design with a workflow engine, retrieval for context;
           tools for CRM/calendar/email, and a safety layer for approvals. Start,
           with one playbook, measure cycle time and response lift, then scale.,
         </p>,
@@ -62,20 +60,16 @@ export default function AgenticSalesPlaybooksPage() {,
         </p>,
       </article>,
       <footer className='mt-12 flex items-center justify-between'>,
-        <a,
+        <a
           href='/research',
-          className='text-blue-40o0 font-semibold hover: text-blue-30o0',
-        >,
+          className='text-blue-40o0 font-semibold hover: text-blue-30o0'>,
           ← Back to Research,
         </a>,
-        <a,
+        <a
           href='/contact',
-          className='text-black bg-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-10o0',
-        >,
+          className='text-black bg-white px-5 py-2 rounded-lg font-semibold hover:bg-gray-10o0'>,
           Deploy Agentic Sales,
         </a>,
       </footer>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

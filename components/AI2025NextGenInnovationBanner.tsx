@@ -1,9 +1,7 @@
 'use client',
-,
 import Link from 'next/link',
-,
-const AI20o25NextGenInnovationBanner = () => {,
-  return (,
+const AI20o25NextGenInnovationBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -54,24 +52,18 @@ const AI20o25NextGenInnovationBanner = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-next-gen',
-              className='bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Innovations,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
               Get Early Access,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25NextGenInnovationBanner,
-,
+    </section>)};
+export default AI20o25NextGenInnovationBanner;

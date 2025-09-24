@@ -1,52 +1,51 @@
-export const metadata = { title: 'AI Financial Analyzer | Zion Tech Group' ,};
-,
-export default function AIFinancialAnalyzerPage() {,
-  return (,
+export const metadata = { title: 'AI Financial Analyzer | Zion Tech Group' };
+export default function AIFinancialAnalyzerPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Financial Analyzer,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent financial analysis platform with AI-powered insights,;
+          Intelligent financial analysis platform with AI-powered insights;
           automated reporting, and predictive modeling to optimize your business,
           finances and investment decisions.,
         </p>,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
-        <FeatureCard,
+        <FeatureCard
           title='Financial Intelligence',
-          features={[,
-            'AI-powered financial forecasting',;
-            'Cash flow analysis & optimization',;
-            'Risk assessment & management',;
-            'Investment opportunity analysis',;
-            'Market trend predictions',;
-            'Portfolio optimization',;
+          features={[
+            'AI-powered financial forecasting';
+            'Cash flow analysis & optimization';
+            'Risk assessment & management';
+            'Investment opportunity analysis';
+            'Market trend predictions';
+            'Portfolio optimization';
           ]}
           icon='💰',
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Automated Reporting',
-          features={[,
-            'Real-time financial dashboards',;
-            'Automated report generation',;
-            'Compliance & regulatory reporting',;
-            'Custom KPI tracking',;
-            'Executive summaries',;
-            'Multi-currency support',;
+          features={[
+            'Real-time financial dashboards';
+            'Automated report generation';
+            'Compliance & regulatory reporting';
+            'Custom KPI tracking';
+            'Executive summaries';
+            'Multi-currency support';
           ]}
           icon='📊',
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Smart Analytics',
-          features={[,
-            'Anomaly detection & alerts',;
-            'Cost optimization recommendations',;
-            'Revenue growth analysis',;
-            'Profit margin optimization',;
-            'Budget variance analysis',;
-            'Financial health scoring',;
+          features={[
+            'Anomaly detection & alerts';
+            'Cost optimization recommendations';
+            'Revenue growth analysis';
+            'Profit margin optimization';
+            'Budget variance analysis';
+            'Financial health scoring';
           ]}
           icon='🧠',
         />,
@@ -96,140 +95,126 @@ export default function AIFinancialAnalyzerPage() {,
       </div>,
       <PricingSection />,
       <ContactSection />,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
-function FeatureCard({,
-  title,;
-  features,;
-  icon,;
-}: {,
+function FeatureCard({
+  title;
+  features;
+  icon;
+}: {
   title: string,
   features: string[],
-  icon: string,
-,}) {,
-  return (,
+  icon: string}) {
+  return (
     <div className='bg-white border border-gray-20o0 rounded-xl p-6 hover: shadow-lg transition-shadow'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-amber-50o0 mr-2 mt-1'>•</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingSection() {,
-  return (,
+function PricingSection() {
+  return (
     <div className='mb-16'>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         Financial Analyzer Pricing,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <PricingCard,
+        <PricingCard
           name='Basic Financial',
           price='$299/mo',
           duration='Up to $1M revenue',
-          features={[,
-            'Basic financial analysis',;
-            'Standard reporting',;
-            'Email support',;
-            'Mobile app access',;
-            'Basic forecasting',;
-            'Single currency support',;
+          features={[
+            'Basic financial analysis';
+            'Standard reporting';
+            'Email support';
+            'Mobile app access';
+            'Basic forecasting';
+            'Single currency support';
           ]}
           popular={false}
         />,
-        <PricingCard,
+        <PricingCard
           name='Professional Financial',
           price='$799/mo',
           duration='Up to $10M revenue',
-          features={[,
-            'Everything in Basic Financial',;
-            'Advanced AI analytics',;
-            'Multi-currency support',;
-            'Custom reporting',;
-            'API access & integrations',;
-            'Priority support',;
+          features={[
+            'Everything in Basic Financial';
+            'Advanced AI analytics';
+            'Multi-currency support';
+            'Custom reporting';
+            'API access & integrations';
+            'Priority support';
           ]}
           popular={true}
         />,
-        <PricingCard,
+        <PricingCard
           name='Enterprise Financial',
           price='$1,999/mo',
           duration='Unlimited revenue',
-          features={[,
-            'Everything in Professional Financial',;
-            'Custom AI model development',;
-            'Advanced security & compliance',;
-            'Dedicated financial analyst',;
-            'Custom integrations',;
-            '24/7 phone support',;
+          features={[
+            'Everything in Professional Financial';
+            'Custom AI model development';
+            'Advanced security & compliance';
+            'Dedicated financial analyst';
+            'Custom integrations';
+            '24/7 phone support';
           ]}
           popular={false}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  name,;
-  price,;
-  duration,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  name;
+  price;
+  duration;
+  features;
+  popular;
+}: {
   name: string,
   price: string,
   duration: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-amber-50o0 shadow-lg' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
           <span className='bg-amber-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold'>,
             Most Popular,
           </span>,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>{name}</h3>,
       <div className='text-3xl font-bold text-amber-60o0 mb-1'>{price}</div>,
       <div className='text-gray-50o0 mb-6'>{duration}</div>,
       <ul className='space-y-3 mb-8'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-green-50o0 mr-2 mt-1'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${,
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-amber-60o0 text-white hover:bg-amber-70o0',
-            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'}`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function ContactSection() {,
-  return (,
+function ContactSection() {
+  return (
     <div className='bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-20o0 rounded-xl p-8 text-center'>,
       <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
         Ready to Optimize Your Financial Performance?,
@@ -239,16 +224,14 @@ function ContactSection() {,
         solution that drives better financial decisions.,
       </p>,
       <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-        <a,
+        <a
           href='tel:+130o24640950',
-          className='bg-amber-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-70o0 transition-colors',
-        >,
+          className='bg-amber-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-70o0 transition-colors'>,
           Call +1 30o2 464 0950,
         </a>,
-        <a,
+        <a
           href='mailto:kleber@ziontechgroup.com',
-          className='border-2 border-amber-60o0 text-amber-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-amber-60o0 hover:text-white transition-colors',
-        >,
+          className='border-2 border-amber-60o0 text-amber-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-amber-60o0 hover:text-white transition-colors'>,
           Email Us,
         </a>,
       </div>,
@@ -256,7 +239,5 @@ function ContactSection() {,
         <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -3,17 +3,14 @@ import { motion } from 'framer-motion',
 import UltraAdvancedNavigation20o26 from '../components/layout/UltraAdvancedNavigation20o26',
 import Enhanced20o26ServicesShowcaseV3 from '../components/sections/Enhanced20o26ServicesShowcaseV3',
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
-,
-export default function ServicesShowcase20o26V3() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
-    <UltraQuantumHolographicBackground,
+export default function ServicesShowcase20o26V3() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  return (
+    <UltraQuantumHolographicBackground
       intensity="extreme",
       colorScheme="neural-network",
       particleCount={50o0}
@@ -36,15 +33,15 @@ export default function ServicesShowcase20o26V3() {,
         <link rel="canonical" href="https://ziontechgroup.com/20o26-services-showcase-v3"  />,
       </Head>,
       <div className="min-h-screen">,
-        {/* Navigation */,}
+        {/* Navigation */}
         <UltraAdvancedNavigation20o26  />,
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm: px-6 lg:px-8 relative">,
           <div className="max-w-7xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent">,
                 Revolutionary 20o26 Services,
@@ -56,25 +53,23 @@ export default function ServicesShowcase20o26V3() {,
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">,
                 <motion.a,
                   href="#services",
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl shadow-lg shadow-purple-50o0/25 hover: shadow-xl hover:shadow-purple-50o0/40 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl shadow-lg shadow-purple-50o0/25 hover: shadow-xl hover:shadow-purple-50o0/40 transition-all duration-20o0">,
                   Explore Services,
                 </motion.a>,
                 <motion.a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-purple-50o0/50 text-purple-40o0 font-semibold rounded-xl hover: bg-purple-50o0/10 transition-all duration-20o0",
-                >,
+                  href={`tel:${contactInfo.mobile}`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-purple-50o0/50 text-purple-40o0 font-semibold rounded-xl hover: bg-purple-50o0/10 transition-all duration-20o0">,
                   Get Started,
                 </motion.a>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Services Showcase */,}
+        {/* Services Showcase */}
         <div id="services">,
           <Enhanced20o26ServicesShowcaseV3  />,
         </div>,
@@ -82,10 +77,10 @@ export default function ServicesShowcase20o26V3() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8 relative">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
@@ -97,26 +92,24 @@ export default function ServicesShowcase20o26V3() {,
               </p>,
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">,
                 <motion.a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl shadow-lg shadow-purple-50o0/25 hover: shadow-xl hover:shadow-purple-50o0/40 transition-all duration-20o0",
-                >,
-                  <span>Call {contactInfo.mobile,}</span>,
+                  href={`tel:${contactInfo.mobile}`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-semibold rounded-xl shadow-lg shadow-purple-50o0/25 hover: shadow-xl hover:shadow-purple-50o0/40 transition-all duration-20o0">,
+                  <span>Call {contactInfo.mobile}</span>,
                 </motion.a>,
                 <motion.a,
-                  href={`mailto: ${contactInfo.email,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-50o0/50 text-purple-40o0 font-semibold rounded-xl hover: bg-purple-50o0/10 transition-all duration-20o0",
-                >,
+                  href={`mailto: ${contactInfo.email}`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-50o0/50 text-purple-40o0 font-semibold rounded-xl hover: bg-purple-50o0/10 transition-all duration-20o0">,
                   <span>Email Us</span>,
                 </motion.a>,
               </div>,
               <div className="mt-12 p-6 bg-gradient-to-r from-purple-90o0/20 via-pink-90o0/20 to-cyan-90o0/20 rounded-2xl border border-purple-50o0/20">,
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">,
                   <div>,
-                    <div className="text-white font-medium">{contactInfo.mobile,}</div>,
+                    <div className="text-white font-medium">{contactInfo.mobile}</div>,
                     <div className="text-gray-40o0 text-sm">Mobile</div>,
                   </div>,
                   <div>,
@@ -133,6 +126,4 @@ export default function ServicesShowcase20o26V3() {,
           </div>,
         </section>,
       </div>,
-    </UltraQuantumHolographicBackground>,
-  ),
-}
+    </UltraQuantumHolographicBackground>)}

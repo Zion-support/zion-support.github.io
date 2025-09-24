@@ -1,23 +1,22 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function EdgeComputingAutomation() {,
-  return (,
+export default function EdgeComputingAutomation() {
+  return (
     <>,
       <Head>,
         <title>,
           Edge Computing Automation: Powering the IoT Revolution | Zion Tech,
           Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Discover how edge computing is transforming automation by bringing intelligence closer to data sources and enabling real-time decision making.',
         />,
-        <meta,
+        <meta
           property='og:title',
           content='Edge Computing Automation: Powering the IoT Revolution',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Learn about the transformative impact of edge computing on automation systems.',
         />,
@@ -26,16 +25,15 @@ export default function EdgeComputingAutomation() {,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
-            {/* Breadcrumb */,}
+            {/* Breadcrumb */}
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                 ← Back to Blog,
               </Link>,
             </nav>,
-            {/* Article Header */,}
+            {/* Article Header */}
             <header className='mb-12'>,
               <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>,
                 Edge Computing Automation: Powering the IoT Revolution,
@@ -188,7 +186,7 @@ export default function EdgeComputingAutomation() {,
                 Cloud Layer,
               </h3>,
               <p className='text-white/80 mb-6'>,
-                The cloud provides centralized management, long-term storage,;
+                The cloud provides centralized management, long-term storage;
                 advanced analytics, and machine learning model training that can,
                 be deployed back to edge devices.,
               </p>,
@@ -296,17 +294,14 @@ export default function EdgeComputingAutomation() {,
                 Discover how Zion Tech Group can help you implement edge,
                 computing automation.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover: from-cyan-60o0 hover:to-blue-60o0 rounded-xl font-semibold text-white transition-all duration-30o0 hover:scale-10o5',
-              >,
+                className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover: from-cyan-60o0 hover:to-blue-60o0 rounded-xl font-semibold text-white transition-all duration-30o0 hover:scale-10o5'>,
                 Contact Us,
               </Link>,
             </div>,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

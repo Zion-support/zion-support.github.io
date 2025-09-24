@@ -1,20 +1,16 @@
 import Link from 'next/link',
 import type { TalentProfile } from '../data/talent',
-,
-export type EnhancedTalentCardProps = {,
-  profile: TalentProfile,
-,};
-,
-function AvailabilityBadge({,
-  status,;
-}: {,
-  status?: 'available' | 'booked' | 'part-time',
-}) {,
-  const map: Record<string, string> = {,
+export type EnhancedTalentCardProps = {
+  profile: TalentProfile};
+function AvailabilityBadge({
+  status;
+}: {
+  status?: 'available' | 'booked' | 'part-time'}) {
+  const map: Record<string string> = {
     available:,
-      'bg-emerald-50o0/15 text-emerald-30o0 ring-1 ring-emerald-50o0/30',;
-    booked: 'bg-rose-50o0/15 text-rose-30o0 ring-1 ring-rose-50o0/30',;
-    'part-time': 'bg-amber-50o0/15 text-amber-30o0 ring-1 ring-amber-50o0/30',;
+      'bg-emerald-50o0/15 text-emerald-30o0 ring-1 ring-emerald-50o0/30';
+    booked: 'bg-rose-50o0/15 text-rose-30o0 ring-1 ring-rose-50o0/30';
+    'part-time': 'bg-amber-50o0/15 text-amber-30o0 ring-1 ring-amber-50o0/30';
   };
   const cls = status,
     ? map[status],
@@ -24,20 +20,18 @@ function AvailabilityBadge({,
       ? 'Part-time',
       : status.charAt(0).toUpperCase() + status.slice(1),
     : 'Unknown',
-  return (,
-    <span,
+  return (
+    <span
       className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${cls}`}
     >,
       {label}
-    </span>,
-  ),
-}
+    </span>)}
 ,
-export default function EnhancedTalentCard({,
-  profile,;
-}: EnhancedTalentCardProps) {,
+export default function EnhancedTalentCard({
+  profile;
+}: EnhancedTalentCardProps) {
   const displayedSkills = profile.skills.slice(0, 4),
-  return (,
+  return (
     <div className='group relative rounded-2xl border border-white/10 bg-white/5 dark: bg-black/40 backdrop-blur hover:bg-white/10 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-50o0/10'>,
       <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-50o0/10 via-violet-50o0/10 to-fuchsia-50o0/10 opacity-0 group-hover:opacity-10o0 transition-opacity pointer-events-none' />,
       <div className='p-4 flex gap-4'>,
@@ -62,26 +56,24 @@ export default function EnhancedTalentCard({,
             </div>,
             <AvailabilityBadge status={profile.status} />,
           </div>,
-          <p,
+          <p
             className='mt-2 text-sm text-slate-30o0',
-            style={{,
-              display: '-webkit-box',;
-              WebkitLineClamp: 2,;
-              WebkitBoxOrient: 'vertical' as any,;
-              overflow: 'hidden',;
+            style={{
+              display: '-webkit-box';
+              WebkitLineClamp: 2;
+              WebkitBoxOrient: 'vertical' as any;
+              overflow: 'hidden';
             }}
           >,
             {profile.bio}
           </p>,
           <div className='mt-3 flex flex-wrap gap-2'>,
-            {displayedSkills.map(skill => (,
-              <span,
+            {displayedSkills.map(skill => (
+              <span
                 key={skill}
-                className='inline-flex items-center rounded-full bg-white/10 px-2 py-1 text-xs text-slate-20o0 ring-1 ring-white/15',
-              >,
+                className='inline-flex items-center rounded-full bg-white/10 px-2 py-1 text-xs text-slate-20o0 ring-1 ring-white/15'>,
                 {skill}
-              </span>,
-            ))}
+              </span>))}
           </div>,
           <div className='mt-4 flex items-center justify-between'>,
             <div className='text-sm text-slate-30o0'>,
@@ -95,7 +87,5 @@ export default function EnhancedTalentCard({,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

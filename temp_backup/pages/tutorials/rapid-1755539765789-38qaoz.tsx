@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TutorialPage() {,
-  return (,
+export default function TutorialPage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Advanced Techniques for API Integration - Zion Tech Group</title>,
@@ -43,17 +42,14 @@ export default function TutorialPage() {,
           <p className="text-white/75 mb-4">,
             Ready to master api integration?,
           </p>,
-          <a,
+          <a
             href="https: //ziontechgroup.com/tutorials",
-            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors",
-          >,
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors">,
             Start Learning,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/tutorials" className="internal-link">Related Content</Link>,
 <Link href="/reports/tutorials/microservices-nextjs" className="internal-link">Related Content</Link>,

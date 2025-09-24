@@ -1,43 +1,31 @@
 "use client",
-import React from 'react',
+import React from 'react';
 import type { Room } from 'livekit-client',
-,
-type Props = {,
+type Props = {
   room: Room | null,
   onLeave: () => void,
-  accent?: 'blue' | 'cyan',
-,};
-,
-export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {,
+  accent?: 'blue' | 'cyan'};
+export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
   const [micEnabledsetMicEnabled] = React.useState(true),
   const [camEnabledsetCamEnabled] = React.useState(true),
   const [sharingsetSharing] = React.useState(false),
-,
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600',
-,
-  const toggleMic = async () => {,
+  const toggleMic = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled),
-    setMicEnabled(enabled),
-  };
-,
-  const toggleCam = async () => {,
+    setMicEnabled(enabled)};
+  const toggleCam = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled),
-    setCamEnabled(enabled),
-  };
-,
-  const toggleScreenShare = async () => {,
+    setCamEnabled(enabled)};
+  const toggleScreenShare = async () => {
     if (!room) return,
-    try {,
+    try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing),
-      setSharing(enabled),
-    } catch (e) {,
-      console.warn('Screen share 'failed', 'e),
-    }
+      setSharing(enabled)} catch (e) {
+      console.warn('Screen share 'failed', 'e)}
   };
-,
-  return (,
+  return (
     <div className="flex items-center gap-3">,
       <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>,
         {micEnabled ? 'Mute' : 'Unmute'}
@@ -49,7 +37,5 @@ export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {,
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>,
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,42 +1,41 @@
-import { useMemo, useState } from 'react',;
-import Head from 'next/head',;
-import type { GetServerSideProps } from 'next',;
-import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 'lucide-react',;
-import { QUOTE_REQUESTS } from '../../data/quote-requests',;
-import type { QuoteRequest, TalentQuoteStatus } from '../../utils/types/quote',;
-import { TALENT_PROFILES } from '../../data/talent',;
-function formatDate(iso: string) {,
-  const d = new Date(iso),;
-  return d.toLocaleDateString(),
-}
+import { useMemo, useState } from 'react';
+import Head from 'next/head';
+import type { GetServerSideProps } from 'next';
+import { MailCheck, UserRound, CalendarDays, BadgeDollarSign, Eye, Check } from 'lucide-react';
+import { QUOTE_REQUESTS } from '../../data/quote-requests';
+import type { QuoteRequest, TalentQuoteStatus } from '../../utils/types/quote';
+import { TALENT_PROFILES } from '../../data/talent';
+function formatDate(iso: string) {
+  const d = new Date(iso);
+  return d.toLocaleDateString()}
 ,
-const TALENT_STATUSES: TalentQuoteStatus[] = ['NewViewed', 'Replied'],;
-type ServerProps ={ role: 'admin' | 'talent' | 'guest', userId?: string | null, talentSlug?: string | null },;
-export const getServerSideProps: GetServerSideProps<ServerProps> = async ({ req ,}) => {,
-  const cookies = (req.headers.cookie || '').split().reduce<Record<stringstring>>((acc, cur) => {,
-    const [k, v] = cur.trim().split('='),;
-    if (k && v) acc[k] = decodeURIComponent(v),;
-    return acc}, {}),;
-  const role = (cookies['role'] as ServerProps['role']) || 'guest',;
-  const userId = cookies['userId'] || null,;
-  const talentSlug = cookies['talentSlug'] || null,;
-  return { props: { role, userId, talentSlug } }},;
-export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {,
-  const [statusFilter, setStatusFilter] = useState<TalentQuoteStatus | 'All'>('All'),;
-  const [dateFilter, setDateFilter] = useState<{ start: string | null, end: string | null ,}>({ start: null, end: null ,}),;
-  const [rows, setRows] = useState<QuoteRequest[]>(QUOTE_REQUESTS),;
-  const currentTalent = TALENT_PROFILES.find(t => t.slug === talentSlug || ''),;
-  const visibleRows = useMemo(() => {,
-    return rows.filter(r => {,
-      if (r.archived) return false,;
-      if (!talentSlug) return false,;
-      if (r.talentSlug !== talentSlug) return false,;
-      if (statusFilter !== 'All' && r.talentStatus !== statusFilter) return false,;
-      if (dateFilter.start && new Date(r.createdAt) < new Date(dateFilter.start)) return false,;
-      if (dateFilter.end && new Date(r.createdAt) > new Date(dateFilter.end)) return false,;
-      return true})}, [rows, statusFilter, dateFilter, talentSlug]),;
-  if (role !== 'talent' || !talentSlug) {,
-    return (,
+const TALENT_STATUSES: TalentQuoteStatus[] = ['NewViewed', 'Replied'];
+type ServerProps ={ role: 'admin' | 'talent' | 'guest', userId?: string | null, talentSlug?: string | null };
+export const getServerSideProps: GetServerSideProps<ServerProps> = async ({ req }) => {
+  const cookies = (req.headers.cookie || '').split().reduce<Record<stringstring>>((acc, cur) => {
+    const [k, v] = cur.trim().split('=');
+    if (k && v) acc[k] = decodeURIComponent(v);
+    return acc}, {});
+  const role = (cookies['role'] as ServerProps['role']) || 'guest';
+  const userId = cookies['userId'] || null;
+  const talentSlug = cookies['talentSlug'] || null;
+  return { props: { role, userId, talentSlug } }};
+export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {
+  const [statusFilter, setStatusFilter] = useState<TalentQuoteStatus | 'All'>('All');
+  const [dateFilter, setDateFilter] = useState<{ start: string | null, end: string | null }>({ start: null, end: null });
+  const [rows, setRows] = useState<QuoteRequest[]>(QUOTE_REQUESTS);
+  const currentTalent = TALENT_PROFILES.find(t => t.slug === talentSlug || '');
+  const visibleRows = useMemo(() => {
+    return rows.filter(r => {
+      if (r.archived) return false;
+      if (!talentSlug) return false;
+      if (r.talentSlug !== talentSlug) return false;
+      if (statusFilter !== 'All' && r.talentStatus !== statusFilter) return false;
+      if (dateFilter.start && new Date(r.createdAt) < new Date(dateFilter.start)) return false;
+      if (dateFilter.end && new Date(r.createdAt) > new Date(dateFilter.end)) return false;
+      return true})}, [rows, statusFilter, dateFilter, talentSlug]);
+  if (role !== 'talent' || !talentSlug) {
+    return (
       <div className="max-w-5xl mx-auto py-12">,
         <Head>,
           <title>My Requests</title>,
@@ -48,10 +47,9 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {,
         <div className="border rounded-lg p-6">,
           <p className="text-sm">No access. Go to <a className="text-blue-60o0 underline" href="/auth">Login</a>.</p>,
         </div>,
-      </div>,
-    )}
+      </div>)}
 ,
-  return (,
+  return (
     <div className="max-w-6xl mx-auto py-8">,
       <Head>,
         <title>My Requests</title>,
@@ -61,64 +59,59 @@ export default function TalentRequestsPage({ role, talentSlug }: ServerProps) {,
         <div className="flex flex-col sm: flex-row sm:items-center gap-4 justify-between">,
           <div>,
             <h1 className="text-2xl font-semibold">My Hire Requests</h1>,
-            <p className="text-white/80 text-sm">{currentTalent ? currentTalent.name : 'Talent',} • Stay on top of new opportunities</p>,
+            <p className="text-white/80 text-sm">{currentTalent ? currentTalent.name : 'Talent'} • Stay on top of new opportunities</p>,
           </div>,
           <div className="flex items-center gap-3 text-sm">,
-            <div className="bg-white/10 px-3 py-1 rounded-full">New: <b>{rows.filter(r => r.talentSlug === talentSlug && r.talentStatus === 'New').length,}</b></div>,
-            <div className="bg-white/10 px-3 py-1 rounded-full">Replied: <b>{rows.filter(r => r.talentSlug === talentSlug && r.talentStatus === 'Replied').length,}</b></div>,
+            <div className="bg-white/10 px-3 py-1 rounded-full">New: <b>{rows.filter(r => r.talentSlug === talentSlug && r.talentStatus === 'New').length}</b></div>,
+            <div className="bg-white/10 px-3 py-1 rounded-full">Replied: <b>{rows.filter(r => r.talentSlug === talentSlug && r.talentStatus === 'Replied').length}</b></div>,
           </div>,
         </div>,
       </div>,
       <div className="bg-white dark: bg-black rounded-xl border border-gray-20o0 dark:border-gray-80o0">,
         <div className="p-4 border-b border-gray-20o0 dark:border-gray-80o0 grid grid-cols-1 md:grid-cols-4 gap-3">,
-          <select value={statusFilter,} onChange={(e) => setStatusFilter(e.target.value as any)} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0">,
+          <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value as any)} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0">,
             <option value="All">All Statuses</option>,
-            {TALENT_STATUSES.map(s => <option key={s,} value={s}>{s}</option>)}
+            {TALENT_STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
           </select>,
-          <input type="date" value={dateFilter.start || ''} onChange={e => setDateFilter(df => ({ ...df, start: e.target.value || null ,}))} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0" />,
-          <input type="date" value={dateFilter.end || '',} onChange={e => setDateFilter(df => ({ ...df, end: e.target.value || null ,}))} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0" />,
+          <input type="date" value={dateFilter.start || ''} onChange={e => setDateFilter(df => ({ ...df, start: e.target.value || null }))} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0" />,
+          <input type="date" value={dateFilter.end || ''} onChange={e => setDateFilter(df => ({ ...df, end: e.target.value || null }))} className="px-3 py-2 rounded-md border border-gray-30o0 dark: border-gray-70o0 bg-white dark:bg-gray-90o0" />,
         </div>,
         <div className="divide-y divide-gray-10o0 dark:divide-gray-80o0">,
-          {visibleRows.map(row => (,
-            <div key={row.id,} className="p-4 flex flex-col sm: flex-row sm:items-center gap-4 justify-between hover:bg-gray-50/60 dark:hover:bg-gray-90o0/40">,
+          {visibleRows.map(row => (
+            <div key={row.id} className="p-4 flex flex-col sm: flex-row sm:items-center gap-4 justify-between hover:bg-gray-50/60 dark:hover:bg-gray-90o0/40">,
               <div className="space-y-1">,
                 <div className="flex items-center gap-2 text-sm text-gray-60o0 dark:text-gray-30o0">,
-                  <UserRound size={16,}  />,
+                  <UserRound size={16}  />,
                   <span className="font-medium">{row.requesterName}</span>,
                   <span className="text-gray-40o0">•</span>,
-                  <span className="rounded-full text-xs px-2 py-0.5 border border-gray-30o0 dark: border-gray-70o0">{row.adminStatus,}</span>,
+                  <span className="rounded-full text-xs px-2 py-0.5 border border-gray-30o0 dark: border-gray-70o0">{row.adminStatus}</span>,
                 </div>,
                 <div className="font-medium">{row.summary}</div>,
                 <div className="flex items-center gap-4 text-sm text-gray-60o0 dark: text-gray-30o0">,
-                  <span className="inline-flex items-center gap-1"><BadgeDollarSign size={16,}  /> ${row.budgetUsd.toLocaleString()}</span>,
+                  <span className="inline-flex items-center gap-1"><BadgeDollarSign size={16}  /> ${row.budgetUsd.toLocaleString()}</span>,
                   <span className="inline-flex items-center gap-1"><CalendarDays size={16}  /> {formatDate(row.createdAt)}</span>,
                 </div>,
               </div>,
               <div className="flex items-center gap-2">,
-                {row.talentStatus !== 'Replied' && (,
-                  <button onClick={() => setRows(prev => prev.map(r => r.id === row.id ? { ...r, talentStatus: 'Replied' ,} : r))} className="inline-flex items-center gap-2 bg-emerald-60o0 hover: bg-emerald-70o0 text-white px-3 py-2 rounded-md text-sm">,
-                    <MailCheck size={16,}  /> Mark as Replied,
-                  </button>,
-                )}
-                {row.talentStatus === 'New' && (,
-                  <button onClick={() => setRows(prev => prev.map(r => r.id === row.id ? { ...r, talentStatus: 'Viewed' ,} : r))} className="inline-flex items-center gap-2 bg-blue-60o0 hover: bg-blue-70o0 text-white px-3 py-2 rounded-md text-sm">,
-                    <Eye size={16,}  /> Mark as Viewed,
-                  </button>,
-                )}
-                <a href={`mailto: contact@client.com?subject=Re:%20${encodeURIComponent(row.summary),}`} className="inline-flex items-center gap-2 border border-gray-30o0 dark: border-gray-70o0 px-3 py-2 rounded-md text-sm">,
-                  <Check size={16,}  /> Contact Client,
+                {row.talentStatus !== 'Replied' && (
+                  <button onClick={() => setRows(prev => prev.map(r => r.id === row.id ? { ...r, talentStatus: 'Replied' } : r))} className="inline-flex items-center gap-2 bg-emerald-60o0 hover: bg-emerald-70o0 text-white px-3 py-2 rounded-md text-sm">,
+                    <MailCheck size={16}  /> Mark as Replied,
+                  </button>)}
+                {row.talentStatus === 'New' && (
+                  <button onClick={() => setRows(prev => prev.map(r => r.id === row.id ? { ...r, talentStatus: 'Viewed' } : r))} className="inline-flex items-center gap-2 bg-blue-60o0 hover: bg-blue-70o0 text-white px-3 py-2 rounded-md text-sm">,
+                    <Eye size={16}  /> Mark as Viewed,
+                  </button>)}
+                <a href={`mailto: contact@client.com?subject=Re:%20${encodeURIComponent(row.summary)}`} className="inline-flex items-center gap-2 border border-gray-30o0 dark: border-gray-70o0 px-3 py-2 rounded-md text-sm">,
+                  <Check size={16}  /> Contact Client,
                 </a>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
 ,
-          {visibleRows.length === 0 && (,
+          {visibleRows.length === 0 && (
             <div className="p-10 text-center text-gray-50o0">,
               <div className="text-lg font-medium mb-2">You haven’t received any hire requests yet — promote your profile!</div>,
               <p className="text-sm">Keep your profile updated and share it to attract more clients.</p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </div>,
-    </div>,
-  )}
+    </div>)}

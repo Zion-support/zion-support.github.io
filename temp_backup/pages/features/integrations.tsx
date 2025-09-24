@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function IntegrationsPage() {,
-  return (,
+export default function IntegrationsPage() {
+  return (
     <>,
       <Head>,
         <title>Integrations - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function IntegrationsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

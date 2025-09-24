@@ -1,85 +1,60 @@
 "use client",
-,
 import React, { useState, useEffect } from 'react',
-,
-const InteractiveROICalculator = () => {,
-  const [inputs, setInputs] = useState({,
-    annualRevenue: 10o000000,;
-    employees: 10o00,;
-    currentEfficiency: 70,;
-    industry: 'manufacturing',
-  ,}),
-,
-  const [results, setResults] = useState({,
-    costSavings: 0,;
-    revenueIncrease: 0,;
-    totalROI: 0,;
-    paybackPeriod: 0,;
-    efficiencyGain: 0,
-  ,}),
-,
-  const industryMultipliers ={,
-    manufacturing: { costSavings: 0.15, revenueIncrease: 0.12, efficiencyGain: 0.25 ,},;
-    healthcare: { costSavings: 0.18, revenueIncrease: 0.15, efficiencyGain: 0.30 ,},;
-    financial: { costSavings: 0.20, revenueIncrease: 0.18, efficiencyGain: 0.35 ,},;
-    retail: { costSavings: 0.12, revenueIncrease: 0.10, efficiencyGain: 0.20 ,},;
-    technology: { costSavings: 0.22, revenueIncrease: 0.25, efficiencyGain: 0.40 ,}
+const InteractiveROICalculator = () => {
+  const [inputs, setInputs] = useState({
+    annualRevenue: 10o000000;
+    employees: 10o00;
+    currentEfficiency: 70;
+    industry: 'manufacturing'}),
+  const [results, setResults] = useState({
+    costSavings: 0;
+    revenueIncrease: 0;
+    totalROI: 0;
+    paybackPeriod: 0;
+    efficiencyGain: 0}),
+  const industryMultipliers ={
+    manufacturing: { costSavings: 0.15, revenueIncrease: 0.12, efficiencyGain: 0.25 };
+    healthcare: { costSavings: 0.18, revenueIncrease: 0.15, efficiencyGain: 0.30 };
+    financial: { costSavings: 0.20, revenueIncrease: 0.18, efficiencyGain: 0.35 };
+    retail: { costSavings: 0.12, revenueIncrease: 0.10, efficiencyGain: 0.20 };
+    technology: { costSavings: 0.22, revenueIncrease: 0.25, efficiencyGain: 0.40 }
   };
-,
-  useEffect(() => {,
-    calculateROI(),
-  }, [inputs]),
-,
-  const calculateROI = () => {,
+  useEffect(() => {
+    calculateROI()}, [inputs]),
+  const calculateROI = () => {
     const multiplier = industryMultipliers[inputs.industry as keyof typeof industryMultipliers],
-,
     // Calculate cost savings (15-22% of annual revenue),
     const costSavings = inputs.annualRevenue * multiplier.costSavings,
-,
     // Calculate revenue increase (10-25% of annual revenue),
     const revenueIncrease = inputs.annualRevenue * multiplier.revenueIncrease,
-,
     // Calculate efficiency gain,
     const efficiencyGain = (10o0 - inputs.currentEfficiency) * multiplier.efficiencyGain,
-,
     // Calculate total ROI (assuming $2M implementation cost),
     const implementationCost = 20o00000,
     const totalBenefit = costSavings + revenueIncrease,
     const totalROI = ((totalBenefit - implementationCost) / implementationCost) * 10o0,
-,
     // Calculate payback period (in months),
     const monthlyBenefit = totalBenefit / 12,
     const paybackPeriod = implementationCost / monthlyBenefit,
-,
-    setResults({,
-      costSavings,;
-      revenueIncrease,;
-      totalROI,;
-      paybackPeriod,;
-      efficiencyGain,
-    }),
-  };
-,
-  const handleInputChange = (field: string, value: number | string) => {,
-    setInputs(prev => ({,
-      ...prev,;
-      [field]: value,
-    })),
-  };
-,
-  const formatCurrency = (amount: number) => {,
-    return new Intl.NumberFormat('en-US', {,
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,}).format(amount),
-  };
-,
-  const formatPercentage = (value: number) => {,
-    return `${value.toFixed(1),}%`,
-  };
-,
-  return (,
+    setResults({
+      costSavings;
+      revenueIncrease;
+      totalROI;
+      paybackPeriod;
+      efficiencyGain})};
+  const handleInputChange = (field: string, value: number | string) => {
+    setInputs(prev => ({
+      ...prev;
+      [field]: value}))};
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency';
+      currency: 'USD';
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0}).format(amount)};
+  const formatPercentage = (value: number) => {
+    return `${value.toFixed(1)}%`};
+  return (
     <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-16">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
@@ -92,7 +67,7 @@ const InteractiveROICalculator = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-          {/* Input Section */,}
+          {/* Input Section */}
           <div className="bg-white rounded-xl shadow-lg p-8">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Your Business Details</h3>,
             <div className="space-y-6">,
@@ -101,7 +76,7 @@ const InteractiveROICalculator = () => {,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Annual Revenue ($),
                 </label>,
-                <input,
+                <input
                   type="number",
                   value={inputs.annualRevenue}
                   onChange={(e) => handleInputChange('annualRevenue', parseInt(e.target.value) || 0)}
@@ -109,12 +84,12 @@ const InteractiveROICalculator = () => {,
                   placeholder="Enter your annual revenue",
                 />,
               </div>,
-              {/* Number of Employees */,}
+              {/* Number of Employees */}
               <div>,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Number of Employees,
                 </label>,
-                <input,
+                <input
                   type="number",
                   value={inputs.employees}
                   onChange={(e) => handleInputChange('employees', parseInt(e.target.value) || 0)}
@@ -122,12 +97,12 @@ const InteractiveROICalculator = () => {,
                   placeholder="Enter number of employees",
                 />,
               </div>,
-              {/* Current Efficiency */,}
+              {/* Current Efficiency */}
               <div>,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Current Operational Efficiency (%),
                 </label>,
-                <input,
+                <input
                   type="range",
                   min="0",
                   max="10o0",
@@ -146,11 +121,10 @@ const InteractiveROICalculator = () => {,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Industry,
                 </label>,
-                <select,
+                <select
                   value={inputs.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
-                >,
+                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                   <option value="manufacturing">Manufacturing</option>,
                   <option value="healthcare">Healthcare</option>,
                   <option value="financial">Financial Services</option>,
@@ -160,7 +134,7 @@ const InteractiveROICalculator = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Results Section */,}
+          {/* Results Section */}
           <div className="bg-white rounded-xl shadow-lg p-8">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Your AI ROI Projection</h3>,
             <div className="space-y-6">,
@@ -236,7 +210,7 @@ const InteractiveROICalculator = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Additional Information */,}
+        {/* Additional Information */}
         <div className="mt-12 bg-white rounded-xl shadow-lg p-8">,
           <h3 className="text-2xl font-bold text-gray-90o0 mb-6 text-center">,
             Why These Projections Are Reliable,
@@ -272,8 +246,5 @@ const InteractiveROICalculator = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InteractiveROICalculator,
+    </section>)};
+export default InteractiveROICalculator;

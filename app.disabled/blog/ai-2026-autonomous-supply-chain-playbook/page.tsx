@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousSupplyChainPlaybook20o26 = () => {,
-  return (,
+const AutonomousSupplyChainPlaybook20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Supply Chain Playbook',
         description='A practical playbook to design, deploy, and scale AI-driven autonomous supply chains in 20o26.',
         keywords='autonomous supply chain, AI logistics, demand forecasting, 20o26 playbook',
@@ -19,7 +18,7 @@ const AutonomousSupplyChainPlaybook20o26 = () => {,
             AI 20o26: Autonomous Supply Chain Playbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            How leaders will orchestrate planning, sourcing, manufacturing,;
+            How leaders will orchestrate planning, sourcing, manufacturing;
             logistics, and returns with AI agents for resilience and ROI.,
           </p>,
         </header>,
@@ -66,23 +65,17 @@ const AutonomousSupplyChainPlaybook20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Explore Your Supply Chain Roadmap,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousSupplyChainPlaybook20o26,
-,
+    </div>)};
+export default AutonomousSupplyChainPlaybook20o26;

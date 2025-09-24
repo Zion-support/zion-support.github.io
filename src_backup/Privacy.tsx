@@ -2,10 +2,10 @@ import { Header } from '@/components/Header',
 import Footer from '@/components/Footer',
 import { SEO } from '@/components/SEO',
 import { GradientHeading } from '@/components/GradientHeading',
-export default function Privacy() {,
-  return (,
+export default function Privacy() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Privacy Policy',
         description='Learn how Zion Tech Group handles your data and protects your privacy.',
         canonical='https: //ziontechgroup.com/privacy',
@@ -23,7 +23,7 @@ export default function Privacy() {,
           <div className='space-y-6 text-zion-slate-light text-lg'>,
             <p>,
               We collect personal information you provide when creating an,
-              account or using our services. This may include your name, email,;
+              account or using our services. This may include your name, email;
               and any other details required to deliver our marketplace,
               features.,
             </p>,
@@ -35,10 +35,9 @@ export default function Privacy() {,
             <p>,
               If you have questions about our privacy practices, please contact,
               us at{' '}
-              <a,
+              <a
                 href='mailto: support@ziontechgroup.com',
-                className='text-zion-cyan hover:underline',
-              >,
+                className='text-zion-cyan hover:underline'>,
                 support@ziontechgroup.com,
               </a>,
               .,
@@ -47,7 +46,5 @@ export default function Privacy() {,
         </div>,
       </main>,
       <Footer />,
-    </>,
-  ),
-,}
+    </>)}
 ,

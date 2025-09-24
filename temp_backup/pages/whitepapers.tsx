@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function WhitepapersPage() {,
-  return (,
+export default function WhitepapersPage() {
+  return (
     <>,
       <Head>,
         <title>Whitepapers - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function WhitepapersPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

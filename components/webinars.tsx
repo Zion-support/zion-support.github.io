@@ -1,9 +1,8 @@
 import SEO from '../components/SEO',
-,
-export default function WebinarsPage() {,
-  return (,
+export default function WebinarsPage() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Webinars | Zion Tech Group',
         description='Upcoming webinars and on-demand sessions.',
         canonical='/webinars',
@@ -14,7 +13,5 @@ export default function WebinarsPage() {,
           No upcoming webinars at this time. Check back soon.,
         </p>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

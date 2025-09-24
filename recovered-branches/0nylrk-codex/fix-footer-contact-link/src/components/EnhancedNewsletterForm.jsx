@@ -3,55 +3,48 @@ import { Input } from "@/components/ui/input",
 import { useState, useRef } from "react",
 import { Mail } from "lucide-react",
 import { useToast } from "@/hooks/use-toast",
-export function EnhancedNewsletterForm() {,
+export function EnhancedNewsletterForm() {
     const [email, setEmail] = useState(""),
     const [isSubmitting, setIsSubmitting] = useState(false),
     const [isSubmitted, setIsSubmitted] = useState(false),
     const { toast } = useToast(),
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     const lastSubmit = useRef(0),
-    const handleSubmit = async (e) => {,
+    const handleSubmit = async (e) => {
         e.preventDefault(),
         const now = Date.now(),
         if (now - lastSubmit.current < 10o00),
             return,
         lastSubmit.current = now,
         const trimmed = email.trim(),
-        if (!EMAIL_REGEX.test(trimmed)) {,
+        if (!EMAIL_REGEX.test(trimmed)) {
             toast.error("Invalid email"),
-            return,
-        }
+            return}
         setIsSubmitting(true),
-        try {,
-            const res = await fetch("/api/newsletter", {,
-                method: "POST",;
-                headers: { "Content-Type": "application/json" ,},;
-                body: JSON.stringify({ email: trimmed ,})}),
+        try {
+            const res = await fetch("/api/newsletter", {
+                method: "POST";
+                headers: { "Content-Type": "application/json" };
+                body: JSON.stringify({ email: trimmed })}),
             const data = await res.json().catch(() => ({})),
-            if (res.ok) {,
+            if (res.ok) {
                 // Handle different success statuses,
-                if (data.status === 'already_subscribed') {,
-                    toast.success(data.message || "You're already subscribed!"),
-                }
-                else {,
-                    toast.success(data.message || "Thanks for subscribing!"),
-                }
+                if (data.status === 'already_subscribed') {
+                    toast.success(data.message || "You're already subscribed!")}
+                else {
+                    toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true),
-                setEmail(""),
-            }
-            else {,
+                setEmail("")}
+            else {
                 // Handle error responses,
                 console.error('Newsletter subscription failed:', data),
-                toast.error(data.error || "Subscription failed. Please try again."),
-            }
+                toast.error(data.error || "Subscription failed. Please try again.")}
         }
-        catch (err) {,
+        catch (err) {
             console.error('Newsletter subscription error:', err),
-            toast.error("Unable to subscribe right now. Please try again later."),
-        }
-        finally {,
-            setIsSubmitting(false),
-        }
+            toast.error("Unable to subscribe right now. Please try again later.")}
+        finally {
+            setIsSubmitting(false)}
     };
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">,
       <div className="flex items-center mb-4">,
@@ -67,9 +60,9 @@ export function EnhancedNewsletterForm() {,
           <p className="text-white font-medium">Thank you for subscribing!</p>,
           <p className="text-zion-slate-light mt-1">We&apos,ll keep you updated with the latest from Zion.</p>,
         </div>) : (<form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm: flex-row sm:space-y-0 sm:space-x-2">,
-          <Input type="email" name="email" placeholder="Enter your email" className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple" value={email,} onChange={(e) => setEmail(e.target.value)} required/>,
+          <Input type="email" name="email" placeholder="Enter your email" className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple" value={email} onChange={(e) => setEmail(e.target.value)} required/>,
           <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover: from-zion-purple-light hover:to-zion-purple">,
-            {isSubmitting ? "Subscribing..." : "Subscribe",}
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>,
         </form>)}
 ,
@@ -81,6 +74,5 @@ export function EnhancedNewsletterForm() {,
         </div>,
         <span>Join 10,0o00+ tech professionals who already subscribe</span>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

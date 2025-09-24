@@ -1,16 +1,14 @@
 'use client',
-,
 import Link from 'next/link',
 ArrowRightStarZapTargetUsersTrendingUpAward,
-const UltimatePromotionBanner20o25 = () => {,
-  const stats = [,
-    { number: "15,0o00+"label: "Businesses Transformed"icon: Users ,},;
-    { number: "95%"label: "Efficiency Increase"icon: TrendingUp ,},;
-    { number: "50o0%"label: "Average ROI"icon: Target ,},;
-    { number: "24/7"label: "AI Support"icon: Zap ,}
+const UltimatePromotionBanner20o25 = () => {
+  const stats = [
+    { number: "15,0o00+"label: "Businesses Transformed"icon: Users };
+    { number: "95%"label: "Efficiency Increase"icon: TrendingUp };
+    { number: "50o0%"label: "Average ROI"icon: Target };
+    { number: "24/7"label: "AI Support"icon: Zap }
   ],
-,
-  return (,
+  return (
     <div className="py-20 bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white relative overflow-hidden">,
       <div className="absolute inset-0 bg-black opacity-10"></div>,
       <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 via-purple-60o0/20 to-pink-60o0/20"></div>,
@@ -39,39 +37,35 @@ const UltimatePromotionBanner20o25 = () => {,
             and unlock unprecedented growth opportunities in 20o25 and beyond.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">,
-            <Link,
+            <Link
               href="#",
-              className="inline-flex items-center px-8 py-4 bg-white text-indigo-60o0 font-bold text-lg rounded-xl hover:bg-gray-10o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-white text-indigo-60o0 font-bold text-lg rounded-xl hover:bg-gray-10o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg">,
               Start Your Transformation,
               <ArrowRight className="w-5 h-5 ml-2"  />,
             </Link>,
-            <Link,
+            <Link
               href="#",
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0",
-            >,
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0">,
               Watch Demo,
             </Link>,
           </div>,
         </div>,
-        {/* Stats Grid */,}
+        {/* Stats Grid */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
-          {stats.map((statindex) => {,
+          {stats.map((statindex) => {
             const IconComponent = stat.icon,
-            return (,
-              <div key={index,} className="text-center group">,
+            return (
+              <div key={index} className="text-center group">,
                 <div className="inline-flex p-4 rounded-2xl bg-white/10 backdrop-blur-sm mb-4 group-hover: bg-white/20 transition-all duration-30o0">,
                   <IconComponent className="w-8 h-8 text-white"  />,
                 </div>,
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">,
-                  {stat.number,}
+                  {stat.number}
                 </div>,
                 <div className="text-white/80 font-medium">,
                   {stat.label}
                 </div>,
-              </div>,
-            ),
-          })}
+              </div>)})}
         </div>,
         {/* Feature Highlights */}
         <div className="grid md: grid-cols-3 gap-8">,
@@ -109,7 +103,7 @@ const UltimatePromotionBanner20o25 = () => {,
             </p>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="text-center mt-16">,
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
             <h3 className="text-2xl font-bold text-white mb-4">,
@@ -119,25 +113,20 @@ const UltimatePromotionBanner20o25 = () => {,
               'Don', 't miss this exclusive opportunity to transform your business with cutting-edge AI technology,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="#",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-indigo-90o0 font-bold text-lg rounded-xl hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-20o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-indigo-90o0 font-bold text-lg rounded-xl hover:from-yellow-50o0 hover:to-orange-50o0 transition-all duration-20o0 transform hover:scale-10o5">,
                 Claim Your Discount,
                 <ArrowRight className="w-5 h-5 ml-2"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#",
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-xl hover:bg-white hover:text-indigo-60o0 transition-all duration-20o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimatePromotionBanner20o25,
+    </div>)};
+export default UltimatePromotionBanner20o25;

@@ -1,43 +1,41 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
-  Home,;
-  ArrowLeft,;
-  Phone,;
-  Mail,;
-  FileText,;
-  Briefcase,;
-  Users,;
-  BookOpen,;
-  DollarSign,;
-  Calendar,;
-  Award,;
-  Shield,;
+import {
+  Home;
+  ArrowLeft;
+  Phone;
+  Mail;
+  FileText;
+  Briefcase;
+  Users;
+  BookOpen;
+  DollarSign;
+  Calendar;
+  Award;
+  Shield;
 } from 'lucide-react',
-,
-const NotFound: NextPage = () => {,
-  const quickLinks = [,
-    { name: 'Home', url: '/', icon: Home ,},;
-    { name: 'Services', url: '/services', icon: Briefcase ,},;
-    { name: 'About', url: '/about', icon: Users ,},;
-    { name: 'Contact', url: '/contact', icon: Phone ,},;
-    { name: 'Blog', url: '/blog', icon: BookOpen ,},;
-    { name: 'Pricing', url: '/pricing', icon: DollarSign ,},;
-    { name: 'Team', url: '/team', icon: Award ,},;
-    { name: 'Webinars', url: '/webinars', icon: Calendar ,},;
-    { name: 'White Papers', url: '/whitepapers', icon: FileText ,},;
-    { name: 'Solutions', url: '/solutions', icon: Award ,},;
-    { name: 'Careers', url: '/careers', icon: Briefcase ,},;
-    { name: 'Help Center', url: '/support', icon: FileText ,},;
-    { name: 'Privacy Policy', url: '/privacy', icon: Shield ,},;
+const NotFound: NextPage = () => {
+  const quickLinks = [
+    { name: 'Home', url: '/', icon: Home };
+    { name: 'Services', url: '/services', icon: Briefcase };
+    { name: 'About', url: '/about', icon: Users };
+    { name: 'Contact', url: '/contact', icon: Phone };
+    { name: 'Blog', url: '/blog', icon: BookOpen };
+    { name: 'Pricing', url: '/pricing', icon: DollarSign };
+    { name: 'Team', url: '/team', icon: Award };
+    { name: 'Webinars', url: '/webinars', icon: Calendar };
+    { name: 'White Papers', url: '/whitepapers', icon: FileText };
+    { name: 'Solutions', url: '/solutions', icon: Award };
+    { name: 'Careers', url: '/careers', icon: Briefcase };
+    { name: 'Help Center', url: '/support', icon: FileText };
+    { name: 'Privacy Policy', url: '/privacy', icon: Shield };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Page Not Found - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='The page you are looking for does not exist. Find what you need with our helpful navigation and search options.',
         />,
@@ -64,17 +62,15 @@ const NotFound: NextPage = () => {,
             </p>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>,
-            <button,
-              onClick={() => window.history.back(),}
-              className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white hover: opacity-90 transition-opacity',
-            >,
+            <button
+              onClick={() => window.history.back()}
+              className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white hover: opacity-90 transition-opacity'>,
               <ArrowLeft className='w-5 h-5 mr-2' />,
               Go Back,
             </button>,
-            <Link,
+            <Link
               href='/',
-              className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-60o0 text-gray-30o0 hover:bg-slate-70o0 transition-colors',
-            >,
+              className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-60o0 text-gray-30o0 hover:bg-slate-70o0 transition-colors'>,
               <Home className='w-5 h-5 mr-2' />,
               Go Home,
             </Link>,
@@ -84,18 +80,16 @@ const NotFound: NextPage = () => {,
               Popular Pages,
             </h3>,
             <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>,
-              {quickLinks.map((link, index) => (,
-                <Link,
+              {quickLinks.map((link, index) => (
+                <Link
                   key={link.url}
                   href={link.url}
-                  className='flex flex-col items-center p-4 rounded-lg bg-slate-70o0 hover: bg-slate-60o0 transition-colors group',
-                >,
+                  className='flex flex-col items-center p-4 rounded-lg bg-slate-70o0 hover: bg-slate-60o0 transition-colors group'>,
                   <link.icon className='w-6 h-6 text-blue-40o0 group-hover:text-blue-30o0 mb-2' />,
                   <span className='text-gray-30o0 group-hover:text-white text-sm text-center'>,
-                    {link.name,}
+                    {link.name}
                   </span>,
-                </Link>,
-              ))}
+                </Link>))}
             </div>,
           </div>,
           <div className='bg-slate-80o0/50 rounded-lg p-8'>,
@@ -107,17 +101,15 @@ const NotFound: NextPage = () => {,
               here to help.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white hover:opacity-90 transition-opacity',
-              >,
+                className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white hover:opacity-90 transition-opacity'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Contact Support,
               </Link>,
-              <a,
+              <a
                 href='mailto:kleber@ziontechgroup.com',
-                className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-60o0 text-gray-30o0 hover:bg-slate-70o0 transition-colors',
-              >,
+                className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-60o0 text-gray-30o0 hover:bg-slate-70o0 transition-colors'>,
                 <Mail className='w-5 h-5 mr-2' />,
                 Email Us,
               </a>,
@@ -125,9 +117,5 @@ const NotFound: NextPage = () => {,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default NotFound,
-,
+    </>)};
+export default NotFound;

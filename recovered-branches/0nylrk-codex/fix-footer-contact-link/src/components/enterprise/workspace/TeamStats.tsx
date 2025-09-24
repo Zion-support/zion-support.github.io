@@ -1,9 +1,8 @@
-import React from 'react',
+import React from 'react';
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
 import { Progress } from '@/components/ui/progress',
-,
-export function TeamStats() {,
-  return (,
+export function TeamStats() {
+  return (
     <Card>,
       <CardHeader>,
         <CardTitle>Team Stats</CardTitle>,
@@ -46,7 +45,5 @@ export function TeamStats() {,
           </button>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-,}
+    </Card>)}
 ,

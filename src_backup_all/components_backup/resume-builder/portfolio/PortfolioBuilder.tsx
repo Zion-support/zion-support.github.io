@@ -6,44 +6,31 @@ import { ProjectCard } from './ProjectCard',
 import { ProjectForm } from './ProjectForm',
 import { PortfolioProject } from '@/types/resume',
 import { usePortfolio } from '@/hooks/usePortfolio',
-,
-export function PortfolioBuilder() {,
+export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
   const [showAddProject, setShowAddProject] = useState(false),
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(,
-    null,
-  ),
-,
-  useEffect(() => {,
-    fetchProjects(),
-  }, [fetchProjects]),
-,
-  const handleAddSuccess = () => {,
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
+    null),
+  useEffect(() => {
+    fetchProjects()}, [fetchProjects]),
+  const handleAddSuccess = () => {
     setShowAddProject(false),
-    fetchProjects(),
-  };
-,
-  const handleEditSuccess = () => {,
+    fetchProjects()};
+  const handleEditSuccess = () => {
     setEditingProject(null),
-    fetchProjects(),
-  };
-,
-  const handleDeleteProject = async (projectId: string) => {,
+    fetchProjects()};
+  const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId),
-    if (success) {,
-      fetchProjects(),
-    ,}
+    if (success) {
+      fetchProjects()}
   };
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='flex justify-center items-center h-64'>,
         <Loader2 className='h-8 w-8 animate-spin text-primary' />,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className='space-y-6'>,
       <div className='flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6'>,
         <div>,
@@ -52,8 +39,8 @@ export function PortfolioBuilder() {,
             Showcase your best work and projects,
           </p>,
         </div>,
-        <Button,
-          onClick={() => setShowAddProject(true),}
+        <Button
+          onClick={() => setShowAddProject(true)}
           className='gap-2',
           disabled={showAddProject || !!editingProject}
         >,
@@ -62,38 +49,34 @@ export function PortfolioBuilder() {,
         </Button>,
       </div>,
       {/* Edit or Add Form */}
-      {(showAddProject || editingProject) && (,
+      {(showAddProject || editingProject) && (
         <Card>,
           <CardContent className='pt-6'>,
             <h2 className='text-xl font-semibold mb-6'>,
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>,
-            <ProjectForm,
+            <ProjectForm
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {,
+              onCancel={() => {
                 setShowAddProject(false),
-                setEditingProject(null),
-              }}
+                setEditingProject(null)}}
             />,
           </CardContent>,
-        </Card>,
-      )}
+        </Card>)}
 ,
       {/* Projects List */}
-      {projects.length > 0 ? (,
+      {projects.length > 0 ? (
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-          {projects.map(project => (,
-            <ProjectCard,
-              key={project.id,}
+          {projects.map(project => (
+            <ProjectCard
+              key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
-            />,
-          ))}
-        </div>,
-      ) : (,
-        !showAddProject && (,
+            />))}
+        </div>) : (
+        !showAddProject && (
           <Card className='text-center py-12'>,
             <CardContent>,
               <div className='flex flex-col items-center gap-4'>,
@@ -107,18 +90,13 @@ export function PortfolioBuilder() {,
                   Add your best work to showcase your skills and experience to,
                   potential employers.,
                 </p>,
-                <Button,
+                <Button
                   onClick={() => setShowAddProject(true)}
-                  className='mt-2',
-                >,
+                  className='mt-2'>,
                   Add Your First Project,
                 </Button>,
               </div>,
             </CardContent>,
-          </Card>,
-        ),
-      )}
-    </div>,
-  ),
-}
+          </Card>))}
+    </div>)}
 ,

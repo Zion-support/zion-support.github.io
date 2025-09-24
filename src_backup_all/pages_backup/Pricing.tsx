@@ -1,6 +1,6 @@
-import React from 'react',
-const Pricing: React.FC = () => {,
-  return (,
+import React from 'react';
+const Pricing: React.FC = () => {
+  return (
     <div className='min-h-screen py-20'>,
       <div className='container mx-auto px-4'>,
         <h1 className='text-4xl font-bold text-center mb-12'>Pricing Plans</h1>,
@@ -57,9 +57,5 @@ const Pricing: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default Pricing,
-,
+    </div>)};
+export default Pricing;

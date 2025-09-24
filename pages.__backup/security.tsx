@@ -1,29 +1,27 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function SecurityPage() {,
-  return (,
+export default function SecurityPage() {
+  return (
     <>,
       <Head>,
         <title>Security — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Security practicespoliciesand measures implemented by Zion Tech Group to protect our systems and data.',
         />,
         <meta property='og: title' content='Security — Zion Tech Group' />,
-        <meta,
+        <meta
           property='og:description',
           content='Security practicespoliciesand measures implemented by Zion Tech Group to protect our systems and data.',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
-          {/* Header */,}
+          {/* Header */}
           <div className='mb-12'>,
-            <Link,
+            <Link
               href='/',
-              className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 mb-8',
-            >,
+              className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 mb-8'>,
               <span className='mr-2'>←</span>,
               Back to Home,
             </Link>,
@@ -32,7 +30,7 @@ export default function SecurityPage() {,
               Protecting your data and systems with enterprise-grade security,
             </p>,
           </div>,
-          {/* Security Overview */,}
+          {/* Security Overview */}
           <section className='mb-12'>,
             <div className='bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-40o0/30 rounded-xl p-8'>,
               <h2 className='text-2xl font-semibold mb-4 text-cyan-40o0'>,
@@ -54,16 +52,15 @@ export default function SecurityPage() {,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover:border-cyan-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-cyan-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-cyan-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M12 15v2m-6 4h12a2 2 0 0o02-2v-6a2 2 0 0o0-2-2H6a2 2 0 0o0-2 2v6a2 2 0 0o02 2zm10-10V7a4 4 0 0o0-8 0v4h8z',
                     />,
                   </svg>,
@@ -76,16 +73,15 @@ export default function SecurityPage() {,
               </div>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover: border-fuchsia-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-fuchsia-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-fuchsia-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 12l2 2 4-4m5.618-4.0o16A11.955 11.955 0 0o112 2.944a11.955 11.955 0 0o1-8.618 3.0o4A12.0o2 12.0o2 0 0o03 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.0o3 9-11.622 0-1.0o42-.133-2.0o52-.382-3.0o16z',
                     />,
                   </svg>,
@@ -98,16 +94,15 @@ export default function SecurityPage() {,
               </div>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover: border-green-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-green-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-green-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 19v-6a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v6a2 2 0 0o02 2h2a2 2 0 0o02-2zm0 0V9a2 2 0 0o12-2h2a2 2 0 0o12 2v10m-6 0a2 2 0 0o02 2h2a2 2 0 0o02-2m0 0V5a2 2 0 0o12-2h2a2 2 0 0o12 2v14a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2z',
                     />,
                   </svg>,
@@ -120,16 +115,15 @@ export default function SecurityPage() {,
               </div>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover: border-yellow-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-yellow-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-yellow-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z',
                     />,
                   </svg>,
@@ -144,16 +138,15 @@ export default function SecurityPage() {,
               </div>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover: border-purple-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-purple-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-purple-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M19.428 15.428a2 2 0 0o0-1.0o22-.547l-2.387-.477a6 6 0 0o0-3.86.517l-.318.158a6 6 0 0o1-3.86.517L6.0o5 15.21a2 2 0 0o0-1.80o6.547M8 4h8l-1 1v5.172a2 2 0 0o0.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 0o09 10.172V5L8 4z',
                     />,
                   </svg>,
@@ -166,16 +159,15 @@ export default function SecurityPage() {,
               </div>,
               <div className='bg-white/5 border border-white/10 rounded-xl p-6 hover: border-red-40o0/30 transition-all'>,
                 <div className='w-12 h-12 bg-red-40o0/20 rounded-lg flex items-center justify-center mb-4'>,
-                  <svg,
+                  <svg
                     className='w-6 h-6 text-red-40o0',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
                     />,
                   </svg>,
@@ -222,7 +214,7 @@ export default function SecurityPage() {,
               </div>,
             </div>,
           </section>,
-          {/* Security Certifications */,}
+          {/* Security Certifications */}
           <section className='mb-12'>,
             <h2 className='text-3xl font-bold mb-8 text-center'>,
               Security Certifications,
@@ -251,7 +243,7 @@ export default function SecurityPage() {,
               </div>,
             </div>,
           </section>,
-          {/* Contact Security Team */,}
+          {/* Contact Security Team */}
           <section className='mb-12'>,
             <div className='bg-gradient-to-r from-red-50o0/10 to-orange-50o0/10 border border-red-40o0/30 rounded-xl p-8 text-center'>,
               <h2 className='text-2xl font-semibold mb-4 text-red-40o0'>,
@@ -268,24 +260,20 @@ export default function SecurityPage() {,
               </div>,
             </div>,
           </section>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <div className='mt-12 text-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-6 py-3 bg-cyan-40o0 hover: bg-cyan-30o0 text-black font-semibold rounded-lg transition-colors mr-4',
-            >,
+              className='px-6 py-3 bg-cyan-40o0 hover: bg-cyan-30o0 text-black font-semibold rounded-lg transition-colors mr-4'>,
               Contact Security Team,
             </Link>,
-            <Link,
+            <Link
               href='/privacy',
-              className='px-6 py-3 border border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-semibold rounded-lg transition-colors',
-            >,
+              className='px-6 py-3 border border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-semibold rounded-lg transition-colors'>,
               Privacy Policy,
             </Link>,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

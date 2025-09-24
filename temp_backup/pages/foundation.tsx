@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function FoundationPage() {,
-  return (,
+export default function FoundationPage() {
+  return (
     <>,
       <Head>,
         <title>Foundation - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function FoundationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

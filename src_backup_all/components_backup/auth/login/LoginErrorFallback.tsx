@@ -1,15 +1,13 @@
 import { AlertTriangle, RefreshCw } from 'lucide-react',
-,
-interface LoginErrorFallbackProps {,
+interface LoginErrorFallbackProps {
   error: any,
-  resetErrorBoundary: () => void,
-,}
+  resetErrorBoundary: () => void}
 ,
-export default function LoginErrorFallback({,
-  error,;
-  resetErrorBoundary,;
-}: LoginErrorFallbackProps) {,
-  return (,
+export default function LoginErrorFallback({
+  error;
+  resetErrorBoundary;
+}: LoginErrorFallbackProps) {
+  return (
     <div className='min-h-screen flex items-center justify-center bg-futuristic p-4'>,
       <div className='max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center'>,
         <div className='w-16 h-16 bg-red-50o0/20 rounded-full flex items-center justify-center mx-auto mb-6'>,
@@ -21,7 +19,7 @@ export default function LoginErrorFallback({,
         <p className='text-zion-slate-light mb-6'>,
           We encountered an error while processing your login. Please try again.,
         </p>,
-        {process.env.NODE_ENV === 'development' && (,
+        {process.env.NODE_ENV === 'development' && (
           <details className='text-left mb-6'>,
             <summary className='text-zion-cyan cursor-pointer text-sm'>,
               Error details,
@@ -29,17 +27,13 @@ export default function LoginErrorFallback({,
             <pre className='text-xs text-zion-slate-light mt-2 p-3 bg-zion-slate rounded overflow-auto'>,
               {error.message}
             </pre>,
-          </details>,
-        )}
-        <button,
+          </details>)}
+        <button
           onClick={resetErrorBoundary}
-          className='inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5',
-        >,
+          className='inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5'>,
           <RefreshCw className='w-4 h-4' />,
           Try Again,
         </button>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

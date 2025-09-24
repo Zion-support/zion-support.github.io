@@ -1,6 +1,6 @@
-import React from 'react',
-const Services: React.FC = () => {,
-  return (,
+import React from 'react';
+const Services: React.FC = () => {
+  return (
     <div className='min-h-screen py-20'>,
       <div className='container mx-auto px-4'>,
         <h1 className='text-4xl font-bold text-center mb-12'>Our Services</h1>,
@@ -41,9 +41,5 @@ const Services: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default Services,
-,
+    </div>)};
+export default Services;

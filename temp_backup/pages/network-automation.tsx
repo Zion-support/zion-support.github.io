@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function NetworkAutomationPage() {,
-  return (,
+export default function NetworkAutomationPage() {
+  return (
     <>,
       <Head>,
         <title>Network Automation - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function NetworkAutomationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

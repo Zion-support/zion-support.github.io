@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AdvertisingMarketingServicesPage() {,
-  return (,
+export default function AdvertisingMarketingServicesPage() {
+  return (
     <>,
       <Head>,
         <title>Advertising Marketing Services - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='advertising marketing services page',
         />,
@@ -21,7 +20,5 @@ export default function AdvertisingMarketingServicesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,21 +1,20 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'Enterprise AI Ops Blueprint 20o26',;
+export const metadata = {
+  title: 'Enterprise AI Ops Blueprint 20o26';
   description:,
-    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 20o26.',;
-  keywords: [,
-    'AI Ops',;
-    'MLOps',;
-    'LLMOps',;
-    'AI Governance',;
-    'AI Reliability',;
-    'Observability',;
-    'AI Platform',;
-  ],;
+    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 20o26.';
+  keywords: [
+    'AI Ops';
+    'MLOps';
+    'LLMOps';
+    'AI Governance';
+    'AI Reliability';
+    'Observability';
+    'AI Platform';
+  ];
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-gray-50 to-purple-50 py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -102,23 +101,19 @@ export default function Page() {,
               state.,
             </p>,
             <div className='flex gap-3'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-              >,
+                className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
                 Talk to an Expert,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-              >,
+                className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

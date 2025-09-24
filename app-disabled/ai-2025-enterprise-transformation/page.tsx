@@ -1,23 +1,21 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o25 Enterprise Transformation - Complete Business Revolution',;
+export const metadata = {
+  title: 'AI 20o25 Enterprise Transformation - Complete Business Revolution';
   description:,
-    'Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',;
-  keywords: [,
-    'AI enterprise transformation 20o25',;
-    'digital transformation',;
-    'enterprise AI',;
-    'business automation',;
-    'AI consulting',;
-  ],;
+    'Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.';
+  keywords: [
+    'AI enterprise transformation 20o25';
+    'digital transformation';
+    'enterprise AI';
+    'business automation';
+    'AI consulting';
+  ];
 };
-,
-export default function AI20o25EnterpriseTransformationPage() {,
-  return (,
+export default function AI20o25EnterpriseTransformationPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0'>,
-      <SEO,
+      <SEO
         title='AI 20o25 Enterprise Transformation - Complete Business Revolution',
         description='Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
         keywords='AI enterprise transformation 20o25, digital transformation, enterprise AI, business automation, AI consulting',
@@ -40,22 +38,20 @@ export default function AI20o25EnterpriseTransformationPage() {,
             decision making that delivers unprecedented results.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5'>,
               Start Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o25-enterprise-transformation/case-studies',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-90o0 transition-all'>,
               View Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Transformation Pillars */,}
+      {/* Transformation Pillars */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -105,7 +101,7 @@ export default function AI20o25EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* ROI Metrics */,}
+      {/* ROI Metrics */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold text-white mb-12'>,
@@ -131,7 +127,7 @@ export default function AI20o25EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Framework */,}
+      {/* Implementation Framework */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -177,7 +173,7 @@ export default function AI20o25EnterpriseTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold text-white mb-6'>,
@@ -187,15 +183,12 @@ export default function AI20o25EnterpriseTransformationPage() {,
             Join Fortune 50o0 companies already using AI 20o25 Enterprise,
             Transformation to achieve unprecedented growth and efficiency.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5'>,
             Start Your Enterprise Transformation,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

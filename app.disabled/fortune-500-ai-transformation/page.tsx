@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import ErrorBoundary from '../components/ErrorBoundary',
 import SEO from '../components/SEO',
-,
-export const metadata = {,
-  title: 'Fortune 50o0 AI Transformation: Success Stories & ROI Analysis',;
+export const metadata = {
+  title: 'Fortune 50o0 AI Transformation: Success Stories & ROI Analysis';
   description:,
-    'Explore real-world Fortune 50o0 AI transformation case studies. Discover how leading enterprises achieved 40o0%+ ROI through strategic AI implementation.',;
-  keywords: [,
-    'Fortune 50o0 AI',;
-    'enterprise AI transformation',;
-    'AI case studies',;
-    'AI ROI analysis',;
-    'enterprise automation',;
-    'AI success stories',;
-  ],;
+    'Explore real-world Fortune 50o0 AI transformation case studies. Discover how leading enterprises achieved 40o0%+ ROI through strategic AI implementation.';
+  keywords: [
+    'Fortune 50o0 AI';
+    'enterprise AI transformation';
+    'AI case studies';
+    'AI ROI analysis';
+    'enterprise automation';
+    'AI success stories';
+  ];
 };
-,
-export default function Fortune50o0AITransformation() {,
-  return (,
+export default function Fortune50o0AITransformation() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='Fortune 50o0 AI Transformation: Success Stories & ROI Analysis',
         description='Explore real-world Fortune 50o0 AI transformation case studies and discover how leading enterprises achieved 40o0%+ ROI through strategic AI implementation.',
         keywords='Fortune 50o0 AI, enterprise AI transformation, AI case studies, AI ROI analysis, enterprise automation',
@@ -43,22 +41,20 @@ export default function Fortune50o0AITransformation() {,
               transformation.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-              >,
+                className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='#case-studies',
-                className='border-2 border-blue-40o0 text-blue-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-blue-40o0 text-blue-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40o0 hover:text-white transition-colors'>,
                 View Case Studies,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-6xl mx-auto'>,
             <h2 className='text-3xl font-bold text-white mb-12 text-center'>,
@@ -92,14 +88,14 @@ export default function Fortune50o0AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Case Studies Section */,}
+        {/* Case Studies Section */}
         <section id='case-studies' className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-6xl mx-auto'>,
             <h2 className='text-3xl font-bold text-white mb-12 text-center'>,
               Featured Case Studies,
             </h2>,
             <div className='space-y-12'>,
-              {/* Case Study 1 */,}
+              {/* Case Study 1 */}
               <div className='bg-gradient-to-r from-blue-90o0 to-purple-90o0 p-8 rounded-xl shadow-2xl'>,
                 <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                   <div>,
@@ -168,7 +164,7 @@ export default function Fortune50o0AITransformation() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Case Study 2 */,}
+              {/* Case Study 2 */}
               <div className='bg-gradient-to-r from-green-90o0 to-blue-90o0 p-8 rounded-xl shadow-2xl'>,
                 <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                   <div>,
@@ -243,7 +239,7 @@ export default function Fortune50o0AITransformation() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Case Study 3 */,}
+              {/* Case Study 3 */}
               <div className='bg-gradient-to-r from-purple-90o0 to-pink-90o0 p-8 rounded-xl shadow-2xl'>,
                 <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
                   <div>,
@@ -321,7 +317,7 @@ export default function Fortune50o0AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Framework */,}
+        {/* Implementation Framework */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-90o0 to-purple-90o0'>,
           <div className='max-w-6xl mx-auto'>,
             <h2 className='text-3xl font-bold text-white mb-12 text-center'>,
@@ -425,7 +421,7 @@ export default function Fortune50o0AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-90o0 to-purple-90o0'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -437,23 +433,19 @@ export default function Fortune50o0AITransformation() {,
               delivered billions in value to Fortune 50o0 companies.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
                 Explore Enterprise Solutions,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>)}
 ,

@@ -1,4 +1,3 @@
 // Module for production-optimizations,
-export const production-optimizations ={,
-  // TODO: Implement module functionality,
-,};
+export const production-optimizations ={
+  // TODO: Implement module functionality};

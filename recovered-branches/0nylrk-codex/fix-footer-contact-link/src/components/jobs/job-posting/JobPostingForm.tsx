@@ -12,110 +12,82 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
-,
-interface JobPostingFormProps {,
+interface JobPostingFormProps {
   jobId?: string,
-  onSuccess?: () => void,
-}
+  onSuccess?: () => void}
 ,
-export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {,
+export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
   const navigate = useNavigate(),
   const { createJobupdateJobgetJobById } = useJobs(),
   const [isFormLoadingsetIsFormLoading] = useState(false),
   const [editorContentsetEditorContent] = useState(""),
-,
-  const {,
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    submitJob,
-  } = useJobForm({ jobIdonSuccess }),
-,
+  const {
+    form;
+    isLoading;
+    startDate;
+    setStartDate;
+    endDate;
+    setEndDate;
+    isRemote;
+    setIsRemote;
+    submitJob} = useJobForm({ jobIdonSuccess }),
   const { handleSubmitsetValueformState } = form,
   const { isSubmitting } = formState,
-,
-  useEffect(() => {,
-    if (jobId) {,
+  useEffect(() => {
+    if (jobId) {
       setIsFormLoading(true),
       getJobById(jobId),
-        .then((job) => {,
-          if (job) {,
+        .then((job) => {
+          if (job) {
             // Set form values,
-            Object.entries(job).forEach(([keyvalue]) => {,
-              if (key === 'published_date' && value) {,
+            Object.entries(job).forEach(([keyvalue]) => {
+              if (key === 'published_date' && value) {
                 setStartDate(new Date(value as string)),
-                setValue('published_date'value as string),
-              } else if (key === 'expiry_date' && value) {,
+                setValue('published_date'value as string)} else if (key === 'expiry_date' && value) {
                 setEndDate(new Date(value as string)),
-                setValue('expiry_date'value as string),
-              } else if (key === 'is_remote') {,
-                setIsRemote(value as boolean),
-              } else if (key === 'description') {,
+                setValue('expiry_date'value as string)} else if (key === 'is_remote') {
+                setIsRemote(value as boolean)} else if (key === 'description') {
                 setEditorContent(value as string),
-                setValue('description'value as string),
-              } else {,
-                try {,
+                setValue('description'value as string)} else {
+                try {
                   // @ts-ignore - We know these fields exist in our form,
-                  setValue(keyvalue as any),
-                } catch (e) {,
-                  // Skip fields that don't exist in our form,
-                }
+                  setValue(keyvalue as any)} catch (e) {
+                  // Skip fields that don't exist in our form}
               }
-            }),
-          }
+            })}
         }),
-        .catch((error) => {,
+        .catch((error) => {
           console.error("Failed to load job: "error),
-          toast.error("Failed to load job"),
-        ,}),
-        .finally(() => {,
-          setIsFormLoading(false),
-        }),
-    }
+          toast.error("Failed to load job")}),
+        .finally(() => {
+          setIsFormLoading(false)})}
   }[jobIdgetJobByIdsetValuesetStartDatesetEndDatesetIsRemote]),
-,
-  const handleEditorChange = useCallback((value: string) => {,
+  const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value),
-    setValue('description'value),
-  ,}[setValue]),
-,
-  const onSubmit = async (values: JobSchemaType) => {,
+    setValue('description'value)}[setValue]),
+  const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
-,
-    try {,
+    try {
       const jobData = await submitJob(values),
-,
-      if (jobId) {,
+      if (jobId) {
         await updateJob(jobIdjobData),
-        toast.success("Job updated successfully!"),
-      ,} else {,
+        toast.success("Job updated successfully!")} else {
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
-        setEditorContent(""),
-      }
+        setEditorContent("")}
 ,
-      if (onSuccess) {,
-        onSuccess(),
-      }
-    } catch (error: any) {,
+      if (onSuccess) {
+        onSuccess()}
+    } catch (error: any) {
       console.error("Error creating/updating job:"error),
-      toast.error(error.message || "Failed to post job"),
-    ,} finally {,
-      setIsFormLoading(false),
-    }
+      toast.error(error.message || "Failed to post job")} finally {
+      setIsFormLoading(false)}
   };
+  if (isLoading || isFormLoading) {
+    return <div className="flex items-center justify-center p-8">Loading...</div>}
 ,
-  if (isLoading || isFormLoading) {,
-    return <div className="flex items-center justify-center p-8">Loading...</div>,
-  }
-,
-  return (,
+  return (
     <Form {...form}>,
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">,
         <div>,
@@ -125,7 +97,7 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {,
           </p>,
         </div>,
         <BasicInfoFields control={form.control} />,
-        <DateFields,
+        <DateFields
           startDate={startDate} ,
           setStartDate={setStartDate}
           endDate={endDate}
@@ -133,7 +105,7 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {,
         />,
         <div>,
           <Label htmlFor="isRemote">,
-            <Input,
+            <Input
               type="checkbox",
               id="isRemote",
               checked={isRemote}
@@ -143,7 +115,7 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {,
             Remote,
           </Label>,
         </div>,
-        <DescriptionFields,
+        <DescriptionFields
           control={form.control} ,
           handleEditorChange={handleEditorChange}
           editorContent={editorContent}
@@ -152,7 +124,5 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {,
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
         </Button>,
       </form>,
-    </Form>,
-  ),
-}
+    </Form>)}
 ,

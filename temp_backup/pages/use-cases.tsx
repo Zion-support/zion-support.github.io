@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function UseCases() {,
-  return (,
+export default function UseCases() {
+  return (
     <div className='max-w-3xl mx-auto p-6 space-y-4'>,
       <h1 className='text-2xl font-semibold'>Zion Use Cases</h1>,
       <p className='text-sm text-gray-60o0'>,
@@ -14,7 +13,5 @@ export default function UseCases() {,
           </span>,
         </Link>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

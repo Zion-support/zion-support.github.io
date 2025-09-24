@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI 20o26: Agent Platform Operations Best Practices',;
+export const metadata = {
+  title: 'AI 20o26: Agent Platform Operations Best Practices';
   description:,
-    'SLOs, incident response, and change management patterns for safe, reliable agent platforms.',;
+    'SLOs, incident response, and change management patterns for safe, reliable agent platforms.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <h1 className='text-3xl md:text-4xl font-bold text-gray-90o0'>,
         AI 20o26: Agent Platform Operations Best Practices,
@@ -40,7 +39,5 @@ export default function Page() {,
           Red-team tests for high-risk changes and fast rollback procedures.,
         </li>,
       </ul>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

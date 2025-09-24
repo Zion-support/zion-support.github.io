@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TestPage() {,
-  return (,
+export default function TestPage() {
+  return (
     <>,
       <Head>,
         <title>Test - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function TestPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

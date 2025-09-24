@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o30SingularityPredictionsBanner: React.FC = () => {,
-  return (,
+const AI20o30SingularityPredictionsBanner: React.FC = () => {
+  return (
     <section className="relative bg-gradient-to-br from-black via-purple-90o0 to-indigo-90o0 text-white py-24 overflow-hidden">,
-      {/* Cosmic Background */,}
+      {/* Cosmic Background */}
       <div className="absolute inset-0 opacity-30">,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="20o0" height="20o0" viewBox="0 0 20o0 20o0" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="10o0" cy="10o0" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>,
       </div>,
-      {/* Floating Cosmic Elements */,}
+      {/* Floating Cosmic Elements */}
       <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-r from-purple-40o0 to-pink-40o0 rounded-full opacity-20 animate-pulse"></div>,
       <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 rounded-full opacity-20 animate-bounce"></div>,
       <div className="absolute bottom-40 left-1/4 w-28 h-28 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full opacity-20 animate-ping"></div>,
@@ -27,7 +26,7 @@ const AI20o30SingularityPredictionsBanner: React.FC = () => {,
             <span className="text-pink-30o0 font-bold"> new forms of consciousness</span>.,
           </p>,
         </div>,
-        {/* Timeline Section */,}
+        {/* Timeline Section */}
         <div className="mb-20">,
           <h3 className="text-4xl font-bold text-center mb-12 text-purple-20o0">,
             The Road to Singularity,
@@ -75,9 +74,9 @@ const AI20o30SingularityPredictionsBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Key Predictions */,}
+        {/* Key Predictions */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 mb-20">,
-          {/* Left Column - Technological Breakthroughs */,}
+          {/* Left Column - Technological Breakthroughs */}
           <div className="space-y-8">,
             <h3 className="text-4xl font-bold text-purple-20o0 mb-8">,
               Revolutionary Breakthroughs,
@@ -188,19 +187,17 @@ const AI20o30SingularityPredictionsBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-8 justify-center mb-10">,
-            <Link,
+            <Link
               href="/blog/ai-20o30-singularity-predictions-ultimate-guide",
-              className="bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-orange-60o0 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-70o0 hover:via-pink-70o0 hover:to-orange-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl",
-            >,
+              className="bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-orange-60o0 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-purple-70o0 hover:via-pink-70o0 hover:to-orange-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl">,
               Read Complete Predictions,
             </Link>,
-            <Link,
+            <Link
               href="/services/ai-singularity",
-              className="border-3 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="border-3 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Prepare for the Future,
             </Link>,
           </div>,
@@ -215,8 +212,5 @@ const AI20o30SingularityPredictionsBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o30SingularityPredictionsBanner,
+    </section>)};
+export default AI20o30SingularityPredictionsBanner;

@@ -1,52 +1,48 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  MessageCircle,;
-  X,;
-  Send,;
-  Bot,;
-  User,;
-  Sparkles,;
-  Loader2,;
-  Mic,;
-  MicOff,;
-  Volume2,;
-  VolumeX,;
-  Settings,;
-  HelpCircle,;
-  Zap,;
-  Brain,;
-  Shield,;
-  Cloud,;
-  Rocket,;
-  FileText,;
-  Image,;
-  Link,;
-  Download,;
-  Share2,;
-  RefreshCw,;
-  Star,;
-  ThumbsUp,;
-  ThumbsDown,
-} from 'lucide-react',
-,
-interface Message {,
+import {
+  MessageCircle;
+  X;
+  Send;
+  Bot;
+  User;
+  Sparkles;
+  Loader2;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Settings;
+  HelpCircle;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Rocket;
+  FileText;
+  Image;
+  Link;
+  Download;
+  Share2;
+  RefreshCw;
+  Star;
+  ThumbsUp;
+  ThumbsDown} from 'lucide-react',
+interface Message {
   id: string,
   type: 'user' | 'assistant' | 'system',
   content: string,
   timestamp: Date,
   isLoading?: boolean,
   error?: string,
-  metadata?: {,
+  metadata?: {
     suggestions?: string[],
-    links?: Array<{ url: string, title: string ,}>,
-    images?: Array<{ url: string, alt: string ,}>,
-    files?: Array<{ name: string, url: string, size: string ,}>,
-  };
-  feedback?: 'positive' | 'negative' | null,
-}
+    links?: Array<{ url: string, title: string }>,
+    images?: Array<{ url: string, alt: string }>,
+    files?: Array<{ name: string, url: string, size: string }>};
+  feedback?: 'positive' | 'negative' | null}
 ,
-interface ChatAssistantProps {,
+interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'dark' | 'light' | 'auto',
   maxHeight?: string,
@@ -55,35 +51,31 @@ interface ChatAssistantProps {,
   enableFileUpload?: boolean,
   enableSuggestions?: boolean,
   enableFeedback?: boolean,
-  autoExpand?: boolean,
-}
+  autoExpand?: boolean}
 ,
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
-  position = 'bottom-right',;
-  theme = 'dark',;
-  maxHeight = '60o0px',;
-  welcomeMessage = "Hello! I'm Zion, your AI assistant. I can help you with:\n\n🚀 AI & Technology Solutions\n💼 Business Intelligence\n☁️ Cloud & DevOps Services\n🔒 Cybersecurity & Compliance\n\nHow can I assist you today?",;
-  enableVoice = true,;
-  enableFileUpload = true,;
-  enableSuggestions = true,;
-  enableFeedback = true,;
-  autoExpand = false,
-}) => {,
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+  position = 'bottom-right';
+  theme = 'dark';
+  maxHeight = '60o0px';
+  welcomeMessage = "Hello! I'm Zion, your AI assistant. I can help you with:\n\n🚀 AI & Technology Solutions\n💼 Business Intelligence\n☁️ Cloud & DevOps Services\n🔒 Cybersecurity & Compliance\n\nHow can I assist you today?";
+  enableVoice = true;
+  enableFileUpload = true;
+  enableSuggestions = true;
+  enableFeedback = true;
+  autoExpand = false}) => {
   const [isOpen, setIsOpen] = useState(false),
-  const [messages, setMessages] = useState<Message[]>([,
-    {,
-      id: '1',;
-      type: 'assistant',;
-      content: welcomeMessage,;
-      timestamp: new Date(),;
-      metadata: {,
-        suggestions: [,
-          "Tell me about your AI services",;
-          "How can you help with digital transformation?",;
-          "What are your pricing options?",;
-          "Show me case studies",
-        ],
-      }
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '1';
+      type: 'assistant';
+      content: welcomeMessage;
+      timestamp: new Date();
+      metadata: {
+        suggestions: [
+          "Tell me about your AI services";
+          "How can you help with digital transformation?";
+          "What are your pricing options?";
+          "Show me case studies"]}
     }
   ]),
   const [inputValue, setIsInputValue] = useState(''),
@@ -95,256 +87,187 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
   const [isExpanded, setIsExpanded] = useState(autoExpand),
   const [conversationHistory, setConversationHistory] = useState<string[]>([]),
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]),
-,
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   const fileInputRef = useRef<HTMLInputElement>(null),
   const recognitionRef = useRef<any>(null),
-,
   // Auto-scroll to bottom when new messages arrive,
-  useEffect(() => {,
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' ,}),
-  }, [messages]),
-,
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]),
   // Initialize speech recognition,
-  useEffect(() => {,
-    if (enableVoice && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {,
+  useEffect(() => {
+    if (enableVoice && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition,
       recognitionRef.current = new SpeechRecognition(),
       recognitionRef.current.continuous = false,
       recognitionRef.current.interimResults = false,
       recognitionRef.current.lang = 'en-US',
-,
-      recognitionRef.current.onresult = (event: any) => {,
+      recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript,
         setIsInputValue(transcript),
-        setIsListening(false),
-      ,};
-,
-      recognitionRef.current.onerror = (event: any) => {,
+        setIsListening(false)};
+      recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error),
-        setIsListening(false),
-      };
+        setIsListening(false)};
     }
   }, [enableVoice]),
-,
   // Handle speech recognition,
-  const toggleListening = useCallback(() => {,
-    if (!recognitionRef.current) {,
+  const toggleListening = useCallback(() => {
+    if (!recognitionRef.current) {
       alert('Speech recognition is not supported in your browser'),
-      return,
-    }
+      return}
 ,
-    if (isListening) {,
+    if (isListening) {
       recognitionRef.current.stop(),
-      setIsListening(false),
-    } else {,
+      setIsListening(false)} else {
       recognitionRef.current.start(),
-      setIsListening(true),
-    }
+      setIsListening(true)}
   }, [isListening]),
-,
   // Handle file upload,
-  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {,
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []),
-    if (files.length > 0) {,
+    if (files.length > 0) {
       setSelectedFiles(prev => [...prev, ...files]),
-,
       // Add file message to chat,
-      const fileMessage: Message ={,
-        id: Date.now().toString(),;
-        type: 'user',;
-        content: `Uploaded ${files.length,} file(s): ${files.map(f => f.name).join(', ')}`,;
-        timestamp: new Date(),;
-        metadata: {,
-          files: files.map(file => ({,
-            name: file.name,;
-            url: URL.createObjectURL(file),;
-            size: `${(file.size / 10o24).toFixed(1),} KB`,
-          })),
-        }
+      const fileMessage: Message ={
+        id: Date.now().toString();
+        type: 'user';
+        content: `Uploaded ${files.length} file(s): ${files.map(f => f.name).join(', ')}`;
+        timestamp: new Date();
+        metadata: {
+          files: files.map(file => ({
+            name: file.name;
+            url: URL.createObjectURL(file);
+            size: `${(file.size / 10o24).toFixed(1)} KB`}))}
       };
-,
-      setMessages(prev => [...prev, fileMessage]),
-    }
+      setMessages(prev => [...prev, fileMessage])}
   }, []),
-,
   // Handle file removal,
-  const removeFile = useCallback((index: number) => {,
-    setSelectedFiles(prev => prev.filter((_, i) => i !== index)),
-  }, []),
-,
+  const removeFile = useCallback((index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index))}, []),
   // Generate AI response,
-  const generateAIResponse = useCallback(async (userMessage: string, context?: any) => {,
+  const generateAIResponse = useCallback(async (userMessage: string, context?: any) => {
     setIsTyping(true),
-,
-    try {,
+    try {
       // Simulate AI processing delay,
       await new Promise(resolve => setTimeout(resolve, 10o00 + Math.random() * 20o00)),
-,
       // Generate contextual response based on user input,
       let response = '',
       let suggestions: string[] = [],
-,
       const lowerMessage = userMessage.toLowerCase(),
-,
-      if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {,
+      if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {
         response = "Our AI services include:\n\n🤖 **Machine Learning Solutions**\n📊 **Predictive Analytics**\n🔄 **Process Automation**\n🧠 **Natural Language Processing**\n\nWe help businesses leverage AI to gain competitive advantages and improve operational efficiency.",
-        suggestions = ["Tell me more about ML", "What industries do you serve?", "Show me AI case studies"],
-      } else if (lowerMessage.includes('cloud') || lowerMessage.includes('devops')) {,
+        suggestions = ["Tell me more about ML", "What industries do you serve?", "Show me AI case studies"]} else if (lowerMessage.includes('cloud') || lowerMessage.includes('devops')) {
         response = "Our Cloud & DevOps expertise covers: \n\n☁️ **Multi-cloud Strategy**\n🐳 **Container Orchestration**\n🚀 **CI/CD Pipelines**\n📈 **Infrastructure as Code**\n\nWe help organizations modernize their infrastructure and accelerate software delivery.",
-        suggestions = ["What cloud providers?", "DevOps best practices", "Migration strategies"],
-      } else if (lowerMessage.includes('security') || lowerMessage.includes('cyber')) {,
+        suggestions = ["What cloud providers?", "DevOps best practices", "Migration strategies"]} else if (lowerMessage.includes('security') || lowerMessage.includes('cyber')) {
         response = "Our cybersecurity services include: \n\n🔒 **Threat Detection & Response**\n🛡️ **Vulnerability Assessment**\n📋 **Compliance & Governance**\n🔐 **Identity & Access Management**\n\nWe protect your digital assets with enterprise-grade security solutions.",
-        suggestions = ["Security audit process", "Compliance frameworks", "Incident response"],
-      } else if (lowerMessage.includes('pricing') || lowerMessage.includes('cost')) {,
+        suggestions = ["Security audit process", "Compliance frameworks", "Incident response"]} else if (lowerMessage.includes('pricing') || lowerMessage.includes('cost')) {
         response = "Our pricing is flexible and tailored to your needs: \n\n💼 **Consultation**: Free initial assessment\n🚀 **Implementation**: Project-based or subscription\n📊 **Support**: 24/7 monitoring and maintenance\n\nContact us for a personalized quote based on your requirements.",
-        suggestions = ["Request a quote", "Schedule a demo", "View pricing tiers"],
-      } else if (lowerMessage.includes('case study') || lowerMessage.includes('success')) {,
+        suggestions = ["Request a quote", "Schedule a demo", "View pricing tiers"]} else if (lowerMessage.includes('case study') || lowerMessage.includes('success')) {
         response = "Here are some recent success stories: \n\n🏥 **Healthcare Provider**: 40% reduction in operational costs\n🏭 **Manufacturing**: 60% improvement in production efficiency\n🏦 **Financial Services**: 99.9% uptime achieved\n\nWould you like me to share detailed case studies?",
-        suggestions = ["Healthcare case study", "Manufacturing example", "Financial services success"],
-      } else {,
+        suggestions = ["Healthcare case study", "Manufacturing example", "Financial services success"]} else {
         response = "I'm here to help you with Zion Tech Group's comprehensive technology solutions. We specialize in: \n\n✨ **AI & Machine Learning**\n☁️ **Cloud & DevOps**\n🔒 **Cybersecurity**\n📊 **Data Analytics**\n💼 **Digital Transformation**\n\nWhat specific area would you like to explore?",
-        suggestions = ["AI services", "Cloud solutions", "Security offerings", "Contact sales"],
-      }
+        suggestions = ["AI services", "Cloud solutions", "Security offerings", "Contact sales"]}
 ,
-      const aiMessage: Message ={,
-        id: Date.now().toString(),;
-        type: 'assistant',;
-        content: response,;
-        timestamp: new Date(),;
-        metadata: { suggestions ,}
+      const aiMessage: Message ={
+        id: Date.now().toString();
+        type: 'assistant';
+        content: response;
+        timestamp: new Date();
+        metadata: { suggestions }
       };
-,
       setMessages(prev => [...prev, aiMessage]),
-,
       // Update conversation history,
-      setConversationHistory(prev => [...prev, userMessage, response]),
-,
-    } catch (error) {,
-      const errorMessage: Message ={,
-        id: Date.now().toString(),;
-        type: 'assistant',;
-        content: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our support team.",;
-        timestamp: new Date(),;
-        error: 'AI response generation failed',
-      ,};
-      setMessages(prev => [...prev, errorMessage]),
-    } finally {,
-      setIsTyping(false),
-    }
+      setConversationHistory(prev => [...prev, userMessage, response])} catch (error) {
+      const errorMessage: Message ={
+        id: Date.now().toString();
+        type: 'assistant';
+        content: "I apologize, but I'm experiencing some technical difficulties. Please try again or contact our support team.";
+        timestamp: new Date();
+        error: 'AI response generation failed'};
+      setMessages(prev => [...prev, errorMessage])} finally {
+      setIsTyping(false)}
   }, []),
-,
   // Handle message submission,
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {,
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault(),
-,
     if (!inputValue.trim() && selectedFiles.length === 0) return,
-,
-    const userMessage: Message ={,
-      id: Date.now().toString(),;
-      type: 'user',;
-      content: inputValue.trim() || `Uploaded ${selectedFiles.length,} file(s)`,;
-      timestamp: new Date(),
-    ,};
-,
+    const userMessage: Message ={
+      id: Date.now().toString();
+      type: 'user';
+      content: inputValue.trim() || `Uploaded ${selectedFiles.length} file(s)`;
+      timestamp: new Date()};
     setMessages(prev => [...prev, userMessage]),
     setIsInputValue(''),
     setSelectedFiles([]),
-,
     // Generate AI response,
-    await generateAIResponse(userMessage.content),
-  }, [inputValue, selectedFiles, generateAIResponse]),
-,
+    await generateAIResponse(userMessage.content)}, [inputValue, selectedFiles, generateAIResponse]),
   // Handle suggestion click,
-  const handleSuggestionClick = useCallback((suggestion: string) => {,
+  const handleSuggestionClick = useCallback((suggestion: string) => {
     setIsInputValue(suggestion),
-    inputRef.current?.focus(),
-  ,}, []),
-,
+    inputRef.current?.focus()}, []),
   // Handle feedback,
-  const handleFeedback = useCallback((messageId: string, feedback: 'positive' | 'negative') => {,
+  const handleFeedback = useCallback((messageId: string, feedback: 'positive' | 'negative') => {
     setMessages(prev => prev.map(msg =>,
-      msg.id === messageId ? { ...msg, feedback } : msg,
-    )),
-,
+      msg.id === messageId ? { ...msg, feedback } : msg)),
     // Send feedback to analytics,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,
-      (window as any).gtag('event', 'chat_feedback', {,
-        feedback_type: feedback,;
-        message_id: messageId,
-      ,}),
-    }
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'chat_feedback', {
+        feedback_type: feedback;
+        message_id: messageId})}
   }, []),
-,
   // Handle message actions,
-  const handleMessageAction = useCallback((action: string, message: Message) => {,
-    switch (action) {,
+  const handleMessageAction = useCallback((action: string, message: Message) => {
+    switch (action) {
       case 'copy':,
         navigator.clipboard.writeText(message.content),
         break,
       case 'share':,
-        if (navigator.share) {,
-          navigator.share({,
-            title: 'Zion Tech Group Chat',;
-            text: message.content,
-          ,}),
-        }
+        if (navigator.share) {
+          navigator.share({
+            title: 'Zion Tech Group Chat';
+            text: message.content})}
         break,
       case 'download':,
-        if (message.metadata?.files) {,
-          message.metadata.files.forEach(file => {,
+        if (message.metadata?.files) {
+          message.metadata.files.forEach(file => {
             const link = document.createElement('a'),
             link.href = file.url,
             link.download = file.name,
-            link.click(),
-          }),
-        }
-        break,
-    }
+            link.click()})}
+        break}
   }, []),
-,
   // Toggle chat state,
-  const toggleChat = useCallback(() => {,
+  const toggleChat = useCallback(() => {
     setIsOpen(prev => !prev),
-    if (!isOpen) {,
+    if (!isOpen) {
       setIsMinimized(false),
-      setIsExpanded(false),
-    }
+      setIsExpanded(false)}
   }, [isOpen]),
-,
   // Toggle minimize,
-  const toggleMinimize = useCallback(() => {,
-    setIsMinimized(prev => !prev),
-  }, []),
-,
+  const toggleMinimize = useCallback(() => {
+    setIsMinimized(prev => !prev)}, []),
   // Toggle expand,
-  const toggleExpand = useCallback(() => {,
-    setIsExpanded(prev => !prev),
-  }, []),
-,
+  const toggleExpand = useCallback(() => {
+    setIsExpanded(prev => !prev)}, []),
   // Clear chat,
-  const clearChat = useCallback(() => {,
-    setMessages([{,
-      id: '1',;
-      type: 'assistant',;
-      content: welcomeMessage,;
-      timestamp: new Date(),;
-      metadata: {,
-        suggestions: [,
-          "Tell me about your AI services",;
-          "How can you help with digital transformation?",;
-          "What are your pricing options?",;
-          "Show me case studies",
-        ],
-      }
+  const clearChat = useCallback(() => {
+    setMessages([{
+      id: '1';
+      type: 'assistant';
+      content: welcomeMessage;
+      timestamp: new Date();
+      metadata: {
+        suggestions: [
+          "Tell me about your AI services";
+          "How can you help with digital transformation?";
+          "What are your pricing options?";
+          "Show me case studies"]}
     }]),
-    setConversationHistory([]),
-  }, [welcomeMessage]),
-,
+    setConversationHistory([])}, [welcomeMessage]),
   // Get position classes,
-  const getPositionClasses = () => {,
-    switch (position) {,
+  const getPositionClasses = () => {
+    switch (position) {
       case 'bottom-left':,
         return 'bottom-4 left-4',
       case 'top-right':,
@@ -352,55 +275,47 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
       case 'top-left':,
         return 'top-4 left-4',
       default: ,
-        return 'bottom-4 right-4',
-    ,}
+        return 'bottom-4 right-4'}
   };
-,
   // Get theme classes,
-  const getThemeClasses = () => {,
-    if (theme === 'auto') {,
-      return 'dark: bg-gray-90o0 dark:text-white bg-white text-gray-90o0',
-    ,}
-    return theme === 'dark' ? 'bg-gray-90o0 text-white' : 'bg-white text-gray-90o0',
-  };
-,
-  if (isMinimized) {,
-    return (,
+  const getThemeClasses = () => {
+    if (theme === 'auto') {
+      return 'dark: bg-gray-90o0 dark:text-white bg-white text-gray-90o0'}
+    return theme === 'dark' ? 'bg-gray-90o0 text-white' : 'bg-white text-gray-90o0'};
+  if (isMinimized) {
+    return (
       <div className={`fixed ${getPositionClasses()} z-50`}>,
         <motion.button,
           onClick={toggleMinimize}
           className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-20o0 flex items-center justify-center",
-          whileHover={{ scale: 1.1 ,}}
-          whileTap={{ scale: 0.9 ,}}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >,
           <MessageCircle className="w-6 h-6"  />,
         </motion.button>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className={`fixed ${getPositionClasses()} z-50`}>,
       {/* Chat Toggle Button */}
-      {!isOpen && (,
+      {!isOpen && (
         <motion.button,
           onClick={toggleChat}
           className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-20o0 flex items-center justify-center",
-          whileHover={{ scale: 1.1 ,}}
-          whileTap={{ scale: 0.9 ,}}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >,
           <MessageCircle className="w-6 h-6"  />,
-        </motion.button>,
-      )}
+        </motion.button>)}
 ,
       {/* Chat Window */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, scale: 0.8, y: 20 ,}}
-            animate={{ opacity: 1, scale: 1, y: 0 ,}}
-            exit={{ opacity: 0, scale: 0.8, y: 20 ,}}
-            className={`w-80 ${isExpanded ? 'h-96' : 'h-96'} ${getThemeClasses()} rounded-2xl shadow-2xl border border-gray-20o0 dark: border-gray-70o0 overflow-hidden`,}
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            className={`w-80 ${isExpanded ? 'h-96' : 'h-96'} ${getThemeClasses()} rounded-2xl shadow-2xl border border-gray-20o0 dark: border-gray-70o0 overflow-hidden`}
           >,
             {/* Chat Header */}
             <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 flex items-center justify-between">,
@@ -409,167 +324,146 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
                 <span className="font-semibold">Zion AI Assistant</span>,
               </div>,
               <div className="flex items-center space-x-1">,
-                <button,
+                <button
                   onClick={toggleExpand}
                   className="p-1 hover: bg-white/20 rounded transition-colors",
-                  title={isExpanded ? "Minimize" : "Expand",}
+                  title={isExpanded ? "Minimize" : "Expand"}
                 >,
                   <RefreshCw className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}  />,
                 </button>,
-                <button,
+                <button
                   onClick={toggleMinimize}
                   className="p-1 hover: bg-white/20 rounded transition-colors",
-                  title="Minimize",
-                >,
+                  title="Minimize">,
                   <X className="w-4 h-4"  />,
                 </button>,
               </div>,
             </div>,
-            {/* Chat Messages */,}
+            {/* Chat Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-64">,
-              {messages.map((message) => (,
+              {messages.map((message) => (
                 <motion.div,
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >,
-                  <div className={`max-w-[80%] ${message.type === 'user' ? 'bg-zion-cyan text-white' : 'bg-gray-10o0 dark: bg-gray-80o0',} rounded-lg p-3`}>,
+                  <div className={`max-w-[80%] ${message.type === 'user' ? 'bg-zion-cyan text-white' : 'bg-gray-10o0 dark: bg-gray-80o0'} rounded-lg p-3`}>,
                     <div className="whitespace-pre-wrap text-sm">{message.content}</div>,
                     {/* Message Metadata */}
-                    {message.metadata && (,
+                    {message.metadata && (
                       <div className="mt-2 space-y-2">,
                         {/* Suggestions */}
-                        {message.metadata.suggestions && enableSuggestions && (,
+                        {message.metadata.suggestions && enableSuggestions && (
                           <div className="flex flex-wrap gap-2">,
-                            {message.metadata.suggestions.map((suggestion, index) => (,
-                              <button,
+                            {message.metadata.suggestions.map((suggestion, index) => (
+                              <button
                                 key={index}
                                 onClick={() => handleSuggestionClick(suggestion)}
-                                className="px-2 py-1 bg-zion-purple/20 text-zion-purple dark: text-zion-purple-light text-xs rounded hover:bg-zion-purple/30 transition-colors",
-                              >,
-                                {suggestion,}
-                              </button>,
-                            ))}
-                          </div>,
-                        )}
+                                className="px-2 py-1 bg-zion-purple/20 text-zion-purple dark: text-zion-purple-light text-xs rounded hover:bg-zion-purple/30 transition-colors">,
+                                {suggestion}
+                              </button>))}
+                          </div>)}
 ,
                         {/* Files */}
-                        {message.metadata.files && (,
+                        {message.metadata.files && (
                           <div className="space-y-1">,
-                            {message.metadata.files.map((file, index) => (,
+                            {message.metadata.files.map((file, index) => (
                               <div key={index} className="flex items-center justify-between bg-white/10 dark: bg-gray-70o0/50 rounded p-2">,
-                                <span className="text-xs truncate">{file.name,}</span>,
-                                <button,
+                                <span className="text-xs truncate">{file.name}</span>,
+                                <button
                                   onClick={() => handleMessageAction('download', message)}
-                                  className="p-1 hover: bg-white/20 rounded",
-                                >,
+                                  className="p-1 hover: bg-white/20 rounded">,
                                   <Download className="w-3 h-3"  />,
                                 </button>,
-                              </div>,
-                            )),}
-                          </div>,
-                        )}
-                      </div>,
-                    )}
+                              </div>))}
+                          </div>)}
+                      </div>)}
 ,
                     {/* Feedback */}
-                    {enableFeedback && message.type === 'assistant' && (,
+                    {enableFeedback && message.type === 'assistant' && (
                       <div className="flex items-center justify-end space-x-1 mt-2">,
-                        <button,
+                        <button
                           onClick={() => handleFeedback(message.id, 'positive')}
-                          className={`p-1 rounded transition-colors ${,
+                          className={`p-1 rounded transition-colors ${
                             message.feedback === 'positive',
                               ? 'text-green-50o0 bg-green-50o0/20',
-                              : 'text-gray-40o0 hover: text-green-50o0',
-                          ,}`}
+                              : 'text-gray-40o0 hover: text-green-50o0'}`}
                         >,
                           <ThumbsUp className="w-3 h-3"  />,
                         </button>,
-                        <button,
+                        <button
                           onClick={() => handleFeedback(message.id, 'negative')}
-                          className={`p-1 rounded transition-colors ${,
+                          className={`p-1 rounded transition-colors ${
                             message.feedback === 'negative',
                               ? 'text-red-50o0 bg-red-50o0/20',
-                              : 'text-gray-40o0 hover: text-red-50o0',
-                          ,}`}
+                              : 'text-gray-40o0 hover: text-red-50o0'}`}
                         >,
                           <ThumbsDown className="w-3 h-3"  />,
                         </button>,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
 ,
               {/* Typing Indicator */}
-              {isTyping && (,
+              {isTyping && (
                 <motion.div,
-                  initial={{ opacity: 0 ,}}
-                  animate={{ opacity: 1 ,}}
-                  className="flex justify-start",
-                >,
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="flex justify-start">,
                   <div className="bg-gray-10o0 dark: bg-gray-80o0 rounded-lg p-3">,
                     <div className="flex items-center space-x-1">,
                       <Loader2 className="w-4 h-4 animate-spin"  />,
                       <span className="text-sm text-gray-50o0">Zion is typing...</span>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),}
+                </motion.div>)}
 ,
               <div ref={messagesEndRef}  />,
             </div>,
             {/* Chat Input */}
             <div className="p-4 border-t border-gray-20o0 dark: border-gray-70o0">,
-              {/* File Preview */,}
-              {selectedFiles.length > 0 && (,
+              {/* File Preview */}
+              {selectedFiles.length > 0 && (
                 <div className="mb-3 space-y-2">,
-                  {selectedFiles.map((file, index) => (,
+                  {selectedFiles.map((file, index) => (
                     <div key={index} className="flex items-center justify-between bg-gray-10o0 dark: bg-gray-80o0 rounded p-2">,
-                      <span className="text-xs truncate flex-1">{file.name,}</span>,
-                      <button,
+                      <span className="text-xs truncate flex-1">{file.name}</span>,
+                      <button
                         onClick={() => removeFile(index)}
-                        className="ml-2 p-1 hover: bg-red-50o0/20 text-red-50o0 rounded",
-                      >,
+                        className="ml-2 p-1 hover: bg-red-50o0/20 text-red-50o0 rounded">,
                         <X className="w-3 h-3"  />,
                       </button>,
-                    </div>,
-                  )),}
-                </div>,
-              )}
+                    </div>))}
+                </div>)}
 ,
               <form onSubmit={handleSubmit} className="flex items-center space-x-2">,
                 {/* File Upload */}
-                {enableFileUpload && (,
-                  <button,
+                {enableFileUpload && (
+                  <button
                     type="button",
                     onClick={() => fileInputRef.current?.click()}
                     className="p-2 text-gray-50o0 hover: text-zion-cyan transition-colors",
-                    title="Attach file",
-                  >,
+                    title="Attach file">,
                     <FileText className="w-4 h-4"  />,
-                  </button>,
-                ),}
+                  </button>)}
 ,
                 {/* Voice Input */}
-                {enableVoice && (,
-                  <button,
+                {enableVoice && (
+                  <button
                     type="button",
                     onClick={toggleListening}
-                    className={`p-2 transition-colors ${,
+                    className={`p-2 transition-colors ${
                       isListening,
                         ? 'text-red-50o0 bg-red-50o0/20',
-                        : 'text-gray-50o0 hover: text-zion-cyan',
-                    ,}`}
+                        : 'text-gray-50o0 hover: text-zion-cyan'}`}
                     title={isListening ? 'Stop recording' : 'Start voice input'}
                   >,
                     {isListening ? <MicOff className="w-4 h-4"  /> : <Mic className="w-4 h-4"  />}
-                  </button>,
-                )}
+                  </button>)}
 ,
                 {/* Text Input */}
-                <input,
+                <input
                   ref={inputRef}
                   type="text",
                   value={inputValue}
@@ -577,18 +471,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
                   placeholder="Type your message...",
                   className="flex-1 px-3 py-2 bg-gray-10o0 dark: bg-gray-80o0 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan",
                 />,
-                {/* Send Button */,}
-                <button,
+                {/* Send Button */}
+                <button
                   type="submit",
                   disabled={!inputValue.trim() && selectedFiles.length === 0}
                   className="p-2 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan-dark disabled:bg-gray-40o0 disabled:cursor-not-allowed transition-colors",
-                  title="Send message",
-                >,
+                  title="Send message">,
                   <Send className="w-4 h-4"  />,
                 </button>,
               </form>,
-              {/* Hidden File Input */,}
-              <input,
+              {/* Hidden File Input */}
+              <input
                 ref={fileInputRef}
                 type="file",
                 multiple,
@@ -599,23 +492,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({,
             </div>,
             {/* Chat Footer */}
             <div className="p-3 bg-gray-50 dark: bg-gray-80o0 border-t border-gray-20o0 dark:border-gray-70o0 flex items-center justify-between">,
-              <button,
-                onClick={clearChat,}
-                className="text-xs text-gray-50o0 hover: text-zion-cyan transition-colors",
-              >,
+              <button
+                onClick={clearChat}
+                className="text-xs text-gray-50o0 hover: text-zion-cyan transition-colors">,
                 Clear Chat,
               </button>,
-              <button,
-                onClick={() => setShowSettings(!showSettings),}
-                className="text-xs text-gray-50o0 hover: text-zion-cyan transition-colors",
-              >,
+              <button
+                onClick={() => setShowSettings(!showSettings)}
+                className="text-xs text-gray-50o0 hover: text-zion-cyan transition-colors">,
                 Settings,
               </button>,
             </div>,
-          </motion.div>,
-        ),}
+          </motion.div>)}
       </AnimatePresence>,
-    </div>,
-  ),
-};
-,
+    </div>)};

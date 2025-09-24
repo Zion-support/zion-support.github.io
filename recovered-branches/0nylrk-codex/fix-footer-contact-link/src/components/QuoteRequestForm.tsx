@@ -13,45 +13,36 @@ import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
 import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
 import { QuoteFormData } from "@/types/quotes",
 import { Sparkles } from "lucide-react",
-,
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
-,
-export function QuoteRequestForm() {,
+export function QuoteRequestForm() {
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const [currentStepsetCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmittingsetIsSubmitting] = useState(false),
-,
-  const [formDatasetFormData] = useState<QuoteFormData>({,
-    serviceType: "",;
-    serviceCategory: "",;
-    specificItem: null,;
-    projectName: "",;
-    projectDescription: "",;
-    startDate: undefined,;
-    endDate: undefined,;
-    timeline: "flexible",;
-    budget: {,
-      amount: 0,;
-      type: "fixed",
-    ,},;
-    contactInfo: {,
-      name: "",;
-      email: "",;
-      phone: "",;
-      company: "",
-    ,}
+  const [formDatasetFormData] = useState<QuoteFormData>({
+    serviceType: "";
+    serviceCategory: "";
+    specificItem: null;
+    projectName: "";
+    projectDescription: "";
+    startDate: undefined;
+    endDate: undefined;
+    timeline: "flexible";
+    budget: {
+      amount: 0;
+      type: "fixed"};
+    contactInfo: {
+      name: "";
+      email: "";
+      phone: "";
+      company: ""}
   }),
-,
-  const updateFormData = (data: Partial<QuoteFormData>) => {,
-    setFormData(prev => ({,
-      ...prev,;
-      ...data,
-    })),
-  };
-,
-  const handleNext = () => {,
-    switch (currentStep) {,
+  const updateFormData = (data: Partial<QuoteFormData>) => {
+    setFormData(prev => ({
+      ...prev;
+      ...data}))};
+  const handleNext = () => {
+    switch (currentStep) {
       case "service":,
         setCurrentStep("details"),
         break,
@@ -65,12 +56,10 @@ export function QuoteRequestForm() {,
         setCurrentStep("summary"),
         break,
       default: ,
-        break,
-    ,}
+        break}
   };
-,
-  const handleBack = () => {,
-    switch (currentStep) {,
+  const handleBack = () => {
+    switch (currentStep) {
       case "details":,
         setCurrentStep("service"),
         break,
@@ -84,38 +73,28 @@ export function QuoteRequestForm() {,
         setCurrentStep("budget"),
         break,
       default: ,
-        break,
-    ,}
+        break}
   };
-,
-  const handleSubmit = async () => {,
+  const handleSubmit = async () => {
     setIsSubmitting(true),
-,
-    try {,
+    try {
       // In a real applicationyou would send the data to your backend,
-      console.log("Submitting form data: "formData),
-,
+      // // console.log("Submitting form data: "formData),
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve1500)),
-,
-      toast({,
-        title: "Quote Request Submitted",;
-        description: "We've received your request and will get back to you soon.",}),
-,
+      toast({
+        title: "Quote Request Submitted";
+        description: "We've received your request and will get back to you soon."}),
       // Redirect to confirmation page or homepage,
-      navigate("/"),
-    } catch (error) {,
-      toast({,
-        title: "Submission Failed",;
-        description: "There was an error submitting your request. Please try again.",;
-        variant: "destructive",}),
-    } finally {,
-      setIsSubmitting(false),
-    }
+      navigate("/")} catch (error) {
+      toast({
+        title: "Submission Failed";
+        description: "There was an error submitting your request. Please try again.";
+        variant: "destructive"})} finally {
+      setIsSubmitting(false)}
   };
-,
-  const renderStepContent = () => {,
-    switch (currentStep) {,
+  const renderStepContent = () => {
+    switch (currentStep) {
       case "service":,
         return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />,
       case "details":,
@@ -127,11 +106,9 @@ export function QuoteRequestForm() {,
       case "summary":,
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
       default: ,
-        return null,
-    ,}
+        return null}
   };
-,
-  return (,
+  return (
     <div className="container mx-auto px-4 py-12">,
       <div className="max-w-3xl mx-auto">,
         <div className="text-center mb-8">,
@@ -151,37 +128,29 @@ export function QuoteRequestForm() {,
               {renderStepContent()}
             </div>,
             <div className="flex justify-between mt-8">,
-              {currentStep !== "service" && (,
-                <Button,
+              {currentStep !== "service" && (
+                <Button
                   variant="outline",
                   onClick={handleBack}
-                  className="border-zion-purple text-zion-cyan hover: bg-zion-purple/10",
-                >,
+                  className="border-zion-purple text-zion-cyan hover: bg-zion-purple/10">,
                   Back,
-                </Button>,
-              ),}
+                </Button>)}
 ,
-              {currentStep !== "summary" ? (,
-                <Button,
+              {currentStep !== "summary" ? (
+                <Button
                   onClick={handleNext}
-                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-                >,
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">,
                   Continue,
-                </Button>,
-              ) : (,
-                <Button,
-                  onClick={handleSubmit,}
+                </Button>) : (
+                <Button
+                  onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-                >,
-                  {isSubmitting ? "Submitting..." : "Submit Request",}
-                </Button>,
-              )}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">,
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>)}
             </div>,
           </CardContent>,
         </Card>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

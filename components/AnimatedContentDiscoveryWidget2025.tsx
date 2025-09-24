@@ -1,81 +1,68 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3SearchFilterClockEye,
-export default function AnimatedContentDiscoveryWidget20o25() {,
+export default function AnimatedContentDiscoveryWidget20o25() {
   const [currentContentsetCurrentContent] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  const contentItems = [,
-    {,
-      title: "AI 20o25 Ultimate Breakthrough Showcase",;
-      description: "Discover revolutionary AI technologies delivering 2,50o0-15,0o00% ROI",;
-      category: "Showcase",;
-      roi: "15,0o00%",;
-      color: "from-purple-50o0 to-pink-50o0",;
-      icon: Brain,;
-      href: "/ai-20o25-ultimate-breakthrough-showcase",
-    ,},;
-    {,
-      title: "Global Transformation Success Story",;
-      description: "How a Fortune 50o0 company achieved 10,0o00% ROI through AI transformation",;
-      category: "Case Study",;
-      roi: "10,0o00%",;
-      color: "from-green-50o0 to-emerald-50o0",;
-      icon: TrendingUp,;
-      href: "/case-studies/ai-20o25-global-transformation-breakthrough",
-    ,},;
-    {,
-      title: "AI 20o25 ROI Calculator",;
-      description: "Calculate your potential ROI with our interactive AI transformation calculator",;
-      category: "Tool",;
-      roi: "Custom",;
-      color: "from-blue-50o0 to-cyan-50o0",;
-      icon: BarChart3,;
-      href: "/tools/ai-20o25-roi-calculator",
-    ,},;
-    {,
-      title: "Quantum-Neural Fusion Technology",;
-      description: "Revolutionary fusion of quantum computing and neural networks",;
-      category: "Technology",;
-      roi: "15,0o00%",;
-      color: "from-indigo-50o0 to-purple-50o0",;
-      icon: Cpu,;
-      href: "/blog/quantum-neural-fusion-20o26",
-    ,},;
-    {,
-      title: "Autonomous AI Systems",;
-      description: "Self-managing AI systems that optimize operations automatically",;
-      category: "Solution",;
-      roi: "8,50o0%",;
-      color: "from-orange-50o0 to-red-50o0",;
-      icon: Rocket,;
-      href: "/solutions/autonomous-ai-systems",
-    ,},;
-    {,
-      title: "Predictive Intelligence Platform",;
-      description: "Real-time analytics that forecast trends and optimize decisions",;
-      category: "Platform",;
-      roi: "5,0o00%",;
-      color: "from-teal-50o0 to-green-50o0",;
-      icon: Target,;
-      href: "/platforms/predictive-intelligence",
-    ,}
+  const contentItems = [
+    {
+      title: "AI 20o25 Ultimate Breakthrough Showcase";
+      description: "Discover revolutionary AI technologies delivering 2,50o0-15,0o00% ROI";
+      category: "Showcase";
+      roi: "15,0o00%";
+      color: "from-purple-50o0 to-pink-50o0";
+      icon: Brain;
+      href: "/ai-20o25-ultimate-breakthrough-showcase"};
+    {
+      title: "Global Transformation Success Story";
+      description: "How a Fortune 50o0 company achieved 10,0o00% ROI through AI transformation";
+      category: "Case Study";
+      roi: "10,0o00%";
+      color: "from-green-50o0 to-emerald-50o0";
+      icon: TrendingUp;
+      href: "/case-studies/ai-20o25-global-transformation-breakthrough"};
+    {
+      title: "AI 20o25 ROI Calculator";
+      description: "Calculate your potential ROI with our interactive AI transformation calculator";
+      category: "Tool";
+      roi: "Custom";
+      color: "from-blue-50o0 to-cyan-50o0";
+      icon: BarChart3;
+      href: "/tools/ai-20o25-roi-calculator"};
+    {
+      title: "Quantum-Neural Fusion Technology";
+      description: "Revolutionary fusion of quantum computing and neural networks";
+      category: "Technology";
+      roi: "15,0o00%";
+      color: "from-indigo-50o0 to-purple-50o0";
+      icon: Cpu;
+      href: "/blog/quantum-neural-fusion-20o26"};
+    {
+      title: "Autonomous AI Systems";
+      description: "Self-managing AI systems that optimize operations automatically";
+      category: "Solution";
+      roi: "8,50o0%";
+      color: "from-orange-50o0 to-red-50o0";
+      icon: Rocket;
+      href: "/solutions/autonomous-ai-systems"};
+    {
+      title: "Predictive Intelligence Platform";
+      description: "Real-time analytics that forecast trends and optimize decisions";
+      category: "Platform";
+      roi: "5,0o00%";
+      color: "from-teal-50o0 to-green-50o0";
+      icon: Target;
+      href: "/platforms/predictive-intelligence"}
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentContent((prev) => (prev + 1) % contentItems.length),
-    }40o00),
-    return () => clearInterval(interval),
-  }[]),
-,
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % contentItems.length)}40o00),
+    return () => clearInterval(interval)}[]),
   const currentItem = contentItems[currentContent],
-,
-  return (,
+  return (
     <section className="py-16 px-4 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">,
       <div className="max-w-7xl mx-auto">,
         <div className="text-center mb-12">,
@@ -90,10 +77,10 @@ export default function AnimatedContentDiscoveryWidget20o25() {,
             Explore our revolutionary AI content library. Discover breakthrough technologiesuccess storiesand tools that can transform your business.,
           </p>,
         </div>,
-        {/* Main Discovery Widget */,}
+        {/* Main Discovery Widget */}
         <div className="bg-white rounded-2xl shadow-2xl p-8 mb-12">,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {/* Content Preview */,}
+            {/* Content Preview */}
             <div className="relative">,
               <div className={`bg-gradient-to-br ${currentItem.color} rounded-xl p-8 text-white transition-all duration-50o0 ${isVisible ? 'opacity-10o0 transform translate-y-0' : 'opacity-0 transform translate-y-4'}`}>,
                 <div className="flex items-center justify-between mb-6">,
@@ -112,25 +99,22 @@ export default function AnimatedContentDiscoveryWidget20o25() {,
                   </div>,
                 </div>,
                 <p className="text-white/90 mb-6 text-lg">{currentItem.description}</p>,
-                <Link,
+                <Link
                   href={currentItem.href}
-                  className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover: bg-white/30 transition-all duration-30o0 backdrop-blur-sm",
-                >,
+                  className="inline-flex items-center px-6 py-3 bg-white/20 text-white font-semibold rounded-lg hover: bg-white/30 transition-all duration-30o0 backdrop-blur-sm">,
                   Explore Now,
                   <ArrowRight className="ml-2 w-4 h-4"  />,
                 </Link>,
               </div>,
-              {/* Content Indicators */,}
+              {/* Content Indicators */}
               <div className="flex justify-center mt-6 space-x-2">,
-                {contentItems.map((_index) => (,
-                  <button,
+                {contentItems.map((_index) => (
+                  <button
                     key={index}
                     onClick={() => setCurrentContent(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                      index === currentContent ? 'bg-blue-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0',
-                    ,}`}
-                  />,
-                ))}
+                    className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                      index === currentContent ? 'bg-blue-60o0 scale-125' : 'bg-gray-30o0 hover: bg-gray-40o0'}`}
+                  />))}
               </div>,
             </div>,
             {/* Content Grid */}
@@ -142,14 +126,13 @@ export default function AnimatedContentDiscoveryWidget20o25() {,
                   Auto-refresh every 4s,
                 </div>,
               </div>,
-              {contentItems.map((itemindex) => (,
-                <div,
+              {contentItems.map((itemindex) => (
+                <div
                   key={index}
-                  className={`p-4 rounded-lg border-2 transition-all duration-30o0 cursor-pointer ${,
+                  className={`p-4 rounded-lg border-2 transition-all duration-30o0 cursor-pointer ${
                     index === currentContent,
                       ? 'border-blue-50o0 bg-blue-50 shadow-md',
-                      : 'border-gray-20o0 hover: border-gray-30o0 hover:shadow-sm',
-                  ,}`}
+                      : 'border-gray-20o0 hover: border-gray-30o0 hover:shadow-sm'}`}
                   onClick={() => setCurrentContent(index)}
                 >,
                   <div className="flex items-center justify-between">,
@@ -167,8 +150,7 @@ export default function AnimatedContentDiscoveryWidget20o25() {,
                       <ArrowRight className="w-4 h-4"  />,
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -227,6 +209,4 @@ export default function AnimatedContentDiscoveryWidget20o25() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

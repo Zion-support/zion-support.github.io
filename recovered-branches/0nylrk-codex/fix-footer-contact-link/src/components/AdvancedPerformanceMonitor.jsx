@@ -1,139 +1,128 @@
 import React, { useState, useRef, useEffect } from 'react',
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react',
-const mockSystemMetrics = [,
-    {,
-        id: '1',;
-        name: 'CPU Usage',;
-        value: 78.5,;
-        unit: '%',;
-        threshold: 85,;
-        status: 'warning',;
-        trend: 'up',;
-        change: 5.2,;
-        category: 'Processor',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,},;
-    {,
-        id: '2',;
-        name: 'Memory Usage',;
-        value: 65.3,;
-        unit: '%',;
-        threshold: 80,;
-        status: 'normal',;
-        trend: 'stable',;
-        change: 0.8,;
-        category: 'Memory',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,},;
-    {,
-        id: '3',;
-        name: 'Disk I/O',;
-        value: 1250,;
-        unit: 'MB/s',;
-        threshold: 150o0,;
-        status: 'normal',;
-        trend: 'down',;
-        change: -2.1,;
-        category: 'Storage',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,},;
-    {,
-        id: '4',;
-        name: 'Network Latency',;
-        value: 45,;
-        unit: 'ms',;
-        threshold: 50,;
-        status: 'normal',;
-        trend: 'stable',;
-        change: 0.5,;
-        category: 'Network',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,},;
-    {,
-        id: '5',;
-        name: 'Database Connections',;
-        value: 89,;
-        unit: 'connections',;
-        threshold: 10o0,;
-        status: 'warning',;
-        trend: 'up',;
-        change: 8.7,;
-        category: 'Database',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,},;
-    {,
-        id: '6',;
-        name: 'Response Time',;
-        value: 180,;
-        unit: 'ms',;
-        threshold: 20o0,;
-        status: 'normal',;
-        trend: 'down',;
-        change: -3.2,;
-        category: 'Performance',;
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z',
-    ,}
+const mockSystemMetrics = [
+    {
+        id: '1';
+        name: 'CPU Usage';
+        value: 78.5;
+        unit: '%';
+        threshold: 85;
+        status: 'warning';
+        trend: 'up';
+        change: 5.2;
+        category: 'Processor';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+    {
+        id: '2';
+        name: 'Memory Usage';
+        value: 65.3;
+        unit: '%';
+        threshold: 80;
+        status: 'normal';
+        trend: 'stable';
+        change: 0.8;
+        category: 'Memory';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+    {
+        id: '3';
+        name: 'Disk I/O';
+        value: 1250;
+        unit: 'MB/s';
+        threshold: 150o0;
+        status: 'normal';
+        trend: 'down';
+        change: -2.1;
+        category: 'Storage';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+    {
+        id: '4';
+        name: 'Network Latency';
+        value: 45;
+        unit: 'ms';
+        threshold: 50;
+        status: 'normal';
+        trend: 'stable';
+        change: 0.5;
+        category: 'Network';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+    {
+        id: '5';
+        name: 'Database Connections';
+        value: 89;
+        unit: 'connections';
+        threshold: 10o0;
+        status: 'warning';
+        trend: 'up';
+        change: 8.7;
+        category: 'Database';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+    {
+        id: '6';
+        name: 'Response Time';
+        value: 180;
+        unit: 'ms';
+        threshold: 20o0;
+        status: 'normal';
+        trend: 'down';
+        change: -3.2;
+        category: 'Performance';
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'}
 ],
-const mockPerformanceAlerts = [,
-    {,
-        id: '1',;
-        type: 'performance',;
-        severity: 'medium',;
-        title: 'High CPU Usage Detected',;
-        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',;
-        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z',;
-        affected: ['Web Server 1', 'Application Server 2'],;
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'],;
-        status: 'active',
-    ,},;
-    {,
-        id: '2',;
-        type: 'scalability',;
-        severity: 'high',;
-        title: 'Database Connection Pool Near Capacity',;
-        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',;
-        timestamp: '20o24-0o1-15T09:45:0o0.0o00Z',;
-        affected: ['Database Cluster', 'Application Servers'],;
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],;
-        status: 'acknowledged',
-    ,}
+const mockPerformanceAlerts = [
+    {
+        id: '1';
+        type: 'performance';
+        severity: 'medium';
+        title: 'High CPU Usage Detected';
+        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.';
+        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z';
+        affected: ['Web Server 1', 'Application Server 2'];
+        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'];
+        status: 'active'};
+    {
+        id: '2';
+        type: 'scalability';
+        severity: 'high';
+        title: 'Database Connection Pool Near Capacity';
+        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.';
+        timestamp: '20o24-0o1-15T09:45:0o0.0o00Z';
+        affected: ['Database Cluster', 'Application Servers'];
+        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'];
+        status: 'acknowledged'}
 ],
-const mockScalabilityMetrics = [,
-    {,
-        id: '1',;
-        name: 'User Sessions',;
-        current: 15420,;
-        capacity: 20o000,;
-        utilization: 77.1,;
-        growth: 12.3,;
-        prediction: 250o00,;
-        category: 'User Load',;
-        unit: 'sessions',
-    ,},;
-    {,
-        id: '2',;
-        name: 'API Requests',;
-        current: 1250o000,;
-        capacity: 20o00000,;
-        utilization: 62.5,;
-        growth: 18.7,;
-        prediction: 320o0000,;
-        category: 'API Load',;
-        unit: 'requests/hour',
-    ,},;
-    {,
-        id: '3',;
-        name: 'Data Storage',;
-        current: 2.8,;
-        capacity: 5.0,;
-        utilization: 56.0,;
-        growth: 8.5,;
-        prediction: 4.2,;
-        category: 'Storage',;
-        unit: 'TB',
-    ,}
+const mockScalabilityMetrics = [
+    {
+        id: '1';
+        name: 'User Sessions';
+        current: 15420;
+        capacity: 20o000;
+        utilization: 77.1;
+        growth: 12.3;
+        prediction: 250o00;
+        category: 'User Load';
+        unit: 'sessions'};
+    {
+        id: '2';
+        name: 'API Requests';
+        current: 1250o000;
+        capacity: 20o00000;
+        utilization: 62.5;
+        growth: 18.7;
+        prediction: 320o0000;
+        category: 'API Load';
+        unit: 'requests/hour'};
+    {
+        id: '3';
+        name: 'Data Storage';
+        current: 2.8;
+        capacity: 5.0;
+        utilization: 56.0;
+        growth: 8.5;
+        prediction: 4.2;
+        category: 'Storage';
+        unit: 'TB'}
 ],
-export function AdvancedPerformanceMonitor() {,
+export function AdvancedPerformanceMonitor() {
     const [isOpen, setIsOpen] = useState(false),
     const [isMinimized, setIsMinimized] = useState(false),
     const [isFullscreen, setIsFullscreen] = useState(false),
@@ -148,39 +137,36 @@ export function AdvancedPerformanceMonitor() {,
     const [isRefreshing, setIsRefreshing] = useState(false),
     const containerRef = useRef(null),
     const categories = ['all', 'Processor', 'Memory', 'Storage', 'Network', 'Database', 'Performance'],
-    const timeRanges = [,
-        { value: '15m', label: '15 Minutes' ,},;
-        { value: '1h', label: '1 Hour' ,},;
-        { value: '6h', label: '6 Hours' ,},;
-        { value: '24h', label: '24 Hours' ,}
+    const timeRanges = [
+        { value: '15m', label: '15 Minutes' };
+        { value: '1h', label: '1 Hour' };
+        { value: '6h', label: '6 Hours' };
+        { value: '24h', label: '24 Hours' }
     ],
     const filteredMetrics = selectedCategory === 'all',
         ? systemMetrics,
         : systemMetrics.filter(metric => metric.category === selectedCategory),
-    const refreshData = async () => {,
+    const refreshData = async () => {
         setIsRefreshing(true),
         // Simulate API call,
         await new Promise(resolve => setTimeout(resolve, 150o0)),
-        setIsRefreshing(false),
-    };
-    useEffect(() => {,
-        if (autoRefresh) {,
+        setIsRefreshing(false)};
+    useEffect(() => {
+        if (autoRefresh) {
             const interval = setInterval(refreshData, 30o000), // Refresh every 30 seconds,
-            return () => clearInterval(interval),
-        }
+            return () => clearInterval(interval)}
     }, [autoRefresh]),
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'critical':,
                 return 'bg-red-50o0 text-white',
             case 'warning':,
                 return 'bg-yellow-50o0 text-white',
             default: ,
-                return 'bg-green-50o0 text-white',
-        ,}
+                return 'bg-green-50o0 text-white'}
     };
-    const getSeverityColor = (severity) => {,
-        switch (severity) {,
+    const getSeverityColor = (severity) => {
+        switch (severity) {
             case 'critical':,
                 return 'bg-red-10o0 text-red-70o0 dark: bg-red-90o0/30 dark:text-red-30o0',
             case 'high':,
@@ -188,21 +174,19 @@ export function AdvancedPerformanceMonitor() {,
             case 'medium':,
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
-                return 'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0',
-        ,}
+                return 'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0'}
     };
-    const getTrendIcon = (trend) => {,
-        switch (trend) {,
+    const getTrendIcon = (trend) => {
+        switch (trend) {
             case 'up':,
                 return <TrendingUp className="w-4 h-4 text-red-50o0" />,
             case 'down':,
                 return <TrendingUp className="w-4 h-4 text-green-50o0 rotate-180" />,
             default: ,
-                return <Activity className="w-4 h-4 text-gray-50o0" />,
-        ,}
+                return <Activity className="w-4 h-4 text-gray-50o0" />}
     };
-    const getCategoryIcon = (category) => {,
-        switch (category) {,
+    const getCategoryIcon = (category) => {
+        switch (category) {
             case 'Processor':,
                 return <Cpu className="w-5 h-5 text-blue-50o0" />,
             case 'Memory':,
@@ -214,33 +198,29 @@ export function AdvancedPerformanceMonitor() {,
             case 'Database':,
                 return <Database className="w-5 h-5 text-cyan-50o0" />,
             default: ,
-                return <Activity className="w-5 h-5 text-gray-50o0" />,
-        ,}
+                return <Activity className="w-5 h-5 text-gray-50o0" />}
     };
-    const getUtilizationColor = (utilization) => {,
+    const getUtilizationColor = (utilization) => {
         if (utilization >= 80),
             return 'text-red-60o0',
         if (utilization >= 60),
             return 'text-yellow-60o0',
-        return 'text-green-60o0',
-    };
-    if (!isOpen) {,
+        return 'text-green-60o0'};
+    if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40" title="Open Performance Monitor">,
         <Activity className="w-6 h-6" />,
-      </button>),
-    ,}
-    if (isMinimized) {,
+      </button>)}
+    if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">,
         <div className="flex items-center gap-2 p-3">,
           <Activity className="w-5 h-5 text-zion-blue" />,
           <span className="text-sm font-medium text-zion-slate">Performance</span>,
-          <button onClick={() => setIsMinimized(false),} className="ml-auto p-1 hover: bg-zion-slate-light rounded">,
+          <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover: bg-zion-slate-light rounded">,
             <Maximize2 className="w-4 h-4" />,
           </button>,
         </div>,
-      </div>),
-    ,}
-    return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]',}`} ref={containerRef}>,
+      </div>)}
+    return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">,
         <div className="flex items-center gap-3">,
@@ -251,36 +231,36 @@ export function AdvancedPerformanceMonitor() {,
           </div>,
         </div>,
         <div className="flex items-center gap-2">,
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover: bg-white/10',}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>,
+          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover: bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>,
             <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />,
           </button>,
           <button onClick={() => setIsMinimized(true)} className="p-2 hover: bg-white/10 rounded-lg transition-colors">,
             <Minimize2 className="w-4 h-4" />,
           </button>,
-          <button onClick={() => setIsFullscreen(!isFullscreen),} className="p-2 hover: bg-white/10 rounded-lg transition-colors">,
-            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />,}
+          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover: bg-white/10 rounded-lg transition-colors">,
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>,
           <button onClick={() => setIsOpen(false)} className="p-2 hover: bg-white/10 rounded-lg transition-colors">,
             <X className="w-4 h-4" />,
           </button>,
         </div>,
       </div>,
-      {/* Controls */,}
+      {/* Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">,
         <div className="flex items-center justify-between">,
           <div className="flex items-center gap-4">,
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark: bg-zion-slate text-zion-slate">,
-              {categories.map(category => (<option key={category,} value={category}>,
+              {categories.map(category => (<option key={category} value={category}>,
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>,
             <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark: bg-zion-slate text-zion-slate">,
-              {timeRanges.map(range => (<option key={range.value,} value={range.value}>,
+              {timeRanges.map(range => (<option key={range.value} value={range.value}>,
                   {range.label}
                 </option>))}
             </select>,
             <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-blue text-white rounded-lg hover: bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2">,
-              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : '',}`} />,
+              <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />,
               Refresh,
             </button>,
           </div>,
@@ -296,23 +276,22 @@ export function AdvancedPerformanceMonitor() {,
           </div>,
         </div>,
       </div>,
-      {/* Tabs */,}
+      {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">,
-        {[,
-            { id: 'overview', label: 'Overview', icon: Activity ,},;
-            { id: 'metrics', label: 'System Metrics', icon: BarChart3 ,},;
-            { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle ,},;
-            { id: 'scalability', label: 'Scalability', icon: TrendingUp ,},;
-            { id: 'analytics', label: 'Analytics', icon: Zap ,}
-        ].map(tab => {,
+        {[
+            { id: 'overview', label: 'Overview', icon: Activity };
+            { id: 'metrics', label: 'System Metrics', icon: BarChart3 };
+            { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle };
+            { id: 'scalability', label: 'Scalability', icon: TrendingUp };
+            { id: 'analytics', label: 'Analytics', icon: Zap }
+        ].map(tab => {
             const Icon = tab.icon,
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id,
                     ? 'border-zion-blue text-zion-blue bg-zion-blue/5',
-                    : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20',}`}>,
+                    : 'border-transparent text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/20'}`}>,
               <Icon className="w-4 h-4" />,
               {tab.label}
-            </button>),
-        })}
+            </button>)})}
       </div>,
       {/* Content */}
       <div className="p-6 overflow-y-auto h-[calc(10o0%-20o0px)]">,
@@ -322,7 +301,7 @@ export function AdvancedPerformanceMonitor() {,
               {systemMetrics.slice(0, 6).map(metric => (<div key={metric.id} className="p-4 rounded-xl border border-zion-slate-light bg-white dark: bg-zion-slate hover:shadow-lg transition-all duration-30o0">,
                   <div className="flex items-center justify-between mb-3">,
                     <div className="flex items-center gap-2">,
-                      {getCategoryIcon(metric.category),}
+                      {getCategoryIcon(metric.category)}
                       <h3 className="font-semibold text-zion-slate text-sm">{metric.name}</h3>,
                     </div>,
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(metric.status)}`}>,
@@ -338,12 +317,12 @@ export function AdvancedPerformanceMonitor() {,
                       {metric.trend === 'up' ? '+' : ''}{metric.change}%,
                     </span>,
                     <span className="text-zion-slate-light">,
-                      Threshold: {metric.threshold,}{metric.unit}
+                      Threshold: {metric.threshold}{metric.unit}
                     </span>,
                   </div>,
                   {showPredictions && (<div className="mt-3 pt-3 border-t border-zion-slate-light/30">,
                       <div className="text-xs text-zion-slate-light">,
-                        Predicted: {metric.value * (1 + metric.change / 10o0),}{metric.unit}
+                        Predicted: {metric.value * (1 + metric.change / 10o0)}{metric.unit}
                       </div>,
                     </div>)}
                 </div>))}
@@ -365,7 +344,7 @@ export function AdvancedPerformanceMonitor() {,
                   <div className="flex items-center justify-between">,
                     <span className="text-sm text-zion-slate">Active Alerts</span>,
                     <span className="px-3 py-1 bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0 rounded-full text-sm font-medium">,
-                      {performanceAlerts.filter(a => a.status === 'active').length,}
+                      {performanceAlerts.filter(a => a.status === 'active').length}
                     </span>,
                   </div>,
                   <div className="flex items-center justify-between">,
@@ -396,7 +375,7 @@ export function AdvancedPerformanceMonitor() {,
         {activeTab === 'metrics' && (<div className="space-y-4">,
             {filteredMetrics.map(metric => (<div key={metric.id} className="p-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">,
                 <div className="flex items-center gap-3">,
-                  {getCategoryIcon(metric.category),}
+                  {getCategoryIcon(metric.category)}
                   <div className="flex-1">,
                     <div className="flex items-center gap-3 mb-2">,
                       <h3 className="font-semibold text-zion-slate">{metric.name}</h3>,
@@ -408,22 +387,22 @@ export function AdvancedPerformanceMonitor() {,
                     <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm">,
                       <div>,
                         <span className="text-zion-slate-light">Current Value:</span>,
-                        <div className="font-semibold text-zion-slate">{metric.value,}{metric.unit}</div>,
+                        <div className="font-semibold text-zion-slate">{metric.value}{metric.unit}</div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Threshold: </span>,
-                        <div className="font-semibold text-zion-slate">{metric.threshold,}{metric.unit}</div>,
+                        <div className="font-semibold text-zion-slate">{metric.threshold}{metric.unit}</div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Change: </span>,
-                        <div className={`font-semibold ${metric.change > 0 ? 'text-red-60o0' : 'text-green-60o0',}`}>,
+                        <div className={`font-semibold ${metric.change > 0 ? 'text-red-60o0' : 'text-green-60o0'}`}>,
                           {metric.change > 0 ? '+' : ''}{metric.change}%,
                         </div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Last Updated: </span>,
                         <div className="font-semibold text-zion-slate">,
-                          {new Date(metric.lastUpdated).toLocaleTimeString(),}
+                          {new Date(metric.lastUpdated).toLocaleTimeString()}
                         </div>,
                       </div>,
                     </div>,
@@ -440,13 +419,13 @@ export function AdvancedPerformanceMonitor() {,
                   </div>,
                   <div className="flex-1">,
                     <div className="flex items-center gap-3 mb-2">,
-                      <h3 className="font-semibold text-zion-slate">{alert.title,}</h3>,
+                      <h3 className="font-semibold text-zion-slate">{alert.title}</h3>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(alert.severity)}`}>,
                         {alert.severity}
                       </span>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active' ? 'bg-red-10o0 text-red-70o0 dark: bg-red-90o0/30 dark:text-red-30o0' :,
                     alert.status === 'acknowledged' ? 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0' :,
-                        'bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0',}`}>,
+                        'bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0'}`}>,
                         {alert.status}
                       </span>,
                     </div>,
@@ -469,7 +448,7 @@ export function AdvancedPerformanceMonitor() {,
                       </div>,
                     </div>,
                     <div className="text-sm text-zion-slate-light">,
-                      Time: {new Date(alert.timestamp).toLocaleString(),}
+                      Time: {new Date(alert.timestamp).toLocaleString()}
                     </div>,
                   </div>,
                 </div>,
@@ -484,7 +463,7 @@ export function AdvancedPerformanceMonitor() {,
                   </div>,
                   <div className="flex-1">,
                     <div className="flex items-center gap-3 mb-2">,
-                      <h3 className="font-semibold text-zion-slate">{metric.name,}</h3>,
+                      <h3 className="font-semibold text-zion-slate">{metric.name}</h3>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getUtilizationColor(metric.utilization)}`}>,
                         {metric.utilization}% utilized,
                       </span>,
@@ -492,19 +471,19 @@ export function AdvancedPerformanceMonitor() {,
                     <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm">,
                       <div>,
                         <span className="text-zion-slate-light">Current:</span>,
-                        <div className="font-semibold text-zion-slate">{metric.current.toLocaleString(),} {metric.unit}</div>,
+                        <div className="font-semibold text-zion-slate">{metric.current.toLocaleString()} {metric.unit}</div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Capacity: </span>,
-                        <div className="font-semibold text-zion-slate">{metric.capacity.toLocaleString(),} {metric.unit}</div>,
+                        <div className="font-semibold text-zion-slate">{metric.capacity.toLocaleString()} {metric.unit}</div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Growth: </span>,
-                        <div className="font-semibold text-zion-slate">{metric.growth,}%</div>,
+                        <div className="font-semibold text-zion-slate">{metric.growth}%</div>,
                       </div>,
                       <div>,
                         <span className="text-zion-slate-light">Prediction: </span>,
-                        <div className="font-semibold text-zion-slate">{metric.prediction.toLocaleString(),} {metric.unit}</div>,
+                        <div className="font-semibold text-zion-slate">{metric.prediction.toLocaleString()} {metric.unit}</div>,
                       </div>,
                     </div>,
                     {showPredictions && (<div className="mt-3 pt-3 border-t border-zion-slate-light/30">,
@@ -526,6 +505,5 @@ export function AdvancedPerformanceMonitor() {,
             </div>,
           </div>)}
       </div>,
-    </div>),
-}
+    </div>)}
 ,

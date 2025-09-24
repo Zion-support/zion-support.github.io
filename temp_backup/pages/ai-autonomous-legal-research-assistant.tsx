@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousLegalResearchAssistantPage() {,
-  return (,
+export default function AiAutonomousLegalResearchAssistantPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Legal Research Assistant - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai autonomous legal research assistant page',
         />,
@@ -21,7 +20,5 @@ export default function AiAutonomousLegalResearchAssistantPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

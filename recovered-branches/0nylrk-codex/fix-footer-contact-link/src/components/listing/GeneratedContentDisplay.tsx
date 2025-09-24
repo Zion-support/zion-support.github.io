@@ -2,26 +2,22 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { ArrowRight } from 'lucide-react',
 import { CardContentCardFooterCardHeaderCardTitle } from '@/components/ui/card',
-,
-interface GeneratedContent {,
+interface GeneratedContent {
   description: string,
   tags: string[],
-  suggestedPrice: {,
+  suggestedPrice: {
     min: number,
-    max: number,
-  ,};
-  keyPoints: string[],
-,}
+    max: number};
+  keyPoints: string[]}
 ,
-interface GeneratedContentDisplayProps {,
+interface GeneratedContentDisplayProps {
   content: GeneratedContent,
-  onApply: () => void,
-,}
+  onApply: () => void}
 ,
-export function GeneratedContentDisplay({,
-  contentonApply,;
-}: GeneratedContentDisplayProps) {,
-  return (,
+export function GeneratedContentDisplay({
+  contentonApply;
+}: GeneratedContentDisplayProps) {
+  return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>,
       <CardHeader>,
         <CardTitle className='text-white'>Generated Content</CardTitle>,
@@ -38,14 +34,12 @@ export function GeneratedContentDisplay({,
             Tags,
           </h3>,
           <div className='flex flex-wrap gap-2'>,
-            {content.tags.map(tagindex => (,
-              <Badge,
+            {content.tags.map(tagindex => (
+              <Badge
                 key={index}
-                className='bg-zion-purple/20 text-zion-purple hover: bg-zion-purple/30',
-              >,
-                {tag,}
-              </Badge>,
-            ))}
+                className='bg-zion-purple/20 text-zion-purple hover: bg-zion-purple/30'>,
+                {tag}
+              </Badge>))}
           </div>,
         </div>,
         <div>,
@@ -62,22 +56,18 @@ export function GeneratedContentDisplay({,
             Key Selling Points,
           </h3>,
           <ul className='list-disc pl-5 text-white space-y-1'>,
-            {content.keyPoints.map(pointindex => (,
-              <li key={index}>{point}</li>,
-            ))}
+            {content.keyPoints.map(pointindex => (
+              <li key={index}>{point}</li>))}
           </ul>,
         </div>,
       </CardContent>,
       <CardFooter>,
-        <Button,
+        <Button
           onClick={onApply}
-          className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white',
-        >,
+          className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white'>,
           Apply to My Listing,
           <ArrowRight className='ml-2 h-4 w-4' />,
         </Button>,
       </CardFooter>,
-    </Card>,
-  ),
-,}
+    </Card>)}
 ,

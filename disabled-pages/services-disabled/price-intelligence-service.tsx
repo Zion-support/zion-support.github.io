@@ -1,8 +1,7 @@
 import Head from 'next/head.ts',
 import Link from 'next/link',
-,
-export default function PriceIntelligence() {,
-  return (,
+export default function PriceIntelligence() {
+  return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">,
       <Helmet>,
         <title>Price Intelligence — Services — Zion</title>,
@@ -27,7 +26,5 @@ export default function PriceIntelligence() {,
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover: b g-white">Get Started</a></Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

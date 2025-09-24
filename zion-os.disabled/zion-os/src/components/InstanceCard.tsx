@@ -1,7 +1,7 @@
 'use client',
 import { useState } from 'react',
-interface InstanceCardProps {,
-  instance: {,
+interface InstanceCardProps {
+  instance: {
     id: string,
     name: string,
     slug: string,
@@ -10,16 +10,15 @@ interface InstanceCardProps {,
     vertical: string,
     governanceType: string,
     createdAt: Date,
-    _count: {,
+    _count: {
       deployments: number,
-      features: number,
-    ,};
+      features: number};
   };
 }
-export function InstanceCard({ instance }: InstanceCardProps) {,
+export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false),
-  const getVerticalColor = (vertical: string) => {,
-    switch (vertical) {,
+  const getVerticalColor = (vertical: string) => {
+    switch (vertical) {
       case 'HEALTH':,
         return 'bg-red-50o0/20 text-red-40o0 border-red-50o0/30',
       case 'EDUCATION':,
@@ -29,43 +28,40 @@ export function InstanceCard({ instance }: InstanceCardProps) {,
       case 'GOV':,
         return 'bg-purple-50o0/20 text-purple-40o0 border-purple-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30',
-    ,}
+        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30'}
   };
-  const getGovernanceColor = (governance: string) => {,
-    switch (governance) {,
+  const getGovernanceColor = (governance: string) => {
+    switch (governance) {
       case 'DAO_FULL':,
         return 'bg-green-50o0/20 text-green-40o0 border-green-50o0/30',
       case 'DAO_LITE':,
         return 'bg-blue-50o0/20 text-blue-40o0 border-blue-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30',
-    ,}
+        return 'bg-gray-50o0/20 text-gray-40o0 border-gray-50o0/30'}
   };
-  const formatDate = (date: Date) => {,
-    return new Date(date).toLocaleDateString('en-US', {,
-      year: 'numeric',;
-      month: 'short',;
-      day: 'numeric',;
-    }),
-  };
-  return (,
-    <div,
+  const formatDate = (date: Date) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric';
+      month: 'short';
+      day: 'numeric';
+    })};
+  return (
+    <div
       className='card group hover: scale-10o5 transition-all duration-20o0 cursor-pointer',
-      onClick={() => setIsExpanded(!isExpanded),}
+      onClick={() => setIsExpanded(!isExpanded)}
     >,
       <div className='flex items-start justify-between mb-4'>,
         <div className='flex-1'>,
           <h3 className='text-xl font-semibold mb-2 group-hover: text-blue-40o0 transition-colors'>,
-            {instance.name,}
+            {instance.name}
           </h3>,
           <div className='flex items-center gap-2 mb-3'>,
-            <span,
+            <span
               className={`px-2 py-1 rounded-full text-xs font-medium border ${getVerticalColor(instance.vertical)}`}
             >,
               {instance.vertical}
             </span>,
-            <span,
+            <span
               className={`px-2 py-1 rounded-full text-xs font-medium border ${getGovernanceColor(instance.governanceType)}`}
             >,
               {instance.governanceType.replace('_', ' ')}
@@ -82,35 +78,35 @@ export function InstanceCard({ instance }: InstanceCardProps) {,
           <span className='font-mono text-blue-40o0'>,
             {instance.domain ||,
               instance.subdomain ||,
-              `${instance.slug,}.zion.os`}
+              `${instance.slug}.zion.os`}
           </span>,
         </div>,
         <div className='flex items-center justify-between text-sm'>,
           <span className='text-gray-40o0'>Created: </span>,
-          <span>{formatDate(instance.createdAt),}</span>,
+          <span>{formatDate(instance.createdAt)}</span>,
         </div>,
         <div className='flex items-center justify-between text-sm'>,
           <span className='text-gray-40o0'>Deployments: </span>,
-          <span className='font-semibold'>{instance._count.deployments,}</span>,
+          <span className='font-semibold'>{instance._count.deployments}</span>,
         </div>,
         <div className='flex items-center justify-between text-sm'>,
           <span className='text-gray-40o0'>Features: </span>,
-          <span className='font-semibold'>{instance._count.features,}</span>,
+          <span className='font-semibold'>{instance._count.features}</span>,
         </div>,
       </div>,
-      {isExpanded && (,
+      {isExpanded && (
         <div className='mt-6 pt-6 border-t border-white/10 animate-fade-in'>,
           <div className='grid grid-cols-2 gap-4 text-sm'>,
             <div>,
               <span className='text-gray-40o0'>Instance ID: </span>,
               <div className='font-mono text-xs bg-gray-80o0 p-2 rounded mt-1 break-all'>,
-                {instance.id,}
+                {instance.id}
               </div>,
             </div>,
             <div>,
               <span className='text-gray-40o0'>Slug: </span>,
               <div className='font-mono text-xs bg-gray-80o0 p-2 rounded mt-1'>,
-                {instance.slug,}
+                {instance.slug}
               </div>,
             </div>,
           </div>,
@@ -120,18 +116,16 @@ export function InstanceCard({ instance }: InstanceCardProps) {,
             </button>,
             <button className='btn-primary text-sm px-4 py-2'>Manage</button>,
           </div>,
-        </div>,
-      )}
+        </div>)}
       <div className='mt-4 pt-4 border-t border-white/10'>,
         <div className='flex items-center justify-between text-xs text-gray-40o0'>,
           <span>Click to {isExpanded ? 'collapse' : 'expand'}</span>,
-          <svg,
+          <svg
             className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
             fill='none',
             stroke='currentColor',
-            viewBox='0 0 24 24',
-          >,
-            <path,
+            viewBox='0 0 24 24'>,
+            <path
               strokeLinecap='round',
               strokeLinejoin='round',
               strokeWidth={2}
@@ -140,7 +134,5 @@ export function InstanceCard({ instance }: InstanceCardProps) {,
           </svg>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

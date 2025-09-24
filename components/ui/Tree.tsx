@@ -1,52 +1,40 @@
 "use client",
 import React{ useState } from "react",
-,
-export interface TreeNode {,
+export interface TreeNode {
   name: string,
   path: string,
   type: "folder" | "file",
   exists?: boolean,
-  children?: TreeNode[],
-,}
+  children?: TreeNode[]}
 ,
-interface TreeProps {,
+interface TreeProps {
   nodes: TreeNode[],
-  onDeploy?: (path: string) => void,
-,}
+  onDeploy?: (path: string) => void}
 ,
-function NodeItem({ nodepthonDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void ,}) {,
+function NodeItem({ nodepthonDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [opensetOpen] = useState<boolean>(false),
-,
   const hasChildren = Array.isArray(node.children) && node.children.length > 0,
   const toggle = () => setOpen((v) => !v),
-,
-  const copyPath = async () => {,
-    await navigator.clipboard.writeText(node.path),
-  };
-,
-  const clonePath = async () => {,
+  const copyPath = async () => {
+    await navigator.clipboard.writeText(node.path)};
+  const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`,
-    await fetch(url{,
-      method: "POST",;
-      headers: {,
-        "Content-Type": "application/json",;
+    await fetch(url{
+      method: "POST";
+      headers: {
+        "Content-Type": "application/json";
         // Expect an admin token in local storagefall back to prompt,
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,;
-      body: JSON.stringify({ path: node.path ,})}),
-  };
-,
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
+      body: JSON.stringify({ path: node.path })})};
   const deploy = () => onDeploy && onDeploy(node.path),
-,
-  return (,
+  return (
     <div className="ml-2">,
       <div className="flex items-center gap-2 py-1">,
-        {hasChildren ? (,
+        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">,
             {open ? "▾" : "▸"}
-          </button>,
-        ) : (,
-          <span className="inline-block w-4" />,
-        )}
+          </button>) : (
+          <span className="inline-block w-4" />)}
         <span className={`font-mono text-sm ${node.exists ? "text-green-600" : "text-gray-500"}`}>,
           {node.path}
         </span>,
@@ -56,26 +44,18 @@ function NodeItem({ nodepthonDeploy }: { node: TreeNode, depth: number, onDeploy
           <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>,
         </div>,
       </div>,
-      {hasChildren && open && (,
+      {hasChildren && open && (
         <div className="ml-4 border-l pl-2">,
-          {node.children!.map((child) => (,
-            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />,
-          ))}
-        </div>,
-      )}
-    </div>,
-  ),
-}
+          {node.children!.map((child) => (
+            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />))}
+        </div>)}
+    </div>)}
 ,
-export function Tree({ nodesonDeploy }: TreeProps) {,
-  return (,
+export function Tree({ nodesonDeploy }: TreeProps) {
+  return (
     <div className="w-full">,
-      {nodes.map((n) => (,
-        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />,
-      ))}
-    </div>,
-  ),
-}
+      {nodes.map((n) => (
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />))}
+    </div>)}
 ,
-export default Tree,
-,
+export default Tree;

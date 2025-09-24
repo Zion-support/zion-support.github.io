@@ -1,32 +1,24 @@
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link',
-,
-export type DocsNavItem = {,
+export type DocsNavItem = {
   id: string,
-  title: string,
-,};
-,
-export type DocsLayoutProps = {,
+  title: string};
+export type DocsLayoutProps = {
   title: string,
   nav: DocsNavItem[],
-  children: React.ReactNode,
-,};
-,
-export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {,
+  children: React.ReactNode};
+export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {
   const [query, setQuery] = useState(''),
-,
-  const filteredNav = useMemo(() => {,
+  const filteredNav = useMemo(() => {
     const q = query.trim().toLowerCase(),
     if (!q) return nav,
-    return nav.filter(n => n.title.toLowerCase().includes(q)),
-  }, [query, nav]),
-,
-  return (,
+    return nav.filter(n => n.title.toLowerCase().includes(q))}, [query, nav]),
+  return (
     <div className='grid grid-cols-1 lg: grid-cols-[260px_1fr_260px] gap-6'>,
       <aside className='lg:sticky lg:top-20 self-start space-y-4'>,
         <div>,
-          <h1 className='text-xl font-semibold mb-2'>{title,}</h1>,
-          <input,
+          <h1 className='text-xl font-semibold mb-2'>{title}</h1>,
+          <input
             type='search',
             placeholder='Search docs...',
             value={query}
@@ -35,19 +27,17 @@ export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {,
           />,
         </div>,
         <nav className='space-y-1 text-sm'>,
-          {filteredNav.map(item => (,
-            <a,
-              key={item.id,}
+          {filteredNav.map(item => (
+            <a
+              key={item.id}
               href={`#${item.id}`}
-              className='block px-2 py-1 rounded hover: bg-gray-10o0 dark:hover:bg-gray-80o0',
-            >,
-              {item.title,}
-            </a>,
-          ))}
+              className='block px-2 py-1 rounded hover: bg-gray-10o0 dark:hover:bg-gray-80o0'>,
+              {item.title}
+            </a>))}
         </nav>,
       </aside>,
       <article className='prose prose-slate dark: prose-invert max-w-none'>,
-        {children,}
+        {children}
       </article>,
       <aside className='hidden lg: block lg:sticky lg:top-20 self-start'>,
         <div className='border-l pl-4 border-gray-20o0 dark:border-gray-80o0'>,
@@ -55,16 +45,14 @@ export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {,
             On this page,
           </p>,
           <ul id='toc' className='mt-2 space-y-2 text-sm'>,
-            {nav.map(item => (,
-              <li key={item.id,}>,
-                <a,
+            {nav.map(item => (
+              <li key={item.id}>,
+                <a
                   href={`#${item.id}`}
-                  className='text-gray-60o0 dark: text-gray-30o0 hover:text-gray-90o0 dark:hover:text-white',
-                >,
-                  {item.title,}
+                  className='text-gray-60o0 dark: text-gray-30o0 hover:text-gray-90o0 dark:hover:text-white'>,
+                  {item.title}
                 </a>,
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
         <div className='mt-6'>,
@@ -73,7 +61,5 @@ export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {,
           </Link>,
         </div>,
       </aside>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

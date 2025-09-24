@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
-  return (,
+const QuantumNeuralFusionRevolutionBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-24 overflow-hidden'>,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className='absolute inset-0'>,
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20'></div>,
         <div className='absolute top-20 left-20 w-96 h-96 bg-blue-50o0 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse'></div>,
@@ -13,7 +12,7 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Revolutionary Badge */,}
+          {/* Revolutionary Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full px-8 py-3 mb-8 border border-cyan-30o0'>,
             <span className='text-lg font-bold'>,
               ⚛️ QUANTUM-NEURAL FUSION REVOLUTION,
@@ -27,13 +26,13 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
             <br />,
             <span className='text-5xl md:text-7xl'>Fusion Technology</span>,
           </h1>,
-          {/* Revolutionary Subtitle */,}
+          {/* Revolutionary Subtitle */}
           <p className='text-2xl md: text-3xl mb-12 max-w-5xl mx-auto leading-relaxed font-light'>,
             The world's first integration of quantum computing with advanced,
             neural networks. Experience unprecedented processing power and,
             intelligence capabilities.,
           </p>,
-          {/* Revolutionary Features */,}
+          {/* Revolutionary Features */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
             <div className='bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-30o0/30'>,
               <div className='text-6xl mb-6'>🧠</div>,
@@ -60,7 +59,7 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* Revolutionary Stats */,}
+          {/* Revolutionary Stats */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-16'>,
             <div className='text-center'>,
               <div className='text-4xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent mb-2'>,
@@ -89,22 +88,20 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
               <div className='text-sm opacity-80'>Response Time</div>,
             </div>,
           </div>,
-          {/* Revolutionary CTAs */,}
+          {/* Revolutionary CTAs */}
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-neural-fusion',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5 shadow-2xl'>,
               Experience the Revolution,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-demo',
-              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-40o0 hover:text-black transition-all',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-40o0 hover:text-black transition-all'>,
               Watch Live Demo,
             </Link>,
           </div>,
-          {/* Warning Notice */,}
+          {/* Warning Notice */}
           <div className='mt-12 p-6 bg-gradient-to-r from-yellow-50o0/20 to-orange-50o0/20 rounded-xl border border-yellow-40o0/30'>,
             <p className='text-lg font-semibold text-yellow-30o0'>,
               ⚠️ Revolutionary Technology: This breakthrough represents the most,
@@ -114,9 +111,5 @@ const QuantumNeuralFusionRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumNeuralFusionRevolutionBanner,
-,
+    </section>)};
+export default QuantumNeuralFusionRevolutionBanner;

@@ -1,418 +1,414 @@
 import React, { useState, useEffect } from 'react.ts',
 import { motion, AnimatePresence  } from 'framer-motion.ts',
-import { Search,;
-  Filter,;
-  Star,;
-  ArrowRight,;
-  ChevronDown,;
-  Globe,;
-  Zap,;
-  Shield,;
-  Brain,;
-  Cloud,;
-  Lock,;
-  Users,;
-  TrendingUp,;
-  Award,;
-  Clock,;
-  DollarSign,;
-  CheckCircle,;
-  Rocket,;
-  Target,;
-  Handshake,;
-  Lightbulb,;
-  Cpu,;
-  Database,;
-  Network,;
-  Smartphone,;
-  BarChart3,;
-  Code,;
-  Server,;
-  Chip,;
-  Wifi,;
-  ShieldCheck,;
-  Globe2,;
-  Bot,;
-  GitFork,;
-  Eye,;
-  Sparkles,;
-  Atom,;
-  Blockchain,;
-  Leaf,;
-  Factory,;
-  Car,;
-  Building,;
-  Heart,;
-  ShoppingCart,;
-  BookOpen,;
-  MessageCircle,;
-  HelpCircle,;
-  Gauge,;
-  PenTool,;
-  Truck,;
-  Building2,;
-  Palette,;
-  Camera,;
-  Video,;
-  Music,;
-  Gamepad2,;
-  CreditCard,;
-  Wallet,;
-  PiggyBank,;
-  TrendingDown,;
-  Activity,;
-  PieChart,;
-  LineChart,;
-  ScatterChart,;
-  BarChart,;
-  AreaChart,;
-  Layers,;
-  Grid,;
-  List,;
-  Columns,;
-  Rows,;
-  Layout,;
-  Monitor,;
-  Smartphone2,;
-  Tablet,;
-  Watch,;
-  Headphones,;
-  Speaker,;
-  Microphone,;
-  Keyboard,;
-  Mouse,;
-  HardDrive,;
-  Usb,;
-  Bluetooth,;
-  Wifi2,;
-  Signal,;
-  Battery,;
-  Power,;
-  Zap2,;
-  Sun,;
-  Moon,;
-  Cloud2,;
-  CloudRain,;
-  CloudLightning,;
-  CloudSnow,;
-  Wind,;
-  Thermometer,;
-  Droplets,;
-  Umbrella,;
-  Snowflake,;
-  Sunrise,;
-  Sunset,;
-  Moon2,;
-  Star2,;
-  Planet,;
-  Satellite,;
-  Telescope,;
-  Microscope,;
-  Flask,;
-  TestTube,;
-  Beaker,;
-  Atom2,;
-  Dna,;
-  Pill,;
-  Stethoscope,;
-  HeartPulse,;
-  Activity2,;
-  Brain2,;
-  Eye2,;
-  Ear,;
-  Nose,;
-  Mouth,;
-  Hand,;
-  Foot,;
-  Arm,;
-  Leg,;
-  Bone,;
-  Muscle,;
-  Nerve,;
-  Cell,;
-  Virus,;
-  Bacteria,;
-  Parasite,;
-  Fungus,;
-  Algae,;
-  Moss,;
-  Fern,;
-  Tree,;
-  Flower,;
-  Seed,;
-  Leaf2,;
-  Root,;
-  Bark,;
-  Wood,;
-  Paper,;
-  Book,;
-  Newspaper,;
-  Magazine,;
-  Document,;
-  File,;
-  Folder,;
-  Archive,;
-  Download,;
-  Upload,;
-  Share,;
-  Link,;
-  ExternalLink,;
-  Copy,;
-  Cut,;
-  Paste,;
-  Save,;
-  Edit,;
-  Trash,;
-  Undo,;
-  Redo,;
-  Refresh,;
-  RotateCcw,;
-  RotateCw,;
-  ZoomIn,;
-  ZoomOut,;
-  Move,;
-  Crop,;
-  Filter2,;
-  Sliders,;
-  Settings,;
-  Tool,;
-  Wrench,;
-  Screwdriver,;
-  Hammer,;
-  Saw,;
-  Drill,;
-  Screw,;
-  Nut,;
-  Bolt,;
-  Washer,;
-  Nail,;
-  Wire,;
-  Cable,;
-  Plug,;
-  Socket,;
-  Switch,;
-  Button,;
-  Knob,;
-  Dial,;
-  Gauge2,;
-  Meter,;
-  Scale,;
-  Weight,;
-  Timer,;
-  Stopwatch,;
-  Calendar,;
-  Clock2,;
-  Alarm,;
-  Bell,;
-  Notification,;
-  Alert,;
-  Warning,;
-  Info,;
-  Help,;
-  Question,;
-  Check,;
-  X,;
-  Plus,;
-  Minus,;
-  Divide,;
-  Multiply,;
-  Equal,;
-  NotEqual,;
-  GreaterThan,;
-  LessThan,;
-  GreaterThanOrEqual,;
-  LessThanOrEqual,;
-  Infinity,;
-  Pi,;
-  Sigma,;
-  Sum,;
-  Product,;
-  Average,;
-  Median,;
-  Mode,;
-  Range,;
-  Variance,;
-  StandardDeviation,;
-  Correlation,;
-  Regression,;
-  Hypothesis,;
-  Confidence,;
-  PValue,;
-  Significance,;
-  Power,;
-  EffectSize,;
-  SampleSize,;
-  Population,;
-  Sample,;
-  Random,;
-  Systematic,;
-  Stratified,;
-  Cluster,;
-  Convenience,;
-  Snowball,;
-  Purposive,;
-  Quota,;
-  Theoretical,;
-  MaximumVariation,;
-  Homogeneous,;
-  Heterogeneous,;
-  Representative,;
-  Biased,;
-  Unbiased,;
-  Valid,;
-  Reliable,;
-  Accurate,;
-  Precise,;
-  Consistent,;
-  Stable,;
-  Robust,;
-  Flexible,;
-  Adaptable,;
-  Scalable,;
-  Extensible,;
-  Maintainable,;
-  Readable,;
-  Testable,;
-  Deployable,;
-  Portable,;
-  Interoperable,;
-  Compatible,;
-  Secure,;
-  Private,;
-  Confidential,;
-  Anonymous,;
-  Pseudonymous,;
-  Transparent,;
-  Accountable,;
-  Traceable,;
-  Auditable,;
-  Verifiable,;
-  Authentic,;
-  Genuine,;
-  Original,;
-  Unique,;
-  Distinct,;
-  Different,;
-  Similar,;
-  Identical,;
-  Equivalent,;
-  Comparable,;
-  Relative,;
-  Absolute,;
-  Objective,;
-  Subjective,;
-  Qualitative,;
-  Quantitative,;
-  Discrete,;
-  Continuous,;
-  Categorical,;
-  Numerical,;
-  Ordinal,;
-  Nominal,;
-  Interval,;
-  Ratio,;
-  Binary,;
-  Ternary,;
-  Quaternary,;
-  Quinary,;
-  Senary,;
-  Septenary,;
-  Octonary,;
-  Nonary,;
-  Decimal,;
-  Duodecimal,;
-  Hexadecimal,;
-  Vigesimal,;
-  Sexagesimal,;
-  Centesimal,;
-  Mille,;
-  Million,;
-  Billion,;
-  Trillion,;
-  Quadrillion,;
-  Quintillion,;
-  Sextillion,;
-  Septillion,;
-  Octillion,;
-  Nonillion,;
-  Decillion,;
-  Undecillion,;
-  Duodecillion,;
-  Tredecillion,;
-  Quattuordecillion,;
-  Quindecillion,;
-  Sexdecillion,;
-  Septendecillion,;
-  Octodecillion,;
-  Novemdecillion,;
-  Vigintillion,;
-  Centillion,;
-  Googol,;
-  Googolplex,;
-  Infinity2,;
-  AlephNull,;
-  AlephOne,;
-  AlephOmega,;
-  BethNull,;
-  BethOne,;
-  BethOmega,;
-  Gimel,;
-  Daleth,;
-  He,;
-  Vav,;
-  Zayin,;
-  Chet,;
-  Tet,;
-  Yod,;
-  Kaf,;
-  Lamed,;
-  Mem,;
-  Nun,;
-  Samekh,;
-  Ayin,;
-  Pe,;
-  Tsadi,;
-  Qof,;
-  Resh,;
-  Shin,;
-  Tav,;
-  Alpha,;
-  Beta,;
-  Gamma,;
-  Delta,;
-  Epsilon,;
-  Zeta,;
-  Eta,;
-  Theta,;
-  Iota,;
-  Kappa,;
-  Lambda,;
-  Mu,;
-  Nu,;
-  Xi,;
-  Omicron,;
-  Pi2,;
-  Rho,;
-  Sigma2,;
-  Tau,;
-  Upsilon,;
-  Phi,;
-  Chi,;
-  Psi,;
-  Omega,;
-  Crown,
- } from 'lucide-react.ts',
+import { Search;
+  Filter;
+  Star;
+  ArrowRight;
+  ChevronDown;
+  Globe;
+  Zap;
+  Shield;
+  Brain;
+  Cloud;
+  Lock;
+  Users;
+  TrendingUp;
+  Award;
+  Clock;
+  DollarSign;
+  CheckCircle;
+  Rocket;
+  Target;
+  Handshake;
+  Lightbulb;
+  Cpu;
+  Database;
+  Network;
+  Smartphone;
+  BarChart3;
+  Code;
+  Server;
+  Chip;
+  Wifi;
+  ShieldCheck;
+  Globe2;
+  Bot;
+  GitFork;
+  Eye;
+  Sparkles;
+  Atom;
+  Blockchain;
+  Leaf;
+  Factory;
+  Car;
+  Building;
+  Heart;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  Gauge;
+  PenTool;
+  Truck;
+  Building2;
+  Palette;
+  Camera;
+  Video;
+  Music;
+  Gamepad2;
+  CreditCard;
+  Wallet;
+  PiggyBank;
+  TrendingDown;
+  Activity;
+  PieChart;
+  LineChart;
+  ScatterChart;
+  BarChart;
+  AreaChart;
+  Layers;
+  Grid;
+  List;
+  Columns;
+  Rows;
+  Layout;
+  Monitor;
+  Smartphone2;
+  Tablet;
+  Watch;
+  Headphones;
+  Speaker;
+  Microphone;
+  Keyboard;
+  Mouse;
+  HardDrive;
+  Usb;
+  Bluetooth;
+  Wifi2;
+  Signal;
+  Battery;
+  Power;
+  Zap2;
+  Sun;
+  Moon;
+  Cloud2;
+  CloudRain;
+  CloudLightning;
+  CloudSnow;
+  Wind;
+  Thermometer;
+  Droplets;
+  Umbrella;
+  Snowflake;
+  Sunrise;
+  Sunset;
+  Moon2;
+  Star2;
+  Planet;
+  Satellite;
+  Telescope;
+  Microscope;
+  Flask;
+  TestTube;
+  Beaker;
+  Atom2;
+  Dna;
+  Pill;
+  Stethoscope;
+  HeartPulse;
+  Activity2;
+  Brain2;
+  Eye2;
+  Ear;
+  Nose;
+  Mouth;
+  Hand;
+  Foot;
+  Arm;
+  Leg;
+  Bone;
+  Muscle;
+  Nerve;
+  Cell;
+  Virus;
+  Bacteria;
+  Parasite;
+  Fungus;
+  Algae;
+  Moss;
+  Fern;
+  Tree;
+  Flower;
+  Seed;
+  Leaf2;
+  Root;
+  Bark;
+  Wood;
+  Paper;
+  Book;
+  Newspaper;
+  Magazine;
+  Document;
+  File;
+  Folder;
+  Archive;
+  Download;
+  Upload;
+  Share;
+  Link;
+  ExternalLink;
+  Copy;
+  Cut;
+  Paste;
+  Save;
+  Edit;
+  Trash;
+  Undo;
+  Redo;
+  Refresh;
+  RotateCcw;
+  RotateCw;
+  ZoomIn;
+  ZoomOut;
+  Move;
+  Crop;
+  Filter2;
+  Sliders;
+  Settings;
+  Tool;
+  Wrench;
+  Screwdriver;
+  Hammer;
+  Saw;
+  Drill;
+  Screw;
+  Nut;
+  Bolt;
+  Washer;
+  Nail;
+  Wire;
+  Cable;
+  Plug;
+  Socket;
+  Switch;
+  Button;
+  Knob;
+  Dial;
+  Gauge2;
+  Meter;
+  Scale;
+  Weight;
+  Timer;
+  Stopwatch;
+  Calendar;
+  Clock2;
+  Alarm;
+  Bell;
+  Notification;
+  Alert;
+  Warning;
+  Info;
+  Help;
+  Question;
+  Check;
+  X;
+  Plus;
+  Minus;
+  Divide;
+  Multiply;
+  Equal;
+  NotEqual;
+  GreaterThan;
+  LessThan;
+  GreaterThanOrEqual;
+  LessThanOrEqual;
+  Infinity;
+  Pi;
+  Sigma;
+  Sum;
+  Product;
+  Average;
+  Median;
+  Mode;
+  Range;
+  Variance;
+  StandardDeviation;
+  Correlation;
+  Regression;
+  Hypothesis;
+  Confidence;
+  PValue;
+  Significance;
+  Power;
+  EffectSize;
+  SampleSize;
+  Population;
+  Sample;
+  Random;
+  Systematic;
+  Stratified;
+  Cluster;
+  Convenience;
+  Snowball;
+  Purposive;
+  Quota;
+  Theoretical;
+  MaximumVariation;
+  Homogeneous;
+  Heterogeneous;
+  Representative;
+  Biased;
+  Unbiased;
+  Valid;
+  Reliable;
+  Accurate;
+  Precise;
+  Consistent;
+  Stable;
+  Robust;
+  Flexible;
+  Adaptable;
+  Scalable;
+  Extensible;
+  Maintainable;
+  Readable;
+  Testable;
+  Deployable;
+  Portable;
+  Interoperable;
+  Compatible;
+  Secure;
+  Private;
+  Confidential;
+  Anonymous;
+  Pseudonymous;
+  Transparent;
+  Accountable;
+  Traceable;
+  Auditable;
+  Verifiable;
+  Authentic;
+  Genuine;
+  Original;
+  Unique;
+  Distinct;
+  Different;
+  Similar;
+  Identical;
+  Equivalent;
+  Comparable;
+  Relative;
+  Absolute;
+  Objective;
+  Subjective;
+  Qualitative;
+  Quantitative;
+  Discrete;
+  Continuous;
+  Categorical;
+  Numerical;
+  Ordinal;
+  Nominal;
+  Interval;
+  Ratio;
+  Binary;
+  Ternary;
+  Quaternary;
+  Quinary;
+  Senary;
+  Septenary;
+  Octonary;
+  Nonary;
+  Decimal;
+  Duodecimal;
+  Hexadecimal;
+  Vigesimal;
+  Sexagesimal;
+  Centesimal;
+  Mille;
+  Million;
+  Billion;
+  Trillion;
+  Quadrillion;
+  Quintillion;
+  Sextillion;
+  Septillion;
+  Octillion;
+  Nonillion;
+  Decillion;
+  Undecillion;
+  Duodecillion;
+  Tredecillion;
+  Quattuordecillion;
+  Quindecillion;
+  Sexdecillion;
+  Septendecillion;
+  Octodecillion;
+  Novemdecillion;
+  Vigintillion;
+  Centillion;
+  Googol;
+  Googolplex;
+  Infinity2;
+  AlephNull;
+  AlephOne;
+  AlephOmega;
+  BethNull;
+  BethOne;
+  BethOmega;
+  Gimel;
+  Daleth;
+  He;
+  Vav;
+  Zayin;
+  Chet;
+  Tet;
+  Yod;
+  Kaf;
+  Lamed;
+  Mem;
+  Nun;
+  Samekh;
+  Ayin;
+  Pe;
+  Tsadi;
+  Qof;
+  Resh;
+  Shin;
+  Tav;
+  Alpha;
+  Beta;
+  Gamma;
+  Delta;
+  Epsilon;
+  Zeta;
+  Eta;
+  Theta;
+  Iota;
+  Kappa;
+  Lambda;
+  Mu;
+  Nu;
+  Xi;
+  Omicron;
+  Pi2;
+  Rho;
+  Sigma2;
+  Tau;
+  Upsilon;
+  Phi;
+  Chi;
+  Psi;
+  Omega;
+  Crown} from 'lucide-react.ts',
 import { INNOVATIVE_MICRO_SAAS_SERVICES_20o25  } from '../data/innovativeMicroSaasServices20o25',
-,
-interface ServiceContact {,
+interface ServiceContact {
   mobile: string,
   email: string,
   address: string,
-  website: string,
+  website: string}
 ,
-,}
-,
-const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
+const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedService, setSelectedService] = useState<any>(null),
@@ -420,32 +416,28 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
   const [viewMode, setViewMode] = useState<any>('grid'),
   const [priceRange, setPriceRange] = useState<any>([0, 10o000]),
   const [innovationLevel, setInnovationLevel] = useState('all'),
-,
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_20o25,
-,
-  const categories = [,
-    { id: any'all', name: 'All Services', count: allServices.length, icon: '🚀' ,},;
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: any'🤖' ,},;
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s  => s.category === 'AI & Analytics').length, icon: any'📊' ,},;
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s  => s.category === 'AI & Research').length, icon: any'🔬' ,},;
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s  => s.category === 'AI & Logistics').length, icon: any'🚛' ,},;
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s  => s.category === 'AI & Marketing').length, icon: any'📢' ,},;
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: any'🏥' ,},;
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: any'⚛️' ,},;
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: any'🔗' ,},;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: any'🌍' ,},;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: any'🌐' ,},;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' ,}
+  const categories = [
+    { id: any'all', name: 'All Services', count: allServices.length, icon: '🚀' };
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: any'🤖' };
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s  => s.category === 'AI & Analytics').length, icon: any'📊' };
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s  => s.category === 'AI & Research').length, icon: any'🔬' };
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s  => s.category === 'AI & Logistics').length, icon: any'🚛' };
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s  => s.category === 'AI & Marketing').length, icon: any'📢' };
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: any'🏥' };
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: any'⚛️' };
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: any'🔗' };
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: any'🌍' };
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: any'🌐' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' }
   ],
-,
-  const innovationLevels = [,
-    { id: 'all', name: 'All Levels', icon: '🌟' ,},;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' ,},;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' ,},;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' ,}
+  const innovationLevels = [
+    { id: 'all', name: 'All Levels', icon: '🌟' };
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' };
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' };
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' }
   ],
-,
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -453,12 +445,9 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1],
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel,
-,
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation,
-  }),
-,
-  const sortedServices = [...filteredServices].sort((a, b) => {,
-    switch (sortBy) {,
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}),
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'price':,
         return a.price - b.price,
       case 'name':,
@@ -470,42 +459,32 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
       case 'category':,
         return a.category.localeCompare(b.category),
       default: ,
-        return 0,
-    ,}
+        return 0}
   }),
-,
-  const handleServiceClick = (service: anyany)  => {,
-    setSelectedService(service),
-  ,};
-,
-  const closeModal = () => {,
-    setSelectedService(null),
-  };
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,
-      ,}
+  const handleServiceClick = (service: anyany)  => {
+    setSelectedService(service)};
+  const closeModal = () => {
+    setSelectedService(null)};
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-        ease: "easeOut",
-      ,}
+  const itemVariants ={
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+        ease: "easeOut"}
     }
   };
-,
-  const getCategoryIcon = (category: anystring)  => {,
-    switch (category) {,
+  const getCategoryIcon = (category: anystring)  => {
+    switch (category) {
       case 'AI & Automation': return <Bot className="w-5 h-5"  />,
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5"  />,
       case 'AI & Research': return <Search className="w-5 h-5"  />,
@@ -517,20 +496,16 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
       case 'Metaverse': return <Globe2 className="w-5 h-5"  />,
       case 'Edge Computing': return <Network className="w-5 h-5"  />,
       case 'Cybersecurity': return <Shield className="w-5 h-5"  />,
-      default: return <Zap className="w-5 h-5"  />,
-    ,}
+      default: return <Zap className="w-5 h-5"  />}
   };
-,
-  const getInnovationIcon = (level: anystring)  => {,
-    switch (level) {,
+  const getInnovationIcon = (level: anystring)  => {
+    switch (level) {
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-50o0"  />,
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-50o0"  />,
       case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-50o0"  />,
-      default: return <Star className="w-4 h-4 text-gray-40o0"  />,
-    ,}
+      default: return <Star className="w-4 h-4 text-gray-40o0"  />}
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -538,13 +513,13 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
         <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/5 via-transparent to-zion-cyan/5"  />,
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-zion-cyan/10 via-transparent to-transparent"  />,
       </div>,
-      {/* Header Section */,}
+      {/* Header Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">,
               Comprehensive Services 20o25,
@@ -570,15 +545,14 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
       <section className="relative px-4 sm: px-6 lg:px-8 mb-12">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className="bg-zion-slate-80o0/50 backdrop-blur-sm border border-zion-slate-70o0 rounded-2xl p-6",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-zion-slate-80o0/50 backdrop-blur-sm border border-zion-slate-70o0 rounded-2xl p-6">,
             {/* Search Bar */}
             <div className="relative mb-6">,
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-40o0 w-5 h-5"  />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search services, categories, or features...",
                 value={searchTerm}
@@ -586,45 +560,40 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                 className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-40o0 focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan",
               />,
             </div>,
-            {/* Filters Row */,}
+            {/* Filters Row */}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,
-              {/* Category Filter */,}
+              {/* Category Filter */}
               <div className="relative">,
-                <select,
+                <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
-                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none",
-                >,
-                  {categories.map((category)  => (,
-                    <option key={category.id,} value={category.id}>,
+                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">,
+                  {categories.map((category)  => (
+                    <option key={category.id} value={category.id}>,
                       {category.icon} {category.name} ({category.count}),
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
               {/* Innovation Level Filter */}
               <div className="relative">,
-                <select,
+                <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
-                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none",
-                >,
-                  {innovationLevels.map((level)  => (,
-                    <option key={level.id,} value={level.id}>,
+                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">,
+                  {innovationLevels.map((level)  => (
+                    <option key={level.id} value={level.id}>,
                       {level.icon} {level.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
               {/* Sort By */}
               <div className="relative">,
-                <select,
+                <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none",
-                >,
+                  className="w-full bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">,
                   <option value="name">Sort by Name</option>,
                   <option value="price">Sort by Price</option>,
                   <option value="innovation">Sort by Innovation</option>,
@@ -632,25 +601,23 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                 </select>,
                 <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
-              {/* View Mode Toggle */,}
+              {/* View Mode Toggle */}
               <div className="flex bg-zion-slate-90o0/50 border border-zion-slate-60o0 rounded-xl p-1">,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${,
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'grid',
                       ? 'bg-zion-cyan text-white',
-                      : 'text-zion-slate-40o0 hover: text-white',
-                  ,}`}
+                      : 'text-zion-slate-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-4 h-4 mx-auto"  />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
-                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${,
+                  className={`flex-1 px-3 py-2 rounded-lg transition-all ${
                     viewMode === 'list',
                       ? 'bg-zion-cyan text-white',
-                      : 'text-zion-slate-40o0 hover: text-white',
-                  ,}`}
+                      : 'text-zion-slate-40o0 hover: text-white'}`}
                 >,
                   <List className="w-4 h-4 mx-auto"  />,
                 </button>,
@@ -659,10 +626,10 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
             {/* Price Range Slider */}
             <div className="mt-6">,
               <label className="block text-sm font-medium text-zion-slate-30o0 mb-2">,
-                Price Range: ${priceRange[0],} - ${priceRange[1]}
+                Price Range: ${priceRange[0]} - ${priceRange[1]}
               </label>,
               <div className="flex gap-4 items-center">,
-                <input,
+                <input
                   type="range",
                   min="0",
                   max="10o000",
@@ -670,7 +637,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                   onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
                   className="flex-1 h-2 bg-zion-slate-60o0 rounded-lg appearance-none cursor-pointer slider",
                 />,
-                <input,
+                <input
                   type="range",
                   min="0",
                   max="10o000",
@@ -686,7 +653,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
       {/* Services Grid */}
       <section className="relative px-4 sm: px-6 lg:px-8 pb-20">,
         <div className="max-w-7xl mx-auto">,
-          {/* Results Count */,}
+          {/* Results Count */}
           <div className="mb-8">,
             <p className="text-zion-slate-30o0">,
               Showing {filteredServices.length} of {allServices.length} services,
@@ -699,19 +666,17 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
             animate="visible",
             className={viewMode === 'grid',
               ? 'grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6',
-              : 'space-y-4',
-            ,}
+              : 'space-y-4'}
           >,
-            {sortedServices.map((service)  => (,
+            {sortedServices.map((service)  => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className={`bg-zion-slate-80o0/50 backdrop-blur-sm border border-zion-slate-70o0 rounded-2xl p-6 hover: border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-30o0 cursor-pointer group ${,
-                  viewMode === 'list' ? 'flex items-center gap-6' : '',
-                ,}`}
+                className={`bg-zion-slate-80o0/50 backdrop-blur-sm border border-zion-slate-70o0 rounded-2xl p-6 hover: border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-30o0 cursor-pointer group ${
+                  viewMode === 'list' ? 'flex items-center gap-6' : ''}`}
                 onClick={() => handleServiceClick(service)}
               >,
-                {viewMode === 'grid' ? (,
+                {viewMode === 'grid' ? (
                   // Grid View,
                   <>,
                     {/* Header */}
@@ -720,7 +685,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                         {getCategoryIcon(service.category)}
                         <div>,
                           <h3 className="text-lg font-semibold text-white group-hover: text-zion-cyan transition-colors">,
-                            {service.title,}
+                            {service.title}
                           </h3>,
                           <p className="text-sm text-zion-slate-40o0">{service.category}</p>,
                         </div>,
@@ -733,14 +698,12 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                     </p>,
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">,
-                      {service.tags.slice(0, 3).map((tag, index) => (,
-                        <span,
+                      {service.tags.slice(0, 3).map((tag, index) => (
+                        <span
                           key={index}
-                          className="px-2 py-1 bg-zion-slate-70o0/50 text-zion-slate-30o0 text-xs rounded-lg",
-                        >,
+                          className="px-2 py-1 bg-zion-slate-70o0/50 text-zion-slate-30o0 text-xs rounded-lg">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                     {/* Price and Features */}
                     <div className="space-y-3">,
@@ -764,17 +727,16 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       Learn More,
                       <ArrowRight className="w-4 h-4"  />,
                     </button>,
-                  </>,
-                ) : (,
+                  </>) : (
                   // List View,
                   <>,
                     <div className="flex-1">,
                       <div className="flex items-start justify-between mb-2">,
                         <div className="flex items-center gap-3">,
-                          {getCategoryIcon(service.category),}
+                          {getCategoryIcon(service.category)}
                           <div>,
                             <h3 className="text-xl font-semibold text-white group-hover: text-zion-cyan transition-colors">,
-                              {service.title,}
+                              {service.title}
                             </h3>,
                             <p className="text-zion-slate-40o0">{service.category}</p>,
                           </div>,
@@ -785,14 +747,12 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                         {service.description}
                       </p>,
                       <div className="flex flex-wrap gap-2">,
-                        {service.tags.slice(0, 5).map((tag, index) => (,
-                          <span,
+                        {service.tags.slice(0, 5).map((tag, index) => (
+                          <span
                             key={index}
-                            className="px-2 py-1 bg-zion-slate-70o0/50 text-zion-slate-30o0 text-xs rounded-lg",
-                          >,
+                            className="px-2 py-1 bg-zion-slate-70o0/50 text-zion-slate-30o0 text-xs rounded-lg">,
                             {tag}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                     </div>,
                     <div className="text-right space-y-2">,
@@ -805,52 +765,46 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                         <ArrowRight className="w-4 h-4"  />,
                       </button>,
                     </div>,
-                  </>,
-                ),}
-              </motion.div>,
-            ))}
+                  </>)}
+              </motion.div>))}
           </motion.div>,
           {/* No Results */}
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <motion.div,
-              initial={{ opacity: 0 ,}}
-              animate={{ opacity: 1 ,}}
-              className="text-center py-20",
-            >,
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20">,
               <div className="text-6xl mb-4">🔍</div>,
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>,
               <p className="text-zion-slate-40o0 mb-6">,
                 Try adjusting your search criteria or filters,
               </p>,
-              <button,
-                onClick={() => {,
+              <button
+                onClick={() => {
                   setSearchTerm(''),
                   setActiveCategory('all'),
                   setPriceRange([0, 10o000]),
-                  setInnovationLevel('all'),
-                }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover: bg-zion-cyan/90 transition-colors",
-              >,
+                  setInnovationLevel('all')}}
+                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover: bg-zion-cyan/90 transition-colors">,
                 Clear All Filters,
               </button>,
-            </motion.div>,
-          ),}
+            </motion.div>)}
         </div>,
       </section>,
       {/* Service Detail Modal */}
       <AnimatePresence>,
-        {selectedService && (,
+        {selectedService && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            exit={{ opacity: 0 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
             onClick={closeModal}
           >,
             <motion.div,
-              initial={{ scale: 0.9, opacity: 0 ,}}
-              animate={{ scale: 1, opacity: 1 ,}}
-              exit={{ scale: 0.9, opacity: 0 ,}}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zion-slate-90o0 border border-zion-slate-70o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto",
               onClick={(e) => e.stopPropagation()}
             >,
@@ -869,18 +823,17 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       {selectedService.description}
                     </p>,
                   </div>,
-                  <button,
+                  <button
                     onClick={closeModal}
-                    className="text-zion-slate-40o0 hover: text-white transition-colors",
-                  >,
+                    className="text-zion-slate-40o0 hover: text-white transition-colors">,
                     <X className="w-6 h-6"  />,
                   </button>,
                 </div>,
-                {/* Price and Key Info */,}
+                {/* Price and Key Info */}
                 <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
                   <div className="bg-zion-slate-80o0/50 rounded-xl p-4">,
                     <div className="text-3xl font-bold text-zion-cyan mb-1">,
-                      ${selectedService.price.toLocaleString(),}
+                      ${selectedService.price.toLocaleString()}
                     </div>,
                     <div className="text-zion-slate-40o0">per month</div>,
                   </div>,
@@ -905,12 +858,11 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       Key Features,
                     </h3>,
                     <ul className="space-y-2">,
-                      {selectedService.features.map((feature, index) => (,
+                      {selectedService.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-30o0">,
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />,
                           {feature}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <div>,
@@ -919,12 +871,11 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       Benefits,
                     </h3>,
                     <ul className="space-y-2">,
-                      {selectedService.benefits.map((benefit, index) => (,
+                      {selectedService.benefits.map((benefit, index) => (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-30o0">,
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />,
                           {benefit}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                 </div>,
@@ -936,12 +887,11 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       Use Cases,
                     </h3>,
                     <ul className="space-y-2">,
-                      {selectedService.useCases.map((useCase, index) => (,
+                      {selectedService.useCases.map((useCase, index) => (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-30o0">,
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"  />,
                           {useCase}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <div>,
@@ -950,17 +900,16 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       Target Audience,
                     </h3>,
                     <ul className="space-y-2">,
-                      {selectedService.targetAudience.map((audience, index) => (,
+                      {selectedService.targetAudience.map((audience, index) => (
                         <li key={index} className="flex items-start gap-2 text-zion-slate-30o0">,
                           <div className="w-1.5 h-1.5 bg-zion-purple rounded-full mt-2 flex-shrink-0"  />,
                           {audience}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                 </div>,
                 {/* Technical Specs */}
-                {selectedService.technicalSpecs && (,
+                {selectedService.technicalSpecs && (
                   <div className="mb-8">,
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">,
                       <Code className="w-5 h-5 text-zion-cyan"  />,
@@ -970,26 +919,23 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                       <div>,
                         <h4 className="font-medium text-zion-slate-30o0 mb-2">Technology Stack</h4>,
                         <div className="flex flex-wrap gap-2">,
-                          {selectedService.technicalSpecs.technology.map((tech, index) => (,
+                          {selectedService.technicalSpecs.technology.map((tech, index) => (
                             <span key={index} className="px-3 py-1 bg-zion-slate-80o0 text-zion-cyan text-sm rounded-lg">,
                               {tech}
-                            </span>,
-                          ))}
+                            </span>))}
                         </div>,
                       </div>,
                       <div>,
                         <h4 className="font-medium text-zion-slate-30o0 mb-2">Integrations</h4>,
                         <div className="flex flex-wrap gap-2">,
-                          {selectedService.technicalSpecs.integrations.map((integration, index) => (,
+                          {selectedService.technicalSpecs.integrations.map((integration, index) => (
                             <span key={index} className="px-3 py-1 bg-zion-slate-80o0 text-zion-purple text-sm rounded-lg">,
                               {integration}
-                            </span>,
-                          ))}
+                            </span>))}
                         </div>,
                       </div>,
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 {/* Contact and CTA */}
                 <div className="border-t border-zion-slate-70o0 pt-6">,
@@ -997,7 +943,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                     <div className="text-center md:text-left">,
                       <p className="text-zion-slate-40o0 mb-2">Ready to get started?</p>,
                       <div className="flex items-center gap-4 text-sm text-zion-slate-30o0">,
-                        <span>📞 {selectedService.contactInfo.phone,}</span>,
+                        <span>📞 {selectedService.contactInfo.phone}</span>,
                         <span>✉️ {selectedService.contactInfo.email}</span>,
                       </div>,
                     </div>,
@@ -1013,11 +959,7 @@ const ComprehensiveServicesShowcase20o25: React.FC = (): JSX.Element => {,
                 </div>,
               </div>,
             </motion.div>,
-          </motion.div>,
-        ),}
+          </motion.div>)}
       </AnimatePresence>,
-    </div>,
-  ),
-};
-,
-export default ComprehensiveServicesShowcase20o25,
+    </div>)};
+export default ComprehensiveServicesShowcase20o25;

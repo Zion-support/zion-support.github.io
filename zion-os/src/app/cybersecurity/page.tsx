@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function CybersecurityPage() {,
-  return (,
+export default function CybersecurityPage() {
+  return (
     <div className='min-h-screen'>,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
@@ -14,7 +13,7 @@ export default function CybersecurityPage() {,
           </p>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <div className='card bg-gradient-to-r from-green-60o0/20 to-blue-60o0/20 border-green-50o0/30'>,
@@ -30,17 +29,14 @@ export default function CybersecurityPage() {,
               <Link href='/contact' className='btn-primary text-lg px-8 py-4'>,
                 Secure Your Organization,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='btn-secondary text-lg px-8 py-4',
-              >,
+                className='btn-secondary text-lg px-8 py-4'>,
                 View Security Case Studies,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

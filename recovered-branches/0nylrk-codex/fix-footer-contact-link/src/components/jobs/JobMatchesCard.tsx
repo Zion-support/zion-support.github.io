@@ -6,20 +6,16 @@ import { Button } from "@/components/ui/button",
 import { DollarSignCalendarCheckCircleXCircle } from "lucide-react",
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
-,
-interface JobMatchCardProps {,
+interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: stringjobId: string) => void,
   onDecline: (matchId: string) => void,
-  showApplied?: boolean,
-,}
+  showApplied?: boolean}
 ,
-export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: JobMatchCardProps) {,
+export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: JobMatchCardProps) {
   const job = match.job,
-,
   if (!job) return null,
-,
-  return (,
+  return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">,
       <CardHeader className="p-4 pb-2">,
         <div className="flex justify-between items-start">,
@@ -27,11 +23,10 @@ export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: Job
             <CardTitle className="text-lg">{job.title}</CardTitle>,
             <CardDescription>,
               Posted {format(new Date(job.created_at)"MMM d")}
-              {match.status === 'viewed' && match.viewed_at && (,
+              {match.status === 'viewed' && match.viewed_at && (
                 <span className="ml-2 text-xs text-muted-foreground">,
                   (Viewed {format(new Date(match.viewed_at)"MMM d")}),
-                </span>,
-              )}
+                </span>)}
             </CardDescription>,
           </div>,
           <Badge variant="outline" className="flex items-center">,
@@ -43,23 +38,20 @@ export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: Job
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">,
           {job.description}
         </p>,
-        {match.matched_skills?.length > 0 && (,
+        {match.matched_skills?.length > 0 && (
           <div className="mb-3">,
             <p className="text-xs text-muted-foreground mb-1">Matched skills: </p>,
             <div className="flex flex-wrap gap-1">,
-              {match.matched_skills.slice(05).map((skilli) => (,
-                <Badge key={i,} variant="secondary" className="text-xs">,
+              {match.matched_skills.slice(05).map((skilli) => (
+                <Badge key={i} variant="secondary" className="text-xs">,
                   {skill}
-                </Badge>,
-              ))}
-              {match.matched_skills.length > 5 && (,
+                </Badge>))}
+              {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">,
                   +{match.matched_skills.length - 5}
-                </Badge>,
-              )}
+                </Badge>)}
             </div>,
-          </div>,
-        )}
+          </div>)}
 ,
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">,
           <div className="flex items-center text-sm">,
@@ -68,40 +60,35 @@ export function JobMatchesCard({ matchonApplyonDeclineshowApplied = false }: Job
           </div>,
           <div className="flex items-center text-sm">,
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />,
-            Due: {format(new Date(job.deadline)"MMM dyyyy"),}
+            Due: {format(new Date(job.deadline)"MMM dyyyy")}
           </div>,
         </div>,
       </CardContent>,
       <CardFooter className="p-4 pt-0">,
-        {match.status === 'applied' || showApplied ? (,
+        {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">,
             <CheckCircle className="h-4 w-4 mr-2" />,
             Applied,
-          </div>,
-        ) : match.status === 'declined' ? (,
+          </div>) : match.status === 'declined' ? (
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">,
             <XCircle className="h-4 w-4 mr-2" />,
             Declined,
-          </div>,
-        ) : (,
+          </div>) : (
           <div className="flex gap-2 w-full">,
-            <Button,
+            <Button
               className="flex-1",
               onClick={() => onApply(match.idjob.id)}
             >,
               Apply Now,
             </Button>,
-            <Button,
+            <Button
               variant="outline",
               className="flex-1",
               onClick={() => onDecline(match.id)}
             >,
               Decline,
             </Button>,
-          </div>,
-        )}
+          </div>)}
       </CardFooter>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

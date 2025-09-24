@@ -4,23 +4,18 @@ import { Button } from "@/components/ui/button",
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { CopyFacebookLinkShareTwitter } from "lucide-react",
-,
-interface ReferralLinkProps {,
+interface ReferralLinkProps {
   referralLink: string,
   onCopy: () => void,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
-,}
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void}
 ,
-export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {,
+export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
   const [copiedsetCopied] = useState(false),
-,
-  const handleCopy = () => {,
+  const handleCopy = () => {
     onCopy(),
     setCopied(true),
-    setTimeout(() => setCopied(false)2000),
-  };
-,
-  return (,
+    setTimeout(() => setCopied(false)2000)};
+  return (
     <Card className="mt-6">,
       <CardHeader>,
         <CardTitle className="flex items-center gap-2">,
@@ -34,7 +29,7 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
       <CardContent>,
         <div className="flex flex-col space-y-3">,
           <div className="flex space-x-2">,
-            <Input,
+            <Input
               value={referralLink}
               readOnly,
               className="font-mono text-sm",
@@ -44,27 +39,26 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
               <span className="sr-only">Copy</span>,
             </Button>,
           </div>,
-          {copied && (,
+          {copied && (
             <p className="text-sm text-green-600 dark: text-green-500">,
               Copied to clipboard!,
-            </p>,
-          ),}
+            </p>)}
         </div>,
       </CardContent>,
       <CardFooter className="border-t bg-muted/50 p-4">,
         <div className="flex flex-col sm: flex-row w-full justify-between items-center gap-4">,
           <p className="text-sm text-muted-foreground">Share on social media:</p>,
           <div className="flex space-x-2">,
-            <Button,
+            <Button
               variant="outline",
               size="sm",
               className="flex items-center gap-2",
-              onClick={() => onShare('twitter'),}
+              onClick={() => onShare('twitter')}
             >,
               <Twitter className="h-4 w-4" />,
               Twitter,
             </Button>,
-            <Button,
+            <Button
               variant="outline",
               size="sm",
               className="flex items-center gap-2",
@@ -73,7 +67,7 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
               <Facebook className="h-4 w-4" />,
               Facebook,
             </Button>,
-            <Button,
+            <Button
               variant="outline",
               size="sm",
               className="flex items-center gap-2",
@@ -85,7 +79,5 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
           </div>,
         </div>,
       </CardFooter>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

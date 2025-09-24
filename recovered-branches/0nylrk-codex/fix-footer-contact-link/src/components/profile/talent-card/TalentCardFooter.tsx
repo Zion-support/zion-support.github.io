@@ -8,100 +8,81 @@ import { HireRequestModal } from "@/components/profile/hire-request",
 import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth",
 import { useNavigate } from "react-router-dom",
-,
-interface TalentCardFooterProps {,
+interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void,
-,}
+  onRequestHire?: (profile: TalentProfile) => void}
 ,
-export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCardFooterProps) {,
+export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpensetIsHireModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const navigate = useNavigate(),
-,
   // Create a compatible UserProfile from UserDetails,
-  const userProfile: UserProfile = {,
-    id: userDetails?.id,;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '',;
-    userType: '',;
-    profileComplete: false,;
-    createdAt: new Date().toISOString(),;
-    updatedAt: new Date().toISOString(),
-  ,};
-,
+  const userProfile: UserProfile = {
+    id: userDetails?.id;
+    displayName: userDetails?.name || '';
+    email: userDetails?.email || '';
+    userType: '';
+    profileComplete: false;
+    createdAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()};
   // Handle request to hire,
-  const handleRequestHire = (e: React.MouseEvent) => {,
+  const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation(),
-,
-    if (onRequestHire) {,
-      onRequestHire(profile),
-    ,} else {,
+    if (onRequestHire) {
+      onRequestHire(profile)} else {
       // Open hire modal directly if no handler provided,
-      setIsHireModalOpen(true),
-    }
+      setIsHireModalOpen(true)}
   };
-,
   // Handle view profile,
-  const handleViewProfile = (e: React.MouseEvent) => {,
+  const handleViewProfile = (e: React.MouseEvent) => {
     e.stopPropagation(),
-,
     // Navigate to the talent profile page,
-    navigate(`/talent/${profile.id || '',}`),
-,
+    navigate(`/talent/${profile.id || ''}`),
     // Also call the onViewProfile callback if provided,
-    if (onViewProfile) {,
-      onViewProfile(profile.id || ''),
-    }
+    if (onViewProfile) {
+      onViewProfile(profile.id || '')}
   };
-,
-  return (,
+  return (
     <>,
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">,
         {/* Experience or Hourly Rate */}
         <div>,
-          {profile.hourly_rate ? (,
+          {profile.hourly_rate ? (
             <div>,
               <span className="text-zion-slate-light text-xs">Hourly Rate</span>,
               <div className="text-white font-bold">${profile.hourly_rate}/hr</div>,
-            </div>,
-          ) : (,
+            </div>) : (
             <div className="flex items-center gap-1">,
               <Star className="h-4 w-4 text-zion-purple" />,
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>,
-            </div>,
-          )}
+            </div>)}
         </div>,
         {/* Action Buttons */}
         <div className="flex gap-2">,
-          <Button,
+          <Button
             variant="default",
             size="sm",
             onClick={handleRequestHire}
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white",
-          >,
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white">,
             Hire,
           </Button>,
-          <Button,
+          <Button
             variant="outline",
             size="sm",
-            onClick={handleViewProfile,}
-            className="border-zion-purple text-zion-purple hover: bg-zion-purple/10",
-          >,
+            onClick={handleViewProfile}
+            className="border-zion-purple text-zion-purple hover: bg-zion-purple/10">,
             View,
             <ExternalLink className="h-3 w-3 ml-1" />,
           </Button>,
         </div>,
       </div>,
-      {/* Hire Request Modal */,}
-      <HireRequestModal,
+      {/* Hire Request Modal */}
+      <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
       />,
-    </>,
-  ),
-}
+    </>)}
 ,

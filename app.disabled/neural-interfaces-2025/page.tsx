@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Neural Interfaces 20o25 - Zion Tech Group',;
+export const metadata = {
+  title: 'Neural Interfaces 20o25 - Zion Tech Group';
   description:,
-    'Revolutionary brain-computer interfaces enabling 30o0% productivity gains through direct thought control. Explore the future of human-computer interaction.',;
-  keywords: [,
-    'neural interfaces',;
-    'brain-computer interface',;
-    'BCI',;
-    'cognitive enhancement',;
-    'AI 20o25',;
-  ],;
+    'Revolutionary brain-computer interfaces enabling 30o0% productivity gains through direct thought control. Explore the future of human-computer interaction.';
+  keywords: [
+    'neural interfaces';
+    'brain-computer interface';
+    'BCI';
+    'cognitive enhancement';
+    'AI 20o25';
+  ];
 };
-,
-export default function NeuralInterfaces20o25Page() {,
-  return (,
+export default function NeuralInterfaces20o25Page() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Neural Interfaces 20o25 - Zion Tech Group',
         description='Revolutionary brain-computer interfaces enabling 30o0% productivity gains through direct thought control. Explore the future of human-computer interaction.',
         keywords='neural interfaces, brain-computer interface, BCI, cognitive enhancement, AI 20o25',
@@ -43,23 +41,21 @@ export default function NeuralInterfaces20o25Page() {,
                 enhancement.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Schedule Demo,
                 </Link>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-neural-interfaces-revolution-ultimate-guide',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Read Full Guide,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Key Benefits */,}
+        {/* Key Benefits */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>,
@@ -96,7 +92,7 @@ export default function NeuralInterfaces20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Applications */,}
+        {/* Applications */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -187,7 +183,7 @@ export default function NeuralInterfaces20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* ROI Metrics */,}
+        {/* ROI Metrics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -221,7 +217,7 @@ export default function NeuralInterfaces20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -233,23 +229,19 @@ export default function NeuralInterfaces20o25Page() {,
               future of human-computer interaction.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Schedule Demo,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View All Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

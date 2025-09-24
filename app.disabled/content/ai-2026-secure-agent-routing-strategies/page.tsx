@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Secure Agent Routing Strategies',;
+export const metadata = {
+  title: 'AI 20o26: Secure Agent Routing Strategies';
   description:,
-    'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.',;
+    'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <header className='mb-8'>,
         <p className='text-sm font-semibold text-purple-70o0'>,
@@ -52,24 +50,20 @@ export default function Page() {,
         <h2>Resources</h2>,
         <ul>,
           <li>,
-            <Link,
+            <Link
               className='text-purple-60o0 font-semibold',
-              href='/content/ai-20o26-secure-tooling-permissions-blueprint',
-            >,
+              href='/content/ai-20o26-secure-tooling-permissions-blueprint'>,
               Permissions Blueprint,
             </Link>,
           </li>,
           <li>,
-            <Link,
+            <Link
               className='text-purple-60o0 font-semibold',
-              href='/content/ai-20o26-evaluation-hub',
-            >,
+              href='/content/ai-20o26-evaluation-hub'>,
               Evaluation Hub,
             </Link>,
           </li>,
         </ul>,
       </article>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

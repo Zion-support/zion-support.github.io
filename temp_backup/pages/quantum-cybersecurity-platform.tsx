@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function QuantumCybersecurityPlatformPage() {,
-  return (,
+export default function QuantumCybersecurityPlatformPage() {
+  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8 text-white'>,
       <Head>,
         <title>Quantum Cybersecurity Platform | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Quantum-resistant cryptography, key distribution, and zero-trust security architecture.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-cybersecurity-platform',
         />,
@@ -29,7 +28,5 @@ export default function QuantumCybersecurityPlatformPage() {,
           <li>Threat detection with quantum-safe telemetry</li>,
         </ul>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

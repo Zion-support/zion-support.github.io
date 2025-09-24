@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiPoweredCustomerSuccessAutomationPage() {,
-  return (,
+export default function AiPoweredCustomerSuccessAutomationPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Powered Customer Success Automation - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai powered customer success automation page',
         />,
@@ -21,7 +20,5 @@ export default function AiPoweredCustomerSuccessAutomationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

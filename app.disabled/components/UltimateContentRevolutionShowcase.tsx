@@ -1,159 +1,153 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const UltimateContentRevolutionShowcase = () => {,
+const UltimateContentRevolutionShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const contentPieces = [,
-    {,
-      id: 'ultimate-content-revolution',;
-      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI',;
-      type: 'blog',;
-      category: 'revolution',;
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',;
+  const contentPieces = [
+    {
+      id: 'ultimate-content-revolution';
+      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI';
+      type: 'blog';
+      category: 'revolution';
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
       description:,
-        'Revolutionary AI-powered content creation transforming Fortune 50o0 companies with unprecedented ROI and business results.',;
-      metrics: {,
-        roi: '25,0o00%',;
-        revenue: '$445M',;
-        production: '2,40o0%',;
-        engagement: '1,80o0%',;
-      },;
-      readingTime: '35 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'fortune-50o0-content-success',;
-      title: 'Fortune 50o0 Content Revolution: $445M Annual Revenue Success',;
-      type: 'case-study',;
-      category: 'success',;
-      url: '/case-studies/fortune-50o0-ultimate-content-revolution-250o00-roi-success-story',;
+        'Revolutionary AI-powered content creation transforming Fortune 50o0 companies with unprecedented ROI and business results.';
+      metrics: {
+        roi: '25,0o00%';
+        revenue: '$445M';
+        production: '2,40o0%';
+        engagement: '1,80o0%';
+      };
+      readingTime: '35 min read';
+      featured: true;
+    };
+    {
+      id: 'fortune-50o0-content-success';
+      title: 'Fortune 50o0 Content Revolution: $445M Annual Revenue Success';
+      type: 'case-study';
+      category: 'success';
+      url: '/case-studies/fortune-50o0-ultimate-content-revolution-250o00-roi-success-story';
       description:,
-        'Proven success story of Fortune 50o0 company achieving 25,0o00% ROI through AI-powered content revolution implementation.',;
-      metrics: {,
-        roi: '25,0o00%',;
-        savings: '$2.8B',;
-        efficiency: '3,20o0%',;
-        accuracy: '99.7%',;
-      },;
-      readingTime: '22 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'content-implementation-guide',;
-      title: 'AI Content Revolution Implementation Guide: Complete Roadmap',;
-      type: 'resource',;
-      category: 'implementation',;
-      url: '/resources/ai-20o25-ultimate-content-revolution-implementation-guide',;
+        'Proven success story of Fortune 50o0 company achieving 25,0o00% ROI through AI-powered content revolution implementation.';
+      metrics: {
+        roi: '25,0o00%';
+        savings: '$2.8B';
+        efficiency: '3,20o0%';
+        accuracy: '99.7%';
+      };
+      readingTime: '22 min read';
+      featured: true;
+    };
+    {
+      id: 'content-implementation-guide';
+      title: 'AI Content Revolution Implementation Guide: Complete Roadmap';
+      type: 'resource';
+      category: 'implementation';
+      url: '/resources/ai-20o25-ultimate-content-revolution-implementation-guide';
       description:,
-        'Comprehensive step-by-step implementation roadmap for achieving 25,0o00% ROI through AI content revolution.',;
-      metrics: {,
-        roi: '25,0o00%',;
-        timeline: '18 months',;
-        success: '99.7%',;
-        guide: '45 min read',;
-      },;
-      readingTime: '45 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'content-automation-mastery',;
+        'Comprehensive step-by-step implementation roadmap for achieving 25,0o00% ROI through AI content revolution.';
+      metrics: {
+        roi: '25,0o00%';
+        timeline: '18 months';
+        success: '99.7%';
+        guide: '45 min read';
+      };
+      readingTime: '45 min read';
+      featured: true;
+    };
+    {
+      id: 'content-automation-mastery';
       title:,
-        'AI Content Automation Mastery: 15,0o00% ROI Through Intelligent Automation',;
-      type: 'blog',;
-      category: 'automation',;
-      url: '/blog/ai-20o25-content-automation-mastery-ultimate-guide',;
+        'AI Content Automation Mastery: 15,0o00% ROI Through Intelligent Automation';
+      type: 'blog';
+      category: 'automation';
+      url: '/blog/ai-20o25-content-automation-mastery-ultimate-guide';
       description:,
-        'Master AI-powered content automation to achieve 15,0o00% ROI through intelligent content creation and distribution.',;
-      metrics: {,
-        roi: '15,0o00%',;
-        automation: '95%',;
-        efficiency: '2,80o0%',;
-        quality: '99.8%',;
-      },;
-      readingTime: '28 min read',;
-      featured: false,;
-    },;
-    {,
-      id: 'content-personalization-breakthrough',;
-      title: 'AI Content Personalization Breakthrough: 99.9% Accuracy Success',;
-      type: 'case-study',;
-      category: 'personalization',;
-      url: '/case-studies/ai-content-personalization-breakthrough-success-story',;
+        'Master AI-powered content automation to achieve 15,0o00% ROI through intelligent content creation and distribution.';
+      metrics: {
+        roi: '15,0o00%';
+        automation: '95%';
+        efficiency: '2,80o0%';
+        quality: '99.8%';
+      };
+      readingTime: '28 min read';
+      featured: false;
+    };
+    {
+      id: 'content-personalization-breakthrough';
+      title: 'AI Content Personalization Breakthrough: 99.9% Accuracy Success';
+      type: 'case-study';
+      category: 'personalization';
+      url: '/case-studies/ai-content-personalization-breakthrough-success-story';
       description:,
-        'How a Fortune 50o0 company achieved 99.9% content personalization accuracy and 12,0o00% ROI through AI innovation.',;
-      metrics: {,
-        roi: '12,0o00%',;
-        accuracy: '99.9%',;
-        engagement: '2,20o0%',;
-        satisfaction: '98.7%',;
-      },;
-      readingTime: '18 min read',;
-      featured: false,;
-    },;
-    {,
-      id: 'content-monetization-guide',;
+        'How a Fortune 50o0 company achieved 99.9% content personalization accuracy and 12,0o00% ROI through AI innovation.';
+      metrics: {
+        roi: '12,0o00%';
+        accuracy: '99.9%';
+        engagement: '2,20o0%';
+        satisfaction: '98.7%';
+      };
+      readingTime: '18 min read';
+      featured: false;
+    };
+    {
+      id: 'content-monetization-guide';
       title:,
-        'AI Content Monetization Master Guide: Maximize Revenue from Every Content Piece',;
-      type: 'resource',;
-      category: 'monetization',;
-      url: '/resources/ai-content-monetization-master-guide-20o25',;
+        'AI Content Monetization Master Guide: Maximize Revenue from Every Content Piece';
+      type: 'resource';
+      category: 'monetization';
+      url: '/resources/ai-content-monetization-master-guide-20o25';
       description:,
-        'Complete guide to maximizing revenue from AI-generated content through advanced monetization strategies.',;
-      metrics: {,
-        revenue: '80o0%',;
-        monetization: '95%',;
-        efficiency: '1,50o0%',;
-        profit: '340%',;
-      },;
-      readingTime: '32 min read',;
-      featured: false,;
-    },;
+        'Complete guide to maximizing revenue from AI-generated content through advanced monetization strategies.';
+      metrics: {
+        revenue: '80o0%';
+        monetization: '95%';
+        efficiency: '1,50o0%';
+        profit: '340%';
+      };
+      readingTime: '32 min read';
+      featured: false;
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Content', count: contentPieces.length ,},;
-    {,
-      id: 'revolution',;
-      name: 'Content Revolution',;
-      count: contentPieces.filter(c => c.category === 'revolution').length,;
-    },;
-    {,
-      id: 'success',;
-      name: 'Success Stories',;
-      count: contentPieces.filter(c => c.category === 'success').length,;
-    },;
-    {,
-      id: 'implementation',;
-      name: 'Implementation',;
-      count: contentPieces.filter(c => c.category === 'implementation').length,;
-    },;
-    {,
-      id: 'automation',;
-      name: 'Automation',;
-      count: contentPieces.filter(c => c.category === 'automation').length,;
-    },;
-    {,
-      id: 'personalization',;
-      name: 'Personalization',;
-      count: contentPieces.filter(c => c.category === 'personalization').length,;
-    },;
-    {,
-      id: 'monetization',;
-      name: 'Monetization',;
-      count: contentPieces.filter(c => c.category === 'monetization').length,;
-    },;
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentPieces.length };
+    {
+      id: 'revolution';
+      name: 'Content Revolution';
+      count: contentPieces.filter(c => c.category === 'revolution').length;
+    };
+    {
+      id: 'success';
+      name: 'Success Stories';
+      count: contentPieces.filter(c => c.category === 'success').length;
+    };
+    {
+      id: 'implementation';
+      name: 'Implementation';
+      count: contentPieces.filter(c => c.category === 'implementation').length;
+    };
+    {
+      id: 'automation';
+      name: 'Automation';
+      count: contentPieces.filter(c => c.category === 'automation').length;
+    };
+    {
+      id: 'personalization';
+      name: 'Personalization';
+      count: contentPieces.filter(c => c.category === 'personalization').length;
+    };
+    {
+      id: 'monetization';
+      name: 'Monetization';
+      count: contentPieces.filter(c => c.category === 'monetization').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? contentPieces,
       : contentPieces.filter(content => content.category === activeCategory),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -161,12 +155,10 @@ const UltimateContentRevolutionShowcase = () => {,
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    ,}
+        return '📄'}
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-50o0/20 text-blue-30o0 border-blue-50o0/30',
       case 'case-study':,
@@ -174,14 +166,12 @@ const UltimateContentRevolutionShowcase = () => {,
       case 'resource':,
         return 'bg-purple-50o0/20 text-purple-30o0 border-purple-50o0/30',
       default:,
-        return 'bg-gray-50o0/20 text-gray-30o0 border-gray-50o0/30',
-    ,}
+        return 'bg-gray-50o0/20 text-gray-30o0 border-gray-50o0/30'}
   };
-,
-  return (,
+  return (
     <div className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-white font-semibold'>,
@@ -226,40 +216,36 @@ const UltimateContentRevolutionShowcase = () => {,
         </div>,
         {/* Category Filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all ${,
+              className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-60o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {filteredContent.map(content => (,
-            <div,
-              key={content.id,}
-              className={`bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
-                content.featured ? 'ring-2 ring-purple-50o0' : '',
-              ,}`}
+          {filteredContent.map(content => (
+            <div
+              key={content.id}
+              className={`bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${
+                content.featured ? 'ring-2 ring-purple-50o0' : ''}`}
             >,
               {/* Featured Badge */}
-              {content.featured && (,
+              {content.featured && (
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-1 rounded-full text-sm font-semibold'>,
                   Featured,
-                </div>,
-              )}
+                </div>)}
 ,
               <div className='p-6'>,
                 {/* Content Type */}
                 <div className='flex items-center justify-between mb-4'>,
-                  <div,
+                  <div
                     className={`flex items-center px-3 py-1 rounded-full text-sm font-semibold border ${getTypeColor(content.type)}`}
                   >,
                     <span className='mr-2'>{getTypeIcon(content.type)}</span>,
@@ -305,19 +291,17 @@ const UltimateContentRevolutionShowcase = () => {,
                   </div>,
                 </div>,
                 {/* Action Button */}
-                <Link,
+                <Link
                   href={content.url}
-                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all',
-                >,
+                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all'>,
                   {content.type === 'blog',
                     ? 'Read Article',
                     : content.type === 'case-study',
                       ? 'View Case Study',
-                      : 'Get Guide',}
+                      : 'Get Guide'}
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='text-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-12 text-white'>,
@@ -329,30 +313,23 @@ const UltimateContentRevolutionShowcase = () => {,
             AI-powered content transformation.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-content-revolution-implementation-guide',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get Implementation Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Schedule Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-colors',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-colors'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContentRevolutionShowcase,
-,
+    </div>)};
+export default UltimateContentRevolutionShowcase;

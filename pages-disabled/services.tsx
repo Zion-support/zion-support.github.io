@@ -1,17 +1,15 @@
 import Head from 'next/head',
-import React from 'react',
+import React from 'react';
 import { innovativeRealMicroSaasServices20o25 } from '../data/20o25-innovative-real-micro-saas-services',
 import { advancedITServices } from '../data/advanced-it-services',
 import { innovativeAIServices } from '../data/innovative-ai-services',
 import { addedMicroSaaS20o25 } from '../data/20o25-added-micro-saas',
 import { addedITServices20o25 } from '../data/20o25-added-it-services',
 import { addedAIServices20o25 } from '../data/20o25-added-ai-services',
-,
-export default function Services() {,
+export default function Services() {
   const title = 'Services — Zion Tech Group',
   const description =,
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.',
-,
   const microSaaS = innovativeRealMicroSaasServices20o25,
     .slice(0, 12),
     .concat(addedMicroSaaS20o25),
@@ -21,8 +19,7 @@ export default function Services() {,
   const aiServices = innovativeAIServices,
     .slice(0, 12),
     .concat(addedAIServices20o25),
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -70,19 +67,18 @@ export default function Services() {,
           </section>,
         </div>,
         <div className='mt-10'>,
-          <a,
+          <a
             className='rounded bg-blue-60o0 px-5 py-2.5 text-white hover: bg-blue-70o0',
-            href='/contact',
-          >,
+            href='/contact'>,
             Get in touch,
           </a>,
         </div>,
-        {/* Expanded Catalog Sections */,}
+        {/* Expanded Catalog Sections */}
         <section className='mt-16'>,
           <h2 className='text-2xl font-semibold'>Featured Micro SaaS</h2>,
           <div className='mt-6 grid gap-4 sm: grid-cols-2 md:grid-cols-3'>,
-            {microSaaS.map(item => (,
-              <article key={item.id,} className='rounded-lg border p-4'>,
+            {microSaaS.map(item => (
+              <article key={item.id} className='rounded-lg border p-4'>,
                 <div className='text-lg font-semibold'>,
                   {item.icon} {item.name}
                 </div>,
@@ -92,25 +88,22 @@ export default function Services() {,
                   <span className='text-gray-50o0'>{item.period}</span>,
                 </div>,
                 <ul className='mt-2 list-disc pl-5 text-sm text-gray-70o0'>,
-                  {item.features.slice(0, 3).map((f, idx) => (,
-                    <li key={idx}>{f}</li>,
-                  ))}
+                  {item.features.slice(0, 3).map((f, idx) => (
+                    <li key={idx}>{f}</li>))}
                 </ul>,
-                <a,
+                <a
                   href={`/services/${item.id}`}
-                  className='mt-3 inline-block text-blue-60o0 underline',
-                >,
+                  className='mt-3 inline-block text-blue-60o0 underline'>,
                   Learn more,
                 </a>,
-              </article>,
-            ))}
+              </article>))}
           </div>,
         </section>,
         <section className='mt-16'>,
           <h2 className='text-2xl font-semibold'>Advanced IT Services</h2>,
           <div className='mt-6 grid gap-4 sm: grid-cols-2 md:grid-cols-3'>,
-            {itServices.map(item => (,
-              <article key={item.id,} className='rounded-lg border p-4'>,
+            {itServices.map(item => (
+              <article key={item.id} className='rounded-lg border p-4'>,
                 <div className='text-lg font-semibold'>,
                   {item.icon} {item.name}
                 </div>,
@@ -120,25 +113,22 @@ export default function Services() {,
                   <span className='text-gray-50o0'>{item.period}</span>,
                 </div>,
                 <ul className='mt-2 list-disc pl-5 text-sm text-gray-70o0'>,
-                  {item.features.slice(0, 3).map((f, idx) => (,
-                    <li key={idx}>{f}</li>,
-                  ))}
+                  {item.features.slice(0, 3).map((f, idx) => (
+                    <li key={idx}>{f}</li>))}
                 </ul>,
-                <a,
+                <a
                   href={`/services/${item.id}`}
-                  className='mt-3 inline-block text-blue-60o0 underline',
-                >,
+                  className='mt-3 inline-block text-blue-60o0 underline'>,
                   Learn more,
                 </a>,
-              </article>,
-            ))}
+              </article>))}
           </div>,
         </section>,
         <section className='mt-16'>,
           <h2 className='text-2xl font-semibold'>Innovative AI Services</h2>,
           <div className='mt-6 grid gap-4 sm: grid-cols-2 md:grid-cols-3'>,
-            {aiServices.map(item => (,
-              <article key={item.id,} className='rounded-lg border p-4'>,
+            {aiServices.map(item => (
+              <article key={item.id} className='rounded-lg border p-4'>,
                 <div className='text-lg font-semibold'>,
                   {item.icon} {item.name}
                 </div>,
@@ -148,18 +138,15 @@ export default function Services() {,
                   <span className='text-gray-50o0'>{item.period}</span>,
                 </div>,
                 <ul className='mt-2 list-disc pl-5 text-sm text-gray-70o0'>,
-                  {item.features.slice(0, 3).map((f, idx) => (,
-                    <li key={idx}>{f}</li>,
-                  ))}
+                  {item.features.slice(0, 3).map((f, idx) => (
+                    <li key={idx}>{f}</li>))}
                 </ul>,
-                <a,
+                <a
                   href={`/services/${item.id}`}
-                  className='mt-3 inline-block text-blue-60o0 underline',
-                >,
+                  className='mt-3 inline-block text-blue-60o0 underline'>,
                   Learn more,
                 </a>,
-              </article>,
-            ))}
+              </article>))}
           </div>,
         </section>,
         <section className='mt-16 rounded-lg border bg-gray-50 p-6'>,
@@ -179,40 +166,32 @@ export default function Services() {,
             Call{' '}
             <a className='text-blue-60o0 underline' href='tel: +130o24640950'>,
               +1 30o2 464 0950,
-            </a>,
-            , email{' '}
-            <a,
+            </a>, email{' '}
+            <a
               className='text-blue-60o0 underline',
-              href='mailto: kleber@ziontechgroup.com',
-            >,
+              href='mailto: kleber@ziontechgroup.com'>,
               kleber@ziontechgroup.com,
-            </a>,
-            , or visit{' '}
-            <a,
+            </a>, or visit{' '}
+            <a
               className='text-blue-60o0 underline',
-              href='https: //ziontechgroup.com',
-            >,
+              href='https: //ziontechgroup.com'>,
               ziontechgroup.com,
             </a>,
             .,
           </p>,
           <div className='mt-4 grid gap-3 sm:grid-cols-2'>,
-            <a,
+            <a
               href='/pricing',
-              className='inline-block rounded border px-4 py-2 text-blue-70o0 hover:bg-blue-50',
-            >,
+              className='inline-block rounded border px-4 py-2 text-blue-70o0 hover:bg-blue-50'>,
               See pricing guidance,
             </a>,
-            <a,
+            <a
               href='/request-quote',
-              className='inline-block rounded bg-blue-60o0 px-4 py-2 text-white hover:bg-blue-70o0',
-            >,
+              className='inline-block rounded bg-blue-60o0 px-4 py-2 text-white hover:bg-blue-70o0'>,
               Request a custom quote,
             </a>,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,51 +1,40 @@
-import React from 'react',
+import React from 'react';
 import { useEffect, useState } from 'react',
 import { Bell, Calendar, X } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { useProjects } from '@/hooks/useProjects',
 import { Project } from '@/types/projects',
-,
-export function ProjectOfferBanner() {,
+export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
-,
-  useEffect(() => {,
-    if (projects && !isLoading) {,
+  useEffect(() => {
+    if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
-      setPendingOffers(offers),
-    }
+      setPendingOffers(offers)}
   }, [projects, isLoading]),
-,
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {,
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
     e.stopPropagation(),
-    setDismissed(prev => {,
+    setDismissed(prev => {
       const updated = new Set(prev),
       updated.add(projectId),
-      return updated,
-    ,}),
-  };
-,
-  const handleViewOffer = (projectId: string) => {,
-    router.push(`/project/${projectId,}`),
-  };
-,
-  if (,
+      return updated})};
+  const handleViewOffer = (projectId: string) => {
+    router.push(`/project/${projectId}`)};
+  if (
     isLoading ||,
     pendingOffers.length === 0 ||,
-    pendingOffers.every(p => dismissed.has(p.id)),
-  ) {,
-    return null,
-  }
+    pendingOffers.every(p => dismissed.has(p.id))) {
+    return null}
 ,
-  return (,
+  return (
     <div className='mb-6 space-y-3'>,
       {pendingOffers,
         .filter(offer => !dismissed.has(offer.id)),
-        .map(offer => (,
-          <Card,
+        .map(offer => (
+          <Card
             key={offer.id}
             className='border-2 border-primary bg-primary/5',
             onClick={() => handleViewOffer(offer.id)}
@@ -67,7 +56,7 @@ export function ProjectOfferBanner() {,
                 <Button size='sm' className='whitespace-nowrap'>,
                   View Offer,
                 </Button>,
-                <Button,
+                <Button
                   size='sm',
                   variant='ghost',
                   onClick={e => handleDismiss(offer.id, e)}
@@ -76,9 +65,6 @@ export function ProjectOfferBanner() {,
                 </Button>,
               </div>,
             </CardContent>,
-          </Card>,
-        ))}
-    </div>,
-  ),
-}
+          </Card>))}
+    </div>)}
 ,

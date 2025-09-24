@@ -1,10 +1,8 @@
 import Head from 'next/head',
 import { useState } from 'react',
-,
-export default function Service-17555750o09754-uwdlyewogService() {,
+export default function Service-17555750o09754-uwdlyewogService() {
   const [selectedPlan, setSelectedPlan] = useState(0),
-,
-  return (,
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>AI-Powered Cybersecurity Service - Zion Tech Group</title>,
@@ -15,26 +13,23 @@ export default function Service-17555750o09754-uwdlyewogService() {,
         <meta property="og:description" content="Advanced Cybersecurity solution powered by cutting-edge artificial intelligence"  />,
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/services/service-17555750o09754-uwdlyewog"  />,
-        <script type="application/ld+json">{JSON.stringify({,
-          "@context": "https://schema.org",;
-          "@type": "Service",;
-          "name": "AI-Powered Cybersecurity Service",;
-          "description": "Advanced Cybersecurity solution powered by cutting-edge artificial intelligence",;
-          "provider": {,
-            "@type": "Organization",;
-            "name": "Zion Tech Group",
-          },;
-          "category": "Cybersecurity",;
-          "offers": serviceData.pricing.map(plan => ({,
-            "@type": "Offer",;
-            "name": plan.plan,;
-            "price": plan.price,;
-            "description": plan.features.join(', '),
-          })),
-        })}</script>,
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org";
+          "@type": "Service";
+          "name": "AI-Powered Cybersecurity Service";
+          "description": "Advanced Cybersecurity solution powered by cutting-edge artificial intelligence";
+          "provider": {
+            "@type": "Organization";
+            "name": "Zion Tech Group"};
+          "category": "Cybersecurity";
+          "offers": serviceData.pricing.map(plan => ({
+            "@type": "Offer";
+            "name": plan.plan;
+            "price": plan.price;
+            "description": plan.features.join(', ')}))})}</script>,
         <meta name="twitter: card" content="summary_large_image"  /></Head>,
       <main className="container mx-auto px-6 py-12">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-16">,
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent">,
             AI-Powered Cybersecurity Service,
@@ -47,7 +42,7 @@ export default function Service-17555750o09754-uwdlyewogService() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {serviceData.features.map((feature, index) => (,
+            {serviceData.features.map((feature, index) => (
               <div key={index} className="bg-slate-80o0 p-6 rounded-lg border border-slate-70o0">,
                 <div className="w-12 h-12 bg-blue-50o0 rounded-lg flex items-center justify-center mb-4">,
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
@@ -55,39 +50,35 @@ export default function Service-17555750o09754-uwdlyewogService() {,
                   </svg>,
                 </div>,
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Pricing Section */}
         <div className="mb-16">,
           <h2 className="text-3xl font-bold mb-8 text-center">Pricing Plans</h2>,
           <div className="grid md: grid-cols-3 gap-6">,
-            {serviceData.pricing.map((plan, index) => (,
-              <div,
+            {serviceData.pricing.map((plan, index) => (
+              <div
                 key={index} ,
-                className={`bg-slate-80o0 p-6 rounded-lg border-2 transition-all cursor-pointer ${,
-                  selectedPlan === index ? 'border-blue-50o0 bg-slate-70o0' : 'border-slate-70o0',
-                }`}
+                className={`bg-slate-80o0 p-6 rounded-lg border-2 transition-all cursor-pointer ${
+                  selectedPlan === index ? 'border-blue-50o0 bg-slate-70o0' : 'border-slate-70o0'}`}
                 onClick={() => setSelectedPlan(index)}
               >,
                 <h3 className="text-xl font-bold mb-2">{plan.plan}</h3>,
                 <div className="text-3xl font-bold mb-4 text-blue-40o0">{plan.price}</div>,
                 <ul className="space-y-2">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">,
                       <svg className="w-4 h-4 text-green-40o0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"  />,
                       </svg>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <button className="w-full mt-6 bg-blue-60o0 hover: bg-blue-70o0 text-white font-bold py-2 px-4 rounded transition-colors">,
                   Get Started,
                 </button>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -99,7 +90,5 @@ export default function Service-17555750o09754-uwdlyewogService() {,
           </button>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

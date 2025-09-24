@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25RevolutionaryTrendsBanner() {,
-  return (,
+export default function AI20o25RevolutionaryTrendsBanner() {
+  return (
     <section className='py-16 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white relative overflow-hidden'>,
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20'></div>,
       <div className='relative max-w-7xl mx-auto px-4'>,
@@ -64,22 +63,18 @@ export default function AI20o25RevolutionaryTrendsBanner() {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-revolutionary-trends-predictions',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform'>,
               🔮 Explore Trends,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-breakthrough-revolution',
-              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors',
-            >,
+              className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors'>,
               🚀 See Breakthrough Technology,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

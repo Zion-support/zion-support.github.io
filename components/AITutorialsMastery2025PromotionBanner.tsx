@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
-  return (,
+const AITutorialsMastery20o25PromotionBanner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-blue-90o0 via-cyan-90o0 to-blue-90o0 py-12 px-4'>,
-      {/* Animated background elements */,}
+      {/* Animated background elements */}
       <div className='absolute inset-0 overflow-hidden'>,
         <div className='absolute -top-4 -left-4 w-24 h-24 bg-blue-50o0/20 rounded-full animate-pulse'></div>,
         <div className='absolute top-1/2 -right-8 w-32 h-32 bg-cyan-50o0/20 rounded-full animate-pulse delay-10o00'></div>,
@@ -30,21 +29,20 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
             learningNLPcomputer visionand more.,
           </p>,
         </div>,
-        {/* Course highlights */,}
+        {/* Course highlights */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-10'>,
           <div className='bg-gradient-to-br from-blue-90o0/50 to-blue-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-blue-50o0/20'>,
             <div className='flex items-center mb-4'>,
               <div className='w-10 h-10 bg-gradient-to-r from-blue-50o0 to-indigo-50o0 rounded-full flex items-center justify-center mr-4'>,
-                <svg,
+                <svg
                   className='w-5 h-5 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 19v-6a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v6a2 2 0 0o02 2h2a2 2 0 0o02-2zm0 0V9a2 2 0 0o12-2h2a2 2 0 0o12 2v10m-6 0a2 2 0 0o02 2h2a2 2 0 0o02-2m0 0V5a2 2 0 0o12-2h2a2 2 0 0o12 2v14a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2z',
                   />,
                 </svg>,
@@ -58,13 +56,12 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
           <div className='bg-gradient-to-br from-purple-90o0/50 to-purple-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-purple-50o0/20'>,
             <div className='flex items-center mb-4'>,
               <div className='w-10 h-10 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mr-4'>,
-                <svg,
+                <svg
                   className='w-5 h-5 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -81,13 +78,12 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
           <div className='bg-gradient-to-br from-green-90o0/50 to-green-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-green-50o0/20'>,
             <div className='flex items-center mb-4'>,
               <div className='w-10 h-10 bg-gradient-to-r from-green-50o0 to-teal-50o0 rounded-full flex items-center justify-center mr-4'>,
-                <svg,
+                <svg
                   className='w-5 h-5 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
                     strokeWidth={2}
@@ -131,7 +127,7 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
             <div className='text-sm text-gray-30o0'>Support</div>,
           </div>,
         </div>,
-        {/* Call to action */,}
+        {/* Call to action */}
         <div className='text-center'>,
           <Link href='/ai-tutorials-mastery-20o25'>,
             <button className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-full text-lg font-semibold hover: scale-10o5 transition-transform shadow-lg shadow-blue-50o0/25'>,
@@ -144,9 +140,5 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AITutorialsMastery20o25PromotionBanner,
-,
+    </div>)};
+export default AITutorialsMastery20o25PromotionBanner;

@@ -1,21 +1,20 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o25NewContentRevolutionBanner: React.FC = () => {,
-  return (,
+const AI20o25NewContentRevolutionBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         />,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black rounded-full px-6 py-2 mb-6 font-bold text-sm'>,
             <span className='mr-2'>🚀</span>,
             NEW 20o25 CONTENT REVOLUTION,
@@ -31,7 +30,7 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
             Discover the latest breakthroughs in AI technology with our,
             comprehensive guides covering,
             <span className='text-yellow-30o0 font-semibold'>,
-              {' ',}
+              {' '}
               Generative Automation,
             </span>,
             <span className='text-blue-30o0 font-semibold'>,
@@ -48,7 +47,7 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
         </div>,
         {/* Content Cards */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
-          {/* Generative Automation Card */,}
+          {/* Generative Automation Card */}
           <div className='bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-2xl shadow-2xl border border-purple-60o0 hover: scale-10o5 transition-transform duration-30o0'>,
             <div className='text-4xl mb-4'>🤖</div>,
             <h4 className='text-2xl font-bold mb-4 text-yellow-30o0'>,
@@ -72,14 +71,13 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
                 <span>40% improvement in engagement rates</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/content/blog/ai-20o25-generative-automation-revolution-complete-guide',
-              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0',
-            >,
+              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0'>,
               Read Complete Guide,
             </Link>,
           </div>,
-          {/* Autonomous Operations Card */,}
+          {/* Autonomous Operations Card */}
           <div className='bg-gradient-to-br from-blue-80o0 to-blue-90o0 p-8 rounded-2xl shadow-2xl border border-blue-60o0 hover: scale-10o5 transition-transform duration-30o0'>,
             <div className='text-4xl mb-4'>⚡</div>,
             <h4 className='text-2xl font-bold mb-4 text-yellow-30o0'>,
@@ -103,14 +101,13 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
                 <span>90% improvement in task completion</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/content/blog/ai-20o25-autonomous-business-operations-revolution',
-              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0',
-            >,
+              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0'>,
               Explore Revolution,
             </Link>,
           </div>,
-          {/* Quantum AI Card */,}
+          {/* Quantum AI Card */}
           <div className='bg-gradient-to-br from-indigo-80o0 to-indigo-90o0 p-8 rounded-2xl shadow-2xl border border-indigo-60o0 hover: scale-10o5 transition-transform duration-30o0'>,
             <div className='text-4xl mb-4'>🔮</div>,
             <h4 className='text-2xl font-bold mb-4 text-yellow-30o0'>,
@@ -134,15 +131,14 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
                 <span>50-80% reduction in computational costs</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/content/blog/ai-20o25-quantum-ai-business-transformation',
-              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0',
-            >,
+              className='inline-block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0'>,
               Discover Future,
             </Link>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black p-8 rounded-2xl shadow-2xl'>,
             <h4 className='text-2xl md: text-3xl font-bold mb-4'>,
@@ -153,22 +149,20 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
               expert consultations,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='bg-black text-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-80o0 transition-colors duration-30o0',
-              >,
+                className='bg-black text-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-80o0 transition-colors duration-30o0'>,
                 Explore AI Services,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-black text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-yellow-40o0 transition-colors duration-30o0',
-              >,
+                className='border-2 border-black text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-black hover:text-yellow-40o0 transition-colors duration-30o0'>,
                 Get Expert Consultation,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Statistics */,}
+        {/* Statistics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mt-12'>,
           <div className='text-center'>,
             <div className='text-3xl font-bold text-yellow-40o0 mb-2'>,
@@ -190,9 +184,5 @@ const AI20o25NewContentRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25NewContentRevolutionBanner,
-,
+    </section>)};
+export default AI20o25NewContentRevolutionBanner;

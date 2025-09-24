@@ -1,8 +1,7 @@
 import ServiceLanding from '../components/sections/ServiceLanding',
-,
-export default function FintechSolutions() {,
-	return (,
-		<ServiceLanding,
+export default function FintechSolutions() {
+	return (
+		<ServiceLanding
 			title="Fintech AI Solutions",
 			slug="fintech-solutions",
 			description="AI solutions for fraud detectionrisk scoringKYC/AML automationand real-time decisioning. Improve compliance and customer experience across the lifecycle.",
@@ -10,16 +9,13 @@ export default function FintechSolutions() {,
 			pricePerMonthUSD={2799}
 			implementationWeeks="Implementation: 4–8 weeks",
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%",
-			features={[,
-				"Transaction anomaly detection and entity resolution",;
-				"Credit risk models with explainability",;
-				"KYC/AML case automation and SAR drafts",;
-				"Collections optimization and next-best-action",;
-				"Realtime rules with feature store integration",;
-				"Integrations: Core bankingKYCpaymentsCRMs",
-			],}
+			features={[
+				"Transaction anomaly detection and entity resolution";
+				"Credit risk models with explainability";
+				"KYC/AML case automation and SAR drafts";
+				"Collections optimization and next-best-action";
+				"Realtime rules with feature store integration";
+				"Integrations: Core bankingKYCpaymentsCRMs"]}
 			industries={["Fintech"Banking"Lending"Payments"]}
 			canonical="https: //ziontechgroup.com/fintech-solutions",
-		 />,
-	),
-,}
+		 />)}

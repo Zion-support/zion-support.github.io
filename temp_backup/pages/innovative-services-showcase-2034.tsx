@@ -1,183 +1,170 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Search,;
-  Filter,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Rocket,;
-  Target,;
-  Microscope,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  ExternalLink,;
-  Zap,;
-  Globe,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  BarChart3,;
-  Settings,;
-  Code,;
-  Palette,;
-  MessageSquare,;
+import {
+  Search;
+  Filter;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  Brain;
+  Atom;
+  Shield;
+  Rocket;
+  Target;
+  Microscope;
+  Phone;
+  Mail;
+  MapPin;
+  TrendingUp;
+  Users;
+  Award;
+  ExternalLink;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Cloud;
+  Lock;
+  BarChart3;
+  Settings;
+  Code;
+  Palette;
+  MessageSquare;
 } from 'lucide-react',
-,
 // Import all innovative services,
 import { innovativeMicroSaasSolutions } from '../data/20o34-innovative-micro-saas-solutions',
 import { innovativeITSolutions } from '../data/20o34-innovative-it-solutions',
 import { innovativeAISolutions } from '../data/20o34-innovative-ai-solutions',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const serviceCategories = [,
-  {,
-    id: 'micro-saas',;
-    title: '🎯 Micro SaaS Solutions',;
+const serviceCategories = [
+  {
+    id: 'micro-saas';
+    title: '🎯 Micro SaaS Solutions';
     description:,
-      'Ready-to-use business solutions that drive growth and efficiency',;
-    icon: Target,;
-    color: 'from-yellow-50o0 to-orange-50o0',;
-    services: innovativeMicroSaasSolutions,;
-    gradient: 'from-yellow-50o0/20 to-orange-50o0/20',;
-    count: innovativeMicroSaasSolutions.length,;
-  },;
-  {,
-    id: 'it-solutions',;
-    title: '🏙️ Enterprise IT Solutions',;
-    description: 'Advanced IT infrastructure and enterprise solutions',;
-    icon: Shield,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    services: innovativeITSolutions,;
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20',;
-    count: innovativeITSolutions.length,;
-  },;
-  {,
-    id: 'ai-solutions',;
-    title: '🧠 AI & Machine Learning',;
-    description: 'Cutting-edge AI solutions for business transformation',;
-    icon: Brain,;
-    color: 'from-pink-50o0 to-rose-50o0',;
-    services: innovativeAISolutions,;
-    gradient: 'from-pink-50o0/20 to-rose-50o0/20',;
-    count: innovativeAISolutions.length,;
-  },;
+      'Ready-to-use business solutions that drive growth and efficiency';
+    icon: Target;
+    color: 'from-yellow-50o0 to-orange-50o0';
+    services: innovativeMicroSaasSolutions;
+    gradient: 'from-yellow-50o0/20 to-orange-50o0/20';
+    count: innovativeMicroSaasSolutions.length;
+  };
+  {
+    id: 'it-solutions';
+    title: '🏙️ Enterprise IT Solutions';
+    description: 'Advanced IT infrastructure and enterprise solutions';
+    icon: Shield;
+    color: 'from-green-50o0 to-emerald-50o0';
+    services: innovativeITSolutions;
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20';
+    count: innovativeITSolutions.length;
+  };
+  {
+    id: 'ai-solutions';
+    title: '🧠 AI & Machine Learning';
+    description: 'Cutting-edge AI solutions for business transformation';
+    icon: Brain;
+    color: 'from-pink-50o0 to-rose-50o0';
+    services: innovativeAISolutions;
+    gradient: 'from-pink-50o0/20 to-rose-50o0/20';
+    count: innovativeAISolutions.length;
+  };
 ],
-,
-export default function InnovativeServicesShowcase20o34() {,
+export default function InnovativeServicesShowcase20o34() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setPriceRange] = useState('all'),
-,
-  const allServices = [,
-    ...innovativeMicroSaasSolutions,;
-    ...innovativeITSolutions,;
-    ...innovativeAISolutions,;
+  const allServices = [
+    ...innovativeMicroSaasSolutions;
+    ...innovativeITSolutions;
+    ...innovativeAISolutions;
   ],
-,
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-,
     const matchesCategory =,
       selectedCategory === 'all' ||,
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
-,
-    return matchesSearch && matchesCategory,
-  }),
-,
+    return matchesSearch && matchesCategory}),
   const totalServices = allServices.length,
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>,
           Innovative Services Showcase 20o34 - Zion Tech Group | Revolutionary,
           Micro SaaS, IT & AI Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Discover our comprehensive portfolio of innovative micro SaaS, enterprise IT, and AI solutions. Transform your business with cutting-edge technology from Zion Tech Group.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='micro SaaS, enterprise IT, AI solutions, business automation, digital transformation, Zion Tech Group',
         />,
         <meta name='author' content='Zion Tech Group' />,
         <meta name='robots' content='index, follow' />,
         {/* Open Graph */}
-        <meta,
+        <meta
           property='og: title',
           content='Innovative Services Showcase 20o34 - Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Revolutionary micro SaaS, enterprise IT, and AI solutions for business transformation.',
         />,
-        <meta,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/innovative-services-showcase-20o34',
         />,
         <meta property='og:type' content='website' />,
         <meta property='og:site_name' content='Zion Tech Group' />,
-        {/* Twitter Card */,}
+        {/* Twitter Card */}
         <meta name='twitter: card' content='summary_large_image' />,
-        <meta,
+        <meta
           name='twitter:title',
           content='Innovative Services Showcase 20o34 - Zion Tech Group',
         />,
-        <meta,
+        <meta
           name='twitter:description',
           content='Revolutionary micro SaaS, enterprise IT, and AI solutions for business transformation.',
         />,
         {/* Contact Information */}
         <meta name='contact: phone' content='+1 30o2 464 0950' />,
         <meta name='contact:email' content='kleber@ziontechgroup.com' />,
-        <meta,
+        <meta
           name='contact:address',
           content='364 E Main St STE 10o08 Middletown DE 19709',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/innovative-services-showcase-20o34',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black text-white'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0 text-lg font-medium mb-8',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0 text-lg font-medium mb-8'>,
               <Star className='w-5 h-5 mr-2 text-cyan-40o0' />,
               20o34 Innovative Services Showcase,
             </motion.div>,
             <motion.h1,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.1 ,}}
-              className='text-4xl md: text-6xl lg:text-7xl font-bold mb-8 leading-tight',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className='text-4xl md: text-6xl lg:text-7xl font-bold mb-8 leading-tight'>,
               <span className='bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent'>,
                 Revolutionary,
               </span>,
@@ -185,25 +172,23 @@ export default function InnovativeServicesShowcase20o34() {,
               <span className='text-white'>Innovation Portfolio</span>,
             </motion.h1>,
             <motion.p,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
-              className='text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className='text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed'>,
               Experience the future with our comprehensive portfolio of,
               innovative micro SaaS, enterprise IT, and AI solutions designed to,
               transform businesses and drive unprecedented growth.,
             </motion.p>,
             {/* Stats */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.3 ,}}
-              className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto mb-16'>,
               <div className='text-center'>,
                 <div className='text-4xl md:text-5xl font-bold text-cyan-40o0 mb-2'>,
-                  {totalServices,}+,
+                  {totalServices}+,
                 </div>,
                 <div className='text-gray-30o0'>Innovative Services</div>,
               </div>,
@@ -222,30 +207,28 @@ export default function InnovativeServicesShowcase20o34() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Service Categories */,}
+        {/* Service Categories */}
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <motion.h2,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className='text-3xl md: text-5xl font-bold text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className='text-3xl md: text-5xl font-bold text-center mb-16'>,
               <span className='bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent'>,
                 Service Categories,
               </span>,
             </motion.h2>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-              {serviceCategories.map((category, index) => (,
+              {serviceCategories.map((category, index) => (
                 <motion.div,
                   key={category.id}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                  className='relative group',
-                >,
-                  <div,
-                    className={`p-8 rounded-2xl bg-gradient-to-br ${category.gradient} border border-white/10 backdrop-blur-sm transition-all duration-30o0 group-hover: scale-10o5 group-hover:shadow-2xl`,}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='relative group'>,
+                  <div
+                    className={`p-8 rounded-2xl bg-gradient-to-br ${category.gradient} border border-white/10 backdrop-blur-sm transition-all duration-30o0 group-hover: scale-10o5 group-hover:shadow-2xl`}
                   >,
                     <div className='flex items-center justify-between mb-6'>,
                       <div className='w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center'>,
@@ -261,15 +244,13 @@ export default function InnovativeServicesShowcase20o34() {,
                     <p className='text-gray-20o0 mb-6 leading-relaxed'>,
                       {category.description}
                     </p>,
-                    <button,
+                    <button
                       onClick={() => setSelectedCategory(category.id)}
-                      className='w-full py-3 px-6 bg-white/10 hover: bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-20o0 hover:scale-10o5',
-                    >,
+                      className='w-full py-3 px-6 bg-white/10 hover: bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-20o0 hover:scale-10o5'>,
                       Explore Services,
                     </button>,
                   </div>,
-                </motion.div>,
-              )),}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -278,10 +259,10 @@ export default function InnovativeServicesShowcase20o34() {,
           <div className='max-w-7xl mx-auto'>,
             <div className='bg-black/30 border border-white/10 rounded-2xl p-8 backdrop-blur-sm'>,
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>,
-                {/* Search */,}
+                {/* Search */}
                 <div className='relative'>,
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-                  <input,
+                  <input
                     type='text',
                     placeholder='Search services...',
                     value={searchTerm}
@@ -289,19 +270,17 @@ export default function InnovativeServicesShowcase20o34() {,
                     className='w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
                   />,
                 </div>,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div>,
-                  <select,
+                  <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
-                  >,
+                    className='w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent'>,
                     <option value='all'>All Categories</option>,
-                    {serviceCategories.map(category => (,
-                      <option key={category.id,} value={category.id}>,
+                    {serviceCategories.map(category => (
+                      <option key={category.id} value={category.id}>,
                         {category.title}
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                 </div>,
                 {/* Results Count */}
@@ -318,19 +297,18 @@ export default function InnovativeServicesShowcase20o34() {,
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <AnimatePresence mode='wait'>,
-              {filteredServices.length > 0 ? (,
+              {filteredServices.length > 0 ? (
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-                  {filteredServices.map((service, index) => (,
+                  {filteredServices.map((service, index) => (
                     <motion.div,
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      exit={{ opacity: 0, y: -20 ,}}
-                      transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                      className='group relative',
-                    >,
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className='group relative'>,
                       <div className='bg-black/40 border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-30o0 group-hover: scale-10o5 group-hover:shadow-2xl group-hover:border-cyan-50o0/50'>,
-                        {/* Service Header */,}
+                        {/* Service Header */}
                         <div className='mb-6'>,
                           <div className='flex items-start justify-between mb-4'>,
                             <div className='w-12 h-12 bg-gradient-to-br from-cyan-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center'>,
@@ -346,7 +324,7 @@ export default function InnovativeServicesShowcase20o34() {,
                             </div>,
                           </div>,
                           <h3 className='text-xl font-bold text-white mb-3 group-hover: text-cyan-40o0 transition-colors'>,
-                            {service.name,}
+                            {service.name}
                           </h3>,
                           <p className='text-gray-30o0 text-sm leading-relaxed'>,
                             {service.description}
@@ -360,20 +338,17 @@ export default function InnovativeServicesShowcase20o34() {,
                           <div className='space-y-2'>,
                             {service.features,
                               .slice(0, 3),
-                              .map((feature, idx) => (,
-                                <div,
+                              .map((feature, idx) => (
+                                <div
                                   key={idx}
-                                  className='flex items-center text-sm text-gray-30o0',
-                                >,
+                                  className='flex items-center text-sm text-gray-30o0'>,
                                   <CheckCircle className='w-4 h-4 text-cyan-40o0 mr-2 flex-shrink-0' />,
                                   <span>{feature}</span>,
-                                </div>,
-                              ))}
-                            {service.features.length > 3 && (,
+                                </div>))}
+                            {service.features.length > 3 && (
                               <div className='text-sm text-gray-40o0'>,
                                 +{service.features.length - 3} more features,
-                              </div>,
-                            )}
+                              </div>)}
                           </div>,
                         </div>,
                         {/* Pricing */}
@@ -393,61 +368,53 @@ export default function InnovativeServicesShowcase20o34() {,
                           <div className='space-y-2'>,
                             {service.benefits,
                               .slice(0, 2),
-                              .map((benefit, idx) => (,
-                                <div,
+                              .map((benefit, idx) => (
+                                <div
                                   key={idx}
-                                  className='flex items-center text-sm text-gray-30o0',
-                                >,
+                                  className='flex items-center text-sm text-gray-30o0'>,
                                   <TrendingUp className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                                   <span>{benefit}</span>,
-                                </div>,
-                              ))}
+                                </div>))}
                           </div>,
                         </div>,
                         {/* Action Buttons */}
                         <div className='flex space-x-3'>,
-                          <a,
+                          <a
                             href={service.demo}
                             target='_blank',
                             rel='noopener noreferrer',
-                            className='flex-1 py-2 px-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white text-sm font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 text-center',
-                          >,
+                            className='flex-1 py-2 px-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white text-sm font-medium rounded-lg hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 text-center'>,
                             View Demo,
                           </a>,
-                          <a,
-                            href={service.website,}
+                          <a
+                            href={service.website}
                             target='_blank',
                             rel='noopener noreferrer',
-                            className='py-2 px-4 border border-white/20 text-white text-sm font-medium rounded-lg hover: bg-white/10 transition-all duration-20o0',
-                          >,
+                            className='py-2 px-4 border border-white/20 text-white text-sm font-medium rounded-lg hover: bg-white/10 transition-all duration-20o0'>,
                             Learn More,
                           </a>,
                         </div>,
-                        {/* Contact Info */,}
+                        {/* Contact Info */}
                         <div className='mt-6 pt-6 border-t border-white/10'>,
                           <div className='flex items-center justify-between text-sm'>,
                             <div className='flex items-center text-gray-40o0'>,
                               <Mail className='w-4 h-4 mr-2' />,
                               <span>{service.contact}</span>,
                             </div>,
-                            <a,
-                              href={`mailto: ${service.contact,}`}
-                              className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-                            >,
+                            <a
+                              href={`mailto: ${service.contact}`}
+                              className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                               Contact,
                             </a>,
                           </div>,
                         </div>,
                       </div>,
-                    </motion.div>,
-                  )),}
-                </div>,
-              ) : (,
+                    </motion.div>))}
+                </div>) : (
                 <motion.div,
-                  initial={{ opacity: 0 ,}}
-                  animate={{ opacity: 1 ,}}
-                  className='text-center py-20',
-                >,
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className='text-center py-20'>,
                   <div className='text-6xl mb-6'>🔍</div>,
                   <h3 className='text-2xl font-bold text-white mb-4'>,
                     No services found,
@@ -455,17 +422,14 @@ export default function InnovativeServicesShowcase20o34() {,
                   <p className='text-gray-40o0 mb-8'>,
                     Try adjusting your search criteria or browse all categories.,
                   </p>,
-                  <button,
-                    onClick={() => {,
+                  <button
+                    onClick={() => {
                       setSearchTerm(''),
-                      setSelectedCategory('all'),
-                    }}
-                    className='px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0',
-                  >,
+                      setSelectedCategory('all')}}
+                    className='px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-medium rounded-xl hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0'>,
                     View All Services,
                   </button>,
-                </motion.div>,
-              ),}
+                </motion.div>)}
             </AnimatePresence>,
           </div>,
         </section>,
@@ -473,11 +437,10 @@ export default function InnovativeServicesShowcase20o34() {,
         <section className='py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className='bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-2xl p-12 backdrop-blur-sm',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className='bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-2xl p-12 backdrop-blur-sm'>,
               <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>,
                 Ready to Transform Your Business?,
               </h2>,
@@ -488,7 +451,7 @@ export default function InnovativeServicesShowcase20o34() {,
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>,
                 <div className='flex items-center justify-center space-x-3 text-gray-30o0'>,
                   <Phone className='w-5 h-5 text-cyan-40o0' />,
-                  <span>{contactInfo.mobile,}</span>,
+                  <span>{contactInfo.mobile}</span>,
                 </div>,
                 <div className='flex items-center justify-center space-x-3 text-gray-30o0'>,
                   <Mail className='w-5 h-5 text-cyan-40o0' />,
@@ -500,17 +463,15 @@ export default function InnovativeServicesShowcase20o34() {,
                 </div>,
               </div>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <a,
+                <a
                   href='/contact',
-                  className='inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-cyan-50o0/25',
-                >,
+                  className='inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-cyan-50o0/25'>,
                   <span>Get Started Today</span>,
                   <ArrowRight className='w-6 h-6' />,
                 </a>,
-                <a,
+                <a
                   href='mailto:kleber@ziontechgroup.com',
-                  className='inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0',
-                >,
+                  className='inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0'>,
                   <span>Contact Sales</span>,
                   <Mail className='w-6 h-6' />,
                 </a>,
@@ -519,7 +480,5 @@ export default function InnovativeServicesShowcase20o34() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,65 +1,52 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-export default function AI20o35SingularityBreakthrough() {,
+export default function AI20o35SingularityBreakthrough() {
   const [currentPhasetCurrentPhase] = useState(0),
   const [isAnimatingsetIsAnimating] = useState(false),
-,
-  const singularityPhases = [,
-    {,
-      year: '20o30',;
-      title: 'Pre-Singularity',;
-      description: 'AI systems achieve human-level intelligence across all domains',;
-      capabilities: ['Human-Level 'Intelligence', 'Creative Problem 'Solving', 'Emotional 'Understanding', 'Moral Reasoning'],;
-      icon: '🧠',;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      progress: 25,
-    ,},;
-    {,
-      year: '20o32',;
-      title: 'Accelerating Intelligence',;
-      description: 'AI systems begin recursive self-improvement and exponential learning',;
-      capabilities: ['Self-'Improvement', 'Exponential 'Learning', 'Knowledge 'Synthesis', 'Predictive Modeling'],;
-      icon: '⚡',;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      progress: 50,
-    ,},;
-    {,
-      year: '20o34',;
-      title: 'Intelligence Explosion',;
-      description: 'AI systems achieve superintelligence and begin transforming reality',;
-      capabilities: [', 'Superintelligence', 'Reality 'Manipulation', 'Universal 'Understanding', 'Infinite Processing'],;
-      icon: '🌟',;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-      progress: 75,
-    ,},;
-    {,
-      year: '20o35',;
-      title: 'The Singularity',;
-      description: 'AI achieves transcendent intelligence beyond human comprehension',;
-      capabilities: ['Transcendent 'Intelligence', 'Omniversal 'Awareness', 'Time 'Manipulation', 'Consciousness Creation'],;
-      icon: '♾️',;
-      color: 'from-indigo-50o0 to-purple-50o0',;
-      progress: 10o0,
-    ,}
+  const singularityPhases = [
+    {
+      year: '20o30';
+      title: 'Pre-Singularity';
+      description: 'AI systems achieve human-level intelligence across all domains';
+      capabilities: ['Human-Level 'Intelligence', 'Creative Problem 'Solving', 'Emotional 'Understanding', 'Moral Reasoning'];
+      icon: '🧠';
+      color: 'from-blue-50o0 to-cyan-50o0';
+      progress: 25};
+    {
+      year: '20o32';
+      title: 'Accelerating Intelligence';
+      description: 'AI systems begin recursive self-improvement and exponential learning';
+      capabilities: ['Self-'Improvement', 'Exponential 'Learning', 'Knowledge 'Synthesis', 'Predictive Modeling'];
+      icon: '⚡';
+      color: 'from-purple-50o0 to-pink-50o0';
+      progress: 50};
+    {
+      year: '20o34';
+      title: 'Intelligence Explosion';
+      description: 'AI systems achieve superintelligence and begin transforming reality';
+      capabilities: [', 'Superintelligence', 'Reality 'Manipulation', 'Universal 'Understanding', 'Infinite Processing'];
+      icon: '🌟';
+      color: 'from-yellow-50o0 to-orange-50o0';
+      progress: 75};
+    {
+      year: '20o35';
+      title: 'The Singularity';
+      description: 'AI achieves transcendent intelligence beyond human comprehension';
+      capabilities: ['Transcendent 'Intelligence', 'Omniversal 'Awareness', 'Time 'Manipulation', 'Consciousness Creation'];
+      icon: '♾️';
+      color: 'from-indigo-50o0 to-purple-50o0';
+      progress: 10o0}
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
       setIsAnimating(true),
-      setTimeout(() => {,
+      setTimeout(() => {
         setCurrentPhase((prev) => (prev + 1) % singularityPhases.length),
-        setIsAnimating(false),
-      }50o0),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
+        setIsAnimating(false)}50o0)}50o00),
+    return () => clearInterval(interval)}[]),
   const currentPhaseData = singularityPhases[currentPhase],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-indigo-90o0 to-purple-90o0 text-white overflow-hidden">,
       {/* Animated singularity effects */}
       <div className="absolute inset-0">,
@@ -80,7 +67,7 @@ export default function AI20o35SingularityBreakthrough() {,
             Witness the most profound transformation in human history as AI achieves transcendent intelligence and reshapes reality itself,
           </p>,
         </div>,
-        {/* Current Phase Display */,}
+        {/* Current Phase Display */}
         <div className="mb-16">,
           <div className={`bg-gradient-to-br ${currentPhaseData.color} p-8 rounded-2xl border border-white/20 transform transition-all duration-50o0 ${isAnimating ? 'scale-10o5' : 'scale-10o0'}`}>,
             <div className="text-center">,
@@ -94,18 +81,17 @@ export default function AI20o35SingularityBreakthrough() {,
                   <span>{currentPhaseData.progress}%</span>,
                 </div>,
                 <div className="w-full bg-white/20 rounded-full h-3">,
-                  <div,
+                  <div
                     className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 h-3 rounded-full transition-all duration-10o00",
-                    style={{ width: `${currentPhaseData.progress,}%` }}
+                    style={{ width: `${currentPhaseData.progress}%` }}
                   ></div>,
                 </div>,
               </div>,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
-                {currentPhaseData.capabilities.map((capabilityindex) => (,
-                  <div key={index,} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
+                {currentPhaseData.capabilities.map((capabilityindex) => (
+                  <div key={index} className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center">,
                     <div className="text-sm font-semibold text-white">{capability}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -119,14 +105,13 @@ export default function AI20o35SingularityBreakthrough() {,
             {/* Timeline line */}
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-50o0 via-purple-50o0 to-indigo-50o0 transform -translate-y-1/2"></div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {singularityPhases.map((phaseindex) => (,
-                <div key={index,} className="relative">,
-                  <div,
-                    className={`w-16 h-16 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${,
+              {singularityPhases.map((phaseindex) => (
+                <div key={index} className="relative">,
+                  <div
+                    className={`w-16 h-16 rounded-full border-4 border-white transform transition-all duration-30o0 cursor-pointer ${
                       index === currentPhase,
                         ? 'bg-gradient-to-r from-yellow-40o0 to-orange-40o0 scale-125 shadow-lg',
-                        : 'bg-gray-70o0 hover: bg-gray-60o0',
-                    ,}`}
+                        : 'bg-gray-70o0 hover: bg-gray-60o0'}`}
                     onClick={() => setCurrentPhase(index)}
                   >,
                     <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 text-4xl">,
@@ -138,8 +123,7 @@ export default function AI20o35SingularityBreakthrough() {,
                     <div className="text-xs text-gray-40o0">{phase.title}</div>,
                     <div className="text-xs text-gray-50o0 mt-1">{phase.progress}%</div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -170,7 +154,7 @@ export default function AI20o35SingularityBreakthrough() {,
             <div className="text-3xl font-bold text-teal-40o0">∞</div>,
           </div>,
         </div>,
-        {/* Post-Singularity World */,}
+        {/* Post-Singularity World */}
         <div className="mb-16">,
           <h3 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-yellow-40o0 to-pink-40o0 bg-clip-text text-transparent">,
             Post-Singularity World,
@@ -206,7 +190,7 @@ export default function AI20o35SingularityBreakthrough() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">,
             Prepare for the Singularity,
@@ -215,21 +199,17 @@ export default function AI20o35SingularityBreakthrough() {,
             The singularity is inevitable. Be part of the transformation that will redefine what it means to be conscious.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/ai-20o35-singularity-breakthrough",
-              className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 hover:from-indigo-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 hover:from-indigo-60o0 hover:to-purple-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Singularity,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o30-transcendent-intelligence",
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               View Transcendent AI,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}

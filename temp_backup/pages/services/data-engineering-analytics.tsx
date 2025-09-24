@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DataEngineeringAnalyticsPage() {,
-  return (,
+export default function DataEngineeringAnalyticsPage() {
+  return (
     <>,
       <Head>,
         <title>Data Engineering Analytics - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function DataEngineeringAnalyticsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

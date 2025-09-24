@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function 20o25InnovativeBreakthroughPricingPage() {,
-  return (,
+export default function 20o25InnovativeBreakthroughPricingPage() {
+  return (
     <>,
       <Head>,
         <title>20o25 Innovative Breakthrough Pricing - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function 20o25InnovativeBreakthroughPricingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

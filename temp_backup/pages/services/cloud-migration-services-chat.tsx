@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CloudMigrationServicesChatPage() {,
-  return (,
+export default function CloudMigrationServicesChatPage() {
+  return (
     <>,
       <Head>,
         <title>Cloud Migration Services Chat - Zion Tech Group</title>,
@@ -18,7 +17,5 @@ export default function CloudMigrationServicesChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

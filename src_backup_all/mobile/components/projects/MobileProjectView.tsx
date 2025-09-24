@@ -2,64 +2,53 @@ import { Card, CardContent } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar',
-import {,
-  CheckCircle,;
-  ChevronRight,;
-  FileText,;
-  MessageSquare,;
-  Video,;
+import {
+  CheckCircle;
+  ChevronRight;
+  FileText;
+  MessageSquare;
+  Video;
 } from 'lucide-react',
 import { Progress } from '@/components/ui/progress',
 import { SeverityIndicator } from '../common/SeverityIndicator',
 import { toast } from 'sonner',
-,
-interface Milestone {,
+interface Milestone {
   id: string,
   title: string,
   dueDate: string,
   status: 'completed' | 'in_progress' | 'pending',
   paymentStatus: 'paid' | 'pending' | 'overdue',
-  amount: string,
-,}
+  amount: string}
 ,
-interface ProjectViewProps {,
-  project: {,
+interface ProjectViewProps {
+  project: {
     id: string,
     title: string,
-    client: {,
+    client: {
       name: string,
-      avatar?: string,
-    ,};
+      avatar?: string};
     startDate: string,
     endDate?: string,
     status: string,
     totalAmount: string,
     progress: number,
-    description: string,
-  ,};
-  milestones: Milestone[],
-,}
+    description: string};
+  milestones: Milestone[]}
 ,
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const router = useRouter(),
-,
-  const startProjectCall = () => {,
+  const startProjectCall = () => {
     const roomId = `project-${project.id}`,
-    toast.success('Starting project call', {,
-      description: 'Initializing video connection...',;
+    toast.success('Starting project call', {
+      description: 'Initializing video connection...';
     }),
-,
-    router.push(`/call/${roomId}`),
-  };
-,
-  const messageClient = () => {,
-    toast.info('Opening message thread with client', {,
-      description: `Messaging ${project.client.name,}...`,;
+    router.push(`/call/${roomId}`)};
+  const messageClient = () => {
+    toast.info('Opening message thread with client', {
+      description: `Messaging ${project.client.name}...`;
     }),
-    // Navigate to messaging with this client,
-  };
-,
-  return (,
+    // Navigate to messaging with this client};
+  return (
     <div className='space-y-6 px-4 pb-24'>,
       <Card>,
         <CardContent className='p-4'>,
@@ -69,7 +58,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
                 <h2 className='text-lg font-medium'>{project.title}</h2>,
                 <div className='flex items-center gap-2 mt-1'>,
                   <Avatar className='h-6 w-6'>,
-                    <AvatarImage,
+                    <AvatarImage
                       src={project.client.avatar}
                       alt={project.client.name}
                     />,
@@ -113,7 +102,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
               <Button size='sm' variant='outline' className='gap-1 flex-1'>,
                 <FileText className='h-4 w-4' /> Contract,
               </Button>,
-              <Button,
+              <Button
                 size='sm',
                 variant='outline',
                 className='gap-1 flex-1',
@@ -121,10 +110,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
               >,
                 <MessageSquare className='h-4 w-4' /> Message,
               </Button>,
-              <Button,
+              <Button
                 size='sm',
                 className='gap-1 flex-1 bg-zion-purple hover: bg-zion-purple-light',
-                onClick={startProjectCall,}
+                onClick={startProjectCall}
               >,
                 <Video className='h-4 w-4' /> Call,
               </Button>,
@@ -135,26 +124,23 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
       <section>,
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>,
         <div className='space-y-3'>,
-          {milestones.map(milestone => (,
+          {milestones.map(milestone => (
             <Card key={milestone.id}>,
               <CardContent className='p-4'>,
                 <div className='flex justify-between items-start mb-2'>,
                   <div className='flex items-center gap-2'>,
-                    {milestone.status === 'completed' ? (,
-                      <CheckCircle className='h-5 w-5 text-green-50o0' />,
-                    ) : (,
-                      <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>,
-                    )}
+                    {milestone.status === 'completed' ? (
+                      <CheckCircle className='h-5 w-5 text-green-50o0' />) : (
+                      <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>)}
                     <h3 className='font-medium'>{milestone.title}</h3>,
                   </div>,
-                  <Badge,
-                    variant={,
+                  <Badge
+                    variant={
                       milestone.paymentStatus === 'paid',
                         ? 'default',
                         : milestone.paymentStatus === 'overdue',
                           ? 'destructive',
-                          : 'outline',
-                    }
+                          : 'outline'}
                   >,
                     {milestone.paymentStatus}
                   </Badge>,
@@ -162,11 +148,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
                 <div className='pl-7'>,
                   <div className='flex justify-between text-sm'>,
                     <span className='text-muted-foreground'>Due Date: </span>,
-                    <span>{milestone.dueDate,}</span>,
+                    <span>{milestone.dueDate}</span>,
                   </div>,
                   <div className='flex justify-between text-sm'>,
                     <span className='text-muted-foreground'>Amount: </span>,
-                    <span>{milestone.amount,}</span>,
+                    <span>{milestone.amount}</span>,
                   </div>,
                   <div className='flex justify-between text-sm'>,
                     <span className='text-muted-foreground'>Status: </span>,
@@ -174,20 +160,16 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {,
                       {milestone.status.replace('_', ' ')}
                     </span>,
                   </div>,
-                  <Button,
+                  <Button
                     size='sm',
                     variant='outline',
-                    className='w-full mt-3 gap-1',
-                  >,
+                    className='w-full mt-3 gap-1'>,
                     View Details <ChevronRight className='h-4 w-4' />,
                   </Button>,
                 </div>,
               </CardContent>,
-            </Card>,
-          ))}
+            </Card>))}
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

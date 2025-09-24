@@ -1,24 +1,22 @@
 import React, { useState, useEffect, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Volume2,;
-  VolumeX,;
-  Eye,;
-  EyeOff,;
-  Keyboard,;
-  MousePointer,;
-  Accessibility,;
-  Settings,;
-  X,;
-  CheckCircle,;
-  AlertTriangle,;
-  Info,;
-  Keyboard,;
-  MousePointer,;
-  Smartphone,
-} from 'lucide-react',
-,
-interface AccessibilitySettings {,
+import {
+  Volume2;
+  VolumeX;
+  Eye;
+  EyeOff;
+  Keyboard;
+  MousePointer;
+  Accessibility;
+  Settings;
+  X;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  Keyboard;
+  MousePointer;
+  Smartphone} from 'lucide-react',
+interface AccessibilitySettings {
   highContrast: boolean,
   largeText: boolean,
   reducedMotion: boolean,
@@ -26,333 +24,265 @@ interface AccessibilitySettings {,
   keyboardNavigation: boolean,
   focusIndicator: boolean,
   colorBlind: boolean,
-  dyslexia: boolean,
-,}
+  dyslexia: boolean}
 ,
-interface EnhancedAccessibilityProps {,
+interface EnhancedAccessibilityProps {
   enabled?: boolean,
   showControls?: boolean,
-  className?: string,
-}
+  className?: string}
 ,
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
-  enabled = true,;
-  showControls = true,;
-  className = '',
-}) => {,
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  enabled = true;
+  showControls = true;
+  className = ''}) => {
   const [isOpen, setIsOpen] = useState(false),
-  const [settings, setSettings] = useState<AccessibilitySettings>({,
-    highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: false,;
-    keyboardNavigation: true,;
-    focusIndicator: true,;
-    colorBlind: false,;
-    dyslexia: false,
-  ,}),
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false;
+    largeText: false;
+    reducedMotion: false;
+    screenReader: false;
+    keyboardNavigation: true;
+    focusIndicator: true;
+    colorBlind: false;
+    dyslexia: false}),
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null),
   const [announcements, setAnnouncements] = useState<string[]>([]),
-,
   // Apply accessibility settings to document,
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {,
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement,
-,
     // High contrast,
-    if (newSettings.highContrast) {,
+    if (newSettings.highContrast) {
       root.classList.add('high-contrast'),
       root.style.setProperty('--text-primary', '#ffffff'),
       root.style.setProperty('--text-secondary', '#e5e7eb'),
       root.style.setProperty('--bg-primary', '#0o00000'),
-      root.style.setProperty('--bg-secondary', '#1f2937'),
-    } else {,
+      root.style.setProperty('--bg-secondary', '#1f2937')} else {
       root.classList.remove('high-contrast'),
       root.style.removeProperty('--text-primary'),
       root.style.removeProperty('--text-secondary'),
       root.style.removeProperty('--bg-primary'),
-      root.style.removeProperty('--bg-secondary'),
-    }
+      root.style.removeProperty('--bg-secondary')}
 ,
     // Large text,
-    if (newSettings.largeText) {,
+    if (newSettings.largeText) {
       root.style.fontSize = '18px',
-      root.style.lineHeight = '1.6',
-    } else {,
+      root.style.lineHeight = '1.6'} else {
       root.style.fontSize = '16px',
-      root.style.lineHeight = '1.5',
-    }
+      root.style.lineHeight = '1.5'}
 ,
     // Reduced motion,
-    if (newSettings.reducedMotion) {,
-      root.style.setProperty('--reduced-motion', 'reduce'),
-    } else {,
-      root.style.removeProperty('--reduced-motion'),
-    }
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--reduced-motion', 'reduce')} else {
+      root.style.removeProperty('--reduced-motion')}
 ,
     // Focus indicator,
-    if (newSettings.focusIndicator) {,
-      root.style.setProperty('--focus-ring', '2px solid #3b82f6'),
-    } else {,
-      root.style.setProperty('--focus-ring', 'none'),
-    }
+    if (newSettings.focusIndicator) {
+      root.style.setProperty('--focus-ring', '2px solid #3b82f6')} else {
+      root.style.setProperty('--focus-ring', 'none')}
 ,
     // Color blind support,
-    if (newSettings.colorBlind) {,
-      root.classList.add('color-blind-support'),
-    } else {,
-      root.classList.remove('color-blind-support'),
-    }
+    if (newSettings.colorBlind) {
+      root.classList.add('color-blind-support')} else {
+      root.classList.remove('color-blind-support')}
 ,
     // Dyslexia support,
-    if (newSettings.dyslexia) {,
+    if (newSettings.dyslexia) {
       root.style.fontFamily = 'OpenDyslexic, Arial, sans-serif',
       root.style.letterSpacing = '0.1em',
-      root.style.wordSpacing = '0.2em',
-    } else {,
+      root.style.wordSpacing = '0.2em'} else {
       root.style.fontFamily = '',
       root.style.letterSpacing = '',
-      root.style.wordSpacing = '',
-    }
+      root.style.wordSpacing = ''}
 ,
     setSettings(newSettings),
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-  }, []),
-,
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []),
   // Load saved settings on mount,
-  useEffect(() => {,
+  useEffect(() => {
     const savedSettings = localStorage.getItem('accessibility-settings'),
-    if (savedSettings) {,
+    if (savedSettings) {
       const parsed = JSON.parse(savedSettings),
       setSettings(parsed),
-      applySettings(parsed),
-    }
+      applySettings(parsed)}
   }, [applySettings]),
-,
   // Screen reader announcements,
-  const announce = useCallback((message: string) => {,
+  const announce = useCallback((message: string) => {
     const announcement = document.createElement('div'),
     announcement.setAttribute('aria-live', 'polite'),
     announcement.setAttribute('aria-atomic', 'true'),
     announcement.className = 'sr-only',
     announcement.textContent = message,
-,
     document.body.appendChild(announcement),
-,
     // Remove after announcement,
-    setTimeout(() => {,
-      document.body.removeChild(announcement),
-    }, 10o00),
-,
-    setAnnouncements(prev => [...prev, message]),
-  }, []),
-,
+    setTimeout(() => {
+      document.body.removeChild(announcement)}, 10o00),
+    setAnnouncements(prev => [...prev, message])}, []),
   // Enhanced keyboard navigation,
-  useEffect(() => {,
+  useEffect(() => {
     if (!settings.keyboardNavigation) return,
-,
-    const handleKeyDown = (e: KeyboardEvent) => {,
+    const handleKeyDown = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement,
-,
       // Skip if in input/textarea,
       if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return,
-,
-      switch (e.key) {,
+      switch (e.key) {
         case 'Tab':,
           // Enhanced tab navigation with visual feedback,
           setCurrentFocus(target),
           target.style.outline = '2px solid #3b82f6',
           target.style.outlineOffset = '2px',
-,
-          setTimeout(() => {,
+          setTimeout(() => {
             target.style.outline = '',
-            target.style.outlineOffset = '',
-          ,}, 20o00),
+            target.style.outlineOffset = ''}, 20o00),
           break,
-,
         case 'Enter':,
         case ' ':,
-          if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {,
+          if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
             e.preventDefault(),
             target.click(),
-            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`),
-          }
+            announce(`Activated ${target.textContent || target.getAttribute('aria-label') || 'button'}`)}
           break,
-,
         case 'Escape':,
           // Close modals, dropdowns, etc.,
           const modals = document.querySelectorAll('[role="dialog"], [data-modal]'),
-          modals.forEach(modal => {,
-            if (modal.getAttribute('aria-hidden') === 'false') {,
-              (modal as HTMLElement).click(),
-            }
+          modals.forEach(modal => {
+            if (modal.getAttribute('aria-hidden') === 'false') {
+              (modal as HTMLElement).click()}
           }),
-          break,
-      }
+          break}
     };
-,
     document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
-  }, [settings.keyboardNavigation, announce]),
-,
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation, announce]),
   // Focus management,
-  useEffect(() => {,
+  useEffect(() => {
     if (!settings.focusIndicator) return,
-,
-    const handleFocusIn = (e: FocusEvent) => {,
+    const handleFocusIn = (e: FocusEvent) => {
       const target = e.target as HTMLElement,
       target.style.outline = '2px solid #3b82f6',
       target.style.outlineOffset = '2px',
-,
-      if (settings.screenReader) {,
+      if (settings.screenReader) {
         const label = target.getAttribute('aria-label') ||,
                      target.getAttribute('title') ||,
                      target.textContent,
-        if (label) announce(`Focused on ${label,}`),
-      }
+        if (label) announce(`Focused on ${label}`)}
     };
-,
-    const handleFocusOut = (e: FocusEvent) => {,
+    const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement,
       target.style.outline = '',
-      target.style.outlineOffset = '',
-    ,};
-,
+      target.style.outlineOffset = ''};
     document.addEventListener('focusin', handleFocusIn),
     document.addEventListener('focusout', handleFocusOut),
-,
-    return () => {,
+    return () => {
       document.removeEventListener('focusin', handleFocusIn),
-      document.removeEventListener('focusout', handleFocusOut),
-    };
+      document.removeEventListener('focusout', handleFocusOut)};
   }, [settings.focusIndicator, settings.screenReader, announce]),
-,
   // Skip to main content link,
-  useEffect(() => {,
+  useEffect(() => {
     const skipLink = document.createElement('a'),
     skipLink.href = '#main-content',
     skipLink.textContent = 'Skip to main content',
     skipLink.className = 'skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded z-50',
-,
     document.body.insertBefore(skipLink, document.body.firstChild),
-,
-    return () => {,
-      if (skipLink.parentNode) {,
-        skipLink.parentNode.removeChild(skipLink),
-      }
+    return () => {
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink)}
     };
   }, []),
-,
   // Quick accessibility actions,
-  const quickActions = [,
-    {,
-      icon: Contrast,;
-      label: 'Toggle High Contrast',;
-      action: () => {,
-        const newSettings ={ ...settings, highContrast: !settings.highContrast ,};
+  const quickActions = [
+    {
+      icon: Contrast;
+      label: 'Toggle High Contrast';
+      action: () => {
+        const newSettings ={ ...settings, highContrast: !settings.highContrast };
         applySettings(newSettings),
-        announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`),
-      },;
-      active: settings.highContrast,
-    ,},;
-    {,
-      icon: Type,;
-      label: 'Toggle Large Text',;
-      action: () => {,
-        const newSettings ={ ...settings, largeText: !settings.largeText ,};
+        announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`)};
+      active: settings.highContrast};
+    {
+      icon: Type;
+      label: 'Toggle Large Text';
+      action: () => {
+        const newSettings ={ ...settings, largeText: !settings.largeText };
         applySettings(newSettings),
-        announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`),
-      },;
-      active: settings.largeText,
-    ,},;
-    {,
-      icon: ZoomIn,;
-      label: 'Increase Zoom',;
-      action: () => {,
+        announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`)};
+      active: settings.largeText};
+    {
+      icon: ZoomIn;
+      label: 'Increase Zoom';
+      action: () => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16,
         const newZoom = Math.min(currentZoom + 0.1, 2.0),
         document.documentElement.style.fontSize = `${newZoom * 16}px`,
-        announce(`Zoom increased to ${Math.round(newZoom * 10o0)}%`),
-      }
-    },;
-    {,
-      icon: ZoomOut,;
-      label: 'Decrease Zoom',;
-      action: () => {,
+        announce(`Zoom increased to ${Math.round(newZoom * 10o0)}%`)}
+    };
+    {
+      icon: ZoomOut;
+      label: 'Decrease Zoom';
+      action: () => {
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16,
         const newZoom = Math.max(currentZoom - 0.1, 0.5),
         document.documentElement.style.fontSize = `${newZoom * 16}px`,
-        announce(`Zoom decreased to ${Math.round(newZoom * 10o0)}%`),
-      }
-    },;
-    {,
-      icon: RotateCcw,;
-      label: 'Reset Zoom',;
-      action: () => {,
+        announce(`Zoom decreased to ${Math.round(newZoom * 10o0)}%`)}
+    };
+    {
+      icon: RotateCcw;
+      label: 'Reset Zoom';
+      action: () => {
         document.documentElement.style.fontSize = '16px',
-        announce('Zoom reset to 10o0%'),
-      ,}
+        announce('Zoom reset to 10o0%')}
     }
   ],
-,
   if (!enabled) return null,
-,
-  return (,
+  return (
     <>,
       {/* Accessibility Toggle Button */}
-      {showControls && (,
+      {showControls && (
         <motion.button,
-          initial={{ opacity: 0, scale: 0.8 ,}}
-          animate={{ opacity: 1, scale: 1 ,}}
-          whileHover={{ scale: 1.1 ,}}
-          whileTap={{ scale: 0.9 ,}}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 left-6 z-50 p-4 bg-cyan-60o0 text-white rounded-full shadow-2xl shadow-cyan-50o0/30 hover: bg-cyan-70o0 transition-colors duration-30o0 focus:outline-none focus:ring-4 focus:ring-cyan-50o0/50",
           aria-label="Open accessibility settings",
-          title="Accessibility Settings",
-        >,
+          title="Accessibility Settings">,
           <Accessibility className="w-6 h-6"  />,
-        </motion.button>,
-      ),}
+        </motion.button>)}
 ,
       {/* Quick Actions Bar */}
       <motion.div,
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        className="fixed bottom-24 left-6 z-40 space-y-2",
-      >,
-        {quickActions.map((action, index) => (,
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="fixed bottom-24 left-6 z-40 space-y-2">,
+        {quickActions.map((action, index) => (
           <motion.button,
             key={action.label}
-            initial={{ opacity: 0, x: -20 ,}}
-            animate={{ opacity: 1, x: 0 ,}}
-            transition={{ delay: index * 0.1 ,}}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 }}
             onClick={action.action}
-            className={`p-3 rounded-full shadow-lg transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${,
+            className={`p-3 rounded-full shadow-lg transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${
               action.active,
                 ? 'bg-cyan-60o0 text-white shadow-cyan-50o0/50',
-                : 'bg-slate-80o0/90 text-gray-30o0 hover:bg-slate-70o0/90 hover:text-white',
-            ,}`}
+                : 'bg-slate-80o0/90 text-gray-30o0 hover:bg-slate-70o0/90 hover:text-white'}`}
             aria-label={action.label}
             title={action.label}
           >,
             <action.icon className="w-5 h-5"  />,
-          </motion.button>,
-        ))}
+          </motion.button>))}
       </motion.div>,
       {/* Accessibility Panel */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            exit={{ opacity: 0 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4",
             onClick={() => setIsOpen(false)}
           >,
             <motion.div,
-              initial={{ opacity: 0, scale: 0.9, y: 20 ,}}
-              animate={{ opacity: 1, scale: 1, y: 0 ,}}
-              exit={{ opacity: 0, scale: 0.9, y: 20 ,}}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="bg-slate-90o0/95 backdrop-blur-sm border border-cyan-50o0/30 rounded-2xl p-6 shadow-2xl shadow-cyan-50o0/20 max-w-2xl w-full max-h-[90vh] overflow-y-auto",
               onClick={(e) => e.stopPropagation()}
             >,
@@ -362,17 +292,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
                   <Accessibility className="w-7 h-7 text-cyan-40o0"  />,
                   <span>Accessibility Settings</span>,
                 </h2>,
-                <button,
+                <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 text-gray-40o0 hover: text-white transition-colors rounded-lg hover:bg-slate-80o0",
-                  aria-label="Close accessibility panel",
-                >,
+                  aria-label="Close accessibility panel">,
                   <X className="w-6 h-6"  />,
                 </button>,
               </div>,
-              {/* Settings Grid */,}
+              {/* Settings Grid */}
               <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mb-6">,
-                {Object.entries(settings).map(([key, value]) => {,
+                {Object.entries(settings).map(([key, value]) => {
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase()),
                   const Icon = key === 'highContrast' ? Contrast :,
                               key === 'largeText' ? Type :,
@@ -382,35 +311,29 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
                               key === 'focusIndicator' ? MousePointer :,
                               key === 'colorBlind' ? Eye :,
                               key === 'dyslexia' ? Type : Settings,
-,
-                  return (,
+                  return (
                     <div key={key} className="flex items-center justify-between p-4 bg-slate-80o0/50 rounded-lg border border-slate-70o0/50">,
                       <div className="flex items-center space-x-3">,
                         <Icon className="w-5 h-5 text-cyan-40o0"  />,
                         <span className="text-white font-medium">{label}</span>,
                       </div>,
-                      <button,
-                        onClick={() => {,
+                      <button
+                        onClick={() => {
                           const newSettings = { ...settings, [key]: !value };
                           applySettings(newSettings),
-                          announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`),
-                        }}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${,
-                          value ? 'bg-cyan-60o0' : 'bg-slate-60o0',
-                        ,}`}
+                          announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`)}}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${
+                          value ? 'bg-cyan-60o0' : 'bg-slate-60o0'}`}
                         role="switch",
                         aria-checked={value}
                         aria-label={`Toggle ${label}`}
                       >,
-                        <span,
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                            value ? 'translate-x-6' : 'translate-x-1',
-                          }`}
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            value ? 'translate-x-6' : 'translate-x-1'}`}
                          />,
                       </button>,
-                    </div>,
-                  ),
-                })}
+                    </div>)})}
               </div>,
               {/* Quick Tips */}
               <div className="bg-cyan-50o0/10 border border-cyan-50o0/20 rounded-lg p-4 mb-6">,
@@ -435,15 +358,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({,
                 </p>,
               </div>,
             </motion.div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
       {/* Screen Reader Only Announcements */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">,
-        {announcements.map((announcement, index) => (,
-          <div key={index}>{announcement}</div>,
-        ))}
+        {announcements.map((announcement, index) => (
+          <div key={index}>{announcement}</div>))}
       </div>,
-    </>,
-  ),
-};
+    </>)};

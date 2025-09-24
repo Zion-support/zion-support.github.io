@@ -1,15 +1,15 @@
-export default function ReplyCard({,
-  reply,;
-  className = '',;
-  onMarkAnswer,;
-  canMarkAnswer,;
-}) {,
-  return (,
-    <div,
+export default function ReplyCard({
+  reply;
+  className = '';
+  onMarkAnswer;
+  canMarkAnswer;
+}) {
+  return (
+    <div
       className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}
     >,
       <div className='flex items-start space-x-3'>,
-        <img,
+        <img
           src={reply.author.avatar}
           alt={reply.author.name}
           className='w-8 h-8 rounded-full',
@@ -22,30 +22,25 @@ export default function ReplyCard({,
             <span className='text-xs text-zion-slate-light'>,
               {new Date(reply.createdAt).toLocaleDateString()}
             </span>,
-            {reply.isSolution && (,
+            {reply.isSolution && (
               <span className='text-xs bg-green-50o0 text-white px-2 py-1 rounded'>,
                 Solution,
-              </span>,
-            )}
+              </span>)}
           </div>,
           <p className='text-zion-slate-light text-sm'>{reply.content}</p>,
           <div className='flex items-center space-x-4 mt-2 text-xs text-zion-slate-light'>,
             <button className='hover: text-zion-cyan'>,
-              Like ({reply.likes,}),
+              Like ({reply.likes}),
             </button>,
             <button className='hover: text-zion-cyan'>Reply</button>,
-            {canMarkAnswer && onMarkAnswer && (,
-              <button,
-                onClick={onMarkAnswer,}
-                className='hover: text-zion-cyan text-green-50o0',
-              >,
+            {canMarkAnswer && onMarkAnswer && (
+              <button
+                onClick={onMarkAnswer}
+                className='hover: text-zion-cyan text-green-50o0'>,
                 Mark as Answer,
-              </button>,
-            ),}
+              </button>)}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

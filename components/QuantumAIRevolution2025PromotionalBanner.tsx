@@ -1,18 +1,17 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-import {,
-  CpuChipIcon,;
-  BoltIcon,;
-  ShieldCheckIcon,;
-  ChartBarIcon,;
-  ArrowRightIcon,;
-  SparklesIcon,;
+import {
+  CpuChipIcon;
+  BoltIcon;
+  ShieldCheckIcon;
+  ChartBarIcon;
+  ArrowRightIcon;
+  SparklesIcon;
 } from '@heroicons/react/24/outline',
-,
-const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
-  return (,
+const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden'>,
-      {/* Quantum Background Effects */,}
+      {/* Quantum Background Effects */}
       <div className='absolute inset-0'>,
         <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20'></div>,
         <div className='absolute top-0 left-0 w-full h-full'>,
@@ -44,7 +43,7 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
             problems and unlock <strong>$65B market opportunities</strong>.,
           </p>,
         </div>,
-        {/* Quantum Capabilities Grid */,}
+        {/* Quantum Capabilities Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
@@ -87,7 +86,7 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
             </p>,
           </div>,
         </div>,
-        {/* Industry Applications */,}
+        {/* Industry Applications */}
         <div className='bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-white/10'>,
           <h3 className='text-2xl font-bold mb-8 text-center'>,
             Industry Applications,
@@ -119,7 +118,7 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
               </div>,
               <h4 className='text-xl font-bold mb-2'>Manufacturing</h4>,
               <p className='text-gray-30o0 text-sm'>,
-                Quantum optimization for supply chains, production scheduling,;
+                Quantum optimization for supply chains, production scheduling;
                 and quality control with 45% efficiency gains.,
               </p>,
             </div>,
@@ -150,22 +149,20 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
             <div className='text-sm text-gray-30o0'>Tech Giants Investing</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-revolution-20o25-enterprise-breakthrough',
-              className='group bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-30o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='group bg-gradient-to-r from-cyan-40o0 to-purple-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-30o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               <span className='flex items-center justify-center'>,
                 Explore Quantum AI Guide,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
               </span>,
             </Link>,
-            <Link,
+            <Link
               href='/services/quantum-ai-consulting',
-              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span className='flex items-center justify-center'>,
                 Get Quantum Consultation,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
@@ -178,9 +175,5 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default QuantumAIRevolution20o25PromotionalBanner,
-,
+    </section>)};
+export default QuantumAIRevolution20o25PromotionalBanner;

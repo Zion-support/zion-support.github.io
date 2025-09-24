@@ -1,55 +1,54 @@
-export const metadata = {,
-  title: 'Social Media Management Platform | Zion Tech Group',;
+export const metadata = {
+  title: 'Social Media Management Platform | Zion Tech Group';
   description:,
-    'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.',;
+    'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.';
 };
-,
-export default function SocialMediaManagementPage() {,
-  return (,
+export default function SocialMediaManagementPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       <section className='mb-12'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           Social Media Management Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build comprehensive social media management tools with scheduling,;
+          Build comprehensive social media management tools with scheduling;
           analytics, content creation, and team collaboration.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
-          <Item,
+          <Item
             title='Content Management',
-            details={[,
-              'Multi-platform posting',;
-              'Content calendar',;
-              'Bulk upload & scheduling',;
-              'Hashtag research tools',;
-              'Content templates',;
-              'Media library',;
-              'Content approval workflows',;
+            details={[
+              'Multi-platform posting';
+              'Content calendar';
+              'Bulk upload & scheduling';
+              'Hashtag research tools';
+              'Content templates';
+              'Media library';
+              'Content approval workflows';
             ]}
           />,
-          <Item,
+          <Item
             title='Analytics & Insights',
-            details={[,
-              'Cross-platform analytics',;
-              'Engagement tracking',;
-              'ROI measurement',;
-              'Audience insights',;
-              'Competitor analysis',;
-              'Custom reporting',;
-              'Real-time monitoring',;
+            details={[
+              'Cross-platform analytics';
+              'Engagement tracking';
+              'ROI measurement';
+              'Audience insights';
+              'Competitor analysis';
+              'Custom reporting';
+              'Real-time monitoring';
             ]}
           />,
-          <Item,
+          <Item
             title='Team Collaboration',
-            details={[,
-              'User roles & permissions',;
-              'Content approval system',;
-              'Team messaging',;
-              'Client management',;
-              'White-label options',;
-              'API access',;
-              'Custom integrations',;
+            details={[
+              'User roles & permissions';
+              'Content approval system';
+              'Team messaging';
+              'Client management';
+              'White-label options';
+              'API access';
+              'Custom integrations';
             ]}
           />,
         </div>,
@@ -98,73 +97,68 @@ export default function SocialMediaManagementPage() {,
         </div>,
       </section>,
       <Pricing />,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Item({ title, details }: { title: string, details: string[] ,}) {,
-  return (,
+function Item({ title, details }: { title: string, details: string[] }) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2'>,
-        {details.map((detail, index) => (,
+        {details.map((detail, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-pink-50o0 mr-2 mt-1'>•</span>,
             <span className='text-gray-60o0'>{detail}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <section>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         Social Media Platform Pricing,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-        <Plan,
+        <Plan
           name='Basic Platform',
           price='$15k–$30k',
           duration='6–8 weeks',
-          features={[,
-            '3 platform connections',;
-            'Basic scheduling',;
-            'Content calendar',;
-            'Simple analytics',;
-            'Team management',;
-            'Mobile app',;
-            'Basic support',;
+          features={[
+            '3 platform connections';
+            'Basic scheduling';
+            'Content calendar';
+            'Simple analytics';
+            'Team management';
+            'Mobile app';
+            'Basic support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Professional Platform',
           price='$30k–$60k',
           duration='8–12 weeks',
-          features={[,
-            'All major platforms',;
-            'Advanced scheduling',;
-            'AI content tools',;
-            'Comprehensive analytics',;
-            'Client management',;
-            'White-label options',;
-            'Priority support',;
+          features={[
+            'All major platforms';
+            'Advanced scheduling';
+            'AI content tools';
+            'Comprehensive analytics';
+            'Client management';
+            'White-label options';
+            'Priority support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Enterprise Platform',
           price='$60k+',
           duration='10–16 weeks',
-          features={[,
-            'Everything in Professional',;
-            'Custom integrations',;
-            'Advanced AI features',;
-            'Custom reporting',;
-            'Dedicated support',;
-            'SLA guarantees',;
-            'Custom development',;
+          features={[
+            'Everything in Professional';
+            'Custom integrations';
+            'Advanced AI features';
+            'Custom reporting';
+            'Dedicated support';
+            'SLA guarantees';
+            'Custom development';
           ]}
         />,
       </div>,
@@ -177,55 +171,46 @@ function Pricing() {,
           streamlines your content strategy and drives engagement.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors',
-          >,
+            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,
-function Plan({,
-  name,;
-  price,;
-  duration,;
-  features,;
-}: {,
+function Plan({
+  name;
+  price;
+  duration;
+  features;
+}: {
   name: string,
   price: string,
   duration: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow'>,
-      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name,}</h4>,
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-pink-60o0 mb-1'>{price}</div>,
       <div className='text-gray-50o0 mb-6'>{duration}</div>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-green-50o0 mr-2 mt-1'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='mailto: kleber@ziontechgroup.com?subject=Social Media Management Platform Inquiry',
-        className='block w-full mt-6 bg-pink-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors',
-      >,
+        className='block w-full mt-6 bg-pink-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors'>,
         Get Started,
       </a>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

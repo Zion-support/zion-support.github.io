@@ -8,15 +8,13 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
 import { innovative20o26MicroSaasV2Services } from '../data/innovative-20o26-micro-saas-v2',
 import { emergingTech20o26ServicesV2 } from '../data/emerging-tech-20o26-services-v2',
 import { enterpriseIT20o26ServicesV2 } from '../data/enterprise-it-20o26-services-v2',
-,
-export default function Services20o26ShowcasePage() {,
+export default function Services20o26ShowcasePage() {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
   const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all'),
   const [sortBysetSortBy] = useState<string>('name'),
-,
   // Map service variants to supported card variants,
-  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {,
+  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced',
     if (serviceVariant.includes('quantum')) return 'quantum',
     if (serviceVariant.includes('ai')) return 'ai-futuristic',
@@ -46,87 +44,71 @@ export default function Services20o26ShowcasePage() {,
     if (serviceVariant.includes('api')) return 'quantum-advanced',
     if (serviceVariant.includes('integration')) return 'quantum-advanced',
     if (serviceVariant.includes('analytics')) return 'neural',
-    return 'default',
-  ,};
-,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
+    return 'default'};
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
   // Combine all 20o26 services,
-  const all20o26Services = [,
-    ...innovative20o26MicroSaasV2Services,;
-    ...emergingTech20o26ServicesV2,;
-    ...enterpriseIT20o26ServicesV2,
-  ],
-,
+  const all20o26Services = [
+    ...innovative20o26MicroSaasV2Services;
+    ...emergingTech20o26ServicesV2;
+    ...enterpriseIT20o26ServicesV2],
   // Enhanced categories for 20o26,
-  const categories = [,
-    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length ,},;
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length ,},;
-    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length ,},;
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length ,},;
-    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length ,}
+  const categories = [
+    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length };
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length };
+    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length };
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length };
+    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length }
   ],
-,
-  const priceRanges = [,
-    { id: 'all'name: 'All Prices'range: 'All' ,},;
-    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' ,},;
-    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' ,},;
-    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' ,},;
-    { id: 'premium'name: '$20K+/month'range: '$20K+' ,}
+  const priceRanges = [
+    { id: 'all'name: 'All Prices'range: 'All' };
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' };
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' };
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' };
+    { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ],
-,
-  const sortOptions = [,
-    { id: 'name'name: 'Name A-Z' ,},;
-    { id: 'price-low'name: 'Price Low to High' ,},;
-    { id: 'price-high'name: 'Price High to Low' ,},;
-    { id: 'popularity'name: 'Most Popular' ,},;
-    { id: 'newest'name: 'Newest First' ,}
+  const sortOptions = [
+    { id: 'name'name: 'Name A-Z' };
+    { id: 'price-low'name: 'Price Low to High' };
+    { id: 'price-high'name: 'Price High to Low' };
+    { id: 'popularity'name: 'Most Popular' };
+    { id: 'newest'name: 'Newest First' }
   ],
-,
   // Filter and sort services,
-  const filteredServices = useMemo(() => {,
+  const filteredServices = useMemo(() => {
     let filtered = all20o26Services,
-,
     // Search filter,
-    if (searchTerm) {,
+    if (searchTerm) {
       filtered = filtered.filter(service =>,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-      ),
-    }
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()))}
 ,
     // Category filter,
-    if (selectedCategory !== 'all') {,
-      filtered = filtered.filter(service => {,
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') return service.category.includes('AI'),
         if (selectedCategory === 'quantum') return service.category.includes('Quantum') || service.category.includes('Emerging'),
         if (selectedCategory === 'enterprise') return service.category.includes('Enterprise') || service.category.includes('IT'),
         if (selectedCategory === 'micro-saas') return service.category.includes('SaaS'),
-        return true,
-      }),
-    }
+        return true})}
 ,
     // Price range filter,
-    if (selectedPriceRange !== 'all') {,
-      filtered = filtered.filter(service => {,
+    if (selectedPriceRange !== 'all') {
+      filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace('$'').replace(','')),
         if (selectedPriceRange === 'low') return price < 10o00,
         if (selectedPriceRange === 'medium') return price >= 10o00 && price < 50o00,
         if (selectedPriceRange === 'high') return price >= 50o00 && price < 20o000,
         if (selectedPriceRange === 'premium') return price >= 20o000,
-        return true,
-      }),
-    }
+        return true})}
 ,
     // Sort services,
-    filtered.sort((ab) => {,
-      switch (sortBy) {,
+    filtered.sort((ab) => {
+      switch (sortBy) {
         case 'price-low':,
           return parseInt(a.price.replace('$'').replace(','')) - parseInt(b.price.replace('$'').replace(','')),
         case 'price-high':,
@@ -136,17 +118,12 @@ export default function Services20o26ShowcasePage() {,
         case 'newest':,
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         default: ,
-          return a.name.localeCompare(b.name),
-      ,}
+          return a.name.localeCompare(b.name)}
     }),
-,
-    return filtered,
-  }[searchTermselectedCategoryselectedPriceRangesortByall20o26Services]),
-,
-  return (,
-    <UltraFuturisticBackground,
-      intensity="high",
-    >,
+    return filtered}[searchTermselectedCategoryselectedPriceRangesortByall20o26Services]),
+  return (
+    <UltraFuturisticBackground
+      intensity="high">,
       <div className="min-h-screen">,
         <Head>,
           <title>20o26 Services Showcase - Zion Tech Group | Revolutionary AIQuantum & IT Solutions</title>,
@@ -160,14 +137,14 @@ export default function Services20o26ShowcasePage() {,
           <meta property="og:type" content="website"  />,
           <link rel="canonical" href="https://ziontechgroup.com/20o26-services-showcase"  />,
         </Head>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative py-32 px-4 sm: px-6 lg:px-8 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-r from-purple-90o0/30 via-transparent to-cyan-90o0/30"></div>,
           <div className="max-w-7xl mx-auto relative z-10 text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 20 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-6">,
                 20o26 Services Showcase,
@@ -177,7 +154,7 @@ export default function Services20o26ShowcasePage() {,
               </p>,
               <div className="flex flex-wrap justify-center gap-4 mb-12">,
                 <div className="bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm border border-purple-50o0/30 rounded-full px-6 py-3">,
-                  <span className="text-purple-30o0 font-semibold">{all20o26Services.length,}+ Revolutionary Services</span>,
+                  <span className="text-purple-30o0 font-semibold">{all20o26Services.length}+ Revolutionary Services</span>,
                 </div>,
                 <div className="bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-cyan-50o0/30 rounded-full px-6 py-3">,
                   <span className="text-cyan-30o0 font-semibold">AI-Powered Solutions</span>,
@@ -193,55 +170,52 @@ export default function Services20o26ShowcasePage() {,
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div className="bg-gradient-to-r from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl p-8">,
-              {/* Search Bar */,}
+              {/* Search Bar */}
               <div className="relative mb-8">,
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-                <input,
+                <input
                   type="text",
                   placeholder="Search 20o26 services...",
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent",
                 />,
               </div>,
-              {/* Filters */,}
+              {/* Filters */}
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div>,
                   <label className="block text-sm font-medium text-gray-30o0 mb-2">Category</label>,
-                  <select,
+                  <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">,
-                    {categories.map((category) => (,
-                      <option key={category.id,} value={category.id}>,
+                    {categories.map((category) => (
+                      <option key={category.id} value={category.id}>,
                         {category.name} ({category.count}),
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                 </div>,
                 {/* Price Range Filter */}
                 <div>,
                   <label className="block text-sm font-medium text-gray-30o0 mb-2">Price Range</label>,
-                  <select,
+                  <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">,
-                    {priceRanges.map((range) => (,
-                      <option key={range.id,} value={range.id}>,
+                    {priceRanges.map((range) => (
+                      <option key={range.id} value={range.id}>,
                         {range.name}
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                 </div>,
                 {/* Sort Options */}
                 <div>,
                   <label className="block text-sm font-medium text-gray-30o0 mb-2">Sort By</label>,
-                  <select,
+                  <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)} className="w-full bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent">,
-                    {sortOptions.map((option) => (,
-                      <option key={option.id,} value={option.id}>,
+                    {sortOptions.map((option) => (
+                      <option key={option.id} value={option.id}>,
                         {option.name}
-                      </option>,
-                    ))}
+                      </option>))}
                   </select>,
                 </div>,
               </div>,
@@ -259,46 +233,43 @@ export default function Services20o26ShowcasePage() {,
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <AnimatePresence mode="wait">,
-              {filteredServices.length === 0 ? (,
+              {filteredServices.length === 0 ? (
                 <motion.div,
-                  initial={{ opacity: 0 ,}}
-                  animate={{ opacity: 1 ,}}
-                  exit={{ opacity: 0 ,}} className="text-center py-20">,
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }} className="text-center py-20">,
                   <div className="text-gray-40o0 text-xl mb-4">No services found matching your criteria</div>,
-                  <button,
-                    onClick={() => {,
+                  <button
+                    onClick={() => {
                       setSearchTerm(''),
                       setSelectedCategory('all'),
                       setSelectedPriceRange('all'),
-                      setSortBy('name'),
-                    }} className="bg-gradient-to-r from-gray-60o0 to-gray-70o0 text-white px-6 py-3 rounded-xl hover: from-gray-50o0 hover:to-gray-60o0 transition-all duration-20o0">,
+                      setSortBy('name')}} className="bg-gradient-to-r from-gray-60o0 to-gray-70o0 text-white px-6 py-3 rounded-xl hover: from-gray-50o0 hover:to-gray-60o0 transition-all duration-20o0">,
                     Clear Filters,
                   </button>,
-                </motion.div>,
-              ) : (,
+                </motion.div>) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-                  {filteredServices.map((serviceindex) => (,
+                  {filteredServices.map((serviceindex) => (
                     <motion.div,
-                      key={service.id,}
-                      initial={{ opacity: 0y: 20 ,}}
-                      animate={{ opacity: 1y: 0 ,}}
-                      exit={{ opacity: 0y: -20 ,}}
-                      transition={{ duration: 0.5delay: index * 0.1 ,}}
+                      key={service.id}
+                      initial={{ opacity: 0y: 20 }}
+                      animate={{ opacity: 1y: 0 }}
+                      exit={{ opacity: 0y: -20 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
                     >,
                       <UltraFuturisticCard className="h-full group hover: scale-10o5 transition-transform duration-30o0">,
                         <div className="p-6 h-full flex flex-col">,
-                          {/* Service Header */,}
+                          {/* Service Header */}
                           <div className="flex items-start justify-between mb-4">,
                             <div className="text-4xl mb-2">{service.icon}</div>,
-                            {service.popular && (,
+                            {service.popular && (
                               <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-bold px-2 py-1 rounded-full">,
                                 POPULAR,
-                              </div>,
-                            )}
+                              </div>)}
                           </div>,
                           {/* Service Info */}
                           <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-30o0 transition-colors">,
-                            {service.name,}
+                            {service.name}
                           </h3>,
                           <p className="text-gray-30o0 text-sm mb-4 flex-grow">,
                             {service.description}
@@ -317,17 +288,15 @@ export default function Services20o26ShowcasePage() {,
                           <div className="mb-6">,
                             <div className="text-sm text-gray-30o0 mb-2">Key Features: </div>,
                             <div className="space-y-1">,
-                              {service.features.slice(0o3).map((featureidx) => (,
-                                <div key={idx,} className="flex items-center text-xs text-gray-40o0">,
+                              {service.features.slice(0o3).map((featureidx) => (
+                                <div key={idx} className="flex items-center text-xs text-gray-40o0">,
                                   <CheckCircle className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0"  />,
                                   {feature}
-                                </div>,
-                              ))}
-                              {service.features.length > 3 && (,
+                                </div>))}
+                              {service.features.length > 3 && (
                                 <div className="text-xs text-gray-50o0 mt-1">,
                                   +{service.features.length - 3} more features,
-                                </div>,
-                              )}
+                                </div>)}
                             </div>,
                           </div>,
                           {/* Stats */}
@@ -355,10 +324,8 @@ export default function Services20o26ShowcasePage() {,
                           </div>,
                         </div>,
                       </UltraFuturisticCard>,
-                    </motion.div>,
-                  )),}
-                </div>,
-              )}
+                    </motion.div>))}
+                </div>)}
             </AnimatePresence>,
           </div>,
         </section>,
@@ -366,10 +333,10 @@ export default function Services20o26ShowcasePage() {,
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 20 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
@@ -392,13 +359,11 @@ export default function Services20o26ShowcasePage() {,
                 </Link>,
               </div>,
               <div className="mt-8 text-gray-40o0">,
-                <p>Mobile: {contactInfo.mobile,} | Email: {contactInfo.email,}</p>,
+                <p>Mobile: {contactInfo.mobile} | Email: {contactInfo.email}</p>,
                 <p>{contactInfo.address}</p>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}

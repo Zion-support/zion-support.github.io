@@ -1,142 +1,122 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,;
-  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play, FileText, ArrowUp, HelpCircle,;
-  Home, Info, Briefcase, BookOpen, Calendar, MessageCircle, ShieldCheck, Building, Heart as HeartIcon,;
-  Target as TargetIcon, Star as StarIcon, Lightbulb, Wrench, Cog, BarChart, PieChart, DollarSign, Monitor,
-} from 'lucide-react',
-,
-const EnhancedFooter20o25: React.FC = () => {,
+import {
+  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu;
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star;
+  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play, FileText, ArrowUp, HelpCircle;
+  Home, Info, Briefcase, BookOpen, Calendar, MessageCircle, ShieldCheck, Building, Heart as HeartIcon;
+  Target as TargetIcon, Star as StarIcon, Lightbulb, Wrench, Cog, BarChart, PieChart, DollarSign, Monitor} from 'lucide-react',
+const EnhancedFooter20o25: React.FC = () => {
   const [email, setEmail] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
-,
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {,
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!email.trim()) return,
-,
     setIsSubmitting(true),
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve, 10o00)),
     setIsSubmitting(false),
     setEmail(''),
-    // Show success message,
+    // Show success message};
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  const stats = [
+    { number: "50o0+", label: "Clients Worldwide", icon: Users, color: "from-cyan-50o0 to-blue-50o0" };
+    { number: "50+", label: "Industry Awards", icon: Award, color: "from-yellow-50o0 to-orange-50o0" };
+    { number: "24/7", label: "Support Available", icon: Clock, color: "from-purple-50o0 to-pink-50o0" };
+    { number: "50+", label: "Countries Served", icon: Globe, color: "from-emerald-50o0 to-teal-50o0" }
+  ],
+  const socialLinks = [
+    { href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, label: "LinkedIn", color: "hover:bg-blue-60o0" };
+    { href: "https://twitter.com/ziontechgroup", icon: Twitter, label: "Twitter", color: "hover:bg-sky-50o0" };
+    { href: "https://github.com/ziontechgroup", icon: Github, label: "GitHub", color: "hover:bg-gray-70o0" };
+    { href: "https://youtube.com/@ziontechgroup", icon: Youtube, label: "YouTube", color: "hover:bg-red-60o0" };
+    { href: "https://facebook.com/ziontechgroup", icon: Facebook, label: "Facebook", color: "hover:bg-blue-70o0" };
+    { href: "https://instagram.com/ziontechgroup", icon: Instagram, label: "Instagram", color: "hover:bg-pink-60o0" }
+  ],
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  const footerSections = [
+    {
+      title: "Services";
+      links: [
+        { label: 'Innovative 20o25 Showcase', href: '/innovative-20o25-services-showcase' };
+        { label: 'AI & Machine Learning', href: '/ai-services' };
+        { label: 'Quantum Computing', href: '/quantum-computing' };
+        { label: 'Cybersecurity', href: '/cybersecurity' };
+        { label: 'Cloud Infrastructure', href: '/cloud-platform' };
+        { label: 'Data Analytics', href: '/data-analytics' };
+        { label: 'Process Automation', href: '/process-automation' };
+        { label: 'Micro SAAS Solutions', href: '/micro-saas' }
+      ]};
+    {
+      title: "Solutions";
+      links: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4"  /> };
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <HeartIcon className="w-4 h-4"  /> };
+        { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4"  /> };
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4"  /> };
+        { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <Target className="w-4 h-4"  /> };
+        { name: 'Government Solutions', href: '/government-technology-solutions', icon: <ShieldCheck className="w-4 h-4"  /> }
+      ]};
+    {
+      title: "Company";
+      links: [
+        { name: 'About Us', href: '/about', icon: <Info className="w-4 h-4"  /> };
+        { name: 'Our Mission', href: '/mission', icon: <TargetIcon className="w-4 h-4"  /> };
+        { name: 'Leadership Team', href: '/leadership', icon: <Users className="w-4 h-4"  /> };
+        { name: 'Company Culture', href: '/culture', icon: <HeartIcon className="w-4 h-4"  /> };
+        { name: 'Our Values', href: '/values', icon: <StarIcon className="w-4 h-4"  /> };
+        { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4"  /> };
+        { name: 'News & Press', href: '/press', icon: <FileText className="w-4 h-4"  /> }
+      ]};
+    {
+      title: "Resources";
+      links: [
+        { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> };
+        { name: 'Blog & Articles', href: '/blog', icon: <BookOpen className="w-4 h-4"  /> };
+        { name: 'Case Studies', href: '/case-studies', icon: <BarChart className="w-4 h-4"  /> };
+        { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> };
+        { name: 'Webinars', href: '/webinars', icon: <Calendar className="w-4 h-4"  /> };
+        { name: 'Events', href: '/events-webinars', icon: <Calendar className="w-4 h-4"  /> };
+        { name: 'Training', href: '/training', icon: <Lightbulb className="w-4 h-4"  /> }
+      ]}
+  ],
+  const socialLinks = [
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' };
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' };
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' };
+    { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' };
+    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' };
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
+  ],
+  const quickLinks = [
+    { name: 'Get Started', href: '/get-started', icon: <ArrowRight className="w-4 h-4"  /> };
+    { name: 'Contact Sales', href: '/contact', icon: <Phone className="w-4 h-4"  /> };
+    { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> };
+    { name: 'Documentation', href: '/docs', icon: <Code className="w-4 h-4"  /> };
+    { name: 'Status Page', href: '/status', icon: <Monitor className="w-4 h-4"  /> };
+    { name: 'Developer Resources', href: '/developer-resources', icon: <Code className="w-4 h-4"  /> }
+  ],
+  const fadeInUp ={
+    initial: { opacity: 0, y: 20 };
+    animate: { opacity: 1, y: 0 };
+    transition: { duration: 0.5 }
   };
-,
-  const scrollToTop = () => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
-  const stats = [,
-    { number: "50o0+", label: "Clients Worldwide", icon: Users, color: "from-cyan-50o0 to-blue-50o0" ,},;
-    { number: "50+", label: "Industry Awards", icon: Award, color: "from-yellow-50o0 to-orange-50o0" ,},;
-    { number: "24/7", label: "Support Available", icon: Clock, color: "from-purple-50o0 to-pink-50o0" ,},;
-    { number: "50+", label: "Countries Served", icon: Globe, color: "from-emerald-50o0 to-teal-50o0" ,}
-  ],
-,
-  const socialLinks = [,
-    { href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, label: "LinkedIn", color: "hover:bg-blue-60o0" ,},;
-    { href: "https://twitter.com/ziontechgroup", icon: Twitter, label: "Twitter", color: "hover:bg-sky-50o0" ,},;
-    { href: "https://github.com/ziontechgroup", icon: Github, label: "GitHub", color: "hover:bg-gray-70o0" ,},;
-    { href: "https://youtube.com/@ziontechgroup", icon: Youtube, label: "YouTube", color: "hover:bg-red-60o0" ,},;
-    { href: "https://facebook.com/ziontechgroup", icon: Facebook, label: "Facebook", color: "hover:bg-blue-70o0" ,},;
-    { href: "https://instagram.com/ziontechgroup", icon: Instagram, label: "Instagram", color: "hover:bg-pink-60o0" ,}
-  ],
-,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  const footerSections = [,
-    {,
-      title: "Services",;
-      links: [,
-        { label: 'Innovative 20o25 Showcase', href: '/innovative-20o25-services-showcase' ,},;
-        { label: 'AI & Machine Learning', href: '/ai-services' ,},;
-        { label: 'Quantum Computing', href: '/quantum-computing' ,},;
-        { label: 'Cybersecurity', href: '/cybersecurity' ,},;
-        { label: 'Cloud Infrastructure', href: '/cloud-platform' ,},;
-        { label: 'Data Analytics', href: '/data-analytics' ,},;
-        { label: 'Process Automation', href: '/process-automation' ,},;
-        { label: 'Micro SAAS Solutions', href: '/micro-saas' ,}
-      ],
-    },;
-    {,
-      title: "Solutions",;
-      links: [,
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4"  /> ,},;
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <HeartIcon className="w-4 h-4"  /> ,},;
-        { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4"  /> ,},;
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4"  /> ,},;
-        { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <Target className="w-4 h-4"  /> ,},;
-        { name: 'Government Solutions', href: '/government-technology-solutions', icon: <ShieldCheck className="w-4 h-4"  /> ,}
-      ],
-    },;
-    {,
-      title: "Company",;
-      links: [,
-        { name: 'About Us', href: '/about', icon: <Info className="w-4 h-4"  /> ,},;
-        { name: 'Our Mission', href: '/mission', icon: <TargetIcon className="w-4 h-4"  /> ,},;
-        { name: 'Leadership Team', href: '/leadership', icon: <Users className="w-4 h-4"  /> ,},;
-        { name: 'Company Culture', href: '/culture', icon: <HeartIcon className="w-4 h-4"  /> ,},;
-        { name: 'Our Values', href: '/values', icon: <StarIcon className="w-4 h-4"  /> ,},;
-        { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4"  /> ,},;
-        { name: 'News & Press', href: '/press', icon: <FileText className="w-4 h-4"  /> ,}
-      ],
-    },;
-    {,
-      title: "Resources",;
-      links: [,
-        { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> ,},;
-        { name: 'Blog & Articles', href: '/blog', icon: <BookOpen className="w-4 h-4"  /> ,},;
-        { name: 'Case Studies', href: '/case-studies', icon: <BarChart className="w-4 h-4"  /> ,},;
-        { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> ,},;
-        { name: 'Webinars', href: '/webinars', icon: <Calendar className="w-4 h-4"  /> ,},;
-        { name: 'Events', href: '/events-webinars', icon: <Calendar className="w-4 h-4"  /> ,},;
-        { name: 'Training', href: '/training', icon: <Lightbulb className="w-4 h-4"  /> ,}
-      ],
-    }
-  ],
-,
-  const socialLinks = [,
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' ,},;
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' ,},;
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' ,},;
-    { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' ,},;
-    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' ,},;
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' ,}
-  ],
-,
-  const quickLinks = [,
-    { name: 'Get Started', href: '/get-started', icon: <ArrowRight className="w-4 h-4"  /> ,},;
-    { name: 'Contact Sales', href: '/contact', icon: <Phone className="w-4 h-4"  /> ,},;
-    { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> ,},;
-    { name: 'Documentation', href: '/docs', icon: <Code className="w-4 h-4"  /> ,},;
-    { name: 'Status Page', href: '/status', icon: <Monitor className="w-4 h-4"  /> ,},;
-    { name: 'Developer Resources', href: '/developer-resources', icon: <Code className="w-4 h-4"  /> ,}
-  ],
-,
-  const fadeInUp ={,
-    initial: { opacity: 0, y: 20 ,},;
-    animate: { opacity: 1, y: 0 ,},;
-    transition: { duration: 0.5 ,}
-  };
-,
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8 mb-12">,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className="lg: col-span-2">,
             <div className="flex items-center gap-3 mb-6">,
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-40o0 to-blue-60o0 rounded-xl flex items-center justify-center">,
                 <Rocket className="w-7 h-7 text-white"  />,
               </div>,
               <p className="text-gray-40o0 mb-6 leading-relaxed">,
-                Pioneering the future of technology with revolutionary AI consciousness,;
+                Pioneering the future of technology with revolutionary AI consciousness;
                 quantum computing, and autonomous solutions that transform businesses worldwide.,
               </p>,
               {/* Contact Info */}
@@ -156,7 +136,7 @@ const EnhancedFooter20o25: React.FC = () => {,
               </div>,
             </motion.div>,
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (,
+            {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={fadeInUp}>,
                 <h3 className="text-white font-semibold text-lg mb-6 flex items-center">,
                   {section.title === 'Services' && <Rocket className="w-5 h-5 text-cyan-40o0 mr-2"  />}
@@ -166,22 +146,19 @@ const EnhancedFooter20o25: React.FC = () => {,
                   {section.title}
                 </h3>,
                 <ul className="space-y-3">,
-                  {section.links.map((link) => (,
+                  {section.links.map((link) => (
                     <li key={link.name}>,
-                      <Link,
+                      <Link
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-30o0 transition-colors duration-20o0 group",
-                      >,
-                        {link.icon,}
+                        className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-30o0 transition-colors duration-20o0 group">,
+                        {link.icon}
                         <span className="group-hover: translate-x-1 transition-transform duration-20o0">,
-                          {link.name,}
+                          {link.name}
                         </span>,
                       </Link>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
           {/* Quick Links & Social */}
           <motion.div,
@@ -189,10 +166,10 @@ const EnhancedFooter20o25: React.FC = () => {,
             variants={fadeInUp}
             initial="initial",
             whileInView="animate",
-            viewport={{ once: true ,}}
+            viewport={{ once: true }}
           >,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Quick Links */,}
+              {/* Quick Links */}
               <div>,
                 <div className="text-xl font-bold text-white">Zion Tech Group</div>,
                 <div className="text-sm text-cyan-40o0">Pioneering the Future</div>,
@@ -221,24 +198,22 @@ const EnhancedFooter20o25: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Footer Sections */,}
-          {footerSections.map((section, index) => (,
+          {/* Footer Sections */}
+          {footerSections.map((section, index) => (
             <div key={index}>,
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>,
               <ul className="space-y-3">,
-                {section.links.map((link, linkIndex) => (,
+                {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>,
-                    <Link,
+                    <Link
                       key={link.name}
                       href={link.href}
-                      className="flex items-center space-x-2 text-sm text-gray-40o0 hover: text-cyan-30o0 transition-colors duration-20o0 group",
-                    >,
-                      {link.icon,}
+                      className="flex items-center space-x-2 text-sm text-gray-40o0 hover: text-cyan-30o0 transition-colors duration-20o0 group">,
+                      {link.icon}
                       <span className="group-hover: translate-x-1 transition-transform duration-20o0">,
-                        {link.name,}
+                        {link.name}
                       </span>,
-                    </Link>,
-                  ))}
+                    </Link>))}
                 </div>,
               </div>,
               {/* Social Links */}
@@ -248,18 +223,17 @@ const EnhancedFooter20o25: React.FC = () => {,
                   Connect With Us,
                 </h4>,
                 <div className="flex space-x-4">,
-                  {socialLinks.map((social) => (,
-                    <a,
+                  {socialLinks.map((social) => (
+                    <a
                       key={social.name}
                       href={social.href}
                       target="_blank",
                       rel="noopener noreferrer",
                       className="w-10 h-10 bg-gray-80o0 hover: bg-cyan-50o0/20 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-cyan-30o0 transition-all duration-20o0 hover:scale-110",
-                      aria-label={social.name,}
+                      aria-label={social.name}
                     >,
                       <social.icon className="w-5 h-5"  />,
-                    </a>,
-                  ))}
+                    </a>))}
                 </div>,
               </div>,
               {/* Newsletter Signup */}
@@ -272,7 +246,7 @@ const EnhancedFooter20o25: React.FC = () => {,
                   Get the latest insights on technology trends and innovations.,
                 </p>,
                 <div className="flex space-x-2">,
-                  <input,
+                  <input
                     type="email",
                     placeholder="Enter your email",
                     className="flex-1 px-3 py-2 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent",
@@ -285,7 +259,7 @@ const EnhancedFooter20o25: React.FC = () => {,
             </div>,
           </motion.div>,
         </div>,
-        {/* Contact Information Section */,}
+        {/* Contact Information Section */}
         <div className="border-t border-gray-70o0/50 pt-8 mb-12">,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             <div>,
@@ -339,7 +313,7 @@ const EnhancedFooter20o25: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Newsletter Section */,}
+        {/* Newsletter Section */}
         <div className="bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 rounded-2xl p-8 mb-12 border border-cyan-50o0/20">,
           <div className="text-center max-w-2xl mx-auto">,
             <h3 className="text-2xl font-bold text-white mb-4">,
@@ -349,18 +323,17 @@ const EnhancedFooter20o25: React.FC = () => {,
               Get insights on AI, quantum computing, cybersecurity, and emerging technologies delivered to your inbox.,
             </p>,
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">,
-              <input,
+              <input
                 type="email",
                 placeholder="Enter your email",
                 required,
                 className="flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-cyan-50o0/50 transition-all duration-20o0",
                 aria-label="Email address for newsletter",
                />,
-              <button,
+              <button
                 type="submit",
                 className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 font-medium flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-cyan-50o0",
-                aria-label="Subscribe to newsletter",
-              >,
+                aria-label="Subscribe to newsletter">,
                 <span className="text-sm">Back to top</span>,
                 <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-20o0"  />,
               </button>,
@@ -368,9 +341,5 @@ const EnhancedFooter20o25: React.FC = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </footer>,
-  ),
-,};
-,
-export default EnhancedFooter20o25,
-})
+    </footer>)};
+export default EnhancedFooter20o25})

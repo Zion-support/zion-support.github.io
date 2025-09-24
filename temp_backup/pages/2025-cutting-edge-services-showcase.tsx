@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function 20o25CuttingEdgeServicesShowcasePage() {,
-  return (,
+export default function 20o25CuttingEdgeServicesShowcasePage() {
+  return (
     <>,
       <Head>,
         <title>20o25 Cutting Edge Services Showcase - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function 20o25CuttingEdgeServicesShowcasePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

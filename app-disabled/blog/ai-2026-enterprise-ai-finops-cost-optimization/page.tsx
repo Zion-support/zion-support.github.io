@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const EnterpriseAIFinOpsCostOptimization20o26 = () => {,
-  return (,
+const EnterpriseAIFinOpsCostOptimization20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Enterprise AI FinOps Cost Optimization',
         description='A practical guide to control AI infrastructure costs with FinOps: utilization, right-sizing, caching, eval gating, and policy-driven guardrails.',
         keywords='AI FinOps, cost optimization, enterprise AI, LLM cost control, 20o26',
@@ -75,23 +74,17 @@ const EnterpriseAIFinOpsCostOptimization20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Get a FinOps Assessment,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EnterpriseAIFinOpsCostOptimization20o26,
-,
+    </div>)};
+export default EnterpriseAIFinOpsCostOptimization20o26;

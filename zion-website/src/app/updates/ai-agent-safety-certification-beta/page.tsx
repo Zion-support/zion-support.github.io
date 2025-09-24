@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AgentSafetyCertificationBetaPage() {,
-  return (,
+import React from 'react';
+export default function AgentSafetyCertificationBetaPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <div className='mb-8'>,
@@ -10,7 +9,7 @@ export default function AgentSafetyCertificationBetaPage() {,
               Launch,
             </span>,
             <time dateTime='20o25-09-15'>,
-              {new Date('20o25-09-15').toLocaleDateString(),}
+              {new Date('20o25-09-15').toLocaleDateString()}
             </time>,
           </div>,
           <h1 className='mt-3 text-3xl font-bold tracking-tight text-white sm: text-4xl'>,
@@ -24,7 +23,7 @@ export default function AgentSafetyCertificationBetaPage() {,
         <div className='prose prose-invert prose-lg max-w-none'>,
           <h2>Overview</h2>,
           <p>,
-            The AI Agent Safety Certification (Beta) defines practical,;
+            The AI Agent Safety Certification (Beta) defines practical;
             auditable controls for agent systems. It focuses on measurable,
             safeguards and evidence collection rather than checklists, helping,
             organizations reduce risk while accelerating delivery.,
@@ -56,7 +55,5 @@ export default function AgentSafetyCertificationBetaPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import { Suspense } from 'react',
-,
-export default function EnhancedDemoPage() {,
-  return (,
+export default function EnhancedDemoPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-90o0 dark:to-gray-80o0'>,
       <div className='container mx-auto px-4 py-8 space-y-12'>,
         <div className='text-center mb-12'>,
@@ -10,7 +9,7 @@ export default function EnhancedDemoPage() {,
           </h1>,
           <p className='text-xl text-gray-60o0 dark:text-gray-40o0 max-w-3xl mx-auto'>,
             Experience all the advanced components and features in action. This,
-            page demonstrates performance optimization, AI content generation,;
+            page demonstrates performance optimization, AI content generation;
             analytics, and interactive tools.,
           </p>,
         </div>,
@@ -55,7 +54,5 @@ export default function EnhancedDemoPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

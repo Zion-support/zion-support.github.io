@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25EnterpriseAutomationBanner = () => {,
-  return (,
+const AI20o25EnterpriseAutomationBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -128,16 +127,14 @@ const AI20o25EnterpriseAutomationBanner = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-enterprise-automation-revolution-ultimate-guide',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Read Full Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-automation',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
               Get AI Automation Solutions,
             </Link>,
           </div>,
@@ -147,9 +144,5 @@ const AI20o25EnterpriseAutomationBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25EnterpriseAutomationBanner,
-,
+    </section>)};
+export default AI20o25EnterpriseAutomationBanner;

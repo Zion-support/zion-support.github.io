@@ -1,202 +1,198 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Brain,;
-  Shield,;
-  Rocket,;
-  Cpu,;
-  Database,;
-  Atom,;
-  Users,;
-  Award,;
-  Mail,;
-  Linkedin,;
-  Github,;
-  Globe,;
-  Zap,;
-  Star,;
-  CheckCircle,;
-  TrendingUp,;
-  BarChart3,;
-  Cloud,;
-  Network,;
+import {
+  Brain;
+  Shield;
+  Rocket;
+  Cpu;
+  Database;
+  Atom;
+  Users;
+  Award;
+  Mail;
+  Linkedin;
+  Github;
+  Globe;
+  Zap;
+  Star;
+  CheckCircle;
+  TrendingUp;
+  BarChart3;
+  Cloud;
+  Network;
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-,
-export default function TeamPage() {,
-  const teamMembers = [,
-    {,
-      name: 'Kleber Oliveira',;
-      role: 'Founder & CEO',;
-      expertise: 'AI Strategy, Quantum Computing, Business Development',;
-      bio: "Visionary leader with 15+ years in AI and quantum technologies. Former AI researcher at leading institutions, now driving Zion Tech Group's mission to democratize cutting-edge technology.",;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'kleber@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/kleberoliveira',;
-      github: 'https://github.com/kleberoliveira',;
-      skills: [,
-        'AI Strategy',;
-        'Quantum Computing',;
-        'Business Development',;
-        'Team Leadership',;
-      ],;
-      color: 'from-blue-60o0 to-cyan-60o0',;
-    },;
-    {,
-      name: 'Dr. Sarah Chen',;
-      role: 'Chief Technology Officer',;
-      expertise: 'AI Architecture, Quantum Algorithms, System Design',;
-      bio: 'PhD in Computer Science with specialization in quantum machine learning. Led AI initiatives at Fortune 50o0 companies and research institutions.',;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'sarah.chen@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/sarahchen',;
-      github: 'https://github.com/sarahchen',;
-      skills: [,
-        'AI Architecture',;
-        'Quantum Algorithms',;
-        'System Design',;
-        'Research & Development',;
-      ],;
-      color: 'from-purple-60o0 to-pink-60o0',;
-    },;
-    {,
-      name: 'Marcus Rodriguez',;
-      role: 'Head of Cybersecurity',;
-      expertise: 'Quantum Security, Threat Intelligence, Compliance',;
-      bio: 'Cybersecurity expert with deep knowledge in quantum-resistant encryption and AI-powered threat detection. Former security consultant for government agencies.',;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'marcus.rodriguez@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/marcusrodriguez',;
-      github: 'https://github.com/marcusrodriguez',;
-      skills: [,
-        'Quantum Security',;
-        'Threat Intelligence',;
-        'Compliance',;
-        'Incident Response',;
-      ],;
-      color: 'from-red-60o0 to-orange-60o0',;
-    },;
-    {,
-      name: 'Dr. Elena Petrova',;
-      role: 'Lead Quantum Researcher',;
-      expertise: 'Quantum Computing, Neural Networks, Research',;
-      bio: 'Quantum physicist with breakthrough research in quantum neural networks. Published author in top-tier journals and speaker at international conferences.',;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'elena.petrova@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/elenapetrova',;
-      github: 'https://github.com/elenapetrova',;
-      skills: [,
-        'Quantum Computing',;
-        'Neural Networks',;
-        'Research',;
-        'Academic Collaboration',;
-      ],;
-      color: 'from-indigo-60o0 to-purple-60o0',;
-    },;
-    {,
-      name: 'Alex Thompson',;
-      role: 'VP of Engineering',;
-      expertise: 'Platform Architecture, DevOps, Scalability',;
-      bio: 'Engineering leader with expertise in building scalable platforms and autonomous systems. Former engineering director at major tech companies.',;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'alex.thompson@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/alexthompson',;
-      github: 'https://github.com/alexthompson',;
-      skills: [,
-        'Platform Architecture',;
-        'DevOps',;
-        'Scalability',;
-        'Team Management',;
-      ],;
-      color: 'from-emerald-60o0 to-teal-60o0',;
-    },;
-    {,
-      name: 'Dr. James Kim',;
-      role: 'Head of AI Research',;
-      expertise: 'Machine Learning, Neural Interfaces, AI Ethics',;
-      bio: 'AI researcher specializing in neural interfaces and consciousness studies. Pioneer in brain-computer interface technology and AI safety.',;
-      avatar: '/api/placeholder/20o0/20o0',;
-      email: 'james.kim@ziontechgroup.com',;
-      linkedin: 'https://linkedin.com/in/jameskim',;
-      github: 'https://github.com/jameskim',;
-      skills: [,
-        'Machine Learning',;
-        'Neural Interfaces',;
-        'AI Ethics',;
-        'Research Leadership',;
-      ],;
-      color: 'from-pink-60o0 to-rose-60o0',;
-    },;
+export default function TeamPage() {
+  const teamMembers = [
+    {
+      name: 'Kleber Oliveira';
+      role: 'Founder & CEO';
+      expertise: 'AI Strategy, Quantum Computing, Business Development';
+      bio: "Visionary leader with 15+ years in AI and quantum technologies. Former AI researcher at leading institutions, now driving Zion Tech Group's mission to democratize cutting-edge technology.";
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'kleber@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/kleberoliveira';
+      github: 'https://github.com/kleberoliveira';
+      skills: [
+        'AI Strategy';
+        'Quantum Computing';
+        'Business Development';
+        'Team Leadership';
+      ];
+      color: 'from-blue-60o0 to-cyan-60o0';
+    };
+    {
+      name: 'Dr. Sarah Chen';
+      role: 'Chief Technology Officer';
+      expertise: 'AI Architecture, Quantum Algorithms, System Design';
+      bio: 'PhD in Computer Science with specialization in quantum machine learning. Led AI initiatives at Fortune 50o0 companies and research institutions.';
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'sarah.chen@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/sarahchen';
+      github: 'https://github.com/sarahchen';
+      skills: [
+        'AI Architecture';
+        'Quantum Algorithms';
+        'System Design';
+        'Research & Development';
+      ];
+      color: 'from-purple-60o0 to-pink-60o0';
+    };
+    {
+      name: 'Marcus Rodriguez';
+      role: 'Head of Cybersecurity';
+      expertise: 'Quantum Security, Threat Intelligence, Compliance';
+      bio: 'Cybersecurity expert with deep knowledge in quantum-resistant encryption and AI-powered threat detection. Former security consultant for government agencies.';
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'marcus.rodriguez@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/marcusrodriguez';
+      github: 'https://github.com/marcusrodriguez';
+      skills: [
+        'Quantum Security';
+        'Threat Intelligence';
+        'Compliance';
+        'Incident Response';
+      ];
+      color: 'from-red-60o0 to-orange-60o0';
+    };
+    {
+      name: 'Dr. Elena Petrova';
+      role: 'Lead Quantum Researcher';
+      expertise: 'Quantum Computing, Neural Networks, Research';
+      bio: 'Quantum physicist with breakthrough research in quantum neural networks. Published author in top-tier journals and speaker at international conferences.';
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'elena.petrova@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/elenapetrova';
+      github: 'https://github.com/elenapetrova';
+      skills: [
+        'Quantum Computing';
+        'Neural Networks';
+        'Research';
+        'Academic Collaboration';
+      ];
+      color: 'from-indigo-60o0 to-purple-60o0';
+    };
+    {
+      name: 'Alex Thompson';
+      role: 'VP of Engineering';
+      expertise: 'Platform Architecture, DevOps, Scalability';
+      bio: 'Engineering leader with expertise in building scalable platforms and autonomous systems. Former engineering director at major tech companies.';
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'alex.thompson@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/alexthompson';
+      github: 'https://github.com/alexthompson';
+      skills: [
+        'Platform Architecture';
+        'DevOps';
+        'Scalability';
+        'Team Management';
+      ];
+      color: 'from-emerald-60o0 to-teal-60o0';
+    };
+    {
+      name: 'Dr. James Kim';
+      role: 'Head of AI Research';
+      expertise: 'Machine Learning, Neural Interfaces, AI Ethics';
+      bio: 'AI researcher specializing in neural interfaces and consciousness studies. Pioneer in brain-computer interface technology and AI safety.';
+      avatar: '/api/placeholder/20o0/20o0';
+      email: 'james.kim@ziontechgroup.com';
+      linkedin: 'https://linkedin.com/in/jameskim';
+      github: 'https://github.com/jameskim';
+      skills: [
+        'Machine Learning';
+        'Neural Interfaces';
+        'AI Ethics';
+        'Research Leadership';
+      ];
+      color: 'from-pink-60o0 to-rose-60o0';
+    };
   ],
-,
-  const values = [,
-    {,
-      title: 'Innovation First',;
+  const values = [
+    {
+      title: 'Innovation First';
       description:,
-        "We push the boundaries of what's possible, always exploring the next frontier of technology.",;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-    },;
-    {,
-      title: 'Excellence in Execution',;
+        "We push the boundaries of what's possible, always exploring the next frontier of technology.";
+      icon: Brain;
+      color: 'from-purple-50o0 to-pink-50o0';
+    };
+    {
+      title: 'Excellence in Execution';
       description:,
-        "We don't just dream big, we deliver exceptional results that exceed expectations.",;
-      icon: Award,;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-    },;
-    {,
-      title: 'Collaborative Growth',;
+        "We don't just dream big, we deliver exceptional results that exceed expectations.";
+      icon: Award;
+      color: 'from-yellow-50o0 to-orange-50o0';
+    };
+    {
+      title: 'Collaborative Growth';
       description:,
-        'We believe in the power of diverse perspectives and collaborative problem-solving.',;
-      icon: Users,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-    },;
-    {,
-      title: 'Ethical Technology',;
+        'We believe in the power of diverse perspectives and collaborative problem-solving.';
+      icon: Users;
+      color: 'from-blue-50o0 to-cyan-50o0';
+    };
+    {
+      title: 'Ethical Technology';
       description:,
-        'We develop technology that benefits humanity while ensuring safety and ethical considerations.',;
-      icon: Shield,;
-      color: 'from-green-50o0 to-teal-50o0',;
-    },;
+        'We develop technology that benefits humanity while ensuring safety and ethical considerations.';
+      icon: Shield;
+      color: 'from-green-50o0 to-teal-50o0';
+    };
   ],
-,
-  const stats = [,
-    { number: '50+', label: 'Team Members', icon: Users ,},;
-    { number: '15+', label: 'Years Experience', icon: Award ,},;
-    { number: '10o0+', label: 'Research Papers', icon: Star ,},;
-    { number: '25+', label: 'Patents Filed', icon: CheckCircle ,},;
+  const stats = [
+    { number: '50+', label: 'Team Members', icon: Users };
+    { number: '15+', label: 'Years Experience', icon: Award };
+    { number: '10o0+', label: 'Research Papers', icon: Star };
+    { number: '25+', label: 'Patents Filed', icon: CheckCircle };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
       <Head>,
         <title>,
           Our Team - Zion Tech Group | Meet the Experts Behind Innovation,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Meet the exceptional team at Zion Tech Group. Our experts in AI, quantum computing, cybersecurity, and technology innovation are driving the future.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='Zion Tech Group team, AI experts, quantum computing researchers, cybersecurity specialists, technology innovators',
         />,
         <meta property='og: title' content='Our Team - Zion Tech Group' />,
-        <meta,
+        <meta
           property='og:description',
           content='Meet the exceptional team at Zion Tech Group driving innovation in AI, quantum computing, and cybersecurity.',
         />,
         <link rel='canonical' href='https: //ziontechgroup.com/team' />,
       </Head>,
       <EnhancedNavigation />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative pt-32 pb-16 px-6'>,
         <div className='max-w-6xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-4xl md: text-6xl font-bold bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent mb-6'>,
               Meet Our Team,
@@ -209,18 +205,17 @@ export default function TeamPage() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <section className='py-16 px-6'>,
         <div className='max-w-6xl mx-auto'>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
-            {stats.map((stat, index) => (,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='text-center'>,
                 <div className='flex justify-center mb-3'>,
                   <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-blue-60o0 to-cyan-60o0 flex items-center justify-center'>,
                     <stat.icon className='w-6 h-6 text-white' />,
@@ -230,8 +225,7 @@ export default function TeamPage() {,
                   {stat.number}
                 </div>,
                 <div className='text-white/70'>{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -247,16 +241,15 @@ export default function TeamPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-            {values.map((value, index) => (,
+            {values.map((value, index) => (
               <motion.div,
                 key={value.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className='bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-8',
-              >,
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-8'>,
                 <div className='flex items-center space-x-4 mb-4'>,
-                  <div,
+                  <div
                     className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.color} flex items-center justify-center`}
                   >,
                     <value.icon className='w-6 h-6 text-white' />,
@@ -268,8 +261,7 @@ export default function TeamPage() {,
                 <p className='text-white/70 leading-relaxed'>,
                   {value.description}
                 </p>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -286,17 +278,16 @@ export default function TeamPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {teamMembers.map((member, index) => (,
+            {teamMembers.map((member, index) => (
               <motion.div,
                 key={member.name}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className='bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover: border-white/20 transition-all duration-30o0',
-              >,
-                {/* Avatar */,}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className='bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover: border-white/20 transition-all duration-30o0'>,
+                {/* Avatar */}
                 <div className='text-center mb-6'>,
-                  <div,
+                  <div
                     className={`w-24 h-24 rounded-full bg-gradient-to-br ${member.color} mx-auto mb-4 flex items-center justify-center text-2xl font-bold text-white`}
                   >,
                     {member.name,
@@ -317,46 +308,40 @@ export default function TeamPage() {,
                 <div className='mb-4'>,
                   <h4 className='text-white font-medium mb-2'>Expertise</h4>,
                   <div className='flex flex-wrap gap-2'>,
-                    {member.skills.map(skill => (,
-                      <span,
+                    {member.skills.map(skill => (
+                      <span
                         key={skill}
-                        className='px-2 py-1 bg-white/10 rounded-lg text-xs text-white/80',
-                      >,
+                        className='px-2 py-1 bg-white/10 rounded-lg text-xs text-white/80'>,
                         {skill}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
                 {/* Contact Links */}
                 <div className='flex justify-center space-x-3'>,
-                  <a,
-                    href={`mailto: ${member.email,}`}
+                  <a
+                    href={`mailto: ${member.email}`}
                     className='w-10 h-10 rounded-lg bg-white/10 hover: bg-white/20 border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-30o0',
-                    title='Email',
-                  >,
+                    title='Email'>,
                     <Mail className='w-4 h-4' />,
                   </a>,
-                  <a,
-                    href={member.linkedin,}
+                  <a
+                    href={member.linkedin}
                     target='_blank',
                     rel='noopener noreferrer',
                     className='w-10 h-10 rounded-lg bg-white/10 hover: bg-white/20 border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-30o0',
-                    title='LinkedIn',
-                  >,
+                    title='LinkedIn'>,
                     <Linkedin className='w-4 h-4' />,
                   </a>,
-                  <a,
-                    href={member.github,}
+                  <a
+                    href={member.github}
                     target='_blank',
                     rel='noopener noreferrer',
                     className='w-10 h-10 rounded-lg bg-white/10 hover: bg-white/20 border border-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-30o0',
-                    title='GitHub',
-                  >,
+                    title='GitHub'>,
                     <Github className='w-4 h-4' />,
                   </a>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -364,11 +349,10 @@ export default function TeamPage() {,
       <section className='py-16 px-6'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 backdrop-blur-xl rounded-3xl border border-blue-50o0/30 p-12',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 backdrop-blur-xl rounded-3xl border border-blue-50o0/30 p-12'>,
             <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>,
               Join Our Mission,
             </h2>,
@@ -378,16 +362,14 @@ export default function TeamPage() {,
               humanity.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='/careers',
-                className='px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl',
-              >,
+                className='px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl'>,
                 View Open Positions,
               </a>,
-              <a,
+              <a
                 href='/contact',
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5 backdrop-blur-sm bg-white/5 hover:bg-white/10',
-              >,
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5 backdrop-blur-sm bg-white/5 hover:bg-white/10'>,
                 Get in Touch,
               </a>,
             </div>,
@@ -395,7 +377,5 @@ export default function TeamPage() {,
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

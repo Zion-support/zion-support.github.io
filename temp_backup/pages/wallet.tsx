@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function WalletPage() {,
-  return (,
+export default function WalletPage() {
+  return (
     <>,
       <Head>,
         <title>Wallet - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function WalletPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

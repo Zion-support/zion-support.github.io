@@ -1,62 +1,57 @@
 import Link from 'next/link',
 import Image from 'next/image',
-,
-const UltimateContent20o25Showcase = () => {,
-  const contentItems = [,
-    {,
-      id: 1,;
-      title: "AI 20o25-20o26 Ultimate Trends: Revolutionary Breakthrough Guide",;
-      description: "Discover the most revolutionary AI trends and breakthroughs that will transform businesses in 20o25-20o26. Complete guide to next-generation AI technologies.",;
-      category: "Blog Post",;
-      readTime: "15 min read",;
-      featured: true,;
-      image: "/images/ai-20o25-20o26-revolutionary-breakthrough.jpg",;
-      href: "/blog/ai-20o25-20o26-ultimate-trends-revolutionary-breakthrough",;
-      tags: ["AI Trends"20o25-20o26"Revolutionary"Breakthrough"],;
-      stats: {,
-        roi: "50o00%",;
-        views: "50K+",;
-        rating: "5.0",
-      ,}
-    },;
-    {,
-      id: 2,;
-      title: "Fortune 50o0 AI Transformation: Ultimate Success Story 20o25-20o26",;
-      description: "How a Fortune 50o0 manufacturing company achieved 50o00% ROI through comprehensive AI transformationrevolutionizing operations and achieving unprecedented success.",;
-      category: "Case Study",;
-      readTime: "12 min read",;
-      featured: true,;
-      image: "/images/fortune-50o0-ai-transformation-success.jpg",;
-      href: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25-20o26",;
-      tags: ["Fortune 50o0"Success Story"50o00% ROI"Manufacturing"],;
-      stats: {,
-        roi: "50o00%",;
-        revenue: "$2.5B",;
-        timeline: "18 months",
-      ,}
-    },;
-    {,
-      id: 3,;
-      title: "AI 20o25-20o26 Implementation: Ultimate Master Guide",;
-      description: "Complete implementation guide for AI transformation in 20o25-20o26. Step-by-step roadmap to achieve 10o00%+ ROI through revolutionary AI technologies.",;
-      category: "Implementation Guide",;
-      readTime: "20 min read",;
-      featured: true,;
-      image: "/images/ai-20o25-20o26-implementation-guide.jpg",;
-      href: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide",;
-      tags: ["Implementation"Master Guide"10o00%+ ROI"Roadmap"],;
-      stats: {,
-        roi: "10o00%+",;
-        pages: "50+",;
-        rating: "5.0",
-      ,}
+const UltimateContent20o25Showcase = () => {
+  const contentItems = [
+    {
+      id: 1;
+      title: "AI 20o25-20o26 Ultimate Trends: Revolutionary Breakthrough Guide";
+      description: "Discover the most revolutionary AI trends and breakthroughs that will transform businesses in 20o25-20o26. Complete guide to next-generation AI technologies.";
+      category: "Blog Post";
+      readTime: "15 min read";
+      featured: true;
+      image: "/images/ai-20o25-20o26-revolutionary-breakthrough.jpg";
+      href: "/blog/ai-20o25-20o26-ultimate-trends-revolutionary-breakthrough";
+      tags: ["AI Trends"20o25-20o26"Revolutionary"Breakthrough"];
+      stats: {
+        roi: "50o00%";
+        views: "50K+";
+        rating: "5.0"}
+    };
+    {
+      id: 2;
+      title: "Fortune 50o0 AI Transformation: Ultimate Success Story 20o25-20o26";
+      description: "How a Fortune 50o0 manufacturing company achieved 50o00% ROI through comprehensive AI transformationrevolutionizing operations and achieving unprecedented success.";
+      category: "Case Study";
+      readTime: "12 min read";
+      featured: true;
+      image: "/images/fortune-50o0-ai-transformation-success.jpg";
+      href: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25-20o26";
+      tags: ["Fortune 50o0"Success Story"50o00% ROI"Manufacturing"];
+      stats: {
+        roi: "50o00%";
+        revenue: "$2.5B";
+        timeline: "18 months"}
+    };
+    {
+      id: 3;
+      title: "AI 20o25-20o26 Implementation: Ultimate Master Guide";
+      description: "Complete implementation guide for AI transformation in 20o25-20o26. Step-by-step roadmap to achieve 10o00%+ ROI through revolutionary AI technologies.";
+      category: "Implementation Guide";
+      readTime: "20 min read";
+      featured: true;
+      image: "/images/ai-20o25-20o26-implementation-guide.jpg";
+      href: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide";
+      tags: ["Implementation"Master Guide"10o00%+ ROI"Roadmap"];
+      stats: {
+        roi: "10o00%+";
+        pages: "50+";
+        rating: "5.0"}
     }
   ],
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">,
             <span className="mr-2">🔥</span>,
@@ -71,21 +66,19 @@ const UltimateContent20o25Showcase = () => {,
             From trend analysis to implementation guideseverything you need to achieve unprecedented success.,
           </p>,
         </div>,
-        {/* Content Grid */,}
+        {/* Content Grid */}
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16">,
-          {contentItems.map((item) => (,
-            <div,
-              key={item.id,}
-              className="bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden group",
-            >,
-              {/* Featured Badge */,}
-              {item.featured && (,
+          {contentItems.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden group">,
+              {/* Featured Badge */}
+              {item.featured && (
                 <div className="absolute top-4 left-4 z-10">,
                   <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold">,
                     FEATURED,
                   </span>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Image */}
               <div className="relative h-48 bg-gradient-to-br from-purple-50o0 to-blue-60o0 overflow-hidden">,
@@ -107,18 +100,16 @@ const UltimateContent20o25Showcase = () => {,
               <div className="p-6">,
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">,
-                  {item.tags.slice(0o2).map((tagindex) => (,
-                    <span,
+                  {item.tags.slice(0o2).map((tagindex) => (
+                    <span
                       key={index}
-                      className="bg-purple-10o0 text-purple-70o0 px-2 py-1 rounded text-xs font-medium",
-                    >,
+                      className="bg-purple-10o0 text-purple-70o0 px-2 py-1 rounded text-xs font-medium">,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2 group-hover: text-purple-60o0 transition-colors">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 {/* Description */}
                 <p className="text-gray-60o0 mb-4 line-clamp-3 leading-relaxed">,
@@ -144,15 +135,13 @@ const UltimateContent20o25Showcase = () => {,
                   </div>,
                 </div>,
                 {/* CTA Button */}
-                <Link,
+                <Link
                   href={item.href}
-                  className="w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold text-center block hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold text-center block hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   Read Now →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Additional Content Preview */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-16">,
@@ -187,7 +176,7 @@ const UltimateContent20o25Showcase = () => {,
             </div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-12 text-white">,
           <h3 className="text-3xl font-bold mb-4">,
             Ready to Transform Your Business?,
@@ -196,23 +185,18 @@ const UltimateContent20o25Showcase = () => {,
             Get personalized AI transformation consultation and implementation roadmap,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1">,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href="/resources",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1">,
               Browse All Resources,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimateContent20o25Showcase,
+    </section>)};
+export default UltimateContent20o25Showcase;

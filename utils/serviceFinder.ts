@@ -16,66 +16,56 @@ import { emergingTech20o25Services } from '../data/emerging-tech-20o25-services'
 import { professionalServices } from '../data/professional-services',
 import { real2029Q2Additions } from '../data/real-2029-q2-additions',
 export type ServiceRecord = any,
-const allServiceArrays: ServiceRecord[][] = [,
-  enhancedRealMicroSaasServices,;
-  innovativeMicroSaasServices,;
-  additionalEnhancedServices,;
-  innovativeAIServices,;
-  enterpriseITServices,;
-  nextGenerationAIServices,;
-  emergingTechnologyServices,;
-  comprehensiveITSolutions,;
-  realMarketServices,;
-  serviceExpansions2025,;
-  realOperationalServices,;
-  newOperationalServices2025,;
-  verifiedRealServices2025Batch2,;
-  innovative2025Services,;
-  emergingTech2025Services,;
-  professionalServices,;
-  real2029Q2Additions,;
+const allServiceArrays: ServiceRecord[][] = [
+  enhancedRealMicroSaasServices;
+  innovativeMicroSaasServices;
+  additionalEnhancedServices;
+  innovativeAIServices;
+  enterpriseITServices;
+  nextGenerationAIServices;
+  emergingTechnologyServices;
+  comprehensiveITSolutions;
+  realMarketServices;
+  serviceExpansions2025;
+  realOperationalServices;
+  newOperationalServices2025;
+  verifiedRealServices2025Batch2;
+  innovative2025Services;
+  emergingTech2025Services;
+  professionalServices;
+  real2029Q2Additions;
 ],
-export function findServiceBySlug(slug: string): ServiceRecord | undefined {,
-  for (const arr of allServiceArrays) {,
-    const hit = arr.find((s: any) => {,
+export function findServiceBySlug(slug: string): ServiceRecord | undefined {
+  for (const arr of allServiceArrays) {
+    const hit = arr.find((s: any) => {
       if (!s) return false,
       if (s.id && s.id === slug) return true,
-      if (s.link && typeof s.link === 'string') {,
-        try {,
+      if (s.link && typeof s.link === 'string') {
+        try {
           const url = new URL(s.link),
-          return url.pathname.replace(/^\/+|\/+$/g, '') === slug,
-        } catch {,
-          return s.link.endsWith('/' + slug),
-        }
+          return url.pathname.replace(/^\/+|\/+$/g, '') === slug} catch {
+          return s.link.endsWith('/' + slug)}
       }
-      return false,
-    }),
-    if (hit) return hit,
-  }
-  return undefined,
-}
-export function listServicesByCategory(,
-  categoryIncludes: string,
-): ServiceRecord[] {,
+      return false}),
+    if (hit) return hit}
+  return undefined}
+export function listServicesByCategory(
+  categoryIncludes: string): ServiceRecord[] {
   const results: ServiceRecord[] = [],
-  for (const arr of allServiceArrays) {,
-    for (const s of arr) {,
-      if (,
+  for (const arr of allServiceArrays) {
+    for (const s of arr) {
+      if (
         s &&,
         typeof s.category === 'string' &&,
-        s.category.toLowerCase().includes(categoryIncludes.toLowerCase()),
-      ) {,
-        results.push(s),
-      ,}
+        s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+        results.push(s)}
     }
   }
   // Deduplicate by id or link,
   const seen = new Set<string>(),
-  return results.filter(s => {,
+  return results.filter(s => {
     const key = s.id || s.link || s.name,
     if (seen.has(key)) return false,
     seen.add(key),
-    return true,
-  }),
-}
+    return true})}
 ,

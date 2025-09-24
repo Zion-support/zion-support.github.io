@@ -1,31 +1,24 @@
 'use client',
-,
 import LoadingSpinner from './LoadingSpinner',
-,
-interface LoadingPageProps {,
+interface LoadingPageProps {
   message?: string,
-  fullScreen?: boolean,
-}
+  fullScreen?: boolean}
 ,
-export default function LoadingPage({,
-  message = 'Loading...',;
-  fullScreen = true,;
-}: LoadingPageProps) {,
-  if (fullScreen) {,
-    return (,
+export default function LoadingPage({
+  message = 'Loading...';
+  fullScreen = true;
+}: LoadingPageProps) {
+  if (fullScreen) {
+    return (
       <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
         <div className='text-center'>,
           <LoadingSpinner size='xl' color='white' />,
           <p className='mt-4 text-white text-lg font-medium'>{message}</p>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className='flex items-center justify-center p-8'>,
       <LoadingSpinner text={message} />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

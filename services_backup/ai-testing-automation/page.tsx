@@ -1,20 +1,18 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Testing Automation | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Testing Automation | Zion Tech Group';
   description:,
-    'Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.',;
+    'Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.';
 };
-,
-export default function AITestingAutomationPage() {,
-  return (,
+export default function AITestingAutomationPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Testing Automation,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent test automation with AI-powered test generation,;
+          Intelligent test automation with AI-powered test generation;
           execution, and maintenance for faster, more reliable software,
           delivery.,
         </p>,
@@ -25,27 +23,27 @@ export default function AITestingAutomationPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='AI Test Generation',
               description='Automatically generate comprehensive test cases based on code analysis, user behavior patterns, and business requirements.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Self-Healing Tests',
               description='AI-powered test maintenance that automatically updates tests when UI elements change, reducing maintenance overhead by 90%.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Intelligent Test Execution',
               description='Smart test prioritization and parallel execution based on risk analysis and code changes.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Visual Testing AI',
               description='Advanced visual regression testing with AI-powered image comparison and layout analysis.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='API Testing Automation',
               description='Comprehensive API testing with automatic schema validation, performance testing, and security scanning.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Cross-Platform Support',
               description='Test across web, mobile, desktop, and API platforms with unified reporting and management.',
             />,
@@ -56,43 +54,43 @@ export default function AITestingAutomationPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$49/month',
               description='Perfect for small teams starting with test automation',
-              features={[,
-                'Up to 1,0o00 test executions per month',;
-                'Basic AI test generation',;
-                'Web testing support',;
-                'Email support',;
-                'Basic reporting',;
+              features={[
+                'Up to 1,0o00 test executions per month';
+                'Basic AI test generation';
+                'Web testing support';
+                'Email support';
+                'Basic reporting';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$149/month',
               description='Ideal for growing development teams',
-              features={[,
-                'Up to 10,0o00 test executions per month',;
-                'Advanced AI test generation',;
-                'All platform support',;
-                'Self-healing tests',;
-                'Priority support',;
-                'Advanced analytics',;
+              features={[
+                'Up to 10,0o00 test executions per month';
+                'Advanced AI test generation';
+                'All platform support';
+                'Self-healing tests';
+                'Priority support';
+                'Advanced analytics';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$399/month',
               description='For large organizations with complex testing needs',
-              features={[,
-                'Unlimited test executions',;
-                'Custom AI model training',;
-                '24/7 dedicated support',;
-                'On-premise deployment',;
-                'Custom integrations',;
-                'SLA guarantees',;
-                'Advanced security testing',;
+              features={[
+                'Unlimited test executions';
+                'Custom AI model training';
+                '24/7 dedicated support';
+                'On-premise deployment';
+                'Custom integrations';
+                'SLA guarantees';
+                'Advanced security testing';
               ]}
             />,
           </div>,
@@ -103,15 +101,15 @@ export default function AITestingAutomationPage() {,
           Why Choose Our AI Testing Automation?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='90% Faster Test Creation',
             description='AI generates comprehensive test suites in minutes instead of weeks, covering edge cases and scenarios you might miss.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Self-Maintaining Tests',
             description='Tests automatically adapt to UI changes, reducing maintenance time and keeping your test suite always up-to-date.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Higher Test Coverage',
             description='AI analyzes your application to identify untested areas and generates targeted tests for maximum coverage.',
           />,
@@ -126,16 +124,14 @@ export default function AITestingAutomationPage() {,
           adapts, learns, and scales with your needs.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -144,26 +140,22 @@ export default function AITestingAutomationPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-green-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -174,49 +166,40 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-green-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-green-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousHealthcareDiagnosticsProPage() {,
-  return (,
+export default function AiAutonomousHealthcareDiagnosticsProPage() {
+  return (
     <>,
       <Head>,
         <title>,
           Ai Autonomous Healthcare Diagnostics Pro - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='ai autonomous healthcare diagnostics pro page',
         />,
@@ -23,7 +22,5 @@ export default function AiAutonomousHealthcareDiagnosticsProPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

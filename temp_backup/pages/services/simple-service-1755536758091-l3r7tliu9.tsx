@@ -1,37 +1,30 @@
 import Head from 'next/head',
 import { useState } from 'react',
-,
-export default function SimpleService1755536758091l3r7tliu9() {,
+export default function SimpleService1755536758091l3r7tliu9() {
   const [selectedPlan, setSelectedPlan] = useState(0),
-  const serviceData ={,
-    features: [,
-      "AI-Powered Automation",;
-      "Machine Learning Solutions",;
-      "Data Analytics & Insights",;
-      "Custom AI Development",;
-      "24/7 Support & Maintenance",;
-      "Scalable Infrastructure",
-    ],;
-    pricing: [,
-      {,
-        plan: "Starter",;
-        price: "$999/month",;
-        features: ["Basic AI Integration", "Standard Support", "Monthly Reports"],
-      },;
-      {,
-        plan: "Professional",;
-        price: "$2,499/month",;
-        features: ["Advanced AI Features", "Priority Support", "Weekly Reports"],
-      },;
-      {,
-        plan: "Enterprise",;
-        price: "$4,999/month",;
-        features: ["Full AI Suite", "Dedicated Support", "Real-time Analytics"],
-      }
-    ],
-  };
-,
-  return (,
+  const serviceData ={
+    features: [
+      "AI-Powered Automation";
+      "Machine Learning Solutions";
+      "Data Analytics & Insights";
+      "Custom AI Development";
+      "24/7 Support & Maintenance";
+      "Scalable Infrastructure"];
+    pricing: [
+      {
+        plan: "Starter";
+        price: "$999/month";
+        features: ["Basic AI Integration", "Standard Support", "Monthly Reports"]};
+      {
+        plan: "Professional";
+        price: "$2,499/month";
+        features: ["Advanced AI Features", "Priority Support", "Weekly Reports"]};
+      {
+        plan: "Enterprise";
+        price: "$4,999/month";
+        features: ["Full AI Suite", "Dedicated Support", "Real-time Analytics"]}
+    ]};
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>DevOps Service - Zion Tech Group</title>,
@@ -53,39 +46,35 @@ export default function SimpleService1755536758091l3r7tliu9() {,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold mb-8 text-center">Features</h2>,
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">,
-            {serviceData.features.map((feature, index) => (,
+            {serviceData.features.map((feature, index) => (
               <div key={index} className="bg-slate-80o0 p-6 rounded-lg border border-slate-70o0">,
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         <div className="mb-16">,
           <h2 className="text-3xl font-bold mb-8 text-center">Pricing</h2>,
           <div className="grid md: grid-cols-3 gap-6">,
-            {serviceData.pricing.map((plan, index) => (,
-              <div,
+            {serviceData.pricing.map((plan, index) => (
+              <div
                 key={index} ,
-                className={`bg-slate-80o0 p-6 rounded-lg border-2 ${,
-                  selectedPlan === index ? 'border-blue-50o0' : 'border-slate-70o0',
-                }`}
+                className={`bg-slate-80o0 p-6 rounded-lg border-2 ${
+                  selectedPlan === index ? 'border-blue-50o0' : 'border-slate-70o0'}`}
                 onClick={() => setSelectedPlan(index)}
               >,
                 <h3 className="text-xl font-bold mb-2">{plan.plan}</h3>,
                 <div className="text-3xl font-bold mb-4 text-blue-40o0">{plan.price}</div>,
                 <ul className="space-y-2">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">,
                       <span className="text-green-40o0 mr-2">✓</span>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <button className="w-full mt-6 bg-blue-60o0 hover: bg-blue-70o0 text-white font-bold py-2 px-4 rounded">,
                   Get Started,
                 </button>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
         <div className="text-center">,
@@ -96,9 +85,7 @@ export default function SimpleService1755536758091l3r7tliu9() {,
           </button>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/services/rapid-1755539340o458-6lge19" className="internal-link">Related Content</Link>,
 <Link href="/services/rapid-1755539347154-xzj546" className="internal-link">Related Content</Link>,

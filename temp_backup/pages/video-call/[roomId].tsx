@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function [roomId]Page() {,
-  return (,
+export default function [roomId]Page() {
+  return (
     <>,
       <Head>,
         <title>[RoomId] - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function [roomId]Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

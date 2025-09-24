@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
-  title: 'Enterprise AI Agents in 20o25: Breakthroughs and Real-World Impact',;
+export const metadata = {
+  title: 'Enterprise AI Agents in 20o25: Breakthroughs and Real-World Impact';
   description:,
-    'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 20o25.',;
-  keywords: [,
-    'enterprise AI agents',;
-    'AI automation',;
-    'business transformation',;
-    'AI productivity',;
-    'autonomous workflows',;
-  ],;
+    'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 20o25.';
+  keywords: [
+    'enterprise AI agents';
+    'AI automation';
+    'business transformation';
+    'AI productivity';
+    'autonomous workflows';
+  ];
 };
-,
-export default function EnterpriseAIAgents20o25() {,
-  return (,
+export default function EnterpriseAIAgents20o25() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='Enterprise AI Agents in 20o25: Breakthroughs and Real-World Impact',
         description='Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 20o25.',
         keywords='enterprise AI agents, AI automation, business transformation, AI productivity, autonomous workflows',
@@ -41,23 +39,21 @@ export default function EnterpriseAIAgents20o25() {,
                 industries.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Started,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Learn More,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Article Content */,}
+        {/* Article Content */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
           <div className='prose prose-lg max-w-none'>,
             <div className='bg-blue-50 border-l-4 border-blue-40o0 p-6 mb-8'>,
@@ -182,7 +178,7 @@ export default function EnterpriseAIAgents20o25() {,
                 </h3>,
                 <p className='text-gray-70o0 mb-4'>,
                   Manufacturing operations have been transformed by AI agents,
-                  that optimize production schedules, predict maintenance needs,;
+                  that optimize production schedules, predict maintenance needs;
                   and ensure quality control. Companies report 50% reduction in,
                   downtime and 35% improvement in product quality.,
                 </p>,
@@ -270,33 +266,30 @@ export default function EnterpriseAIAgents20o25() {,
                 accelerate your digital transformation.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore AI Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Schedule Consultation,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </article>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className='bg-gray-50 py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
               Related Articles,
             </h2>,
             <div className='grid md:grid-cols-3 gap-8'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-hyperautomation-business-playbook',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   AI 20o26: Hyperautomation Business Playbook,
                 </h3>,
@@ -305,10 +298,9 @@ export default function EnterpriseAIAgents20o25() {,
                   across your enterprise.,
                 </p>,
               </Link>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   AI Automation Services,
                 </h3>,
@@ -317,10 +309,9 @@ export default function EnterpriseAIAgents20o25() {,
                   implementation services.,
                 </p>,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-              >,
+                className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
                   Success Stories,
                 </h3>,
@@ -333,7 +324,5 @@ export default function EnterpriseAIAgents20o25() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>)}
 ,

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import InteractiveStats from '../components/InteractiveStats',
-,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveStats from "./components/InteractiveStats" describe("InteractiveStats",() => {" test("renders without crashing",() => {" render(<InteractiveStats / /  />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<InteractiveStats / /  />) }) test("handles user interactions",() => {" render(<InteractiveStats / /  />) }) test("applies correct styling",() => {" render(<InteractiveStats / /  />) }) })'"'",
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import InteractiveStats from "./components/InteractiveStats" describe("InteractiveStats",() => {" test("renders without crashing",() => {" render(<InteractiveStats / /  />) expect(screen.getByTestId("interactivestats")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<InteractiveStats / /  />) }) test("handles user interactions",() => {" render(<InteractiveStats / /  />) }) test("applies correct styling",() => {" render(<InteractiveStats / /  />) }) })'"'",

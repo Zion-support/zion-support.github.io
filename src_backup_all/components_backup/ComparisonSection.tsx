@@ -1,17 +1,16 @@
 import { GradientHeading } from './GradientHeading',
 import { Button } from './ui/button',
 import { CheckCircle2 } from 'lucide-react',
-import {,
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow;
 } from './ui/table',
-,
-export function ComparisonSection() {,
-  return (,
+export function ComparisonSection() {
+  return (
     <section className='py-20 bg-zion-blue-dark'>,
       <div className='container mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -39,38 +38,38 @@ export function ComparisonSection() {,
                 </TableRow>,
               </TableHeader>,
               <TableBody>,
-                {[,
-                  {,
-                    service: 'Server Hosting',;
-                    traditional: '$1,20o0/mo',;
-                    zion: '$650/mo',;
-                    savings: '45%',;
-                  },;
-                  {,
-                    service: 'IT Equipment',;
-                    traditional: 'Full Purchase',;
-                    zion: 'Flexible Rental',;
-                    savings: '60%',;
-                  },;
-                  {,
-                    service: '24/7 Support',;
-                    traditional: '$2,50o0/mo',;
-                    zion: '$950/mo',;
-                    savings: '62%',;
-                  },;
-                  {,
-                    service: 'Storage Solutions',;
-                    traditional: '$80o0/mo',;
-                    zion: '$350/mo',;
-                    savings: '56%',;
-                  },;
-                  {,
-                    service: 'Marketplace Listings',;
-                    traditional: '$99/mo',;
-                    zion: 'Free',;
-                    savings: '10o0%',;
-                  },;
-                ].map((item, index) => (,
+                {[
+                  {
+                    service: 'Server Hosting';
+                    traditional: '$1,20o0/mo';
+                    zion: '$650/mo';
+                    savings: '45%';
+                  };
+                  {
+                    service: 'IT Equipment';
+                    traditional: 'Full Purchase';
+                    zion: 'Flexible Rental';
+                    savings: '60%';
+                  };
+                  {
+                    service: '24/7 Support';
+                    traditional: '$2,50o0/mo';
+                    zion: '$950/mo';
+                    savings: '62%';
+                  };
+                  {
+                    service: 'Storage Solutions';
+                    traditional: '$80o0/mo';
+                    zion: '$350/mo';
+                    savings: '56%';
+                  };
+                  {
+                    service: 'Marketplace Listings';
+                    traditional: '$99/mo';
+                    zion: 'Free';
+                    savings: '10o0%';
+                  };
+                ].map((item, index) => (
                   <TableRow key={index} className='border-b border-zion-blue'>,
                     <TableCell className='font-medium text-white'>,
                       {item.service}
@@ -84,8 +83,7 @@ export function ComparisonSection() {,
                     <TableCell className='text-center text-green-40o0 font-bold'>,
                       {item.savings}
                     </TableCell>,
-                  </TableRow>,
-                ))}
+                  </TableRow>))}
               </TableBody>,
             </Table>,
           </div>,
@@ -109,7 +107,5 @@ export function ComparisonSection() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

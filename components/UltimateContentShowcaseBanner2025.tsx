@@ -1,19 +1,18 @@
 "use client",
 'use client',
 import { useState, useEffect } from 'react',
-export default function UltimateContentShowcaseBanner20o25() {,
+export default function UltimateContentShowcaseBanner20o25() {
   const [isVisible, setIsVisible] = useState(false),
-  useEffect(() => {,
-    setIsVisible(true),
-  }, []),
+  useEffect(() => {
+    setIsVisible(true)}, []),
   if (!isVisible) return null,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 py-16">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20 animate-pulse"></div>,
       <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-        {/* Main Banner */,}
+        {/* Main Banner */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-40o0 via-orange-40o0 to-red-40o0 text-black text-lg font-bold mb-6 animate-bounce">,
             🔥 ULTIMATE BREAKTHROUGH CONTENT 20o25,
@@ -25,30 +24,27 @@ export default function UltimateContentShowcaseBanner20o25() {,
             </span>,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-30o0 max-w-5xl mx-auto leading-relaxed mb-8">,
-            Discover our latest breakthrough content featuring Neural Consciousness, $15B ROI success stories,;
+            Discover our latest breakthrough content featuring Neural Consciousness, $15B ROI success stories;
             and complete autonomous business transformation guides. Get exclusive access to the future of AI.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
-            <a,
+            <a
               href="/blog/ai-20o25-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence",
-              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               🧠 Read Neural Consciousness,
             </a>,
-            <a,
+            <a
               href="/case-studies/global-enterprise-conscious-ai-transformation-20o25-15-billion-roi",
-              className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               💰 View $15B Success Story,
             </a>,
-            <a,
+            <a
               href="/blog/ai-20o25-autonomous-business-revolution-complete-guide",
-              className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               📚 Get Implementation Guide,
             </a>,
           </div>,
-          {/* Feature Tags */,}
+          {/* Feature Tags */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">,
             <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white font-medium">,
               🧠 Neural Consciousness,
@@ -107,7 +103,7 @@ export default function UltimateContentShowcaseBanner20o25() {,
             </a>,
           </div>,
         </div>,
-        {/* Stats Section */,}
+        {/* Stats Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
           <div className="grid md: grid-cols-4 gap-6 text-center">,
             <div>,
@@ -148,6 +144,4 @@ export default function UltimateContentShowcaseBanner20o25() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GreenItPage() {,
-  return (,
+export default function GreenItPage() {
+  return (
     <>,
       <Head>,
         <title>Green It - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function GreenItPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CloudInfrastructureDevopsPage() {,
-  return (,
+export default function CloudInfrastructureDevopsPage() {
+  return (
     <>,
       <Head>,
         <title>Cloud Infrastructure Devops - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function CloudInfrastructureDevopsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Operational Blueprint for Autonomous Agents | Zion Tech Group',;
+    'AI 20o26: Operational Blueprint for Autonomous Agents | Zion Tech Group';
   description:,
-    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.',;
-  keywords: [,
-    'autonomous agents',;
-    'operations',;
-    'on-call',;
-    'governance',;
-    'eval-gates',;
-  ],;
+    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.';
+  keywords: [
+    'autonomous agents';
+    'operations';
+    'on-call';
+    'governance';
+    'eval-gates';
+  ];
 };
-,
-export default function OperationalBlueprintPage() {,
-  return (,
+export default function OperationalBlueprintPage() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Operational Blueprint for Autonomous Agents',
         description='Practical operating model for autonomous agents: roles, gates, on-call, and governance.',
         keywords='autonomous agents, operations, on-call, governance, eval-gates',
@@ -62,22 +60,18 @@ export default function OperationalBlueprintPage() {,
             </p>,
           </article>,
           <div className='flex gap-4'>,
-            <Link,
+            <Link
               href='/content/ai-20o26-operational-excellence-handbook',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
               Operational Excellence Handbook,
             </Link>,
-            <Link,
+            <Link
               href='/blog',
-              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               ← Back to Blog,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

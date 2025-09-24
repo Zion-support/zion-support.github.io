@@ -1,24 +1,22 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agentic Sandbox Patterns | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agentic Sandbox Patterns | Zion Tech Group';
   description:,
-    'Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.',;
-  keywords: [,
-    'agent sandbox',;
-    'tool use safety',;
-    'policy-as-code',;
-    'runtime guards',;
-    'isolation domains',;
-    'eval gates',;
-  ],;
+    'Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.';
+  keywords: [
+    'agent sandbox';
+    'tool use safety';
+    'policy-as-code';
+    'runtime guards';
+    'isolation domains';
+    'eval gates';
+  ];
 };
-,
-export default function AgenticSandboxPatternsPage() {,
-  return (,
+export default function AgenticSandboxPatternsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agentic Sandbox Patterns',
         description='Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.',
         keywords='agent sandbox, tool use safety, policy-as-code, runtime guards, isolation domains, eval gates',
@@ -78,22 +76,18 @@ export default function AgenticSandboxPatternsPage() {,
             </ol>,
           </div>,
           <div className='mt-10 flex flex-wrap gap-4'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-agentic-sandbox-patterns',
-              className='text-purple-60o0 font-semibold',
-            >,
+              className='text-purple-60o0 font-semibold'>,
               Read Blog Overview →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-            >,
+              className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
               Discuss Architecture,
             </Link>,
           </div>,
         </article>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

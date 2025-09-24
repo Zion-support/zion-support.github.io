@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {,
-  return (,
+export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20"></div>,
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Content */,}
+          {/* Content */}
           <div>,
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white text-sm font-semibold mb-6 animate-pulse">,
               🚀 REVOLUTIONARY BREAKTHROUGH ANNOUNCEMENT,
@@ -42,21 +41,19 @@ export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {,
             </div>,
             {/* CTA Buttons */}
             <div className="flex flex-col sm: flex-row gap-4">,
-              <Link,
+              <Link
                 href="/ai-20o25-revolutionary-breakthrough-announcement",
-                className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 hover:from-green-60o0 hover:to-emerald-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 text-center",
-              >,
+                className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 hover:from-green-60o0 hover:to-emerald-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 text-center">,
                 Discover Breakthrough,
               </Link>,
-              <Link,
+              <Link
                 href="/case-studies/ai-20o25-global-transformation-breakthrough",
-                className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 text-center",
-              >,
+                className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 text-center">,
                 View Success Story,
               </Link>,
             </div>,
           </div>,
-          {/* Visual Element */,}
+          {/* Visual Element */}
           <div className="relative">,
             <div className="relative w-full h-96 bg-gradient-to-br from-purple-60o0/20 to-blue-60o0/20 rounded-2xl border border-purple-50o0/30 overflow-hidden">,
               {/* Animated Background */}
@@ -69,9 +66,9 @@ export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {,
                   {/* Orbiting Nodes */}
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
                     <div className="w-8 h-8 bg-gradient-to-r from-green-40o0 to-blue-40o0 rounded-full absolute -top-20 left-1/2 transform -translate-x-1/2 animate-bounce"></div>,
-                    <div className="w-8 h-8 bg-gradient-to-r from-pink-40o0 to-purple-40o0 rounded-full absolute -bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce" style={{animationDelay: '0.5s',}}></div>,
-                    <div className="w-8 h-8 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full absolute top-1/2 -left-20 transform -translate-y-1/2 animate-bounce" style={{animationDelay: '1s',}}></div>,
-                    <div className="w-8 h-8 bg-gradient-to-r from-indigo-40o0 to-cyan-40o0 rounded-full absolute top-1/2 -right-20 transform -translate-y-1/2 animate-bounce" style={{animationDelay: '1.5s',}}></div>,
+                    <div className="w-8 h-8 bg-gradient-to-r from-pink-40o0 to-purple-40o0 rounded-full absolute -bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce" style={{animationDelay: '0.5s'}}></div>,
+                    <div className="w-8 h-8 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full absolute top-1/2 -left-20 transform -translate-y-1/2 animate-bounce" style={{animationDelay: '1s'}}></div>,
+                    <div className="w-8 h-8 bg-gradient-to-r from-indigo-40o0 to-cyan-40o0 rounded-full absolute top-1/2 -right-20 transform -translate-y-1/2 animate-bounce" style={{animationDelay: '1.5s'}}></div>,
                   </div>,
                   {/* Connection Lines */}
                   <svg className="absolute inset-0 w-full h-full" viewBox="0 0 256 256">,
@@ -102,9 +99,9 @@ export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {,
               </div>,
               {/* Floating Elements */}
               <div className="absolute top-4 left-4 text-2xl animate-bounce">⚛️</div>,
-              <div className="absolute top-4 right-4 text-2xl animate-bounce" style={{animationDelay: '0.5s',}}>🧠</div>,
-              <div className="absolute bottom-4 left-4 text-2xl animate-bounce" style={{animationDelay: '1s',}}>🤖</div>,
-              <div className="absolute bottom-4 right-4 text-2xl animate-bounce" style={{animationDelay: '1.5s',}}>🌌</div>,
+              <div className="absolute top-4 right-4 text-2xl animate-bounce" style={{animationDelay: '0.5s'}}>🧠</div>,
+              <div className="absolute bottom-4 left-4 text-2xl animate-bounce" style={{animationDelay: '1s'}}>🤖</div>,
+              <div className="absolute bottom-4 right-4 text-2xl animate-bounce" style={{animationDelay: '1.5s'}}>🌌</div>,
             </div>,
             {/* Success Metrics Overlay */}
             <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white px-6 py-3 rounded-lg shadow-lg">,
@@ -114,6 +111,4 @@ export default function AI20o25RevolutionaryBreakthroughPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

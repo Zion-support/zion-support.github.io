@@ -1,66 +1,55 @@
 import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Search, Grid, List, Filter,;
-  Brain, Atom, Shield, Target, Rocket,;
-  ArrowRight, Check, Star, Phone, Mail, MapPin,;
-  Building, Cpu, Zap, Globe, Lock, BarChart3,
-} from 'lucide-react',
-,
+import {
+  Search, Grid, List, Filter;
+  Brain, Atom, Shield, Target, Rocket;
+  ArrowRight, Check, Star, Phone, Mail, MapPin;
+  Building, Cpu, Zap, Globe, Lock, BarChart3} from 'lucide-react',
 // Import our new service data,
 import { innovativeMicroSaasExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
 import { innovativeITInfrastructureExpansion } from '../data/20o25-innovative-it-infrastructure-expansion',
 import { innovativeAIServicesExpansion } from '../data/20o25-innovative-ai-services-expansion',
-,
 // Create unified services array,
-const allNewServices = [,
-  ...innovativeMicroSaasExpansionV2,;
-  ...innovativeITInfrastructureExpansion,;
-  ...innovativeAIServicesExpansion,
+const allNewServices = [
+  ...innovativeMicroSaasExpansionV2;
+  ...innovativeITInfrastructureExpansion;
+  ...innovativeAIServicesExpansion],
+const categories = [
+  {
+    id: 'all';
+    name: 'All New Services';
+    icon: <Grid className="w-6 h-6"  />;
+    color: 'from-gray-50o0 to-slate-50o0';
+    description: 'Complete portfolio of new innovative services'};
+  {
+    id: 'micro-saas';
+    name: 'Micro SAAS Solutions';
+    icon: <Target className="w-6 h-6"  />;
+    color: 'from-green-50o0 to-emerald-50o0';
+    description: 'Innovative business solutions and automation'};
+  {
+    id: 'it-infrastructure';
+    name: 'IT Infrastructure';
+    icon: <Building className="w-6 h-6"  />;
+    color: 'from-indigo-50o0 to-purple-50o0';
+    description: 'Advanced infrastructure and security solutions'};
+  {
+    id: 'ai-services';
+    name: 'AI Services';
+    icon: <Brain className="w-6 h-6"  />;
+    color: 'from-purple-50o0 to-pink-50o0';
+    description: 'Cutting-edge AI and machine learning services'}
 ],
-,
-const categories = [,
-  {,
-    id: 'all',;
-    name: 'All New Services',;
-    icon: <Grid className="w-6 h-6"  />,;
-    color: 'from-gray-50o0 to-slate-50o0',;
-    description: 'Complete portfolio of new innovative services',
-  ,},;
-  {,
-    id: 'micro-saas',;
-    name: 'Micro SAAS Solutions',;
-    icon: <Target className="w-6 h-6"  />,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    description: 'Innovative business solutions and automation',
-  ,},;
-  {,
-    id: 'it-infrastructure',;
-    name: 'IT Infrastructure',;
-    icon: <Building className="w-6 h-6"  />,;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    description: 'Advanced infrastructure and security solutions',
-  ,},;
-  {,
-    id: 'ai-services',;
-    name: 'AI Services',;
-    icon: <Brain className="w-6 h-6"  />,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    description: 'Cutting-edge AI and machine learning services',
-  ,}
+const sortOptions = [
+  { value: 'name', label: 'Name A-Z' };
+  { value: 'price-low', label: 'Price: Low to High' };
+  { value: 'price-high', label: 'Price: High to Low' };
+  { value: 'popular', label: 'Most Popular' };
+  { value: 'newest', label: 'Newest First' };
+  { value: 'rating', label: 'Highest Rated' }
 ],
-,
-const sortOptions = [,
-  { value: 'name', label: 'Name A-Z' ,},;
-  { value: 'price-low', label: 'Price: Low to High' ,},;
-  { value: 'price-high', label: 'Price: High to Low' ,},;
-  { value: 'popular', label: 'Most Popular' ,},;
-  { value: 'newest', label: 'Newest First' ,},;
-  { value: 'rating', label: 'Highest Rated' ,}
-],
-,
-export default function ComprehensiveServicesExpansion20o25() {,
+export default function ComprehensiveServicesExpansion20o25() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [sortBy, setSortBy] = useState('name'),
@@ -69,31 +58,22 @@ export default function ComprehensiveServicesExpansion20o25() {,
   const [isLoading, setIsLoading] = useState(true),
   const [isVisible, setIsVisible] = useState(false),
   const pageSize = 12,
-,
   // Simulate loading state for better UX,
-  useEffect(() => {,
-    const timer = setTimeout(() => {,
+  useEffect(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false),
-      setIsVisible(true),
-    }, 80o0),
-,
-    return () => clearTimeout(timer),
-  }, []),
-,
+      setIsVisible(true)}, 80o0),
+    return () => clearTimeout(timer)}, []),
   // Filter services based on search and category,
-  const filteredServices = allNewServices.filter(service => {,
+  const filteredServices = allNewServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()),
-,
     if (selectedCategory === 'all') return matchesSearch,
-,
     const serviceCategory = service.category.toLowerCase(),
-    return matchesSearch && serviceCategory.includes(selectedCategory.toLowerCase()),
-  }),
-,
+    return matchesSearch && serviceCategory.includes(selectedCategory.toLowerCase())}),
   // Sort services,
-  const sortedServices = [...filteredServices].sort((a, b) => {,
-    switch (sortBy) {,
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
       case 'name':,
         return a.name.localeCompare(b.name),
       case 'price-low':,
@@ -107,30 +87,22 @@ export default function ComprehensiveServicesExpansion20o25() {,
       case 'rating':,
         return b.rating - a.rating,
       default: ,
-        return 0,
-    ,}
+        return 0}
   }),
-,
   // Pagination,
   const totalPages = Math.ceil(sortedServices.length / pageSize),
-  const paginatedServices = sortedServices.slice(,
-    (currentPage - 1) * pageSize,;
-    currentPage * pageSize,
-  ),
-,
-  const handlePageChange = (page: number) => {,
+  const paginatedServices = sortedServices.slice(
+    (currentPage - 1) * pageSize;
+    currentPage * pageSize),
+  const handlePageChange = (page: number) => {
     setCurrentPage(page),
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
-  const getServiceCategory = (service: any) => {,
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  const getServiceCategory = (service: any) => {
     if (service.category) return service.category,
-    return 'Other',
-  ,};
-,
-  return (,
+    return 'Other'};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
-      <SEO,
+      <SEO
         title="20o25 Comprehensive Services Expansion - Zion Tech Group",
         description="Discover our latest innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions from Zion Tech Group.",
         keywords={["micro SAAS", "IT infrastructure", "AI services", "business automation", "cybersecurity", "cloud solutions", "Zion Tech Group"]}
@@ -141,32 +113,29 @@ export default function ComprehensiveServicesExpansion20o25() {,
         <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20"  />,
         <div className="relative max-w-7xl mx-auto text-center">,
           <motion.h1,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-4xl md: text-6xl font-bold text-white mb-6",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md: text-6xl font-bold text-white mb-6">,
             20o25 Comprehensive Services,
             <span className="block bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
               Expansion,
             </span>,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">,
             Transform your business with our latest innovative micro SAAS, IT infrastructure, and AI services.,
             Built for the future, delivered today.,
           </motion.p>,
           {/* Contact Information */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto">,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-center">,
               <div className="flex flex-col items-center">,
                 <Phone className="w-6 h-6 text-blue-40o0 mb-2"  />,
@@ -187,14 +156,14 @@ export default function ComprehensiveServicesExpansion20o25() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Search and Filters */,}
+      {/* Search and Filters */}
       <section className="py-8 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search services...",
                 value={searchQuery}
@@ -202,50 +171,44 @@ export default function ComprehensiveServicesExpansion20o25() {,
                 className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent",
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex gap-2">,
-              {categories.map((category) => (,
-                <button,
+              {categories.map((category) => (
+                <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${,
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                     selectedCategory === category.id,
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg',
-                      : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                  ,}`}
+                      : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {category.icon}
                   <span className="ml-2">{category.name}</span>,
-                </button>,
-              ))}
+                </button>))}
             </div>,
             {/* Sort and View */}
             <div className="flex gap-2">,
-              <select,
+              <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0",
-              >,
-                {sortOptions.map((option) => (,
-                  <option key={option.value,} value={option.value} className="bg-gray-80o0 text-white">,
+                className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0">,
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value} className="bg-gray-80o0 text-white">,
                     {option.label}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
               <div className="flex bg-white/10 backdrop-blur-lg rounded-lg p-1">,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all duration-20o0 ${,
-                    viewMode === 'grid' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  ,}`}
+                  className={`p-2 rounded-md transition-all duration-20o0 ${
+                    viewMode === 'grid' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5"  />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all duration-20o0 ${,
-                    viewMode === 'list' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white',
-                  ,}`}
+                  className={`p-2 rounded-md transition-all duration-20o0 ${
+                    viewMode === 'list' ? 'bg-blue-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5"  />,
                 </button>,
@@ -257,49 +220,44 @@ export default function ComprehensiveServicesExpansion20o25() {,
       {/* Services Grid */}
       <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          {isLoading ? (,
+          {isLoading ? (
             <div className="text-center py-20">,
               <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-50o0 mx-auto"></div>,
               <p className="text-gray-40o0 mt-4">Loading innovative services...</p>,
-            </div>,
-          ) : (,
+            </div>) : (
             <AnimatePresence>,
-              {isVisible && (,
+              {isVisible && (
                 <motion.div,
-                  initial={{ opacity: 0 ,}}
-                  animate={{ opacity: 1 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
                 >,
-                  {paginatedServices.length === 0 ? (,
+                  {paginatedServices.length === 0 ? (
                     <div className="text-center py-20">,
                       <Search className="w-16 h-16 text-gray-40o0 mx-auto mb-4"  />,
                       <h3 className="text-xl font-semibold text-gray-30o0 mb-2">No services found</h3>,
                       <p className="text-gray-40o0">Try adjusting your search or filter criteria.</p>,
-                    </div>,
-                  ) : (,
+                    </div>) : (
                     <>,
-                      <div className={`grid gap-6 ${,
+                      <div className={`grid gap-6 ${
                         viewMode === 'grid',
                           ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-                          : 'grid-cols-1',
-                      ,}`}>,
-                        {paginatedServices.map((service, index) => (,
+                          : 'grid-cols-1'}`}>,
+                        {paginatedServices.map((service, index) => (
                           <motion.div,
                             key={service.id}
-                            initial={{ opacity: 0, y: 20 ,}}
-                            animate={{ opacity: 1, y: 0 ,}}
-                            transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                            className={`bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl ${,
-                              viewMode === 'list' ? 'flex gap-6' : '',
-                            ,}`}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className={`bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl ${
+                              viewMode === 'list' ? 'flex gap-6' : ''}`}
                           >,
-                            {viewMode === 'list' && (,
+                            {viewMode === 'list' && (
                               <div className="flex-shrink-0">,
                                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center text-2xl`}>,
                                   {service.icon}
                                 </div>,
-                              </div>,
-                            )}
+                              </div>)}
 ,
                             <div className="flex-1">,
                               <div className="flex items-start justify-between mb-4">,
@@ -307,29 +265,25 @@ export default function ComprehensiveServicesExpansion20o25() {,
                                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>,
                                   <p className="text-gray-30o0 text-sm mb-3">{service.tagline}</p>,
                                 </div>,
-                                {viewMode === 'grid' && (,
+                                {viewMode === 'grid' && (
                                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center text-xl`}>,
                                     {service.icon}
-                                  </div>,
-                                )}
+                                  </div>)}
                               </div>,
                               <p className="text-gray-40o0 mb-4 line-clamp-3">{service.description}</p>,
                               {/* Features */}
                               <div className="mb-4">,
                                 <div className="flex flex-wrap gap-2">,
-                                  {service.features.slice(0, 3).map((feature, idx) => (,
-                                    <span,
+                                  {service.features.slice(0, 3).map((feature, idx) => (
+                                    <span
                                       key={idx}
-                                      className="px-2 py-1 bg-white/10 rounded-md text-xs text-gray-30o0",
-                                    >,
+                                      className="px-2 py-1 bg-white/10 rounded-md text-xs text-gray-30o0">,
                                       {feature}
-                                    </span>,
-                                  ))}
-                                  {service.features.length > 3 && (,
+                                    </span>))}
+                                  {service.features.length > 3 && (
                                     <span className="px-2 py-1 bg-blue-50o0/20 rounded-md text-xs text-blue-40o0">,
                                       +{service.features.length - 3} more,
-                                    </span>,
-                                  )}
+                                    </span>)}
                                 </div>,
                               </div>,
                               {/* Pricing and Rating */}
@@ -346,91 +300,79 @@ export default function ComprehensiveServicesExpansion20o25() {,
                               </div>,
                               {/* Market Info */}
                               <div className="mb-4 text-xs text-gray-40o0">,
-                                <p><strong>Market Size: </strong> {service.marketSize,}</p>,
-                                <p><strong>Growth Rate: </strong> {service.growthRate,}</p>,
+                                <p><strong>Market Size: </strong> {service.marketSize}</p>,
+                                <p><strong>Growth Rate: </strong> {service.growthRate}</p>,
                               </div>,
                               {/* ROI */}
                               <div className="mb-4 p-3 bg-green-50o0/10 border border-green-50o0/20 rounded-lg">,
                                 <p className="text-green-40o0 text-sm font-medium">ROI Benefits: </p>,
-                                <p className="text-green-30o0 text-xs">{service.roi,}</p>,
+                                <p className="text-green-30o0 text-xs">{service.roi}</p>,
                               </div>,
                               {/* CTA */}
                               <div className="flex gap-2">,
-                                <a,
+                                <a
                                   href={service.link}
-                                  className="flex-1 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-4 py-2 rounded-lg text-center font-medium hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2",
-                                >,
+                                  className="flex-1 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-4 py-2 rounded-lg text-center font-medium hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2">,
                                   Learn More,
                                   <ArrowRight className="w-4 h-4"  />,
                                 </a>,
-                                <a,
-                                  href={`mailto:${service.contactInfo.email,}?subject=Inquiry about ${service.name}`}
-                                  className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white hover: bg-white/20 transition-all duration-20o0 flex items-center justify-center",
-                                >,
+                                <a
+                                  href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                                  className="px-4 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white hover: bg-white/20 transition-all duration-20o0 flex items-center justify-center">,
                                   <Mail className="w-4 h-4"  />,
                                 </a>,
                               </div>,
                             </div>,
-                          </motion.div>,
-                        )),}
+                          </motion.div>))}
                       </div>,
                       {/* Pagination */}
-                      {totalPages > 1 && (,
+                      {totalPages > 1 && (
                         <div className="flex justify-center mt-12">,
                           <div className="flex gap-2">,
-                            {Array.from({ length: totalPages ,}, (_, i) => i + 1).map((page) => (,
-                              <button,
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                              <button
                                 key={page}
                                 onClick={() => handlePageChange(page)}
-                                className={`px-4 py-2 rounded-lg transition-all duration-20o0 ${,
+                                className={`px-4 py-2 rounded-lg transition-all duration-20o0 ${
                                   currentPage === page,
                                     ? 'bg-blue-50o0 text-white',
-                                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20',
-                                ,}`}
+                                    : 'bg-white/10 backdrop-blur-lg text-gray-30o0 hover: bg-white/20'}`}
                               >,
                                 {page}
-                              </button>,
-                            ))}
+                              </button>))}
                           </div>,
-                        </div>,
-                      )}
-                    </>,
-                  )}
-                </motion.div>,
-              )}
-            </AnimatePresence>,
-          )}
+                        </div>)}
+                    </>)}
+                </motion.div>)}
+            </AnimatePresence>)}
         </div>,
       </section>,
       {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20">,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
               Ready to Transform Your Business?,
             </h2>,
             <p className="text-xl text-gray-30o0 mb-8">,
-              Join hundreds of businesses already leveraging our innovative services to drive growth,;
+              Join hundreds of businesses already leveraging our innovative services to drive growth;
               efficiency, and competitive advantage.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <a,
+              <a
                 href="mailto:kleber@ziontechgroup.com?subject=Service Consultation Request",
-                className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2",
-              >,
+                className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-20o0 flex items-center justify-center gap-2">,
                 <Mail className="w-5 h-5"  />,
                 Get Free Consultation,
               </a>,
-              <a,
+              <a
                 href="tel:+130o24640950",
-                className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2",
-              >,
+                className="bg-white/10 backdrop-blur-lg border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-20o0 flex items-center justify-center gap-2">,
                 <Phone className="w-5 h-5"  />,
                 Call Now,
               </a>,
@@ -438,6 +380,4 @@ export default function ComprehensiveServicesExpansion20o25() {,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}

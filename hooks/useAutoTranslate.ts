@@ -3,15 +3,14 @@ import { useEffect, useState } from 'react';
 // Simulated translator
 async function translateTextViaAI(
   text: string,
-  target: string,
-): Promise<string> {
+  target: string): Promise<string> {
   return new Promise(resolve => {
     setTimeout(() => resolve(`${text} (${target})`), 100);
   });
 }
 
 export type UseAutoTranslateResult = {
-  translations: Record<string, string>;
+  translations: Record<string string>;
   loading: boolean;
   error?: string;
 };
@@ -19,9 +18,8 @@ export type UseAutoTranslateResult = {
 export function useAutoTranslate(
   text: string,
   targets: string[],
-  debounceMs = 300,
-): UseAutoTranslateResult {
-  const [translations, setTranslations] = useState<Record<string, string>>({});
+  debounceMs = 300): UseAutoTranslateResult {
+  const [translations, setTranslations] = useState<Record<string string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
@@ -36,7 +34,7 @@ export function useAutoTranslate(
       try {
         setLoading(true);
         setError(undefined);
-        const results: Record<string, string> = {};
+        const results: Record<string string> = {};
         for (const target of targets) {
           results[target] = await translateTextViaAI(text, target);
         }

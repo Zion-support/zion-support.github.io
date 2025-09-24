@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PublishPage() {,
-  return (,
+export default function PublishPage() {
+  return (
     <>,
       <Head>,
         <title>Publish - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function PublishPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

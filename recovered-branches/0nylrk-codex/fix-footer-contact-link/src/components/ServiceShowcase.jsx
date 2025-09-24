@@ -1,16 +1,16 @@
-import {,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from './ui/card',
 import { Badge } from './ui/badge',
 import { Button } from './ui/button',
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react',
-export function ServiceShowcase({ services }) {,
-  const getCategoryIcon = category => {,
-    switch (category) {,
+export function ServiceShowcase({ services }) {
+  const getCategoryIcon = category => {
+    switch (category) {
       case 'AI Services':,
         return <Zap className='h-5 w-5' />,
       case 'Security':,
@@ -20,11 +20,10 @@ export function ServiceShowcase({ services }) {,
       case 'Development':,
         return <Users className='h-5 w-5' />,
       default: ,
-        return <Star className='h-5 w-5' />,
-    ,}
+        return <Star className='h-5 w-5' />}
   };
-  const getCategoryColor = category => {,
-    switch (category) {,
+  const getCategoryColor = category => {
+    switch (category) {
       case 'AI Services':,
         return 'from-purple-50o0 to-pink-50o0',
       case 'Security':,
@@ -34,10 +33,9 @@ export function ServiceShowcase({ services }) {,
       case 'Development':,
         return 'from-green-50o0 to-emerald-50o0',
       default: ,
-        return 'from-gray-50o0 to-slate-50o0',
-    ,}
+        return 'from-gray-50o0 to-slate-50o0'}
   };
-  return (,
+  return (
     <div className='py-12 bg-gradient-to-br from-zinc-90o0 via-zinc-80o0 to-zinc-90o0'>,
       <div className='container mx-auto px-4'>,
         <div className='text-center mb-12'>,
@@ -50,35 +48,32 @@ export function ServiceShowcase({ services }) {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {services.slice(0, 6).map(service => (,
-            <Card,
+          {services.slice(0, 6).map(service => (
+            <Card
               key={service.id}
-              className='group relative overflow-hidden bg-gradient-to-br from-zinc-80o0/50 to-zinc-70o0/50 border-zinc-60o0/30 hover: border-zion-cyan/50 transition-all duration-50o0 hover:scale-10o5 backdrop-blur-sm',
-            >,
-              {service.featured && (,
+              className='group relative overflow-hidden bg-gradient-to-br from-zinc-80o0/50 to-zinc-70o0/50 border-zinc-60o0/30 hover: border-zion-cyan/50 transition-all duration-50o0 hover:scale-10o5 backdrop-blur-sm'>,
+              {service.featured && (
                 <div className='absolute top-4 right-4'>,
                   <Badge className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black font-semibold'>,
                     Featured,
                   </Badge>,
-                </div>,
-              ),}
+                </div>)}
 ,
               <CardHeader className='pb-4'>,
                 <div className='flex items-center gap-3 mb-3'>,
-                  <div,
+                  <div
                     className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}
                   >,
                     {getCategoryIcon(service.category)}
                   </div>,
-                  <Badge,
+                  <Badge
                     variant='outline',
-                    className='border-zinc-50o0 text-zinc-30o0',
-                  >,
+                    className='border-zinc-50o0 text-zinc-30o0'>,
                     {service.category}
                   </Badge>,
                 </div>,
                 <CardTitle className='text-xl text-white group-hover: text-zion-cyan transition-colors'>,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
                 <CardDescription className='text-zinc-40o0'>,
                   {service.description}
@@ -93,7 +88,7 @@ export function ServiceShowcase({ services }) {,
                   <div className='flex items-center gap-2'>,
                     <Zap className='h-4 w-4 text-zion-cyan' />,
                     <span className='text-zion-cyan font-semibold'>,
-                      AI Score: {service.aiScore,}
+                      AI Score: {service.aiScore}
                     </span>,
                   </div>,
                 </div>,
@@ -102,15 +97,13 @@ export function ServiceShowcase({ services }) {,
                     Key Features: ,
                   </h4>,
                   <div className='flex flex-wrap gap-2'>,
-                    {service.features.slice(0, 3).map((feature, index) => (,
-                      <Badge,
+                    {service.features.slice(0, 3).map((feature, index) => (
+                      <Badge
                         key={index}
                         variant='secondary',
-                        className='text-xs bg-zinc-70o0/50 text-zinc-30o0',
-                      >,
+                        className='text-xs bg-zinc-70o0/50 text-zinc-30o0'>,
                         {feature}
-                      </Badge>,
-                    ))}
+                      </Badge>))}
                   </div>,
                 </div>,
                 <div className='pt-4 border-t border-zinc-60o0/30'>,
@@ -125,21 +118,17 @@ export function ServiceShowcase({ services }) {,
                   </Button>,
                 </div>,
               </CardContent>,
-              {/* Hover Effect Overlay */,}
+              {/* Hover Effect Overlay */}
               <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/5 to-zion-purple/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 pointer-events-none' />,
-            </Card>,
-          )),}
+            </Card>))}
         </div>,
         <div className='text-center mt-12'>,
-          <Button,
+          <Button
             size='lg',
-            className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/25',
-          >,
+            className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/25'>,
             View All Services,
           </Button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

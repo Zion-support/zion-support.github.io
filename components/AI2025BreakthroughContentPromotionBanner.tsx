@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25BreakthroughContentPromotionBanner() {,
-  return (,
+export default function AI20o25BreakthroughContentPromotionBanner() {
+  return (
     <section className='py-8 bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-red-60o0 text-white relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black bg-opacity-10'></div>,
@@ -15,7 +14,7 @@ export default function AI20o25BreakthroughContentPromotionBanner() {,
       </div>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-4 backdrop-blur-sm'>,
             <span className='text-sm font-bold'>,
               🚀 BREAKTHROUGH CONTENT JUST RELEASED,
@@ -25,7 +24,7 @@ export default function AI20o25BreakthroughContentPromotionBanner() {,
           <h2 className='text-3xl md: text-4xl lg:text-5xl font-bold mb-4 leading-tight'>,
             🎉 AI 20o25 Breakthrough Content Revolution,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-lg md: text-xl opacity-90 mb-6 max-w-4xl mx-auto leading-relaxed'>,
             Discover our latest revolutionary content: Advanced Automation,
             MasteryEnterprise Transformation Case Studiesand Next-Gen AI,
@@ -52,28 +51,25 @@ export default function AI20o25BreakthroughContentPromotionBanner() {,
               <p className='text-xs opacity-90'>Step-by-step frameworks</p>,
             </div>,
           </div>,
-          {/* Call to Action Buttons */,}
+          {/* Call to Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-advanced-automation-mastery',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Advanced Automation Guide,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-enterprise-transformation-breakthrough',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               View Success Stories,
             </Link>,
-            <Link,
+            <Link
               href='/content-showcase',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Explore All Content,
             </Link>,
           </div>,
-          {/* Social Proof */,}
+          {/* Social Proof */}
           <div className='mt-8 flex flex-col sm: flex-row items-center justify-center gap-6 text-sm opacity-90'>,
             <div className='flex items-center gap-2'>,
               <span className='text-2xl'>👥</span>,
@@ -96,7 +92,5 @@ export default function AI20o25BreakthroughContentPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

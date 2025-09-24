@@ -1,60 +1,51 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
 import { Globe, Cloud, Server, Database, Zap, Shield, BarChart3, Rocket } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-,
-export default function CloudPlatform() {,
-  const services = [,
-    {,
-      icon: <Cloud className="w-12 h-12 text-cyan-400" />,;
-      title: "Multi-Cloud Solutions",;
-      description: "Comprehensive multi-cloud infrastructure and disaster recovery",;
-      href: "/multi-cloud-disaster-recovery",
-    ,},;
-    {,
-      icon: <Server className="w-12 h-12 text-blue-400" />,;
-      title: "Kubernetes Management",;
-      description: "Advanced Kubernetes RBAC auditing and cluster management",;
-      href: "/kubernetes-rbac-auditor",
-    ,},;
-    {,
-      icon: <Database className="w-12 h-12 text-purple-400" />,;
-      title: "Database Solutions",;
-      description: "High-availability PostgreSQL and database performance optimization",;
-      href: "/managed-postgres-ha",
-    ,},;
-    {,
-      icon: <Zap className="w-12 h-12 text-green-400" />,;
-      title: "Serverless Platform",;
-      description: "Serverless cron management and cloud automation",;
-      href: "/serverless-cron-manager",
-    ,},;
-    {,
-      icon: <Shield className="w-12 h-12 text-yellow-400" />,;
-      title: "Cloud Security",;
-      description: "Zero trust network architecture and cloud security",;
-      href: "/zero-trust-network-architecture",
-    ,},;
-    {,
-      icon: <BarChart3 className="w-12 h-12 text-pink-400" />,;
-      title: "Cloud Monitoring",;
-      description: "Comprehensive cloud infrastructure monitoring and SLO tracking",;
-      href: "/status-pages-slo",
-    ,}
+export default function CloudPlatform() {
+  const services = [
+    {
+      icon: <Cloud className="w-12 h-12 text-cyan-400" />;
+      title: "Multi-Cloud Solutions";
+      description: "Comprehensive multi-cloud infrastructure and disaster recovery";
+      href: "/multi-cloud-disaster-recovery"};
+    {
+      icon: <Server className="w-12 h-12 text-blue-400" />;
+      title: "Kubernetes Management";
+      description: "Advanced Kubernetes RBAC auditing and cluster management";
+      href: "/kubernetes-rbac-auditor"};
+    {
+      icon: <Database className="w-12 h-12 text-purple-400" />;
+      title: "Database Solutions";
+      description: "High-availability PostgreSQL and database performance optimization";
+      href: "/managed-postgres-ha"};
+    {
+      icon: <Zap className="w-12 h-12 text-green-400" />;
+      title: "Serverless Platform";
+      description: "Serverless cron management and cloud automation";
+      href: "/serverless-cron-manager"};
+    {
+      icon: <Shield className="w-12 h-12 text-yellow-400" />;
+      title: "Cloud Security";
+      description: "Zero trust network architecture and cloud security";
+      href: "/zero-trust-network-architecture"};
+    {
+      icon: <BarChart3 className="w-12 h-12 text-pink-400" />;
+      title: "Cloud Monitoring";
+      description: "Comprehensive cloud infrastructure monitoring and SLO tracking";
+      href: "/status-pages-slo"}
   ],
-,
-  return (,
+  return (
     <Layout>,
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">,
         {/* Hero Section */}
         <section className="relative py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">,
                 Cloud Infrastructure Solutions,
               </h1>,
@@ -69,27 +60,25 @@ export default function CloudPlatform() {,
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className="grid md: grid-cols-2 lg:grid-cols-3 gap-8",
-            >,
-              {services.map((service, index) => (,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              {services.map((service, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 ,}}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
                   className="p-8 bg-black/40 border border-gray-800 rounded-2xl hover: border-cyan-500/50 transition-all duration-300 group cursor-pointer",
-                  onClick={() => window.location.href = service.href,}
+                  onClick={() => window.location.href = service.href}
                 >,
                   <div className="flex justify-center mb-6 group-hover: scale-110 transition-transform duration-300">,
-                    {service.icon,}
+                    {service.icon}
                   </div>,
                   <h3 className="text-xl font-bold text-white mb-4 text-center">{service.title}</h3>,
                   <p className="text-gray-300 leading-relaxed text-center">{service.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </motion.div>,
           </div>,
         </section>,
@@ -97,21 +86,19 @@ export default function CloudPlatform() {,
         <section className="py-20 px-4 bg-black/30">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 1.6 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl font-bold text-white mb-4">Cloud Services</h2>,
               <p className="text-xl text-gray-300">Comprehensive cloud infrastructure solutions</p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 1.8 ,}}
-                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.8 }}
+                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300">,
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">,
                   <Server className="w-6 h-6 text-cyan-400" />,
                 </div>,
@@ -124,11 +111,10 @@ export default function CloudPlatform() {,
                 </a>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.0 ,}}
-                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2.0 }}
+                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300">,
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">,
                   <Brain className="w-6 h-6 text-blue-400" />,
                 </div>,
@@ -141,11 +127,10 @@ export default function CloudPlatform() {,
                 </a>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.2 ,}}
-                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2.2 }}
+                className="p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300">,
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">,
                   <Shield className="w-6 h-6 text-purple-400" />,
                 </div>,
@@ -160,25 +145,23 @@ export default function CloudPlatform() {,
             </div>,
           </div>,
         </section>,
-        {/* Features */,}
+        {/* Features */}
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 2.4 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 2.4 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl font-bold text-white mb-4">Platform Features</h2>,
               <p className="text-xl text-gray-300">Advanced capabilities for modern businesses</p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 gap-8">,
               <motion.div,
-                initial={{ opacity: 0, x: -20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.6 ,}}
-                className="space-y-6",
-              >,
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 2.6 }}
+                className="space-y-6">,
                 <div className="flex items-start gap-4">,
                   <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">,
                     <Zap className="w-4 h-4 text-cyan-400" />,
@@ -208,11 +191,10 @@ export default function CloudPlatform() {,
                 </div>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, x: 20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.8 ,}}
-                className="space-y-6",
-              >,
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 2.8 }}
+                className="space-y-6">,
                 <div className="flex items-start gap-4">,
                   <div className="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">,
                     <Cpu className="w-4 h-4 text-green-400" />,
@@ -246,11 +228,10 @@ export default function CloudPlatform() {,
         </motion.div>,
         {/* Cloud Benefits */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8, delay: 0.5 ,}}
-          className="grid md: grid-cols-3 gap-6 mb-16",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="grid md: grid-cols-3 gap-6 mb-16">,
           <div className="text-center">,
             <div className="text-4xl font-bold text-white mb-2">50%</div>,
             <div className="text-gray-300">Cost Reduction</div>,
@@ -264,29 +245,27 @@ export default function CloudPlatform() {,
             <div className="text-gray-300">Support</div>,
           </div>,
         </motion.div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-4xl text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">Ready for Cloud Transformation?</h2>,
               <p className="text-xl text-gray-300 mb-8">,
                 Let our cloud experts help you build a robust, scalable, and secure cloud infrastructure.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105",
-                >,
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,
                   Get Started Today,
                 </a>,
-                <a,
+                <a
                   href="/services",
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300",
-                >,
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300">,
                   View All Services,
                 </a>,
               </div>,
@@ -294,9 +273,5 @@ export default function CloudPlatform() {,
           </div>,
         </motion.div>,
       </div>,
-    </Layout>,
-  ),
-,};
-,
-export default CloudPlatformPage,
-,
+    </Layout>)};
+export default CloudPlatformPage;

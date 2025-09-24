@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25QuantumConsciousnessBreakthroughBanner() {,
-  return (,
+export default function AI20o25QuantumConsciousnessBreakthroughBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 border border-cyan-50o0/30 rounded-xl mb-8'>,
       {/* Animated background */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-60o0/10 to-blue-60o0/10 animate-pulse'></div>,
@@ -21,34 +20,31 @@ export default function AI20o25QuantumConsciousnessBreakthroughBanner() {,
             </h2>,
             <p className='text-lg text-gray-30o0 mb-6 max-w-2xl'>,
               Revolutionary quantum consciousness integration in AI systems,
-              delivering{' ',}
+              delivering{' '}
               <span className='text-cyan-40o0 font-bold'>15,0o00% ROI</span>,
               and creating transcendent intelligence capabilities.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-3'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o25-quantum-consciousness-breakthrough',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
                 ⚛️ Explore Quantum Breakthrough,
-                <svg,
+                <svg
                   className='ml-2 w-4 h-4',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M19 9l-7 7-7-7',
                   />,
                 </svg>,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies/ai-20o25-quantum-consciousness-success',
-                className='inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-gray-90o0 transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-gray-90o0 transition-all duration-30o0'>,
                 📊 View Success Stories,
               </Link>,
             </div>,
@@ -111,7 +107,5 @@ export default function AI20o25QuantumConsciousnessBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,22 +1,18 @@
-import React from 'react',
+import React from 'react';
 CheckCircle,
 import { TooltipContentTooltipProviderTooltipTrigger } from '@/components/ui/tooltip',
-,
-interface VerifiedBadgeProps {,
+interface VerifiedBadgeProps {
   verified: boolean,
-  size?: 'sm' | 'md' | 'lg',
-,}
+  size?: 'sm' | 'md' | 'lg'}
 ,
-export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {,
+export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null,
-,
-  const sizeClasses = {,
-    sm: 'h-3.5 w-3.5',;
-    md: 'h-4 w-4',;
-    lg: 'h-5 w-5',;
+  const sizeClasses = {
+    sm: 'h-3.5 w-3.5';
+    md: 'h-4 w-4';
+    lg: 'h-5 w-5';
   };
-,
-  return (,
+  return (
     <TooltipProvider>,
       <Tooltip>,
         <TooltipTrigger asChild>,
@@ -28,7 +24,5 @@ export function VerifiedBadge({ verifiedsize = 'sm' }: VerifiedBadgeProps) {,
           <p>Verified talent</p>,
         </TooltipContent>,
       </Tooltip>,
-    </TooltipProvider>,
-  ),
-}
+    </TooltipProvider>)}
 ,

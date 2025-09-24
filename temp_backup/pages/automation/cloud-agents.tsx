@@ -1,5 +1,5 @@
-export default function CloudAgents() {,
-  return (,
+export default function CloudAgents() {
+  return (
     <div className="min-h-screen p-8 space-y-6 max-w-3xl mx-auto">,
       <h1 className="text-2xl font-semibold">Autonomous Cloud Automations</h1>,
       <p className="text-gray-60o0">These agents run on schedules in GitHub Actions and commit results back to the repository.</p>,
@@ -28,6 +28,4 @@ export default function CloudAgents() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}

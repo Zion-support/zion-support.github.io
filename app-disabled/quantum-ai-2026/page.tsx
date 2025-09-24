@@ -1,23 +1,21 @@
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'Quantum AI 20o26 - Revolutionary Computing Technology | Zion Tech Group',;
+    'Quantum AI 20o26 - Revolutionary Computing Technology | Zion Tech Group';
   description:,
-    'Experience the future with Quantum AI 20o26. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.',;
-  keywords: [,
-    'quantum AI',;
-    'quantum computing',;
-    'AI 20o26',;
-    'quantum neural networks',;
-    'quantum machine learning',;
-  ],;
+    'Experience the future with Quantum AI 20o26. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.';
+  keywords: [
+    'quantum AI';
+    'quantum computing';
+    'AI 20o26';
+    'quantum neural networks';
+    'quantum machine learning';
+  ];
 };
-,
-export default function QuantumAI20o26Page() {,
-  return (,
+export default function QuantumAI20o26Page() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Quantum AI 20o26 - Revolutionary Computing Technology',
         description='Experience the future with Quantum AI 20o26. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.',
         keywords='quantum AI, quantum computing, AI 20o26, quantum neural networks, quantum machine learning',
@@ -49,7 +47,7 @@ export default function QuantumAI20o26Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Capabilities */,}
+        {/* Quantum Capabilities */}
         <section className='py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -104,7 +102,7 @@ export default function QuantumAI20o26Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Applications */,}
+        {/* Applications */}
         <section className='py-20 bg-white bg-opacity-5'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -182,7 +180,5 @@ export default function QuantumAI20o26Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

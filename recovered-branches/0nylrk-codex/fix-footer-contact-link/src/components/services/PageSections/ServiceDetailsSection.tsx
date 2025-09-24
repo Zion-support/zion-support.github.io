@@ -1,28 +1,22 @@
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { CountryServiceSelector } from "../CountryServiceSelector",
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-import { CountryServiceSelector } from "../CountryServiceSelector",;
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceSelector } from "../CountryServiceSelector";
 import {CountryPricing} from "@/data/onsiteServicePricing",
 import {CountryServiceSelector} from "../CountryServiceSelector",
-
-,
-,
-interface ServiceDetailsSectionProps {,
+interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
-  setSelectedCountry: (country: CountryPricing | null) => void,
-,}
-export function ServiceDetailsSection({,
+  setSelectedCountry: (country: CountryPricing | null) => void}
+export function ServiceDetailsSection({
   selectedCountry,
-  setSelectedCountry,
-}: ServiceDetailsSectionProps) {,
-  return (,
+  setSelectedCountry}: ServiceDetailsSectionProps) {
+  return (
     <div id="service - details" className="mt - 12">,
-      {selected_country ? (,
-        <CountryServiceSelector,
+      {selected_country ? (
+        <CountryServiceSelector
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
-        />,
-      ) : (,
+        />) : (
         <div className="text-center">,
           <h2 className="text-2xl font-bold text-white mb-4">,
             Select a Country for Details,
@@ -32,45 +26,39 @@ export function ServiceDetailsSection({,
             pricing,
           </p>,
         </div>,
-interface ServiceDetailsSectionProps {,
+interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null,
-  setSelectedCountry: (country: CountryPricing | null) => void,
-,}
+  setSelectedCountry: (country: CountryPricing | null) => void}
 export /**,
  * ServiceDetailsSection - Function description,
  */,
-function ServiceDetailsSection() {,
-  return (,
+function ServiceDetailsSection() {
+  return (
     <div id="service - details" className="mt - 12">,
-      {selected_country ? (,
-        <CountryServiceSelector,
+      {selected_country ? (
+        <CountryServiceSelector
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
 ,
+interface ServiceDetailsSectionProps {
+  selectedCountry: CountryPricing | null;
+  setSelectedCountry: (country: CountryPricing | null) => void}
 ,
-,
-interface ServiceDetailsSectionProps {,
-  selectedCountry: CountryPricing | null,;
-  setSelectedCountry: (country: CountryPricing | null) => void,
-,}
-,
-export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {,
-  return (,
+export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCountry }: ServiceDetailsSectionProps) {
+  return (
     <div id="service-details" className="mt-12">,
-      {selectedCountry ? (,
-        <CountryServiceSelector,
+      {selectedCountry ? (
+        <CountryServiceSelector
           selectedCountry={selectedCountry}
           onCountryChange={setSelectedCountry}
-        />,
-      ) : (,
+        />) : (
         <div className="text-center">,
           <h2 className="text-2xl font-bold text-white mb-4">Select a Country for Details</h2>,
           <p className="text-zion-slate-light mb-6">,
             Choose a country from the options above to see service details and pricing,
           </p>,
         </div>,
-,
-        />) : (,
+        />) : (
         <div className="text - center">,
           <h2 className="text - 2xl font - bold text - white mb - 4">,
             Select a Country for Details,
@@ -80,7 +68,4 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
             pricing,
           </p>,
         </div>)}
-    </div>),
-,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}}}}))))
+    </div>)>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}))))

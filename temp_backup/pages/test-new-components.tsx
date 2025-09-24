@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TestNewComponentsPage() {,
-  return (,
+export default function TestNewComponentsPage() {
+  return (
     <>,
       <Head>,
         <title>Test New Components - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function TestNewComponentsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

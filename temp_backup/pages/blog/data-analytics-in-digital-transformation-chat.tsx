@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DataAnalyticsInDigitalTransformationChatPage() {,
-  return (,
+export default function DataAnalyticsInDigitalTransformationChatPage() {
+  return (
     <>,
       <Head>,
         <title>Data Analytics In Digital Transformation Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function DataAnalyticsInDigitalTransformationChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

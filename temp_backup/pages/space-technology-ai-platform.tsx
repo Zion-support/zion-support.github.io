@@ -2,9 +2,8 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { Button } from '../components/ui/Button',
 import Card from '../components/ui/Card',
-,
-export default function SpaceTechnologyAIPlatformPage() {,
-  return (,
+export default function SpaceTechnologyAIPlatformPage() {
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Space Technology AI Platform | Zion Tech Group</title>,
@@ -33,7 +32,5 @@ export default function SpaceTechnologyAIPlatformPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-,}
+    </UltraAdvancedFuturisticBackground>)}
 ,

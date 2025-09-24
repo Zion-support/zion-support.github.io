@@ -4,31 +4,30 @@ import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { useToast } from '@/hooks/use-toast',
 import { Button } from '@/components/ui/button',
-import {,
+import {
 import { Badge } from '@/components/ui/badge',
 import Skeleton from '@/components/ui/skeleton',
 import { formatDistanceToNow } from 'date-fns',
 import { safeStorage } from '@/utils/safeStorage',
 import { useCurrency } from '@/hooks/useCurrency',
 import { logErrorToProduction } from '@/utils/productionLogger',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  ArrowLeft,;
-  ArrowRight,;
-  RefreshCcw,;
-  CheckCircle2,;
-  XCircle,;
-  Clock,;
-  AlertCircle,;
-  ShieldAlert,;
+  ArrowLeft;
+  ArrowRight;
+  RefreshCcw;
+  CheckCircle2;
+  XCircle;
+  Clock;
+  AlertCircle;
+  ShieldAlert;
 } from 'lucide-react',
-,
-interface Transaction {,
+interface Transaction {
   id: string,
   user_id: string,
   provider_id: string,
@@ -47,191 +46,145 @@ interface Transaction {,
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
-  provider?: {,
-    display_name?: string,
-  ,};
-  service?: {,
-    title?: string,
-  };
+  provider?: {
+    display_name?: string};
+  service?: {
+    title?: string};
 }
 ,
-export function TransactionHistory() {,
+export function TransactionHistory() {
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [filter, setFilter] = useState<,
-    'all' | 'pending' | 'completed' | 'escrow',
-  >(() => (safeStorage.getItem('transaction_filter') as any) || 'all'),
-,
-  useEffect(() => {,
-    safeStorage.setItem('transaction_filter', filter),
-  }, [filter]),
-,
-  const {,
-    data: transactions,;
-    isLoading,;
-    error,;
-    refetch,;
-  } = useQuery({,
-    queryKey: ['transactions', user?.id, filter],;
-    queryFn: async () => {,
+    'all' | 'pending' | 'completed' | 'escrow'>(() => (safeStorage.getItem('transaction_filter') as any) || 'all'),
+  useEffect(() => {
+    safeStorage.setItem('transaction_filter', filter)}, [filter]),
+  const {
+    data: transactions;
+    isLoading;
+    error;
+    refetch;
+  } = useQuery({
+    queryKey: ['transactions', user?.id, filter];
+    queryFn: async () => {
       if (!user) return [],
-,
       // Build the query based on filters,
       let query = supabase,
         .from('transactions'),
-        .select(,
+        .select(
           `,
-          *,;
-          provider:profiles!provider_id(display_name),;
+          *;
+          provider:profiles!provider_id(display_name);
           service: services(title),
-        `,
-        ),
-        .or(`user_id.eq.${user.id,},provider_id.eq.${user.id}`),
+        `),
+        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
+      if (filter === 'pending') {
+        query = query.eq('status', 'pending')} else if (filter === 'completed') {
+        query = query.eq('status', 'released')} else if (filter === 'escrow') {
+        query = query.eq('in_escrow', true)}
 ,
-      if (filter === 'pending') {,
-        query = query.eq('status', 'pending'),
-      } else if (filter === 'completed') {,
-        query = query.eq('status', 'released'),
-      } else if (filter === 'escrow') {,
-        query = query.eq('in_escrow', true),
-      }
-,
-      query = query.order('created_at', { ascending: false ,}),
-,
+      query = query.order('created_at', { ascending: false }),
       const { data, error } = await query,
-,
       if (error) throw error,
-      return data as Transaction[],
-    },;
-    enabled: !!user,;
+      return data as Transaction[]};
+    enabled: !!user;
   }),
-,
-  const handleManageTransaction = async (,
-    transactionId: string,;
-    action: 'release' | 'refund' | 'cancel',
-  ) => {,
-    try {,
-      const { data, error } = await supabase.functions.invoke(,
-        'manage-transaction',;
-        {,
-          body: { transactionId, action },;
+  const handleManageTransaction = async (
+    transactionId: string;
+    action: 'release' | 'refund' | 'cancel') => {
+    try {
+      const { data, error } = await supabase.functions.invoke(
+        'manage-transaction';
+        {
+          body: { transactionId, action };
         }
       ),
-,
       if (error) throw error,
-,
-      toast({,
-        title: 'Success',;
+      toast({
+        title: 'Success';
         description:,
-          (data as any)?.message || 'Transaction updated successfully',;
+          (data as any)?.message || 'Transaction updated successfully';
       }),
-,
-      refetch(),
-    } catch (error) {,
-      logErrorToProduction('Error managing transaction:', { data: error ,}),
-      toast({,
-        title: 'Error',;
+      refetch()} catch (error) {
+      logErrorToProduction('Error managing transaction:', { data: error }),
+      toast({
+        title: 'Error';
         description: ,
           error instanceof Error,
             ? error.message,
-            : 'Failed to update transaction',;
-        variant: 'destructive',;
-      }),
-    }
+            : 'Failed to update transaction';
+        variant: 'destructive';
+      })}
   };
-,
-  const getStatusBadge = (status: string, inEscrow: boolean) => {,
-    switch (status) {,
+  const getStatusBadge = (status: string, inEscrow: boolean) => {
+    switch (status) {
       case 'in_escrow':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0',
-          >,
+            className='bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0'>,
             <Clock className='w-3 h-3 mr-1' /> In Escrow,
-          </Badge>,
-        ),
+          </Badge>),
       case 'pending':,
-        return inEscrow ? (,
-          <Badge,
+        return inEscrow ? (
+          <Badge
             variant='outline',
-            className='bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0',
-          >,
+            className='bg-yellow-50o0/20 text-yellow-50o0 border-yellow-50o0'>,
             <Clock className='w-3 h-3 mr-1' /> In Escrow,
-          </Badge>,
-        ) : (,
-          <Badge,
+          </Badge>) : (
+          <Badge
             variant='outline',
-            className='bg-blue-50o0/20 text-blue-50o0 border-blue-50o0',
-          >,
+            className='bg-blue-50o0/20 text-blue-50o0 border-blue-50o0'>,
             <Clock className='w-3 h-3 mr-1' /> Pending,
-          </Badge>,
-        ),
+          </Badge>),
       case 'released':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-green-50o0/20 text-green-50o0 border-green-50o0',
-          >,
+            className='bg-green-50o0/20 text-green-50o0 border-green-50o0'>,
             <CheckCircle2 className='w-3 h-3 mr-1' /> Released,
-          </Badge>,
-        ),
+          </Badge>),
       case 'completed':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-green-50o0/20 text-green-50o0 border-green-50o0',
-          >,
+            className='bg-green-50o0/20 text-green-50o0 border-green-50o0'>,
             <CheckCircle2 className='w-3 h-3 mr-1' /> Completed,
-          </Badge>,
-        ),
+          </Badge>),
       case 'disputed':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-red-50o0/20 text-red-50o0 border-red-50o0',
-          >,
+            className='bg-red-50o0/20 text-red-50o0 border-red-50o0'>,
             <ShieldAlert className='w-3 h-3 mr-1' /> Disputed,
-          </Badge>,
-        ),
+          </Badge>),
       case 'refunded':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-purple-50o0/20 text-purple-50o0 border-purple-50o0',
-          >,
+            className='bg-purple-50o0/20 text-purple-50o0 border-purple-50o0'>,
             <RefreshCcw className='w-3 h-3 mr-1' /> Refunded,
-          </Badge>,
-        ),
+          </Badge>),
       case 'cancelled':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-red-50o0/20 text-red-50o0 border-red-50o0',
-          >,
+            className='bg-red-50o0/20 text-red-50o0 border-red-50o0'>,
             <XCircle className='w-3 h-3 mr-1' /> Cancelled,
-          </Badge>,
-        ),
+          </Badge>),
       default:,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-gray-50o0/20 text-gray-50o0 border-gray-50o0',
-          >,
+            className='bg-gray-50o0/20 text-gray-50o0 border-gray-50o0'>,
             <AlertCircle className='w-3 h-3 mr-1' /> Unknown,
-          </Badge>,
-        ),
-    ,}
+          </Badge>)}
   };
-,
   const { formatPrice } = useCurrency(),
-,
-  const formatCurrency = (amount: number) => {,
-    return formatPrice(amount),
-  ,};
-,
-  if (error) {,
-    return (,
+  const formatCurrency = (amount: number) => {
+    return formatPrice(amount)};
+  if (error) {
+    return (
       <div className='bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light'>,
         <div className='text-center text-zion-slate-light'>,
           <AlertCircle className='mx-auto h-12 w-12 text-red-50o0 mb-4' />,
@@ -244,70 +197,64 @@ export function TransactionHistory() {,
             Try Again,
           </Button>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden'>,
       <div className='p-6'>,
         <div className='flex items-center justify-between mb-6'>,
           <h2 className='text-2xl font-bold text-white'>Transaction History</h2>,
           <div className='flex space-x-2'>,
-            <Button,
+            <Button
               size='sm',
               variant={filter === 'all' ? 'default' : 'outline'}
               onClick={() => setFilter('all')}
-              className={,
+              className={
                 filter === 'all',
                   ? 'bg-zion-purple text-white',
-                  : 'text-zion-slate-light',
-              }
+                  : 'text-zion-slate-light'}
             >,
               All,
             </Button>,
-            <Button,
+            <Button
               size='sm',
               variant={filter === 'pending' ? 'default' : 'outline'}
               onClick={() => setFilter('pending')}
-              className={,
+              className={
                 filter === 'pending',
                   ? 'bg-zion-purple text-white',
-                  : 'text-zion-slate-light',
-              }
+                  : 'text-zion-slate-light'}
             >,
               Pending,
             </Button>,
-            <Button,
+            <Button
               size='sm',
               variant={filter === 'completed' ? 'default' : 'outline'}
               onClick={() => setFilter('completed')}
-              className={,
+              className={
                 filter === 'completed',
                   ? 'bg-zion-purple text-white',
-                  : 'text-zion-slate-light',
-              }
+                  : 'text-zion-slate-light'}
             >,
               Completed,
             </Button>,
-            <Button,
+            <Button
               size='sm',
               variant={filter === 'escrow' ? 'default' : 'outline'}
               onClick={() => setFilter('escrow')}
-              className={,
+              className={
                 filter === 'escrow',
                   ? 'bg-zion-purple text-white',
-                  : 'text-zion-slate-light',
-              }
+                  : 'text-zion-slate-light'}
             >,
               Escrow,
             </Button>,
           </div>,
         </div>,
-        {isLoading ? (,
+        {isLoading ? (
           Array(3),
             .fill(0),
-            .map((_, i) => (,
+            .map((_, i) => (
               <div key={i} className='mb-4'>,
                 <Card className='bg-zion-blue-dark border-zion-blue-light'>,
                   <CardHeader className='pb-2'>,
@@ -325,11 +272,9 @@ export function TransactionHistory() {,
                     <Skeleton className='h-9 w-28 bg-zion-blue-light rounded-md' />,
                   </CardFooter>,
                 </Card>,
-              </div>,
-            )),
-        ) : transactions && transactions.length > 0 ? (,
+              </div>))) : transactions && transactions.length > 0 ? (
           <div className='space-y-4'>,
-            {transactions.map(transaction => {,
+            {transactions.map(transaction => {
               const isClient = user?.id === transaction.user_id,
               const isPending =,
                 transaction.status === 'pending' ||,
@@ -338,16 +283,13 @@ export function TransactionHistory() {,
               const canRelease = !isClient && isPending && isInEscrow,
               const canCancel = isClient && isPending,
               const canRefund = isClient && transaction.status === 'released',
-,
               const counterpartyName = isClient,
                 ? transaction.provider?.display_name || 'Service Provider',
                 : 'Client',
-,
-              return (,
-                <Card,
+              return (
+                <Card
                   key={transaction.id}
-                  className='bg-zion-blue-dark border-zion-blue-light overflow-hidden',
-                >,
+                  className='bg-zion-blue-dark border-zion-blue-light overflow-hidden'>,
                   <CardHeader className='pb-3'>,
                     <div className='flex justify-between items-start'>,
                       <div>,
@@ -355,109 +297,92 @@ export function TransactionHistory() {,
                           {transaction.service?.title || 'Service Payment'}
                         </CardTitle>,
                         <CardDescription className='text-zion-slate-light'>,
-                          {isClient ? (,
+                          {isClient ? (
                             <span>,
                               Payment to{' '}
                               <span className='text-zion-purple'>,
                                 {counterpartyName}
                               </span>,
-                            </span>,
-                          ) : (,
+                            </span>) : (
                             <span>,
                               Payment from{' '}
                               <span className='text-zion-cyan'>Client</span>,
-                            </span>,
-                          )}
+                            </span>)}
                         </CardDescription>,
                       </div>,
-                      {getStatusBadge(,
-                        transaction.status,;
-                        transaction.in_escrow,
-                      )}
+                      {getStatusBadge(
+                        transaction.status;
+                        transaction.in_escrow)}
                     </div>,
                   </CardHeader>,
                   <CardContent className='pb-3'>,
                     <div className='flex justify-between items-center mb-1'>,
                       <span className='text-zion-slate-light'>Amount: </span>,
                       <span className='text-white font-medium text-lg'>,
-                        {formatCurrency(transaction.amount),}
+                        {formatCurrency(transaction.amount)}
                       </span>,
                     </div>,
                     <div className='flex justify-between items-center text-sm'>,
                       <span className='text-zion-slate-light'>Date: </span>,
                       <span className='text-zion-slate-light'>,
-                        {new Date(transaction.created_at).toLocaleDateString(),}(,
-                        {formatDistanceToNow(new Date(transaction.created_at), {,
-                          addSuffix: true,;
+                        {new Date(transaction.created_at).toLocaleDateString()}(
+                        {formatDistanceToNow(new Date(transaction.created_at), {
+                          addSuffix: true;
                         })}
                         ),
                       </span>,
                     </div>,
                     {(transaction.completed_at ||,
                       transaction.refunded_at ||,
-                      transaction.cancelled_at) && (,
+                      transaction.cancelled_at) && (
                       <div className='flex justify-between items-center text-sm mt-1'>,
                         <span className='text-zion-slate-light'>,
                           {transaction.completed_at,
                             ? 'Completed: ',
                             : transaction.refunded_at,
                               ? 'Refunded:',
-                              : 'Cancelled:',}
+                              : 'Cancelled:'}
                         </span>,
                         <span className='text-zion-slate-light'>,
-                          {new Date(,
+                          {new Date(
                             transaction.completed_at ||,
                               transaction.refunded_at ||,
-                              transaction.cancelled_at!,
-                          ).toLocaleDateString()}
+                              transaction.cancelled_at!).toLocaleDateString()}
                         </span>,
-                      </div>,
-                    )}
+                      </div>)}
                   </CardContent>,
                   <CardFooter className='flex justify-end gap-2 bg-zion-blue/20 pt-3'>,
-                    {canRelease && (,
-                      <Button,
+                    {canRelease && (
+                      <Button
                         onClick={() =>,
-                          handleManageTransaction(transaction.id, 'release'),
-                        }
+                          handleManageTransaction(transaction.id, 'release')}
                         size='sm',
-                        className='bg-green-60o0 hover: bg-green-70o0 text-white',
-                      >,
+                        className='bg-green-60o0 hover: bg-green-70o0 text-white'>,
                         <CheckCircle2 className='mr-1 h-4 w-4' /> Release Funds,
-                      </Button>,
-                    ),}
+                      </Button>)}
 ,
-                    {canRefund && (,
-                      <Button,
+                    {canRefund && (
+                      <Button
                         onClick={() =>,
-                          handleManageTransaction(transaction.id, 'refund'),
-                        }
+                          handleManageTransaction(transaction.id, 'refund')}
                         size='sm',
                         variant='outline',
-                        className='text-zion-slate-light border-zion-blue-light',
-                      >,
+                        className='text-zion-slate-light border-zion-blue-light'>,
                         <RefreshCcw className='mr-1 h-4 w-4' /> Request Refund,
-                      </Button>,
-                    )}
+                      </Button>)}
 ,
-                    {canCancel && (,
-                      <Button,
+                    {canCancel && (
+                      <Button
                         onClick={() =>,
-                          handleManageTransaction(transaction.id, 'cancel'),
-                        }
+                          handleManageTransaction(transaction.id, 'cancel')}
                         size='sm',
                         variant='outline',
-                        className='text-red-40o0 border-red-40o0/30 hover: bg-red-40o0/10',
-                      >,
+                        className='text-red-40o0 border-red-40o0/30 hover: bg-red-40o0/10'>,
                         <XCircle className='mr-1 h-4 w-4' /> Cancel,
-                      </Button>,
-                    ),}
+                      </Button>)}
                   </CardFooter>,
-                </Card>,
-              ),
-            })}
-          </div>,
-        ) : (,
+                </Card>)})}
+          </div>) : (
           <div className='text-center py-12 border border-dashed border-zion-blue-light rounded-lg'>,
             <div className='mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4'>,
               <ArrowRight className='h-8 w-8 text-zion-slate-light' />,
@@ -471,10 +396,7 @@ export function TransactionHistory() {,
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`,
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>,
-          </div>,
-        )}
+          </div>)}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {,
-  return (,
+export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {
+  return (
     <div className='bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-pink-60o0 text-white py-12 px-4'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center mb-8'>,
@@ -20,7 +19,7 @@ export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {,
             optimizationand autonomous business systems.,
           </p>,
         </div>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-8'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20'>,
             <div className='text-3xl md:text-4xl font-bold text-yellow-30o0 mb-2'>,
@@ -53,7 +52,7 @@ export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {,
             <div className='text-sm opacity-80'>Successfully transformed</div>,
           </div>,
         </div>,
-        {/* Technology Highlights */,}
+        {/* Technology Highlights */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20'>,
             <div className='text-2xl mb-2'>⚛️</div>,
@@ -95,35 +94,31 @@ export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {,
         {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-ultimate-automation-revolution',
-              className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors shadow-lg',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors shadow-lg'>,
               Learn More About the Revolution,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-ultimate-automation-revolution-success',
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-60o0 transition-colors',
-            >,
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-60o0 transition-colors'>,
               View Success Stories,
             </Link>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-automation-implementation-guide',
-              className='bg-yellow-50o0 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-40o0 transition-colors',
-            >,
+              className='bg-yellow-50o0 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-40o0 transition-colors'>,
               📚 Download Implementation Guide,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-green-50o0 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-40o0 transition-colors',
-            >,
+              className='bg-green-50o0 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-40o0 transition-colors'>,
               🚀 Get Started Today,
             </Link>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className='mt-8 pt-6 border-t border-white/20'>,
           <div className='text-center'>,
             <p className='text-sm opacity-80 mb-4'>,
@@ -139,7 +134,5 @@ export default function AI20o25UltimateAutomationRevolutionPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

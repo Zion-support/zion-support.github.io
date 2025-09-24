@@ -1,23 +1,20 @@
-import React from 'react',
+import React from 'react';
 import { GradientHeading } from '@/components/GradientHeading',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent, CardFooter } from '@/components/ui/card',
 import Image from 'next/image',
-,
-export interface Benefit {,
+export interface Benefit {
   title: string,
   description: string,
-  icon?: React.ReactNode,
-,}
+  icon?: React.ReactNode}
 ,
-export interface Testimonial {,
+export interface Testimonial {
   name: string,
   role?: string,
   text: string,
-  avatar?: string,
-,}
+  avatar?: string}
 ,
-interface ServiceLandingTemplateProps {,
+interface ServiceLandingTemplateProps {
   title: string,
   subtitle: string,
   heroImage?: string,
@@ -25,20 +22,19 @@ interface ServiceLandingTemplateProps {,
   benefits: Benefit[],
   testimonials: Testimonial[],
   ctaText: string,
-  ctaLink: string,
-,}
+  ctaLink: string}
 ,
-export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({,
-  title,;
-  subtitle,;
-  heroImage,;
-  description,;
-  benefits,;
-  testimonials,;
-  ctaText,;
-  ctaLink,;
-}) => {,
-  return (,
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+  title;
+  subtitle;
+  heroImage;
+  description;
+  benefits;
+  testimonials;
+  ctaText;
+  ctaLink;
+}) => {
+  return (
     <div className='bg-background text-white'>,
       <section className='bg-zion-blue py-16 px-4 text-center'>,
         <div className='container mx-auto'>,
@@ -48,16 +44,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({,
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>,
             {subtitle}
           </p>,
-          {heroImage && (,
+          {heroImage && (
             <div className='mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80'>,
-              <Image,
+              <Image
                 src={heroImage}
                 alt={title}
                 className='object-cover rounded-lg',
                 loading='lazy',
               />,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       <section className='py-12 px-4'>,
@@ -73,20 +68,17 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({,
             Benefits,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {benefits.map((benefit, idx) => (,
-              <div,
+            {benefits.map((benefit, idx) => (
+              <div
                 key={idx}
-                className='bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center',
-              >,
-                {benefit.icon && (,
+                className='bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center'>,
+                {benefit.icon && (
                   <div className='mb-4 flex justify-center text-zion-cyan'>,
                     {benefit.icon}
-                  </div>,
-                )}
+                  </div>)}
                 <h3 className='text-lg font-bold mb-2'>{benefit.title}</h3>,
                 <p className='text-zion-slate-light'>{benefit.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -96,49 +88,41 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({,
             What Our Clients Say,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {testimonials.map((t, idx) => (,
-              <Card,
+            {testimonials.map((t, idx) => (
+              <Card
                 key={idx}
-                className='bg-zion-blue-dark border-zion-purple/30',
-              >,
+                className='bg-zion-blue-dark border-zion-purple/30'>,
                 <CardContent className='pt-6'>,
                   <p className='text-gray-20o0 mb-6'>"{t.text}"</p>,
                 </CardContent>,
                 <CardFooter className='border-t border-zion-purple/20 pt-4'>,
                   <div className='flex items-center'>,
-                    {t.avatar && (,
-                      <Image,
+                    {t.avatar && (
+                      <Image
                         src={t.avatar}
                         alt={t.name}
                         width={40}
                         height={40}
                         className='rounded-full mr-4',
                         loading='lazy',
-                      />,
-                    )}
+                      />)}
                     <div>,
                       <p className='font-semibold text-white'>{t.name}</p>,
-                      {t.role && (,
-                        <p className='text-sm text-gray-40o0'>{t.role}</p>,
-                      )}
+                      {t.role && (
+                        <p className='text-sm text-gray-40o0'>{t.role}</p>)}
                     </div>,
                   </div>,
                 </CardFooter>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
       <section className='py-12 bg-zion-blue-dark text-center'>,
-        <Button,
+        <Button
           size='lg',
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white',
-          asChild,
-        >,
+          asChild>,
           <a href={ctaLink}>{ctaText}</a>,
         </Button>,
       </section>,
-    </div>,
-  ),
-};
-,
+    </div>)};

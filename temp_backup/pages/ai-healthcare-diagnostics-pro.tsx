@@ -1,95 +1,92 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  MessageSquare,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Rocket,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  FileText,;
-  Image,;
-  Video,;
-  Music,;
-  Palette,;
-  Type,;
-  User,;
-  Search,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  Activity,;
-  Stethoscope,;
-  Brain,;
-  Zap,;
-  Users2,;
-  Award,;
-  CheckCircle,;
-  AlertTriangle,;
-  Target,;
-  BarChart3,;
-  TrendingUp,;
-  Microscope,;
+import {
+  Brain;
+  Zap;
+  Target;
+  BarChart3;
+  Users;
+  TrendingUp;
+  MessageSquare;
+  Mail;
+  Phone;
+  MapPin;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Rocket;
+  Globe;
+  Shield;
+  Cpu;
+  FileText;
+  Image;
+  Video;
+  Music;
+  Palette;
+  Type;
+  User;
+  Search;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Activity;
+  Stethoscope;
+  Brain;
+  Zap;
+  Users2;
+  Award;
+  CheckCircle;
+  AlertTriangle;
+  Target;
+  BarChart3;
+  TrendingUp;
+  Microscope;
 } from 'lucide-react',
-,
-export const metadata: Metadata = {,
-  title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
   description:,
-    'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',;
+    'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
   keywords:,
-    'AI healthcare, medical diagnostics, AI diagnosis, healthcare AI, medical AI, diagnostic platform',;
-  openGraph: {,
-    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',;
+    'AI healthcare, medical diagnostics, AI diagnosis, healthcare AI, medical AI, diagnostic platform';
+  openGraph: {
+    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
     description:,
-      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',;
-    url: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg',;
-        width: 1200,;
-        height: 630,;
-        alt: 'AI Healthcare Diagnostics Pro',;
-      },;
-    ],;
-    locale: 'en_US',;
-    type: 'website',;
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',;
+      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
+    url: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg';
+        width: 1200;
+        height: 630;
+        alt: 'AI Healthcare Diagnostics Pro';
+      };
+    ];
+    locale: 'en_US';
+    type: 'website';
+  };
+  twitter: {
+    card: 'summary_large_image';
+    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
     description:,
-      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',;
-    images: [,
-      'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg',;
-    ],;
-  },;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro',;
-  },;
+      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
+    images: [
+      'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg';
+    ];
+  };
+  alternates: {
+    canonical: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro';
+  };
 };
-,
-const contactInfo = {,
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-export default function AIHealthcareDiagnosticsPro() {,
-  return (,
+export default function AIHealthcareDiagnosticsPro() {
+  return (
     <div className='min-h-screen bg-black text-white'>,
       {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
@@ -105,32 +102,29 @@ export default function AIHealthcareDiagnosticsPro() {,
             </h1>,
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
               The world's most advanced AI healthcare diagnostics platform that,
-              provides accurate medical diagnosis, treatment recommendations,;
+              provides accurate medical diagnosis, treatment recommendations;
               and patient care optimization.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
                 Get Started,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='#features',
-                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
-      <section,
+      {/* Features Section */}
+      <section
         id='features',
-        className='py-20 bg-gradient-to-b from-black to-gray-900',
-      >,
+        className='py-20 bg-gradient-to-b from-black to-gray-900'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
             <h2 className='text-3xl lg:text-4xl font-bold mb-4'>,
@@ -316,7 +310,7 @@ export default function AIHealthcareDiagnosticsPro() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -324,7 +318,7 @@ export default function AIHealthcareDiagnosticsPro() {,
               How AI Healthcare Diagnostics Works,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-              Our AI platform operates in a continuous cycle of learning,;
+              Our AI platform operates in a continuous cycle of learning;
               analyzing, and improving diagnostic accuracy.,
             </p>,
           </div>,
@@ -387,24 +381,22 @@ export default function AIHealthcareDiagnosticsPro() {,
             while healthcare providers focus on patient care.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
               Start Your Free Trial,
               <ArrowRight className='ml-2 w-5 h-5' />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300',
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300'>,
               <Phone className='mr-2 w-5 h-5' />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
@@ -417,20 +409,18 @@ export default function AIHealthcareDiagnosticsPro() {,
               <div className='space-y-4'>,
                 <div className='flex items-center space-x-3'>,
                   <Phone className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`tel:${contactInfo.mobile,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel:${contactInfo.mobile}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
                   <Mail className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
@@ -445,10 +435,9 @@ export default function AIHealthcareDiagnosticsPro() {,
                 See our AI Healthcare Diagnostics Pro Platform in action.,
                 Schedule a personalized demo today.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300'>,
                 Schedule Demo,
                 <ArrowRight className='ml-2 w-4 h-4' />,
               </Link>,
@@ -456,7 +445,5 @@ export default function AIHealthcareDiagnosticsPro() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

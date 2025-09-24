@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function IndexPage() {,
-  return (,
+export default function IndexPage() {
+  return (
     <>,
       <Head>,
         <title>Index - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function IndexPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

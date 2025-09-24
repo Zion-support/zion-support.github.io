@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Eval‑Driven Release Engineering',;
+export const metadata = {
+  title: 'AI 20o26: Eval‑Driven Release Engineering';
   description:,
-    'How to ship safer AI with evaluation-gated releases, metrics, and automation.',;
+    'How to ship safer AI with evaluation-gated releases, metrics, and automation.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <header className='mb-8'>,
         <p className='text-sm font-semibold text-purple-70o0'>,
@@ -44,20 +42,16 @@ export default function Page() {,
         </p>,
       </article>,
       <div className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-evaluation-hub',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Evaluation Hub,
         </Link>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-eval-gated-autonomy',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Eval‑Gated Autonomy,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

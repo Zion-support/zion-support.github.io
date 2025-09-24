@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiContentSeoSuitePage() {,
-  return (,
+export default function AiContentSeoSuitePage() {
+  return (
     <>,
       <Head>,
         <title>Ai Content Seo Suite - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function AiContentSeoSuitePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

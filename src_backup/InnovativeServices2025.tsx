@@ -1,188 +1,166 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Brain,;
-  Cloud,;
-  Shield,;
-  Database,;
-  Network,;
-  Code,;
-  BarChart3,;
-  Target,;
-  Lightbulb,;
-  Rocket,;
-  Zap,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Sparkles,;
-  ShieldCheck,;
-  Globe2,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,
-} from 'lucide-react',
+import {
+  Brain;
+  Cloud;
+  Shield;
+  Database;
+  Network;
+  Code;
+  BarChart3;
+  Target;
+  Lightbulb;
+  Rocket;
+  Zap;
+  Globe;
+  Lock;
+  Cpu;
+  Sparkles;
+  ShieldCheck;
+  Globe2;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  ExternalLink} from 'lucide-react',
 import SEOHead from '../components/SEOHead',
-,
-const InnovativeServices20o25: React.FC = () => {,
-  const serviceCategories = [,
-    {,
-      title: "AI Automation Services",;
-      description: "Revolutionary AI-powered automation solutions that transform business operations",;
-      icon: Brain,;
-      color: "from-blue-60o0 to-cyan-60o0",;
-      services: [,
-        {,
-          name: "AI Code Review & Quality Assurance",;
-          description: "Intelligent code analysis, review automation, and quality assurance",;
-          price: "$1,299/month",;
-          features: ["AI-powered code analysis", "Security vulnerability detection", "Code quality scoring", "Performance optimization"],;
-          link: "https://ziontechgroup.com/ai-code-review",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Content Marketing Automation",;
-          description: "Intelligent content creation, optimization, and distribution automation",;
-          price: "$899/month",;
-          features: ["AI-powered content generation", "SEO optimization", "Multi-channel distribution", "Performance analytics"],;
-          link: "https://ziontechgroup.com/ai-content-marketing",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Customer Support Automation",;
-          description: "Intelligent customer support with automated responses and issue resolution",;
-          price: "$699/month",;
-          features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"],;
-          link: "https://ziontechgroup.com/ai-customer-support",;
-          popular: true,
-        ,}
-      ],
-    },;
-    {,
-      title: "Advanced IT Infrastructure",;
-      description: "Cutting-edge infrastructure solutions with quantum computing and neuromorphic technology",;
-      icon: Cpu,;
-      color: "from-purple-60o0 to-indigo-60o0",;
-      services: [,
-        {,
-          name: "Quantum-Secure Cloud Infrastructure",;
-          description: "Future-proof cloud infrastructure with quantum-resistant encryption",;
-          price: "$3,999/month",;
-          features: ["Quantum-resistant encryption", "Post-quantum cryptography", "Multi-cloud orchestration", "Zero-trust security"],;
-          link: "https://ziontechgroup.com/quantum-secure-cloud",;
-          popular: true,
-        ,},;
-        {,
-          name: "Edge Computing Orchestration",;
-          description: "Intelligent orchestration of distributed edge computing resources",;
-          price: "$1,899/month",;
-          features: ["Intelligent workload distribution", "Edge-to-cloud synchronization", "Real-time optimization", "IoT integration"],;
-          link: "https://ziontechgroup.com/edge-computing-orchestration",;
-          popular: true,
-        ,},;
-        {,
-          name: "Neuromorphic Computing Infrastructure",;
-          description: "Brain-inspired computing architecture for ultra-efficient AI processing",;
-          price: "$5,999/month",;
-          features: ["Brain-inspired neural architecture", "Ultra-low power consumption", "Real-time learning", "Spiking neural networks"],;
-          link: "https://ziontechgroup.com/neuromorphic-computing",;
-          popular: false,
-        ,}
-      ],
-    },;
-    {,
-      title: "Innovative Micro-SaaS Solutions",;
-      description: "Specialized SaaS solutions for specific industries and business needs",;
-      icon: Sparkles,;
-      color: "from-green-60o0 to-emerald-60o0",;
-      services: [,
-        {,
-          name: "AI Legal Document Automation",;
-          description: "Intelligent legal document creation, review, and automation",;
-          price: "$599/month",;
-          features: ["AI-powered contract generation", "Legal document review", "Compliance checking", "Workflow automation"],;
-          link: "https://ziontechgroup.com/ai-legal-automation",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Real Estate Analytics",;
-          description: "Intelligent real estate market analysis and investment insights",;
-          price: "$799/month",;
-          features: ["Market trend analysis", "Investment opportunity identification", "Property valuation", "Risk assessment"],;
-          link: "https://ziontechgroup.com/ai-real-estate-analytics",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Restaurant Management",;
-          description: "Intelligent restaurant operations, inventory, and customer management",;
-          price: "$399/month",;
-          features: ["Inventory management", "Demand forecasting", "Staff optimization", "Customer analytics"],;
-          link: "https://ziontechgroup.com/ai-restaurant-management",;
-          popular: true,
-        ,}
-      ],
-    },;
-    {,
-      title: "Cutting-Edge AI Research",;
-      description: "Revolutionary AI platforms for advanced research and scientific discovery",;
-      icon: Rocket,;
-      color: "from-orange-60o0 to-red-60o0",;
-      services: [,
-        {,
-          name: "AI Drug Discovery Platform",;
-          description: "Accelerate drug discovery with AI-powered molecular analysis",;
-          price: "$8,999/month",;
-          features: ["Molecular analysis", "Drug efficacy prediction", "Toxicity prediction", "Clinical trial optimization"],;
-          link: "https://ziontechgroup.com/ai-drug-discovery",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Climate Prediction Platform",;
-          description: "Predict climate patterns with AI-powered environmental analysis",;
-          price: "$3,999/month",;
-          features: ["Climate modeling", "Weather prediction", "Environmental analysis", "Risk assessment"],;
-          link: "https://ziontechgroup.com/ai-climate-prediction",;
-          popular: true,
-        ,},;
-        {,
-          name: "AI Space Exploration Platform",;
-          description: "Revolutionize space exploration with AI-powered mission optimization",;
-          price: "$12,999/month",;
-          features: ["Mission planning", "Satellite optimization", "Astronomical analysis", "Risk assessment"],;
-          link: "https://ziontechgroup.com/ai-space-exploration",;
-          popular: false,
-        ,}
-      ],
-    }
+const InnovativeServices20o25: React.FC = () => {
+  const serviceCategories = [
+    {
+      title: "AI Automation Services";
+      description: "Revolutionary AI-powered automation solutions that transform business operations";
+      icon: Brain;
+      color: "from-blue-60o0 to-cyan-60o0";
+      services: [
+        {
+          name: "AI Code Review & Quality Assurance";
+          description: "Intelligent code analysis, review automation, and quality assurance";
+          price: "$1,299/month";
+          features: ["AI-powered code analysis", "Security vulnerability detection", "Code quality scoring", "Performance optimization"];
+          link: "https://ziontechgroup.com/ai-code-review";
+          popular: true};
+        {
+          name: "AI Content Marketing Automation";
+          description: "Intelligent content creation, optimization, and distribution automation";
+          price: "$899/month";
+          features: ["AI-powered content generation", "SEO optimization", "Multi-channel distribution", "Performance analytics"];
+          link: "https://ziontechgroup.com/ai-content-marketing";
+          popular: true};
+        {
+          name: "AI Customer Support Automation";
+          description: "Intelligent customer support with automated responses and issue resolution";
+          price: "$699/month";
+          features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"];
+          link: "https://ziontechgroup.com/ai-customer-support";
+          popular: true}
+      ]};
+    {
+      title: "Advanced IT Infrastructure";
+      description: "Cutting-edge infrastructure solutions with quantum computing and neuromorphic technology";
+      icon: Cpu;
+      color: "from-purple-60o0 to-indigo-60o0";
+      services: [
+        {
+          name: "Quantum-Secure Cloud Infrastructure";
+          description: "Future-proof cloud infrastructure with quantum-resistant encryption";
+          price: "$3,999/month";
+          features: ["Quantum-resistant encryption", "Post-quantum cryptography", "Multi-cloud orchestration", "Zero-trust security"];
+          link: "https://ziontechgroup.com/quantum-secure-cloud";
+          popular: true};
+        {
+          name: "Edge Computing Orchestration";
+          description: "Intelligent orchestration of distributed edge computing resources";
+          price: "$1,899/month";
+          features: ["Intelligent workload distribution", "Edge-to-cloud synchronization", "Real-time optimization", "IoT integration"];
+          link: "https://ziontechgroup.com/edge-computing-orchestration";
+          popular: true};
+        {
+          name: "Neuromorphic Computing Infrastructure";
+          description: "Brain-inspired computing architecture for ultra-efficient AI processing";
+          price: "$5,999/month";
+          features: ["Brain-inspired neural architecture", "Ultra-low power consumption", "Real-time learning", "Spiking neural networks"];
+          link: "https://ziontechgroup.com/neuromorphic-computing";
+          popular: false}
+      ]};
+    {
+      title: "Innovative Micro-SaaS Solutions";
+      description: "Specialized SaaS solutions for specific industries and business needs";
+      icon: Sparkles;
+      color: "from-green-60o0 to-emerald-60o0";
+      services: [
+        {
+          name: "AI Legal Document Automation";
+          description: "Intelligent legal document creation, review, and automation";
+          price: "$599/month";
+          features: ["AI-powered contract generation", "Legal document review", "Compliance checking", "Workflow automation"];
+          link: "https://ziontechgroup.com/ai-legal-automation";
+          popular: true};
+        {
+          name: "AI Real Estate Analytics";
+          description: "Intelligent real estate market analysis and investment insights";
+          price: "$799/month";
+          features: ["Market trend analysis", "Investment opportunity identification", "Property valuation", "Risk assessment"];
+          link: "https://ziontechgroup.com/ai-real-estate-analytics";
+          popular: true};
+        {
+          name: "AI Restaurant Management";
+          description: "Intelligent restaurant operations, inventory, and customer management";
+          price: "$399/month";
+          features: ["Inventory management", "Demand forecasting", "Staff optimization", "Customer analytics"];
+          link: "https://ziontechgroup.com/ai-restaurant-management";
+          popular: true}
+      ]};
+    {
+      title: "Cutting-Edge AI Research";
+      description: "Revolutionary AI platforms for advanced research and scientific discovery";
+      icon: Rocket;
+      color: "from-orange-60o0 to-red-60o0";
+      services: [
+        {
+          name: "AI Drug Discovery Platform";
+          description: "Accelerate drug discovery with AI-powered molecular analysis";
+          price: "$8,999/month";
+          features: ["Molecular analysis", "Drug efficacy prediction", "Toxicity prediction", "Clinical trial optimization"];
+          link: "https://ziontechgroup.com/ai-drug-discovery";
+          popular: true};
+        {
+          name: "AI Climate Prediction Platform";
+          description: "Predict climate patterns with AI-powered environmental analysis";
+          price: "$3,999/month";
+          features: ["Climate modeling", "Weather prediction", "Environmental analysis", "Risk assessment"];
+          link: "https://ziontechgroup.com/ai-climate-prediction";
+          popular: true};
+        {
+          name: "AI Space Exploration Platform";
+          description: "Revolutionize space exploration with AI-powered mission optimization";
+          price: "$12,999/month";
+          features: ["Mission planning", "Satellite optimization", "Astronomical analysis", "Risk assessment"];
+          link: "https://ziontechgroup.com/ai-space-exploration";
+          popular: false}
+      ]}
   ],
-,
-  const contactInfo ={,
-    mobile: "+1 30o2 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 10o08 Middletown DE 19709",;
-    website: "https://ziontechgroup.com",
-  ,};
-,
-  return (,
+  const contactInfo ={
+    mobile: "+1 30o2 464 0950";
+    email: "kleber@ziontechgroup.com";
+    address: "364 E Main St STE 10o08 Middletown DE 19709";
+    website: "https://ziontechgroup.com"};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
-      <SEOHead,
-        config={{,
-          title: "Innovative Services 20o25 - Zion Tech Group",;
-          description: "Discover our cutting-edge AI, IT infrastructure, and micro-SaaS services. Revolutionary solutions for the future of business and technology.",;
-          keywords: "AI services, IT infrastructure, micro-SaaS, quantum computing, neuromorphic computing, AI automation, Zion Tech Group",
-        }}
+      <SEOHead
+        config={{
+          title: "Innovative Services 20o25 - Zion Tech Group";
+          description: "Discover our cutting-edge AI, IT infrastructure, and micro-SaaS services. Revolutionary solutions for the future of business and technology.";
+          keywords: "AI services, IT infrastructure, micro-SaaS, quantum computing, neuromorphic computing, AI automation, Zion Tech Group"}}
        />,
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
               <span className="bg-gradient-to-r from-blue-40o0 via-cyan-40o0 to-emerald-40o0 bg-clip-text text-transparent">,
@@ -193,17 +171,15 @@ const InnovativeServices20o25: React.FC = () => {,
               Revolutionary AI, IT infrastructure, and micro-SaaS solutions that transform businesses and drive innovation,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-              <a,
+              <a
                 href="#services",
-                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center gap-2",
-              >,
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center gap-2">,
                 Explore Services,
                 <ArrowRight className="w-5 h-5"  />,
               </a>,
-              <a,
-                href={`tel:${contactInfo.mobile,}`}
-                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center gap-2",
-              >,
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center gap-2">,
                 <Phone className="w-5 h-5"  />,
                 Contact Us,
               </a>,
@@ -211,16 +187,15 @@ const InnovativeServices20o25: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Services Section */,}
+      {/* Services Section */}
       <section id="services" className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
               Cutting-Edge Service Categories,
             </h2>,
@@ -229,42 +204,39 @@ const InnovativeServices20o25: React.FC = () => {,
             </p>,
           </motion.div>,
           <div className="space-y-16">,
-            {serviceCategories.map((category, categoryIndex) => (,
+            {serviceCategories.map((category, categoryIndex) => (
               <motion.div,
                 key={category.title}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 ,}}
-                viewport={{ once: true ,}}
-                className="bg-slate-80o0/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-70o0/50",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-slate-80o0/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-70o0/50">,
                 <div className="flex items-center gap-4 mb-8">,
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color}`}>,
                     <category.icon className="w-8 h-8 text-white"  />,
                   </div>,
                   <div>,
-                    <h3 className="text-2xl md: text-3xl font-bold text-white">{category.title,}</h3>,
+                    <h3 className="text-2xl md: text-3xl font-bold text-white">{category.title}</h3>,
                     <p className="text-gray-30o0">{category.description}</p>,
                   </div>,
                 </div>,
                 <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-                  {category.services.map((service, serviceIndex) => (,
+                  {category.services.map((service, serviceIndex) => (
                     <motion.div,
                       key={service.name}
-                      initial={{ opacity: 0, scale: 0.95 ,}}
-                      whileInView={{ opacity: 1, scale: 1 ,}}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 ,}}
-                      viewport={{ once: true ,}}
-                      className={`bg-slate-70o0/50 rounded-xl p-6 border transition-all duration-30o0 hover: scale-10o5 ${,
-                        service.popular ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/20' : 'border-slate-60o0/50',
-                      ,}`}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
+                      viewport={{ once: true }}
+                      className={`bg-slate-70o0/50 rounded-xl p-6 border transition-all duration-30o0 hover: scale-10o5 ${
+                        service.popular ? 'border-blue-50o0/50 shadow-lg shadow-blue-50o0/20' : 'border-slate-60o0/50'}`}
                     >,
-                      {service.popular && (,
+                      {service.popular && (
                         <div className="flex items-center gap-2 mb-4">,
                           <Star className="w-5 h-5 text-yellow-40o0 fill-current"  />,
                           <span className="text-sm font-semibold text-yellow-40o0">Popular</span>,
-                        </div>,
-                      )}
+                        </div>)}
 ,
                       <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>,
                       <p className="text-gray-30o0 text-sm mb-4">{service.description}</p>,
@@ -272,27 +244,23 @@ const InnovativeServices20o25: React.FC = () => {,
                         <span className="text-2xl font-bold text-emerald-40o0">{service.price}</span>,
                       </div>,
                       <ul className="space-y-2 mb-6">,
-                        {service.features.map((feature, featureIndex) => (,
+                        {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-30o0">,
                             <CheckCircle className="w-4 h-4 text-emerald-40o0 flex-shrink-0"  />,
                             {feature}
-                          </li>,
-                        ))}
+                          </li>))}
                       </ul>,
-                      <a,
+                      <a
                         href={service.link}
                         target="_blank",
                         rel="noopener noreferrer",
-                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 w-full justify-center",
-                      >,
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 w-full justify-center">,
                         Learn More,
                         <ExternalLink className="w-4 h-4"  />,
                       </a>,
-                    </motion.div>,
-                  )),}
+                    </motion.div>))}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -300,10 +268,10 @@ const InnovativeServices20o25: React.FC = () => {,
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-80o0/30">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-8">,
               Ready to Transform Your Business?,
@@ -318,11 +286,10 @@ const InnovativeServices20o25: React.FC = () => {,
                 </div>,
                 <div>,
                   <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>,
-                  <a,
-                    href={`tel:${contactInfo.mobile,}`}
-                    className="text-emerald-40o0 hover: text-emerald-30o0 transition-colors",
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel:${contactInfo.mobile}`}
+                    className="text-emerald-40o0 hover: text-emerald-30o0 transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
               </div>,
@@ -332,11 +299,10 @@ const InnovativeServices20o25: React.FC = () => {,
                 </div>,
                 <div>,
                   <h3 className="text-lg font-semibold text-white mb-2">Email</h3>,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className="text-emerald-40o0 hover: text-emerald-30o0 transition-colors",
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className="text-emerald-40o0 hover: text-emerald-30o0 transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
               </div>,
@@ -351,17 +317,15 @@ const InnovativeServices20o25: React.FC = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <a,
-                href={`tel:${contactInfo.mobile,}`}
-                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2",
-              >,
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2">,
                 <Phone className="w-5 h-5"  />,
                 Call Now,
               </a>,
-              <a,
-                href={`mailto:${contactInfo.email,}`}
-                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center justify-center gap-2",
-              >,
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 flex items-center justify-center gap-2">,
                 <Mail className="w-5 h-5"  />,
                 Send Email,
               </a>,
@@ -369,16 +333,15 @@ const InnovativeServices20o25: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Market Position Section */,}
+      {/* Market Position Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">,
             <h2 className="text-3xl md: text-5xl font-bold text-white mb-6">,
               Why Choose Zion Tech Group?,
             </h2>,
@@ -388,12 +351,11 @@ const InnovativeServices20o25: React.FC = () => {,
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.1 ,}}
-              viewport={{ once: true ,}}
-              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50">,
               <div className="p-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-lg w-fit mb-4">,
                 <Target className="w-8 h-8 text-white"  />,
               </div>,
@@ -403,12 +365,11 @@ const InnovativeServices20o25: React.FC = () => {,
               </p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              viewport={{ once: true ,}}
-              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50">,
               <div className="p-3 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-lg w-fit mb-4">,
                 <Zap className="w-8 h-8 text-white"  />,
               </div>,
@@ -418,12 +379,11 @@ const InnovativeServices20o25: React.FC = () => {,
               </p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.3 ,}}
-              viewport={{ once: true ,}}
-              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-slate-80o0/50 rounded-xl p-6 border border-slate-70o0/50">,
               <div className="p-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-lg w-fit mb-4">,
                 <ShieldCheck className="w-8 h-8 text-white"  />,
               </div>,
@@ -435,6 +395,4 @@ const InnovativeServices20o25: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

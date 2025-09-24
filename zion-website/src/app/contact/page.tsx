@@ -1,11 +1,10 @@
-import {,
-  EnvelopeIcon,;
-  PhoneIcon,;
-  MapPinIcon,;
+import {
+  EnvelopeIcon;
+  PhoneIcon;
+  MapPinIcon;
 } from '@heroicons/react/24/outline',
-,
-export default function ContactPage() {,
-  return (,
+export default function ContactPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-20'>,
         <h1 className='text-4xl font-bold tracking-tight text-white'>,
@@ -40,7 +39,5 @@ export default function ContactPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

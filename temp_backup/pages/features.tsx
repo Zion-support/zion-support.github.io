@@ -1,17 +1,16 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function FeaturesPage() {,
-  return (,
+export default function FeaturesPage() {
+  return (
     <>,
       <Head>,
         <title>Features — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics.',
         />,
         <meta property='og: title' content='Features — Zion Tech Group' />,
-        <meta,
+        <meta
           property='og:description',
           content='Explore our comprehensive suite of autonomous AI features including monitoring, auto-healing, security, and analytics.',
         />,
@@ -30,54 +29,47 @@ export default function FeaturesPage() {,
           </section>,
           {/* Navigation */}
           <nav className='flex flex-wrap justify-center gap-4 mb-16'>,
-            <a,
+            <a
               href='#ai-agents',
-              className='px-4 py-2 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50'>,
               AI Agents,
             </a>,
-            <a,
+            <a
               href='#monitoring',
-              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50'>,
               Monitoring,
             </a>,
-            <a,
+            <a
               href='#auto-healing',
-              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-blue-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-blue-40o0/50'>,
               Auto-healing,
             </a>,
-            <a,
+            <a
               href='#security',
-              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50'>,
               Security,
             </a>,
-            <a,
+            <a
               href='#analytics',
-              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-yellow-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-yellow-40o0/50'>,
               Analytics,
             </a>,
-            <a,
+            <a
               href='#automation',
-              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-purple-40o0/50',
-            >,
+              className='px-4 py-2 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-purple-40o0/50'>,
               Automation,
             </a>,
           </nav>,
-          {/* AI Agents Section */,}
-          <section,
+          {/* AI Agents Section */}
+          <section
             id='ai-agents',
-            className='mx-auto max-w-7xl px-6 pb-16 mb-16',
-          >,
+            className='mx-auto max-w-7xl px-6 pb-16 mb-16'>,
             <div className='text-center mb-12'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Autonomous AI Agents,
               </h2>,
               <p className='text-xl text-white/70 max-w-3xl mx-auto'>,
-                Our intelligent AI agents work autonomously to monitor,;
+                Our intelligent AI agents work autonomously to monitor;
                 optimize, and improve your infrastructure 24/7.,
               </p>,
             </div>,
@@ -94,7 +86,7 @@ export default function FeaturesPage() {,
                       </h3>,
                       <p className='text-white/70'>,
                         AI agents analyze complex data patterns and make,
-                        intelligent decisions to optimize performance, security,;
+                        intelligent decisions to optimize performance, security;
                         and resource utilization.,
                       </p>,
                     </div>,
@@ -136,30 +128,28 @@ export default function FeaturesPage() {,
                   AI Agent Capabilities,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    'Real-time system monitoring',;
-                    'Predictive failure analysis',;
-                    'Automated resource scaling',;
-                    'Intelligent load balancing',;
-                    'Performance optimization',;
-                    'Security threat detection',;
-                    'Compliance monitoring',;
-                    'Cost optimization',;
-                  ].map((capability, index) => (,
+                  {[
+                    'Real-time system monitoring';
+                    'Predictive failure analysis';
+                    'Automated resource scaling';
+                    'Intelligent load balancing';
+                    'Performance optimization';
+                    'Security threat detection';
+                    'Compliance monitoring';
+                    'Cost optimization';
+                  ].map((capability, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
                       <span className='text-white/80'>{capability}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
           </section>,
           {/* Monitoring Section */}
-          <section,
+          <section
             id='monitoring',
-            className='mx-auto max-w-7xl px-6 pb-16 mb-16',
-          >,
+            className='mx-auto max-w-7xl px-6 pb-16 mb-16'>,
             <div className='text-center mb-12'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Advanced Monitoring & Observability,
@@ -212,31 +202,28 @@ export default function FeaturesPage() {,
                 Monitoring Dashboard Features,
               </h3>,
               <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
-                {[,
-                  'Custom dashboards',;
-                  'Alert management',;
-                  'Historical data analysis',;
-                  'Performance baselines',;
-                  'Capacity planning',;
-                  'Cost tracking',;
-                  'Compliance reporting',;
-                  'API monitoring',;
-                ].map((feature, index) => (,
-                  <div,
+                {[
+                  'Custom dashboards';
+                  'Alert management';
+                  'Historical data analysis';
+                  'Performance baselines';
+                  'Capacity planning';
+                  'Cost tracking';
+                  'Compliance reporting';
+                  'API monitoring';
+                ].map((feature, index) => (
+                  <div
                     key={index}
-                    className='text-center p-4 bg-white/5 rounded-lg',
-                  >,
+                    className='text-center p-4 bg-white/5 rounded-lg'>,
                     <div className='text-white/80 text-sm'>{feature}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </section>,
           {/* Auto-healing Section */}
-          <section,
+          <section
             id='auto-healing',
-            className='mx-auto max-w-7xl px-6 pb-16 mb-16',
-          >,
+            className='mx-auto max-w-7xl px-6 pb-16 mb-16'>,
             <div className='text-center mb-12'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Intelligent Auto-healing Systems,
@@ -252,33 +239,33 @@ export default function FeaturesPage() {,
                   Auto-healing Workflow,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    {,
-                      step: '1',;
-                      title: 'Detection',;
-                      desc: 'AI identifies anomalies and potential issues',;
-                    },;
-                    {,
-                      step: '2',;
-                      title: 'Analysis',;
-                      desc: 'Deep analysis of root causes and impact',;
-                    },;
-                    {,
-                      step: '3',;
-                      title: 'Resolution',;
-                      desc: 'Automated fixes and system recovery',;
-                    },;
-                    {,
-                      step: '4',;
-                      title: 'Verification',;
-                      desc: 'Confirm resolution and system health',;
-                    },;
-                    {,
-                      step: '5',;
-                      title: 'Learning',;
-                      desc: 'Update AI models for future prevention',;
-                    },;
-                  ].map((item, index) => (,
+                  {[
+                    {
+                      step: '1';
+                      title: 'Detection';
+                      desc: 'AI identifies anomalies and potential issues';
+                    };
+                    {
+                      step: '2';
+                      title: 'Analysis';
+                      desc: 'Deep analysis of root causes and impact';
+                    };
+                    {
+                      step: '3';
+                      title: 'Resolution';
+                      desc: 'Automated fixes and system recovery';
+                    };
+                    {
+                      step: '4';
+                      title: 'Verification';
+                      desc: 'Confirm resolution and system health';
+                    };
+                    {
+                      step: '5';
+                      title: 'Learning';
+                      desc: 'Update AI models for future prevention';
+                    };
+                  ].map((item, index) => (
                     <div key={index} className='flex items-center space-x-4'>,
                       <div className='w-8 h-8 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-sm'>,
                         {item.step}
@@ -289,8 +276,7 @@ export default function FeaturesPage() {,
                         </div>,
                         <div className='text-sm text-white/70'>{item.desc}</div>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div>,
@@ -358,21 +344,20 @@ export default function FeaturesPage() {,
                   Security Features,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    'Real-time threat detection',;
-                    'Automated vulnerability scanning',;
-                    'Intrusion prevention systems',;
-                    'Data encryption at rest & transit',;
-                    'Access control & authentication',;
-                    'Compliance monitoring',;
-                    'Security incident response',;
-                    'Audit logging & reporting',;
-                  ].map((feature, index) => (,
+                  {[
+                    'Real-time threat detection';
+                    'Automated vulnerability scanning';
+                    'Intrusion prevention systems';
+                    'Data encryption at rest & transit';
+                    'Access control & authentication';
+                    'Compliance monitoring';
+                    'Security incident response';
+                    'Audit logging & reporting';
+                  ].map((feature, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-green-40o0 rounded-full'></div>,
                       <span className='text-white/80'>{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className='bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10'>,
@@ -380,30 +365,28 @@ export default function FeaturesPage() {,
                   Compliance Standards,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    'SOC 2 Type II',;
-                    'ISO 270o01',;
-                    'GDPR compliance',;
-                    'HIPAA ready',;
-                    'PCI DSS',;
-                    'FedRAMP',;
-                    'NIST framework',;
-                    'Industry-specific standards',;
-                  ].map((standard, index) => (,
+                  {[
+                    'SOC 2 Type II';
+                    'ISO 270o01';
+                    'GDPR compliance';
+                    'HIPAA ready';
+                    'PCI DSS';
+                    'FedRAMP';
+                    'NIST framework';
+                    'Industry-specific standards';
+                  ].map((standard, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-blue-40o0 rounded-full'></div>,
                       <span className='text-white/80'>{standard}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
           </section>,
           {/* Analytics Section */}
-          <section,
+          <section
             id='analytics',
-            className='mx-auto max-w-7xl px-6 pb-16 mb-16',
-          >,
+            className='mx-auto max-w-7xl px-6 pb-16 mb-16'>,
             <div className='text-center mb-12'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Advanced Analytics & Insights,
@@ -456,31 +439,28 @@ export default function FeaturesPage() {,
                 Analytics Capabilities,
               </h3>,
               <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
-                {[,
-                  'Real-time dashboards',;
-                  'Custom reporting',;
-                  'Data visualization',;
-                  'Trend analysis',;
-                  'Anomaly detection',;
-                  'Capacity forecasting',;
-                  'ROI calculations',;
-                  'Benchmark comparisons',;
-                ].map((capability, index) => (,
-                  <div,
+                {[
+                  'Real-time dashboards';
+                  'Custom reporting';
+                  'Data visualization';
+                  'Trend analysis';
+                  'Anomaly detection';
+                  'Capacity forecasting';
+                  'ROI calculations';
+                  'Benchmark comparisons';
+                ].map((capability, index) => (
+                  <div
                     key={index}
-                    className='text-center p-4 bg-white/5 rounded-lg',
-                  >,
+                    className='text-center p-4 bg-white/5 rounded-lg'>,
                     <div className='text-white/80 text-sm'>{capability}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </section>,
           {/* Automation Section */}
-          <section,
+          <section
             id='automation',
-            className='mx-auto max-w-7xl px-6 pb-16 mb-16',
-          >,
+            className='mx-auto max-w-7xl px-6 pb-16 mb-16'>,
             <div className='text-center mb-12'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Comprehensive Automation,
@@ -496,21 +476,20 @@ export default function FeaturesPage() {,
                   Automation Areas,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    'Infrastructure provisioning',;
-                    'Application deployment',;
-                    'Configuration management',;
-                    'Backup & recovery',;
-                    'Scaling & load balancing',;
-                    'Security updates',;
-                    'Performance tuning',;
-                    'Disaster recovery',;
-                  ].map((area, index) => (,
+                  {[
+                    'Infrastructure provisioning';
+                    'Application deployment';
+                    'Configuration management';
+                    'Backup & recovery';
+                    'Scaling & load balancing';
+                    'Security updates';
+                    'Performance tuning';
+                    'Disaster recovery';
+                  ].map((area, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
                       <span className='text-white/80'>{area}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className='bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10'>,
@@ -518,21 +497,20 @@ export default function FeaturesPage() {,
                   Automation Benefits,
                 </h3>,
                 <div className='space-y-4'>,
-                  {[,
-                    '99.9% uptime guarantee',;
-                    '90% reduction in manual tasks',;
-                    '60% faster deployment',;
-                    '50% cost savings',;
-                    '24/7 operation',;
-                    'Zero human error',;
-                    'Instant scalability',;
-                    'Proactive maintenance',;
-                  ].map((benefit, index) => (,
+                  {[
+                    '99.9% uptime guarantee';
+                    '90% reduction in manual tasks';
+                    '60% faster deployment';
+                    '50% cost savings';
+                    '24/7 operation';
+                    'Zero human error';
+                    'Instant scalability';
+                    'Proactive maintenance';
+                  ].map((benefit, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-fuchsia-40o0 rounded-full'></div>,
                       <span className='text-white/80'>{benefit}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -549,16 +527,14 @@ export default function FeaturesPage() {,
                 your infrastructure.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-xl hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-xl hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                   Request Demo,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-30o0',
-                >,
+                  className='px-8 py-4 bg-white/10 text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
                   View Case Studies,
                 </Link>,
               </div>,
@@ -566,7 +542,5 @@ export default function FeaturesPage() {,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

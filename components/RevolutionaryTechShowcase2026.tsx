@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const RevolutionaryTechShowcase20o26: React.FC = () => {,
-  return (,
+const RevolutionaryTechShowcase20o26: React.FC = () => {
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-black text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -62,25 +61,19 @@ const RevolutionaryTechShowcase20o26: React.FC = () => {,
               revolutionary technologies,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/revolutionary-tech-showcase-20o26',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-40o0 hover:to-blue-40o0 text-white font-semibold rounded-full transition-all duration-30o0 hover:scale-10o5',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-40o0 hover:to-blue-40o0 text-white font-semibold rounded-full transition-all duration-30o0 hover:scale-10o5'>,
                 Explore Technologies,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 border-2 border-purple-40o0 text-purple-30o0 hover:bg-purple-40o0 hover:text-white font-semibold rounded-full transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-6 py-3 border-2 border-purple-40o0 text-purple-30o0 hover:bg-purple-40o0 hover:text-white font-semibold rounded-full transition-all duration-30o0'>,
                 Get Started,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryTechShowcase20o26,
-,
+    </section>)};
+export default RevolutionaryTechShowcase20o26;

@@ -2,31 +2,28 @@ import { Control } from 'react-hook-form',
 import { FormFieldFormItemFormLabelFormControlFormDescriptionFormMessage } from '@/components/ui/form',
 import { Textarea } from '@/components/ui/textarea',
 import { JobSchemaType } from './validation',
-,
-interface DescriptionFieldsProps {,
+interface DescriptionFieldsProps {
   control: Control<JobSchemaType>,
   handleEditorChange: (content: string) => void,
-  editorContent: string,
-,}
+  editorContent: string}
 ,
-export function DescriptionFields({,
-  controlhandleEditorChangeditorContent,;
-}: DescriptionFieldsProps) {,
-  return (,
+export function DescriptionFields({
+  controlhandleEditorChangeditorContent;
+}: DescriptionFieldsProps) {
+  return (
     <>,
-      <FormField,
+      <FormField
         control={control}
         name='description',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel>Job Description</FormLabel>,
             <FormControl>,
-              <Textarea,
+              <Textarea
                 value={editorContent}
-                onChange={e => {,
+                onChange={e => {
                   handleEditorChange(e.target.value),
-                  field.onChange(e.target.value),
-                }}
+                  field.onChange(e.target.value)}}
                 className='min-h-[200px]',
                 placeholder='Enter a detailed description of the job role',
               />,
@@ -35,17 +32,16 @@ export function DescriptionFields({,
               Detailed description of the job role.,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={control}
         name='responsibilities',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel>Responsibilities (Optional)</FormLabel>,
             <FormControl>,
-              <Textarea,
+              <Textarea
                 placeholder='List the main responsibilities of this job',
                 className='resize-none min-h-[100px]',
                 {...field}
@@ -55,17 +51,16 @@ export function DescriptionFields({,
               List the main responsibilities of this job.,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={control}
         name='qualifications',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel>Qualifications (Optional)</FormLabel>,
             <FormControl>,
-              <Textarea,
+              <Textarea
                 placeholder='List the required qualifications for this job',
                 className='resize-none min-h-[100px]',
                 {...field}
@@ -75,17 +70,16 @@ export function DescriptionFields({,
               List the required qualifications for this job.,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={control}
         name='benefits',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel>Benefits (Optional)</FormLabel>,
             <FormControl>,
-              <Textarea,
+              <Textarea
                 placeholder='List the benefits offered for this job',
                 className='resize-none min-h-[100px]',
                 {...field}
@@ -95,17 +89,16 @@ export function DescriptionFields({,
               List the benefits offered for this job.,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-      <FormField,
+      <FormField
         control={control}
         name='application_instructions',
-        render={({ field }) => (,
+        render={({ field }) => (
           <FormItem>,
             <FormLabel>Application Instructions (Optional)</FormLabel>,
             <FormControl>,
-              <Textarea,
+              <Textarea
                 placeholder='Provide instructions on how to apply for this job',
                 className='resize-none min-h-[100px]',
                 {...field}
@@ -115,10 +108,7 @@ export function DescriptionFields({,
               Provide instructions on how to apply for this job.,
             </FormDescription>,
             <FormMessage />,
-          </FormItem>,
-        )}
+          </FormItem>)}
       />,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,9 +1,8 @@
-import React from 'react',
+import React from 'react';
 import { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
-,
-type Investor = {,
+type Investor = {
   name: string,
   website: string,
   contact?: string,
@@ -12,10 +11,8 @@ type Investor = {,
   notable_investments: string[],
   location_focus?: string[],
   stages?: string[],
-  type?: string,
-,};
-,
-export default function InvestorMatchPage() {,
+  type?: string};
+export default function InvestorMatchPage() {
   const [session, setSession] = useState<boolean>(false), // TODO: replace with real auth check,
   const [startupName, setStartupName] = useState(''),
   const [industry, setIndustry] = useState('AI Marketplaces'),
@@ -24,111 +21,91 @@ export default function InvestorMatchPage() {,
   const [pitchSummary, setPitchSummary] = useState(''),
   const [deckOrWebsite, setDeckOrWebsite] = useState(''),
   const [location, setLocation] = useState(''),
-,
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [investors, setInvestors] = useState<Investor[]>([]),
-,
   const [favorites, setFavorites] = useState<string[]>([]),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Mock session check,
     fetch('/api/auth-session'),
       .then(r => r.json()),
       .then(d => setSession(Boolean(d?.authenticated))),
       .catch(() => setSession(false)),
-,
-    try {,
+    try {
       const fav = JSON.parse(localStorage.getItem('investorFavorites') || '[]'),
-      if (Array.isArray(fav)) setFavorites(fav),
-    } catch {}
+      if (Array.isArray(fav)) setFavorites(fav)} catch {}
   }, []),
-,
-  useEffect(() => {,
-    localStorage.setItem('investorFavorites', JSON.stringify(favorites)),
-  }, [favorites]),
-,
-  const isFormValid = useMemo(() => {,
-    return startupName && industry && roundType && pitchSummary,
-  }, [startupName, industry, roundType, pitchSummary]),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  useEffect(() => {
+    localStorage.setItem('investorFavorites', JSON.stringify(favorites))}, [favorites]),
+  const isFormValid = useMemo(() => {
+    return startupName && industry && roundType && pitchSummary}, [startupName, industry, roundType, pitchSummary]),
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!isFormValid) return,
     setLoading(true),
     setError(null),
     setInvestors([]),
-    try {,
-      const res = await fetch('/api/investor-match', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          startupName,;
-          industry,;
-          roundType,;
-          teamSize,;
-          pitchSummary,;
-          deckOrWebsite,;
-          location,;
-        }),;
+    try {
+      const res = await fetch('/api/investor-match', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          startupName;
+          industry;
+          roundType;
+          teamSize;
+          pitchSummary;
+          deckOrWebsite;
+          location;
+        });
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
-      setInvestors(data.investors || []),
-    } catch (err: any) {,
-      setError(err.message || 'Something went wrong'),
-    ,} finally {,
-      setLoading(false),
-    }
+      setInvestors(data.investors || [])} catch (err: any) {
+      setError(err.message || 'Something went wrong')} finally {
+      setLoading(false)}
   };
-,
-  const toggleFavorite = (name: string) => {,
+  const toggleFavorite = (name: string) => {
     setFavorites(prev =>,
-      prev.includes(name) ? prev.filter(n => n !== name) : [...prev, name],
-    ),
-  };
-,
-  const generateEmail = async (inv: Investor) => {,
-    try {,
-      const res = await fetch('/api/generate-intro-email', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          startupName,;
-          investorName: inv.name,;
-          investorType: inv.type || 'Investor',;
-          highlights: [industry, roundType, teamSize ? `${teamSize} FTE` : ''],;
-          pitchSummary,;
-          website: deckOrWebsite,;
-        }),;
+      prev.includes(name) ? prev.filter(n => n !== name) : [...prev, name])};
+  const generateEmail = async (inv: Investor) => {
+    try {
+      const res = await fetch('/api/generate-intro-email', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          startupName;
+          investorName: inv.name;
+          investorType: inv.type || 'Investor';
+          highlights: [industry, roundType, teamSize ? `${teamSize} FTE` : ''];
+          pitchSummary;
+          website: deckOrWebsite;
+        });
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
-      const blob = new Blob(,
-        [`Subject: ${data.subject,}\n\n${data.body_markdown}`],;
-        { type: 'text/markdown' ,}
+      const blob = new Blob(
+        [`Subject: ${data.subject}\n\n${data.body_markdown}`];
+        { type: 'text/markdown' }
       ),
       const url = URL.createObjectURL(blob),
       const a = document.createElement('a'),
       a.href = url,
       a.download = `intro-${inv.name.replace(/\s+/g, '-').toLowerCase()}.md`,
       a.click(),
-      URL.revokeObjectURL(url),
-    } catch (e: any) {,
-      alert(e.message || 'Failed to generate email'),
-    ,}
+      URL.revokeObjectURL(url)} catch (e: any) {
+      alert(e.message || 'Failed to generate email')}
   };
-,
-  return (,
+  return (
     <EnhancedLayout>,
       <Head>,
         <title>Investor Match – Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='GPT-based investor matchmaking for startups',
         />,
       </Head>,
-      {!session ? (,
+      {!session ? (
         <div className='max-w-2xl mx-auto p-6 border rounded-xl'>,
           <h1 className='text-2xl font-semibold mb-2'>,
             Founder profile required,
@@ -138,15 +115,13 @@ export default function InvestorMatchPage() {,
             are protected behind a privacy wall.,
           </p>,
           <div className='mt-4'>,
-            <a,
+            <a
               className='inline-flex items-center px-4 py-2 rounded-md bg-black text-white dark: bg-white dark:text-black',
-              href='/auth',
-            >,
+              href='/auth'>,
               Sign in,
             </a>,
           </div>,
-        </div>,
-      ) : (,
+        </div>) : (
         <div className='grid gap-8 md:grid-cols-2'>,
           <section className='p-6 border rounded-2xl bg-white/60 dark:bg-white/5'>,
             <h1 className='text-2xl font-semibold'>Investor Match</h1>,
@@ -156,18 +131,18 @@ export default function InvestorMatchPage() {,
             <form onSubmit={handleSubmit} className='grid gap-3'>,
               <div>,
                 <label className='block text-sm mb-1'>Startup Name</label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                  value={startupName,}
+                  value={startupName}
                   onChange={e => setStartupName(e.target.value)}
                   required,
                 />,
               </div>,
               <div>,
                 <label className='block text-sm mb-1'>Industry</label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                  value={industry,}
+                  value={industry}
                   onChange={e => setIndustry(e.target.value)}
                   placeholder='AI Marketplaces',
                   required,
@@ -176,9 +151,9 @@ export default function InvestorMatchPage() {,
               <div className='grid grid-cols-2 gap-3'>,
                 <div>,
                   <label className='block text-sm mb-1'>Round Type</label>,
-                  <select,
+                  <select
                     className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                    value={roundType,}
+                    value={roundType}
                     onChange={e => setRoundType(e.target.value)}
                   >,
                     <option>Pre-seed</option>,
@@ -189,9 +164,9 @@ export default function InvestorMatchPage() {,
                 </div>,
                 <div>,
                   <label className='block text-sm mb-1'>Team size</label>,
-                  <input,
+                  <input
                     className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                    value={teamSize,}
+                    value={teamSize}
                     onChange={e => setTeamSize(e.target.value)}
                     placeholder='e.g., 6',
                   />,
@@ -199,18 +174,18 @@ export default function InvestorMatchPage() {,
               </div>,
               <div>,
                 <label className='block text-sm mb-1'>Location</label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                  value={location,}
+                  value={location}
                   onChange={e => setLocation(e.target.value)}
                   placeholder='City, Country',
                 />,
               </div>,
               <div>,
                 <label className='block text-sm mb-1'>Pitch summary</label>,
-                <textarea,
+                <textarea
                   className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20 min-h-[120px]',
-                  value={pitchSummary,}
+                  value={pitchSummary}
                   onChange={e => setPitchSummary(e.target.value)}
                   placeholder='One-liner + traction, market, differentiator',
                   required,
@@ -218,116 +193,99 @@ export default function InvestorMatchPage() {,
               </div>,
               <div>,
                 <label className='block text-sm mb-1'>Deck or website</label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded-md border bg-white/80 dark: bg-black/20',
-                  value={deckOrWebsite,}
+                  value={deckOrWebsite}
                   onChange={e => setDeckOrWebsite(e.target.value)}
                   placeholder='https: //...',
                 />,
               </div>,
-              <button,
-                disabled={!isFormValid || loading,}
-                className='inline-flex items-center justify-center px-4 py-2 rounded-md bg-black text-white disabled: opacity-50 dark:bg-white dark:text-black',
-              >,
-                {loading ? 'Matching…' : 'Find Matches',}
+              <button
+                disabled={!isFormValid || loading}
+                className='inline-flex items-center justify-center px-4 py-2 rounded-md bg-black text-white disabled: opacity-50 dark:bg-white dark:text-black'>,
+                {loading ? 'Matching…' : 'Find Matches'}
               </button>,
               {error && <p className='text-red-60o0 text-sm'>{error}</p>}
             </form>,
           </section>,
           <section className='space-y-4'>,
-            {favorites.length > 0 && (,
+            {favorites.length > 0 && (
               <div className='p-4 border rounded-xl bg-yellow-50 dark: bg-yellow-90o0/20 text-sm'>,
                 <div className='font-medium mb-1'>Saved to dashboard</div>,
                 <div className='flex flex-wrap gap-2'>,
-                  {favorites.map(f => (,
-                    <span key={f,} className='px-2 py-0.5 rounded-md border'>,
+                  {favorites.map(f => (
+                    <span key={f} className='px-2 py-0.5 rounded-md border'>,
                       {f}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
-              </div>,
-            )}
-            {investors.length === 0 && !loading && (,
+              </div>)}
+            {investors.length === 0 && !loading && (
               <div className='p-6 border rounded-2xl text-sm opacity-70'>,
                 No results yet. Submit the form to see recommendations.,
-              </div>,
-            )}
-            {investors.map(inv => (,
-              <article,
+              </div>)}
+            {investors.map(inv => (
+              <article
                 key={inv.name}
-                className='p-5 border rounded-2xl bg-white/60 dark: bg-white/5',
-              >,
+                className='p-5 border rounded-2xl bg-white/60 dark: bg-white/5'>,
                 <div className='flex items-start justify-between gap-4'>,
                   <div>,
-                    <h3 className='text-lg font-semibold'>{inv.name,}</h3>,
+                    <h3 className='text-lg font-semibold'>{inv.name}</h3>,
                     <div className='text-sm opacity-70 flex gap-2 flex-wrap'>,
-                      {inv.type && (,
+                      {inv.type && (
                         <span className='px-2 py-0.5 rounded-md border'>,
                           {inv.type}
-                        </span>,
-                      )}
-                      {inv.stages?.length ? (,
+                        </span>)}
+                      {inv.stages?.length ? (
                         <span className='px-2 py-0.5 rounded-md border'>,
                           {inv.stages.join(', ')}
-                        </span>,
-                      ) : null}
+                        </span>) : null}
                       <span className='px-2 py-0.5 rounded-md border'>,
-                        Score: {Math.round(inv.relevance_score),}
+                        Score: {Math.round(inv.relevance_score)}
                       </span>,
                     </div>,
                   </div>,
-                  <button,
+                  <button
                     onClick={() => toggleFavorite(inv.name)}
-                    className={`px-3 py-1 rounded-md border text-sm ${favorites.includes(inv.name) ? 'bg-yellow-10o0 dark: bg-yellow-90o0/30' : '',}`}
+                    className={`px-3 py-1 rounded-md border text-sm ${favorites.includes(inv.name) ? 'bg-yellow-10o0 dark: bg-yellow-90o0/30' : ''}`}
                   >,
                     {favorites.includes(inv.name) ? 'Saved' : 'Save'}
                   </button>,
                 </div>,
                 <p className='text-sm mt-2'>{inv.why_fit}</p>,
-                {inv.notable_investments?.length ? (,
+                {inv.notable_investments?.length ? (
                   <p className='text-sm mt-2 opacity-80'>,
                     Notable investments: {inv.notable_investments.join(', ')}
-                  </p>,
-                ) : null}
+                  </p>) : null}
                 <div className='flex flex-wrap items-center gap-3 mt-3 text-sm'>,
-                  <a,
+                  <a
                     className='underline',
                     href={inv.website}
                     target='_blank',
-                    rel='noreferrer',
-                  >,
+                    rel='noreferrer'>,
                     Website,
                   </a>,
-                  {inv.contact ? (,
+                  {inv.contact ? (
                     <span className='opacity-70'>,
                       Contact hidden — available via intro,
-                    </span>,
-                  ) : (,
+                    </span>) : (
                     <span className='opacity-70'>,
                       Contact not publicly listed,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <div className='flex gap-2 mt-4'>,
-                  <button,
+                  <button
                     onClick={() => alert('Intro request sent (mock).')}
-                    className='px-3 py-2 rounded-md border text-sm',
-                  >,
+                    className='px-3 py-2 rounded-md border text-sm'>,
                     Contact via Intro,
                   </button>,
-                  <button,
+                  <button
                     onClick={() => generateEmail(inv)}
-                    className='px-3 py-2 rounded-md border text-sm',
-                  >,
+                    className='px-3 py-2 rounded-md border text-sm'>,
                     Generate Custom Pitch Email,
                   </button>,
                 </div>,
-              </article>,
-            ))}
+              </article>))}
           </section>,
-        </div>,
-      )}
-    </EnhancedLayout>,
-  ),
-}
+        </div>)}
+    </EnhancedLayout>)}
 ,

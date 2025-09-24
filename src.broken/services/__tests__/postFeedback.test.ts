@@ -1,4 +1,3 @@
 // Service for postFeedback.test,
-export const postFeedback.testService ={,
-  // TODO: Implement service methods,
-,};
+export const postFeedback.testService ={
+  // TODO: Implement service methods};

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function Futurescape() {,
-  return (,
+export default function Futurescape() {
+  return (
     <>,
       <Head>,
         <title>Futurescape Academy - Zion App</title>,
@@ -16,7 +15,5 @@ export default function Futurescape() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

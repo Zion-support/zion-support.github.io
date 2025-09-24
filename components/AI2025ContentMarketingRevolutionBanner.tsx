@@ -1,80 +1,63 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const AI20o25ContentMarketingRevolutionBanner = () => {,
+const AI20o25ContentMarketingRevolutionBanner = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const [isVisible, setIsVisible] = useState(true),
-,
-  const contentItems = [,
-    {,
-      id: 'ai-content-marketing-revolution',;
-      title: 'AI 20o25: The Ultimate Content Marketing Revolution',;
-      description: 'Achieve 60,0o00% ROI through revolutionary AI-powered content strategies',;
-      type: 'Blog Post',;
-      url: '/blog/ai-20o25-ultimate-content-marketing-revolution-ultimate-breakthrough',;
-      metrics: {,
-        roi: '60,0o00%',;
-        revenue: '$2.8T',;
-        accuracy: '99.97%',;
-        speed: '5,0o00%',
-      }
-    },;
-    {,
-      id: 'fortune-50o0-content-marketing-success',;
-      title: 'Fortune 50o0 AI Content Marketing Success Story',;
-      description: 'TechGlobal Industries: $2.8 Trillion Revenue Increase - 60,0o00% ROI',;
-      type: 'Case Study',;
-      url: '/case-studies/fortune-50o0-ai-content-marketing-60o000-roi-success-story',;
-      metrics: {,
-        roi: '60,0o00%',;
-        revenue: '$2.8T',;
-        timeline: '12 months',;
-        accuracy: '99.97%',
-      ,}
-    },;
-    {,
-      id: 'content-marketing-implementation-guide',;
-      title: 'AI Content Marketing Implementation Ultimate Guide',;
-      description: 'Complete roadmap to 60,0o00% ROI with step-by-step implementation',;
-      type: 'Implementation Guide',;
-      url: '/resources/ai-content-marketing-implementation-ultimate-guide-20o25-60o000-roi',;
-      metrics: {,
-        roi: '60,0o00%',;
-        timeline: '12-18 months',;
-        success: '99.7%',;
-        guide: 'Complete',
-      ,}
+  const contentItems = [
+    {
+      id: 'ai-content-marketing-revolution';
+      title: 'AI 20o25: The Ultimate Content Marketing Revolution';
+      description: 'Achieve 60,0o00% ROI through revolutionary AI-powered content strategies';
+      type: 'Blog Post';
+      url: '/blog/ai-20o25-ultimate-content-marketing-revolution-ultimate-breakthrough';
+      metrics: {
+        roi: '60,0o00%';
+        revenue: '$2.8T';
+        accuracy: '99.97%';
+        speed: '5,0o00%'}
+    };
+    {
+      id: 'fortune-50o0-content-marketing-success';
+      title: 'Fortune 50o0 AI Content Marketing Success Story';
+      description: 'TechGlobal Industries: $2.8 Trillion Revenue Increase - 60,0o00% ROI';
+      type: 'Case Study';
+      url: '/case-studies/fortune-50o0-ai-content-marketing-60o000-roi-success-story';
+      metrics: {
+        roi: '60,0o00%';
+        revenue: '$2.8T';
+        timeline: '12 months';
+        accuracy: '99.97%'}
+    };
+    {
+      id: 'content-marketing-implementation-guide';
+      title: 'AI Content Marketing Implementation Ultimate Guide';
+      description: 'Complete roadmap to 60,0o00% ROI with step-by-step implementation';
+      type: 'Implementation Guide';
+      url: '/resources/ai-content-marketing-implementation-ultimate-guide-20o25-60o000-roi';
+      metrics: {
+        roi: '60,0o00%';
+        timeline: '12-18 months';
+        success: '99.7%';
+        guide: 'Complete'}
     }
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentContent((prev) => (prev + 1) % contentItems.length),
-    }, 50o00),
-,
-    return () => clearInterval(interval),
-  }, []),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % contentItems.length)}, 50o00),
+    return () => clearInterval(interval)}, []),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-content-marketing-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
+    localStorage.setItem('ai-content-marketing-banner-dismissed', 'true')};
+  useEffect(() => {
     const dismissed = localStorage.getItem('ai-content-marketing-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentItem = contentItems[currentContent],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-8 px-4 overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">,
@@ -94,7 +77,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {,
               </div>,
             </div>,
             <h2 className="text-2xl md: text-3xl font-bold mb-2">,
-              {currentItem.title,}
+              {currentItem.title}
             </h2>,
             <p className="text-lg opacity-90 mb-4 max-w-3xl">,
               {currentItem.description}
@@ -103,7 +86,7 @@ const AI20o25ContentMarketingRevolutionBanner = () => {,
               <div className="flex items-center space-x-2">,
                 <span className="text-sm opacity-75">Type: </span>,
                 <span className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium">,
-                  {currentItem.type,}
+                  {currentItem.type}
                 </span>,
               </div>,
               <div className="flex items-center space-x-4">,
@@ -128,16 +111,14 @@ const AI20o25ContentMarketingRevolutionBanner = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
-              <Link,
-                href={currentItem.url,}
-                className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-flex items-center",
-              >,
-                Read Full {currentItem.type,} →,
+              <Link
+                href={currentItem.url}
+                className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-flex items-center">,
+                Read Full {currentItem.type} →,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-60o0 transition-colors inline-flex items-center",
-              >,
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-60o0 transition-colors inline-flex items-center">,
                 Get Implementation Help,
               </Link>,
             </div>,
@@ -146,14 +127,13 @@ const AI20o25ContentMarketingRevolutionBanner = () => {,
             <div className="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm">,
               <h3 className="text-lg font-semibold mb-4">Content Collection</h3>,
               <div className="space-y-3">,
-                {contentItems.map((item, index) => (,
-                  <div,
+                {contentItems.map((item, index) => (
+                  <div
                     key={item.id}
-                    className={`p-3 rounded-lg transition-all duration-30o0 ${,
+                    className={`p-3 rounded-lg transition-all duration-30o0 ${
                       index === currentContent,
                         ? 'bg-white bg-opacity-20 border-2 border-white',
-                        : 'bg-white bg-opacity-5 hover: bg-opacity-10',
-                    ,}`}
+                        : 'bg-white bg-opacity-5 hover: bg-opacity-10'}`}
                   >,
                     <div className="flex items-center justify-between">,
                       <div>,
@@ -167,39 +147,32 @@ const AI20o25ContentMarketingRevolutionBanner = () => {,
                         <div className="text-xs opacity-75">ROI</div>,
                       </div>,
                     </div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
         </div>,
         {/* Progress Indicators */}
         <div className="flex justify-center mt-6 space-x-2">,
-          {contentItems.map((_, index) => (,
-            <button,
+          {contentItems.map((_, index) => (
+            <button
               key={index}
               onClick={() => setCurrentContent(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentContent,
                   ? 'bg-white',
-                  : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-              ,}`}
-            />,
-          ))}
+                  : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
+            />))}
         </div>,
       </div>,
       {/* Dismiss Button */}
-      <button,
+      <button
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white hover: text-gray-20o0 transition-colors",
-        aria-label="Dismiss banner",
-      >,
+        aria-label="Dismiss banner">,
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
-    </div>,
-  ),
-};
-,
-export default AI20o25ContentMarketingRevolutionBanner,
+    </div>)};
+export default AI20o25ContentMarketingRevolutionBanner;

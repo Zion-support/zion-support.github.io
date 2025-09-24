@@ -1,7 +1,6 @@
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react',
-,
-export function EnterpriseTrustBadges() {,
-  return (,
+export function EnterpriseTrustBadges() {
+  return (
     <section className='py-10 px-4 md: px-6 border-t border-b border-border'>,
       <div className='container mx-auto max-w-6xl'>,
         <div className='text-center mb-8'>,
@@ -31,7 +30,5 @@ export function EnterpriseTrustBadges() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

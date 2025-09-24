@@ -1,59 +1,47 @@
 "use client",
 import React, { useState, useEffect } from 'react',
-,
-const InteractiveROICalculator20o25 = () => {,
-  const [formData, setFormData] = useState({,
-    companySize: 'small',;
-    industry: 'manufacturing',;
-    currentRevenue: 10o000000,;
-    currentEmployees: 10o0,;
-    currentEfficiency: 70,;
-    aiInvestment: 50o0000,;
-    implementationTime: 12,
-  ,}),
-,
-  const [results, setResults] = useState({,
-    projectedROI: 0,;
-    costSavings: 0,;
-    revenueIncrease: 0,;
-    paybackPeriod: 0,;
-    efficiencyGain: 0,;
-    productivityBoost: 0,
-  ,}),
-,
-  const industryMultipliers ={,
-    manufacturing: { roi: 1.5, efficiency: 1.3, productivity: 1.4 ,},;
-    healthcare: { roi: 1.8, efficiency: 1.5, productivity: 1.6 ,},;
-    financial: { roi: 1.6, efficiency: 1.4, productivity: 1.5 ,},;
-    retail: { roi: 1.3, efficiency: 1.2, productivity: 1.3 ,},;
-    technology: { roi: 1.4, efficiency: 1.3, productivity: 1.4 ,},;
-    other: { roi: 1.2, efficiency: 1.1, productivity: 1.2 ,}
+const InteractiveROICalculator20o25 = () => {
+  const [formData, setFormData] = useState({
+    companySize: 'small';
+    industry: 'manufacturing';
+    currentRevenue: 10o000000;
+    currentEmployees: 10o0;
+    currentEfficiency: 70;
+    aiInvestment: 50o0000;
+    implementationTime: 12}),
+  const [results, setResults] = useState({
+    projectedROI: 0;
+    costSavings: 0;
+    revenueIncrease: 0;
+    paybackPeriod: 0;
+    efficiencyGain: 0;
+    productivityBoost: 0}),
+  const industryMultipliers ={
+    manufacturing: { roi: 1.5, efficiency: 1.3, productivity: 1.4 };
+    healthcare: { roi: 1.8, efficiency: 1.5, productivity: 1.6 };
+    financial: { roi: 1.6, efficiency: 1.4, productivity: 1.5 };
+    retail: { roi: 1.3, efficiency: 1.2, productivity: 1.3 };
+    technology: { roi: 1.4, efficiency: 1.3, productivity: 1.4 };
+    other: { roi: 1.2, efficiency: 1.1, productivity: 1.2 }
   };
-,
-  const sizeMultipliers ={,
-    small: { baseROI: 80o0, baseEfficiency: 25, baseProductivity: 20o0 ,},;
-    medium: { baseROI: 120o0, baseEfficiency: 35, baseProductivity: 280 ,},;
-    large: { baseROI: 180o0, baseEfficiency: 45, baseProductivity: 350 ,},;
-    enterprise: { baseROI: 250o0, baseEfficiency: 55, baseProductivity: 40o0 ,}
+  const sizeMultipliers ={
+    small: { baseROI: 80o0, baseEfficiency: 25, baseProductivity: 20o0 };
+    medium: { baseROI: 120o0, baseEfficiency: 35, baseProductivity: 280 };
+    large: { baseROI: 180o0, baseEfficiency: 45, baseProductivity: 350 };
+    enterprise: { baseROI: 250o0, baseEfficiency: 55, baseProductivity: 40o0 }
   };
-,
-  useEffect(() => {,
-    calculateROI(),
-  }, [formData]),
-,
-  const calculateROI = () => {,
+  useEffect(() => {
+    calculateROI()}, [formData]),
+  const calculateROI = () => {
     const industry = industryMultipliers[formData.industry],
     const size = sizeMultipliers[formData.companySize],
-,
     // Base calculations,
     const baseROI = size.baseROI * industry.roi,
     const baseEfficiencyGain = size.baseEfficiency * industry.efficiency,
     const baseProductivityBoost = size.baseProductivity * industry.productivity,
-,
     // Revenue-based calculations,
     const revenueMultiplier = Math.log10(formData.currentRevenue / 10o00000) + 1,
     const employeeMultiplier = Math.log10(formData.currentEmployees / 10) + 1,
-,
     // Final calculations,
     const projectedROI = Math.round(baseROI * revenueMultiplier * employeeMultiplier),
     const costSavings = Math.round(formData.currentRevenue * (baseEfficiencyGain / 10o0) * 0.3),
@@ -61,39 +49,27 @@ const InteractiveROICalculator20o25 = () => {,
     const paybackPeriod = Math.round((formData.aiInvestment / (costSavings + revenueIncrease)) * 12),
     const efficiencyGain = Math.round(baseEfficiencyGain),
     const productivityBoost = Math.round(baseProductivityBoost),
-,
-    setResults({,
-      projectedROI,;
-      costSavings,;
-      revenueIncrease,;
-      paybackPeriod,;
-      efficiencyGain,;
-      productivityBoost,
-    }),
-  };
-,
-  const handleInputChange = (field: string, value: any) => {,
-    setFormData(prev => ({,
-      ...prev,;
-      [field]: value,
-    })),
-  };
-,
-  const formatNumber = (num: number) => {,
-    if (num >= 10o00000000) {,
-      return `$${(num / 10o00000000).toFixed(1),}B`,
-    } else if (num >= 10o00000) {,
-      return `$${(num / 10o00000).toFixed(1)}M`,
-    } else if (num >= 10o00) {,
-      return `$${(num / 10o00).toFixed(0)}K`,
-    }
-    return `$${num.toLocaleString()}`,
-  };
-,
-  return (,
+    setResults({
+      projectedROI;
+      costSavings;
+      revenueIncrease;
+      paybackPeriod;
+      efficiencyGain;
+      productivityBoost})};
+  const handleInputChange = (field: string, value: any) => {
+    setFormData(prev => ({
+      ...prev;
+      [field]: value}))};
+  const formatNumber = (num: number) => {
+    if (num >= 10o00000000) {
+      return `$${(num / 10o00000000).toFixed(1)}B`} else if (num >= 10o00000) {
+      return `$${(num / 10o00000).toFixed(1)}M`} else if (num >= 10o00) {
+      return `$${(num / 10o00).toFixed(0)}K`}
+    return `$${num.toLocaleString()}`};
+  return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">,
             <span className="mr-2">🧮</span>,
@@ -109,7 +85,7 @@ const InteractiveROICalculator20o25 = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
-          {/* Input Form */,}
+          {/* Input Form */}
           <div className="bg-white rounded-2xl shadow-2xl p-8">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-8">Your Company Details</h3>,
             <div className="space-y-6">,
@@ -119,25 +95,23 @@ const InteractiveROICalculator20o25 = () => {,
                   Company Size,
                 </label>,
                 <div className="grid grid-cols-2 gap-3">,
-                  {[,
-                    { value: 'small', label: 'Small (10-50 employees)', icon: '🏢' ,},;
-                    { value: 'medium', label: 'Medium (51-20o0 employees)', icon: '🏭' ,},;
-                    { value: 'large', label: 'Large (20o1-10o00 employees)', icon: '🏢' ,},;
-                    { value: 'enterprise', label: 'Enterprise (10o00+ employees)', icon: '🏗️' ,}
-                  ].map((size) => (,
-                    <button,
+                  {[
+                    { value: 'small', label: 'Small (10-50 employees)', icon: '🏢' };
+                    { value: 'medium', label: 'Medium (51-20o0 employees)', icon: '🏭' };
+                    { value: 'large', label: 'Large (20o1-10o00 employees)', icon: '🏢' };
+                    { value: 'enterprise', label: 'Enterprise (10o00+ employees)', icon: '🏗️' }
+                  ].map((size) => (
+                    <button
                       key={size.value}
                       onClick={() => handleInputChange('companySize', size.value)}
-                      className={`p-4 rounded-xl border-2 transition-all duration-30o0 ${,
+                      className={`p-4 rounded-xl border-2 transition-all duration-30o0 ${
                         formData.companySize === size.value,
                           ? 'border-purple-50o0 bg-purple-50 text-purple-70o0',
-                          : 'border-gray-20o0 hover: border-gray-30o0 text-gray-70o0',
-                      ,}`}
+                          : 'border-gray-20o0 hover: border-gray-30o0 text-gray-70o0'}`}
                     >,
                       <div className="text-2xl mb-2">{size.icon}</div>,
                       <div className="text-sm font-semibold">{size.label}</div>,
-                    </button>,
-                  ))}
+                    </button>))}
                 </div>,
               </div>,
               {/* Industry */}
@@ -145,11 +119,10 @@ const InteractiveROICalculator20o25 = () => {,
                 <label className="block text-sm font-semibold text-gray-70o0 mb-3">,
                   Industry,
                 </label>,
-                <select,
+                <select
                   value={formData.industry}
                   onChange={(e) => handleInputChange('industry', e.target.value)}
-                  className="w-full p-4 border-2 border-gray-20o0 rounded-xl focus: border-purple-50o0 focus:outline-none transition-colors",
-                >,
+                  className="w-full p-4 border-2 border-gray-20o0 rounded-xl focus: border-purple-50o0 focus:outline-none transition-colors">,
                   <option value="manufacturing">Manufacturing</option>,
                   <option value="healthcare">Healthcare</option>,
                   <option value="financial">Financial Services</option>,
@@ -158,14 +131,14 @@ const InteractiveROICalculator20o25 = () => {,
                   <option value="other">Other</option>,
                 </select>,
               </div>,
-              {/* Current Revenue */,}
+              {/* Current Revenue */}
               <div>,
                 <label className="block text-sm font-semibold text-gray-70o0 mb-3">,
                   Annual Revenue,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-50o0">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={formData.currentRevenue}
                     onChange={(e) => handleInputChange('currentRevenue', parseInt(e.target.value) || 0)}
@@ -179,7 +152,7 @@ const InteractiveROICalculator20o25 = () => {,
                 <label className="block text-sm font-semibold text-gray-70o0 mb-3">,
                   Number of Employees,
                 </label>,
-                <input,
+                <input
                   type="number",
                   value={formData.currentEmployees}
                   onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
@@ -187,12 +160,12 @@ const InteractiveROICalculator20o25 = () => {,
                   placeholder="10o0",
                 />,
               </div>,
-              {/* Current Efficiency */,}
+              {/* Current Efficiency */}
               <div>,
                 <label className="block text-sm font-semibold text-gray-70o0 mb-3">,
                   Current Operational Efficiency (%),
                 </label>,
-                <input,
+                <input
                   type="range",
                   min="20",
                   max="95",
@@ -213,7 +186,7 @@ const InteractiveROICalculator20o25 = () => {,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-50o0">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={formData.aiInvestment}
                     onChange={(e) => handleInputChange('aiInvestment', parseInt(e.target.value) || 0)}
@@ -227,7 +200,7 @@ const InteractiveROICalculator20o25 = () => {,
                 <label className="block text-sm font-semibold text-gray-70o0 mb-3">,
                   Implementation Timeline (months),
                 </label>,
-                <input,
+                <input
                   type="range",
                   min="6",
                   max="36",
@@ -316,7 +289,7 @@ const InteractiveROICalculator20o25 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Disclaimer */,}
+        {/* Disclaimer */}
         <div className="mt-12 text-center">,
           <p className="text-sm text-gray-50o0 max-w-4xl mx-auto">,
             * These projections are based on industry averages and our experience with 50o0+ AI implementations.,
@@ -325,8 +298,5 @@ const InteractiveROICalculator20o25 = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default InteractiveROICalculator20o25,
+    </section>)};
+export default InteractiveROICalculator20o25;

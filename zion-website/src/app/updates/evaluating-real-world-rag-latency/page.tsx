@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function EvaluatingRealWorldRagLatencyPage() {,
-  return (,
+import React from 'react';
+export default function EvaluatingRealWorldRagLatencyPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-16 lg: px-8'>,
         <div className='mb-6 flex items-center gap-3 text-xs text-gray-40o0'>,
@@ -14,7 +13,7 @@ export default function EvaluatingRealWorldRagLatencyPage() {,
           Evaluating Real-World RAG Latency,
         </h1>,
         <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
-          Measure what matters in production: tail latency, retrieval hit rate,;
+          Measure what matters in production: tail latency, retrieval hit rate;
           and answer quality. This guide covers practical instrumentation,
           patterns, load generation, and dashboards to ensure your,
           retrieval-augmented systems meet user expectations.,
@@ -34,15 +33,12 @@ export default function EvaluatingRealWorldRagLatencyPage() {,
           </p>,
         </div>,
         <div className='mt-10'>,
-          <a,
+          <a
             href='/contact',
-            className='text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0',
-          >,
+            className='text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0'>,
             Get the reference dashboard →,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

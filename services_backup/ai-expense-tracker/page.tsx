@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Expense Tracker | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Expense Tracker | Zion Tech Group';
   description:,
-    'Smart expense tracking and financial management powered by AI. Automate receipt processing, categorization, and expense reporting.',;
+    'Smart expense tracking and financial management powered by AI. Automate receipt processing, categorization, and expense reporting.';
 };
-,
-export default function AIExpenseTrackerPage() {,
-  return (,
+export default function AIExpenseTrackerPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,32 +23,32 @@ export default function AIExpenseTrackerPage() {,
             Key Features,
           </h2>,
           <div className='space-y-4'>,
-            <FeatureItem,
+            <FeatureItem
               icon='📸',
               title='Smart Receipt Scanning',
               description='Take a photo of any receipt and our AI automatically extracts merchant, amount, date, and category information.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🏷️',
               title='Auto-Categorization',
               description='AI-powered expense categorization that learns from your patterns and automatically sorts expenses by type.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Real-time Analytics',
               description='Comprehensive dashboards showing spending patterns, budget tracking, and financial insights.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='💼',
               title='Business Integration',
               description='Seamlessly integrate with accounting software like QuickBooks, Xero, and SAP for streamlined workflows.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🔍',
               title='Expense Search & Filter',
               description='Powerful search capabilities to find any expense instantly, with advanced filtering by date, category, or amount.',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📱',
               title='Mobile App',
               description='Full-featured mobile app for iOS and Android with offline capability and receipt scanning on the go.',
@@ -60,47 +58,47 @@ export default function AIExpenseTrackerPage() {,
         <div>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               plan='Personal',
               price='$9',
               period='per month',
               description='Perfect for individuals and freelancers',
-              features={[,
-                'Up to 10o0 receipts per month',;
-                'Basic categorization',;
-                'Expense reports',;
-                'Mobile app access',;
-                'Email support',;
+              features={[
+                'Up to 10o0 receipts per month';
+                'Basic categorization';
+                'Expense reports';
+                'Mobile app access';
+                'Email support';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Business',
               price='$29',
               period='per month',
               description='Ideal for small to medium businesses',
-              features={[,
-                'Up to 50o0 receipts per month',;
-                'Advanced AI categorization',;
-                'Team collaboration',;
-                'Accounting integrations',;
-                'Priority support',;
-                'Custom reporting',;
+              features={[
+                'Up to 50o0 receipts per month';
+                'Advanced AI categorization';
+                'Team collaboration';
+                'Accounting integrations';
+                'Priority support';
+                'Custom reporting';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$99',
               period='per month',
               description='For large organizations with complex needs',
-              features={[,
-                'Unlimited receipts',;
-                'Custom AI training',;
-                'Advanced analytics',;
-                'Dedicated support',;
-                'Custom integrations',;
-                'On-premise deployment',;
+              features={[
+                'Unlimited receipts';
+                'Custom AI training';
+                'Advanced analytics';
+                'Dedicated support';
+                'Custom integrations';
+                'On-premise deployment';
               ]}
               popular={false}
             />,
@@ -112,17 +110,17 @@ export default function AIExpenseTrackerPage() {,
           How It Works,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <StepCard,
+          <StepCard
             step='1',
             title='Capture Receipts',
             description='Take photos of receipts or upload PDFs. Our AI instantly extracts all relevant information.',
           />,
-          <StepCard,
+          <StepCard
             step='2',
             title='AI Processing',
             description='Advanced AI categorizes expenses, detects duplicates, and flags potential issues or policy violations.',
           />,
-          <StepCard,
+          <StepCard
             step='3',
             title='Track & Report',
             description='View real-time analytics, generate reports, and export data to your accounting system.',
@@ -234,16 +232,14 @@ export default function AIExpenseTrackerPage() {,
           tracker to streamline their financial management.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -251,54 +247,47 @@ export default function AIExpenseTrackerPage() {,
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   plan: string,
   price: string,
   period: string,
   description: string,
   features: string[],
-  popular: boolean,
-,}) {,
-  return (,
-    <div,
+  popular: boolean}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-blue-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -306,34 +295,28 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map(feature => (,
+        {features.map(feature => (
           <li key={feature} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function StepCard({,
-  step,;
-  title,;
-  description,;
-}: {,
+function StepCard({
+  step;
+  title;
+  description;
+}: {
   step: string,
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <div className='w-12 h-12 bg-blue-60o0 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>,
         {step}
       </div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

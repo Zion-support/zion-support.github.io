@@ -3,8 +3,7 @@ import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
-,
-interface TalentResultsProps {,
+interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
   viewProfile: (id: string) => void,
@@ -12,7 +11,7 @@ interface TalentResultsProps {,
   savedTalents: string[],
   handleToggleSave: (id: stringisSaved: boolean) => void,
   isAuthenticated: boolean,
-  activeFiltersProps: {,
+  activeFiltersProps: {
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -23,31 +22,29 @@ interface TalentResultsProps {,
     setPriceRange: (range: [number]) => void,
     experienceRange: [number],
     setExperienceRange: (range: [number]) => void,
-    clearFilters: () => void,
-  ,}
+    clearFilters: () => void}
 }
 ,
-export function TalentResults({,
-  filteredTalents,;
-  isLoading,;
-  viewProfile,;
-  handleRequestHire,;
-  savedTalents,;
-  handleToggleSave,;
-  isAuthenticated,;
-  activeFiltersProps,
-}: TalentResultsProps) {,
-  return (,
+export function TalentResults({
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+  activeFiltersProps}: TalentResultsProps) {
+  return (
     <div className="flex-1">,
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />,
       {/* Results count */}
-      <ResultsHeader,
+      <ResultsHeader
         isLoading={isLoading} ,
         resultCount={filteredTalents.length} ,
       />,
       {/* Talents grid */}
-      <TalentGrid,
+      <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
@@ -58,7 +55,5 @@ export function TalentResults({,
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
       />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

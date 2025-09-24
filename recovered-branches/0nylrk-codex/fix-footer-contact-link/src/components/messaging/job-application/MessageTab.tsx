@@ -1,45 +1,41 @@
-import React from "react",
+import React from "react";
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
-import React from 'react',;
-import { Textarea } from "@/components/ui/textarea",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
+import React from 'react';;
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
-export interface MessageTabProps {,
+export interface MessageTabProps {
   message: string,
   setMessage: (message: string) => void,
   proposalLink: string,
   setProposalLink: (link: string) => void,
-,
-export interface MessageTabProps {,
+export interface MessageTabProps {
   message: string,
   setMessage: (message: string) => void,
   proposalLink: string,
-  setProposalLink: (link: string) => void,
-,}
-export function MessageTab({,
+  setProposalLink: (link: string) => void}
+export function MessageTab({
   message,
   setMessage,
   proposalLink,
-  setProposalLink,
-}: MessageTabProps) {,
-export interface MessageTabProps {,
-  message: string,;
-  setMessage: (message: string) => void,;
-  proposalLink: string,;
-  setProposalLink: (link: string) => void,
-,}
+  setProposalLink}: MessageTabProps) {
+export interface MessageTabProps {
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void}
 ,
-export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {,
-  return (,
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
+  return (
     <div className="space-y-4">,
       <div>,
         <Label htmlFor="message" className="text-white">,
           Application Message,
         </Label>,
-        <Textarea,
+        <Textarea
           id="message",
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -49,7 +45,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
       </div>,
       <div>,
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>,
-        <Input,
+        <Input
           id="proposalLink",
           type="url",
           value={proposalLink}
@@ -58,26 +54,23 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white",
           placeholder="https: //...",
         />,
-      </div>,
-  ),
-export interface MessageTabProps {,
-  message: string,;
+      </div>),
+export interface MessageTabProps {
+  message: string;
   setMessage: (message: string) => void,
   proposalLink: string,
-,
-  setProposalLink: (link: string) => void,
-,}
+  setProposalLink: (link: string) => void}
 export /**,
  * MessageTab - Function description,
  */,
-function MessageTab() {,
-  return (,
+function MessageTab() {
+  return (
     <div className="space - y-4">,
       <div>,
         <Label html_for="message" className="text - white">,
           Application Message,
         </Label>,
-        <Textarea,
+        <Textarea
           id="message",
           value={message}
           on_change={(e) => set_message (e.target.value)}
@@ -89,7 +82,7 @@ function MessageTab() {,
         <Label html_for="proposal_link" className="text - white">,
           Link to Proposal / Portfolio (Optional),
         </Label>,
-        <Input,
+        <Input
           id="proposal_link",
           type="url",
           value={proposal_link}
@@ -98,33 +91,27 @@ function MessageTab() {,
           placeholder="https: //...",
         />,
       </div>,
-,
-    </div>),
-,
-,}
+    </div>)}
 ,
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white",
           placeholder="https: //...",
         />,
       </div>,
-    </div>,
+    </div>)}
   ),
-,}
-  ),
-export interface MessageTabProps {,
-  message: string,;
+export interface MessageTabProps {
+  message: string;
   setMessage: (message: string) => void,
   proposalLink: string,
-  setProposalLink: (link: string) => void,
-,}
+  setProposalLink: (link: string) => void}
 ,
-export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {,
-  return (,
+export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
+  return (
     <div className="space-y-4">,
       <div>,
         <Label htmlFor="message" className="text-white">Application Message</Label>,
-        <Textarea,
+        <Textarea
           id="message",
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -134,7 +121,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
       </div>,
       <div>,
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>,
-        <Input,
+        <Input
           id="proposalLink",
           type="url",
           value={proposalLink}
@@ -143,10 +130,5 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="https: //...",
         />,
       </div>,
-    </div>,
-  ),
-,}
-,
-,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}
+    </div>)}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function 20o25ComprehensiveNewServicesShowcasePage() {,
-  return (,
+export default function 20o25ComprehensiveNewServicesShowcasePage() {
+  return (
     <>,
       <Head>,
         <title>20o25 Comprehensive New Services Showcase - Zion Tech Group</title>,
@@ -16,6 +15,4 @@ export default function 20o25ComprehensiveNewServicesShowcasePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

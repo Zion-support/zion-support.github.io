@@ -1,6 +1,4 @@
 'use client',
-,
-export default function RevolutionaryAIContentBanner() {,
-  return null,
-}
+export default function RevolutionaryAIContentBanner() {
+  return null}
 ,

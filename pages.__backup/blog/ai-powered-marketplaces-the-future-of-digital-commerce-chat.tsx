@@ -1,16 +1,15 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {,
-  return (,
+const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           AiPoweredMarketplacesTheFutureOfDigitalCommerceChat - Zion Tech,
           Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='AiPoweredMarketplacesTheFutureOfDigitalCommerceChat blog post',
         />,
@@ -20,9 +19,5 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat,
-,
+    </div>)};
+export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat;

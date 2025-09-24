@@ -1,56 +1,48 @@
 "use client",
 import { useState } from 'react',
-,
 export type FeedbackContext = { actionType?: string, metadata?: any };
-,
-export default function FeedbackModal({,
-  isOpen,;
-  onClose,;
-  defaultContext,;
-  defaultKind = 'general',;
-  userHeaders}: {,
+export default function FeedbackModal({
+  isOpen;
+  onClose;
+  defaultContext;
+  defaultKind = 'general';
+  userHeaders}: {
   isOpen: boolean,
   onClose: (submitted: boolean) => void,
   defaultContext?: FeedbackContext,
   defaultKind?: 'general' | 'bug' | 'feature',
-  userHeaders?: Record<string>,
-,}) {,
+  userHeaders?: Record<string>}) {
   const [ratingsetRating] = useState<number>(0),
   const [hoversetHover] = useState<number>(0),
   const [kindsetKind] = useState<'general' | 'bug' | 'feature'>(defaultKind),
   const [commentsetComment] = useState(''),
   const [loadingsetLoading] = useState(false),
-,
   if (!isOpen) return null,
-,
-  async function submit() {,
+  async function submit() {
     if (rating < 1) return onClose(false),
     setLoading(true),
-    try {,
-      await fetch('/api/feedback'{,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json'...(userHeaders || {,}) },;
-        body: JSON.stringify({ ratingcommentkindcontext: defaultContext || {,} })}),
-    } catch {}
+    try {
+      await fetch('/api/feedback'{
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json'...(userHeaders || {}) };
+        body: JSON.stringify({ ratingcommentkindcontext: defaultContext || {} })})} catch {}
     setLoading(false),
-    onClose(true),
-  }
+    onClose(true)}
 ,
-  return (,
+  return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">,
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">,
         <div className="text-lg font-medium">Was this helpful?</div>,
         <div className="flex gap-2">,
-          {[1,2,3,4,5].map(n => (,
-            <button,
+          {[1,2,3,4,5].map(n => (
+            <button
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
               className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
               aria-label={`${n} stars`}
-            >★</button>,
-          ))}
+            >★</button>))}
         </div>,
         <div className="text-sm">,
           <label className="block mb-1">Optional comment</label>,
@@ -69,7 +61,5 @@ export default function FeedbackModal({,
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

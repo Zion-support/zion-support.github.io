@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AugmentedRealityInEnterpriseApplicationsChatPage() {,
-  return (,
+export default function AugmentedRealityInEnterpriseApplicationsChatPage() {
+  return (
     <>,
       <Head>,
         <title>Augmented Reality In Enterprise Applications Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function AugmentedRealityInEnterpriseApplicationsChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

@@ -1,13 +1,10 @@
-interface StructuredDataProps {,
-  data: object,
-,}
+interface StructuredDataProps {
+  data: object}
 ,
-export default function StructuredData({ data }: StructuredDataProps) {,
-  return (,
-    <script,
+export default function StructuredData({ data }: StructuredDataProps) {
+  return (
+    <script
       type='application/ld+json',
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) ,}}
-    />,
-  ),
-}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />)}
 ,

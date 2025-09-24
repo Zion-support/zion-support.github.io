@@ -1,70 +1,55 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Search,;
-  Grid,;
-  List,;
-  Brain,;
-  ArrowRight,;
-  Check,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Globe,;
+import {
+  Search;
+  Grid;
+  List;
+  Brain;
+  ArrowRight;
+  Check;
+  Star;
+  TrendingUp;
+  Zap;
+  Globe;
 } from 'lucide-react',
 import { cuttingEdgeFuturisticServices } from '../data/20o25-cutting-edge-futuristic-services',
-,
 // Helper function to get service category,
-const getServiceCategory = (service: { category?: string, type?: string ,}) => {,
+const getServiceCategory = (service: { category?: string, type?: string }) => {
   if (service.category) return service.category,
   if (service.type) return service.type,
-  return 'Other',
-};
-,
+  return 'Other'};
 // Helper function to get service features,
-const getServiceFeatures = (service: {,
+const getServiceFeatures = (service: {
   features?: string[],
-  keyFeatures?: string[],
-,}) => {,
+  keyFeatures?: string[]}) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return [],
-};
-,
+  return []};
 // Helper function to get service description,
-const getServiceDescription = (service: {,
+const getServiceDescription = (service: {
   description?: string,
-  tagline?: string,
-,}) => {,
+  tagline?: string}) => {
   if (service.description) return service.description,
   if (service.tagline) return service.tagline,
-  return 'No description available',
-};
-,
-const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
+  return 'No description available'};
+const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<,
-    'name' | 'price' | 'rating' | 'popularity',
-  >('popularity'),
-,
+    'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Get unique categories,
-  const categories = [,
-    'All',;
-    ...Array.from(,
-      new Set(,
+  const categories = [
+    'All';
+    ...Array.from(
+      new Set(
         cuttingEdgeFuturisticServices.map(service =>,
-          getServiceCategory(service),
-        ),
-      ),
-    ),;
+          getServiceCategory(service))));
   ],
-,
   // Filter and sort services,
   const filteredServices = cuttingEdgeFuturisticServices,
-    .filter(service => {,
+    .filter(service => {
       const matchesSearch =,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -72,49 +57,43 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
       const matchesCategory =,
         selectedCategory === 'All' ||,
         getServiceCategory(service) === selectedCategory,
-      return matchesSearch && matchesCategory,
-    }),
-    .sort((a, b) => {,
-      switch (sortBy) {,
+      return matchesSearch && matchesCategory}),
+    .sort((a, b) => {
+      switch (sortBy) {
         case 'name':,
           return a.name.localeCompare(b.name),
-        case 'price': {,
+        case 'price': {
           const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')),
           const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')),
-          return priceA - priceB,
-        }
+          return priceA - priceB}
         case 'rating':,
           return (b.rating || 0) - (a.rating || 0),
         case 'popularity':,
         default: ,
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
-      ,}
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)}
     }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-      },;
-    },;
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+      };
+    };
   };
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='20o25 Cutting-Edge Futuristic Services Showcase | Zion Tech Group',
         description='Discover our revolutionary cutting-edge futuristic services including quantum AI, autonomous systems, holographic technology, and more. Transform your business with next-generation solutions.',
         keywords='cutting-edge services, futuristic technology, quantum AI, autonomous systems, holographic technology, AI automation, quantum computing, neural interfaces',
@@ -124,9 +103,9 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-5xl md: text-7xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
@@ -139,7 +118,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
               Experience the future of technology with our revolutionary,
-              services that combine quantum computing, autonomous AI,;
+              services that combine quantum computing, autonomous AI;
               holographic technology, and neural interfaces to transform your,
               business.,
             </p>,
@@ -169,11 +148,11 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
         <div className='max-w-7xl mx-auto'>,
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20'>,
             <div className='flex flex-col lg:flex-row gap-6 items-center'>,
-              {/* Search */,}
+              {/* Search */}
               <div className='flex-1 w-full'>,
                 <div className='relative'>,
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-                  <input,
+                  <input
                     type='text',
                     placeholder='Search cutting-edge services...',
                     value={searchTerm}
@@ -182,56 +161,49 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
                   />,
                 </div>,
               </div>,
-              {/* Category Filter */,}
+              {/* Category Filter */}
               <div className='flex gap-2'>,
-                {categories.map(category => (,
-                  <button,
+                {categories.map(category => (
+                  <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${,
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category,
                         ? 'bg-purple-60o0 text-white shadow-lg',
-                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                    ,}`}
+                        : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                   >,
                     {category}
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
               {/* Sort */}
-              <select,
+              <select
                 value={sortBy}
                 onChange={e =>,
-                  setSortBy(,
-                    e.target.value as 'name' | 'price' | 'rating' | 'popularity',
-                  ),
-                }
-                className='px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0',
-              >,
+                  setSortBy(
+                    e.target.value as 'name' | 'price' | 'rating' | 'popularity')}
+                className='px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0'>,
                 <option value='popularity'>Most Popular</option>,
                 <option value='rating'>Highest Rated</option>,
                 <option value='price'>Price: Low to High</option>,
                 <option value='name'>Name: A to Z</option>,
               </select>,
-              {/* View Mode */,}
+              {/* View Mode */}
               <div className='flex gap-2'>,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-20o0 ${,
+                  className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'grid',
                       ? 'bg-purple-60o0 text-white',
-                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  ,}`}
+                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-20o0 ${,
+                  className={`p-2 rounded-lg transition-all duration-20o0 ${
                     viewMode === 'list',
                       ? 'bg-purple-60o0 text-white',
-                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20',
-                  ,}`}
+                      : 'bg-white/10 text-gray-40o0 hover: bg-white/20'}`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -244,47 +216,44 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
       <section className='px-4 sm: px-6 lg:px-8 pb-20'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial='hidden',
             animate='visible',
-            className={,
+            className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
-                : 'space-y-6',
-            ,}
+                : 'space-y-6'}
           >,
-            {filteredServices.map(service => (,
+            {filteredServices.map(service => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className={`group ${,
+                className={`group ${
                   viewMode === 'grid',
                     ? 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0',
-                ,}`}
+                    : 'bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0'}`}
               >,
                 {/* Service Header */}
                 <div className='flex items-start justify-between mb-4'>,
                   <div className='flex items-center gap-3'>,
-                    <div,
+                    <div
                       className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center text-2xl`}
                     >,
                       {service.icon}
                     </div>,
                     <div>,
                       <h3 className='text-xl font-bold text-white group-hover: text-purple-30o0 transition-colors duration-20o0'>,
-                        {service.name,}
+                        {service.name}
                       </h3>,
                       <p className='text-sm text-gray-40o0'>,
                         {getServiceCategory(service)}
                       </p>,
                     </div>,
                   </div>,
-                  {service.popular && (,
+                  {service.popular && (
                     <span className='px-2 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white text-xs font-medium rounded-full'>,
                       Popular,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 {/* Service Description */}
                 <p className='text-gray-30o0 mb-4 line-clamp-3'>,
@@ -298,20 +267,17 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
                   <div className='grid grid-cols-1 gap-1'>,
                     {getServiceFeatures(service),
                       .slice(0, 3),
-                      .map((feature, index) => (,
-                        <div,
+                      .map((feature, index) => (
+                        <div
                           key={index}
-                          className='flex items-center gap-2 text-sm text-gray-40o0',
-                        >,
+                          className='flex items-center gap-2 text-sm text-gray-40o0'>,
                           <Check className='w-4 h-4 text-green-40o0 flex-shrink-0' />,
                           <span className='line-clamp-1'>{feature}</span>,
-                        </div>,
-                      ))}
-                    {getServiceFeatures(service).length > 3 && (,
+                        </div>))}
+                    {getServiceFeatures(service).length > 3 && (
                       <p className='text-xs text-gray-50o0 mt-1'>,
                         +{getServiceFeatures(service).length - 3} more features,
-                      </p>,
-                    )}
+                      </p>)}
                   </div>,
                 </div>,
                 {/* Service Stats */}
@@ -357,16 +323,15 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
                     <span className='text-sm text-gray-40o0'>,
                       Innovation Level: ,
                     </span>,
-                    <span,
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${,
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service.innovationLevel === 'Revolutionary',
                           ? 'bg-red-50o0/20 text-red-40o0',
                           : service.innovationLevel === 'Breakthrough',
                             ? 'bg-orange-50o0/20 text-orange-40o0',
                             : service.innovationLevel === 'Advanced',
                               ? 'bg-blue-50o0/20 text-blue-40o0',
-                              : 'bg-green-50o0/20 text-green-40o0',
-                      ,}`}
+                              : 'bg-green-50o0/20 text-green-40o0'}`}
                     >,
                       {service.innovationLevel}
                     </span>,
@@ -383,14 +348,13 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
                   <p className='text-sm text-green-30o0'>{service.roi}</p>,
                 </div>,
                 {/* Action Button */}
-                <a,
+                <a
                   href={service.link}
-                  className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg',
-                >,
+                  className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg'>,
                   Explore Service,
                   <ArrowRight className='w-4 h-4' />,
                 </a>,
-                {/* Contact Info */,}
+                {/* Contact Info */}
                 <div className='mt-4 pt-4 border-t border-white/10'>,
                   <div className='text-center'>,
                     <p className='text-xs text-gray-40o0 mb-2'>,
@@ -403,11 +367,10 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
                     </div>,
                   </div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
           {/* No Results */}
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <div className='text-center py-20'>,
               <div className='w-24 h-24 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center'>,
                 <Search className='w-12 h-12 text-gray-40o0' />,
@@ -418,20 +381,18 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
               <p className='text-gray-40o0'>,
                 Try adjusting your search terms or filters,
               </p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* CTA Section */}
       <section className='px-4 sm: px-6 lg:px-8 pb-20'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Ready to Experience the Future?,
             </h2>,
@@ -440,25 +401,19 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {,
               Get in touch to discuss how we can revolutionize your operations.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='mailto:kleber@ziontechgroup.com',
-                className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-20o0 hover:transform hover:scale-10o5 hover:shadow-lg'>,
                 Contact Us,
               </a>,
-              <a,
+              <a
                 href='tel:+130o24640950',
-                className='bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-xl border border-white/20 transition-all duration-20o0 hover:transform hover:scale-10o5',
-              >,
+                className='bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-xl border border-white/20 transition-all duration-20o0 hover:transform hover:scale-10o5'>,
                 Call Now,
               </a>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default CuttingEdgeFuturisticServicesShowcase,
-,
+    </div>)};
+export default CuttingEdgeFuturisticServicesShowcase;

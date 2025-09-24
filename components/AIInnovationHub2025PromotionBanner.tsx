@@ -1,120 +1,102 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Rocket,
   Target,
   ArrowRight,
   Star,
-  TrendingUp,;
-  Users,;
-  Shield,;
-  Globe,;
-  X,;
-  Play,;
-  Download,;
-  Search,;
-  Grid,;
-  List,;
-  Crown,;
-  Gem,;
-  Sparkles,;
-  CheckCircle,;
-  Award,;
-  Code,;
-  Settings,;
-  Wrench,;
-  Eye,;
-  BarChart3,;
-  MessageCircle,;
-  Building,
-} from 'lucide-react',
-,
-const AIInnovationHub20o25PromotionBanner = () => {,
+  TrendingUp;
+  Users;
+  Shield;
+  Globe;
+  X;
+  Play;
+  Download;
+  Search;
+  Grid;
+  List;
+  Crown;
+  Gem;
+  Sparkles;
+  CheckCircle;
+  Award;
+  Code;
+  Settings;
+  Wrench;
+  Eye;
+  BarChart3;
+  MessageCircle;
+  Building} from 'lucide-react',
+const AIInnovationHub20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentInnovationsetCurrentInnovation] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
     // Auto-rotate innovations,
-    const interval = setInterval(() => {,
-      setCurrentInnovation((prev) => (prev + 1) % innovations.length),
-    }40o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const innovations = [,
-    {,
-      icon: Brain,;
-      title: 'Neural Architecture Search',;
-      description: 'Automated discovery of optimal neural networks',;
-      category: 'AI Core',;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      rating: 4.9,;
-      downloads: '50K+',
-    ,},;
-    {,
-      icon: Zap,;
-      title: 'Quantum Neural Networks',;
-      description: 'Hybrid quantum-classical neural networks',;
-      category: 'Quantum AI',;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      rating: 4.8,;
-      downloads: '25K+',
-    ,},;
-    {,
-      icon: Shield,;
-      title: 'Federated Learning',;
-      description: 'Privacy-preserving distributed ML',;
-      category: 'Privacy AI',;
-      color: 'from-green-50o0 to-emerald-50o0',;
-      rating: 4.7,;
-      downloads: '75K+',
-    ,},;
-    {,
-      icon: Rocket,;
-      title: 'Edge AI Computing',;
-      description: 'Ultra-low latency distributed processing',;
-      category: 'Future Tech',;
-      color: 'from-orange-50o0 to-red-50o0',;
-      rating: 4.7,;
-      downloads: '35K+',
-    ,}
+    const interval = setInterval(() => {
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length)}40o00),
+    return () => clearInterval(interval)}[]),
+  const innovations = [
+    {
+      icon: Brain;
+      title: 'Neural Architecture Search';
+      description: 'Automated discovery of optimal neural networks';
+      category: 'AI Core';
+      color: 'from-purple-50o0 to-pink-50o0';
+      rating: 4.9;
+      downloads: '50K+'};
+    {
+      icon: Zap;
+      title: 'Quantum Neural Networks';
+      description: 'Hybrid quantum-classical neural networks';
+      category: 'Quantum AI';
+      color: 'from-blue-50o0 to-cyan-50o0';
+      rating: 4.8;
+      downloads: '25K+'};
+    {
+      icon: Shield;
+      title: 'Federated Learning';
+      description: 'Privacy-preserving distributed ML';
+      category: 'Privacy AI';
+      color: 'from-green-50o0 to-emerald-50o0';
+      rating: 4.7;
+      downloads: '75K+'};
+    {
+      icon: Rocket;
+      title: 'Edge AI Computing';
+      description: 'Ultra-low latency distributed processing';
+      category: 'Future Tech';
+      color: 'from-orange-50o0 to-red-50o0';
+      rating: 4.7;
+      downloads: '35K+'}
   ],
-,
-  const categories = [,
-    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain ,},;
-    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target ,},;
-    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket ,},;
-    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench ,}
+  const categories = [
+    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain };
+    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target };
+    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket };
+    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench }
   ],
-,
-  const stats = [,
-    { number: '40o0+'label: 'AI 'Innovations', 'icon: Brain ,},;
-    { number: '1M+'label: ''Downloads', 'icon: Download ,},;
-    { number: '4.8'label: 'Average 'Rating', 'icon: Star ,},;
-    { number: '50+'label: ''Categories', 'icon: Grid ,}
+  const stats = [
+    { number: '40o0+'label: 'AI 'Innovations', 'icon: Brain };
+    { number: '1M+'label: ''Downloads', 'icon: Download };
+    { number: '4.8'label: 'Average 'Rating', 'icon: Star };
+    { number: '50+'label: ''Categories', 'icon: Grid }
   ],
-,
   if (isDismissed) return null,
-,
-  return (,
+  return (
     <AnimatePresence>,
-      {isVisible && (,
+      {isVisible && (
         <motion.div,
-          initial={{ opacity: 0, y: -10o0 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -10o0 ,}}
-          transition={{ duration: 0.6ease: "easeOut" ,}}
-          className="relative overflow-hidden",
-        >,
+          initial={{ opacity: 0, y: -10o0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10o0 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
+          className="relative overflow-hidden">,
           {/* Main Banner */}
           <div className="relative bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">,
             {/* Animated Background */}
@@ -126,14 +108,13 @@ const AIInnovationHub20o25PromotionBanner = () => {,
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 py-12">,
               <div className="flex flex-col lg: flex-row items-center justify-between gap-12">,
-                {/* Left Content */,}
+                {/* Left Content */}
                 <div className="flex-1 text-center lg: text-left">,
                   <motion.div,
-                    initial={{ opacity: 0x: -50 ,}}
-                    animate={{ opacity: 1x: 0 ,}}
-                    transition={{ duration: 0.8delay: 0.2 ,}}
-                    className="mb-8",
-                  >,
+                    initial={{ opacity: 0x: -50 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.8delay: 0.2 }}
+                    className="mb-8">,
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full text-white text-sm font-semibold mb-6">,
                       <Crown className="w-4 h-4 mr-2"  />,
                       🚀 NEW: AI Innovation Hub 20o25,
@@ -149,14 +130,13 @@ const AIInnovationHub20o25PromotionBanner = () => {,
                       find everything you need to build the future.,
                     </p>,
                   </motion.div>,
-                  {/* Rotating Innovation Showcase */,}
+                  {/* Rotating Innovation Showcase */}
                   <motion.div,
                     key={currentInnovation}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.5 ,}}
-                    className="mb-8",
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-8">,
                     <div className={`inline-flex items-center px-6 py-4 bg-gradient-to-r ${innovations[currentInnovation].color} rounded-2xl text-white max-w-md`}>,
                       <innovations[currentInnovation].icon className="w-8 h-8 mr-4"  />,
                       <div className="flex-1">,
@@ -177,44 +157,39 @@ const AIInnovationHub20o25PromotionBanner = () => {,
                   </motion.div>,
                   {/* Categories */}
                   <motion.div,
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8delay: 0.4 ,}}
-                    className="mb-8",
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8delay: 0.4 }}
+                    className="mb-8">,
                     <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
-                      {categories.map((categoryindex) => (,
-                        <div key={index,} className="text-center">,
+                      {categories.map((categoryindex) => (
+                        <div key={index} className="text-center">,
                           <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full mb-2">,
                             <category.icon className="w-6 h-6 text-white"  />,
                           </div>,
                           <div className="text-white font-semibold text-sm">{category.name}</div>,
                           <div className="text-gray-40o0 text-xs">{category.count}</div>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </motion.div>,
                   {/* Stats */}
                   <motion.div,
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8delay: 0.6 ,}}
-                    className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
-                  >,
-                    {stats.map((statindex) => (,
-                      <div key={index,} className="text-center">,
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8delay: 0.6 }}
+                    className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">,
+                    {stats.map((statindex) => (
+                      <div key={index} className="text-center">,
                         <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>,
                         <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </motion.div>,
                   {/* Action Buttons */}
                   <motion.div,
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8delay: 0.8 ,}}
-                    className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start",
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8delay: 0.8 }}
+                    className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start">,
                     <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center group">,
                       <Search className="w-5 h-5 mr-2"  />,
                       Explore Hub,
@@ -226,13 +201,12 @@ const AIInnovationHub20o25PromotionBanner = () => {,
                     </button>,
                   </motion.div>,
                 </div>,
-                {/* Right Content - Visual */,}
+                {/* Right Content - Visual */}
                 <motion.div,
-                  initial={{ opacity: 0x: 50 ,}}
-                  animate={{ opacity: 1x: 0 ,}}
-                  transition={{ duration: 0.8delay: 0.4 ,}}
-                  className="flex-1 max-w-lg",
-                >,
+                  initial={{ opacity: 0x: 50 }}
+                  animate={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.8delay: 0.4 }}
+                  className="flex-1 max-w-lg">,
                   <div className="relative">,
                     {/* Main Visual Card */}
                     <div className="bg-gradient-to-br from-purple-60o0/20 to-blue-60o0/20 backdrop-blur-sm rounded-3xl p-8 border border-white/20">,
@@ -249,46 +223,41 @@ const AIInnovationHub20o25PromotionBanner = () => {,
                       </div>,
                       {/* Feature Grid */}
                       <div className="grid grid-cols-2 gap-4 mb-6">,
-                        {[,
-                          { icon: Brainlabel: 'Neural 'Networks', 'color: 'from-purple-50o0 to-pink-50o0' ,},;
-                          { icon: Zaplabel: 'Quantum 'AI', 'color: 'from-blue-50o0 to-cyan-50o0' ,},;
-                          { icon: Shieldlabel: 'Privacy 'AI', 'color: 'from-green-50o0 to-emerald-50o0' ,},;
-                          { icon: Rocketlabel: 'Edge 'Computing', 'color: 'from-orange-50o0 to-red-50o0' ,}
-                        ].map((featureindex) => (,
+                        {[
+                          { icon: Brainlabel: 'Neural 'Networks', 'color: 'from-purple-50o0 to-pink-50o0' };
+                          { icon: Zaplabel: 'Quantum 'AI', 'color: 'from-blue-50o0 to-cyan-50o0' };
+                          { icon: Shieldlabel: 'Privacy 'AI', 'color: 'from-green-50o0 to-emerald-50o0' };
+                          { icon: Rocketlabel: 'Edge 'Computing', 'color: 'from-orange-50o0 to-red-50o0' }
+                        ].map((featureindex) => (
                           <div key={index} className={`bg-gradient-to-r ${feature.color} rounded-xl p-4 text-center`}>,
                             <feature.icon className="w-6 h-6 text-white mx-auto mb-2"  />,
                             <div className="text-white text-sm font-semibold">{feature.label}</div>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                       {/* Quick Stats */}
                       <div className="space-y-3">,
-                        {[,
-                          '40o0+ AI Innovations',;
-                          '1M+ Downloads',;
-                          '4.8/5 Average Rating',;
-                          '50+ Categories',
-                        ].map((statindex) => (,
+                        {[
+                          '40o0+ AI Innovations';
+                          '1M+ Downloads';
+                          '4.8/5 Average Rating';
+                          '50+ Categories'].map((statindex) => (
                           <div key={index} className="flex items-center">,
                             <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />,
                             <span className="text-gray-30o0 text-sm">{stat}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     {/* Floating Elements */}
                     <motion.div,
-                      animate={{ y: [0-10] ,}}
-                      transition={{ duration: 2repeat: Infinityease: "easeInOut" ,}}
-                      className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full flex items-center justify-center",
-                    >,
+                      animate={{ y: [0-10] }}
+                      transition={{ duration: 2repeat: Infinityease: "easeInOut" }}
+                      className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full flex items-center justify-center">,
                       <Award className="w-8 h-8 text-white"  />,
                     </motion.div>,
                     <motion.div,
-                      animate={{ y: [0o10] ,}}
-                      transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 ,}}
-                      className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-40o0 to-emerald-40o0 rounded-full flex items-center justify-center",
-                    >,
+                      animate={{ y: [0o10] }}
+                      transition={{ duration: 2.5repeat: Infinityease: "easeInOut"delay: 0.5 }}
+                      className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-40o0 to-emerald-40o0 rounded-full flex items-center justify-center">,
                       <Sparkles className="w-6 h-6 text-white"  />,
                     </motion.div>,
                   </div>,
@@ -296,19 +265,14 @@ const AIInnovationHub20o25PromotionBanner = () => {,
               </div>,
             </div>,
             {/* Dismiss Button */}
-            <button,
+            <button
               onClick={() => setIsDismissed(true)}
-              className="absolute top-4 right-4 p-2 text-white/70 hover: text-white transition-colors duration-30o0",
-            >,
+              className="absolute top-4 right-4 p-2 text-white/70 hover: text-white transition-colors duration-30o0">,
               <X className="w-6 h-6"  />,
             </button>,
           </div>,
-          {/* Bottom Gradient */,}
+          {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0"  />,
-        </motion.div>,
-      )}
-    </AnimatePresence>,
-  ),
-};
-,
-export default AIInnovationHub20o25PromotionBanner,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default AIInnovationHub20o25PromotionBanner;

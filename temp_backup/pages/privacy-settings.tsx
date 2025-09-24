@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PrivacySettingsPage() {,
-  return (,
+export default function PrivacySettingsPage() {
+  return (
     <>,
       <Head>,
         <title>Privacy Settings - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function PrivacySettingsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

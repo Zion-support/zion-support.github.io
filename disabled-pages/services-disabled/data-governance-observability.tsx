@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function DataGovernanceObservability(...args: any[]): any {,
-  return (,
+export default function DataGovernanceObservability(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Data Governance & Observability — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='End-to-end lineage, quality checks, and compliance reporting across your data platform.',
         />,
@@ -49,7 +48,5 @@ export default function DataGovernanceObservability(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

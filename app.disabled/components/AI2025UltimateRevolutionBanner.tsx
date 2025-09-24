@@ -1,67 +1,50 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const AI20o25UltimateRevolutionBanner = () => {,
+const AI20o25UltimateRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isVisible, setIsVisible] = useState(true),
-,
-  const content = [,
-    {,
-      title: "AI 20o25: The Ultimate AI Revolution",;
-      subtitle: "Ultimate Breakthrough Guide to 30,0o00% ROI",;
-      description: "Discover how Fortune 50o0 companies are achieving extraordinary results through next-generation AI implementations.",;
-      metrics: "30,0o00% ROI • $150B Savings • 99.99% Accuracy",;
-      cta: "Download Ultimate Guide",;
-      link: "/resources/ai-revolution-implementation-ultimate-guide-20o25",;
-      type: "Ultimate Guide",
-    ,},;
-    {,
-      title: "Fortune 50o0 AI Revolution Success",;
-      subtitle: "$150B Annual Savings - 30,0o00% ROI Success Story",;
-      description: "Learn how a Fortune 50 manufacturing company achieved the highest documented ROI in AI transformation history.",;
-      metrics: "30,0o00% ROI • $150B Savings • 18 Months",;
-      cta: "Read Success Story",;
-      link: "/case-studies/fortune-50o0-ai-revolution-30o000-roi-success-story",;
-      type: "Case Study",
-    ,},;
-    {,
-      title: "Revolutionary AI Technologies",;
-      subtitle: "Quantum-Enhanced AI • Neural Superintelligence • Synthetic Intelligence",;
-      description: "Explore the cutting-edge AI technologies transforming business operations and delivering unprecedented results.",;
-      metrics: "1,0o00x Processing • 99.99% Accuracy • 5,0o00% Efficiency",;
-      cta: "Explore Technologies",;
-      link: "/blog/ai-20o25-ultimate-ai-revolution-20o25-ultimate-breakthrough",;
-      type: "Blog Post",
-    ,}
+  const content = [
+    {
+      title: "AI 20o25: The Ultimate AI Revolution";
+      subtitle: "Ultimate Breakthrough Guide to 30,0o00% ROI";
+      description: "Discover how Fortune 50o0 companies are achieving extraordinary results through next-generation AI implementations.";
+      metrics: "30,0o00% ROI • $150B Savings • 99.99% Accuracy";
+      cta: "Download Ultimate Guide";
+      link: "/resources/ai-revolution-implementation-ultimate-guide-20o25";
+      type: "Ultimate Guide"};
+    {
+      title: "Fortune 50o0 AI Revolution Success";
+      subtitle: "$150B Annual Savings - 30,0o00% ROI Success Story";
+      description: "Learn how a Fortune 50 manufacturing company achieved the highest documented ROI in AI transformation history.";
+      metrics: "30,0o00% ROI • $150B Savings • 18 Months";
+      cta: "Read Success Story";
+      link: "/case-studies/fortune-50o0-ai-revolution-30o000-roi-success-story";
+      type: "Case Study"};
+    {
+      title: "Revolutionary AI Technologies";
+      subtitle: "Quantum-Enhanced AI • Neural Superintelligence • Synthetic Intelligence";
+      description: "Explore the cutting-edge AI technologies transforming business operations and delivering unprecedented results.";
+      metrics: "1,0o00x Processing • 99.99% Accuracy • 5,0o00% Efficiency";
+      cta: "Explore Technologies";
+      link: "/blog/ai-20o25-ultimate-ai-revolution-20o25-ultimate-breakthrough";
+      type: "Blog Post"}
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % content.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, [content.length]),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 50o00),
+    return () => clearInterval(timer)}, [content.length]),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-ultimate-revolution-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
+    localStorage.setItem('ai20o25-ultimate-revolution-banner-dismissed', 'true')};
+  useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-ultimate-revolution-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = content[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -76,7 +59,7 @@ const AI20o25UltimateRevolutionBanner = () => {,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
         <div className="flex items-center justify-between">,
-          {/* Content */,}
+          {/* Content */}
           <div className="flex-1 pr-8">,
             <div className="flex items-center space-x-4 mb-4">,
               <div className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold">,
@@ -87,10 +70,10 @@ const AI20o25UltimateRevolutionBanner = () => {,
               </div>,
             </div>,
             <h2 className="text-2xl md: text-3xl font-bold mb-2 bg-gradient-to-r from-white to-blue-20o0 bg-clip-text text-transparent">,
-              {currentContent.title,}
+              {currentContent.title}
             </h2>,
             <h3 className="text-lg md: text-xl text-blue-20o0 mb-3">,
-              {currentContent.subtitle,}
+              {currentContent.subtitle}
             </h3>,
             <p className="text-gray-20o0 mb-4 max-w-2xl">,
               {currentContent.description}
@@ -98,30 +81,28 @@ const AI20o25UltimateRevolutionBanner = () => {,
             <div className="flex flex-wrap items-center gap-4 mb-6">,
               <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">,
                 <span className="text-sm font-medium text-yellow-30o0">Success Metrics: </span>,
-                <span className="ml-2 text-sm text-white">{currentContent.metrics,}</span>,
+                <span className="ml-2 text-sm text-white">{currentContent.metrics}</span>,
               </div>,
             </div>,
             <div className="flex flex-wrap gap-4">,
-              <Link,
+              <Link
                 href={currentContent.link}
-                className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-semibold hover: from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-              >,
-                {currentContent.cta,}
+                className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-3 rounded-lg font-semibold hover: from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
+                {currentContent.cta}
               </Link>,
-              <Link,
+              <Link
                 href="/ai-revolution-20o25",
-                className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover: bg-white/10 transition-all duration-30o0",
-              >,
+                className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover: bg-white/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
-          {/* Visual Elements */,}
+          {/* Visual Elements */}
           <div className="hidden lg: block relative">,
             <div className="w-64 h-64 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-full flex items-center justify-center">,
               <div className="text-6xl">🤖</div>,
             </div>,
-            {/* Floating Metrics */,}
+            {/* Floating Metrics */}
             <div className="absolute -top-4 -right-4 bg-green-50o0 text-black px-3 py-1 rounded-full text-sm font-bold animate-pulse">,
               30,0o00% ROI,
             </div>,
@@ -135,29 +116,23 @@ const AI20o25UltimateRevolutionBanner = () => {,
         </div>,
         {/* Progress Indicators */}
         <div className="flex justify-center space-x-2 mt-6">,
-          {content.map((_, index) => (,
-            <button,
+          {content.map((_, index) => (
+            <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                index === currentSlide ? 'bg-white' : 'bg-white/30',
-              }`}
-            />,
-          ))}
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'}`}
+            />))}
         </div>,
       </div>,
       {/* Dismiss Button */}
-      <button,
+      <button
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors duration-20o0",
-        aria-label="Dismiss banner",
-      >,
+        aria-label="Dismiss banner">,
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
-    </div>,
-  ),
-};
-,
-export default AI20o25UltimateRevolutionBanner,
+    </div>)};
+export default AI20o25UltimateRevolutionBanner;

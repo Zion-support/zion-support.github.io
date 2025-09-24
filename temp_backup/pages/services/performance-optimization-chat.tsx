@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PerformanceOptimizationChatPage() {,
-  return (,
+export default function PerformanceOptimizationChatPage() {
+  return (
     <>,
       <Head>,
         <title>Performance Optimization Chat - Zion Tech Group</title>,
@@ -18,7 +17,5 @@ export default function PerformanceOptimizationChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

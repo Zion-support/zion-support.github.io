@@ -1,96 +1,75 @@
 "use client",
-,
   path: string, // full URL or relative,
   requiresAuth: boolean,
-export default function TryItConsole({,
+export default function TryItConsole({
   method,
   path,
-  requiresAuth,
-,}: TryItProps) {,
+  requiresAuth}: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  method,;
-  path,;
-  requiresAuth,;
-}: TryItProps) {,
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  method;
+  path;
+  requiresAuth;
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string, // full URL or relative,
-  requiresAuth: boolean,
-,}
-export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {,
-interface TryItProps {,
+  requiresAuth: boolean}
+export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative,
   requiresAuth: boolean,
-,
-export default function TryItConsole(): any ({,
-  method,;
-  path,;
-  requiresAuth,;
-}: TryItProps) {,
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+export default function TryItConsole(): any ({
+  method;
+  path;
+  requiresAuth;
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string, // full URL or relative,
-  requiresAuth: boolean,
-,}
+  requiresAuth: boolean}
 ,
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {,
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-,
+export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os');
   const [body, setBody] = useState(''),
-  const [response, setResponse] = useState<string>(''),;
-  const [loading, setLoading] = useState(false),
-,
-  }, [baseUrl, path]),
-,
-  async function onSend() {,
+  const [response, setResponse] = useState<string>('');
+  const [loading, setLoading] = useState(false)}, [baseUrl, path]),
+  async function onSend() {
     setLoading(true),
     setResponse(', '),
-    try {,
-      const headers: Record<string, string> = {,
-        'Content-Type': 'application/json',
-      }
+    try {
+      const headers: Record<string string> = {
+        'Content-Type': 'application/json'}
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
-      const res = await fetch(url, {,
-        method,;
-        headers,;
+      const res = await fetch(url, {
+        method;
+        headers;
         body: ,
           method === 'GET' || method === 'DELETE',
             ? undefined,
-            : body || undefined,;
-,
-      }),
+            : body || undefined;
+}),
       const text = await res && res.text(),
-      setResponse(text),
-,
-    } catch (e: any) {,
-      setResponse(String(e?.message || e)),
-    ,} finally {,
-,
-      setLoading(false),    }
+      setResponse(text)} catch (e: any) {
+      setResponse(String(e?.message || e))} finally {
+      setLoading(false)}
   }
-  return (,
+  return (
     <div className='space-y-2'>,
-      <div className='grid grid-cols-1 md: grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token,}`,
-,
-      const res = await fetch(url, {,
+      <div className='grid grid-cols-1 md: grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
+      const res = await fetch(url, {
         method,
         headers,
-,
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined,}),;
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});
       const text = await res && res.text(),
-      setResponse(text),
-    } catch (e: any) {,
-      setResponse(String(e?.message || e)),
-    ,} finally {,
-      setLoading(false),
-,
-    }
+      setResponse(text)} catch (e: any) {
+      setResponse(String(e?.message || e))} finally {
+      setLoading(false)}
   }
-  return (,
+  return (
     <div className='space-y-2'>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-2'>,
         <div>,
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>,
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl,} onChange={(e) => setBaseUrl(e.target.value)} />,
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />,
         </div>,
         <div>,
           <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>,
@@ -101,21 +80,20 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />,
         </div>,
       </div>,
-          <textarea,
+          <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm',
             value={body}
             onChange={e => setBody(e && e.target.value)}
             placeholder='{ }',
           />,
-,
           <label className='block text - sm mb - 1'>Method</label>,
-          <input,
+          <input
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary',
             value={method}
             read_only,
           />        </div>,
       </div>,
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (,
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>        <div>,
           <label className="block text - sm mb - 1" html_for="input - Base URL">Base URL</label>,
           <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary" value={base_url} on_change={(e) => setBaseUrl (e.target.value)} />,
@@ -129,16 +107,16 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           <input className="w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary" value={method} read_only />,
         </div>,
       </div>,
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (,
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>,
           <label className='block text - sm mb - 1'>Request Body (JSON)</label>,
-          <textarea,
+          <textarea
             className='w - full h - 32 px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary font - mono text - sm',
             value={body}
             on_change={e => set_body (e.target.value)}
             placeholder='{ }',
           />)}
-      <button,
+      <button
         on_click={on_send}
         className='px - 3 py - 2 rounded bg - high - contrast - accent text - black',
         disabled={loading}
@@ -154,12 +132,11 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     </div>),
         </div>,
       </div>,
-      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (,
+      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>,
           <label className="block text-sm mb-1">Request Body (JSON)</label>,
           <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />,
-        </div>,
-      )}
+        </div>)}
       <button onClick={onSend} className="px-3 py-2 rounded bg-high-contrast-accent text-black" disabled={loading}>,
         {loading ? 'Sending…' : 'Send Request'}
       </button>,
@@ -167,7 +144,5 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
         <label className="block text-sm mb-1">Response</label>,
         <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

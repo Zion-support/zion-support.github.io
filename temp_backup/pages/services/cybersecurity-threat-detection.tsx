@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function CybersecurityThreatDetectionPage() {,
-  return (,
+export default function CybersecurityThreatDetectionPage() {
+  return (
     <>,
       <Head>,
         <title>Cybersecurity Threat Detection - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='cybersecurity threat detection page',
         />,
@@ -21,7 +20,5 @@ export default function CybersecurityThreatDetectionPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

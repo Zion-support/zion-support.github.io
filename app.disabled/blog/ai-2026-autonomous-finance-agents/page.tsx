@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousFinanceAgents20o26 = () => {,
-  return (,
+const AutonomousFinanceAgents20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Finance Agents — From FP&A to Real-Time Treasury',
         description='How autonomous AI agents are transforming finance with real-time forecasting, risk management, and continuous close operations in 20o26.',
         keywords='autonomous finance, FP&A, treasury, real-time forecasting, AI agents, 20o26',
@@ -55,7 +54,7 @@ const AutonomousFinanceAgents20o26 = () => {,
           <p>,
             Event streams feed an agent orchestration layer connected to finance,
             systems (ERP, AP/AR, banking). Agents operate under policy, log,
-            decisions, and escalate exceptions to humans. Observability,;
+            decisions, and escalate exceptions to humans. Observability;
             auditing, and controls ensure compliance.,
           </p>,
           <h2>Getting Started</h2>,
@@ -73,23 +72,17 @@ const AutonomousFinanceAgents20o26 = () => {,
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Your Finance Roadmap,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousFinanceAgents20o26,
-,
+    </div>)};
+export default AutonomousFinanceAgents20o26;

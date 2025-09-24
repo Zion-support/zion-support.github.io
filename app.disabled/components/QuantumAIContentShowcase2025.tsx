@@ -1,115 +1,109 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const QuantumAIContentShowcase20o25 = () => {,
+const QuantumAIContentShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
-,
-  const quantumContent = [,
-    {,
-      id: 'quantum-computing-revolution',;
+  const quantumContent = [
+    {
+      id: 'quantum-computing-revolution';
       title:,
-        'AI 20o25: The Quantum Computing Revolution - Enterprise Breakthrough Guide',;
+        'AI 20o25: The Quantum Computing Revolution - Enterprise Breakthrough Guide';
       description:,
-        'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.',;
-      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough',;
-      type: 'blog',;
-      category: 'technology',;
-      metrics: {,
-        performance: '10o00%',;
-        accuracy: '99.9%',;
-        market: '$50B+',;
-        roi: '1,20o0%',;
-      },;
-      readingTime: '18 min read',;
-      featured: true,;
-      tags: [,
-        'Quantum Computing',;
-        'AI',;
-        'Enterprise',;
-        'Breakthrough',;
-        'Performance',;
-      ],;
-    },;
-    {,
-      id: 'fortune-50o0-quantum-success',;
+        'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.';
+      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough';
+      type: 'blog';
+      category: 'technology';
+      metrics: {
+        performance: '10o00%';
+        accuracy: '99.9%';
+        market: '$50B+';
+        roi: '1,20o0%';
+      };
+      readingTime: '18 min read';
+      featured: true;
+      tags: [
+        'Quantum Computing';
+        'AI';
+        'Enterprise';
+        'Breakthrough';
+        'Performance';
+      ];
+    };
+    {
+      id: 'fortune-50o0-quantum-success';
       title:,
-        'Fortune 50o0 Quantum AI Transformation 20o25: $2.1B Company Achieves 1,20o0% ROI',;
+        'Fortune 50o0 Quantum AI Transformation 20o25: $2.1B Company Achieves 1,20o0% ROI';
       description:,
-        'How a Fortune 50o0 manufacturing giant transformed their operations with quantum AI, achieving unprecedented efficiency and $180M in annual savings.',;
-      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success',;
-      type: 'case-study',;
-      category: 'success-story',;
-      metrics: {,
-        roi: '1,20o0%',;
-        savings: '$180M',;
-        efficiency: '78%',;
-        accuracy: '99.9%',;
-      },;
-      readingTime: '15 min read',;
-      featured: true,;
-      tags: [,
-        'Case Study',;
-        'Fortune 50o0',;
-        'Quantum AI',;
-        'Manufacturing',;
-        'ROI',;
-      ],;
-    },;
-    {,
-      id: 'quantum-implementation-guide',;
+        'How a Fortune 50o0 manufacturing giant transformed their operations with quantum AI, achieving unprecedented efficiency and $180M in annual savings.';
+      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success';
+      type: 'case-study';
+      category: 'success-story';
+      metrics: {
+        roi: '1,20o0%';
+        savings: '$180M';
+        efficiency: '78%';
+        accuracy: '99.9%';
+      };
+      readingTime: '15 min read';
+      featured: true;
+      tags: [
+        'Case Study';
+        'Fortune 50o0';
+        'Quantum AI';
+        'Manufacturing';
+        'ROI';
+      ];
+    };
+    {
+      id: 'quantum-implementation-guide';
       title:,
-        'Quantum AI Implementation Master Guide 20o25: From Strategy to 1,20o0% ROI',;
+        'Quantum AI Implementation Master Guide 20o25: From Strategy to 1,20o0% ROI';
       description:,
-        'Complete guide to implementing quantum AI in your enterprise, with proven strategies, technology stack, and ROI optimization techniques.',;
-      url: '/resources/quantum-ai-implementation-master-guide-20o25',;
-      type: 'resource',;
-      category: 'implementation',;
-      metrics: {,
-        roi: '1,20o0%',;
-        performance: '10o00%',;
-        accuracy: '99.9%',;
-        timeline: '18 months',;
-      },;
-      readingTime: '25 min read',;
-      featured: true,;
-      tags: [,
-        'Implementation Guide',;
-        'Quantum AI',;
-        'Strategy',;
-        'ROI',;
-        'Enterprise',;
-      ],;
-    },;
+        'Complete guide to implementing quantum AI in your enterprise, with proven strategies, technology stack, and ROI optimization techniques.';
+      url: '/resources/quantum-ai-implementation-master-guide-20o25';
+      type: 'resource';
+      category: 'implementation';
+      metrics: {
+        roi: '1,20o0%';
+        performance: '10o00%';
+        accuracy: '99.9%';
+        timeline: '18 months';
+      };
+      readingTime: '25 min read';
+      featured: true;
+      tags: [
+        'Implementation Guide';
+        'Quantum AI';
+        'Strategy';
+        'ROI';
+        'Enterprise';
+      ];
+    };
   ],
-,
-  const filters = [,
-    { id: 'all', label: 'All Content', count: quantumContent.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Blog Posts',;
-      count: quantumContent.filter(item => item.type === 'blog').length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
-      count: quantumContent.filter(item => item.type === 'case-study').length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Resources',;
-      count: quantumContent.filter(item => item.type === 'resource').length,;
-    },;
+  const filters = [
+    { id: 'all', label: 'All Content', count: quantumContent.length };
+    {
+      id: 'blog';
+      label: 'Blog Posts';
+      count: quantumContent.filter(item => item.type === 'blog').length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
+      count: quantumContent.filter(item => item.type === 'case-study').length;
+    };
+    {
+      id: 'resource';
+      label: 'Resources';
+      count: quantumContent.filter(item => item.type === 'resource').length;
+    };
   ],
-,
   const filteredContent =,
     activeFilter === 'all',
       ? quantumContent,
       : quantumContent.filter(item => item.type === activeFilter),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -117,12 +111,10 @@ const QuantumAIContentShowcase20o25 = () => {,
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    ,}
+        return '📄'}
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study':,
@@ -130,14 +122,12 @@ const QuantumAIContentShowcase20o25 = () => {,
       case 'resource':,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
-        return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+        return 'bg-gray-10o0 text-gray-80o0'}
   };
-,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full mb-4'>,
             <span className='text-3xl'>⚛️</span>,
@@ -152,32 +142,29 @@ const QuantumAIContentShowcase20o25 = () => {,
         </div>,
         {/* Filter Tabs */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {filters.map(filter => (,
-            <button,
+          {filters.map(filter => (
+            <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-20o0 ${,
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-20o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {filter.label}
               <span className='ml-2 text-sm opacity-75'>({filter.count})</span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {filteredContent.map(content => (,
-            <div,
-              key={content.id,}
-              className='bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden group',
-            >,
-              {/* Content Header */,}
+          {filteredContent.map(content => (
+            <div
+              key={content.id}
+              className='bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden group'>,
+              {/* Content Header */}
               <div className='p-6 border-b border-gray-10o0'>,
                 <div className='flex items-center justify-between mb-4'>,
-                  <span,
+                  <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(content.type)}`}
                   >,
                     {getTypeIcon(content.type)}{' '}
@@ -192,7 +179,7 @@ const QuantumAIContentShowcase20o25 = () => {,
                   </span>,
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors'>,
-                  {content.title,}
+                  {content.title}
                 </h3>,
                 <p className='text-gray-60o0 leading-relaxed'>,
                   {content.description}
@@ -201,7 +188,7 @@ const QuantumAIContentShowcase20o25 = () => {,
               {/* Metrics */}
               <div className='p-6'>,
                 <div className='grid grid-cols-2 gap-4 mb-6'>,
-                  {Object.entries(content.metrics).map(([key, value]) => (,
+                  {Object.entries(content.metrics).map(([key, value]) => (
                     <div key={key} className='text-center'>,
                       <div className='text-2xl font-bold text-purple-60o0'>,
                         {value}
@@ -209,47 +196,40 @@ const QuantumAIContentShowcase20o25 = () => {,
                       <div className='text-xs text-gray-50o0 capitalize'>,
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-6'>,
-                  {content.tags.slice(0, 3).map(tag => (,
-                    <span,
+                  {content.tags.slice(0, 3).map(tag => (
+                    <span
                       key={tag}
-                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full',
-                    >,
+                      className='px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full'>,
                       {tag}
-                    </span>,
-                  ))}
-                  {content.tags.length > 3 && (,
+                    </span>))}
+                  {content.tags.length > 3 && (
                     <span className='px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full'>,
                       +{content.tags.length - 3} more,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
-                <Link,
+                <Link
                   href={content.url}
-                  className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 group',
-                >,
+                  className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-20o0 group'>,
                   Read Full Article,
-                  <svg,
+                  <svg
                     className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 5l7 7-7 7',
                     />,
                   </svg>,
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Statistics */}
         <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
@@ -281,21 +261,19 @@ const QuantumAIContentShowcase20o25 = () => {,
             </div>,
           </div>,
           <div className='text-center mt-8'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 rounded-lg font-semibold hover: bg-purple-50 transition-colors',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 rounded-lg font-semibold hover: bg-purple-50 transition-colors'>,
               Start Your Quantum AI Journey,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -303,9 +281,5 @@ const QuantumAIContentShowcase20o25 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default QuantumAIContentShowcase20o25,
-,
+    </section>)};
+export default QuantumAIContentShowcase20o25;

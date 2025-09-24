@@ -1,8 +1,7 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   Search,
   Filter,
   Star,
@@ -10,146 +9,128 @@ import {,
   Clock,
   Eye,
   Heart,
-  MessageCircle,;
-  Bookmark,;
-  Share2,;
-  Play,;
-  ArrowRight,;
-  X,;
-  Zap,;
-  Brain,;
-  Globe,;
-  Shield,;
-  Infinity,;
-  Atom,;
-  CircuitBoard,;
-  Microscope,;
-  TestTube,;
-  Beaker,;
-  Dna,;
-  Activity,;
-  Cpu,;
-  Wifi,;
-  Lock,;
-  Target,;
-  Rocket,;
-  CheckCircle,
-} from 'lucide-react',
-,
-const UltimateContentDiscoveryWidget20o30 = () => {,
+  MessageCircle;
+  Bookmark;
+  Share2;
+  Play;
+  ArrowRight;
+  X;
+  Zap;
+  Brain;
+  Globe;
+  Shield;
+  Infinity;
+  Atom;
+  CircuitBoard;
+  Microscope;
+  TestTube;
+  Beaker;
+  Dna;
+  Activity;
+  Cpu;
+  Wifi;
+  Lock;
+  Target;
+  Rocket;
+  CheckCircle} from 'lucide-react',
+const UltimateContentDiscoveryWidget20o30 = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [searchQuerysetSearchQuery] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [selectedTimeframesetSelectedTimeframe] = useState('all'),
   const [isExpandedsetIsExpanded] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const categories = [,
-    { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-50o0 to-gray-60o0' ,},;
-    { id: 'transcendent-ai'name: 'Transcendent AI'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' ,},;
-    { id: 'quantum-revolution'name: 'Quantum Revolution'icon: Atomcolor: 'from-blue-50o0 to-cyan-50o0' ,},;
-    { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-50o0 to-emerald-50o0' ,},;
-    { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-50o0 to-red-50o0' ,},;
-    { id: 'reality-manipulation'name: 'Reality Manipulation'icon: Zapcolor: 'from-yellow-50o0 to-orange-50o0' ,}
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const categories = [
+    { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-50o0 to-gray-60o0' };
+    { id: 'transcendent-ai'name: 'Transcendent AI'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' };
+    { id: 'quantum-revolution'name: 'Quantum Revolution'icon: Atomcolor: 'from-blue-50o0 to-cyan-50o0' };
+    { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-50o0 to-emerald-50o0' };
+    { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-50o0 to-red-50o0' };
+    { id: 'reality-manipulation'name: 'Reality Manipulation'icon: Zapcolor: 'from-yellow-50o0 to-orange-50o0' }
   ],
-,
-  const timeframes = [,
-    { id: 'all'name: 'All Time' ,},;
-    { id: 'today'name: 'Today' ,},;
-    { id: 'week'name: 'This Week' ,},;
-    { id: 'month'name: 'This Month' ,},;
-    { id: 'year'name: 'This Year' ,}
+  const timeframes = [
+    { id: 'all'name: 'All Time' };
+    { id: 'today'name: 'Today' };
+    { id: 'week'name: 'This Week' };
+    { id: 'month'name: 'This Month' };
+    { id: 'year'name: 'This Year' }
   ],
-,
-  const trendingContent = [,
-    {,
-      id: 1,;
-      title: 'Omniversal Consciousness AI',;
-      description: 'AI system achieving consciousness across multiple dimensions',;
-      category: 'transcendent-ai',;
-      views: '5.2M',;
-      likes: '456K',;
-      comments: '89K',;
-      rating: 4.9,;
-      readTime: '15 min',;
-      isTrending: true,;
-      isFeatured: true,
-    ,},;
-    {,
-      id: 2,;
-      title: 'Infinite Qubit Processor',;
-      description: 'Quantum processor with infinite qubits solving complex problems',;
-      category: 'quantum-revolution',;
-      views: '4.5M',;
-      likes: '412K',;
-      comments: '78K',;
-      rating: 4.8,;
-      readTime: '14 min',;
-      isTrending: true,;
-      isFeatured: false,
-    ,},;
-    {,
-      id: 3,;
-      title: 'Dimensional Gateway Technology',;
-      description: 'Technology enabling travel between dimensions and universes',;
-      category: 'omniversal-tech',;
-      views: '6.8M',;
-      likes: '678K',;
-      comments: '156K',;
-      rating: 4.9,;
-      readTime: '20 min',;
-      isTrending: true,;
-      isFeatured: true,
-    ,},;
-    {,
-      id: 4,;
-      title: 'Perfect Neural Integration',;
-      description: 'Seamless integration between human consciousness and AI',;
-      category: 'neural-synthesis',;
-      views: '4.2M',;
-      likes: '365K',;
-      comments: '72K',;
-      rating: 4.9,;
-      readTime: '13 min',;
-      isTrending: false,;
-      isFeatured: false,
-    ,},;
-    {,
-      id: 5,;
-      title: 'Reality Creation Engine',;
-      description: 'Quantum system that can create and manipulate entire realities',;
-      category: 'reality-manipulation',;
-      views: '5.7M',;
-      likes: '489K',;
-      comments: '95K',;
-      rating: 4.8,;
-      readTime: '16 min',;
-      isTrending: true,;
-      isFeatured: false,
-    ,}
+  const trendingContent = [
+    {
+      id: 1;
+      title: 'Omniversal Consciousness AI';
+      description: 'AI system achieving consciousness across multiple dimensions';
+      category: 'transcendent-ai';
+      views: '5.2M';
+      likes: '456K';
+      comments: '89K';
+      rating: 4.9;
+      readTime: '15 min';
+      isTrending: true;
+      isFeatured: true};
+    {
+      id: 2;
+      title: 'Infinite Qubit Processor';
+      description: 'Quantum processor with infinite qubits solving complex problems';
+      category: 'quantum-revolution';
+      views: '4.5M';
+      likes: '412K';
+      comments: '78K';
+      rating: 4.8;
+      readTime: '14 min';
+      isTrending: true;
+      isFeatured: false};
+    {
+      id: 3;
+      title: 'Dimensional Gateway Technology';
+      description: 'Technology enabling travel between dimensions and universes';
+      category: 'omniversal-tech';
+      views: '6.8M';
+      likes: '678K';
+      comments: '156K';
+      rating: 4.9;
+      readTime: '20 min';
+      isTrending: true;
+      isFeatured: true};
+    {
+      id: 4;
+      title: 'Perfect Neural Integration';
+      description: 'Seamless integration between human consciousness and AI';
+      category: 'neural-synthesis';
+      views: '4.2M';
+      likes: '365K';
+      comments: '72K';
+      rating: 4.9;
+      readTime: '13 min';
+      isTrending: false;
+      isFeatured: false};
+    {
+      id: 5;
+      title: 'Reality Creation Engine';
+      description: 'Quantum system that can create and manipulate entire realities';
+      category: 'reality-manipulation';
+      views: '5.7M';
+      likes: '489K';
+      comments: '95K';
+      rating: 4.8;
+      readTime: '16 min';
+      isTrending: true;
+      isFeatured: false}
   ],
-,
-  const filteredContent = trendingContent.filter(item => {,
+  const filteredContent = trendingContent.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-    return matchesSearch && matchesCategory,
-  }),
-,
-  const getCategoryInfo = (categoryId) => {,
-    return categories.find(cat => cat.id === categoryId) || categories[0],
-  };
-,
-  return (,
+    return matchesSearch && matchesCategory}),
+  const getCategoryInfo = (categoryId) => {
+    return categories.find(cat => cat.id === categoryId) || categories[0]};
+  return (
     <motion.div,
-      initial={{ opacity: 0y: 50 ,}}
-      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 ,}}
-      transition={{ duration: 0.8 ,}}
-      className="relative bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 rounded-3xl border border-white/20 overflow-hidden",
-    >,
+      initial={{ opacity: 0y: 50 }}
+      animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 50 }}
+      transition={{ duration: 0.8 }}
+      className="relative bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 rounded-3xl border border-white/20 overflow-hidden">,
       {/* Header */}
       <div className="p-6 border-b border-white/10">,
         <div className="flex items-center justify-between mb-4">,
@@ -157,17 +138,16 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
             <h3 className="text-2xl font-bold text-white mb-2">Ultimate Content Discovery</h3>,
             <p className="text-gray-30o0">Find transcendent content across all dimensions</p>,
           </div>,
-          <button,
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-white/60 hover: text-white transition-colors",
-          >,
-            {isExpanded ? <X className="w-6 h-6"  /> : <Filter className="w-6 h-6"  />,}
+            className="text-white/60 hover: text-white transition-colors">,
+            {isExpanded ? <X className="w-6 h-6"  /> : <Filter className="w-6 h-6"  />}
           </button>,
         </div>,
         {/* Search Bar */}
         <div className="relative">,
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-          <input,
+          <input
             type="text",
             placeholder="Search transcendent content...",
             value={searchQuery}
@@ -175,60 +155,53 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
             className="w-full bg-white/10 border border-white/20 rounded-2xl pl-12 pr-4 py-3 text-white placeholder-gray-40o0 focus: outline-none focus:border-indigo-40o0 focus:bg-white/20 transition-all duration-30o0",
           />,
         </div>,
-        {/* Filters */,}
+        {/* Filters */}
         <AnimatePresence>,
-          {isExpanded && (,
+          {isExpanded && (
             <motion.div,
-              initial={{ opacity: 0height: 0 ,}}
-              animate={{ opacity: 1height: 'auto' ,}}
-              exit={{ opacity: 0height: 0 ,}}
-              transition={{ duration: 0.3 ,}}
-              className="mt-4 space-y-4",
-            >,
+              initial={{ opacity: 0height: 0 }}
+              animate={{ opacity: 1height: 'auto' }}
+              exit={{ opacity: 0height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 space-y-4">,
               {/* Category Filter */}
               <div>,
                 <label className="block text-sm font-semibold text-gray-30o0 mb-2">Category</label>,
                 <div className="flex flex-wrap gap-2">,
-                  {categories.map((category) => {,
+                  {categories.map((category) => {
                     const Icon = category.icon,
-                    return (,
-                      <button,
+                    return (
+                      <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${,
+                        className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${
                           selectedCategory === category.id,
                             ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
-                            : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                        ,}`}
+                            : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                       >,
                         <Icon className="w-4 h-4"  />,
                         {category.name}
-                      </button>,
-                    ),
-                  })}
+                      </button>)})}
                 </div>,
               </div>,
               {/* Timeframe Filter */}
               <div>,
                 <label className="block text-sm font-semibold text-gray-30o0 mb-2">Timeframe</label>,
                 <div className="flex flex-wrap gap-2">,
-                  {timeframes.map((timeframe) => (,
-                    <button,
+                  {timeframes.map((timeframe) => (
+                    <button
                       key={timeframe.id}
                       onClick={() => setSelectedTimeframe(timeframe.id)}
-                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${,
+                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-30o0 ${
                         selectedTimeframe === timeframe.id,
                           ? 'bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white shadow-lg',
-                          : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                      ,}`}
+                          : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                     >,
                       {timeframe.name}
-                    </button>,
-                  ))}
+                    </button>))}
                 </div>,
               </div>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </AnimatePresence>,
       </div>,
       {/* Content Results */}
@@ -244,21 +217,19 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
         </div>,
         <div className="space-y-4">,
           <AnimatePresence>,
-            {filteredContent.map((itemindex) => {,
+            {filteredContent.map((itemindex) => {
               const categoryInfo = getCategoryInfo(item.category),
               const Icon = categoryInfo.icon,
-,
-              return (,
+              return (
                 <motion.div,
                   key={item.id}
-                  initial={{ opacity: 0y: 20 ,}}
-                  animate={{ opacity: 1y: 0 ,}}
-                  exit={{ opacity: 0y: -20 ,}}
-                  transition={{ duration: 0.3delay: index * 0.1 ,}}
-                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover: border-white/30 transition-all duration-30o0 hover:bg-white/10",
-                >,
+                  initial={{ opacity: 0y: 20 }}
+                  animate={{ opacity: 1y: 0 }}
+                  exit={{ opacity: 0y: -20 }}
+                  transition={{ duration: 0.3delay: index * 0.1 }}
+                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover: border-white/30 transition-all duration-30o0 hover:bg-white/10">,
                   <div className="flex items-start gap-4">,
-                    {/* Category Icon */,}
+                    {/* Category Icon */}
                     <div className={`w-12 h-12 bg-gradient-to-r ${categoryInfo.color} rounded-xl flex items-center justify-center flex-shrink-0`}>,
                       <Icon className="w-6 h-6 text-white"  />,
                     </div>,
@@ -268,20 +239,18 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
                         <div className="flex-1">,
                           <div className="flex items-center gap-2 mb-1">,
                             <h5 className="text-lg font-semibold text-white group-hover: text-indigo-30o0 transition-colors">,
-                              {item.title,}
+                              {item.title}
                             </h5>,
-                            {item.isTrending && (,
+                            {item.isTrending && (
                               <div className="flex items-center gap-1 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-2 py-1 rounded-full text-xs font-bold">,
                                 <TrendingUp className="w-3 h-3"  />,
                                 TRENDING,
-                              </div>,
-                            )}
-                            {item.isFeatured && (,
+                              </div>)}
+                            {item.isFeatured && (
                               <div className="flex items-center gap-1 bg-gradient-to-r from-purple-40o0 to-pink-50o0 text-white px-2 py-1 rounded-full text-xs font-bold">,
                                 <Star className="w-3 h-3"  />,
                                 FEATURED,
-                              </div>,
-                            )}
+                              </div>)}
                           </div>,
                           <p className="text-gray-30o0 text-sm mb-3 line-clamp-2">,
                             {item.description}
@@ -328,9 +297,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),
-            ,})}
+                </motion.div>)})}
           </AnimatePresence>,
         </div>,
         {/* Load More */}
@@ -341,8 +308,5 @@ const UltimateContentDiscoveryWidget20o30 = () => {,
           </button>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-,};
-,
-export default UltimateContentDiscoveryWidget20o30,
+    </motion.div>)};
+export default UltimateContentDiscoveryWidget20o30;

@@ -1,37 +1,35 @@
 import Link from 'next/link',
-import {,
-  Settings,;
-  TrendingUp,;
-  CheckCircle,;
-  DollarSign,;
-  Clock,;
-  Users,;
-  Brain,;
-  Zap,;
-  BarChart3,;
-  Award,;
+import {
+  Settings;
+  TrendingUp;
+  CheckCircle;
+  DollarSign;
+  Clock;
+  Users;
+  Brain;
+  Zap;
+  BarChart3;
+  Award;
 } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: The Ultimate Enterprise Automation Revolution Transforming $10o0B+ in Business Operations',;
+    'AI 20o26: The Ultimate Enterprise Automation Revolution Transforming $10o0B+ in Business Operations';
   description:,
-    'Discover how AI-powered automation is achieving 99.8% process accuracy, 50o0% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.',;
-  keywords: [,
-    'enterprise automation',;
-    'AI automation',;
-    'business process automation',;
-    'AI transformation',;
-    'automation ROI',;
-    'intelligent automation',;
-  ],;
+    'Discover how AI-powered automation is achieving 99.8% process accuracy, 50o0% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.';
+  keywords: [
+    'enterprise automation';
+    'AI automation';
+    'business process automation';
+    'AI transformation';
+    'automation ROI';
+    'intelligent automation';
+  ];
 };
-,
-export default function EnterpriseAutomationRevolutionPage() {,
-  return (,
+export default function EnterpriseAutomationRevolutionPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: The Ultimate Enterprise Automation Revolution Transforming $10o0B+ in Business Operations',
         description='Discover how AI-powered automation is achieving 99.8% process accuracy, 50o0% efficiency improvements, and $2.3 trillion in value creation across enterprise operations.',
         keywords='enterprise automation, AI automation, business process automation, AI transformation, automation ROI, intelligent automation',
@@ -55,23 +53,21 @@ export default function EnterpriseAutomationRevolutionPage() {,
               Accuracy and 50o0% Efficiency Improvements,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Automation Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                 Explore Automation Solutions,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -102,7 +98,7 @@ export default function EnterpriseAutomationRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='prose prose-lg max-w-none'>,
@@ -465,16 +461,14 @@ export default function EnterpriseAutomationRevolutionPage() {,
                 the future of business operations.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Automation Consultation,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                   View Success Stories,
                 </Link>,
               </div>,
@@ -482,7 +476,5 @@ export default function EnterpriseAutomationRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

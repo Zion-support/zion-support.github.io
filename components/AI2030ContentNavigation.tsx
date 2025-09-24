@@ -1,122 +1,105 @@
 "use client",
 'use client',
-,
 import React{ useState } from 'react',
 import Link from 'next/link',
 import { CardContent } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
-import {,
+import {
   ChevronDown,
   ChevronUp,
   Brain,
   Zap,
   Target,
-  Calendar,;
-  ArrowRight,;
-  Sparkles,;
-  TrendingUp,;
-  Users,
-} from 'lucide-react',
-,
-export default function AI20o30ContentNavigation() {,
+  Calendar;
+  ArrowRight;
+  Sparkles;
+  TrendingUp;
+  Users} from 'lucide-react',
+export default function AI20o30ContentNavigation() {
   const [isExpandedsetIsExpanded] = useState(false),
-,
-  const contentSections = [,
-    {,
-      title: "AI 20o30 Insights",;
-      icon: Brain,;
-      color: "text-blue-60o0",;
-      bgColor: "bg-blue-50",;
-      items: [,
-        {,
-          title: "Future Workforce Revolution",;
-          description: "Autonomous collaboration and human-AI partnerships",;
-          href: "/blog/ai-20o30-future-workforce-autonomous-collaboration-revolution",;
-          badge: "NEW",;
-          badgeColor: "bg-yellow-50o0 text-yellow-90o0",
-        ,},;
-        {,
-          title: "Sustainable Enterprise Transformation",;
-          description: "Net-zero operations through intelligent automation",;
-          href: "/blog/ai-20o30-sustainable-enterprise-transformation-ultimate-guide",;
-          badge: "SUSTAINABILITY",;
-          badgeColor: "bg-green-50o0 text-green-90o0",
-        ,}
-      ],
-    },;
-    {,
-      title: "Interactive Tools",;
-      icon: Zap,;
-      color: "text-purple-60o0",;
-      bgColor: "bg-purple-50",;
-      items: [,
-        {,
-          title: "AI 20o30 Readiness Assessment",;
-          description: "Evaluate your 'organization', 's AI transformation readiness",;
-          href: "/tools/ai-20o30-readiness-assessment",;
-          badge: "ASSESSMENT",;
-          badgeColor: "bg-purple-50o0 text-purple-90o0",
-        ,},;
-        {,
-          title: "AI ROI Calculator 20o25",;
-          description: "Calculate potential returns from AI investments",;
-          href: "/tools/ai-roi-calculator-20o25",;
-          badge: "CALCULATOR",;
-          badgeColor: "bg-blue-50o0 text-blue-90o0",
-        ,}
-      ],
-    },;
-    {,
-      title: "Success Stories",;
-      icon: Target,;
-      color: "text-green-60o0",;
-      bgColor: "bg-green-50",;
-      items: [,
-        {,
-          title: "Fortune 50o0 Net-Zero Success",;
-          description: "40o0% ROI through AI-powered sustainability transformation",;
-          href: "/case-studies/fortune-50o0-ai-20o30-transformation-net-zero-success-story",;
-          badge: "CASE STUDY",;
-          badgeColor: "bg-orange-50o0 text-orange-90o0",
-        ,},;
-        {,
-          title: "AI Transformation ROI Success",;
-          description: "Real-world examples of AI implementation success",;
-          href: "/case-studies/ai-transformation-60o0-roi-success-story-20o25",;
-          badge: "SUCCESS",;
-          badgeColor: "bg-green-50o0 text-green-90o0",
-        ,}
-      ],
-    },;
-    {,
-      title: "Future Predictions",;
-      icon: TrendingUp,;
-      color: "text-orange-60o0",;
-      bgColor: "bg-orange-50",;
-      items: [,
-        {,
-          title: "AI 20o30 Trends & Predictions",;
-          description: "Comprehensive guide to AI trends through 20o30",;
-          href: "/blog/ai-20o26-trends-predictions-ultimate-guide",;
-          badge: "TRENDS",;
-          badgeColor: "bg-orange-50o0 text-orange-90o0",
-        ,},;
-        {,
-          title: "Quantum AI Business Revolution",;
-          description: "How quantum computing will transform business",;
-          href: "/blog/quantum-ai-20o26-business-revolution",;
-          badge: "QUANTUM",;
-          badgeColor: "bg-indigo-50o0 text-indigo-90o0",
-        ,}
-      ],
-    }
+  const contentSections = [
+    {
+      title: "AI 20o30 Insights";
+      icon: Brain;
+      color: "text-blue-60o0";
+      bgColor: "bg-blue-50";
+      items: [
+        {
+          title: "Future Workforce Revolution";
+          description: "Autonomous collaboration and human-AI partnerships";
+          href: "/blog/ai-20o30-future-workforce-autonomous-collaboration-revolution";
+          badge: "NEW";
+          badgeColor: "bg-yellow-50o0 text-yellow-90o0"};
+        {
+          title: "Sustainable Enterprise Transformation";
+          description: "Net-zero operations through intelligent automation";
+          href: "/blog/ai-20o30-sustainable-enterprise-transformation-ultimate-guide";
+          badge: "SUSTAINABILITY";
+          badgeColor: "bg-green-50o0 text-green-90o0"}
+      ]};
+    {
+      title: "Interactive Tools";
+      icon: Zap;
+      color: "text-purple-60o0";
+      bgColor: "bg-purple-50";
+      items: [
+        {
+          title: "AI 20o30 Readiness Assessment";
+          description: "Evaluate your 'organization', 's AI transformation readiness";
+          href: "/tools/ai-20o30-readiness-assessment";
+          badge: "ASSESSMENT";
+          badgeColor: "bg-purple-50o0 text-purple-90o0"};
+        {
+          title: "AI ROI Calculator 20o25";
+          description: "Calculate potential returns from AI investments";
+          href: "/tools/ai-roi-calculator-20o25";
+          badge: "CALCULATOR";
+          badgeColor: "bg-blue-50o0 text-blue-90o0"}
+      ]};
+    {
+      title: "Success Stories";
+      icon: Target;
+      color: "text-green-60o0";
+      bgColor: "bg-green-50";
+      items: [
+        {
+          title: "Fortune 50o0 Net-Zero Success";
+          description: "40o0% ROI through AI-powered sustainability transformation";
+          href: "/case-studies/fortune-50o0-ai-20o30-transformation-net-zero-success-story";
+          badge: "CASE STUDY";
+          badgeColor: "bg-orange-50o0 text-orange-90o0"};
+        {
+          title: "AI Transformation ROI Success";
+          description: "Real-world examples of AI implementation success";
+          href: "/case-studies/ai-transformation-60o0-roi-success-story-20o25";
+          badge: "SUCCESS";
+          badgeColor: "bg-green-50o0 text-green-90o0"}
+      ]};
+    {
+      title: "Future Predictions";
+      icon: TrendingUp;
+      color: "text-orange-60o0";
+      bgColor: "bg-orange-50";
+      items: [
+        {
+          title: "AI 20o30 Trends & Predictions";
+          description: "Comprehensive guide to AI trends through 20o30";
+          href: "/blog/ai-20o26-trends-predictions-ultimate-guide";
+          badge: "TRENDS";
+          badgeColor: "bg-orange-50o0 text-orange-90o0"};
+        {
+          title: "Quantum AI Business Revolution";
+          description: "How quantum computing will transform business";
+          href: "/blog/quantum-ai-20o26-business-revolution";
+          badge: "QUANTUM";
+          badgeColor: "bg-indigo-50o0 text-indigo-90o0"}
+      ]}
   ],
-,
-  return (,
+  return (
     <div className="bg-gray-50 py-12">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-8">,
           <div className="inline-flex items-center bg-purple-10o0 text-purple-80o0 rounded-full px-4 py-2 mb-4">,
             <Sparkles className="h-4 w-4 mr-2"  />,
@@ -149,10 +132,10 @@ export default function AI20o30ContentNavigation() {,
             <div className="text-sm text-gray-60o0">Future Focus</div>,
           </div>,
         </div>,
-        {/* Content Sections */,}
+        {/* Content Sections */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-          {contentSections.map((sectionIndex) => (,
-            <Card key={sectionIndex,} className="h-full">,
+          {contentSections.map((sectionIndex) => (
+            <Card key={sectionIndex} className="h-full">,
               <CardContent className="p-6">,
                 <div className="flex items-center gap-3 mb-4">,
                   <div className={`p-2 rounded-lg ${section.bgColor}`}>,
@@ -161,17 +144,17 @@ export default function AI20o30ContentNavigation() {,
                   <h3 className="font-bold text-gray-90o0">{section.title}</h3>,
                 </div>,
                 <div className="space-y-3">,
-                  {section.items.slice(0isExpanded ? section.items.length : 2).map((itemIndex) => (,
+                  {section.items.slice(0isExpanded ? section.items.length : 2).map((itemIndex) => (
                     <div key={itemIndex} className="group">,
                       <Link href={item.href} className="block">,
                         <div className="p-3 rounded-lg hover: bg-gray-50 transition-colors">,
                           <div className="flex items-start gap-2 mb-2">,
-                            <Badge className={`text-xs ${item.badgeColor,}`}>,
+                            <Badge className={`text-xs ${item.badgeColor}`}>,
                               {item.badge}
                             </Badge>,
                           </div>,
                           <h4 className="font-semibold text-gray-90o0 text-sm mb-1 group-hover: text-purple-60o0 transition-colors">,
-                            {item.title,}
+                            {item.title}
                           </h4>,
                           <p className="text-xs text-gray-60o0 leading-relaxed">,
                             {item.description}
@@ -182,24 +165,20 @@ export default function AI20o30ContentNavigation() {,
                           </div>,
                         </div>,
                       </Link>,
-                    </div>,
-                  )),}
+                    </div>))}
 ,
-                  {section.items.length > 2 && !isExpanded && (,
-                    <Button,
+                  {section.items.length > 2 && !isExpanded && (
+                    <Button
                       variant="ghost",
                       size="sm",
                       onClick={() => setIsExpanded(!isExpanded)}
-                      className="w-full text-xs text-gray-50o0 hover: text-purple-60o0",
-                    >,
-                      Show {section.items.length - 2,} more,
+                      className="w-full text-xs text-gray-50o0 hover: text-purple-60o0">,
+                      Show {section.items.length - 2} more,
                       <ChevronDown className="h-3 w-3 ml-1"  />,
-                    </Button>,
-                  )}
+                    </Button>)}
                 </div>,
               </CardContent>,
-            </Card>,
-          ))}
+            </Card>))}
         </div>,
         {/* Featured Content CTA */}
         <div className="mt-12 text-center">,
@@ -228,25 +207,20 @@ export default function AI20o30ContentNavigation() {,
             </CardContent>,
           </Card>,
         </div>,
-        {/* Expand/Collapse Button */,}
+        {/* Expand/Collapse Button */}
         <div className="text-center mt-8">,
-          <Button,
+          <Button
             variant="outline",
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-gray-60o0 hover: text-purple-60o0",
-          >,
-            {isExpanded ? (,
+            className="text-gray-60o0 hover: text-purple-60o0">,
+            {isExpanded ? (
               <>,
                 Show Less <ChevronUp className="h-4 w-4 ml-2"  />,
-              </>,
-            ) : (,
+              </>) : (
               <>,
                 Show All Content <ChevronDown className="h-4 w-4 ml-2"  />,
-              </>,
-            ),}
+              </>)}
           </Button>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

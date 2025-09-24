@@ -2,15 +2,12 @@ import React, { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
-,
-type Category = {,
+type Category = {
   id: string,
   slug: string,
   name: string,
-  isAdminOnly?: boolean,
-,};
-,
-type Thread = {,
+  isAdminOnly?: boolean};
+type Thread = {
   id: string,
   categoryId: string,
   title: string,
@@ -25,82 +22,66 @@ type Thread = {,
   isLocked: boolean,
   isFeatured: boolean,
   createdAt: string,
-  updatedAt: string,
-,};
-,
-const fetchJson = async (url: string, opts?: RequestInit) => {,
-  const res = await fetch(url, {,
-    ...opts,;
-    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) },;
+  updatedAt: string};
+const fetchJson = async (url: string, opts?: RequestInit) => {
+  const res = await fetch(url, {
+    ...opts;
+    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) };
   }),
   if (!res.ok) throw new Error(await res.text()),
-  return res.json(),
-};
-,
-export default function CommunityPage() {,
+  return res.json()};
+export default function CommunityPage() {
   const [categories, setCategories] = useState<Category[]>([]),
-  const [activeCategory, setActiveCategory] = useState<string | undefined>(,
-    undefined,
-  ),
+  const [activeCategory, setActiveCategory] = useState<string | undefined>(
+    undefined),
   const [threads, setThreads] = useState<Thread[]>([]),
   const [sort, setSort] = useState<'new' | 'top' | 'active'>('new'),
   const [loading, setLoading] = useState(false),
   const [showNewThread, setShowNewThread] = useState(false),
-  const [newThread, setNewThread] = useState({ title: '', body: '', tags: '' ,}),
-,
-  useEffect(() => {,
-    fetchJson('/api/community/categories').then(d => {,
+  const [newThread, setNewThread] = useState({ title: '', body: '', tags: '' }),
+  useEffect(() => {
+    fetchJson('/api/community/categories').then(d => {
       setCategories(d.categories),
       const first =,
         d.categories.find((c: Category) => !c.isAdminOnly) || d.categories[0],
-      setActiveCategory(first?.id),
-    ,}),
-  }, []),
-,
-  useEffect(() => {,
+      setActiveCategory(first?.id)})}, []),
+  useEffect(() => {
     if (!activeCategory) return,
     setLoading(true),
-    fetchJson(,
-      `/api/community/threads?categoryId=${encodeURIComponent(activeCategory)}&sort=${sort}`,
-    ),
+    fetchJson(
+      `/api/community/threads?categoryId=${encodeURIComponent(activeCategory)}&sort=${sort}`),
       .then(d => setThreads(d.threads)),
-      .finally(() => setLoading(false)),
-  }, [activeCategory, sort]),
-,
+      .finally(() => setLoading(false))}, [activeCategory, sort]),
   const pinned = useMemo(() => threads.filter(t => t.isPinned), [threads]),
   const normal = useMemo(() => threads.filter(t => !t.isPinned), [threads]),
-,
-  const submitNewThread = async () => {,
-    const payload = {,
-      categoryId: activeCategory,;
-      title: newThread.title.trim(),;
-      body: newThread.body.trim(),;
+  const submitNewThread = async () => {
+    const payload = {
+      categoryId: activeCategory;
+      title: newThread.title.trim();
+      body: newThread.body.trim();
       tags: newThread.tags,
         .split(','),
         .map(s => s.trim()),
-        .filter(Boolean),;
+        .filter(Boolean);
     };
     if (!payload.title || !payload.body) return,
     // Demo auth: set a cookie if not present via fetch header, users can override with real auth headers,
-    await fetchJson('/api/community/threads', {,
-      method: 'POST',;
-      body: JSON.stringify(payload),;
-      headers: {,
-        'x-user-id': 'demo-user',;
-        'x-user-name': 'Demo User',;
-        'x-user-role': 'Talent',;
-      },;
+    await fetchJson('/api/community/threads', {
+      method: 'POST';
+      body: JSON.stringify(payload);
+      headers: {
+        'x-user-id': 'demo-user';
+        'x-user-name': 'Demo User';
+        'x-user-role': 'Talent';
+      };
     }),
     setShowNewThread(false),
-    setNewThread({ title: '', body: '', tags: '' ,}),
+    setNewThread({ title: '', body: '', tags: '' }),
     // refresh,
-    const d = await fetchJson(,
-      `/api/community/threads?categoryId=${encodeURIComponent(activeCategory!)}&sort=${sort}`,
-    ),
-    setThreads(d.threads),
-  };
-,
-  return (,
+    const d = await fetchJson(
+      `/api/community/threads?categoryId=${encodeURIComponent(activeCategory!)}&sort=${sort}`),
+    setThreads(d.threads)};
+  return (
     <EnhancedLayout>,
       <Head>,
         <title>Community Forum — Zion AI Marketplace</title>,
@@ -112,16 +93,15 @@ export default function CommunityPage() {,
               Categories,
             </h2>,
             <ul className='space-y-1'>,
-              {categories.map(c => (,
-                <li key={c.id,}>,
-                  <button,
-                    className={`w-full text-left px-3 py-2 rounded hover: bg-gray-10o0 dark:hover:bg-gray-90o0 ${activeCategory === c.id ? 'bg-gray-10o0 dark:bg-gray-90o0 font-medium' : '',}`}
+              {categories.map(c => (
+                <li key={c.id}>,
+                  <button
+                    className={`w-full text-left px-3 py-2 rounded hover: bg-gray-10o0 dark:hover:bg-gray-90o0 ${activeCategory === c.id ? 'bg-gray-10o0 dark:bg-gray-90o0 font-medium' : ''}`}
                     onClick={() => setActiveCategory(c.id)}
                   >,
                     {c.name} {c.isAdminOnly ? '🔒' : ''}
                   </button>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
             <div className='pt-4 text-xs text-gray-50o0'>,
               Discourse-like forum UI,
@@ -131,9 +111,9 @@ export default function CommunityPage() {,
         <section className='flex-1 min-w-0'>,
           <div className='flex items-center justify-between mb-4'>,
             <div className='flex items-center gap-2'>,
-              <select,
+              <select
                 className='px-2 py-1 rounded bg-gray-10o0 dark: bg-gray-90o0',
-                value={sort,}
+                value={sort}
                 onChange={e => setSort(e.target.value as any)}
               >,
                 <option value='new'>New</option>,
@@ -141,46 +121,40 @@ export default function CommunityPage() {,
                 <option value='active'>Active</option>,
               </select>,
             </div>,
-            <button,
+            <button
               className='px-3 py-2 rounded bg-blue-60o0 text-white hover: bg-blue-50o0',
-              onClick={() => setShowNewThread(true),}
+              onClick={() => setShowNewThread(true)}
             >,
               New Thread,
             </button>,
           </div>,
-          {loading ? (,
+          {loading ? (
             <div className='py-10 text-center text-gray-50o0'>,
               Loading threads…,
-            </div>,
-          ) : (,
+            </div>) : (
             <div className='space-y-2'>,
-              {pinned.length > 0 && (,
+              {pinned.length > 0 && (
                 <div>,
                   <div className='text-xs uppercase tracking-wide text-gray-50o0 mb-1'>,
                     Pinned,
                   </div>,
                   <ul className='divide-y divide-gray-20o0 dark: divide-gray-80o0 rounded border border-gray-20o0 dark:border-gray-80o0 overflow-hidden'>,
-                    {pinned.map(t => (,
-                      <ThreadRow key={t.id,} t={t} />,
-                    ))}
+                    {pinned.map(t => (
+                      <ThreadRow key={t.id} t={t} />))}
                   </ul>,
-                </div>,
-              )}
+                </div>)}
               <ul className='divide-y divide-gray-20o0 dark: divide-gray-80o0 rounded border border-gray-20o0 dark:border-gray-80o0 overflow-hidden'>,
-                {normal.map(t => (,
-                  <ThreadRow key={t.id,} t={t} />,
-                ))}
-                {normal.length === 0 && pinned.length === 0 && (,
+                {normal.map(t => (
+                  <ThreadRow key={t.id} t={t} />))}
+                {normal.length === 0 && pinned.length === 0 && (
                   <li className='p-8 text-center text-gray-50o0'>,
                     No threads yet. Be the first to post!,
-                  </li>,
-                )}
+                  </li>)}
               </ul>,
-            </div>,
-          )}
+            </div>)}
         </section>,
       </div>,
-      {showNewThread && (,
+      {showNewThread && (
         <div className='fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50'>,
           <div className='bg-white dark: bg-gray-950 rounded-lg shadow-xl w-full max-w-2xl'>,
             <div className='p-4 border-b border-gray-20o0 dark:border-gray-80o0 font-medium'>,
@@ -189,65 +163,59 @@ export default function CommunityPage() {,
             <div className='p-4 space-y-3'>,
               <div>,
                 <label className='text-sm block mb-1'>Title</label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded bg-gray-10o0 dark:bg-gray-90o0',
-                  value={newThread.title,}
+                  value={newThread.title}
                   onChange={e =>,
-                    setNewThread({ ...newThread, title: e.target.value ,}),
-                  }
+                    setNewThread({ ...newThread, title: e.target.value })}
                 />,
               </div>,
               <div>,
                 <label className='text-sm block mb-1'>Body</label>,
-                <textarea,
+                <textarea
                   className='w-full px-3 py-2 rounded bg-gray-10o0 dark: bg-gray-90o0 min-h-[140px]',
-                  value={newThread.body,}
+                  value={newThread.body}
                   onChange={e =>,
-                    setNewThread({ ...newThread, body: e.target.value ,}),
-                  }
+                    setNewThread({ ...newThread, body: e.target.value })}
                 />,
               </div>,
               <div>,
                 <label className='text-sm block mb-1'>,
                   Tags (comma separated),
                 </label>,
-                <input,
+                <input
                   className='w-full px-3 py-2 rounded bg-gray-10o0 dark: bg-gray-90o0',
-                  value={newThread.tags,}
+                  value={newThread.tags}
                   onChange={e =>,
-                    setNewThread({ ...newThread, tags: e.target.value ,}),
-                  }
+                    setNewThread({ ...newThread, tags: e.target.value })}
                 />,
               </div>,
             </div>,
             <div className='p-4 border-t border-gray-20o0 dark: border-gray-80o0 flex justify-end gap-2'>,
-              <button,
+              <button
                 className='px-3 py-2 rounded bg-gray-20o0 dark:bg-gray-80o0',
-                onClick={() => setShowNewThread(false),}
+                onClick={() => setShowNewThread(false)}
               >,
                 Cancel,
               </button>,
-              <button,
+              <button
                 className='px-3 py-2 rounded bg-blue-60o0 text-white hover: bg-blue-50o0',
-                onClick={submitNewThread,}
+                onClick={submitNewThread}
               >,
                 Post,
               </button>,
             </div>,
           </div>,
-        </div>,
-      )}
-    </EnhancedLayout>,
-  ),
-}
+        </div>)}
+    </EnhancedLayout>)}
 ,
-function ThreadRow({ t }: { t: Thread ,}) {,
-  return (,
+function ThreadRow({ t }: { t: Thread }) {
+  return (
     <li className='p-4 flex items-start gap-4 bg-white dark: bg-gray-950'>,
       <div className='flex flex-col items-center w-12'>,
         <button className='text-gray-50o0 hover:text-blue-60o0'>▲</button>,
-        <div,
-          className={`font-semibold ${t.votes >= 0 ? 'text-gray-90o0 dark:text-gray-10o0' : 'text-red-50o0',}`}
+        <div
+          className={`font-semibold ${t.votes >= 0 ? 'text-gray-90o0 dark:text-gray-10o0' : 'text-red-50o0'}`}
         >,
           {t.votes}
         </div>,
@@ -255,34 +223,30 @@ function ThreadRow({ t }: { t: Thread ,}) {,
       </div>,
       <div className='min-w-0 flex-1'>,
         <div className='flex items-center gap-2 text-xs text-gray-50o0'>,
-          {t.isPinned && (,
+          {t.isPinned && (
             <span className='px-2 py-0.5 rounded bg-yellow-10o0 text-yellow-80o0'>,
               Pinned,
-            </span>,
-          ),}
-          {t.isFeatured && (,
+            </span>)}
+          {t.isFeatured && (
             <span className='px-2 py-0.5 rounded bg-purple-10o0 text-purple-80o0'>,
               Featured,
-            </span>,
-          )}
-          {t.isLocked && (,
+            </span>)}
+          {t.isLocked && (
             <span className='px-2 py-0.5 rounded bg-gray-20o0 text-gray-70o0'>,
               Locked,
-            </span>,
-          )}
-          {t.isAnswered && (,
+            </span>)}
+          {t.isAnswered && (
             <span className='px-2 py-0.5 rounded bg-green-10o0 text-green-80o0'>,
               Answered,
-            </span>,
-          )}
+            </span>)}
         </div>,
         <Link href={`/community/thread/${t.id}`}>,
           <a className='block font-medium text-lg truncate hover: underline'>,
-            {t.title,}
+            {t.title}
           </a>,
         </Link>,
         <div className='mt-1 text-sm text-gray-60o0 dark: text-gray-30o0 line-clamp-2'>,
-          {t.body,}
+          {t.body}
         </div>,
         <div className='mt-2 flex items-center justify-between text-xs text-gray-50o0'>,
           <div className='flex items-center gap-2'>,
@@ -290,7 +254,7 @@ function ThreadRow({ t }: { t: Thread ,}) {,
               <div className='w-6 h-6 rounded-full bg-gray-20o0' />,
               <span>{t.authorName}</span>,
               <span className='px-1.5 py-0.5 rounded bg-gray-10o0 dark: bg-gray-80o0'>,
-                {t.authorRole,}
+                {t.authorRole}
               </span>,
             </div>,
             <span>•</span>,
@@ -298,20 +262,16 @@ function ThreadRow({ t }: { t: Thread ,}) {,
           </div>,
           <div className='flex items-center gap-2'>,
             <div className='flex gap-1'>,
-              {t.tags.map(tag => (,
-                <span,
+              {t.tags.map(tag => (
+                <span
                   key={tag}
-                  className='px-2 py-0.5 rounded bg-blue-50 text-blue-70o0',
-                >,
+                  className='px-2 py-0.5 rounded bg-blue-50 text-blue-70o0'>,
                   #{tag}
-                </span>,
-              ))}
+                </span>))}
             </div>,
             <span className='ml-2'>💬 {t.replyCount}</span>,
           </div>,
         </div>,
       </div>,
-    </li>,
-  ),
-}
+    </li>)}
 ,

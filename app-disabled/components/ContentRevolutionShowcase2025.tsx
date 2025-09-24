@@ -1,95 +1,89 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const ContentRevolutionShowcase20o25 = () => {,
+const ContentRevolutionShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 'ultimate-content-revolution',;
-      title: 'AI 20o25: The Ultimate Content Revolution',;
+  const contentItems = [
+    {
+      id: 'ultimate-content-revolution';
+      title: 'AI 20o25: The Ultimate Content Revolution';
       description:,
-        'Achieve 2,50o0% ROI through AI-powered content strategies that are reshaping entire industries and creating new revenue streams worth billions.',;
-      type: 'blog',;
-      category: 'ai-content',;
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',;
-      readingTime: '30 min read',;
-      featured: true,;
-      metrics: {,
-        roi: '2,50o0%',;
-        savings: '$45.2M',;
-        efficiency: '1,20o0%',;
-        engagement: '450%',;
-      },;
-    },;
-    {,
-      id: 'fortune-50o0-content-success',;
-      title: 'Fortune 50o0 Content Revolution Success',;
+        'Achieve 2,50o0% ROI through AI-powered content strategies that are reshaping entire industries and creating new revenue streams worth billions.';
+      type: 'blog';
+      category: 'ai-content';
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
+      readingTime: '30 min read';
+      featured: true;
+      metrics: {
+        roi: '2,50o0%';
+        savings: '$45.2M';
+        efficiency: '1,20o0%';
+        engagement: '450%';
+      };
+    };
+    {
+      id: 'fortune-50o0-content-success';
+      title: 'Fortune 50o0 Content Revolution Success';
       description:,
-        '$45.2M Annual Savings - 2,50o0% ROI Success Story from Global Media Conglomerate with 1,50o0% increase in content output.',;
-      type: 'case-study',;
-      category: 'success-stories',;
-      url: '/case-studies/fortune-50o0-content-revolution-250o0-roi-success-story',;
-      readingTime: '18 min read',;
-      featured: true,;
-      metrics: {,
-        roi: '2,50o0%',;
-        savings: '$45.2M',;
-        output: '1,50o0%',;
-        engagement: '560%',;
-      },;
-    },;
-    {,
-      id: 'content-implementation-guide',;
-      title: 'AI Content Revolution Implementation Guide',;
+        '$45.2M Annual Savings - 2,50o0% ROI Success Story from Global Media Conglomerate with 1,50o0% increase in content output.';
+      type: 'case-study';
+      category: 'success-stories';
+      url: '/case-studies/fortune-50o0-content-revolution-250o0-roi-success-story';
+      readingTime: '18 min read';
+      featured: true;
+      metrics: {
+        roi: '2,50o0%';
+        savings: '$45.2M';
+        output: '1,50o0%';
+        engagement: '560%';
+      };
+    };
+    {
+      id: 'content-implementation-guide';
+      title: 'AI Content Revolution Implementation Guide';
       description:,
-        'Complete Roadmap to 2,50o0% ROI - Ultimate Implementation Guide for Content Transformation with comprehensive strategies and frameworks.',;
-      type: 'resource',;
-      category: 'implementation',;
-      url: '/resources/ai-content-revolution-implementation-ultimate-guide-20o25',;
-      readingTime: '45 min read',;
-      featured: true,;
-      metrics: {,
-        roi: '2,50o0%',;
-        timeline: '18 months',;
-        success: '99.7%',;
-        projects: '1,0o00+',;
-      },;
-    },;
+        'Complete Roadmap to 2,50o0% ROI - Ultimate Implementation Guide for Content Transformation with comprehensive strategies and frameworks.';
+      type: 'resource';
+      category: 'implementation';
+      url: '/resources/ai-content-revolution-implementation-ultimate-guide-20o25';
+      readingTime: '45 min read';
+      featured: true;
+      metrics: {
+        roi: '2,50o0%';
+        timeline: '18 months';
+        success: '99.7%';
+        projects: '1,0o00+';
+      };
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'ai-content',;
-      label: 'AI Content',;
-      count: contentItems.filter(item => item.category === 'ai-content').length,;
-    },;
-    {,
-      id: 'success-stories',;
-      label: 'Success Stories',;
+  const categories = [
+    { id: 'all', label: 'All Content', count: contentItems.length };
+    {
+      id: 'ai-content';
+      label: 'AI Content';
+      count: contentItems.filter(item => item.category === 'ai-content').length;
+    };
+    {
+      id: 'success-stories';
+      label: 'Success Stories';
       count: contentItems.filter(item => item.category === 'success-stories'),
-        .length,;
-    },;
-    {,
-      id: 'implementation',;
-      label: 'Implementation',;
+        .length;
+    };
+    {
+      id: 'implementation';
+      label: 'Implementation';
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length,;
-    },;
+        .length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.category === activeCategory),
-,
-  return (,
+  return (
     <div className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>,
@@ -107,39 +101,35 @@ const ContentRevolutionShowcase20o25 = () => {,
         </div>,
         {/* Category Filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.label} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-12'>,
-          {filteredContent.map((item, index) => (,
-            <div,
+          {filteredContent.map((item, index) => (
+            <div
               key={item.id}
-              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden',
-            >,
+              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden'>,
               <div className='p-8'>,
-                {/* Content Type Badge */,}
+                {/* Content Type Badge */}
                 <div className='flex items-center justify-between mb-4'>,
                   <div className='flex items-center space-x-2'>,
-                    <span,
-                      className={`px-3 py-1 rounded-full text-sm font-medium ${,
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${
                         item.type === 'blog',
                           ? 'bg-blue-10o0 text-blue-80o0',
                           : item.type === 'case-study',
                             ? 'bg-green-10o0 text-green-80o0',
-                            : 'bg-purple-10o0 text-purple-80o0',
-                      }`}
+                            : 'bg-purple-10o0 text-purple-80o0'}`}
                     >,
                       {item.type.toUpperCase()}
                     </span>,
@@ -160,7 +150,7 @@ const ContentRevolutionShowcase20o25 = () => {,
                 </p>,
                 {/* Metrics Grid */}
                 <div className='grid grid-cols-2 gap-4 mb-6'>,
-                  {Object.entries(item.metrics).map(([key, value]) => (,
+                  {Object.entries(item.metrics).map(([key, value]) => (
                     <div key={key} className='text-center'>,
                       <div className='text-2xl font-bold text-purple-60o0'>,
                         {value}
@@ -168,15 +158,13 @@ const ContentRevolutionShowcase20o25 = () => {,
                       <div className='text-sm text-gray-50o0 capitalize'>,
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Action Button */}
-                <Link,
+                <Link
                   href={item.url}
-                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white text-center py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5',
-                >,
-                  Read Full{' ',}
+                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white text-center py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5'>,
+                  Read Full{' '}
                   {item.type === 'blog',
                     ? 'Article',
                     : item.type === 'case-study',
@@ -185,8 +173,7 @@ const ContentRevolutionShowcase20o25 = () => {,
                   →,
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Metrics Section */}
         <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 rounded-2xl p-8 text-white mb-12'>,
@@ -291,25 +278,19 @@ const ContentRevolutionShowcase20o25 = () => {,
               AI-powered content strategies,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0'>,
                 View Our Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default ContentRevolutionShowcase20o25,
-,
+    </div>)};
+export default ContentRevolutionShowcase20o25;

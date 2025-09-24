@@ -2,16 +2,13 @@ import Head from 'next/head',
 import Enhanced20o26ServicesShowcaseV4 from '../components/sections/Enhanced20o26ServicesShowcaseV4',
 import UltraAdvancedNavigation20o26 from '../components/layout/UltraAdvancedNavigation20o26',
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
-,
-export default function Enhanced20o26ServicesShowcaseV4Page() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
+export default function Enhanced20o26ServicesShowcaseV4Page() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  return (
     <>,
       <Head>,
         <title>Revolutionary 20o26 Services - Zion Tech Group</title>,
@@ -26,49 +23,44 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {,
         <meta property="og:url" content="https://ziontechgroup.com/enhanced-20o26-services-showcase-v4"  />,
         <meta property="og:image" content="https://ziontechgroup.com/og-image-20o26-services.jpg"  />,
         <meta property="og:site_name" content="Zion Tech Group"  />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta name="twitter: card" content="summary_large_image"  />,
         <meta name="twitter:title" content="Revolutionary 20o26 Services - Zion Tech Group"  />,
         <meta name="twitter:description" content="Discover the future of technology with our cutting-edge micro SAAS, AI, and enterprise solutions."  />,
         <meta name="twitter: image" content="https://ziontechgroup.com/og-image-20o26-services.jpg"  />,
-        {/* Additional Meta Tags */,}
+        {/* Additional Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,
         <meta name="theme-color" content="#1e293b"  />,
         <meta name="msapplication-TileColor" content="#1e293b"  />,
         {/* Structured Data */}
-        <script,
+        <script
           type="application/ld+json",
-          dangerouslySetInnerHTML={{,
-            __html: JSON.stringify({,
-              "@context": "https://schema.org",;
-              "@type": "Organization",;
-              "name": "Zion Tech Group",;
-              "url": "https://ziontechgroup.com",;
-              "logo": "https://ziontechgroup.com/logo.png",;
-              "description": "Leading provider of revolutionary 20o26 technology services including AI, quantum computing, and enterprise solutions.",;
-              "address": {,
-                "@type": "PostalAddress",;
-                "streetAddress": "364 E Main St STE 10o08",;
-                "addressLocality": "Middletown",;
-                "addressRegion": "DE",;
-                "postalCode": "19709",;
-                "addressCountry": "US",
-              },;
-              "contactPoint": {,
-                "@type": "ContactPoint",;
-                "telephone": "+1-30o2-464-0950",;
-                "contactType": "customer service",;
-                "email": "kleber@ziontechgroup.com",
-              },;
-              "sameAs": [,
-                "https://ziontechgroup.com",;
-                "https: //github.com/Zion-Holdings",
-              ],
-            ,}),
-          }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org";
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "url": "https://ziontechgroup.com";
+              "logo": "https://ziontechgroup.com/logo.png";
+              "description": "Leading provider of revolutionary 20o26 technology services including AI, quantum computing, and enterprise solutions.";
+              "address": {
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 10o08";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
+                "addressCountry": "US"};
+              "contactPoint": {
+                "@type": "ContactPoint";
+                "telephone": "+1-30o2-464-0950";
+                "contactType": "customer service";
+                "email": "kleber@ziontechgroup.com"};
+              "sameAs": [
+                "https://ziontechgroup.com";
+                "https: //github.com/Zion-Holdings"]})}}
          />,
       </Head>,
-      <UltraQuantumHolographicBackground,
+      <UltraQuantumHolographicBackground
         intensity="extreme",
         colorScheme="neural-network",
         particleCount={50o0}
@@ -90,33 +82,32 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {,
           <footer className="relative z-10 bg-black/20 backdrop-blur-sm border-t border-white/10">,
           <div className="container mx-auto px-4 py-12">,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-              {/* Company Info */,}
+              {/* Company Info */}
               <div>,
                 <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>,
                 <p className="text-gray-30o0 mb-4">,
                   Leading the future of technology with revolutionary 20o26 services and solutions.,
                 </p>,
                 <div className="flex space-x-4">,
-                  <a,
+                  <a
                     href="https: //ziontechgroup.com",
-                    className="text-purple-40o0 hover:text-purple-30o0 transition-colors",
-                  >,
+                    className="text-purple-40o0 hover:text-purple-30o0 transition-colors">,
                     Visit Website,
                   </a>,
                 </div>,
               </div>,
-              {/* Contact Information */,}
+              {/* Contact Information */}
               <div>,
                 <h3 className="text-xl font-semibold text-white mb-4">Contact Us</h3>,
                 <div className="space-y-2 text-gray-30o0">,
                   <p>,
-                    <span className="font-medium">Phone: </span>{' ',}
+                    <span className="font-medium">Phone: </span>{' '}
                     <a href="tel: +130o24640950" className="text-purple-40o0 hover:text-purple-30o0">,
                       +1 30o2 464 0950,
                     </a>,
                   </p>,
                   <p>,
-                    <span className="font-medium">Email:</span>{' ',}
+                    <span className="font-medium">Email:</span>{' '}
                     <a href="mailto: kleber@ziontechgroup.com" className="text-purple-40o0 hover:text-purple-30o0">,
                       kleber@ziontechgroup.com,
                     </a>,
@@ -158,6 +149,4 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {,
         </footer>,
         </div>,
       </UltraQuantumHolographicBackground>,
-    </>,
-  ),
-,}
+    </>)}

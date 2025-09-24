@@ -1,146 +1,143 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  MessageSquare,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Rocket,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  FileText,;
-  Image,;
-  Video,;
-  Music,;
-  Palette,;
-  Type,;
-  User,;
-  Search,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  Code,;
-  Database,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  Users2,;
-  Award,;
-  CheckCircle,;
-  Target,;
-  BarChart3,;
-  TrendingUp,;
-  Lock,;
-  Server,;
-  Network,;
-  Monitor,;
-  Settings,;
-  RefreshCw,;
-  Play,;
-  Pause,;
-  AlertTriangle,;
-  CheckCircle2,;
-  Building,;
-  Wifi,;
-  HardDrive,;
-  Cloud,;
-  Smartphone,;
-  Link,;
-  Blocks,;
-  Wallet,;
-  CreditCard,;
-  PiggyBank,;
-  Building2,;
-  Activity,;
-  Waves,;
-  Zap,;
-  BrainCircuit,;
-  CpuIcon,;
-  MonitorHeart,;
-  Film,;
-  Headphones,;
-  Camera,;
-  Gamepad2,;
-  Tv,;
-  Radio,;
-  Factory,;
-  Cog,;
-  Gauge,;
-  Wrench,;
-  Settings2,;
-  CpuIcon2,;
-  Calendar,;
-  Clock,;
-  Target,;
-  Users2,;
-  FileText2,;
-  PieChart,;
-  TrendingUp,;
-  DollarSign,;
-  ChartBar,;
-  LineChart,;
-  PieChart2,;
-  BarChart4,;
-  Activity,;
-  TrendingDown,;
-  ArrowUpDown,;
+import {
+  Brain;
+  Zap;
+  Target;
+  BarChart3;
+  Users;
+  TrendingUp;
+  MessageSquare;
+  Mail;
+  Phone;
+  MapPin;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Rocket;
+  Globe;
+  Shield;
+  Cpu;
+  FileText;
+  Image;
+  Video;
+  Music;
+  Palette;
+  Type;
+  User;
+  Search;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Code;
+  Database;
+  Globe;
+  Shield;
+  Cpu;
+  Users2;
+  Award;
+  CheckCircle;
+  Target;
+  BarChart3;
+  TrendingUp;
+  Lock;
+  Server;
+  Network;
+  Monitor;
+  Settings;
+  RefreshCw;
+  Play;
+  Pause;
+  AlertTriangle;
+  CheckCircle2;
+  Building;
+  Wifi;
+  HardDrive;
+  Cloud;
+  Smartphone;
+  Link;
+  Blocks;
+  Wallet;
+  CreditCard;
+  PiggyBank;
+  Building2;
+  Activity;
+  Waves;
+  Zap;
+  BrainCircuit;
+  CpuIcon;
+  MonitorHeart;
+  Film;
+  Headphones;
+  Camera;
+  Gamepad2;
+  Tv;
+  Radio;
+  Factory;
+  Cog;
+  Gauge;
+  Wrench;
+  Settings2;
+  CpuIcon2;
+  Calendar;
+  Clock;
+  Target;
+  Users2;
+  FileText2;
+  PieChart;
+  TrendingUp;
+  DollarSign;
+  ChartBar;
+  LineChart;
+  PieChart2;
+  BarChart4;
+  Activity;
+  TrendingDown;
+  ArrowUpDown;
 } from 'lucide-react',
-,
-export const metadata: Metadata = {,
-  title: 'Neural Finance AI | Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'Neural Finance AI | Zion Tech Group';
   description:,
-    'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',;
+    'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
   keywords:,
-    'neural finance AI, financial AI, trading algorithms, risk management, financial analysis, neural networks',;
-  openGraph: {,
-    title: 'Neural Finance AI | Zion Tech Group',;
+    'neural finance AI, financial AI, trading algorithms, risk management, financial analysis, neural networks';
+  openGraph: {
+    title: 'Neural Finance AI | Zion Tech Group';
     description:,
-      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',;
-    url: 'https://ziontechgroup.com/neural-finance-ai',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-neural-finance.jpg',;
-        width: 1200,;
-        height: 630,;
-        alt: 'Neural Finance AI',;
-      },;
-    ],;
-    locale: 'en_US',;
-    type: 'website',;
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Neural Finance AI | Zion Tech Group',;
+      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
+    url: 'https://ziontechgroup.com/neural-finance-ai';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-neural-finance.jpg';
+        width: 1200;
+        height: 630;
+        alt: 'Neural Finance AI';
+      };
+    ];
+    locale: 'en_US';
+    type: 'website';
+  };
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Neural Finance AI | Zion Tech Group';
     description:,
-      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',;
-    images: ['https://ziontechgroup.com/og-image-neural-finance.jpg'],;
-  },;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/neural-finance-ai',;
-  },;
+      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
+    images: ['https://ziontechgroup.com/og-image-neural-finance.jpg'];
+  };
+  alternates: {
+    canonical: 'https://ziontechgroup.com/neural-finance-ai';
+  };
 };
-,
-const contactInfo = {,
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-export default function NeuralFinanceAI() {,
-  return (,
+export default function NeuralFinanceAI() {
+  return (
     <div className='min-h-screen bg-black text-white'>,
       {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
@@ -160,28 +157,25 @@ export default function NeuralFinanceAI() {,
               market analysis.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
                 Get Started,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='#features',
-                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
-      <section,
+      {/* Features Section */}
+      <section
         id='features',
-        className='py-20 bg-gradient-to-b from-black to-gray-900',
-      >,
+        className='py-20 bg-gradient-to-b from-black to-gray-900'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
             <h2 className='text-3xl lg:text-4xl font-bold mb-4'>,
@@ -265,7 +259,7 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-      {/* Neural Finance Capabilities Section */,}
+      {/* Neural Finance Capabilities Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -371,7 +365,7 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-      {/* Financial Markets Section */,}
+      {/* Financial Markets Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -451,7 +445,7 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -513,7 +507,7 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases Section */,}
+      {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -588,7 +582,7 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20'>,
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>,
@@ -599,24 +593,22 @@ export default function NeuralFinanceAI() {,
             platform.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
               Start Trading,
               <ArrowRight className='ml-2 w-5 h-5' />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300',
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300'>,
               <Phone className='mr-2 w-5 h-5' />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
@@ -629,20 +621,18 @@ export default function NeuralFinanceAI() {,
               <div className='space-y-4'>,
                 <div className='flex items-center space-x-3'>,
                   <Phone className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`tel:${contactInfo.mobile,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel:${contactInfo.mobile}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
                   <Mail className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
@@ -659,10 +649,9 @@ export default function NeuralFinanceAI() {,
                 Let's discuss your financial needs and how AI can transform your,
                 trading operations.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300'>,
                 Schedule Consultation,
                 <ArrowRight className='ml-2 w-4 h-4' />,
               </Link>,
@@ -670,7 +659,5 @@ export default function NeuralFinanceAI() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

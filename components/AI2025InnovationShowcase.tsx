@@ -1,10 +1,9 @@
 import Link from 'next/link',
-,
-const AI20o25InnovationShowcase = () => {,
-  return (,
+const AI20o25InnovationShowcase = () => {
+  return (
     <section className='py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-bold text-white'>,
@@ -19,9 +18,9 @@ const AI20o25InnovationShowcase = () => {,
             innovations that are transforming industries worldwide.,
           </p>,
         </div>,
-        {/* Innovation Grid */,}
+        {/* Innovation Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {/* Innovation 1 */,}
+          {/* Innovation 1 */}
           <div className='bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-40o0/50 transition-all duration-30o0 group'>,
             <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
               🧠,
@@ -35,16 +34,15 @@ const AI20o25InnovationShowcase = () => {,
             </p>,
             <div className='flex items-center text-cyan-40o0 font-semibold'>,
               <span>Learn More</span>,
-              <svg,
+              <svg
                 className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -64,16 +62,15 @@ const AI20o25InnovationShowcase = () => {,
             </p>,
             <div className='flex items-center text-purple-40o0 font-semibold'>,
               <span>Discover</span>,
-              <svg,
+              <svg
                 className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -93,16 +90,15 @@ const AI20o25InnovationShowcase = () => {,
             </p>,
             <div className='flex items-center text-green-40o0 font-semibold'>,
               <span>Explore</span>,
-              <svg,
+              <svg
                 className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -130,7 +126,7 @@ const AI20o25InnovationShowcase = () => {,
             <div className='text-gray-30o0'>Faster Processing</div>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-2xl p-8 max-w-4xl mx-auto'>,
             <h3 className='text-3xl font-bold mb-4'>,
@@ -141,25 +137,19 @@ const AI20o25InnovationShowcase = () => {,
               revolutionary AI innovations.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Schedule Demo,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25InnovationShowcase,
-,
+    </section>)};
+export default AI20o25InnovationShowcase;

@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AgenticRiskAndSafetyPlaybook20o26 = () => {,
-  return (,
+const AgenticRiskAndSafetyPlaybook20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agentic Risk and Safety Playbook',
         description='Safeguards, monitoring, and governance patterns for production agent systems.',
         keywords='AI agent safety, risk management, governance, evaluations, 20o26',
@@ -47,23 +46,17 @@ const AgenticRiskAndSafetyPlaybook20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request a Safety Review,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgenticRiskAndSafetyPlaybook20o26,
-,
+    </div>)};
+export default AgenticRiskAndSafetyPlaybook20o26;

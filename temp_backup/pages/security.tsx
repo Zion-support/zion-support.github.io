@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SecurityPage() {,
-  return (,
+export default function SecurityPage() {
+  return (
     <>,
       <Head>,
         <title>Security - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function SecurityPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

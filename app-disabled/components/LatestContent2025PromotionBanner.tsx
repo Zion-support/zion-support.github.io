@@ -1,53 +1,51 @@
 import Link from 'next/link',
-,
-const LatestContent20o25PromotionBanner = () => {,
-  const featuredContent = [,
-    {,
-      title: 'AI 20o25 Enterprise Integration Mastery',;
+const LatestContent20o25PromotionBanner = () => {
+  const featuredContent = [
+    {
+      title: 'AI 20o25 Enterprise Integration Mastery';
       description:,
-        'Complete implementation guide for enterprise AI integration with 340% average ROI increase',;
-      category: 'AI Implementation',;
-      readingTime: '12 min read',;
-      href: '/blog/ai-20o25-enterprise-integration-mastery',;
-      featured: true,;
-      new: true,;
-    },;
-    {,
-      title: 'Quantum AI Business Revolution 20o25',;
+        'Complete implementation guide for enterprise AI integration with 340% average ROI increase';
+      category: 'AI Implementation';
+      readingTime: '12 min read';
+      href: '/blog/ai-20o25-enterprise-integration-mastery';
+      featured: true;
+      new: true;
+    };
+    {
+      title: 'Quantum AI Business Revolution 20o25';
       description:,
-        'Discover how quantum AI is revolutionizing business operations with exponential improvements',;
-      category: 'Quantum Technology',;
-      readingTime: '15 min read',;
-      href: '/blog/quantum-ai-business-revolution-20o25',;
-      featured: true,;
-      new: true,;
-    },;
-    {,
-      title: 'AI Autonomous Business Operations 20o25',;
+        'Discover how quantum AI is revolutionizing business operations with exponential improvements';
+      category: 'Quantum Technology';
+      readingTime: '15 min read';
+      href: '/blog/quantum-ai-business-revolution-20o25';
+      featured: true;
+      new: true;
+    };
+    {
+      title: 'AI Autonomous Business Operations 20o25';
       description:,
-        'The future of self-managing enterprises with 50o0% productivity increases',;
-      category: 'AI Automation',;
-      readingTime: '18 min read',;
-      href: '/blog/ai-autonomous-business-operations-20o25',;
-      featured: true,;
-      new: true,;
-    },;
-    {,
-      title: 'AI Implementation Enterprise Guide 20o25',;
+        'The future of self-managing enterprises with 50o0% productivity increases';
+      category: 'AI Automation';
+      readingTime: '18 min read';
+      href: '/blog/ai-autonomous-business-operations-20o25';
+      featured: true;
+      new: true;
+    };
+    {
+      title: 'AI Implementation Enterprise Guide 20o25';
       description:,
-        'Complete roadmap for enterprise AI implementation with real-world case studies',;
-      category: 'Implementation Guide',;
-      readingTime: '25 min read',;
-      href: '/resources/ai-implementation-enterprise-guide-20o25',;
-      featured: true,;
-      new: true,;
-    },;
+        'Complete roadmap for enterprise AI implementation with real-world case studies';
+      category: 'Implementation Guide';
+      readingTime: '25 min read';
+      href: '/resources/ai-implementation-enterprise-guide-20o25';
+      featured: true;
+      new: true;
+    };
   ],
-,
-  return (,
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>🔥 NEW CONTENT 20o25</span>,
@@ -62,21 +60,20 @@ const LatestContent20o25PromotionBanner = () => {,
         </div>,
         {/* Featured Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>,
-          {featuredContent.map((content, index) => (,
-            <div,
+          {featuredContent.map((content, index) => (
+            <div
               key={index}
-              className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover: bg-opacity-20 transition-all duration-30o0 group border border-white border-opacity-20',
-            >,
+              className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 hover: bg-opacity-20 transition-all duration-30o0 group border border-white border-opacity-20'>,
               <div className='flex items-center justify-between mb-4'>,
                 <span className='bg-green-50o0 text-white text-xs font-semibold px-3 py-1 rounded-full'>,
                   NEW,
                 </span>,
                 <span className='text-sm opacity-75'>,
-                  {content.readingTime,}
+                  {content.readingTime}
                 </span>,
               </div>,
               <h3 className='text-xl font-bold mb-3 group-hover: text-yellow-30o0 transition-colors'>,
-                {content.title,}
+                {content.title}
               </h3>,
               <p className='text-sm opacity-90 mb-4 leading-relaxed'>,
                 {content.description}
@@ -85,15 +82,13 @@ const LatestContent20o25PromotionBanner = () => {,
                 <span className='text-xs bg-white bg-opacity-20 px-3 py-1 rounded-full'>,
                   {content.category}
                 </span>,
-                <Link,
+                <Link
                   href={content.href}
-                  className='text-yellow-30o0 hover: text-yellow-20o0 font-semibold text-sm group-hover:underline transition-colors',
-                >,
+                  className='text-yellow-30o0 hover: text-yellow-20o0 font-semibold text-sm group-hover:underline transition-colors'>,
                   Read More →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='text-center'>,
@@ -106,22 +101,20 @@ const LatestContent20o25PromotionBanner = () => {,
               to achieve unprecedented growth and efficiency,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services',
-                className='bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Explore Our Services,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
                 Get Free Consultation,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <div className='mt-16 grid grid-cols-1 md: grid-cols-4 gap-8'>,
           <div className='text-center'>,
             <div className='text-3xl font-bold text-yellow-30o0 mb-2'>,
@@ -143,9 +136,5 @@ const LatestContent20o25PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default LatestContent20o25PromotionBanner,
-,
+    </section>)};
+export default LatestContent20o25PromotionBanner;

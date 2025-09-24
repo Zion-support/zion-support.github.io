@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const SustainableTechnologyGreenComputingSolutionsChat: NextPage = () => {,
-  return (,
+const SustainableTechnologyGreenComputingSolutionsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           SustainableTechnologyGreenComputingSolutionsChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='SustainableTechnologyGreenComputingSolutionsChat blog post',
         />,
@@ -19,9 +18,5 @@ const SustainableTechnologyGreenComputingSolutionsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default SustainableTechnologyGreenComputingSolutionsChat,
-,
+    </div>)};
+export default SustainableTechnologyGreenComputingSolutionsChat;

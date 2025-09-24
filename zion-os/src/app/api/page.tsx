@@ -1,8 +1,8 @@
-export default function APIPage() {,
-  return (,
+export default function APIPage() {
+  return (
     <div className='min-h-screen py-20 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-6xl mx-auto'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <h1 className='text-4xl md: text-6xl font-bold mb-6'>Zion OS API</h1>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
@@ -10,7 +10,7 @@ export default function APIPage() {,
             platform,
           </p>,
         </div>,
-        {/* API Overview */,}
+        {/* API Overview */}
         <div className='grid md: grid-cols-2 gap-8 mb-16'>,
           <div className='bg-white p-8 rounded-lg shadow-lg'>,
             <h2 className='text-2xl font-bold mb-4'>Authentication</h2>,
@@ -32,7 +32,5 @@ export default function APIPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

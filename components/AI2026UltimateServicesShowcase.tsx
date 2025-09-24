@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Shield,
@@ -11,134 +10,113 @@ import {,
   Users,
   Globe,
   Cpu,
-  Database,;
-  Cloud,;
-  Lock,;
-  TrendingUp,;
-  Target,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Sparkles,
-} from 'lucide-react',
-,
-const AI20o26UltimateServicesShowcase = () => {,
+  Database;
+  Cloud;
+  Lock;
+  TrendingUp;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Sparkles} from 'lucide-react',
+const AI20o26UltimateServicesShowcase = () => {
   const [activeServicesetActiveService] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const services = [,
-    {,
-      id: 1,;
-      title: "Neural Interface Revolution",;
-      description: "Breakthrough neural interfaces that enable direct brain-computer communicationrevolutionizing how humans interact with technology.",;
-      icon: Brain,;
-      features: [,
-        "Direct neural data processing",;
-        "Real-time thought-to-text conversion",;
-        "Enhanced cognitive augmentation",;
-        "Seamless human-AI collaboration",
-      ],;
-      stats: "99.7% accuracy",;
-      color: "from-purple-60o0 to-pink-60o0",
-    ,},;
-    {,
-      id: 2,;
-      title: "Quantum AI Fusion",;
-      description: "Revolutionary quantum computing integration with AIdelivering unprecedented processing power and problem-solving capabilities.",;
-      icon: Cpu,;
-      features: [,
-        "Quantum-enhanced machine learning",;
-        "Exponential processing speed",;
-        "Complex optimization solutions",;
-        "Next-gen cryptography",
-      ],;
-      stats: "10,0o00x faster",;
-      color: "from-blue-60o0 to-cyan-60o0",
-    ,},;
-    {,
-      id: 3,;
-      title: "Autonomous Business Operations",;
-      description: "Fully automated business processes that run independentlyoptimizing operations 24/7 without human intervention.",;
-      icon: Zap,;
-      features: [,
-        "Self-healing systems",;
-        "Predictive maintenance",;
-        "Dynamic resource allocation",;
-        "Intelligent decision making",
-      ],;
-      stats: "95% efficiency gain",;
-      color: "from-green-60o0 to-emerald-60o0",
-    ,},;
-    {,
-      id: 4,;
-      title: "Advanced Security AI",;
-      description: "Next-generation AI security systems that provide comprehensive protection against evolving cyber threats.",;
-      icon: Shield,;
-      features: [,
-        "Threat prediction and prevention",;
-        "Behavioral analysis",;
-        "Zero-trust architecture",;
-        "Real-time threat response",
-      ],;
-      stats: "99.9% threat detection",;
-      color: "from-red-60o0 to-orange-60o0",
-    ,},;
-    {,
-      id: 5,;
-      title: "Global Analytics Intelligence",;
-      description: "Worldwide data processing and analysis that provides insights across all business operations and markets.",;
-      icon: BarChart3,;
-      features: [,
-        "Real-time global monitoring",;
-        "Predictive market analysis",;
-        "Cross-platform integration",;
-        "Automated reporting",
-      ],;
-      stats: "50+ countries",;
-      color: "from-indigo-60o0 to-purple-60o0",
-    ,},;
-    {,
-      id: 6,;
-      title: "Consciousness Evolution Platform",;
-      description: "Revolutionary platform that enhances human consciousness and cognitive abilities through AI integration.",;
-      icon: Sparkles,;
-      features: [,
-        "Consciousness augmentation",;
-        "Enhanced creativity",;
-        "Improved decision making",;
-        "Expanded awareness",
-      ],;
-      stats: "30o0% cognitive boost",;
-      color: "from-yellow-60o0 to-orange-60o0",
-    ,}
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const services = [
+    {
+      id: 1;
+      title: "Neural Interface Revolution";
+      description: "Breakthrough neural interfaces that enable direct brain-computer communicationrevolutionizing how humans interact with technology.";
+      icon: Brain;
+      features: [
+        "Direct neural data processing";
+        "Real-time thought-to-text conversion";
+        "Enhanced cognitive augmentation";
+        "Seamless human-AI collaboration"];
+      stats: "99.7% accuracy";
+      color: "from-purple-60o0 to-pink-60o0"};
+    {
+      id: 2;
+      title: "Quantum AI Fusion";
+      description: "Revolutionary quantum computing integration with AIdelivering unprecedented processing power and problem-solving capabilities.";
+      icon: Cpu;
+      features: [
+        "Quantum-enhanced machine learning";
+        "Exponential processing speed";
+        "Complex optimization solutions";
+        "Next-gen cryptography"];
+      stats: "10,0o00x faster";
+      color: "from-blue-60o0 to-cyan-60o0"};
+    {
+      id: 3;
+      title: "Autonomous Business Operations";
+      description: "Fully automated business processes that run independentlyoptimizing operations 24/7 without human intervention.";
+      icon: Zap;
+      features: [
+        "Self-healing systems";
+        "Predictive maintenance";
+        "Dynamic resource allocation";
+        "Intelligent decision making"];
+      stats: "95% efficiency gain";
+      color: "from-green-60o0 to-emerald-60o0"};
+    {
+      id: 4;
+      title: "Advanced Security AI";
+      description: "Next-generation AI security systems that provide comprehensive protection against evolving cyber threats.";
+      icon: Shield;
+      features: [
+        "Threat prediction and prevention";
+        "Behavioral analysis";
+        "Zero-trust architecture";
+        "Real-time threat response"];
+      stats: "99.9% threat detection";
+      color: "from-red-60o0 to-orange-60o0"};
+    {
+      id: 5;
+      title: "Global Analytics Intelligence";
+      description: "Worldwide data processing and analysis that provides insights across all business operations and markets.";
+      icon: BarChart3;
+      features: [
+        "Real-time global monitoring";
+        "Predictive market analysis";
+        "Cross-platform integration";
+        "Automated reporting"];
+      stats: "50+ countries";
+      color: "from-indigo-60o0 to-purple-60o0"};
+    {
+      id: 6;
+      title: "Consciousness Evolution Platform";
+      description: "Revolutionary platform that enhances human consciousness and cognitive abilities through AI integration.";
+      icon: Sparkles;
+      features: [
+        "Consciousness augmentation";
+        "Enhanced creativity";
+        "Improved decision making";
+        "Expanded awareness"];
+      stats: "30o0% cognitive boost";
+      color: "from-yellow-60o0 to-orange-60o0"}
   ],
-,
-  const containerVariants ={,
-    hidden: { opacity: 0, y: 50 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.8,;
-        staggerChildren: 0.2,
-      ,}
+  const containerVariants ={
+    hidden: { opacity: 0, y: 50 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.8;
+        staggerChildren: 0.2}
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0, y: 30 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 ,}
+  const itemVariants ={
+    hidden: { opacity: 0, y: 30 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: { duration: 0.6 }
     }
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20 px-4">,
       <motion.div,
         className="max-w-7xl mx-auto",
@@ -155,7 +133,7 @@ const AI20o26UltimateServicesShowcase = () => {,
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
             Revolutionary AI,
             <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
-              {" ",}Services,
+              {" "}Services,
             </span>,
           </h1>,
           <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
@@ -164,33 +142,31 @@ const AI20o26UltimateServicesShowcase = () => {,
         </motion.div>,
         {/* Services Grid */}
         <motion.div variants={itemVariants} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
-          {services.map((serviceindex) => (,
+          {services.map((serviceindex) => (
             <motion.div,
-              key={service.id,}
-              className={`relative group cursor-pointer ${,
-                activeService === index ? 'scale-10o5' : 'hover: scale-10o2',
-              ,} transition-all duration-30o0`}
+              key={service.id}
+              className={`relative group cursor-pointer ${
+                activeService === index ? 'scale-10o5' : 'hover: scale-10o2'} transition-all duration-30o0`}
               onClick={() => setActiveService(index)}
-              whileHover={{ y: -10 ,}}
-              whileTap={{ scale: 0.95 ,}}
+              whileHover={{ y: -10 }}
+              whileTap={{ scale: 0.95 }}
             >,
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full">,
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}>,
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}>,
                   <service.icon className="w-8 h-8 text-white"  />,
                 </div>,
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-purple-30o0 transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </h3>,
                 <p className="text-gray-30o0 mb-6 leading-relaxed">,
                   {service.description}
                 </p>,
                 <div className="space-y-3 mb-6">,
-                  {service.features.map((featureIndex) => (,
+                  {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">,
                       <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />,
                       <span className="text-gray-30o0 text-sm">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="flex items-center justify-between">,
                   <div className="text-2xl font-bold text-white">,
@@ -198,32 +174,29 @@ const AI20o26UltimateServicesShowcase = () => {,
                   </div>,
                   <ArrowRight className="w-6 h-6 text-purple-40o0 group-hover: translate-x-2 transition-transform"  />,
                 </div>,
-                {activeService === index && (,
+                {activeService === index && (
                   <motion.div,
                     className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-2xl border-2 border-purple-40o0",
                     layoutId="activeService",
-                    initial={{ opacity: 0 ,}}
-                    animate={{ opacity: 1 ,}}
-                    exit={{ opacity: 0 ,}}
-                   />,
-                )}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                   />)}
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
         {/* Active Service Details */}
         <AnimatePresence mode="wait">,
           <motion.div,
             key={activeService}
             variants={itemVariants}
-            initial={{ opacity: 0, y: 50 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            exit={{ opacity: 0, y: -50 ,}}
-            className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20",
-          >,
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="bg-white/10 backdrop-blur-lg rounded-3xl p-12 border border-white/20">,
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
               <div>,
-                <div className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${services[activeService].color,} flex items-center justify-center mb-8`}>,
+                <div className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${services[activeService].color} flex items-center justify-center mb-8`}>,
                   <services[activeService].icon className="w-10 h-10 text-white"  />,
                 </div>,
                 <h2 className="text-4xl font-bold text-white mb-6">,
@@ -247,18 +220,16 @@ const AI20o26UltimateServicesShowcase = () => {,
               </div>,
               <div className="space-y-6">,
                 <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>,
-                {services[activeService].features.map((featureindex) => (,
+                {services[activeService].features.map((featureindex) => (
                   <motion.div,
-                    key={index,}
-                    initial={{ opacity: 0x: 50 ,}}
-                    animate={{ opacity: 1x: 0 ,}}
-                    transition={{ delay: index * 0.1 ,}}
-                    className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10",
-                  >,
+                    key={index}
+                    initial={{ opacity: 0x: 50 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">,
                     <CheckCircle className="w-6 h-6 text-green-40o0 flex-shrink-0"  />,
                     <span className="text-gray-30o0 text-lg">{feature}</span>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </motion.div>,
@@ -281,8 +252,5 @@ const AI20o26UltimateServicesShowcase = () => {,
           </div>,
         </motion.div>,
       </motion.div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o26UltimateServicesShowcase,
+    </div>)};
+export default AI20o26UltimateServicesShowcase;

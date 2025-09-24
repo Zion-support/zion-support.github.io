@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {,
-  return (,
+const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='ApiFirstDevelopmentBuildingScalableSystemsChat blog post',
         />,
@@ -19,9 +18,5 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default ApiFirstDevelopmentBuildingScalableSystemsChat,
-,
+    </div>)};
+export default ApiFirstDevelopmentBuildingScalableSystemsChat;

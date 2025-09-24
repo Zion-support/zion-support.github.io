@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Agent Incident Response Playbook',;
+export const metadata = {
+  title: 'AI 20o26: Agent Incident Response Playbook';
   description:,
-    'Eval‑gated triage, mitigation, and escalation with autonomous agents.',;
+    'Eval‑gated triage, mitigation, and escalation with autonomous agents.';
 };
-,
-export default function AgentIncidentResponsePlaybookPage() {,
-  return (,
+export default function AgentIncidentResponsePlaybookPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agent Incident Response Playbook,
@@ -35,24 +34,20 @@ export default function AgentIncidentResponsePlaybookPage() {,
         <h3>Related Guides</h3>,
         <ul>,
           <li>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-agents-oncall-automation',
-              className='text-purple-70o0 hover: underline',
-            >,
+              className='text-purple-70o0 hover: underline'>,
               Agents‑On‑Call Automation,
             </Link>,
           </li>,
           <li>,
-            <Link,
+            <Link
               href='/content/ai-20o26-evaluation-hub',
-              className='text-purple-70o0 hover:underline',
-            >,
+              className='text-purple-70o0 hover:underline'>,
               Evaluation Hub,
             </Link>,
           </li>,
         </ul>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function NewContent20o25EnterpriseSuccessBanner() {,
-  return (,
+export default function NewContent20o25EnterpriseSuccessBanner() {
+  return (
     <div className='bg-gradient-to-r from-green-50o0 via-emerald-60o0 to-teal-70o0 text-white py-8 px-4'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='flex flex-col lg: flex-row items-center justify-between'>,
@@ -38,35 +37,30 @@ export default function NewContent20o25EnterpriseSuccessBanner() {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-transformation-breakthrough',
-              className='inline-flex items-center px-8 py-4 bg-white text-green-60o0 font-bold rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-white text-green-60o0 font-bold rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
               Read Success Story,
-              <svg,
+              <svg
                 className='w-5 h-5 ml-2',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover: bg-white hover:text-green-60o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover: bg-white hover:text-green-60o0 transition-all duration-30o0'>,
               Schedule Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

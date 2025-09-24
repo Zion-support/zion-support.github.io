@@ -1,6 +1,6 @@
-import React from 'react',
+import React from 'react';
 import { useState } from 'react',
-export default function PostJobPage() {,
+export default function PostJobPage() {
   const router = useRouter(),
   const [title, setTitle] = useState(''),
   const [description, setDescription] = useState(''),
@@ -12,55 +12,47 @@ export default function PostJobPage() {,
   const [clientEmail, setClientEmail] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [error, setError] = useState<string | null>(null),
-,
-  async function handleSubmit(e: React.FormEvent) {,
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault(),
     setError(null),
-,
-    if (!title || !description || !category || !clientEmail) {,
+    if (!title || !description || !category || !clientEmail) {
       setError('Please fill in all required fields.'),
-      return,
-    ,}
+      return}
 ,
-    try {,
+    try {
       setIsSubmitting(true),
-      const res = await fetch('/api/jobs', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          title,;
-          description,;
-          category,;
+      const res = await fetch('/api/jobs', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          title;
+          description;
+          category;
           requiredSkills: skills,
             .split(','),
             .map(s => s.trim()),
-            .filter(Boolean),;
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
-          clientEmail,;
-        }),;
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined;
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined;
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined;
+          clientEmail;
+        });
       }),
-,
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to post job'),
-,
-      router.push(`/client/dashboard`),
-    } catch (err: any) {,
-      setError(err.message || 'Something went wrong'),
-    ,} finally {,
-      setIsSubmitting(false),
-    }
+      router.push(`/client/dashboard`)} catch (err: any) {
+      setError(err.message || 'Something went wrong')} finally {
+      setIsSubmitting(false)}
   }
 ,
-  return (,
+  return (
     <div className='max-w-2xl mx-auto'>,
       <h1 className='text-2xl font-semibold mb-4'>Post a Job</h1>,
       {error && <p className='text-red-60o0 mb-3'>{error}</p>}
       <form onSubmit={handleSubmit} className='space-y-4'>,
         <div>,
           <label className='block text-sm font-medium'>Project Title *</label>,
-          <input,
+          <input
             className='mt-1 w-full border rounded p-2',
             value={title}
             onChange={e => setTitle(e.target.value)}
@@ -68,7 +60,7 @@ export default function PostJobPage() {,
         </div>,
         <div>,
           <label className='block text-sm font-medium'>Description *</label>,
-          <textarea,
+          <textarea
             className='mt-1 w-full border rounded p-2',
             rows={6}
             value={description}
@@ -77,7 +69,7 @@ export default function PostJobPage() {,
         </div>,
         <div>,
           <label className='block text-sm font-medium'>Category *</label>,
-          <input,
+          <input
             className='mt-1 w-full border rounded p-2',
             value={category}
             onChange={e => setCategory(e.target.value)}
@@ -88,7 +80,7 @@ export default function PostJobPage() {,
           <label className='block text-sm font-medium'>,
             Required Skills (comma-separated),
           </label>,
-          <input,
+          <input
             className='mt-1 w-full border rounded p-2',
             value={skills}
             onChange={e => setSkills(e.target.value)}
@@ -100,10 +92,10 @@ export default function PostJobPage() {,
             <label className='block text-sm font-medium'>,
               Budget Min (USD),
             </label>,
-            <input,
+            <input
               type='number',
               className='mt-1 w-full border rounded p-2',
-              value={budgetMinUsd,}
+              value={budgetMinUsd}
               onChange={e => setBudgetMinUsd(e.target.value)}
             />,
           </div>,
@@ -111,7 +103,7 @@ export default function PostJobPage() {,
             <label className='block text-sm font-medium'>,
               Budget Max (USD),
             </label>,
-            <input,
+            <input
               type='number',
               className='mt-1 w-full border rounded p-2',
               value={budgetMaxUsd}
@@ -123,7 +115,7 @@ export default function PostJobPage() {,
           <label className='block text-sm font-medium'>,
             Delivery Deadline (ISO or YYYY-MM-DD),
           </label>,
-          <input,
+          <input
             className='mt-1 w-full border rounded p-2',
             value={deliveryDeadlineIso}
             onChange={e => setDeliveryDeadlineIso(e.target.value)}
@@ -132,7 +124,7 @@ export default function PostJobPage() {,
         </div>,
         <div>,
           <label className='block text-sm font-medium'>Email *</label>,
-          <input,
+          <input
             type='email',
             className='mt-1 w-full border rounded p-2',
             value={clientEmail}
@@ -141,16 +133,14 @@ export default function PostJobPage() {,
           />,
         </div>,
         <div className='pt-2'>,
-          <button,
+          <button
             type='submit',
             className='px-4 py-2 rounded bg-black text-white disabled: opacity-50',
-            disabled={isSubmitting,}
+            disabled={isSubmitting}
           >,
             {isSubmitting ? 'Posting…' : 'Post Job'}
           </button>,
         </div>,
       </form>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

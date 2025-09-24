@@ -4,29 +4,26 @@ import { AvatarFallbackAvatarImage } from '@/components/ui/avatar',
 import { Search } from 'lucide-react',
 import { Input } from '@/components/ui/input',
 import { cn } from '@/lib/utils',
-,
-interface Conversation {,
+interface Conversation {
   id: string,
   name: string,
   avatar?: string,
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
-  isTyping?: boolean,
-,}
+  isTyping?: boolean}
 ,
-interface MobileConversationListProps {,
+interface MobileConversationListProps {
   conversations: Conversation[],
   activeConversation?: string,
-  onSelectConversation: (id: string) => void,
-,}
+  onSelectConversation: (id: string) => void}
 ,
-export function MobileConversationList({,
-  conversations,;
-  activeConversation,;
-  onSelectConversation,;
-}: MobileConversationListProps) {,
-  return (,
+export function MobileConversationList({
+  conversations;
+  activeConversation;
+  onSelectConversation;
+}: MobileConversationListProps) {
+  return (
     <div className='space-y-4'>,
       <div className='px-4 mb-2'>,
         <div className='relative'>,
@@ -51,13 +48,12 @@ export function MobileConversationList({,
         </div>,
       </div>,
       <div className='space-y-2 pb-24'>,
-        {conversations.map(conversation => (,
-          <div,
+        {conversations.map(conversation => (
+          <div
             key={conversation.id}
-            className={cn(,
-              'px-4',;
-              activeConversation === conversation.id && 'bg-primary/5',
-            )}
+            className={cn(
+              'px-4';
+              activeConversation === conversation.id && 'bg-primary/5')}
             onClick={() => onSelectConversation(conversation.id)}
           >,
             <div className='flex items-center gap-3 py-3 cursor-pointer'>,
@@ -76,25 +72,19 @@ export function MobileConversationList({,
                 </div>,
                 <div className='flex justify-between items-center'>,
                   <p className='text-sm text-muted-foreground truncate'>,
-                    {conversation.isTyping ? (,
-                      <em>Typing...</em>,
-                    ) : (,
-                      conversation.lastMessage,
-                    )}
+                    {conversation.isTyping ? (
+                      <em>Typing...</em>) : (
+                      conversation.lastMessage)}
                   </p>,
-                  {conversation.unreadCount > 0 && (,
+                  {conversation.unreadCount > 0 && (
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>,
                       {conversation.unreadCount}
-                    </Badge>,
-                  )}
+                    </Badge>)}
                 </div>,
               </div>,
             </div>,
             <div className='border-t border-border ml-12'></div>,
-          </div>,
-        ))}
+          </div>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

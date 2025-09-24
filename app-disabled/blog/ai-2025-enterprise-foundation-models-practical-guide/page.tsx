@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const EnterpriseFoundationModelsPracticalGuide20o25 = () => {,
-  return (,
+const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Enterprise Foundation Models: A Practical Guide (20o25)',
         description='A practical, vendor-neutral guide for evaluating, deploying, and governing enterprise foundation models in 20o25.',
         keywords='foundation models, enterprise AI, governance, MLOps, 20o25 guide',
@@ -35,11 +34,11 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {,
           <ul>,
             <li>Business fit: top-3 use cases, value hypotheses, and KPIs</li>,
             <li>,
-              Model fit: reasoning, multilingual, tools, context length,;
+              Model fit: reasoning, multilingual, tools, context length;
               cost-to-serve,
             </li>,
             <li>,
-              Operational fit: latency SLOs, availability, observability,;
+              Operational fit: latency SLOs, availability, observability;
               incident playbooks,
             </li>,
             <li>,
@@ -49,7 +48,7 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {,
           </ul>,
           <h2>Architecture Blueprint</h2>,
           <p>,
-            Adopt a model routing layer, retrieval layer, function/tool layer,;
+            Adopt a model routing layer, retrieval layer, function/tool layer;
             and guardrails. Standardize on evaluation harnesses and golden tasks,
             to compare vendors and versions objectively.,
           </p>,
@@ -61,7 +60,7 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {,
           </p>,
           <h2>Success Metrics</h2>,
           <p>,
-            Track task success rate, cost per successful task, resolution time,;
+            Track task success rate, cost per successful task, resolution time;
             escalation rate, and net business impact. Tie model promotion to,
             these metrics, not leaderboard scores.,
           </p>,
@@ -81,23 +80,17 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {,
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Plan Your Foundation Model Strategy,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EnterpriseFoundationModelsPracticalGuide20o25,
-,
+    </div>)};
+export default EnterpriseFoundationModelsPracticalGuide20o25;

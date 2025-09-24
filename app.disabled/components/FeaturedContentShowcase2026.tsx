@@ -1,61 +1,56 @@
 'use client',
-,
-import React from 'react',
-,
-export default function FeaturedContentShowcase2026() {,
-  return null,
-}
+import React from 'react';
+export default function FeaturedContentShowcase2026() {
+  return null}
 import Link from 'next/link',
-,
-const FeaturedContentShowcase20o26 = () => {,
-  const featuredContent = [,
-    {,
-      title: 'AI 20o26 Enterprise Transformation',;
+const FeaturedContentShowcase20o26 = () => {
+  const featuredContent = [
+    {
+      title: 'AI 20o26 Enterprise Transformation';
       description:,
-        'Complete guide to transforming your enterprise with cutting-edge AI technologies',;
-      category: 'AI Implementation',;
-      readTime: '15 min read',;
-      image: '/images/ai-enterprise-transformation.jpg',;
-      href: '/blog/ai-20o26-enterprise-transformation-ultimate-guide',;
-      featured: true,;
-      tags: ['Enterprise AI', 'Transformation', '20o26', 'Implementation'],;
-    },;
-    {,
-      title: 'Quantum AI 20o26 Business Revolution',;
+        'Complete guide to transforming your enterprise with cutting-edge AI technologies';
+      category: 'AI Implementation';
+      readTime: '15 min read';
+      image: '/images/ai-enterprise-transformation.jpg';
+      href: '/blog/ai-20o26-enterprise-transformation-ultimate-guide';
+      featured: true;
+      tags: ['Enterprise AI', 'Transformation', '20o26', 'Implementation'];
+    };
+    {
+      title: 'Quantum AI 20o26 Business Revolution';
       description:,
-        'Discover how quantum AI is revolutionizing business operations with exponential improvements',;
-      category: 'Quantum AI',;
-      readTime: '12 min read',;
-      image: '/images/quantum-ai-revolution.jpg',;
-      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide',;
-      featured: true,;
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Case Studies'],;
-    },;
-    {,
-      title: 'AI Transformation Success Story',;
+        'Discover how quantum AI is revolutionizing business operations with exponential improvements';
+      category: 'Quantum AI';
+      readTime: '12 min read';
+      image: '/images/quantum-ai-revolution.jpg';
+      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide';
+      featured: true;
+      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Case Studies'];
+    };
+    {
+      title: 'AI Transformation Success Story';
       description:,
-        'How TechCorp achieved 40o0% ROI in 12 months through strategic AI implementation',;
-      category: 'Case Study',;
-      readTime: '8 min read',;
-      image: '/images/ai-success-story.jpg',;
-      href: '/case-studies/ai-transformation-success-story-20o26',;
-      featured: true,;
-      tags: ['Success Story', '40o0% ROI', 'Fortune 50o0', 'Implementation'],;
-    },;
-    {,
-      title: 'AI Implementation Ultimate Guide 20o26',;
+        'How TechCorp achieved 40o0% ROI in 12 months through strategic AI implementation';
+      category: 'Case Study';
+      readTime: '8 min read';
+      image: '/images/ai-success-story.jpg';
+      href: '/case-studies/ai-transformation-success-story-20o26';
+      featured: true;
+      tags: ['Success Story', '40o0% ROI', 'Fortune 50o0', 'Implementation'];
+    };
+    {
+      title: 'AI Implementation Ultimate Guide 20o26';
       description:,
-        'The most comprehensive AI implementation guide with complete roadmap to success',;
-      category: 'Resource',;
-      readTime: '20 min read',;
-      image: '/images/ai-implementation-guide.jpg',;
-      href: '/resources/ai-implementation-ultimate-guide-20o26',;
-      featured: true,;
-      tags: ['Implementation', 'Guide', '20o26', 'Best Practices'],;
-    },;
+        'The most comprehensive AI implementation guide with complete roadmap to success';
+      category: 'Resource';
+      readTime: '20 min read';
+      image: '/images/ai-implementation-guide.jpg';
+      href: '/resources/ai-implementation-ultimate-guide-20o26';
+      featured: true;
+      tags: ['Implementation', 'Guide', '20o26', 'Best Practices'];
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -74,15 +69,14 @@ const FeaturedContentShowcase20o26 = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
-          {featuredContent.map((content, index) => (,
-            <div,
+          {featuredContent.map((content, index) => (
+            <div
               key={index}
-              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden group',
-            >,
+              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 overflow-hidden group'>,
               <div className='relative'>,
                 <div className='aspect-w-16 aspect-h-9 bg-gradient-to-br from-purple-50o0 to-blue-60o0'>,
                   <div className='flex items-center justify-center text-6xl text-white'>,
-                    {index === 0 && '🤖',}
+                    {index === 0 && '🤖'}
                     {index === 1 && '⚛️'}
                     {index === 2 && '📈'}
                     {index === 3 && '📚'}
@@ -101,30 +95,26 @@ const FeaturedContentShowcase20o26 = () => {,
               </div>,
               <div className='p-6'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors'>,
-                  {content.title,}
+                  {content.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4 leading-relaxed'>,
                   {content.description}
                 </p>,
                 <div className='flex flex-wrap gap-2 mb-6'>,
-                  {content.tags.slice(0, 2).map((tag, tagIndex) => (,
-                    <span,
+                  {content.tags.slice(0, 2).map((tag, tagIndex) => (
+                    <span
                       key={tagIndex}
-                      className='bg-gray-10o0 text-gray-60o0 px-3 py-1 rounded-full text-xs font-medium',
-                    >,
+                      className='bg-gray-10o0 text-gray-60o0 px-3 py-1 rounded-full text-xs font-medium'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
-                <Link,
+                <Link
                   href={content.href}
-                  className='inline-flex items-center text-purple-60o0 hover: text-purple-70o0 font-semibold group-hover:underline',
-                >,
+                  className='inline-flex items-center text-purple-60o0 hover: text-purple-70o0 font-semibold group-hover:underline'>,
                   Read More →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-12 text-white'>,
@@ -133,29 +123,23 @@ const FeaturedContentShowcase20o26 = () => {,
             </h3>,
             <p className='text-xl text-purple-10o0 mb-8 max-w-3xl mx-auto'>,
               Join thousands of organizations already transforming their,
-              operations with our proven AI strategies, implementation guides,;
+              operations with our proven AI strategies, implementation guides;
               and real-world success stories.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center text-purple-60o0 bg-white hover:bg-gray-10o0 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-10o5',
-              >,
+                className='inline-flex items-center text-purple-60o0 bg-white hover:bg-gray-10o0 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-10o5'>,
                 Get Started Today →,
               </Link>,
-              <Link,
+              <Link
                 href='/blog',
-                className='inline-flex items-center text-white border-2 border-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-10o5',
-              >,
+                className='inline-flex items-center text-white border-2 border-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-10o5'>,
                 Explore All Content,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default FeaturedContentShowcase20o26,
-,
+    </section>)};
+export default FeaturedContentShowcase20o26;

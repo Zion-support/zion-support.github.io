@@ -5,8 +5,7 @@ import { AvatarFallbackAvatarImage } from "@/components/ui/avatar",
 import { BuildingMapPinClockDollarSignStar } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
-,
-interface JobMatchProps {,
+interface JobMatchProps {
   matchId: string,
   talentId: string,
   name: string,
@@ -19,10 +18,9 @@ interface JobMatchProps {,
   skills: string[],
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
-  onInvite?: (matchId: string) => void,
-,}
+  onInvite?: (matchId: string) => void}
 ,
-export function JobMatchCard({,
+export function JobMatchCard({
   matchId,
   talentId,
   name,
@@ -32,33 +30,26 @@ export function JobMatchCard({,
   location,
   category,
   matchPercent,
-  skills,;
+  skills;
   onApply,
   onViewDetails,
-  onInvite,
-}: JobMatchProps) {,
-  const handleApply = () => {,
-    if (onApply) {,
-      onApply(matchId),
-    }
+  onInvite}: JobMatchProps) {
+  const handleApply = () => {
+    if (onApply) {
+      onApply(matchId)}
   };
-,
-  const handleViewDetails = () => {,
-    if (onViewDetails) {,
-      onViewDetails(matchId),
-    }
+  const handleViewDetails = () => {
+    if (onViewDetails) {
+      onViewDetails(matchId)}
   };
-,
-  const handleInvite = () => {,
-    if (onInvite) {,
-      onInvite(matchId),
-    }
+  const handleInvite = () => {
+    if (onInvite) {
+      onInvite(matchId)}
   };
-,
   // Generate a formatted date for display,
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks,
-  return (,
+  return (
     <Card className="overflow-hidden">,
       <CardContent className="p-0">,
         {/* Match score indicator */}
@@ -68,7 +59,7 @@ export function JobMatchCard({,
             <span className="font-medium">{matchPercent}% Match</span>,
           </div>,
           <Badge variant="outline" className="bg-background">,
-            {formatDistanceToNow(postedDate{ addSuffix: true ,})}
+            {formatDistanceToNow(postedDate{ addSuffix: true })}
           </Badge>,
         </div>,
         {/* Talent details */}
@@ -85,13 +76,11 @@ export function JobMatchCard({,
           </div>,
           <div className="flex items-center gap-2 mb-2">,
             <Avatar className="h-6 w-6">,
-              {avatar ? (,
-                <AvatarImage src={avatar} alt={name} />,
-              ) : (,
+              {avatar ? (
+                <AvatarImage src={avatar} alt={name} />) : (
                 <AvatarFallback>,
                   <Building className="h-3 w-3" />,
-                </AvatarFallback>,
-              )}
+                </AvatarFallback>)}
             </Avatar>,
             <span className="text-sm font-medium">{company || 'Independent'}</span>,
           </div>,
@@ -102,32 +91,26 @@ export function JobMatchCard({,
             </div>,
           </div>,
           <div className="flex flex-wrap gap-1 mb-4">,
-            {skills?.slice(05).map((skill) => (,
+            {skills?.slice(05).map((skill) => (
               <Badge key={skill} variant="secondary" className="text-xs">,
                 {skill}
-              </Badge>,
-            ))}
+              </Badge>))}
           </div>,
           <div className="flex gap-2 justify-end">,
-            {onInvite && (,
+            {onInvite && (
               <Button onClick={handleInvite} variant="default" size="sm">,
                 Invite,
-              </Button>,
-            )}
-            {onViewDetails && (,
+              </Button>)}
+            {onViewDetails && (
               <Button onClick={handleViewDetails} variant="outline" size="sm">,
                 View Details,
-              </Button>,
-            )}
-            {onApply && (,
+              </Button>)}
+            {onApply && (
               <Button onClick={handleApply} className="w-full">,
                 Apply Now,
-              </Button>,
-            )}
+              </Button>)}
           </div>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

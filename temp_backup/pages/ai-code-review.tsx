@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AICodeReview() {,
-  return (,
+export default function AICodeReview() {
+  return (
     <div className='relative isolate'>,
       <section className='px-6 lg: px-10 py-16 lg:py-24'>,
         <div className='max-w-6xl mx-auto'>,
@@ -14,37 +13,35 @@ export default function AICodeReview() {,
             frameworks.,
           </p>,
           <div className='mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {[,
-              {,
-                title: 'Style & Lint',;
-                desc: 'Enforce conventions and consistency, autofix common issues.',;
-              },;
-              {,
-                title: 'Security',;
-                desc: 'Detect vulnerabilities and secrets with remediation steps.',;
-              },;
-              {,
-                title: 'Performance',;
-                desc: 'Highlight inefficient queries and hot paths.',;
-              },;
-              { title: 'Test Gaps', desc: 'Suggest tests and coverage areas.' ,},;
-              {,
-                title: 'Integrations',;
-                desc: 'GitHub/GitLab/Bitbucket, Jira, Slack.',;
-              },;
-              {,
-                title: 'Policy',;
-                desc: 'Branch protection checks and compliance enforcements.',;
-              },;
-            ].map(f => (,
-              <div,
+            {[
+              {
+                title: 'Style & Lint';
+                desc: 'Enforce conventions and consistency, autofix common issues.';
+              };
+              {
+                title: 'Security';
+                desc: 'Detect vulnerabilities and secrets with remediation steps.';
+              };
+              {
+                title: 'Performance';
+                desc: 'Highlight inefficient queries and hot paths.';
+              };
+              { title: 'Test Gaps', desc: 'Suggest tests and coverage areas.' };
+              {
+                title: 'Integrations';
+                desc: 'GitHub/GitLab/Bitbucket, Jira, Slack.';
+              };
+              {
+                title: 'Policy';
+                desc: 'Branch protection checks and compliance enforcements.';
+              };
+            ].map(f => (
+              <div
                 key={f.title}
-                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur',
-              >,
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>,
                 <h3 className='text-lg font-semibold text-white'>{f.title}</h3>,
                 <p className='mt-2 text-sm text-gray-30o0'>{f.desc}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div className='mt-12'>,
             <h2 className='text-2xl font-semibold'>Pricing</h2>,
@@ -82,54 +79,45 @@ export default function AICodeReview() {,
               </div>,
             </div>,
             <p className='mt-4 text-sm text-gray-40o0'>,
-              Market references: {' ',}
-              <a,
+              Market references: {' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://www.sonarsource.com/plans-and-pricing/',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 SonarCloud,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://www.codacy.com/pricing',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Codacy,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://aws.amazon.com/codeguru/pricing/',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Amazon CodeGuru,
               </a>,
               .,
             </p>,
           </div>,
           <div className='mt-12 flex flex-wrap items-center gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-5 py-3 rounded-lg bg-violet-40o0 text-black font-semibold',
-            >,
+              className='px-5 py-3 rounded-lg bg-violet-40o0 text-black font-semibold'>,
               Review My Code,
             </Link>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='px-5 py-3 rounded-lg border border-white/20',
-            >,
+              className='px-5 py-3 rounded-lg border border-white/20'>,
               Email: kleber@ziontechgroup.com,
             </a>,
             <span className='text-gray-40o0'>Call: +1 30o2 464 0950</span>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

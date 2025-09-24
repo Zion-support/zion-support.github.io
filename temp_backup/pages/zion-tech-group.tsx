@@ -1,162 +1,159 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  MessageSquare,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Rocket,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  FileText,;
-  Image,;
-  Video,;
-  Music,;
-  Palette,;
-  Type,;
-  User,;
-  Search,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  Code,;
-  Database,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  Users2,;
-  Award,;
-  CheckCircle,;
-  Target,;
-  BarChart3,;
-  TrendingUp,;
-  Lock,;
-  Server,;
-  Network,;
-  Monitor,;
-  Settings,;
-  RefreshCw,;
-  Play,;
-  Pause,;
-  AlertTriangle,;
-  CheckCircle2,;
-  Building,;
-  Wifi,;
-  HardDrive,;
-  Cloud,;
-  Smartphone,;
-  Link,;
-  Blocks,;
-  Wallet,;
-  CreditCard,;
-  PiggyBank,;
-  Building2,;
-  Activity,;
-  Waves,;
-  Zap,;
-  BrainCircuit,;
-  CpuIcon,;
-  MonitorHeart,;
-  Film,;
-  Headphones,;
-  Camera,;
-  Gamepad2,;
-  Tv,;
-  Radio,;
-  Factory,;
-  Cog,;
-  Gauge,;
-  Wrench,;
-  Settings2,;
-  CpuIcon2,;
-  Calendar,;
-  Clock,;
-  Target,;
-  Users2,;
-  FileText2,;
-  PieChart,;
-  Atom,;
-  Cpu,;
-  Brain,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  Shield,;
-  Globe,;
-  Database,;
-  Network,;
-  Building,;
-  Users,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  Award,;
-  CheckCircle,;
-  Target,;
-  BarChart3,;
-  TrendingUp,;
-  Lock,;
-  Server,;
-  Cloud,;
+import {
+  Brain;
+  Zap;
+  Target;
+  BarChart3;
+  Users;
+  TrendingUp;
+  MessageSquare;
+  Mail;
+  Phone;
+  MapPin;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Rocket;
+  Globe;
+  Shield;
+  Cpu;
+  FileText;
+  Image;
+  Video;
+  Music;
+  Palette;
+  Type;
+  User;
+  Search;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Code;
+  Database;
+  Globe;
+  Shield;
+  Cpu;
+  Users2;
+  Award;
+  CheckCircle;
+  Target;
+  BarChart3;
+  TrendingUp;
+  Lock;
+  Server;
+  Network;
+  Monitor;
+  Settings;
+  RefreshCw;
+  Play;
+  Pause;
+  AlertTriangle;
+  CheckCircle2;
+  Building;
+  Wifi;
+  HardDrive;
+  Cloud;
+  Smartphone;
+  Link;
+  Blocks;
+  Wallet;
+  CreditCard;
+  PiggyBank;
+  Building2;
+  Activity;
+  Waves;
+  Zap;
+  BrainCircuit;
+  CpuIcon;
+  MonitorHeart;
+  Film;
+  Headphones;
+  Camera;
+  Gamepad2;
+  Tv;
+  Radio;
+  Factory;
+  Cog;
+  Gauge;
+  Wrench;
+  Settings2;
+  CpuIcon2;
+  Calendar;
+  Clock;
+  Target;
+  Users2;
+  FileText2;
+  PieChart;
+  Atom;
+  Cpu;
+  Brain;
+  Zap;
+  Target;
+  BarChart3;
+  Users;
+  TrendingUp;
+  Shield;
+  Globe;
+  Database;
+  Network;
+  Building;
+  Users;
+  Globe;
+  Shield;
+  Cpu;
+  Award;
+  CheckCircle;
+  Target;
+  BarChart3;
+  TrendingUp;
+  Lock;
+  Server;
+  Cloud;
 } from 'lucide-react',
-,
-export const metadata: Metadata = {,
-  title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',;
+export const metadata: Metadata = {
+  title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
   description:,
-    'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',;
+    'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
   keywords:,
-    'Zion Tech Group, quantum AI, autonomous systems, AI technology, quantum computing, artificial intelligence, technology solutions',;
-  openGraph: {,
-    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',;
+    'Zion Tech Group, quantum AI, autonomous systems, AI technology, quantum computing, artificial intelligence, technology solutions';
+  openGraph: {
+    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
     description:,
-      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',;
-    url: 'https://ziontechgroup.com',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-zion-tech-group.jpg',;
-        width: 1200,;
-        height: 630,;
-        alt: 'Zion Tech Group',;
-      },;
-    ],;
-    locale: 'en_US',;
-    type: 'website',;
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',;
+      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
+    url: 'https://ziontechgroup.com';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-zion-tech-group.jpg';
+        width: 1200;
+        height: 630;
+        alt: 'Zion Tech Group';
+      };
+    ];
+    locale: 'en_US';
+    type: 'website';
+  };
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
     description:,
-      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',;
-    images: ['https://ziontechgroup.com/og-image-zion-tech-group.jpg'],;
-  },;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com',;
-  },;
+      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
+    images: ['https://ziontechgroup.com/og-image-zion-tech-group.jpg'];
+  };
+  alternates: {
+    canonical: 'https://ziontechgroup.com';
+  };
 };
-,
-const contactInfo = {,
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-export default function ZionTechGroup() {,
-  return (,
+export default function ZionTechGroup() {
+  return (
     <div className='min-h-screen bg-black text-white'>,
       {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
@@ -176,28 +173,25 @@ export default function ZionTechGroup() {,
               platforms that transform industries and redefine possibilities.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
                 Get Started,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='#about',
-                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover:bg-blue-500/10 transition-all duration-300'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* About Section */,}
-      <section,
+      {/* About Section */}
+      <section
         id='about',
-        className='py-20 bg-gradient-to-b from-black to-gray-900',
-      >,
+        className='py-20 bg-gradient-to-b from-black to-gray-900'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
             <h2 className='text-3xl lg:text-4xl font-bold mb-4'>,
@@ -205,7 +199,7 @@ export default function ZionTechGroup() {,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
               We are a forward-thinking technology company dedicated to pushing,
-              the boundaries of what's possible through quantum computing,;
+              the boundaries of what's possible through quantum computing;
               artificial intelligence, and autonomous systems.,
             </p>,
           </div>,
@@ -379,7 +373,7 @@ export default function ZionTechGroup() {,
           </div>,
         </div>,
       </section>,
-      {/* Industries Served Section */,}
+      {/* Industries Served Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -469,7 +463,7 @@ export default function ZionTechGroup() {,
               Why Choose Zion Tech Group?,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-              We stand apart through our commitment to innovation, excellence,;
+              We stand apart through our commitment to innovation, excellence;
               and transformative results.,
             </p>,
           </div>,
@@ -515,7 +509,7 @@ export default function ZionTechGroup() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20'>,
         <div className='max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>,
@@ -526,24 +520,22 @@ export default function ZionTechGroup() {,
             revolutionary solutions.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105'>,
               Get Started,
               <ArrowRight className='ml-2 w-5 h-5' />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300',
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='inline-flex items-center px-8 py-4 border border-blue-500/30 rounded-xl font-semibold text-blue-300 hover: bg-blue-500/10 transition-all duration-300'>,
               <Phone className='mr-2 w-5 h-5' />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
@@ -556,20 +548,18 @@ export default function ZionTechGroup() {,
               <div className='space-y-4'>,
                 <div className='flex items-center space-x-3'>,
                   <Phone className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`tel:${contactInfo.mobile,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel:${contactInfo.mobile}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
                   <Mail className='w-5 h-5 text-blue-400' />,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
@@ -586,10 +576,9 @@ export default function ZionTechGroup() {,
                 Let's discuss your technology challenges and how our,
                 revolutionary solutions can drive your success.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-white hover: from-blue-700 hover:to-indigo-700 transition-all duration-300'>,
                 Schedule Consultation,
                 <ArrowRight className='ml-2 w-4 h-4' />,
               </Link>,
@@ -597,7 +586,5 @@ export default function ZionTechGroup() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

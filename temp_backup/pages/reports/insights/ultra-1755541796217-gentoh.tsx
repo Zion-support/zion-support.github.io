@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UltraInsightPage() {,
-  return (,
+export default function UltraInsightPage() {
+  return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,
         <title>Ultra-Fast Rapid prototyping systems Insight</title>,
@@ -27,17 +26,14 @@ export default function UltraInsightPage() {,
           </p>,
         </section>,
         <section className="text-center">,
-          <a,
+          <a
             href="https://ziontechgroup.com",
-            className="inline-block bg-green-60o0 hover:bg-green-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors",
-          >,
+            className="inline-block bg-green-60o0 hover:bg-green-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors">,
             Learn More,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>,
 <Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>,

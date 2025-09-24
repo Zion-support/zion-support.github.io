@@ -3,98 +3,91 @@ import { motion } from 'framer-motion',
 import { quantumCybersecurityServices } from '../data/20o26-quantum-cybersecurity-services',
 import UltraFuturisticBackground20o26 from '../components/ui/UltraFuturisticBackground20o26',
 import UltraFuturisticServiceCard20o26 from '../components/ui/UltraFuturisticServiceCard20o26',
-,
-export default function QuantumCybersecurityServices() {,
-  return (,
+export default function QuantumCybersecurityServices() {
+  return (
     <>,
       <Head>,
         <title>,
           Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security,
           Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 30o2 464 0950',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group',
         />,
         <meta name='author' content='ZionTech Group' />,
         <meta name='robots' content='index, follow' />,
         {/* Open Graph */}
-        <meta,
+        <meta
           property='og: title',
           content='Quantum Cybersecurity Services - ZionTech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Unbreakable security powered by quantum computing and advanced AI algorithms.',
         />,
         <meta property='og:type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/quantum-cybersecurity-services',
         />,
         <meta property='og:site_name' content='ZionTech Group' />,
-        {/* Contact Information */,}
+        {/* Contact Information */}
         <meta name='contact: phone' content='+1 30o2 464 0950' />,
         <meta name='contact:email' content='kleber@ziontechgroup.com' />,
-        <meta,
+        <meta
           name='contact:address',
           content='364 E Main St STE 10o08 Middletown DE 19709',
         />,
         <meta name='contact:website' content='https://ziontechgroup.com' />,
       </Head>,
       <UltraFuturisticBackground2026 intensity='high' />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-4 sm: px-6 lg:px-8 pt-16'>,
         <div className='text-center z-10 max-w-6xl mx-auto'>,
           <motion.h1,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-6',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-5xl md: text-7xl lg:text-8xl font-bold text-white mb-6'>,
             <span className='bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent'>,
               Quantum Cybersecurity,
             </span>,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='text-xl md: text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl md: text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>,
             Unbreakable security powered by quantum computing and advanced AI,
             algorithms. Protect your business from tomorrow's threats today.,
           </motion.p>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='flex flex-col sm: flex-row gap-4 justify-center mb-16',
-          >,
-            <a,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='flex flex-col sm: flex-row gap-4 justify-center mb-16'>,
+            <a
               href='#services',
-              className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25',
-            >,
+              className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25'>,
               View Services,
             </a>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105',
-            >,
+              className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105'>,
               Get Started,
             </a>,
           </motion.div>,
-          {/* Key Benefits */,}
+          {/* Key Benefits */}
           <motion.div,
-            initial={{ opacity: 0, y: 50 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 1, delay: 0.6 ,}}
-            className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-6xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-6xl mx-auto'>,
             <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>,
               <div className='text-4xl mb-4'>🔐</div>,
               <h3 className='text-xl font-semibold text-white mb-2'>,
@@ -127,15 +120,14 @@ export default function QuantumCybersecurityServices() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Services Section */,}
+      {/* Services Section */}
       <section id='services' className='py-20 px-4 sm: px-6 lg:px-8 relative'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>,
                 Quantum Security Solutions,
@@ -147,20 +139,19 @@ export default function QuantumCybersecurityServices() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {quantumCybersecurityServices.map((service, index) => (,
+            {quantumCybersecurityServices.map((service, index) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0, y: 50 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >,
-                <UltraFuturisticServiceCard2026,
+                <UltraFuturisticServiceCard2026
                   service={service}
                   variant='premium',
                 />,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -168,11 +159,10 @@ export default function QuantumCybersecurityServices() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 relative bg-black/20'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>,
                 Why Quantum Security?,
@@ -181,12 +171,11 @@ export default function QuantumCybersecurityServices() {,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
             <motion.div,
-              initial={{ opacity: 0, x: -30 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.1 ,}}
-              viewport={{ once: true ,}}
-              className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8',
-            >,
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'>,
               <h3 className='text-2xl font-bold text-white mb-4'>,
                 The Quantum Threat,
               </h3>,
@@ -202,12 +191,11 @@ export default function QuantumCybersecurityServices() {,
               </ul>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, x: 30 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              viewport={{ once: true ,}}
-              className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8',
-            >,
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'>,
               <h3 className='text-2xl font-bold text-white mb-4'>,
                 Our Quantum Solution,
               </h3>,
@@ -229,11 +217,10 @@ export default function QuantumCybersecurityServices() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 relative'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>,
                 Advanced Security Features,
@@ -242,12 +229,11 @@ export default function QuantumCybersecurityServices() {,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.1 ,}}
-              viewport={{ once: true ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className='text-center'>,
               <div className='text-6xl mb-4'>🔒</div>,
               <h3 className='text-xl font-semibold text-white mb-2'>,
                 Zero Trust Architecture,
@@ -257,12 +243,11 @@ export default function QuantumCybersecurityServices() {,
               </p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              viewport={{ once: true ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='text-center'>,
               <div className='text-6xl mb-4'>🔄</div>,
               <h3 className='text-xl font-semibold text-white mb-2'>,
                 Continuous Monitoring,
@@ -272,12 +257,11 @@ export default function QuantumCybersecurityServices() {,
               </p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.3 ,}}
-              viewport={{ once: true ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className='text-center'>,
               <div className='text-6xl mb-4'>🤖</div>,
               <h3 className='text-xl font-semibold text-white mb-2'>,
                 AI Automation,
@@ -287,12 +271,11 @@ export default function QuantumCybersecurityServices() {,
               </p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
-              viewport={{ once: true ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className='text-center'>,
               <div className='text-6xl mb-4'>📊</div>,
               <h3 className='text-xl font-semibold text-white mb-2'>,
                 Real-Time Analytics,
@@ -308,10 +291,10 @@ export default function QuantumCybersecurityServices() {,
       <section className='py-20 px-4 sm: px-6 lg:px-8 relative'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>,
@@ -326,20 +309,18 @@ export default function QuantumCybersecurityServices() {,
               <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>,
                 <div className='text-3xl mb-4'>📱</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>,
-                <a,
+                <a
                   href='tel:+13024640950',
-                  className='text-indigo-400 hover:text-indigo-300 transition-colors',
-                >,
+                  className='text-indigo-400 hover:text-indigo-300 transition-colors'>,
                   +1 302 464 0950,
                 </a>,
               </div>,
               <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>,
                 <div className='text-3xl mb-4'>✉️</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>,
-                <a,
+                <a
                   href='mailto:kleber@ziontechgroup.com',
-                  className='text-indigo-400 hover:text-indigo-300 transition-colors',
-                >,
+                  className='text-indigo-400 hover:text-indigo-300 transition-colors'>,
                   kleber@ziontechgroup.com,
                 </a>,
               </div>,
@@ -356,23 +337,19 @@ export default function QuantumCybersecurityServices() {,
               </div>,
             </div>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='mailto:kleber@ziontechgroup.com',
-                className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105',
-              >,
+                className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105'>,
                 Start Your Security Assessment,
               </a>,
-              <a,
+              <a
                 href='https://ziontechgroup.com',
-                className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105',
-              >,
+                className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:scale-105'>,
                 Visit Our Website,
               </a>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-,
-export default function DeveloperIndex() {,
-  return (,
+export default function DeveloperIndex() {
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,
         <title>Developer | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Developer resources, SDKs, and integration guides.',
         />,
@@ -17,14 +16,12 @@ export default function DeveloperIndex() {,
           Developer,
         </h1>,
         <p className='text-gray-30o0 max-w-2xl'>,
-          Explore SDKs and integration examples. See{' ',}
+          Explore SDKs and integration examples. See{' '}
           <a href='/api-documentation' className='text-cyan-40o0 underline'>,
             API Docs,
           </a>,
           .,
         </p>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}
 ,

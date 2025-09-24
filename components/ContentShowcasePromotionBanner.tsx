@@ -1,14 +1,13 @@
 ArrowRightStarZapBrainAtom,
-,
-export default function ContentShowcasePromotionBanner() {,
-  return (,
+export default function ContentShowcasePromotionBanner() {
+  return (
     <div className='bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-pink-90o0 py-16 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center mb-12'>,
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>,
             Discover Revolutionary,
             <span className='bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
-              {' ',}
+              {' '}
               Content Showcase,
             </span>,
           </h2>,
@@ -18,9 +17,9 @@ export default function ContentShowcasePromotionBanner() {,
             today.,
           </p>,
         </div>,
-        {/* Content Cards Grid */,}
+        {/* Content Cards Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {/* AI Innovation Showcase */,}
+          {/* AI Innovation Showcase */}
           <div className='bg-gradient-to-br from-blue-90o0/50 to-purple-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-50o0/20 hover: border-blue-40o0/40 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-6'>,
               <div className='bg-blue-50o0 p-3 rounded-lg group-hover:scale-110 transition-transform duration-30o0'>,
@@ -37,7 +36,7 @@ export default function ContentShowcasePromotionBanner() {,
             </p>,
             <div className='flex items-center justify-between'>,
               <div className='flex items-center text-blue-40o0 font-semibold group-hover:text-blue-30o0 transition-colors'>,
-                Explore Now{' ',}
+                Explore Now{' '}
                 <ArrowRight className='ml-2 h-4 w-4 group-hover: translate-x-1 transition-transform' />,
               </div>,
               <div className='flex items-center text-yellow-40o0'>,
@@ -46,7 +45,7 @@ export default function ContentShowcasePromotionBanner() {,
               </div>,
             </div>,
           </div>,
-          {/* Quantum Computing Breakthrough */,}
+          {/* Quantum Computing Breakthrough */}
           <div className='bg-gradient-to-br from-purple-90o0/50 to-pink-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-50o0/20 hover: border-purple-40o0/40 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-6'>,
               <div className='bg-purple-50o0 p-3 rounded-lg group-hover:scale-110 transition-transform duration-30o0'>,
@@ -63,7 +62,7 @@ export default function ContentShowcasePromotionBanner() {,
             </p>,
             <div className='flex items-center justify-between'>,
               <div className='flex items-center text-purple-40o0 font-semibold group-hover:text-purple-30o0 transition-colors'>,
-                Discover More{' ',}
+                Discover More{' '}
                 <ArrowRight className='ml-2 h-4 w-4 group-hover: translate-x-1 transition-transform' />,
               </div>,
               <div className='flex items-center text-yellow-40o0'>,
@@ -72,7 +71,7 @@ export default function ContentShowcasePromotionBanner() {,
               </div>,
             </div>,
           </div>,
-          {/* Advanced Automation Solutions */,}
+          {/* Advanced Automation Solutions */}
           <div className='bg-gradient-to-br from-cyan-90o0/50 to-teal-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-50o0/20 hover: border-cyan-40o0/40 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-6'>,
               <div className='bg-cyan-50o0 p-3 rounded-lg group-hover:scale-110 transition-transform duration-30o0'>,
@@ -89,7 +88,7 @@ export default function ContentShowcasePromotionBanner() {,
             </p>,
             <div className='flex items-center justify-between'>,
               <div className='flex items-center text-cyan-40o0 font-semibold group-hover:text-cyan-30o0 transition-colors'>,
-                Learn More{' ',}
+                Learn More{' '}
                 <ArrowRight className='ml-2 h-4 w-4 group-hover: translate-x-1 transition-transform' />,
               </div>,
               <div className='flex items-center text-yellow-40o0'>,
@@ -99,7 +98,7 @@ export default function ContentShowcasePromotionBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
             <button className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center'>,
@@ -112,7 +111,5 @@ export default function ContentShowcasePromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

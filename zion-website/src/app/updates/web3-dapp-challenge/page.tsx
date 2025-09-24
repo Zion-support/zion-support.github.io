@@ -1,5 +1,5 @@
-export default function UpdateDetailPage() {,
-  return (,
+export default function UpdateDetailPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='relative isolate px-6 pt-24 lg: px-8'>,
         <div className='mx-auto max-w-3xl py-12 lg:py-16'>,
@@ -9,7 +9,7 @@ export default function UpdateDetailPage() {,
           <p className='mt-2 text-sm text-blue-40o0'>20o25-09-0o3</p>,
           <p className='mt-6 text-lg leading-8 text-gray-30o0'>,
             Build a decentralized application and compete for prizes up to,
-            $10o00 in ZION tokens. Submissions are judged on innovation,;
+            $10o00 in ZION tokens. Submissions are judged on innovation;
             usability, and real-world impact.,
           </p>,
           <div className='mt-10 space-y-6 text-gray-30o0'>,
@@ -22,22 +22,18 @@ export default function UpdateDetailPage() {,
             <p>Register now and join the community on our Discord.</p>,
           </div>,
           <div className='mt-10 flex gap-4'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover: bg-blue-50o0 transition-all duration-20o0'>,
               Register interest,
             </a>,
-            <a,
+            <a
               href='https://discord.gg/',
-              className='inline-flex items-center rounded-md border border-white/10 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-all duration-20o0',
-            >,
+              className='inline-flex items-center rounded-md border border-white/10 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-all duration-20o0'>,
               Join Discord,
             </a>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

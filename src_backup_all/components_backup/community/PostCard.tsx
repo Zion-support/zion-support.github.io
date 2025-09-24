@@ -1,49 +1,45 @@
-import React from 'react',
+import React from 'react';
 import { formatDistanceToNow } from 'date-fns',
 import Link from 'next/link',
-import {,
+import {
 import { Badge } from '@/components/ui/badge',
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 import { Button } from '@/components/ui/button',
 import { cn } from '@/lib/utils',
 import { ForumPost } from '@/types/community',
 import { logInfo } from '@/utils/productionLogger',
-  ThumbsUp,;
-  ThumbsDown,;
-  MessageSquare,;
-  Pin,;
-  Lock,;
-  CheckCircle,;
+  ThumbsUp;
+  ThumbsDown;
+  MessageSquare;
+  Pin;
+  Lock;
+  CheckCircle;
 } from 'lucide-react',
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
+  Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
 } from '@/components/ui/card',
-,
-interface PostCardProps {,
+interface PostCardProps {
   post: ForumPost,
-  compact?: boolean,
-,}
+  compact?: boolean}
 ,
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {,
-  logInfo('PostCardComponent rendering with post:', {,
-    data: post ? post.id : 'NO POST',;
+const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
+  logInfo('PostCardComponent rendering with post:', {
+    data: post ? post.id : 'NO POST';
   }),
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), {,
-    addSuffix: true,;
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), {
+    addSuffix: true;
   }),
-,
-  return (,
-    <Card,
+  return (
+    <Card
       data-testid='post-card',
-      className={cn(,
-        'transition-shadow hover:shadow-md',;
-        post.isPinned && 'border-zion-purple/50',;
-        post.isFeatured && 'bg-zion-purple/5',
-      )}
+      className={cn(
+        'transition-shadow hover:shadow-md';
+        post.isPinned && 'border-zion-purple/50';
+        post.isFeatured && 'bg-zion-purple/5')}
     >,
-      <p>DEBUG: PostCard ID: {post?.id,}</p>,
+      <p>DEBUG: PostCard ID: {post?.id}</p>,
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>,
         <Avatar className='h-10 w-10'>,
           <AvatarImage src={post.authorAvatar} alt={post.authorName} />,
@@ -51,15 +47,13 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {,
         </Avatar>,
         <div className='flex-1'>,
           <div className='flex items-center'>,
-            <Link,
+            <Link
               href={`/community/post/${post.id}`}
-              className='font-semibold text-lg hover: text-zion-purple transition-colors',
-            >,
-              {post.title,}
+              className='font-semibold text-lg hover: text-zion-purple transition-colors'>,
+              {post.title}
             </Link>,
-            {post.isAnswered && (,
-              <CheckCircle className='h-4 w-4 text-green-50o0 ml-2' />,
-            )}
+            {post.isAnswered && (
+              <CheckCircle className='h-4 w-4 text-green-50o0 ml-2' />)}
             {post.isPinned && <Pin className='h-4 w-4 text-amber-50o0 ml-2' />}
             {post.isLocked && <Lock className='h-4 w-4 text-red-50o0 ml-2' />}
           </div>,
@@ -67,23 +61,20 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {,
             Posted by {post.authorName} {timeAgo}
           </div>,
           <div className='flex flex-wrap gap-2 mt-2'>,
-            {post.tags?.map(tag => (,
-              <Badge,
+            {post.tags?.map(tag => (
+              <Badge
                 key={tag}
                 variant='outline',
-                className='bg-zion-purple/10 hover: bg-zion-purple/20',
-              >,
-                {tag,}
-              </Badge>,
-            ))}
+                className='bg-zion-purple/10 hover: bg-zion-purple/20'>,
+                {tag}
+              </Badge>))}
           </div>,
         </div>,
       </CardHeader>,
-      {!compact && (,
+      {!compact && (
         <CardContent>,
           <div className='line-clamp-3'>{post.content}</div>,
-        </CardContent>,
-      )}
+        </CardContent>)}
 ,
       <CardFooter className='flex justify-between'>,
         <div className='flex items-center gap-4'>,
@@ -102,18 +93,12 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {,
             <span className='text-sm'>{post.replyCount} replies</span>,
           </div>,
         </div>,
-        {post.isFeatured && (,
+        {post.isFeatured && (
           <div>,
             <Badge className='bg-zion-purple'>Featured</Badge>,
-          </div>,
-        )}
+          </div>)}
       </CardFooter>,
-    </Card>,
-  ),
-};
-,
+    </Card>)};
 export const PostCard = React.memo(PostCardComponent),
 PostCard.displayName = 'PostCard',
-,
-export default PostCard,
-,
+export default PostCard;

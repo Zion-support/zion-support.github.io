@@ -2,292 +2,261 @@ import { motion } from 'framer-motion',
 import Link from 'next/link',
 import Layout from '../components/Layout',
 import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react',
-,
-const endpoints = [,
-  {,
-    name: 'AI Email Responder',;
-    method: 'POST',;
-    path: '/api/ai/email-responder',;
-    description: 'Generate intelligent email responses using AI',;
-    parameters: [,
-      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' ,},;
-      { name: 'context', type: 'object', required: false, description: 'Additional context for the response' ,}
-    ],;
-    response: {,
-      status: 20o0,;
-      data: {,
-        response: 'string',;
-        confidence: 'number',;
-        suggestions: 'array',
-      ,}
+const endpoints = [
+  {
+    name: 'AI Email Responder';
+    method: 'POST';
+    path: '/api/ai/email-responder';
+    description: 'Generate intelligent email responses using AI';
+    parameters: [
+      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' };
+      { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
+    ];
+    response: {
+      status: 20o0;
+      data: {
+        response: 'string';
+        confidence: 'number';
+        suggestions: 'array'}
     }
-  },;
-  {,
-    name: 'Predictive Analytics',;
-    method: 'POST',;
-    path: '/api/ai/predictive-analytics',;
-    description: 'Generate business predictions and forecasts',;
-    parameters: [,
-      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' ,},;
-      { name: 'period', type: 'string', required: true, description: 'Time period for prediction' ,}
-    ],;
-    response: {,
-      status: 20o0,;
-      data: {,
-        predictions: 'array',;
-        accuracy: 'number',;
-        trends: 'array',
-      ,}
+  };
+  {
+    name: 'Predictive Analytics';
+    method: 'POST';
+    path: '/api/ai/predictive-analytics';
+    description: 'Generate business predictions and forecasts';
+    parameters: [
+      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' };
+      { name: 'period', type: 'string', required: true, description: 'Time period for prediction' }
+    ];
+    response: {
+      status: 20o0;
+      data: {
+        predictions: 'array';
+        accuracy: 'number';
+        trends: 'array'}
     }
-  },;
-  {,
-    name: 'Content Generation',;
-    method: 'POST',;
-    path: '/api/ai/content-generation',;
-    description: 'Generate AI-powered content for various purposes',;
-    parameters: [,
-      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' ,},;
-      { name: 'type', type: 'string', required: true, description: 'Type of content to generate' ,}
-    ],;
-    response: {,
-      status: 20o0,;
-      data: {,
-        content: 'string',;
-        metadata: 'object',
-      ,}
+  };
+  {
+    name: 'Content Generation';
+    method: 'POST';
+    path: '/api/ai/content-generation';
+    description: 'Generate AI-powered content for various purposes';
+    parameters: [
+      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' };
+      { name: 'type', type: 'string', required: true, description: 'Type of content to generate' }
+    ];
+    response: {
+      status: 20o0;
+      data: {
+        content: 'string';
+        metadata: 'object'}
     }
   }
 ],
-,
-const codeExamples = [,
-  {,
-    language: 'JavaScript',;
+const codeExamples = [
+  {
+    language: 'JavaScript';
     code: `// AI Email Responder,
-const response = await fetch('/api/ai/email-responder', {,
-  method: 'POST',;
-  headers: {,
-    'Content-Type': 'application/json',;
-    'Authorization': 'Bearer YOUR_API_KEY',
-  },;
-  body: JSON.stringify({,
-    message: 'I need help with my account',;
-    context: { userId: '12345' ,}
-  }),
-}
+const response = await fetch('/api/ai/email-responder', {
+  method: 'POST';
+  headers: {
+    'Content-Type': 'application/json';
+    'Authorization': 'Bearer YOUR_API_KEY'};
+  body: JSON.stringify({
+    message: 'I need help with my account';
+    context: { userId: '12345' }
+  })}
 ,
-export default function APIDocumentationPage() {,
+export default function APIDocumentationPage() {
   const [copiedCode, setCopiedCode] = useState(null),
   const [activeTab, setActiveTab] = useState('overview'),
-,
-  const apiEndpoints = [,
-    {,
-      id: 'auth',;
-      title: 'Authentication',;
-      description: 'Endpoints for user authentication and authorization',;
-      methods: ['POST', 'GET', 'PUT', 'DELETE'],;
-      baseUrl: '/api/v1/auth',;
-      endpoints: [,
-        {,
-          method: 'POST',;
-          path: '/login',;
-          description: 'Authenticate user with email and password',;
-          parameters: [,
-            { name: 'email', type: 'string', required: true, description: 'User email address' ,},;
-            { name: 'password', type: 'string', required: true, description: 'User password' ,}
-          ],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              token: 'string',;
-              user: 'object',;
-              expires_in: 'number',
-            ,}
+  const apiEndpoints = [
+    {
+      id: 'auth';
+      title: 'Authentication';
+      description: 'Endpoints for user authentication and authorization';
+      methods: ['POST', 'GET', 'PUT', 'DELETE'];
+      baseUrl: '/api/v1/auth';
+      endpoints: [
+        {
+          method: 'POST';
+          path: '/login';
+          description: 'Authenticate user with email and password';
+          parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' };
+            { name: 'password', type: 'string', required: true, description: 'User password' }
+          ];
+          response: {
+            status: 20o0;
+            data: {
+              token: 'string';
+              user: 'object';
+              expires_in: 'number'}
           }
-        },;
-        {,
-          method: 'POST',;
-          path: '/register',;
-          description: 'Register a new user account',;
-          parameters: [,
-            { name: 'email', type: 'string', required: true, description: 'User email address' ,},;
-            { name: 'password', type: 'string', required: true, description: 'User password' ,},;
-            { name: 'name', type: 'string', required: true, description: 'User full name' ,}
-          ],;
-          response: {,
-            status: 20o1,;
-            data: {,
-              user: 'object',;
-              message: 'string',
-            ,}
+        };
+        {
+          method: 'POST';
+          path: '/register';
+          description: 'Register a new user account';
+          parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' };
+            { name: 'password', type: 'string', required: true, description: 'User password' };
+            { name: 'name', type: 'string', required: true, description: 'User full name' }
+          ];
+          response: {
+            status: 20o1;
+            data: {
+              user: 'object';
+              message: 'string'}
           }
-        },;
-        {,
-          method: 'POST',;
-          path: '/logout',;
-          description: 'Logout user and invalidate token',;
-          parameters: [],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              message: 'string',
-            ,}
+        };
+        {
+          method: 'POST';
+          path: '/logout';
+          description: 'Logout user and invalidate token';
+          parameters: [];
+          response: {
+            status: 20o0;
+            data: {
+              message: 'string'}
           }
         }
-      ],
-    },;
-    {,
-      id: 'users',;
-      title: 'Users',;
-      description: 'User management and profile operations',;
-      methods: ['GET', 'PUT', 'DELETE'],;
-      baseUrl: '/api/v1/users',;
-      endpoints: [,
-        {,
-          method: 'GET',;
-          path: '/profile',;
-          description: 'Get current user profile',;
-          parameters: [],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              id: 'string',;
-              name: 'string',;
-              email: 'string',;
-              created_at: 'string',;
-              updated_at: 'string',
-            ,}
+      ]};
+    {
+      id: 'users';
+      title: 'Users';
+      description: 'User management and profile operations';
+      methods: ['GET', 'PUT', 'DELETE'];
+      baseUrl: '/api/v1/users';
+      endpoints: [
+        {
+          method: 'GET';
+          path: '/profile';
+          description: 'Get current user profile';
+          parameters: [];
+          response: {
+            status: 20o0;
+            data: {
+              id: 'string';
+              name: 'string';
+              email: 'string';
+              created_at: 'string';
+              updated_at: 'string'}
           }
-        },;
-        {,
-          method: 'PUT',;
-          path: '/profile',;
-          description: 'Update user profile',;
-          parameters: [,
-            { name: 'name', type: 'string', required: false, description: 'User full name' ,},;
-            { name: 'email', type: 'string', required: false, description: 'User email address' ,}
-          ],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              user: 'object',;
-              message: 'string',
-            ,}
+        };
+        {
+          method: 'PUT';
+          path: '/profile';
+          description: 'Update user profile';
+          parameters: [
+            { name: 'name', type: 'string', required: false, description: 'User full name' };
+            { name: 'email', type: 'string', required: false, description: 'User email address' }
+          ];
+          response: {
+            status: 20o0;
+            data: {
+              user: 'object';
+              message: 'string'}
           }
         }
-      ],
-    },;
-    {,
-      id: 'projects',;
-      title: 'Projects',;
-      description: 'Project management and operations',;
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],;
-      baseUrl: '/api/v1/projects',;
-      endpoints: [,
-        {,
-          method: 'GET',;
-          path: '/',;
-          description: 'Get list of user projects',;
-          parameters: [,
-            { name: 'page', type: 'number', required: false, description: 'Page number for pagination' ,},;
-            { name: 'limit', type: 'number', required: false, description: 'Number of items per page' ,}
-          ],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              projects: 'array',;
-              pagination: 'object',
-            ,}
+      ]};
+    {
+      id: 'projects';
+      title: 'Projects';
+      description: 'Project management and operations';
+      methods: ['GET', 'POST', 'PUT', 'DELETE'];
+      baseUrl: '/api/v1/projects';
+      endpoints: [
+        {
+          method: 'GET';
+          path: '/';
+          description: 'Get list of user projects';
+          parameters: [
+            { name: 'page', type: 'number', required: false, description: 'Page number for pagination' };
+            { name: 'limit', type: 'number', required: false, description: 'Number of items per page' }
+          ];
+          response: {
+            status: 20o0;
+            data: {
+              projects: 'array';
+              pagination: 'object'}
           }
-        },;
-        {,
-          method: 'POST',;
-          path: '/',;
-          description: 'Create a new project',;
-          parameters: [,
-            { name: 'name', type: 'string', required: true, description: 'Project name' ,},;
-            { name: 'description', type: 'string', required: false, description: 'Project description' ,},;
-            { name: 'type', type: 'string', required: true, description: 'Project type' ,}
-          ],;
-          response: {,
-            status: 20o1,;
-            data: {,
-              project: 'object',;
-              message: 'string',
-            ,}
+        };
+        {
+          method: 'POST';
+          path: '/';
+          description: 'Create a new project';
+          parameters: [
+            { name: 'name', type: 'string', required: true, description: 'Project name' };
+            { name: 'description', type: 'string', required: false, description: 'Project description' };
+            { name: 'type', type: 'string', required: true, description: 'Project type' }
+          ];
+          response: {
+            status: 20o1;
+            data: {
+              project: 'object';
+              message: 'string'}
           }
-        },;
-        {,
-          method: 'GET',;
-          path: '/:id',;
-          description: 'Get project details',;
-          parameters: [,
-            { name: 'id', type: 'string', required: true, description: 'Project ID' ,}
-          ],;
-          response: {,
-            status: 20o0,;
-            data: {,
-              project: 'object',
-            ,}
+        };
+        {
+          method: 'GET';
+          path: '/:id';
+          description: 'Get project details';
+          parameters: [
+            { name: 'id', type: 'string', required: true, description: 'Project ID' }
+          ];
+          response: {
+            status: 20o0;
+            data: {
+              project: 'object'}
           }
         }
-      ],
-    }
+      ]}
   ],
-,
-  const codeExamples ={,
+  const codeExamples ={
     javascript: `// JavaScript/Node.js Example,
-const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {,
-  method: 'POST',;
-  headers: {,
-    'Content-Type': 'application/json',},;
-  body: JSON.stringify({,
-    email: 'user@example.com',;
-    password: 'your-password',
-  ,}),
-}),
-,
+const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {
+  method: 'POST';
+  headers: {
+    'Content-Type': 'application/json'};
+  body: JSON.stringify({
+    email: 'user@example.com';
+    password: 'your-password'})}),
 const data = await response.json(),
-console.log(data),`,;
+// // console.log(data),`;
     python: `# Python Example,
 import requests,
 url = "https://api.ziontechgroup.com/api/v1/auth/login",
-payload ={,
-    "email": "user@example.com",;
-    "password": "your-password",
-}
+payload ={
+    "email": "user@example.com";
+    "password": "your-password"}
 ,
 response = requests.post(url, json=payload),
 data = response.json(),
-print(data)`,;
+print(data)`;
     curl: `# cURL Example,
 curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
   -H "Content-Type: application/json" \\,
-  -d '{,
-    "email": "user@example.com",;
-    "password": "your-password",
-  }'`,
-  };
-,
-  const copyToClipboard = (code, language) => {,
+  -d '{
+    "email": "user@example.com";
+    "password": "your-password"}'`};
+  const copyToClipboard = (code, language) => {
     navigator.clipboard.writeText(code),
     setCopiedCode(language),
-    setTimeout(() => setCopiedCode(null), 20o00),
-  };
-,
-  const tabs = [,
-    { id: 'overview', label: 'Overview', icon: Globe ,},;
-    { id: 'authentication', label: 'Authentication', icon: Shield ,},;
-    { id: 'endpoints', label: 'Endpoints', icon: Code ,},;
-    { id: 'examples', label: 'Examples', icon: Terminal ,},;
-    { id: 'errors', label: 'Errors', icon: XCircle ,}
+    setTimeout(() => setCopiedCode(null), 20o00)};
+  const tabs = [
+    { id: 'overview', label: 'Overview', icon: Globe };
+    { id: 'authentication', label: 'Authentication', icon: Shield };
+    { id: 'endpoints', label: 'Endpoints', icon: Code };
+    { id: 'examples', label: 'Examples', icon: Terminal };
+    { id: 'errors', label: 'Errors', icon: XCircle }
   ],
-,
-  return (,
-    <MainLayout,
+  return (
+    <MainLayout
       title="API Documentation - Zion Tech Group",
       description="Comprehensive API documentation for Zion Tech Group services. Learn how to integrate with our APIs and build powerful applications.",
-      keywords="API documentation, REST API, integration, developers, endpoints, authentication",
-    >,
+      keywords="API documentation, REST API, integration, developers, endpoints, authentication">,
       <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden">,
@@ -297,13 +266,12 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
           </div>,
           <div className="container mx-auto px-4 relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <h1 className="text-4xl md: text-6xl font-bold mb-6">,
-                API{' ',}
+                API{' '}
                 <span className="bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">,
                   Documentation,
                 </span>,
@@ -315,34 +283,31 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
             </motion.div>,
           </div>,
         </section>,
-        {/* API Endpoints */,}
+        {/* API Endpoints */}
         <section className="py-16 px-4">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12">,
               <h2 className="text-3xl md: text-4xl font-bold mb-4">API Endpoints</h2>,
               <p className="text-lg text-gray-60o0 max-w-2xl mx-auto">,
                 Explore our comprehensive API endpoints for AI services.,
               </p>,
             </motion.div>,
             <div className="space-y-8">,
-              {endpoints.map((endpoint, index) => (,
+              {endpoints.map((endpoint, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                  className="bg-white rounded-xl shadow-lg p-6",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6">,
                   <div className="flex items-center justify-between mb-4">,
                     <h3 className="text-xl font-semibold">{endpoint.name}</h3>,
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${,
-                      endpoint.method === 'POST' ? 'bg-green-10o0 text-green-80o0' : 'bg-blue-10o0 text-blue-80o0',
-                    }`}>,
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      endpoint.method === 'POST' ? 'bg-green-10o0 text-green-80o0' : 'bg-blue-10o0 text-blue-80o0'}`}>,
                       {endpoint.method}
                     </span>,
                   </div>,
@@ -354,16 +319,14 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                     <div>,
                       <h4 className="font-semibold mb-3">Parameters</h4>,
                       <div className="space-y-2">,
-                        {endpoint.parameters.map((param, paramIndex) => (,
+                        {endpoint.parameters.map((param, paramIndex) => (
                           <div key={paramIndex} className="flex items-center justify-between text-sm">,
                             <span className="font-mono">{param.name}</span>,
-                            <span className={`px-2 py-1 rounded text-xs ${,
-                              param.required ? 'bg-red-10o0 text-red-80o0' : 'bg-gray-10o0 text-gray-80o0',
-                            }`}>,
+                            <span className={`px-2 py-1 rounded text-xs ${
+                              param.required ? 'bg-red-10o0 text-red-80o0' : 'bg-gray-10o0 text-gray-80o0'}`}>,
                               {param.type}
                             </span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     <div>,
@@ -375,27 +338,24 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
         {/* Navigation Tabs */}
         <section className="py-8 bg-white border-b">,
           <div className="container mx-auto px-4">,
             <div className="max-w-6xl mx-auto">,
               <div className="flex flex-wrap gap-2">,
-                {tabs.map((tab) => (,
-                  <button,
+                {tabs.map((tab) => (
+                  <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-30o0 ${,
+                    className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-30o0 ${
                       activeTab === tab.id,
                         ? 'bg-indigo-50o0 text-white',
-                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                    ,}`}
+                        : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                   >,
                     <tab.icon className="w-4 h-4 mr-2"  />,
                     {tab.label}
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
             </div>,
           </div>,
@@ -405,11 +365,11 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
           <div className="container mx-auto px-4">,
             <div className="max-w-6xl mx-auto">,
               {/* Overview Tab */}
-              {activeTab === 'overview' && (,
+              {activeTab === 'overview' && (
                 <motion.div,
-                  initial={{ opacity: 0, y: 30 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
                 >,
                   <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-8">,
                     API Overview,
@@ -463,15 +423,14 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                       <p className="text-gray-60o0">Built to handle high traffic and scale with your needs</p>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),}
+                </motion.div>)}
 ,
               {/* Authentication Tab */}
-              {activeTab === 'authentication' && (,
+              {activeTab === 'authentication' && (
                 <motion.div,
-                  initial={{ opacity: 0, y: 30 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
                 >,
                   <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-8">,
                     Authentication,
@@ -509,27 +468,26 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                       </code>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),}
+                </motion.div>)}
 ,
               {/* Endpoints Tab */}
-              {activeTab === 'endpoints' && (,
+              {activeTab === 'endpoints' && (
                 <motion.div,
-                  initial={{ opacity: 0, y: 30 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
                 >,
                   <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-8">,
                     API Endpoints,
                   </h2>,
                   <div className="space-y-8">,
-                    {apiEndpoints.map((endpoint, index) => (,
+                    {apiEndpoints.map((endpoint, index) => (
                       <motion.div,
                         key={endpoint.id}
                         className="bg-white border border-gray-20o0 rounded-lg overflow-hidden",
-                        initial={{ opacity: 0, y: 30 ,}}
-                        animate={{ opacity: 1, y: 0 ,}}
-                        transition={{ duration: 0.8, delay: index * 0.1 ,}}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: index * 0.1 }}
                       >,
                         <div className="bg-gray-50 p-6 border-b">,
                           <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{endpoint.title}</h3>,
@@ -543,23 +501,22 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                         </div>,
                         <div className="p-6">,
                           <div className="space-y-6">,
-                            {endpoint.endpoints.map((ep, epIndex) => (,
+                            {endpoint.endpoints.map((ep, epIndex) => (
                               <div key={epIndex} className="border border-gray-20o0 rounded-lg p-4">,
                                 <div className="flex items-center justify-between mb-3">,
                                   <div className="flex items-center">,
-                                    <span className={`px-2 py-1 rounded text-sm font-semibold mr-3 ${,
+                                    <span className={`px-2 py-1 rounded text-sm font-semibold mr-3 ${
                                       ep.method === 'GET' ? 'bg-green-10o0 text-green-70o0' :,
                                       ep.method === 'POST' ? 'bg-blue-10o0 text-blue-70o0' :,
                                       ep.method === 'PUT' ? 'bg-yellow-10o0 text-yellow-70o0' :,
-                                      'bg-red-10o0 text-red-70o0',
-                                    }`}>,
+                                      'bg-red-10o0 text-red-70o0'}`}>,
                                       {ep.method}
                                     </span>,
                                     <code className="text-gray-80o0 font-mono">{endpoint.baseUrl}{ep.path}</code>,
                                   </div>,
                                 </div>,
                                 <p className="text-gray-60o0 mb-4">{ep.description}</p>,
-                                {ep.parameters.length > 0 && (,
+                                {ep.parameters.length > 0 && (
                                   <div className="mb-4">,
                                     <h4 className="font-semibold text-gray-90o0 mb-2">Parameters</h4>,
                                     <div className="overflow-x-auto">,
@@ -573,92 +530,80 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                                           </tr>,
                                         </thead>,
                                         <tbody>,
-                                          {ep.parameters.map((param, paramIndex) => (,
+                                          {ep.parameters.map((param, paramIndex) => (
                                             <tr key={paramIndex} className="border-t">,
                                               <td className="px-3 py-2 font-mono">{param.name}</td>,
                                               <td className="px-3 py-2">{param.type}</td>,
                                               <td className="px-3 py-2">,
-                                                {param.required ? (,
-                                                  <span className="text-red-60o0">Yes</span>,
-                                                ) : (,
-                                                  <span className="text-gray-50o0">No</span>,
-                                                )}
+                                                {param.required ? (
+                                                  <span className="text-red-60o0">Yes</span>) : (
+                                                  <span className="text-gray-50o0">No</span>)}
                                               </td>,
                                               <td className="px-3 py-2">{param.description}</td>,
-                                            </tr>,
-                                          ))}
+                                            </tr>))}
                                         </tbody>,
                                       </table>,
                                     </div>,
-                                  </div>,
-                                )}
+                                  </div>)}
 ,
                                 <div>,
                                   <h4 className="font-semibold text-gray-90o0 mb-2">Response</h4>,
                                   <div className="bg-gray-80o0 text-green-40o0 p-3 rounded-lg font-mono text-sm">,
-                                    <div>Status: {ep.response.status,}</div>,
+                                    <div>Status: {ep.response.status}</div>,
                                     <div>Data: {JSON.stringify(ep.response.data, null, 2)}</div>,
                                   </div>,
                                 </div>,
-                              </div>,
-                            ))}
+                              </div>))}
                           </div>,
                         </div>,
-                      </motion.div>,
-                    ))}
+                      </motion.div>))}
                   </div>,
-                </motion.div>,
-              )}
+                </motion.div>)}
 ,
               {/* Examples Tab */}
-              {activeTab === 'examples' && (,
+              {activeTab === 'examples' && (
                 <motion.div,
-                  initial={{ opacity: 0, y: 30 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
                 >,
                   <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-8">,
                     Code Examples,
                   </h2>,
                   <div className="space-y-8">,
-                    {Object.entries(codeExamples).map(([language, code]) => (,
+                    {Object.entries(codeExamples).map(([language, code]) => (
                       <div key={language} className="bg-gray-50 rounded-lg p-6">,
                         <div className="flex items-center justify-between mb-4">,
                           <h3 className="text-xl font-bold text-gray-90o0 capitalize">,
                             {language} Example,
                           </h3>,
-                          <button,
+                          <button
                             onClick={() => copyToClipboard(code, language)}
-                            className="flex items-center px-3 py-1 bg-indigo-50o0 hover: bg-indigo-60o0 text-white rounded-lg transition-colors duration-30o0",
-                          >,
-                            {copiedCode === language ? (,
+                            className="flex items-center px-3 py-1 bg-indigo-50o0 hover: bg-indigo-60o0 text-white rounded-lg transition-colors duration-30o0">,
+                            {copiedCode === language ? (
                               <>,
                                 <Check className="w-4 h-4 mr-2"  />,
                                 Copied!,
-                              </>,
-                            ) : (,
+                              </>) : (
                               <>,
                                 <Copy className="w-4 h-4 mr-2"  />,
                                 Copy,
-                              </>,
-                            ),}
+                              </>)}
                           </button>,
                         </div>,
                         <pre className="bg-gray-80o0 text-green-40o0 p-4 rounded-lg overflow-x-auto">,
                           <code>{code}</code>,
                         </pre>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </motion.div>,
-              )}
+                </motion.div>)}
 ,
               {/* Errors Tab */}
-              {activeTab === 'errors' && (,
+              {activeTab === 'errors' && (
                 <motion.div,
-                  initial={{ opacity: 0, y: 30 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
                 >,
                   <h2 className="text-3xl md: text-4xl font-bold text-gray-90o0 mb-8">,
                     Error Handling,
@@ -695,20 +640,18 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                       All error responses follow a consistent format: ,
                     </p>,
                     <pre className="bg-gray-80o0 text-green-40o0 p-4 rounded-lg overflow-x-auto">,
-                      <code>{`{,
-  "error": {,
-    "code": "VALIDATION_ERROR",;
-    "message": "The request data is invalid",;
-    "details": {,
-      "field": "email",;
-      "reason": "Invalid email format",
-    }
+                      <code>{`{
+  "error": {
+    "code": "VALIDATION_ERROR";
+    "message": "The request data is invalid";
+    "details": {
+      "field": "email";
+      "reason": "Invalid email format"}
   }
 }`}</code>,
                     </pre>,
                   </div>,
-                </motion.div>,
-              )}
+                </motion.div>)}
             </div>,
           </div>,
         </section>,
@@ -716,9 +659,9 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
         <section className="py-20 bg-blue-60o0">,
           <div className="max-w-7xl mx-auto px-4 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
                 Ready to Get Started?,
@@ -727,27 +670,25 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                 Get your API key and start integrating our AI services into your applications.,
               </p>,
               <div className="flex flex-wrap justify-center gap-4">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-60o0 rounded-lg hover:bg-gray-10o0 transition-colors font-semibold",
-                >,
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-60o0 rounded-lg hover:bg-gray-10o0 transition-colors font-semibold">,
                   Get API Key,
                   <ExternalLink className="ml-2 w-4 h-4"  />,
                 </Link>,
-                <Link,
+                <Link
                   href="/ai-services",
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-60o0 transition-colors font-semibold",
-                >,
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-60o0 transition-colors font-semibold">,
                   View AI Services,
                 </Link>,
         <section className="py-20 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white">,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold mb-6">,
                 Ready to Get Started?,
@@ -757,16 +698,14 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                 with our powerful services.,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="px-8 py-4 bg-white text-indigo-60o0 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold",
-                >,
+                  className="px-8 py-4 bg-white text-indigo-60o0 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold">,
                   Get API Key,
                 </a>,
-                <a,
+                <a
                   href="/docs",
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 font-semibold",
-                >,
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 font-semibold">,
                   View Full Documentation,
                 </a>,
               </div>,
@@ -774,11 +713,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}
       </div>,
-    </MainLayout>,
-  ),
-}
-,]
+    </MainLayout>)}
+]

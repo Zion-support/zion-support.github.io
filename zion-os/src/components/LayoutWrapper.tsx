@@ -1,21 +1,16 @@
-import React from 'react',
+import React from 'react';
 import type { ReactNode } from 'react',
-,
-export default function LayoutWrapper({ children }: { children: ReactNode ,}) {,
-  return <div className='min-h-screen'>{children}</div>,
-}
+export default function LayoutWrapper({ children }: { children: ReactNode }) {
+  return <div className='min-h-screen'>{children}</div>}
 ('use client'),
-,
 import { useWalkthroughTarget } from './OnboardingWalkthrough',
 import { useAuth } from '@/contexts/AuthContext',
 import Link from 'next/link',
-,
-export function LayoutWrapper({ children }: { children: React.ReactNode ,}) {,
+export function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const { user, isAuthenticated, logout } = useAuth(),
-,
-  return (,
+  return (
     <>,
-      <nav,
+      <nav
         className='border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur',
         {...useWalkthroughTarget('nav-menu')}
       >,
@@ -25,68 +20,57 @@ export function LayoutWrapper({ children }: { children: React.ReactNode ,}) {,
               Zion OS,
             </Link>,
             <div className='hidden md: flex items-center gap-4'>,
-              <Link,
+              <Link
                 href='/multiverse/launch',
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity',
-              >,
+                className='text-sm opacity-80 hover:opacity-100 transition-opacity'>,
                 Launch,
               </Link>,
-              <Link,
+              <Link
                 href='/admin/os-deploy',
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity',
-              >,
+                className='text-sm opacity-80 hover:opacity-100 transition-opacity'>,
                 Admin Deploy,
               </Link>,
-              <Link,
+              <Link
                 href='/admin/instances',
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity',
-              >,
+                className='text-sm opacity-80 hover:opacity-100 transition-opacity'>,
                 Instances,
               </Link>,
             </div>,
           </div>,
           <div className='flex items-center gap-4'>,
-            {isAuthenticated ? (,
+            {isAuthenticated ? (
               <>,
-                <Link,
+                <Link
                   href='/dashboard',
-                  className='text-sm text-zinc-300 hover:text-white transition-colors',
-                >,
+                  className='text-sm text-zinc-300 hover:text-white transition-colors'>,
                   Dashboard,
                 </Link>,
                 <div className='flex items-center gap-3'>,
                   <span className='text-sm text-zinc-400'>,
                     Welcome, {user?.name || user?.email}
                   </span>,
-                  <button,
+                  <button
                     onClick={logout}
-                    className='text-sm text-zinc-400 hover: text-white transition-colors',
-                  >,
+                    className='text-sm text-zinc-400 hover: text-white transition-colors'>,
                     Sign Out,
                   </button>,
                 </div>,
-              </>,
-            ) : (,
+              </>) : (
               <div className='flex items-center gap-3'>,
-                <Link,
+                <Link
                   href='/auth/signin',
-                  className='text-sm text-zinc-400 hover:text-white transition-colors',
-                >,
+                  className='text-sm text-zinc-400 hover:text-white transition-colors'>,
                   Sign In,
                 </Link>,
-                <Link,
+                <Link
                   href='/auth/signup',
-                  className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors',
-                >,
+                  className='px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors'>,
                   Start Free Trial,
                 </Link>,
-              </div>,
-            ),}
+              </div>)}
           </div>,
         </div>,
       </nav>,
       {children}
-    </>,
-  ),
-}
+    </>)}
 ,

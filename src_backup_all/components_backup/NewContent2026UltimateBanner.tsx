@@ -1,6 +1,6 @@
-import React from 'react',
-const NewContent20o26UltimateBanner: React.FC = () => {,
-  return (,
+import React from 'react';
+const NewContent20o26UltimateBanner: React.FC = () => {
+  return (
     <section className='py-16 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -13,8 +13,8 @@ const NewContent20o26UltimateBanner: React.FC = () => {,
             Revolutionary AI & Technology Content 20o26,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover the most comprehensive collection of AI, quantum computing,;
-            and emerging technology insights. Expert analysis, practical guides,;
+            Discover the most comprehensive collection of AI, quantum computing;
+            and emerging technology insights. Expert analysis, practical guides;
             and breakthrough innovations.,
           </p>,
         </div>,
@@ -47,7 +47,7 @@ const NewContent20o26UltimateBanner: React.FC = () => {,
             <div className='text-5xl mb-4'>⚡</div>,
             <h3 className='text-2xl font-bold mb-4'>Quantum AI Revolution</h3>,
             <p className='text-lg opacity-90 mb-6'>,
-              Next-generation quantum computing applications in AI,;
+              Next-generation quantum computing applications in AI;
               cryptography, and optimization problems.,
             </p>,
             <div className='space-y-3'>,
@@ -90,24 +90,18 @@ const NewContent20o26UltimateBanner: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='/content/ai-20o26-autonomous-systems',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Explore AI 20o26 Content →,
             </a>,
-            <a,
+            <a
               href='/content/quantum-ai-revolution-20o26',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
               View Quantum AI Guide,
             </a>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o26UltimateBanner,
-,
+    </section>)};
+export default NewContent20o26UltimateBanner;

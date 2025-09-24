@@ -1,10 +1,9 @@
 import { Server, Clock, MapPin } from 'lucide-react',
-interface ServiceDetailsProps {,
-  country: string,
-,}
+interface ServiceDetailsProps {
+  country: string}
 ,
-export function ServiceDetails({ country }: ServiceDetailsProps) {,
-  return (,
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  return (
     <div className='space-y-6'>,
       <div className='bg-slate-80o0 rounded-lg border border-slate-60o0 p-6'>,
         <h2 className='text-2xl font-bold text-white mb-4'>,
@@ -15,7 +14,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {,
             <MapPin className='h-6 w-6 text-blue-40o0' />,
             <div>,
               <p className='text-sm text-gray-40o0'>Service Location</p>,
-              <p className='text-white font-medium'>{country,}</p>,
+              <p className='text-white font-medium'>{country}</p>,
             </div>,
           </div>,
           <div className='flex items-center space-x-3'>,
@@ -68,7 +67,5 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {,
           </ul>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

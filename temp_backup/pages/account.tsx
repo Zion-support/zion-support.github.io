@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function Account() {,
-  return (,
+export default function Account() {
+  return (
     <>,
       <Head>,
         <title>Account - Zion App</title>,
@@ -16,7 +15,5 @@ export default function Account() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

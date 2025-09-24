@@ -1,29 +1,27 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Rocket,;
-  Globe,;
-  Satellite,;
-  Brain,;
-  Users,;
-  Target,;
-  Atom,;
+import {
+  Rocket;
+  Globe;
+  Satellite;
+  Brain;
+  Users;
+  Target;
+  Atom;
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-,
-export default function SpaceTech() {,
-  return (,
+export default function SpaceTech() {
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black'>,
         {/* Hero Section */}
         <section className='relative py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'>,
               <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>,
                 Space Technology,
               </h1>,
@@ -40,9 +38,9 @@ export default function SpaceTech() {,
           <div className='container mx-auto max-w-6xl'>,
             <div className='grid md: grid-cols-2 gap-12 items-center'>,
               <motion.div,
-                initial={{ opacity: 0, x: -20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.2 ,}}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               >,
                 <div className='flex items-center gap-3 mb-6'>,
                   <Target className='w-8 h-8 text-cyan-400' />,
@@ -55,16 +53,16 @@ export default function SpaceTech() {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, x: 20 ,}}
-                animate={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >,
                 <div className='flex items-center gap-3 mb-6'>,
                   <Globe className='w-8 h-8 text-blue-400' />,
                   <h2 className='text-3xl font-bold text-white'>Our Vision</h2>,
                 </div>,
                 <p className='text-lg text-gray-300 leading-relaxed'>,
-                  A future where humanity thrives across multiple worlds,;
+                  A future where humanity thrives across multiple worlds;
                   powered by intelligent space technology that makes space,
                   accessible and sustainable for all.,
                 </p>,
@@ -76,11 +74,10 @@ export default function SpaceTech() {,
         <section className='py-20 px-4 bg-black/30'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.6 ,}}
-              className='grid grid-cols-2 md: grid-cols-4 gap-8 text-center',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className='grid grid-cols-2 md: grid-cols-4 gap-8 text-center'>,
               <div className='p-6'>,
                 <div className='text-4xl font-bold text-cyan-400 mb-2'>50+</div>,
                 <div className='text-gray-300'>Space Missions</div>,
@@ -104,15 +101,14 @@ export default function SpaceTech() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Core Values */,}
+        {/* Core Values */}
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl font-bold text-white mb-4'>,
                 Core Values,
               </h2>,
@@ -122,11 +118,10 @@ export default function SpaceTech() {,
             </motion.div>,
             <div className='grid md: grid-cols-3 gap-8'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 1.0 ,}}
-                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>,
                   <Rocket className='w-8 h-8 text-cyan-400' />,
                 </div>,
@@ -138,11 +133,10 @@ export default function SpaceTech() {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 1.2 ,}}
-                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>,
                   <Brain className='w-8 h-8 text-blue-400' />,
                 </div>,
@@ -154,11 +148,10 @@ export default function SpaceTech() {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 1.4 ,}}
-                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.4 }}
+                className='text-center p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>,
                   <Users className='w-8 h-8 text-purple-400' />,
                 </div>,
@@ -172,15 +165,14 @@ export default function SpaceTech() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
+        {/* Services Overview */}
         <section className='py-20 px-4 bg-black/30'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 1.6 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl font-bold text-white mb-4'>,
                 Space Technology Services,
               </h2>,
@@ -190,11 +182,10 @@ export default function SpaceTech() {,
             </motion.div>,
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 1.8 ,}}
-                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.8 }}
+                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4'>,
                   <Satellite className='w-6 h-6 text-cyan-400' />,
                 </div>,
@@ -204,19 +195,17 @@ export default function SpaceTech() {,
                 <p className='text-gray-300 mb-4'>,
                   Advanced satellite systems for communication and observation,
                 </p>,
-                <a,
+                <a
                   href='/space-technology',
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors',
-                >,
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors'>,
                   Learn More →,
                 </a>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.0 ,}}
-                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2.0 }}
+                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4'>,
                   <Brain className='w-6 h-6 text-blue-400' />,
                 </div>,
@@ -226,19 +215,17 @@ export default function SpaceTech() {,
                 <p className='text-gray-300 mb-4'>,
                   Intelligent systems for autonomous space operations,
                 </p>,
-                <a,
+                <a
                   href='/space-technology-ai-platform',
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors',
-                >,
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors'>,
                   Learn More →,
                 </a>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 2.2 ,}}
-                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 2.2 }}
+                className='p-6 rounded-lg bg-gray-800/50 hover: bg-gray-800/70 transition-all duration-300'>,
                 <div className='w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4'>,
                   <Atom className='w-6 h-6 text-purple-400' />,
                 </div>,
@@ -248,23 +235,22 @@ export default function SpaceTech() {,
                 <p className='text-gray-300 mb-4'>,
                   Quantum technologies for space communications and computing,
                 </p>,
-                <a,
+                <a
                   href='/ai-powered-space-technology',
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors',
-                >,
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors'>,
                   Learn More →,
                 </a>,
               </motion.div>,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-4xl text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 2.4 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 2.4 }}
             >,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Ready to Explore the Final Frontier?,
@@ -273,16 +259,14 @@ export default function SpaceTech() {,
                 Join us in pioneering the future of space technology,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <a,
+                <a
                   href='/contact',
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300',
-                >,
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300'>,
                   Get Started,
                 </a>,
-                <a,
+                <a
                   href='/services',
-                  className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300',
-                >,
+                  className='px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300'>,
                   View Services,
                 </a>,
               </div>,
@@ -290,9 +274,6 @@ export default function SpaceTech() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>)}
 ,
-export default SpaceTech,
-,
+export default SpaceTech;

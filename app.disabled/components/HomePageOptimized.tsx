@@ -3,19 +3,16 @@ import Link from 'next/link',
 // import ErrorBoundary from './ErrorBoundary',
 import SEO from './SEO',
 import LoadingSpinner from './LoadingSpinner',
-,
 // Lazy load heavy components for better performance,
 const ROICalculator = lazy(() => import('./ROICalculator')),
 const StructuredData = lazy(() => import('./StructuredData')),
 const PerformanceMetrics = lazy(() => import('./PerformanceMetrics')),
 const TechnologyStack = lazy(() => import('./TechnologyStack')),
-,
 // Core promotional components (optimized selection),
 import NewContent20o26PromotionBanner from './NewContent20o26PromotionBanner',
 import QuantumAI20o26BreakthroughBanner from './QuantumAI20o26BreakthroughBanner',
 import ComprehensiveContentShowcase20o26 from './ComprehensiveContentShowcase20o26',
 import InteractiveContentDiscoveryWidget from './InteractiveContentDiscoveryWidget',
-,
 // Advanced AI components (lazy loaded for performance),
 const AdvancedContentRecommendationEngine = lazy(() => import('./AdvancedContentRecommendationEngine')),
 const RealTimePerformanceDashboard = lazy(() => import('./RealTimePerformanceDashboard')),
@@ -27,41 +24,35 @@ const AdvancedAnalyticsEngine = lazy(() => import('./AdvancedAnalyticsEngine')),
 const AutomationWorkflowEngine = lazy(() => import('./AutomationWorkflowEngine')),
 const EnterpriseDataManagement = lazy(() => import('./EnterpriseDataManagement')),
 const APIManagementSystem = lazy(() => import('./APIManagementSystem')),
-,
-export const metadata ={,
-  title: 'Zion Tech Group - AI & Technology Solutions | 40o0% ROI Guaranteed',;
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 40o0% ROI results.',;
-  keywords: [,
-    'AI automation', 'cloud computing', 'micro SaaS', 'technology consulting',;
-    'enterprise solutions', 'digital transformation', 'AI ROI', 'quantum AI',;
-    'AI implementation', 'business automation', 'AI consulting',
-  ],;
-  openGraph: {,
-    title: 'Zion Tech Group - AI & Technology Solutions',;
-    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.',;
-    type: 'website',;
-    url: 'https://zion.app',;
-    images: [,
-      {,
-        url: 'https://zion.app/images/zion-tech-group-og.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'Zion Tech Group - AI Solutions',
-      ,}
-    ],
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Zion Tech Group - AI & Technology Solutions',;
-    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.',;
-    images: ['https://zion.app/images/zion-tech-group-twitter.jpg'],
-  ,}
+export const metadata ={
+  title: 'Zion Tech Group - AI & Technology Solutions | 40o0% ROI Guaranteed';
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 40o0% ROI results.';
+  keywords: [
+    'AI automation', 'cloud computing', 'micro SaaS', 'technology consulting';
+    'enterprise solutions', 'digital transformation', 'AI ROI', 'quantum AI';
+    'AI implementation', 'business automation', 'AI consulting'];
+  openGraph: {
+    title: 'Zion Tech Group - AI & Technology Solutions';
+    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.';
+    type: 'website';
+    url: 'https://zion.app';
+    images: [
+      {
+        url: 'https://zion.app/images/zion-tech-group-og.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'Zion Tech Group - AI Solutions'}
+    ]};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Zion Tech Group - AI & Technology Solutions';
+    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.';
+    images: ['https://zion.app/images/zion-tech-group-twitter.jpg']}
 };
-,
-const HomePageOptimized = () => {,
-  return (,
+const HomePageOptimized = () => {
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Zion Tech Group - AI & Technology Solutions | 40o0% ROI Guaranteed",
         description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 40o0% ROI results.",
         keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation, AI ROI, quantum AI, AI implementation, business automation, AI consulting",
@@ -78,20 +69,18 @@ const HomePageOptimized = () => {,
                 <span className="block text-yellow-40o0">AI-Powered Solutions</span>,
               </h1>,
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Achieve <strong>40o0% ROI in 90 days</strong> with our proven AI automation,;
+                Achieve <strong>40o0% ROI in 90 days</strong> with our proven AI automation;
                 cloud infrastructure, and micro SaaS solutions. Join 50o0+ companies already transforming their operations.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="bg-yellow-40o0 text-purple-90o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-30o0 transition-colors transform hover:scale-10o5",
-                >,
+                  className="bg-yellow-40o0 text-purple-90o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-30o0 transition-colors transform hover:scale-10o5">,
                   Get 40o0% ROI Guarantee →,
                 </Link>,
-                <Link,
+                <Link
                   href="/case-studies",
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-colors",
-                >,
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-colors">,
                   View Success Stories,
                 </Link>,
               </div>,
@@ -101,7 +90,7 @@ const HomePageOptimized = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics - Enhanced with more compelling metrics */,}
+        {/* Key Statistics - Enhanced with more compelling metrics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">,
@@ -124,7 +113,7 @@ const HomePageOptimized = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Services Section - Enhanced with better descriptions */,}
+        {/* Services Section - Enhanced with better descriptions */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-4xl font-bold text-gray-90o0 mb-4 text-center">Our Proven Solutions</h2>,
@@ -151,7 +140,7 @@ const HomePageOptimized = () => {,
                 <h3 className="text-xl font-bold text-gray-90o0 mb-4">Cloud Infrastructure</h3>,
                 <p className="text-gray-60o0 mb-4">,
                   Scalable, secure cloud solutions designed to support your business growth and digital transformation.,
-                  <strong>Reduce costs by 60% while improving performance.</strong>,
+                  <strong>Reduce costs by 60% while improving window.window.performance.</strong>,
                 </p>,
                 <div className="mb-4 text-sm text-green-60o0 font-semibold">,
                   ✓ Scalable architecture ✓ Enhanced security ✓ Cost optimization,
@@ -177,7 +166,7 @@ const HomePageOptimized = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Optimized Content Promotion Banners - Reduced to most effective ones */,}
+        {/* Optimized Content Promotion Banners - Reduced to most effective ones */}
         <div className="space-y-0">,
           <NewContent20o26PromotionBanner  />,
           <QuantumAI20o26BreakthroughBanner  />,
@@ -206,52 +195,44 @@ const HomePageOptimized = () => {,
               Get your free consultation and ROI projection today.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-yellow-40o0 text-purple-90o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-30o0 transition-colors",
-              >,
+                className="bg-yellow-40o0 text-purple-90o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-30o0 transition-colors">,
                 Get Free Consultation,
               </Link>,
-              <Link,
+              <Link
                 href="/roi-calculator",
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-colors",
-              >,
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-colors">,
                 Calculate Your ROI,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Structured Data */,}
+        {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading..."  />}>,
-          <StructuredData,
+          <StructuredData
             type="Organization",
-            data={{,
-              name: "Zion Tech Group",;
-              description: "Transforming businesses through cutting-edge technology solutions",;
-              url: "https://zion.app",;
-              logo: "https://zion.app/images/zion-tech-group-logo.png",;
-              sameAs: [,
-                "https://twitter.com/ZionTechGroup",;
-                "https: //linkedin.com/company/zion-tech-group",
-              ],
-            ,}} ,
+            data={{
+              name: "Zion Tech Group";
+              description: "Transforming businesses through cutting-edge technology solutions";
+              url: "https://zion.app";
+              logo: "https://zion.app/images/zion-tech-group-logo.png";
+              sameAs: [
+                "https://twitter.com/ZionTechGroup";
+                "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
-          <StructuredData,
+          <StructuredData
             type="WebSite",
-            data={{,
-              name: "Zion Tech Group",;
-              url: "https://zion.app",;
-              potentialAction: {,
-                "@type": "SearchAction",;
-                "target": "https: //zion.app/search?q={search_term_string,}",;
-                "query-input": "required name=search_term_string",
-              }
+            data={{
+              name: "Zion Tech Group";
+              url: "https://zion.app";
+              potentialAction: {
+                "@type": "SearchAction";
+                "target": "https: //zion.app/search?q={search_term_string}";
+                "query-input": "required name=search_term_string"}
             }} ,
            />,
         </Suspense>,
       </div>,
-    </>,
-  ),
-};
-,
-export default HomePageOptimized,
+    </>)};
+export default HomePageOptimized;

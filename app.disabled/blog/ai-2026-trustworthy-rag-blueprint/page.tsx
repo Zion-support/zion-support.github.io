@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-const TrustworthyRAGBlueprint20o26 = () => {,
-  return (,
+const TrustworthyRAGBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Trustworthy RAG Blueprint',
         description='End-to-end blueprint to build reliable Retrieval-Augmented Generation systems with grounding, citations, evals, and governance.',
         keywords='RAG, retrieval augmented generation, grounding, citations, evals, governance',
@@ -26,7 +25,7 @@ const TrustworthyRAGBlueprint20o26 = () => {,
         <div className='prose prose-lg max-w-none'>,
           <h2>Foundations</h2>,
           <p>,
-            Trustworthy RAG begins with data governance: versioned corpora,;
+            Trustworthy RAG begins with data governance: versioned corpora;
             document lineage, and access controls. Retrieval quality and,
             response grounding must be measurable and enforced.,
           </p>,
@@ -51,7 +50,7 @@ const TrustworthyRAGBlueprint20o26 = () => {,
           </ul>,
           <h2>Reference Stack</h2>,
           <p>,
-            Feature store for retrieval signals, vector and keyword indices,;
+            Feature store for retrieval signals, vector and keyword indices;
             policy engine for PII/security rules, evaluation harness, and,
             observability overlay for retrieval and generation steps.,
           </p>,
@@ -62,23 +61,17 @@ const TrustworthyRAGBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Schedule a RAG Assessment,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default TrustworthyRAGBlueprint20o26,
-,
+    </div>)};
+export default TrustworthyRAGBlueprint20o26;

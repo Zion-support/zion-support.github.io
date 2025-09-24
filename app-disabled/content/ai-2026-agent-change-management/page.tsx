@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Change Management | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Change Management | Zion Tech Group';
   description:,
-    'Eval-gated change management for autonomous agents: approvals, rollouts, and safeguards.',;
+    'Eval-gated change management for autonomous agents: approvals, rollouts, and safeguards.';
 };
-,
-export default function AgentChangeManagement20o26Page() {,
-  return (,
+export default function AgentChangeManagement20o26Page() {
+  return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agent Change Management,
@@ -40,24 +38,20 @@ export default function AgentChangeManagement20o26Page() {,
           <li>Document runbooks for rollback and mitigation</li>,
         </ol>,
         <p>,
-          See also: {' ',}
-          <Link,
+          See also: {' '}
+          <Link
             className='text-purple-70o0 font-semibold',
-            href='/content/ai-20o26-agent-platform-operations',
-          >,
+            href='/content/ai-20o26-agent-platform-operations'>,
             Agent Platform Operations,
           </Link>{' '}
           and{' '}
-          <Link,
+          <Link
             className='text-purple-70o0 font-semibold',
-            href='/content/ai-20o26-evaluation-hub',
-          >,
+            href='/content/ai-20o26-evaluation-hub'>,
             Evaluation Hub,
           </Link>,
           .,
         </p>,
       </div>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

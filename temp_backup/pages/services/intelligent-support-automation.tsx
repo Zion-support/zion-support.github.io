@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function IntelligentSupportAutomationPage() {,
-  return (,
+export default function IntelligentSupportAutomationPage() {
+  return (
     <>,
       <Head>,
         <title>Intelligent Support Automation - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='intelligent support automation page',
         />,
@@ -21,7 +20,5 @@ export default function IntelligentSupportAutomationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

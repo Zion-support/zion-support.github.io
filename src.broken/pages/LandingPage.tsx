@@ -1,9 +1,7 @@
-export function LandingPage() {,
-  return (,
+export function LandingPage() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MultiCloudManagementPage() {,
-  return (,
+export default function MultiCloudManagementPage() {
+  return (
     <>,
       <Head>,
         <title>Multi Cloud Management - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function MultiCloudManagementPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

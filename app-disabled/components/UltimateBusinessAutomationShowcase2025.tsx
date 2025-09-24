@@ -1,117 +1,111 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-import {,
-  ArrowRight,;
-  TrendingUp,;
-  DollarSign,;
-  Zap,;
-  Clock,;
-  Users,;
-  Award,;
-  CheckCircle,;
-  Star,;
+import {
+  ArrowRight;
+  TrendingUp;
+  DollarSign;
+  Zap;
+  Clock;
+  Users;
+  Award;
+  CheckCircle;
+  Star;
 } from 'lucide-react',
-,
-const UltimateBusinessAutomationShowcase20o25 = () => {,
+const UltimateBusinessAutomationShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 'ultimate-business-automation-revolution',;
+  const contentItems = [
+    {
+      id: 'ultimate-business-automation-revolution';
       title:,
-        'AI 20o25: The Ultimate Business Automation Revolution - Ultimate Breakthrough Guide to 15,0o00% ROI',;
+        'AI 20o25: The Ultimate Business Automation Revolution - Ultimate Breakthrough Guide to 15,0o00% ROI';
       description:,
-        'Transform your enterprise with next-generation AI automation that delivers unprecedented results. Learn how Fortune 50o0 companies are achieving 15,0o00% ROI with our revolutionary framework.',;
-      type: 'blog',;
-      category: 'automation',;
-      url: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$85.2B',;
-        accuracy: '99.97%',;
-        automation: '98.7%',;
-      },;
-      readingTime: '25 min read',;
-      isNew: true,;
-      featured: true,;
-      tags: ['AI Automation', 'Enterprise', 'ROI', 'Revolution', '20o25'],;
-    },;
-    {,
-      id: 'fortune-50o0-ultimate-automation-success',;
+        'Transform your enterprise with next-generation AI automation that delivers unprecedented results. Learn how Fortune 50o0 companies are achieving 15,0o00% ROI with our revolutionary framework.';
+      type: 'blog';
+      category: 'automation';
+      url: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$85.2B';
+        accuracy: '99.97%';
+        automation: '98.7%';
+      };
+      readingTime: '25 min read';
+      isNew: true;
+      featured: true;
+      tags: ['AI Automation', 'Enterprise', 'ROI', 'Revolution', '20o25'];
+    };
+    {
+      id: 'fortune-50o0-ultimate-automation-success';
       title:,
-        'Fortune 50o0 Ultimate Business Automation Success: $85.2B Annual Savings - 15,0o00% ROI Success Story',;
+        'Fortune 50o0 Ultimate Business Automation Success: $85.2B Annual Savings - 15,0o00% ROI Success Story';
       description:,
-        'How a Fortune 10 manufacturing giant achieved unprecedented results with AI automation. Discover the complete transformation story and implementation details.',;
-      type: 'case-study',;
-      category: 'case-study',;
-      url: '/case-studies/fortune-50o0-ultimate-business-automation-150o00-roi-success-story',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$85.2B',;
-        timeline: '18 months',;
-        satisfaction: '99.8%',;
-      },;
-      readingTime: '18 min read',;
-      isNew: true,;
-      featured: true,;
-      tags: [,
-        'Fortune 50o0',;
-        'Success Story',;
-        'ROI',;
-        'Manufacturing',;
-        'Transformation',;
-      ],;
-    },;
-    {,
-      id: 'ultimate-automation-implementation-guide',;
+        'How a Fortune 10 manufacturing giant achieved unprecedented results with AI automation. Discover the complete transformation story and implementation details.';
+      type: 'case-study';
+      category: 'case-study';
+      url: '/case-studies/fortune-50o0-ultimate-business-automation-150o00-roi-success-story';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$85.2B';
+        timeline: '18 months';
+        satisfaction: '99.8%';
+      };
+      readingTime: '18 min read';
+      isNew: true;
+      featured: true;
+      tags: [
+        'Fortune 50o0';
+        'Success Story';
+        'ROI';
+        'Manufacturing';
+        'Transformation';
+      ];
+    };
+    {
+      id: 'ultimate-automation-implementation-guide';
       title:,
-        'AI 20o25 Ultimate Business Automation Implementation Guide: Complete Roadmap to 15,0o00% ROI',;
+        'AI 20o25 Ultimate Business Automation Implementation Guide: Complete Roadmap to 15,0o00% ROI';
       description:,
-        'The definitive guide to implementing AI automation that delivers unprecedented business results. Step-by-step roadmap for achieving 15,0o00% ROI.',;
-      type: 'resource',;
-      category: 'guide',;
-      url: '/resources/ai-20o25-ultimate-business-automation-implementation-guide',;
-      metrics: {,
-        roi: '15,0o00%',;
-        timeline: '18 months',;
-        success: '99.7%',;
-        projects: '1,0o00+',;
-      },;
-      readingTime: '35 min read',;
-      isNew: true,;
-      featured: true,;
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework', '20o25'],;
-    },;
+        'The definitive guide to implementing AI automation that delivers unprecedented business results. Step-by-step roadmap for achieving 15,0o00% ROI.';
+      type: 'resource';
+      category: 'guide';
+      url: '/resources/ai-20o25-ultimate-business-automation-implementation-guide';
+      metrics: {
+        roi: '15,0o00%';
+        timeline: '18 months';
+        success: '99.7%';
+        projects: '1,0o00+';
+      };
+      readingTime: '35 min read';
+      isNew: true;
+      featured: true;
+      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework', '20o25'];
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'automation',;
-      name: 'AI Automation',;
-      count: contentItems.filter(item => item.category === 'automation').length,;
-    },;
-    {,
-      id: 'case-study',;
-      name: 'Case Studies',;
-      count: contentItems.filter(item => item.category === 'case-study').length,;
-    },;
-    {,
-      id: 'guide',;
-      name: 'Implementation Guides',;
-      count: contentItems.filter(item => item.category === 'guide').length,;
-    },;
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length };
+    {
+      id: 'automation';
+      name: 'AI Automation';
+      count: contentItems.filter(item => item.category === 'automation').length;
+    };
+    {
+      id: 'case-study';
+      name: 'Case Studies';
+      count: contentItems.filter(item => item.category === 'case-study').length;
+    };
+    {
+      id: 'guide';
+      name: 'Implementation Guides';
+      count: contentItems.filter(item => item.category === 'guide').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.category === activeCategory),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -119,12 +113,10 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
       case 'resource':,
         return '📚',
       default:,
-        return '📄',
-    ,}
+        return '📄'}
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'from-blue-50o0 to-blue-60o0',
       case 'case-study':,
@@ -132,14 +124,12 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
       case 'resource':,
         return 'from-purple-50o0 to-purple-60o0',
       default:,
-        return 'from-gray-50o0 to-gray-60o0',
-    ,}
+        return 'from-gray-50o0 to-gray-60o0'}
   };
-,
-  return (,
+  return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-6'>,
             <Star className='w-5 h-5 mr-2' />,
@@ -151,7 +141,7 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
             Revolutionary AI Automation Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed'>,
-            Discover the most comprehensive collection of AI automation content,;
+            Discover the most comprehensive collection of AI automation content;
             featuring,
             <span className='text-purple-60o0 font-bold'>,
               {' '}
@@ -221,34 +211,31 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
         </div>,
         {/* Category Filter */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
-                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0',
-              ,}`}
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
             >,
               {category.name}
               <span className='ml-2 text-xs bg-white/20 px-2 py-1 rounded-full'>,
                 {category.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:transform hover:scale-10o5 ${,
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : '',
-              ,}`}
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden transition-all duration-30o0 hover: shadow-xl hover:transform hover:scale-10o5 ${
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
             >,
               {/* Header */}
-              <div,
+              <div
                 className={`bg-gradient-to-r ${getTypeColor(item.type)} p-4 text-white`}
               >,
                 <div className='flex items-center justify-between mb-2'>,
@@ -263,16 +250,14 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
                     </span>,
                   </div>,
                   <div className='flex items-center space-x-2'>,
-                    {item.isNew && (,
+                    {item.isNew && (
                       <span className='bg-red-50o0 text-white text-xs px-2 py-1 rounded-full font-bold'>,
                         NEW,
-                      </span>,
-                    )}
-                    {item.featured && (,
+                      </span>)}
+                    {item.featured && (
                       <span className='bg-yellow-50o0 text-white text-xs px-2 py-1 rounded-full font-bold'>,
                         FEATURED,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                 </div>,
                 <div className='flex items-center space-x-4 text-sm'>,
@@ -319,21 +304,18 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-4'>,
-                  {item.tags.slice(0, 3).map(tag => (,
-                    <span,
+                  {item.tags.slice(0, 3).map(tag => (
+                    <span
                       key={tag}
-                      className='bg-purple-10o0 text-purple-70o0 text-xs px-2 py-1 rounded-full',
-                    >,
+                      className='bg-purple-10o0 text-purple-70o0 text-xs px-2 py-1 rounded-full'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Action Button */}
-                <Link,
+                <Link
                   href={item.url}
-                  className='w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center group',
-                >,
-                  Read{' ',}
+                  className='w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-3 px-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center group'>,
+                  Read{' '}
                   {item.type === 'blog',
                     ? 'Article',
                     : item.type === 'case-study',
@@ -342,8 +324,7 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
                   <ArrowRight className='w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform' />,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='mt-16 text-center'>,
@@ -356,26 +337,20 @@ const UltimateBusinessAutomationShowcase20o25 = () => {,
               with our revolutionary AI automation framework.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors flex items-center justify-center',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors flex items-center justify-center'>,
                 Get Free Consultation,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Link>,
-              <Link,
+              <Link
                 href='/resources/ai-20o25-ultimate-business-automation-implementation-guide',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-60o0 transition-colors flex items-center justify-center',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-60o0 transition-colors flex items-center justify-center'>,
                 Download Implementation Guide,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateBusinessAutomationShowcase20o25,
-,
+    </div>)};
+export default UltimateBusinessAutomationShowcase20o25;

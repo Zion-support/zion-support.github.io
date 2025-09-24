@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Autonomous Operations - Zion Tech Group',;
+export const metadata = {
+  title: 'Autonomous Operations - Zion Tech Group';
   description:,
-    'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 10o0 proven solutions.',;
-  keywords: [,
-    'autonomous operations',;
-    'AI automation',;
-    'business transformation',;
-    'ROI',;
-    'enterprise AI',;
-  ],;
+    'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 10o0 proven solutions.';
+  keywords: [
+    'autonomous operations';
+    'AI automation';
+    'business transformation';
+    'ROI';
+    'enterprise AI';
+  ];
 };
-,
-export default function AutonomousOperationsPage() {,
-  return (,
+export default function AutonomousOperationsPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Autonomous Operations - Zion Tech Group',
         description='Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 10o0 proven solutions.',
         keywords='autonomous operations, AI automation, business transformation, ROI, enterprise AI',
@@ -37,29 +35,27 @@ export default function AutonomousOperationsPage() {,
                 Revolutionary Autonomous Operations,
               </h1>,
               <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-                Transform your business with autonomous AI systems that deliver{' ',}
+                Transform your business with autonomous AI systems that deliver{' '}
                 <strong>890% ROI</strong> and,
                 <strong> $12.8B in annual savings</strong>. Join Fortune 10o0,
                 leaders achieving unprecedented results.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
                   Get Expert Consultation,
                 </Link>,
-                <Link,
+                <Link
                   href='/resources/autonomous-operations-implementation-guide-20o25',
-                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-                >,
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
                   Download Implementation Guide,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-12'>,
@@ -112,7 +108,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* What Are Autonomous Operations */,}
+        {/* What Are Autonomous Operations */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
@@ -125,7 +121,7 @@ export default function AutonomousOperationsPage() {,
                   enterprise automation, where AI systems operate independently,
                   with minimal human intervention. These systems make real-time,
                   decisions, adapt to changing conditions, and continuously,
-                  optimize performance.,
+                  optimize window.window.performance.,
                 </p>,
                 <div className='space-y-4'>,
                   <div className='flex items-start space-x-3'>,
@@ -260,10 +256,9 @@ export default function AutonomousOperationsPage() {,
                   control and supply chain management across 47 manufacturing,
                   facilities worldwide.,
                 </p>,
-                <Link,
+                <Link
                   href='/case-studies/fortune-10o0-autonomous-operations-890-roi-success',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Read Full Case Study →,
                 </Link>,
               </div>,
@@ -294,20 +289,19 @@ export default function AutonomousOperationsPage() {,
                   </div>,
                 </div>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Transformed operations with autonomous fraud detection,;
+                  Transformed operations with autonomous fraud detection;
                   investment optimization, and customer service systems.,
                 </p>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Explore More Success Stories →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Process */,}
+        {/* Implementation Process */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-12'>,
@@ -378,7 +372,7 @@ export default function AutonomousOperationsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className='py-16 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-4'>,
@@ -389,23 +383,19 @@ export default function AutonomousOperationsPage() {,
               ROI and $12.8B savings to enterprise leaders worldwide.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Expert Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/resources/autonomous-operations-implementation-guide-20o25',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Download Implementation Guide,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,21 +1,19 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Ultimate Content Revolution - Transform Your Business',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Ultimate Content Revolution - Transform Your Business';
   description:,
-    'Discover the revolutionary AI content strategies that are transforming businesses in 20o25. Learn how to leverage AI for content creation, automation, and customer engagement.',;
-  keywords: [,
-    'AI content revolution',;
-    'content automation',;
-    'AI marketing',;
-    'business transformation',;
-    '20o25 trends',;
-  ],;
+    'Discover the revolutionary AI content strategies that are transforming businesses in 20o25. Learn how to leverage AI for content creation, automation, and customer engagement.';
+  keywords: [
+    'AI content revolution';
+    'content automation';
+    'AI marketing';
+    'business transformation';
+    '20o25 trends';
+  ];
 };
-,
-export default function AI20o25UltimateContentRevolution() {,
-  return (,
+export default function AI20o25UltimateContentRevolution() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -33,23 +31,21 @@ export default function AI20o25UltimateContentRevolution() {,
               engagement.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Success Stories,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Key Statistics */,}
+      {/* Key Statistics */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -78,7 +74,7 @@ export default function AI20o25UltimateContentRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <section className='py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='prose prose-lg max-w-none'>,
@@ -89,7 +85,7 @@ export default function AI20o25UltimateContentRevolution() {,
               In 20o25, we're witnessing the most significant transformation in,
               content creation and marketing history. AI-powered content,
               strategies are delivering unprecedented results, with businesses,
-              experiencing exponential growth in engagement, conversion rates,;
+              experiencing exponential growth in engagement, conversion rates;
               and revenue.,
             </p>,
             <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
@@ -178,27 +174,25 @@ export default function AI20o25UltimateContentRevolution() {,
                 Join thousands of businesses already experiencing the AI content,
                 revolution.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-block',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-block'>,
                 Start Your Transformation,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className='py-16 bg-gray-50'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
             Related Content,
           </h2>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-enterprise-automation-revolution',
-              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-            >,
+              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
               <h3 className='text-xl font-bold text-gray-90o0 mb-2'>,
                 AI Enterprise Automation,
               </h3>,
@@ -206,10 +200,9 @@ export default function AI20o25UltimateContentRevolution() {,
                 Discover how AI is revolutionizing enterprise operations.,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-ai-transformation',
-              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-            >,
+              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
               <h3 className='text-xl font-bold text-gray-90o0 mb-2'>,
                 Success Stories,
               </h3>,
@@ -217,10 +210,9 @@ export default function AI20o25UltimateContentRevolution() {,
                 Real results from Fortune 50o0 companies.,
               </p>,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow',
-            >,
+              className='bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow'>,
               <h3 className='text-xl font-bold text-gray-90o0 mb-2'>,
                 Our Services,
               </h3>,
@@ -231,7 +223,5 @@ export default function AI20o25UltimateContentRevolution() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

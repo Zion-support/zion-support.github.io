@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-export default function ManagedPostgresHA() {,
-  return (,
+export default function ManagedPostgresHA() {
+  return (
     <div className='relative isolate'>,
       <section className='px-6 lg: px-10 py-16 lg:py-24'>,
         <div className='max-w-6xl mx-auto'>,
@@ -10,45 +9,43 @@ export default function ManagedPostgresHA() {,
             Managed Postgres HA,
           </h1>,
           <p className='mt-4 text-gray-300 max-w-3xl'>,
-            Fully managed PostgreSQL with high availability, automated failover,;
+            Fully managed PostgreSQL with high availability, automated failover;
             PITR backups, encryption, observability, and performance tuning.,
             Delivered on AWS/GCP/Azure or on-prem Kubernetes.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {[,
-              {,
-                title: 'HA & Failover',;
-                desc: 'Multi-AZ replicas, Patroni/pg_auto_failover, health checks, and automated promotion.',;
-              },;
-              {,
-                title: 'Backups & PITR',;
-                desc: 'Continuous archiving with WAL-G, object storage retention, and disaster recovery runbooks.',;
-              },;
-              {,
-                title: 'Security',;
-                desc: 'TLS everywhere, IAM auth, TDE, row-level security, audit logging, and CIS benchmarks.',;
-              },;
-              {,
-                title: 'Performance',;
-                desc: 'Query plans, index advisory, autovacuum tuning, connection pooling (PgBouncer).',;
-              },;
-              {,
-                title: 'Observability',;
-                desc: 'pg_stat sampling, Prometheus/Grafana dashboards, slow query alerts, SLOs.',;
-              },;
-              {,
-                title: 'Migrations',;
-                desc: 'Minimal-downtime migrations with logical replication and blue/green strategy.',;
-              },;
-            ].map(f => (,
-              <div,
+            {[
+              {
+                title: 'HA & Failover';
+                desc: 'Multi-AZ replicas, Patroni/pg_auto_failover, health checks, and automated promotion.';
+              };
+              {
+                title: 'Backups & PITR';
+                desc: 'Continuous archiving with WAL-G, object storage retention, and disaster recovery runbooks.';
+              };
+              {
+                title: 'Security';
+                desc: 'TLS everywhere, IAM auth, TDE, row-level security, audit logging, and CIS benchmarks.';
+              };
+              {
+                title: 'Performance';
+                desc: 'Query plans, index advisory, autovacuum tuning, connection pooling (PgBouncer).';
+              };
+              {
+                title: 'Observability';
+                desc: 'pg_stat sampling, Prometheus/Grafana dashboards, slow query alerts, SLOs.';
+              };
+              {
+                title: 'Migrations';
+                desc: 'Minimal-downtime migrations with logical replication and blue/green strategy.';
+              };
+            ].map(f => (
+              <div
                 key={f.title}
-                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur',
-              >,
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>,
                 <h3 className='text-lg font-semibold text-white'>{f.title}</h3>,
                 <p className='mt-2 text-sm text-gray-300'>{f.desc}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div className='mt-14'>,
             <h2 className='text-2xl font-semibold'>Pricing</h2>,
@@ -86,54 +83,45 @@ export default function ManagedPostgresHA() {,
               </div>,
             </div>,
             <p className='mt-4 text-sm text-gray-400'>,
-              Market references: {' ',}
-              <a,
+              Market references: {' '}
+              <a
                 className='underline hover: text-cyan-300',
                 href='https://www.crunchydata.com/products/crunchy-bridge',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Crunchy Bridge,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-300',
                 href='https://aiven.io/postgresql',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Aiven,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-300',
                 href='https://cloud.google.com/sql/pricing',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Cloud SQL,
               </a>,
               .,
             </p>,
           </div>,
           <div className='mt-14 flex flex-wrap items-center gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-5 py-3 rounded-lg bg-emerald-400 text-black font-semibold',
-            >,
+              className='px-5 py-3 rounded-lg bg-emerald-400 text-black font-semibold'>,
               Get a Managed Cluster,
             </Link>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='px-5 py-3 rounded-lg border border-white/20',
-            >,
+              className='px-5 py-3 rounded-lg border border-white/20'>,
               Email: kleber@ziontechgroup.com,
             </a>,
             <span className='text-gray-400'>Call: +1 302 464 0950</span>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

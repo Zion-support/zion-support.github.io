@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-export default function LeadershipPage() {,
-	return (,
+import React from 'react';;
+import Head from 'next/head';
+export default function LeadershipPage() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>Leadership | Zion Tech Group</title>,
@@ -23,7 +23,5 @@ export default function LeadershipPage() {,
 				</div>,
 				<div className="mt-10 text-slate-30o0">Contact: <a className="text-cyan-40o0" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-40o0" href="tel:+130o24640950">+1 30o2 464 0950</a></div>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>)}
 ,

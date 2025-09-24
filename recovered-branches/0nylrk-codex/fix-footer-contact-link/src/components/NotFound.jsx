@@ -1,54 +1,54 @@
 import { Link } from 'react-router-dom',
 import { motion } from 'framer-motion',
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react',
-const NotFound = () => {,
-  const popularPages = [,
-    { path: '/', label: 'Home', description: 'Main landing page' ,},;
-    { path: '/services', label: 'Services', description: 'All our services' ,},;
-    {,
-      path: '/about',;
-      label: 'About Us',;
-      description: 'Learn about Zion Tech Group',;
-    },;
-    { path: '/contact', label: 'Contact', description: 'Get in touch with us' ,},;
-    { path: '/blog', label: 'Blog', description: 'Latest insights and news' ,},;
-    { path: '/careers', label: 'Careers', description: 'Join our team' ,},;
+const NotFound = () => {
+  const popularPages = [
+    { path: '/', label: 'Home', description: 'Main landing page' };
+    { path: '/services', label: 'Services', description: 'All our services' };
+    {
+      path: '/about';
+      label: 'About Us';
+      description: 'Learn about Zion Tech Group';
+    };
+    { path: '/contact', label: 'Contact', description: 'Get in touch with us' };
+    { path: '/blog', label: 'Blog', description: 'Latest insights and news' };
+    { path: '/careers', label: 'Careers', description: 'Join our team' };
   ],
-  const servicePages = [,
-    {,
-      path: '/services/ai',;
-      label: 'AI Services',;
-      description: 'Artificial Intelligence solutions',;
-    },;
-    {,
-      path: '/services/cloud',;
-      label: 'Cloud Services',;
-      description: 'Cloud infrastructure and DevOps',;
-    },;
-    {,
-      path: '/services/cybersecurity',;
-      label: 'Cybersecurity',;
-      description: 'Security and protection',;
-    },;
-    {,
-      path: '/services/infrastructure',;
-      label: 'IT Infrastructure',;
-      description: 'Enterprise IT solutions',;
-    },;
+  const servicePages = [
+    {
+      path: '/services/ai';
+      label: 'AI Services';
+      description: 'Artificial Intelligence solutions';
+    };
+    {
+      path: '/services/cloud';
+      label: 'Cloud Services';
+      description: 'Cloud infrastructure and DevOps';
+    };
+    {
+      path: '/services/cybersecurity';
+      label: 'Cybersecurity';
+      description: 'Security and protection';
+    };
+    {
+      path: '/services/infrastructure';
+      label: 'IT Infrastructure';
+      description: 'Enterprise IT solutions';
+    };
   ],
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 flex items-center justify-center px-4'>,
       <motion.div,
         className='max-w-4xl mx-auto text-center',
-        initial={{ opacity: 0, y: 20 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        transition={{ duration: 0.5 ,}}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >,
         {/* 40o4 Icon */}
         <motion.div,
           className='mb-8',
           animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 2, repeat: Infinity ,}}
+          transition={{ duration: 2, repeat: Infinity }}
         >,
           <div className='w-32 h-32 mx-auto bg-gradient-to-r from-red-50o0 to-orange-50o0 rounded-full flex items-center justify-center'>,
             <AlertTriangle className='w-16 h-16 text-white' />,
@@ -63,48 +63,47 @@ const NotFound = () => {,
           The page you're looking for doesn't exist or has been moved. Let us,
           help you find what you need.,
         </p>,
-        {/* Search Section */,}
+        {/* Search Section */}
         <motion.div,
           className='mb-12',
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 0.3 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
         >,
           <div className='max-w-md mx-auto relative'>,
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-            <input,
+            <input
               type='text',
               placeholder='Search our website...',
               className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-blue-40o0 transition-colors',
             />,
           </div>,
         </motion.div>,
-        {/* Popular Pages */,}
+        {/* Popular Pages */}
         <motion.div,
           className='mb-12',
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 0.5 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
         >,
           <h3 className='text-2xl font-semibold text-white mb-6'>,
             Popular Pages,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'>,
-            {popularPages.map((page, index) => (,
+            {popularPages.map((page, index) => (
               <motion.div,
                 key={page.path}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: 0.1 * index ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
               >,
-                <Link,
+                <Link
                   to={page.path}
-                  className='block p-4 bg-white/10 border border-white/20 rounded-lg hover: border-blue-40o0 hover:bg-white/20 transition-all duration-30o0 group',
-                >,
+                  className='block p-4 bg-white/10 border border-white/20 rounded-lg hover: border-blue-40o0 hover:bg-white/20 transition-all duration-30o0 group'>,
                   <div className='flex items-center justify-between'>,
                     <div className='text-left'>,
                       <h4 className='text-white font-semibold group-hover:text-blue-40o0 transition-colors'>,
-                        {page.label,}
+                        {page.label}
                       </h4>,
                       <p className='text-gray-40o0 text-sm'>,
                         {page.description}
@@ -113,36 +112,34 @@ const NotFound = () => {,
                     <ArrowRight className='w-5 h-5 text-gray-40o0 group-hover: text-blue-40o0 group-hover:translate-x-1 transition-all duration-30o0' />,
                   </div>,
                 </Link>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Service Pages */}
         <motion.div,
           className='mb-12',
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 0.7 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
         >,
           <h3 className='text-2xl font-semibold text-white mb-6'>,
             Our Services,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-            {servicePages.map((service, index) => (,
+            {servicePages.map((service, index) => (
               <motion.div,
                 key={service.path}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ delay: 0.1 * index ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
               >,
-                <Link,
+                <Link
                   to={service.path}
-                  className='block p-4 bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-40o0/30 rounded-lg hover: border-blue-40o0 hover:from-blue-50o0/30 hover:to-cyan-50o0/30 transition-all duration-30o0 group',
-                >,
+                  className='block p-4 bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 border border-blue-40o0/30 rounded-lg hover: border-blue-40o0 hover:from-blue-50o0/30 hover:to-cyan-50o0/30 transition-all duration-30o0 group'>,
                   <div className='flex items-center justify-between'>,
                     <div className='text-left'>,
                       <h4 className='text-white font-semibold group-hover:text-blue-30o0 transition-colors'>,
-                        {service.label,}
+                        {service.label}
                       </h4>,
                       <p className='text-gray-30o0 text-sm'>,
                         {service.description}
@@ -151,57 +148,49 @@ const NotFound = () => {,
                     <ArrowRight className='w-5 h-5 text-blue-40o0 group-hover: text-blue-30o0 group-hover:translate-x-1 transition-all duration-30o0' />,
                   </div>,
                 </Link>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* CTA Buttons */}
         <motion.div,
           className='flex flex-col sm: flex-row gap-4 justify-center',
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 0.9 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9 }}
         >,
-          <Link,
+          <Link
             to='/',
-            className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl',
-          >,
+            className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
             <Home className='w-5 h-5' />,
             Go Home,
           </Link>,
-          <Link,
+          <Link
             to='/contact',
-            className='inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-30o0',
-          >,
+            className='inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:border-white/30 transition-all duration-30o0'>,
             Contact Support,
             <ArrowRight className='w-5 h-5' />,
           </Link>,
         </motion.div>,
-        {/* Help Text */,}
+        {/* Help Text */}
         <motion.p,
           className='text-gray-40o0 mt-8 text-sm',
-          initial={{ opacity: 0 ,}}
-          animate={{ opacity: 1 ,}}
-          transition={{ delay: 1.1 ,}}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.1 }}
         >,
           Can't find what you're looking for?{' '}
-          <a,
+          <a
             href='mailto: kleber@ziontechgroup.com',
-            className='text-blue-40o0 hover:text-blue-30o0 underline',
-          >,
+            className='text-blue-40o0 hover:text-blue-30o0 underline'>,
             Email us,
-          </a>{' ',}
+          </a>{' '}
           or call us at{' '}
-          <a,
+          <a
             href='tel: +130o24640950',
-            className='text-blue-40o0 hover:text-blue-30o0 underline',
-          >,
+            className='text-blue-40o0 hover:text-blue-30o0 underline'>,
             +1 30o2 464 0950,
           </a>,
         </motion.p>,
       </motion.div>,
-    </div>,
-  ),
-,};
-export default NotFound,
-,
+    </div>)};
+export default NotFound;

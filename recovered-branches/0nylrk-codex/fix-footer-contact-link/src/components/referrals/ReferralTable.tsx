@@ -2,69 +2,55 @@ import { TableBodyTableCellTableHeaderTableRow } from '@/components/ui/table',
 import { ReferralStatus } from '@/types/referrals',
 import { Badge } from '@/components/ui/badge',
 import { formatDate } from '@/utils/referralUtils',
-,
-interface ReferralTableProps {,
+interface ReferralTableProps {
   referrals: Referral[],
-  isLoading: boolean,
-,}
+  isLoading: boolean}
 ,
-export function ReferralTable({ referralsisLoading }: ReferralTableProps) {,
+export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
   // Helper function to render status badges,
-  const renderStatusBadge = (status: ReferralStatus) => {,
-    switch (status) {,
+  const renderStatusBadge = (status: ReferralStatus) => {
+    switch (status) {
       case 'pending':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-yellow-50 text-yellow-800 border-yellow-200',
-          >,
+            className='bg-yellow-50 text-yellow-800 border-yellow-200'>,
             Pending,
-          </Badge>,
-        ),
+          </Badge>),
       case 'completed':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-green-50 text-green-800 border-green-200',
-          >,
+            className='bg-green-50 text-green-800 border-green-200'>,
             Completed,
-          </Badge>,
-        ),
+          </Badge>),
       case 'expired':,
-        return (,
-          <Badge,
+        return (
+          <Badge
             variant='outline',
-            className='bg-gray-50 text-gray-800 border-gray-200',
-          >,
+            className='bg-gray-50 text-gray-800 border-gray-200'>,
             Expired,
-          </Badge>,
-        ),
+          </Badge>),
       default:,
-        return null,
-    ,}
+        return null}
   };
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='flex items-center justify-center p-8'>,
         <div className='h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent' />,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (referrals.length === 0) {,
-    return (,
+  if (referrals.length === 0) {
+    return (
       <div className='flex flex-col items-center justify-center p-8 text-center'>,
         <p className='text-muted-foreground mb-2'>No referrals yet</p>,
         <p className='text-sm text-muted-foreground'>,
           Share your referral link with friends and colleagues to start earning,
           rewards,
         </p>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <Table>,
       <TableHeader>,
         <TableRow>,
@@ -77,7 +63,7 @@ export function ReferralTable({ referralsisLoading }: ReferralTableProps) {,
         </TableRow>,
       </TableHeader>,
       <TableBody>,
-        {referrals.map(referral => (,
+        {referrals.map(referral => (
           <TableRow key={referral.id}>,
             <TableCell>{formatDate(referral.created_at)}</TableCell>,
             <TableCell>{referral.email || '-'}</TableCell>,
@@ -92,22 +78,16 @@ export function ReferralTable({ referralsisLoading }: ReferralTableProps) {,
               {referral.completed_at ? formatDate(referral.completed_at) : '-'}
             </TableCell>,
             <TableCell>,
-              {referral.reward_issued ? (,
+              {referral.reward_issued ? (
                 <Badge className='bg-green-50 text-green-800 border-green-200'>,
                   Issued,
-                </Badge>,
-              ) : referral.status === 'completed' ? (,
+                </Badge>) : referral.status === 'completed' ? (
                 <Badge className='bg-blue-50 text-blue-800 border-blue-200'>,
                   Pending,
-                </Badge>,
-              ) : (,
-                '-',
-              )}
+                </Badge>) : (
+                '-')}
             </TableCell>,
-          </TableRow>,
-        ))}
+          </TableRow>))}
       </TableBody>,
-    </Table>,
-  ),
-}
+    </Table>)}
 ,

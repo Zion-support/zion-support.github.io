@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {,
-  return (,
+export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {
+  return (
     <section className='relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-70o0 text-white py-12 overflow-hidden'>,
       {/* Background Animation */}
       <div className='absolute inset-0'>,
@@ -13,7 +12,7 @@ export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-2 bg-red-50o0 text-white text-sm font-bold rounded-full mb-6 shadow-lg animate-pulse'>,
             🚀 BREAKTHROUGH CONTENT JUST RELEASED,
           </div>,
@@ -24,12 +23,12 @@ export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {,
               Breakthrough Revolution,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl mb-8 text-blue-10o0 max-w-4xl mx-auto leading-relaxed'>,
             Discover the revolutionary AI trends transforming every industry in,
             20o25. From quantum-neural fusion to consciousness AI - delivering,
             <span className='font-bold text-yellow-40o0'>,
-              {' ',}
+              {' '}
               15,0o00% ROI,
             </span>{' '}
             and beyond.,
@@ -56,26 +55,23 @@ export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-ultimate-trends-breakthrough',
-              className='bg-red-60o0 hover:bg-red-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-red-60o0 hover:bg-red-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🚀 Read Breakthrough Trends,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-transformation-breakthrough',
-              className='bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🏆 View 15,0o00% ROI Success,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-implementation-toolkit',
-              className='bg-yellow-50o0 text-gray-90o0 hover: bg-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-yellow-50o0 text-gray-90o0 hover: bg-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               📚 Get Implementation Toolkit,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-8 flex flex-col sm: flex-row items-center justify-center gap-6 text-blue-20o0 text-sm'>,
             <div className='flex items-center gap-2'>,
               <span className='text-green-40o0'>✓</span>,
@@ -92,7 +88,5 @@ export default function AI20o25UltimateTrendsBreakthroughPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

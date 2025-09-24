@@ -1,22 +1,15 @@
 export type AvailabilityStatus = 'Open' | 'Part-time' | 'Booked',
-,
-export type PortfolioItem = {,
+export type PortfolioItem = {
   title: string,
-  url: string,
-,};
-,
-export type FieldTranslations = {,
-  [langCode: string]: string,
-,};
-,
-export type TalentTranslations = {,
+  url: string};
+export type FieldTranslations = {
+  [langCode: string]: string};
+export type TalentTranslations = {
   title?: FieldTranslations,
   summary?: FieldTranslations,
   bio?: FieldTranslations,
-  category?: FieldTranslations,
-};
-,
-export type TalentProfile = {,
+  category?: FieldTranslations};
+export type TalentProfile = {
   id?: string,
   slug: string,
   name: string,
@@ -40,15 +33,11 @@ export type TalentProfile = {,
   createdAt?: string,
   // i18n,
   originalLanguage?: string, // ISO 639-1,
-  translations?: TalentTranslations,
-,};
-,
-export type TalentFilters = {,
+  translations?: TalentTranslations};
+export type TalentFilters = {
   skills?: string[],
   availability?: AvailabilityStatus[],
   minRate?: number,
   maxRate?: number,
   region?: string[],
-  minRating?: number,
-};
-,
+  minRating?: number};

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumAiFusionPlatformPage() {,
-  return (,
+export default function QuantumAiFusionPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Ai Fusion Platform - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function QuantumAiFusionPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

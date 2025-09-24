@@ -2,73 +2,61 @@ import { useState } from 'react',
 import { formatDistanceToNow } from 'date-fns',
 import { JobApplication } from '@/types/jobs',
 import { Button } from '@/components/ui/button',
-import {,
+import {
 import Link from 'next/link',
 import { StatusBadge } from './StatusBadge',
 import { ApplicationProgress } from './ApplicationProgress',
 import { toast } from 'sonner',
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardFooter;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  FileText,;
-  MessageSquare,;
-  HelpCircle,;
-  Calendar,;
-  ExternalLink,;
-  Download,;
+  FileText;
+  MessageSquare;
+  HelpCircle;
+  Calendar;
+  ExternalLink;
+  Download;
 } from 'lucide-react',
+interface ApplicationCardProps {
+  application: JobApplication}
 ,
-interface ApplicationCardProps {,
-  application: JobApplication,
-,}
-,
-export function ApplicationCard({ application }: ApplicationCardProps) {,
+export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
-,
-  const handleDownloadResume = () => {,
+  const handleDownloadResume = () => {
     // This would typically download the resume file,
-    toast.info('Resume download functionality will be implemented soon'),
-  };
-,
-  const renderActionButtons = () => {,
-    switch (application.status) {,
+    toast.info('Resume download functionality will be implemented soon')};
+  const renderActionButtons = () => {
+    switch (application.status) {
       case 'shortlisted':,
-        return (,
+        return (
           <Button variant='default' size='sm'>,
             <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview,
-          </Button>,
-        ),
+          </Button>),
       case 'interview':,
-        return (,
+        return (
           <Button variant='default' size='sm'>,
             <Calendar className='h-4 w-4 mr-1' /> View Interview Details,
-          </Button>,
-        ),
+          </Button>),
       case 'hired':,
-        return (,
-          <Button,
+        return (
+          <Button
             variant='secondary',
             size='sm',
-            className='bg-green-10o0 text-green-80o0 hover: bg-green-20o0 hover:text-green-90o0',
-          >,
+            className='bg-green-10o0 text-green-80o0 hover: bg-green-20o0 hover:text-green-90o0'>,
             <FileText className='h-4 w-4 mr-1' /> View Offer,
-          </Button>,
-        ),
+          </Button>),
       case 'rejected':,
-        return (,
+        return (
           <Button variant='outline' size='sm'>,
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback,
-          </Button>,
-        ),
+          </Button>),
       default:,
-        return null,
-    ,}
+        return null}
   };
-,
-  return (,
+  return (
     <Card className='overflow-hidden'>,
       <CardHeader className='pb-3'>,
         <div className='flex justify-between items-start'>,
@@ -76,8 +64,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
             <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>,
             <div className='text-sm text-muted-foreground mt-1'>,
               Applied{' '}
-              {formatDistanceToNow(new Date(application.created_at), {,
-                addSuffix: true,;
+              {formatDistanceToNow(new Date(application.created_at), {
+                addSuffix: true;
               })}
             </div>,
           </div>,
@@ -86,18 +74,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
       </CardHeader>,
       <CardContent className='pb-3'>,
         <ApplicationProgress status={application.status} className='my-4' />,
-        {expanded && (,
+        {expanded && (
           <div className='mt-4 space-y-3'>,
-            {application.cover_letter && (,
+            {application.cover_letter && (
               <div>,
                 <h4 className='text-sm font-medium mb-1'>Your Cover Letter</h4>,
                 <p className='text-sm text-muted-foreground'>,
                   {application.cover_letter}
                 </p>,
-              </div>,
-            )}
+              </div>)}
 ,
-            {application.resume && (,
+            {application.resume && (
               <div className='border rounded-md p-3 bg-muted/20'>,
                 <div className='flex justify-between items-center'>,
                   <div className='flex items-center'>,
@@ -106,7 +93,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
                       {application.resume.title || 'Resume'}
                     </span>,
                   </div>,
-                  <Button,
+                  <Button
                     variant='ghost',
                     size='sm',
                     onClick={handleDownloadResume}
@@ -114,10 +101,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
                     <Download className='h-3 w-3 mr-1' /> Download,
                   </Button>,
                 </div>,
-              </div>,
-            )}
+              </div>)}
 ,
-            {application.match_score && (,
+            {application.match_score && (
               <div>,
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>,
                 <div className='flex items-center'>,
@@ -128,14 +114,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
                     Relevance to job requirements,
                   </span>,
                 </div>,
-              </div>,
-            )}
-          </div>,
-        )}
+              </div>)}
+          </div>)}
       </CardContent>,
       <CardFooter className='flex flex-col gap-3 pt-0'>,
         <div className='flex justify-between items-center w-full'>,
-          <Button,
+          <Button
             variant='ghost',
             size='sm',
             onClick={() => setExpanded(!expanded)}
@@ -157,7 +141,5 @@ export function ApplicationCard({ application }: ApplicationCardProps) {,
           </Link>,
         </Button>,
       </CardFooter>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

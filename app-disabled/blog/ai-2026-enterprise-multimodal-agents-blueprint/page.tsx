@@ -1,25 +1,23 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
-  title: 'AI 20o26: Enterprise Multimodal Agents Blueprint',;
+export const metadata = {
+  title: 'AI 20o26: Enterprise Multimodal Agents Blueprint';
   description:,
-    'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',;
-  keywords: [,
-    'enterprise AI agents',;
-    'multimodal AI',;
-    'AI blueprint',;
-    'vision-language models',;
-    'speech AI',;
-    'enterprise automation',;
-  ],;
+    'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.';
+  keywords: [
+    'enterprise AI agents';
+    'multimodal AI';
+    'AI blueprint';
+    'vision-language models';
+    'speech AI';
+    'enterprise automation';
+  ];
 };
-,
-export default function EnterpriseMultimodalAgentsBlueprint20o26() {,
-  return (,
+export default function EnterpriseMultimodalAgentsBlueprint20o26() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI 20o26: Enterprise Multimodal Agents Blueprint',
         description='Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',
         keywords='enterprise AI agents, multimodal AI, AI blueprint, vision-language models, speech AI, enterprise automation',
@@ -43,16 +41,14 @@ export default function EnterpriseMultimodalAgentsBlueprint20o26() {,
                 deliver autonomous enterprise outcomes.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-teal-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-teal-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Start Your Build,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-60o0 transition-colors'>,
                   Talk to Experts,
                 </Link>,
               </div>,
@@ -127,20 +123,18 @@ export default function EnterpriseMultimodalAgentsBlueprint20o26() {,
                 Build Your Multimodal Agent Program,
               </h3>,
               <p className='text-lg mb-6 opacity-90'>,
-                Accelerate delivery with proven blueprints, reference stacks,;
+                Accelerate delivery with proven blueprints, reference stacks;
                 and enterprise readiness checklists.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='bg-white text-teal-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-teal-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore Our Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-60o0 transition-colors'>,
                   Schedule Consultation,
                 </Link>,
               </div>,
@@ -148,7 +142,5 @@ export default function EnterpriseMultimodalAgentsBlueprint20o26() {,
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>)}
 ,

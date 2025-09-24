@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Link from 'next/link',
-,
-export default function PricingPage() {,
-  return (,
+export default function PricingPage() {
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='medium'>,
       <Head>,
         <title>Pricing | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Transparent pricing for micro SaaS, AI, and IT services. View plans and market pricing references.',
         />,
@@ -57,7 +56,5 @@ export default function PricingPage() {,
           STE 1008 Middletown DE 19709,
         </div>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-,}
+    </UltraFuturisticBackground>)}
 ,

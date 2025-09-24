@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumAI20o25PromotionBanner: React.FC = () => {,
-  return (,
+const QuantumAI20o25PromotionBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className='absolute inset-0'>,
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20'></div>,
         <div className='absolute top-20 left-20 w-32 h-32 bg-cyan-40o0/10 rounded-full animate-pulse'></div>,
@@ -13,7 +12,7 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
         <div className='absolute bottom-40 right-20 w-28 h-28 bg-blue-40o0/10 rounded-full animate-pulse delay-30o00'></div>,
       </div>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg'>,
             <span className='w-3 h-3 bg-white rounded-full mr-2 animate-ping'></span>,
@@ -27,12 +26,12 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
             <span className='text-white'>Transformation</span>,
           </h2>,
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-gray-20o0'>,
-            Master the <strong className='text-cyan-40o0'>150o0% ROI</strong>{' ',}
+            Master the <strong className='text-cyan-40o0'>150o0% ROI</strong>{' '}
             quantum AI revolution that's transforming businesses worldwide,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16'>,
-          {/* Quantum Advantage */,}
+          {/* Quantum Advantage */}
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0'>,
             <div className='text-center mb-6'>,
               <div className='text-6xl mb-4'>⚛️</div>,
@@ -94,7 +93,7 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Applications */,}
+          {/* Applications */}
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0'>,
             <div className='text-center mb-6'>,
               <div className='text-6xl mb-4'>🚀</div>,
@@ -122,7 +121,7 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
             </ul>,
           </div>,
         </div>,
-        {/* Featured Content */,}
+        {/* Featured Content */}
         <div className='bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 mb-16'>,
           <div className='text-center mb-8'>,
             <h3 className='text-3xl font-bold mb-4'>,
@@ -136,11 +135,10 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
-            {/* Blog Post */,}
-            <Link,
+            {/* Blog Post */}
+            <Link
               href='/blog/quantum-ai-20o25-business-transformation-complete-guide',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-gradient-to-br from-cyan-60o0/20 to-blue-60o0/20 rounded-2xl p-8 border border-cyan-40o0/30 hover: border-cyan-40o0/60 transition-all duration-30o0 transform hover:scale-10o5'>,
                 <div className='flex items-start justify-between mb-6'>,
                   <div className='flex-1'>,
@@ -165,16 +163,15 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
                 </div>,
                 <div className='flex items-center text-cyan-40o0 font-semibold'>,
                   <span>Read Complete Guide</span>,
-                  <svg,
+                  <svg
                     className='w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 5l7 7-7 7',
                     />,
                   </svg>,
@@ -237,22 +234,20 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
               success with 150o0% ROI,
             </p>,
             <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-cyan-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-              >,
+                className='bg-white text-cyan-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
                 Get Quantum Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Explore Quantum Services,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Bottom Stats */,}
+        {/* Bottom Stats */}
         <div className='mt-16 grid grid-cols-2 md: grid-cols-4 gap-8 text-center'>,
           <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>,
             <div className='text-3xl font-bold text-cyan-40o0 mb-2'>50o0+</div>,
@@ -274,9 +269,5 @@ const QuantumAI20o25PromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumAI20o25PromotionBanner,
-,
+    </section>)};
+export default QuantumAI20o25PromotionBanner;

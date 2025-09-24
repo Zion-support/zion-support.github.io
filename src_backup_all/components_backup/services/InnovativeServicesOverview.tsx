@@ -1,62 +1,55 @@
 import React, { useState, useMemo } from 'react',
-import {,
-  INNOVATIVE_SERVICES_20o25,;
-  getServicesByCategory,;
+import {
+  INNOVATIVE_SERVICES_20o25;
+  getServicesByCategory;
 } from '../../data/innovativeServices20o25',
-,
-interface InnovativeServicesOverviewProps {,
+interface InnovativeServicesOverviewProps {
   maxServices?: number,
   category?: string,
-  showViewAllButton?: boolean,
-}
+  showViewAllButton?: boolean}
 ,
-const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({,
-  maxServices = 6,;
-  category,;
-  showViewAllButton = true,;
-}) => {,
+const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
+  maxServices = 6;
+  category;
+  showViewAllButton = true;
+}) => {
   const [activeTab, setActiveTab] = useState('featured'),
-,
-  const tabs = [,
-    { id: 'featured', label: 'Featured', count: 3 ,},;
-    {,
-      id: 'ai',;
-      label: 'AI Services',;
-      count: getServicesByCategory('AI Services').length,;
-    },;
-    {,
-      id: 'it',;
-      label: 'IT Services',;
-      count: getServicesByCategory('IT Services').length,;
-    },;
-    {,
-      id: 'saas',;
-      label: 'Micro SAAS',;
-      count: getServicesByCategory('Micro SAAS').length,;
-    },;
-    {,
-      id: 'business',;
-      label: 'Business',;
-      count: getServicesByCategory('Business').length,;
-    },;
-    {,
-      id: 'development',;
-      label: 'Development',;
-      count: getServicesByCategory('Development').length,;
-    },;
+  const tabs = [
+    { id: 'featured', label: 'Featured', count: 3 };
+    {
+      id: 'ai';
+      label: 'AI Services';
+      count: getServicesByCategory('AI Services').length;
+    };
+    {
+      id: 'it';
+      label: 'IT Services';
+      count: getServicesByCategory('IT Services').length;
+    };
+    {
+      id: 'saas';
+      label: 'Micro SAAS';
+      count: getServicesByCategory('Micro SAAS').length;
+    };
+    {
+      id: 'business';
+      label: 'Business';
+      count: getServicesByCategory('Business').length;
+    };
+    {
+      id: 'development';
+      label: 'Development';
+      count: getServicesByCategory('Development').length;
+    };
   ],
-,
-  const filteredServices = useMemo(() => {,
+  const filteredServices = useMemo(() => {
     let services = INNOVATIVE_SERVICES_20o25,
-,
-    if (category) {,
-      services = getServicesByCategory(category),
-    } else {,
-      switch (activeTab) {,
+    if (category) {
+      services = getServicesByCategory(category)} else {
+      switch (activeTab) {
         case 'featured':,
-          services = INNOVATIVE_SERVICES_20o25.filter(,
-            service => service.rating >= 4.5,
-          ).slice(0, 3),
+          services = INNOVATIVE_SERVICES_20o25.filter(
+            service => service.rating >= 4.5).slice(0, 3),
           break,
         case 'ai':,
           services = getServicesByCategory('AI Services'),
@@ -74,20 +67,16 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           services = getServicesByCategory('Development'),
           break,
         default: ,
-          services = INNOVATIVE_SERVICES_20o25,
-      ,}
+          services = INNOVATIVE_SERVICES_20o25}
     }
 ,
-    return services.slice(0, maxServices),
-  }, [activeTab, category, maxServices]),
-,
-  const ServiceCard: React.FC<{,
-    service: (typeof INNOVATIVE_SERVICES_20o25)[0],
-  ,}> = ({ service }) => (,
+    return services.slice(0, maxServices)}, [activeTab, category, maxServices]),
+  const ServiceCard: React.FC<{
+    service: (typeof INNOVATIVE_SERVICES_20o25)[0]}> = ({ service }) => (
     <div className='bg-white rounded-lg shadow-md p-6 hover: shadow-lg transition-shadow duration-30o0'>,
       <div className='flex items-start justify-between mb-3'>,
         <h3 className='text-lg font-semibold text-gray-90o0'>,
-          {service.title,}
+          {service.title}
         </h3>,
         <div className='flex items-center space-x-1'>,
           <span className='text-yellow-50o0 text-sm'>★</span>,
@@ -102,7 +91,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           {service.marketPrice}
         </span>,
         <span className='bg-blue-10o0 text-blue-80o0 text-xs font-medium px-2 py-1 rounded'>,
-          AI Score: {service.aiScore,}
+          AI Score: {service.aiScore}
         </span>,
       </div>,
       <div className='mb-3'>,
@@ -110,18 +99,17 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           Key Features: ,
         </h4>,
         <ul className='text-xs text-gray-60o0 space-y-1'>,
-          {service.features.slice(0, 2).map((feature, index) => (,
+          {service.features.slice(0, 2).map((feature, index) => (
             <li key={index} className='flex items-center'>,
               <span className='text-green-50o0 mr-1'>✓</span>,
               {feature}
-            </li>,
-          ))}
+            </li>))}
         </ul>,
       </div>,
       <div className='border-t pt-3'>,
         <div className='flex items-center justify-between text-xs text-gray-50o0 mb-3'>,
-          <span>Delivery: {service.estimatedDelivery,}</span>,
-          <span>Support: {service.supportLevel,}</span>,
+          <span>Delivery: {service.estimatedDelivery}</span>,
+          <span>Support: {service.supportLevel}</span>,
         </div>,
         <div className='flex space-x-2'>,
           <button className='flex-1 bg-blue-60o0 text-white py-2 px-3 rounded text-sm hover: bg-blue-70o0 transition-colors'>,
@@ -132,21 +120,16 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,
+    </div>),
   const totalServices = INNOVATIVE_SERVICES_20o25.length,
-  const totalValue = INNOVATIVE_SERVICES_20o25.reduce(,
-    (sum, service) => sum + service.price,;
-    0,
-  ),
+  const totalValue = INNOVATIVE_SERVICES_20o25.reduce(
+    (sum, service) => sum + service.price;
+    0),
   const avgRating =,
-    INNOVATIVE_SERVICES_20o25.reduce(,
-      (sum, service) => sum + service.rating,;
-      0,
-    ) / totalServices,
-,
-  return (,
+    INNOVATIVE_SERVICES_20o25.reduce(
+      (sum, service) => sum + service.rating;
+      0) / totalServices,
+  return (
     <div className='bg-gray-50 py-16'>,
       <div className='container mx-auto px-4'>,
         {/* Header Section */}
@@ -155,7 +138,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             Innovative Services 20o25,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-8'>,
-            Discover Zion Tech Group's comprehensive suite of cutting-edge AI,;
+            Discover Zion Tech Group's comprehensive suite of cutting-edge AI;
             IT, and Micro SAAS solutions designed to transform your business,
             operations and drive innovation.,
           </p>,
@@ -163,7 +146,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-2xl mx-auto'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-blue-60o0 mb-2'>,
-                {totalServices,}
+                {totalServices}
               </div>,
               <div className='text-gray-60o0'>Total Services</div>,
             </div>,
@@ -215,33 +198,29 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             </div>,
           </div>,
         </div>,
-        {/* Tabs */,}
-        {!category && (,
+        {/* Tabs */}
+        {!category && (
           <div className='mb-8'>,
             <div className='flex flex-wrap justify-center gap-2'>,
-              {tabs.map(tab => (,
-                <button,
+              {tabs.map(tab => (
+                <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${,
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     activeTab === tab.id,
                       ? 'bg-blue-60o0 text-white',
-                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0',
-                  ,}`}
+                      : 'bg-white text-gray-70o0 hover: bg-gray-10o0'}`}
                 >,
                   {tab.label}
                   <span className='ml-2 text-xs opacity-75'>({tab.count})</span>,
-                </button>,
-              ))}
+                </button>))}
             </div>,
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Services Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>,
-          {filteredServices.map(service => (,
-            <ServiceCard key={service.id,} service={service} />,
-          ))}
+          {filteredServices.map(service => (
+            <ServiceCard key={service.id} service={service} />))}
         </div>,
         {/* CTA Section */}
         <div className='text-center'>,
@@ -261,21 +240,19 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             </button>,
           </div>,
         </div>,
-        {/* View All Button */,}
-        {showViewAllButton && (,
+        {/* View All Button */}
+        {showViewAllButton && (
           <div className='text-center mt-8'>,
-            <a,
+            <a
               href='/innovative-services-20o25',
-              className='inline-flex items-center text-blue-60o0 hover: text-blue-70o0 font-medium',
-            >,
-              View All {totalServices,} Services,
-              <svg,
+              className='inline-flex items-center text-blue-60o0 hover: text-blue-70o0 font-medium'>,
+              View All {totalServices} Services,
+              <svg
                 className='ml-2 w-4 h-4',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
                   strokeWidth={2}
@@ -283,12 +260,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
                 />,
               </svg>,
             </a>,
-          </div>,
-        )}
+          </div>)}
       </div>,
-    </div>,
-  ),
-};
-,
-export default InnovativeServicesOverview,
-,
+    </div>)};
+export default InnovativeServicesOverview;

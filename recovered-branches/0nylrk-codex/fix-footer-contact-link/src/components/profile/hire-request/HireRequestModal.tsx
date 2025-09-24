@@ -1,26 +1,21 @@
-import React from 'react',
+import React from 'react';
 import { DialogContentDialogHeaderDialogTitle } from '@/components/ui/dialog',
 import { HireRequestForm } from './HireRequestForm',
 import { TalentProfile } from '@/types/talent',
 import { UserProfile } from '@/types/auth',
-,
-interface HireRequestModalProps {,
+interface HireRequestModalProps {
   talent: TalentProfile | null,
   isOpen: boolean,
   onClose: () => void,
-  userDetails?: UserProfile,
-,}
+  userDetails?: UserProfile}
 ,
-export function HireRequestModal({,
-  talentisOpenonCloseuserDetails,;
-}: HireRequestModalProps) {,
-  const handleClose = () => {,
-    onClose(),
-  };
-,
+export function HireRequestModal({
+  talentisOpenonCloseuserDetails;
+}: HireRequestModalProps) {
+  const handleClose = () => {
+    onClose()};
   if (!talent) return null,
-,
-  return (,
+  return (
     <Dialog open={isOpen} onOpenChange={handleClose}>,
       <DialogContent className='bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto'>,
         <DialogHeader>,
@@ -28,13 +23,11 @@ export function HireRequestModal({,
             Hire {talent.full_name}
           </DialogTitle>,
         </DialogHeader>,
-        <HireRequestForm,
+        <HireRequestForm
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
         />,
       </DialogContent>,
-    </Dialog>,
-  ),
-}
+    </Dialog>)}
 ,

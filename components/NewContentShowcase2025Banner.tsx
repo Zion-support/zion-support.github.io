@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-const NewContentShowcase20o25Banner = () => {,
-  return (,
+const NewContentShowcase20o25Banner = () => {
+  return (
     <section className='py-20 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         ></div>,
       </div>,
@@ -74,7 +73,7 @@ const NewContentShowcase20o25Banner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Key Highlights */,}
+        {/* Key Highlights */}
         <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12'>,
           <h3 className='text-2xl font-bold mb-6 text-center'>,
             'What', 's New & Exciting,
@@ -98,25 +97,22 @@ const NewContentShowcase20o25Banner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Explore Case Studies,
             </Link>,
-            <Link,
+            <Link
               href='/ai-assessment',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
               Take AI Assessment,
             </Link>,
-            <Link,
+            <Link
               href='/blog',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg'>,
               Read Expert Insights,
             </Link>,
           </div>,
@@ -126,9 +122,5 @@ const NewContentShowcase20o25Banner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContentShowcase20o25Banner,
-,
+    </section>)};
+export default NewContentShowcase20o25Banner;

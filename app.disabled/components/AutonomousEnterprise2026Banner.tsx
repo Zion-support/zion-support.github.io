@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AutonomousEnterprise20o26Banner: React.FC = () => {,
-  return (,
+const AutonomousEnterprise20o26Banner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-green-90o0 via-teal-90o0 to-blue-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -99,30 +98,23 @@ const AutonomousEnterprise20o26Banner: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-autonomous-enterprise-systems',
-              className='bg-white text-green-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg',
-            >,
+              className='bg-white text-green-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg'>,
               Learn More,
             </Link>,
-            <Link,
+            <Link
               href='/services/autonomous-enterprise-systems',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-colors text-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-colors text-lg'>,
               Our Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-50o0 hover:to-blue-60o0 transition-colors text-lg',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-50o0 hover:to-blue-60o0 transition-colors text-lg'>,
               Start Your Transformation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousEnterprise20o26Banner,
-,
+    </section>)};
+export default AutonomousEnterprise20o26Banner;

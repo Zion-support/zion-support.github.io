@@ -1,46 +1,43 @@
 'use client',
-,
 BotZapTrendingUpShieldUsersCheckCircle,
-,
-const AdvancedAutomationSolutions = () => {,
-  const features = [,
-    {,
-      icon: Bot,;
-      title: 'AI-Powered Automation',;
+const AdvancedAutomationSolutions = () => {
+  const features = [
+    {
+      icon: Bot;
+      title: 'AI-Powered Automation';
       description:,
-        'Intelligent automation solutions that learn and adapt to your business processes.',;
-    },;
-    {,
-      icon: Zap,;
-      title: 'Real-time Processing',;
+        'Intelligent automation solutions that learn and adapt to your business processes.';
+    };
+    {
+      icon: Zap;
+      title: 'Real-time Processing';
       description:,
-        'Lightning-fast processing capabilities for immediate results.',;
-    },;
-    {,
-      icon: TrendingUp,;
-      title: 'Performance Analytics',;
+        'Lightning-fast processing capabilities for immediate results.';
+    };
+    {
+      icon: TrendingUp;
+      title: 'Performance Analytics';
       description:,
-        'Comprehensive analytics to track and optimize automation performance.',;
-    },;
-    {,
-      icon: Shield,;
-      title: 'Enterprise Security',;
+        'Comprehensive analytics to track and optimize automation window.window.performance.';
+    };
+    {
+      icon: Shield;
+      title: 'Enterprise Security';
       description:,
-        'Bank-level security protocols to protect your data and processes.',;
-    },;
-    {,
-      icon: Users,;
-      title: 'Team Collaboration',;
-      description: 'Seamless collaboration tools for distributed teams.',;
-    },;
-    {,
-      icon: CheckCircle,;
-      title: 'Precision Targeting',;
-      description: 'Advanced targeting algorithms for maximum efficiency.',;
-    },;
+        'Bank-level security protocols to protect your data and processes.';
+    };
+    {
+      icon: Users;
+      title: 'Team Collaboration';
+      description: 'Seamless collaboration tools for distributed teams.';
+    };
+    {
+      icon: CheckCircle;
+      title: 'Precision Targeting';
+      description: 'Advanced targeting algorithms for maximum efficiency.';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -53,20 +50,18 @@ const AdvancedAutomationSolutions = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {features.map(featureindex => (,
-            <div,
-              key={index,}
-              className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0',
-            >,
+          {features.map(featureindex => (
+            <div
+              key={index}
+              className='bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0'>,
               <div className='w-16 h-16 bg-blue-10o0 rounded-lg flex items-center justify-center mb-6'>,
                 <feature.icon className='w-8 h-8 text-blue-60o0' />,
               </div>,
               <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
-                {feature.title,}
+                {feature.title}
               </h3>,
               <p className='text-gray-60o0'>{feature.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className='text-center mt-16'>,
           <button className='px-8 py-4 bg-blue-60o0 text-white font-semibold rounded-full hover: bg-blue-70o0 transition-colors duration-30o0'>,
@@ -74,9 +69,5 @@ const AdvancedAutomationSolutions = () => {,
           </button>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AdvancedAutomationSolutions,
-,
+    </section>)};
+export default AdvancedAutomationSolutions;

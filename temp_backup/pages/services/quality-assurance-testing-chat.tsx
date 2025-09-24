@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QualityAssuranceTestingChatPage() {,
-  return (,
+export default function QualityAssuranceTestingChatPage() {
+  return (
     <>,
       <Head>,
         <title>Quality Assurance Testing Chat - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quality assurance testing chat page',
         />,
@@ -21,7 +20,5 @@ export default function QualityAssuranceTestingChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

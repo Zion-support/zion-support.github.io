@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousAgentsInfrastructureBlueprint20o26 = () => {,
-  return (,
+const AutonomousAgentsInfrastructureBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Agents Infrastructure Blueprint',
         description='A practical blueprint for designing, deploying, and operating enterprise-grade autonomous agent infrastructure in 20o26.',
         keywords='autonomous agents, agent infrastructure, enterprise ai, orchestration, observability',
@@ -51,23 +50,17 @@ const AutonomousAgentsInfrastructureBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Your Agent Platform,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousAgentsInfrastructureBlueprint20o26,
-,
+    </div>)};
+export default AutonomousAgentsInfrastructureBlueprint20o26;

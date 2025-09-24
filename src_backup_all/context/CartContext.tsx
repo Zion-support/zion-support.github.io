@@ -3,31 +3,26 @@ import { CartContextType, CartAction } from '@/types/cart',
 import { useSelector, useDispatch } from 'react-redux',
 import type { RootState, AppDispatch } from '@/store',
 import { addItem, removeItem, clear, setItems } from '@/store/cartSlice',
-,
 const CartContext = createContext<CartContextType | undefined>(undefined),
-,
-export function useCart(): CartContextType {,
+export function useCart(): CartContextType {
   const ctx = useContext(CartContext) as CartContextType,
   if (!ctx) throw new Error('useCart must be used within a CartProvider'),
-  return ctx,
-}
+  return ctx}
 ,
-export function CartProvider({ children }: { children: React.ReactNode ,}) {,
-  console.log('[CartProvider] Initializing...'),
+export function CartProvider({ children }: { children: React.ReactNode }) {
+  // // console.log('[CartProvider] Initializing...'),
   const items = useSelector((state: RootState) => state.cart.items),
   const reduxDispatch = useDispatch<AppDispatch>(),
-,
-  const dispatch = (action: CartAction) => {,
-    switch (action.type) {,
+  const dispatch = (action: CartAction) => {
+    switch (action.type) {
       case 'ADD_ITEM':,
-        reduxDispatch(,
-          addItem({,
+        reduxDispatch(
+          addItem({
             // addItem from cartSlice expects { id, title, price }
-            id: action.payload.id,;
+            id: action.payload.id;
             title: action.payload.title, // action.payload is now { id, title, price, quantity? }
-            price: action.payload.price,;
-          }),
-        ),
+            price: action.payload.price;
+          })),
         break,
       case 'REMOVE_ITEM':,
         reduxDispatch(removeItem(action.payload)),
@@ -39,15 +34,11 @@ export function CartProvider({ children }: { children: React.ReactNode ,}) {,
         reduxDispatch(setItems(action.payload)),
         break,
       default: ,
-        break,
-    ,}
+        break}
   };
-,
-  const value: CartContextType = {,
-    items,;
-    dispatch,;
+  const value: CartContextType = {
+    items;
+    dispatch;
   };
-,
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>,
-}
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
 ,

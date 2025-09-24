@@ -1,104 +1,88 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Search, Filter, Star, CheckCircle, ArrowRight,;
-  Shield, Cpu, Database, Cloud, Lock, Users,;
-  Building, Globe, Zap, TrendingUp, Award,;
-  Phone, Mail, MapPin, ExternalLink, Briefcase,;
-  Server, Network, Key, Eye, ShieldCheck,;
-  BarChart3, Settings, Code, GitBranch, Workflow,
-} from 'lucide-react',
-,
+import {
+  Search, Filter, Star, CheckCircle, ArrowRight;
+  Shield, Cpu, Database, Cloud, Lock, Users;
+  Building, Globe, Zap, TrendingUp, Award;
+  Phone, Mail, MapPin, ExternalLink, Briefcase;
+  Server, Network, Key, Eye, ShieldCheck;
+  BarChart3, Settings, Code, GitBranch, Workflow} from 'lucide-react',
 // Import enterprise IT solutions,
 import { enterpriseITSolutions } from '../data/20o34-enterprise-it-solutions',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-const solutionCategories = [,
-  {,
-    id: 'all',;
-    title: '🏢 All Enterprise Solutions',;
-    description: 'Complete portfolio of enterprise IT solutions',;
-    icon: Building,;
-    color: 'from-blue-50o0 to-purple-50o0',;
-    solutions: enterpriseITSolutions,;
-    gradient: 'from-blue-50o0/20 to-purple-50o0/20',
-  ,},;
-  {,
-    id: 'Enterprise Security',;
-    title: '🔒 Enterprise Security',;
-    description: 'Advanced security solutions for enterprise protection',;
-    icon: Shield,;
-    color: 'from-red-50o0 to-pink-50o0',;
-    solutions: enterpriseITSolutions.filter(s => s.category === 'Enterprise Security'),;
-    gradient: 'from-red-50o0/20 to-pink-50o0/20',
-  ,},;
-  {,
-    id: 'DevOps & Automation',;
-    title: '⚙️ DevOps & Automation',;
-    description: 'Intelligent automation and DevOps solutions',;
-    icon: GitBranch,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    solutions: enterpriseITSolutions.filter(s => s.category === 'DevOps & Automation'),;
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
-  ,},;
-  {,
-    id: 'Data & Analytics',;
-    title: '📊 Data & Analytics',;
-    description: 'Enterprise data analytics and business intelligence',;
-    icon: BarChart3,;
-    color: 'from-indigo-50o0 to-blue-50o0',;
-    solutions: enterpriseITSolutions.filter(s => s.category === 'Data & Analytics'),;
-    gradient: 'from-indigo-50o0/20 to-blue-50o0/20',
-  ,},;
-  {,
-    id: 'Cloud Services',;
-    title: '☁️ Cloud Services',;
-    description: 'Cloud migration and transformation solutions',;
-    icon: Cloud,;
-    color: 'from-cyan-50o0 to-blue-50o0',;
-    solutions: enterpriseITSolutions.filter(s => s.category === 'Cloud Services'),;
-    gradient: 'from-cyan-50o0/20 to-blue-50o0/20',
-  ,},;
-  {,
-    id: 'Cybersecurity',;
-    title: '🛡️ Cybersecurity',;
-    description: 'Comprehensive cybersecurity and threat protection',;
-    icon: ShieldCheck,;
-    color: 'from-orange-50o0 to-red-50o0',;
-    solutions: enterpriseITSolutions.filter(s => s.category === 'Cybersecurity'),;
-    gradient: 'from-orange-50o0/20 to-red-50o0/20',
-  ,}
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+const solutionCategories = [
+  {
+    id: 'all';
+    title: '🏢 All Enterprise Solutions';
+    description: 'Complete portfolio of enterprise IT solutions';
+    icon: Building;
+    color: 'from-blue-50o0 to-purple-50o0';
+    solutions: enterpriseITSolutions;
+    gradient: 'from-blue-50o0/20 to-purple-50o0/20'};
+  {
+    id: 'Enterprise Security';
+    title: '🔒 Enterprise Security';
+    description: 'Advanced security solutions for enterprise protection';
+    icon: Shield;
+    color: 'from-red-50o0 to-pink-50o0';
+    solutions: enterpriseITSolutions.filter(s => s.category === 'Enterprise Security');
+    gradient: 'from-red-50o0/20 to-pink-50o0/20'};
+  {
+    id: 'DevOps & Automation';
+    title: '⚙️ DevOps & Automation';
+    description: 'Intelligent automation and DevOps solutions';
+    icon: GitBranch;
+    color: 'from-green-50o0 to-emerald-50o0';
+    solutions: enterpriseITSolutions.filter(s => s.category === 'DevOps & Automation');
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
+  {
+    id: 'Data & Analytics';
+    title: '📊 Data & Analytics';
+    description: 'Enterprise data analytics and business intelligence';
+    icon: BarChart3;
+    color: 'from-indigo-50o0 to-blue-50o0';
+    solutions: enterpriseITSolutions.filter(s => s.category === 'Data & Analytics');
+    gradient: 'from-indigo-50o0/20 to-blue-50o0/20'};
+  {
+    id: 'Cloud Services';
+    title: '☁️ Cloud Services';
+    description: 'Cloud migration and transformation solutions';
+    icon: Cloud;
+    color: 'from-cyan-50o0 to-blue-50o0';
+    solutions: enterpriseITSolutions.filter(s => s.category === 'Cloud Services');
+    gradient: 'from-cyan-50o0/20 to-blue-50o0/20'};
+  {
+    id: 'Cybersecurity';
+    title: '🛡️ Cybersecurity';
+    description: 'Comprehensive cybersecurity and threat protection';
+    icon: ShieldCheck;
+    color: 'from-orange-50o0 to-red-50o0';
+    solutions: enterpriseITSolutions.filter(s => s.category === 'Cybersecurity');
+    gradient: 'from-orange-50o0/20 to-red-50o0/20'}
 ],
-,
-export default function EnterpriseSolutionsShowcase() {,
+export default function EnterpriseSolutionsShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setSelectedPriceRange] = useState('all'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-,
   const filteredSolutions = solutionCategories,
     .find(cat => cat.id === selectedCategory)?.solutions || [],
-    .filter(solution => {,
+    .filter(solution => {
       const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            solution.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            solution.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-,
       if (priceRange === 'all') return matchesSearch,
-,
       // Handle different pricing structures,
       let priceValue = 0,
-      if (solution.pricing.starter) {,
-        priceValue = parseInt(solution.pricing.starter.replace(/[^0-9]/g, '')),
-      }
+      if (solution.pricing.starter) {
+        priceValue = parseInt(solution.pricing.starter.replace(/[^0-9]/g, ''))}
 ,
-      switch (priceRange) {,
+      switch (priceRange) {
         case 'low':,
           return matchesSearch && priceValue < 30o00,
         case 'medium':,
@@ -106,12 +90,10 @@ export default function EnterpriseSolutionsShowcase() {,
         case 'high':,
           return matchesSearch && priceValue >= 80o00,
         default: ,
-          return matchesSearch,
-      ,}
+          return matchesSearch}
     }),
-,
-  const getCategoryIcon = (category: string) => {,
-    switch (category) {,
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
       case 'Enterprise Security':,
         return <Shield className="w-6 h-6 text-red-40o0"  />,
       case 'DevOps & Automation':,
@@ -123,11 +105,9 @@ export default function EnterpriseSolutionsShowcase() {,
       case 'Cybersecurity':,
         return <ShieldCheck className="w-6 h-6 text-orange-40o0"  />,
       default:,
-        return <Building className="w-6 h-6 text-blue-40o0"  />,
-    ,}
+        return <Building className="w-6 h-6 text-blue-40o0"  />}
   };
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Enterprise IT Solutions Showcase | Zion Tech Group - Security, DevOps, Analytics, Cloud</title>,
@@ -140,14 +120,14 @@ export default function EnterpriseSolutionsShowcase() {,
         <meta property="og:description" content="Comprehensive enterprise IT solutions for security, DevOps, analytics, and cloud transformation."  />,
         <meta property="og: url" content="https://ziontechgroup.com/enterprise-solutions-showcase"  />,
         <meta property="og:type" content="website"  />,
-        {/* Contact Information */,}
+        {/* Contact Information */}
         <meta name="contact: phone" content="+1 30o2 464 0950"  />,
         <meta name="contact:email" content="kleber@ziontechgroup.com"  />,
         <meta name="contact:address" content="364 E Main St STE 10o08 Middletown DE 19709"  />,
         <link rel="canonical" href="https://ziontechgroup.com/enterprise-solutions-showcase"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white pt-24">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">,
           <div className="absolute inset-0 pointer-events-none">,
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-50o0/5 to-purple-60o0/5 rounded-full blur-3xl"  />,
@@ -155,11 +135,10 @@ export default function EnterpriseSolutionsShowcase() {,
           </div>,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16">,
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50o0/20 to-purple-60o0/20 border border-blue-50o0/30 rounded-full text-blue-30o0 text-sm font-medium mb-6">,
                 <Building className="w-4 h-4 mr-2 text-blue-40o0"  />,
                 Enterprise IT Solutions,
@@ -168,22 +147,21 @@ export default function EnterpriseSolutionsShowcase() {,
                 Enterprise <span className="bg-gradient-to-r from-blue-40o0 via-purple-50o0 to-red-50o0 bg-clip-text text-transparent">Solutions</span> for the Digital Age,
               </h1>,
               <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-                Transform your enterprise with cutting-edge IT solutions: Zero Trust Security,;
+                Transform your enterprise with cutting-edge IT solutions: Zero Trust Security;
                 AI-Powered DevOps, Advanced Analytics, Cloud Migration, and 24/7 Cybersecurity Operations.,
               </p>,
             </motion.div>,
             {/* Search and Filters */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.1 ,}}
-              className="mb-12",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-12">,
               <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-                {/* Search */,}
+                {/* Search */}
                 <div className="relative flex-1 max-w-md">,
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-40o0"  />,
-                  <input,
+                  <input
                     type="text",
                     placeholder="Search enterprise solutions...",
                     value={searchTerm}
@@ -191,60 +169,55 @@ export default function EnterpriseSolutionsShowcase() {,
                     className="w-full pl-12 pr-4 py-3 bg-black/50 border border-blue-50o0/30 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0/50 focus:border-blue-50o0",
                   />,
                 </div>,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">,
-                  {solutionCategories.map((category) => (,
+                  {solutionCategories.map((category) => (
                     <motion.button,
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      whileHover={{ scale: 1.0o5 ,}}
-                      whileTap={{ scale: 0.95 ,}}
-                      className={`px-4 py-2 rounded-lg border transition-all duration-20o0 flex items-center space-x-2 ${,
+                      whileHover={{ scale: 1.0o5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`px-4 py-2 rounded-lg border transition-all duration-20o0 flex items-center space-x-2 ${
                         selectedCategory === category.id,
                           ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 border-blue-50o0 text-white shadow-lg shadow-blue-50o0/25',
-                          : 'bg-black/50 border-blue-50o0/30 text-gray-30o0 hover: border-blue-50o0/50 hover:text-blue-30o0',
-                      ,}`}
+                          : 'bg-black/50 border-blue-50o0/30 text-gray-30o0 hover: border-blue-50o0/50 hover:text-blue-30o0'}`}
                     >,
                       <category.icon className="w-4 h-4"  />,
-                      <span className="hidden sm: inline">{category.title.replace(/[\u{1F5BC,}\u{1F512}\u{2699}\u{1F4CA}\u{260o1}\u{1F6E1}]/gu, '').trim()}</span>,
-                    </motion.button>,
-                  ))}
+                      <span className="hidden sm: inline">{category.title.replace(/[\u{1F5BC}\u{1F512}\u{2699}\u{1F4CA}\u{260o1}\u{1F6E1}]/gu, '').trim()}</span>,
+                    </motion.button>))}
                 </div>,
                 {/* Price Filter */}
                 <div className="flex items-center space-x-2">,
                   <Filter className="w-5 h-5 text-blue-40o0"  />,
-                  <select,
+                  <select
                     value={priceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="px-3 py-2 bg-black/50 border border-blue-50o0/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50 focus:border-blue-50o0",
-                  >,
+                    className="px-3 py-2 bg-black/50 border border-blue-50o0/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50 focus:border-blue-50o0">,
                     <option value="all">All Prices</option>,
                     <option value="low">Under $3K/month</option>,
                     <option value="medium">$3K - $8K/month</option>,
                     <option value="high">Over $8K/month</option>,
                   </select>,
                 </div>,
-                {/* View Mode Toggle */,}
+                {/* View Mode Toggle */}
                 <div className="flex items-center space-x-2">,
-                  <button,
+                  <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-lg border transition-all duration-20o0 ${,
+                    className={`p-2 rounded-lg border transition-all duration-20o0 ${
                       viewMode === 'grid',
                         ? 'bg-blue-50o0/20 border-blue-50o0 text-blue-30o0',
-                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0',
-                    ,}`}
+                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path d="M5 3a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2V5a2 2 0 0o0-2-2H5zM5 11a2 2 0 0o0-2 2v2a2 2 0 0o02 2h2a2 2 0 0o02-2v-2a2 2 0 0o0-2-2H5zM11 5a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2V5zM11 13a2 2 0 0o12-2h2a2 2 0 0o12 2v2a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2v-2z"  />,
                     </svg>,
                   </button>,
-                  <button,
+                  <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg border transition-all duration-20o0 ${,
+                    className={`p-2 rounded-lg border transition-all duration-20o0 ${
                       viewMode === 'list',
                         ? 'bg-blue-50o0/20 border-blue-50o0 text-blue-30o0',
-                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0',
-                    ,}`}
+                        : 'bg-black/50 border-blue-50o0/30 text-gray-40o0 hover: text-blue-30o0'}`}
                   >,
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">,
                       <path fillRule="evenodd" d="M3 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1zm0 4a1 1 0 0o11-1h12a1 1 0 110 2H4a1 1 0 0o1-1-1z" clipRule="evenodd"  />,
@@ -255,11 +228,10 @@ export default function EnterpriseSolutionsShowcase() {,
             </motion.div>,
             {/* Solutions Count */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
-              className="text-center mb-8",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center mb-8">,
               <p className="text-gray-30o0">,
                 Showing <span className="text-blue-40o0 font-semibold">{filteredSolutions.length}</span> enterprise solutions,
                 {selectedCategory !== 'all' && ` in ${solutionCategories.find(cat => cat.id === selectedCategory)?.title.replace(/[\u{1F5BC}\u{1F512}\u{2699}\u{1F4CA}\u{260o1}\u{1F6E1}]/gu, '').trim()}`}
@@ -270,30 +242,27 @@ export default function EnterpriseSolutionsShowcase() {,
         {/* Solutions Grid/List */}
         <section className="py-20 relative">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-            {filteredSolutions.length > 0 ? (,
+            {filteredSolutions.length > 0 ? (
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.3 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 className={viewMode === 'grid',
                   ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8",
-                  : "space-y-6",
-                ,}
+                  : "space-y-6"}
               >,
-                {filteredSolutions.map((solution, index) => (,
+                {filteredSolutions.map((solution, index) => (
                   <motion.div,
                     key={solution.id}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                    whileHover={{ y: -8 ,}}
-                    className={`group relative ${,
-                      viewMode === 'list' ? 'flex items-start space-x-6' : '',
-                    }`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={{ y: -8 }}
+                    className={`group relative ${
+                      viewMode === 'list' ? 'flex items-start space-x-6' : ''}`}
                   >,
-                    <div className={`relative bg-gradient-to-br ${solutionCategories.find(cat => cat.id === solution.category)?.gradient || 'from-gray-50o0/20 to-slate-50o0/20'} border border-blue-50o0/30 rounded-2xl p-6 h-full backdrop-blur-sm hover: border-blue-50o0/50 transition-all duration-30o0 ${,
-                      viewMode === 'list' ? 'flex-1' : '',
-                    ,}`}>,
+                    <div className={`relative bg-gradient-to-br ${solutionCategories.find(cat => cat.id === solution.category)?.gradient || 'from-gray-50o0/20 to-slate-50o0/20'} border border-blue-50o0/30 rounded-2xl p-6 h-full backdrop-blur-sm hover: border-blue-50o0/50 transition-all duration-30o0 ${
+                      viewMode === 'list' ? 'flex-1' : ''}`}>,
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4 flex items-center space-x-2">,
                         {getCategoryIcon(solution.category)}
@@ -304,7 +273,7 @@ export default function EnterpriseSolutionsShowcase() {,
                       {/* Solution Header */}
                       <div className="mb-6">,
                         <h3 className="text-xl font-bold text-white mb-3 group-hover: text-blue-40o0 transition-colors">,
-                          {solution.name,}
+                          {solution.name}
                         </h3>,
                         <p className="text-blue-30o0 text-sm font-medium mb-2">,
                           {solution.tagline}
@@ -317,17 +286,15 @@ export default function EnterpriseSolutionsShowcase() {,
                       <div className="mb-6">,
                         <h4 className="text-sm font-semibold text-blue-30o0 mb-3">Key Features</h4>,
                         <div className="space-y-2">,
-                          {solution.features.slice(0, 3).map((feature, idx) => (,
+                          {solution.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-start space-x-2">,
                               <CheckCircle className="w-4 h-4 text-green-40o0 mt-0.5 flex-shrink-0"  />,
                               <span className="text-xs text-gray-30o0">{feature}</span>,
-                            </div>,
-                          ))}
-                          {solution.features.length > 3 && (,
+                            </div>))}
+                          {solution.features.length > 3 && (
                             <div className="text-xs text-blue-40o0">,
                               +{solution.features.length - 3} more features,
-                            </div>,
-                          )}
+                            </div>)}
                         </div>,
                       </div>,
                       {/* Pricing */}
@@ -344,11 +311,11 @@ export default function EnterpriseSolutionsShowcase() {,
                       <div className="mb-6">,
                         <div className="flex items-center justify-between text-xs">,
                           <span className="text-gray-40o0">Market Size: </span>,
-                          <span className="text-green-40o0 font-medium">{solution.marketSize,}</span>,
+                          <span className="text-green-40o0 font-medium">{solution.marketSize}</span>,
                         </div>,
                         <div className="flex items-center justify-between text-xs mt-1">,
                           <span className="text-gray-40o0">Customers: </span>,
-                          <span className="text-blue-40o0 font-medium">{solution.customerCount,}+</span>,
+                          <span className="text-blue-40o0 font-medium">{solution.customerCount}+</span>,
                         </div>,
                       </div>,
                       {/* Action Buttons */}
@@ -357,64 +324,55 @@ export default function EnterpriseSolutionsShowcase() {,
                           href={solution.demo}
                           target="_blank",
                           rel="noopener noreferrer",
-                          whileHover={{ scale: 1.0o2 ,}}
-                          whileTap={{ scale: 0.98 ,}}
-                          className="flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-blue-50o0/25",
-                        >,
+                          whileHover={{ scale: 1.0o2 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-blue-50o0/25">,
                           <span>View Demo</span>,
                           <ExternalLink className="w-4 h-4"  />,
                         </motion.a>,
                         <motion.a,
-                          href={`mailto:${solution.contact,}?subject=Inquiry about ${solution.name}`}
-                          whileHover={{ scale: 1.0o2 ,}}
-                          whileTap={{ scale: 0.98 ,}}
-                          className="flex items-center justify-center space-x-2 px-4 py-3 bg-black/50 border border-blue-50o0/30 text-blue-30o0 font-medium rounded-lg hover: bg-blue-50o0/10 hover:border-blue-50o0/50 transition-all duration-20o0",
-                        >,
+                          href={`mailto:${solution.contact}?subject=Inquiry about ${solution.name}`}
+                          whileHover={{ scale: 1.0o2 }}
+                          whileTap={{ scale: 0.98 }}
+                          className="flex items-center justify-center space-x-2 px-4 py-3 bg-black/50 border border-blue-50o0/30 text-blue-30o0 font-medium rounded-lg hover: bg-blue-50o0/10 hover:border-blue-50o0/50 transition-all duration-20o0">,
                           <Mail className="w-4 h-4"  />,
                           <span>Contact Sales</span>,
                         </motion.a>,
                       </div>,
-                      {/* Hover Effect Overlay */,}
+                      {/* Hover Effect Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-50o0/5 to-purple-60o0/5 rounded-2xl opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 pointer-events-none"  />,
                     </div>,
-                  </motion.div>,
-                )),}
-              </motion.div>,
-            ) : (,
+                  </motion.div>))}
+              </motion.div>) : (
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                className="text-center py-20",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center py-20">,
                 <div className="text-6xl mb-6">🔍</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">No solutions found</h3>,
                 <p className="text-gray-30o0 mb-8">,
                   Try adjusting your search terms or filters to find the enterprise solutions you're looking for.,
                 </p>,
-                <button,
-                  onClick={() => {,
+                <button
+                  onClick={() => {
                     setSearchTerm(''),
                     setSelectedCategory('all'),
-                    setSelectedPriceRange('all'),
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0",
-                >,
+                    setSelectedPriceRange('all')}}
+                  className="px-6 py-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-medium rounded-lg hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0">,
                   Clear Filters,
                 </button>,
-              </motion.div>,
-            ),}
+              </motion.div>)}
           </div>,
         </section>,
         {/* Contact CTA Section */}
         <section className="py-20 relative">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              className="bg-gradient-to-r from-blue-50o0/10 via-purple-50o0/10 to-red-50o0/10 border border-blue-50o0/30 rounded-3xl p-12 text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-r from-blue-50o0/10 via-purple-50o0/10 to-red-50o0/10 border border-blue-50o0/30 rounded-3xl p-12 text-center">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your <span className="bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent">Enterprise</span>?,
               </h2>,
@@ -425,28 +383,26 @@ export default function EnterpriseSolutionsShowcase() {,
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">,
                 <motion.a,
                   href="/contact",
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-blue-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover: from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-blue-50o0/25">,
                   <span>Get Enterprise Consultation</span>,
                   <ArrowRight className="w-6 h-6"  />,
                 </motion.a>,
                 <motion.a,
                   href="tel:+130o24640950",
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-blue-50o0/50 text-blue-30o0 font-bold text-lg rounded-xl hover: bg-blue-50o0/10 hover:border-blue-40o0 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-blue-50o0/50 text-blue-30o0 font-bold text-lg rounded-xl hover: bg-blue-50o0/10 hover:border-blue-40o0 transition-all duration-20o0">,
                   <Phone className="w-6 h-6"  />,
                   <span>Call +1 30o2 464 0950</span>,
                 </motion.a>,
               </div>,
-              {/* Contact Information */,}
+              {/* Contact Information */}
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-2xl mx-auto">,
                 <div className="flex items-center justify-center space-x-3 text-gray-30o0">,
                   <Phone className="w-5 h-5 text-blue-40o0"  />,
-                  <span>{contactInfo.mobile,}</span>,
+                  <span>{contactInfo.mobile}</span>,
                 </div>,
                 <div className="flex items-center justify-center space-x-3 text-gray-30o0">,
                   <Mail className="w-5 h-5 text-blue-40o0"  />,
@@ -461,6 +417,4 @@ export default function EnterpriseSolutionsShowcase() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-}
+    </>)}

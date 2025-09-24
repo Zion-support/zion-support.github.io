@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-const AutonomousCustomerSupportBlueprint20o26 = () => {,
-  return (,
+const AutonomousCustomerSupportBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Customer Support Blueprint',
         description='Design and deploy autonomous, guardrailed AI support agents that resolve issues end-to-end with measurable CSAT and cost savings.',
         keywords='autonomous support, AI agents, customer service, CSAT, AHT, containment rate, 20o26',
@@ -98,23 +97,17 @@ const AutonomousCustomerSupportBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Schedule a Support Workshop,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousCustomerSupportBlueprint20o26,
-,
+    </div>)};
+export default AutonomousCustomerSupportBlueprint20o26;

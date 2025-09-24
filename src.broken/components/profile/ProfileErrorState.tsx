@@ -1,9 +1,7 @@
-export function ProfileErrorState() {,
-  return (,
+export function ProfileErrorState() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

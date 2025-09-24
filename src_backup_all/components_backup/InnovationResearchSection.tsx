@@ -1,71 +1,68 @@
 import { motion } from 'framer-motion',
-import {,
-  Lightbulb,;
-  TestTube,;
-  BookOpen,;
-  Award,;
-  Users,;
-  TrendingUp,;
-  Rocket,;
-  Brain,;
-  Microscope,;
-  Target,;
+import {
+  Lightbulb;
+  TestTube;
+  BookOpen;
+  Award;
+  Users;
+  TrendingUp;
+  Rocket;
+  Brain;
+  Microscope;
+  Target;
 } from 'lucide-react',
-,
-const researchAreas = [,
-  {,
-    icon: '🧠',;
-    title: 'Artificial Intelligence',;
-    description: 'Advanced AI algorithms and neural network architectures',;
-    progress: 85,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-  },;
-  {,
-    icon: '⚛️',;
-    title: 'Quantum Computing',;
-    description: 'Quantum algorithms and quantum machine learning',;
-    progress: 70,;
-    color: 'from-blue-50o0 to-cyan-50o0',;
-  },;
-  {,
-    icon: '🔗',;
-    title: 'Blockchain Technology',;
-    description: 'Next-generation blockchain and Web3 solutions',;
-    progress: 90,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-  },;
-  {,
-    icon: '🌐',;
-    title: 'Edge Computing',;
-    description: 'Distributed computing and IoT optimization',;
-    progress: 80,;
-    color: 'from-orange-50o0 to-red-50o0',;
-  },;
+const researchAreas = [
+  {
+    icon: '🧠';
+    title: 'Artificial Intelligence';
+    description: 'Advanced AI algorithms and neural network architectures';
+    progress: 85;
+    color: 'from-purple-50o0 to-pink-50o0';
+  };
+  {
+    icon: '⚛️';
+    title: 'Quantum Computing';
+    description: 'Quantum algorithms and quantum machine learning';
+    progress: 70;
+    color: 'from-blue-50o0 to-cyan-50o0';
+  };
+  {
+    icon: '🔗';
+    title: 'Blockchain Technology';
+    description: 'Next-generation blockchain and Web3 solutions';
+    progress: 90;
+    color: 'from-green-50o0 to-emerald-50o0';
+  };
+  {
+    icon: '🌐';
+    title: 'Edge Computing';
+    description: 'Distributed computing and IoT optimization';
+    progress: 80;
+    color: 'from-orange-50o0 to-red-50o0';
+  };
 ],
-,
-const innovationMetrics = [,
-  { label: 'Research Papers', value: '30+', icon: '📚' ,},;
-  { label: 'Patents Filed', value: '15+', icon: '📋' ,},;
-  { label: 'R&D Investment', value: '$2M+', icon: '💰' ,},;
-  { label: 'Innovation Awards', value: '8+', icon: '🏆' ,},;
+const innovationMetrics = [
+  { label: 'Research Papers', value: '30+', icon: '📚' };
+  { label: 'Patents Filed', value: '15+', icon: '📋' };
+  { label: 'R&D Investment', value: '$2M+', icon: '💰' };
+  { label: 'Innovation Awards', value: '8+', icon: '🏆' };
 ],
-,
-export function InnovationResearchSection() {,
-  return (,
+export function InnovationResearchSection() {
+  return (
     <section className='py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0'>,
       <div className='max-w-7xl mx-auto px-6'>,
         <motion.div,
           className='text-center mb-16',
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >,
           <h2 className='text-4xl md: text-5xl font-bold text-white mb-4'>,
             Innovation & Research,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Pushing the boundaries of technology through cutting-edge research,;
+            Pushing the boundaries of technology through cutting-edge research;
             breakthrough innovations, and collaborative partnerships with,
             leading institutions.,
           </p>,
@@ -73,12 +70,12 @@ export function InnovationResearchSection() {,
         {/* Innovation Metrics */}
         <motion.div,
           className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-16',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.2 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >,
-          {innovationMetrics.map((metric, index) => (,
+          {innovationMetrics.map((metric, index) => (
             <div key={metric.label} className='text-center'>,
               <div className='w-16 h-16 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
                 <span className='text-2xl'>{metric.icon}</span>,
@@ -87,32 +84,31 @@ export function InnovationResearchSection() {,
                 {metric.value}
               </div>,
               <div className='text-gray-30o0 text-sm'>{metric.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* Research Areas */}
         <motion.div,
           className='mb-16',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.4 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >,
           <h3 className='text-3xl font-bold text-white text-center mb-12'>,
             Active Research Areas,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
-            {researchAreas.map((area, index) => (,
+            {researchAreas.map((area, index) => (
               <motion.div,
                 key={area.title}
                 className='bg-slate-80o0 border border-slate-70o0 rounded-xl p-6 hover: border-blue-50o0/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-blue-50o0/25',
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >,
                 <div className='flex items-start gap-4'>,
-                  <div,
+                  <div
                     className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}
                   >,
                     <span className='text-2xl'>{area.icon}</span>,
@@ -132,26 +128,25 @@ export function InnovationResearchSection() {,
                       <div className='w-full bg-slate-70o0 rounded-full h-2'>,
                         <motion.div,
                           className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
-                          initial={{ width: 0 ,}}
-                          whileInView={{ width: `${area.progress,}%` }}
-                          viewport={{ once: true ,}}
-                          transition={{ duration: 1, delay: 0.8 + index * 0.1 ,}}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${area.progress}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
                         />,
                       </div>,
                     </div>,
                   </div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Research Highlights */}
         <motion.div,
           className='mb-12',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.8 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.8 }}
         >,
           <div className='bg-slate-80o0 border border-slate-70o0 rounded-2xl p-8'>,
             <h3 className='text-2xl font-bold text-white text-center mb-6'>,
@@ -196,10 +191,10 @@ export function InnovationResearchSection() {,
         </motion.div>,
         <motion.div,
           className='text-center',
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 1.0 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 1.0 }}
         >,
           <div className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-2xl p-8 text-white'>,
             <h3 className='text-2xl font-bold mb-4'>,
@@ -222,7 +217,5 @@ export function InnovationResearchSection() {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

@@ -1,75 +1,70 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 } from 'lucide-react',
-const testimonials = [,
-    {,
-        id: '1',;
-        name: 'Sarah Chen',;
-        role: 'CTO',;
-        company: 'TechFlow Solutions',;
-        avatar: 'SC',;
-        rating: 5,;
-        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model performance.',;
-        category: 'AI Infrastructure',;
-        date: '2 weeks ago',;
-        likes: 127,;
-        verified: true,
-    ,},;
-    {,
-        id: '2',;
-        name: 'Marcus Rodriguez',;
-        role: 'Head of Engineering',;
-        company: 'InnovateCorp',;
-        avatar: 'MR',;
-        rating: 5,;
-        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',;
-        category: 'Talent Matching',;
-        date: '1 month ago',;
-        likes: 89,;
-        verified: true,
-    ,},;
-    {,
-        id: '3',;
-        name: 'Dr. Emily Watson',;
-        role: 'Research Director',;
-        company: 'Quantum Labs',;
-        avatar: 'EW',;
-        rating: 5,;
-        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',;
-        category: 'Research & Development',;
-        date: '3 weeks ago',;
-        likes: 156,;
-        verified: true,
-    ,},;
-    {,
-        id: '4',;
-        name: 'Alex Thompson',;
-        role: 'Product Manager',;
-        company: 'StartupXYZ',;
-        avatar: 'AT',;
-        rating: 5,;
-        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',;
-        category: 'Startup Solutions',;
-        date: '1 week ago',;
-        likes: 73,;
-        verified: true,
-    ,},;
-    {,
-        id: '5',;
-        name: 'Lisa Park',;
-        role: 'VP of Operations',;
-        company: 'GlobalTech Inc',;
-        avatar: 'LP',;
-        rating: 5,;
-        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.',;
-        category: 'Global Operations',;
-        date: '2 months ago',;
-        likes: 94,;
-        verified: true,
-    ,}
+const testimonials = [
+    {
+        id: '1';
+        name: 'Sarah Chen';
+        role: 'CTO';
+        company: 'TechFlow Solutions';
+        avatar: 'SC';
+        rating: 5;
+        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model window.window.performance.';
+        category: 'AI Infrastructure';
+        date: '2 weeks ago';
+        likes: 127;
+        verified: true};
+    {
+        id: '2';
+        name: 'Marcus Rodriguez';
+        role: 'Head of Engineering';
+        company: 'InnovateCorp';
+        avatar: 'MR';
+        rating: 5;
+        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.';
+        category: 'Talent Matching';
+        date: '1 month ago';
+        likes: 89;
+        verified: true};
+    {
+        id: '3';
+        name: 'Dr. Emily Watson';
+        role: 'Research Director';
+        company: 'Quantum Labs';
+        avatar: 'EW';
+        rating: 5;
+        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.';
+        category: 'Research & Development';
+        date: '3 weeks ago';
+        likes: 156;
+        verified: true};
+    {
+        id: '4';
+        name: 'Alex Thompson';
+        role: 'Product Manager';
+        company: 'StartupXYZ';
+        avatar: 'AT';
+        rating: 5;
+        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.';
+        category: 'Startup Solutions';
+        date: '1 week ago';
+        likes: 73;
+        verified: true};
+    {
+        id: '5';
+        name: 'Lisa Park';
+        role: 'VP of Operations';
+        company: 'GlobalTech Inc';
+        avatar: 'LP';
+        rating: 5;
+        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.';
+        category: 'Global Operations';
+        date: '2 months ago';
+        likes: 94;
+        verified: true}
 ],
 const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'],
-export function InteractiveTestimonials() {,
+export function InteractiveTestimonials() {
     const [currentIndex, setCurrentIndex] = useState(0),
     const [selectedCategory, setSelectedCategory] = useState('All'),
     const [isAutoPlaying, setIsAutoPlaying] = useState(true),
@@ -77,55 +72,44 @@ export function InteractiveTestimonials() {,
     const filteredTestimonials = selectedCategory === 'All',
         ? testimonials,
         : testimonials.filter(testimonial => testimonial.category === selectedCategory),
-    useEffect(() => {,
+    useEffect(() => {
         if (!isAutoPlaying),
             return,
-        const interval = setInterval(() => {,
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length),
-        }, 50o00),
-        return () => clearInterval(interval),
-    }, [isAutoPlaying, filteredTestimonials.length]),
-    const nextTestimonial = () => {,
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length),
-    };
-    const prevTestimonial = () => {,
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length),
-    };
-    const toggleLike = (testimonialId) => {,
-        setLikedTestimonials(prev => {,
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 50o00),
+        return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]),
+    const nextTestimonial = () => {
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
+    const prevTestimonial = () => {
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
+    const toggleLike = (testimonialId) => {
+        setLikedTestimonials(prev => {
             const newSet = new Set(prev),
-            if (newSet.has(testimonialId)) {,
-                newSet.delete(testimonialId),
-            }
-            else {,
-                newSet.add(testimonialId),
-            }
-            return newSet,
-        }),
-    };
-    const renderStars = (rating) => {,
-        return Array.from({ length: 5 ,}, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`} />)),
-    };
-    const containerVariants ={,
-        hidden: { opacity: 0 ,},;
-        visible: {,
-            opacity: 1,;
-            transition: {,
-                staggerChildren: 0.1,;
-                delayChildren: 0.2,
-            ,}
+            if (newSet.has(testimonialId)) {
+                newSet.delete(testimonialId)}
+            else {
+                newSet.add(testimonialId)}
+            return newSet})};
+    const renderStars = (rating) => {
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`} />))};
+    const containerVariants ={
+        hidden: { opacity: 0 };
+        visible: {
+            opacity: 1;
+            transition: {
+                staggerChildren: 0.1;
+                delayChildren: 0.2}
         }
     };
-    const itemVariants ={,
-        hidden: { opacity: 0, y: 20, scale: 0.95 ,},;
-        visible: {,
-            opacity: 1,;
-            y: 0,;
-            scale: 1,;
-            transition: {,
-                duration: 0.5,;
-                ease: "easeOut",
-            ,}
+    const itemVariants ={
+        hidden: { opacity: 0, y: 20, scale: 0.95 };
+        visible: {
+            opacity: 1;
+            y: 0;
+            scale: 1;
+            transition: {
+                duration: 0.5;
+                ease: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">,
@@ -137,7 +121,7 @@ export function InteractiveTestimonials() {,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,
         {/* Header Section */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 ,}} whileInView={{ opacity: 1, y: 0 ,}} viewport={{ once: true ,}} transition={{ duration: 0.6 ,}}>,
+        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 px-4 py-2 rounded-full border border-blue-50o0/30 mb-6">,
             <MessageCircle className="w-5 h-5 text-blue-40o0" />,
             <span className="text-blue-30o0 font-medium">Client Success Stories</span>,
@@ -152,18 +136,18 @@ export function InteractiveTestimonials() {,
             Discover why leading companies choose Zion Tech Group for their AI and technology needs,
           </p>,
         </motion.div>,
-        {/* Category Filter */,}
-        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 ,}} whileInView={{ opacity: 1, y: 0 ,}} viewport={{ once: true ,}} transition={{ duration: 0.6, delay: 0.2 ,}}>,
+        {/* Category Filter */}
+        <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>,
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${selectedCategory === category,
                 ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg shadow-blue-50o0/25',
-                : 'bg-white/10 text-zion-slate-light hover: bg-white/20 border border-white/20',}`} whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}} initial={{ opacity: 0, y: 20 ,}} whileInView={{ opacity: 1, y: 0 ,}} viewport={{ once: true ,}} transition={{ duration: 0.5, delay: index * 0.1 ,}}>,
+                : 'bg-white/10 text-zion-slate-light hover: bg-white/20 border border-white/20'}`} whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>,
               {category}
             </motion.button>))}
         </motion.div>,
         {/* Main Testimonial Display */}
-        <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
+        <motion.div className="relative max-w-4xl mx-auto mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
           <AnimatePresence mode="wait">,
-            <motion.div key={currentIndex} initial={{ opacity: 0, x: 10o0 ,}} animate={{ opacity: 1, x: 0 ,}} exit={{ opacity: 0, x: -10o0 ,}} transition={{ duration: 0.5 ,}} className="text-center">,
+            <motion.div key={currentIndex} initial={{ opacity: 0, x: 10o0 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -10o0 }} transition={{ duration: 0.5 }} className="text-center">,
               <div className="bg-gradient-to-br from-white/5 to-white/10 rounded-3xl p-12 border border-white/20 backdrop-blur-sm relative overflow-hidden">,
                 {/* Quote icon */}
                 <div className="absolute top-8 left-8 text-blue-40o0/20">,
@@ -175,7 +159,7 @@ export function InteractiveTestimonials() {,
                 </div>,
                 {/* Content */}
                 <blockquote className="text-2xl md: text-3xl text-white font-light leading-relaxed mb-8 max-w-3xl mx-auto">,
-                  "{filteredTestimonials[currentIndex]?.content,}",
+                  "{filteredTestimonials[currentIndex]?.content}",
                 </blockquote>,
                 {/* Author */}
                 <div className="flex items-center justify-center gap-4 mb-6">,
@@ -205,7 +189,7 @@ export function InteractiveTestimonials() {,
                 <div className="flex items-center justify-center gap-6 mt-8">,
                   <motion.button onClick={() => toggleLike(filteredTestimonials[currentIndex]?.id || '')} className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-30o0 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || ''),
             ? 'bg-red-50o0/20 text-red-40o0 border border-red-50o0/30',
-            : 'bg-white/10 text-zion-slate-light border border-white/20 hover: bg-white/20',}`} whileHover={{ scale: 1.0o5 ,}} whileTap={{ scale: 0.95 ,}}>,
+            : 'bg-white/10 text-zion-slate-light border border-white/20 hover: bg-white/20'}`} whileHover={{ scale: 1.0o5 }} whileTap={{ scale: 0.95 }}>,
                     <ThumbsUp className={`w-4 h-4 ${likedTestimonials.has(filteredTestimonials[currentIndex]?.id || '') ? 'fill-current' : ''}`} />,
                     {filteredTestimonials[currentIndex]?.likes || 0}
                   </motion.button>,
@@ -217,15 +201,15 @@ export function InteractiveTestimonials() {,
               </div>,
             </motion.div>,
           </AnimatePresence>,
-          {/* Navigation Controls */,}
+          {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-6 mt-8">,
-            <motion.button onClick={prevTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover: bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}}>,
+            <motion.button onClick={prevTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover: bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
               <ChevronLeft className="w-6 h-6" />,
             </motion.button>,
-            <motion.button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}}>,
+            <motion.button onClick={() => setIsAutoPlaying(!isAutoPlaying)} className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white hover: from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
               {isAutoPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
             </motion.button>,
-            <motion.button onClick={nextTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover: bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}}>,
+            <motion.button onClick={nextTestimonial} className="w-12 h-12 rounded-full bg-white/10 border border-white/20 text-white hover: bg-white/20 transition-all duration-30o0 flex items-center justify-center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
               <ChevronRight className="w-6 h-6" />,
             </motion.button>,
           </div>,
@@ -233,18 +217,18 @@ export function InteractiveTestimonials() {,
           <div className="flex justify-center gap-2 mt-6">,
             {filteredTestimonials.map((_, index) => (<motion.button key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-30o0 ${index === currentIndex,
                 ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0',
-                : 'bg-white/20 hover: bg-white/40',}`} whileHover={{ scale: 1.2 ,}}/>))}
+                : 'bg-white/20 hover: bg-white/40'}`} whileHover={{ scale: 1.2 }}/>))}
           </div>,
         </motion.div>,
         {/* Testimonial Grid */}
-        <motion.div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants,} initial="hidden" whileInView="visible" viewport={{ once: true ,}}>,
-          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{,
-                y: -8,;
-                scale: 1.0o2,;
-                transition: { duration: 0.2 ,}
+        <motion.div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
+          {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
+                y: -8;
+                scale: 1.0o2;
+                transition: { duration: 0.2 }
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>,
               <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover: border-blue-50o0/40 transition-all duration-30o0 backdrop-blur-sm">,
-                {/* Header */,}
+                {/* Header */}
                 <div className="flex items-start justify-between mb-4">,
                   <div className="flex items-center gap-3">,
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center text-white font-bold">,
@@ -278,7 +262,7 @@ export function InteractiveTestimonials() {,
             </motion.div>))}
         </motion.div>,
         {/* Enhanced CTA Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 ,}} whileInView={{ opacity: 1, y: 0 ,}} viewport={{ once: true ,}} transition={{ duration: 0.6, delay: 0.4 ,}}>,
+        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>,
           <div className="bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-3xl p-12 border border-blue-50o0/30 backdrop-blur-sm">,
             <h3 className="text-3xl font-bold text-white mb-6">,
               Join Our Success Stories,
@@ -299,6 +283,5 @@ export function InteractiveTestimonials() {,
           </div>,
         </motion.div>,
       </div>,
-    </section>),
-,}
+    </section>)}
 ,

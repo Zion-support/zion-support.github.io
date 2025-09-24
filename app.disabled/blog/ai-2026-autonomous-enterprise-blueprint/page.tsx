@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousEnterpriseBlueprint20o26 = () => {,
-  return (,
+const AutonomousEnterpriseBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Enterprise Blueprint',
         description='A step-by-step blueprint to design, build, and scale an autonomous enterprise using AI agents, workflow orchestration, and robust governance.',
         keywords='autonomous enterprise, AI agents, workflow orchestration, governance, 20o26',
@@ -28,7 +27,7 @@ const AutonomousEnterpriseBlueprint20o26 = () => {,
           <p>,
             Autonomous enterprises orchestrate AI agents, human experts, and,
             systems via policy to deliver outcomes with minimal manual,
-            intervention. This blueprint outlines capabilities, architecture,;
+            intervention. This blueprint outlines capabilities, architecture;
             operating model, and maturity milestones to achieve autonomy at,
             scale.,
           </p>,
@@ -56,7 +55,7 @@ const AutonomousEnterpriseBlueprint20o26 = () => {,
           </p>,
           <h2>Operating Model</h2>,
           <p>,
-            Establish an Autonomous Platform Team, define service boundaries,;
+            Establish an Autonomous Platform Team, define service boundaries;
             productize agent capabilities, and operate with SLOs tied to,
             business outcomes (cycle time, cost-to-serve, quality, and risk).,
           </p>,
@@ -69,23 +68,17 @@ const AutonomousEnterpriseBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Plan Your Autonomy Roadmap,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousEnterpriseBlueprint20o26,
-,
+    </div>)};
+export default AutonomousEnterpriseBlueprint20o26;

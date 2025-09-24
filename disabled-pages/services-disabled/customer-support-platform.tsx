@@ -1,167 +1,146 @@
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
-  MessageSquare,;
-  Bot,;
-  Users,;
-  Headphones,;
-  Zap,;
-  Target,;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Award,;
-  Star,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Monitor,;
-  Smartphone,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  DollarSign,;
-  Eye,;
-  Settings,;
-  FileText,;
-  BarChart3,;
-  Calendar,;
-  Search,;
-  Bell,
-} from 'lucide-react',
-,
-export default function CustomerSupportPlatform() {,
+import {
+  MessageSquare;
+  Bot;
+  Users;
+  Headphones;
+  Zap;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Monitor;
+  Smartphone;
+  Mail;
+  Phone;
+  MapPin;
+  DollarSign;
+  Eye;
+  Settings;
+  FileText;
+  BarChart3;
+  Calendar;
+  Search;
+  Bell} from 'lucide-react',
+export default function CustomerSupportPlatform() {
   const title = 'Customer Support & Helpdesk Solutions — Zion Tech Group',
   const description = 'Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.',
-,
-  const features = [,
-    {,
-      title: 'AI-Powered Chatbots',;
-      description: 'Intelligent chatbots that provide instant customer support 24/7',;
-      icon: Bot,;
-      details: [,
-        'Natural language processing',;
-        'Multi-language support',;
-        'Context-aware conversations',;
-        'Escalation to human agents',;
-        'Integration with CRM systems',;
-        'Custom bot personality training',
-      ],
-},;
-    {,
-      title: 'Ticket Management System',;
-      description: 'Streamlined ticket creation, tracking, and resolution workflow',;
-      icon: MessageSquare,;
-      details: [,
-        'Automated ticket routing',;
-        'Priority-based categorization',;
-        'SLA tracking and alerts',;
-        'Team collaboration tools',;
-        'Custom ticket fields',;
-        'Bulk operations and automation',
-      ],
-},;
-    {,
-      title: 'Live Chat Support',;
-      description: 'Real-time customer communication with advanced features',;
-      icon: Headphones,;
-      details: [,
-        'Multi-channel chat integration',;
-        'Screen sharing and co-browsing',;
-        'Chat history and transcripts',;
-        'Proactive chat invitations',;
-        'Mobile app for agents',;
-        'Chat analytics and reporting',
-      ],
-},;
-    {,
-      title: 'Knowledge Base Builder',;
-      description: 'Create and manage comprehensive self-service documentation',;
-      icon: FileText,;
-      details: [,
-        'Drag-and-drop article editor',;
-        'Search functionality',;
-        'Category and tag organization',;
-        'Version control and history',;
-        'Multi-language support',;
-        'Analytics and feedback collection',
-      ],
-}
+  const features = [
+    {
+      title: 'AI-Powered Chatbots';
+      description: 'Intelligent chatbots that provide instant customer support 24/7';
+      icon: Bot;
+      details: [
+        'Natural language processing';
+        'Multi-language support';
+        'Context-aware conversations';
+        'Escalation to human agents';
+        'Integration with CRM systems';
+        'Custom bot personality training']};
+    {
+      title: 'Ticket Management System';
+      description: 'Streamlined ticket creation, tracking, and resolution workflow';
+      icon: MessageSquare;
+      details: [
+        'Automated ticket routing';
+        'Priority-based categorization';
+        'SLA tracking and alerts';
+        'Team collaboration tools';
+        'Custom ticket fields';
+        'Bulk operations and automation']};
+    {
+      title: 'Live Chat Support';
+      description: 'Real-time customer communication with advanced features';
+      icon: Headphones;
+      details: [
+        'Multi-channel chat integration';
+        'Screen sharing and co-browsing';
+        'Chat history and transcripts';
+        'Proactive chat invitations';
+        'Mobile app for agents';
+        'Chat analytics and reporting']};
+    {
+      title: 'Knowledge Base Builder';
+      description: 'Create and manage comprehensive self-service documentation';
+      icon: FileText;
+      details: [
+        'Drag-and-drop article editor';
+        'Search functionality';
+        'Category and tag organization';
+        'Version control and history';
+        'Multi-language support';
+        'Analytics and feedback collection']}
   ],
-  const pricing = [,
-    {,
-      name: 'Starter',;
-      price: '$49',;
-      period: '/month',;
-      description: 'Perfect for small teams',;
-      features: [,
-        'Up to 3 agents',;
-        'Unlimited tickets',;
-        'Basic chatbot',;
-        'Email support',;
-        'Knowledge base',;
-        'Basic reporting',
-      ],;
-      popular: false,
-,},;
-    {,
-      name: 'Professional',;
-      price: '$149',;
-      period: '/month',;
-      description: 'Ideal for growing businesses',;
-      features: [,
-        'Up to 10 agents',;
-        'Advanced chatbot',;
-        'Live chat support',;
-        'Priority support',;
-        'Advanced reporting',;
-        'API access',;
-        'Custom branding',
-      ],;
-      popular: true,
-,},;
-    {,
-      name: 'Enterprise',;
-      price: '$399',;
-      period: '/month',;
-      description: 'For large organizations',;
-      features: [,
-        'Unlimited agents',;
-        'AI-powered automation',;
-        'Advanced analytics',;
-        'Dedicated support',;
-        'Custom integrations',;
-        'White-label options',;
-        'SLA guarantee',
-      ],;
-      popular: false,
-,}
+  const pricing = [
+    {
+      name: 'Starter';
+      price: '$49';
+      period: '/month';
+      description: 'Perfect for small teams';
+      features: [
+        'Up to 3 agents';
+        'Unlimited tickets';
+        'Basic chatbot';
+        'Email support';
+        'Knowledge base';
+        'Basic reporting'];
+      popular: false};
+    {
+      name: 'Professional';
+      price: '$149';
+      period: '/month';
+      description: 'Ideal for growing businesses';
+      features: [
+        'Up to 10 agents';
+        'Advanced chatbot';
+        'Live chat support';
+        'Priority support';
+        'Advanced reporting';
+        'API access';
+        'Custom branding'];
+      popular: true};
+    {
+      name: 'Enterprise';
+      price: '$399';
+      period: '/month';
+      description: 'For large organizations';
+      features: [
+        'Unlimited agents';
+        'AI-powered automation';
+        'Advanced analytics';
+        'Dedicated support';
+        'Custom integrations';
+        'White-label options';
+        'SLA guarantee'];
+      popular: false}
   ],
-  const benefits = [,
-    {,
-      icon: Zap,;
-      title: 'Reduce Response Time by 80%',;
-      description: 'AI chatbots provide instant responses, reducing customer wait times significantly',
-},;
-    {,
-      icon: Users,;
-      title: 'Improve Customer Satisfaction',;
-      description: 'Comprehensive support tools help resolve issues faster and more effectively',
-,},;
-    {,
-      icon: BarChart3,;
-      title: 'Gain Actionable Insights',;
-      description: 'Detailed analytics help you understand customer needs and optimize support processes',
-,},;
-    {,
-      icon: Target,;
-      title: 'Scale Efficiently',;
-      description: 'Automation and AI help you handle more customers without proportionally increasing staff',
-,}
+  const benefits = [
+    {
+      icon: Zap;
+      title: 'Reduce Response Time by 80%';
+      description: 'AI chatbots provide instant responses, reducing customer wait times significantly'};
+    {
+      icon: Users;
+      title: 'Improve Customer Satisfaction';
+      description: 'Comprehensive support tools help resolve issues faster and more effectively'};
+    {
+      icon: BarChart3;
+      title: 'Gain Actionable Insights';
+      description: 'Detailed analytics help you understand customer needs and optimize support processes'};
+    {
+      icon: Target;
+      title: 'Scale Efficiently';
+      description: 'Automation and AI help you handle more customers without proportionally increasing staff'}
   ],
-  return (,
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -169,7 +148,7 @@ export default function CustomerSupportPlatform() {,
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,
         <link rel="canonical" href="https: //ziontechgroup.com/services/customer-support-platform"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -181,7 +160,7 @@ export default function CustomerSupportPlatform() {,
               Complete Customer Support & Helpdesk Solution,
             </h1>,
             <p className="mt-6 text-lg leading-8 text-gray-60o0">,
-              Transform your customer service with our comprehensive platform featuring AI chatbots,;
+              Transform your customer service with our comprehensive platform featuring AI chatbots;
               ticket management, live chat, and knowledge base creation.,
             </p>,
             <div className="mt-8 flex items-center justify-center gap-x-6">,
@@ -195,7 +174,7 @@ export default function CustomerSupportPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-24 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center mb-16">,
@@ -207,27 +186,25 @@ export default function CustomerSupportPlatform() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg:grid-cols-2">,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <div key={index} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-30o0 hover:border-blue-30o0">,
                 <div className="flex items-center gap-x-3 mb-6">,
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-60o0 group-hover:bg-blue-70o0 transition-colors">,
                     <feature.icon className="h-7 w-7 text-white"  />,
                   </div>,
                   <div>,
-                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title,}</h3>,
+                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title}</h3>,
                     <p className="text-sm text-blue-60o0 font-medium">{feature.description}</p>,
                   </div>,
                 </div>,
                 <ul className="space-y-3">,
-                  {feature.details.map((detail, detailIndex) => (,
+                  {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{detail}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -243,7 +220,7 @@ export default function CustomerSupportPlatform() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg:grid-cols-2">,
-            {benefits.map((benefit, index) => (,
+            {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-x-4">,
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-60o0">,
                   <benefit.icon className="h-6 w-6 text-white"  />,
@@ -252,8 +229,7 @@ export default function CustomerSupportPlatform() {,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit.title}</h3>,
                   <p className="text-gray-60o0">{benefit.description}</p>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -269,15 +245,14 @@ export default function CustomerSupportPlatform() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg: grid-cols-3">,
-            {pricing.map((plan, index) => (,
+            {pricing.map((plan, index) => (
               <div key={index} className={`relative rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-60o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="inline-flex items-center rounded-full bg-blue-60o0 px-4 py-1 text-sm font-semibold text-white">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
                 <div className="text-center">,
                   <h3 className="text-xl font-semibold text-gray-90o0">{plan.name}</h3>,
                   <p className="mt-2 text-sm text-gray-60o0">{plan.description}</p>,
@@ -287,20 +262,18 @@ export default function CustomerSupportPlatform() {,
                   </div>,
                 </div>,
                 <ul className="mt-8 space-y-4">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className="mt-8">,
-                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0',}`}>,
+                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}>,
                     Get Started,
                   </Link>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -335,7 +308,7 @@ export default function CustomerSupportPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-16 sm: py-24">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -356,7 +329,7 @@ export default function CustomerSupportPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* Contact Info */,}
+      {/* Contact Info */}
       <section className="py-16 bg-gray-50">,
         <div className="mx-auto max-w-7xl px-6 lg: px-8">,
           <div className="text-center">,
@@ -378,6 +351,4 @@ export default function CustomerSupportPlatform() {,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}

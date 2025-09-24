@@ -1,24 +1,22 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Go-To-Market Agents Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Go-To-Market Agents Blueprint | Zion Tech Group';
   description:,
-    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',;
-  keywords: [,
-    'go-to-market agents',;
-    'GTM agents',;
-    'sales automation',;
-    'marketing automation',;
-    'policy-as-code',;
-    'evals',;
-    'governance',;
-  ],;
+    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.';
+  keywords: [
+    'go-to-market agents';
+    'GTM agents';
+    'sales automation';
+    'marketing automation';
+    'policy-as-code';
+    'evals';
+    'governance';
+  ];
 };
-,
-export default function GoToMarketAgentsBlueprintPage() {,
-  return (,
+export default function GoToMarketAgentsBlueprintPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Go-To-Market Agents Blueprint',
         description='Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',
         keywords='GTM agents, go-to-market, sales automation, marketing automation, policy-as-code, evals',
@@ -82,22 +80,18 @@ export default function GoToMarketAgentsBlueprintPage() {,
             </ol>,
           </div>,
           <div className='mt-10 flex flex-wrap gap-4'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-go-to-market-agents-blueprint',
-              className='text-purple-60o0 font-semibold',
-            >,
+              className='text-purple-60o0 font-semibold'>,
               Read Blog Overview →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-            >,
+              className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
               Discuss GTM Agents,
             </Link>,
           </div>,
         </article>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

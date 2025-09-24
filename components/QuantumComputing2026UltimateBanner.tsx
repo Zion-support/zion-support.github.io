@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const QuantumComputing20o26UltimateBanner = () => {,
-  return (,
+const QuantumComputing20o26UltimateBanner = () => {
+  return (
     <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
       {/* Quantum field animation background */}
       <div className='absolute inset-0'>,
@@ -26,21 +25,19 @@ const QuantumComputing20o26UltimateBanner = () => {,
             billions of years in mere seconds.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-computing-20o26',
-              className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
               Explore Quantum 20o26,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-applications',
-              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0'>,
               Quantum Applications,
             </Link>,
           </div>,
         </div>,
-        {/* Quantum Capabilities Grid */,}
+        {/* Quantum Capabilities Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
           <div className='bg-gradient-to-br from-cyan-50o0/20 to-purple-50o0/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-40o0/30'>,
             <div className='text-5xl mb-6'>🔬</div>,
@@ -87,7 +84,7 @@ const QuantumComputing20o26UltimateBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Quantum Statistics */,}
+        {/* Quantum Statistics */}
         <div className='bg-gradient-to-r from-black/30 to-black/50 backdrop-blur-sm rounded-3xl p-12 border border-cyan-40o0/20'>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 text-center'>,
             <div>,
@@ -116,23 +113,18 @@ const QuantumComputing20o26UltimateBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center mt-16'>,
           <p className='text-xl text-gray-30o0 mb-8'>,
             Ready to harness the power of quantum computing for your business?,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl',
-          >,
+            className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white px-12 py-4 rounded-xl font-bold text-xl hover: from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
             Get Quantum Access Now,
             <span className='ml-2'>→</span>,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumComputing20o26UltimateBanner,
-,
+    </section>)};
+export default QuantumComputing20o26UltimateBanner;

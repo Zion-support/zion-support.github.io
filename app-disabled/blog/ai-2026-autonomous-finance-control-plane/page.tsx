@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Finance Control Plane',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Finance Control Plane';
   description:,
-    'Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.',;
+    'Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.';
 };
-,
-export default function AutonomousFinanceControlPlanePage() {,
-  return (,
+export default function AutonomousFinanceControlPlanePage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <header className='mb-8'>,
         <p className='text-sm font-semibold text-purple-70o0'>New Finance AI</p>,
@@ -34,21 +32,17 @@ export default function AutonomousFinanceControlPlanePage() {,
         </ul>,
         <h2>Next steps</h2>,
         <div className='not-prose mt-4 flex gap-3'>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-autonomous-finance-operating-system',
-            className='inline-block bg-purple-60o0 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-purple-70o0',
-          >,
+            className='inline-block bg-purple-60o0 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-purple-70o0'>,
             Finance OS,
           </Link>,
-          <Link,
+          <Link
             href='/content/ai-20o26-autonomous-compliance',
-            className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50',
-          >,
+            className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50'>,
             Compliance Model,
           </Link>,
         </div>,
       </article>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

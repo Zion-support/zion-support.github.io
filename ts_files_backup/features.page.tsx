@@ -1,8 +1,7 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 BotGlobe2MonitorSmartphone,
-,
-export default function FeaturesPage() {,
-  return (,
+export default function FeaturesPage() {
+  return (
     <EnhancedLayout>,
       <h1 className='text-2xl font-semibold'>Features</h1>,
       <div className='mt-6 grid md: grid-cols-3 gap-6'>,
@@ -28,7 +27,5 @@ export default function FeaturesPage() {,
           </p>,
         </div>,
       </div>,
-    </EnhancedLayout>,
-  ),
-,}
+    </EnhancedLayout>)}
 ,

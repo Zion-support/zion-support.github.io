@@ -1,24 +1,22 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Agents Red-Team Scenarios',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Agents Red-Team Scenarios';
   description:,
-    'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden autonomous agents before production.',;
-  keywords: [,
-    'red team',;
-    'adversarial testing',;
-    'agent safety',;
-    'evals',;
-    'governance',;
-  ],;
+    'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden autonomous agents before production.';
+  keywords: [
+    'red team';
+    'adversarial testing';
+    'agent safety';
+    'evals';
+    'governance';
+  ];
 };
-,
-const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {,
-  return (,
+const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Agents Red-Team Scenarios',
         description='Adversarial scenarios, pass criteria, and CI/CD integration to harden agents.',
         keywords='red team, adversarial testing, agent safety, evals, governance',
@@ -49,7 +47,7 @@ const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {,
           </ul>,
           <h3>Pass Criteria</h3>,
           <p>,
-            Define measurable criteria per scenario: block rate, containment,;
+            Define measurable criteria per scenario: block rate, containment;
             and recovery time. Track regressions over time.,
           </p>,
           <h3>CI/CD Integration</h3>,
@@ -59,29 +57,22 @@ const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {,
           </p>,
         </div>,
         <div className='mt-10 flex flex-wrap gap-4'>,
-          <Link,
+          <Link
             href='/content/ai-20o26-agentic-evaluation-checklists',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             Evaluation Checklists →,
           </Link>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-agent-safety-certification',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             Safety Certification →,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Run a Red-Team,
           </Link>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousAgentsRedTeamScenariosPage,
-,
+    </div>)};
+export default AutonomousAgentsRedTeamScenariosPage;

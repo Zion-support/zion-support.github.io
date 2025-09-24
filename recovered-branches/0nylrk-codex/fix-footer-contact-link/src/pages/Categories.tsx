@@ -1,7 +1,7 @@
 
 ,
-export default function Categories() {,
-  return (,
+export default function Categories() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue">,
@@ -15,13 +15,12 @@ export default function Categories() {,
               Find exactly what you're looking for to enhance your business or personal projects.,
             </p>,
           </div>,
-import { Header ,} from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { CategoriesSection } from "@/components/CategoriesSection",;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading",
-,
-export default function Categories() {,
-  return (,
+export default function Categories() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue">,
@@ -35,15 +34,12 @@ export default function Categories() {,
               Find exactly what you're looking for to enhance your business or personal projects.,
             </p>,
           </div>,
-,
-          {/* Reuse the Categories Section component */,}
+          {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-}
+    </>)}
 ,
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -52,8 +48,8 @@ import { GradientHeading } from '@/components / GradientHeading',
 export default /**,
  * Categories - Function description,
  */,
-function Categories() {,
-  return (,
+function Categories() {
+  return (
     <>,
       <Header />,
       <div className="min - h-screen bg - zion - blue">,
@@ -67,14 +63,11 @@ function Categories() {,
               Find exactly what you're looking for to enhance your business or personal projects.,
             </p>,
           </div>,
-          {/* Reuse the Categories Section component */,}
+          {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
+    </>)}
 }
-}
-,
-,)
+)

@@ -1,36 +1,35 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-import {,
-  Atom,;
-  Zap,;
-  Target,;
-  Network,;
-  Globe,;
-  Users,;
-  Brain,;
-  TrendingUp,;
+import {
+  Atom;
+  Zap;
+  Target;
+  Network;
+  Globe;
+  Users;
+  Brain;
+  TrendingUp;
 } from 'lucide-react',
-,
-const QuantumSimulationPlatformPage: React.FC = () => {,
-  return (,
+const QuantumSimulationPlatformPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>Quantum Simulation Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Simulate quantum systems with Zion Tech Group's quantum simulation platform. Molecular modeling, material science, and quantum chemistry simulations.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='quantum simulation, molecular modeling, quantum chemistry, material science, Zion Tech Group',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-simulation-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-teal-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -224,7 +223,7 @@ const QuantumSimulationPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Use Cases */,}
+        {/* Use Cases */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-7xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-16'>,
@@ -246,7 +245,7 @@ const QuantumSimulationPlatformPage: React.FC = () => {,
                     Material Design,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Design of new materials with specific electronic, magnetic,;
+                    Design of new materials with specific electronic, magnetic;
                     and optical properties.,
                   </p>,
                 </div>,
@@ -483,7 +482,7 @@ const QuantumSimulationPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Get Started */,}
+        {/* Get Started */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -527,9 +526,5 @@ const QuantumSimulationPlatformPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default QuantumSimulationPlatformPage,
-,
+    </>)};
+export default QuantumSimulationPlatformPage;

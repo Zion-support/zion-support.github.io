@@ -3,32 +3,29 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 CheckPhoneMailMapPinExternalLink,
-,
-export default function SmartCrmIntelligenceSuitePage() {,
-  const contact = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+export default function SmartCrmIntelligenceSuitePage() {
+  const contact = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
   };
-,
-  const features = [,
-    'AI lead scoring and next-best-action',;
-    'Account-based insights and intent signals',;
-    'Conversational summaries and auto-logging',;
-    'Pipeline risk alerts and forecast accuracy',;
-    'Playbooks with automated outreach',;
-    'Native integrations (SalesforceHubSpotPipedrive)',;
+  const features = [
+    'AI lead scoring and next-best-action';
+    'Account-based insights and intent signals';
+    'Conversational summaries and auto-logging';
+    'Pipeline risk alerts and forecast accuracy';
+    'Playbooks with automated outreach';
+    'Native integrations (SalesforceHubSpotPipedrive)';
   ],
-,
-  return (,
+  return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,
         <title>Smart CRM Intelligence Suite | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Transform your CRM with AI-driven lead scoringnext-best-actionsand pipeline risk alerts. Boost win rates and forecast accuracy.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/smart-crm-intelligence-suite',
         />,
@@ -61,12 +58,11 @@ export default function SmartCrmIntelligenceSuitePage() {,
                 Key Features,
               </h3>,
               <ul className='space-y-2 text-gray-30o0'>,
-                {features.map(f => (,
-                  <li key={f,} className='flex items-start gap-2'>,
+                {features.map(f => (
+                  <li key={f} className='flex items-start gap-2'>,
                     <Check className='w-4 h-4 mt-0.5 text-emerald-40o0' />,
                     <span>{f}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </Card>,
           </div>,
@@ -84,17 +80,15 @@ export default function SmartCrmIntelligenceSuitePage() {,
                 SalesforceHubSpotPipedrive,
               </div>,
               <div className='mt-6 flex gap-3'>,
-                <Button,
+                <Button
                   href='/contact',
-                  className='flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white',
-                >,
+                  className='flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'>,
                   Contact Sales,
                 </Button>,
-                <Button,
+                <Button
                   href='/market-pricing',
                   variant='outline',
-                  className='flex-1 border border-gray-60o0 text-gray-20o0',
-                >,
+                  className='flex-1 border border-gray-60o0 text-gray-20o0'>,
                   <ExternalLink className='w-4 h-4 mr-2' /> Market Pricing,
                 </Button>,
               </div>,
@@ -105,16 +99,15 @@ export default function SmartCrmIntelligenceSuitePage() {,
                 <div className='flex items-center gap-2 text-cyan-40o0'>,
                   <Phone className='w-4 h-4' />,
                   <a href='tel:+130o24640950' className='hover:underline'>,
-                    {contact.mobile,}
+                    {contact.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center gap-2 text-purple-40o0'>,
                   <Mail className='w-4 h-4' />,
-                  <a,
+                  <a
                     href='mailto: kleber@ziontechgroup.com',
-                    className='hover:underline',
-                  >,
-                    {contact.email,}
+                    className='hover:underline'>,
+                    {contact.email}
                   </a>,
                 </div>,
                 <div className='flex items-center gap-2 text-green-40o0'>,
@@ -126,7 +119,5 @@ export default function SmartCrmIntelligenceSuitePage() {,
           </div>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}
 ,

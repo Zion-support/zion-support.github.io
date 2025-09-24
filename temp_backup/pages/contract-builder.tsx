@@ -3,79 +3,65 @@ import Head from 'next/head',
 import { marked } from 'marked',
 import html2canvas from 'html2canvas',
 import jsPDF from 'jspdf',
-,
-interface Milestone {,
+interface Milestone {
   description: string,
-  amount: string,
-,}
+  amount: string}
 ,
-export default function ContractBuilderPage() {,
+export default function ContractBuilderPage() {
   const [projectTitle, setProjectTitle] = useState('Zion Project'),
   const [clientName, setClientName] = useState('Client Co.'),
   const [talentName, setTalentName] = useState('Developer'),
-  const [deliverables, setDeliverables] = useState(,
-    'List the expected deliverables here.',
-  ),
-  const [milestones, setMilestones] = useState<Milestone[]>([,
-    { description: 'Initial delivery', amount: '10o00' ,},;
+  const [deliverables, setDeliverables] = useState(
+    'List the expected deliverables here.'),
+  const [milestones, setMilestones] = useState<Milestone[]>([
+    { description: 'Initial delivery', amount: '10o00' };
   ]),
-  const [paymentStructure, setPaymentStructure] = useState(,
-    '50% upfront, 50% on completion',
-  ),
+  const [paymentStructure, setPaymentStructure] = useState(
+    '50% upfront, 50% on completion'),
   const [walletAddress, setWalletAddress] = useState(''),
-,
   const [markdown, setMarkdown] = useState<string>(''),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string>(''),
-,
-  const htmlPreview = useMemo(,
-    () => marked.parse(markdown || '') as unknown as string,;
-    [markdown],
-  ),
-,
+  const htmlPreview = useMemo(
+    () => marked.parse(markdown || '') as unknown as string;
+    [markdown]),
   const onAddMilestone = () =>,
-    setMilestones(m => [...m, { description: '', amount: '' ,}]),
+    setMilestones(m => [...m, { description: '', amount: '' }]),
   const onRemoveMilestone = (idx: number) =>,
     setMilestones(m => m.filter((_, i) => i !== idx)),
-  const onMilestoneChange = (,
-    idx: number,;
-    field: keyof Milestone,;
-    value: string,
-  ) =>,
+  const onMilestoneChange = (
+    idx: number;
+    field: keyof Milestone;
+    value: string) =>,
     setMilestones(m =>,
-      m.map((row, i) => (i === idx ? { ...row, [field]: value } : row)),
-    ),
-,
-  async function generateContract() {,
+      m.map((row, i) => (i === idx ? { ...row, [field]: value } : row))),
+  async function generateContract() {
     setLoading(true),
     setError(''),
-    try {,
-      const res = await fetch('/api/contract-builder/generate', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          projectTitle,;
-          clientName,;
-          talentName,;
-          deliverables,;
-          milestones,;
-          paymentStructure,;
-          walletAddress,;
-        }),;
+    try {
+      const res = await fetch('/api/contract-builder/generate', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          projectTitle;
+          clientName;
+          talentName;
+          deliverables;
+          milestones;
+          paymentStructure;
+          walletAddress;
+        });
       }),
       const data = await res.json(),
-      setMarkdown(data.markdown || ''),
-    } catch (e: any) {,
-      setError(e?.message || 'Failed to generate contract'),
-    ,} finally {,
-      setLoading(false),
-    }
+      setMarkdown(data.markdown || '')} catch (e: any) {
+      setError(e?.message || 'Failed to generate contract')} finally {
+      setLoading(false)}
   }
 ,
-  async function exportPDF() {,
+  async function exportPDF() {
     const el = document.getElementById('contract-preview'),
     if (!el) return,
-    const canvas = await html2canvas(el, { scale: 2 ,}),
+    const canvas = await html2canvas(el, { scale: 2 }),
     const imgData = canvas.toDataURL('image/png'),
     const pdf = new jsPDF('p', 'mm', 'a4'),
     const pageWidth = pdf.internal.pageSize.getWidth(),
@@ -83,78 +69,64 @@ export default function ContractBuilderPage() {,
     const imgProps = (pdf as any).getImageProperties(imgData),
     const imgWidth = pageWidth,
     const imgHeight = (imgProps.height * imgWidth) / imgProps.width,
-,
     let position = 0,
     let heightLeft = imgHeight,
-,
     pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight),
     heightLeft -= pageHeight,
-,
-    while (heightLeft > 0) {,
+    while (heightLeft > 0) {
       position = heightLeft - imgHeight,
       pdf.addPage(),
       pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight),
-      heightLeft -= pageHeight,
-    }
+      heightLeft -= pageHeight}
 ,
-    pdf.save(`${projectTitle.replace(/\s+/g, '_')}_Agreement.pdf`),
-  }
+    pdf.save(`${projectTitle.replace(/\s+/g, '_')}_Agreement.pdf`)}
 ,
-  async function compileSolidity() {,
+  async function compileSolidity() {
     setLoading(true),
     setError(''),
-    try {,
-      const res = await fetch('/api/contract-builder/compile', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({ projectTitle ,}),;
+    try {
+      const res = await fetch('/api/contract-builder/compile', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ projectTitle });
       }),
       const data = await res.json(),
-      return data.source as string,
-    } catch (e: any) {,
+      return data.source as string} catch (e: any) {
       setError(e?.message || 'Failed to compile'),
-      return '',
-    ,} finally {,
-      setLoading(false),
-    }
+      return ''} finally {
+      setLoading(false)}
   }
 ,
-  async function deployWithMetamask() {,
-    try {,
+  async function deployWithMetamask() {
+    try {
       const source = await compileSolidity(),
       if (!source) return,
-,
       // For MVP, we skip server-side compilation to bytecode due to environment constraints.,
       // In a production version, use a compiler service to return ABI/bytecode.,
-      alert(,
-        'For this MVP, deployment prepares a transaction template. Complete deploy via your wallet integration.',
-      ),
-    } catch (e: any) {,
-      setError(e?.message || 'Deploy failed'),
-    ,}
+      alert(
+        'For this MVP, deployment prepares a transaction template. Complete deploy via your wallet integration.')} catch (e: any) {
+      setError(e?.message || 'Deploy failed')}
   }
 ,
-  async function saveAgreement() {,
+  async function saveAgreement() {
     if (!markdown) return,
-    try {,
-      const res = await fetch('/api/contract-builder/save', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          projectTitle,;
-          markdown,;
-          meta: { clientName, talentName, walletAddress },;
-        }),;
+    try {
+      const res = await fetch('/api/contract-builder/save', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          projectTitle;
+          markdown;
+          meta: { clientName, talentName, walletAddress };
+        });
       }),
       const data = await res.json(),
       if (!data.ok) throw new Error(data.error || 'Save failed'),
-      alert('Saved as ' + data.filename),
-    } catch (e: any) {,
-      setError(e?.message || 'Failed to save'),
-    ,}
+      alert('Saved as ' + data.filename)} catch (e: any) {
+      setError(e?.message || 'Failed to save')}
   }
 ,
-  return (,
+  return (
     <div className='min-h-screen bg-gray-50'>,
       <Head>,
         <title>Contract Builder — Zion</title>,
@@ -165,15 +137,15 @@ export default function ContractBuilderPage() {,
           <div className='grid grid-cols-1 gap-3'>,
             <label className='block'>,
               <span className='text-sm'>Project title</span>,
-              <input,
-                value={projectTitle,}
+              <input
+                value={projectTitle}
                 onChange={e => setProjectTitle(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
               />,
             </label>,
             <label className='block'>,
               <span className='text-sm'>Client name</span>,
-              <input,
+              <input
                 value={clientName}
                 onChange={e => setClientName(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
@@ -181,7 +153,7 @@ export default function ContractBuilderPage() {,
             </label>,
             <label className='block'>,
               <span className='text-sm'>Talent name</span>,
-              <input,
+              <input
                 value={talentName}
                 onChange={e => setTalentName(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
@@ -189,7 +161,7 @@ export default function ContractBuilderPage() {,
             </label>,
             <label className='block'>,
               <span className='text-sm'>Deliverables</span>,
-              <textarea,
+              <textarea
                 value={deliverables}
                 onChange={e => setDeliverables(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
@@ -198,42 +170,37 @@ export default function ContractBuilderPage() {,
             </label>,
             <div className='space-y-2'>,
               <div className='text-sm font-medium'>Milestones</div>,
-              {milestones.map((m, idx) => (,
+              {milestones.map((m, idx) => (
                 <div key={idx} className='flex gap-2 items-center'>,
-                  <input,
+                  <input
                     placeholder='Description',
                     value={m.description}
                     onChange={e =>,
-                      onMilestoneChange(idx, 'description', e.target.value),
-                    }
+                      onMilestoneChange(idx, 'description', e.target.value)}
                     className='flex-1 border rounded p-2',
                   />,
-                  <input,
+                  <input
                     placeholder='Amount',
                     value={m.amount}
                     onChange={e =>,
-                      onMilestoneChange(idx, 'amount', e.target.value),
-                    }
+                      onMilestoneChange(idx, 'amount', e.target.value)}
                     className='w-32 border rounded p-2',
                   />,
-                  <button,
+                  <button
                     onClick={() => onRemoveMilestone(idx)}
-                    className='text-red-50o0 text-sm',
-                  >,
+                    className='text-red-50o0 text-sm'>,
                     Remove,
                   </button>,
-                </div>,
-              ))}
-              <button,
+                </div>))}
+              <button
                 onClick={onAddMilestone}
-                className='text-blue-60o0 text-sm',
-              >,
+                className='text-blue-60o0 text-sm'>,
                 + Add milestone,
               </button>,
             </div>,
             <label className='block'>,
               <span className='text-sm'>Payment structure</span>,
-              <input,
+              <input
                 value={paymentStructure}
                 onChange={e => setPaymentStructure(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
@@ -243,42 +210,35 @@ export default function ContractBuilderPage() {,
               <span className='text-sm'>,
                 On-chain payment address (optional),
               </span>,
-              <input,
+              <input
                 value={walletAddress}
                 onChange={e => setWalletAddress(e.target.value)}
                 className='mt-1 w-full border rounded p-2',
               />,
             </label>,
             <div className='flex gap-3'>,
-              <button,
+              <button
                 onClick={generateContract}
                 disabled={loading}
-                className='bg-black text-white px-4 py-2 rounded',
-              >,
+                className='bg-black text-white px-4 py-2 rounded'>,
                 {loading ? 'Generating…' : 'Generate contract'}
               </button>,
-              <button,
-                onClick={() => {,
-                  void exportPDF(),
-                }}
-                className='border px-4 py-2 rounded',
-              >,
+              <button
+                onClick={() => {
+                  void exportPDF()}}
+                className='border px-4 py-2 rounded'>,
                 Download PDF,
               </button>,
-              <button,
-                onClick={() => {,
-                  void deployWithMetamask(),
-                }}
-                className='border px-4 py-2 rounded',
-              >,
+              <button
+                onClick={() => {
+                  void deployWithMetamask()}}
+                className='border px-4 py-2 rounded'>,
                 Deploy (optional),
               </button>,
-              <button,
-                onClick={() => {,
-                  void saveAgreement(),
-                }}
-                className='border px-4 py-2 rounded',
-              >,
+              <button
+                onClick={() => {
+                  void saveAgreement()}}
+                className='border px-4 py-2 rounded'>,
                 Save,
               </button>,
             </div>,
@@ -288,20 +248,17 @@ export default function ContractBuilderPage() {,
         <div>,
           <div className='flex items-center justify-between'>,
             <h2 className='text-xl font-semibold'>Preview</h2>,
-            {walletAddress && (,
+            {walletAddress && (
               <span className='inline-flex items-center text-xs bg-green-10o0 text-green-70o0 px-2 py-1 rounded'>,
                 Verify on-chain,
-              </span>,
-            )}
+              </span>)}
           </div>,
-          <div,
+          <div
             id='contract-preview',
             className='mt-3 bg-white border rounded p-4 prose max-w-none',
-            dangerouslySetInnerHTML={{ __html: htmlPreview ,}}
+            dangerouslySetInnerHTML={{ __html: htmlPreview }}
           />,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

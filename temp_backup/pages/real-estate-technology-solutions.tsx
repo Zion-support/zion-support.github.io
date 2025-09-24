@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function RealEstateTechnologySolutionsPage() {,
-  return (,
+export default function RealEstateTechnologySolutionsPage() {
+  return (
     <>,
       <Head>,
         <title>Real Estate Technology Solutions - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='real estate technology solutions page',
         />,
@@ -21,7 +20,5 @@ export default function RealEstateTechnologySolutionsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

@@ -1,13 +1,12 @@
-export const metadata = {,
-  title: 'AI Agents ROI Playbook 20o26 | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Agents ROI Playbook 20o26 | Zion Tech Group';
   description:,
-    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.',;
+    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.';
 };
-,
-export default function AIAgentsROIPlaybook20o26() {,
-  return (,
+export default function AIAgentsROIPlaybook20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI Agents ROI Playbook 20o26',
         description='Model, track, and realize ROI from enterprise AI agents with evaluation gates and policy-as-code.',
         keywords='AI ROI, agents ROI, enterprise AI, value tracking, evals',
@@ -28,7 +27,7 @@ export default function AIAgentsROIPlaybook20o26() {,
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg'>,
           <h2>Measure What Matters</h2>,
           <p>,
-            Define success metrics aligned to business outcomes: cycle time,;
+            Define success metrics aligned to business outcomes: cycle time;
             quality, cost-to-serve, and risk. Use counterfactuals and guardrail,
             pass rates to quantify value and confidence.,
           </p>,
@@ -50,17 +49,15 @@ export default function AIAgentsROIPlaybook20o26() {,
             <p className='mb-2 font-semibold text-emerald-80o0'>Next steps</p>,
             <p>,
               Apply this model with the{' '}
-              <a,
+              <a
                 href='/content/ai-20o26-evaluation-harness-blueprint',
-                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0'>,
                 Evaluation Harness Blueprint,
-              </a>{' ',}
+              </a>{' '}
               and the{' '}
-              <a,
+              <a
                 href='/content/ai-20o26-agent-release-checklists',
-                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0'>,
                 Agent Release Checklists,
               </a>,
               .,
@@ -68,7 +65,5 @@ export default function AIAgentsROIPlaybook20o26() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

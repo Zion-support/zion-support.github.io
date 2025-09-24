@@ -1,9 +1,7 @@
-export function AICoreDashboard() {,
-  return (,
+export function AICoreDashboard() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

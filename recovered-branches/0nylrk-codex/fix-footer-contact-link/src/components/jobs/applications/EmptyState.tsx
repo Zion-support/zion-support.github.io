@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button',
 import { CardContent } from '@/components/ui/card',
 import { Link } from 'react-router-dom',
-,
-export function EmptyState() {,
-  return (,
+export function EmptyState() {
+  return (
     <Card className='bg-muted/30'>,
       <CardContent className='pt-6 text-center'>,
         <h3 className='text-lg font-medium mb-2'>No Applications Yet</h3>,
@@ -15,7 +14,5 @@ export function EmptyState() {,
           <Link to='/jobs'>Browse Jobs</Link>,
         </Button>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function IntegratePage() {,
-  return (,
+export default function IntegratePage() {
+  return (
     <>,
       <Head>,
         <title>Integrate - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function IntegratePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

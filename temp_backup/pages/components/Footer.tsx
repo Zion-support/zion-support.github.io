@@ -1,177 +1,172 @@
 import Link from 'next/link',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  ArrowRight,;
-  Brain,;
-  Network,;
-  Cloud,;
-  Shield,;
-  BarChart3,;
-  Users,;
-  Settings,;
-  FileText,;
-  MessageSquare,;
-  Calendar,;
-  ShoppingCart,;
-  BookOpen,;
-  Building,;
-  Heart,;
-  DollarSign,;
-  Target,;
-  Zap,;
-  Award,;
-  Star,;
-  CheckCircle,;
-  Clock,;
-  TrendingUp,;
-  Eye,;
-  Lock,;
-  Code,;
-  Home,;
-  Camera,;
-  Music,;
-  Gamepad2,;
-  Truck,;
-  Calculator,;
-  CreditCard,;
-  Paintbrush,;
-  HardDrive,;
-  Activity,;
-  Lightbulb,;
-  Wrench,;
-  PieChart,;
-  ClipboardList,;
-  Layers,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  ArrowRight;
+  Brain;
+  Network;
+  Cloud;
+  Shield;
+  BarChart3;
+  Users;
+  Settings;
+  FileText;
+  MessageSquare;
+  Calendar;
+  ShoppingCart;
+  BookOpen;
+  Building;
+  Heart;
+  DollarSign;
+  Target;
+  Zap;
+  Award;
+  Star;
+  CheckCircle;
+  Clock;
+  TrendingUp;
+  Eye;
+  Lock;
+  Code;
+  Home;
+  Camera;
+  Music;
+  Gamepad2;
+  Truck;
+  Calculator;
+  CreditCard;
+  Paintbrush;
+  HardDrive;
+  Activity;
+  Lightbulb;
+  Wrench;
+  PieChart;
+  ClipboardList;
+  Layers;
 } from 'lucide-react',
-,
-const footerSections = [,
-  {,
-    title: 'Services',;
-    links: [,
-      { title: 'AI Services', href: '/ai-services', icon: Brain ,},;
-      { title: 'IT Services', href: '/it-services', icon: Network ,},;
-      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud ,},;
-      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code ,},;
-      { title: 'Blockchain', href: '/blockchain', icon: Lock ,},;
-      { title: 'IoT Solutions', href: '/iot', icon: Globe ,},;
-      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye ,},;
-      { title: 'Space Technology', href: '/space-tech', icon: Settings ,},;
-    ],;
-  },;
-  {,
-    title: 'Solutions',;
-    links: [,
-      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building ,},;
-      { title: 'Startup Solutions', href: '/startup', icon: Settings ,},;
-      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud ,},;
-      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield ,},;
-      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 ,},;
-      { title: 'Automation', href: '/automation', icon: Zap ,},;
-      {,
-        title: 'Digital Transformation',;
-        href: '/digital-transformation',;
-        icon: TrendingUp,;
-      },;
-      { title: 'Custom Development', href: '/custom-development', icon: Code ,},;
-    ],;
-  },;
-  {,
-    title: 'Industries',;
-    links: [,
-      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart ,},;
-      { title: 'Finance', href: '/industries/finance', icon: DollarSign ,},;
-      {,
-        title: 'Manufacturing',;
-        href: '/industries/manufacturing',;
-        icon: Settings,;
-      },;
-      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart ,},;
-      { title: 'Education', href: '/industries/education', icon: BookOpen ,},;
-      { title: 'Real Estate', href: '/industries/real-estate', icon: Home ,},;
-      { title: 'Agriculture', href: '/industries/agriculture', icon: Target ,},;
-      { title: 'Energy', href: '/industries/energy', icon: Zap ,},;
-    ],;
-  },;
-  {,
-    title: 'Resources',;
-    links: [,
-      { title: 'Blog', href: '/blog', icon: FileText ,},;
-      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 ,},;
-      { title: 'White Papers', href: '/white-papers', icon: FileText ,},;
-      { title: 'Webinars', href: '/webinars', icon: Calendar ,},;
-      { title: 'Tutorials', href: '/tutorials', icon: BookOpen ,},;
-      { title: 'API Documentation', href: '/api-docs', icon: Code ,},;
-      { title: 'Training', href: '/training', icon: BookOpen ,},;
-      { title: 'FAQ', href: '/faq', icon: MessageSquare ,},;
-    ],;
-  },;
-  {,
-    title: 'Company',;
-    links: [,
-      { title: 'About Us', href: '/about', icon: Building ,},;
-      { title: 'Team', href: '/team', icon: Users ,},;
-      { title: 'Careers', href: '/careers', icon: Users ,},;
-      { title: 'Partners', href: '/partners', icon: Globe ,},;
-      { title: 'News', href: '/news', icon: FileText ,},;
-      { title: 'Contact', href: '/contact', icon: MessageSquare ,},;
-      { title: 'Privacy Policy', href: '/privacy', icon: Lock ,},;
-      { title: 'Terms of Service', href: '/terms', icon: FileText ,},;
-    ],;
-  },;
-  {,
-    title: 'Support',;
-    links: [,
-      { title: 'Help Center', href: '/help', icon: MessageSquare ,},;
-      { title: 'Documentation', href: '/docs', icon: FileText ,},;
-      { title: 'API Reference', href: '/api', icon: Code ,},;
-      { title: 'Status Page', href: '/status', icon: BarChart3 ,},;
-      { title: 'Community', href: '/community', icon: Users ,},;
-      { title: 'Training', href: '/training', icon: BookOpen ,},;
-      { title: 'Free Consultation', href: '/consultation', icon: Calendar ,},;
-      { title: 'Get Quote', href: '/quote', icon: FileText ,},;
-    ],;
-  },;
+const footerSections = [
+  {
+    title: 'Services';
+    links: [
+      { title: 'AI Services', href: '/ai-services', icon: Brain };
+      { title: 'IT Services', href: '/it-services', icon: Network };
+      { title: 'Micro SaaS', href: '/micro-saas', icon: Cloud };
+      { title: 'Quantum Computing', href: '/quantum-computing', icon: Code };
+      { title: 'Blockchain', href: '/blockchain', icon: Lock };
+      { title: 'IoT Solutions', href: '/iot', icon: Globe };
+      { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye };
+      { title: 'Space Technology', href: '/space-tech', icon: Settings };
+    ];
+  };
+  {
+    title: 'Solutions';
+    links: [
+      { title: 'Enterprise Solutions', href: '/enterprise', icon: Building };
+      { title: 'Startup Solutions', href: '/startup', icon: Settings };
+      { title: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud };
+      { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield };
+      { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 };
+      { title: 'Automation', href: '/automation', icon: Zap };
+      {
+        title: 'Digital Transformation';
+        href: '/digital-transformation';
+        icon: TrendingUp;
+      };
+      { title: 'Custom Development', href: '/custom-development', icon: Code };
+    ];
+  };
+  {
+    title: 'Industries';
+    links: [
+      { title: 'Healthcare', href: '/industries/healthcare', icon: Heart };
+      { title: 'Finance', href: '/industries/finance', icon: DollarSign };
+      {
+        title: 'Manufacturing';
+        href: '/industries/manufacturing';
+        icon: Settings;
+      };
+      { title: 'Retail', href: '/industries/retail', icon: ShoppingCart };
+      { title: 'Education', href: '/industries/education', icon: BookOpen };
+      { title: 'Real Estate', href: '/industries/real-estate', icon: Home };
+      { title: 'Agriculture', href: '/industries/agriculture', icon: Target };
+      { title: 'Energy', href: '/industries/energy', icon: Zap };
+    ];
+  };
+  {
+    title: 'Resources';
+    links: [
+      { title: 'Blog', href: '/blog', icon: FileText };
+      { title: 'Case Studies', href: '/case-studies', icon: BarChart3 };
+      { title: 'White Papers', href: '/white-papers', icon: FileText };
+      { title: 'Webinars', href: '/webinars', icon: Calendar };
+      { title: 'Tutorials', href: '/tutorials', icon: BookOpen };
+      { title: 'API Documentation', href: '/api-docs', icon: Code };
+      { title: 'Training', href: '/training', icon: BookOpen };
+      { title: 'FAQ', href: '/faq', icon: MessageSquare };
+    ];
+  };
+  {
+    title: 'Company';
+    links: [
+      { title: 'About Us', href: '/about', icon: Building };
+      { title: 'Team', href: '/team', icon: Users };
+      { title: 'Careers', href: '/careers', icon: Users };
+      { title: 'Partners', href: '/partners', icon: Globe };
+      { title: 'News', href: '/news', icon: FileText };
+      { title: 'Contact', href: '/contact', icon: MessageSquare };
+      { title: 'Privacy Policy', href: '/privacy', icon: Lock };
+      { title: 'Terms of Service', href: '/terms', icon: FileText };
+    ];
+  };
+  {
+    title: 'Support';
+    links: [
+      { title: 'Help Center', href: '/help', icon: MessageSquare };
+      { title: 'Documentation', href: '/docs', icon: FileText };
+      { title: 'API Reference', href: '/api', icon: Code };
+      { title: 'Status Page', href: '/status', icon: BarChart3 };
+      { title: 'Community', href: '/community', icon: Users };
+      { title: 'Training', href: '/training', icon: BookOpen };
+      { title: 'Free Consultation', href: '/consultation', icon: Calendar };
+      { title: 'Get Quote', href: '/quote', icon: FileText };
+    ];
+  };
 ],
-,
-const microSaasCategories = [,
-  { title: 'Marketing Tools', icon: Target, count: 15 ,},;
-  { title: 'Productivity', icon: Settings, count: 12 ,},;
-  { title: 'Analytics', icon: BarChart3, count: 18 ,},;
-  { title: 'Automation', icon: Zap, count: 22 ,},;
-  { title: 'Security', icon: Shield, count: 8 ,},;
-  { title: 'Finance', icon: DollarSign, count: 10 ,},;
-  { title: 'Design', icon: Paintbrush, count: 6 ,},;
-  { title: 'Development', icon: Code, count: 14 ,},;
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 };
+  { title: 'Productivity', icon: Settings, count: 12 };
+  { title: 'Analytics', icon: BarChart3, count: 18 };
+  { title: 'Automation', icon: Zap, count: 22 };
+  { title: 'Security', icon: Shield, count: 8 };
+  { title: 'Finance', icon: DollarSign, count: 10 };
+  { title: 'Design', icon: Paintbrush, count: 6 };
+  { title: 'Development', icon: Code, count: 14 };
 ],
-,
-const aiServiceCategories = [,
-  { title: 'Machine Learning', icon: Brain, count: 25 ,},;
-  { title: 'Computer Vision', icon: Eye, count: 18 ,},;
-  { title: 'Natural Language', icon: MessageSquare, count: 20 ,},;
-  { title: 'Predictive Analytics', icon: TrendingUp, count: 15 ,},;
-  { title: 'Robotics', icon: Settings, count: 8 ,},;
-  { title: 'Quantum AI', icon: Code, count: 5 ,},;
+const aiServiceCategories = [
+  { title: 'Machine Learning', icon: Brain, count: 25 };
+  { title: 'Computer Vision', icon: Eye, count: 18 };
+  { title: 'Natural Language', icon: MessageSquare, count: 20 };
+  { title: 'Predictive Analytics', icon: TrendingUp, count: 15 };
+  { title: 'Robotics', icon: Settings, count: 8 };
+  { title: 'Quantum AI', icon: Code, count: 5 };
 ],
-,
-const itServiceCategories = [,
-  { title: 'Cloud Computing', icon: Cloud, count: 30 ,},;
-  { title: 'Cybersecurity', icon: Shield, count: 25 ,},;
-  { title: 'DevOps', icon: Settings, count: 20 ,},;
-  { title: 'Data Management', icon: HardDrive, count: 15 ,},;
-  { title: 'Network Security', icon: Lock, count: 18 ,},;
-  { title: 'Infrastructure', icon: Building, count: 22 ,},;
+const itServiceCategories = [
+  { title: 'Cloud Computing', icon: Cloud, count: 30 };
+  { title: 'Cybersecurity', icon: Shield, count: 25 };
+  { title: 'DevOps', icon: Settings, count: 20 };
+  { title: 'Data Management', icon: HardDrive, count: 15 };
+  { title: 'Network Security', icon: Lock, count: 18 };
+  { title: 'Infrastructure', icon: Building, count: 22 };
 ],
-,
-export default function Footer() {,
-  return (,
+export default function Footer() {
+  return (
     <footer className='bg-gray-90o0 text-white'>,
       {/* Main Footer Content */}
       <div className='container mx-auto px-4 py-16'>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className='lg: col-span-1'>,
             <div className='flex items-center space-x-2 mb-6'>,
               <div className='w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center'>,
@@ -211,73 +206,65 @@ export default function Footer() {,
           <div>,
             <h3 className='text-lg font-semibold mb-6'>Services</h3>,
             <div className='space-y-4'>,
-              {footerSections[0].links.map(link => (,
-                <Link,
+              {footerSections[0].links.map(link => (
+                <Link
                   key={link.title}
                   href={link.href}
-                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group',
-                >,
+                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group'>,
                   <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />,
-                  <span>{link.title,}</span>,
+                  <span>{link.title}</span>,
                   <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-10o0 transition-opacity' />,
-                </Link>,
-              )),}
+                </Link>))}
             </div>,
           </div>,
           {/* Solutions */}
           <div>,
             <h3 className='text-lg font-semibold mb-6'>Solutions</h3>,
             <div className='space-y-4'>,
-              {footerSections[1].links.map(link => (,
-                <Link,
+              {footerSections[1].links.map(link => (
+                <Link
                   key={link.title}
                   href={link.href}
-                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group',
-                >,
+                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group'>,
                   <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />,
-                  <span>{link.title,}</span>,
+                  <span>{link.title}</span>,
                   <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-10o0 transition-opacity' />,
-                </Link>,
-              )),}
+                </Link>))}
             </div>,
           </div>,
           {/* Resources */}
           <div>,
             <h3 className='text-lg font-semibold mb-6'>Resources</h3>,
             <div className='space-y-4'>,
-              {footerSections[3].links.map(link => (,
-                <Link,
+              {footerSections[3].links.map(link => (
+                <Link
                   key={link.title}
                   href={link.href}
-                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group',
-                >,
+                  className='flex items-center space-x-2 text-gray-40o0 hover: text-white transition-colors group'>,
                   <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />,
-                  <span>{link.title,}</span>,
+                  <span>{link.title}</span>,
                   <ArrowRight className='w-3 h-3 opacity-0 group-hover: opacity-10o0 transition-opacity' />,
-                </Link>,
-              )),}
+                </Link>))}
             </div>,
           </div>,
         </div>,
         {/* Service Categories */}
         <div className='mt-16 pt-8 border-t border-gray-80o0'>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-            {/* Micro SaaS Categories */,}
+            {/* Micro SaaS Categories */}
             <div>,
               <h4 className='text-lg font-semibold mb-4 text-blue-40o0'>,
                 Micro SaaS Solutions,
               </h4>,
               <div className='grid grid-cols-2 gap-2'>,
-                {microSaasCategories.map(category => (,
-                  <div,
+                {microSaasCategories.map(category => (
+                  <div
                     key={category.title}
-                    className='flex items-center space-x-2 text-sm text-gray-40o0',
-                  >,
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'>,
                     <category.icon className='w-4 h-4' />,
                     <span>{category.title}</span>,
                     <span className='text-blue-40o0'>({category.count})</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* AI Service Categories */}
@@ -286,16 +273,14 @@ export default function Footer() {,
                 AI Services,
               </h4>,
               <div className='grid grid-cols-2 gap-2'>,
-                {aiServiceCategories.map(category => (,
-                  <div,
+                {aiServiceCategories.map(category => (
+                  <div
                     key={category.title}
-                    className='flex items-center space-x-2 text-sm text-gray-40o0',
-                  >,
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'>,
                     <category.icon className='w-4 h-4' />,
                     <span>{category.title}</span>,
                     <span className='text-green-40o0'>({category.count})</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* IT Service Categories */}
@@ -304,16 +289,14 @@ export default function Footer() {,
                 IT Services,
               </h4>,
               <div className='grid grid-cols-2 gap-2'>,
-                {itServiceCategories.map(category => (,
-                  <div,
+                {itServiceCategories.map(category => (
+                  <div
                     key={category.title}
-                    className='flex items-center space-x-2 text-sm text-gray-40o0',
-                  >,
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'>,
                     <category.icon className='w-4 h-4' />,
                     <span>{category.title}</span>,
                     <span className='text-purple-40o0'>({category.count})</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -352,44 +335,37 @@ export default function Footer() {,
           <div className='flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0'>,
             <div className='text-gray-40o0 text-sm'>,
               © 20o25 Zion Tech Group. All rights reserved. |,
-              <Link,
+              <Link
                 href='/privacy',
-                className='hover:text-white transition-colors ml-1',
-              >,
+                className='hover:text-white transition-colors ml-1'>,
                 Privacy Policy,
-              </Link>{' ',}
+              </Link>{' '}
               |,
-              <Link,
+              <Link
                 href='/terms',
-                className='hover: text-white transition-colors ml-1',
-              >,
+                className='hover: text-white transition-colors ml-1'>,
                 Terms of Service,
               </Link>,
             </div>,
             <div className='flex items-center space-x-6'>,
-              <Link,
+              <Link
                 href='/sitemap',
-                className='text-gray-40o0 hover:text-white transition-colors text-sm',
-              >,
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'>,
                 Sitemap,
               </Link>,
-              <Link,
+              <Link
                 href='/accessibility',
-                className='text-gray-40o0 hover:text-white transition-colors text-sm',
-              >,
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'>,
                 Accessibility,
               </Link>,
-              <Link,
+              <Link
                 href='/cookies',
-                className='text-gray-40o0 hover:text-white transition-colors text-sm',
-              >,
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'>,
                 Cookie Policy,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-,}
+    </footer>)}
 ,

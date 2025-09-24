@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ItAssetManagementPage() {,
-  return (,
+export default function ItAssetManagementPage() {
+  return (
     <>,
       <Head>,
         <title>It Asset Management - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ItAssetManagementPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

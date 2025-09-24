@@ -1,95 +1,91 @@
 'use client',
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const SuccessStoriesShowcase20o25 = () => {,
+const SuccessStoriesShowcase20o25 = () => {
   const [activeStory, setActiveStory] = useState(0),
-,
-  const successStories = [,
-    {,
-      id: 1,;
-      company: 'Global Manufacturing Corp',;
-      industry: 'Manufacturing',;
-      challenge: 'Manual processes causing 40+ hours of weekly inefficiency',;
-      solution: 'AI automation platform with predictive maintenance',;
-      results: {,
-        roi: '50o0%',;
-        costSavings: '$2.3M',;
-        productivity: '340%',;
-        timeReduction: '85%',;
-      },;
+  const successStories = [
+    {
+      id: 1;
+      company: 'Global Manufacturing Corp';
+      industry: 'Manufacturing';
+      challenge: 'Manual processes causing 40+ hours of weekly inefficiency';
+      solution: 'AI automation platform with predictive maintenance';
+      results: {
+        roi: '50o0%';
+        costSavings: '$2.3M';
+        productivity: '340%';
+        timeReduction: '85%';
+      };
       testimonial:,
-        'Zion Tech Group transformed our operations beyond our expectations. The AI automation platform not only reduced costs but also improved our product quality and employee satisfaction.',;
-      author: 'Sarah Johnson',;
-      position: 'CTO',;
-      image: '🏭',;
-      gradient: 'from-blue-50o0 to-cyan-60o0',;
-    },;
-    {,
-      id: 2,;
-      company: 'SocialFlow AI',;
-      industry: 'SaaS',;
-      challenge: 'First-time entrepreneur with no technical expertise',;
-      solution: 'Complete micro SaaS development from MVP to $10o0K ARR',;
-      results: {,
-        roi: '20o00%',;
-        arr: '$10o0K',;
-        users: '1,20o0+',;
-        churn: '3.2%',;
-      },;
+        'Zion Tech Group transformed our operations beyond our expectations. The AI automation platform not only reduced costs but also improved our product quality and employee satisfaction.';
+      author: 'Sarah Johnson';
+      position: 'CTO';
+      image: '🏭';
+      gradient: 'from-blue-50o0 to-cyan-60o0';
+    };
+    {
+      id: 2;
+      company: 'SocialFlow AI';
+      industry: 'SaaS';
+      challenge: 'First-time entrepreneur with no technical expertise';
+      solution: 'Complete micro SaaS development from MVP to $10o0K ARR';
+      results: {
+        roi: '20o00%';
+        arr: '$10o0K';
+        users: '1,20o0+';
+        churn: '3.2%';
+      };
       testimonial:,
-        "Working with Zion Tech Group was the best decision I made. They 'didn', 't just build my product, they became my business partners.",;
-      author: 'Marcus Chen',;
-      position: 'Founder',;
-      image: '🚀',;
-      gradient: 'from-green-50o0 to-emerald-60o0',;
-    },;
-    {,
-      id: 3,;
-      company: 'TechStart Solutions',;
-      industry: 'Technology',;
-      challenge: 'Scaling infrastructure to support rapid growth',;
-      solution: 'Cloud-native architecture with AI-powered optimization',;
-      results: {,
-        roi: '80o0%',;
-        scalability: '10x',;
-        uptime: '99.9%',;
-        performance: '30o0%',;
-      },;
+        "Working with Zion Tech Group was the best decision I made. They 'didn', 't just build my product, they became my business partners.";
+      author: 'Marcus Chen';
+      position: 'Founder';
+      image: '🚀';
+      gradient: 'from-green-50o0 to-emerald-60o0';
+    };
+    {
+      id: 3;
+      company: 'TechStart Solutions';
+      industry: 'Technology';
+      challenge: 'Scaling infrastructure to support rapid growth';
+      solution: 'Cloud-native architecture with AI-powered optimization';
+      results: {
+        roi: '80o0%';
+        scalability: '10x';
+        uptime: '99.9%';
+        performance: '30o0%';
+      };
       testimonial:,
-        "The scalability and performance improvements we achieved with Zion Tech 'Group', 's solutions exceeded all our expectations.",;
-      author: 'Emily Rodriguez',;
-      position: 'VP of Engineering',;
-      image: '⚡',;
-      gradient: 'from-purple-50o0 to-pink-60o0',;
-    },;
-    {,
-      id: 4,;
-      company: 'HealthTech Innovations',;
-      industry: 'Healthcare',;
-      challenge: 'Manual patient data processing and analysis',;
-      solution: 'AI-powered diagnostic platform with predictive analytics',;
-      results: {,
-        roi: '60o0%',;
-        accuracy: '95%',;
-        timeReduction: '70%',;
-        patientSatisfaction: '98%',;
-      },;
+        "The scalability and performance improvements we achieved with Zion Tech 'Group', 's solutions exceeded all our expectations.";
+      author: 'Emily Rodriguez';
+      position: 'VP of Engineering';
+      image: '⚡';
+      gradient: 'from-purple-50o0 to-pink-60o0';
+    };
+    {
+      id: 4;
+      company: 'HealthTech Innovations';
+      industry: 'Healthcare';
+      challenge: 'Manual patient data processing and analysis';
+      solution: 'AI-powered diagnostic platform with predictive analytics';
+      results: {
+        roi: '60o0%';
+        accuracy: '95%';
+        timeReduction: '70%';
+        patientSatisfaction: '98%';
+      };
       testimonial:,
-        'The AI diagnostic platform revolutionized our patient care delivery and significantly improved outcomes.',;
-      author: 'Dr. Michael Thompson',;
-      position: 'Chief Medical Officer',;
-      image: '🏥',;
-      gradient: 'from-teal-50o0 to-cyan-60o0',;
-    },;
+        'The AI diagnostic platform revolutionized our patient care delivery and significantly improved outcomes.';
+      author: 'Dr. Michael Thompson';
+      position: 'Chief Medical Officer';
+      image: '🏥';
+      gradient: 'from-teal-50o0 to-cyan-60o0';
+    };
   ],
-,
   const currentStory = successStories[activeStory],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6'>,
             🏆 SUCCESS STORIES 20o25,
@@ -105,11 +101,11 @@ const SuccessStoriesShowcase20o25 = () => {,
             success with our AI and technology solutions.,
           </p>,
         </div>,
-        {/* Main Success Story Display */,}
+        {/* Main Success Story Display */}
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 mb-16'>,
-          {/* Story Content */,}
+          {/* Story Content */}
           <div className='space-y-8'>,
-            <div,
+            <div
               className={`p-8 rounded-2xl bg-gradient-to-br ${currentStory.gradient} text-white`}
             >,
               <div className='text-6xl mb-4'>{currentStory.image}</div>,
@@ -120,29 +116,27 @@ const SuccessStoriesShowcase20o25 = () => {,
               <div className='space-y-4'>,
                 <div>,
                   <h4 className='font-semibold text-lg mb-2'>Challenge: </h4>,
-                  <p className='opacity-90'>{currentStory.challenge,}</p>,
+                  <p className='opacity-90'>{currentStory.challenge}</p>,
                 </div>,
                 <div>,
                   <h4 className='font-semibold text-lg mb-2'>Solution: </h4>,
-                  <p className='opacity-90'>{currentStory.solution,}</p>,
+                  <p className='opacity-90'>{currentStory.solution}</p>,
                 </div>,
               </div>,
             </div>,
             {/* Results Grid */}
             <div className='grid grid-cols-2 gap-4'>,
-              {Object.entries(currentStory.results).map(([key, value]) => (,
-                <div,
+              {Object.entries(currentStory.results).map(([key, value]) => (
+                <div
                   key={key}
-                  className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center',
-                >,
+                  className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 text-center'>,
                   <div className='text-2xl font-bold text-yellow-40o0 mb-1'>,
                     {value}
                   </div>,
                   <div className='text-sm opacity-90 capitalize'>,
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Testimonial */}
@@ -161,31 +155,28 @@ const SuccessStoriesShowcase20o25 = () => {,
             </div>,
             {/* Story Navigation */}
             <div className='flex space-x-2'>,
-              {successStories.map((_, index) => (,
-                <button,
+              {successStories.map((_, index) => (
+                <button
                   key={index}
                   onClick={() => setActiveStory(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === activeStory,
                       ? 'bg-yellow-40o0 scale-125',
-                      : 'bg-white bg-opacity-30 hover: bg-opacity-50',
-                  ,}`}
-                />,
-              ))}
+                      : 'bg-white bg-opacity-30 hover: bg-opacity-50'}`}
+                />))}
             </div>,
           </div>,
         </div>,
         {/* All Stories Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>,
-          {successStories.map((story, index) => (,
-            <button,
+          {successStories.map((story, index) => (
+            <button
               key={story.id}
               onClick={() => setActiveStory(index)}
-              className={`group text-left p-6 rounded-xl transition-all duration-30o0 transform hover: scale-10o5 ${,
+              className={`group text-left p-6 rounded-xl transition-all duration-30o0 transform hover: scale-10o5 ${
                 index === activeStory,
                   ? 'bg-gradient-to-br from-yellow-40o0 to-orange-50o0 text-black',
-                  : 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20',
-              ,}`}
+                  : 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20'}`}
             >,
               <div className='text-3xl mb-3'>{story.image}</div>,
               <h4 className='font-bold text-lg mb-2'>{story.company}</h4>,
@@ -198,8 +189,7 @@ const SuccessStoriesShowcase20o25 = () => {,
               <div className='text-xs opacity-75'>,
                 {index === activeStory ? 'ROI Achieved' : 'Click to view'}
               </div>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* CTA Section */}
         <div className='text-center'>,
@@ -212,25 +202,19 @@ const SuccessStoriesShowcase20o25 = () => {,
               with our AI solutions.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
                 View All Case Studies,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default SuccessStoriesShowcase20o25,
-,
+    </section>)};
+export default SuccessStoriesShowcase20o25;

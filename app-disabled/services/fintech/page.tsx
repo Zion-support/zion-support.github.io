@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'fintech - Zion Tech Group',;
-  description: 'Professional fintech solutions for your business needs.',;
-  keywords: 'fintech, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'fintech - Zion Tech Group';
+  description: 'Professional fintech solutions for your business needs.';
+  keywords: 'fintech, services, business, technology';
 };
-export default function FintechPage() {,
-  return (,
+export default function FintechPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function FintechPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

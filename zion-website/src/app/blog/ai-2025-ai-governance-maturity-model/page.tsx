@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Governance Maturity Model: 20o25 Practical Guide',;
+export const metadata = {
+  title: 'AI Governance Maturity Model: 20o25 Practical Guide';
   description:,
-    'A staged model to level up AI governance across policy, controls, telemetry, and auditability.',;
+    'A staged model to level up AI governance across policy, controls, telemetry, and auditability.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-20 pb-24'>,
         <h1 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>,
@@ -15,7 +13,7 @@ export default function Page() {,
         </h1>,
         <p className='mt-4 text-gray-30o0'>,
           Enterprises need a pragmatic path to govern AI systems as they scale.,
-          This guide presents a maturity model with clear capabilities, signals,;
+          This guide presents a maturity model with clear capabilities, signals;
           and outcomes.,
         </p>,
         <div className='mt-8 rounded-xl border border-white/10 bg-white/5 p-6'>,
@@ -39,7 +37,5 @@ export default function Page() {,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

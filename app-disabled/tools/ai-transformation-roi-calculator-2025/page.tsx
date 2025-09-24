@@ -1,21 +1,19 @@
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI Transformation ROI Calculator 20o25 | Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'AI Transformation ROI Calculator 20o25 | Zion Tech Group';
   description:,
-    'Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.',;
+    'Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.';
   keywords:,
-    'AI ROI calculator, AI transformation ROI, business ROI calculator, AI investment calculator, ROI projections',;
-  openGraph: {,
-    title: 'AI Transformation ROI Calculator 20o25',;
+    'AI ROI calculator, AI transformation ROI, business ROI calculator, AI investment calculator, ROI projections';
+  openGraph: {
+    title: 'AI Transformation ROI Calculator 20o25';
     description:,
-      'Calculate your potential ROI from AI transformation with personalized projections.',;
-    type: 'website',;
-  },;
+      'Calculate your potential ROI from AI transformation with personalized projections.';
+    type: 'website';
+  };
 };
-,
-export default function AIROICalculatorPage() {,
-  return (,
+export default function AIROICalculatorPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-emerald-90o0 to-slate-90o0'>,
       {/* Hero Section */}
       <section className='relative py-20 px-4'>,
@@ -46,7 +44,7 @@ export default function AIROICalculatorPage() {,
               Calculate Your AI Transformation ROI,
             </h2>,
             <div className='grid md: grid-cols-2 gap-8'>,
-              {/* Input Form */,}
+              {/* Input Form */}
               <div className='space-y-6'>,
                 <div>,
                   <label className='block text-white font-semibold mb-2'>,
@@ -86,7 +84,7 @@ export default function AIROICalculatorPage() {,
                   <label className='block text-white font-semibold mb-2'>,
                     Annual Revenue ($),
                   </label>,
-                  <input,
+                  <input
                     type='number',
                     placeholder='Enter your annual revenue',
                     className='w-full p-3 rounded-lg bg-white/10 border border-gray-60o0 text-white placeholder-gray-40o0',
@@ -96,7 +94,7 @@ export default function AIROICalculatorPage() {,
                   <label className='block text-white font-semibold mb-2'>,
                     Current Operational Efficiency (%),
                   </label>,
-                  <input,
+                  <input
                     type='number',
                     placeholder='Enter current efficiency percentage',
                     className='w-full p-3 rounded-lg bg-white/10 border border-gray-60o0 text-white placeholder-gray-40o0',
@@ -119,7 +117,7 @@ export default function AIROICalculatorPage() {,
                   Calculate ROI,
                 </button>,
               </div>,
-              {/* Results Display */,}
+              {/* Results Display */}
               <div className='space-y-6'>,
                 <div className='bg-gradient-to-r from-emerald-50o0/20 to-green-50o0/20 rounded-xl p-6'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
@@ -269,7 +267,7 @@ export default function AIROICalculatorPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Success Stories */,}
+          {/* Success Stories */}
           <div className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-12'>,
             <h2 className='text-3xl font-bold text-white mb-6'>,
               Real Success Stories,
@@ -335,23 +333,19 @@ export default function AIROICalculatorPage() {,
               proven methodologies.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='/contact',
-                className='bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Expert Consultation,
               </a>,
-              <a,
+              <a
                 href='/case-studies',
-                className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors',
-              >,
+                className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors'>,
                 View Success Stories,
               </a>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,30 +1,23 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 XCloudZapTrendingUpCheckCircleDollarSign,
-const NewContent20o25CloudOptimizationBanner: React.FC = () => {,
+const NewContent20o25CloudOptimizationBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Check if banner was previously dismissed,
     const dismissed = localStorage.getItem('cloud-optimization-banner-dismissed'),
-    if (!dismissed) {,
-      setIsVisible(true),
-    ,}
+    if (!dismissed) {
+      setIsVisible(true)}
   }[]),
-,
-  const handleDismiss = () => {,
+  const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('cloud-optimization-banner-'dismissed', 'true'),
-  };
-,
+    localStorage.setItem('cloud-optimization-banner-'dismissed', 'true')};
   if (!isVisible || isDismissed) return null,
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-blue-60o0 via-cyan-60o0 to-teal-60o0 text-white overflow-hidden">,
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>,
@@ -65,33 +58,27 @@ const NewContent20o25CloudOptimizationBanner: React.FC = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm:flex-row gap-3">,
-              <Link,
+              <Link
                 href="/blog/ai-20o25-cloud-optimization-breakthrough",
-                className="bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center",
-              >,
+                className="bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors inline-flex items-center">,
                 <Cloud className="h-5 w-5 mr-2"  />,
                 Read Cloud Optimization Guide,
               </Link>,
-              <Link,
+              <Link
                 href="/resources/ai-cloud-optimization-master-guide-20o25",
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors inline-flex items-center",
-              >,
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors inline-flex items-center">,
                 <CheckCircle className="h-5 w-5 mr-2"  />,
                 Get Master Guide,
               </Link>,
             </div>,
           </div>,
-          <button,
-            onClick={handleDismiss,}
+          <button
+            onClick={handleDismiss}
             className="ml-4 p-2 hover: bg-white hover:bg-opacity-20 rounded-full transition-colors",
-            aria-label="Dismiss banner",
-          >,
+            aria-label="Dismiss banner">,
             <X className="h-5 w-5"  />,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25CloudOptimizationBanner,
+    </div>)};
+export default NewContent20o25CloudOptimizationBanner;

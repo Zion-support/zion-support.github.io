@@ -1,18 +1,16 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'SEO Analyzer | Zion Tech Group',;
+export const metadata = {
+  title: 'SEO Analyzer | Zion Tech Group';
   description:,
-    'Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.',;
+    'Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.';
 };
-,
-export default function SEOAnalyzerPage() {,
-  return (,
+export default function SEOAnalyzerPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>SEO Analyzer</h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Advanced SEO analysis with AI-powered optimization recommendations,;
+          Advanced SEO analysis with AI-powered optimization recommendations;
           competitor analysis, and automated reporting for maximum search,
           visibility.,
         </p>,
@@ -23,27 +21,27 @@ export default function SEOAnalyzerPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='AI-Powered SEO Analysis',
               description="Advanced AI algorithms analyze your website's SEO performance and provide intelligent optimization recommendations.",
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Competitor Intelligence',
               description='Comprehensive competitor analysis with keyword gap analysis, backlink monitoring, and content strategy insights.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Technical SEO Audits',
               description='Deep technical SEO audits covering page speed, mobile optimization, structured data, and Core Web Vitals.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Keyword Research & Tracking',
               description='Advanced keyword research tools with search volume analysis, difficulty scoring, and ranking tracking.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Content Optimization',
               description='AI-powered content analysis and optimization suggestions for better search rankings and user engagement.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Automated Reporting',
               description='Customizable reports with actionable insights, performance tracking, and ROI measurement for SEO efforts.',
             />,
@@ -54,43 +52,43 @@ export default function SEOAnalyzerPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$29/month',
               description='Perfect for small websites and blogs',
-              features={[,
-                'Up to 5 websites',;
-                'Basic SEO analysis',;
-                'Email support',;
-                'Monthly reports',;
-                '10o0 keyword tracking',;
+              features={[
+                'Up to 5 websites';
+                'Basic SEO analysis';
+                'Email support';
+                'Monthly reports';
+                '10o0 keyword tracking';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$79/month',
               description='Ideal for growing businesses',
-              features={[,
-                'Up to 25 websites',;
-                'Advanced AI analysis',;
-                'Priority support',;
-                'Weekly reports',;
-                '1,0o00 keyword tracking',;
-                'Competitor analysis',;
+              features={[
+                'Up to 25 websites';
+                'Advanced AI analysis';
+                'Priority support';
+                'Weekly reports';
+                '1,0o00 keyword tracking';
+                'Competitor analysis';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$199/month',
               description='For large organizations and agencies',
-              features={[,
-                'Unlimited websites',;
-                'Custom AI models',;
-                '24/7 dedicated support',;
-                'Real-time monitoring',;
-                'Unlimited keyword tracking',;
-                'White-label reporting',;
-                'API access',;
+              features={[
+                'Unlimited websites';
+                'Custom AI models';
+                '24/7 dedicated support';
+                'Real-time monitoring';
+                'Unlimited keyword tracking';
+                'White-label reporting';
+                'API access';
               ]}
             />,
           </div>,
@@ -101,15 +99,15 @@ export default function SEOAnalyzerPage() {,
           Why Choose Our SEO Analyzer?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='30o0% Traffic Increase',
             description='Our AI-powered recommendations help businesses achieve an average 30o0% increase in organic traffic within 6 months.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Comprehensive Analysis',
             description='Complete SEO analysis covering technical, content, and off-page factors for maximum search visibility.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Competitive Advantage',
             description='Advanced competitor analysis gives you the insights needed to outperform your competition in search results.',
           />,
@@ -125,16 +123,14 @@ export default function SEOAnalyzerPage() {,
           recommendations.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -143,26 +139,22 @@ export default function SEOAnalyzerPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-yellow-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -173,49 +165,40 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
-  features: string[],
-,}) {,
-  return (,
+  features: string[]}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-yellow-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-yellow-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
-  description: string,
-,}) {,
-  return (,
+  description: string}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

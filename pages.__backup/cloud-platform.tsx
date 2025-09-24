@@ -1,44 +1,41 @@
 import Head from 'next/head',
 BarChart3TrendingUpPieChartActivityArrowRightCheckEye,
-,
-export default function CloudPlatformPage() {,
-  const features = [,
-    {,
-      icon: <Server className='w-8 h-8 text-white' />,;
-      title: 'Scalable Infrastructure',;
-      description: 'Auto-scaling compute resources that grow with your needs',;
-    },;
-    {,
-      icon: <Database className='w-8 h-8 text-white' />,;
-      title: 'Managed Databases',;
-      description: 'Fully managed databases with automated backups and scaling',;
-    },;
-    {,
-      icon: <Globe className='w-8 h-8 text-white' />,;
-      title: 'Global CDN',;
-      description: 'Lightning-fast content delivery across the globe',;
-    },;
-    {,
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Enterprise Security',;
-      description: 'SOC 2 compliant with advanced threat protection',;
-    },;
+export default function CloudPlatformPage() {
+  const features = [
+    {
+      icon: <Server className='w-8 h-8 text-white' />;
+      title: 'Scalable Infrastructure';
+      description: 'Auto-scaling compute resources that grow with your needs';
+    };
+    {
+      icon: <Database className='w-8 h-8 text-white' />;
+      title: 'Managed Databases';
+      description: 'Fully managed databases with automated backups and scaling';
+    };
+    {
+      icon: <Globe className='w-8 h-8 text-white' />;
+      title: 'Global CDN';
+      description: 'Lightning-fast content delivery across the globe';
+    };
+    {
+      icon: <Shield className='w-8 h-8 text-white' />;
+      title: 'Enterprise Security';
+      description: 'SOC 2 compliant with advanced threat protection';
+    };
   ],
-,
-  const benefits = [,
-    '99.99% uptime guarantee',;
-    'Global edge locations',;
-    'Real-time monitoring',;
-    'Automated scaling',;
-    'Pay-as-you-go pricing',;
-    '24/7 expert support',;
+  const benefits = [
+    '99.99% uptime guarantee';
+    'Global edge locations';
+    'Real-time monitoring';
+    'Automated scaling';
+    'Pay-as-you-go pricing';
+    '24/7 expert support';
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Cloud Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Enterprise-grade cloud infrastructure with global reachautomated scalingand 99.99% uptime guarantee.',
         />,
@@ -69,16 +66,15 @@ export default function CloudPlatformPage() {,
                 Start Analyzing,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </a>,
-              <a,
+              <a
                 href='/contact',
-                className='border-white/20 hover:border-white/40',
-              >,
+                className='border-white/20 hover:border-white/40'>,
                 View Demo,
               </a>,
             </div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-24'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-20'>,
@@ -90,13 +86,12 @@ export default function CloudPlatformPage() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {features.map(featureindex => (,
-                <div,
-                  key={index,}
-                  className='p-8 bg-gray-90o0/50 rounded-2xl border border-gray-80o0 hover: border-blue-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0',
-                >,
+              {features.map(featureindex => (
+                <div
+                  key={index}
+                  className='p-8 bg-gray-90o0/50 rounded-2xl border border-gray-80o0 hover: border-blue-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0'>,
                   <div className='w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-blue-50o0 to-blue-60o0 flex items-center justify-center'>,
-                    {feature.icon,}
+                    {feature.icon}
                   </div>,
                   <h3 className='text-xl font-bold text-white mb-4'>,
                     {feature.title}
@@ -104,8 +99,7 @@ export default function CloudPlatformPage() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -118,14 +112,13 @@ export default function CloudPlatformPage() {,
                   Why Choose Our Cloud Platform?,
                 </h2>,
                 <div className='space-y-6'>,
-                  {benefits.map(benefitindex => (,
-                    <div key={index,} className='flex items-start'>,
+                  {benefits.map(benefitindex => (
+                    <div key={index} className='flex items-start'>,
                       <div className='w-6 h-6 rounded-full bg-blue-50o0/20 flex items-center justify-center mr-4 mt-1'>,
                         <Check className='w-4 h-4 text-blue-50o0' />,
                       </div>,
                       <span className='text-gray-30o0 text-lg'>{benefit}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className='relative'>,
@@ -159,23 +152,19 @@ export default function CloudPlatformPage() {,
               Deploy your applications on enterprise-grade cloud infrastructure,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='/contact',
-                className='bg-white text-blue-60o0 hover:bg-gray-10o0',
-              >,
+                className='bg-white text-blue-60o0 hover:bg-gray-10o0'>,
                 Start Free Trial,
               </a>,
-              <a,
+              <a
                 href='/contact',
-                className='border-white text-white hover:bg-white hover:text-blue-60o0',
-              >,
+                className='border-white text-white hover:bg-white hover:text-blue-60o0'>,
                 Schedule Demo,
               </a>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

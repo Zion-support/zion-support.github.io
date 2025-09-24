@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function Comprehensive20o25InnovativeServicesOverviewPage() {,
-  return (,
+export default function Comprehensive20o25InnovativeServicesOverviewPage() {
+  return (
     <>,
       <Head>,
         <title>,
           Comprehensive 20o25 Innovative Services Overview - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='comprehensive 20o25 innovative services overview page',
         />,
@@ -23,7 +22,5 @@ export default function Comprehensive20o25InnovativeServicesOverviewPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

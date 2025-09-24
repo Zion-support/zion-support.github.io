@@ -2,10 +2,9 @@ import React, { useState } from 'react',
 import Card from '../ui/Card',
 import Button from '../ui/Button',
 import { FileText, CheckCircle, Copy, ExternalLink, BarChart3, Clock, TrendingUp, BookOpen } from 'lucide-react',
-,
-interface TextAnalysisResult {,
+interface TextAnalysisResult {
   text: string,
-  statistics: {,
+  statistics: {
     characters: number,
     charactersNoSpaces: number,
     words: number,
@@ -13,118 +12,93 @@ interface TextAnalysisResult {,
     paragraphs: number,
     syllables: number,
     readingTime: number,
-    speakingTime: number,
-  ,};
-  readability: {,
+    speakingTime: number};
+  readability: {
     fleschReadingEase: number,
     fleschKincaidGrade: number,
     gunningFog: number,
     smog: number,
     colemanLiau: number,
     automatedReadability: number,
-    averageGrade: number,
-  ,};
-  sentiment: {,
+    averageGrade: number};
+  sentiment: {
     score: number,
     label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
     positiveWords: string[],
-    negativeWords: string[],
-  ,};
-  language: {,
+    negativeWords: string[]};
+  language: {
     detectedLanguage: string,
     confidence: number,
-    isEnglish: boolean,
-  ,};
-  keywords: {,
-    topWords: Array<{ word: string, count: number, frequency: number ,}>,
-    bigrams: Array<{ phrase: string, count: number ,}>,
-    trigrams: Array<{ phrase: string, count: number ,}>,
-  };
+    isEnglish: boolean};
+  keywords: {
+    topWords: Array<{ word: string, count: number, frequency: number }>,
+    bigrams: Array<{ phrase: string, count: number }>,
+    trigrams: Array<{ phrase: string, count: number }>};
 }
 ,
-export default function TextAnalyzerDemo() {,
+export default function TextAnalyzerDemo() {
   const [text, setText] = useState(''),
   const [result, setResult] = useState<TextAnalysisResult | null>(null),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState(''),
-,
-  const analyzeText = async () => {,
-    if (!text.trim()) {,
+  const analyzeText = async () => {
+    if (!text.trim()) {
       setError('Please enter some text to analyze'),
-      return,
-    }
+      return}
 ,
-    if (text.length > 10o000) {,
+    if (text.length > 10o000) {
       setError('Text is too long (maximum 10,0o00 characters)'),
-      return,
-    }
+      return}
 ,
     setLoading(true),
     setError(''),
     setResult(null),
-,
-    try {,
-      const response = await fetch('/api/text-analyzer', {,
-        method: 'POST',;
-        headers: {,
-          'Content-Type': 'application/json',},;
-        body: JSON.stringify({ text: text.trim() ,})}),
-,
-      if (!response.ok) {,
-        throw new Error('Text analysis failed'),
-      }
+    try {
+      const response = await fetch('/api/text-analyzer', {
+        method: 'POST';
+        headers: {
+          'Content-Type': 'application/json'};
+        body: JSON.stringify({ text: text.trim() })}),
+      if (!response.ok) {
+        throw new Error('Text analysis failed')}
 ,
       const data = await response.json(),
-      setResult(data),
-    } catch (err) {,
-      setError('Failed to analyze text. Please try again.'),
-    } finally {,
-      setLoading(false),
-    }
+      setResult(data)} catch (err) {
+      setError('Failed to analyze text. Please try again.')} finally {
+      setLoading(false)}
   };
-,
-  const copyToClipboard = (text: string) => {,
-    navigator.clipboard.writeText(text),
-  ,};
-,
-  const getSentimentColor = (label: string) => {,
-    switch (label) {,
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)};
+  const getSentimentColor = (label: string) => {
+    switch (label) {
       case 'very-positive': return 'text-green-40o0',
       case 'positive': return 'text-green-50o0',
       case 'neutral': return 'text-yellow-40o0',
       case 'negative': return 'text-orange-40o0',
       case 'very-negative': return 'text-red-40o0',
-      default: return 'text-gray-40o0',
-    ,}
+      default: return 'text-gray-40o0'}
   };
-,
-  const getSentimentBgColor = (label: string) => {,
-    switch (label) {,
+  const getSentimentBgColor = (label: string) => {
+    switch (label) {
       case 'very-positive': return 'bg-green-50o0/20 border-green-50o0/30',
       case 'positive': return 'bg-green-50o0/20 border-green-50o0/30',
       case 'neutral': return 'bg-yellow-50o0/20 border-yellow-50o0/30',
       case 'negative': return 'bg-orange-50o0/20 border-orange-50o0/30',
       case 'very-negative': return 'bg-red-50o0/20 border-red-50o0/30',
-      default: return 'bg-gray-50o0/20 border-gray-50o0/30',
-    ,}
+      default: return 'bg-gray-50o0/20 border-gray-50o0/30'}
   };
-,
-  const getReadabilityColor = (score: number) => {,
+  const getReadabilityColor = (score: number) => {
     if (score >= 80) return 'text-green-40o0',
     if (score >= 60) return 'text-yellow-40o0',
     if (score >= 40) return 'text-orange-40o0',
-    return 'text-red-40o0',
-  ,};
-,
-  const getReadabilityLabel = (score: number) => {,
+    return 'text-red-40o0'};
+  const getReadabilityLabel = (score: number) => {
     if (score >= 80) return 'Very Easy',
     if (score >= 60) return 'Easy',
     if (score >= 40) return 'Moderate',
     if (score >= 20) return 'Difficult',
-    return 'Very Difficult',
-  ,};
-,
-  return (,
+    return 'Very Difficult'};
+  return (
     <Card className="max-w-4xl mx-auto">,
       <div className="text-center mb-8">,
         <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-50o0 to-red-60o0 flex items-center justify-center">,
@@ -140,7 +114,7 @@ export default function TextAnalyzerDemo() {,
             <label className="block text-sm font-medium text-gray-30o0 mb-2">,
               Text to Analyze,
             </label>,
-            <textarea,
+            <textarea
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Enter or paste your text here for comprehensive analysis...",
@@ -149,37 +123,35 @@ export default function TextAnalyzerDemo() {,
             />,
             <div className="flex justify-between items-center mt-2">,
               <span className="text-xs text-gray-50o0">,
-                {text.length,}/10,0o00 characters,
+                {text.length}/10,0o00 characters,
               </span>,
               <span className="text-xs text-gray-50o0">,
                 {text.split(/\s+/).filter(word => word.length > 0).length} words,
               </span>,
             </div>,
           </div>,
-          <Button,
+          <Button
             onClick={analyzeText}
             disabled={loading}
-            className="w-full px-6 py-3 bg-orange-60o0 hover: bg-orange-70o0",
-          >,
-            {loading ? 'Analyzing...' : 'Analyze Text',}
+            className="w-full px-6 py-3 bg-orange-60o0 hover: bg-orange-70o0">,
+            {loading ? 'Analyzing...' : 'Analyze Text'}
           </Button>,
         </div>,
-        {error && (,
+        {error && (
           <div className="mt-3 flex items-center text-red-40o0 text-sm">,
             <ExternalLink className="w-4 h-4 mr-2"  />,
             {error}
-          </div>,
-        )}
+          </div>)}
       </div>,
       {/* Results Section */}
-      {result && (,
+      {result && (
         <div className="space-y-6">,
           {/* Summary Statistics */}
           <div className="bg-gray-80o0/50 rounded-lg p-6">,
             <h4 className="text-lg font-semibold text-white mb-4">Text Statistics</h4>,
             <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
               <div className="text-center">,
-                <div className="text-2xl font-bold text-orange-40o0">{result.statistics.characters,}</div>,
+                <div className="text-2xl font-bold text-orange-40o0">{result.statistics.characters}</div>,
                 <div className="text-xs text-gray-40o0">Characters</div>,
               </div>,
               <div className="text-center">,
@@ -197,7 +169,7 @@ export default function TextAnalyzerDemo() {,
             </div>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mt-4">,
               <div className="text-center">,
-                <div className="text-lg font-bold text-orange-40o0">{result.statistics.syllables,}</div>,
+                <div className="text-lg font-bold text-orange-40o0">{result.statistics.syllables}</div>,
                 <div className="text-xs text-gray-40o0">Syllables</div>,
               </div>,
               <div className="text-center">,
@@ -218,12 +190,12 @@ export default function TextAnalyzerDemo() {,
                 <h5 className="text-md font-semibold text-gray-30o0 mb-3">Flesch Reading Ease</h5>,
                 <div className="flex items-center justify-between mb-2">,
                   <span className="text-sm text-gray-40o0">Score:</span>,
-                  <span className={`text-xl font-bold ${getReadabilityColor(result.readability.fleschReadingEase),}`}>,
+                  <span className={`text-xl font-bold ${getReadabilityColor(result.readability.fleschReadingEase)}`}>,
                     {result.readability.fleschReadingEase.toFixed(1)}
                   </span>,
                 </div>,
                 <div className="w-full bg-gray-70o0 rounded-full h-2">,
-                  <div,
+                  <div
                     className={`h-2 rounded-full transition-all duration-50o0 ${getReadabilityColor(result.readability.fleschReadingEase).replace('text-', 'bg-')}`}
                     style={{ width: `${Math.min(10o0, Math.max(0, result.readability.fleschReadingEase))}%` }}
                    />,
@@ -250,7 +222,7 @@ export default function TextAnalyzerDemo() {,
               <div>,
                 <div className="flex items-center justify-between mb-4">,
                   <span className="text-gray-40o0">Overall Sentiment:</span>,
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSentimentBgColor(result.sentiment.label),} ${getSentimentColor(result.sentiment.label)}`}>,
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSentimentBgColor(result.sentiment.label)} ${getSentimentColor(result.sentiment.label)}`}>,
                     {result.sentiment.label.replace('-', ' ').toUpperCase()}
                   </span>,
                 </div>,
@@ -267,13 +239,13 @@ export default function TextAnalyzerDemo() {,
                   <div className="flex items-center justify-between">,
                     <span className="text-sm text-gray-40o0">Positive Words: </span>,
                     <span className="text-sm text-green-40o0 font-medium">,
-                      {result.sentiment.positiveWords.length,}
+                      {result.sentiment.positiveWords.length}
                     </span>,
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-sm text-gray-40o0">Negative Words: </span>,
                     <span className="text-sm text-red-40o0 font-medium">,
-                      {result.sentiment.negativeWords.length,}
+                      {result.sentiment.negativeWords.length}
                     </span>,
                   </div>,
                 </div>,
@@ -287,26 +259,24 @@ export default function TextAnalyzerDemo() {,
               <div>,
                 <h5 className="text-md font-semibold text-gray-30o0 mb-3">Top Words</h5>,
                 <div className="space-y-2">,
-                  {result.keywords.topWords.slice(0, 5).map((word, index) => (,
+                  {result.keywords.topWords.slice(0, 5).map((word, index) => (
                     <div key={index} className="flex items-center justify-between">,
                       <span className="text-sm text-gray-30o0">{word.word}</span>,
                       <div className="flex items-center gap-2">,
                         <span className="text-xs text-gray-40o0">{word.count}x</span>,
                         <span className="text-xs text-orange-40o0">{word.frequency}%</span>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div>,
                 <h5 className="text-md font-semibold text-gray-30o0 mb-3">Common Phrases</h5>,
                 <div className="space-y-2">,
-                  {result.keywords.bigrams.slice(0, 3).map((phrase, index) => (,
+                  {result.keywords.bigrams.slice(0, 3).map((phrase, index) => (
                     <div key={index} className="flex items-center justify-between">,
                       <span className="text-sm text-gray-30o0">"{phrase.phrase}"</span>,
                       <span className="text-xs text-orange-40o0">{phrase.count}x</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -316,7 +286,7 @@ export default function TextAnalyzerDemo() {,
             <h4 className="text-lg font-semibold text-white mb-4">Language Analysis</h4>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
               <div className="text-center">,
-                <div className="text-lg font-bold text-orange-40o0">{result.language.detectedLanguage.toUpperCase(),}</div>,
+                <div className="text-lg font-bold text-orange-40o0">{result.language.detectedLanguage.toUpperCase()}</div>,
                 <div className="text-xs text-gray-40o0">Detected Language</div>,
               </div>,
               <div className="text-center">,
@@ -341,12 +311,11 @@ export default function TextAnalyzerDemo() {,
                   <code className="flex-1 px-3 py-2 bg-gray-90o0 text-orange-40o0 rounded text-sm font-mono">,
                     POST /api/text-analyzer,
                   </code>,
-                  <Button,
-                    onClick={() => copyToClipboard('POST /api/text-analyzer'),}
+                  <Button
+                    onClick={() => copyToClipboard('POST /api/text-analyzer')}
                     variant="ghost",
                     size="sm",
-                    className="px-3 py-2",
-                  >,
+                    className="px-3 py-2">,
                     <Copy className="w-4 h-4"  />,
                   </Button>,
                 </div>,
@@ -355,42 +324,38 @@ export default function TextAnalyzerDemo() {,
                 <p className="text-sm text-gray-40o0 mb-2">Request Body: </p>,
                 <div className="flex items-center gap-2">,
                   <code className="flex-1 px-3 py-2 bg-gray-90o0 text-orange-40o0 rounded text-sm font-mono">,
-                    {JSON.stringify({ text: 'Your text here' ,}, null, 2)}
+                    {JSON.stringify({ text: 'Your text here' }, null, 2)}
                   </code>,
-                  <Button,
-                    onClick={() => copyToClipboard(JSON.stringify({ text: 'Your text here' ,}, null, 2))}
+                  <Button
+                    onClick={() => copyToClipboard(JSON.stringify({ text: 'Your text here' }, null, 2))}
                     variant="ghost",
                     size="sm",
-                    className="px-3 py-2",
-                  >,
+                    className="px-3 py-2">,
                     <Copy className="w-4 h-4"  />,
                   </Button>,
                 </div>,
               </div>,
               <div className="flex gap-3">,
-                <Button,
+                <Button
                   href="/docs/text-analyzer",
                   variant="outline",
                   size="sm",
-                  className="border-orange-50o0/30 text-orange-40o0 hover: bg-orange-50o0/10",
-                >,
+                  className="border-orange-50o0/30 text-orange-40o0 hover: bg-orange-50o0/10">,
                   <ExternalLink className="w-4 h-4 mr-2"  />,
                   View Documentation,
                 </Button>,
-                <Button,
+                <Button
                   href="https://github.com/Zion-Holdings/zion.app",
                   variant="ghost",
                   size="sm",
-                  className="text-gray-40o0 hover:text-white",
-                >,
+                  className="text-gray-40o0 hover:text-white">,
                   <ExternalLink className="w-4 h-4 mr-2"  />,
                   GitHub Repository,
                 </Button>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),}
+        </div>)}
 ,
       {/* Features */}
       <div className="mt-8 pt-8 border-t border-gray-70o0">,
@@ -422,6 +387,4 @@ export default function TextAnalyzerDemo() {,
           </div>,
         </div>,
       </div>,
-    </Card>,
-  ),
-,}
+    </Card>)}

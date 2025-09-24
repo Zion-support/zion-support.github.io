@@ -1,64 +1,51 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Megaphone, Target, Users, BarChart3, Zap, Shield,;
-  Mail, Calendar, CheckCircle, Star, Globe, Lock,;
-  Smartphone, Monitor, TrendingUp,
-} from 'lucide-react',
-,
-export default function AIMarketingAutomationSuite() {,
-  const features = [,
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'AI-Powered Audience Targeting',;
-      description: 'Intelligent audience segmentation and targeting using machine learning to identify your most valuable prospects.',
-    ,},;
-    {,
-      icon: <Megaphone className="w-6 h-6"  />,;
-      title: 'Automated Campaign Management',;
-      description: 'Create, optimize, and manage marketing campaigns automatically with AI-driven insights and recommendations.',
-    },;
-    {,
-      icon: <Users className="w-6 h-6"  />,;
-      title: 'Personalized Content Delivery',;
-      description: 'Deliver personalized content and messaging to each customer based on their behavior and preferences.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Smart Lead Nurturing',;
-      description: 'Automated lead nurturing workflows that adapt to customer behavior and engagement patterns.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Multi-Channel Orchestration',;
-      description: 'Coordinate marketing efforts across email, social media, web, and mobile channels seamlessly.',
-    },;
-    {,
-      icon: <BarChart3 className="w-6 h-6"  />,;
-      title: 'Advanced Analytics & ROI',;
-      description: 'Comprehensive marketing analytics with AI-powered insights to optimize campaigns and maximize ROI.',
-    ,}
+import {
+  Megaphone, Target, Users, BarChart3, Zap, Shield;
+  Mail, Calendar, CheckCircle, Star, Globe, Lock;
+  Smartphone, Monitor, TrendingUp} from 'lucide-react',
+export default function AIMarketingAutomationSuite() {
+  const features = [
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'AI-Powered Audience Targeting';
+      description: 'Intelligent audience segmentation and targeting using machine learning to identify your most valuable prospects.'};
+    {
+      icon: <Megaphone className="w-6 h-6"  />;
+      title: 'Automated Campaign Management';
+      description: 'Create, optimize, and manage marketing campaigns automatically with AI-driven insights and recommendations.'};
+    {
+      icon: <Users className="w-6 h-6"  />;
+      title: 'Personalized Content Delivery';
+      description: 'Deliver personalized content and messaging to each customer based on their behavior and preferences.'};
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Smart Lead Nurturing';
+      description: 'Automated lead nurturing workflows that adapt to customer behavior and engagement patterns.'};
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Multi-Channel Orchestration';
+      description: 'Coordinate marketing efforts across email, social media, web, and mobile channels seamlessly.'};
+    {
+      icon: <BarChart3 className="w-6 h-6"  />;
+      title: 'Advanced Analytics & ROI';
+      description: 'Comprehensive marketing analytics with AI-powered insights to optimize campaigns and maximize ROI.'}
   ],
-,
-  const benefits = [,
-    'Increase marketing ROI by 30o0%',;
-    'Reduce customer acquisition costs by 50%',;
-    'Improve email open rates by 40%',;
-    'Boost conversion rates by 60%',;
-    'Reduce manual work by 80%',;
-    'Improve customer lifetime value by 45%',;
-    'Scale marketing operations effortlessly',;
-    'Gain real-time campaign insights',
-  ],
-,
-  const integrations = [,
-    'HubSpot', 'Mailchimp', 'Salesforce', 'Google Analytics',;
-    'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Twitter Ads',;
-    'Shopify', 'WooCommerce', 'Zapier', 'Slack',;
-    'Microsoft Teams', 'Discord', 'WhatsApp Business',
-  ],
-,
-  return (,
+  const benefits = [
+    'Increase marketing ROI by 30o0%';
+    'Reduce customer acquisition costs by 50%';
+    'Improve email open rates by 40%';
+    'Boost conversion rates by 60%';
+    'Reduce manual work by 80%';
+    'Improve customer lifetime value by 45%';
+    'Scale marketing operations effortlessly';
+    'Gain real-time campaign insights'],
+  const integrations = [
+    'HubSpot', 'Mailchimp', 'Salesforce', 'Google Analytics';
+    'Facebook Ads', 'Google Ads', 'LinkedIn Ads', 'Twitter Ads';
+    'Shopify', 'WooCommerce', 'Zapier', 'Slack';
+    'Microsoft Teams', 'Discord', 'WhatsApp Business'],
+  return (
     <>,
       <Head>,
         <title>AI Marketing Automation Suite | Zion Tech Group</title>,
@@ -71,16 +58,15 @@ export default function AIMarketingAutomationSuite() {,
         <link rel="canonical" href="https://ziontechgroup.com/ai-marketing-automation-suite"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-pink-90o0/20 via-purple-90o0/20 to-blue-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-50o0 to-purple-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Megaphone className="w-8 h-8 text-white"  />,
@@ -90,37 +76,34 @@ export default function AIMarketingAutomationSuite() {,
                 AI Marketing Automation Suite,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform your marketing with AI-powered automation. Create personalized campaigns,;
+                Transform your marketing with AI-powered automation. Create personalized campaigns;
                 intelligent targeting, and automated lead nurturing that drives growth.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white rounded-xl font-semibold text-lg hover: from-pink-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-pink-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white rounded-xl font-semibold text-lg hover: from-pink-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-pink-50o0/25">,
                   Start Free Trial,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-pink-50o0/30 text-pink-40o0 rounded-xl font-semibold text-lg hover: bg-pink-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-pink-50o0/30 text-pink-40o0 rounded-xl font-semibold text-lg hover: bg-pink-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Powerful Marketing Automation Features,
               </h2>,
@@ -130,23 +113,21 @@ export default function AIMarketingAutomationSuite() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-pink-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-pink-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-pink-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-pink-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +135,10 @@ export default function AIMarketingAutomationSuite() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Your Marketing Results,
               </h2>,
@@ -168,20 +148,18 @@ export default function AIMarketingAutomationSuite() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-pink-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-pink-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-pink-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +167,10 @@ export default function AIMarketingAutomationSuite() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Seamless Platform Integrations,
               </h2>,
@@ -203,20 +180,18 @@ export default function AIMarketingAutomationSuite() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">,
-              {integrations.map((integration, index) => (,
+              {integrations.map((integration, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-pink-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-pink-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-50o0/20 to-purple-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Globe className="w-6 h-6 text-pink-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{integration,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{integration}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +199,9 @@ export default function AIMarketingAutomationSuite() {,
         <section className="py-20 bg-gradient-to-r from-pink-90o0/20 via-purple-90o0/20 to-blue-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Marketing?,
@@ -237,17 +212,15 @@ export default function AIMarketingAutomationSuite() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white rounded-xl font-semibold text-lg hover: from-pink-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-pink-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white rounded-xl font-semibold text-lg hover: from-pink-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-lg shadow-pink-50o0/25">,
                   Get Started Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-pink-50o0/30 text-pink-40o0 rounded-xl font-semibold text-lg hover: bg-pink-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-pink-50o0/30 text-pink-40o0 rounded-xl font-semibold text-lg hover: bg-pink-50o0/10 transition-all duration-20o0">,
                   Contact Sales,
                 </motion.button>,
               </div>,
@@ -255,6 +228,4 @@ export default function AIMarketingAutomationSuite() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}

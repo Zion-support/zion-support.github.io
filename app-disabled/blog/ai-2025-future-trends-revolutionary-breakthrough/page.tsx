@@ -1,32 +1,29 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  CalendarIcon,;
-  ClockIcon,;
-  TagIcon,;
+import {
+  ArrowLeftIcon;
+  CalendarIcon;
+  ClockIcon;
+  TagIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Future Trends Revolutionary Breakthrough - Complete Guide to 1,20o0% ROI',;
+    'AI 20o25: The Future Trends Revolutionary Breakthrough - Complete Guide to 1,20o0% ROI';
   description:,
-    'Discover the revolutionary AI trends that are delivering 1,20o0% ROI and transforming industries. Complete guide to AI 20o25 future trends and implementation strategies.',;
+    'Discover the revolutionary AI trends that are delivering 1,20o0% ROI and transforming industries. Complete guide to AI 20o25 future trends and implementation strategies.';
   keywords:,
-    'AI trends 20o25, future predictions, ROI, revolutionary breakthrough, AI implementation, quantum AI, neural interfaces, synthetic intelligence',;
+    'AI trends 20o25, future predictions, ROI, revolutionary breakthrough, AI implementation, quantum AI, neural interfaces, synthetic intelligence';
 };
-,
-export default function AI20o25FutureTrendsPage() {,
-  return (,
+export default function AI20o25FutureTrendsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/blog',
-              className='flex items-center text-white/80 hover:text-white transition-colors',
-            >,
+              className='flex items-center text-white/80 hover:text-white transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Blog,
             </Link>,
@@ -450,23 +447,19 @@ export default function AI20o25FutureTrendsPage() {,
               1,20o0% ROI and join the AI revolution.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-              >,
+                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
                 Get AI Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/resources',
-                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors'>,
                 View All Resources,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

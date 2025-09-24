@@ -14,15 +14,13 @@ export function buildPrintableHtml(project: BookProject): string {
         <h2>${escapeHtml(c.title)}</h2>
         <div class="content">${paragraphize(c.content)}</div>
       </section>
-    `,
-    )
+    `)
     .join('\n\n');
 
   const visualsHtml = [
     ...visuals.timelineImages,
     ...visuals.daoVoteCharts,
-    ...visuals.uiScreens,
-  ]
+    ...visuals.uiScreens]
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join('\n');
 
@@ -76,8 +74,8 @@ function paragraphize(text: string): string {
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/</g, '<')
+    .replace(/>/g, '>')
+    .replace(/"/g, '"')
     .replace(/'/g, '&#039;');
 }

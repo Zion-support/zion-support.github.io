@@ -1,83 +1,67 @@
 import React, { useEffect, useMemo, useState } from 'react',
-,
-interface FraudItem {,
+interface FraudItem {
   id: string,
   userId: string | null,
   source: string,
   createdAt: string,
-  heuristic: { reasons: string[], severity: string ,};
-  gpt?: { label: string, reason: string, confidence: number ,};
-  status: string,
-,}
+  heuristic: { reasons: string[], severity: string };
+  gpt?: { label: string, reason: string, confidence: number };
+  status: string}
 ,
-export default function FraudAdminPage() {,
+export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]),
   const [adminToken, setAdminToken] = useState<string>(''),
   const [loading, setLoading] = useState<boolean>(false),
   const [error, setError] = useState<string | null>(null),
-,
-  useEffect(() => {,
+  useEffect(() => {
     const saved = localStorage.getItem('admin-token') || '',
-    setAdminToken(saved),
-  }, []),
-,
-  const fetchItems = async () => {,
+    setAdminToken(saved)}, []),
+  const fetchItems = async () => {
     setLoading(true),
     setError(null),
-    try {,
-      const res = await fetch('/api/fraud/admin/list', {,
-        headers: adminToken ? { 'x-admin-token': adminToken ,} : {},;
+    try {
+      const res = await fetch('/api/fraud/admin/list', {
+        headers: adminToken ? { 'x-admin-token': adminToken } : {};
       }),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed to load'),
-      setItems(json.items || []),
-    } catch (e: any) {,
-      setError(e.message || 'Failed to load'),
-    ,} finally {,
-      setLoading(false),
-    }
+      setItems(json.items || [])} catch (e: any) {
+      setError(e.message || 'Failed to load')} finally {
+      setLoading(false)}
   };
-,
-  useEffect(() => {,
+  useEffect(() => {
     fetchItems(),
-    // eslint-disable-next-line react-hooks/exhaustive-deps,
-  }, [adminToken]),
-,
-  const onSaveToken = () => {,
+    // eslint-disable-next-line react-hooks/exhaustive-deps}, [adminToken]),
+  const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken),
-    fetchItems(),
-  };
-,
-  const takeAction = async (,
-    id: string,;
-    action: 'SUSPEND' | 'WARN' | 'IGNORE',
-  ) => {,
-    const res = await fetch('/api/fraud/admin/action', {,
-      method: 'POST',;
-      headers: {,
-        'Content-Type': 'application/json',;
-        ...(adminToken ? { 'x-admin-token': adminToken } : {}),;
-      },;
-      body: JSON.stringify({ fraudId: id, action }),;
+    fetchItems()};
+  const takeAction = async (
+    id: string;
+    action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
+    const res = await fetch('/api/fraud/admin/action', {
+      method: 'POST';
+      headers: {
+        'Content-Type': 'application/json';
+        ...(adminToken ? { 'x-admin-token': adminToken } : {});
+      };
+      body: JSON.stringify({ fraudId: id, action });
     }),
     const json = await res.json(),
     if (res.ok) fetchItems(),
-    else alert(json.error || 'Action failed'),
-  };
-,
-  return (,
+    else alert(json.error || 'Action failed')};
+  return (
     <div className='p-6 max-w-7xl mx-auto'>,
       <h1 className='text-2xl font-bold mb-4'>,
         Fraud Monitoring - Admin Review,
       </h1>,
       <div className='flex items-center gap-2 mb-4'>,
-        <input,
+        <input
           className='border rounded px-2 py-1 w-80',
           placeholder='Admin token (optional)',
           value={adminToken}
           onChange={e => setAdminToken(e.target.value)}
         />,
-        <button,
+        <button
           className='bg-blue-60o0 text-white px-3 py-1 rounded',
           onClick={onSaveToken}
         >,
@@ -104,7 +88,7 @@ export default function FraudAdminPage() {,
             </tr>,
           </thead>,
           <tbody>,
-            {items.map(it => (,
+            {items.map(it => (
               <tr key={it.id} className='border-t'>,
                 <td className='p-2 border'>{it.userId || '—'}</td>,
                 <td className='p-2 border'>{it.source}</td>,
@@ -113,11 +97,10 @@ export default function FraudAdminPage() {,
                 </td>,
                 <td className='p-2 border'>,
                   <div className='text-sm space-y-1'>,
-                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (,
+                    {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className='text-gray-70o0'>,
                         {r}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </td>,
                 <td className='p-2 border'>,
@@ -129,19 +112,19 @@ export default function FraudAdminPage() {,
                 <td className='p-2 border'>{it.status}</td>,
                 <td className='p-2 border'>,
                   <div className='flex gap-2'>,
-                    <button,
+                    <button
                       className='px-2 py-1 text-xs bg-yellow-50o0 text-white rounded',
                       onClick={() => takeAction(it.id, 'WARN')}
                     >,
                       Warn,
                     </button>,
-                    <button,
+                    <button
                       className='px-2 py-1 text-xs bg-red-60o0 text-white rounded',
                       onClick={() => takeAction(it.id, 'SUSPEND')}
                     >,
                       Suspend,
                     </button>,
-                    <button,
+                    <button
                       className='px-2 py-1 text-xs bg-gray-30o0 rounded',
                       onClick={() => takeAction(it.id, 'IGNORE')}
                     >,
@@ -149,12 +132,9 @@ export default function FraudAdminPage() {,
                     </button>,
                   </div>,
                 </td>,
-              </tr>,
-            ))}
+              </tr>))}
           </tbody>,
         </table>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

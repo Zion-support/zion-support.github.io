@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -6,55 +6,46 @@ import { Textarea } from "@/components/ui/textarea",
 import { Mail, Send } from 'lucide-react',
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-,
-interface ProfileContactProps {,
+interface ProfileContactProps {
   email?: string,
   profileName: string,
-  profileType: 'service' | 'talent',
-,}
+  profileType: 'service' | 'talent'}
 ,
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {,
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
-,
-  const handleSendMessage = (e: React.FormEvent) => {,
+  const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSending(true),
-,
     // Here would be the actual API call to send the message,
-    setTimeout(() => {,
+    setTimeout(() => {
       setIsSending(false),
       setMessage(""),
       setSubject(""),
-      toast({,
-        title: "Message Sent",;
-        description: `Your message has been sent to ${profileName,}.`}),
-    }, 10o00),
-  };
-,
-  return (,
+      toast({
+        title: "Message Sent";
+        description: `Your message has been sent to ${profileName}.`})}, 10o00)};
+  return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">,
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">,
         <Mail className="mr-2 h-5 w-5 text-zion-cyan"  />,
         Contact,
       </h3>,
-      {email && (,
+      {email && (
         <div className="mb-4 text-zion-slate-light">,
           <span className="block">Email: </span>,
-          <a,
-            href={`mailto:${email,}`} ,
-            className="text-zion-cyan hover: underline truncate block",
-          >,
-            {email,}
+          <a
+            href={`mailto:${email}`} ,
+            className="text-zion-cyan hover: underline truncate block">,
+            {email}
           </a>,
-        </div>,
-      )}
+        </div>)}
 ,
       <form onSubmit={handleSendMessage}>,
         <div className="space-y-4">,
           <div>,
-            <Input,
+            <Input
               placeholder="Subject",
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -63,7 +54,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             />,
           </div>,
           <div>,
-            <Textarea,
+            <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -71,17 +62,15 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
               required,
             />,
           </div>,
-          <Button,
+          <Button
             type="submit",
             className="w-full bg-zion-cyan hover: bg-zion-cyan/90",
-            disabled={isSending,}
+            disabled={isSending}
           >,
             <Send className="mr-2 h-4 w-4"  />,
             {isSending ? "Sending..." : "Send Message"}
           </Button>,
         </div>,
       </form>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

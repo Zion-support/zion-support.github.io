@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function WebApplicationDevelopmentChatPage() {,
-  return (,
+export default function WebApplicationDevelopmentChatPage() {
+  return (
     <>,
       <Head>,
         <title>Web Application Development Chat - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='web application development chat page',
         />,
@@ -21,7 +20,5 @@ export default function WebApplicationDevelopmentChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

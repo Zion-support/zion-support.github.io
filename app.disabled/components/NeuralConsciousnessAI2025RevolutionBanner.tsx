@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
-  return (,
+const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-br from-emerald-90o0 via-cyan-90o0 to-blue-90o0 text-white'>,
-      {/* Animated consciousness particles */,}
+      {/* Animated consciousness particles */}
       <div className='absolute inset-0'>,
         <div className='absolute top-20 left-20 w-96 h-96 bg-emerald-40o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'></div>,
         <div className='absolute top-60 right-20 w-96 h-96 bg-cyan-40o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-10o00'></div>,
@@ -12,7 +11,7 @@ const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20'>,
         <div className='text-center'>,
-          {/* Neural Consciousness Badge */,}
+          {/* Neural Consciousness Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-emerald-40o0 to-cyan-50o0 rounded-full px-6 py-3 mb-8 shadow-lg'>,
             <span className='text-lg font-bold text-white'>,
               🧠 NEURAL CONSCIOUSNESS AI 20o25 REVOLUTION,
@@ -30,9 +29,9 @@ const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
               AI REVOLUTION,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90'>,
-            Experience the world's first{' ',}
+            Experience the world's first{' '}
             <span className='font-bold text-emerald-40o0'>,
               Neural Consciousness AI,
             </span>{' '}
@@ -76,7 +75,7 @@ const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* ROI Highlight */,}
+          {/* ROI Highlight */}
           <div className='bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 rounded-2xl p-8 mb-12 max-w-3xl mx-auto shadow-2xl'>,
             <div className='text-6xl font-black mb-4'>50,0o00%</div>,
             <div className='text-2xl font-bold mb-2'>DOCUMENTED ROI</div>,
@@ -86,26 +85,23 @@ const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
           </div>,
           {/* Call to Action Buttons */}
           <div className='flex flex-col sm: flex-row gap-6 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/services/neural-consciousness-ai',
-              className='bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 hover:from-emerald-60o0 hover:to-cyan-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-emerald-50o0 to-cyan-60o0 hover:from-emerald-60o0 hover:to-cyan-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               🧠 Experience Consciousness AI,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:bg-opacity-30',
-            >,
+              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white border-opacity-30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:bg-opacity-30'>,
               💡 Schedule Demo,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/neural-consciousness-ai',
-              className='bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover:from-blue-60o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover:from-blue-60o0 hover:to-purple-70o0 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               📊 View Consciousness Results,
             </Link>,
           </div>,
-          {/* Consciousness Technology Showcase */,}
+          {/* Consciousness Technology Showcase */}
           <div className='bg-black bg-opacity-30 backdrop-blur-sm rounded-2xl p-8 max-w-5xl mx-auto'>,
             <h3 className='text-2xl font-bold mb-6'>,
               Revolutionary Consciousness Technologies,
@@ -167,16 +163,12 @@ const NeuralConsciousnessAI20o25RevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Floating consciousness particles */,}
+      {/* Floating consciousness particles */}
       <div className='absolute inset-0 pointer-events-none'>,
         <div className='absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-40o0 rounded-full animate-ping'></div>,
         <div className='absolute top-3/4 right-1/4 w-1 h-1 bg-cyan-40o0 rounded-full animate-ping delay-50o0'></div>,
         <div className='absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-blue-40o0 rounded-full animate-ping delay-10o00'></div>,
         <div className='absolute top-1/2 right-1/3 w-1 h-1 bg-purple-40o0 rounded-full animate-ping delay-150o0'></div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default NeuralConsciousnessAI20o25RevolutionBanner,
-,
+    </section>)};
+export default NeuralConsciousnessAI20o25RevolutionBanner;

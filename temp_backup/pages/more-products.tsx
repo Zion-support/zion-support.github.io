@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MoreProductsPage() {,
-  return (,
+export default function MoreProductsPage() {
+  return (
     <>,
       <Head>,
         <title>More Products - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function MoreProductsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

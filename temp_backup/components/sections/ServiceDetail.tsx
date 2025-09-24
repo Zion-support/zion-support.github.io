@@ -1,87 +1,77 @@
-import React from 'react',
+import React from 'react';
 import Card from '../ui/Card',
 import Button from '../ui/Button',
 import { MicroSaasService } from '../../data/micro-saas-services',
-import {,
-  ExternalLink,;
-  Star,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  Globe,;
-  Shield,;
-  ArrowRight,;
-  Check,;
-  Clock,;
-  DollarSign,;
-  Target,;
-  Code,;
-  Link,;
+import {
+  ExternalLink;
+  Star;
+  Zap;
+  TrendingUp;
+  Users;
+  Globe;
+  Shield;
+  ArrowRight;
+  Check;
+  Clock;
+  DollarSign;
+  Target;
+  Code;
+  Link;
 } from 'lucide-react',
+interface ServiceDetailProps {
+  service: MicroSaasService}
 ,
-interface ServiceDetailProps {,
-  service: MicroSaasService,
-,}
-,
-const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
-  const getCategoryIcon = (category: string) => {,
-    const iconMap: { [key: string]: React.ReactNode ,} = {,
-      'Content & Marketing': <Zap className='w-6 h-6' />,;
-      'Analytics & Business Intelligence': <TrendingUp className='w-6 h-6' />,;
-      'Customer Support': <Users className='w-6 h-6' />,;
-      'SEO & Marketing': <Globe className='w-6 h-6' />,;
-      'Project Management': <Users className='w-6 h-6' />,;
-      'Email Marketing': <Zap className='w-6 h-6' />,;
-      'Social Media': <Globe className='w-6 h-6' />,;
-      'E-commerce & Inventory': <TrendingUp className='w-6 h-6' />,;
-      'Human Resources': <Users className='w-6 h-6' />,;
-      'Finance & Accounting': <TrendingUp className='w-6 h-6' />,;
-      'Design & Creative': <Star className='w-6 h-6' />,;
-      'Video & Media': <Star className='w-6 h-6' />,;
-      'Legal & Compliance': <Shield className='w-6 h-6' />,;
+const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+      'Content & Marketing': <Zap className='w-6 h-6' />;
+      'Analytics & Business Intelligence': <TrendingUp className='w-6 h-6' />;
+      'Customer Support': <Users className='w-6 h-6' />;
+      'SEO & Marketing': <Globe className='w-6 h-6' />;
+      'Project Management': <Users className='w-6 h-6' />;
+      'Email Marketing': <Zap className='w-6 h-6' />;
+      'Social Media': <Globe className='w-6 h-6' />;
+      'E-commerce & Inventory': <TrendingUp className='w-6 h-6' />;
+      'Human Resources': <Users className='w-6 h-6' />;
+      'Finance & Accounting': <TrendingUp className='w-6 h-6' />;
+      'Design & Creative': <Star className='w-6 h-6' />;
+      'Video & Media': <Star className='w-6 h-6' />;
+      'Legal & Compliance': <Shield className='w-6 h-6' />;
     };
-,
-    return iconMap[category] || <Zap className='w-6 h-6' />,
-  };
-,
-  const getStatusBadge = (status: string) => {,
-    const statusConfig = {,
-      active: {,
-        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20',;
-        text: 'Active',;
-      },;
-      beta: {,
-        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20',;
-        text: 'Beta',;
-      },;
-      'coming-soon': {,
-        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20',;
-        text: 'Coming Soon',;
-      },;
+    return iconMap[category] || <Zap className='w-6 h-6' />};
+  const getStatusBadge = (status: string) => {
+    const statusConfig = {
+      active: {
+        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20';
+        text: 'Active';
+      };
+      beta: {
+        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20';
+        text: 'Beta';
+      };
+      'coming-soon': {
+        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20';
+        text: 'Coming Soon';
+      };
     };
-,
     const config =,
       statusConfig[status as keyof typeof statusConfig] || statusConfig.active,
-,
-    return (,
-      <span,
+    return (
+      <span
         className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border ${config.color}`}
       >,
         {config.text}
-      </span>,
-    ),
-  };
-,
-  return (,
+      </span>)};
+  return (
     <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-      {/* Service Header */,}
+      {/* Service Header */}
       <div className='text-center mb-16'>,
         <div className='flex items-center justify-center gap-3 mb-6'>,
           {getCategoryIcon(service.category)}
           <span className='text-lg text-gray-40o0'>{service.category}</span>,
         </div>,
         <h1 className='text-4xl sm: text-5xl font-bold mb-6 text-white leading-tight'>,
-          {service.name,}
+          {service.name}
         </h1>,
         <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed mb-8'>,
           {service.description}
@@ -96,8 +86,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
           </div>,
         </div>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Button,
-            href={service.website,}
+          <Button
+            href={service.website}
             variant='primary',
             size='lg',
             className='shadow-2xl shadow-blue-50o0/25',
@@ -105,20 +95,19 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
           >,
             Visit Service,
           </Button>,
-          <Button,
+          <Button
             href='/contact',
             variant='outline',
             size='lg',
-            className='border-white/20 text-white hover: border-white/40',
-          >,
+            className='border-white/20 text-white hover: border-white/40'>,
             Get Started,
           </Button>,
         </div>,
       </div>,
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className='lg: col-span-2 space-y-8'>,
-          {/* Pricing Section */,}
+          {/* Pricing Section */}
           <Card className='p-8'>,
             <h2 className='text-2xl font-bold mb-6 text-white flex items-center gap-3'>,
               <DollarSign className='w-6 h-6 text-green-40o0' />,
@@ -130,15 +119,14 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
                   Starter,
                 </h3>,
                 <div className='text-3xl font-bold text-white mb-2'>,
-                  ${service.pricing.starter,}
+                  ${service.pricing.starter}
                 </div>,
                 <div className='text-gray-40o0 text-sm mb-4'>per month</div>,
-                <Button,
+                <Button
                   href={service.website}
                   variant='outline',
                   size='sm',
-                  className='w-full',
-                >,
+                  className='w-full'>,
                   Start Free Trial,
                 </Button>,
               </div>,
@@ -155,12 +143,11 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
                   ${service.pricing.pro}
                 </div>,
                 <div className='text-gray-40o0 text-sm mb-4'>per month</div>,
-                <Button,
+                <Button
                   href={service.website}
                   variant='primary',
                   size='sm',
-                  className='w-full',
-                >,
+                  className='w-full'>,
                   Start Free Trial,
                 </Button>,
               </div>,
@@ -172,12 +159,11 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
                   ${service.pricing.enterprise}
                 </div>,
                 <div className='text-gray-40o0 text-sm mb-4'>per month</div>,
-                <Button,
+                <Button
                   href='/contact',
                   variant='outline',
                   size='sm',
-                  className='w-full',
-                >,
+                  className='w-full'>,
                   Contact Sales,
                 </Button>,
               </div>,
@@ -199,15 +185,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
               Features & Capabilities,
             </h2>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-              {service.features.map((feature, index) => (,
-                <div,
+              {service.features.map((feature, index) => (
+                <div
                   key={index}
-                  className='flex items-center gap-3 p-3 bg-gray-80o0/30 rounded-lg',
-                >,
+                  className='flex items-center gap-3 p-3 bg-gray-80o0/30 rounded-lg'>,
                   <Check className='w-5 h-5 text-green-40o0 flex-shrink-0' />,
                   <span className='text-gray-30o0'>{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </Card>,
           {/* Use Cases Section */}
@@ -217,14 +201,12 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
               Use Cases & Applications,
             </h2>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-              {service.useCases.map((useCase, index) => (,
-                <div,
+              {service.useCases.map((useCase, index) => (
+                <div
                   key={index}
-                  className='p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0',
-                >,
+                  className='p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0'>,
                   <div className='text-white font-medium mb-2'>{useCase}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </Card>,
           {/* Technology Stack */}
@@ -234,14 +216,12 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
               Technology Stack,
             </h2>,
             <div className='flex flex-wrap gap-3'>,
-              {service.technology.map((tech, index) => (,
-                <span,
+              {service.technology.map((tech, index) => (
+                <span
                   key={index}
-                  className='px-4 py-2 bg-gray-80o0 text-gray-30o0 text-sm rounded-lg border border-gray-70o0',
-                >,
+                  className='px-4 py-2 bg-gray-80o0 text-gray-30o0 text-sm rounded-lg border border-gray-70o0'>,
                   {tech}
-                </span>,
-              ))}
+                </span>))}
             </div>,
           </Card>,
           {/* Integrations */}
@@ -271,14 +251,12 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
                 Popular Integrations,
               </h4>,
               <div className='flex flex-wrap gap-3'>,
-                {service.integration.map((integration, index) => (,
-                  <span,
+                {service.integration.map((integration, index) => (
+                  <span
                     key={index}
-                    className='px-3 py-2 bg-gray-80o0 text-gray-30o0 text-sm rounded-md border border-gray-70o0',
-                  >,
+                    className='px-3 py-2 bg-gray-80o0 text-gray-30o0 text-sm rounded-md border border-gray-70o0'>,
                     {integration}
-                  </span>,
-                ))}
+                  </span>))}
               </div>,
             </div>,
           </Card>,
@@ -348,7 +326,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
               Join thousands of businesses already using {service.name} to grow,
               and scale their operations.,
             </p>,
-            <Button,
+            <Button
               href={service.website}
               variant='primary',
               size='lg',
@@ -357,20 +335,15 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service ,}) => {,
             >,
               Start Free Trial,
             </Button>,
-            <Button,
+            <Button
               href='/contact',
               variant='outline',
               size='sm',
-              className='w-full border-white/20 text-white hover: border-white/40',
-            >,
+              className='w-full border-white/20 text-white hover: border-white/40'>,
               Contact Sales Team,
             </Button>,
           </Card>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default ServiceDetail,
-,
+    </div>)};
+export default ServiceDetail;

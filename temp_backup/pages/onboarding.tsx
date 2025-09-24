@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function OnboardingPage() {,
-  return (,
+export default function OnboardingPage() {
+  return (
     <>,
       <Head>,
         <title>Onboarding - Zion Tech Group</title>,
@@ -17,7 +16,5 @@ export default function OnboardingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

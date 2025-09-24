@@ -1,50 +1,48 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  Clock,;
-  User,;
-  TrendingUp,;
-  DollarSign,;
-  Users,;
-  Zap,;
-  Brain,;
+import {
+  ArrowLeft;
+  Calendar;
+  Clock;
+  User;
+  TrendingUp;
+  DollarSign;
+  Users;
+  Zap;
+  Brain;
 } from 'lucide-react',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
-  title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',;
+export const metadata: Metadata = {
+  title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story';
   description:,
-    'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.',;
-  keywords: [,
-    'quantum AI',;
-    'healthcare',;
-    'transformation',;
-    'success story',;
-    'ROI',;
-  ],;
-  openGraph: {,
-    title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',;
+    'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.';
+  keywords: [
+    'quantum AI';
+    'healthcare';
+    'transformation';
+    'success story';
+    'ROI';
+  ];
+  openGraph: {
+    title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story';
     description:,
-      'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'quantum AI',;
-      'healthcare',;
-      'transformation',;
-      'success story',;
-      'ROI',;
-    ],;
-  },;
+      'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'quantum AI';
+      'healthcare';
+      'transformation';
+      'success story';
+      'ROI';
+    ];
+  };
 };
-,
-export default function QuantumAIHealthcareCaseStudyPage() {,
-  return (,
+export default function QuantumAIHealthcareCaseStudyPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Quantum AI Healthcare Transformation: A $2.3B Success Story',
         description='Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.',
         keywords='quantum AI, healthcare, transformation, success story, ROI',
@@ -54,16 +52,15 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
         {/* Navigation */}
         <div className='bg-gray-50 border-b'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-4'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors',
-            >,
+              className='inline-flex items-center text-purple-60o0 hover:text-purple-80o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4 mr-2' />,
               Back to Case Studies,
             </Link>,
           </div>,
         </div>,
-        {/* Case Study Header */,}
+        {/* Case Study Header */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
           <div className='mb-8'>,
             <div className='flex items-center space-x-4 text-sm text-gray-60o0 mb-4'>,
@@ -89,21 +86,19 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               and operational efficiency.,
             </p>,
             <div className='flex flex-wrap gap-2'>,
-              {[,
-                'quantum AI',;
-                'healthcare',;
-                'transformation',;
-                'success story',;
-                'ROI',;
-              ].map(tag => (,
-                <span,
+              {[
+                'quantum AI';
+                'healthcare';
+                'transformation';
+                'success story';
+                'ROI';
+              ].map(tag => (
+                <span
                   key={tag}
-                  className='inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-10o0 text-purple-80o0',
-                >,
+                  className='inline-flex items-center px-3 py-1 rounded-full text-sm bg-purple-10o0 text-purple-80o0'>,
                   <Brain className='w-3 h-3 mr-1' />,
                   {tag}
-                </span>,
-              ))}
+                </span>))}
             </div>,
           </div>,
           {/* Executive Summary */}
@@ -115,7 +110,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               In 20o25, a major healthcare provider partnered with Zion Tech,
               Group to implement quantum AI solutions across their entire,
               organization. The results exceeded all expectations, delivering,
-              $2.3 billion in value creation through improved patient outcomes,;
+              $2.3 billion in value creation through improved patient outcomes;
               operational efficiency, and cost savings.,
             </p>,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
@@ -136,7 +131,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               </div>,
             </div>,
           </div>,
-          {/* The Challenge */,}
+          {/* The Challenge */}
           <div className='mb-12'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
               The Challenge,
@@ -178,7 +173,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               </div>,
             </div>,
           </div>,
-          {/* The Solution */,}
+          {/* The Solution */}
           <div className='mb-12'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
               The Solution: Quantum AI Implementation,
@@ -278,7 +273,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Quantified Results */,}
+          {/* Quantified Results */}
           <div className='mb-12'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
               Quantified Results,
@@ -423,7 +418,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               </div>,
             </div>,
           </div>,
-          {/* ROI Analysis */,}
+          {/* ROI Analysis */}
           <div className='bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8'>,
             <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>,
               ROI Analysis,
@@ -508,7 +503,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               shift in healthcare delivery. By leveraging quantum computing and,
               artificial intelligence, the healthcare provider achieved,
               unprecedented improvements in patient outcomes, operational,
-              efficiency, and financial performance.,
+              efficiency, and financial window.window.performance.,
             </p>,
             <div className='bg-white p-6 rounded-lg mb-6'>,
               <h3 className='text-lg font-bold text-gray-90o0 mb-3'>,
@@ -538,23 +533,19 @@ export default function QuantumAIHealthcareCaseStudyPage() {,
               </ul>,
             </div>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center',
-              >,
+                className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center'>,
                 Schedule a Quantum AI Healthcare Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services/healthcare-ai',
-                className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center',
-              >,
+                className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center'>,
                 Explore Our Healthcare AI Services,
               </Link>,
             </div>,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

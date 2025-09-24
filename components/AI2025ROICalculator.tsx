@@ -1,7 +1,6 @@
 "use client",
 import React, { useState, useEffect } from 'react',
-,
-export default function AI20o25ROICalculator() {,
+export default function AI20o25ROICalculator() {
   const [currentRevenuesetCurrentRevenue] = useState(10o00000),
   const [implementationCostsetImplementationCost] = useState(10o0000),
   const [timeframesetTimeframe] = useState(12),
@@ -9,8 +8,7 @@ export default function AI20o25ROICalculator() {,
   const [revenueIncreasetRevenueIncrease] = useState(0),
   const [costSavingsetCostSavings] = useState(0),
   const [totalReturnsetTotalReturns] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Calculate ROI based on AI 20o25 breakthrough potential,
     const baseROI = 10o000, // 10,0o00% base ROI,
     const timeframeMultiplier = Math.min(timeframe / 12), // Up to 2x for longer timeframes,
@@ -19,22 +17,17 @@ export default function AI20o25ROICalculator() {,
     const revenueIncreaseAmount = (currentRevenue * finalROI) / 10o0,
     const costSavingsAmount = implementationCost * 5, // 5x cost savings,
     const totalReturnsAmount = revenueIncreaseAmount + costSavingsAmount,
-,
     setCalculatedROI(Math.round(finalROI)),
     setRevenueIncrease(Math.round(revenueIncreaseAmount)),
     setCostSavings(Math.round(costSavingsAmount)),
-    setTotalReturns(Math.round(totalReturnsAmount)),
-  }[currentRevenueimplementationCostimeframe]),
-,
-  const formatCurrency = (amount) => {,
-    return new Intl.NumberFormat('en-US'{,
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,}).format(amount),
-  };
-,
-  return (,
+    setTotalReturns(Math.round(totalReturnsAmount))}[currentRevenueimplementationCostimeframe]),
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat('en-US'{
+      style: 'currency';
+      currency: 'USD';
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0}).format(amount)};
+  return (
     <div className="py-16 px-4 bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white">,
       <div className="max-w-6xl mx-auto">,
         {/* Header */}
@@ -51,7 +44,7 @@ export default function AI20o25ROICalculator() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-          {/* Input Section */,}
+          {/* Input Section */}
           <div className="bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 p-8 rounded-xl border border-gray-60o0/30 backdrop-blur-sm">,
             <h3 className="text-2xl font-bold mb-6 text-green-40o0">Investment Parameters</h3>,
             <div className="space-y-6">,
@@ -62,7 +55,7 @@ export default function AI20o25ROICalculator() {,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 text-lg">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={currentRevenue}
                     onChange={(e) => setCurrentRevenue(Number(e.target.value))}
@@ -81,7 +74,7 @@ export default function AI20o25ROICalculator() {,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 text-lg">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={implementationCost}
                     onChange={(e) => setImplementationCost(Number(e.target.value))}
@@ -98,12 +91,11 @@ export default function AI20o25ROICalculator() {,
                 <label className="block text-lg font-semibold mb-3 text-white">,
                   Implementation Timeframe (Months),
                 </label>,
-                <select,
+                <select
                   value={timeframe}
                   onChange={(e) => setTimeframe(Number(e.target.value))}
-                  className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white text-lg focus: outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20",
-                >,
-                  <option value={6,}>6 Months</option>,
+                  className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white text-lg focus: outline-none focus:border-purple-50o0 focus:ring-2 focus:ring-purple-50o0/20">,
+                  <option value={6}>6 Months</option>,
                   <option value={12}>12 Months</option>,
                   <option value={18}>18 Months</option>,
                   <option value={24}>24 Months</option>,
@@ -195,22 +187,18 @@ export default function AI20o25ROICalculator() {,
               Join thousands of companies already experiencing unprecedented success with our AI 20o25 breakthrough technologies.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <a,
+              <a
                 href="/contact",
-                className="bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Start Your Implementation,
               </a>,
-              <a,
+              <a
                 href="/ai-20o25-ultimate-breakthrough-revolution",
-                className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 px-8 py-3 rounded-lg font-bold text-white hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Learn About AI 20o25 Breakthrough,
               </a>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}

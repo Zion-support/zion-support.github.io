@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Production Guardrails for Autonomous Agents',;
+export const metadata = {
+  title: 'AI 20o26: Production Guardrails for Autonomous Agents';
   description:,
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',;
+    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.';
 };
-,
-export default function ProductionGuardrailsForAutonomousAgentsPage() {,
-  return (,
+export default function ProductionGuardrailsForAutonomousAgentsPage() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-purple-90o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -66,22 +65,18 @@ export default function ProductionGuardrailsForAutonomousAgentsPage() {,
             </ol>,
           </article>,
           <div className='flex gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
               Talk to an Expert,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-enterprise-agent-observability-guide',
-              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Read Agent Observability,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

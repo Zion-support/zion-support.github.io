@@ -1,51 +1,48 @@
 import React, { useState } from 'react',
 import { advancedInnovativeServicesExpansionV3 } from '../data/20o25-advanced-innovative-services-expansion-v3',
 import { specializedEnterpriseSolutions20o25 } from '../data/20o25-specialized-enterprise-solutions',
-const EnhancedComprehensiveServicesShowcase = () => {,
+const EnhancedComprehensiveServicesShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedService, setSelectedService] = useState(null),
-  const allServices = [,
-    ...advancedInnovativeServicesExpansionV3.map(service => ({,
-      ...service,;
-      type: 'Advanced AI & Innovation',;
-      displayPrice: service.price,;
-    })),;
-    ...specializedEnterpriseSolutions20o25.map(service => ({,
-      ...service,;
-      type: 'Specialized Enterprise',;
-      displayPrice: service.price,;
-    })),;
+  const allServices = [
+    ...advancedInnovativeServicesExpansionV3.map(service => ({
+      ...service;
+      type: 'Advanced AI & Innovation';
+      displayPrice: service.price;
+    }));
+    ...specializedEnterpriseSolutions20o25.map(service => ({
+      ...service;
+      type: 'Specialized Enterprise';
+      displayPrice: service.price;
+    }));
   ],
-  const filteredServices = allServices.filter(service => {,
+  const filteredServices = allServices.filter(service => {
     const matchesCategory =,
       activeCategory === 'all' || service.type === activeCategory,
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
-  const categories = [,
-    { id: 'all', name: 'All Services', count: allServices.length ,},;
-    {,
-      id: 'Advanced AI & Innovation',;
-      name: 'Advanced AI & Innovation',;
-      count: advancedInnovativeServicesExpansionV3.length,;
-    },;
-    {,
-      id: 'Specialized Enterprise',;
-      name: 'Specialized Enterprise',;
-      count: specializedEnterpriseSolutions20o25.length,;
-    },;
+    return matchesCategory && matchesSearch}),
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length };
+    {
+      id: 'Advanced AI & Innovation';
+      name: 'Advanced AI & Innovation';
+      count: advancedInnovativeServicesExpansionV3.length;
+    };
+    {
+      id: 'Specialized Enterprise';
+      name: 'Specialized Enterprise';
+      count: specializedEnterpriseSolutions20o25.length;
+    };
   ],
-  const handleServiceClick = service => {,
-    setSelectedService(service),
-  };
-  const closeModal = () => {,
-    setSelectedService(null),
-  };
-  return (,
+  const handleServiceClick = service => {
+    setSelectedService(service)};
+  const closeModal = () => {
+    setSelectedService(null)};
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white'>,
       {/* Header Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
@@ -53,7 +50,7 @@ const EnhancedComprehensiveServicesShowcase = () => {,
           <h1 className='text-4xl md:text-6xl font-bold mb-6'>,
             Zion Tech Group,
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-cyan-40o0'>,
-              {' ',}
+              {' '}
               Innovative Services 20o25,
             </span>,
           </h1>,
@@ -66,7 +63,7 @@ const EnhancedComprehensiveServicesShowcase = () => {,
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20'>,
               <div className='text-3xl font-bold text-blue-40o0 mb-2'>,
-                {allServices.length,}+,
+                {allServices.length}+,
               </div>,
               <div className='text-sm text-gray-30o0'>Innovative Services</div>,
             </div>,
@@ -90,23 +87,22 @@ const EnhancedComprehensiveServicesShowcase = () => {,
           {/* Search and Filter */}
           <div className='max-w-2xl mx-auto mb-8'>,
             <div className='relative'>,
-              <input,
+              <input
                 type='text',
                 placeholder='Search services, features, or technologies...',
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-blue-40o0',
               />,
-              <svg,
+              <svg
                 className='absolute right-3 top-3 h-6 w-6 text-gray-40o0',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0o114 0z',
                 />,
               </svg>,
@@ -114,19 +110,17 @@ const EnhancedComprehensiveServicesShowcase = () => {,
           </div>,
           {/* Category Filter */}
           <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-            {categories.map(category => (,
-              <button,
+            {categories.map(category => (
+              <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white',
-                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-30o0 hover: bg-white/20',
-                ,}`}
+                    : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-30o0 hover: bg-white/20'}`}
               >,
                 {category.name} ({category.count}),
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
       </section>,
@@ -134,13 +128,12 @@ const EnhancedComprehensiveServicesShowcase = () => {,
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {filteredServices.map((service, index) => (,
-              <div,
+            {filteredServices.map((service, index) => (
+              <div
                 key={service.id}
                 onClick={() => handleServiceClick(service)}
-                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 hover:transform hover:scale-10o5 cursor-pointer',
-              >,
-                <div className='text-4xl mb-4'>{service.icon,}</div>,
+                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-30o0 hover:transform hover:scale-10o5 cursor-pointer'>,
+                <div className='text-4xl mb-4'>{service.icon}</div>,
                 <h3 className='text-xl font-semibold text-white mb-3'>,
                   {service.name}
                 </h3>,
@@ -163,35 +156,30 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                     Key Features: ,
                   </h4>,
                   <ul className='space-y-1'>,
-                    {service.features.slice(0, 3).map((feature, idx) => (,
-                      <li,
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <li
                         key={idx}
-                        className='text-sm text-gray-30o0 flex items-center',
-                      >,
+                        className='text-sm text-gray-30o0 flex items-center'>,
                         <span className='w-2 h-2 bg-blue-40o0 rounded-full mr-2'></span>,
                         {feature}
-                      </li>,
-                    ))}
-                    {service.features.length > 3 && (,
+                      </li>))}
+                    {service.features.length > 3 && (
                       <li className='text-sm text-gray-40o0 flex items-center'>,
                         <span className='w-2 h-2 bg-gray-40o0 rounded-full mr-2'></span>,
                         +{service.features.length - 3} more features,
-                      </li>,
-                    )}
+                      </li>)}
                   </ul>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <div className='flex items-center space-x-2'>,
                     <div className='flex text-yellow-40o0'>,
-                      {[...Array(5)].map((_, i) => (,
-                        <svg,
+                      {[...Array(5)].map((_, i) => (
+                        <svg
                           key={i}
                           className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-gray-60o0'}`}
-                          viewBox='0 0 20 20',
-                        >,
+                          viewBox='0 0 20 20'>,
                           <path d='M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z' />,
-                        </svg>,
-                      ))}
+                        </svg>))}
                     </div>,
                     <span className='text-sm text-gray-40o0'>,
                       ({service.reviews}),
@@ -201,8 +189,7 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                     Learn More →,
                   </button>,
                 </div>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -225,7 +212,7 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                 Innovation First,
               </h3>,
               <p className='text-gray-30o0'>,
-                We stay ahead of technology trends, offering the latest AI,;
+                We stay ahead of technology trends, offering the latest AI;
                 quantum computing, and emerging tech solutions,
               </p>,
             </div>,
@@ -263,23 +250,21 @@ const EnhancedComprehensiveServicesShowcase = () => {,
             digital transformation and competitive advantage,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0'>,
               Get Custom Quote,
             </a>,
-            <a,
+            <a
               href='tel:+130o24640950',
-              className='inline-flex items-center px-8 py-3 border border-gray-60o0 text-white font-semibold rounded-lg hover:bg-gray-80o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-8 py-3 border border-gray-60o0 text-white font-semibold rounded-lg hover:bg-gray-80o0 transition-all duration-30o0'>,
               Call Us: +1 30o2 464 0950,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Service Detail Modal */,}
-      {selectedService && (,
+      {/* Service Detail Modal */}
+      {selectedService && (
         <div className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'>,
           <div className='bg-slate-80o0 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto'>,
             <div className='p-6'>,
@@ -293,20 +278,18 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                     {selectedService.tagline}
                   </p>,
                 </div>,
-                <button,
+                <button
                   onClick={closeModal}
-                  className='text-gray-40o0 hover: text-white transition-colors duration-30o0',
-                >,
-                  <svg,
+                  className='text-gray-40o0 hover: text-white transition-colors duration-30o0'>,
+                  <svg
                     className='w-8 h-8',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M6 18L18 6M6 6l12 12',
                     />,
                   </svg>,
@@ -318,22 +301,20 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                     Service Overview,
                   </h3>,
                   <p className='text-gray-30o0 mb-6'>,
-                    {selectedService.description,}
+                    {selectedService.description}
                   </p>,
                   <div className='mb-6'>,
                     <h4 className='text-lg font-semibold text-white mb-3'>,
                       Key Features,
                     </h4>,
                     <ul className='space-y-2'>,
-                      {selectedService.features.map((feature, idx) => (,
-                        <li,
+                      {selectedService.features.map((feature, idx) => (
+                        <li
                           key={idx}
-                          className='text-gray-30o0 flex items-center',
-                        >,
+                          className='text-gray-30o0 flex items-center'>,
                           <span className='w-2 h-2 bg-blue-40o0 rounded-full mr-3'></span>,
                           {feature}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <div className='mb-6'>,
@@ -341,14 +322,12 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                       Technology Stack,
                     </h4>,
                     <div className='flex flex-wrap gap-2'>,
-                      {selectedService.technology.map((tech, idx) => (,
-                        <span,
+                      {selectedService.technology.map((tech, idx) => (
+                        <span
                           key={idx}
-                          className='px-3 py-1 bg-blue-60o0/20 text-blue-40o0 text-sm rounded-full border border-blue-60o0/30',
-                        >,
+                          className='px-3 py-1 bg-blue-60o0/20 text-blue-40o0 text-sm rounded-full border border-blue-60o0/30'>,
                           {tech}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -363,25 +342,23 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                     <div className='text-gray-40o0 mb-4'>,
                       {selectedService.period}
                     </div>,
-                    {selectedService.setupFee && (,
+                    {selectedService.setupFee && (
                       <div className='mb-2'>,
                         <span className='text-gray-40o0'>Setup Fee: </span>,
                         <span className='text-white'>,
-                          {selectedService.setupFee,}
+                          {selectedService.setupFee}
                         </span>,
-                      </div>,
-                    )}
+                      </div>)}
 ,
-                    {selectedService.annualDiscount && (,
+                    {selectedService.annualDiscount && (
                       <div className='mb-2'>,
                         <span className='text-gray-40o0'>,
-                          Annual Discount: {' ',}
+                          Annual Discount: {' '}
                         </span>,
                         <span className='text-white'>,
                           {selectedService.annualDiscount}
                         </span>,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                   <div className='bg-white/10 rounded-lg p-6 mb-6'>,
                     <h4 className='text-lg font-semibold text-white mb-4'>,
@@ -415,17 +392,15 @@ const EnhancedComprehensiveServicesShowcase = () => {,
                       Get Started,
                     </h4>,
                     <div className='space-y-3'>,
-                      <a,
-                        href={`mailto: ${selectedService.contactInfo.email,}?subject=Inquiry about ${selectedService.name}`}
-                        className='block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0',
-                      >,
+                      <a
+                        href={`mailto: ${selectedService.contactInfo.email}?subject=Inquiry about ${selectedService.name}`}
+                        className='block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-lg hover: from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0'>,
                         Request Demo,
                       </a>,
-                      <a,
-                        href={`tel:${selectedService.contactInfo.mobile,}`}
-                        className='block w-full text-center px-6 py-3 border border-gray-60o0 text-white font-semibold rounded-lg hover: bg-gray-80o0 transition-all duration-30o0',
-                      >,
-                        Call Us: {selectedService.contactInfo.mobile,}
+                      <a
+                        href={`tel:${selectedService.contactInfo.mobile}`}
+                        className='block w-full text-center px-6 py-3 border border-gray-60o0 text-white font-semibold rounded-lg hover: bg-gray-80o0 transition-all duration-30o0'>,
+                        Call Us: {selectedService.contactInfo.mobile}
                       </a>,
                     </div>,
                   </div>,
@@ -433,10 +408,6 @@ const EnhancedComprehensiveServicesShowcase = () => {,
               </div>,
             </div>,
           </div>,
-        </div>,
-      )}
-    </div>,
-  ),
-};
-export default EnhancedComprehensiveServicesShowcase,
-,
+        </div>)}
+    </div>)};
+export default EnhancedComprehensiveServicesShowcase;

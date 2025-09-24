@@ -1,24 +1,23 @@
 import Head from 'next/head',
-,
-export default function TutorialPage() {,
-  return (,
+export default function TutorialPage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Mastering AI-Powered Analytics - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Learn ai-powered analytics with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='tutorial, ai-powered analytics, learning, guide, education, technology',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/tutorials/rapid-17555750o47217-h4x3zm',
         />,
         <meta property='og:title' content='Mastering AI-Powered Analytics' />,
-        <meta,
+        <meta
           property='og:description',
           content='Mastering AI-Powered Analytics — automatically suggested description.',
         />,
@@ -61,15 +60,12 @@ export default function TutorialPage() {,
           <p className='text-white/75 mb-4'>,
             Ready to master ai-powered analytics?,
           </p>,
-          <a,
+          <a
             href='https: //ziontechgroup.com/tutorials',
-            className='inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors',
-          >,
+            className='inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors'>,
             Start Learning,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

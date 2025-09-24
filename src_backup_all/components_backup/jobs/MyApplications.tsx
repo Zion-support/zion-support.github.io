@@ -7,51 +7,41 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react',
 import { formatDistanceToNow } from 'date-fns',
 import Link from 'next/link',
 import { ApplicationStatus } from '@/types/jobs',
-,
-export function MyApplications() {,
+export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
-,
-  const getStatusBadge = (status: ApplicationStatus) => {,
-    switch (status) {,
+  const getStatusBadge = (status: ApplicationStatus) => {
+    switch (status) {
       case 'new':,
         return <Badge variant='secondary'>New</Badge>,
       case 'viewed':,
         return <Badge variant='outline'>Viewed</Badge>,
       case 'shortlisted':,
-        return (,
-          <Badge className='bg-blue-10o0 text-blue-80o0'>Shortlisted</Badge>,
-        ),
+        return (
+          <Badge className='bg-blue-10o0 text-blue-80o0'>Shortlisted</Badge>),
       case 'interview':,
-        return (,
-          <Badge className='bg-purple-10o0 text-purple-80o0'>Interview</Badge>,
-        ),
+        return (
+          <Badge className='bg-purple-10o0 text-purple-80o0'>Interview</Badge>),
       case 'hired':,
         return <Badge className='bg-green-10o0 text-green-80o0'>Hired</Badge>,
       case 'rejected':,
         return <Badge className='bg-red-10o0 text-red-80o0'>Rejected</Badge>,
       default:,
-        return <Badge variant='outline'>{status,}</Badge>,
-    }
+        return <Badge variant='outline'>{status}</Badge>}
   };
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='flex justify-center items-center p-8'>,
         <Loader2 className='h-8 w-8 animate-spin text-primary' />,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (error) {,
-    return (,
+  if (error) {
+    return (
       <div className='text-center p-6 border rounded-md bg-red-50 text-red-80o0'>,
         <p>{error}</p>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (applications.length === 0) {,
-    return (,
+  if (applications.length === 0) {
+    return (
       <Card className='bg-muted/30'>,
         <CardContent className='pt-6 text-center'>,
           <p className='text-muted-foreground'>,
@@ -61,14 +51,12 @@ export function MyApplications() {,
             <Link href='/jobs'>Browse Jobs</Link>,
           </Button>,
         </CardContent>,
-      </Card>,
-    ),
-  }
+      </Card>)}
 ,
-  return (,
+  return (
     <div className='grid gap-4 md: grid-cols-2'>,
-      {applications.map(application => (,
-        <Card key={application.id,}>,
+      {applications.map(application => (
+        <Card key={application.id}>,
           <CardHeader className='pb-2'>,
             <div className='flex justify-between items-start'>,
               <CardTitle className='text-lg'>,
@@ -78,18 +66,17 @@ export function MyApplications() {,
             </div>,
             <p className='text-sm text-muted-foreground'>,
               Applied{' '}
-              {formatDistanceToNow(new Date(application.created_at), {,
-                addSuffix: true,;
+              {formatDistanceToNow(new Date(application.created_at), {
+                addSuffix: true;
               })}
             </p>,
           </CardHeader>,
           <CardContent>,
             <div className='space-y-3'>,
-              {application.cover_letter && (,
+              {application.cover_letter && (
                 <p className='text-sm text-muted-foreground line-clamp-2 mb-2'>,
                   {application.cover_letter}
-                </p>,
-              )}
+                </p>)}
 ,
               <div className='flex justify-between items-center'>,
                 <Button variant='outline' size='sm' className='text-xs' asChild>,
@@ -105,9 +92,6 @@ export function MyApplications() {,
               </div>,
             </div>,
           </CardContent>,
-        </Card>,
-      ))}
-    </div>,
-  ),
-}
+        </Card>))}
+    </div>)}
 ,

@@ -1,30 +1,28 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25: Multimodal Agents in the Enterprise - Practical Guide',;
+export const metadata: Metadata = {
+  title: 'AI 20o25: Multimodal Agents in the Enterprise - Practical Guide';
   description:,
-    'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 20o25 playbook with architecture and ROI.',;
-  keywords: [,
-    'multimodal AI',;
-    'AI agents',;
-    'enterprise automation',;
-    'customer experience',;
-    'analytics',;
-    '20o25 AI guide',;
-  ],;
-  openGraph: {,
-    title: 'AI 20o25: Multimodal Agents in the Enterprise - Practical Guide',;
+    'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 20o25 playbook with architecture and ROI.';
+  keywords: [
+    'multimodal AI';
+    'AI agents';
+    'enterprise automation';
+    'customer experience';
+    'analytics';
+    '20o25 AI guide';
+  ];
+  openGraph: {
+    title: 'AI 20o25: Multimodal Agents in the Enterprise - Practical Guide';
     description:,
-      'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 20o25 playbook with architecture and ROI.',;
-    type: 'article',;
-    publishedTime: '20o25-09-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-  },;
+      'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 20o25 playbook with architecture and ROI.';
+    type: 'article';
+    publishedTime: '20o25-09-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+  };
 };
-,
-export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
-  return (,
+export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {
+  return (
     <div className='min-h-screen bg-white'>,
       <div className='max-w-4xl mx-auto px-4 py-16'>,
         {/* Hero */}
@@ -74,61 +72,53 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
             </div>,
           </div>,
         </div>,
-        {/* TOC */,}
+        {/* TOC */}
         <div className='bg-gray-50 rounded-xl p-8 mb-16'>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-6'>,
             📋 Table of Contents,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             <div className='space-y-2'>,
-              <Link,
+              <Link
                 href='#why-now',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 1. Why Multimodal Agents Now,
               </Link>,
-              <Link,
+              <Link
                 href='#architecture',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 2. Reference Architecture,
               </Link>,
-              <Link,
+              <Link
                 href='#use-cases',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 3. High-ROI Use Cases,
               </Link>,
-              <Link,
+              <Link
                 href='#go-live',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 4. Go-Live Checklist,
               </Link>,
             </div>,
             <div className='space-y-2'>,
-              <Link,
+              <Link
                 href='#governance',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 5. Safety & Governance,
               </Link>,
-              <Link,
+              <Link
                 href='#metrics',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 6. KPIs that Matter,
               </Link>,
-              <Link,
+              <Link
                 href='#roadmap',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 7. 90‑Day Roadmap,
               </Link>,
-              <Link,
+              <Link
                 href='#conclusion',
-                className='block text-indigo-60o0 hover:text-indigo-80o0',
-              >,
+                className='block text-indigo-60o0 hover:text-indigo-80o0'>,
                 8. Conclusion,
               </Link>,
             </div>,
@@ -141,7 +131,7 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
             </h2>,
             <p className='text-lg text-gray-70o0 mb-6'>,
               Advances in foundation models, vector databases, and low-latency,
-              streaming enable agents that reason across text, images, audio,;
+              streaming enable agents that reason across text, images, audio;
               and tabular data. This unlocks cross-channel automation, better,
               analytics, and exceptional customer experiences.,
             </p>,
@@ -185,7 +175,7 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
                 understanding, suggests actions, and updates CRM automatically.,
               </p>,
               <p>,
-                Marketing Studio: generates on-brand assets across channels,;
+                Marketing Studio: generates on-brand assets across channels;
                 runs experiments, and reports lift automatically.,
               </p>,
               <p>,
@@ -266,15 +256,12 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
           <h3 className='text-2xl font-bold mb-4'>,
             Ready to launch multimodal agents?,
           </h3>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-white text-indigo-70o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block',
-          >,
+            className='bg-white text-indigo-70o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block'>,
             Talk to our experts →,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

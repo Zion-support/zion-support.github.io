@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const RevolutionaryTechBanner20o26 = () => {,
-  return (,
+const RevolutionaryTechBanner20o26 = () => {
+  return (
     <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0'>,
@@ -29,7 +28,7 @@ const RevolutionaryTechBanner20o26 = () => {,
         </div>,
         {/* Technology Showcase */}
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16'>,
-          {/* AI 20o26 */,}
+          {/* AI 20o26 */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-6xl mb-6 text-center'>🤖</div>,
             <h3 className='text-3xl font-bold mb-4 text-center'>AI 20o26</h3>,
@@ -52,14 +51,13 @@ const RevolutionaryTechBanner20o26 = () => {,
                 <span className='text-2xl font-bold text-purple-40o0'>80%</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-enterprise-automation-revolution',
-              className='block w-full bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white text-center py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0',
-            >,
+              className='block w-full bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white text-center py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0'>,
               Explore AI 20o26,
             </Link>,
           </div>,
-          {/* Quantum Computing */,}
+          {/* Quantum Computing */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-6xl mb-6 text-center'>⚛️</div>,
             <h3 className='text-3xl font-bold mb-4 text-center'>,
@@ -85,14 +83,13 @@ const RevolutionaryTechBanner20o26 = () => {,
                 <span className='text-2xl font-bold text-indigo-40o0'>∞</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-computing-breakthrough',
-              className='block w-full bg-gradient-to-r from-yellow-50o0 to-pink-50o0 text-white text-center py-3 rounded-lg font-semibold hover:from-yellow-60o0 hover:to-pink-60o0 transition-all duration-30o0',
-            >,
+              className='block w-full bg-gradient-to-r from-yellow-50o0 to-pink-50o0 text-white text-center py-3 rounded-lg font-semibold hover:from-yellow-60o0 hover:to-pink-60o0 transition-all duration-30o0'>,
               Discover Quantum,
             </Link>,
           </div>,
-          {/* Global Transformation */,}
+          {/* Global Transformation */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='text-6xl mb-6 text-center'>🌍</div>,
             <h3 className='text-3xl font-bold mb-4 text-center'>,
@@ -120,15 +117,14 @@ const RevolutionaryTechBanner20o26 = () => {,
                 <span className='text-2xl font-bold text-blue-40o0'>8 mo</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-global-transformation-success',
-              className='block w-full bg-gradient-to-r from-purple-50o0 to-indigo-50o0 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-indigo-60o0 transition-all duration-30o0',
-            >,
+              className='block w-full bg-gradient-to-r from-purple-50o0 to-indigo-50o0 text-white text-center py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-indigo-60o0 transition-all duration-30o0'>,
               View Success,
             </Link>,
           </div>,
         </div>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-16'>,
           <h3 className='text-3xl font-bold text-center mb-8'>,
             Proven Results from 50o0+ Companies,
@@ -158,7 +154,7 @@ const RevolutionaryTechBanner20o26 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <h3 className='text-4xl font-bold mb-6'>,
             Ready to Transform Your Business?,
@@ -169,16 +165,14 @@ const RevolutionaryTechBanner20o26 = () => {,
             unprecedented growth.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-10 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-10 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Start Your Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
               Explore Services,
             </Link>,
           </div>,
@@ -188,9 +182,5 @@ const RevolutionaryTechBanner20o26 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryTechBanner20o26,
-,
+    </section>)};
+export default RevolutionaryTechBanner20o26;

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26BreakthroughRevolutionBanner() {,
-  return (,
+export default function AI20o26BreakthroughRevolutionBanner() {
+  return (
     <section className='py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='text-center mb-12'>,
@@ -18,21 +17,19 @@ export default function AI20o26BreakthroughRevolutionBanner() {,
             life.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-breakthrough-revolution',
-              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
               Explore the Revolution,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
               Get Early Access,
             </Link>,
           </div>,
         </div>,
-        {/* Key Features Grid */,}
+        {/* Key Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mt-12'>,
           <div className='text-center'>,
             <div className='text-4xl mb-4'>🧠</div>,
@@ -57,7 +54,5 @@ export default function AI20o26BreakthroughRevolutionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>)}
 ,

@@ -1,10 +1,10 @@
-export default function Footer() {,
-  return (,
+export default function Footer() {
+  return (
     <footer className='border-t border-white/10 bg-black'>,
       <div className='mx-auto max-w-7xl px-6 py-10'>,
         <div className='flex flex-col sm: flex-row items-center justify-between gap-4'>,
           <p className='text-sm text-gray-40o0'>,
-            © {new Date().getFullYear(),} Zion Tech Group,
+            © {new Date().getFullYear()} Zion Tech Group,
           </p>,
           <div className='flex items-center gap-4 text-sm'>,
             <a href='/about' className='text-gray-40o0 hover: text-white'>,
@@ -22,7 +22,5 @@ export default function Footer() {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-,}
+    </footer>)}
 ,

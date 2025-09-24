@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function QuantumResistantCryptographyPlatform20o25Page() {,
-  return (,
+export default function QuantumResistantCryptographyPlatform20o25Page() {
+  return (
     <>,
       <Head>,
         <title>,
           Quantum Resistant Cryptography Platform 20o25 - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='quantum resistant cryptography platform 20o25 page',
         />,
@@ -23,7 +22,5 @@ export default function QuantumResistantCryptographyPlatform20o25Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

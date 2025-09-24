@@ -1,90 +1,74 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Search, Filter, Star, Users, TrendingUp,;
-  DollarSign, Clock, CheckCircle, ArrowRight,;
-  Brain, Rocket, Dna, Globe, Shield, Wifi,;
-  Package, Bot, Car, Building2, Monitor, Cpu,;
-  Zap, Atom, Database, Cloud, Lock, Code,;
-  Phone, Mail, MapPin, ExternalLink, Award,;
-  Target, Sparkles, Crown, Infinity, Zap as ZapIcon,
-} from 'lucide-react',
+import {
+  Search, Filter, Star, Users, TrendingUp;
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi;
+  Package, Bot, Car, Building2, Monitor, Cpu;
+  Zap, Atom, Database, Cloud, Lock, Code;
+  Phone, Mail, MapPin, ExternalLink, Award;
+  Target, Sparkles, Crown, Infinity, Zap as ZapIcon} from 'lucide-react',
 import { revolutionary20o25Services } from '../data/revolutionary-20o25-services',
 import { nextGenInnovations20o25 } from '../data/next-gen-innovations-20o25',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card',
-,
-export default function RevolutionaryServicesShowcase() {,
+export default function RevolutionaryServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
-,
-  const allServices = [,
-    ...revolutionary20o25Services,;
-    ...nextGenInnovations20o25,
-  ],
-,
+  const allServices = [
+    ...revolutionary20o25Services;
+    ...nextGenInnovations20o25],
   // Enhanced category mapping,
-  const categories = [,
-    { id: 'all', name: 'All Revolutionary Services', icon: '🚀', count: allServices.length ,},;
-    { id: 'ai', name: 'AI & Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI')).length ,},;
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum')).length ,},;
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Next-Gen')).length ,},;
-    { id: 'business', name: 'Business & Finance', icon: '💼', count: allServices.filter(s => s.category.includes('Business') || s.category.includes('Finance')).length ,},;
-    { id: 'industry', name: 'Industry 4.0', icon: '🏭', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industry')).length ,}
+  const categories = [
+    { id: 'all', name: 'All Revolutionary Services', icon: '🚀', count: allServices.length };
+    { id: 'ai', name: 'AI & Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI')).length };
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum')).length };
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Next-Gen')).length };
+    { id: 'business', name: 'Business & Finance', icon: '💼', count: allServices.filter(s => s.category.includes('Business') || s.category.includes('Finance')).length };
+    { id: 'industry', name: 'Industry 4.0', icon: '🏭', count: allServices.filter(s => s.category.includes('Manufacturing') || s.category.includes('Industry')).length }
   ],
-,
-  const priceRanges = [,
-    { id: 'all', name: 'All Prices', range: 'All' ,},;
-    { id: 'low', name: 'Under $10K/month', range: 'Under $10K' ,},;
-    { id: 'medium', name: '$10K - $25K/month', range: '$10K - $25K' ,},;
-    { id: 'high', name: '$25K+/month', range: '$25K+' ,}
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' };
+    { id: 'low', name: 'Under $10K/month', range: 'Under $10K' };
+    { id: 'medium', name: '$10K - $25K/month', range: '$10K - $25K' };
+    { id: 'high', name: '$25K+/month', range: '$25K+' }
   ],
-,
-  const sortOptions = [,
-    { id: 'name', name: 'Name A-Z' ,},;
-    { id: 'price-low', name: 'Price Low to High' ,},;
-    { id: 'price-high', name: 'Price High to Low' ,},;
-    { id: 'rating', name: 'Rating' ,},;
-    { id: 'customers', name: 'Customer Count' ,}
+  const sortOptions = [
+    { id: 'name', name: 'Name A-Z' };
+    { id: 'price-low', name: 'Price Low to High' };
+    { id: 'price-high', name: 'Price High to Low' };
+    { id: 'rating', name: 'Rating' };
+    { id: 'customers', name: 'Customer Count' }
   ],
-,
   // Filter and sort services,
-  const filteredServices = React.useMemo(() => {,
-    const parsePriceToNumber = (price: any): number => {,
+  const filteredServices = React.useMemo(() => {
+    const parsePriceToNumber = (price: any): number => {
       if (typeof price === 'number') return price,
-      if (typeof price === 'string') {,
+      if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, ''),
         const parsed = parseFloat(match || '0'),
-        return isNaN(parsed) ? 0 : parsed,
-      }
-      return 0,
-    };
-,
-    let filtered = allServices.filter(service => {,
+        return isNaN(parsed) ? 0 : parsed}
+      return 0};
+    let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-,
       const matchesCategory = selectedCategory === 'all' ||,
                              (selectedCategory === 'ai' && service.category.includes('AI')) ||,
                              (selectedCategory === 'quantum' && service.category.includes('Quantum')) ||,
                              (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Next-Gen'))) ||,
                              (selectedCategory === 'business' && (service.category.includes('Business') || service.category.includes('Finance'))) ||,
                              (selectedCategory === 'industry' && (service.category.includes('Manufacturing') || service.category.includes('Industry'))),
-,
       const matchesPrice = selectedPriceRange === 'all' ||,
                           (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 10o000) ||,
                           (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 10o000 && parsePriceToNumber(service.price) <= 250o00) ||,
                           (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 250o00),
-,
-      return matchesSearch && matchesCategory && matchesPrice,
-    }),
-,
+      return matchesSearch && matchesCategory && matchesPrice}),
     // Sort services,
-    switch (sortBy) {,
+    switch (sortBy) {
       case 'price-low':,
         filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)),
         break,
@@ -98,20 +82,15 @@ export default function RevolutionaryServicesShowcase() {,
         filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),
         break,
       default:,
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
-    }
+        filtered.sort((a, b) => a.name.localeCompare(b.name))}
 ,
-    return filtered,
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
-,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',
-  ,};
-,
-  return (,
+    return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com'};
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Revolutionary 20o25 Services Showcase | Zion Tech Group - 10o00+ Cutting-Edge Solutions</title>,
@@ -125,13 +104,12 @@ export default function RevolutionaryServicesShowcase() {,
       </Head>,
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16">,
             <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent mb-6">,
               Revolutionary 20o25 Services,
             </h1>,
@@ -146,7 +124,7 @@ export default function RevolutionaryServicesShowcase() {,
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
               <div className="flex items-center gap-2 text-gray-30o0">,
                 <Phone className="w-5 h-5 text-cyan-40o0"  />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center gap-2 text-gray-30o0">,
                 <Mail className="w-5 h-5 text-purple-40o0"  />,
@@ -176,19 +154,18 @@ export default function RevolutionaryServicesShowcase() {,
               </div>,
             </div>,
           </motion.div>,
-          {/* Search and Filters */,}
+          {/* Search and Filters */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.2 ,}}
-            className="mb-12",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-12">,
             <div className="bg-gray-90o0/50 backdrop-blur-sm rounded-2xl border border-gray-70o0 p-6">,
               <div className="grid grid-cols-1 lg: grid-cols-4 gap-4">,
-                {/* Search */,}
+                {/* Search */}
                 <div className="relative">,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-                  <input,
+                  <input
                     type="text",
                     placeholder="Search revolutionary services...",
                     value={searchTerm}
@@ -196,78 +173,69 @@ export default function RevolutionaryServicesShowcase() {,
                     className="w-full pl-10 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:border-cyan-50o0 focus:ring-1 focus:ring-cyan-50o0",
                   />,
                 </div>,
-                {/* Category Filter */,}
-                <select,
+                {/* Category Filter */}
+                <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-purple-50o0 focus:ring-1 focus:ring-purple-50o0",
-                >,
-                  {categories.map((category) => (,
-                    <option key={category.id,} value={category.id}>,
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-purple-50o0 focus:ring-1 focus:ring-purple-50o0">,
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>,
                       {category.name} ({category.count}),
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 {/* Price Range Filter */}
-                <select,
+                <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-pink-50o0 focus:ring-1 focus:ring-pink-50o0",
-                >,
-                  {priceRanges.map((range) => (,
-                    <option key={range.id,} value={range.id}>,
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-pink-50o0 focus:ring-1 focus:ring-pink-50o0">,
+                  {priceRanges.map((range) => (
+                    <option key={range.id} value={range.id}>,
                       {range.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 {/* Sort */}
-                <select,
+                <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-green-50o0 focus:ring-1 focus:ring-green-50o0",
-                >,
-                  {sortOptions.map((option) => (,
-                    <option key={option.id,} value={option.id}>,
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus: outline-none focus:border-green-50o0 focus:ring-1 focus:ring-green-50o0">,
+                  {sortOptions.map((option) => (
+                    <option key={option.id} value={option.id}>,
                       {option.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
               </div>,
             </div>,
           </motion.div>,
           {/* Services Grid */}
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className="mb-16",
-          >,
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-16">,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               <AnimatePresence>,
-                {filteredServices.map((service, index) => (,
+                {filteredServices.map((service, index) => (
                   <motion.div,
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -20 ,}}
-                    transition={{ duration: 0.5, delay: index * 0.1 ,}}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   >,
-                    <Card,
-                      className="h-full group hover: scale-10o5 transition-transform duration-30o0 bg-gray-80o0/50 border border-gray-70o0 hover:border-cyan-50o0/50",
-                    >,
+                    <Card
+                      className="h-full group hover: scale-10o5 transition-transform duration-30o0 bg-gray-80o0/50 border border-gray-70o0 hover:border-cyan-50o0/50">,
                       <div className="p-6">,
-                        {/* Service Header */,}
+                        {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">,
                           <div className="text-4xl">{service.icon}</div>,
-                          {service.popular && (,
+                          {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white text-xs px-3 py-1 rounded-full font-semibold">,
                               POPULAR,
-                            </div>,
-                          )}
+                            </div>)}
                         </div>,
                         {/* Service Name and Tagline */}
                         <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-40o0 transition-colors">,
-                          {service.name,}
+                          {service.name}
                         </h3>,
                         <p className="text-gray-30o0 text-sm mb-4">,
                           {service.tagline}
@@ -287,23 +255,22 @@ export default function RevolutionaryServicesShowcase() {,
                         <div className="mb-4">,
                           <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>,
                           <ul className="space-y-1">,
-                            {service.features.slice(0, 3).map((feature, idx) => (,
+                            {service.features.slice(0, 3).map((feature, idx) => (
                               <li key={idx} className="flex items-center gap-2 text-xs text-gray-40o0">,
                                 <CheckCircle className="w-3 h-3 text-green-40o0 flex-shrink-0"  />,
                                 {feature}
-                              </li>,
-                            ))}
+                              </li>))}
                           </ul>,
                         </div>,
                         {/* Market Info */}
                         <div className="bg-gray-80o0/30 rounded-lg p-3 mb-4">,
                           <div className="flex items-center justify-between text-xs">,
                             <span className="text-gray-40o0">Market Size: </span>,
-                            <span className="text-green-40o0 font-semibold">{service.marketSize,}</span>,
+                            <span className="text-green-40o0 font-semibold">{service.marketSize}</span>,
                           </div>,
                           <div className="flex items-center justify-between text-xs mt-1">,
                             <span className="text-gray-40o0">Growth Rate: </span>,
-                            <span className="text-purple-40o0 font-semibold">{service.growthRate,}</span>,
+                            <span className="text-purple-40o0 font-semibold">{service.growthRate}</span>,
                           </div>,
                         </div>,
                         {/* ROI and Contact */}
@@ -314,22 +281,20 @@ export default function RevolutionaryServicesShowcase() {,
                             </p>,
                           </div>,
                           <div className="flex gap-2">,
-                            <a,
+                            <a
                               href={service.link}
-                              className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2",
-                            >,
+                              className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2">,
                               Learn More,
                               <ArrowRight className="w-4 h-4"  />,
                             </a>,
-                            <a,
-                              href={`mailto:${contactInfo.email,}?subject=Inquiry about ${service.name}`}
-                              className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover: from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center",
-                            >,
+                            <a
+                              href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+                              className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover: from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center">,
                               <Mail className="w-4 h-4"  />,
                             </a>,
                           </div>,
                         </div>,
-                        {/* Contact Information */,}
+                        {/* Contact Information */}
                         <div className="mt-4 pt-4 border-t border-gray-70o0">,
                           <div className="text-xs text-gray-40o0 space-y-1">,
                             <div className="flex items-center gap-2">,
@@ -344,19 +309,17 @@ export default function RevolutionaryServicesShowcase() {,
                         </div>,
                       </div>,
                     </Card>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </AnimatePresence>,
             </div>,
           </motion.div>,
           {/* Call to Action */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
-            viewport={{ once: true ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center">,
             <div className="bg-gradient-to-r from-cyan-50o0/20 via-purple-50o0/20 to-pink-50o0/20 rounded-2xl border border-cyan-50o0/30 p-8">,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Ready to Revolutionize Your Business?,
@@ -366,17 +329,15 @@ export default function RevolutionaryServicesShowcase() {,
                 Get started today and achieve 10o00% ROI with cutting-edge AI, quantum computing, and emerging technologies.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <a,
-                  href={`tel:${contactInfo.mobile,}`}
-                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold py-3 px-8 rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2",
-                >,
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold py-3 px-8 rounded-xl hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2">,
                   <Phone className="w-5 h-5"  />,
-                  Call {contactInfo.mobile,}
+                  Call {contactInfo.mobile}
                 </a>,
-                <a,
-                  href={`mailto: ${contactInfo.email,}?subject=Revolutionary Services Inquiry`}
-                  className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-semibold py-3 px-8 rounded-xl hover: from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center gap-2",
-                >,
+                <a
+                  href={`mailto: ${contactInfo.email}?subject=Revolutionary Services Inquiry`}
+                  className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-semibold py-3 px-8 rounded-xl hover: from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center gap-2">,
                   <Mail className="w-5 h-5"  />,
                   Email Us,
                 </a>,
@@ -385,6 +346,4 @@ export default function RevolutionaryServicesShowcase() {,
           </motion.div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-,}
+    </UltraAdvancedFuturisticBackground>)}

@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { GradientHeading } from '@/components/GradientHeading',
@@ -6,60 +6,48 @@ import { Input } from '@/components/ui/input',
 import { Label } from '@/components/ui/label',
 import { useToast } from '@/hooks/use-toast',
 import { Checkbox } from '@/components/ui/checkbox',
-,
-export function WaitlistSection() {,
+export function WaitlistSection() {
   const [emailsetEmail] = useState(''),
   const [namesetName] = useState(''),
   const [rolesetRole] = useState(''),
   const [agreeTermsetAgreeTerms] = useState(false),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const { toast } = useToast(),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-,
-    if (!email || !name || !role || !agreeTerms) {,
-      toast({,
-        variant: 'destructive',;
-        title: 'Missing information',;
-        description: 'Please fill all fields and agree to the terms.',;
+    if (!email || !name || !role || !agreeTerms) {
+      toast({
+        variant: 'destructive';
+        title: 'Missing information';
+        description: 'Please fill all fields and agree to the terms.';
       }),
-      return,
-    }
+      return}
 ,
     setIsSubmitting(true),
-,
-    try {,
+    try {
       // Simulating an API call,
       await new Promise(resolve => setTimeout(resolve1000)),
-,
-      toast({,
-        title: 'Success!',;
+      toast({
+        title: 'Success!';
         description:,
-          "Thank you for registering with Zion. We'll be in touch soon.",;
+          "Thank you for registering with Zion. We'll be in touch soon.";
       }),
-,
       // Reset form,
       setEmail(''),
       setName(''),
       setRole(''),
-      setAgreeTerms(false),
-    } catch (error) {,
-      toast({,
-        variant: 'destructive',;
-        title: 'Something went wrong',;
-        description: 'Please try again later.',;
-      }),
-    } finally {,
-      setIsSubmitting(false),
-    }
+      setAgreeTerms(false)} catch (error) {
+      toast({
+        variant: 'destructive';
+        title: 'Something went wrong';
+        description: 'Please try again later.';
+      })} finally {
+      setIsSubmitting(false)}
   };
-,
-  return (,
-    <section,
+  return (
+    <section
       id='waitlist',
-      className='py-20 bg-zion-blue-dark relative overflow-hidden',
-    >,
+      className='py-20 bg-zion-blue-dark relative overflow-hidden'>,
       {/* Background elements */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden opacity-10'>,
         <div className='absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]'></div>,
@@ -75,13 +63,12 @@ export function WaitlistSection() {,
               services.,
             </p>,
           </div>,
-          <form,
+          <form
             onSubmit={handleSubmit}
-            className='space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20',
-          >,
+            className='space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20'>,
             <div className='space-y-2'>,
               <Label htmlFor='name'>Full Name</Label>,
-              <Input,
+              <Input
                 id='name',
                 placeholder='John Smith',
                 value={name}
@@ -91,7 +78,7 @@ export function WaitlistSection() {,
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor='email'>Email Address</Label>,
-              <Input,
+              <Input
                 id='email',
                 type='email',
                 placeholder='you@company.com',
@@ -102,7 +89,7 @@ export function WaitlistSection() {,
             </div>,
             <div className='space-y-2'>,
               <Label htmlFor='role'>Your Role</Label>,
-              <Input,
+              <Input
                 id='role',
                 placeholder='IT ManagerDeveloperBusiness Owneretc.',
                 value={role}
@@ -111,30 +98,26 @@ export function WaitlistSection() {,
               />,
             </div>,
             <div className='flex items-center space-x-2'>,
-              <Checkbox,
+              <Checkbox
                 id='terms',
                 checked={agreeTerms}
                 onCheckedChange={checked => setAgreeTerms(checked as boolean)}
               />,
-              <Label,
+              <Label
                 htmlFor='terms',
-                className='text-sm text-zion-slate font-normal',
-              >,
+                className='text-sm text-zion-slate font-normal'>,
                 I agree to receive updates about Zion and understand I can,
                 unsubscribe anytime.,
               </Label>,
             </div>,
-            <Button,
+            <Button
               type='submit',
               disabled={isSubmitting}
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple',
-            >,
-              {isSubmitting ? 'Processing...' : 'Complete Registration',}
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple'>,
+              {isSubmitting ? 'Processing...' : 'Complete Registration'}
             </Button>,
           </form>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

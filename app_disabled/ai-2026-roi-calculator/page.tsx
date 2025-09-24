@@ -3,34 +3,26 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { ArrowLeft, Calculator, TrendingUp, DollarSign, Users, Clock, ArrowRight } from 'lucide-react',
-,
-export default function AIROICalculator() {,
-  const [inputs, setInputs] = useState({,
-    annualRevenue: '',;
-    employees: '',;
-    currentEfficiency: '',;
-    expectedEfficiency: '',;
-    implementationCost: '',;
-    maintenanceCost: '',;
-    trainingCost: '',
-  ,}),
-,
-  const [results, setResults] = useState({,
-    annualSavings: 0,;
-    totalCosts: 0,;
-    netBenefit: 0,;
-    roi: 0,;
-    paybackPeriod: 0,
-  ,}),
-,
-  const handleInputChange = (field: string, value: string) => {,
-    setInputs(prev => ({,
-      ...prev,;
-      [field]: value,
-    })),
-  };
-,
-  const calculateROI = () => {,
+export default function AIROICalculator() {
+  const [inputs, setInputs] = useState({
+    annualRevenue: '';
+    employees: '';
+    currentEfficiency: '';
+    expectedEfficiency: '';
+    implementationCost: '';
+    maintenanceCost: '';
+    trainingCost: ''}),
+  const [results, setResults] = useState({
+    annualSavings: 0;
+    totalCosts: 0;
+    netBenefit: 0;
+    roi: 0;
+    paybackPeriod: 0}),
+  const handleInputChange = (field: string, value: string) => {
+    setInputs(prev => ({
+      ...prev;
+      [field]: value}))};
+  const calculateROI = () => {
     const revenue = parseFloat(inputs.annualRevenue) || 0,
     const employees = parseFloat(inputs.employees) || 0,
     const currentEff = parseFloat(inputs.currentEfficiency) || 0,
@@ -38,48 +30,33 @@ export default function AIROICalculator() {,
     const implCost = parseFloat(inputs.implementationCost) || 0,
     const maintCost = parseFloat(inputs.maintenanceCost) || 0,
     const trainCost = parseFloat(inputs.trainingCost) || 0,
-,
     // Calculate efficiency improvement,
     const efficiencyGain = (expectedEff - currentEff) / 100,
-,
     // Calculate annual savings from efficiency improvement,
     const annualSavings = revenue * efficiencyGain,
-,
     // Calculate total costs,
     const totalCosts = implCost + maintCost + trainCost,
-,
     // Calculate net benefit,
     const netBenefit = annualSavings - totalCosts,
-,
     // Calculate ROI,
     const roi = totalCosts > 0 ? (netBenefit / totalCosts) * 100 : 0,
-,
     // Calculate payback period (in months),
     const paybackPeriod = annualSavings > 0 ? (totalCosts / annualSavings) * 12 : 0,
-,
-    setResults({,
-      annualSavings,;
-      totalCosts,;
-      netBenefit,;
-      roi,;
-      paybackPeriod,
-    }),
-  };
-,
-  const formatCurrency = (amount: number) => {,
-    return new Intl.NumberFormat('en-US', {,
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,
-    ,}).format(amount),
-  };
-,
-  const formatPercentage = (value: number) => {,
-    return `${value.toFixed(1),}%`,
-  };
-,
-  return (,
+    setResults({
+      annualSavings;
+      totalCosts;
+      netBenefit;
+      roi;
+      paybackPeriod})};
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency';
+      currency: 'USD';
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0}).format(amount)};
+  const formatPercentage = (value: number) => {
+    return `${value.toFixed(1)}%`};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         <div className="bg-white rounded-2xl shadow-xl p-8">,
@@ -94,14 +71,14 @@ export default function AIROICalculator() {,
             <p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>,
           </div>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-            {/* Input Form */,}
+            {/* Input Form */}
             <div className="space-y-6">,
               <h2 className="text-xl font-semibold text-gray-900 mb-4">Business Information</h2>,
               <div>,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Annual Revenue ($),
                 </label>,
-                <input,
+                <input
                   type="number",
                   value={inputs.annualRevenue}
                   onChange={(e) => handleInputChange('annualRevenue', e.target.value)}
@@ -113,9 +90,9 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Number of Employees,
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.employees,}
+                  value={inputs.employees}
                   onChange={(e) => handleInputChange('employees', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter number of employees",
@@ -125,9 +102,9 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Current Efficiency (%),
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.currentEfficiency,}
+                  value={inputs.currentEfficiency}
                   onChange={(e) => handleInputChange('currentEfficiency', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter current efficiency percentage",
@@ -137,9 +114,9 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Expected Efficiency After AI (%),
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.expectedEfficiency,}
+                  value={inputs.expectedEfficiency}
                   onChange={(e) => handleInputChange('expectedEfficiency', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter expected efficiency percentage",
@@ -150,9 +127,9 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Implementation Cost ($),
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.implementationCost,}
+                  value={inputs.implementationCost}
                   onChange={(e) => handleInputChange('implementationCost', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter implementation cost",
@@ -162,9 +139,9 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Annual Maintenance Cost ($),
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.maintenanceCost,}
+                  value={inputs.maintenanceCost}
                   onChange={(e) => handleInputChange('maintenanceCost', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter annual maintenance cost",
@@ -174,22 +151,21 @@ export default function AIROICalculator() {,
                 <label className="block text-sm font-medium text-gray-700 mb-2">,
                   Training Cost ($),
                 </label>,
-                <input,
+                <input
                   type="number",
-                  value={inputs.trainingCost,}
+                  value={inputs.trainingCost}
                   onChange={(e) => handleInputChange('trainingCost', e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent",
                   placeholder="Enter training cost",
                 />,
               </div>,
-              <button,
-                onClick={calculateROI,}
-                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover: bg-green-700 transition-colors",
-              >,
+              <button
+                onClick={calculateROI}
+                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover: bg-green-700 transition-colors">,
                 Calculate ROI,
               </button>,
             </div>,
-            {/* Results */,}
+            {/* Results */}
             <div className="space-y-6">,
               <h2 className="text-xl font-semibold text-gray-900 mb-4">ROI Analysis Results</h2>,
               <div className="grid grid-cols-1 gap-4">,
@@ -258,21 +234,16 @@ export default function AIROICalculator() {,
               <div className="bg-gray-50 rounded-lg p-6">,
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">ROI Interpretation</h3>,
                 <div className="space-y-2 text-sm text-gray-700">,
-                  {results.roi > 300 && (,
-                    <p className="text-green-600 font-medium">Excellent ROI - Highly recommended for implementation</p>,
-                  )}
-                  {results.roi >= 100 && results.roi <= 300 && (,
-                    <p className="text-blue-600 font-medium">Good ROI - Recommended with proper planning</p>,
-                  )}
-                  {results.roi >= 50 && results.roi < 100 && (,
-                    <p className="text-yellow-600 font-medium">Moderate ROI - Consider pilot implementation first</p>,
-                  )}
-                  {results.roi < 50 && results.roi > 0 && (,
-                    <p className="text-orange-600 font-medium">Low ROI - Review costs and expected benefits</p>,
-                  )}
-                  {results.roi <= 0 && (,
-                    <p className="text-red-600 font-medium">Negative ROI - Not recommended at current parameters</p>,
-                  )}
+                  {results.roi > 300 && (
+                    <p className="text-green-600 font-medium">Excellent ROI - Highly recommended for implementation</p>)}
+                  {results.roi >= 100 && results.roi <= 300 && (
+                    <p className="text-blue-600 font-medium">Good ROI - Recommended with proper planning</p>)}
+                  {results.roi >= 50 && results.roi < 100 && (
+                    <p className="text-yellow-600 font-medium">Moderate ROI - Consider pilot implementation first</p>)}
+                  {results.roi < 50 && results.roi > 0 && (
+                    <p className="text-orange-600 font-medium">Low ROI - Review costs and expected benefits</p>)}
+                  {results.roi <= 0 && (
+                    <p className="text-red-600 font-medium">Negative ROI - Not recommended at current parameters</p>)}
                 </div>,
               </div>,
               {/* Recommendations */}
@@ -289,30 +260,22 @@ export default function AIROICalculator() {,
             </div>,
           </div>,
           <div className="mt-8 text-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors",
-            >,
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors">,
               Get Expert Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,
-export default function Page() {,
-	return (,
+    </div>),
+export default function Page() {
+	return (
 		<div className="max-w-3xl mx-auto py-16 px-4">,
 			<h1 className="text-3xl font-bold">AI 2026 ROI Calculator</h1>,
 			<p className="mt-4 text-gray-600">Temporarily disabled due to unresolved merge markers. Coming back soon.</p>,
-		</div>,
-	),
-,}
-=======,
-}
+		</div>)}
+=======}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295,
-=======,
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
+=======}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -1,50 +1,45 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Shield,;
-  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle,;
-  Target, BarChart3, TrendingUp, Cpu, Globe,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'AI Powered Enterprise Security | Zion Tech Group',;
-  description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',;
-  keywords: 'AI enterprise security, cybersecurity, AI security, enterprise protection, cyber threat detection, AI defense',;
-  openGraph: {,
-    title: 'AI Powered Enterprise Security | Zion Tech Group',;
-    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',;
-    url: 'https://ziontechgroup.com/ai-powered-enterprise-security',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'AI Powered Enterprise Security',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'AI Powered Enterprise Security | Zion Tech Group',;
-    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',;
-    images: ['https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/ai-powered-enterprise-security',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',
-,};
-,
-export default function AIPoweredEnterpriseSecurity() {,
-  return (,
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Shield;
+  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle;
+  Target, BarChart3, TrendingUp, Cpu, Globe} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'AI Powered Enterprise Security | Zion Tech Group';
+  description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
+  keywords: 'AI enterprise security, cybersecurity, AI security, enterprise protection, cyber threat detection, AI defense';
+  openGraph: {
+    title: 'AI Powered Enterprise Security | Zion Tech Group';
+    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
+    url: 'https://ziontechgroup.com/ai-powered-enterprise-security';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'AI Powered Enterprise Security'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'AI Powered Enterprise Security | Zion Tech Group';
+    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
+    images: ['https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/ai-powered-enterprise-security'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com'};
+export default function AIPoweredEnterpriseSecurity() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -63,24 +58,22 @@ export default function AIPoweredEnterpriseSecurity() {,
               against cyber threats with intelligent threat detection and automated response.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover:from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover:from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#features",
-                className="inline-flex items-center px-8 py-4 border border-red-50o0/30 rounded-xl font-semibold text-red-30o0 hover:bg-red-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-red-50o0/30 rounded-xl font-semibold text-red-30o0 hover:bg-red-50o0/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -88,7 +81,7 @@ export default function AIPoweredEnterpriseSecurity() {,
               Revolutionary AI Enterprise Security,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of enterprise security from threat detection to automated response,;
+              Our AI platform handles every aspect of enterprise security from threat detection to automated response;
               continuously learning and adapting to new cyber threats.,
             </p>,
           </div>,
@@ -243,7 +236,7 @@ export default function AIPoweredEnterpriseSecurity() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -294,7 +287,7 @@ export default function AIPoweredEnterpriseSecurity() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-90o0/20 via-purple-90o0/20 to-indigo-90o0/20">,
         <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">,
@@ -304,24 +297,22 @@ export default function AIPoweredEnterpriseSecurity() {,
             Join the future of enterprise security where AI provides intelligent protection while you focus on business growth.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover:from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover:from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Your Free Trial,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-red-50o0/30 rounded-xl font-semibold text-red-30o0 hover: bg-red-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-red-50o0/30 rounded-xl font-semibold text-red-30o0 hover: bg-red-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -333,14 +324,14 @@ export default function AIPoweredEnterpriseSecurity() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-red-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-red-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -354,10 +345,9 @@ export default function AIPoweredEnterpriseSecurity() {,
               <p className="text-gray-40o0 mb-6">,
                 See our AI Powered Enterprise Security Platform in action. Schedule a personalized demo today.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover: from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-60o0 to-purple-60o0 rounded-xl font-semibold text-white hover: from-red-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
                 Schedule Demo,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -365,7 +355,5 @@ export default function AIPoweredEnterpriseSecurity() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

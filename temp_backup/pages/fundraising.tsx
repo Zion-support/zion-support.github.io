@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function FundraisingPage() {,
-  return (,
+export default function FundraisingPage() {
+  return (
     <>,
       <Head>,
         <title>Fundraising - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function FundraisingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

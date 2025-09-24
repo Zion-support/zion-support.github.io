@@ -4,9 +4,8 @@ import { UsageStats } from './UsageStats',
 import { RoleManagement } from './RoleManagement',
 import { TeamActivity } from './TeamActivity',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-,
-export function AdminDashboard() {,
-  return (,
+export function AdminDashboard() {
+  return (
     <div className='container mx-auto max-w-7xl py-8 px-4 md: px-6'>,
       <AdminHeader />,
       <Tabs defaultValue='team' className='mt-8'>,
@@ -29,7 +28,5 @@ export function AdminDashboard() {,
           <TeamActivity />,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

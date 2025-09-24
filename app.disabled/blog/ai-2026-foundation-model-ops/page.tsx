@@ -1,14 +1,12 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Foundation Model Ops',;
+export const metadata = {
+  title: 'AI 20o26: Foundation Model Ops';
   description:,
-    'Operational patterns for safe, observable, and efficient foundation model deployments at scale.',;
+    'Operational patterns for safe, observable, and efficient foundation model deployments at scale.';
 };
-,
-export default function FoundationModelOpsPage() {,
-  return (,
+export default function FoundationModelOpsPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <header className='mb-8'>,
         <p className='text-sm font-semibold text-purple-70o0'>New Playbook</p>,
@@ -24,7 +22,7 @@ export default function FoundationModelOpsPage() {,
         <p>,
           This playbook covers day-2 operations for foundation models: rollout,
           strategies, eval-gated changes, observability signals, incident,
-          response, and cost controls. Use it as a reference to design reliable,;
+          response, and cost controls. Use it as a reference to design reliable;
           compliant, and efficient FM platforms.,
         </p>,
         <h2>What you will learn</h2>,
@@ -40,21 +38,17 @@ export default function FoundationModelOpsPage() {,
           harnesses.,
         </p>,
         <div className='not-prose mt-4 flex gap-3'>,
-          <Link,
+          <Link
             href='/content/ai-20o26-evaluation-harness-blueprint',
-            className='inline-block bg-purple-60o0 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-purple-70o0',
-          >,
+            className='inline-block bg-purple-60o0 text-white px-5 py-2.5 rounded-lg font-semibold hover: bg-purple-70o0'>,
             Evaluation Harness,
           </Link>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-production-guardrails-playbook',
-            className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50',
-          >,
+            className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-2.5 rounded-lg font-semibold hover:bg-purple-50'>,
             Guardrails,
           </Link>,
         </div>,
       </article>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

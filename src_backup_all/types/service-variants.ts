@@ -1,4 +1,4 @@
-export type ServiceVariant = {,
+export type ServiceVariant = {
   id: string,
   name: string,
   description: string,
@@ -7,22 +7,16 @@ export type ServiceVariant = {,
   features: string[],
   popular?: boolean,
   category?: string,
-  tags?: string[],
-,};
-,
-export type ServiceCategory = {,
+  tags?: string[]};
+export type ServiceCategory = {
   id: string,
   name: string,
   description: string,
-  services: ServiceVariant[],
-,};
-,
-export type PricingTier = {,
+  services: ServiceVariant[]};
+export type PricingTier = {
   name: string,
   price: string,
   period: string,
   features: string[],
   popular?: boolean,
-  cta?: string,
-,};
-,
+  cta?: string};

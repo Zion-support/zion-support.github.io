@@ -1,220 +1,174 @@
 import React, { useState, useCallback, useEffect } from 'react',
-import {,
-  Plus,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowUp,;
-  X,;
-  Settings,;
-  HelpCircle,;
-  Star,;
-  Share2,;
-  Bookmark,;
-  Download,;
-  Printer,
-} from 'lucide-react',
-,
-interface FloatingAction {,
+import {
+  Plus;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowUp;
+  X;
+  Settings;
+  HelpCircle;
+  Star;
+  Share2;
+  Bookmark;
+  Download;
+  Printer} from 'lucide-react',
+interface FloatingAction {
   id: string,
-  icon: React.ComponentType<{ size?: number, className?: string ,}>,
+  icon: React.ComponentType<{ size?: number, className?: string }>,
   label: string,
   action: () => void,
   color: string,
-  priority: 'high' | 'medium' | 'low',
-,}
+  priority: 'high' | 'medium' | 'low'}
 ,
-interface FloatingActionButtonProps {,
+interface FloatingActionButtonProps {
   actions?: FloatingAction[],
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'light' | 'dark' | 'auto',
   showScrollToTop?: boolean,
   showContactActions?: boolean,
-  showUtilityActions?: boolean,
-}
+  showUtilityActions?: boolean}
 ,
-const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,
-  actions = [],;
-  position = 'bottom-right',;
-  theme = 'auto',;
-  showScrollToTop = true,;
-  showContactActions = true,;
-  showUtilityActions = true,
-}) => {,
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
+  actions = [];
+  position = 'bottom-right';
+  theme = 'auto';
+  showScrollToTop = true;
+  showContactActions = true;
+  showUtilityActions = true}) => {
   const [isExpanded, setIsExpanded] = useState(false),
   const [showScrollButton, setShowScrollButton] = useState(false),
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
-,
   // Detect theme,
-  useEffect(() => {,
-    if (theme === 'auto') {,
+  useEffect(() => {
+    if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)'),
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light'),
-,
-      const handleChange = (e: MediaQueryListEvent) => {,
-        setCurrentTheme(e.matches ? 'dark' : 'light'),
-      ,};
-,
+      const handleChange = (e: MediaQueryListEvent) => {
+        setCurrentTheme(e.matches ? 'dark' : 'light')};
       mediaQuery.addEventListener('change', handleChange),
-      return () => mediaQuery.removeEventListener('change', handleChange),
-    } else {,
-      setCurrentTheme(theme),
-    }
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {
+      setCurrentTheme(theme)}
   }, [theme]),
-,
   // Show scroll to top button when scrolled down,
-  useEffect(() => {,
-    const handleScroll = () => {,
-      setShowScrollButton(window.scrollY > 30o0),
-    };
-,
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 30o0)};
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
-,
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Default actions,
-  const defaultActions: FloatingAction[] = [,
+  const defaultActions: FloatingAction[] = [
     // Contact actions,
-    ...(showContactActions ? [,
-      {,
-        id: 'contact',;
-        icon: MessageCircle,;
-        label: 'Contact Us',;
-        action: () => {,
+    ...(showContactActions ? [
+      {
+        id: 'contact';
+        icon: MessageCircle;
+        label: 'Contact Us';
+        action: () => {
           const contactSection = document.getElementById('contact'),
-          if (contactSection) {,
-            contactSection.scrollIntoView({ behavior: 'smooth' ,}),
-          }
-        },;
-        color: 'bg-blue-50o0 hover:bg-blue-60o0',;
-        priority: 'high' as const,
-      ,},;
-      {,
-        id: 'phone',;
-        icon: Phone,;
-        label: 'Call Now',;
-        action: () => {,
-          window.location.href = 'tel:+1234567890',
-        ,},;
-        color: 'bg-green-50o0 hover:bg-green-60o0',;
-        priority: 'high' as const,
-      ,},;
-      {,
-        id: 'email',;
-        icon: Mail,;
-        label: 'Send Email',;
-        action: () => {,
-          window.location.href = 'mailto:info@ziontechgroup.com',
-        ,},;
-        color: 'bg-purple-50o0 hover:bg-purple-60o0',;
-        priority: 'medium' as const,
-      ,},;
-      {,
-        id: 'location',;
-        icon: MapPin,;
-        label: 'Get Directions',;
-        action: () => {,
-          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank'),
-        },;
-        color: 'bg-red-50o0 hover:bg-red-60o0',;
-        priority: 'medium' as const,
-      ,}
-    ] : []),;
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' })}
+        };
+        color: 'bg-blue-50o0 hover:bg-blue-60o0';
+        priority: 'high' as const};
+      {
+        id: 'phone';
+        icon: Phone;
+        label: 'Call Now';
+        action: () => {
+          window.location.href = 'tel:+1234567890'};
+        color: 'bg-green-50o0 hover:bg-green-60o0';
+        priority: 'high' as const};
+      {
+        id: 'email';
+        icon: Mail;
+        label: 'Send Email';
+        action: () => {
+          window.location.href = 'mailto:info@ziontechgroup.com'};
+        color: 'bg-purple-50o0 hover:bg-purple-60o0';
+        priority: 'medium' as const};
+      {
+        id: 'location';
+        icon: MapPin;
+        label: 'Get Directions';
+        action: () => {
+          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank')};
+        color: 'bg-red-50o0 hover:bg-red-60o0';
+        priority: 'medium' as const}
+    ] : []);
     // Utility actions,
-    ...(showUtilityActions ? [,
-      {,
-        id: 'bookmark',;
-        icon: Bookmark,;
-        label: 'Bookmark Page',;
-        action: () => {,
-          if (navigator.share) {,
-            navigator.share({,
-              title: document.title,;
-              url: window.location.href,
-            ,}),
-          } else {,
+    ...(showUtilityActions ? [
+      {
+        id: 'bookmark';
+        icon: Bookmark;
+        label: 'Bookmark Page';
+        action: () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title;
+              url: window.location.href})} else {
             // Fallback for browsers without share API,
             const url = window.location.href,
-            navigator.clipboard.writeText(url).then(() => {,
+            navigator.clipboard.writeText(url).then(() => {
               // Show success message,
-              showNotification('Page URL copied to clipboard!'),
-            }),
-          }
-        },;
-        color: 'bg-yellow-50o0 hover:bg-yellow-60o0',;
-        priority: 'low' as const,
-      ,},;
-      {,
-        id: 'share',;
-        icon: Share2,;
-        label: 'Share Page',;
-        action: () => {,
-          if (navigator.share) {,
-            navigator.share({,
-              title: document.title,;
-              url: window.location.href,
-            ,}),
-          } else {,
+              showNotification('Page URL copied to clipboard!')})}
+        };
+        color: 'bg-yellow-50o0 hover:bg-yellow-60o0';
+        priority: 'low' as const};
+      {
+        id: 'share';
+        icon: Share2;
+        label: 'Share Page';
+        action: () => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title;
+              url: window.location.href})} else {
             // Fallback for browsers without share API,
             const url = window.location.href,
-            navigator.clipboard.writeText(url).then(() => {,
-              showNotification('Page URL copied to clipboard!'),
-            }),
-          }
-        },;
-        color: 'bg-indigo-50o0 hover:bg-indigo-60o0',;
-        priority: 'low' as const,
-      ,},;
-      {,
-        id: 'download',;
-        icon: Download,;
-        label: 'Download Brochure',;
-        action: () => {,
+            navigator.clipboard.writeText(url).then(() => {
+              showNotification('Page URL copied to clipboard!')})}
+        };
+        color: 'bg-indigo-50o0 hover:bg-indigo-60o0';
+        priority: 'low' as const};
+      {
+        id: 'download';
+        icon: Download;
+        label: 'Download Brochure';
+        action: () => {
           // Create a temporary link to trigger download,
           const link = document.createElement('a'),
           link.href = '/brochure.pdf', // Adjust path as needed,
           link.download = 'Zion-Tech-Group-Brochure.pdf',
           document.body.appendChild(link),
           link.click(),
-          document.body.removeChild(link),
-        ,},;
-        color: 'bg-teal-50o0 hover:bg-teal-60o0',;
-        priority: 'low' as const,
-      ,},;
-      {,
-        id: 'print',;
-        icon: Printer,;
-        label: 'Print Page',;
-        action: () => {,
-          window.print(),
-        ,},;
-        color: 'bg-gray-50o0 hover:bg-gray-60o0',;
-        priority: 'low' as const,
-      ,}
-    ] : []),;
+          document.body.removeChild(link)};
+        color: 'bg-teal-50o0 hover:bg-teal-60o0';
+        priority: 'low' as const};
+      {
+        id: 'print';
+        icon: Printer;
+        label: 'Print Page';
+        action: () => {
+          window.print()};
+        color: 'bg-gray-50o0 hover:bg-gray-60o0';
+        priority: 'low' as const}
+    ] : []);
     // Custom actions,
-    ...actions,
-  ],
-,
+    ...actions],
   // Sort actions by priority,
-  const sortedActions = defaultActions.sort((a, b) => {,
-    const priorityOrder ={ high: 3, medium: 2, low: 1 ,};
-    return priorityOrder[b.priority] - priorityOrder[a.priority],
-  }),
-,
+  const sortedActions = defaultActions.sort((a, b) => {
+    const priorityOrder ={ high: 3, medium: 2, low: 1 };
+    return priorityOrder[b.priority] - priorityOrder[a.priority]}),
   // Toggle expansion,
-  const toggleExpansion = useCallback(() => {,
-    setIsExpanded(prev => !prev),
-  }, []),
-,
+  const toggleExpansion = useCallback(() => {
+    setIsExpanded(prev => !prev)}, []),
   // Scroll to top,
-  const scrollToTop = useCallback(() => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  }, []),
-,
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })}, []),
   // Show notification,
-  const showNotification = useCallback((message: string) => {,
+  const showNotification = useCallback((message: string) => {
     // Create notification element,
     const notification = document.createElement('div'),
     notification.className = `,
@@ -222,26 +176,18 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,
       transform translate-x-full transition-transform duration-30o0 ease-in-out,
     `,
     notification.textContent = message,
-,
     document.body.appendChild(notification),
-,
     // Animate in,
-    setTimeout(() => {,
-      notification.classList.remove('translate-x-full'),
-    ,}, 10o0),
-,
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full')}, 10o0),
     // Remove after 3 seconds,
-    setTimeout(() => {,
+    setTimeout(() => {
       notification.classList.add('translate-x-full'),
-      setTimeout(() => {,
-        document.body.removeChild(notification),
-      }, 30o0),
-    }, 30o00),
-  }, []),
-,
+      setTimeout(() => {
+        document.body.removeChild(notification)}, 30o0)}, 30o00)}, []),
   // Get position classes,
-  const getPositionClasses = () => {,
-    switch (position) {,
+  const getPositionClasses = () => {
+    switch (position) {
       case 'bottom-left':,
         return 'bottom-6 left-6',
       case 'top-right':,
@@ -249,55 +195,48 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,
       case 'top-left':,
         return 'top-6 left-6',
       default: ,
-        return 'bottom-6 right-6',
-    ,}
+        return 'bottom-6 right-6'}
   };
-,
   // Get theme classes,
-  const getThemeClasses = () => {,
+  const getThemeClasses = () => {
     return currentTheme === 'dark',
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20',
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20',
-  };
-,
-  return (,
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20'};
+  return (
     <>,
       {/* Main Floating Action Button */}
       <div className={`fixed ${getPositionClasses()} z-50`}>,
         {/* Action Buttons */}
         <div className={`relative ${isExpanded ? 'mb-4' : ''}`}>,
-          {isExpanded && (,
+          {isExpanded && (
             <div className="absolute bottom-full mb-4 space-y-3">,
-              {sortedActions.map((action, index) => (,
-                <div,
+              {sortedActions.map((action, index) => (
+                <div
                   key={action.id}
                   className={`,
                     flex items-center space-x-3 p-3 rounded-lg shadow-lg transition-all duration-30o0,
                     ${action.color} text-white transform opacity-0 scale-75,
                     hover: scale-10o5 focus:outline-none focus:ring-2 focus:ring-white/50,
-                  `,}
-                  style={{,
-                    animationDelay: `${index * 10o0,}ms`,;
-                    animation: 'slideInUp 0.3s ease-out forwards',
-                  ,}}
+                  `}
+                  style={{
+                    animationDelay: `${index * 10o0}ms`;
+                    animation: 'slideInUp 0.3s ease-out forwards'}}
                 >,
                   <action.icon size={20}  />,
                   <span className="whitespace-nowrap text-sm font-medium">,
                     {action.label}
                   </span>,
-                </div>,
-              ))}
-            </div>,
-          )}
+                </div>))}
+            </div>)}
 ,
           {/* Main Button */}
-          <button,
+          <button
             onClick={toggleExpansion}
             className={`,
               p-4 rounded-full shadow-lg transition-all duration-30o0,
               ${getThemeClasses()} border-2,
               hover: scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30,
-              ${isExpanded ? 'rotate-45' : '',}
+              ${isExpanded ? 'rotate-45' : ''}
             `}
             aria-label={isExpanded ? 'Close actions' : 'Open actions'}
             aria-expanded={isExpanded}
@@ -307,56 +246,43 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({,
         </div>,
       </div>,
       {/* Scroll to Top Button */}
-      {showScrollToTop && showScrollButton && (,
-        <button,
+      {showScrollToTop && showScrollButton && (
+        <button
           onClick={scrollToTop}
           className={`,
             fixed bottom-6 right-6 z-40 p-4 rounded-full shadow-lg transition-all duration-30o0,
             ${getThemeClasses()} border-2,
             hover: scale-110 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30,
             animate-bounce,
-          `,}
-          aria-label="Scroll to top",
-        >,
+          `}
+          aria-label="Scroll to top">,
           <ArrowUp size={24}  />,
-        </button>,
-      )}
+        </button>)}
 ,
       {/* CSS Animations */}
       <style jsx>{`,
-        @keyframes slideInUp {,
-          from {,
+        @keyframes slideInUp {
+          from {
             opacity: 0,
-            transform: translateY(20px) scale(0.75),
-          ,}
-          to {,
+            transform: translateY(20px) scale(0.75)}
+          to {
             opacity: 1,
-            transform: translateY(0) scale(1),
-          ,}
+            transform: translateY(0) scale(1)}
         }
 ,
-        @keyframes bounce {,
-          0%, 20%, 53%, 80%, 10o0% {,
-            transform: translate3d(0,0,0),
-          }
-          40%, 43% {,
-            transform: translate3d(0, -30px, 0),
-          }
-          70% {,
-            transform: translate3d(0, -15px, 0),
-          }
-          90% {,
-            transform: translate3d(0, -4px, 0),
-          }
+        @keyframes bounce {
+          0%, 20%, 53%, 80%, 10o0% {
+            transform: translate3d(0,0,0)}
+          40%, 43% {
+            transform: translate3d(0, -30px, 0)}
+          70% {
+            transform: translate3d(0, -15px, 0)}
+          90% {
+            transform: translate3d(0, -4px, 0)}
         }
 ,
-        .animate-bounce {,
-          animation: bounce 2s infinite,
-        ,}
+        .animate-bounce {
+          animation: bounce 2s infinite}
       `}</style>,
-    </>,
-  ),
-};
-,
-export default FloatingActionButton,
-,
+    </>)};
+export default FloatingActionButton;

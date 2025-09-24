@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Neural Interface Revolution 20o26 - Zion Tech Group',;
+export const metadata = {
+  title: 'Neural Interface Revolution 20o26 - Zion Tech Group';
   description:,
-    'Discover the future of human-computer interaction with advanced neural interfaces that will transform how we work and communicate.',;
-  keywords: [,
-    'neural interface',;
-    'brain-computer interface',;
-    'BCI',;
-    'AI 20o26',;
-    'human-computer interaction',;
-  ],;
+    'Discover the future of human-computer interaction with advanced neural interfaces that will transform how we work and communicate.';
+  keywords: [
+    'neural interface';
+    'brain-computer interface';
+    'BCI';
+    'AI 20o26';
+    'human-computer interaction';
+  ];
 };
-,
-export default function NeuralInterfaceRevolution20o26() {,
-  return (,
+export default function NeuralInterfaceRevolution20o26() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Neural Interface Revolution 20o26',
         description='Discover the future of human-computer interaction with advanced neural interfaces that will transform how we work and communicate.',
         keywords='neural interface, brain-computer interface, BCI, AI 20o26, human-computer interaction',
@@ -40,23 +38,21 @@ export default function NeuralInterfaceRevolution20o26() {,
               how we work, communicate, and interact with technology in 20o26.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started,
               </Link>,
-              <Link,
+              <Link
                 href='/demo',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Watch Demo,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className='py-16'>,
         <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -128,7 +124,7 @@ export default function NeuralInterfaceRevolution20o26() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-3xl md:text-4xl font-bold mb-6'>,
@@ -139,22 +135,18 @@ export default function NeuralInterfaceRevolution20o26() {,
             with technology.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Get Started Today,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Learn More,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

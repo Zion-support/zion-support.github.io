@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-const RevolutionaryContent20o26Banner = () => {,
-  return (,
+const RevolutionaryContent20o26Banner = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
-        <div,
+        <div
           className='absolute inset-0',
-          style={{,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
           }}
         ></div>,
       </div>,
@@ -27,7 +26,7 @@ const RevolutionaryContent20o26Banner = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {/* Featured Article 1 */,}
+          {/* Featured Article 1 */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -47,14 +46,13 @@ const RevolutionaryContent20o26Banner = () => {,
               Learn implementation strategies best practicesand real-world case,
               studies.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-enterprise-transformation-complete-guide',
-              className='inline-flex items-center text-purple-30o0 hover:text-purple-20o0 font-semibold text-sm',
-            >,
+              className='inline-flex items-center text-purple-30o0 hover:text-purple-20o0 font-semibold text-sm'>,
               Read More →,
             </Link>,
           </div>,
-          {/* Featured Article 2 */,}
+          {/* Featured Article 2 */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -71,14 +69,13 @@ const RevolutionaryContent20o26Banner = () => {,
               Explore the revolutionary impact of Quantum AI on business,
               operations competitive advantageand market dynamics in 20o26.,
             </p>,
-            <Link,
+            <Link
               href='/blog/quantum-ai-20o26-business-revolution',
-              className='inline-flex items-center text-blue-30o0 hover:text-blue-20o0 font-semibold text-sm',
-            >,
+              className='inline-flex items-center text-blue-30o0 hover:text-blue-20o0 font-semibold text-sm'>,
               Read More →,
             </Link>,
           </div>,
-          {/* Featured Resource */,}
+          {/* Featured Resource */}
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center mr-4'>,
@@ -93,15 +90,14 @@ const RevolutionaryContent20o26Banner = () => {,
               The definitive guide to enterprise AI implementation in 20o26.,
               Complete strategyexecution frameworkand best practices.,
             </p>,
-            <Link,
+            <Link
               href='/resources/ai-implementation-enterprise-guide-20o26',
-              className='inline-flex items-center text-green-30o0 hover:text-green-20o0 font-semibold text-sm',
-            >,
+              className='inline-flex items-center text-green-30o0 hover:text-green-20o0 font-semibold text-sm'>,
               Read More →,
             </Link>,
           </div>,
         </div>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-12'>,
           <div className='text-center'>,
             <div className='text-3xl font-bold text-purple-30o0 mb-2'>,
@@ -122,33 +118,26 @@ const RevolutionaryContent20o26Banner = () => {,
             <div className='text-sm opacity-80'>Expert Support</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/blog',
-              className='bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Explore All Content,
             </Link>,
-            <Link,
+            <Link
               href='/resources',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
               View Resources,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-colors',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-colors'>,
               Get Expert Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryContent20o26Banner,
-,
+    </section>)};
+export default RevolutionaryContent20o26Banner;

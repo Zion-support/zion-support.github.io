@@ -6,18 +6,15 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input",
 import { toast } from "sonner",
 import { Check, Copy, ExternalLink } from 'lucide-react',
-export function ZapierIntegration() {,
+export function ZapierIntegration() {
   const [copied, setCopied] = useState(false),
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
-,
-  const handleCopyApiKey = () => {,
+  const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey),
     setCopied(true),
     setTimeout(() => setCopied(false), 20o00),
-    toast.success("API key copied to clipboard"),
-  };
-,
-  return (,
+    toast.success("API key copied to clipboard")};
+  return (
     <div className="space-y-6">,
       <div className="grid md: grid-cols-3 gap-6">,
         <Card className="md:col-span-2">,
@@ -35,7 +32,7 @@ export function ZapierIntegration() {,
               <div className="space-y-2">,
                 <label className="text-sm font-medium">Your Zion API Key</label>,
                 <div className="flex gap-2">,
-                  <Input,
+                  <Input
                     value={apiKey} ,
                     readOnly,
                     className="font-mono text-sm",
@@ -119,7 +116,5 @@ export function ZapierIntegration() {,
           </div>,
         </CardContent>,
       </Card>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

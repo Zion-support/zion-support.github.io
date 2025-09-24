@@ -1,16 +1,14 @@
 import { Card } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { SparklesRefreshCcw } from 'lucide-react',
-,
-export interface EmptyMatchesCardProps {,
+export interface EmptyMatchesCardProps {
   onRefresh: () => void,
-  isProcessing: boolean,
-,}
+  isProcessing: boolean}
 ,
-export function EmptyMatchesCard({,
-  onRefreshisProcessing,;
-}: EmptyMatchesCardProps) {,
-  return (,
+export function EmptyMatchesCard({
+  onRefreshisProcessing;
+}: EmptyMatchesCardProps) {
+  return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>,
       <div className='mb-4 flex justify-center'>,
         <Sparkles className='h-12 w-12 text-muted-foreground' />,
@@ -20,19 +18,15 @@ export function EmptyMatchesCard({,
         Run AI matching to find talents that match this job's requirements.,
       </p>,
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>,
-        {isProcessing ? (,
+        {isProcessing ? (
           <>,
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />,
             Processing...,
-          </>,
-        ) : (,
+          </>) : (
           <>,
             <Sparkles className='mr-2 h-4 w-4' />,
             Find AI Matches,
-          </>,
-        )}
+          </>)}
       </Button>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

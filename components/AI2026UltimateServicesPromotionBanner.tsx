@@ -1,39 +1,31 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   ArrowRight,
   Star,
-  Sparkles,;
-  TrendingUp,;
-  Users,;
-  CheckCircle,
-} from 'lucide-react',
-,
-const AI20o26UltimateServicesPromotionBanner = () => {,
+  Sparkles;
+  TrendingUp;
+  Users;
+  CheckCircle} from 'lucide-react',
+const AI20o26UltimateServicesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const features = [,
-    "Neural Interface Revolution",;
-    "Quantum AI Fusion",;
-    "Autonomous Operations",;
-    "Advanced Security AI",
-  ],
-,
-  return (,
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const features = [
+    "Neural Interface Revolution";
+    "Quantum AI Fusion";
+    "Autonomous Operations";
+    "Advanced Security AI"],
+  return (
     <motion.div,
       className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 py-16 px-4",
-      initial={{ opacity: 0, y: 50 ,}}
-      animate={isVisible ? { opacity: 1, y: 0 ,} : { opacity: 0, y: 50 ,}}
-      transition={{ duration: 0.8 ,}}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8 }}
     >,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20"  />,
@@ -44,12 +36,12 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto">,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <motion.div,
             className="space-y-8",
-            initial={{ opacity: 0x: -50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: -50 ,}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -50 }}
+            transition={{ duration: 0.8delay: 0.2 }}
           >,
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold">,
               <Star className="w-4 h-4"  />,
@@ -58,7 +50,7 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
             <h1 className="text-5xl md: text-6xl font-bold text-white leading-tight">,
               Revolutionary AI,
               <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
-                {" ",}Services,
+                {" "}Services,
               </span>,
               <br  />,
               <span className="text-3xl md: text-4xl text-gray-30o0">,
@@ -70,32 +62,31 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
               enhancing human capabilitiesand creating unprecedented opportunities for growth and innovation.,
             </p>,
             <div className="space-y-4">,
-              {features.map((featureindex) => (,
+              {features.map((featureindex) => (
                 <motion.div,
-                  key={index,}
+                  key={index}
                   className="flex items-center gap-3",
-                  initial={{ opacity: 0x: -20 ,}}
-                  animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: -20 ,}}
-                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 ,}}
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: -20 }}
+                  transition={{ duration: 0.6delay: 0.4 + index * 0.1 }}
                 >,
                   <CheckCircle className="w-6 h-6 text-green-40o0 flex-shrink-0"  />,
                   <span className="text-gray-30o0 text-lg">{feature}</span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
               <motion.button,
                 className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center gap-3 group",
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 Explore Services,
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-2 transition-transform"  />,
               </motion.button>,
               <motion.button,
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all duration-30o0",
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 Watch Demo,
               </motion.button>,
@@ -114,17 +105,17 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
           {/* Right Content - Visual Elements */}
           <motion.div,
             className="relative",
-            initial={{ opacity: 0x: 50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : { opacity: 0x: 50 ,}}
-            transition={{ duration: 0.8delay: 0.4 ,}}
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : { opacity: 0x: 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
           >,
             <div className="relative">,
               {/* Main Service Cards */}
               <div className="grid grid-cols-2 gap-4">,
                 <motion.div,
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20",
-                  whileHover={{ scale: 1.0o5rotate: 2 ,}}
-                  transition={{ duration: 0.3 ,}}
+                  whileHover={{ scale: 1.0o5rotate: 2 }}
+                  transition={{ duration: 0.3 }}
                 >,
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl flex items-center justify-center mb-4">,
                     <Brain className="w-6 h-6 text-white"  />,
@@ -134,8 +125,8 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
                 </motion.div>,
                 <motion.div,
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20",
-                  whileHover={{ scale: 1.0o5rotate: -2 ,}}
-                  transition={{ duration: 0.3 ,}}
+                  whileHover={{ scale: 1.0o5rotate: -2 }}
+                  transition={{ duration: 0.3 }}
                 >,
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-xl flex items-center justify-center mb-4">,
                     <Zap className="w-6 h-6 text-white"  />,
@@ -145,8 +136,8 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
                 </motion.div>,
                 <motion.div,
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20",
-                  whileHover={{ scale: 1.0o5rotate: 2 ,}}
-                  transition={{ duration: 0.3 ,}}
+                  whileHover={{ scale: 1.0o5rotate: 2 }}
+                  transition={{ duration: 0.3 }}
                 >,
                   <div className="w-12 h-12 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-xl flex items-center justify-center mb-4">,
                     <Sparkles className="w-6 h-6 text-white"  />,
@@ -156,8 +147,8 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
                 </motion.div>,
                 <motion.div,
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20",
-                  whileHover={{ scale: 1.0o5rotate: -2 ,}}
-                  transition={{ duration: 0.3 ,}}
+                  whileHover={{ scale: 1.0o5rotate: -2 }}
+                  transition={{ duration: 0.3 }}
                 >,
                   <div className="w-12 h-12 bg-gradient-to-r from-red-60o0 to-orange-60o0 rounded-xl flex items-center justify-center mb-4">,
                     <Brain className="w-6 h-6 text-white"  />,
@@ -169,33 +160,28 @@ const AI20o26UltimateServicesPromotionBanner = () => {,
               {/* Floating Elements */}
               <motion.div,
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full blur-xl opacity-60",
-                animate={{,
-                  y: [0-20],;
-                  scale: [1.1],}}
-                transition={{,
-                  duration: 4,;
-                  repeat: Infinity,;
-                  ease: "easeInOut",
-                ,}}
+                animate={{
+                  y: [0-20];
+                  scale: [1.1]}}
+                transition={{
+                  duration: 4;
+                  repeat: Infinity;
+                  ease: "easeInOut"}}
                />,
               <motion.div,
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full blur-xl opacity-60",
-                animate={{,
-                  y: [0o20],;
-                  scale: [1.21],}}
-                transition={{,
-                  duration: 3,;
-                  repeat: Infinity,;
-                  ease: "easeInOut",;
-                  delay: 1,
-                ,}}
+                animate={{
+                  y: [0o20];
+                  scale: [1.21]}}
+                transition={{
+                  duration: 3;
+                  repeat: Infinity;
+                  ease: "easeInOut";
+                  delay: 1}}
                />,
             </div>,
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-};
-,
-export default AI20o26UltimateServicesPromotionBanner,
+    </motion.div>)};
+export default AI20o26UltimateServicesPromotionBanner;

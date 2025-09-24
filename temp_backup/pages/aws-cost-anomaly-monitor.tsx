@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
-export default function AwsCostAnomalyMonitorPage() {,
-  return (,
+export default function AwsCostAnomalyMonitorPage() {
+  return (
     <Layout>,
       <Head>,
         <title>AWS Cost Anomaly Monitor | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Real-time AWS cost anomaly alerts with Slack notifications, budgets, and remediation playbooks.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/aws-cost-anomaly-monitor',
         />,
@@ -21,41 +20,35 @@ export default function AwsCostAnomalyMonitorPage() {,
             AWS Cost Anomaly Monitor,
           </h1>,
           <p className='text-slate-30o0'>,
-            Continuous anomaly detection with budget guardrails, Slack alerts,;
+            Continuous anomaly detection with budget guardrails, Slack alerts;
             root-cause hints, and savings recommendations.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-            {[,
-              'Anomaly detection & budgets',;
-              'Slack triage workflows',;
-              'Service/tag breakdowns',;
-              'Monthly savings report',;
-            ].map(f => (,
-              <div,
+            {[
+              'Anomaly detection & budgets';
+              'Slack triage workflows';
+              'Service/tag breakdowns';
+              'Monthly savings report';
+            ].map(f => (
+              <div
                 key={f}
-                className='p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0',
-              >,
+                className='p-4 rounded-xl bg-black/40 border border-cyan-50o0/30 text-slate-20o0'>,
                 {f}
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div className='flex gap-3'>,
-            <a,
+            <a
               href='/contact',
-              className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-60o0 to-blue-70o0 text-white',
-            >,
+              className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-60o0 to-blue-70o0 text-white'>,
               Start from $199/mo,
             </a>,
-            <a,
+            <a
               href='/market-pricing',
-              className='px-6 py-3 rounded-xl border border-gray-70o0 text-gray-20o0',
-            >,
+              className='px-6 py-3 rounded-xl border border-gray-70o0 text-gray-20o0'>,
               See market pricing,
             </a>,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

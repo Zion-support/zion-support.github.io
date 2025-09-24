@@ -1,13 +1,11 @@
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Evaluation Harness Blueprint - Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Evaluation Harness Blueprint - Zion Tech Group';
   description:,
-    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.',;
+    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16'>,
         <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -41,22 +39,18 @@ export default function Page() {,
             Certification.,
           </p>,
           <p className='flex gap-3'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-llm-evals-maturity-model',
-              className='inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover: bg-purple-50',
-            >,
+              className='inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover: bg-purple-50'>,
               LLM Evals Model,
             </Link>,
-            <Link,
+            <Link
               href='/content/ai-20o26-agent-safety-certification',
-              className='inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='inline-block border border-purple-60o0 text-purple-70o0 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50'>,
               Safety Certification,
             </Link>,
           </p>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

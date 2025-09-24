@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Shield,
@@ -11,35 +10,32 @@ import {,
   Database,
   Cpu,
   Network,
-  BarChart3,;
-  Users,;
-  Target,;
-  Rocket,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Clock,;
-  Award,;
-  Lightbulb,;
-  Code,;
-  Settings,;
-  Search,;
-  Filter,;
-  Grid,;
-  List,
-} from 'lucide-react',
-,
-interface Service {,
+  BarChart3;
+  Users;
+  Target;
+  Rocket;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  TrendingUp;
+  Clock;
+  Award;
+  Lightbulb;
+  Code;
+  Settings;
+  Search;
+  Filter;
+  Grid;
+  List} from 'lucide-react',
+interface Service {
   id: string,
   title: string,
   description: string,
   category: string,
-  pricing: {,
+  pricing: {
     type: 'free' | 'starter' | 'professional' | 'enterprise',
     price: number,
-    period: 'month' | 'year',
-  ,};
+    period: 'month' | 'year'};
   features: string[],
   benefits: string[],
   icon: React.ComponentType<any>,
@@ -48,174 +44,158 @@ interface Service {,
   reviews: number,
   deliveryTime: string,
   complexity: 'simple' | 'moderate' | 'complex' | 'expert',
-  tags: string[],
-,}
+  tags: string[]}
 ,
-const services: Service[] = [,
-  {,
-    id: 'ai-consulting',;
-    title: 'AI Strategy Consulting',;
-    description: 'Comprehensive AI strategy development and implementation planning for businesses of all sizes.',;
-    category: 'Consulting',;
-    pricing: { type: ''professional', 'price: 50o00period: 'month' ,},;
-    features: ['Strategy 'Development', 'Technology 'Assessment', 'Implementation 'Roadmap', 'ROI Analysis'],;
-    benefits: ['Increased 'Efficiency', 'Cost 'Reduction', 'Competitive 'Advantage', 'Future-Proofing'],;
-    icon: Brain,;
-    color: 'from-purple-50o0 to-pink-50o0',;
-    rating: 4.9,;
-    reviews: 127,;
-    deliveryTime: '2-4 weeks',;
-    complexity: 'expert',;
-    tags: [', 'AI', 'Strategy', 'Consulting', 'Planning'],
-  },;
-  {,
-    id: 'ml-implementation',;
-    title: 'Machine Learning Implementation',;
-    description: 'End-to-end machine learning model developmentrainingand deployment services.',;
-    category: 'Development',;
-    pricing: { type: ''professional', 'price: 80o00period: 'month' ,},;
-    features: ['Model 'Development', 'Data 'Processing', 'Training & 'Validation', 'Deployment'],;
-    benefits: ['Automated Decision 'Making', 'Predictive 'Analytics', 'Process 'Optimization', 'Scalable Solutions'],;
-    icon: Cpu,;
-    color: 'from-blue-50o0 to-cyan-50o0',;
-    rating: 4.8,;
-    reviews: 89,;
-    deliveryTime: '4-8 weeks',;
-    complexity: 'expert',;
-    tags: [', 'ML', 'Development'Data 'Science', 'Deployment'],
-  },;
-  {,
-    id: 'ai-automation',;
-    title: 'AI-Powered Automation',;
-    description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',;
-    category: 'Automation',;
-    pricing: { type: ''starter', 'price: 250o0period: 'month' ,},;
-    features: ['Process 'Automation', 'Workflow 'Optimization', 'Integration 'Services', 'Monitoring'],;
-    benefits: ['Time 'Savings', 'Error 'Reduction', 'Cost 'Efficiency', 'Scalability'],;
-    icon: Zap,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    rating: 4.7,;
-    reviews: 156,;
-    deliveryTime: '2-6 weeks',;
-    complexity: 'moderate',;
-    tags: [', 'Automation', 'RPA', 'Workflow', 'Efficiency'],
-  },;
-  {,
-    id: 'data-analytics',;
-    title: 'Advanced Data Analytics',;
-    description: 'Comprehensive data analysis and visualization services to unlock business insights.',;
-    category: 'Analytics',;
-    pricing: { type: ''professional', 'price: 40o00period: 'month' ,},;
-    features: ['Data 'Mining', 'Statistical 'Analysis', 'Visualization'Reporting'],;
-    benefits: ['Data-Driven 'Decisions', 'Performance 'Insights', 'Trend 'Analysis', 'Predictive Modeling'],;
-    icon: BarChart3,;
-    color: 'from-orange-50o0 to-red-50o0',;
-    rating: 4.6,;
-    reviews: 98,;
-    deliveryTime: '3-5 weeks',;
-    complexity: 'complex',;
-    tags: [', 'Analytics', 'Data', 'Visualization', 'Insights'],
-  },;
-  {,
-    id: 'ai-security',;
-    title: 'AI Security Solutions',;
-    description: 'Advanced AI-powered security systems to protect your digital assets and infrastructure.',;
-    category: 'Security',;
-    pricing: { type: ''enterprise', 'price: 120o00period: 'month' ,},;
-    features: ['Threat 'Detection', 'Anomaly 'Detection', 'Security 'Monitoring', 'Incident Response'],;
-    benefits: ['Enhanced 'Security', 'Real-time 'Protection', 'Risk 'Mitigation', 'Compliance'],;
-    icon: Shield,;
-    color: 'from-red-50o0 to-pink-50o0',;
-    rating: 4.9,;
-    reviews: 73,;
-    deliveryTime: '4-6 weeks',;
-    complexity: 'expert',;
-    tags: [', 'Security', 'AI', 'Protection', 'Monitoring'],
-  },;
-  {,
-    id: 'cloud-ai',;
-    title: 'Cloud AI Infrastructure',;
-    description: 'Scalable cloud-based AI infrastructure setup and management services.',;
-    category: 'Infrastructure',;
-    pricing: { type: ''professional', 'price: 60o00period: 'month' ,},;
-    features: ['Cloud 'Setup', 'Resource 'Management', 'Scaling 'Solutions', 'Monitoring'],;
-    benefits: [', 'Scalability', 'Cost 'Optimization', 'High 'Availability', 'Global Access'],;
-    icon: Globe,;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    rating: 4.7,;
-    reviews: 112,;
-    deliveryTime: '3-4 weeks',;
-    complexity: 'complex',;
-    tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'AWS'],
-  },;
-  {,
-    id: 'ai-integration',;
-    title: 'AI System Integration',;
-    description: 'Seamless integration of AI capabilities into existing business systems and workflows.',;
-    category: 'Integration',;
-    pricing: { type: ''starter', 'price: 30o00period: 'month' ,},;
-    features: ['API 'Development', 'System 'Integration', 'Data 'Migration', 'Testing'],;
-    benefits: ['Seamless 'Integration', 'Improved 'Workflows', 'Data 'Consistency', 'User Experience'],;
-    icon: Network,;
-    color: 'from-teal-50o0 to-blue-50o0',;
-    rating: 4.5,;
-    reviews: 84,;
-    deliveryTime: '2-5 weeks',;
-    complexity: 'moderate',;
-    tags: [', 'Integration', 'API', 'Systems', 'Workflow'],
-  },;
-  {,
-    id: 'ai-training',;
-    title: 'AI Training & Education',;
-    description: 'Comprehensive AI training programs for teams and organizations.',;
-    category: 'Education',;
-    pricing: { type: ''starter', 'price: 20o00period: 'month' ,},;
-    features: ['Custom 'Training', 'Workshops', 'Certification', 'Ongoing Support'],;
-    benefits: ['Skill 'Development', 'Team 'Empowerment', 'Knowledge 'Transfer', 'Best Practices'],;
-    icon: Users,;
-    color: 'from-yellow-50o0 to-orange-50o0',;
-    rating: 4.8,;
-    reviews: 145,;
-    deliveryTime: '1-3 weeks',;
-    complexity: 'simple',;
-    tags: [', 'Training', 'Education', 'Skills', 'Workshops'],
-  }
+const services: Service[] = [
+  {
+    id: 'ai-consulting';
+    title: 'AI Strategy Consulting';
+    description: 'Comprehensive AI strategy development and implementation planning for businesses of all sizes.';
+    category: 'Consulting';
+    pricing: { type: ''professional', 'price: 50o00period: 'month' };
+    features: ['Strategy 'Development', 'Technology 'Assessment', 'Implementation 'Roadmap', 'ROI Analysis'];
+    benefits: ['Increased 'Efficiency', 'Cost 'Reduction', 'Competitive 'Advantage', 'Future-Proofing'];
+    icon: Brain;
+    color: 'from-purple-50o0 to-pink-50o0';
+    rating: 4.9;
+    reviews: 127;
+    deliveryTime: '2-4 weeks';
+    complexity: 'expert';
+    tags: [', 'AI', 'Strategy', 'Consulting', 'Planning']};
+  {
+    id: 'ml-implementation';
+    title: 'Machine Learning Implementation';
+    description: 'End-to-end machine learning model developmentrainingand deployment services.';
+    category: 'Development';
+    pricing: { type: ''professional', 'price: 80o00period: 'month' };
+    features: ['Model 'Development', 'Data 'Processing', 'Training & 'Validation', 'Deployment'];
+    benefits: ['Automated Decision 'Making', 'Predictive 'Analytics', 'Process 'Optimization', 'Scalable Solutions'];
+    icon: Cpu;
+    color: 'from-blue-50o0 to-cyan-50o0';
+    rating: 4.8;
+    reviews: 89;
+    deliveryTime: '4-8 weeks';
+    complexity: 'expert';
+    tags: [', 'ML', 'Development'Data 'Science', 'Deployment']};
+  {
+    id: 'ai-automation';
+    title: 'AI-Powered Automation';
+    description: 'Intelligent automation solutions that streamline business processes and reduce manual work.';
+    category: 'Automation';
+    pricing: { type: ''starter', 'price: 250o0period: 'month' };
+    features: ['Process 'Automation', 'Workflow 'Optimization', 'Integration 'Services', 'Monitoring'];
+    benefits: ['Time 'Savings', 'Error 'Reduction', 'Cost 'Efficiency', 'Scalability'];
+    icon: Zap;
+    color: 'from-green-50o0 to-emerald-50o0';
+    rating: 4.7;
+    reviews: 156;
+    deliveryTime: '2-6 weeks';
+    complexity: 'moderate';
+    tags: [', 'Automation', 'RPA', 'Workflow', 'Efficiency']};
+  {
+    id: 'data-analytics';
+    title: 'Advanced Data Analytics';
+    description: 'Comprehensive data analysis and visualization services to unlock business insights.';
+    category: 'Analytics';
+    pricing: { type: ''professional', 'price: 40o00period: 'month' };
+    features: ['Data 'Mining', 'Statistical 'Analysis', 'Visualization'Reporting'];
+    benefits: ['Data-Driven 'Decisions', 'Performance 'Insights', 'Trend 'Analysis', 'Predictive Modeling'];
+    icon: BarChart3;
+    color: 'from-orange-50o0 to-red-50o0';
+    rating: 4.6;
+    reviews: 98;
+    deliveryTime: '3-5 weeks';
+    complexity: 'complex';
+    tags: [', 'Analytics', 'Data', 'Visualization', 'Insights']};
+  {
+    id: 'ai-security';
+    title: 'AI Security Solutions';
+    description: 'Advanced AI-powered security systems to protect your digital assets and infrastructure.';
+    category: 'Security';
+    pricing: { type: ''enterprise', 'price: 120o00period: 'month' };
+    features: ['Threat 'Detection', 'Anomaly 'Detection', 'Security 'Monitoring', 'Incident Response'];
+    benefits: ['Enhanced 'Security', 'Real-time 'Protection', 'Risk 'Mitigation', 'Compliance'];
+    icon: Shield;
+    color: 'from-red-50o0 to-pink-50o0';
+    rating: 4.9;
+    reviews: 73;
+    deliveryTime: '4-6 weeks';
+    complexity: 'expert';
+    tags: [', 'Security', 'AI', 'Protection', 'Monitoring']};
+  {
+    id: 'cloud-ai';
+    title: 'Cloud AI Infrastructure';
+    description: 'Scalable cloud-based AI infrastructure setup and management services.';
+    category: 'Infrastructure';
+    pricing: { type: ''professional', 'price: 60o00period: 'month' };
+    features: ['Cloud 'Setup', 'Resource 'Management', 'Scaling 'Solutions', 'Monitoring'];
+    benefits: [', 'Scalability', 'Cost 'Optimization', 'High 'Availability', 'Global Access'];
+    icon: Globe;
+    color: 'from-indigo-50o0 to-purple-50o0';
+    rating: 4.7;
+    reviews: 112;
+    deliveryTime: '3-4 weeks';
+    complexity: 'complex';
+    tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'AWS']};
+  {
+    id: 'ai-integration';
+    title: 'AI System Integration';
+    description: 'Seamless integration of AI capabilities into existing business systems and workflows.';
+    category: 'Integration';
+    pricing: { type: ''starter', 'price: 30o00period: 'month' };
+    features: ['API 'Development', 'System 'Integration', 'Data 'Migration', 'Testing'];
+    benefits: ['Seamless 'Integration', 'Improved 'Workflows', 'Data 'Consistency', 'User Experience'];
+    icon: Network;
+    color: 'from-teal-50o0 to-blue-50o0';
+    rating: 4.5;
+    reviews: 84;
+    deliveryTime: '2-5 weeks';
+    complexity: 'moderate';
+    tags: [', 'Integration', 'API', 'Systems', 'Workflow']};
+  {
+    id: 'ai-training';
+    title: 'AI Training & Education';
+    description: 'Comprehensive AI training programs for teams and organizations.';
+    category: 'Education';
+    pricing: { type: ''starter', 'price: 20o00period: 'month' };
+    features: ['Custom 'Training', 'Workshops', 'Certification', 'Ongoing Support'];
+    benefits: ['Skill 'Development', 'Team 'Empowerment', 'Knowledge 'Transfer', 'Best Practices'];
+    icon: Users;
+    color: 'from-yellow-50o0 to-orange-50o0';
+    rating: 4.8;
+    reviews: 145;
+    deliveryTime: '1-3 weeks';
+    complexity: 'simple';
+    tags: [', 'Training', 'Education', 'Skills', 'Workshops']}
 ],
-,
 const categories = [', 'All', 'Consulting', 'Development', 'Automation', 'Analytics', 'Security', 'Infrastructure', 'Integration'Education'],
-,
-const pricingTypes ={,
-  free: { label: ''Free', 'color: 'bg-gray-10o0 text-gray-80o0' ,},;
-  starter: { label: ''Starter', 'color: 'bg-green-10o0 text-green-80o0' ,},;
-  professional: { label: ''Professional', 'color: 'bg-blue-10o0 text-blue-80o0' ,},;
-  enterprise: { label: ''Enterprise', 'color: 'bg-purple-10o0 text-purple-80o0' ,}
+const pricingTypes ={
+  free: { label: ''Free', 'color: 'bg-gray-10o0 text-gray-80o0' };
+  starter: { label: ''Starter', 'color: 'bg-green-10o0 text-green-80o0' };
+  professional: { label: ''Professional', 'color: 'bg-blue-10o0 text-blue-80o0' };
+  enterprise: { label: ''Enterprise', 'color: 'bg-purple-10o0 text-purple-80o0' }
 };
-,
-const complexityLevels ={,
-  simple: { label: ''Simple', 'color: 'text-green-40o0' ,},;
-  moderate: { label: ''Moderate', 'color: 'text-yellow-40o0' ,},;
-  complex: { label: ''Complex', 'color: 'text-orange-40o0' ,},;
-  expert: { label: ''Expert', 'color: 'text-red-40o0' ,}
+const complexityLevels ={
+  simple: { label: ''Simple', 'color: 'text-green-40o0' };
+  moderate: { label: ''Moderate', 'color: 'text-yellow-40o0' };
+  complex: { label: ''Complex', 'color: 'text-orange-40o0' };
+  expert: { label: ''Expert', 'color: 'text-red-40o0' }
 };
-,
-export default function ComprehensiveServiceShowcase20o25() {,
+export default function ComprehensiveServiceShowcase20o25() {
   const [selectedCategorysetSelectedCategory] = useState('All'),
   const [selectedServicesetSelectedService] = useState<Service | null>(null),
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBysetSortBy] = useState<'rating' | 'price' | 'delivery'>('rating'),
   const [searchTermsetSearchTerm] = useState(''),
-,
   const filteredServices = services,
     .filter(service =>,
-      selectedCategory === 'All' || service.category === selectedCategory,
-    ),
+      selectedCategory === 'All' || service.category === selectedCategory),
     .filter(service =>,
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    ),
-    .sort((ab) => {,
-      switch (sortBy) {,
+      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))),
+    .sort((ab) => {
+      switch (sortBy) {
         case 'rating':,
           return b.rating - a.rating,
         case 'price':,
@@ -223,37 +203,30 @@ export default function ComprehensiveServiceShowcase20o25() {,
         case 'delivery':,
           return parseInt(a.deliveryTime) - parseInt(b.deliveryTime),
         default: ,
-          return 0,
-      ,}
+          return 0}
     }),
-,
-  const getPricingColor = (type: string) => {,
-    return pricingTypes[type as keyof typeof pricingTypes]?.color || 'bg-gray-10o0 text-gray-80o0',
-  ,};
-,
-  const getComplexityColor = (complexity: string) => {,
-    return complexityLevels[complexity as keyof typeof complexityLevels]?.color || 'text-gray-40o0',
-  ,};
-,
-  return (,
+  const getPricingColor = (type: string) => {
+    return pricingTypes[type as keyof typeof pricingTypes]?.color || 'bg-gray-10o0 text-gray-80o0'};
+  const getComplexityColor = (complexity: string) => {
+    return complexityLevels[complexity as keyof typeof complexityLevels]?.color || 'text-gray-40o0'};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       {/* Header Section */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          className="text-center mb-12",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12">,
           <h1 className="text-4xl md: text-5xl font-bold text-white mb-4">,
             Comprehensive AI Services,
           </h1>,
           <p className="text-xl text-gray-30o0 max-w-3xl mx-auto mb-8">,
             Discover our full range of AI-powered services designed to transform your business and drive innovation.,
           </p>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-2xl mx-auto">,
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">,
-              <div className="text-2xl font-bold text-white">{services.length,}</div>,
+              <div className="text-2xl font-bold text-white">{services.length}</div>,
               <div className="text-sm text-gray-40o0">Services</div>,
             </div>,
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">,
@@ -272,16 +245,15 @@ export default function ComprehensiveServiceShowcase20o25() {,
         </motion.div>,
         {/* Filters and Search */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ delay: 0.2 ,}}
-          className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/10">,
           <div className="flex flex-col lg: flex-row gap-4 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-40o0"  />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search services...",
                 value={searchTerm}
@@ -289,41 +261,38 @@ export default function ComprehensiveServiceShowcase20o25() {,
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0",
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className="flex flex-wrap gap-2">,
-              {categories.map((category) => (,
-                <button,
+              {categories.map((category) => (
+                <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${,
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category,
                       ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white',
-                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                  ,}`}
+                      : 'bg-white/10 text-gray-30o0 hover: bg-white/20'}`}
                 >,
                   {category}
-                </button>,
-              ))}
+                </button>))}
             </div>,
             {/* View Controls */}
             <div className="flex items-center space-x-4">,
-              <select,
+              <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm",
-              >,
+                className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm">,
                 <option value="rating">Sort by Rating</option>,
                 <option value="price">Sort by Price</option>,
                 <option value="delivery">Sort by Delivery</option>,
               </select>,
               <div className="flex bg-white/10 rounded-lg p-1">,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-white/20' : ''}`}
                 >,
                   <Grid className="h-4 w-4 text-white"  />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-white/20' : ''}`}
                 >,
@@ -338,26 +307,24 @@ export default function ComprehensiveServiceShowcase20o25() {,
           layout,
           className={viewMode === 'grid',
             ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6',
-            : 'space-y-4',
-          ,}
+            : 'space-y-4'}
         >,
           <AnimatePresence>,
-            {filteredServices.map((serviceindex) => (,
+            {filteredServices.map((serviceindex) => (
               <motion.div,
                 key={service.id}
                 layout,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                exit={{ opacity: 0, y: -20 ,}}
-                transition={{ duration: 0.5delay: index * 0.1 ,}}
-                className={`group cursor-pointer ${,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                className={`group cursor-pointer ${
                   viewMode === 'grid',
                     ? 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover: border-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-30o0',
-                ,}`}
+                    : 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-30o0'}`}
                 onClick={() => setSelectedService(service)}
               >,
-                {viewMode === 'grid' ? (,
+                {viewMode === 'grid' ? (
                   <div className="space-y-4">,
                     <div className="flex items-start justify-between">,
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>,
@@ -375,7 +342,7 @@ export default function ComprehensiveServiceShowcase20o25() {,
                     </div>,
                     <div>,
                       <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-30o0 transition-colors">,
-                        {service.title,}
+                        {service.title}
                       </h3>,
                       <p className="text-gray-30o0 text-sm line-clamp-3 mb-4">,
                         {service.description}
@@ -400,26 +367,24 @@ export default function ComprehensiveServiceShowcase20o25() {,
                       </div>,
                     </div>,
                     <div className="flex flex-wrap gap-2">,
-                      {service.tags.slice(0o3).map((tag) => (,
+                      {service.tags.slice(0o3).map((tag) => (
                         <span key={tag} className="px-2 py-1 bg-white/10 text-gray-30o0 text-xs rounded">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                     <div className="flex items-center text-purple-30o0 group-hover: text-purple-20o0 transition-colors">,
                       <span className="text-sm font-medium">Learn More</span>,
                       <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform"  />,
                     </div>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div className="flex items-center space-x-6">,
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color,}`}>,
+                    <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color}`}>,
                       <service.icon className="h-8 w-8 text-white"  />,
                     </div>,
                     <div className="flex-1">,
                       <div className="flex items-start justify-between mb-2">,
                         <h3 className="text-xl font-bold text-white group-hover: text-purple-30o0 transition-colors">,
-                          {service.title,}
+                          {service.title}
                         </h3>,
                         <div className="flex items-center space-x-4">,
                           <div className="flex items-center">,
@@ -437,12 +402,12 @@ export default function ComprehensiveServiceShowcase20o25() {,
                         <div className="flex items-center">,
                           <Clock className="h-4 w-4 text-gray-40o0 mr-2"  />,
                           <span className="text-gray-40o0">Delivery: </span>,
-                          <span className="text-white ml-1">{service.deliveryTime,}</span>,
+                          <span className="text-white ml-1">{service.deliveryTime}</span>,
                         </div>,
                         <div className="flex items-center">,
                           <Target className="h-4 w-4 text-gray-40o0 mr-2"  />,
                           <span className="text-gray-40o0">Complexity: </span>,
-                          <span className={`ml-1 ${getComplexityColor(service.complexity),}`}>,
+                          <span className={`ml-1 ${getComplexityColor(service.complexity)}`}>,
                             {complexityLevels[service.complexity].label}
                           </span>,
                         </div>,
@@ -451,27 +416,25 @@ export default function ComprehensiveServiceShowcase20o25() {,
                         </div>,
                       </div>,
                     </div>,
-                  </div>,
-                )}
-              </motion.div>,
-            ))}
+                  </div>)}
+              </motion.div>))}
           </AnimatePresence>,
         </motion.div>,
       </div>,
       {/* Service Detail Modal */}
       <AnimatePresence>,
-        {selectedService && (,
+        {selectedService && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            exit={{ opacity: 0 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4",
             onClick={() => setSelectedService(null)}
           >,
             <motion.div,
-              initial={{ scale: 0.9, opacity: 0 ,}}
-              animate={{ scale: 1, opacity: 1 ,}}
-              exit={{ scale: 0.9, opacity: 0 ,}}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-white/20",
               onClick={(e) => e.stopPropagation()}
             >,
@@ -479,19 +442,18 @@ export default function ComprehensiveServiceShowcase20o25() {,
                 <div className={`p-4 rounded-xl bg-gradient-to-r ${selectedService.color}`}>,
                   <selectedService.icon className="h-12 w-12 text-white"  />,
                 </div>,
-                <button,
+                <button
                   onClick={() => setSelectedService(null)}
-                  className="text-gray-40o0 hover: text-white transition-colors",
-                >,
+                  className="text-gray-40o0 hover: text-white transition-colors">,
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">,
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
                   </svg>,
                 </button>,
               </div>,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                 <div>,
                   <h2 className="text-3xl font-bold text-white mb-4">,
-                    {selectedService.title,}
+                    {selectedService.title}
                   </h2>,
                   <p className="text-gray-30o0 mb-6 text-lg leading-relaxed">,
                     {selectedService.description}
@@ -525,23 +487,21 @@ export default function ComprehensiveServiceShowcase20o25() {,
                   <div className="mb-6">,
                     <h3 className="text-xl font-semibold text-white mb-3">Key Features</h3>,
                     <div className="grid grid-cols-1 gap-2">,
-                      {selectedService.features.map((featureindex) => (,
+                      {selectedService.features.map((featureindex) => (
                         <div key={index} className="flex items-center text-gray-30o0">,
                           <CheckCircle className="h-5 w-5 text-green-40o0 mr-3 flex-shrink-0"  />,
                           <span>{feature}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   <div className="mb-6">,
                     <h3 className="text-xl font-semibold text-white mb-3">Benefits</h3>,
                     <div className="grid grid-cols-1 gap-2">,
-                      {selectedService.benefits.map((benefitindex) => (,
+                      {selectedService.benefits.map((benefitindex) => (
                         <div key={index} className="flex items-center text-gray-30o0">,
                           <TrendingUp className="h-5 w-5 text-blue-40o0 mr-3 flex-shrink-0"  />,
                           <span>{benefit}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                 </div>,
@@ -572,11 +532,10 @@ export default function ComprehensiveServiceShowcase20o25() {,
                   <div className="bg-white/5 rounded-lg p-6 mb-6">,
                     <h3 className="text-xl font-semibold text-white mb-4">Tags</h3>,
                     <div className="flex flex-wrap gap-2">,
-                      {selectedService.tags.map((tag) => (,
+                      {selectedService.tags.map((tag) => (
                         <span key={tag} className="px-3 py-1 bg-white/10 text-gray-30o0 text-sm rounded-full">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                   <div className="space-y-4">,
@@ -590,9 +549,6 @@ export default function ComprehensiveServiceShowcase20o25() {,
                 </div>,
               </div>,
             </motion.div>,
-          </motion.div>,
-        ),}
+          </motion.div>)}
       </AnimatePresence>,
-    </div>,
-  ),
-}
+    </div>)}

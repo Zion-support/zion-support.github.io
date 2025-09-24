@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const RevolutionaryAIContent20o26Banner = () => {,
-  return (,
+const RevolutionaryAIContent20o26Banner = () => {
+  return (
     <section className='bg-gradient-to-r from-violet-90o0 via-purple-90o0 to-fuchsia-90o0 text-white py-20 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-violet-60o0/20 to-fuchsia-60o0/20'></div>,
@@ -21,16 +20,14 @@ const RevolutionaryAIContent20o26Banner = () => {,
             will reshape industries.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-revolutionary-content',
-              className='bg-white text-violet-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-white text-violet-60o0 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Revolutionary Content,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26-research',
-              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-violet-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-violet-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               View Research Papers,
             </Link>,
           </div>,
@@ -68,9 +65,5 @@ const RevolutionaryAIContent20o26Banner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryAIContent20o26Banner,
-,
+    </section>)};
+export default RevolutionaryAIContent20o26Banner;

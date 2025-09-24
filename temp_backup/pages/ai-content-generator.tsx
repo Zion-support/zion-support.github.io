@@ -1,221 +1,216 @@
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-import {,
-  Brain,;
-  Zap,;
-  Shield,;
-  BarChart3,;
-  Users,;
-  Clock,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Play,;
-  Download,;
-  Code,;
-  Globe,;
-  Lock,;
-  Sparkles,;
+import {
+  Brain;
+  Zap;
+  Shield;
+  BarChart3;
+  Users;
+  Clock;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Play;
+  Download;
+  Code;
+  Globe;
+  Lock;
+  Sparkles;
 } from 'lucide-react',
-,
-export default function AIContentGeneratorPage() {,
-  const features = [,
-    {,
-      icon: <Brain className='w-8 h-8 text-white' />,;
-      title: 'AI-Powered Content Creation',;
+export default function AIContentGeneratorPage() {
+  const features = [
+    {
+      icon: <Brain className='w-8 h-8 text-white' />;
+      title: 'AI-Powered Content Creation';
       description:,
-        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',;
-      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',;
-      gradient: 'from-purple-40o0 to-indigo-50o0',;
-    },;
-    {,
-      icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'Real-time Generation',;
+        'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.';
+      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0';
+      gradient: 'from-purple-40o0 to-indigo-50o0';
+    };
+    {
+      icon: <Zap className='w-8 h-8 text-white' />;
+      title: 'Real-time Generation';
       description:,
-        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',;
-      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0',;
-      gradient: 'from-yellow-40o0 to-orange-50o0',;
-    },;
-    {,
-      icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'Plagiarism-Free Content',;
+        'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.';
+      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0';
+      gradient: 'from-yellow-40o0 to-orange-50o0';
+    };
+    {
+      icon: <Shield className='w-8 h-8 text-white' />;
+      title: 'Plagiarism-Free Content';
       description:,
-        'Every piece of content is unique and original. Our AI ensures 10o0% plagiarism-free writing.',;
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',;
-      gradient: 'from-green-40o0 to-emerald-50o0',;
-    },;
-    {,
-      icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'SEO Optimization',;
+        'Every piece of content is unique and original. Our AI ensures 10o0% plagiarism-free writing.';
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
+      gradient: 'from-green-40o0 to-emerald-50o0';
+    };
+    {
+      icon: <BarChart3 className='w-8 h-8 text-white' />;
+      title: 'SEO Optimization';
       description:,
-        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',;
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',;
-      gradient: 'from-blue-40o0 to-cyan-50o0',;
-    },;
-    {,
-      icon: <Users className='w-8 h-8 text-white' />,;
-      title: 'Multi-Language Support',;
+        'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.';
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
+      gradient: 'from-blue-40o0 to-cyan-50o0';
+    };
+    {
+      icon: <Users className='w-8 h-8 text-white' />;
+      title: 'Multi-Language Support';
       description:,
-        'Generate content in 50+ languages with native-level fluency and cultural understanding.',;
-      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0',;
-      gradient: 'from-red-40o0 to-pink-50o0',;
-    },;
-    {,
-      icon: <Clock className='w-8 h-8 text-white' />,;
-      title: '24/7 Availability',;
+        'Generate content in 50+ languages with native-level fluency and cultural understanding.';
+      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0';
+      gradient: 'from-red-40o0 to-pink-50o0';
+    };
+    {
+      icon: <Clock className='w-8 h-8 text-white' />;
+      title: '24/7 Availability';
       description:,
-        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',;
-      color: 'bg-gradient-to-br from-teal-50o0 to-blue-60o0',;
-      gradient: 'from-teal-40o0 to-blue-50o0',;
-    },;
+        'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.';
+      color: 'bg-gradient-to-br from-teal-50o0 to-blue-60o0';
+      gradient: 'from-teal-40o0 to-blue-50o0';
+    };
   ],
-,
-  const pricingPlans = [,
-    {,
-      name: 'Starter',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for individuals and small blogs',;
-      features: [,
-        '1,0o00 words per month',;
-        '5 content templates',;
-        'Basic SEO optimization',;
-        'Email support',;
-        'API access (10o0 calls/month)',;
-        'Content analytics dashboard',;
-      ],;
-      popular: false,;
-      color: 'border-gray-60o0',;
-      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0',;
-    },;
-    {,
-      name: 'Professional',;
-      price: '$99',;
-      period: '/month',;
-      description: 'Ideal for growing businesses and agencies',;
-      features: [,
-        '10,0o00 words per month',;
-        '25+ content templates',;
-        'Advanced SEO tools',;
-        'Priority support',;
-        'API access (1,0o00 calls/month)',;
-        'Advanced analytics',;
-        'Team collaboration',;
-        'Custom branding',;
-      ],;
-      popular: true,;
-      color: 'border-blue-50o0',;
-      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0',;
-    },;
-    {,
-      name: 'Enterprise',;
-      price: '$299',;
-      period: '/month',;
-      description: 'For large organizations and enterprises',;
-      features: [,
-        'Unlimited words',;
-        'All templates + custom',;
-        'Full SEO suite',;
-        'Dedicated support',;
-        'Unlimited API access',;
-        'Advanced analytics',;
-        'White-label solution',;
-        'Custom integrations',;
-        'SLA guarantee',;
-      ],;
-      popular: false,;
-      color: 'border-purple-60o0',;
-      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0',;
-    },;
+  const pricingPlans = [
+    {
+      name: 'Starter';
+      price: '$29';
+      period: '/month';
+      description: 'Perfect for individuals and small blogs';
+      features: [
+        '1,0o00 words per month';
+        '5 content templates';
+        'Basic SEO optimization';
+        'Email support';
+        'API access (10o0 calls/month)';
+        'Content analytics dashboard';
+      ];
+      popular: false;
+      color: 'border-gray-60o0';
+      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0';
+    };
+    {
+      name: 'Professional';
+      price: '$99';
+      period: '/month';
+      description: 'Ideal for growing businesses and agencies';
+      features: [
+        '10,0o00 words per month';
+        '25+ content templates';
+        'Advanced SEO tools';
+        'Priority support';
+        'API access (1,0o00 calls/month)';
+        'Advanced analytics';
+        'Team collaboration';
+        'Custom branding';
+      ];
+      popular: true;
+      color: 'border-blue-50o0';
+      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0';
+    };
+    {
+      name: 'Enterprise';
+      price: '$299';
+      period: '/month';
+      description: 'For large organizations and enterprises';
+      features: [
+        'Unlimited words';
+        'All templates + custom';
+        'Full SEO suite';
+        'Dedicated support';
+        'Unlimited API access';
+        'Advanced analytics';
+        'White-label solution';
+        'Custom integrations';
+        'SLA guarantee';
+      ];
+      popular: false;
+      color: 'border-purple-60o0';
+      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0';
+    };
   ],
-,
-  const useCases = [,
-    {,
-      title: 'Blog Writing',;
+  const useCases = [
+    {
+      title: 'Blog Writing';
       description:,
-        'Generate engaging blog posts, articles, and long-form content in minutes.',;
-      icon: '📝',;
-      examples: [,
-        'Tech reviews',;
-        'How-to guides',;
-        'Industry insights',;
-        'Product comparisons',;
-      ],;
-    },;
-    {,
-      title: 'Marketing Copy',;
+        'Generate engaging blog posts, articles, and long-form content in minutes.';
+      icon: '📝';
+      examples: [
+        'Tech reviews';
+        'How-to guides';
+        'Industry insights';
+        'Product comparisons';
+      ];
+    };
+    {
+      title: 'Marketing Copy';
       description:,
-        'Create compelling ad copy, landing pages, and marketing materials.',;
-      icon: '🎯',;
-      examples: [,
-        'Facebook ads',;
-        'Google ads',;
-        'Landing pages',;
-        'Email campaigns',;
-      ],;
-    },;
-    {,
-      title: 'Social Media',;
+        'Create compelling ad copy, landing pages, and marketing materials.';
+      icon: '🎯';
+      examples: [
+        'Facebook ads';
+        'Google ads';
+        'Landing pages';
+        'Email campaigns';
+      ];
+    };
+    {
+      title: 'Social Media';
       description:,
-        'Generate engaging social media posts, captions, and hashtag suggestions.',;
-      icon: '📱',;
-      examples: [,
-        'Instagram posts',;
-        'Twitter threads',;
-        'LinkedIn articles',;
-        'TikTok captions',;
-      ],;
-    },;
-    {,
-      title: 'E-commerce',;
+        'Generate engaging social media posts, captions, and hashtag suggestions.';
+      icon: '📱';
+      examples: [
+        'Instagram posts';
+        'Twitter threads';
+        'LinkedIn articles';
+        'TikTok captions';
+      ];
+    };
+    {
+      title: 'E-commerce';
       description:,
-        'Write product descriptions, category pages, and promotional content.',;
-      icon: '🛍️',;
-      examples: [,
-        'Product descriptions',;
-        'Category pages',;
-        'Promotional emails',;
-        'FAQ sections',;
-      ],;
-    },;
+        'Write product descriptions, category pages, and promotional content.';
+      icon: '🛍️';
+      examples: [
+        'Product descriptions';
+        'Category pages';
+        'Promotional emails';
+        'FAQ sections';
+      ];
+    };
   ],
-,
-  const integrations = [,
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' ,},;
-    {,
-      name: 'Shopify',;
-      icon: '🛒',;
-      description: 'E-commerce content automation',;
-    },;
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' ,},;
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' ,},;
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' ,},;
-    { name: 'Zapier', icon: '⚡', description: '50o0+ app integrations' ,},;
+  const integrations = [
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' };
+    {
+      name: 'Shopify';
+      icon: '🛒';
+      description: 'E-commerce content automation';
+    };
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' };
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' };
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' };
+    { name: 'Zapier', icon: '⚡', description: '50o0+ app integrations' };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>,
           AI Content Generator | Zion Tech Group - Advanced AI-Powered Content,
           Creation,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Generate high-quality, SEO-optimized content in seconds with our advanced AI content generator. Support for 50+ languages, plagiarism-free writing, and real-time generation.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='AI Content Generator | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Advanced AI-powered content creation with real-time generation, SEO optimization, and multi-language support.',
         />,
         <meta name='twitter: card' content='summary_large_image' />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>,
         <div className='absolute inset-0'>,
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(147,51,234,0.1),transparent_50%)]' />,
@@ -236,25 +231,23 @@ export default function AIContentGeneratorPage() {,
             most advanced AI writing assistant,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center items-center mb-20'>,
-            <Button,
+            <Button
               href='#pricing',
               size='lg',
-              className='bg-purple-60o0 hover:bg-purple-70o0 shadow-2xl shadow-purple-50o0/25',
-            >,
+              className='bg-purple-60o0 hover:bg-purple-70o0 shadow-2xl shadow-purple-50o0/25'>,
               Start Free Trial,
               <ArrowRight className='w-5 h-5 ml-2' />,
             </Button>,
-            <Button,
+            <Button
               href='#demo',
               variant='outline',
               size='lg',
-              className='border-white/20 hover:border-white/40 hover:bg-white/5',
-            >,
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'>,
               <Play className='w-5 h-5 mr-2' />,
               Watch Demo,
             </Button>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 max-w-5xl mx-auto'>,
             <div className='text-center'>,
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-40o0'>,
@@ -283,7 +276,7 @@ export default function AIContentGeneratorPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className='py-24 bg-gray-90o0 relative overflow-hidden'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
           <div className='text-center mb-20'>,
@@ -295,27 +288,26 @@ export default function AIContentGeneratorPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {features.map((feature, index) => (,
-              <Card,
+            {features.map((feature, index) => (
+              <Card
                 key={index}
                 className='text-center group bg-gray-80o0/50 border border-gray-70o0 hover: border-purple-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0 hover:-translate-y-1',
-                style={{ animationDelay: `${index * 0.1 + 0.2,}s` }}
+                style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
               >,
                 <div className='relative'>,
-                  <div,
-                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-30o0 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color,} shadow-xl`}
+                  <div
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-30o0 group-hover: scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >,
                     {feature.icon}
                   </div>,
                 </div>,
                 <h3 className='text-xl font-bold mb-4 text-white group-hover: text-purple-40o0 transition-colors duration-30o0'>,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className='text-gray-40o0 leading-relaxed'>,
                   {feature.description}
                 </p>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -331,43 +323,38 @@ export default function AIContentGeneratorPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-            {useCases.map((useCase, index) => (,
-              <Card,
+            {useCases.map((useCase, index) => (
+              <Card
                 key={index}
-                className='group border border-gray-70o0 hover: border-purple-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0',
-              >,
+                className='group border border-gray-70o0 hover: border-purple-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0'>,
                 <div className='flex items-start space-x-4'>,
-                  <div className='text-4xl'>{useCase.icon,}</div>,
+                  <div className='text-4xl'>{useCase.icon}</div>,
                   <div className='flex-1'>,
                     <h3 className='text-xl font-bold mb-3 text-white group-hover: text-purple-40o0 transition-colors duration-30o0'>,
-                      {useCase.title,}
+                      {useCase.title}
                     </h3>,
                     <p className='text-gray-40o0 mb-4 leading-relaxed'>,
                       {useCase.description}
                     </p>,
                     <div className='grid grid-cols-2 gap-2'>,
-                      {useCase.examples.map((example, exampleIndex) => (,
-                        <div,
+                      {useCase.examples.map((example, exampleIndex) => (
+                        <div
                           key={exampleIndex}
-                          className='flex items-center text-sm text-gray-30o0',
-                        >,
+                          className='flex items-center text-sm text-gray-30o0'>,
                           <CheckCircle className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                           {example}
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                 </div>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
       {/* Pricing Section */}
-      <section,
+      <section
         id='pricing',
-        className='py-24 bg-gray-90o0 relative overflow-hidden',
-      >,
+        className='py-24 bg-gray-90o0 relative overflow-hidden'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
           <div className='text-center mb-20'>,
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>,
@@ -378,18 +365,17 @@ export default function AIContentGeneratorPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-            {pricingPlans.map((plan, index) => (,
-              <Card,
+            {pricingPlans.map((plan, index) => (
+              <Card
                 key={index}
-                className={`relative group ${plan.popular ? 'ring-2 ring-purple-50o0 scale-10o5' : ''} border ${plan.color} hover: border-purple-50o0/50 transition-all duration-30o0`,}
+                className={`relative group ${plan.popular ? 'ring-2 ring-purple-50o0 scale-10o5' : ''} border ${plan.color} hover: border-purple-50o0/50 transition-all duration-30o0`}
               >,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
                     <span className='bg-purple-50o0 text-white px-4 py-2 rounded-full text-sm font-semibold'>,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className='text-center mb-8'>,
                   <h3 className='text-2xl font-bold text-white mb-2'>,
@@ -404,26 +390,22 @@ export default function AIContentGeneratorPage() {,
                   <p className='text-gray-40o0'>{plan.description}</p>,
                 </div>,
                 <ul className='space-y-4 mb-8'>,
-                  {plan.features.map((feature, featureIndex) => (,
-                    <li,
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
                       key={featureIndex}
-                      className='flex items-center text-gray-30o0',
-                    >,
+                      className='flex items-center text-gray-30o0'>,
                       <CheckCircle className='w-5 h-5 text-green-40o0 mr-3 flex-shrink-0' />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <Button,
+                <Button
                   href='/contact',
                   className={`w-full ${plan.buttonColor} text-white`}
-                  size='lg',
-                >,
+                  size='lg'>,
                   Get Started,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </Button>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -439,13 +421,12 @@ export default function AIContentGeneratorPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>,
-            {integrations.map((integration, index) => (,
-              <Card,
+            {integrations.map((integration, index) => (
+              <Card
                 key={index}
-                className='text-center group border border-gray-70o0 hover: border-purple-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0',
-              >,
+                className='text-center group border border-gray-70o0 hover: border-purple-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0'>,
                 <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
-                  {integration.icon,}
+                  {integration.icon}
                 </div>,
                 <h3 className='font-semibold text-white mb-2'>,
                   {integration.name}
@@ -453,8 +434,7 @@ export default function AIContentGeneratorPage() {,
                 <p className='text-sm text-gray-40o0'>,
                   {integration.description}
                 </p>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
         </div>,
       </section>,
@@ -470,28 +450,24 @@ export default function AIContentGeneratorPage() {,
             every day with AI-powered content generation.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>,
-            <Button,
+            <Button
               href='/contact',
               variant='secondary',
               size='lg',
-              className='bg-white text-purple-60o0 hover:bg-gray-10o0 shadow-2xl',
-            >,
+              className='bg-white text-purple-60o0 hover:bg-gray-10o0 shadow-2xl'>,
               Start Free Trial,
               <ArrowRight className='w-5 h-5 ml-2' />,
             </Button>,
-            <Button,
+            <Button
               href='#demo',
               variant='outline',
               size='lg',
-              className='border-white text-white hover:bg-white hover:text-purple-60o0 shadow-2xl',
-            >,
+              className='border-white text-white hover:bg-white hover:text-purple-60o0 shadow-2xl'>,
               <Play className='w-5 h-5 mr-2' />,
               Watch Demo,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>)}
 ,

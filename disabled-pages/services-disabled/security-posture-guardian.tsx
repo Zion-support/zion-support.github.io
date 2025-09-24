@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function SecurityPostureGuardian(...args: any[]): any {,
-  return (,
+export default function SecurityPostureGuardian(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Security Posture Guardian — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Continuously monitor misconfigurations, secrets, and drift with automated fixes.',
         />,
@@ -43,7 +42,5 @@ export default function SecurityPostureGuardian(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

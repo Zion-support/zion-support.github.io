@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Risk Management Framework',;
+export const metadata = {
+  title: 'AI 20o26: Agent Risk Management Framework';
   description:,
-    'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.',;
-  keywords: [,
-    'AI 20o26',;
-    'risk management',;
-    'agent security',;
-    'governance',;
-    'controls',;
-  ],;
+    'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.';
+  keywords: [
+    'AI 20o26';
+    'risk management';
+    'agent security';
+    'governance';
+    'controls';
+  ];
 };
-,
-export default function AgentRiskManagementFramework20o26Page() {,
-  return (,
+export default function AgentRiskManagementFramework20o26Page() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Risk Management Framework',
         description='A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.',
         keywords='AI 20o26, risk management, agent security, governance, controls',
@@ -52,7 +50,7 @@ export default function AgentRiskManagementFramework20o26Page() {,
                 violations,
               </li>,
               <li>,
-                Responsive Controls: circuit breakers, rollbacks,;
+                Responsive Controls: circuit breakers, rollbacks;
                 human-in-the-loop,
               </li>,
               <li>,
@@ -105,23 +103,19 @@ export default function AgentRiskManagementFramework20o26Page() {,
               </p>,
             </div>,
             <div className='flex gap-3'>,
-              <Link,
+              <Link
                 href='/content/genai-governance-20o26',
-                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover: text-emerald-90o0'>,
                 GenAI Governance 20o26 →,
               </Link>,
-              <Link,
+              <Link
                 href='/content/agent-observability-20o26',
-                className='text-emerald-70o0 font-semibold hover:text-emerald-90o0',
-              >,
+                className='text-emerald-70o0 font-semibold hover:text-emerald-90o0'>,
                 Agent Observability 20o26 →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>)}
 ,

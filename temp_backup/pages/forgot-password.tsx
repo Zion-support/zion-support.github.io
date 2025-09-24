@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ForgotPasswordPage() {,
-  return (,
+export default function ForgotPasswordPage() {
+  return (
     <>,
       <Head>,
         <title>Forgot Password - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ForgotPasswordPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

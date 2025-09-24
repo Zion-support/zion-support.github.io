@@ -5,115 +5,107 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card',
 import { Button } from './ui/button',
 import { Badge } from './ui/badge',
 import { Input } from './ui/input',
-const AdvancedServicePortfolioDashboard = () => {,
+const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all'),
     const [selectedStatus, setSelectedStatus] = useState('all'),
     const [selectedComplexity, setSelectedComplexity] = useState('all'),
     const [searchTerm, setSearchTerm] = useState(''),
     const [viewMode, setViewMode] = useState('overview'),
     // Mock data - in real app this would come from API,
-    const portfolioData = [,
-        {,
-            id: 'ai-consciousness',;
-            title: 'Advanced AI Consciousness Platform',;
-            category: 'ai',;
-            price: '$30o0,0o00/month',;
-            duration: '24-36 months',;
-            status: 'Active',;
-            performance: 95,;
-            clientCount: 8,;
-            revenue: 240o0000,;
-            growth: 28.5,;
-            complexity: 'Enterprise',;
-            marketDemand: 'Exploding',;
-            technologyMaturity: 'Leading',
-        ,},;
-        {,
-            id: 'space-mining',;
-            title: 'Space Mining & Resource Extraction',;
-            category: 'space-tech',;
-            price: '$1,0o00,0o00/month',;
-            duration: '36-48 months',;
-            status: 'Development',;
-            performance: 88,;
-            clientCount: 3,;
-            revenue: 30o00000,;
-            growth: 45.2,;
-            complexity: 'Enterprise',;
-            marketDemand: 'High',;
-            technologyMaturity: 'Emerging',
-        ,},;
-        {,
-            id: 'quantum-teleportation',;
-            title: 'Quantum Teleportation Network',;
-            category: 'quantum',;
-            price: '$80o0,0o00/month',;
-            duration: '36-48 months',;
-            status: 'Planning',;
-            performance: 0,;
-            clientCount: 0,;
-            revenue: 0,;
-            growth: 0,;
-            complexity: 'Enterprise',;
-            marketDemand: 'Exploding',;
-            technologyMaturity: 'Emerging',
-        ,},;
-        {,
-            id: 'fusion-energy',;
-            title: 'Fusion Energy Generation Platform',;
-            category: 'green-tech',;
-            price: '$2,0o00,0o00/month',;
-            duration: '48-60 months',;
-            status: 'Development',;
-            performance: 92,;
-            clientCount: 2,;
-            revenue: 40o00000,;
-            growth: 67.8,;
-            complexity: 'Enterprise',;
-            marketDemand: 'High',;
-            technologyMaturity: 'Growing',
-        ,},;
-        {,
-            id: 'nanotechnology',;
-            title: 'Advanced Nanotechnology Platform',;
-            category: 'biotech-ai',;
-            price: '$450,0o00/month',;
-            duration: '30-42 months',;
-            status: 'Active',;
-            performance: 89,;
-            clientCount: 12,;
-            revenue: 540o0000,;
-            growth: 34.2,;
-            complexity: 'Advanced',;
-            marketDemand: 'High',;
-            technologyMaturity: 'Growing',
-        ,},;
-        {,
-            id: 'brain-computer-interface',;
-            title: 'Advanced Brain-Computer Interface',;
-            category: 'biotech-ai',;
-            price: '$60o0,0o00/month',;
-            duration: '30-42 months',;
-            status: 'Active',;
-            performance: 91,;
-            clientCount: 6,;
-            revenue: 360o0000,;
-            growth: 42.1,;
-            complexity: 'Enterprise',;
-            marketDemand: 'Exploding',;
-            technologyMaturity: 'Leading',
-        ,}
+    const portfolioData = [
+        {
+            id: 'ai-consciousness';
+            title: 'Advanced AI Consciousness Platform';
+            category: 'ai';
+            price: '$30o0,0o00/month';
+            duration: '24-36 months';
+            status: 'Active';
+            performance: 95;
+            clientCount: 8;
+            revenue: 240o0000;
+            growth: 28.5;
+            complexity: 'Enterprise';
+            marketDemand: 'Exploding';
+            technologyMaturity: 'Leading'};
+        {
+            id: 'space-mining';
+            title: 'Space Mining & Resource Extraction';
+            category: 'space-tech';
+            price: '$1,0o00,0o00/month';
+            duration: '36-48 months';
+            status: 'Development';
+            performance: 88;
+            clientCount: 3;
+            revenue: 30o00000;
+            growth: 45.2;
+            complexity: 'Enterprise';
+            marketDemand: 'High';
+            technologyMaturity: 'Emerging'};
+        {
+            id: 'quantum-teleportation';
+            title: 'Quantum Teleportation Network';
+            category: 'quantum';
+            price: '$80o0,0o00/month';
+            duration: '36-48 months';
+            status: 'Planning';
+            performance: 0;
+            clientCount: 0;
+            revenue: 0;
+            growth: 0;
+            complexity: 'Enterprise';
+            marketDemand: 'Exploding';
+            technologyMaturity: 'Emerging'};
+        {
+            id: 'fusion-energy';
+            title: 'Fusion Energy Generation Platform';
+            category: 'green-tech';
+            price: '$2,0o00,0o00/month';
+            duration: '48-60 months';
+            status: 'Development';
+            performance: 92;
+            clientCount: 2;
+            revenue: 40o00000;
+            growth: 67.8;
+            complexity: 'Enterprise';
+            marketDemand: 'High';
+            technologyMaturity: 'Growing'};
+        {
+            id: 'nanotechnology';
+            title: 'Advanced Nanotechnology Platform';
+            category: 'biotech-ai';
+            price: '$450,0o00/month';
+            duration: '30-42 months';
+            status: 'Active';
+            performance: 89;
+            clientCount: 12;
+            revenue: 540o0000;
+            growth: 34.2;
+            complexity: 'Advanced';
+            marketDemand: 'High';
+            technologyMaturity: 'Growing'};
+        {
+            id: 'brain-computer-interface';
+            title: 'Advanced Brain-Computer Interface';
+            category: 'biotech-ai';
+            price: '$60o0,0o00/month';
+            duration: '30-42 months';
+            status: 'Active';
+            performance: 91;
+            clientCount: 6;
+            revenue: 360o0000;
+            growth: 42.1;
+            complexity: 'Enterprise';
+            marketDemand: 'Exploding';
+            technologyMaturity: 'Leading'}
     ],
-    const filteredPortfolio = useMemo(() => {,
-        return portfolioData.filter(service => {,
+    const filteredPortfolio = useMemo(() => {
+        return portfolioData.filter(service => {
             const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
             const matchesStatus = selectedStatus === 'all' || service.status === selectedStatus,
             const matchesComplexity = selectedComplexity === 'all' || service.complexity === selectedComplexity,
             const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()),
-            return matchesCategory && matchesStatus && matchesComplexity && matchesSearch,
-        }),
-    }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]),
-    const portfolioMetrics = useMemo(() => {,
+            return matchesCategory && matchesStatus && matchesComplexity && matchesSearch})}, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]),
+    const portfolioMetrics = useMemo(() => {
         const activeServices = portfolioData.filter(s => s.status === 'Active'),
         const totalRevenue = portfolioData.reduce((sum, s) => sum + s.revenue, 0),
         const totalClients = portfolioData.reduce((sum, s) => sum + s.clientCount, 0),
@@ -123,62 +115,57 @@ const AdvancedServicePortfolioDashboard = () => {,
         const portfolioGrowth = portfolioData.length > 0,
             ? portfolioData.reduce((sum, s) => sum + s.growth, 0) / portfolioData.length,
             : 0,
-        return {,
-            totalServices: portfolioData.length,;
-            totalRevenue,;
-            activeClients: totalClients,;
-            averagePerformance: Math.round(avgPerformance),;
-            portfolioGrowth: Math.round(portfolioGrowth),;
-            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services,
-        ,};
+        return {
+            totalServices: portfolioData.length;
+            totalRevenue;
+            activeClients: totalClients;
+            averagePerformance: Math.round(avgPerformance);
+            portfolioGrowth: Math.round(portfolioGrowth);
+            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services};
     }, [portfolioData]),
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'Active': return 'bg-green-10o0 text-green-80o0',
             case 'Development': return 'bg-blue-10o0 text-blue-80o0',
             case 'Planning': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Discontinued': return 'bg-red-10o0 text-red-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
-    const getComplexityColor = (complexity) => {,
-        switch (complexity) {,
+    const getComplexityColor = (complexity) => {
+        switch (complexity) {
             case 'Basic': return 'bg-green-10o0 text-green-80o0',
             case 'Intermediate': return 'bg-blue-10o0 text-blue-80o0',
             case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
             case 'Enterprise': return 'bg-purple-10o0 text-purple-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
-    const getMarketDemandColor = (demand) => {,
-        switch (demand) {,
+    const getMarketDemandColor = (demand) => {
+        switch (demand) {
             case 'Low': return 'bg-gray-10o0 text-gray-80o0',
             case 'Medium': return 'bg-blue-10o0 text-blue-80o0',
             case 'High': return 'bg-orange-10o0 text-orange-80o0',
             case 'Exploding': return 'bg-red-10o0 text-red-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
-    const getTechnologyMaturityColor = (maturity) => {,
-        switch (maturity) {,
+    const getTechnologyMaturityColor = (maturity) => {
+        switch (maturity) {
             case 'Emerging': return 'bg-blue-10o0 text-blue-80o0',
             case 'Growing': return 'bg-green-10o0 text-green-80o0',
             case 'Mature': return 'bg-orange-10o0 text-orange-80o0',
             case 'Leading': return 'bg-purple-10o0 text-purple-80o0',
-            default: return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+            default: return 'bg-gray-10o0 text-gray-80o0'}
     };
-    const categories = [,
-        { id: 'all', name: 'All Categories', count: portfolioData.length ,},;
-        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length ,},;
-        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length ,},;
-        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length ,},;
-        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length ,},;
-        { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length ,}
+    const categories = [
+        { id: 'all', name: 'All Categories', count: portfolioData.length };
+        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length };
+        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length };
+        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length };
+        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length };
+        { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }
     ],
     return (<div className="max-w-7xl mx-auto p-6">,
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} className="mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">,
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">,
           <div>,
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">,
@@ -199,7 +186,7 @@ const AdvancedServicePortfolioDashboard = () => {,
         </div>,
       </motion.div>,
       {/* Portfolio Metrics */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.1 ,}} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
         <Card className="hover:shadow-lg transition-shadow">,
           <CardHeader className="pb-3">,
             <div className="flex items-center justify-between">,
@@ -209,7 +196,7 @@ const AdvancedServicePortfolioDashboard = () => {,
               <div className="flex items-center gap-1">,
                 <ArrowUpRight className="w-4 h-4 text-green-50o0" />,
                 <span className="text-sm font-medium text-green-60o0">,
-                  +{portfolioMetrics.portfolioGrowth,}%,
+                  +{portfolioMetrics.portfolioGrowth}%,
                 </span>,
               </div>,
             </div>,
@@ -232,7 +219,7 @@ const AdvancedServicePortfolioDashboard = () => {,
               <div className="flex items-center gap-1">,
                 <ArrowUpRight className="w-4 h-4 text-green-50o0" />,
                 <span className="text-sm font-medium text-green-60o0">,
-                  +{Math.round(portfolioMetrics.portfolioGrowth),}%,
+                  +{Math.round(portfolioMetrics.portfolioGrowth)}%,
                 </span>,
               </div>,
             </div>,
@@ -255,7 +242,7 @@ const AdvancedServicePortfolioDashboard = () => {,
               <div className="flex items-center gap-1">,
                 <ArrowUpRight className="w-4 h-4 text-green-50o0" />,
                 <span className="text-sm font-medium text-green-60o0">,
-                  +{Math.round(portfolioMetrics.portfolioGrowth),}%,
+                  +{Math.round(portfolioMetrics.portfolioGrowth)}%,
                 </span>,
               </div>,
             </div>,
@@ -278,7 +265,7 @@ const AdvancedServicePortfolioDashboard = () => {,
               <div className="flex items-center gap-1">,
                 <ArrowUpRight className="w-4 h-4 text-green-50o0" />,
                 <span className="text-sm font-medium text-green-60o0">,
-                  +{Math.round(portfolioMetrics.portfolioGrowth),}%,
+                  +{Math.round(portfolioMetrics.portfolioGrowth)}%,
                 </span>,
               </div>,
             </div>,
@@ -294,11 +281,11 @@ const AdvancedServicePortfolioDashboard = () => {,
         </Card>,
       </motion.div>,
       {/* Filters and Controls */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.2 ,}} className="bg-white rounded-lg shadow-lg p-6 mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">,
           <div>,
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>,
-            <select value={selectedCategory,} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">,
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">,
               {categories.map(category => (<option key={category.id} value={category.id}>,
                   {category.name} ({category.count}),
                 </option>))}
@@ -329,12 +316,11 @@ const AdvancedServicePortfolioDashboard = () => {,
             <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>,
           </div>,
           <div className="flex items-end">,
-            <Button variant="outline" className="w-full" onClick={() => {,
+            <Button variant="outline" className="w-full" onClick={() => {
             setSelectedCategory('all'),
             setSelectedStatus('all'),
             setSelectedComplexity('all'),
-            setSearchTerm(''),
-        }}>,
+            setSearchTerm('')}}>,
               <Filter className="w-4 h-4 mr-2" />,
               Clear Filters,
             </Button>,
@@ -342,7 +328,7 @@ const AdvancedServicePortfolioDashboard = () => {,
         </div>,
       </motion.div>,
       {/* Portfolio Table */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.3 ,}} className="mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mb-8">,
         <Card>,
           <CardHeader>,
             <div className="flex items-center justify-between">,
@@ -372,9 +358,9 @@ const AdvancedServicePortfolioDashboard = () => {,
                   </tr>,
                 </thead>,
                 <tbody>,
-                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ delay: 0.1 * index ,}} className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">,
+                  {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">,
                       <td className="py-3 px-4">,
-                        <div className="font-medium text-zion-blue-dark">{service.title,}</div>,
+                        <div className="font-medium text-zion-blue-dark">{service.title}</div>,
                         <div className="text-sm text-zion-slate-light">{service.price}</div>,
                       </td>,
                       <td className="py-3 px-4">,
@@ -385,7 +371,7 @@ const AdvancedServicePortfolioDashboard = () => {,
                       <td className="py-3 px-4">,
                         <div className="flex items-center gap-2">,
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">,
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.performance,}%` }}></div>,
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.performance}%` }}></div>,
                           </div>,
                           <span className="text-sm font-medium">{service.performance}%</span>,
                         </div>,
@@ -422,8 +408,8 @@ const AdvancedServicePortfolioDashboard = () => {,
         </Card>,
       </motion.div>,
       {/* Portfolio Insights */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.4 ,}} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
-        {/* Category Distribution */,}
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
+        {/* Category Distribution */}
         <Card>,
           <CardHeader>,
             <CardTitle className="flex items-center gap-2">,
@@ -433,7 +419,7 @@ const AdvancedServicePortfolioDashboard = () => {,
           </CardHeader>,
           <CardContent>,
             <div className="space-y-3">,
-              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ delay: 0.1 * index ,}} className="flex items-center justify-between">,
+              {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-50o0' :,
                 index === 1 ? 'bg-purple-50o0' :,
@@ -448,7 +434,7 @@ const AdvancedServicePortfolioDashboard = () => {,
                 index === 1 ? 'bg-purple-50o0' :,
                     index === 2 ? 'bg-green-50o0' :,
                         index === 3 ? 'bg-orange-50o0' :,
-                            index === 4 ? 'bg-red-50o0' : 'bg-gray-50o0'}`} style={{ width: `${(category.count / portfolioData.length) * 10o0,}%` }}></div>,
+                            index === 4 ? 'bg-red-50o0' : 'bg-gray-50o0'}`} style={{ width: `${(category.count / portfolioData.length) * 10o0}%` }}></div>,
                     </div>,
                     <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>,
                   </div>,
@@ -498,7 +484,7 @@ const AdvancedServicePortfolioDashboard = () => {,
         </Card>,
       </motion.div>,
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.5 ,}} className="text-center">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center">,
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">,
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>,
           <p className="text-xl mb-6 max-w-2xl mx-auto">,
@@ -517,7 +503,5 @@ const AdvancedServicePortfolioDashboard = () => {,
           </div>,
         </div>,
       </motion.div>,
-    </div>),
-};
-export default AdvancedServicePortfolioDashboard,
-,
+    </div>)};
+export default AdvancedServicePortfolioDashboard;

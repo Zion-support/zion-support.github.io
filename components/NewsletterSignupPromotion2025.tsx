@@ -1,52 +1,42 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
 MailArrowRightCheckCircleStarZapTrendingUpUsersAward,
-const NewsletterSignupPromotion20o25 = () => {,
+const NewsletterSignupPromotion20o25 = () => {
   const [emailsetEmail] = useState(''),
   const [isSubscribedsetIsSubscribed] = useState(false),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const handleSubmit = (e: React.FormEvent) => {,
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    if (email) {,
+    if (email) {
       setIsSubscribed(true),
       // Here you would typically send the email to your backend,
-      console.log('Email subscribed:'email),
-    ,}
+      // // console.log('Email subscribed:'email)}
   };
-,
-  const benefits = [,
-    "Exclusive AI insights and trends",;
-    "Early access to new features",;
-    "Industry reports and case studies",;
-    "Expert webinars and workshops",;
-    "Special offers and discounts",
+  const benefits = [
+    "Exclusive AI insights and trends";
+    "Early access to new features";
+    "Industry reports and case studies";
+    "Expert webinars and workshops";
+    "Special offers and discounts"],
+  const stats = [
+    { icon: <Users className="w-6 h-6"  />value: "50,0o00+"label: "Subscribers" };
+    { icon: <Star className="w-6 h-6"  />value: "4.9/5"label: "Rating" };
+    { icon: <TrendingUp className="w-6 h-6"  />value: "95%"label: "Open Rate" };
+    { icon: <Award className="w-6 h-6"  />value: "Weekly"label: "Updates" }
   ],
-,
-  const stats = [,
-    { icon: <Users className="w-6 h-6"  />value: "50,0o00+"label: "Subscribers" ,},;
-    { icon: <Star className="w-6 h-6"  />value: "4.9/5"label: "Rating" ,},;
-    { icon: <TrendingUp className="w-6 h-6"  />value: "95%"label: "Open Rate" ,},;
-    { icon: <Award className="w-6 h-6"  />value: "Weekly"label: "Updates" ,}
-  ],
-,
-  if (isSubscribed) {,
-    return (,
+  if (isSubscribed) {
+    return (
       <div className="py-16 bg-gradient-to-r from-green-50o0 to-blue-60o0">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <motion.div,
-            initial={{ opacity: 0scale: 0.8 ,}}
-            animate={{ opacity: 1scale: 1 ,}}
-            transition={{ duration: 0.5 ,}}
-            className="bg-white rounded-2xl p-12 shadow-2xl",
-          >,
+            initial={{ opacity: 0scale: 0.8 }}
+            animate={{ opacity: 1scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl p-12 shadow-2xl">,
             <div className="w-20 h-20 bg-green-10o0 rounded-full flex items-center justify-center mx-auto mb-6">,
               <CheckCircle className="w-10 h-10 text-green-60o0"  />,
             </div>,
@@ -66,11 +56,9 @@ const NewsletterSignupPromotion20o25 = () => {,
             </div>,
           </motion.div>,
         </div>,
-      </div>,
-    ),
-  ,}
+      </div>)}
 ,
-  return (,
+  return (
     <div className="py-20 bg-gradient-to-br from-blue-60o0 via-purple-60o0 to-pink-60o0 relative overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -81,13 +69,12 @@ const NewsletterSignupPromotion20o25 = () => {,
       </div>,
       <div className="relative max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Column - Content */,}
+          {/* Left Column - Content */}
           <motion.div,
-            initial={{ opacity: 0x: -30 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8 ,}}
-            className="text-white",
-          >,
+            initial={{ opacity: 0x: -30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-white">,
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-6">,
               <Zap className="w-4 h-4"  />,
               <span>EXCLUSIVE ACCESS</span>,
@@ -101,47 +88,42 @@ const NewsletterSignupPromotion20o25 = () => {,
             <p className="text-xl mb-8 opacity-90">,
               Get exclusive insightsearly access to breakthrough technologiesand expert analysis delivered directly to your inbox.,
             </p>,
-            {/* Benefits List */,}
+            {/* Benefits List */}
             <div className="space-y-4 mb-8">,
-              {benefits.map((benefitindex) => (,
+              {benefits.map((benefitindex) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0x: -20 ,}}
-                  animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-                  transition={{ duration: 0.5delay: 0.2 + index * 0.1 ,}}
-                  className="flex items-center gap-3",
-                >,
+                  initial={{ opacity: 0x: -20 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.2 + index * 0.1 }}
+                  className="flex items-center gap-3">,
                   <CheckCircle className="w-5 h-5 text-green-30o0"  />,
                   <span className="text-lg">{benefit}</span>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">,
-              {stats.map((statindex) => (,
+              {stats.map((statindex) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                  transition={{ duration: 0.5delay: 0.6 + index * 0.1 ,}}
-                  className="text-center",
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5delay: 0.6 + index * 0.1 }}
+                  className="text-center">,
                   <div className="text-white mb-2 flex justify-center">,
                     {stat.icon}
                   </div>,
                   <div className="text-2xl font-bold">{stat.value}</div>,
                   <div className="text-sm opacity-80">{stat.label}</div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </motion.div>,
           {/* Right Column - Signup Form */}
           <motion.div,
-            initial={{ opacity: 0x: 30 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            className="bg-white rounded-2xl p-8 shadow-2xl",
-          >,
+            initial={{ opacity: 0x: 30 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="bg-white rounded-2xl p-8 shadow-2xl">,
             <div className="text-center mb-8">,
               <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center mx-auto mb-4">,
                 <Mail className="w-8 h-8 text-white"  />,
@@ -158,7 +140,7 @@ const NewsletterSignupPromotion20o25 = () => {,
                 <label htmlFor="email" className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Email Address,
                 </label>,
-                <input,
+                <input
                   type="email",
                   id="email",
                   value={email}
@@ -168,10 +150,9 @@ const NewsletterSignupPromotion20o25 = () => {,
                   required,
                 />,
               </div>,
-              <button,
+              <button
                 type="submit",
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 hover:scale-10o5",
-              >,
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 hover:scale-10o5">,
                 Subscribe Now,
                 <ArrowRight className="w-5 h-5"  />,
               </button>,
@@ -179,24 +160,20 @@ const NewsletterSignupPromotion20o25 = () => {,
                 By subscribingyou agree to our privacy policy. Unsubscribe at any time.,
               </p>,
             </form>,
-            {/* Trust Indicators */,}
+            {/* Trust Indicators */}
             <div className="mt-8 pt-6 border-t border-gray-20o0">,
               <p className="text-sm text-gray-60o0 text-center mb-4">,
                 Trusted by industry leaders,
               </p>,
               <div className="flex justify-center items-center gap-6 opacity-60">,
-                {["Microsoft"Google"Amazon"IBM"].map((companyindex) => (,
+                {["Microsoft"Google"Amazon"IBM"].map((companyindex) => (
                   <div key={index} className="text-gray-50o0 font-semibold text-sm">,
                     {company}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </motion.div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default NewsletterSignupPromotion20o25,
+    </div>)};
+export default NewsletterSignupPromotion20o25;

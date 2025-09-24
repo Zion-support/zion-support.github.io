@@ -1,5 +1,5 @@
-import React from 'react',
-export interface UserDetails {,
+import React from 'react';
+export interface UserDetails {
   id?: string,
   name?: string,
   email?: string,
@@ -23,10 +23,9 @@ export interface UserDetails {,
   /**,
    * Status of the user's identity verification,
    */,
-  kycStatus?: 'unverified' | 'pending' | 'verified',
-}
+  kycStatus?: 'unverified' | 'pending' | 'verified'}
 ,
-export interface UserProfile {,
+export interface UserProfile {
   id?: string,
   displayName?: string,
   email: string,
@@ -42,19 +41,17 @@ export interface UserProfile {,
   permissions?: string[],
   companyId?: string,
   points?: number,
-  emailVerified?: boolean, // Added emailVerified,
-,}
+  emailVerified?: boolean, // Added emailVerified}
 ,
 // Update AuthContextType definition to match implementation,
-export interface AuthContextType {,
+export interface AuthContextType {
   user: UserProfile | null, // Changed from UserDetails,
   isLoading: boolean,
   isAuthenticated: boolean,
-  login: (,
-    email: string,;
-    password: string,;
-    rememberMe?: boolean,
-  ) => Promise<{ data?: any, error?: any }>,
+  login: (
+    email: string;
+    password: string;
+    rememberMe?: boolean) => Promise<{ data?: any, error?: any }>,
   /**,
    * Current onboarding step for the authenticated user. `string | number | null`,
    * is used to support both index-based and named steps.,
@@ -64,35 +61,30 @@ export interface AuthContextType {,
    * Setter for `onboardingStep` to allow consumers to update the step.,
    */,
   setOnboardingStep?: React.Dispatch<,
-    React.SetStateAction<string | number | null>,
-  >,
-  signup: (,
-    email: string,;
-    password: string,;
-    userData?: any,
-  ) => Promise<{ error?: any, emailVerificationRequired?: boolean }>,
-  register?: (,
-    name: string,;
-    email: string,;
-    password: string,
-  ) => Promise<{ error?: any ,}>,
+    React.SetStateAction<string | number | null>>,
+  signup: (
+    email: string;
+    password: string;
+    userData?: any) => Promise<{ error?: any, emailVerificationRequired?: boolean }>,
+  register?: (
+    name: string;
+    email: string;
+    password: string) => Promise<{ error?: any }>,
   logout: () => Promise<void>,
-  resetPassword: (email: string) => Promise<{ error?: any ,}>,
-  updateProfile: (data: Partial<UserProfile>) => Promise<{ error?: any ,}>, // Changed from UserDetails,
+  resetPassword: (email: string) => Promise<{ error?: any }>,
+  updateProfile: (data: Partial<UserProfile>) => Promise<{ error?: any }>, // Changed from UserDetails,
   loginWithGoogle: () => Promise<void>,
   loginWithFacebook: () => Promise<void>,
   loginWithTwitter: () => Promise<void>,
   loginWithWeb3: () => Promise<void>,
-  signIn?: (email: string, password: string) => Promise<{ error: any ,}>,
+  signIn?: (email: string, password: string) => Promise<{ error: any }>,
   signOut?: () => Promise<void>,
-  signUp?: (,
-    email: string,;
-    password: string,;
-    userData?: Partial<UserProfile> // Changed from UserDetails,
-  ) => Promise<{ error: any, emailVerificationRequired?: boolean ,}>,
+  signUp?: (
+    email: string;
+    password: string;
+    userData?: Partial<UserProfile> // Changed from UserDetails) => Promise<{ error: any, emailVerificationRequired?: boolean }>,
   setUser?: React.Dispatch<React.SetStateAction<UserProfile | null>>, // Changed from UserDetails,
-  tokens?: { accessToken: string, refreshToken?: string ,} | null,
+  tokens?: { accessToken: string, refreshToken?: string } | null,
   avatarUrl?: string | null,
-  setAvatarUrl?: (url: string | null) => void,
-,}
+  setAvatarUrl?: (url: string | null) => void}
 ,

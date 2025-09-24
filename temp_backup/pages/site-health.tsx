@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function SiteHealth() {,
-  return (,
+export default function SiteHealth() {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Site Health — A11y, Performance, Links</title>,
-        <meta,
+        <meta
           name='description',
           content='Dashboards and audits for accessibility, performance, and link integrity.',
         />,
@@ -53,16 +52,15 @@ export default function SiteHealth() {,
             <span className='gradient-text'>Site Health</span>,
           </h1>,
           <p className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>,
-            Dashboards, audits, and guardrails that keep your experience fast,;
+            Dashboards, audits, and guardrails that keep your experience fast;
             accessible, and reliable.,
           </p>,
           <div className='mt-8 flex flex-wrap justify-center gap-3'>,
-            <a,
+            <a
               href='/site-health',
               target='_blank',
               rel='noopener',
-              className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10',
-            >,
+              className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10'>,
               Live Pipelines,
             </a>,
             <Link href='/automation'>,
@@ -77,34 +75,33 @@ export default function SiteHealth() {,
             Dashboards,
           </h2>,
           <div className='mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3'>,
-            {[,
-              {,
-                title: 'Accessibility',;
-                desc: 'WCAG checks with actionable fixes and reports.',;
-                href: '/reports/seo',;
-              },;
-              {,
-                title: 'Performance',;
-                desc: 'Core Web Vitals and performance budgets.',;
-                href: '/reports/seo',;
-              },;
-              {,
-                title: 'Link Integrity',;
-                desc: 'Broken links identified and prevented.',;
-                href: '/reports/links',;
-              },;
-            ].map(card => (,
+            {[
+              {
+                title: 'Accessibility';
+                desc: 'WCAG checks with actionable fixes and reports.';
+                href: '/reports/seo';
+              };
+              {
+                title: 'Performance';
+                desc: 'Core Web Vitals and performance budgets.';
+                href: '/reports/seo';
+              };
+              {
+                title: 'Link Integrity';
+                desc: 'Broken links identified and prevented.';
+                href: '/reports/links';
+              };
+            ].map(card => (
               <Link key={card.title} href={card.href}>,
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30'>,
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0' />,
-                  <h3 className='text-lg font-semibold'>{card.title,}</h3>,
+                  <h3 className='text-lg font-semibold'>{card.title}</h3>,
                   <p className='mt-1 text-sm text-white/75'>{card.desc}</p>,
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-30o0/90'>,
                     Open →,
                   </div>,
                 </a>,
-              </Link>,
-            ))}
+              </Link>))}
           </div>,
         </section>,
         <section className='mx-auto max-w-7xl px-6 pb-16'>,
@@ -112,16 +109,14 @@ export default function SiteHealth() {,
             Artifacts,
           </h2>,
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2'>,
-            <a,
+            <a
               href='/reports/seo/latest.json',
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-40o0/30',
-            >,
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-40o0/30'>,
               Latest SEO Report JSON ↗,
             </a>,
-            <a,
+            <a
               href='/reports/seo/index.html',
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-40o0/30',
-            >,
+              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-40o0/30'>,
               SEO Audit Dashboard →,
             </a>,
           </div>,
@@ -141,19 +136,16 @@ export default function SiteHealth() {,
                   Get Started,
                 </a>,
               </Link>,
-              <a,
+              <a
                 href='/site-health',
                 target='_blank',
                 rel='noopener',
-                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10',
-              >,
+                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>,
                 View Pipelines,
               </a>,
             </div>,
           </div>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

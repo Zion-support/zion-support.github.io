@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CompliancePage() {,
-  return (,
+export default function CompliancePage() {
+  return (
     <>,
       <Head>,
         <title>Compliance - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function CompliancePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

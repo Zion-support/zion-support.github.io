@@ -1,31 +1,29 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o25 Ultimate Innovation Showcase - Revolutionary Breakthroughs',;
+export const metadata = {
+  title: 'AI 20o25 Ultimate Innovation Showcase - Revolutionary Breakthroughs';
   description:,
-    'Discover the most revolutionary AI innovations of 20o25 that are transforming industries and creating unprecedented opportunities for businesses worldwide.',;
-  keywords: [,
-    'AI 20o25',;
-    'artificial intelligence',;
-    'innovation',;
-    'breakthrough',;
-    'technology trends',;
-    'business transformation',;
-  ],;
+    'Discover the most revolutionary AI innovations of 20o25 that are transforming industries and creating unprecedented opportunities for businesses worldwide.';
+  keywords: [
+    'AI 20o25';
+    'artificial intelligence';
+    'innovation';
+    'breakthrough';
+    'technology trends';
+    'business transformation';
+  ];
 };
-,
-export default function AI20o25UltimateInnovationShowcase() {,
-  return (,
+export default function AI20o25UltimateInnovationShowcase() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25 Ultimate Innovation Showcase - Revolutionary Breakthroughs',
         description='Discover the most revolutionary AI innovations of 20o25 that are transforming industries and creating unprecedented opportunities for businesses worldwide.',
         keywords='AI 20o25, artificial intelligence, innovation, breakthrough, technology trends, business transformation',
         url='/ai-20o25-ultimate-innovation-showcase',
       />,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>,
@@ -119,22 +117,18 @@ export default function AI20o25UltimateInnovationShowcase() {,
             AI innovations to achieve unprecedented growth and success.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
               Get Started Today,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

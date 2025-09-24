@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='min-h-screen bg-black'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -42,15 +42,12 @@ export default function Page() {,
           </p>,
         </section>,
         <div className='mt-10'>,
-          <a,
+          <a
             href='/contact',
-            className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white hover: bg-blue-50o0 transition-colors duration-20o0',
-          >,
+            className='inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white hover: bg-blue-50o0 transition-colors duration-20o0'>,
             Request a demo,
           </a>,
         </div>,
       </article>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

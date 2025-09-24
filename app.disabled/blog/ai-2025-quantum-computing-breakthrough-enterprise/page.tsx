@@ -1,53 +1,51 @@
 import { Metadata } from 'next',
 import SEO from '../../components/SEO',
-import {,
-  ArrowLeft,;
-  ArrowRight,;
-  Calendar,;
-  Clock,;
-  User,;
-  TrendingUp,;
-  Zap,;
-  CheckCircle,;
+import {
+  ArrowLeft;
+  ArrowRight;
+  Calendar;
+  Clock;
+  User;
+  TrendingUp;
+  Zap;
+  CheckCircle;
 } from 'lucide-react',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",;
+    "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise";
   description:,
-    'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',;
-  keywords: [,
-    'Quantum Computing',;
-    'AI',;
-    'Enterprise',;
-    'ROI',;
-    'Breakthrough',;
-    '20o25',;
-  ],;
-  openGraph: {,
+    'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
+  keywords: [
+    'Quantum Computing';
+    'AI';
+    'Enterprise';
+    'ROI';
+    'Breakthrough';
+    '20o25';
+  ];
+  openGraph: {
     title:,
-      "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",;
+      "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise";
     description:,
-      'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'Quantum Computing',;
-      'AI',;
-      'Enterprise',;
-      'ROI',;
-      'Breakthrough',;
-      '20o25',;
-    ],;
-  },;
+      'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
+    type: 'article';
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'Quantum Computing';
+      'AI';
+      'Enterprise';
+      'ROI';
+      'Breakthrough';
+      '20o25';
+    ];
+  };
 };
-,
-export default function QuantumComputingBreakthroughPage() {,
-  return (,
+export default function QuantumComputingBreakthroughPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title="AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",
         description='Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',
         keywords='Quantum Computing, AI, Enterprise, ROI, Breakthrough, 20o25',
@@ -57,18 +55,17 @@ export default function QuantumComputingBreakthroughPage() {,
         {/* Back button */}
         <div className='bg-gray-50 border-b'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-4'>,
-            <Link,
+            <Link
               href='/blog',
-              className='inline-flex items-center space-x-2 text-gray-60o0 hover:text-purple-60o0 transition-colors',
-            >,
+              className='inline-flex items-center space-x-2 text-gray-60o0 hover:text-purple-60o0 transition-colors'>,
               <ArrowLeft className='w-4 h-4' />,
               <span>Back to Blog</span>,
             </Link>,
           </div>,
         </div>,
-        {/* Article header */,}
+        {/* Article header */}
         <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-          {/* Meta information */,}
+          {/* Meta information */}
           <div className='flex flex-wrap items-center gap-4 text-sm text-gray-60o0 mb-6'>,
             <div className='flex items-center space-x-2'>,
               <Calendar className='w-4 h-4' />,
@@ -85,30 +82,28 @@ export default function QuantumComputingBreakthroughPage() {,
           </div>,
           {/* Tags */}
           <div className='flex flex-wrap gap-2 mb-8'>,
-            {[,
-              'Quantum Computing',;
-              'AI',;
-              'Enterprise',;
-              'ROI',;
-              'Breakthrough',;
-              '20o25',;
-            ].map(tag => (,
-              <span,
+            {[
+              'Quantum Computing';
+              'AI';
+              'Enterprise';
+              'ROI';
+              'Breakthrough';
+              '20o25';
+            ].map(tag => (
+              <span
                 key={tag}
-                className='px-3 py-1 bg-purple-10o0 text-purple-80o0 rounded-full text-sm font-medium',
-              >,
+                className='px-3 py-1 bg-purple-10o0 text-purple-80o0 rounded-full text-sm font-medium'>,
                 {tag}
-              </span>,
-            ))}
+              </span>))}
           </div>,
           {/* Title */}
           <h1 className='text-4xl md: text-5xl font-bold text-gray-90o0 mb-6 leading-tight'>,
             AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing,
             Enterprise,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className='text-xl text-gray-60o0 mb-8 leading-relaxed'>,
-            Discover how quantum computing is transforming enterprise AI,;
+            Discover how quantum computing is transforming enterprise AI;
             delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0,
             companies.,
           </p>,
@@ -134,7 +129,7 @@ export default function QuantumComputingBreakthroughPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Article content */,}
+          {/* Article content */}
           <div className='prose prose-lg max-w-none'>,
             <h2>The $2.8 Trillion Quantum Revolution Has Begun</h2>,
             <p>,
@@ -153,11 +148,11 @@ export default function QuantumComputingBreakthroughPage() {,
             </p>,
             <ul>,
               <li>,
-                <strong>Financial Services</strong>: Portfolio optimization,;
+                <strong>Financial Services</strong>: Portfolio optimization;
                 risk analysis, and fraud detection,
               </li>,
               <li>,
-                <strong>Healthcare</strong>: Drug discovery, protein folding,;
+                <strong>Healthcare</strong>: Drug discovery, protein folding;
                 and personalized medicine,
               </li>,
               <li>,
@@ -225,7 +220,7 @@ export default function QuantumComputingBreakthroughPage() {,
             <h2>The Technical Breakthrough: Quantum Error Correction</h2>,
             <h3>Quantum Error Correction Milestone</h3>,
             <p>,
-              20o25 marks the achievement of practical quantum error correction,;
+              20o25 marks the achievement of practical quantum error correction;
               enabling: ,
             </p>,
             <ul>,
@@ -372,17 +367,15 @@ export default function QuantumComputingBreakthroughPage() {,
                 your competitive advantage in the quantum era.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center justify-center space-x-2 bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='inline-flex items-center justify-center space-x-2 bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   <span>Contact Us Today</span>,
                   <ArrowRight className='w-4 h-4' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/quantum-computing-solutions',
-                  className='inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='inline-flex items-center justify-center space-x-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   <span>Explore Solutions</span>,
                   <Zap className='w-4 h-4' />,
                 </Link>,
@@ -391,7 +384,5 @@ export default function QuantumComputingBreakthroughPage() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>)}
 ,

@@ -1,16 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AIAutonomousBusinessOperationsPage() {,
-  return (,
+export default function AIAutonomousBusinessOperationsPage() {
+  return (
     <>,
       <Head>,
         <title>AI Autonomous Business Operations | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='End-to-end autonomous business operations orchestrated by AI agents.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-autonomous-business-operations',
         />,
@@ -23,7 +22,5 @@ export default function AIAutonomousBusinessOperationsPage() {,
           Automate workflows across departments using coordinated AI agents.,
         </p>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

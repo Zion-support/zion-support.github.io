@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function UiUxDesignChatPage() {,
-  return (,
+export default function UiUxDesignChatPage() {
+  return (
     <>,
       <Head>,
         <title>Ui Ux Design Chat - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function UiUxDesignChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

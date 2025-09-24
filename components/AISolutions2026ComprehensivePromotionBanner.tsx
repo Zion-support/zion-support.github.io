@@ -1,8 +1,7 @@
 import Link from 'next/link',
 BrainChevronRightStarZapTrendingUp,
-,
-const AISolutions20o26ComprehensivePromotionBanner = () => {,
-  return (,
+const AISolutions20o26ComprehensivePromotionBanner = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-blue-90o0 border border-blue-50o0/20 rounded-2xl p-8 mb-8'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/10 via-purple-60o0/10 to-blue-60o0/10'></div>,
@@ -10,7 +9,7 @@ const AISolutions20o26ComprehensivePromotionBanner = () => {,
       <div className='absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-purple-50o0/20 to-transparent rounded-full blur-3xl'></div>,
       <div className='relative z-10'>,
         <div className='flex flex-col lg: flex-row items-center justify-between gap-8'>,
-          {/* Content */,}
+          {/* Content */}
           <div className='flex-1'>,
             <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-4'>,
               <Brain className='w-4 h-4' />,
@@ -19,7 +18,7 @@ const AISolutions20o26ComprehensivePromotionBanner = () => {,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4 leading-tight'>,
               Comprehensive AI Solutions for,
               <span className='bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
-                {' ',}
+                {' '}
                 Business Transformation,
               </span>,
             </h2>,
@@ -45,24 +44,22 @@ const AISolutions20o26ComprehensivePromotionBanner = () => {,
                 </span>,
               </div>,
             </div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/ai-solutions-20o26-comprehensive',
-                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center gap-2 group',
-              >,
+                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center gap-2 group'>,
                 Explore AI Solutions,
                 <ChevronRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center',
-              >,
+                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center'>,
                 Get Consultation,
               </Link>,
             </div>,
           </div>,
-          {/* Visual Element */,}
+          {/* Visual Element */}
           <div className='flex-shrink-0'>,
             <div className='relative'>,
               <div className='w-64 h-64 bg-gradient-to-br from-blue-50o0/20 to-purple-50o0/20 rounded-2xl border border-white/10 backdrop-blur-sm flex items-center justify-center'>,
@@ -85,9 +82,5 @@ const AISolutions20o26ComprehensivePromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AISolutions20o26ComprehensivePromotionBanner,
-,
+    </div>)};
+export default AISolutions20o26ComprehensivePromotionBanner;

@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AiAutonomousResearchAssistantPage() {,
-  return (,
+export default function AiAutonomousResearchAssistantPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Research Assistant - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai autonomous research assistant page',
         />,
@@ -22,7 +21,5 @@ export default function AiAutonomousResearchAssistantPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

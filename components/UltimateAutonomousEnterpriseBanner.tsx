@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const UltimateAutonomousEnterpriseBanner = () => {,
-  return (,
+const UltimateAutonomousEnterpriseBanner = () => {
+  return (
     <div className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 px-4'>,
       <div className='max-w-7xl mx-auto text-center'>,
         <div className='mb-8'>,
@@ -41,23 +40,17 @@ const UltimateAutonomousEnterpriseBanner = () => {,
           </div>,
         </div>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             href='/ai-20o25-20o26-ultimate-breakthrough',
-            className='bg-gradient-to-r from-cyan-50o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-cyan-50o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
             Explore Autonomous Enterprise,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0',
-          >,
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-indigo-90o0 transition-all duration-30o0'>,
             Get Started Today,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateAutonomousEnterpriseBanner,
-,
+    </div>)};
+export default UltimateAutonomousEnterpriseBanner;

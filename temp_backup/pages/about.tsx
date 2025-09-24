@@ -2,54 +2,51 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-import {,
-  Mail,;
-  Phone,;
-  MapPin,;
-  ShieldCheck,;
-  Rocket,;
-  Sparkles,;
-  Globe,;
-  Cpu,;
-  Brain,;
+import {
+  Mail;
+  Phone;
+  MapPin;
+  ShieldCheck;
+  Rocket;
+  Sparkles;
+  Globe;
+  Cpu;
+  Brain;
 } from 'lucide-react',
-,
-export default function AboutPage() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function AboutPage() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  const pillars = [,
-    {,
-      title: 'AI-first Engineering',;
-      icon: <Brain className='w-6 h-6' />,;
-      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.',;
-    },;
-    {,
-      title: 'Platform and SRE',;
-      icon: <ShieldCheck className='w-6 h-6' />,;
-      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.',;
-    },;
-    {,
-      title: 'Quantum R&D',;
-      icon: <Cpu className='w-6 h-6' />,;
-      desc: 'Exploratory quantum workloads with pragmatic business outcomes.',;
-    },;
-    {,
-      title: 'Global Delivery',;
-      icon: <Globe className='w-6 h-6' />,;
-      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.',;
-    },;
+  const pillars = [
+    {
+      title: 'AI-first Engineering';
+      icon: <Brain className='w-6 h-6' />;
+      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.';
+    };
+    {
+      title: 'Platform and SRE';
+      icon: <ShieldCheck className='w-6 h-6' />;
+      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.';
+    };
+    {
+      title: 'Quantum R&D';
+      icon: <Cpu className='w-6 h-6' />;
+      desc: 'Exploratory quantum workloads with pragmatic business outcomes.';
+    };
+    {
+      title: 'Global Delivery';
+      icon: <Globe className='w-6 h-6' />;
+      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.';
+    };
   ],
-,
-  return (,
+  return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>,
       <Head>,
         <title>About Us - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Zion Tech Group builds outcome-driven AI, micro SaaS, and platform engineering solutions with transparent pricing and 24/7 support.',
         />,
@@ -92,63 +89,55 @@ export default function AboutPage() {,
             </Card>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-16'>,
-            {pillars.map(p => (,
-              <Card,
-                key={p.title,}
-                className='bg-gradient-to-br from-gray-90o0/70 to-black/80 border border-gray-70o0/40 p-6',
-              >,
+            {pillars.map(p => (
+              <Card
+                key={p.title}
+                className='bg-gradient-to-br from-gray-90o0/70 to-black/80 border border-gray-70o0/40 p-6'>,
                 <div className='flex items-center gap-3 mb-3 text-white'>,
                   {p.icon}
                   <span className='font-semibold'>{p.title}</span>,
                 </div>,
                 <p className='text-gray-30o0 text-sm'>{p.desc}</p>,
-              </Card>,
-            ))}
+              </Card>))}
           </div>,
           <Card className='bg-gradient-to-br from-gray-90o0/80 to-black/90 border border-gray-70o0/50 backdrop-blur-xl p-8'>,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
               <div className='flex items-center gap-3 text-cyan-40o0'>,
                 <Phone className='w-5 h-5' />,
-                <a,
+                <a
                   href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}
-                  className='hover: text-white',
-                >,
-                  {contactInfo.mobile,}
+                  className='hover: text-white'>,
+                  {contactInfo.mobile}
                 </a>,
               </div>,
               <div className='flex items-center gap-3 text-purple-40o0'>,
                 <Mail className='w-5 h-5' />,
-                <a,
-                  href={`mailto: ${contactInfo.email,}`}
-                  className='hover: text-white',
-                >,
-                  {contactInfo.email,}
+                <a
+                  href={`mailto: ${contactInfo.email}`}
+                  className='hover: text-white'>,
+                  {contactInfo.email}
                 </a>,
               </div>,
               <div className='flex items-center gap-3 text-green-40o0'>,
                 <MapPin className='w-5 h-5' />,
-                <a,
-                  href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`}
+                <a
+                  href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                   target='_blank',
                   rel='noopener noreferrer',
-                  className='hover: text-white',
-                >,
-                  {contactInfo.address,}
+                  className='hover: text-white'>,
+                  {contactInfo.address}
                 </a>,
               </div>,
             </div>,
             <div className='mt-6 flex justify-center'>,
-              <Button,
+              <Button
                 href='/contact',
-                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white',
-              >,
+                className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'>,
                 Contact Us,
               </Button>,
             </div>,
           </Card>,
         </div>,
       </section>,
-    </UltraFuturisticBackground>,
-  ),
-}
+    </UltraFuturisticBackground>)}
 ,

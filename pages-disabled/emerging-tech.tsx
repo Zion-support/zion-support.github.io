@@ -1,134 +1,117 @@
-import React from 'react',
+import React from 'react';
 import dynamic from 'next/dynamic',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Brain,;
-  Lock,;
-  Zap,;
-  Globe,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Users,;
-  Clock,;
-  Shield,;
-  Database,;
-  Cloud,
-} from 'lucide-react',
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false ,}),
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false ,}),
-const EmergingTechPage: React.FC = () => {,
-  const technologies = [,
-    {,
-      icon: <Brain className="w-8 h-8"   />,;
-      title: 'Artificial Intelligence',;
-      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',;
-      features: [,
-        'Machine Learning Models',;
-        'Natural Language Processing',;
-        'Computer Vision',;
-        'Predictive Analytics',
-      ],;
-      category: 'AI & ML',;
-      pricing: 'Starting at $5,0o00',;
-      delivery: '2-8 weeks',
-    ,},;
-    {,
-      icon: <Lock className="w-8 h-8"   />,;
-      title: 'Blockchain & Web3',;
-      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',;
-      features: [,
-        'Smart Contract Development',;
-        'DeFi Solutions',;
-        'NFT Platforms',;
-        'Cryptocurrency Integration',
-      ],;
-      category: 'Blockchain',;
-      pricing: 'Starting at $8,0o00',;
-      delivery: '4-12 weeks',
-    ,},;
-    {,
-      icon: <Zap className="w-8 h-8"   />,;
-      title: 'Quantum Computing',;
-      description: 'Next-generation quantum computing solutions for complex problem-solving and optimization.',;
-      features: [,
-        'Quantum Algorithms',;
-        'Optimization Problems',;
-        'Cryptography',;
-        'Simulation',
-      ],;
-      category: 'Quantum',;
-      pricing: 'Starting at $15,0o00',;
-      delivery: '6-16 weeks',
-    ,},;
-    {,
-      icon: <Globe className="w-8 h-8"   />,;
-      title: 'Edge Computing',;
-      description: 'Distributed computing solutions that bring processing power closer to data sources.',;
-      features: [,
-        'Edge Infrastructure',;
-        'Real-time Processing',;
-        'IoT Integration',;
-        'Low Latency',
-      ],;
-      category: 'Edge',;
-      pricing: 'Starting at $6,0o00',;
-      delivery: '3-10 weeks',
-    ,},;
-    {,
-      icon: <Shield className="w-8 h-8"   />,;
-      title: 'Zero Trust Security',;
-      description: 'Advanced security framework that assumes no trust and verifies everything.',;
-      features: [,
-        'Identity Verification',;
-        'Access Control',;
-        'Network Segmentation',;
-        'Continuous Monitoring',
-      ],;
-      category: 'Security',;
-      pricing: 'Starting at $4,0o00',;
-      delivery: '2-6 weeks',
-    ,},;
-    {,
-      icon: <Database className="w-8 h-8"   />,;
-      title: 'Augmented Reality',;
-      description: 'Immersive AR solutions that overlay digital information onto the real world.',;
-      features: [,
-        'AR Applications',;
-        '3D Visualization',;
-        'Interactive Experiences',;
-        'Mobile Integration',
-      ],;
-      category: 'AR/VR',;
-      pricing: 'Starting at $7,0o00',;
-      delivery: '4-14 weeks',
-    ,}
+import {
+  Brain;
+  Lock;
+  Zap;
+  Globe;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Users;
+  Clock;
+  Shield;
+  Database;
+  Cloud} from 'lucide-react',
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false }),
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false }),
+const EmergingTechPage: React.FC = () => {
+  const technologies = [
+    {
+      icon: <Brain className="w-8 h-8"   />;
+      title: 'Artificial Intelligence';
+      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.';
+      features: [
+        'Machine Learning Models';
+        'Natural Language Processing';
+        'Computer Vision';
+        'Predictive Analytics'];
+      category: 'AI & ML';
+      pricing: 'Starting at $5,0o00';
+      delivery: '2-8 weeks'};
+    {
+      icon: <Lock className="w-8 h-8"   />;
+      title: 'Blockchain & Web3';
+      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.';
+      features: [
+        'Smart Contract Development';
+        'DeFi Solutions';
+        'NFT Platforms';
+        'Cryptocurrency Integration'];
+      category: 'Blockchain';
+      pricing: 'Starting at $8,0o00';
+      delivery: '4-12 weeks'};
+    {
+      icon: <Zap className="w-8 h-8"   />;
+      title: 'Quantum Computing';
+      description: 'Next-generation quantum computing solutions for complex problem-solving and optimization.';
+      features: [
+        'Quantum Algorithms';
+        'Optimization Problems';
+        'Cryptography';
+        'Simulation'];
+      category: 'Quantum';
+      pricing: 'Starting at $15,0o00';
+      delivery: '6-16 weeks'};
+    {
+      icon: <Globe className="w-8 h-8"   />;
+      title: 'Edge Computing';
+      description: 'Distributed computing solutions that bring processing power closer to data sources.';
+      features: [
+        'Edge Infrastructure';
+        'Real-time Processing';
+        'IoT Integration';
+        'Low Latency'];
+      category: 'Edge';
+      pricing: 'Starting at $6,0o00';
+      delivery: '3-10 weeks'};
+    {
+      icon: <Shield className="w-8 h-8"   />;
+      title: 'Zero Trust Security';
+      description: 'Advanced security framework that assumes no trust and verifies everything.';
+      features: [
+        'Identity Verification';
+        'Access Control';
+        'Network Segmentation';
+        'Continuous Monitoring'];
+      category: 'Security';
+      pricing: 'Starting at $4,0o00';
+      delivery: '2-6 weeks'};
+    {
+      icon: <Database className="w-8 h-8"   />;
+      title: 'Augmented Reality';
+      description: 'Immersive AR solutions that overlay digital information onto the real world.';
+      features: [
+        'AR Applications';
+        '3D Visualization';
+        'Interactive Experiences';
+        'Mobile Integration'];
+      category: 'AR/VR';
+      pricing: 'Starting at $7,0o00';
+      delivery: '4-14 weeks'}
   ],
-  const benefits = [,
-    {,
-      icon: <Star className="w-6 h-6"   />,;
-      title: 'Cutting-Edge Technology',;
-      description: 'Stay ahead with the latest emerging technologies and innovations',
-    ,},;
-    {,
-      icon: <Users className="w-6 h-6"   />,;
-      title: 'Expert Team',;
-      description: 'Experienced professionals with deep knowledge in emerging technologies',
-    ,},;
-    {,
-      icon: <Clock className="w-6 h-6"   />,;
-      title: 'Rapid Development',;
-      description: 'Fast implementation and deployment of emerging technology solutions',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"   />,;
-      title: 'Future-Proof',;
-      description: 'Solutions designed to adapt and scale with evolving technology trends',
-    ,}
+  const benefits = [
+    {
+      icon: <Star className="w-6 h-6"   />;
+      title: 'Cutting-Edge Technology';
+      description: 'Stay ahead with the latest emerging technologies and innovations'};
+    {
+      icon: <Users className="w-6 h-6"   />;
+      title: 'Expert Team';
+      description: 'Experienced professionals with deep knowledge in emerging technologies'};
+    {
+      icon: <Clock className="w-6 h-6"   />;
+      title: 'Rapid Development';
+      description: 'Fast implementation and deployment of emerging technology solutions'};
+    {
+      icon: <Shield className="w-6 h-6"   />;
+      title: 'Future-Proof';
+      description: 'Solutions designed to adapt and scale with evolving technology trends'}
   ],
-  return (,
+  return (
     <>,
       <SEO title="Emerging Technologies - Zion Tech Group",
         description="Explore cutting-edge emerging technologies including AI, blockchain, quantum computing, and more with Zion Tech Group.",
@@ -137,15 +120,14 @@ const EmergingTechPage: React.FC = () => {,
         />,
       <PageTransition>,
         <main className="min-h-screen bg-white">,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-20">,
             <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 2 0 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center">,
                 <h1 className="text-4xl md: tex t-6xl font-bold text-gray-90o0 mb-6">,
                   Emerging <span className="text-blue-60o0">Technologies</span>,
                 </h1>,
@@ -155,19 +137,17 @@ const EmergingTechPage: React.FC = () => {,
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">,
                   <motion.a,
                     href="#technologies",
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2",
-                  >,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
                     <ArrowRight className="w-5 h-5"   />,
                     Explore Technologies,
                   </motion.a>,
                   <motion.a,
                     href="/contact",
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2",
-                  >,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
                     <ArrowRight className="w-5 h-5"   />,
                     Get Started,
                   </motion.a>,
@@ -179,11 +159,10 @@ const EmergingTechPage: React.FC = () => {,
           <section id="technologies" className="py-20">,
             <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 2 0 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.2 ,}}
-                className="text-center mb-16",
-              >,
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center mb-16">,
                 <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">,
                   Emerging Technologies,
                 </h2>,
@@ -192,18 +171,17 @@ const EmergingTechPage: React.FC = () => {,
                 </p>,
               </motion.div>,
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-8">,
-                {technologies.map((tech, index) => (,
+                {technologies.map((tech, index) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 ,}}
-                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-30o0 overflow-hidden",
-                  >,
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-30o0 overflow-hidden">,
                     <div className="p-8">,
                       <div className="flex items-center justify-between mb-4">,
                         <div className="text-blue-60o0">,
-                          {tech.icon,}
+                          {tech.icon}
                         </div>,
                         <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-medium">,
                           {tech.category}
@@ -218,12 +196,11 @@ const EmergingTechPage: React.FC = () => {,
                       <div className="mb-6">,
                         <h4 className="font-semibold text-gray-90o0 mb-3">Key Features: </h4>,
                         <ul className="space-y-2">,
-                          {tech.features.map((feature, idx) => (,
+                          {tech.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-60o0">,
                               <CheckCircle className="w-4 h-4 text-green-50o0"   />,
                               {feature}
-                            </li>,
-                          ))}
+                            </li>))}
                         </ul>,
                       </div>,
                       <div className="flex items-center justify-between text-sm text-gray-50o0 mb-6">,
@@ -231,16 +208,14 @@ const EmergingTechPage: React.FC = () => {,
                         <span>{tech.delivery}</span>,
                       </div>,
                       <motion.button,
-                        whileHover={{ scale: 1.0o2 ,}}
-                        whileTap={{ scale: 0.98 ,}}
-                        className="w-full bg-blue-60o0 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-70o0 transition-colors",
-                      >,
+                        whileHover={{ scale: 1.0o2 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full bg-blue-60o0 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover: b g-blue-70o0 transition-colors">,
                         <ArrowRight className="w-5 h-5"   />,
                         Learn More,
                       </motion.button>,
                     </div>,
-                  </motion.div>,
-                )),}
+                  </motion.div>))}
               </div>,
             </div>,
           </section>,
@@ -248,11 +223,10 @@ const EmergingTechPage: React.FC = () => {,
           <section className="bg-gray-50 py-20">,
             <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 2 0 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                className="text-center mb-16",
-              >,
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-16">,
                 <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-4">,
                   Why Choose Emerging Technologies?,
                 </h2>,
@@ -261,16 +235,15 @@ const EmergingTechPage: React.FC = () => {,
                 </p>,
               </motion.div>,
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">,
-                {benefits.map((benefit, index) => (,
+                {benefits.map((benefit, index) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 ,}}
-                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-30o0 text-center",
-                  >,
+                    initial={{ opacity: 0, y: 2 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-30o0 text-center">,
                     <div className="text-blue-60o0 mb-4 flex justify-center">,
-                      {benefit.icon,}
+                      {benefit.icon}
                     </div>,
                     <h3 className="text-xl font-bold text-gray-90o0 mb-3">,
                       {benefit.title}
@@ -278,8 +251,7 @@ const EmergingTechPage: React.FC = () => {,
                     <p className="text-gray-60o0">,
                       {benefit.description}
                     </p>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </section>,
@@ -287,11 +259,10 @@ const EmergingTechPage: React.FC = () => {,
           <section className="py-20">,
             <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">,
               <motion.div,
-                initial={{ opacity: 0, y: 2 0 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 2 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center">,
                 <h2 className="text-3xl md: tex t-4xl font-bold text-gray-90o0 mb-6">,
                   Ready to Embrace the Future?,
                 </h2>,
@@ -301,19 +272,17 @@ const EmergingTechPage: React.FC = () => {,
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">,
                   <motion.a,
                     href="/contact",
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2",
-                  >,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
                     <ArrowRight className="w-5 h-5"   />,
                     Get Started Today,
                   </motion.a>,
                   <motion.a,
                     href="tel: +130o24640950",
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
-                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2",
-                  >,
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold flex items-center gap-2">,
                     <ArrowRight className="w-5 h-5"   />,
                     Call Us: +1 30o2 464 0950,
                   </motion.a>,
@@ -323,8 +292,6 @@ const EmergingTechPage: React.FC = () => {,
           </section>,
         </main>,
       </PageTransition>,
-    </>,
-  ),
-,}
+    </>)}
 ,
-export default EmergingTechPage,
+export default EmergingTechPage;

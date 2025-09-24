@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ZeroTrustQuantumNetworkPage() {,
-  return (,
+export default function ZeroTrustQuantumNetworkPage() {
+  return (
     <>,
       <Head>,
         <title>Zero Trust Quantum Network - Zion Tech Group</title>,
@@ -16,7 +15,5 @@ export default function ZeroTrustQuantumNetworkPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,

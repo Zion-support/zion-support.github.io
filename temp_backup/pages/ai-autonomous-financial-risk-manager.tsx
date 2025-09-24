@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousFinancialRiskManagerPage() {,
-  return (,
+export default function AiAutonomousFinancialRiskManagerPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Financial Risk Manager - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai autonomous financial risk manager page',
         />,
@@ -21,7 +20,5 @@ export default function AiAutonomousFinancialRiskManagerPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>)}
 ,
