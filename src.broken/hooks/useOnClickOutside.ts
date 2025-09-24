@@ -1,5 +1,5 @@
-// Hook for useOnClickOutside;
+// Hook for useOnClickOutside,
 export const useUseOnClickOutside: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

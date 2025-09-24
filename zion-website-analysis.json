@@ -16,9 +16,7 @@
       "parentUrl": "https://ziontechgroup.com",
       "status": 0,
       "error": "Unsupported protocol tel:",
-      "issues": [
-        "Connection error: Unsupported protocol tel:"
-      ],
+      "issues": ["Connection error: Unsupported protocol tel:"],
       "isBroken": true,
       "responseTime": 1755908686035
     },
@@ -27,9 +25,7 @@
       "parentUrl": "https://ziontechgroup.com",
       "status": 0,
       "error": "Unsupported protocol mailto:",
-      "issues": [
-        "Connection error: Unsupported protocol mailto:"
-      ],
+      "issues": ["Connection error: Unsupported protocol mailto:"],
       "isBroken": true,
       "responseTime": 1755908686035
     },
@@ -39,10 +35,7 @@
       "status": 404,
       "contentType": "text/html",
       "contentLength": "51660",
-      "issues": [
-        "HTTP 404 - Not Found",
-        "404 page content detected"
-      ],
+      "issues": ["HTTP 404 - Not Found", "404 page content detected"],
       "isBroken": true,
       "responseTime": 1755908698920
     },
@@ -52,9 +45,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908699157
     },
@@ -64,9 +55,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908699443
     },
@@ -76,9 +65,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908699682
     },
@@ -101,10 +88,7 @@
       "status": 429,
       "contentType": "text/html; charset=\"utf-8\"",
       "contentLength": "0",
-      "issues": [
-        "HTTP 429 - Unknown",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 429 - Unknown", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908558092
     },
@@ -114,9 +98,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908558418
     },
@@ -126,9 +108,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908558637
     },
@@ -138,9 +118,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908558697
     },
@@ -149,9 +127,7 @@
       "parentUrl": "",
       "status": 0,
       "error": "Request failed with status code 404",
-      "issues": [
-        "Crawl error: Request failed with status code 404"
-      ],
+      "issues": ["Crawl error: Request failed with status code 404"],
       "isBroken": true,
       "responseTime": 1755908558940
     },
@@ -160,9 +136,7 @@
       "parentUrl": "",
       "status": 0,
       "error": "Request failed with status code 404",
-      "issues": [
-        "Crawl error: Request failed with status code 404"
-      ],
+      "issues": ["Crawl error: Request failed with status code 404"],
       "isBroken": true,
       "responseTime": 1755908559177
     },
@@ -171,9 +145,7 @@
       "parentUrl": "https://ziontechgroup.com/privacy/",
       "status": 0,
       "error": "Unsupported protocol tel:",
-      "issues": [
-        "Connection error: Unsupported protocol tel:"
-      ],
+      "issues": ["Connection error: Unsupported protocol tel:"],
       "isBroken": true,
       "responseTime": 1755908680618
     },
@@ -183,9 +155,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908567107
     },
@@ -195,9 +165,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908567223
     },
@@ -206,9 +174,7 @@
       "parentUrl": "",
       "status": 0,
       "error": "Request failed with status code 404",
-      "issues": [
-        "Crawl error: Request failed with status code 404"
-      ],
+      "issues": ["Crawl error: Request failed with status code 404"],
       "isBroken": true,
       "responseTime": 1755908584766
     },
@@ -218,9 +184,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908585215
     },
@@ -230,10 +194,7 @@
       "status": 403,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 403 - Forbidden",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 403 - Forbidden", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908585272
     },
@@ -243,9 +204,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908585472
     },
@@ -255,9 +214,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908586518
     },
@@ -267,9 +224,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908586904
     },
@@ -279,9 +234,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908587071
     },
@@ -304,9 +257,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908588297
     },
@@ -329,9 +280,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908590016
     },
@@ -341,9 +290,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908590111
     },
@@ -353,9 +300,7 @@
       "status": 200,
       "contentType": "text/html;charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908590171
     },
@@ -365,10 +310,7 @@
       "status": 404,
       "contentType": "text/html;charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908592618
     },
@@ -378,10 +320,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908592820
     },
@@ -391,9 +330,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908595453
     },
@@ -403,9 +340,7 @@
       "status": 404,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": "72292",
-      "issues": [
-        "HTTP 404 - Not Found"
-      ],
+      "issues": ["HTTP 404 - Not Found"],
       "isBroken": true,
       "responseTime": 1755908596707
     },
@@ -415,9 +350,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908597083
     },
@@ -427,9 +360,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908601082
     },
@@ -439,10 +370,7 @@
       "status": 403,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 403 - Forbidden",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 403 - Forbidden", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908601215
     },
@@ -452,9 +380,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908601767
     },
@@ -464,9 +390,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908603207
     },
@@ -489,9 +413,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908607286
     },
@@ -501,9 +423,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908609682
     },
@@ -513,9 +433,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908610275
     },
@@ -525,9 +443,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908611553
     },
@@ -537,9 +453,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908612657
     },
@@ -548,9 +462,7 @@
       "parentUrl": "https://ziontechgroup.com/tls-certificate-monitor/",
       "status": 0,
       "error": "Unsupported protocol tel:",
-      "issues": [
-        "Connection error: Unsupported protocol tel:"
-      ],
+      "issues": ["Connection error: Unsupported protocol tel:"],
       "isBroken": true,
       "responseTime": 1755908619068
     },
@@ -560,9 +472,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908619521
     },
@@ -572,9 +482,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908624603
     },
@@ -584,9 +492,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908624664
     },
@@ -596,9 +502,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908625360
     },
@@ -608,10 +512,7 @@
       "status": 403,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 403 - Forbidden",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 403 - Forbidden", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908625415
     },
@@ -621,9 +522,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908625675
     },
@@ -633,9 +532,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908625959
     },
@@ -645,10 +542,7 @@
       "status": 403,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 403 - Forbidden",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 403 - Forbidden", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626058
     },
@@ -658,9 +552,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626176
     },
@@ -670,9 +562,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626375
     },
@@ -682,9 +572,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626561
     },
@@ -694,9 +582,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626623
     },
@@ -706,9 +592,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626842
     },
@@ -718,9 +602,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908626886
     },
@@ -730,9 +612,7 @@
       "status": 404,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": "59226",
-      "issues": [
-        "HTTP 404 - Not Found"
-      ],
+      "issues": ["HTTP 404 - Not Found"],
       "isBroken": true,
       "responseTime": 1755908630439
     },
@@ -742,9 +622,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908631208
     },
@@ -768,10 +646,7 @@
       "status": 404,
       "contentType": "text/html;charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908631672
     },
@@ -781,9 +656,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908632240
     },
@@ -793,9 +666,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908632453
     },
@@ -805,9 +676,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908632567
     },
@@ -817,9 +686,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908634055
     },
@@ -829,9 +696,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908634094
     },
@@ -841,9 +706,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908634395
     },
@@ -853,9 +716,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908634516
     },
@@ -865,9 +726,7 @@
       "status": 404,
       "contentType": "text/html",
       "contentLength": "1758",
-      "issues": [
-        "HTTP 404 - Not Found"
-      ],
+      "issues": ["HTTP 404 - Not Found"],
       "isBroken": true,
       "responseTime": 1755908634636
     },
@@ -877,9 +736,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908635101
     },
@@ -889,9 +746,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908635907
     },
@@ -901,9 +756,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908637055
     },
@@ -913,9 +766,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908637351
     },
@@ -925,9 +776,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908637514
     },
@@ -937,9 +786,7 @@
       "status": 200,
       "contentType": "text/html;charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908638062
     },
@@ -949,9 +796,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908638802
     },
@@ -961,9 +806,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908638867
     },
@@ -973,9 +816,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908639656
     },
@@ -985,9 +826,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908639985
     },
@@ -997,9 +836,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908640489
     },
@@ -1009,9 +846,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908640755
     },
@@ -1021,9 +856,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908640904
     },
@@ -1033,9 +866,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908641209
     },
@@ -1045,9 +876,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908641420
     },
@@ -1057,9 +886,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908641565
     },
@@ -1069,10 +896,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908641687
     },
@@ -1082,9 +906,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908641818
     },
@@ -1094,9 +916,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908642859
     },
@@ -1106,9 +926,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908642942
     },
@@ -1118,9 +936,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908643193
     },
@@ -1130,9 +946,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908643325
     },
@@ -1142,9 +956,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908643714
     },
@@ -1154,9 +966,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908643763
     },
@@ -1166,9 +976,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908644017
     },
@@ -1178,9 +986,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908644336
     },
@@ -1190,9 +996,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908644548
     },
@@ -1215,9 +1019,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908644913
     },
@@ -1227,9 +1029,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908645074
     },
@@ -1239,10 +1039,7 @@
       "status": 403,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 403 - Forbidden",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 403 - Forbidden", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908645843
     },
@@ -1252,9 +1049,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908651148
     },
@@ -1264,9 +1059,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908651393
     },
@@ -1276,9 +1069,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908654420
     },
@@ -1288,9 +1079,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908656377
     },
@@ -1300,9 +1089,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908656596
     },
@@ -1312,9 +1099,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908656951
     },
@@ -1324,9 +1109,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908657861
     },
@@ -1336,9 +1119,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659065
     },
@@ -1348,9 +1129,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659393
     },
@@ -1360,9 +1139,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659497
     },
@@ -1372,9 +1149,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659703
     },
@@ -1384,9 +1159,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659813
     },
@@ -1396,9 +1169,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908659918
     },
@@ -1408,9 +1179,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908660019
     },
@@ -1420,9 +1189,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908660074
     },
@@ -1432,9 +1199,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908661026
     },
@@ -1444,9 +1209,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908661440
     },
@@ -1456,9 +1219,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908662484
     },
@@ -1468,9 +1229,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908662596
     },
@@ -1480,9 +1239,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908662674
     },
@@ -1492,9 +1249,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908664251
     },
@@ -1504,9 +1259,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908664727
     },
@@ -1516,9 +1269,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908665284
     },
@@ -1528,9 +1279,7 @@
       "status": 200,
       "contentType": "text/html;charset=utf-8",
       "contentLength": "56587",
-      "issues": [
-        "404 page content detected"
-      ],
+      "issues": ["404 page content detected"],
       "isBroken": true,
       "responseTime": 1755908665425
     },
@@ -1540,9 +1289,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908665739
     },
@@ -1552,9 +1299,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908666655
     },
@@ -1564,9 +1309,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908666928
     },
@@ -1576,9 +1319,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908667965
     },
@@ -1588,9 +1329,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908668074
     },
@@ -1600,9 +1339,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908668228
     },
@@ -1626,9 +1363,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": "111172",
-      "issues": [
-        "404 page content detected"
-      ],
+      "issues": ["404 page content detected"],
       "isBroken": true,
       "responseTime": 1755908668467
     },
@@ -1638,9 +1373,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908668533
     },
@@ -1650,9 +1383,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908668681
     },
@@ -1662,9 +1393,7 @@
       "status": 200,
       "contentType": "text/html",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908672014
     },
@@ -1674,9 +1403,7 @@
       "status": 200,
       "contentType": "text/html;charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908672308
     },
@@ -1686,9 +1413,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908672504
     },
@@ -1697,9 +1422,7 @@
       "parentUrl": "https://ziontechgroup.com/careers/",
       "status": 0,
       "error": "Unsupported protocol mailto:",
-      "issues": [
-        "Connection error: Unsupported protocol mailto:"
-      ],
+      "issues": ["Connection error: Unsupported protocol mailto:"],
       "isBroken": true,
       "responseTime": 1755908676986
     },
@@ -1708,9 +1431,7 @@
       "parentUrl": "",
       "status": 0,
       "error": "Request failed with status code 404",
-      "issues": [
-        "Crawl error: Request failed with status code 404"
-      ],
+      "issues": ["Crawl error: Request failed with status code 404"],
       "isBroken": true,
       "responseTime": 1755908683780
     },
@@ -1720,9 +1441,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908702929
     },
@@ -1732,9 +1451,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908703313
     },
@@ -1744,9 +1461,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908703645
     },
@@ -1756,9 +1471,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908703973
     },
@@ -1768,9 +1481,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908726333
     },
@@ -1780,9 +1491,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908724616
     },
@@ -1792,9 +1501,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908704971
     },
@@ -1804,9 +1511,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908705342
     },
@@ -1816,9 +1521,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908705553
     },
@@ -1828,9 +1531,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908705826
     },
@@ -1840,10 +1541,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908705963
     },
@@ -1853,10 +1551,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706110
     },
@@ -1866,10 +1561,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706257
     },
@@ -1879,10 +1571,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706394
     },
@@ -1892,9 +1581,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706659
     },
@@ -1904,9 +1591,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706809
     },
@@ -1916,10 +1601,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908706945
     },
@@ -1929,9 +1611,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908707205
     },
@@ -1941,9 +1621,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908707552
     },
@@ -1953,10 +1631,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908707687
     },
@@ -1966,9 +1641,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908707989
     },
@@ -1978,10 +1651,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908708160
     },
@@ -1991,10 +1661,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908708343
     },
@@ -2004,10 +1671,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908708478
     },
@@ -2017,9 +1681,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908708717
     },
@@ -2029,9 +1691,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908709075
     },
@@ -2041,9 +1701,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908709347
     },
@@ -2053,10 +1711,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908709500
     },
@@ -2066,9 +1721,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908709747
     },
@@ -2078,10 +1731,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908709878
     },
@@ -2091,9 +1741,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908710212
     },
@@ -2103,9 +1751,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908710566
     },
@@ -2115,10 +1761,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908710723
     },
@@ -2128,10 +1771,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908710890
     },
@@ -2141,9 +1781,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711129
     },
@@ -2153,10 +1791,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711285
     },
@@ -2166,10 +1801,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711434
     },
@@ -2179,9 +1811,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711678
     },
@@ -2191,10 +1821,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711838
     },
@@ -2204,10 +1831,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908711973
     },
@@ -2217,10 +1841,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908712133
     },
@@ -2230,9 +1851,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908712355
     },
@@ -2242,10 +1861,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908712524
     },
@@ -2255,10 +1871,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908712684
     },
@@ -2268,9 +1881,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908712825
     },
@@ -2280,9 +1891,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713084
     },
@@ -2292,10 +1901,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713227
     },
@@ -2305,10 +1911,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713388
     },
@@ -2318,10 +1921,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713523
     },
@@ -2331,10 +1931,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713677
     },
@@ -2344,10 +1941,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713810
     },
@@ -2357,10 +1951,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908713967
     },
@@ -2370,9 +1961,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714103
     },
@@ -2382,10 +1971,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714239
     },
@@ -2395,10 +1981,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714387
     },
@@ -2408,10 +1991,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714527
     },
@@ -2421,10 +2001,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714680
     },
@@ -2434,10 +2011,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714816
     },
@@ -2447,10 +2021,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908714965
     },
@@ -2460,10 +2031,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715102
     },
@@ -2473,10 +2041,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715242
     },
@@ -2486,10 +2051,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715371
     },
@@ -2499,10 +2061,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715522
     },
@@ -2512,10 +2071,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715657
     },
@@ -2525,10 +2081,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715794
     },
@@ -2538,10 +2091,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908715938
     },
@@ -2551,9 +2101,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908716161
     },
@@ -2563,10 +2111,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908716313
     },
@@ -2576,10 +2121,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908716449
     },
@@ -2589,10 +2131,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908716604
     },
@@ -2602,9 +2141,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908716904
     },
@@ -2614,10 +2151,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908717046
     },
@@ -2627,10 +2161,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908717203
     },
@@ -2640,10 +2171,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908717402
     },
@@ -2653,9 +2181,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908717735
     },
@@ -2665,9 +2191,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718100
     },
@@ -2677,10 +2201,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718250
     },
@@ -2690,10 +2211,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718407
     },
@@ -2703,10 +2221,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718545
     },
@@ -2716,10 +2231,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718681
     },
@@ -2729,9 +2241,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908718939
     },
@@ -2741,9 +2251,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719083
     },
@@ -2753,10 +2261,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719219
     },
@@ -2766,10 +2271,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719371
     },
@@ -2779,9 +2281,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719647
     },
@@ -2791,9 +2291,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719782
     },
@@ -2803,10 +2301,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908719939
     },
@@ -2816,9 +2311,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720190
     },
@@ -2828,10 +2321,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720331
     },
@@ -2841,10 +2331,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720463
     },
@@ -2854,10 +2341,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720600
     },
@@ -2867,10 +2351,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720733
     },
@@ -2880,10 +2361,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908720863
     },
@@ -2893,10 +2371,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721013
     },
@@ -2906,10 +2381,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721168
     },
@@ -2919,10 +2391,7 @@
       "status": 404,
       "contentType": "text/html; charset=utf-8",
       "contentLength": 0,
-      "issues": [
-        "HTTP 404 - Not Found",
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["HTTP 404 - Not Found", "Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721321
     },
@@ -2932,9 +2401,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721469
     },
@@ -2944,9 +2411,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721701
     },
@@ -2956,9 +2421,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908721858
     },
@@ -2968,9 +2431,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908722077
     },
@@ -2980,9 +2441,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908722484
     },
@@ -2992,9 +2451,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908722946
     },
@@ -3004,9 +2461,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908723133
     },
@@ -3016,9 +2471,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908723333
     },
@@ -3028,9 +2481,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908723842
     },
@@ -3040,9 +2491,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908724108
     },
@@ -3052,9 +2501,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908724436
     },
@@ -3064,9 +2511,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908724914
     },
@@ -3076,9 +2521,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908725252
     },
@@ -3088,9 +2531,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908725559
     },
@@ -3100,9 +2541,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908725942
     },
@@ -3112,9 +2551,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908726185
     },
@@ -3124,9 +2561,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908726574
     },
@@ -3136,9 +2571,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908726795
     },
@@ -3148,9 +2581,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908727063
     },
@@ -3160,9 +2591,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908727464
     },
@@ -3172,9 +2601,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908727705
     },
@@ -3184,9 +2611,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908727988
     },
@@ -3196,9 +2621,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908728276
     },
@@ -3208,9 +2631,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908728520
     },
@@ -3220,9 +2641,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908728765
     },
@@ -3232,9 +2651,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908729018
     },
@@ -3244,9 +2661,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908729257
     },
@@ -3256,9 +2671,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908729485
     },
@@ -3268,9 +2681,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908729865
     },
@@ -3280,9 +2691,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908730148
     },
@@ -3292,9 +2701,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908730526
     },
@@ -3304,9 +2711,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908730794
     },
@@ -3316,9 +2721,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908731084
     },
@@ -3328,9 +2731,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908731413
     },
@@ -3340,9 +2741,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908731600
     },
@@ -3352,9 +2751,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908731785
     },
@@ -3364,9 +2761,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908732152
     },
@@ -3376,9 +2771,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908732389
     },
@@ -3388,9 +2781,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908732638
     },
@@ -3400,9 +2791,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908732826
     },
@@ -3412,9 +2801,7 @@
       "status": 200,
       "contentType": "text/html; charset=UTF-8",
       "contentLength": 0,
-      "issues": [
-        "Suspiciously small HTML content"
-      ],
+      "issues": ["Suspiciously small HTML content"],
       "isBroken": true,
       "responseTime": 1755908733181
     }

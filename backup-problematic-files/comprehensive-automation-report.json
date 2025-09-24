@@ -1,18 +1,14 @@
 {
-
-
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-
 
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-
 
       "duration": 6393,
       "errors": [],
@@ -29,19 +25,16 @@
       "duration": 5672,
       "errors": [],
 
-
       "warnings": []
     },
     "seoOptimization": {
       "success": true,
-
 
       "errors": [],
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-
 
       "duration": 291,
       "errors": [],
@@ -52,12 +45,10 @@
       "duration": 6276,
       "errors": [],
 
-
       "warnings": []
     },
     "deployment": {
       "success": true,
-
 
       "duration": 1796,
       "errors": [],
@@ -65,5 +56,3 @@
     }
   }
 }
-
-

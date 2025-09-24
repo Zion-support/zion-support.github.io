@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { useEffect } from 'react',
 export default function ForumRedirect() {
-  const router = useRouter();
-  useEffect(() => { router.replace('/community'); }, [router]);
-  return null;
-}
+  const router = useRouter(),
+  useEffect(() => {
+    router.replace('/community')}, [router]),
+  return null}
+,

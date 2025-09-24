@@ -7,16 +7,10 @@ on:
 
 permissions:
   contents: write
-<<<<<<< HEAD
-
-concurrency:
-  group: homepage-updater
-=======
   pull-requests: write
   actions: read
 concurrency:
   group: "cursor-rules-auto-update-${{ github.ref }}"
->>>>>>> origin/auto/autonomy-17186719616
   cancel-in-progress: true
 
 jobs:

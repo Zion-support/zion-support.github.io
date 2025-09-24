@@ -2,6 +2,7 @@ import secrets
 from hashlib import sha256
 from rest_framework.decorators import api_view, permission_classes, authentication_classes, throttle_classes
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import render
@@ -12,25 +13,41 @@ from .authentication import ApiKeyAuthentication
 from .throttling import RedisDailyThrottle
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 def generate_key(request):
-    prefix = secrets.token_hex(4)
-    full_key = prefix + secrets.token_hex(16)
-    hashed = sha256(full_key.encode()).hexdigest()
-    ApiKey.objects.create(user=request.user, prefix=prefix, hashed_key=hashed)
-    return Response({'key': full_key, 'prefix': prefix}, status=status.HTTP_201_CREATED)
+    if not request.user or not request.user.is_authenticated:
+        return Response({'detail': 'Authentication credentials were not provided.'}, status=status.HTTP_401_UNAUTHORIZED)
+    name = request.data.get('name', '')
+    prefix, secret = ApiKey.generate_key()
+    hashed = ApiKey.hash_secret(secret)
+    ApiKey.objects.create(user=request.user, name=name, prefix=prefix, hashed_key=hashed)
+    return Response({'key': f"{prefix}.{secret}", 'prefix': prefix, 'name': name}, status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 def revoke_key(request):
+    if not request.user or not request.user.is_authenticated:
+        return Response({'detail': 'Authentication credentials were not provided.'}, status=status.HTTP_401_UNAUTHORIZED)
     prefix = request.data.get('prefix')
-    ApiKey.objects.filter(user=request.user, prefix=prefix).update(revoked=True)
-    return Response({'detail': 'revoked'})
+    if not prefix:
+        return Response({'error': 'Prefix is required.'}, status=status.HTTP_400_BAD_REQUEST)
+    updated = ApiKey.objects.filter(user=request.user, prefix=prefix).update(revoked=True)
+    if updated == 0:
+        return Response({'message': 'API key not found or not owned by user.'})
+    return Response({'message': 'API key revoked successfully.'})
 
 @api_view(['GET'])
-@authentication_classes([ApiKeyAuthentication])
-@throttle_classes([RedisDailyThrottle])
 def protected_endpoint(request):
+    # Perform manual API key auth to return 401 on failure instead of 403
+    authenticator = ApiKeyAuthentication()
+    try:
+        user_auth = authenticator.authenticate(request)
+    except Exception as e:
+        return Response({'detail': str(e)}, status=status.HTTP_401_UNAUTHORIZED)
+    if not user_auth:
+        return Response({'detail': 'Authentication credentials were not provided.'}, status=status.HTTP_401_UNAUTHORIZED)
+    user, _ = user_auth
+    request.user = user
     return Response({'detail': 'success'})
 
 

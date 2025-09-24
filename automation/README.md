@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Automation
 
 This directory contains autonomous, credential-free local automations and logs.

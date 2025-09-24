@@ -1,68 +1,71 @@
 #!/bin/bash
 
-# Script to merge all open PRs from GitHub
-REPO="Zion-Holdings/zion.app"
-API_BASE="https://api.github.com/repos/$REPO"
+# Script to merge all codex branches into main
+# This script will attempt to merge branches systematically and handle conflicts
 
-echo "Starting PR merge process for $REPO..."
+set -e
 
-# Get all open PRs
-echo "Fetching open PRs..."
-PRS_JSON=$(curl -s "$API_BASE/pulls?state=open")
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-# Extract PR numbers using a more reliable method
-PRS=$(echo "$PRS_JSON" | grep -o '"number":[0-9]*' | sed 's/"number"://')
+# Counters
+SUCCESS_COUNT=0
+CONFLICT_COUNT=0
+ERROR_COUNT=0
+TOTAL_COUNT=0
 
-echo "Found PRs: $PRS"
+echo -e "${BLUE}Starting bulk merge of codex branches...${NC}"
 
-if [ -z "$PRS" ]; then
-    echo "No PRs found or failed to extract PR numbers"
-    exit 1
-fi
+# Get all codex branches
+BRANCHES=$(git branch -r | grep "origin/.*-codex/" | head -50)
 
-for pr in $PRS; do
-    echo "Processing PR #$pr..."
+for branch in $BRANCHES; do
+    TOTAL_COUNT=$((TOTAL_COUNT + 1))
+    echo -e "\n${YELLOW}[$TOTAL_COUNT] Attempting to merge: $branch${NC}"
     
-    # Get PR details
-    PR_INFO=$(curl -s "$API_BASE/pulls/$pr")
-    PR_TITLE=$(echo "$PR_INFO" | grep -o '"title":"[^"]*"' | head -1 | cut -d'"' -f4)
-    PR_BRANCH=$(echo "$PR_INFO" | grep -o '"ref":"[^"]*"' | head -1 | cut -d'"' -f4)
+    # Fetch the latest changes
+    BRANCH_NAME=$(echo "$branch" | sed 's/origin\///')
+    git fetch origin "$BRANCH_NAME"
     
-    echo "  Title: $PR_TITLE"
-    echo "  Branch: $PR_BRANCH"
-    
-    # Get files changed in this PR
-    echo "  Fetching changed files..."
-    FILES_JSON=$(curl -s "$API_BASE/pulls/$pr/files")
-    FILES=$(echo "$FILES_JSON" | grep -o '"filename":"[^"]*"' | cut -d'"' -f4)
-    
-    echo "  Files to process: $FILES"
-    
-    for file in $FILES; do
-        echo "    Processing file: $file"
+    # Try to merge
+    if git merge --no-edit "$branch" 2>/dev/null; then
+        echo -e "${GREEN}✅ Successfully merged: $branch${NC}"
+        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
         
-        # Get the content of the file from the PR branch
-        CONTENT_URL="$API_BASE/contents/$file?ref=$PR_BRANCH"
-        FILE_CONTENT_JSON=$(curl -s "$CONTENT_URL")
-        FILE_CONTENT=$(echo "$FILE_CONTENT_JSON" | grep -o '"content":"[^"]*"' | cut -d'"' -f4)
-        
-        if [ ! -z "$FILE_CONTENT" ]; then
-            # Create directory if it doesn't exist
-            DIR=$(dirname "$file")
-            if [ ! -d "$DIR" ]; then
-                mkdir -p "$DIR"
-            fi
-            
-            # Write the file content (base64 decode if needed)
-            echo "$FILE_CONTENT" | base64 -d > "$file" 2>/dev/null || echo "$FILE_CONTENT" > "$file"
-            echo "      Updated $file"
-        else
-            echo "      No content found for $file"
+        # Commit the merge if needed
+        if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Merge branch '$BRANCH_NAME' into main"
         fi
-    done
+    else
+        echo -e "${RED}❌ Merge conflict in: $branch${NC}"
+        CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
+        
+        # Reset to clean state
+        git merge --abort 2>/dev/null || true
+        git reset --hard HEAD
+        
+        # Log the conflicted branch
+        echo "$BRANCH_NAME" >> /workspace/conflicted_branches.txt
+    fi
     
-    echo "  Completed PR #$pr"
-    echo ""
+    # Break after 10 merges to avoid overwhelming the system
+    if [ $TOTAL_COUNT -ge 10 ]; then
+        echo -e "${YELLOW}Stopping after 10 merges to assess progress...${NC}"
+        break
+    fi
 done
 
-echo "PR merge process completed!"
+echo -e "\n${BLUE}=== Merge Summary ===${NC}"
+echo -e "${GREEN}Successful merges: $SUCCESS_COUNT${NC}"
+echo -e "${RED}Conflicts: $CONFLICT_COUNT${NC}"
+echo -e "${YELLOW}Total processed: $TOTAL_COUNT${NC}"
+
+if [ -f /workspace/conflicted_branches.txt ]; then
+    echo -e "\n${RED}Conflicted branches:${NC}"
+    cat /workspace/conflicted_branches.txt
+fi

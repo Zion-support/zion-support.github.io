@@ -1,85 +1,82 @@
 #!/bin/bash
 
-# Bulk merge script for all cursor/create-and-deploy-new-content branches
+# Efficient bulk merge script for codex branches
 set -e
 
-echo "Starting bulk merge process..."
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-# Get all the branches
-branches=(
-    "origin/cursor/create-and-deploy-new-content-1cf6"
-    "origin/cursor/create-and-deploy-new-content-481e"
-    "origin/cursor/create-and-deploy-new-content-484f"
-    "origin/cursor/create-and-deploy-new-content-502e"
-    "origin/cursor/create-and-deploy-new-content-5fbd"
-    "origin/cursor/create-and-deploy-new-content-666b"
-    "origin/cursor/create-and-deploy-new-content-6774"
-    "origin/cursor/create-and-deploy-new-content-7a80"
-    "origin/cursor/create-and-deploy-new-content-8092"
-    "origin/cursor/create-and-deploy-new-content-86e7"
-    "origin/cursor/create-and-deploy-new-content-8c61"
-    "origin/cursor/create-and-deploy-new-content-95ef"
-    "origin/cursor/create-and-deploy-new-content-97a6"
-    "origin/cursor/create-and-deploy-new-content-9e5a"
-    "origin/cursor/create-and-deploy-new-content-a3a8"
-    "origin/cursor/create-and-deploy-new-content-bc04"
-    "origin/cursor/create-and-deploy-new-content-c647"
-    "origin/cursor/create-and-deploy-new-content-cde3"
-    "origin/cursor/create-and-deploy-new-content-da36"
-    "origin/cursor/create-and-deploy-new-content-e33c"
-    "origin/cursor/create-and-deploy-new-content-e745"
-    "origin/cursor/create-and-deploy-new-content-f420"
-    "origin/cursor/create-and-deploy-new-content-fdcc"
-    "origin/cursor/create-and-deploy-new-content-ffcc"
-)
+echo -e "${BLUE}Starting bulk merge of all codex branches...${NC}"
 
-# Function to merge a branch
-merge_branch() {
-    local branch=$1
-    local branch_name=$(echo "$branch" | sed 's/origin\///')
+# Get all codex branches
+ALL_BRANCHES=$(git branch -r | grep "origin/.*-codex/" | wc -l)
+echo -e "${YELLOW}Found $ALL_BRANCHES codex branches to merge${NC}"
+
+# Process branches in batches of 50
+BATCH_SIZE=50
+PROCESSED=0
+MERGED=0
+UP_TO_DATE=0
+CONFLICTS=0
+
+# Create a temporary file to track progress
+echo "Starting merge process at $(date)" > /workspace/merge_progress.log
+
+# Get all codex branches
+git branch -r | grep "origin/.*-codex/" | while read -r branch; do
+    PROCESSED=$((PROCESSED + 1))
     
-    echo "Processing branch: $branch_name"
+    # Extract branch name without origin/
+    BRANCH_NAME=$(echo "$branch" | sed 's/origin\///')
+    
+    echo -e "\n${YELLOW}[$PROCESSED/$ALL_BRANCHES] Processing: $BRANCH_NAME${NC}"
     
     # Try to merge
-    if git merge "$branch" --no-ff -m "Merge $branch_name" 2>/dev/null; then
-        echo "✅ Successfully merged $branch_name"
-        return 0
+    if git merge --no-edit "$branch" 2>/dev/null; then
+        echo -e "${GREEN}✅ Merged: $BRANCH_NAME${NC}"
+        MERGED=$((MERGED + 1))
+        echo "MERGED: $BRANCH_NAME" >> /workspace/merge_progress.log
     else
-        echo "⚠️  Merge conflict in $branch_name, resolving..."
-        
-        # Resolve conflicts by accepting our version
-        git checkout --ours . 2>/dev/null || true
-        git add . 2>/dev/null || true
-        
-        # Complete the merge
-        if git commit -m "Merge $branch_name (resolved conflicts)" 2>/dev/null; then
-            echo "✅ Resolved conflicts and merged $branch_name"
-            return 0
+        # Check if it's already up to date or has conflicts
+        if git merge --no-edit "$branch" 2>&1 | grep -q "Already up to date"; then
+            echo -e "${BLUE}📋 Already up to date: $BRANCH_NAME${NC}"
+            UP_TO_DATE=$((UP_TO_DATE + 1))
+            echo "UP_TO_DATE: $BRANCH_NAME" >> /workspace/merge_progress.log
         else
-            echo "❌ Failed to merge $branch_name"
-            return 1
+            echo -e "${RED}❌ Conflict: $BRANCH_NAME${NC}"
+            CONFLICTS=$((CONFLICTS + 1))
+            echo "CONFLICT: $BRANCH_NAME" >> /workspace/merge_progress.log
+            # Reset to clean state
+            git merge --abort 2>/dev/null || true
         fi
     fi
-}
-
-# Process each branch
-success_count=0
-total_count=${#branches[@]}
-
-for branch in "${branches[@]}"; do
-    echo "=========================================="
-    if merge_branch "$branch"; then
-        ((success_count++))
+    
+    # Show progress every 50 branches
+    if [ $((PROCESSED % 50)) -eq 0 ]; then
+        echo -e "\n${BLUE}=== Progress Update ===${NC}"
+        echo -e "Processed: $PROCESSED/$ALL_BRANCHES"
+        echo -e "Merged: $MERGED"
+        echo -e "Up to date: $UP_TO_DATE"
+        echo -e "Conflicts: $CONFLICTS"
+        echo -e "========================\n"
     fi
-    echo ""
 done
 
-echo "=========================================="
-echo "Bulk merge completed: $success_count/$total_count branches merged successfully"
-echo "=========================================="
+echo -e "\n${BLUE}=== Final Summary ===${NC}"
+echo -e "Total processed: $PROCESSED"
+echo -e "${GREEN}Successfully merged: $MERGED${NC}"
+echo -e "${BLUE}Already up to date: $UP_TO_DATE${NC}"
+echo -e "${RED}Conflicts: $CONFLICTS${NC}"
 
-# Push all changes
-echo "Pushing changes to main branch..."
-git push origin main
+# Commit any pending changes
+if [ -n "$(git status --porcelain)" ]; then
+    echo -e "\n${YELLOW}Committing final changes...${NC}"
+    git add .
+    git commit -m "Bulk merge of codex branches - processed $PROCESSED branches"
+fi
 
-echo "All changes have been pushed to main branch!"
+echo -e "\n${GREEN}Bulk merge completed at $(date)${NC}"

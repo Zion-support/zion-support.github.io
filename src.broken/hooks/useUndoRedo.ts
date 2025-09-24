@@ -1,5 +1,5 @@
-// Hook for useUndoRedo;
+// Hook for useUndoRedo,
 export const useUseUndoRedo: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };
