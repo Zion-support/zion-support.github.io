@@ -125,7 +125,7 @@ export default function AIDataPrivacy2025() {
             This advanced encryption technique allows computation on encrypted data without 
             decrypting it. While computationally expensive, it provides the highest level 
             of privacy protection for sensitive applications.
-          </h3>
+          </p>
 
           <h3>4. Synthetic Data Generation</h3>
           <p>
@@ -148,14 +148,14 @@ export default function AIDataPrivacy2025() {
             Financial institutions face strict privacy requirements while needing AI for 
             fraud detection and risk assessment. Privacy-preserving techniques must be 
             combined with regulatory compliance frameworks.
-          </h3>
+          </p>
 
           <h3>Retail and E-commerce</h3>
           <p>
             Customer behavior analysis requires detailed personal data, but consumers 
             increasingly demand privacy protection. Organizations must find creative 
             ways to personalize experiences while respecting privacy preferences.
-          </h3>
+          </p>
 
           <h2>Building a Privacy-First AI Strategy</h2>
           <p>

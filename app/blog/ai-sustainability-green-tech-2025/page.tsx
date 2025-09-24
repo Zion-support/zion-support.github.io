@@ -272,7 +272,7 @@ export default function AISustainabilityGreenTech2025() {
             <div className="bg-white border border-gray-200 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-gray-900 mb-3">Data Center Optimization</h4>
               <ul className="space-y-2 text-gray-700">
-                <li>• PUE (Power Usage Effectiveness) < 1.2</li>
+                <li>• PUE (Power Usage Effectiveness) &lt; 1.2</li>
                 <li>• Free cooling systems</li>
                 <li>• Smart load balancing</li>
                 <li>• Container orchestration</li>
