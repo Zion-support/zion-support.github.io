@@ -807,3 +807,285 @@ nothing added to commit but untracked files present (use "git add" to track)
 ⏰ Started at: Wed Sep 24 08:33:35 AM UTC 2025
 ---
 🔒 Creating backup branch: backup-main-comprehensive-20250924-083335
+🚀 Starting comprehensive PR merge process...
+📊 Found 100 open PRs to process
+📝 Logging to: pr_merge_process_20250924_102454.log
+[2025-09-24 10:24:54] 🎯 Starting to process 100 open PRs...
+[2025-09-24 10:24:54] 📊 Progress: 1/100 PRs processed
+[2025-09-24 10:24:54] 🔍 Processing PR #8387...
+[2025-09-24 10:24:54] 📋 PR #8387: 
+[2025-09-24 10:24:54] 🌿 Head:  -> Base: 
+[2025-09-24 10:24:54] ⏭️  Skipping PR #8387 (targets , not main)
+[2025-09-24 10:24:54] ✅ PR #8387 completed successfully
+[2025-09-24 10:24:56] 📊 Progress: 2/100 PRs processed
+[2025-09-24 10:24:56] 🔍 Processing PR #8386...
+[2025-09-24 10:24:57] 📋 PR #8386: 
+[2025-09-24 10:24:57] 🌿 Head:  -> Base: 
+[2025-09-24 10:24:57] ⏭️  Skipping PR #8386 (targets , not main)
+[2025-09-24 10:24:57] ✅ PR #8386 completed successfully
+[2025-09-24 10:24:59] 📊 Progress: 3/100 PRs processed
+[2025-09-24 10:24:59] 🔍 Processing PR #8385...
+[2025-09-24 10:24:59] 📋 PR #8385: 
+[2025-09-24 10:24:59] 🌿 Head:  -> Base: 
+[2025-09-24 10:24:59] ⏭️  Skipping PR #8385 (targets , not main)
+[2025-09-24 10:24:59] ✅ PR #8385 completed successfully
+[2025-09-24 10:25:01] 📊 Progress: 4/100 PRs processed
+[2025-09-24 10:25:01] 🔍 Processing PR #8382...
+[2025-09-24 10:25:01] 📋 PR #8382: 
+[2025-09-24 10:25:01] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:01] ⏭️  Skipping PR #8382 (targets , not main)
+[2025-09-24 10:25:01] ✅ PR #8382 completed successfully
+[2025-09-24 10:25:03] 📊 Progress: 5/100 PRs processed
+[2025-09-24 10:25:03] 🔍 Processing PR #8376...
+[2025-09-24 10:25:04] 📋 PR #8376: 
+[2025-09-24 10:25:04] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:04] ⏭️  Skipping PR #8376 (targets , not main)
+[2025-09-24 10:25:04] ✅ PR #8376 completed successfully
+[2025-09-24 10:25:06] 📊 Progress: 6/100 PRs processed
+[2025-09-24 10:25:06] 🔍 Processing PR #6762...
+[2025-09-24 10:25:08] 📋 PR #6762: 
+[2025-09-24 10:25:08] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:08] ⏭️  Skipping PR #6762 (targets , not main)
+[2025-09-24 10:25:08] ✅ PR #6762 completed successfully
+[2025-09-24 10:25:10] 📊 Progress: 7/100 PRs processed
+[2025-09-24 10:25:10] 🔍 Processing PR #6757...
+[2025-09-24 10:25:11] 📋 PR #6757: 
+[2025-09-24 10:25:11] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:11] ⏭️  Skipping PR #6757 (targets , not main)
+[2025-09-24 10:25:11] ✅ PR #6757 completed successfully
+[2025-09-24 10:25:13] 📊 Progress: 8/100 PRs processed
+[2025-09-24 10:25:13] 🔍 Processing PR #6740...
+[2025-09-24 10:25:13] 📋 PR #6740: 
+[2025-09-24 10:25:13] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:13] ⏭️  Skipping PR #6740 (targets , not main)
+[2025-09-24 10:25:13] ✅ PR #6740 completed successfully
+[2025-09-24 10:25:15] 📊 Progress: 9/100 PRs processed
+[2025-09-24 10:25:15] 🔍 Processing PR #6727...
+[2025-09-24 10:25:16] 📋 PR #6727: 
+[2025-09-24 10:25:16] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:16] ⏭️  Skipping PR #6727 (targets , not main)
+[2025-09-24 10:25:16] ✅ PR #6727 completed successfully
+[2025-09-24 10:25:18] 📊 Progress: 10/100 PRs processed
+[2025-09-24 10:25:18] 🔍 Processing PR #6726...
+[2025-09-24 10:25:20] 📋 PR #6726: 
+[2025-09-24 10:25:20] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:20] ⏭️  Skipping PR #6726 (targets , not main)
+[2025-09-24 10:25:20] ✅ PR #6726 completed successfully
+🚀 Starting comprehensive PR merge process...
+📊 Found 100 open PRs to process
+📝 Logging to: pr_merge_process_20250924_102522.log
+[2025-09-24 10:25:22] 🎯 Starting to process 100 open PRs...
+[2025-09-24 10:25:22] 📊 Progress: 1/100 PRs processed
+[2025-09-24 10:25:22] 🔍 Processing PR #8387...
+[2025-09-24 10:25:22] 📋 PR #8387: 
+[2025-09-24 10:25:22] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:22] ⏭️  Skipping PR #8387 (targets , not main)
+[2025-09-24 10:25:22] ✅ PR #8387 completed successfully
+[2025-09-24 10:25:22] 💾 Committing progress...
+[main af8af99a4588] Progress: processed 10/100 PRs (merged: 0, failed: 0)
+ 2 files changed, 89 insertions(+), 2 deletions(-)
+[2025-09-24 10:25:24] 📊 Progress: 2/100 PRs processed
+[2025-09-24 10:25:24] 🔍 Processing PR #8386...
+[2025-09-24 10:25:25] 📋 PR #8386: 
+[2025-09-24 10:25:25] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:25] ⏭️  Skipping PR #8386 (targets , not main)
+[2025-09-24 10:25:25] ✅ PR #8386 completed successfully
+[2025-09-24 10:25:25] 📊 Progress: 11/100 PRs processed
+[2025-09-24 10:25:25] 🔍 Processing PR #6717...
+[2025-09-24 10:25:25] 📋 PR #6717: 
+[2025-09-24 10:25:25] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:25] ⏭️  Skipping PR #6717 (targets , not main)
+[2025-09-24 10:25:25] ✅ PR #6717 completed successfully
+[2025-09-24 10:25:27] 📊 Progress: 3/100 PRs processed
+[2025-09-24 10:25:27] 🔍 Processing PR #8385...
+[2025-09-24 10:25:27] 📋 PR #8385: 
+[2025-09-24 10:25:27] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:27] ⏭️  Skipping PR #8385 (targets , not main)
+[2025-09-24 10:25:27] ✅ PR #8385 completed successfully
+[2025-09-24 10:25:27] 📊 Progress: 12/100 PRs processed
+[2025-09-24 10:25:27] 🔍 Processing PR #6712...
+[2025-09-24 10:25:28] 📋 PR #6712: 
+[2025-09-24 10:25:28] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:28] ⏭️  Skipping PR #6712 (targets , not main)
+[2025-09-24 10:25:28] ✅ PR #6712 completed successfully
+[2025-09-24 10:25:29] 📊 Progress: 4/100 PRs processed
+[2025-09-24 10:25:29] 🔍 Processing PR #8382...
+[2025-09-24 10:25:29] 📋 PR #8382: 
+[2025-09-24 10:25:29] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:29] ⏭️  Skipping PR #8382 (targets , not main)
+[2025-09-24 10:25:29] ✅ PR #8382 completed successfully
+[2025-09-24 10:25:30] 📊 Progress: 13/100 PRs processed
+[2025-09-24 10:25:30] 🔍 Processing PR #6707...
+[2025-09-24 10:25:31] 📊 Progress: 5/100 PRs processed
+[2025-09-24 10:25:31] 🔍 Processing PR #8376...
+[2025-09-24 10:25:31] 📋 PR #8376: 
+[2025-09-24 10:25:31] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:31] ⏭️  Skipping PR #8376 (targets , not main)
+[2025-09-24 10:25:31] ✅ PR #8376 completed successfully
+[2025-09-24 10:25:32] 📋 PR #6707: 
+[2025-09-24 10:25:32] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:32] ⏭️  Skipping PR #6707 (targets , not main)
+[2025-09-24 10:25:32] ✅ PR #6707 completed successfully
+[2025-09-24 10:25:33] 📊 Progress: 6/100 PRs processed
+[2025-09-24 10:25:33] 🔍 Processing PR #6762...
+[2025-09-24 10:25:34] 📊 Progress: 14/100 PRs processed
+[2025-09-24 10:25:34] 🔍 Processing PR #6706...
+[2025-09-24 10:25:35] 📋 PR #6706: 
+[2025-09-24 10:25:35] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:35] ⏭️  Skipping PR #6706 (targets , not main)
+[2025-09-24 10:25:35] ✅ PR #6706 completed successfully
+[2025-09-24 10:25:36] 📋 PR #6762: 
+[2025-09-24 10:25:36] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:36] ⏭️  Skipping PR #6762 (targets , not main)
+[2025-09-24 10:25:36] ✅ PR #6762 completed successfully
+[2025-09-24 10:25:37] 📊 Progress: 15/100 PRs processed
+[2025-09-24 10:25:37] 🔍 Processing PR #6703...
+[2025-09-24 10:25:37] 📋 PR #6703: 
+[2025-09-24 10:25:37] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:37] ⏭️  Skipping PR #6703 (targets , not main)
+[2025-09-24 10:25:37] ✅ PR #6703 completed successfully
+[2025-09-24 10:25:38] 📊 Progress: 7/100 PRs processed
+[2025-09-24 10:25:38] 🔍 Processing PR #6757...
+[2025-09-24 10:25:38] 📋 PR #6757: 
+[2025-09-24 10:25:38] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:38] ⏭️  Skipping PR #6757 (targets , not main)
+[2025-09-24 10:25:38] ✅ PR #6757 completed successfully
+[2025-09-24 10:25:39] 📊 Progress: 16/100 PRs processed
+[2025-09-24 10:25:39] 🔍 Processing PR #6698...
+[2025-09-24 10:25:39] 📋 PR #6698: 
+[2025-09-24 10:25:39] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:39] ⏭️  Skipping PR #6698 (targets , not main)
+[2025-09-24 10:25:39] ✅ PR #6698 completed successfully
+[2025-09-24 10:25:40] 📊 Progress: 8/100 PRs processed
+[2025-09-24 10:25:40] 🔍 Processing PR #6740...
+[2025-09-24 10:25:41] 📋 PR #6740: 
+[2025-09-24 10:25:41] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:41] ⏭️  Skipping PR #6740 (targets , not main)
+[2025-09-24 10:25:41] ✅ PR #6740 completed successfully
+[2025-09-24 10:25:41] 📊 Progress: 17/100 PRs processed
+[2025-09-24 10:25:41] 🔍 Processing PR #6697...
+[2025-09-24 10:25:42] 📋 PR #6697: 
+[2025-09-24 10:25:42] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:42] ⏭️  Skipping PR #6697 (targets , not main)
+[2025-09-24 10:25:42] ✅ PR #6697 completed successfully
+[2025-09-24 10:25:43] 📊 Progress: 9/100 PRs processed
+[2025-09-24 10:25:43] 🔍 Processing PR #6727...
+[2025-09-24 10:25:43] 📋 PR #6727: 
+[2025-09-24 10:25:43] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:43] ⏭️  Skipping PR #6727 (targets , not main)
+[2025-09-24 10:25:43] ✅ PR #6727 completed successfully
+[2025-09-24 10:25:44] 📊 Progress: 18/100 PRs processed
+[2025-09-24 10:25:44] 🔍 Processing PR #6694...
+[2025-09-24 10:25:44] 📋 PR #6694: 
+[2025-09-24 10:25:44] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:44] ⏭️  Skipping PR #6694 (targets , not main)
+[2025-09-24 10:25:44] ✅ PR #6694 completed successfully
+[2025-09-24 10:25:45] 📊 Progress: 10/100 PRs processed
+[2025-09-24 10:25:45] 🔍 Processing PR #6726...
+[2025-09-24 10:25:46] 📊 Progress: 19/100 PRs processed
+[2025-09-24 10:25:46] 🔍 Processing PR #6691...
+[2025-09-24 10:25:47] 📋 PR #6691: 
+[2025-09-24 10:25:47] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:47] ⏭️  Skipping PR #6691 (targets , not main)
+[2025-09-24 10:25:47] ✅ PR #6691 completed successfully
+[2025-09-24 10:25:48] 📋 PR #6726: 
+[2025-09-24 10:25:48] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:48] ⏭️  Skipping PR #6726 (targets , not main)
+[2025-09-24 10:25:48] ✅ PR #6726 completed successfully
+[2025-09-24 10:25:49] 📊 Progress: 20/100 PRs processed
+[2025-09-24 10:25:49] 🔍 Processing PR #6686...
+[2025-09-24 10:25:49] 📋 PR #6686: 
+[2025-09-24 10:25:49] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:49] ⏭️  Skipping PR #6686 (targets , not main)
+[2025-09-24 10:25:49] ✅ PR #6686 completed successfully
+[2025-09-24 10:25:50] 💾 Committing progress...
+[main f6ded6cde5fa] Progress: processed 10/100 PRs (merged: 0, failed: 0)
+ 1 file changed, 117 insertions(+)
+[2025-09-24 10:25:51] 💾 Committing progress...
+[main cee277b7e591] Progress: processed 20/100 PRs (merged: 0, failed: 0)
+ 1 file changed, 3 insertions(+)
+[2025-09-24 10:25:52] 📊 Progress: 11/100 PRs processed
+[2025-09-24 10:25:52] 🔍 Processing PR #6717...
+[2025-09-24 10:25:52] 📋 PR #6717: 
+[2025-09-24 10:25:52] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:52] ⏭️  Skipping PR #6717 (targets , not main)
+[2025-09-24 10:25:52] ✅ PR #6717 completed successfully
+[2025-09-24 10:25:53] 📊 Progress: 21/100 PRs processed
+[2025-09-24 10:25:53] 🔍 Processing PR #6684...
+[2025-09-24 10:25:54] 📋 PR #6684: 
+[2025-09-24 10:25:54] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:54] ⏭️  Skipping PR #6684 (targets , not main)
+[2025-09-24 10:25:54] ✅ PR #6684 completed successfully
+[2025-09-24 10:25:54] 📊 Progress: 12/100 PRs processed
+[2025-09-24 10:25:54] 🔍 Processing PR #6712...
+[2025-09-24 10:25:55] 📋 PR #6712: 
+[2025-09-24 10:25:55] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:55] ⏭️  Skipping PR #6712 (targets , not main)
+[2025-09-24 10:25:55] ✅ PR #6712 completed successfully
+[2025-09-24 10:25:56] 📊 Progress: 22/100 PRs processed
+[2025-09-24 10:25:56] 🔍 Processing PR #6680...
+[2025-09-24 10:25:56] 📋 PR #6680: 
+[2025-09-24 10:25:56] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:56] ⏭️  Skipping PR #6680 (targets , not main)
+[2025-09-24 10:25:56] ✅ PR #6680 completed successfully
+[2025-09-24 10:25:57] 📊 Progress: 13/100 PRs processed
+[2025-09-24 10:25:57] 🔍 Processing PR #6707...
+[2025-09-24 10:25:58] 📊 Progress: 23/100 PRs processed
+[2025-09-24 10:25:58] 🔍 Processing PR #6673...
+[2025-09-24 10:25:58] 📋 PR #6673: 
+[2025-09-24 10:25:58] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:58] ⏭️  Skipping PR #6673 (targets , not main)
+[2025-09-24 10:25:58] ✅ PR #6673 completed successfully
+[2025-09-24 10:25:59] 📋 PR #6707: 
+[2025-09-24 10:25:59] 🌿 Head:  -> Base: 
+[2025-09-24 10:25:59] ⏭️  Skipping PR #6707 (targets , not main)
+[2025-09-24 10:25:59] ✅ PR #6707 completed successfully
+[2025-09-24 10:26:00] 📊 Progress: 24/100 PRs processed
+[2025-09-24 10:26:00] 🔍 Processing PR #6672...
+[2025-09-24 10:26:01] 📋 PR #6672: 
+[2025-09-24 10:26:01] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:01] ⏭️  Skipping PR #6672 (targets , not main)
+[2025-09-24 10:26:01] ✅ PR #6672 completed successfully
+[2025-09-24 10:26:01] 📊 Progress: 14/100 PRs processed
+[2025-09-24 10:26:01] 🔍 Processing PR #6706...
+[2025-09-24 10:26:02] 📋 PR #6706: 
+[2025-09-24 10:26:02] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:02] ⏭️  Skipping PR #6706 (targets , not main)
+[2025-09-24 10:26:02] ✅ PR #6706 completed successfully
+[2025-09-24 10:26:03] 📊 Progress: 25/100 PRs processed
+[2025-09-24 10:26:03] 🔍 Processing PR #6671...
+[2025-09-24 10:26:03] 📋 PR #6671: 
+[2025-09-24 10:26:03] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:03] ⏭️  Skipping PR #6671 (targets , not main)
+[2025-09-24 10:26:03] ✅ PR #6671 completed successfully
+[2025-09-24 10:26:04] 📊 Progress: 15/100 PRs processed
+[2025-09-24 10:26:04] 🔍 Processing PR #6703...
+[2025-09-24 10:26:04] 📋 PR #6703: 
+[2025-09-24 10:26:04] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:04] ⏭️  Skipping PR #6703 (targets , not main)
+[2025-09-24 10:26:04] ✅ PR #6703 completed successfully
+[2025-09-24 10:26:05] 📊 Progress: 26/100 PRs processed
+[2025-09-24 10:26:05] 🔍 Processing PR #6668...
+[2025-09-24 10:26:06] 📋 PR #6668: 
+[2025-09-24 10:26:06] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:06] ⏭️  Skipping PR #6668 (targets , not main)
+[2025-09-24 10:26:06] ✅ PR #6668 completed successfully
+[2025-09-24 10:26:06] 📊 Progress: 16/100 PRs processed
+[2025-09-24 10:26:06] 🔍 Processing PR #6698...
+[2025-09-24 10:26:06] 📋 PR #6698: 
+[2025-09-24 10:26:06] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:06] ⏭️  Skipping PR #6698 (targets , not main)
+[2025-09-24 10:26:06] ✅ PR #6698 completed successfully
+[2025-09-24 10:26:08] 📊 Progress: 27/100 PRs processed
+[2025-09-24 10:26:08] 🔍 Processing PR #6666...
+[2025-09-24 10:26:08] 📋 PR #6666: 
+[2025-09-24 10:26:08] 🌿 Head:  -> Base: 
+[2025-09-24 10:26:08] ⏭️  Skipping PR #6666 (targets , not main)
+[2025-09-24 10:26:08] ✅ PR #6666 completed successfully
+[2025-09-24 10:26:08] 🏁 Process completed!
+[2025-09-24 10:26:08] 📊 Final Statistics:
+[2025-09-24 10:26:08]    Total PRs: 100
+[2025-09-24 10:26:08]    Processed: 16
+[2025-09-24 10:26:08]    Merged: 0
+[2025-09-24 10:26:08]    Failed: 0
+[2025-09-24 10:26:08]    Conflicts Resolved: 0
