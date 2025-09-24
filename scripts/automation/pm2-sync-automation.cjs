@@ -1,297 +1,693 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
 /**
- * PM2 Sync Automation;
- * Manages PM2 processes and ensures synchronization;
+ * PM2 Sync Automation System
+ * 
+ * This system provides:
+ * - Real-time file watching and automatic Git synchronization
+ * - Intelligent build triggering based on file changes
+ * - Automated testing and security scanning
+ * - Conflict resolution and error recovery
+ * - Performance monitoring and optimization
  */
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
+const chokidar = require('chokidar');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-class PM2SyncAutomation {}
-    constructor() {}
-        this.projectRoot = process.cwd();
+// Configuration
+const CONFIG = {
+  // File watching patterns
+  WATCH_PATTERNS: [
+    'src/**/*',
+    'public/**/*',
+    '*.{js,jsx,ts,tsx,json,md,yml,yaml}',
+    '!node_modules/**',
+    '!.git/**',
+    '!dist/**',
+    '!build/**',
+    '!logs/**'
+  ],
+  
+  // Git configuration
+  GIT_CONFIG: {
+    BRANCH: 'main',
+    REMOTE: 'origin',
+    COMMIT_MESSAGE: 'Auto-commit: {description}',
+    SYNC_INTERVAL: 30000, // 30 seconds
+    MAX_COMMIT_SIZE: 50 // Maximum files per commit
+  },
+  
+  // Build configuration
+  BUILD_CONFIG: {
+    TRIGGER_PATTERNS: [
+      'src/**/*.{js,jsx,ts,tsx}',
+      'package.json',
+      'vite.config.*',
+      'tsconfig.json'
+    ],
+    BUILD_COMMAND: 'npm run build',
+    TEST_COMMAND: 'npm test',
+    SECURITY_COMMAND: 'npm audit'
+  },
+  
+  // Performance configuration
+  PERFORMANCE: {
+    DEBOUNCE_DELAY: 2000, // 2 seconds
+    MAX_FILE_SIZE: 1024 * 1024, // 1MB
+    MEMORY_LIMIT: '1G'
+  }
+};
 
-        if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
+// Global state
+let pendingChanges = new Set();
+let isProcessing = false;
+let lastSyncTime = Date.now();
+let syncCount = 0;
+let errorCount = 0;
+let lastBuildTime = 0;
+let lastTestTime = 0;
+let lastSecurityScan = 0;
+
+// Utility functions
+const log = (level, message, data = {}) => {
+  const timestamp = new Date().toISOString();
+  const logEntry = {
+    timestamp,
+    level,
+    message,
+    data,
+    process: 'pm2-sync-automation'
+  };
+  
+  console.log(JSON.stringify(logEntry));
+  
+  // Also log to file for PM2
+  if (level === 'ERROR') {
+    console.error(JSON.stringify(logEntry));
+  }
+};
+
+const executeCommand = (command, options = {}) => {
+  try {
+    const result = execSync(command, {
+      stdio: 'pipe',
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      ...options
+    });
+    return { success: true, output: result };
+  } catch (error) {
+    return { 
+      success: false, 
+      error: error.message, 
+      code: error.status,
+      command 
     };
-    log(message) {}
-        const timestamp = new Date().toISOString() {}
-    ) {}"
-        const timestamp = new Date().toISOString(})
-});
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
-        fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
+  }
+};
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        console.log(message)};
-    checkPM2Status() {}
-        this.log('Checking PM2 status...');
-        try {}
-            const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot,
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
-            const status = JSON.parse(statusResult;);
-            this.log(`Found ${status.length} PM2 processes`);
-=======
-        console.log(message)};
-    checkPM2Status() {}"
+const shouldTriggerBuild = (filePath) => {
+  return CONFIG.BUILD_CONFIG.TRIGGER_PATTERNS.some(pattern => {
+    const regex = new RegExp(pattern.replace(/\*\*/g, '.*').replace(/\*/g, '[^/]*'));
+    return regex.test(filePath);
+  });
+};
 
-            };);
-            const status = JSON.parse(statusResult;);`;
-            this.log(`Found ${status.length} PM2 processes`);
-<<<<<<< HEAD
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            return {;}
+const shouldRunTests = (filePath) => {
+  return filePath.includes('src/') && 
+         (filePath.endsWith('.ts') || filePath.endsWith('.tsx') || filePath.endsWith('.js') || filePath.endsWith('.jsx'));
+};
 
-                "error": error.message;"
-            }};
-<<<<<<< HEAD
-    };
-    syncPM2Processes() {}
-        this.log('Syncing PM2 processes...');
-<<<<<<< HEAD
-        try {}
-            // Stop all processes;
-            execSync('pm2 stop all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            // Delete all processes;
-            execSync('pm2 delete all', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-            // Start processes from ecosystem file;
-            execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-=======
+const getFileDescription = (filePath) => {
+  const ext = path.extname(filePath);
+  const dir = path.dirname(filePath).split('/').pop();
+  
+  if (ext === '.tsx' || ext === '.jsx') return `React component in ${dir}`;
+  if (ext === '.ts' || ext === '.js') return `JavaScript/TypeScript file in ${dir}`;
+  if (ext === '.json') return 'Configuration file';
+  if (ext === '.md') return 'Documentation';
+  if (ext === '.yml' || ext === '.yaml') return 'Configuration file';
+  
+  return `File in ${dir}`;
+};
+
+// File watching and change detection
+const setupFileWatcher = () => {
+  log('INFO', 'Setting up file watcher...');
+  
+  const watcher = chokidar.watch(CONFIG.WATCH_PATTERNS, {
+    ignored: /(^|[\/\\])\../,
+    persistent: true,
+    ignoreInitial: true,
+    awaitWriteFinish: {
+      stabilityThreshold: 1000,
+      pollInterval: 100
+    }
+  });
+  
+  watcher
+    .on('add', (filePath) => handleFileChange('add', filePath))
+    .on('change', (filePath) => handleFileChange('change', filePath))
+    .on('unlink', (filePath) => handleFileChange('delete', filePath))
+    .on('error', (error) => log('ERROR', 'File watcher error', { error: error.message }))
+    .on('ready', () => log('INFO', 'File watcher ready'));
+  
+  return watcher;
+};
+
+const handleFileChange = (event, filePath) => {
+  try {
+    // Skip if file is too large
+    if (fs.existsSync(filePath)) {
+      const stats = fs.statSync(filePath);
+      if (stats.size > CONFIG.PERFORMANCE.MAX_FILE_SIZE) {
+        log('WARN', 'File too large, skipping', { filePath, size: stats.size });
+        return;
+      }
+    }
+    
+    // Add to pending changes
+    pendingChanges.add({
+      event,
+      filePath,
+      timestamp: Date.now(),
+      description: getFileDescription(filePath)
+    });
+    
+    log('INFO', 'File change detected', { event, filePath });
+    
+    // Process changes after debounce delay
+    setTimeout(() => processPendingChanges(), CONFIG.PERFORMANCE.DEBOUNCE_DELAY);
+    
+  } catch (error) {
+    log('ERROR', 'Error handling file change', { event, filePath, error: error.message });
+  }
+};
+
+const processPendingChanges = async () => {
+  if (isProcessing || pendingChanges.size === 0) return;
+  
+  isProcessing = true;
+  log('INFO', 'Processing pending changes', { count: pendingChanges.size });
+  
+  try {
+    const changes = Array.from(pendingChanges);
+    pendingChanges.clear();
+    
+    // Group changes by type
+    const adds = changes.filter(c => c.event === 'add');
+    const modifications = changes.filter(c => c.event === 'change');
+    const deletions = changes.filter(c => c.event === 'delete');
+    
+    // Process in batches
+    if (adds.length > 0) await processFileChanges('add', adds);
+    if (modifications.length > 0) await processFileChanges('modify', modifications);
+    if (deletions.length > 0) await processFileChanges('delete', deletions);
+    
+    // Trigger sync if needed
+    if (changes.length > 0) {
+      await triggerSync(changes);
+    }
+    
+  } catch (error) {
+    log('ERROR', 'Error processing changes', { error: error.message });
+    errorCount++;
+  } finally {
+    isProcessing = false;
+  }
+};
+
+const processFileChanges = async (type, changes) => {
+  log('INFO', `Processing ${type} changes`, { count: changes.length });
+  
+  try {
+    switch (type) {
+      case 'add':
+        await gitAdd(changes.map(c => c.filePath));
+        break;
+      case 'modify':
+        await gitAdd(changes.map(c => c.filePath));
+        break;
+      case 'delete':
+        await gitRemove(changes.map(c => c.filePath));
+        break;
+    }
+  } catch (error) {
+    log('ERROR', `Error processing ${type} changes`, { error: error.message });
+  }
+};
+
+// Git operations
+const gitAdd = async (filePaths) => {
+  if (filePaths.length === 0) return;
+  
+  try {
+    const result = executeCommand(`git add ${filePaths.join(' ')}`);
+    if (result.success) {
+      log('INFO', 'Files added to git', { count: filePaths.length });
+    } else {
+      log('ERROR', 'Failed to add files to git', { error: result.error });
+    }
+  } catch (error) {
+    log('ERROR', 'Error adding files to git', { error: error.message });
+  }
+};
+
+const gitRemove = async (filePaths) => {
+  if (filePaths.length === 0) return;
+  
+  try {
+    const result = executeCommand(`git rm ${filePaths.join(' ')}`);
+    if (result.success) {
+      log('INFO', 'Files removed from git', { count: filePaths.length });
+    } else {
+      log('ERROR', 'Failed to remove files from git', { error: result.error });
+    }
+  } catch (error) {
+    log('ERROR', 'Error removing files from git', { error: error.message });
+  }
+};
+
+const triggerSync = async (changes) => {
+  try {
+    // Check if we should commit
+    const status = executeCommand('git status --porcelain');
+    if (!status.success || !status.output.trim()) {
+      log('INFO', 'No changes to commit');
+      return;
+    }
+    
+    // Create commit message
+    const descriptions = changes.map(c => c.description).slice(0, 5);
+    const commitMessage = CONFIG.GIT_CONFIG.COMMIT_MESSAGE.replace(
+      '{description}', 
+      descriptions.join(', ')
+    );
+    
+    // Commit changes
+    const commitResult = executeCommand(`git commit -m "${commitMessage}"`);
+    if (commitResult.success) {
+      log('INFO', 'Changes committed', { message: commitMessage });
+      
+      // Push to remote
+      const pushResult = executeCommand(`git push ${CONFIG.GIT_CONFIG.REMOTE} ${CONFIG.GIT_CONFIG.BRANCH}`);
+      if (pushResult.success) {
+        log('INFO', 'Changes pushed to remote');
+        syncCount++;
+        lastSyncTime = Date.now();
         
-        try {}
-            // Stop all processes;
-            execSync('pm2 stop all', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-=======
-    syncPM2Processes() {}"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            }
-            // Delete all processes;
-<<<<<<< HEAD
-            execSync('pm2 delete all', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
-            // Start processes from ecosystem file;
-            execSync('pm2 start ecosystem.config.cjs', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            this.log('PM2 processes synced successfully');
-            return { "status": 'success' }} catch (error) {}
-            this.log(`PM2 sync "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    checkProcessHealth() {}
-        this.log('Checking process health...');
-<<<<<<< HEAD
-        try {}
-            const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot,
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
-            const processes = JSON.parse(statusResult;);
-            const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
-            const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
-            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
-=======
+        // Trigger build if needed
+        if (changes.some(c => shouldTriggerBuild(c.filePath))) {
+          await triggerBuild();
+        }
         
-        try {}
-            const statusResult = execSync('pm2 status --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
-            
-            const processes = JSON.parse(statusResult;);
-            const healthyProcesses = processes.filter(p => p.pm2_env?.status === 'online';);
-            const unhealthyProcesses = processes.filter(p => p.pm2_env?.status !== 'online';);
-            
-            this.log(`Healthy "processes": ${healthyProcesses.length}/${processes.length}`);
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            return {;}
-                "status": 'success',
-                "total": processes.length,
-                "healthy": healthyProcesses.length,
-                "unhealthy": unhealthyProcesses.length,
-                "processes": processes;
-            }} catch (error) {}
-            this.log(`Process health check "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    restartUnhealthyProcesses() {}
-        this.log('Restarting unhealthy processes...');
-<<<<<<< HEAD
-        try {}
-            const healthCheck = this.checkProcessHealth(;);
-            if ( {})
-                execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot,
-=======
+        // Run tests if needed
+        if (changes.some(c => shouldRunTests(c.filePath))) {
+          await runTests();
+        }
         
-        try {}
-            const healthCheck = this.checkProcessHealth(;);
-            
-            if ( {})
-                execSync('pm2 restart all', { })
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                    "stdio": 'pipe'
-                })) {}
-     {}
-                execSync('pm2 restart all', { })
-<<<<<<< HEAD
-                    "cwd": this.projectRoot,
-=======
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                    "stdio": 'pipe'
-                })};
-                this.log('Unhealthy processes restarted');
-                return { "status": 'success', "restarted": healthCheck.unhealthy }} else {}
-                this.log('All processes are healthy');
-                return { "status": 'success', "restarted": 0 }};
-        } catch (error) {}
-            this.log(`Process restart "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
-    generateSyncReport() {}
-        this.log('Generating PM2 sync report...');
-<<<<<<< HEAD
-=======
+      } else {
+        log('ERROR', 'Failed to push changes', { error: pushResult.error });
         
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "pm2": {}
-                status: this.checkPM2Status(),
-                "health": this.checkProcessHealth(),
-                "sync": this.syncPM2Processes(),
-                "restart": this.restartUnhealthyProcesses();
-            },
-            "recommendations": this.generateSyncRecommendations();
-       };
-<<<<<<< HEAD
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`PM2 sync report saved to ${this.reportFile}`);
-=======
+        // Try to resolve conflicts
+        await resolveConflicts();
+      }
+    } else {
+      log('ERROR', 'Failed to commit changes', { error: commitResult.error });
+    }
+    
+  } catch (error) {
+    log('ERROR', 'Error during sync', { error: error.message });
+  }
+};
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`PM2 sync report saved to ${this.reportFile}`);
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        return report};
-    generateSyncRecommendations() {}
-        return [;]
-            'Set up PM2 monitoring dashboard',
-            'Configure automatic restarts for failed processes',
-            'Implement log rotation for PM2 logs',
-            'Set up alerts for process failures',
-            'Use PM2 ecosystem files for configuration management',
-            'Implement graceful shutdowns for processes',
-            'Monitor memory usage and restart if needed'
-        ]};
-    async run() {}
-        this.log('PM2 Sync Automation started');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        try {}
-            const report = this.generateSyncReport(;);
-            this.log('PM2 Sync Automation completed successfully');
-            return report} catch (error) {}
-            this.log(`PM2 Sync Automation "failed": ${error.message}`);
-=======
+const resolveConflicts = async () => {
+  log('INFO', 'Attempting to resolve conflicts...');
+  
+  try {
+    // Pull latest changes
+    const pullResult = executeCommand(`git pull ${CONFIG.GIT_CONFIG.REMOTE} ${CONFIG.GIT_CONFIG.BRANCH}`);
+    if (pullResult.success) {
+      log('INFO', 'Conflicts resolved successfully');
+    } else {
+      log('ERROR', 'Failed to resolve conflicts', { error: pullResult.error });
+      
+      // Try to reset and reapply
+      await resetAndReapply();
+    }
+  } catch (error) {
+    log('ERROR', 'Error resolving conflicts', { error: error.message });
+  }
+};
 
-            "pm2": {}"
-                status: this.checkPM2Status(),"
-                "health": this.checkProcessHealth(),
-                "sync": this.syncPM2Processes(),
-                "restart": this.restartUnhealthyProcesses();"
-            },"
-            "recommendations": this.generateSyncRecommendations();"
+const resetAndReapply = async () => {
+  log('INFO', 'Resetting and reapplying changes...');
+  
+  try {
+    // Stash current changes
+    const stashResult = executeCommand('git stash');
+    if (!stashResult.success) {
+      log('ERROR', 'Failed to stash changes');
+      return;
+    }
+    
+    // Reset to remote
+    const resetResult = executeCommand(`git reset --hard ${CONFIG.GIT_CONFIG.REMOTE}/${CONFIG.GIT_CONFIG.BRANCH}`);
+    if (!resetResult.success) {
+      log('ERROR', 'Failed to reset to remote');
+      return;
+    }
+    
+    // Reapply stashed changes
+    const popResult = executeCommand('git stash pop');
+    if (popResult.success) {
+      log('INFO', 'Changes reapplied successfully');
+    } else {
+      log('ERROR', 'Failed to reapply changes');
+    }
+    
+  } catch (error) {
+    log('ERROR', 'Error during reset and reapply', { error: error.message });
+  }
+};
 
+// Build and test operations
+const triggerBuild = async () => {
+  const now = Date.now();
+  if (now - lastBuildTime < 60000) { // Minimum 1 minute between builds
+    log('INFO', 'Build skipped - too soon since last build');
+    return;
+  }
+  
+  log('INFO', 'Starting build process...');
+  lastBuildTime = now;
+  
+  try {
+    const buildResult = executeCommand(CONFIG.BUILD_CONFIG.BUILD_COMMAND);
+    if (buildResult.success) {
+      log('INFO', 'Build completed successfully');
+    } else {
+      log('ERROR', 'Build failed', { error: buildResult.error });
+      await fixBuildIssues();
+    }
+  } catch (error) {
+    log('ERROR', 'Error during build', { error: error.message });
+  }
+};
 
-        return report};
-    generateSyncRecommendations() {}
-        return [;]"
+const runTests = async () => {
+  const now = Date.now();
+  if (now - lastTestTime < 300000) { // Minimum 5 minutes between test runs
+    log('INFO', 'Tests skipped - too soon since last test run');
+    return;
+  }
+  
+  log('INFO', 'Running tests...');
+  lastTestTime = now;
+  
+  try {
+    const testResult = executeCommand(CONFIG.BUILD_CONFIG.TEST_COMMAND);
+    if (testResult.success) {
+      log('INFO', 'Tests completed successfully');
+    } else {
+      log('ERROR', 'Tests failed', { error: testResult.error });
+      await fixTestIssues();
+    }
+  } catch (error) {
+    log('ERROR', 'Error during tests', { error: error.message });
+  }
+};
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            throw error};
-// Run the automation if this script is executed directly;
-    const automation = new PM2SyncAutomation) {}
-    const automation = new PM2SyncAutomation}(;);
-    automation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+const runSecurityScan = async () => {
+  const now = Date.now();
+  if (now - lastSecurityScan < 1800000) { // Minimum 30 minutes between scans
+    return;
+  }
+  
+  log('INFO', 'Running security scan...');
+  lastSecurityScan = now;
+  
+  try {
+    const securityResult = executeCommand(CONFIG.BUILD_CONFIG.SECURITY_COMMAND);
+    if (securityResult.success) {
+      log('INFO', 'Security scan completed');
+      
+      // Check for vulnerabilities
+      if (securityResult.output.includes('vulnerabilities found')) {
+        log('WARN', 'Security vulnerabilities detected');
+        await fixSecurityIssues();
+      }
+    } else {
+      log('ERROR', 'Security scan failed', { error: securityResult.error });
+    }
+  } catch (error) {
+    log('ERROR', 'Error during security scan', { error: error.message });
+  }
+};
 
-=======
-module.exports = PM2SyncAutomation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = PM2SyncAutomation;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = PM2SyncAutomation;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+// Issue resolution
+const fixBuildIssues = async () => {
+  log('INFO', 'Attempting to fix build issues...');
+  
+  try {
+    // Reinstall dependencies
+    log('INFO', 'Reinstalling dependencies...');
+    const installResult = executeCommand('npm install');
+    if (installResult.success) {
+      log('INFO', 'Dependencies reinstalled');
+      
+      // Try build again
+      const rebuildResult = executeCommand(CONFIG.BUILD_CONFIG.BUILD_COMMAND);
+      if (rebuildResult.success) {
+        log('INFO', 'Build fixed successfully');
+      } else {
+        log('ERROR', 'Build still failing after dependency reinstall');
+      }
+    } else {
+      log('ERROR', 'Failed to reinstall dependencies');
+    }
+  } catch (error) {
+    log('ERROR', 'Error fixing build issues', { error: error.message });
+  }
+};
 
+const fixTestIssues = async () => {
+  log('INFO', 'Attempting to fix test issues...');
+  
+  try {
+    // Clear test cache
+    const clearResult = executeCommand('npm run test:clear || npm run test -- --clearCache');
+    if (clearResult.success) {
+      log('INFO', 'Test cache cleared');
+      
+      // Try tests again
+      const retestResult = executeCommand(CONFIG.BUILD_CONFIG.TEST_COMMAND);
+      if (retestResult.success) {
+        log('INFO', 'Tests fixed successfully');
+      } else {
+        log('ERROR', 'Tests still failing after cache clear');
+      }
+    } else {
+      log('ERROR', 'Failed to clear test cache');
+    }
+  } catch (error) {
+    log('ERROR', 'Error fixing test issues', { error: error.message });
+  }
+};
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+const fixSecurityIssues = async () => {
+  log('INFO', 'Attempting to fix security issues...');
+  
+  try {
+    // Run security fix
+    const fixResult = executeCommand('npm audit fix');
+    if (fixResult.success) {
+      log('INFO', 'Security issues fixed automatically');
+    } else {
+      log('WARN', 'Some security issues require manual attention');
+      
+      // Try force fix
+      const forceFixResult = executeCommand('npm audit fix --force');
+      if (forceFixResult.success) {
+        log('INFO', 'Security issues fixed with force flag');
+      } else {
+        log('ERROR', 'Failed to fix security issues');
+      }
+    }
+  } catch (error) {
+    log('ERROR', 'Error fixing security issues', { error: error.message });
+  }
+};
+
+// Periodic operations
+const startAutomationLoops = () => {
+  // Sync loop
+  setInterval(async () => {
+    try {
+      if (pendingChanges.size > 0) {
+        await processPendingChanges();
+      }
+    } catch (error) {
+      log('ERROR', 'Error in sync loop', { error: error.message });
+    }
+  }, CONFIG.GIT_CONFIG.SYNC_INTERVAL);
+  
+  // Build loop
+  setInterval(async () => {
+    try {
+      if (Date.now() - lastBuildTime > 300000) { // 5 minutes
+        await triggerBuild();
+      }
+    } catch (error) {
+      log('ERROR', 'Error in build loop', { error: error.message });
+    }
+  }, 300000); // 5 minutes
+  
+  // Test loop
+  setInterval(async () => {
+    try {
+      if (Date.now() - lastTestTime > 600000) { // 10 minutes
+        await runTests();
+      }
+    } catch (error) {
+      log('ERROR', 'Error in test loop', { error: error.message });
+    }
+  }, 600000); // 10 minutes
+  
+  // Security scan loop
+  setInterval(async () => {
+    try {
+      await runSecurityScan();
+    } catch (error) {
+      log('ERROR', 'Error in security scan loop', { error: error.message });
+    }
+  }, 1800000); // 30 minutes
+};
+
+// Health monitoring
+const getHealthStatus = () => {
+  return {
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    metrics: {
+      syncCount,
+      errorCount,
+      lastSyncTime: new Date(lastSyncTime).toISOString(),
+      pendingChanges: pendingChanges.size,
+      isProcessing,
+      uptime: process.uptime()
+    }
+  };
+};
+
+// Main execution
+const main = async () => {
+  try {
+    log('INFO', 'Initializing PM2 Sync Automation System...');
+    
+    // Setup file watcher
+    const watcher = setupFileWatcher();
+    
+    // Start automation loops
+    startAutomationLoops();
+    
+    // Perform initial sync
+    log('INFO', 'Performing full repository sync...');
+    await performFullSync();
+    
+    log('INFO', 'PM2 Sync Automation System initialized successfully');
+    
+    // Health check endpoint
+    if (process.env.HEALTH_CHECK_PORT) {
+      const http = require('http');
+      const server = http.createServer((req, res) => {
+        if (req.url === '/health') {
+          res.writeHead(200, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify(getHealthStatus()));
+        } else {
+          res.writeHead(404);
+          res.end('Not Found');
+        }
+      });
+      
+      server.listen(process.env.HEALTH_CHECK_PORT, () => {
+        log('INFO', `Health check server listening on port ${process.env.HEALTH_CHECK_PORT}`);
+      });
+    }
+    
+    // Graceful shutdown
+    process.on('SIGTERM', () => {
+      log('INFO', 'Received SIGTERM, shutting down gracefully...');
+      watcher.close();
+      process.exit(0);
+    });
+    
+    process.on('SIGINT', () => {
+      log('INFO', 'Received SIGINT, shutting down gracefully...');
+      watcher.close();
+      process.exit(0);
+    });
+    
+  } catch (error) {
+    log('ERROR', 'Failed to initialize system', { error: error.message });
+    process.exit(1);
+  }
+};
+
+const performFullSync = async () => {
+  try {
+    // Check current status
+    const status = executeCommand('git status --porcelain');
+    if (status.success && status.output.trim()) {
+      log('INFO', 'Stashed local changes for sync');
+      executeCommand('git stash');
+    }
+    
+    // Pull latest changes
+    const pullResult = executeCommand(`git pull ${CONFIG.GIT_CONFIG.REMOTE} ${CONFIG.GIT_CONFIG.BRANCH}`);
+    if (pullResult.success) {
+      log('INFO', 'Full sync completed successfully');
+      
+      // Restore stashed changes if any
+      const stashList = executeCommand('git stash list');
+      if (stashList.success && stashList.output.trim()) {
+        const popResult = executeCommand('git stash pop');
+        if (popResult.success) {
+          log('INFO', 'Stashed changes restored');
+        } else {
+          log('WARN', 'Failed to restore stashed changes, resolving conflicts...');
+          await resolveConflicts();
+        }
+      }
+    } else {
+      log('ERROR', 'Full sync failed', { error: pullResult.error });
+      throw new Error('Full sync failed');
+    }
+    
+    // Start build process
+    log('INFO', 'Starting build process...');
+    await triggerBuild();
+    
+  } catch (error) {
+    log('ERROR', 'Error during full sync', { error: error.message });
+    throw error;
+  }
+};
+
+// Start the system
+if (require.main === module) {
+  main().catch(error => {
+    log('ERROR', 'System startup failed', { error: error.message });
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  main,
+  getHealthStatus,
+  triggerBuild,
+  runTests,
+  runSecurityScan
+};

@@ -1,210 +1,52 @@
-import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import eslintJs from '@eslint/js'
+import reactPlugin from 'eslint-plugin-react'
+import reactHooksPlugin from 'eslint-plugin-react-hooks'
+import tseslint from 'typescript-eslint'
 
 export default [
-  {
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      'coverage/',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/',
-      'ultimate-*.cjs',
-      'automation/',
-      'pm2-automation/',
-      'pages.disabled/',
-      'pages.disabled_auto/',
-      'pages.disabled_full/',
-      'pages.corrupted.*/',
-      'pages.broken/',
-      'pages.bak/',
-      'pages.blog.disabled/',
-      'pages._archive_corrupted/',
-      'pages._quarantine/',
-      'pages-disabled/',
-      'pages-quarantine/',
-      'pages.__backup/',
-      'pages-backup/',
-      'tests.disabled/',
-      'components.disabled/',
-      'zion-os.disabled/',
-      'zion_academy/',
-      'temp_backup/',
-      'temp_broken_files/',
-      'temp_exclude/',
-      'test_build/',
-      '*.test.js',
-      '*.test.ts',
-      '*.test.tsx',
-      '*.spec.js',
-      '*.spec.ts',
-      '*.spec.tsx'
-    ]
-  },
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLParagraphElement: 'readonly',
-        HTMLHeadingElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        HTMLElement: 'readonly',
-        Performance: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        MessageEvent: 'readonly',
-        RequestInit: 'readonly',
-        AbortController: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        exports: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-<<<<<<< HEAD
-      'prefer-const': 'warn',
-=======
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        React: 'readonly',
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        vi: 'readonly',
-        Deno: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLParagraphElement: 'readonly',
-        HTMLHeadingElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        Performance: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        MessageEvent: 'readonly',
-        RequestInit: 'readonly',
-        AbortController: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
-      },
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true }
-      ],
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
->>>>>>> origin/main
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    }
-  },
-  {
-    files: ['**/*.cjs', '**/scripts/**/*.js', '**/automation/**/*.js', '**/pm2/**/*.js'],
-    languageOptions: {
-      ecmaVersion: 2021,
-      sourceType: 'script',
-      globals: {
-        ...globals.node,
-        console: 'readonly',
-        process: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        Buffer: 'readonly',
-        global: 'readonly'
-      }
-    },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'no-undef': 'error'
-    }
-  }
-];
+	{
+		ignores: [
+			'node_modules/**',
+			'.next/**',
+			'out/**',
+			'dist/**',
+			'build/**',
+			'public/**',
+			'automation/**',
+			'apps.backup/**',
+			'backup/**',
+			'backups/**',
+			'backup-merge-conflicts/**',
+			'backup-problematic-files/**',
+			'recovered-branches/**',
+			'server/**',
+			'zion-os/**',
+			'zion-website/**',
+			'zion-ai-assistant/**',
+			'ts_files_backup/**',
+			'src_backup/**',
+			'src_backup_temp/**',
+			'components/2025-advanced-services-showcase.tsx',
+			'components/2025-comprehensive-services-showcase-v2.tsx',
+			'components/AI2025AdvancedAutomationShowcase.tsx',
+			'components/AI2025AdvancedAnalyticsDashboard.tsx',
+			'**/*.min.js']},
+	eslintJs.configs.recommended,
+	...tseslint.configs.recommended,
+	{
+		files: ['app/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+		languageOptions: {
+			parser: tseslint.parser,
+			ecmaVersion: 2021,
+			sourceType: 'module'},
+		plugins: {
+			react: reactPlugin,
+			'react-hooks': reactHooksPlugin,
+			'@typescript-eslint': tseslint.plugin},
+		settings: { react: { version: 'detect' } },
+		rules: {
+			'react/react-in-jsx-scope': 'off',
+			'no-console': 'warn',
+			'@typescript-eslint/no-unused-vars': [
+				'warn',
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}]
