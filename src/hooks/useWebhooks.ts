@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export interface Webhook {
+interface Webhook {
   id: string;
   name: string;
   url: string;
   events: string[];
-  isActive: boolean;
+  active: boolean;
   createdAt: string;
-  lastTriggered?: string;
 }
 
 export const useWebhooks = () => {
@@ -26,21 +25,21 @@ export const useWebhooks = () => {
             id: '1',
             name: 'User Registration',
             url: 'https://api.example.com/webhooks/user-registration',
-            events: ['user.created', 'user.verified'],
-            isActive: true,
-            createdAt: new Date().toISOString(),
-            lastTriggered: new Date().toISOString()
+            events: ['user.created', 'user.updated'],
+            active: true,
+            createdAt: new Date().toISOString()
           },
           {
             id: '2',
             name: 'Payment Processing',
             url: 'https://api.example.com/webhooks/payment',
             events: ['payment.completed', 'payment.failed'],
-            isActive: true,
+            active: true,
             createdAt: new Date().toISOString()
           }
         ];
         setWebhooks(mockWebhooks);
+        setError(null);
       } catch (err) {
         setError('Failed to load webhooks');
       } finally {
@@ -68,9 +67,11 @@ export const useWebhooks = () => {
 
   const updateWebhook = async (id: string, updates: Partial<Webhook>) => {
     try {
-      setWebhooks(prev => prev.map(webhook => 
-        webhook.id === id ? { ...webhook, ...updates } : webhook
-      ));
+      setWebhooks(prev => 
+        prev.map(webhook => 
+          webhook.id === id ? { ...webhook, ...updates } : webhook
+        )
+      );
     } catch (err) {
       setError('Failed to update webhook');
       throw err;
@@ -86,24 +87,12 @@ export const useWebhooks = () => {
     }
   };
 
-  const toggleWebhook = async (id: string) => {
-    try {
-      setWebhooks(prev => prev.map(webhook => 
-        webhook.id === id ? { ...webhook, isActive: !webhook.isActive } : webhook
-      ));
-    } catch (err) {
-      setError('Failed to toggle webhook');
-      throw err;
-    }
-  };
-
   return {
     webhooks,
     loading,
     error,
     createWebhook,
     updateWebhook,
-    deleteWebhook,
-    toggleWebhook
+    deleteWebhook
   };
 };

@@ -1,306 +1,181 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 const EnhancedContentShowcase: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const contentSlides = [
+  const enhancedFeatures = [
     {
-      id: 1,
-      title: "Advanced AI Transformation 2025",
-      description: "Revolutionary AI technologies reshaping industries with autonomous agents and intelligent automation",
-      image: "🤖",
-      color: "from-purple-600 to-pink-600",
-      link: "/pages/AdvancedAITransformation2025",
-      features: ["Autonomous AI Agents", "Edge AI Computing", "Generative AI 2.0"]
+      title: "Interactive 3D Visualizations",
+      description: "Explore technologies in immersive 3D environments with real-time interactions",
+      icon: "🎮",
+      features: ["3D Models", "Interactive Controls", "Real-time Rendering", "VR Support"]
     },
     {
-      id: 2,
-      title: "Quantum Computing Revolution 2025",
-      description: "Experience exponential computational power with quantum technology solving impossible problems",
-      image: "⚡",
-      color: "from-cyan-600 to-blue-600",
-      link: "/pages/QuantumComputingRevolution2025",
-      features: ["Exponential Speed", "Quantum Cryptography", "Molecular Simulation"]
+      title: "AI-Powered Insights",
+      description: "Get personalized recommendations and insights powered by advanced AI algorithms",
+      icon: "🧠",
+      features: ["Personalized Content", "Smart Recommendations", "Predictive Analytics", "Custom Insights"]
     },
     {
-      id: 3,
-      title: "Neural Interface Revolution 2025",
-      description: "Bridge mind and machine with direct neural interfaces enabling seamless brain-computer communication",
-      image: "🧬",
-      color: "from-emerald-600 to-teal-600",
-      link: "/pages/NeuralInterfaceRevolution2025",
-      features: ["Non-Invasive BCI", "Thought Control", "Neural Feedback"]
+      title: "Real-time Collaboration",
+      description: "Collaborate with experts and peers in real-time on technology projects",
+      icon: "👥",
+      features: ["Live Chat", "Screen Sharing", "Document Collaboration", "Video Conferencing"]
     },
     {
-      id: 4,
-      title: "Next-Gen Tech Showcase 2025",
-      description: "Comprehensive showcase of next-generation technologies reshaping our world",
-      image: "🚀",
-      color: "from-orange-600 to-red-600",
-      link: "/pages/NextGenTechShowcase2025",
-      features: ["Autonomous Systems", "5G & Edge Computing", "Extended Reality"]
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics and reporting on technology trends and performance",
+      icon: "📊",
+      features: ["Trend Analysis", "Performance Metrics", "Custom Reports", "Data Visualization"]
     }
   ];
 
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-      }, 5000);
-      return () => clearInterval(interval);
+  const technologies = [
+    {
+      name: "Synthetic Intelligence",
+      progress: 85,
+      status: "In Development",
+      description: "Advanced AI systems with consciousness simulation capabilities"
+    },
+    {
+      name: "Quantum Neural Fusion",
+      progress: 70,
+      status: "Beta Testing",
+      description: "Quantum-enhanced neural networks for exponential processing power"
+    },
+    {
+      name: "Neural Interfaces",
+      progress: 60,
+      status: "Research Phase",
+      description: "Direct brain-computer communication systems"
+    },
+    {
+      name: "Climate AI Solutions",
+      progress: 90,
+      status: "Deployed",
+      description: "AI-powered solutions for climate change mitigation"
     }
-  }, [isPlaying, contentSlides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % contentSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + contentSlides.length) % contentSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-blue-600/5"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white text-sm font-bold mb-6 animate-pulse">
-              🌟 INTERACTIVE SHOWCASE • 2025
-            </div>
-            <h1 className="text-6xl font-bold text-gray-900 mb-6">
-              Enhanced Technology Experience
-            </h1>
-            <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Explore our revolutionary technologies through an immersive, interactive showcase featuring cutting-edge innovations.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Interactive Carousel */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>
-            <p className="text-xl text-gray-600">Click, explore, and discover the future of technology</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-sm font-bold mb-6 animate-pulse">
+            🚀 ENHANCED EXPERIENCE • JANUARY 2026
           </div>
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Enhanced Content Showcase
+          </h1>
+          <p className="text-2xl text-purple-200 max-w-4xl mx-auto mb-8">
+            Experience revolutionary technologies through immersive, interactive, and intelligent interfaces
+          </p>
+        </div>
 
-          <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-            {/* Carousel Controls */}
-            <div className="absolute top-4 right-4 z-10 flex space-x-2">
-              <button
-                onClick={() => setIsPlaying(!isPlaying)}
-                className="bg-white/90 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-lg hover:bg-white transition-colors"
-              >
-                {isPlaying ? '⏸️' : '▶️'}
-              </button>
-              <button
-                onClick={prevSlide}
-                className="bg-white/90 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-lg hover:bg-white transition-colors"
-              >
-                ⬅️
-              </button>
-              <button
-                onClick={nextSlide}
-                className="bg-white/90 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-lg hover:bg-white transition-colors"
-              >
-                ➡️
-              </button>
-            </div>
+        {/* Enhanced Features */}
+        <section className="mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Enhanced Features</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {enhancedFeatures.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-purple-200 mb-6">{feature.description}</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {feature.features.map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      <span className="text-purple-300 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-            {/* Slide Indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
-              {contentSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Slides */}
-            <div className="relative h-96">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: 300 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -300 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute inset-0 flex items-center"
-                >
-                  <div className={`w-full h-full bg-gradient-to-r ${contentSlides[currentSlide].color} flex items-center`}>
-                    <div className="container mx-auto px-8 flex items-center justify-between">
-                      <div className="flex-1 text-white">
-                        <div className="text-8xl mb-6 animate-bounce">
-                          {contentSlides[currentSlide].image}
-                        </div>
-                        <h3 className="text-4xl font-bold mb-4">
-                          {contentSlides[currentSlide].title}
-                        </h3>
-                        <p className="text-xl opacity-90 mb-6 max-w-2xl">
-                          {contentSlides[currentSlide].description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {contentSlides[currentSlide].features.map((feature, index) => (
-                            <span
-                              key={index}
-                              className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold"
-                            >
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                        <a
-                          href={contentSlides[currentSlide].link}
-                          className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-                        >
-                          Explore Technology →
-                        </a>
-                      </div>
+        {/* Technology Progress */}
+        <section className="mb-16">
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Technology Development Progress</h2>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="space-y-8">
+              {technologies.map((tech, index) => (
+                <div key={index} className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-white">{tech.name}</h3>
+                      <p className="text-purple-200">{tech.description}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white">{tech.progress}%</div>
+                      <div className="text-purple-300 text-sm">{tech.status}</div>
                     </div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
+                  <div className="w-full bg-gray-700 rounded-full h-3">
+                    <div 
+                      className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-1000"
+                      style={{ width: `${tech.progress}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Interactive Features Grid */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">🎯 Interactive Features</h2>
-            <p className="text-xl text-gray-600">Engage with our technology showcase</p>
+        {/* Interactive Demo */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Try Interactive Demo</h2>
+            <p className="text-xl text-purple-100 mb-6">
+              Experience our revolutionary technologies through hands-on interactive demos
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-4xl mb-4">🎮</div>
+                <h3 className="text-xl font-bold text-white mb-2">3D Visualization</h3>
+                <p className="text-purple-100 mb-4">Explore technologies in immersive 3D</p>
+                <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                  Launch Demo
+                </button>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold text-white mb-2">AI Assistant</h3>
+                <p className="text-purple-100 mb-4">Chat with our AI about technologies</p>
+                <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                  Start Chat
+                </button>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-bold text-white mb-2">Analytics Dashboard</h3>
+                <p className="text-purple-100 mb-4">View real-time technology metrics</p>
+                <button className="bg-white text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                  View Dashboard
+                </button>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 text-center border border-purple-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="text-5xl mb-4">🎮</div>
-              <h3 className="text-xl font-bold mb-3">Interactive Controls</h3>
-              <p className="text-gray-600">Navigate through content with intuitive controls and animations</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: -2 }}
-              className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 text-center border border-cyan-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="text-5xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-3">Real-time Updates</h3>
-              <p className="text-gray-600">Experience live updates and dynamic content changes</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 text-center border border-emerald-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="text-5xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-3">Visual Effects</h3>
-              <p className="text-gray-600">Stunning animations and visual effects enhance the experience</p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: -2 }}
-              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 text-center border border-orange-200 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="text-5xl mb-4">🔍</div>
-              <h3 className="text-xl font-bold mb-3">Deep Dive</h3>
-              <p className="text-gray-600">Explore detailed information about each technology</p>
-            </motion.div>
+        {/* Call to Action */}
+        <section className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">Experience the Future Today</h2>
+            <p className="text-xl text-purple-100 mb-6">
+              Join us in exploring the limitless possibilities of revolutionary technology
+            </p>
+            <div className="flex justify-center space-x-4">
+              <a href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition-colors font-semibold">
+                Get Started
+              </a>
+              <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold">
+                Learn More
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Technology Stats */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">📊 Technology Impact</h2>
-            <p className="text-xl opacity-90">Real-world impact of our revolutionary technologies</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-6xl font-bold mb-2">500+</div>
-              <div className="text-lg opacity-90">Companies Transformed</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="text-6xl font-bold mb-2">$2B+</div>
-              <div className="text-lg opacity-90">Value Created</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="text-6xl font-bold mb-2">99.9%</div>
-              <div className="text-lg opacity-90">Success Rate</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="text-6xl font-bold mb-2">24/7</div>
-              <div className="text-lg opacity-90">Support Available</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join thousands of companies already leveraging our revolutionary technologies to transform their business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
-            >
-              Start Your Journey
-            </a>
-            <a
-              href="/pages/ComprehensiveServices2025"
-              className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-lg"
-            >
-              View All Services
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
