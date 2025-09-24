@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function OpenApp.pagePage() {,
-  return (,
+export default function OpenApp.pagePage() {
+  return (
     <>,
       <Head>,
         <title>Open App.Page - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function OpenApp.pagePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

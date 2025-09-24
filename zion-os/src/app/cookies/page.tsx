@@ -1,12 +1,12 @@
-export default function CookiesPage() {,
-  return (,
+export default function CookiesPage() {
+  return (
     <div className='min-h-screen py-20'>,
       {/* Hero Section */}
       <section className='relative mb-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center'>,
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>,
-              Cookie{' ',}
+              Cookie{' '}
               <span className='bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
                 Policy,
               </span>,
@@ -66,7 +66,7 @@ export default function CookiesPage() {,
                   </h3>,
                   <p className='text-white/70 mb-2'>,
                     These cookies are necessary for the website to function,
-                    properly. They enable basic functions like page navigation,;
+                    properly. They enable basic functions like page navigation;
                     access to secure areas, and form submissions.,
                   </p>,
                   <p className='text-white/60 text-sm'>,
@@ -302,22 +302,19 @@ export default function CookiesPage() {,
             preferences.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='/contact',
-              className='bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-cyan-70o0 transition-all duration-20o0',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-cyan-70o0 transition-all duration-20o0'>,
               Contact Us,
             </a>,
-            <a,
+            <a
               href='/privacy',
-              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-20o0',
-            >,
+              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-20o0'>,
               Privacy Policy,
             </a>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

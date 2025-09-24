@@ -2,31 +2,28 @@
 import React{ useState } from "react",
 import { MapPin } from "lucide-react",
 import { TalentCardSkills } from "./TalentCardSkills",
-,
-interface TalentCardContentProps {,
+interface TalentCardContentProps {
   summary: string | undefined,
   bio: string,
   timezone: string | undefined,
   skills: string[] | undefined,
-,}
+}
 ,
-export function TalentCardContent({ summarybiotimezoneskills }: TalentCardContentProps) {,
+export function TalentCardContent({ summarybiotimezoneskills }: TalentCardContentProps) {
   const [isHoveringsetIsHovering] = useState(false),
-,
-  return (,
+  return (
     <div>,
       {/* Location */}
-      {timezone && (,
+      {timezone && (
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">,
           <MapPin className="h-3 w-3" />,
           <span>{timezone}</span>,
-        </div>,
-      )}
+        </div>)}
 ,
       {/* Short bio or summary - longer on hover for desktop */}
-      <div,
+      <div
         className="overflow-hidden transition-all duration-300",
-        style={{ maxHeight: isHovering ? '8rem' : '3rem' ,}}
+        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >,
@@ -36,7 +33,5 @@ export function TalentCardContent({ summarybiotimezoneskills }: TalentCardConten
       </div>,
       {/* Skills */}
       <TalentCardSkills skills={skills} />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

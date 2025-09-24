@@ -1,5 +1,4 @@
 // Type definitions for notifications,
-interface notifications {,
+interface notifications {
   // TODO: Add proper type definitions,
-,};
-,
+};

@@ -1,61 +1,52 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useEffect, useState } from 'react',
-,
-const NationPublicPage: NextPage = () => {,
+const NationPublicPage: NextPage = () => {
   const router = useRouter(),
-  const { slug ,} = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string };
   const [nation, setNation] = useState<any>(null),
   const [joining, setJoining] = useState(false),
   const [error, setError] = useState(''),
-,
-  useEffect(() => {,
+  useEffect(() => {
     if (!slug) return,
-    (async () => {,
+    (async () => {
       const res = await fetch(`/api/nations/${slug}`),
       const data = await res.json(),
-      if (res.ok) setNation(data.nation),
-    })(),
-  }, [slug]),
-,
-  async function handleJoin(role: 'talent' | 'client' | 'citizen') {,
+      if (res.ok) setNation(data.nation)})()}, [slug]),
+  async function handleJoin(role: 'talent' | 'client' | 'citizen') {
     if (!slug) return,
     setJoining(true),
     setError(''),
-    try {,
+    try {
       // In real app, userId would come from auth, use anonymous placeholder,
-      const res = await fetch(`/api/nations/${slug}/join`, {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({ userId: 'anonymous-user', role }),;
+      const res = await fetch(`/api/nations/${slug}/join`, {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ userId: 'anonymous-user', role });
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Join failed'),
-      setNation(data.nation),
-    } catch (e: any) {,
+      setNation(data.nation)} catch (e: any) {
       setError(e?.message || 'Join failed'),
-    ,} finally {,
-      setJoining(false),
-    }
+    } finally {
+      setJoining(false)}
   }
 ,
-  return (,
+  return (
     <div>,
       <Head>,
         <title>{nation?.name ? `${nation.name} - Nation` : 'Nation'}</title>,
       </Head>,
-      {!nation ? (,
-        <p>Loading...</p>,
-      ) : (,
+      {!nation ? (
+        <p>Loading...</p>) : (
         <div className='space-y-4'>,
           <div className='flex items-center gap-3'>,
-            {nation.flagDataUrl && (,
-              <img,
+            {nation.flagDataUrl && (
+              <img
                 src={nation.flagDataUrl}
                 alt='Flag',
                 className='h-10 w-10 rounded',
-              />,
-            )}
+              />)}
             <h1 className='text-2xl font-semibold'>{nation.name}</h1>,
             <span className='ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs border'>,
               Country,
@@ -63,29 +54,26 @@ const NationPublicPage: NextPage = () => {,
           </div>,
           <p className='text-sm whitespace-pre-wrap'>{nation.constitution}</p>,
           <div className='flex gap-2'>,
-            <button,
+            <button
               disabled={joining}
               onClick={() => handleJoin('citizen')}
-              className='px-3 py-2 rounded bg-indigo-60o0 text-white disabled: opacity-50',
-            >,
+              className='px-3 py-2 rounded bg-indigo-60o0 text-white disabled: opacity-50'>,
               Join Nation,
             </button>,
-            <button,
-              disabled={joining,}
+            <button
+              disabled={joining}
               onClick={() => handleJoin('talent')}
-              className='px-3 py-2 rounded border disabled: opacity-50',
-            >,
+              className='px-3 py-2 rounded border disabled: opacity-50'>,
               Join as Talent,
             </button>,
-            <button,
-              disabled={joining,}
+            <button
+              disabled={joining}
               onClick={() => handleJoin('client')}
-              className='px-3 py-2 rounded border disabled: opacity-50',
-            >,
+              className='px-3 py-2 rounded border disabled: opacity-50'>,
               Join as Client,
             </button>,
           </div>,
-          {error && <p className='text-red-60o0 text-sm'>{error,}</p>}
+          {error && <p className='text-red-60o0 text-sm'>{error}</p>}
 ,
           <div className='mt-6'>,
             <h2 className='font-medium mb-2'>Map view</h2>,
@@ -93,11 +81,6 @@ const NationPublicPage: NextPage = () => {,
               Map of nations across the multiverse (placeholder),
             </div>,
           </div>,
-        </div>,
-      )}
-    </div>,
-  ),
-};
-,
-export default NationPublicPage,
-,
+        </div>)}
+    </div>)};
+export default NationPublicPage;

@@ -1,9 +1,7 @@
-export function Payments() {,
-  return (,
+export function Payments() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

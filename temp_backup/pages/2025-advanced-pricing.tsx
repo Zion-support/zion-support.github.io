@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function 20o25AdvancedPricingPage() {,
-  return (,
+export default function 20o25AdvancedPricingPage() {
+  return (
     <>,
       <Head>,
         <title>20o25 Advanced Pricing - Zion Tech Group</title>,
@@ -16,6 +15,5 @@ export default function 20o25AdvancedPricingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

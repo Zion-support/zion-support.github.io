@@ -1,116 +1,110 @@
 import Head from 'next/head',
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
-import {,
-  TrendingUp,;
-  CheckCircle,;
-  Shield,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  DollarSign,;
-  Clock,;
-  ArrowRight,;
-  Star,;
-  Calculator,;
-  Globe,;
-  Bot,;
-  Smartphone,;
-  Mail,;
-  Phone,;
-  Eye,;
-  AlertTriangle,;
-  Lightbulb,;
-  PieChart,;
-  LineChart,;
+import {
+  TrendingUp;
+  CheckCircle;
+  Shield;
+  Zap;
+  Target;
+  BarChart3;
+  DollarSign;
+  Clock;
+  ArrowRight;
+  Star;
+  Calculator;
+  Globe;
+  Bot;
+  Smartphone;
+  Mail;
+  Phone;
+  Eye;
+  AlertTriangle;
+  Lightbulb;
+  PieChart;
+  LineChart;
 } from 'lucide-react',
-,
-export default function AIRevenueForecastingCopilot() {,
-  const features = [,
-    {,
-      icon: <TrendingUp className='w-6 h-6' />,;
-      title: 'Predictive Revenue Modeling',;
+export default function AIRevenueForecastingCopilot() {
+  const features = [
+    {
+      icon: <TrendingUp className='w-6 h-6' />;
+      title: 'Predictive Revenue Modeling';
       description:,
-        'AI-powered forecasting using historical data, market trends, and predictive analytics',;
-    },;
-    {,
-      icon: <BarChart3 className='w-6 h-6' />,;
-      title: 'Real-time Analytics',;
+        'AI-powered forecasting using historical data, market trends, and predictive analytics';
+    };
+    {
+      icon: <BarChart3 className='w-6 h-6' />;
+      title: 'Real-time Analytics';
       description:,
-        'Live monitoring and analysis of revenue performance with instant insights',;
-    },;
-    {,
-      icon: <Target className='w-6 h-6' />,;
-      title: 'Goal Setting & Tracking',;
+        'Live monitoring and analysis of revenue performance with instant insights';
+    };
+    {
+      icon: <Target className='w-6 h-6' />;
+      title: 'Goal Setting & Tracking';
       description:,
-        'Intelligent goal setting and progress tracking with automated alerts',;
-    },;
-    {,
-      icon: <Lightbulb className='w-6 h-6' />,;
-      title: 'Strategic Insights',;
+        'Intelligent goal setting and progress tracking with automated alerts';
+    };
+    {
+      icon: <Lightbulb className='w-6 h-6' />;
+      title: 'Strategic Insights';
       description:,
-        'Actionable recommendations for revenue optimization and growth strategies',;
-    },;
+        'Actionable recommendations for revenue optimization and growth strategies';
+    };
   ],
-,
-  const capabilities = [,
-    'Machine Learning Forecasting',;
-    'Seasonal Pattern Recognition',;
-    'Market Trend Analysis',;
-    'Customer Behavior Modeling',;
-    'Risk Assessment',;
-    'Scenario Planning',;
-    'Performance Benchmarking',;
-    'Automated Reporting',;
-    'Integration APIs',;
-    'Real-time Dashboards',;
+  const capabilities = [
+    'Machine Learning Forecasting';
+    'Seasonal Pattern Recognition';
+    'Market Trend Analysis';
+    'Customer Behavior Modeling';
+    'Risk Assessment';
+    'Scenario Planning';
+    'Performance Benchmarking';
+    'Automated Reporting';
+    'Integration APIs';
+    'Real-time Dashboards';
   ],
-,
-  const useCases = [,
-    'Sales Forecasting',;
-    'Budget Planning',;
-    'Investment Decisions',;
-    'Resource Allocation',;
-    'Pricing Strategy',;
-    'Market Expansion',;
-    'Product Launch Planning',;
-    'Customer Acquisition',;
+  const useCases = [
+    'Sales Forecasting';
+    'Budget Planning';
+    'Investment Decisions';
+    'Resource Allocation';
+    'Pricing Strategy';
+    'Market Expansion';
+    'Product Launch Planning';
+    'Customer Acquisition';
   ],
-,
-  const benefits = [,
-    'Improved Accuracy',;
-    'Faster Decision Making',;
-    'Risk Mitigation',;
-    'Cost Reduction',;
-    'Better Planning',;
-    'Increased Revenue',;
-    'Competitive Advantage',;
-    'Data-Driven Insights',;
+  const benefits = [
+    'Improved Accuracy';
+    'Faster Decision Making';
+    'Risk Mitigation';
+    'Cost Reduction';
+    'Better Planning';
+    'Increased Revenue';
+    'Competitive Advantage';
+    'Data-Driven Insights';
   ],
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>AI Revenue Forecasting Copilot | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='AI-powered revenue forecasting and financial planning system. Predict future revenue with machine learning and advanced analytics.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/services/ai-revenue-forecasting-copilot',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'>,
               <div className='inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-50o0 to-teal-60o0 mb-6'>,
                 <TrendingUp className='w-10 h-10 text-white' />,
               </div>,
@@ -123,32 +117,29 @@ export default function AIRevenueForecastingCopilot() {,
                 analytics.,
               </p>,
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>,
-                <a,
+                <a
                   href='/contact',
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-full hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0',
-                >,
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-full hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0'>,
                   Get Started,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </a>,
-                <a,
+                <a
                   href='/pricing',
-                  className='inline-flex items-center px-8 py-4 border-2 border-emerald-50o0 text-emerald-40o0 font-semibold rounded-full hover:bg-emerald-50o0 hover:text-white transition-all duration-30o0',
-                >,
+                  className='inline-flex items-center px-8 py-4 border-2 border-emerald-50o0 text-emerald-40o0 font-semibold rounded-full hover:bg-emerald-50o0 hover:text-white transition-all duration-30o0'>,
                   View Pricing,
                 </a>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Intelligent Revenue Forecasting,
               </h2>,
@@ -158,17 +149,16 @@ export default function AIRevenueForecastingCopilot() {,
               </p>,
             </motion.div>,
             <div className='grid md:grid-cols-2 gap-8'>,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.3 + index * 0.1 ,}}
-                  className='p-8 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
+                  className='p-8 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0'>,
                   <div className='flex items-center gap-4 mb-4'>,
                     <div className='p-3 rounded-xl bg-emerald-50o0/20 text-emerald-40o0'>,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                     <h3 className='text-2xl font-bold text-white'>,
                       {feature.title}
@@ -177,8 +167,7 @@ export default function AIRevenueForecastingCopilot() {,
                   <p className='text-gray-30o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -186,11 +175,10 @@ export default function AIRevenueForecastingCopilot() {,
         <section className='py-20 px-4 bg-black/30'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Advanced Capabilities,
               </h2>,
@@ -200,22 +188,20 @@ export default function AIRevenueForecastingCopilot() {,
               </p>,
             </motion.div>,
             <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-6'>,
-              {capabilities.map((capability, index) => (,
+              {capabilities.map((capability, index) => (
                 <motion.div,
                   key={capability}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.5 + index * 0.1 ,}}
-                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 + index * 0.1 }}
+                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center'>,
                   <div className='flex items-center justify-center gap-3 mb-3'>,
                     <CheckCircle className='w-5 h-5 text-emerald-40o0' />,
                     <span className='text-white font-semibold text-sm'>,
-                      {capability,}
+                      {capability}
                     </span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -223,11 +209,10 @@ export default function AIRevenueForecastingCopilot() {,
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.6 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Business Applications,
               </h2>,
@@ -237,17 +222,15 @@ export default function AIRevenueForecastingCopilot() {,
               </p>,
             </motion.div>,
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={useCase}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.7 + index * 0.1 ,}}
-                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center',
-                >,
-                  <div className='text-white font-semibold'>{useCase,}</div>,
-                </motion.div>,
-              ))}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.7 + index * 0.1 }}
+                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center'>,
+                  <div className='text-white font-semibold'>{useCase}</div>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -255,11 +238,10 @@ export default function AIRevenueForecastingCopilot() {,
         <section className='py-20 px-4 bg-black/30'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Business Benefits,
               </h2>,
@@ -269,22 +251,20 @@ export default function AIRevenueForecastingCopilot() {,
               </p>,
             </motion.div>,
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={benefit}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.9 + index * 0.1 ,}}
-                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center',
-                >,
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.9 + index * 0.1 }}
+                  className='p-6 rounded-xl bg-black/40 border border-gray-70o0/60 hover: border-emerald-50o0/40 transition-all duration-30o0 text-center'>,
                   <div className='flex items-center justify-center gap-3 mb-3'>,
                     <Star className='w-5 h-5 text-emerald-40o0' />,
                     <span className='text-white font-semibold text-sm'>,
-                      {benefit,}
+                      {benefit}
                     </span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -292,11 +272,10 @@ export default function AIRevenueForecastingCopilot() {,
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-4xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 1.0 ,}}
-              className='text-center p-12 rounded-3xl bg-gradient-to-r from-emerald-50o0/20 to-teal-60o0/20 border border-emerald-50o0/30',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className='text-center p-12 rounded-3xl bg-gradient-to-r from-emerald-50o0/20 to-teal-60o0/20 border border-emerald-50o0/30'>,
               <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                 Ready to Predict Your Revenue?,
               </h2>,
@@ -306,17 +285,15 @@ export default function AIRevenueForecastingCopilot() {,
                 today.,
               </p>,
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>,
-                <a,
+                <a
                   href='/contact',
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-full hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0',
-                >,
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-full hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0'>,
                   Contact Our Experts,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </a>,
-                <a,
+                <a
                   href='/market-pricing',
-                  className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-30o0',
-                >,
+                  className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-30o0'>,
                   View Pricing,
                 </a>,
               </div>,
@@ -324,7 +301,6 @@ export default function AIRevenueForecastingCopilot() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

@@ -1,20 +1,19 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Button from '../components/ui/Button',;
-export default function HolographicAICommunicationPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
+import React from 'react';;
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+export default function HolographicAICommunicationPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 10o08 Middletown DE 19709',
-  ,},;
-  const features = [,
-    'AI-powered 3D holographic projectionReal-time holographic rendering',;
-    'Multi-user holographic meetingsGesture and voice control',;
-    'Cross-platform WebXR supportEnterprise-grade security',
-  ],;
-  return (,
+  };
+  const features = [
+    'AI-powered 3D holographic projectionReal-time holographic rendering';
+    'Multi-user holographic meetingsGesture and voice control';
+    'Cross-platform WebXR supportEnterprise-grade security'];
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Holographic AI Communication Platform - Zion Tech Group</title>,
@@ -33,9 +32,8 @@ export default function HolographicAICommunicationPage() {,
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-fuchsia-50o0/30 p-6">,
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>,
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">,
-                {features.map((feat) => (,
-                  <li key={feat,} className="flex items-start space-x-3 text-slate-20o0"><Check className="w-5 h-5 text-fuchsia-40o0 mt-0.5"  /><span>{feat}</span></li>,
-                ))}
+                {features.map((feat) => (
+                  <li key={feat} className="flex items-start space-x-3 text-slate-20o0"><Check className="w-5 h-5 text-fuchsia-40o0 mt-0.5"  /><span>{feat}</span></li>))}
               </ul>,
             </div>,
             <div className="bg-black/30 rounded-2xl border border-fuchsia-50o0/30 p-6 h-fit">,
@@ -43,7 +41,7 @@ export default function HolographicAICommunicationPage() {,
               <div className="text-slate-40o0">30-day free trial • Setup: 1 week</div>,
               <Button href="/contact" variant="quantum" size="lg" className="w-full mt-4">Start Free Trial<ArrowRight className="w-5 h-5 ml-2"  /></Button>,
               <div className="mt-6 space-y-3 text-sm text-slate-30o0">,
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-40o0"  /><span>{contactInfo.mobile,}</span></div>,
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-40o0"  /><span>{contactInfo.mobile}</span></div>,
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-40o0"  /><span>{contactInfo.email}</span></div>,
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-40o0"  /><span className="text-xs">{contactInfo.address}</span></div>,
               </div>,
@@ -51,6 +49,5 @@ export default function HolographicAICommunicationPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  )}
+    </UltraAdvancedFuturisticBackground>)}
 ,

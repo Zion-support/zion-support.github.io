@@ -1,29 +1,24 @@
-import React from 'react',
-,
+import React from 'react';
 import Head from 'next/head',
 CheckShieldAlertLockPhoneMailMapPinExternalLink,
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-,
-export default function AIGuardrailsPage() {,
-	const contactInfo = {,
-		mobile: '+1 302 464 0950',;
-		email: 'kleber@ziontechgroup.com',;
-		address: '364 E Main St STE 1008 Middletown DE 19709',;
+export default function AIGuardrailsPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950';
+		email: 'kleber@ziontechgroup.com';
+		address: '364 E Main St STE 1008 Middletown DE 19709';
 		website: 'https://ziontechgroup.com',
-	,};
-,
-	const features = [,
-		'Prompt/output policy engine with allow/deny lists',;
-		'Jailbreak and prompt injection detection',;
-		'PII/PHI detection and redaction',;
-		'Toxicitybias and safety classifiers',;
-		'Human handoff flows and escalation policies',;
-		'Audit logsalerting and exportable evidence',
-	],
-,
-	return (,
+	};
+	const features = [
+		'Prompt/output policy engine with allow/deny lists';
+		'Jailbreak and prompt injection detection';
+		'PII/PHI detection and redaction';
+		'Toxicitybias and safety classifiers';
+		'Human handoff flows and escalation policies';
+		'Audit logsalerting and exportable evidence'],
+	return (
 		<UltraAdvancedFuturisticBackground>,
 			<Head>,
 				<title>AI Guardrails Suite | Zion Tech Group</title>,
@@ -41,9 +36,8 @@ export default function AIGuardrailsPage() {,
 							<div className="p-6">,
 								<h2 className="text-2xl font-semibold text-white mb-4">Capabilities</h2>,
 								<ul className="grid grid-cols-1 md:grid-cols-2 gap-3">,
-									{features.map((f) => (,
-										<li key={f,} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>,
-									))}
+									{features.map((f) => (
+										<li key={f} className="flex items-start gap-2 text-gray-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /> <span>{f}</span></li>))}
 								</ul>,
 							</div>,
 						</Card>,
@@ -75,8 +69,8 @@ export default function AIGuardrailsPage() {,
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>,
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">,
 							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`}>{contactInfo.mobile}</a></div>,
-							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto: ${contactInfo.email,}`}>{contactInfo.email}</a></div>,
-							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>,
+							<div className="flex items-center justify-center gap-2 text-purple-400"><Mail className="w-4 h-4" /> <a href={`mailto: ${contactInfo.email}`}>{contactInfo.email}</a></div>,
+							<div className="flex items-center justify-center gap-2 text-emerald-400"><MapPin className="w-4 h-4" /> <a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs">{contactInfo.address}</a></div>,
 						</div>,
 						<div className="text-center mt-6">,
 							<Button href="/services" variant="outline" className="border-rose-500 text-rose-400">Explore Services <ExternalLink className="w-4 h-4 ml-2" /></Button>,
@@ -84,7 +78,5 @@ export default function AIGuardrailsPage() {,
 					</div>,
 				</div>,
 			</section>,
-		</UltraAdvancedFuturisticBackground>,
-	),
-}
+		</UltraAdvancedFuturisticBackground>)}
 ,

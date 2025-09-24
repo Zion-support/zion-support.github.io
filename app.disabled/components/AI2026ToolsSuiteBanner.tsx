@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26ToolsSuiteBanner = () => {,
-  return (,
+const AI20o26ToolsSuiteBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -14,7 +13,7 @@ const AI20o26ToolsSuiteBanner = () => {,
             Complete AI 20o26 Enterprise Tools Suite,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Access our comprehensive suite of AI 20o26 enterprise tools,;
+            Access our comprehensive suite of AI 20o26 enterprise tools;
             calculators, and resources designed to help you plan, implement, and,
             optimize AI solutions for maximum ROI.,
           </p>,
@@ -54,7 +53,7 @@ const AI20o26ToolsSuiteBanner = () => {,
             <div className='text-3xl mb-4'>📊</div>,
             <h3 className='text-xl font-bold mb-3'>Readiness Assessment</h3>,
             <p className='text-gray-20o0 mb-4'>,
-              Evaluate your organization's AI readiness across data, technology,;
+              Evaluate your organization's AI readiness across data, technology;
               and culture.,
             </p>,
             <div className='text-sm text-pink-30o0 mb-2'>Features: </div>,
@@ -158,37 +157,30 @@ const AI20o26ToolsSuiteBanner = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/resources/ai-20o26-enterprise-tools-suite',
-              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Access Tools Suite,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               Get Expert Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               View Our Services,
             </Link>,
           </div>,
           <p className='text-gray-30o0 text-sm'>,
             Free access to all tools •,
             <span className='text-indigo-40o0 font-semibold'>,
-              {' ',}
+              {' '}
               No registration required,
             </span>,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o26ToolsSuiteBanner,
-,
+    </section>)};
+export default AI20o26ToolsSuiteBanner;

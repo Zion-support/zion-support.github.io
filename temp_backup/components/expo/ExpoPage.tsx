@@ -12,28 +12,24 @@ import { agendaItems } from '../../data/expo/agenda',
 import { speakers } from '../../data/expo/speakers',
 import { partners } from '../../data/expo/partners',
 import { locations } from '../../data/expo/locations',
-,
-export default function ExpoPage() {,
+export default function ExpoPage() {
   const [activeTrack, setActiveTrack] = useState<,
-    'All' | 'AI' | 'DAO' | 'Talent' | 'Global',
-  >('All'),
-,
-  return (,
+    'All' | 'AI' | 'DAO' | 'Talent' | 'Global'>('All'),
+  return (
     <div className='space-y-12'>,
       <WelcomeManifesto manifesto={expoManifesto} />,
       <section className='space-y-4'>,
         <div className='flex items-center justify-between'>,
           <h2 className='text-2xl font-semibold'>Agenda</h2>,
           <div className='flex gap-2 text-sm'>,
-            {['All', 'AI', 'DAO', 'Talent', 'Global'].map(track => (,
-              <button,
+            {['All', 'AI', 'DAO', 'Talent', 'Global'].map(track => (
+              <button
                 key={track}
                 onClick={() => setActiveTrack(track as any)}
-                className={`px-3 py-1 rounded border ${activeTrack === track ? 'bg-black text-white dark: bg-white dark:text-black' : '',}`}
+                className={`px-3 py-1 rounded border ${activeTrack === track ? 'bg-black text-white dark: bg-white dark:text-black' : ''}`}
               >,
                 {track}
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
         <AgendaTimeline items={agendaItems} activeTrack={activeTrack} />,
@@ -59,7 +55,5 @@ export default function ExpoPage() {,
         <GPTAssistant />,
       </section>,
       <ExportsBar />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

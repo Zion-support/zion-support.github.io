@@ -1,98 +1,98 @@
 import { Link } from 'react-router-dom',
 import { Button } from '../ui/button',
-import {,
+import {
 import { Badge } from '../ui/badge',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '../ui/card',
-  Brain,;
-  Shield,;
-  Cloud,;
-  Database,;
-  Zap,;
-  Eye,;
-  Leaf,;
-  DollarSign,;
-  ArrowRight,;
-  Star,;
-  Clock,;
-  Globe,;
+  Brain;
+  Shield;
+  Cloud;
+  Database;
+  Zap;
+  Eye;
+  Leaf;
+  DollarSign;
+  ArrowRight;
+  Star;
+  Clock;
+  Globe;
 } from 'lucide-react',
 // Mock data for enhanced services,
-const ENHANCED_SERVICES = [,
-  {,
-    id: 'ai-1',;
-    title: 'AI-Powered Business Intelligence',;
+const ENHANCED_SERVICES = [
+  {
+    id: 'ai-1';
+    title: 'AI-Powered Business Intelligence';
     description:,
-      'Advanced AI algorithms that transform your data into actionable business insights',;
-    category: 'AI & Machine Learning',;
-    pricingModel: 'subscription',;
-    availability: 'immediate',;
-    rating: 4.9,;
-    price: 2999,;
-    features: [,
-      'Predictive analytics',;
-      'Natural language processing',;
-      'Real-time insights',;
-      'Custom dashboards',;
-    ],;
-    benefits: [,
-      'Increased efficiency',;
-      'Better decision making',;
-      'Cost reduction',;
-    ],;
-    tags: ['AI', 'Analytics', 'Business Intelligence'],;
-    location: 'Global',;
-  },;
-  {,
-    id: 'security-1',;
-    title: 'Enterprise Cybersecurity Suite',;
+      'Advanced AI algorithms that transform your data into actionable business insights';
+    category: 'AI & Machine Learning';
+    pricingModel: 'subscription';
+    availability: 'immediate';
+    rating: 4.9;
+    price: 2999;
+    features: [
+      'Predictive analytics';
+      'Natural language processing';
+      'Real-time insights';
+      'Custom dashboards';
+    ];
+    benefits: [
+      'Increased efficiency';
+      'Better decision making';
+      'Cost reduction';
+    ];
+    tags: ['AI', 'Analytics', 'Business Intelligence'];
+    location: 'Global';
+  };
+  {
+    id: 'security-1';
+    title: 'Enterprise Cybersecurity Suite';
     description:,
-      'Comprehensive security solution protecting your business from modern threats',;
-    category: 'Cybersecurity',;
-    pricingModel: 'subscription',;
-    availability: 'immediate',;
-    rating: 4.8,;
-    price: 1999,;
-    features: [,
-      'Threat detection',;
-      '24/7 monitoring',;
-      'Incident response',;
-      'Compliance reporting',;
-    ],;
-    benefits: ['Enhanced security', 'Compliance assurance', 'Risk mitigation'],;
-    tags: ['Security', 'Compliance', 'Enterprise'],;
-    location: 'Global',;
-  },;
-  {,
-    id: 'cloud-1',;
-    title: 'Cloud Infrastructure Optimization',;
+      'Comprehensive security solution protecting your business from modern threats';
+    category: 'Cybersecurity';
+    pricingModel: 'subscription';
+    availability: 'immediate';
+    rating: 4.8;
+    price: 1999;
+    features: [
+      'Threat detection';
+      '24/7 monitoring';
+      'Incident response';
+      'Compliance reporting';
+    ];
+    benefits: ['Enhanced security', 'Compliance assurance', 'Risk mitigation'];
+    tags: ['Security', 'Compliance', 'Enterprise'];
+    location: 'Global';
+  };
+  {
+    id: 'cloud-1';
+    title: 'Cloud Infrastructure Optimization';
     description:,
-      'Optimize your cloud costs and performance with intelligent automation',;
-    category: 'Cloud & DevOps',;
-    pricingModel: 'usage-based',;
-    availability: 'within-week',;
-    rating: 4.7,;
-    price: 1499,;
-    features: [,
-      'Cost optimization',;
-      'Performance monitoring',;
-      'Auto-scaling',;
-      'Security compliance',;
-    ],;
-    benefits: ['Cost savings', 'Improved performance', 'Scalability'],;
-    tags: ['Cloud', 'DevOps', 'Optimization'],;
-    location: 'Global',;
-  },;
+      'Optimize your cloud costs and performance with intelligent automation';
+    category: 'Cloud & DevOps';
+    pricingModel: 'usage-based';
+    availability: 'within-week';
+    rating: 4.7;
+    price: 1499;
+    features: [
+      'Cost optimization';
+      'Performance monitoring';
+      'Auto-scaling';
+      'Security compliance';
+    ];
+    benefits: ['Cost savings', 'Improved performance', 'Scalability'];
+    tags: ['Cloud', 'DevOps', 'Optimization'];
+    location: 'Global';
+  };
 ],
-const EnhancedServicesOverview = () => {,
+const EnhancedServicesOverview = () => {
   // Get featured services (first 6),
   const featuredServices = ENHANCED_SERVICES.slice(0, 6),
-  const getCategoryIcon = category => {,
-    switch (category) {,
+  const getCategoryIcon = category => {
+    switch (category) {
       case 'AI & Machine Learning':,
         return <Brain className='w-6 h-6' />,
       case 'Cybersecurity':,
@@ -115,10 +115,10 @@ const EnhancedServicesOverview = () => {,
         return <DollarSign className='w-6 h-6' />,
       default: ,
         return <Zap className='w-6 h-6' />,
-    ,}
+    }
   };
-  const getAvailabilityColor = availability => {,
-    switch (availability) {,
+  const getAvailabilityColor = availability => {
+    switch (availability) {
       case 'immediate':,
         return 'text-green-40o0',
       case 'within-week':,
@@ -127,9 +127,9 @@ const EnhancedServicesOverview = () => {,
         return 'text-orange-40o0',
       default: ,
         return 'text-gray-40o0',
-    ,}
+    }
   };
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>,
       <div className='container mx-auto px-4'>,
         {/* Header */}
@@ -148,42 +148,38 @@ const EnhancedServicesOverview = () => {,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
             <Link to='/enhanced-services'>,
-              <Button,
+              <Button
                 size='lg',
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white',
-              >,
+                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white'>,
                 Explore All Services,
                 <ArrowRight className='ml-2 w-4 h-4' />,
               </Button>,
             </Link>,
-            <Button,
+            <Button
               size='lg',
               variant='outline',
-              className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10',
-            >,
+              className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'>,
               Schedule Consultation,
             </Button>,
           </div>,
         </div>,
-        {/* Featured Services Grid */,}
+        {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {featuredServices.map(service => (,
-            <Card,
-              key={service.id,}
-              className='bg-zion-blue-dark/50 border-zion-blue-light hover: border-zion-purple/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2',
-            >,
+          {featuredServices.map(service => (
+            <Card
+              key={service.id}
+              className='bg-zion-blue-dark/50 border-zion-blue-light hover: border-zion-purple/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2'>,
               <CardHeader className='pb-4'>,
                 <div className='flex items-start justify-between mb-3'>,
                   <div className='flex items-center gap-2 text-zion-cyan'>,
-                    {getCategoryIcon(service.category),}
+                    {getCategoryIcon(service.category)}
                     <span className='text-sm font-medium'>,
                       {service.category}
                     </span>,
                   </div>,
-                  <Badge,
+                  <Badge
                     variant='secondary',
-                    className='bg-zion-purple/20 text-zion-cyan border-zion-purple/30',
-                  >,
+                    className='bg-zion-purple/20 text-zion-cyan border-zion-purple/30'>,
                     {service.pricingModel}
                   </Badge>,
                 </div>,
@@ -215,31 +211,27 @@ const EnhancedServicesOverview = () => {,
                 </div>,
                 {/* Key Benefits */}
                 <div className='space-y-2'>,
-                  {service.benefits.slice(0, 2).map((benefit, index) => (,
-                    <div,
+                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <div
                       key={index}
-                      className='flex items-center gap-2 text-sm text-zion-slate-light',
-                    >,
+                      className='flex items-center gap-2 text-sm text-zion-slate-light'>,
                       <div className='w-1.5 h-1.5 bg-green-40o0 rounded-full'></div>,
                       {benefit}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2'>,
-                  {service.tags.slice(0, 3).map((tag, index) => (,
-                    <Badge,
+                  {service.tags.slice(0, 3).map((tag, index) => (
+                    <Badge
                       key={index}
                       variant='outline',
-                      className='text-xs border-zion-purple/30 text-zion-cyan',
-                    >,
+                      className='text-xs border-zion-purple/30 text-zion-cyan'>,
                       {tag}
-                    </Badge>,
-                  ))}
+                    </Badge>))}
                 </div>,
                 {/* Availability and Location */}
                 <div className='flex items-center justify-between text-sm'>,
-                  <div,
+                  <div
                     className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}
                   >,
                     <Clock className='w-4 h-4' />,
@@ -263,8 +255,7 @@ const EnhancedServicesOverview = () => {,
                   Get Started,
                 </Button>,
               </CardContent>,
-            </Card>,
-          )),}
+            </Card>))}
         </div>,
         {/* Service Categories Overview */}
         <div className='bg-zion-blue/20 rounded-2xl p-8 border border-zion-blue-light'>,
@@ -277,24 +268,20 @@ const EnhancedServicesOverview = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-2 md: grid-cols-5 gap-4'>,
-            {ENHANCED_SERVICES.reduce((acc, service) => {,
-              if (!acc.find(cat => cat.category === service.category)) {,
-                acc.push({,
-                  category: service.category,;
-                  count: ENHANCED_SERVICES.filter(,
-                    s => s.category === service.category,
-                  ).length,;
-                  icon: getCategoryIcon(service.category),;
-                }),
-              }
-              return acc,
-            }, []).map((cat, index) => (,
-              <div,
+            {ENHANCED_SERVICES.reduce((acc, service) => {
+              if (!acc.find(cat => cat.category === service.category)) {
+                acc.push({
+                  category: service.category;
+                  count: ENHANCED_SERVICES.filter(
+                    s => s.category === service.category).length;
+                  icon: getCategoryIcon(service.category);
+                })}
+              return acc}, []).map((cat, index) => (
+              <div
                 key={index}
-                className='text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover: border-zion-purple/50 transition-colors',
-              >,
+                className='text-center p-4 rounded-lg bg-zion-blue-dark/50 border border-zion-blue-light hover: border-zion-purple/50 transition-colors'>,
                 <div className='text-zion-cyan mb-2 flex justify-center'>,
-                  {cat.icon,}
+                  {cat.icon}
                 </div>,
                 <div className='text-white font-medium text-sm mb-1'>,
                   {cat.category}
@@ -302,8 +289,7 @@ const EnhancedServicesOverview = () => {,
                 <div className='text-zion-slate-light text-xs'>,
                   {cat.count} services,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -318,17 +304,15 @@ const EnhancedServicesOverview = () => {,
               us today for a free consultation.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              <Button,
+              <Button
                 size='lg',
-                className='bg-white text-zion-purple hover: bg-zion-slate-light',
-              >,
+                className='bg-white text-zion-purple hover: bg-zion-slate-light'>,
                 Schedule Free Consultation,
               </Button>,
-              <Button,
+              <Button
                 size='lg',
                 variant='outline',
-                className='border-white text-white hover:bg-white/10',
-              >,
+                className='border-white text-white hover:bg-white/10'>,
                 Download Service Catalog,
               </Button>,
             </div>,
@@ -351,8 +335,6 @@ const EnhancedServicesOverview = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-export default EnhancedServicesOverview,
-,
+    </section>),
+};
+export default EnhancedServicesOverview;

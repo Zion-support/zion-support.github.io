@@ -1,130 +1,117 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Rocket,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Globe,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Linkedin,;
-  Twitter,;
-  Github,;
-  Youtube,;
-  ArrowRight,;
-  Star,;
-  Sparkles,;
-  Infinity,;
-  Zap,;
-  ShieldCheck,;
-  TrendingUp,;
-  Award,;
-  Eye,;
-  Car,;
-  TestTube,;
-  Globe as PlanetIcon,;
-  Lock,;
-  Palette,;
-  Heart,;
-  Truck,;
-  Cpu,;
-  Users,;
-  Building,;
-  Target,;
-  FileText,;
-  Video,;
-  Handshake,;
-  BookOpen,;
-  Code,;
-  BarChart3,;
-  Lightbulb,;
-  Settings,
-} from 'lucide-react',
-,
-const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
+import {
+  Rocket;
+  Brain;
+  Atom;
+  Shield;
+  Globe;
+  Mail;
+  Phone;
+  MapPin;
+  Linkedin;
+  Twitter;
+  Github;
+  Youtube;
+  ArrowRight;
+  Star;
+  Sparkles;
+  Infinity;
+  Zap;
+  ShieldCheck;
+  TrendingUp;
+  Award;
+  Eye;
+  Car;
+  TestTube;
+  Globe as PlanetIcon;
+  Lock;
+  Palette;
+  Heart;
+  Truck;
+  Cpu;
+  Users;
+  Building;
+  Target;
+  FileText;
+  Video;
+  Handshake;
+  BookOpen;
+  Code;
+  BarChart3;
+  Lightbulb;
+  Settings} from 'lucide-react',
+const UltraAdvancedFuturisticFooter20o40: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [,
-    {,
-      title: "Revolutionary Services",;
-      links: [,
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml", icon: Brain ,},;
-        { name: "Quantum Computing", href: "/services?category=quantum", icon: Atom ,},;
-        { name: "Space Technology", href: "/services?category=space-tech", icon: Rocket ,},;
-        { name: "Cybersecurity", href: "/services?category=cybersecurity", icon: Shield ,},;
-        { name: "Emerging Tech", href: "/services?category=emerging-tech", icon: Lightbulb ,},;
-        { name: "Holographic & VR", href: "/services?category=holographic", icon: Eye ,},;
-        { name: "Autonomous Systems", href: "/services?category=autonomous", icon: Car ,},;
-        { name: "Synthetic Biology", href: "/services?category=synthetic-biology", icon: TestTube ,}
-      ],
-    },;
-    {,
-      title: "Industry Solutions",;
-      links: [,
-        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart ,},;
-        { name: "Finance", href: "/solutions/finance", icon: BarChart3 ,},;
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Settings ,},;
-        { name: "Logistics", href: "/solutions/logistics", icon: Truck ,},;
-        { name: "Education", href: "/solutions/education", icon: BookOpen ,},;
-        { name: "Government", href: "/solutions/government", icon: Building ,},;
-        { name: "Retail", href: "/solutions/retail", icon: Target ,},;
-        { name: "Energy", href: "/solutions/energy", icon: Zap ,}
-      ],
-    },;
-    {,
-      title: "Resources & Support",;
-      links: [,
-        { name: "Documentation", href: "/docs", icon: FileText ,},;
-        { name: "API Reference", href: "/api", icon: Code ,},;
-        { name: "Case Studies", href: "/case-studies", icon: BarChart3 ,},;
-        { name: "White Papers", href: "/white-papers", icon: FileText ,},;
-        { name: "Webinars", href: "/webinars", icon: Video ,},;
-        { name: "Training", href: "/training", icon: Users ,},;
-        { name: "Support", href: "/support", icon: ShieldCheck ,},;
-        { name: "Status", href: "/status", icon: TrendingUp ,}
-      ],
-    },;
-    {,
-      title: "Company",;
-      links: [,
-        { name: "About Us", href: "/about", icon: Building ,},;
-        { name: "Leadership", href: "/leadership", icon: Users ,},;
-        { name: "Careers", href: "/careers", icon: Target ,},;
-        { name: "News", href: "/news", icon: FileText ,},;
-        { name: "Partners", href: "/partners", icon: Handshake ,},;
-        { name: "Investors", href: "/investors", icon: TrendingUp ,},;
-        { name: "Contact", href: "/contact", icon: Mail ,},;
-        { name: "Locations", href: "/locations", icon: MapPin ,}
-      ],
-    }
+  const footerSections = [
+    {
+      title: "Revolutionary Services";
+      links: [
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml", icon: Brain };
+        { name: "Quantum Computing", href: "/services?category=quantum", icon: Atom };
+        { name: "Space Technology", href: "/services?category=space-tech", icon: Rocket };
+        { name: "Cybersecurity", href: "/services?category=cybersecurity", icon: Shield };
+        { name: "Emerging Tech", href: "/services?category=emerging-tech", icon: Lightbulb };
+        { name: "Holographic & VR", href: "/services?category=holographic", icon: Eye };
+        { name: "Autonomous Systems", href: "/services?category=autonomous", icon: Car };
+        { name: "Synthetic Biology", href: "/services?category=synthetic-biology", icon: TestTube }
+      ]};
+    {
+      title: "Industry Solutions";
+      links: [
+        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart };
+        { name: "Finance", href: "/solutions/finance", icon: BarChart3 };
+        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Settings };
+        { name: "Logistics", href: "/solutions/logistics", icon: Truck };
+        { name: "Education", href: "/solutions/education", icon: BookOpen };
+        { name: "Government", href: "/solutions/government", icon: Building };
+        { name: "Retail", href: "/solutions/retail", icon: Target };
+        { name: "Energy", href: "/solutions/energy", icon: Zap }
+      ]};
+    {
+      title: "Resources & Support";
+      links: [
+        { name: "Documentation", href: "/docs", icon: FileText };
+        { name: "API Reference", href: "/api", icon: Code };
+        { name: "Case Studies", href: "/case-studies", icon: BarChart3 };
+        { name: "White Papers", href: "/white-papers", icon: FileText };
+        { name: "Webinars", href: "/webinars", icon: Video };
+        { name: "Training", href: "/training", icon: Users };
+        { name: "Support", href: "/support", icon: ShieldCheck };
+        { name: "Status", href: "/status", icon: TrendingUp }
+      ]};
+    {
+      title: "Company";
+      links: [
+        { name: "About Us", href: "/about", icon: Building };
+        { name: "Leadership", href: "/leadership", icon: Users };
+        { name: "Careers", href: "/careers", icon: Target };
+        { name: "News", href: "/news", icon: FileText };
+        { name: "Partners", href: "/partners", icon: Handshake };
+        { name: "Investors", href: "/investors", icon: TrendingUp };
+        { name: "Contact", href: "/contact", icon: Mail };
+        { name: "Locations", href: "/locations", icon: MapPin }
+      ]}
   ],
-,
-  const socialLinks = [,
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-40o0" ,},;
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-40o0" ,},;
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-40o0" ,},;
-    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-40o0" ,}
+  const socialLinks = [
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-40o0" };
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-40o0" };
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-40o0" };
+    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-40o0" }
   ],
-,
-  const contactInfo ={,
-    phone: "+1 30o2 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 10o08, Middletown, DE 19709",
-  };
-,
-  const certifications = [,
-    "SOC 2 Type II Certified",;
-    "ISO 270o01 Compliant",;
-    "GDPR Compliant",;
-    "HIPAA Compliant",;
-    "NIST Framework",;
-    "Zero Trust Architecture",
-  ],
-,
-  return (,
+  const contactInfo ={
+    phone: "+1 30o2 464 0950";
+    email: "kleber@ziontechgroup.com";
+    address: "364 E Main St STE 10o08, Middletown, DE 19709"};
+  const certifications = [
+    "SOC 2 Type II Certified";
+    "ISO 270o01 Compliant";
+    "GDPR Compliant";
+    "HIPAA Compliant";
+    "NIST Framework";
+    "Zero Trust Architecture"],
+  return (
     <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-40o0/20 overflow-hidden">,
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0 pointer-events-none">,
@@ -135,7 +122,7 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">,
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8 mb-12">,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className="lg: col-span-2">,
             <div className="flex items-center space-x-3 mb-6">,
               <div className="relative">,
@@ -171,58 +158,53 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
             </div>,
             {/* Social Links */}
             <div className="flex items-center space-x-4">,
-              {socialLinks.map((social) => (,
-                <a,
+              {socialLinks.map((social) => (
+                <a
                   key={social.name}
                   href={social.href}
                   target="_blank",
                   rel="noopener noreferrer",
-                  className={`p-2 text-gray-40o0 ${social.color} transition-colors duration-20o0 rounded-lg hover: bg-white/5`,}
+                  className={`p-2 text-gray-40o0 ${social.color} transition-colors duration-20o0 rounded-lg hover: bg-white/5`}
                   aria-label={social.name}
                 >,
                   <social.icon className="w-5 h-5"  />,
-                </a>,
-              ))}
+                </a>))}
             </div>,
           </div>,
           {/* Service Sections */}
-          {footerSections.map((section, index) => (,
+          {footerSections.map((section, index) => (
             <div key={section.title}>,
               <h4 className="text-lg font-semibold text-white mb-4">,
                 <span>{section.title}</span>,
               </h4>,
               <ul className="space-y-3">,
-                {section.links.map((link) => (,
+                {section.links.map((link) => (
                   <li key={link.name}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 group",
-                    >,
+                      className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 group">,
                       <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-20o0"  />,
-                      <span className="text-sm">{link.name,}</span>,
+                      <span className="text-sm">{link.name}</span>,
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Enhanced Middle Section */}
         <div className="border-t border-gray-70o0/50 pt-12 mb-8">,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {/* Certifications */,}
+            {/* Certifications */}
             <div>,
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">,
                 <ShieldCheck className="w-5 h-5 text-green-40o0"  />,
                 <span>Certifications & Compliance</span>,
               </h4>,
               <div className="grid grid-cols-2 gap-2">,
-                {certifications.map((cert) => (,
+                {certifications.map((cert) => (
                   <div key={cert} className="flex items-center space-x-2 text-sm text-gray-40o0">,
                     <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>,
                     <span>{cert}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Quick Stats */}
@@ -260,7 +242,7 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
                 Get the latest insights on AI, quantum computing, and emerging technologies.,
               </p>,
               <div className="flex space-x-2">,
-                <input,
+                <input
                   type="email",
                   placeholder="Enter your email",
                   className="flex-1 px-3 py-2 bg-gray-80o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: border-cyan-40o0 focus:outline-none transition-colors",
@@ -272,11 +254,11 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Bottom Section */,}
+        {/* Bottom Section */}
         <div className="border-t border-gray-70o0/50 pt-8">,
           <div className="flex flex-col md: flex-row items-center justify-between space-y-4 md:space-y-0">,
             <div className="flex items-center space-x-6 text-sm text-gray-40o0">,
-              <span>&copy, {currentYear,} Zion Tech Group. All rights reserved.</span>,
+              <span>&copy, {currentYear} Zion Tech Group. All rights reserved.</span>,
               <Link href="/privacy" className="hover: text-cyan-40o0 transition-colors duration-20o0">,
                 Privacy Policy,
               </Link>,
@@ -304,30 +286,25 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">,
-        {[...Array(6)].map((_, i) => (,
+        {[...Array(6)].map((_, i) => (
           <motion.div,
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0/30 rounded-full",
-            style={{,
-              left: `${Math.random() * 10o0,}%`,;
-              top: `${Math.random() * 10o0,}%`,;
-              animationDelay: `${Math.random() * 3,}s`,
-            }}
-            animate={{,
-              scale: [0, 1, 0],;
+            style={{
+              left: `${Math.random() * 10o0}%`;
+              top: `${Math.random() * 10o0}%`;
+              animationDelay: `${Math.random() * 3}s`}}
+            animate={{
+              scale: [0, 1, 0];
               opacity: [0, 1, 0]}}
-            transition={{,
-              duration: 4,;
-              repeat: -1,;
+            transition={{
+              duration: 4;
+              repeat: -1;
               delay: Math.random() * 3,
-            ,}}
-           />,
-        ))}
+            }}
+           />))}
       </div>,
-    </footer>,
-  ),
-};
-,
-export default UltraAdvancedFuturisticFooter20o40,
+    </footer>)};
+export default UltraAdvancedFuturisticFooter20o40;

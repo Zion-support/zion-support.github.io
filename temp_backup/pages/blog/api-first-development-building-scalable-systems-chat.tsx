@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {,
-  return (,
+export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {
+  return (
     <>,
       <Head>,
         <title>Api First Development Building Scalable Systems Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

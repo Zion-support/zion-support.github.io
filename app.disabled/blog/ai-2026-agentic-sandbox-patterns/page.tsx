@@ -1,14 +1,12 @@
 import Link from 'next/link',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards',;
+    'AI 20o26: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards';
   description:,
-    'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.',;
+    'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -44,25 +42,21 @@ export default function Page() {,
             evaluation‑gated feature flags.,
           </p>,
           <p>,
-            Related: {' ',}
-            <Link,
+            Related: {' '}
+            <Link
               href='/content/ai-20o26-secure-tooling-permissions-blueprint',
-              className='text-purple-70o0 underline',
-            >,
+              className='text-purple-70o0 underline'>,
               Secure Tooling Permissions Blueprint,
             </Link>{' '}
             and{' '}
-            <Link,
+            <Link
               href='/blog/ai-20o26-secure-agent-routing-strategies',
-              className='text-purple-70o0 underline',
-            >,
+              className='text-purple-70o0 underline'>,
               Secure Agent Routing Strategies,
             </Link>,
             .,
           </p>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

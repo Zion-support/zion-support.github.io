@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function DeveloperProductivityCopilot(...args: any[]): any {,
-  return (,
+export default function DeveloperProductivityCopilot(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Developer Productivity Copilot — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Ship faster with AI code reviews, test generation, and CI insights.',
         />,
@@ -45,7 +44,6 @@ export default function DeveloperProductivityCopilot(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

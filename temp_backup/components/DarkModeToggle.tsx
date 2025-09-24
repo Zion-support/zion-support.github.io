@@ -1,54 +1,41 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { Sun, Moon, Monitor } from 'lucide-react',
-,
 type Theme = 'light' | 'dark' | 'system',
-,
-const DarkModeToggle: React.FC = () => {,
+const DarkModeToggle: React.FC = () => {
   const [theme, setTheme] = useState<Theme>('dark'),
   const [isOpen, setIsOpen] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Load saved theme preference,
     const savedTheme = localStorage.getItem('theme') as Theme,
-    if (savedTheme) {,
+    if (savedTheme) {
       setTheme(savedTheme),
-      applyTheme(savedTheme),
-    } else {,
+      applyTheme(savedTheme)} else {
       // Default to dark theme for Zion Tech Group,
       setTheme('dark'),
-      applyTheme('dark'),
-    }
+      applyTheme('dark')}
   }, []),
-,
-  const applyTheme = (newTheme: Theme) => {,
+  const applyTheme = (newTheme: Theme) => {
     const root = document.documentElement,
-,
-    if (newTheme === 'system') {,
+    if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
       root.classList.toggle('dark', systemTheme === 'dark'),
-      root.classList.toggle('light', systemTheme === 'light'),
-    } else {,
+      root.classList.toggle('light', systemTheme === 'light')} else {
       root.classList.toggle('dark', newTheme === 'dark'),
-      root.classList.toggle('light', newTheme === 'light'),
-    }
+      root.classList.toggle('light', newTheme === 'light')}
 ,
     // Update meta theme-color,
     const metaThemeColor = document.querySelector('meta[name="theme-color"]'),
-    if (metaThemeColor) {,
-      metaThemeColor.setAttribute('content', newTheme === 'dark' ? '#0o00000' : '#ffffff'),
-    }
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', newTheme === 'dark' ? '#0o00000' : '#ffffff')}
   };
-,
-  const handleThemeChange = (newTheme: Theme) => {,
+  const handleThemeChange = (newTheme: Theme) => {
     setTheme(newTheme),
     localStorage.setItem('theme', newTheme),
     applyTheme(newTheme),
-    setIsOpen(false),
-  };
-,
-  const getCurrentThemeIcon = () => {,
-    switch (theme) {,
+    setIsOpen(false)};
+  const getCurrentThemeIcon = () => {
+    switch (theme) {
       case 'light':,
         return <Sun className="w-5 h-5"  />,
       case 'dark':,
@@ -57,11 +44,10 @@ const DarkModeToggle: React.FC = () => {,
         return <Monitor className="w-5 h-5"  />,
       default: ,
         return <Moon className="w-5 h-5"  />,
-    ,}
+    }
   };
-,
-  const getCurrentThemeLabel = () => {,
-    switch (theme) {,
+  const getCurrentThemeLabel = () => {
+    switch (theme) {
       case 'light':,
         return 'Light Mode',
       case 'dark':,
@@ -70,28 +56,26 @@ const DarkModeToggle: React.FC = () => {,
         return 'System',
       default: ,
         return 'Dark Mode',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="relative">,
       {/* Theme Toggle Button */}
       <motion.button,
         onClick={() => setIsOpen(!isOpen)}
         className="relative p-3 bg-gray-80o0/50 backdrop-blur-sm border border-gray-70o0 rounded-full text-gray-30o0 hover: text-white hover:bg-gray-80o0/70 transition-all duration-30o0 group",
-        whileHover={{ scale: 1.0o5 ,}}
-        whileTap={{ scale: 0.95 ,}}
-        aria-label={`Current theme: ${getCurrentThemeLabel(),}. Click to change theme.`}
+        whileHover={{ scale: 1.0o5 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={`Current theme: ${getCurrentThemeLabel()}. Click to change theme.`}
         aria-expanded={isOpen}
-        aria-haspopup="true",
-      >,
+        aria-haspopup="true">,
         <AnimatePresence mode="wait">,
           <motion.div,
             key={theme}
-            initial={{ rotate: -90, opacity: 0 ,}}
-            animate={{ rotate: 0, opacity: 1 ,}}
-            exit={{ rotate: 90, opacity: 0 ,}}
-            transition={{ duration: 0.2 ,}}
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: 90, opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >,
             {getCurrentThemeIcon()}
           </motion.div>,
@@ -99,16 +83,15 @@ const DarkModeToggle: React.FC = () => {,
         {/* Hover indicator */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0"  />,
       </motion.button>,
-      {/* Theme Options Dropdown */,}
+      {/* Theme Options Dropdown */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, scale: 0.95, y: -10 ,}}
-            animate={{ opacity: 1, scale: 1, y: 0 ,}}
-            exit={{ opacity: 0, scale: 0.95, y: -10 ,}}
-            transition={{ duration: 0.2 ,}}
-            className="absolute bottom-full right-0 mb-2 w-48 bg-gray-90o0 border border-gray-70o0 rounded-xl shadow-2xl overflow-hidden z-50",
-          >,
+            initial={{ opacity: 0, scale: 0.95, y: -10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute bottom-full right-0 mb-2 w-48 bg-gray-90o0 border border-gray-70o0 rounded-xl shadow-2xl overflow-hidden z-50">,
             {/* Header */}
             <div className="p-3 border-b border-gray-70o0 bg-gradient-to-r from-gray-80o0 to-gray-70o0">,
               <h3 className="text-sm font-medium text-white">Theme Settings</h3>,
@@ -116,21 +99,21 @@ const DarkModeToggle: React.FC = () => {,
             </div>,
             {/* Theme Options */}
             <div className="p-2 space-y-1">,
-              {[,
-                { value: 'light' as Theme, label: 'Light Mode', icon: <Sun className="w-4 h-4"  />, description: 'Bright, clean interface' },;
-                { value: 'dark' as Theme, label: 'Dark Mode', icon: <Moon className="w-4 h-4"  />, description: 'Easy on the eyes' ,},;
-                { value: 'system' as Theme, label: 'System', icon: <Monitor className="w-4 h-4"  />, description: 'Follows system preference' ,}
-              ].map((option) => (,
+              {[
+                { value: 'light' as Theme, label: 'Light Mode', icon: <Sun className="w-4 h-4"  />, description: 'Bright, clean interface' };
+                { value: 'dark' as Theme, label: 'Dark Mode', icon: <Moon className="w-4 h-4"  />, description: 'Easy on the eyes' };
+                { value: 'system' as Theme, label: 'System', icon: <Monitor className="w-4 h-4"  />, description: 'Follows system preference' }
+              ].map((option) => (
                 <motion.button,
                   key={option.value}
                   onClick={() => handleThemeChange(option.value)}
-                  className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left transition-all duration-20o0 ${,
+                  className={`w-full flex items-center space-x-3 p-3 rounded-lg text-left transition-all duration-20o0 ${
                     theme === option.value,
                       ? 'bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 text-cyan-40o0',
                       : 'text-gray-30o0 hover: text-white hover:bg-gray-80o0',
-                  ,}`}
-                  whileHover={{ x: 4 ,}}
-                  whileTap={{ scale: 0.98 ,}}
+                  }`}
+                  whileHover={{ x: 4 }}
+                  whileTap={{ scale: 0.98 }}
                 >,
                   <div className={`flex-shrink-0 ${theme === option.value ? 'text-cyan-40o0' : 'text-gray-40o0'}`}>,
                     {option.icon}
@@ -139,15 +122,13 @@ const DarkModeToggle: React.FC = () => {,
                     <div className="text-sm font-medium">{option.label}</div>,
                     <div className="text-xs text-gray-40o0">{option.description}</div>,
                   </div>,
-                  {theme === option.value && (,
+                  {theme === option.value && (
                     <motion.div,
-                      initial={{ scale: 0 ,}}
-                      animate={{ scale: 1 ,}}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
                       className="w-2 h-2 bg-cyan-40o0 rounded-full",
-                     />,
-                  )}
-                </motion.button>,
-              ))}
+                     />)}
+                </motion.button>))}
             </div>,
             {/* Footer */}
             <div className="p-3 border-t border-gray-70o0 bg-gray-80o0/50">,
@@ -155,23 +136,18 @@ const DarkModeToggle: React.FC = () => {,
                 Theme preference saved locally,
               </div>,
             </div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
       {/* Backdrop for closing dropdown */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            exit={{ opacity: 0 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 z-40",
             onClick={() => setIsOpen(false)}
-          />,
-        )}
+          />)}
       </AnimatePresence>,
-    </div>,
-  ),
-};
-,
-export default DarkModeToggle,
+    </div>)};
+export default DarkModeToggle;

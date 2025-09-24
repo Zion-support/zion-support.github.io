@@ -2,36 +2,33 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
-,
-export default function QuantumServicesPage() {,
-  const features = [,
-    'Quantum-inspired optimization & annealing strategies',;
-    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable',;
-    'Quantum-safe cryptography assessments and roadmaps',;
-    'R&D ideation for quantum-ready workloads',;
+export default function QuantumServicesPage() {
+  const features = [
+    'Quantum-inspired optimization & annealing strategies';
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable';
+    'Quantum-safe cryptography assessments and roadmaps';
+    'R&D ideation for quantum-ready workloads';
   ],
-,
-  const solutions = [,
-    {,
-      name: 'Quantum Internet Security',;
-      href: '/quantum-internet-security-platform',;
-    },;
-    { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' ,},;
-    {,
-      name: 'Quantum Cloud Infrastructure',;
-      href: '/quantum-cloud-infrastructure',;
-    },;
+  const solutions = [
+    {
+      name: 'Quantum Internet Security';
+      href: '/quantum-internet-security-platform';
+    };
+    { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' };
+    {
+      name: 'Quantum Cloud Infrastructure';
+      href: '/quantum-cloud-infrastructure';
+    };
   ],
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground colorScheme='quantum' intensity='high'>,
       <Head>,
         <title>Quantum Services | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Quantum computing strategy, hybrid pipelines, and quantum-safe security initiatives.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-services',
         />,
@@ -53,11 +50,10 @@ export default function QuantumServicesPage() {,
               <Button href='/contact' className='px-8 py-4'>,
                 Talk to Experts,
               </Button>,
-              <Button,
+              <Button
                 href='/market-pricing',
                 variant='outline',
-                className='px-8 py-4',
-              >,
+                className='px-8 py-4'>,
                 See Market Pricing,
               </Button>,
             </div>,
@@ -67,15 +63,13 @@ export default function QuantumServicesPage() {,
               Focus Areas,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>,
-              {features.map(f => (,
-                <div,
-                  key={f,}
-                  className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60',
-                >,
+              {features.map(f => (
+                <div
+                  key={f}
+                  className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60'>,
                   <CheckCircle className='w-5 h-5 text-emerald-40o0 mt-0.5' />,
                   <span className='text-gray-20o0'>{f}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </section>,
           <section>,
@@ -83,19 +77,17 @@ export default function QuantumServicesPage() {,
               Highlighted Solutions,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>,
-              {solutions.map(s => (,
-                <a,
-                  key={s.name,}
+              {solutions.map(s => (
+                <a
+                  key={s.name}
                   href={s.href}
-                  className='p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors',
-                >,
+                  className='p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors'>,
                   <div className='flex items-center gap-3 text-cyan-30o0 mb-2'>,
                     <Sparkles className='w-5 h-5' />,
-                    <span className='font-semibold'>{s.name,}</span>,
+                    <span className='font-semibold'>{s.name}</span>,
                   </div>,
                   <p className='text-gray-30o0 text-sm'>Learn more</p>,
-                </a>,
-              ))}
+                </a>))}
             </div>,
           </section>,
           <section className='text-center'>,
@@ -108,7 +100,5 @@ export default function QuantumServicesPage() {,
           </section>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

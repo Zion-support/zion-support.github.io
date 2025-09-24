@@ -1,24 +1,22 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Reliability Engineering for Agents | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Reliability Engineering for Agents | Zion Tech Group';
   description:,
-    'Engineering reliable autonomous agents with SLOs, chaos testing, and progressive delivery guarded by evals.',;
-  keywords: [,
-    'reliability engineering',;
-    'SLOs',;
-    'chaos testing',;
-    'evals',;
-    'progressive delivery',;
-  ],;
+    'Engineering reliable autonomous agents with SLOs, chaos testing, and progressive delivery guarded by evals.';
+  keywords: [
+    'reliability engineering';
+    'SLOs';
+    'chaos testing';
+    'evals';
+    'progressive delivery';
+  ];
 };
-,
-const ReliabilityEngineeringForAgents20o26: React.FC = () => {,
-  return (,
+const ReliabilityEngineeringForAgents20o26: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Reliability Engineering for Agents',
         description='SLOs, chaos testing, and progressive delivery guarded by evaluation gates for agent systems.',
         keywords='reliability engineering, SLOs, chaos testing, evals, progressive delivery',
@@ -58,23 +56,18 @@ const ReliabilityEngineeringForAgents20o26: React.FC = () => {,
           </p>,
         </div>,
         <div className='mt-8 flex flex-wrap gap-4'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/content/ai-20o26-policy-as-code-starter-kit',
-            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Policy-as-Code Kit,
           </Link>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default ReliabilityEngineeringForAgents20o26,
-,
+    </div>),
+};
+export default ReliabilityEngineeringForAgents20o26;

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import TestimonialsSection from '../components/TestimonialsSection',
-,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import TestimonialsSection from "./components/TestimonialsSection" describe("TestimonialsSection",() => {" test("renders without crashing",() => {" render(<TestimonialsSection /  />) expect(screen.getByTestId("testimonialssection")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<TestimonialsSection /  />) }) test("handles user interactions",() => {" render(<TestimonialsSection /  />) }) test("applies correct styling",() => {" render(<TestimonialsSection /  />) }) })'"'",
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import TestimonialsSection from "./components/TestimonialsSection" describe("TestimonialsSection",() => {" test("renders without crashing",() => {" render(<TestimonialsSection /  />) expect(screen.getByTestId("testimonialssection")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<TestimonialsSection /  />) }) test("handles user interactions",() => {" render(<TestimonialsSection /  />) }) test("applies correct styling",() => {" render(<TestimonialsSection /  />) }) })'"'",

@@ -14,8 +14,7 @@ const PerformanceMetrics = memo(function PerformanceMetrics() {
 		{ label: 'Response Time', value: '45ms', change: -12, trend: 'up' },
 		{ label: 'Uptime', value: '99.9%', change: 0.1, trend: 'up' },
 		{ label: 'Throughput', value: '2.4k req/s', change: 15, trend: 'up' },
-		{ label: 'Error Rate', value: '0.02%', change: -25, trend: 'up' },
-	]);
+		{ label: 'Error Rate', value: '0.02%', change: -25, trend: 'up' }]);
 
 	const [isVisible, setIsVisible] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);

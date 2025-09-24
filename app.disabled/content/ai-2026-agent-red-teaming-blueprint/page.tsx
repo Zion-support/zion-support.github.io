@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Red Teaming Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Red Teaming Blueprint | Zion Tech Group';
   description:,
-    'A practical blueprint for red teaming autonomous agents: scenarios, attack surfaces, controls, and continuous hardening.',;
+    'A practical blueprint for red teaming autonomous agents: scenarios, attack surfaces, controls, and continuous hardening.';
 };
-,
-const AgentRedTeamingBlueprint20o26 = () => {,
-  return (,
+const AgentRedTeamingBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Red Teaming Blueprint',
         description='Threat-model agents, simulate adversaries, and harden with eval-gated mitigations and runtime controls.',
         keywords='agent red teaming, adversarial testing, AI safety, evals, hardening',
@@ -58,23 +56,18 @@ const AgentRedTeamingBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Security Assessment,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgentRedTeamingBlueprint20o26,
-,
+    </div>),
+};
+export default AgentRedTeamingBlueprint20o26;

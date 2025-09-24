@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
-  return (,
+const RevolutionaryTransformationSuccessBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16 relative overflow-hidden'>,
-      {/* Background Elements */,}
+      {/* Background Elements */}
       <div className='absolute inset-0 bg-black opacity-30'></div>,
       <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-60o0/10 via-emerald-60o0/10 to-teal-60o0/10'></div>,
       {/* Floating Elements */}
@@ -13,7 +12,7 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
       <div className='absolute top-1/2 left-1/3 w-16 h-16 bg-teal-50o0 rounded-full opacity-25 animate-ping'></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
-          {/* Success Badge */,}
+          {/* Success Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full px-6 py-2 mb-6 shadow-lg'>,
             <span className='text-sm font-bold'>,
               🏆 SUCCESS STORY 20o25-20o26,
@@ -23,14 +22,14 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
           <h2 className='text-4xl md: text-6xl font-bold mb-6 leading-tight'>,
             Revolutionary Transformation:,
             <span className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent'>,
-              {' ',}
+              {' '}
               2,50o0% ROI Success,
             </span>,
           </h2>,
           {/* Subheadline */}
           <p className='text-xl md: text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Discover how a Fortune 10o0 company achieved unprecedented success,
-            through revolutionary AI transformation. From{' ',}
+            through revolutionary AI transformation. From{' '}
             <span className='font-semibold text-yellow-40o0'>,
               $45B to $157.5B revenue,
             </span>{' '}
@@ -62,7 +61,7 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
         </div>,
         {/* Transformation Journey */}
         <div className='grid md: grid-cols-3 gap-8 mb-12'>,
-          {/* Before */,}
+          {/* Before */}
           <div className='bg-red-90o0/20 backdrop-blur-sm rounded-xl p-6 border border-red-50o0/30'>,
             <div className='text-center'>,
               <div className='text-4xl mb-4'>❌</div>,
@@ -150,21 +149,19 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
               business transformation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gray-90o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-80o0 transition-colors',
-              >,
+                className='bg-gray-90o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-80o0 transition-colors'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies/ai-20o25-20o26-revolutionary-transformation-250o0-roi-success',
-                className='border-2 border-gray-90o0 text-gray-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-90o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-gray-90o0 text-gray-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-90o0 hover:text-white transition-colors'>,
                 Read Full Case Study,
               </Link>,
             </div>,
           </div>,
-          {/* Industry Recognition */,}
+          {/* Industry Recognition */}
           <div className='text-center opacity-80'>,
             <p className='text-sm mb-2'>Industry Recognition & Awards</p>,
             <div className='flex justify-center items-center space-x-8 text-xs'>,
@@ -175,9 +172,5 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default RevolutionaryTransformationSuccessBanner,
-,
+    </section>)};
+export default RevolutionaryTransformationSuccessBanner;

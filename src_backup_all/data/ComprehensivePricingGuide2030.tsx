@@ -3,16 +3,13 @@ import { SEO  } from '../components/SEO',
 import { innovativeMicroSaasServices20o30  } from '../data/innovativeMicroSaasServices20o30',
 import { comprehensiveITServices20o30  } from '../data/comprehensiveITServices20o30',
 import { comprehensiveAIServices20o30  } from '../data/comprehensiveAIServices20o30',
-,
-const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
+const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState<any>('microsaas'),
   const [priceRange, setPriceRange] = useState<any>([0, 50o00]),
   const [selectedCategory, setSelectedCategory] = useState('all'),
-,
-  const getFilteredServices = () => {,
+  const getFilteredServices = () => {
     let services: any[] = [],
-,
-    switch (activeTab) {,
+    switch (activeTab) {
       case 'microsaas':,
         services = innovativeMicroSaasServices20o30,
         break,
@@ -22,29 +19,22 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
       case 'ai':,
         services = comprehensiveAIServices20o30,
         break,
-    ,}
+    }
 ,
     // Filter by price range,
-    services = services.filter(service => {,
-      if (activeTab === 'it') {,
-        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1],
-      } else {,
-        return service.price >= priceRange[0] && service.price <= priceRange[1],
-      }
+    services = services.filter(service => {
+      if (activeTab === 'it') {
+        return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {
+        return service.price >= priceRange[0] && service.price <= priceRange[1]}
     }),
-,
     // Filter by category,
-    if (selectedCategory !== 'all') {,
-      services = services.filter(service => service.category === selectedCategory),
-    }
+    if (selectedCategory !== 'all') {
+      services = services.filter(service => service.category === selectedCategory)}
 ,
-    return services,
-  };
-,
-  const getCategories = () => {,
+    return services};
+  const getCategories = () => {
     let services: any[] = [],
-,
-    switch (activeTab) {,
+    switch (activeTab) {
       case 'microsaas':,
         services = innovativeMicroSaasServices20o30,
         break,
@@ -54,16 +44,13 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
       case 'ai':,
         services = comprehensiveAIServices20o30,
         break,
-    ,}
+    }
 ,
     const categories = [...new Set(services.map(service => service.category))],
-    return categories,
-  };
-,
-  const getPriceRange = () => {,
+    return categories};
+  const getPriceRange = () => {
     let services: any[] = [],
-,
-    switch (activeTab) {,
+    switch (activeTab) {
       case 'microsaas':,
         services = innovativeMicroSaasServices20o30,
         break,
@@ -73,26 +60,23 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
       case 'ai':,
         services = comprehensiveAIServices20o30,
         break,
-    ,}
+    }
 ,
-    if (activeTab === 'it') {,
+    if (activeTab === 'it') {
       const min = Math.min(...services.map(s => s.hourlyRate)),
       const max = Math.max(...services.map(s => s.hourlyRate)),
-      return [min, max],
-    } else {,
+      return [min, max]} else {
       const min = Math.min(...services.map(s => s.price)),
       const max = Math.max(...services.map(s => s.price)),
-      return [min, max],
-    }
+      return [min, max]}
   };
-,
-  const renderPricingCard = (service: anyany)  => {,
-    if (activeTab === 'microsaas') {,
-      return (,
-        <div key={service.id,} className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden">,
+  const renderPricingCard = (service: anyany)  => {
+    if (activeTab === 'microsaas') {
+      return (
+        <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden">,
           <div className="p-6">,
             <div className="text-center mb-6">,
-              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name,}</h3>,
+              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name}</h3>,
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full">,
                 {service.pricing}
               </span>,
@@ -101,18 +85,17 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
               <div className="text-4xl font-bold text-gray-90o0 mb-2">${service.price.toLocaleString()}</div>,
               <div className="text-gray-60o0">{service.pricingModel}</div>,
               <div className="text-sm text-gray-50o0 mt-2">,
-                <strong>Market Price: </strong> {service.marketPrice,}
+                <strong>Market Price: </strong> {service.marketPrice}
               </div>,
             </div>,
             <div className="mb-6">,
               <h4 className="font-semibold text-gray-90o0 mb-3 text-center">Key Benefits</h4>,
               <div className="space-y-2">,
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (,
-                  <div key={index,} className="flex items-center text-sm text-gray-60o0">,
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                  <div key={index} className="flex items-center text-sm text-gray-60o0">,
                     <span className="w-2 h-2 bg-green-50o0 rounded-full mr-3"></span>,
                     {benefit}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="mb-6">,
@@ -131,39 +114,35 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
             <div className="border-t pt-4">,
               <div className="text-center mb-4">,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Innovation Level: </strong> {service.innovationLevel,}
+                  <strong>Innovation Level: </strong> {service.innovationLevel}
                 </div>,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Market Size: </strong> {service.marketSize,}
+                  <strong>Market Size: </strong> {service.marketSize}
                 </div>,
                 <div className="text-sm text-gray-60o0">,
-                  <strong>Growth Rate: </strong> {service.growthRate,}
+                  <strong>Growth Rate: </strong> {service.growthRate}
                 </div>,
               </div>,
               <div className="flex flex-col gap-2">,
-                <a,
-                  href={`tel: ${service.contactInfo.phone,}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 text-center",
-                >,
-                  Call: {service.contactInfo.phone,}
+                <a
+                  href={`tel: ${service.contactInfo.phone}`}
+                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 text-center">,
+                  Call: {service.contactInfo.phone}
                 </a>,
-                <a,
-                  href={`mailto: ${service.contactInfo.email,}`}
-                  className="w-full px-4 py-2 border border-blue-60o0 text-blue-60o0 rounded-lg hover: bg-blue-50 transition-colors text-center",
-                >,
-                  Email: {service.contactInfo.email,}
+                <a
+                  href={`mailto: ${service.contactInfo.email}`}
+                  className="w-full px-4 py-2 border border-blue-60o0 text-blue-60o0 rounded-lg hover: bg-blue-50 transition-colors text-center">,
+                  Email: {service.contactInfo.email}
                 </a>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),
-    } else if (activeTab === 'it') {,
-      return (,
+        </div>)} else if (activeTab === 'it') {
+      return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden">,
           <div className="p-6">,
             <div className="text-center mb-6">,
-              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name,}</h3>,
+              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name}</h3>,
               <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-green-60o0 to-blue-60o0 rounded-full">,
                 {service.category}
               </span>,
@@ -180,18 +159,17 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
                 </div>,
               </div>,
               <div className="text-sm text-gray-50o0">,
-                <strong>Market Price: </strong> {service.marketPrice,}
+                <strong>Market Price: </strong> {service.marketPrice}
               </div>,
             </div>,
             <div className="mb-6">,
               <h4 className="font-semibold text-gray-90o0 mb-3 text-center">Key Benefits</h4>,
               <div className="space-y-2">,
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (,
-                  <div key={index,} className="flex items-center text-sm text-gray-60o0">,
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                  <div key={index} className="flex items-center text-sm text-gray-60o0">,
                     <span className="w-2 h-2 bg-green-50o0 rounded-full mr-3"></span>,
                     {benefit}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="mb-6">,
@@ -210,45 +188,41 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
             <div className="border-t pt-4">,
               <div className="text-center mb-4">,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Delivery Time: </strong> {service.deliveryTime,}
+                  <strong>Delivery Time: </strong> {service.deliveryTime}
                 </div>,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Support: </strong> {service.support,}
+                  <strong>Support: </strong> {service.support}
                 </div>,
                 <div className="text-sm text-gray-60o0">,
-                  <strong>ROI: </strong> {service.roi,}
+                  <strong>ROI: </strong> {service.roi}
                 </div>,
               </div>,
               <div className="flex flex-col gap-2">,
-                <a,
-                  href={`tel: ${service.contactInfo.phone,}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white rounded-lg hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 text-center",
-                >,
-                  Call: {service.contactInfo.phone,}
+                <a
+                  href={`tel: ${service.contactInfo.phone}`}
+                  className="w-full px-4 py-2 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white rounded-lg hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 text-center">,
+                  Call: {service.contactInfo.phone}
                 </a>,
-                <a,
-                  href={`mailto: ${service.contactInfo.email,}`}
-                  className="w-full px-4 py-2 border border-green-60o0 text-green-60o0 rounded-lg hover: bg-green-50 transition-colors text-center",
-                >,
-                  Email: {service.contactInfo.email,}
+                <a
+                  href={`mailto: ${service.contactInfo.email}`}
+                  className="w-full px-4 py-2 border border-green-60o0 text-green-60o0 rounded-lg hover: bg-green-50 transition-colors text-center">,
+                  Email: {service.contactInfo.email}
                 </a>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),
-    } else {,
-      return (,
+        </div>)} else {
+      return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0 overflow-hidden">,
           <div className="p-6">,
             <div className="text-center mb-6">,
-              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name,}</h3>,
+              <h3 className="text-xl font-bold text-gray-90o0 mb-2">{service.name}</h3>,
               <div className="flex flex-col items-center gap-2">,
                 <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-full">,
                   {service.category}
                 </span>,
                 <div className="text-sm text-gray-60o0">,
-                  AI Score: <span className="font-bold text-purple-60o0">{service.aiScore,}/10o0</span>,
+                  AI Score: <span className="font-bold text-purple-60o0">{service.aiScore}/10o0</span>,
                 </div>,
               </div>,
             </div>,
@@ -256,21 +230,20 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
               <div className="text-4xl font-bold text-gray-90o0 mb-2">${service.price.toLocaleString()}</div>,
               <div className="text-gray-60o0">{service.pricingModel}</div>,
               <div className="text-sm text-gray-50o0 mt-2">,
-                <strong>Market Price: </strong> {service.marketPrice,}
+                <strong>Market Price: </strong> {service.marketPrice}
               </div>,
               <div className="text-sm text-gray-50o0">,
-                <strong>Accuracy: </strong> {service.accuracy,}
+                <strong>Accuracy: </strong> {service.accuracy}
               </div>,
             </div>,
             <div className="mb-6">,
               <h4 className="font-semibold text-gray-90o0 mb-3 text-center">Key Benefits</h4>,
               <div className="space-y-2">,
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (,
-                  <div key={index,} className="flex items-center text-sm text-gray-60o0">,
+                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                  <div key={index} className="flex items-center text-sm text-gray-60o0">,
                     <span className="w-2 h-2 bg-purple-50o0 rounded-full mr-3"></span>,
                     {benefit}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="mb-6">,
@@ -289,41 +262,35 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
             <div className="border-t pt-4">,
               <div className="text-center mb-4">,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Innovation Level: </strong> {service.innovationLevel,}
+                  <strong>Innovation Level: </strong> {service.innovationLevel}
                 </div>,
                 <div className="text-sm text-gray-60o0 mb-2">,
-                  <strong>Market Size: </strong> {service.marketSize,}
+                  <strong>Market Size: </strong> {service.marketSize}
                 </div>,
                 <div className="text-sm text-gray-60o0">,
-                  <strong>Training Data: </strong> {service.trainingData,}
+                  <strong>Training Data: </strong> {service.trainingData}
                 </div>,
               </div>,
               <div className="flex flex-col gap-2">,
-                <a,
-                  href={`tel: ${service.contactInfo.phone,}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 text-center",
-                >,
-                  Call: {service.contactInfo.phone,}
+                <a
+                  href={`tel: ${service.contactInfo.phone}`}
+                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 text-center">,
+                  Call: {service.contactInfo.phone}
                 </a>,
-                <a,
-                  href={`mailto: ${service.contactInfo.email,}`}
-                  className="w-full px-4 py-2 border border-purple-60o0 text-purple-60o0 rounded-lg hover: bg-purple-50 transition-colors text-center",
-                >,
-                  Email: {service.contactInfo.email,}
+                <a
+                  href={`mailto: ${service.contactInfo.email}`}
+                  className="w-full px-4 py-2 border border-purple-60o0 text-purple-60o0 rounded-lg hover: bg-purple-50 transition-colors text-center">,
+                  Email: {service.contactInfo.email}
                 </a>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),
-    }
+        </div>)}
   };
-,
   const priceRangeData = getPriceRange(),
-,
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Comprehensive Pricing Guide 20o30 - Zion Tech Group",
         description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services. Compare prices, ROI, and market data to find the perfect solution for your business.",
         keywords="pricing guide, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group, 20o30 pricing",
@@ -331,7 +298,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
         ogUrl="https://ziontechgroup.com/comprehensive-pricing-guide-20o30",
        />,
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white">,
           <div className="container mx-auto px-4 py-20">,
             <div className="text-center max-w-4xl mx-auto">,
@@ -385,38 +352,38 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
             </div>,
           </div>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="container mx-auto px-4 py-12">,
           {/* Service Tabs */}
           <div className="mb-8">,
             <div className="flex flex-wrap gap-2 justify-center">,
-              <button,
+              <button
                 onClick={() => setActiveTab('microsaas')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'microsaas',
                     ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg',
                     : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                ,}`}
+                }`}
               >,
                 Micro SAAS Services ({innovativeMicroSaasServices20o30.length}),
               </button>,
-              <button,
+              <button
                 onClick={() => setActiveTab('it')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'it',
                     ? 'bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white shadow-lg',
                     : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                ,}`}
+                }`}
               >,
                 IT Services ({comprehensiveITServices20o30.length}),
               </button>,
-              <button,
+              <button
                 onClick={() => setActiveTab('ai')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                   activeTab === 'ai',
                     ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg',
                     : 'bg-white text-gray-70o0 hover: bg-gray-50 border border-gray-20o0',
-                ,}`}
+                }`}
               >,
                 AI Services ({comprehensiveAIServices20o30.length}),
               </button>,
@@ -429,10 +396,10 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
                 <div>,
                   <label className="block text-sm font-medium text-gray-70o0 mb-2">,
-                    Price Range: ${priceRange[0],} - ${priceRange[1]}
+                    Price Range: ${priceRange[0]} - ${priceRange[1]}
                   </label>,
                   <div className="flex items-center gap-4">,
-                    <input,
+                    <input
                       type="range",
                       min={priceRangeData[0]}
                       max={priceRangeData[1]}
@@ -440,7 +407,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
                       onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
                       className="flex-1",
                     />,
-                    <input,
+                    <input
                       type="range",
                       min={priceRangeData[0]}
                       max={priceRangeData[1]}
@@ -458,39 +425,35 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
                   <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                     Category,
                   </label>,
-                  <select,
+                  <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
-                  >,
+                    className="w-full px-4 py-2 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                     <option value="all">All Categories</option>,
-                    {getCategories().map((category) => (,
-                      <option key={category,} value={category}>{category}</option>,
-                    ))}
+                    {getCategories().map((category) => (
+                      <option key={category} value={category}>{category}</option>))}
                   </select>,
                 </div>,
               </div>,
               <div className="mt-4 text-center">,
-                <button,
-                  onClick={() => {,
+                <button
+                  onClick={() => {
                     setPriceRange([priceRangeData[0], priceRangeData[1]]),
-                    setSelectedCategory('all'),
-                  }}
-                  className="px-4 py-2 bg-gray-60o0 text-white rounded-lg hover: bg-gray-70o0 transition-colors",
-                >,
+                    setSelectedCategory('all')}}
+                  className="px-4 py-2 bg-gray-60o0 text-white rounded-lg hover: bg-gray-70o0 transition-colors">,
                   Reset Filters,
                 </button>,
               </div>,
             </div>,
           </div>,
-          {/* Pricing Summary */,}
+          {/* Pricing Summary */}
           <div className="mb-8">,
             <div className="bg-white rounded-xl p-6 shadow-lg">,
               <h3 className="text-lg font-semibold text-gray-90o0 mb-4">Pricing Summary</h3>,
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
                 <div className="text-center p-4 bg-blue-50 rounded-lg">,
                   <div className="text-2xl font-bold text-blue-60o0">,
-                    {activeTab === 'microsaas' ? '$299' : activeTab === 'it' ? '$120' : '$699',}
+                    {activeTab === 'microsaas' ? '$299' : activeTab === 'it' ? '$120' : '$699'}
                   </div>,
                   <div className="text-gray-60o0">Starting Price</div>,
                 </div>,
@@ -511,23 +474,20 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
           </div>,
           {/* Services Grid */}
           <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">,
-            {getFilteredServices().map(renderPricingCard),}
+            {getFilteredServices().map(renderPricingCard)}
           </div>,
           {/* No Results */}
-          {getFilteredServices().length === 0 && (,
+          {getFilteredServices().length === 0 && (
             <div className="text-center py-12">,
               <div className="text-gray-50o0 text-lg mb-4">No services found matching your criteria</div>,
-              <button,
-                onClick={() => {,
+              <button
+                onClick={() => {
                   setPriceRange([priceRangeData[0], priceRangeData[1]]),
-                  setSelectedCategory('all'),
-                }}
-                className="px-6 py-3 bg-blue-60o0 text-white rounded-lg hover: bg-blue-70o0 transition-colors",
-              >,
+                  setSelectedCategory('all')}}
+                className="px-6 py-3 bg-blue-60o0 text-white rounded-lg hover: bg-blue-70o0 transition-colors">,
                 Clear Filters,
               </button>,
-            </div>,
-          ),}
+            </div>)}
 ,
           {/* Pricing Comparison */}
           <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">,
@@ -536,7 +496,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
               <div className="text-center">,
                 <div className="w-16 h-16 bg-blue-10o0 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <svg className="w-8 h-8 text-blue-60o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1"  />,
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1"  />,
                   </svg>,
                 </div>,
                 <h3 className="text-lg font-semibold text-gray-90o0 mb-2">Competitive Pricing</h3>,
@@ -578,24 +538,20 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {,
               Contact our team to discuss your specific needs and get a customized quote for your business.,
             </p>,
             <div className="flex flex-col md: flex-row gap-4 justify-center">,
-              <a,
+              <a
                 href="tel:+130o24640950",
-                className="px-8 py-3 bg-white text-blue-60o0 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-              >,
+                className="px-8 py-3 bg-white text-blue-60o0 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
                 Call Now: +1 30o2 464 0950,
               </a>,
-              <a,
+              <a
                 href="mailto:kleber@ziontechgroup.com",
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-              >,
+                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
                 Email Us,
               </a>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default ComprehensivePricingGuide20o30,
+    </>),
+};
+export default ComprehensivePricingGuide20o30;

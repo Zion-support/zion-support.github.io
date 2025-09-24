@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SmartCitiesPage() {,
-  return (,
+export default function SmartCitiesPage() {
+  return (
     <>,
       <Head>,
         <title>Smart Cities - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SmartCitiesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

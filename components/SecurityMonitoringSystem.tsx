@@ -1,75 +1,64 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 ShieldAlertTriangleCheckCircleLockEyeZapGlobeDatabase,
-const SecurityMonitoringSystem = () => {,
-  const [securityStatusetSecurityStatus] = useState({,
-    overallScore: 0,;
-    threatsBlocked: 0,;
-    vulnerabilitiesFixed: 0,;
-    securityEvents: [],;
-    complianceStatus: 'excellent',;
-    lastScan: new Date(),;
-    activeThreats: 0,;
+const SecurityMonitoringSystem = () => {
+  const [securityStatusetSecurityStatus] = useState({
+    overallScore: 0;
+    threatsBlocked: 0;
+    vulnerabilitiesFixed: 0;
+    securityEvents: [];
+    complianceStatus: 'excellent';
+    lastScan: new Date();
+    activeThreats: 0;
     protectedAssets: 0,
-  ,}),
-,
+  }),
   const [isScanningsetIsScanning] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Simulate security data loading,
-    const loadSecurityData = () => {,
-      setSecurityStatus({,
-        overallScore: 98,;
-        threatsBlocked: 1247,;
-        vulnerabilitiesFixed: 23,;
-        securityEvents: [,
-          { type: ''success', 'message: 'SSL Certificate 'renewed', 'time: '2 hours ago' ,},;
-          { type: ''info', 'message: 'Security scan 'completed', 'time: '4 hours ago' ,},;
-          { type: ''success', 'message: 'Firewall rules 'updated', 'time: '6 hours ago' ,},;
-          { type: ''warning', 'message: 'Unusual traffic pattern 'detected', 'time: '8 hours ago' ,}
-        ],;
-        complianceStatus: 'excellent',;
-        lastScan: new Date(),;
-        activeThreats: 0,;
+    const loadSecurityData = () => {
+      setSecurityStatus({
+        overallScore: 98;
+        threatsBlocked: 1247;
+        vulnerabilitiesFixed: 23;
+        securityEvents: [
+          { type: ''success', 'message: 'SSL Certificate 'renewed', 'time: '2 hours ago' };
+          { type: ''info', 'message: 'Security scan 'completed', 'time: '4 hours ago' };
+          { type: ''success', 'message: 'Firewall rules 'updated', 'time: '6 hours ago' };
+          { type: ''warning', 'message: 'Unusual traffic pattern 'detected', 'time: '8 hours ago' }
+        ];
+        complianceStatus: 'excellent';
+        lastScan: new Date();
+        activeThreats: 0;
         protectedAssets: 156,
-      ,}),
-    };
-,
-    loadSecurityData(),
-  }[]),
-,
-  const runSecurityScan = () => {,
+      })};
+    loadSecurityData()}[]),
+  const runSecurityScan = () => {
     setIsScanning(true),
-    setTimeout(() => {,
-      setSecurityStatus(prev => ({,
-        ...prev,;
-        overallScore: 99,;
-        threatsBlocked: prev.threatsBlocked + 3,;
+    setTimeout(() => {
+      setSecurityStatus(prev => ({
+        ...prev;
+        overallScore: 99;
+        threatsBlocked: prev.threatsBlocked + 3;
         lastScan: new Date(),
-      ,})),
-      setIsScanning(false),
-    }30o00),
-  };
-,
-  const getScoreColor = (score: number) => {,
+      })),
+      setIsScanning(false)}30o00)};
+  const getScoreColor = (score: number) => {
     if (score >= 95) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
     return 'text-red-40o0',
-  ,};
-,
-  const getEventIcon = (type: string) => {,
-    switch (type) {,
+  };
+  const getEventIcon = (type: string) => {
+    switch (type) {
       case 'success': return <CheckCircle className="w-4 h-4 text-green-40o0"  />,
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-40o0"  />,
       case 'error': return <AlertTriangle className="w-4 h-4 text-red-40o0"  />,
       default: return <Eye className="w-4 h-4 text-blue-40o0"  />,
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="bg-gradient-to-br from-slate-90o0 via-red-90o0 to-orange-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-50o0 to-orange-50o0 text-white text-sm font-medium mb-6">,
             <Shield className="w-4 h-4 mr-2"  />,
@@ -83,7 +72,7 @@ const SecurityMonitoringSystem = () => {,
             Comprehensive security monitoring and threat protection to keep your data safe and secure,
           </p>,
         </div>,
-        {/* Security Score */,}
+        {/* Security Score */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">,
           <div className="text-center">,
             <div className="text-6xl font-bold mb-4">,
@@ -96,12 +85,11 @@ const SecurityMonitoringSystem = () => {,
                securityStatus.overallScore >= 80 ? 'Good security with room for improvement' :,
                'Security needs immediate attention'}
             </p>,
-            <button,
+            <button
               onClick={runSecurityScan}
               disabled={isScanning}
-              className="bg-gradient-to-r from-red-50o0 to-orange-50o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-red-60o0 hover:to-orange-60o0 transition-all duration-30o0 disabled:opacity-50",
-            >,
-              {isScanning ? 'Scanning...' : 'Run Security Scan',}
+              className="bg-gradient-to-r from-red-50o0 to-orange-50o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-red-60o0 hover:to-orange-60o0 transition-all duration-30o0 disabled:opacity-50">,
+              {isScanning ? 'Scanning...' : 'Run Security Scan'}
             </button>,
           </div>,
         </div>,
@@ -110,7 +98,7 @@ const SecurityMonitoringSystem = () => {,
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">,
             <div className="flex items-center justify-between mb-4">,
               <Shield className="w-8 h-8 text-green-40o0"  />,
-              <span className="text-2xl font-bold text-white">{securityStatus.threatsBlocked.toLocaleString(),}</span>,
+              <span className="text-2xl font-bold text-white">{securityStatus.threatsBlocked.toLocaleString()}</span>,
             </div>,
             <h3 className="text-lg font-semibold text-white mb-2">Threats Blocked</h3>,
             <p className="text-gray-30o0 text-sm">Malicious attempts prevented</p>,
@@ -144,7 +132,7 @@ const SecurityMonitoringSystem = () => {,
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">,
           <h3 className="text-2xl font-bold text-white mb-6">Recent Security Events</h3>,
           <div className="space-y-4">,
-            {securityStatus.securityEvents.map((eventindex) => (,
+            {securityStatus.securityEvents.map((eventindex) => (
               <div key={index} className="flex items-center justify-between p-4 bg-white/10 rounded-xl">,
                 <div className="flex items-center">,
                   {getEventIcon(event.type)}
@@ -157,8 +145,7 @@ const SecurityMonitoringSystem = () => {,
                   {event.type === 'success' ? 'Resolved' :,
                    event.type === 'warning' ? 'Monitoring' : 'Info'}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Security Features */}
@@ -191,7 +178,7 @@ const SecurityMonitoringSystem = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Compliance Status */,}
+        {/* Compliance Status */}
         <div className="mt-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">,
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Compliance Status</h3>,
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6">,
@@ -218,8 +205,6 @@ const SecurityMonitoringSystem = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default SecurityMonitoringSystem,
+    </div>),
+};
+export default SecurityMonitoringSystem;

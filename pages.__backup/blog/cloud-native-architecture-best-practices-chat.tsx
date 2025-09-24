@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const CloudNativeArchitectureBestPracticesChat: NextPage = () => {,
-  return (,
+const CloudNativeArchitectureBestPracticesChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           CloudNativeArchitectureBestPracticesChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='CloudNativeArchitectureBestPracticesChat blog post',
         />,
@@ -19,9 +18,6 @@ const CloudNativeArchitectureBestPracticesChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default CloudNativeArchitectureBestPracticesChat,
-,
+    </div>),
+};
+export default CloudNativeArchitectureBestPracticesChat;

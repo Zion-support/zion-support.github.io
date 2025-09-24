@@ -1,15 +1,14 @@
 import Link from 'next/link',
 ArrowRightBookOpenCheckCircleClockTargetTrendingUpUsersZapBrainAward,
-,
-const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
-  return (,
+const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {
+  return (
     <section className='relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%20o0%20o60%20o60%22%20xmlns%3D%22http%3A//www.w3.org/20o00/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Cpath%20d%3D%22M30%20o30c0-16.569-13.431-30-30-30v30h30z%22/%3E%3C/g%3E%3C/svg%3E')]"></div>,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-40o0 to-pink-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6'>,
             <BookOpen className='w-4 h-4 mr-2' />,
@@ -24,7 +23,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
             methodologiestoolsand best practices for guaranteed success.,
           </p>,
         </div>,
-        {/* Framework Overview */,}
+        {/* Framework Overview */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20'>,
             <div className='w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mb-4'>,
@@ -109,7 +108,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Success Metrics Framework */,}
+        {/* Success Metrics Framework */}
         <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-12'>,
           <h3 className='text-2xl font-bold mb-6 text-center'>,
             Proven Success Metrics Framework,
@@ -161,7 +160,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Implementation Tools and Resources */,}
+        {/* Implementation Tools and Resources */}
         <div className='mb-12'>,
           <h3 className='text-2xl font-bold text-center mb-8'>,
             Complete Toolkit Included,
@@ -173,7 +172,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
               </div>,
               <h4 className='text-lg font-bold mb-2'>Readiness Assessment</h4>,
               <p className='text-purple-10o0 text-sm'>,
-                Comprehensive diagnostic tool to evaluate your 'organization',;
+                Comprehensive diagnostic tool to evaluate your 'organization';
                 's AI readiness,
               </p>,
             </div>,
@@ -257,7 +256,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Success Stories Preview */,}
+        {/* Success Stories Preview */}
         <div className='mb-12'>,
           <h3 className='text-2xl font-bold text-center mb-8'>,
             Real-World Success Stories,
@@ -320,39 +319,35 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
         {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/content/resources/ai-20o26-implementation-ultimate-framework',
-              className='bg-gradient-to-r from-purple-40o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-50o0 hover:to-pink-60o0 transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-purple-40o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-50o0 hover:to-pink-60o0 transition-all duration-30o0 flex items-center justify-center'>,
               Download Complete Framework,
               <BookOpen className='w-5 h-5 ml-2' />,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-all duration-30o0 flex items-center justify-center'>,
               Get Implementation Support,
               <Users className='w-5 h-5 ml-2' />,
             </Link>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/tools/ai-readiness-assessment',
-              className='bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center'>,
               Start with Readiness Assessment,
               <Target className='w-4 h-4 ml-2' />,
             </Link>,
-            <Link,
+            <Link
               href='/tools/ai-roi-calculator',
-              className='bg-gradient-to-r from-green-50o0 to-teal-50o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-60o0 hover:to-teal-60o0 transition-all duration-30o0 flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-teal-50o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-60o0 hover:to-teal-60o0 transition-all duration-30o0 flex items-center justify-center'>,
               Calculate Your Potential ROI,
               <TrendingUp className='w-4 h-4 ml-2' />,
             </Link>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className='mt-12 pt-8 border-t border-white border-opacity-20'>,
           <div className='text-center'>,
             <p className='text-purple-20o0 mb-4'>,
@@ -370,9 +365,5 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o26ImplementationFrameworkUltimatePromotionBanner,
-,
+    </section>)};
+export default AI20o26ImplementationFrameworkUltimatePromotionBanner;

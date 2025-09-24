@@ -1,9 +1,7 @@
 // @ts-nocheck,
 'use client',
-,
 import { useEffect, useState } from 'react',
-,
-interface Feature {,
+interface Feature {
   id: string,
   title: string,
   description: string,
@@ -11,119 +9,107 @@ interface Feature {,
   color: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo',
   details: string[],
   demo?: string,
-,}
+}
 ,
-const features: Feature[] = [,
-  {,
-    id: 'marketplace',;
-    title: 'Marketplace & Jobs',;
+const features: Feature[] = [
+  {
+    id: 'marketplace';
+    title: 'Marketplace & Jobs';
     description:,
-      'Complete marketplace infrastructure with job posting, talent matching, and project management.',;
-    icon: (,
-      <svg,
+      'Complete marketplace infrastructure with job posting, talent matching, and project management.';
+    icon: (
+      <svg
         className='w-8 h-8',
         fill='none',
         stroke='currentColor',
-        viewBox='0 0 24 24',
-      >,
-        <path,
+        viewBox='0 0 24 24'>,
+        <path
           strokeLinecap='round',
           strokeLinejoin='round',
-          strokeWidth={2,}
+          strokeWidth={2}
           d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
         />,
-      </svg>,
-    ),;
-    color: 'blue',;
-    details: [,
-      'Smart job matching algorithms',;
-      'Escrow payment systems',;
-      'Project milestone tracking',;
-      'Rating and review systems',;
-      'Multi-currency support',;
-    ],;
-  },;
-  {,
-    id: 'governance',;
-    title: 'AI Governance',;
+      </svg>);
+    color: 'blue';
+    details: [
+      'Smart job matching algorithms';
+      'Escrow payment systems';
+      'Project milestone tracking';
+      'Rating and review systems';
+      'Multi-currency support';
+    ];
+  };
+  {
+    id: 'governance';
+    title: 'AI Governance';
     description:,
-      'Intelligent governance systems with DAO voting, proposal management, and automated decision-making.',;
-    icon: (,
-      <svg,
+      'Intelligent governance systems with DAO voting, proposal management, and automated decision-making.';
+    icon: (
+      <svg
         className='w-8 h-8',
         fill='none',
         stroke='currentColor',
-        viewBox='0 0 24 24',
-      >,
-        <path,
+        viewBox='0 0 24 24'>,
+        <path
           strokeLinecap='round',
           strokeLinejoin='round',
-          strokeWidth={2,}
+          strokeWidth={2}
           d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
         />,
-      </svg>,
-    ),;
-    color: 'purple',;
-    details: [,
-      'AI-powered proposal analysis',;
-      'Automated voting systems',;
-      'Smart contract governance',;
-      'Transparency reporting',;
-      'Multi-signature wallets',;
-    ],;
-  },;
-  {,
-    id: 'tokens',;
-    title: 'Token Systems',;
+      </svg>);
+    color: 'purple';
+    details: [
+      'AI-powered proposal analysis';
+      'Automated voting systems';
+      'Smart contract governance';
+      'Transparency reporting';
+      'Multi-signature wallets';
+    ];
+  };
+  {
+    id: 'tokens';
+    title: 'Token Systems';
     description:,
-      'Flexible token economics with rewards, staking, and multi-currency support for your economy.',;
-    icon: (,
-      <svg,
+      'Flexible token economics with rewards, staking, and multi-currency support for your economy.';
+    icon: (
+      <svg
         className='w-8 h-8',
         fill='none',
         stroke='currentColor',
-        viewBox='0 0 24 24',
-      >,
-        <path,
+        viewBox='0 0 24 24'>,
+        <path
           strokeLinecap='round',
           strokeLinejoin='round',
-          strokeWidth={2,}
+          strokeWidth={2}
           d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08-.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c1.11 0 2.08-.402 2.599-1',
         />,
-      </svg>,
-    ),;
-    color: 'green',;
-    details: [,
-      'Custom token creation',;
-      'Staking and rewards',;
-      'Liquidity pools',;
-      'Token burning mechanisms',;
-      'Cross-chain bridges',;
-    ],;
-  },;
+      </svg>);
+    color: 'green';
+    details: [
+      'Custom token creation';
+      'Staking and rewards';
+      'Liquidity pools';
+      'Token burning mechanisms';
+      'Cross-chain bridges';
+    ];
+  };
 ],
-,
-export function FeatureShowcase() {,
+export function FeatureShowcase() {
   const [activeFeature, setActiveFeature] = useState<string | null>(null),
   const [isVisible, setIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }, []),
-,
-  const getColorClasses = (color: Feature['color']) => {,
-    const colorMap = {,
-      blue: 'from-blue-500 to-blue-600',;
-      purple: 'from-purple-500 to-purple-600',;
-      green: 'from-green-500 to-green-600',;
-      red: 'from-red-500 to-red-600',;
-      yellow: 'from-yellow-500 to-yellow-600',;
-      indigo: 'from-indigo-500 to-indigo-600',;
+  useEffect(() => {
+    setIsVisible(true)}, []),
+  const getColorClasses = (color: Feature['color']) => {
+    const colorMap = {
+      blue: 'from-blue-500 to-blue-600';
+      purple: 'from-purple-500 to-purple-600';
+      green: 'from-green-500 to-green-600';
+      red: 'from-red-500 to-red-600';
+      yellow: 'from-yellow-500 to-yellow-600';
+      indigo: 'from-indigo-500 to-indigo-600';
     } as const,
-    return colorMap[color] || 'from-blue-500 to-blue-600',
-  };
-,
-  return (,
+    return colorMap[color] || 'from-blue-500 to-blue-600'};
+  return (
     <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center mb-16'>,
@@ -136,25 +122,23 @@ export function FeatureShowcase() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
-          {/* Feature Cards */,}
+          {/* Feature Cards */}
           <div className='space-y-6'>,
-            {features.map((feature, index) => (,
-              <div,
+            {features.map((feature, index) => (
+              <div
                 key={feature.id}
-                className={`card cursor-pointer transform transition-all duration-300 hover: scale-105 ${,
+                className={`card cursor-pointer transform transition-all duration-300 hover: scale-105 ${
                   activeFeature === feature.id,
                     ? `ring-2 bg-white/10`,
                     : 'hover:bg-white/10',
-                ,} ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
-                style={{ transitionDelay: `${index * 100,}ms` }}
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() =>,
-                  setActiveFeature(,
-                    activeFeature === feature.id ? null : feature.id,
-                  ),
-                }
+                  setActiveFeature(
+                    activeFeature === feature.id ? null : feature.id)}
               >,
                 <div className='flex items-start space-x-4'>,
-                  <div,
+                  <div
                     className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}
                   >,
                     {feature.icon}
@@ -164,32 +148,27 @@ export function FeatureShowcase() {,
                       {feature.title}
                     </h3>,
                     <p className='text-gray-400 mb-3'>{feature.description}</p>,
-                    {activeFeature === feature.id && (,
+                    {activeFeature === feature.id && (
                       <div className='space-y-2 animate-fade-in'>,
-                        {feature.details.map((detail, idx) => (,
-                          <div,
+                        {feature.details.map((detail, idx) => (
+                          <div
                             key={idx}
-                            className='flex items-center space-x-2 text-sm text-gray-300',
-                          >,
+                            className='flex items-center space-x-2 text-sm text-gray-300'>,
                             <div className='w-1.5 h-1.5 bg-white/50 rounded-full'></div>,
                             <span>{detail}</span>,
-                          </div>,
-                        ))}
-                      </div>,
-                    )}
+                          </div>))}
+                      </div>)}
                   </div>,
-                  <div,
-                    className={`transform transition-transform duration-300 ${,
-                      activeFeature === feature.id ? 'rotate-180' : 'rotate-0',
-                    }`}
+                  <div
+                    className={`transform transition-transform duration-300 ${
+                      activeFeature === feature.id ? 'rotate-180' : 'rotate-0'}`}
                   >,
-                    <svg,
+                    <svg
                       className='w-5 h-5 text-gray-400',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -198,8 +177,7 @@ export function FeatureShowcase() {,
                     </svg>,
                   </div>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           {/* Interactive Demo Area */}
           <div className='relative'>,
@@ -216,7 +194,7 @@ export function FeatureShowcase() {,
                     : 'Click on any feature to see detailed information and demonstrations'}
                 </p>,
               </div>,
-              {activeFeature ? (,
+              {activeFeature ? (
                 <div className='space-y-6 animate-fade-in'>,
                   <div className='bg-black/30 rounded-lg p-4 border border-white/10'>,
                     <h4 className='font-semibold text-white mb-3'>,
@@ -225,15 +203,13 @@ export function FeatureShowcase() {,
                     <div className='grid grid-cols-1 sm: grid-cols-2 gap-3'>,
                       {features,
                         .find(f => f.id === activeFeature),
-                        ?.details.map((detail, idx) => (,
-                          <div,
+                        ?.details.map((detail, idx) => (
+                          <div
                             key={idx}
-                            className='flex items-center space-x-2 text-sm',
-                          >,
+                            className='flex items-center space-x-2 text-sm'>,
                             <div className='w-2 h-2 bg-green-50o0 rounded-full'></div>,
                             <span className='text-gray-30o0'>{detail}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                     </div>,
                   </div>,
                   <div className='bg-black/30 rounded-lg p-4 border border-white/10'>,
@@ -257,17 +233,15 @@ export function FeatureShowcase() {,
                   <button className='w-full btn-primary'>,
                     Try {features.find(f => f.id === activeFeature)?.title} Demo,
                   </button>,
-                </div>,
-              ) : (,
+                </div>) : (
                 <div className='text-center py-12'>,
                   <div className='w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center'>,
-                    <svg,
+                    <svg
                       className='w-12 h-12 text-blue-400',
                       fill='none',
                       stroke='currentColor',
-                      viewBox='0 0 24 24',
-                    >,
-                      <path,
+                      viewBox='0 0 24 24'>,
+                      <path
                         strokeLinecap='round',
                         strokeLinejoin='round',
                         strokeWidth={2}
@@ -278,15 +252,11 @@ export function FeatureShowcase() {,
                   <p className='text-gray-40o0'>,
                     Interactive feature exploration,
                   </p>,
-                </div>,
-              )}
+                </div>)}
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,
-export default FeatureShowcase,
-,
+export default FeatureShowcase;

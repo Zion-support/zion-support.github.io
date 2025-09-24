@@ -1,29 +1,22 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const NewContent20o25PromotionalBanner = () => {,
+const NewContent20o25PromotionalBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentStat, setCurrentStat] = useState(0),
-,
-  const stats = [,
-    { number: "50,0o00%", label: "Average ROI", color: "text-green-50o0" ,},;
-    { number: "50o0+", label: "Success Stories", color: "text-blue-50o0" ,},;
-    { number: "98%", label: "Client Satisfaction", color: "text-purple-50o0" ,},;
-    { number: "24/7", label: "Support Available", color: "text-orange-50o0" ,}
+  const stats = [
+    { number: "50,0o00%", label: "Average ROI", color: "text-green-50o0" };
+    { number: "50o0+", label: "Success Stories", color: "text-blue-50o0" };
+    { number: "98%", label: "Client Satisfaction", color: "text-purple-50o0" };
+    { number: "24/7", label: "Support Available", color: "text-orange-50o0" }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentStat((prev) => (prev + 1) % stats.length),
-    }, 30o00),
-    return () => clearInterval(interval),
-  }, []),
-,
-  return (,
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length)}, 30o00),
+    return () => clearInterval(interval)}, []),
+  return (
     <div className={`py-16 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
@@ -42,19 +35,17 @@ const NewContent20o25PromotionalBanner = () => {,
         </div>,
         {/* Animated Stats */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12">,
-          {stats.map((stat, index) => (,
-            <div,
+          {stats.map((stat, index) => (
+            <div
               key={index}
-              className={`text-center transition-all duration-50o0 ${,
-                currentStat === index ? 'transform scale-110' : 'opacity-70',
-              }`}
+              className={`text-center transition-all duration-50o0 ${
+                currentStat === index ? 'transform scale-110' : 'opacity-70'}`}
             >,
-              <div className={`text-4xl md: text-5xl font-bold mb-2 ${stat.color,}`}>,
+              <div className={`text-4xl md: text-5xl font-bold mb-2 ${stat.color}`}>,
                 {stat.number}
               </div>,
               <div className="text-lg opacity-90">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Feature Highlights */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">,
@@ -80,19 +71,17 @@ const NewContent20o25PromotionalBanner = () => {,
             </p>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
-            <Link,
+            <Link
               href="/services",
-              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg">,
               Explore New Content,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg">,
               Get Started Today,
             </Link>,
           </div>,
@@ -101,8 +90,5 @@ const NewContent20o25PromotionalBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default NewContent20o25PromotionalBanner,
+    </div>)};
+export default NewContent20o25PromotionalBanner;

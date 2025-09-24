@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function AIEvaluationOrchestratorPage() {,
-  return (,
+export default function AIEvaluationOrchestratorPage() {
+  return (
     <>,
       <Head>,
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Automate AI model evaluations with reproducible datasets and metrics.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-evaluation-orchestrator',
         />,
@@ -19,17 +18,14 @@ export default function AIEvaluationOrchestratorPage() {,
           AI Evaluation Orchestrator,
         </h1>,
         <p className='text-gray-300 max-w-3xl'>,
-          Benchmark and monitor AI models at scale. Contact sales at{' ',}
-          <a,
+          Benchmark and monitor AI models at scale. Contact sales at{' '}
+          <a
             className='text-cyan-400 underline',
-            href='mailto: kleber@ziontechgroup.com',
-          >,
+            href='mailto: kleber@ziontechgroup.com'>,
             kleber@ziontechgroup.com,
-          </a>{' ',}
+          </a>{' '}
           or call +1 302 464 0950.,
         </p>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

@@ -1,6 +1,4 @@
 'use client',
-,
-export default function AdvancedAIAssistant() {,
-  return null,
-}
+export default function AdvancedAIAssistant() {
+  return null}
 ,

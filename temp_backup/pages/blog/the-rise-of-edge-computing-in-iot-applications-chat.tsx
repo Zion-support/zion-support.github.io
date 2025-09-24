@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {,
-  return (,
+export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {
+  return (
     <>,
       <Head>,
         <title>The Rise Of Edge Computing In Iot Applications Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function TheRiseOfEdgeComputingInIotApplicationsChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

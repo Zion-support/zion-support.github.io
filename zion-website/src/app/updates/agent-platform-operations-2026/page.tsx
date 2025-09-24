@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AgentPlatformOperationsPage() {,
-  return (,
+import React from 'react';
+export default function AgentPlatformOperationsPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <header className='mb-12'>,
@@ -30,7 +29,5 @@ export default function AgentPlatformOperationsPage() {,
           </ul>,
         </article>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

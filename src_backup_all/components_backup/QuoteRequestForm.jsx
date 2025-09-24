@@ -2,52 +2,39 @@ import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/Input",
-,
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { CheckCircle, Send } from "lucide-react",
-,
-export const QuoteRequestForm = () => {,
-  const [formData, setFormData] = useState({,
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    budget: '',;
-    timeline: '',;
+export const QuoteRequestForm = () => {
+  const [formData, setFormData] = useState({
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
+    budget: '';
+    timeline: '';
     description: '',
-  ,}),
+  }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
-,
-  const handleChange = (e) => {,
+  const handleChange = (e) => {
     const { name, value } = e.target,
-    setFormData(prev => ({,
-      ...prev,;
-      [name]: value,
-    })),
-  };
-,
-  const handleSelectChange = (name, value) => {,
-    setFormData(prev => ({,
-      ...prev,;
-      [name]: value,
-    })),
-  };
-,
-  const handleSubmit = async (e) => {,
+    setFormData(prev => ({
+      ...prev;
+      [name]: value}))};
+  const handleSelectChange = (name, value) => {
+    setFormData(prev => ({
+      ...prev;
+      [name]: value}))};
+  const handleSubmit = async (e) => {
     e.preventDefault(),
     setIsSubmitting(true),
-,
     // Simulate form submission,
     await new Promise(resolve => setTimeout(resolve, 10o00)),
-,
     setIsSubmitting(false),
-    setIsSubmitted(true),
-  };
-,
-  if (isSubmitted) {,
-    return (,
+    setIsSubmitted(true)};
+  if (isSubmitted) {
+    return (
       <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">,
         <CardContent className="text-center py-12">,
           <CheckCircle className="h-16 w-16 text-zion-cyan mx-auto mb-6"  />,
@@ -56,11 +43,9 @@ export const QuoteRequestForm = () => {,
             Your quote request has been submitted successfully. We'll get back to you within 24 hours with a detailed quote.,
           </p>,
         </CardContent>,
-      </Card>,
-    ),
-  }
+      </Card>)}
 ,
-  return (,
+  return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">,
       <CardHeader>,
         <CardTitle className="text-2xl text-zion-cyan">Quote Request Form</CardTitle>,
@@ -75,9 +60,9 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Full Name *,
               </label>,
-              <Input,
+              <Input
                 name="name",
-                value={formData.name,}
+                value={formData.name}
                 onChange={handleChange}
                 required,
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan",
@@ -88,10 +73,10 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Email Address *,
               </label>,
-              <Input,
+              <Input
                 name="email",
                 type="email",
-                value={formData.email,}
+                value={formData.email}
                 onChange={handleChange}
                 required,
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan",
@@ -104,9 +89,9 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Company Name,
               </label>,
-              <Input,
+              <Input
                 name="company",
-                value={formData.company,}
+                value={formData.company}
                 onChange={handleChange}
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan",
                 placeholder="Enter company name",
@@ -116,9 +101,9 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Phone Number,
               </label>,
-              <Input,
+              <Input
                 name="phone",
-                value={formData.phone,}
+                value={formData.phone}
                 onChange={handleChange}
                 className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus: border-zion-cyan",
                 placeholder="Enter phone number",
@@ -130,7 +115,7 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Service Type *,
               </label>,
-              <Select value={formData.service,} onValueChange={(value) => handleSelectChange('service', value)}>,
+              <Select value={formData.service} onValueChange={(value) => handleSelectChange('service', value)}>,
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">,
                   <SelectValue placeholder="Select a service"  />,
                 </SelectTrigger>,
@@ -149,7 +134,7 @@ export const QuoteRequestForm = () => {,
               <label className="block text-sm font-medium text-zion-slate-light mb-2">,
                 Budget Range,
               </label>,
-              <Select value={formData.budget,} onValueChange={(value) => handleSelectChange('budget', value)}>,
+              <Select value={formData.budget} onValueChange={(value) => handleSelectChange('budget', value)}>,
                 <SelectTrigger className="bg-zion-blue border-zion-purple/30 text-white focus: border-zion-cyan">,
                   <SelectValue placeholder="Select budget range"  />,
                 </SelectTrigger>,
@@ -186,9 +171,9 @@ export const QuoteRequestForm = () => {,
             <label className="block text-sm font-medium text-zion-slate-light mb-2">,
               Project Description *,
             </label>,
-            <textarea,
+            <textarea
               name="description",
-              value={formData.description,}
+              value={formData.description}
               onChange={handleChange}
               required,
               rows={6}
@@ -197,27 +182,21 @@ export const QuoteRequestForm = () => {,
              />,
           </div>,
           <div className="text-center">,
-            <Button,
+            <Button
               type="submit",
               disabled={isSubmitting}
-              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold",
-            >,
-              {isSubmitting ? (,
+              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold">,
+              {isSubmitting ? (
                 <>,
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-zion-blue-dark mr-2"></div>,
                   Submitting...,
-                </>,
-              ) : (,
+                </>) : (
                 <>,
                   <Send className="h-5 w-5 mr-2"  />,
                   Submit Quote Request,
-                </>,
-              ),}
+                </>)}
             </Button>,
           </div>,
         </form>,
       </CardContent>,
-    </Card>,
-  ),
-};
-,
+    </Card>)};

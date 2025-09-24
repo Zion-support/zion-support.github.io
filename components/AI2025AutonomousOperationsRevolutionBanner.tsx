@@ -1,68 +1,54 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {,
+const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentSlidesetCurrentSlide] = useState(0),
-,
   // Content slides for rotation,
-  const slides = [,
-    {,
-      title: "AI 20o25: The Autonomous Business Operations Revolution",;
-      subtitle: "$5.2T Market Transformation",;
-      metrics: "750% ROI • $8.5M Savings • 95% Efficiency",;
-      description: "Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.",;
-      cta: "Explore Autonomous Operations",;
+  const slides = [
+    {
+      title: "AI 20o25: The Autonomous Business Operations Revolution";
+      subtitle: "$5.2T Market Transformation";
+      metrics: "750% ROI • $8.5M Savings • 95% Efficiency";
+      description: "Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.";
+      cta: "Explore Autonomous Operations";
       link: "/blog/ai-20o25-autonomous-business-operations-revolution",
-    ,},;
-    {,
-      title: "Fortune 10o0 Success Story",;
-      subtitle: "$12.8B Annual Savings Achieved",;
-      metrics: "890% ROI • 156% Efficiency • 99.97% Uptime",;
-      description: "See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations.",;
-      cta: "Read Success Story",;
+    };
+    {
+      title: "Fortune 10o0 Success Story";
+      subtitle: "$12.8B Annual Savings Achieved";
+      metrics: "890% ROI • 156% Efficiency • 99.97% Uptime";
+      description: "See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations.";
+      cta: "Read Success Story";
       link: "/case-studies/fortune-10o0-autonomous-operations-890-roi-success",
-    ,},;
-    {,
-      title: "Implementation Master Guide",;
-      subtitle: "From Strategy to 890% ROI",;
-      metrics: "35 Min Read • 98% Success Rate • 1.4 Month Payback",;
-      description: "Complete roadmap for implementing autonomous operations with proven strategies and frameworks.",;
-      cta: "Get Implementation Guide",;
+    };
+    {
+      title: "Implementation Master Guide";
+      subtitle: "From Strategy to 890% ROI";
+      metrics: "35 Min Read • 98% Success Rate • 1.4 Month Payback";
+      description: "Complete roadmap for implementing autonomous operations with proven strategies and frameworks.";
+      cta: "Get Implementation Guide";
       link: "/resources/autonomous-operations-implementation-guide-20o25",
-    ,}
-  ],
-,
-  // Auto-rotate slides every 5 seconds,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % slides.length),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[slides.length]),
-,
-  // Check if banner was dismissed,
-  useEffect(() => {,
-    const dismissed = localStorage.getItem('autonomous-ops-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
     }
+  ],
+  // Auto-rotate slides every 5 seconds,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)}50o00),
+    return () => clearInterval(interval)}[slides.length]),
+  // Check if banner was dismissed,
+  useEffect(() => {
+    const dismissed = localStorage.getItem('autonomous-ops-banner-dismissed'),
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }[]),
-,
-  const handleDismiss = () => {,
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('autonomous-ops-banner-'dismissed', 'true'),
-  };
-,
+    localStorage.setItem('autonomous-ops-banner-'dismissed', 'true')};
   if (!isVisible) return null,
-,
   const currentSlideData = slides[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated background elements */}
       <div className="absolute inset-0">,
@@ -74,29 +60,27 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {,
       <div className="relative z-10 py-12 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="flex items-center justify-between">,
-            {/* Main content */,}
+            {/* Main content */}
             <div className="flex-1">,
               <div className="flex items-center space-x-4 mb-4">,
                 <div className="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">,
                   <span className="text-sm font-medium">🚀 NEW AUTONOMOUS OPERATIONS CONTENT</span>,
                 </div>,
                 <div className="hidden sm: flex items-center space-x-2">,
-                  {slides.map((_index) => (,
-                    <button,
-                      key={index,}
+                  {slides.map((_index) => (
+                    <button
+                      key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${,
-                        index === currentSlide ? 'bg-white' : 'bg-white/40',
-                      }`}
-                    />,
-                  ))}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/40'}`}
+                    />))}
                 </div>,
               </div>,
               <h2 className="text-2xl sm: text-3xl lg:text-4xl font-bold mb-3 leading-tight">,
-                {currentSlideData.title,}
+                {currentSlideData.title}
               </h2>,
               <p className="text-lg sm: text-xl text-purple-20o0 mb-4 font-semibold">,
-                {currentSlideData.subtitle,}
+                {currentSlideData.subtitle}
               </p>,
               <div className="flex flex-wrap items-center gap-4 mb-6">,
                 <div className="bg-green-50o0/20 backdrop-blur-sm rounded-lg px-4 py-2">,
@@ -111,27 +95,25 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {,
                 </div>,
               </div>,
               <p className="text-gray-20o0 text-base sm: text-lg mb-6 max-w-3xl leading-relaxed">,
-                {currentSlideData.description,}
+                {currentSlideData.description}
               </p>,
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
-                  href={currentSlideData.link,}
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-90o0 font-semibold rounded-lg hover: bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-                >,
-                  <span>{currentSlideData.cta,}</span>,
+                <Link
+                  href={currentSlideData.link}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-90o0 font-semibold rounded-lg hover: bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
+                  <span>{currentSlideData.cta}</span>,
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
                   </svg>,
                 </Link>,
-                <Link,
+                <Link
                   href="/services/autonomous-operations",
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-90o0 transition-all duration-30o0",
-                >,
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-purple-90o0 transition-all duration-30o0">,
                   <span>Get Consultation</span>,
                 </Link>,
               </div>,
             </div>,
-            {/* Visual element */,}
+            {/* Visual element */}
             <div className="hidden lg: flex items-center justify-center ml-8">,
               <div className="relative">,
                 <div className="w-48 h-48 bg-gradient-to-br from-purple-40o0 to-blue-50o0 rounded-full flex items-center justify-center shadow-2xl">,
@@ -151,25 +133,21 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Dismiss button */,}
-      <button,
+      {/* Dismiss button */}
+      <button
         onClick={handleDismiss}
         className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors p-2",
-        aria-label="Dismiss banner",
-      >,
+        aria-label="Dismiss banner">,
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">,
-        <div,
+        <div
           className="h-full bg-gradient-to-r from-purple-40o0 to-blue-40o0 transition-all duration-10o0 ease-linear",
-          style={{ width: `${((currentSlide + 1) / slides.length) * 10o0,}%` }}
+          style={{ width: `${((currentSlide + 1) / slides.length) * 10o0}%` }}
          />,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o25AutonomousOperationsRevolutionBanner,
+    </div>)};
+export default AI20o25AutonomousOperationsRevolutionBanner;

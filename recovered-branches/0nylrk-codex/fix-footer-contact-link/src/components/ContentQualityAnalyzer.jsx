@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
 import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap } from 'lucide-react',
-const ContentQualityAnalyzer = () => {,
+const ContentQualityAnalyzer = () => {
     const [isOpen, setIsOpen] = useState(false),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     const [contentIssues, setContentIssues] = useState([]),
@@ -9,78 +9,75 @@ const ContentQualityAnalyzer = () => {,
     const [selectedFilter, setSelectedFilter] = useState('all'),
     const [searchTerm, setSearchTerm] = useState(''),
     // Sample data based on the analysis report,
-    const sampleIssues = [,
-        {,
-            id: '1',;
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130o431b0a.js',;
-            pageTitle: 'Missing',;
-            issueType: 'missing_title',;
-            severity: 'high',;
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',;
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',;
+    const sampleIssues = [
+        {
+            id: '1';
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130o431b0a.js';
+            pageTitle: 'Missing';
+            issueType: 'missing_title';
+            severity: 'high';
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
+            recommendation: 'Add proper page title, headings, and meta description for better SEO';
             status: 'open',
-        ,},;
-        {,
-            id: '2',;
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js',;
-            pageTitle: 'Missing',;
-            issueType: 'missing_meta',;
-            severity: 'high',;
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',;
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',;
+        };
+        {
+            id: '2';
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js';
+            pageTitle: 'Missing';
+            issueType: 'missing_meta';
+            severity: 'high';
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
+            recommendation: 'Add proper page title, headings, and meta description for better SEO';
             status: 'open',
-        ,},;
-        {,
-            id: '3',;
-            pageUrl: 'https://ziontechgroup.com/about/',;
-            pageTitle: 'About',;
-            issueType: 'minimal_content',;
-            severity: 'medium',;
-            description: 'Suspiciously small HTML content',;
-            recommendation: 'Add more meaningful content, headings, and images to improve user experience',;
+        };
+        {
+            id: '3';
+            pageUrl: 'https://ziontechgroup.com/about/';
+            pageTitle: 'About';
+            issueType: 'minimal_content';
+            severity: 'medium';
+            description: 'Suspiciously small HTML content';
+            recommendation: 'Add more meaningful content, headings, and images to improve user experience';
             status: 'open',
-        ,},;
-        {,
-            id: '4',;
-            pageUrl: 'https://ziontechgroup.com/services/',;
-            pageTitle: 'Services',;
-            issueType: 'no_headings',;
-            severity: 'medium',;
-            description: 'No headings found',;
-            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',;
+        };
+        {
+            id: '4';
+            pageUrl: 'https://ziontechgroup.com/services/';
+            pageTitle: 'Services';
+            issueType: 'no_headings';
+            severity: 'medium';
+            description: 'No headings found';
+            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO';
             status: 'open',
-        ,}
+        }
     ],
-    useEffect(() => {,
+    useEffect(() => {
         setContentIssues(sampleIssues),
-        generateReport(sampleIssues),
-    }, []),
-    const generateReport = (issues) => {,
+        generateReport(sampleIssues)}, []),
+    const generateReport = (issues) => {
         const totalPages = 79, // From analysis report,
         const pagesWithIssues = issues.length,
         const criticalIssues = issues.filter(i => i.severity === 'high').length,
         const mediumIssues = issues.filter(i => i.severity === 'medium').length,
         const lowIssues = issues.filter(i => i.severity === 'low').length,
-        setReport({,
-            totalPages,;
-            pagesWithIssues,;
-            criticalIssues,;
-            mediumIssues,;
-            lowIssues,;
+        setReport({
+            totalPages;
+            pagesWithIssues;
+            criticalIssues;
+            mediumIssues;
+            lowIssues;
             averageContentLength: 50o00, // Sample data,
             pagesWithImages: 45, // Sample data,
             pagesWithMetaDescriptions: 32, // Sample data,
             lastUpdated: new Date(),
-        ,}),
-    };
-    const startAnalysis = async () => {,
+        })};
+    const startAnalysis = async () => {
         setIsAnalyzing(true),
         // Simulate content analysis,
         await new Promise(resolve => setTimeout(resolve, 30o00)),
-        setIsAnalyzing(false),
-    };
-    const getSeverityIcon = (severity) => {,
-        switch (severity) {,
+        setIsAnalyzing(false)};
+    const getSeverityIcon = (severity) => {
+        switch (severity) {
             case 'high':,
                 return <AlertTriangle className="w-4 h-4 text-red-40o0" />,
             case 'medium':,
@@ -89,10 +86,10 @@ const ContentQualityAnalyzer = () => {,
                 return <Info className="w-4 h-4 text-blue-40o0" />,
             default: ,
                 return <Info className="w-4 h-4 text-gray-40o0" />,
-        ,}
+        }
     };
-    const getSeverityColor = (severity) => {,
-        switch (severity) {,
+    const getSeverityColor = (severity) => {
+        switch (severity) {
             case 'high':,
                 return 'text-red-40o0',
             case 'medium':,
@@ -101,10 +98,10 @@ const ContentQualityAnalyzer = () => {,
                 return 'text-blue-40o0',
             default: ,
                 return 'text-gray-40o0',
-        ,}
+        }
     };
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'resolved':,
                 return 'text-green-40o0',
             case 'in_progress':,
@@ -113,16 +110,15 @@ const ContentQualityAnalyzer = () => {,
                 return 'text-red-40o0',
             default: ,
                 return 'text-gray-40o0',
-        ,}
+        }
     };
-    const filteredIssues = contentIssues.filter(issue => {,
+    const filteredIssues = contentIssues.filter(issue => {
         const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter,
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||,
             issue.description.toLowerCase().includes(searchTerm.toLowerCase()),
-        return matchesFilter && matchesSearch,
-    }),
-    const getIssueTypeLabel = (type) => {,
-        switch (type) {,
+        return matchesFilter && matchesSearch}),
+    const getIssueTypeLabel = (type) => {
+        switch (type) {
             case 'missing_title':,
                 return 'Missing Title',
             case 'missing_meta':,
@@ -135,16 +131,16 @@ const ContentQualityAnalyzer = () => {,
                 return 'No Images',
             default: ,
                 return type,
-        ,}
+        }
     };
     return (<>,
       {/* Floating Action Button */}
-      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110" whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}}>,
+      <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
         <FileText className="w-6 h-6" />,
       </motion.button>,
       {/* Modal */}
-      {isOpen && (<motion.div initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} exit={{ opacity: 0 ,}} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>,
-          <motion.div initial={{ scale: 0.9, opacity: 0 ,}} animate={{ scale: 1, opacity: 1 ,}} exit={{ scale: 0.9, opacity: 0 ,}} className="bg-gray-90o0 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>,
+      {isOpen && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>,
+          <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="bg-gray-90o0 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>,
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 p-6 text-white">,
               <div className="flex items-center justify-between">,
@@ -160,12 +156,12 @@ const ContentQualityAnalyzer = () => {,
                 Analyze and improve content quality across all website pages,
               </p>,
             </div>,
-            {/* Content */,}
+            {/* Content */}
             <div className="p-6 space-y-6">,
               {/* Summary Cards */}
               {report && (<div className="grid grid-cols-1 md: grid-cols-4 gap-4">,
                   <div className="bg-gray-80o0 rounded-lg p-4 text-center">,
-                    <div className="text-2xl font-bold text-white">{report.totalPages,}</div>,
+                    <div className="text-2xl font-bold text-white">{report.totalPages}</div>,
                     <div className="text-gray-40o0 text-sm">Total Pages</div>,
                   </div>,
                   <div className="bg-red-90o0/20 border border-red-50o0/20 rounded-lg p-4 text-center">,
@@ -187,27 +183,27 @@ const ContentQualityAnalyzer = () => {,
                 <div className="flex space-x-2">,
                   <button onClick={() => setSelectedFilter('all')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'all',
                 ? 'bg-purple-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     All Issues,
                   </button>,
                   <button onClick={() => setSelectedFilter('critical')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'critical',
                 ? 'bg-red-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     Critical,
                   </button>,
                   <button onClick={() => setSelectedFilter('medium')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'medium',
                 ? 'bg-yellow-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     Medium,
                   </button>,
                   <button onClick={() => setSelectedFilter('low')} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${selectedFilter === 'low',
                 ? 'bg-blue-50o0 text-white',
-                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0',}`}>,
+                : 'bg-gray-70o0 text-gray-30o0 hover: bg-gray-60o0'}`}>,
                     Low,
                   </button>,
                 </div>,
                 <button onClick={startAnalysis} disabled={isAnalyzing} className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-6 py-2 rounded-lg font-medium hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2">,
-                  {isAnalyzing ? (<Zap className="w-4 h-4 animate-spin" />) : (<Search className="w-4 h-4" />),}
+                  {isAnalyzing ? (<Zap className="w-4 h-4 animate-spin" />) : (<Search className="w-4 h-4" />)}
                   <span>{isAnalyzing ? 'Analyzing...' : 'Analyze Content'}</span>,
                 </button>,
               </div>,
@@ -216,7 +212,7 @@ const ContentQualityAnalyzer = () => {,
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5" />,
                 <input type="text" placeholder="Search issues by page title or description..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-70o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"/>,
               </div>,
-              {/* Issues Table */,}
+              {/* Issues Table */}
               <div className="bg-gray-80o0 rounded-lg overflow-hidden">,
                 <div className="overflow-x-auto">,
                   <table className="w-full">,
@@ -246,7 +242,7 @@ const ContentQualityAnalyzer = () => {,
                       {filteredIssues.map((issue, index) => (<tr key={index} className="hover: bg-gray-70o0/50 transition-colors">,
                           <td className="px-6 py-4 whitespace-nowrap">,
                             <div className="flex items-center space-x-2">,
-                              {getSeverityIcon(issue.severity),}
+                              {getSeverityIcon(issue.severity)}
                               <span className={`text-sm font-medium ${getSeverityColor(issue.severity)}`}>,
                                 {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
                               </span>,
@@ -258,7 +254,7 @@ const ContentQualityAnalyzer = () => {,
                                 {issue.pageTitle || 'Untitled'}
                               </div>,
                               <a href={issue.pageUrl} target="_blank" rel="noopener noreferrer" className="text-purple-40o0 hover: text-purple-30o0 transition-colors text-xs truncate block">,
-                                {issue.pageUrl,}
+                                {issue.pageUrl}
                               </a>,
                             </div>,
                           </td>,
@@ -273,7 +269,7 @@ const ContentQualityAnalyzer = () => {,
                                 {issue.description}
                               </div>,
                               <div className="text-xs text-purple-40o0">,
-                                <strong>Recommendation: </strong> {issue.recommendation,}
+                                <strong>Recommendation: </strong> {issue.recommendation}
                               </div>,
                             </div>,
                           </td>,
@@ -295,7 +291,7 @@ const ContentQualityAnalyzer = () => {,
                               </button>,
                             </div>,
                           </td>,
-                        </tr>)),}
+                        </tr>))}
                     </tbody>,
                   </table>,
                 </div>,
@@ -338,8 +334,6 @@ const ContentQualityAnalyzer = () => {,
               </div>,
             </div>,
           </motion.div>,
-        </motion.div>),}
-    </>),
-};
-export default ContentQualityAnalyzer,
-,
+        </motion.div>)}
+    </>)};
+export default ContentQualityAnalyzer;

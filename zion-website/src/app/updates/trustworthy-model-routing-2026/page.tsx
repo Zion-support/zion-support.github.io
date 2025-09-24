@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>,
         <p className='text-sm font-semibold leading-6 text-blue-40o0'>Launch</p>,
@@ -11,7 +11,7 @@ export default function Page() {,
           <p>,
             Trustworthy Model Routing ties policy-as-code, eval signals, and,
             budget controls together to route requests to the right model,
-            deterministically. It improves reliability while keeping quality,;
+            deterministically. It improves reliability while keeping quality;
             latency, and cost within targets.,
           </p>,
           <h2>Highlights</h2>,
@@ -29,16 +29,14 @@ export default function Page() {,
             pipelines and telemetry.,
           </p>,
           <p className='mt-8'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0'>,
               Talk to us,
             </a>,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

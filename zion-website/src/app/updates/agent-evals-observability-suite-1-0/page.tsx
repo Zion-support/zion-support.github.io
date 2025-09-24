@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>,
         <p className='text-sm font-semibold leading-6 text-blue-40o0'>Launch</p>,
@@ -9,7 +9,7 @@ export default function Page() {,
         <p className='mt-2 text-gray-40o0'>20o25-09-15</p>,
         <div className='prose prose-invert mt-8'>,
           <p>,
-            The Agent Evals & Observability Suite v1.0 unifies live evaluations,;
+            The Agent Evals & Observability Suite v1.0 unifies live evaluations;
             guardrail events, tracing, and cost/latency telemetry to operate,
             production agents with confidence.,
           </p>,
@@ -30,16 +30,14 @@ export default function Page() {,
             faster while maintaining reliability and compliance.,
           </p>,
           <p className='mt-8'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0'>,
               Talk to us,
             </a>,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

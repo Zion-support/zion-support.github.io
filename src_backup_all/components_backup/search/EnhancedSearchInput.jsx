@@ -1,46 +1,38 @@
 import React, { useState } from 'react',
 import { Search, X } from 'lucide-react',
-,
-export function EnhancedSearchInput({,
-  placeholder = 'Search services, solutions...',;
-  className = '',;
-  onSearch,;
-  showClear = true,;
-  compact = false,;
-}) {,
+export function EnhancedSearchInput({
+  placeholder = 'Search services, solutions...';
+  className = '';
+  onSearch;
+  showClear = true;
+  compact = false;
+}) {
   const [query, setQuery] = useState(''),
   const [isFocused, setIsFocused] = useState(false),
-,
-  const handleSearch = e => {,
+  const handleSearch = e => {
     e.preventDefault(),
-    if (onSearch && query.trim()) {,
-      onSearch(query.trim()),
-    }
+    if (onSearch && query.trim()) {
+      onSearch(query.trim())}
   };
-,
-  const handleClear = () => {,
+  const handleClear = () => {
     setQuery(''),
-    if (onSearch) {,
-      onSearch(''),
-    }
+    if (onSearch) {
+      onSearch('')}
   };
-,
-  const handleKeyDown = e => {,
-    if (e.key === 'Enter') {,
-      handleSearch(e),
-    }
+  const handleKeyDown = e => {
+    if (e.key === 'Enter') {
+      handleSearch(e)}
   };
-,
-  return (,
+  return (
     <div className={`relative ${className}`}>,
       <form onSubmit={handleSearch} className='relative'>,
-        <div,
+        <div
           className={`relative flex items-center ${compact ? 'h-10' : 'h-12'}`}
         >,
-          <Search,
+          <Search
             className={`absolute left-3 text-gray-40o0 ${compact ? 'w-4 h-4' : 'w-5 h-5'}`}
           />,
-          <input,
+          <input
             type='text',
             value={query}
             onChange={e => setQuery(e.target.value)}
@@ -51,49 +43,41 @@ export function EnhancedSearchInput({,
             className={`,
               w-full pl-10 pr-10 py-2 bg-white/10 border border-white/20 rounded-lg,
               text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-40o0/50,
-              transition-all duration-20o0 ${compact ? 'text-sm' : 'text-base',}
+              transition-all duration-20o0 ${compact ? 'text-sm' : 'text-base'}
               ${isFocused ? 'bg-white/20 border-cyan-40o0/50' : ''}
             `}
           />,
-          {showClear && query && (,
-            <button,
+          {showClear && query && (
+            <button
               type='button',
               onClick={handleClear}
-              className='absolute right-3 text-gray-40o0 hover: text-white transition-colors duration-20o0',
-            >,
-              <X className={`${compact ? 'w-4 h-4' : 'w-5 h-5',}`} />,
-            </button>,
-          )}
+              className='absolute right-3 text-gray-40o0 hover: text-white transition-colors duration-20o0'>,
+              <X className={`${compact ? 'w-4 h-4' : 'w-5 h-5'}`} />,
+            </button>)}
         </div>,
       </form>,
       {/* Search suggestions dropdown */}
-      {isFocused && query && (,
+      {isFocused && query && (
         <div className='absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark border border-zion-blue-light/20 rounded-lg shadow-xl z-50 max-h-64 overflow-y-auto'>,
           <div className='py-2'>,
             <div className='px-4 py-2 text-sm text-gray-40o0 border-b border-zion-blue-light/20'>,
               Quick suggestions,
             </div>,
-            {[,
-              'AI Services',;
-              'Cloud Solutions',;
-              'Cybersecurity',;
-              'IT Consulting',;
-            ].map((suggestion, index) => (,
-              <button,
+            {[
+              'AI Services';
+              'Cloud Solutions';
+              'Cybersecurity';
+              'IT Consulting';
+            ].map((suggestion, index) => (
+              <button
                 key={index}
-                onClick={() => {,
+                onClick={() => {
                   setQuery(suggestion),
-                  if (onSearch) onSearch(suggestion),
-                }}
-                className='w-full px-4 py-2 text-left text-white hover: bg-zion-blue-light/20 transition-colors duration-20o0',
-              >,
-                {suggestion,}
-              </button>,
-            ))}
+                  if (onSearch) onSearch(suggestion)}}
+                className='w-full px-4 py-2 text-left text-white hover: bg-zion-blue-light/20 transition-colors duration-20o0'>,
+                {suggestion}
+              </button>))}
           </div>,
-        </div>,
-      )}
-    </div>,
-  ),
-}
+        </div>)}
+    </div>)}
 ,

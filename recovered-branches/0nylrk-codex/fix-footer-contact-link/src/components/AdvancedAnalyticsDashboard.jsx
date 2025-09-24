@@ -4,95 +4,95 @@ import { TrendingUp, TrendingDown, Users, DollarSign, Target, BarChart3, PieChar
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card',
 import { Button } from './ui/button',
 import { Badge } from './ui/badge',
-const AdvancedAnalyticsDashboard = () => {,
+const AdvancedAnalyticsDashboard = () => {
     const [timeRange, setTimeRange] = useState('30d'),
     const [selectedMetric, setSelectedMetric] = useState('overview'),
     // Mock data - in real app this would come from API,
-    const metrics = [,
-        {,
-            title: 'Total Revenue',;
-            value: '$2.4M',;
-            change: 12.5,;
-            changeType: 'increase',;
-            icon: <DollarSign className="w-6 h-6" />,;
+    const metrics = [
+        {
+            title: 'Total Revenue';
+            value: '$2.4M';
+            change: 12.5;
+            changeType: 'increase';
+            icon: <DollarSign className="w-6 h-6" />;
             color: 'from-green-50o0 to-emerald-60o0',
-        ,},;
-        {,
-            title: 'Active Clients',;
-            value: '1,247',;
-            change: 8.2,;
-            changeType: 'increase',;
-            icon: <Users className="w-6 h-6" />,;
+        };
+        {
+            title: 'Active Clients';
+            value: '1,247';
+            change: 8.2;
+            changeType: 'increase';
+            icon: <Users className="w-6 h-6" />;
             color: 'from-blue-50o0 to-cyan-60o0',
-        ,},;
-        {,
-            title: 'Service Performance',;
-            value: '94.2%',;
-            change: 2.1,;
-            changeType: 'increase',;
-            icon: <Target className="w-6 h-6" />,;
+        };
+        {
+            title: 'Service Performance';
+            value: '94.2%';
+            change: 2.1;
+            changeType: 'increase';
+            icon: <Target className="w-6 h-6" />;
             color: 'from-purple-50o0 to-pink-60o0',
-        ,},;
-        {,
-            title: 'Client Satisfaction',;
-            value: '4.8/5',;
-            change: 0.3,;
-            changeType: 'increase',;
-            icon: <Star className="w-6 h-6" />,;
+        };
+        {
+            title: 'Client Satisfaction';
+            value: '4.8/5';
+            change: 0.3;
+            changeType: 'increase';
+            icon: <Star className="w-6 h-6" />;
             color: 'from-yellow-50o0 to-orange-60o0',
-        ,}
+        }
     ],
-    const servicePerformance = [,
-        {,
-            name: 'AI CRM Platform',;
-            performance: 96,;
-            growth: 15.2,;
-            clients: 89,;
-            revenue: 450o000,;
+    const servicePerformance = [
+        {
+            name: 'AI CRM Platform';
+            performance: 96;
+            growth: 15.2;
+            clients: 89;
+            revenue: 450o000;
             status: 'trending',
-        ,},;
-        {,
-            name: 'Quantum Computing',;
-            performance: 92,;
-            growth: 28.7,;
-            clients: 23,;
-            revenue: 120o0000,;
+        };
+        {
+            name: 'Quantum Computing';
+            performance: 92;
+            growth: 28.7;
+            clients: 23;
+            revenue: 120o0000;
             status: 'trending',
-        ,},;
-        {,
-            name: 'Blockchain Solutions',;
-            performance: 88,;
-            growth: 12.4,;
-            clients: 156,;
-            revenue: 780o000,;
+        };
+        {
+            name: 'Blockchain Solutions';
+            performance: 88;
+            growth: 12.4;
+            clients: 156;
+            revenue: 780o000;
             status: 'stable',
-        ,},;
-        {,
-            name: 'Cybersecurity Suite',;
-            performance: 94,;
-            growth: 18.9,;
-            clients: 20o3,;
-            revenue: 920o000,;
+        };
+        {
+            name: 'Cybersecurity Suite';
+            performance: 94;
+            growth: 18.9;
+            clients: 20o3;
+            revenue: 920o000;
             status: 'trending',
-        ,},;
-        {,
-            name: 'IoT Platform',;
-            performance: 85,;
-            growth: 8.7,;
-            clients: 67,;
-            revenue: 340o000,;
+        };
+        {
+            name: 'IoT Platform';
+            performance: 85;
+            growth: 8.7;
+            clients: 67;
+            revenue: 340o000;
             status: 'stable',
-        ,}
+        }
     ],
-    const categoryDistribution = [,
-        { label: 'AI & ML', value: 35, color: 'from-purple-50o0 to-pink-60o0' ,},;
-        { label: 'Quantum', value: 20, color: 'from-blue-50o0 to-cyan-60o0' ,},;
-        { label: 'Blockchain', value: 25, color: 'from-green-50o0 to-emerald-60o0' ,},;
-        { label: 'Cybersecurity', value: 15, color: 'from-red-50o0 to-pink-60o0' ,},;
-        { label: 'IoT', value: 5, color: 'from-orange-50o0 to-yellow-60o0' ,}
+    const categoryDistribution = [
+        { label: 'AI & ML', value: 35, color: 'from-purple-50o0 to-pink-60o0' };
+        { label: 'Quantum', value: 20, color: 'from-blue-50o0 to-cyan-60o0' };
+        { label: 'Blockchain', value: 25, color: 'from-green-50o0 to-emerald-60o0' };
+        { label: 'Cybersecurity', value: 15, color: 'from-red-50o0 to-pink-60o0' };
+        { label: 'IoT', value: 5, color: 'from-orange-50o0 to-yellow-60o0' }
     ],
-    const getStatusIcon = (status) => {,
-        switch (status) {,
+    const getStatusIcon = (status) => {
+        switch (status) {
             case 'trending':,
                 return <TrendingUp className="w-4 h-4 text-green-50o0" />,
             case 'stable':,
@@ -101,10 +101,10 @@ const AdvancedAnalyticsDashboard = () => {,
                 return <TrendingDown className="w-4 h-4 text-red-50o0" />,
             default: ,
                 return <Activity className="w-4 h-4 text-gray-50o0" />,
-        ,}
+        }
     };
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'trending':,
                 return 'bg-green-10o0 text-green-80o0',
             case 'stable':,
@@ -113,11 +113,11 @@ const AdvancedAnalyticsDashboard = () => {,
                 return 'bg-red-10o0 text-red-80o0',
             default: ,
                 return 'bg-gray-10o0 text-gray-80o0',
-        ,}
+        }
     };
     return (<div className="max-w-7xl mx-auto p-6">,
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} className="mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">,
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">,
           <div>,
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">,
@@ -135,12 +135,12 @@ const AdvancedAnalyticsDashboard = () => {,
         </div>,
       </motion.div>,
       {/* Metrics Cards */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.1 ,}} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
-        {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.1 * index ,}}>,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
+        {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>,
             <Card className="h-full hover: shadow-lg transition-shadow">,
               <CardHeader className="pb-3">,
                 <div className="flex items-center justify-between">,
-                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color,} rounded-lg flex items-center justify-center text-white`}>,
+                  <div className={`w-12 h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white`}>,
                     {metric.icon}
                   </div>,
                   <div className="flex items-center gap-1">,
@@ -163,7 +163,7 @@ const AdvancedAnalyticsDashboard = () => {,
           </motion.div>))}
       </motion.div>,
       {/* Service Performance Table */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.2 ,}} className="mb-8">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mb-8">,
         <Card>,
           <CardHeader>,
             <CardTitle className="flex items-center gap-2">,
@@ -185,14 +185,14 @@ const AdvancedAnalyticsDashboard = () => {,
                   </tr>,
                 </thead>,
                 <tbody>,
-                  {servicePerformance.map((service, index) => (<motion.tr key={index} initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ delay: 0.1 * index ,}} className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">,
+                  {servicePerformance.map((service, index) => (<motion.tr key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5">,
                       <td className="py-3 px-4">,
-                        <div className="font-medium text-zion-blue-dark">{service.name,}</div>,
+                        <div className="font-medium text-zion-blue-dark">{service.name}</div>,
                       </td>,
                       <td className="py-3 px-4">,
                         <div className="flex items-center gap-2">,
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">,
-                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.performance,}%` }}></div>,
+                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: `${service.performance}%` }}></div>,
                           </div>,
                           <span className="text-sm font-medium">{service.performance}%</span>,
                         </div>,
@@ -225,8 +225,8 @@ const AdvancedAnalyticsDashboard = () => {,
         </Card>,
       </motion.div>,
       {/* Charts and Insights */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.3 ,}} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
-        {/* Category Distribution */,}
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">,
+        {/* Category Distribution */}
         <Card>,
           <CardHeader>,
             <CardTitle className="flex items-center gap-2">,
@@ -236,14 +236,14 @@ const AdvancedAnalyticsDashboard = () => {,
           </CardHeader>,
           <CardContent>,
             <div className="space-y-3">,
-              {categoryDistribution.map((category, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ delay: 0.1 * index ,}} className="flex items-center justify-between">,
+              {categoryDistribution.map((category, index) => (<motion.div key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <div className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}></div>,
                     <span className="font-medium text-zion-slate-dark">{category.label}</span>,
                   </div>,
                   <div className="flex items-center gap-2">,
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">,
-                      <div className={`bg-gradient-to-r ${category.color} h-2 rounded-full`} style={{ width: `${category.value,}%` }}></div>,
+                      <div className={`bg-gradient-to-r ${category.color} h-2 rounded-full`} style={{ width: `${category.value}%` }}></div>,
                     </div>,
                     <span className="text-sm font-medium text-zion-slate-light">{category.value}%</span>,
                   </div>,
@@ -293,7 +293,7 @@ const AdvancedAnalyticsDashboard = () => {,
         </Card>,
       </motion.div>,
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ delay: 0.4 ,}} className="text-center">,
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">,
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">,
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>,
           <p className="text-xl mb-6 max-w-2xl mx-auto">,
@@ -312,7 +312,5 @@ const AdvancedAnalyticsDashboard = () => {,
           </div>,
         </div>,
       </motion.div>,
-    </div>),
-};
-export default AdvancedAnalyticsDashboard,
-,
+    </div>)};
+export default AdvancedAnalyticsDashboard;

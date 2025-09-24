@@ -1,5 +1,5 @@
-export default function GovernancePrivacy() {,
-  return (,
+export default function GovernancePrivacy() {
+  return (
     <div className='max-w-2xl mx-auto p-6 space-y-4'>,
       <h1 className='text-2xl font-semibold'>,
         Zion OS — Privacy-preserving Governance,
@@ -9,13 +9,10 @@ export default function GovernancePrivacy() {,
         verified on-chain without revealing your identity. Weighted voting with,
         ZION$ stake is supported.,
       </p>,
-      <a,
+      <a
         href='/dao/zkvote',
-        className='inline-block px-4 py-2 rounded bg-black text-white',
-      >,
+        className='inline-block px-4 py-2 rounded bg-black text-white'>,
         Open ZK Vote,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

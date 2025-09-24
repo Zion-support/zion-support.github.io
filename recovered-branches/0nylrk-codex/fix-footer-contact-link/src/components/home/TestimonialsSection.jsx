@@ -1,44 +1,42 @@
-export function TestimonialsSection() {,
-  const testimonials = [,
-    {,
-      name: 'Sarah Johnson',;
-      role: 'CTO',;
-      company: 'TechCorp Inc.',;
+export function TestimonialsSection() {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson';
+      role: 'CTO';
+      company: 'TechCorp Inc.';
       content:,
-        'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',;
-      rating: 5,;
-      avatar: '👩‍💼',;
-    },;
-    {,
-      name: 'Michael Chen',;
-      role: 'VP of Engineering',;
-      company: 'InnovateLabs',;
+        'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.';
+      rating: 5;
+      avatar: '👩‍💼';
+    };
+    {
+      name: 'Michael Chen';
+      role: 'VP of Engineering';
+      company: 'InnovateLabs';
       content:,
-        'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',;
-      rating: 5,;
-      avatar: '👨‍💻',;
-    },;
-    {,
-      name: 'Emily Rodriguez',;
-      role: 'Operations Director',;
-      company: 'Global Solutions',;
+        'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.';
+      rating: 5;
+      avatar: '👨‍💻';
+    };
+    {
+      name: 'Emily Rodriguez';
+      role: 'Operations Director';
+      company: 'Global Solutions';
       content:,
-        'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',;
-      rating: 5,;
-      avatar: '👩‍🔬',;
-    },;
+        'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.';
+      rating: 5;
+      avatar: '👩‍🔬';
+    };
   ],
-  const renderStars = rating => {,
-    return Array.from({ length: 5 ,}, (_, i) => (,
-      <span,
+  const renderStars = rating => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span
         key={i}
         className={i < rating ? 'text-yellow-40o0' : 'text-gray-30o0'}
       >,
         ★,
-      </span>,
-    )),
-  };
-  return (,
+      </span>))};
+  return (
     <section className='py-16 bg-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -51,14 +49,13 @@ export function TestimonialsSection() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-          {testimonials.map((testimonial, index) => (,
-            <div,
+          {testimonials.map((testimonial, index) => (
+            <div
               key={index}
-              className='bg-gray-50 rounded-xl p-6 border border-gray-20o0 hover: shadow-lg transition-shadow duration-30o0',
-            >,
+              className='bg-gray-50 rounded-xl p-6 border border-gray-20o0 hover: shadow-lg transition-shadow duration-30o0'>,
               <div className='flex items-center mb-4'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full flex items-center justify-center text-2xl mr-4'>,
-                  {testimonial.avatar,}
+                  {testimonial.avatar}
                 </div>,
                 <div>,
                   <h4 className='font-semibold text-gray-90o0'>,
@@ -73,11 +70,8 @@ export function TestimonialsSection() {,
               <p className='text-gray-70o0 leading-relaxed italic'>,
                 "{testimonial.content}",
               </p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

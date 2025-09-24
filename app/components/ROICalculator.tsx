@@ -12,8 +12,7 @@ const ROICalculator = memo(function ROICalculator() {
 	const [data, setData] = useState<ROIData>({
 		investment: 50000,
 		monthlySavings: 15000,
-		timeframe: 12,
-	});
+		timeframe: 12});
 
 	const [isVisible, setIsVisible] = useState(false);
 	const [errors, setErrors] = useState<Partial<Record<keyof ROIData, string>>>({});

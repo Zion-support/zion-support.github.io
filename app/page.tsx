@@ -12,8 +12,7 @@ export const metadata = {
     'Consulting',
     'Digital Transformation',
     'Automation',
-    'Machine Learning',
-  ],
+    'Machine Learning'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -27,15 +26,13 @@ export const metadata = {
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    siteName: 'Zion Tech Group',
-  },
+    siteName: 'Zion Tech Group'},
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    creator: '@ziontech',
-  },
+    creator: '@ziontech'},
   robots: {
     index: true,
     follow: true,
@@ -44,10 +41,7 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+      'max-snippet': -1}}};
 
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ROICalculator from './components/ROICalculator';

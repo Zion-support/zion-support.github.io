@@ -1,48 +1,46 @@
 "use client",
 'use client',
 import { useState, useEffect } from 'react',
-export default function RevolutionaryContent20o25PromotionBanner() {,
+export default function RevolutionaryContent20o25PromotionBanner() {
   const [currentContent, setCurrentContent] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
-  const contentItems = [,
-    {,
-      title: "Neural Consciousness Breakthrough",;
-      description: "Revolutionary conscious AI with genuine self-awareness and autonomous decision-making capabilities.",;
-      link: "/blog/ai-20o25-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence",;
-      icon: "🧠",;
+  const contentItems = [
+    {
+      title: "Neural Consciousness Breakthrough";
+      description: "Revolutionary conscious AI with genuine self-awareness and autonomous decision-making capabilities.";
+      link: "/blog/ai-20o25-neural-consciousness-breakthrough-revolutionary-autonomous-intelligence";
+      icon: "🧠";
       color: "from-purple-50o0 to-pink-50o0",
-    ,},;
-    {,
-      title: "$15B ROI Success Story",;
-      description: "How a Fortune 50o0 company achieved unprecedented ROI through conscious AI transformation.",;
-      link: "/case-studies/global-enterprise-conscious-ai-transformation-20o25-15-billion-roi",;
-      icon: "💰",;
+    };
+    {
+      title: "$15B ROI Success Story";
+      description: "How a Fortune 50o0 company achieved unprecedented ROI through conscious AI transformation.";
+      link: "/case-studies/global-enterprise-conscious-ai-transformation-20o25-15-billion-roi";
+      icon: "💰";
       color: "from-green-50o0 to-emerald-50o0",
-    ,},;
-    {,
-      title: "Complete Implementation Guide",;
-      description: "Master autonomous business transformation with our comprehensive framework.",;
-      link: "/blog/ai-20o25-autonomous-business-revolution-complete-guide",;
-      icon: "📚",;
+    };
+    {
+      title: "Complete Implementation Guide";
+      description: "Master autonomous business transformation with our comprehensive framework.";
+      link: "/blog/ai-20o25-autonomous-business-revolution-complete-guide";
+      icon: "📚";
       color: "from-blue-50o0 to-cyan-50o0",
-    ,},;
-    {,
-      title: "Interactive ROI Calculator",;
-      description: "Calculate your potential ROI from AI transformation with personalized projections.",;
-      link: "/tools/ai-transformation-roi-calculator-20o25",;
-      icon: "📊",;
+    };
+    {
+      title: "Interactive ROI Calculator";
+      description: "Calculate your potential ROI from AI transformation with personalized projections.";
+      link: "/tools/ai-transformation-roi-calculator-20o25";
+      icon: "📊";
       color: "from-orange-50o0 to-red-50o0",
-    ,}
+    }
   ],
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentContent((prev) => (prev + 1) % contentItems.length),
-    }, 40o00),
-    return () => clearInterval(interval),
-  }, []),
+    const interval = setInterval(() => {
+      setCurrentContent((prev) => (prev + 1) % contentItems.length)}, 40o00),
+    return () => clearInterval(interval)}, []),
   const currentItem = contentItems[currentContent],
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 py-16">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/10 via-blue-60o0/10 to-indigo-60o0/10"></div>,
@@ -53,7 +51,7 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
         <div className="absolute bottom-32 right-10 w-18 h-18 bg-green-50o0/20 rounded-full animate-pulse delay-30o00"></div>,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Main Banner */,}
+        {/* Main Banner */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-yellow-40o0 via-orange-40o0 to-red-40o0 text-black text-lg font-bold mb-6 animate-bounce">,
             🔥 REVOLUTIONARY CONTENT 20o25,
@@ -65,7 +63,7 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
             </span>,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-30o0 max-w-5xl mx-auto leading-relaxed mb-8">,
-            Experience the future of AI with our revolutionary content featuring Neural Consciousness,;
+            Experience the future of AI with our revolutionary content featuring Neural Consciousness;
             proven ROI success stories, and complete implementation frameworks.,
           </p>,
         </div>,
@@ -74,14 +72,12 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
           <div className="text-center mb-8">,
             <h2 className="text-3xl font-bold text-white mb-4">Featured Content</h2>,
             <div className="flex justify-center space-x-2 mb-6">,
-              {contentItems.map((_, index) => (,
-                <div,
+              {contentItems.map((_, index) => (
+                <div
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                    index === currentContent ? 'bg-white' : 'bg-white/30',
-                  }`}
-                 />,
-              ))}
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                    index === currentContent ? 'bg-white' : 'bg-white/30'}`}
+                 />))}
             </div>,
           </div>,
           <div className="max-w-4xl mx-auto">,
@@ -96,9 +92,9 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
                 {currentItem.description}
               </p>,
               <div className="text-center">,
-                <a,
+                <a
                   href={currentItem.link}
-                  className={`inline-block bg-gradient-to-r ${currentItem.color} text-white px-8 py-4 rounded-xl font-bold text-lg hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5`,}
+                  className={`inline-block bg-gradient-to-r ${currentItem.color} text-white px-8 py-4 rounded-xl font-bold text-lg hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5`}
                 >,
                   Explore Content →,
                 </a>,
@@ -108,12 +104,12 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
         </div>,
         {/* Content Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
-          {contentItems.map((item, index) => (,
-            <div,
+          {contentItems.map((item, index) => (
+            <div
               key={index}
-              className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/15 transition-all duration-30o0 transform hover:scale-10o5 cursor-pointer ${,
+              className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/15 transition-all duration-30o0 transform hover:scale-10o5 cursor-pointer ${
                 index === currentContent ? 'ring-2 ring-white/50' : '',
-              ,}`}
+              }`}
               onClick={() => setCurrentContent(index)}
             >,
               <div className="text-4xl mb-4 text-center">{item.icon}</div>,
@@ -122,15 +118,14 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
                 {item.description}
               </p>,
               <div className="text-center">,
-                <a,
+                <a
                   href={item.link}
-                  className={`inline-block bg-gradient-to-r ${item.color} text-white px-4 py-2 rounded-lg font-semibold text-sm hover: shadow-lg transition-all duration-30o0`,}
+                  className={`inline-block bg-gradient-to-r ${item.color} text-white px-4 py-2 rounded-lg font-semibold text-sm hover: shadow-lg transition-all duration-30o0`}
                 >,
                   Learn More →,
                 </a>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Stats Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
@@ -160,21 +155,18 @@ export default function RevolutionaryContent20o25PromotionBanner() {,
             Join thousands of businesses that have already transformed their operations with our revolutionary AI solutions.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <a,
+            <a
               href="/contact",
-              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Start Your Transformation,
             </a>,
-            <a,
+            <a
               href="/case-studies",
-              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-30o0 transform hover:scale-10o5">,
               View Success Stories,
             </a>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}

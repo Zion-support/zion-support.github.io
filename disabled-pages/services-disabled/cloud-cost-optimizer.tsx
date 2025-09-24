@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function CloudCostOptimizer(...args: any[]): any {,
-  return (,
+export default function CloudCostOptimizer(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Cloud Cost Optimizer — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Continuously reduce AWS, GCP, and Azure spend with autonomous recommendations and safe automation.',
         />,
@@ -49,7 +48,6 @@ export default function CloudCostOptimizer(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

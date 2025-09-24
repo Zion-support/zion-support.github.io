@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'computer-vision-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'computer-vision-solutions - Zion Tech Group';
   description:,
-    'Professional computer-vision-solutions solutions for your business needs.',;
-  keywords: 'computer-vision-solutions, services, business, technology',;
+    'Professional computer-vision-solutions solutions for your business needs.';
+  keywords: 'computer-vision-solutions, services, business, technology';
 };
-export default function ComputerVisionSolutionsPage() {,
-  return (,
+export default function ComputerVisionSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function ComputerVisionSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

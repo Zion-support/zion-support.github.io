@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function StaticPropsExamplePage() {,
-  return (,
+export default function StaticPropsExamplePage() {
+  return (
     <>,
       <Head>,
         <title>Static Props Example - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function StaticPropsExamplePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

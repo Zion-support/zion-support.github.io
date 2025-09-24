@@ -1,173 +1,154 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 XBrainZapTrendingUpArrowRightPlayUsersAward,
-interface NeuralInterfaceContent {,
+interface NeuralInterfaceContent {
   id: string,
   title: string,
   type: string,
   url: string,
-  metrics: {,
+  metrics: {
     roi: string,
     savings: string,
     timeframe: string,
     accuracy: string,
-  ,};
+  };
   description: string,
   featured: boolean,
-,}
+}
 ,
-const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
+const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {
   const [currentIndexsetCurrentIndex] = useState(0),
   const [isVisiblesetIsVisible] = useState(true),
   const [isDismissedsetIsDismissed] = useState(false),
-,
-  const neuralInterfaceContent: NeuralInterfaceContent[] = [,
-    {,
-      id: 'neural-interface-revolution',;
-      title: 'AI 20o25: The Neural Interface Revolution - Ultimate Guide to 1,50o0% ROI',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide',;
-      metrics: {,
-        roi: '1,50o0%',;
-        savings: '$180M',;
-        timeframe: '24 months',;
+  const neuralInterfaceContent: NeuralInterfaceContent[] = [
+    {
+      id: 'neural-interface-revolution';
+      title: 'AI 20o25: The Neural Interface Revolution - Ultimate Guide to 1,50o0% ROI';
+      type: 'blog';
+      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
+      metrics: {
+        roi: '1,50o0%';
+        savings: '$180M';
+        timeframe: '24 months';
         accuracy: '99.7%',
-      ,},;
-      description: 'Transform your business with brain-computer integration technology',;
+      };
+      description: 'Transform your business with brain-computer integration technology';
       featured: true,
-    ,},;
-    {,
-      id: 'neural-interface-case-study',;
-      title: 'Neural Interface Fortune 50o0 Success: $4.8B Company Achieves 1,50o0% ROI',;
-      type: 'case-study',;
-      url: '/case-studies/neural-interface-fortune-50o0-transformation-150o0-roi-success',;
-      metrics: {,
-        roi: '1,50o0%',;
-        savings: '$180M',;
-        timeframe: '24 months',;
+    };
+    {
+      id: 'neural-interface-case-study';
+      title: 'Neural Interface Fortune 50o0 Success: $4.8B Company Achieves 1,50o0% ROI';
+      type: 'case-study';
+      url: '/case-studies/neural-interface-fortune-50o0-transformation-150o0-roi-success';
+      metrics: {
+        roi: '1,50o0%';
+        savings: '$180M';
+        timeframe: '24 months';
         accuracy: '99.7%',
-      ,},;
-      description: 'Real-world success story of neural interface implementation',;
+      };
+      description: 'Real-world success story of neural interface implementation';
       featured: true,
-    ,},;
-    {,
-      id: 'neural-interface-guide',;
-      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 1,50o0% ROI',;
-      type: 'resource',;
-      url: '/resources/neural-interface-implementation-master-guide-20o25',;
-      metrics: {,
-        roi: '1,50o0%',;
-        savings: '$180M',;
-        timeframe: '24 months',;
+    };
+    {
+      id: 'neural-interface-guide';
+      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 1,50o0% ROI';
+      type: 'resource';
+      url: '/resources/neural-interface-implementation-master-guide-20o25';
+      metrics: {
+        roi: '1,50o0%';
+        savings: '$180M';
+        timeframe: '24 months';
         accuracy: '99.7%',
-      ,},;
-      description: 'Complete implementation framework for neural interface technology',;
+      };
+      description: 'Complete implementation framework for neural interface technology';
       featured: true,
-    ,}
-  ],
-,
-  useEffect(() => {,
-    const savedState = localStorage.getItem('neural-interface-banner-dismissed'),
-    if (savedState === 'true') {,
-      setIsDismissed(true),
-      setIsVisible(false),
     }
+  ],
+  useEffect(() => {
+    const savedState = localStorage.getItem('neural-interface-banner-dismissed'),
+    if (savedState === 'true') {
+      setIsDismissed(true),
+      setIsVisible(false)}
   }[]),
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>,
-        prevIndex === neuralInterfaceContent.length - 1 ? 0 : prevIndex + 1,
-      ),
-    }80o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const handleDismiss = () => {,
+        prevIndex === neuralInterfaceContent.length - 1 ? 0 : prevIndex + 1)}80o00),
+    return () => clearInterval(interval)}[]),
+  const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('neural-interface-banner-'dismissed', 'true'),
-  };
-,
-  const handleUndismiss = () => {,
+    localStorage.setItem('neural-interface-banner-'dismissed', 'true')};
+  const handleUndismiss = () => {
     setIsVisible(true),
     setIsDismissed(false),
-    localStorage.removeItem('neural-interface-banner-dismissed'),
-  };
-,
-  if (isDismissed) {,
-    return (,
+    localStorage.removeItem('neural-interface-banner-dismissed')};
+  if (isDismissed) {
+    return (
       <motion.div,
-        initial={{ opacity: 0, y: -50 ,}}
-        animate={{ opacity: 1, y: 0 ,}}
-        className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-70o0 text-white p-4 text-center",
-      >,
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-70o0 text-white p-4 text-center">,
         <div className="max-w-7xl mx-auto flex items-center justify-center space-x-4">,
           <Brain className="h-6 w-6"  />,
           <span className="font-semibold">Neural Interface Revolution Content Available</span>,
-          <button,
+          <button
             onClick={handleUndismiss}
-            className="bg-white/20 hover: bg-white/30 px-3 py-1 rounded-full text-sm transition-colors",
-          >,
+            className="bg-white/20 hover: bg-white/30 px-3 py-1 rounded-full text-sm transition-colors">,
             Show Banner,
           </button>,
         </div>,
-      </motion.div>,
-    ),
-  ,}
+      </motion.div>),
+  }
 ,
   const currentContent = neuralInterfaceContent[currentIndex],
-,
-  return (,
+  return (
     <AnimatePresence>,
-      {isVisible && (,
+      {isVisible && (
         <motion.div,
-          initial={{ opacity: 0, y: -10o0 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -10o0 ,}}
-          className="relative overflow-hidden",
-        >,
+          initial={{ opacity: 0, y: -10o0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10o0 }}
+          className="relative overflow-hidden">,
           {/* Animated Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0">,
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%20o0%20o60%20o60%22%20xmlns%3D%22http%3A//www.w3.org/20o00/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
             {/* Floating Neural Network Animation */}
             <motion.div,
               className="absolute top-10 left-10 w-20 h-20 border border-purple-40o0/30 rounded-full",
-              animate={{,
-                scale: [1.21],;
-                opacity: [0.30.60.3],}}
-              transition={{,
-                duration: 4,;
-                repeat: Infinity,;
+              animate={{
+                scale: [1.21];
+                opacity: [0.30.60.3]}}
+              transition={{
+                duration: 4;
+                repeat: Infinity;
                 ease: "easeInOut",
-              ,}}
+              }}
              />,
             <motion.div,
               className="absolute top-20 right-20 w-16 h-16 border border-blue-40o0/30 rounded-full",
-              animate={{,
-                scale: [1.21.2],;
-                opacity: [0.60.30.6],}}
-              transition={{,
-                duration: 5,;
-                repeat: Infinity,;
+              animate={{
+                scale: [1.21.2];
+                opacity: [0.60.30.6]}}
+              transition={{
+                duration: 5;
+                repeat: Infinity;
                 ease: "easeInOut",
-              ,}}
+              }}
              />,
             <motion.div,
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-40o0/30 rounded-full",
-              animate={{,
-                scale: [1.31],;
-                opacity: [0.40.70.4],}}
-              transition={{,
-                duration: 6,;
-                repeat: Infinity,;
+              animate={{
+                scale: [1.31];
+                opacity: [0.40.70.4]}}
+              transition={{
+                duration: 6;
+                repeat: Infinity;
                 ease: "easeInOut",
-              ,}}
+              }}
              />,
           </div>,
           <div className="relative z-10 bg-gradient-to-r from-purple-80o0/95 via-blue-80o0/95 to-indigo-80o0/95 backdrop-blur-sm">,
@@ -187,17 +168,16 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
                     </p>,
                   </div>,
                 </div>,
-                <button,
+                <button
                   onClick={handleDismiss}
                   className="p-2 hover: bg-white/10 rounded-full transition-colors",
-                  aria-label="Dismiss banner",
-                >,
+                  aria-label="Dismiss banner">,
                   <X className="h-5 w-5 text-white"  />,
                 </button>,
               </div>,
-              {/* Main Content */,}
+              {/* Main Content */}
               <div className="grid lg: grid-cols-2 gap-8 items-center">,
-                {/* Content Showcase */,}
+                {/* Content Showcase */}
                 <div className="space-y-6">,
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                     <div className="flex items-center space-x-3 mb-4">,
@@ -211,10 +191,10 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
                     <AnimatePresence mode="wait">,
                       <motion.div,
                         key={currentIndex}
-                        initial={{ opacity: 0x: 20 ,}}
-                        animate={{ opacity: 1x: 0 ,}}
-                        exit={{ opacity: 0x: -20 ,}}
-                        transition={{ duration: 0.5 ,}}
+                        initial={{ opacity: 0x: 20 }}
+                        animate={{ opacity: 1x: 0 }}
+                        exit={{ opacity: 0x: -20 }}
+                        transition={{ duration: 0.5 }}
                       >,
                         <h3 className="text-xl font-bold text-white mb-3 leading-tight">,
                           {currentContent.title}
@@ -239,28 +219,26 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
                             <p className="text-purple-20o0 text-xs">Annual benefits</p>,
                           </div>,
                         </div>,
-                        <Link,
+                        <Link
                           href={currentContent.url}
-                          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5",
-                        >,
-                          <span>Explore {currentContent.type,}</span>,
+                          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5">,
+                          <span>Explore {currentContent.type}</span>,
                           <ArrowRight className="h-4 w-4"  />,
                         </Link>,
                       </motion.div>,
                     </AnimatePresence>,
                     {/* Progress Indicators */}
                     <div className="flex space-x-2 mt-4">,
-                      {neuralInterfaceContent.map((_index) => (,
-                        <button,
+                      {neuralInterfaceContent.map((_index) => (
+                        <button
                           key={index}
                           onClick={() => setCurrentIndex(index)}
-                          className={`w-2 h-2 rounded-full transition-all duration-30o0 ${,
+                          className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
                             index === currentIndex,
                               ? 'bg-white w-8',
                               : 'bg-white/30 hover: bg-white/50',
-                          ,}`}
-                        />,
-                      ))}
+                          }`}
+                        />))}
                     </div>,
                   </div>,
                 </div>,
@@ -313,23 +291,21 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
                       Join Fortune 50o0 companies transforming their operations with neural interface technology,
                     </p>,
                     <div className="flex flex-col sm: flex-row gap-3">,
-                      <Link,
+                      <Link
                         href="/contact",
-                        className="flex-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-30o0 transform hover:scale-10o5",
-                      >,
+                        className="flex-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-30o0 transform hover:scale-10o5">,
                         Get Consultation,
                       </Link>,
-                      <Link,
+                      <Link
                         href="/resources/neural-interface-implementation-master-guide-20o25",
-                        className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-30o0 border border-white/30",
-                      >,
+                        className="flex-1 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-30o0 border border-white/30">,
                         Download Guide,
                       </Link>,
                     </div>,
                   </div>,
                 </div>,
               </div>,
-              {/* Footer Stats */,}
+              {/* Footer Stats */}
               <div className="mt-8 pt-6 border-t border-white/20">,
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-center">,
                   <div>,
@@ -352,10 +328,6 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-        </motion.div>,
-      )}
-    </AnimatePresence>,
-  ),
-};
-,
-export default NeuralInterfaceRevolutionBanner20o25,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default NeuralInterfaceRevolutionBanner20o25;

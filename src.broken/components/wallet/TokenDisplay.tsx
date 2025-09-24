@@ -1,9 +1,7 @@
-export function TokenDisplay() {,
-  return (,
+export function TokenDisplay() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

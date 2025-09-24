@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Failure Modes and Mitigations',;
+export const metadata = {
+  title: 'AI 20o26: Agent Failure Modes and Mitigations';
   description:,
-    'Catalog common agent failure modes with concrete mitigations, eval suites, and guardrails for production.',;
+    'Catalog common agent failure modes with concrete mitigations, eval suites, and guardrails for production.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <header className='mb-8'>,
         <p className='text-sm font-semibold text-purple-70o0'>,
@@ -41,24 +39,20 @@ export default function Page() {,
         <h2>Related Guides</h2>,
         <ul>,
           <li>,
-            <Link,
+            <Link
               className='text-purple-60o0 font-semibold',
-              href='/content/ai-20o26-production-safety-checklist',
-            >,
+              href='/content/ai-20o26-production-safety-checklist'>,
               Production Safety Checklist,
             </Link>,
           </li>,
           <li>,
-            <Link,
+            <Link
               className='text-purple-60o0 font-semibold',
-              href='/blog/ai-20o26-agent-observability-blueprint',
-            >,
+              href='/blog/ai-20o26-agent-observability-blueprint'>,
               Agent Observability Blueprint,
             </Link>,
           </li>,
         </ul>,
       </article>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

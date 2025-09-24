@@ -1,139 +1,132 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const PredictiveAnalyticsContentShowcase20o25 = () => {,
+const PredictiveAnalyticsContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const content = [,
-    {,
-      id: 'predictive-analytics-revolution',;
+  const content = [
+    {
+      id: 'predictive-analytics-revolution';
       title:,
-        'AI 20o25: The Predictive Analytics Revolution - Ultimate Guide to 750% ROI',;
+        'AI 20o25: The Predictive Analytics Revolution - Ultimate Guide to 750% ROI';
       description:,
-        'Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies and proven strategies.',;
-      url: '/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide',;
-      type: 'Blog Post',;
-      category: 'blog',;
-      metrics: {,
-        roi: '750%',;
-        savings: '$4.2M',;
-        accuracy: '94%',;
-        success: '89%',;
-      },;
-      readingTime: '22 min read',;
-      isNew: true,;
-      featured: true,;
-    },;
-    {,
-      id: 'fortune-50o0-predictive-success',;
+        'Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies and proven strategies.';
+      url: '/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide';
+      type: 'Blog Post';
+      category: 'blog';
+      metrics: {
+        roi: '750%';
+        savings: '$4.2M';
+        accuracy: '94%';
+        success: '89%';
+      };
+      readingTime: '22 min read';
+      isNew: true;
+      featured: true;
+    };
+    {
+      id: 'fortune-50o0-predictive-success';
       title:,
-        'Fortune 50o0 Predictive Analytics Success: $4.2B Company Achieves 750% ROI',;
+        'Fortune 50o0 Predictive Analytics Success: $4.2B Company Achieves 750% ROI';
       description:,
-        'Discover how a Fortune 50o0 manufacturing company achieved 750% ROI and $67M annual savings through AI-powered predictive analytics implementation.',;
-      url: '/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi',;
-      type: 'Case Study',;
-      category: 'case-study',;
-      metrics: {,
-        roi: '750%',;
-        savings: '$67M',;
-        accuracy: '97%',;
-        efficiency: '156%',;
-      },;
-      readingTime: '15 min read',;
-      isNew: true,;
-      featured: true,;
-    },;
-    {,
-      id: 'predictive-analytics-implementation-guide',;
+        'Discover how a Fortune 50o0 manufacturing company achieved 750% ROI and $67M annual savings through AI-powered predictive analytics implementation.';
+      url: '/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi';
+      type: 'Case Study';
+      category: 'case-study';
+      metrics: {
+        roi: '750%';
+        savings: '$67M';
+        accuracy: '97%';
+        efficiency: '156%';
+      };
+      readingTime: '15 min read';
+      isNew: true;
+      featured: true;
+    };
+    {
+      id: 'predictive-analytics-implementation-guide';
       title:,
-        'AI 20o25 Predictive Analytics Implementation Master Guide: From Strategy to 750% ROI',;
+        'AI 20o25 Predictive Analytics Implementation Master Guide: From Strategy to 750% ROI';
       description:,
-        'Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from 50o0+ successful implementations.',;
-      url: '/resources/ai-20o25-predictive-analytics-implementation-master-guide',;
-      type: 'Resource',;
-      category: 'resource',;
-      metrics: {,
-        roi: '750%',;
-        success: '89%',;
-        payback: '4.2 months',;
-        implementations: '50o0+',;
-      },;
-      readingTime: '28 min read',;
-      isNew: true,;
-      featured: true,;
-    },;
-    {,
-      id: 'edge-computing-revolution',;
+        'Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from 50o0+ successful implementations.';
+      url: '/resources/ai-20o25-predictive-analytics-implementation-master-guide';
+      type: 'Resource';
+      category: 'resource';
+      metrics: {
+        roi: '750%';
+        success: '89%';
+        payback: '4.2 months';
+        implementations: '50o0+';
+      };
+      readingTime: '28 min read';
+      isNew: true;
+      featured: true;
+    };
+    {
+      id: 'edge-computing-revolution';
       title:,
-        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI',;
+        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI';
       description:,
-        'Discover how edge computing is transforming business operations with 450% ROI, 67% latency reduction, and 89% cost savings. Complete implementation guide with real-world case studies.',;
-      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide',;
-      type: 'Blog Post',;
-      category: 'blog',;
-      metrics: {,
-        roi: '450%',;
-        latency: '67%',;
-        savings: '$2.3M',;
-        uptime: '99.7%',;
-      },;
-      readingTime: '18 min read',;
-      isNew: true,;
-      featured: false,;
-    },;
-    {,
-      id: 'autonomous-systems-revolution',;
+        'Discover how edge computing is transforming business operations with 450% ROI, 67% latency reduction, and 89% cost savings. Complete implementation guide with real-world case studies.';
+      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
+      type: 'Blog Post';
+      category: 'blog';
+      metrics: {
+        roi: '450%';
+        latency: '67%';
+        savings: '$2.3M';
+        uptime: '99.7%';
+      };
+      readingTime: '18 min read';
+      isNew: true;
+      featured: false;
+    };
+    {
+      id: 'autonomous-systems-revolution';
       title:,
-        'AI 20o25 Autonomous Systems Revolution: $1.8B Company Achieves 90o0% ROI',;
+        'AI 20o25 Autonomous Systems Revolution: $1.8B Company Achieves 90o0% ROI';
       description:,
-        'Discover how a Fortune 50o0 company achieved 90o0% ROI and $750M savings through AI-powered autonomous systems implementation.',;
-      url: '/case-studies/ai-20o25-autonomous-systems-revolution-success-story',;
-      type: 'Case Study',;
-      category: 'case-study',;
-      metrics: {,
-        roi: '90o0%',;
-        savings: '$750M',;
-        automation: '95%',;
-        efficiency: '156%',;
-      },;
-      readingTime: '16 min read',;
-      isNew: true,;
-      featured: true,;
-    },;
+        'Discover how a Fortune 50o0 company achieved 90o0% ROI and $750M savings through AI-powered autonomous systems implementation.';
+      url: '/case-studies/ai-20o25-autonomous-systems-revolution-success-story';
+      type: 'Case Study';
+      category: 'case-study';
+      metrics: {
+        roi: '90o0%';
+        savings: '$750M';
+        automation: '95%';
+        efficiency: '156%';
+      };
+      readingTime: '16 min read';
+      isNew: true;
+      featured: true;
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', count: content.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Blog Posts',;
-      count: content.filter(item => item.category === 'blog').length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
-      count: content.filter(item => item.category === 'case-study').length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Resources',;
-      count: content.filter(item => item.category === 'resource').length,;
-    },;
+  const categories = [
+    { id: 'all', label: 'All Content', count: content.length };
+    {
+      id: 'blog';
+      label: 'Blog Posts';
+      count: content.filter(item => item.category === 'blog').length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
+      count: content.filter(item => item.category === 'case-study').length;
+    };
+    {
+      id: 'resource';
+      label: 'Resources';
+      count: content.filter(item => item.category === 'resource').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? content,
       : content.filter(item => item.category === activeCategory),
-,
   const featuredContent = content.filter(item => item.featured),
-,
-  return (,
+  return (
     <div className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-purple-10o0 text-purple-80o0 rounded-full px-4 py-2 mb-4'>,
             <span className='text-sm font-medium'>🚀 NEW CONTENT 20o25</span>,
@@ -142,7 +135,7 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {,
             Predictive Analytics & AI Revolution Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover our latest content featuring 750% ROI success stories,;
+            Discover our latest content featuring 750% ROI success stories;
             implementation guides, and cutting-edge AI solutions that are,
             transforming businesses worldwide.,
           </p>,
@@ -168,41 +161,39 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {,
             <div className='text-gray-60o0'>Implementations</div>,
           </div>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div className='flex flex-wrap justify-center gap-4 mb-8'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${,
+              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
                 activeCategory === category.id,
                   ? 'bg-purple-60o0 text-white',
                   : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-30o0',
-              ,}`}
+              }`}
             >,
               {category.label} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Featured Content */}
-        {activeCategory === 'all' && (,
+        {activeCategory === 'all' && (
           <div className='mb-12'>,
             <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>,
               Featured Content,
             </h3>,
             <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
-              {featuredContent.slice(0, 2).map(item => (,
-                <div,
+              {featuredContent.slice(0, 2).map(item => (
+                <div
                   key={item.id}
-                  className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow',
-                >,
+                  className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow'>,
                   <div className='p-8'>,
                     <div className='flex items-center space-x-3 mb-4'>,
                       <span className='bg-green-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold'>,
                         FEATURED,
                       </span>,
                       <span className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm font-semibold'>,
-                        {item.type,}
+                        {item.type}
                       </span>,
                       <span className='bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-semibold'>,
                         {item.readingTime}
@@ -230,58 +221,52 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {,
                         </div>,
                       </div>,
                     </div>,
-                    <Link,
+                    <Link
                       href={item.url}
-                      className='inline-flex items-center space-x-2 bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors',
-                    >,
+                      className='inline-flex items-center space-x-2 bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors'>,
                       <span>Read Now</span>,
-                      <svg,
+                      <svg
                         className='w-4 h-4',
                         fill='none',
                         stroke='currentColor',
-                        viewBox='0 0 24 24',
-                      >,
-                        <path,
+                        viewBox='0 0 24 24'>,
+                        <path
                           strokeLinecap='round',
                           strokeLinejoin='round',
-                          strokeWidth={2,}
+                          strokeWidth={2}
                           d='M9 5l7 7-7 7',
                         />,
                       </svg>,
                     </Link>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
-          </div>,
-        )}
+          </div>)}
 ,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow',
-            >,
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow'>,
               <div className='p-6'>,
                 <div className='flex items-center justify-between mb-4'>,
                   <div className='flex items-center space-x-2'>,
-                    <span,
-                      className={`px-3 py-1 rounded-full text-sm font-semibold ${,
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-semibold ${
                         item.category === 'blog',
                           ? 'bg-blue-10o0 text-blue-80o0',
                           : item.category === 'case-study',
                             ? 'bg-green-10o0 text-green-80o0',
                             : 'bg-purple-10o0 text-purple-80o0',
-                      ,}`}
+                      }`}
                     >,
                       {item.type}
                     </span>,
-                    {item.isNew && (,
+                    {item.isNew && (
                       <span className='bg-green-50o0 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse'>,
                         NEW,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <span className='text-sm text-gray-50o0'>,
                     {item.readingTime}
@@ -311,15 +296,13 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {,
                     </div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href={item.url}
-                  className='w-full bg-gray-90o0 text-white px-4 py-2 rounded-lg font-semibold hover: bg-gray-80o0 transition-colors text-center block',
-                >,
+                  className='w-full bg-gray-90o0 text-white px-4 py-2 rounded-lg font-semibold hover: bg-gray-80o0 transition-colors text-center block'>,
                   Read More,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='mt-16 text-center'>,
@@ -332,25 +315,20 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {,
               transformation today.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Implementation Support,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Our Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default PredictiveAnalyticsContentShowcase20o25,
-,
+    </div>),
+};
+export default PredictiveAnalyticsContentShowcase20o25;

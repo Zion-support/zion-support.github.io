@@ -1,79 +1,73 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Brain, Atom, Rocket, Target, Microscope, Cpu,;
-  Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle,;
-  Phone, Mail, MapPin, Globe, TrendingUp, DollarSign,
-} from 'lucide-react',
+import {
+  Brain, Atom, Rocket, Target, Microscope, Cpu;
+  Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle;
+  Phone, Mail, MapPin, Globe, TrendingUp, DollarSign} from 'lucide-react',
 import Link from 'next/link',
 import { cuttingEdgeInnovations20o29 } from '../../data/20o29-cutting-edge-innovations',
 import { innovativeMicroSaas20o29 } from '../../data/20o29-innovative-micro-saas',
 import { enterpriseITServices20o29 } from '../../data/20o29-enterprise-it-services',
 import { emergingTechServices20o29 } from '../../data/20o29-emerging-tech-services',
-,
-const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+const UltraFuturisticServiceShowcase20o30: React.FC = () => {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
+  };
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
         staggerChildren: 0.1,
-      ,}
+      }
     }
   };
-,
-  const itemVariants ={,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.6,;
+  const itemVariants ={
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.6;
         ease: "easeOut" as const,
-      ,}
+      }
     }
   };
-,
-  const cardVariants ={,
-    hidden: { scale: 0.9, opacity: 0 ,},;
-    visible: {,
-      scale: 1,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
+  const cardVariants ={
+    hidden: { scale: 0.9, opacity: 0 };
+    visible: {
+      scale: 1;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
         ease: "easeOut" as const,
-      ,}
-    },;
-    hover: {,
-      scale: 1.0o5,;
-      y: -10,;
-      transition: {,
-        duration: 0.3,;
+      }
+    };
+    hover: {
+      scale: 1.0o5;
+      y: -10;
+      transition: {
+        duration: 0.3;
         ease: "easeOut" as const,
-      ,}
+      }
     }
   };
-,
-  return (,
+  return (
     <section className="py-20 px-4 relative overflow-hidden">,
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-90o0 via-purple-90o0/20 to-slate-90o0"  />,
       {/* Quantum Grid Pattern */}
       <div className="absolute inset-0 opacity-10">,
-        <div className="absolute inset-0" style={{,
+        <div className="absolute inset-0" style={{
           backgroundImage: `,
-            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),;
+            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
             linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-          `,;
+          `;
           backgroundSize: '10o0px 10o0px',
-        ,}}  />,
+        }}  />,
       </div>,
       <div className="max-w-7xl mx-auto relative z-10">,
         {/* Header Section */}
@@ -81,20 +75,20 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
           className="text-center mb-20",
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
           variants={containerVariants}
         >,
           <motion.h2,
             className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-6",
-            variants={itemVariants,}
+            variants={itemVariants}
           >,
             20o30 Cutting-Edge Innovations,
           </motion.h2>,
           <motion.p,
             className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed",
-            variants={itemVariants,}
+            variants={itemVariants}
           >,
-            Experience the future with our revolutionary AI consciousness, quantum creativity,;
+            Experience the future with our revolutionary AI consciousness, quantum creativity;
             biotech DNA computing, and space mining automation platforms,
           </motion.p>,
         </motion.div>,
@@ -103,15 +97,14 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
           className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-20",
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
           variants={containerVariants}
         >,
           {/* AI Consciousness & Innovation */}
           <motion.div,
             className="bg-gradient-to-br from-purple-90o0/50 to-indigo-90o0/50 backdrop-blur-xl rounded-2xl p-8 border border-purple-50o0/30",
             variants={cardVariants}
-            whileHover="hover",
-          >,
+            whileHover="hover">,
             <div className="flex items-center mb-6">,
               <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-2xl flex items-center justify-center mr-4">,
                 <Brain className="w-8 h-8 text-white"  />,
@@ -122,29 +115,26 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
               </div>,
             </div>,
             <div className="space-y-4">,
-              {cuttingEdgeInnovations20o29.slice(0, 2).map((service) => (,
+              {cuttingEdgeInnovations20o29.slice(0, 2).map((service) => (
                 <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-purple-50o0/20">,
                   <h4 className="text-lg font-semibold text-white mb-2">{service.name}</h4>,
                   <p className="text-gray-30o0 text-sm mb-3">{service.description}</p>,
                   <div className="flex items-center justify-between">,
                     <span className="text-purple-40o0 font-bold">{service.price}</span>,
-                    <Link,
+                    <Link
                       href={`/services/${service.id}`}
-                      className="text-purple-40o0 hover: text-purple-30o0 transition-colors",
-                    >,
+                      className="text-purple-40o0 hover: text-purple-30o0 transition-colors">,
                       Learn More →,
                     </Link>,
                   </div>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </motion.div>,
           {/* Enterprise IT & Security */}
           <motion.div,
             className="bg-gradient-to-br from-blue-90o0/50 to-cyan-90o0/50 backdrop-blur-xl rounded-2xl p-8 border border-blue-50o0/30",
             variants={cardVariants}
-            whileHover="hover",
-          >,
+            whileHover="hover">,
             <div className="flex items-center mb-6">,
               <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-2xl flex items-center justify-center mr-4">,
                 <Cpu className="w-8 h-8 text-white"  />,
@@ -155,21 +145,19 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
               </div>,
             </div>,
             <div className="space-y-4">,
-              {enterpriseITServices20o29.slice(0, 2).map((service) => (,
+              {enterpriseITServices20o29.slice(0, 2).map((service) => (
                 <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-blue-50o0/20">,
                   <h4 className="text-lg font-semibold text-white mb-2">{service.name}</h4>,
                   <p className="text-gray-30o0 text-sm mb-3">{service.description}</p>,
                   <div className="flex items-center justify-between">,
                     <span className="text-blue-40o0 font-bold">{service.price}</span>,
-                    <Link,
+                    <Link
                       href={`/services/${service.id}`}
-                      className="text-blue-40o0 hover: text-blue-30o0 transition-colors",
-                    >,
+                      className="text-blue-40o0 hover: text-blue-30o0 transition-colors">,
                       Learn More →,
                     </Link>,
                   </div>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </motion.div>,
         </motion.div>,
@@ -178,21 +166,21 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
           className="mb-20",
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
           variants={containerVariants}
         >,
           <motion.h3,
             className="text-3xl md: text-4xl font-bold text-white text-center mb-12",
-            variants={itemVariants,}
+            variants={itemVariants}
           >,
             Emerging Technology Breakthroughs,
           </motion.h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {emergingTechServices20o29.map((service, index) => (,
+            {emergingTechServices20o29.map((service, index) => (
               <motion.div,
                 key={service.id}
                 className="bg-gradient-to-br from-slate-80o0/80 to-slate-90o0/80 backdrop-blur-xl rounded-xl p-6 border border-slate-60o0/30 hover: border-slate-50o0/50 transition-all duration-30o0",
-                variants={cardVariants,}
+                variants={cardVariants}
                 whileHover="hover",
                 custom={index}
               >,
@@ -212,15 +200,13 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
                 </div>,
                 <div className="flex items-center justify-between">,
                   <span className="text-gray-40o0 text-sm">{service.marketSize}</span>,
-                  <Link,
+                  <Link
                     href={`/services/${service.id}`}
-                    className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors text-sm font-medium",
-                  >,
+                    className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors text-sm font-medium">,
                     Explore <ArrowRight className="w-4 h-4 ml-1"  />,
                   </Link>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Micro SAAS Innovation Hub */}
@@ -228,17 +214,17 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
           className="mb-20",
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
           variants={containerVariants}
         >,
           <motion.h3,
             className="text-3xl md: text-4xl font-bold text-white text-center mb-12",
-            variants={itemVariants,}
+            variants={itemVariants}
           >,
             Micro SAAS Innovation Hub,
           </motion.h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {innovativeMicroSaas20o29.map((service, index) => (,
+            {innovativeMicroSaas20o29.map((service, index) => (
               <motion.div,
                 key={service.id}
                 className="bg-gradient-to-br from-emerald-90o0/50 to-teal-90o0/50 backdrop-blur-xl rounded-2xl p-8 border border-emerald-50o0/30",
@@ -270,15 +256,13 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
                     <TrendingUp className="w-4 h-4 text-emerald-40o0"  />,
                     <span className="text-emerald-20o0 text-sm">{service.marketSize}</span>,
                   </div>,
-                  <Link,
+                  <Link
                     href={`/services/${service.id}`}
-                    className="inline-flex items-center bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-6 py-2 rounded-lg hover: from-emerald-60o0 hover:to-teal-60o0 transition-all duration-30o0",
-                  >,
+                    className="inline-flex items-center bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-6 py-2 rounded-lg hover: from-emerald-60o0 hover:to-teal-60o0 transition-all duration-30o0">,
                     Get Started <ArrowRight className="w-4 h-4 ml-2"  />,
                   </Link>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Contact & CTA Section */}
@@ -286,7 +270,7 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
           className="text-center",
           initial="hidden",
           whileInView="visible",
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
           variants={containerVariants}
         >,
           <motion.div,
@@ -303,7 +287,7 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
               <div className="flex items-center justify-center space-x-3">,
                 <Phone className="w-5 h-5 text-purple-40o0"  />,
-                <span className="text-white">{contactInfo.mobile,}</span>,
+                <span className="text-white">{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center justify-center space-x-3">,
                 <Mail className="w-5 h-5 text-purple-40o0"  />,
@@ -315,25 +299,21 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:from-purple-60o0 hover:to-blue-60o0 transition-all duration-30o0">,
                 <Sparkles className="w-5 h-5 mr-2"  />,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href="/services",
-                className="inline-flex items-center border border-purple-50o0 text-purple-40o0 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-50o0 hover:text-white transition-all duration-30o0",
-              >,
+                className="inline-flex items-center border border-purple-50o0 text-purple-40o0 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-50o0 hover:text-white transition-all duration-30o0">,
                 Explore All Services,
               </Link>,
             </div>,
           </motion.div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltraFuturisticServiceShowcase20o30,
+    </section>),
+};
+export default UltraFuturisticServiceShowcase20o30;

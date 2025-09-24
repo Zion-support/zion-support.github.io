@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function VerifyStatusPage() {,
-  return (,
+export default function VerifyStatusPage() {
+  return (
     <>,
       <Head>,
         <title>Verify Status - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function VerifyStatusPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

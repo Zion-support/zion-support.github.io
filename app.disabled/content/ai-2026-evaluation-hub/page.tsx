@@ -1,17 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Evaluation Hub | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Evaluation Hub | Zion Tech Group';
   description:,
-    'Central hub for task suites, datasets, metrics, and governance to ship reliable AI.',;
-  keywords: ['evaluation hub', 'datasets', 'metrics', 'evals', 'governance'],;
+    'Central hub for task suites, datasets, metrics, and governance to ship reliable AI.';
+  keywords: ['evaluation hub', 'datasets', 'metrics', 'evals', 'governance'];
 };
-,
-const EvaluationHub20o26: React.FC = () => {,
-  return (,
+const EvaluationHub20o26: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Evaluation Hub',
         description='Central hub for task suites, datasets, metrics, and governance to ship reliable AI.',
         keywords='evaluation hub, datasets, metrics, evals, governance',
@@ -42,7 +40,7 @@ const EvaluationHub20o26: React.FC = () => {,
           <pre>,
             {`POST /api/evals/run,
 GET  /api/evals/scores?task=...,
-GET  /api/evals/scorecards?team=...`,}
+GET  /api/evals/scorecards?team=...`}
           </pre>,
           <h2>Adoption Path</h2>,
           <ol>,
@@ -52,23 +50,18 @@ GET  /api/evals/scorecards?team=...`,}
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-eval-gated-autonomy',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Read Eval‑Gated Autonomy,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EvaluationHub20o26,
-,
+    </div>),
+};
+export default EvaluationHub20o26;

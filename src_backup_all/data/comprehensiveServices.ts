@@ -1,2 +1,2 @@
-export interface ComprehensiveService {,
+export interface ComprehensiveService {
 }

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26QuantumNeuralFusionBanner() {,
-  return (,
+export default function AI20o26QuantumNeuralFusionBanner() {
+  return (
     <section className="py-16 px-4 bg-gradient-to-r from-cyan-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -45,7 +44,7 @@ export default function AI20o26QuantumNeuralFusionBanner() {,
             </p>,
           </div>,
         </div>,
-        {/* Quantum Applications */,}
+        {/* Quantum Applications */}
         <div className="grid md: grid-cols-2 gap-6 mb-12">,
           <div className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-xl p-6">,
             <h3 className="text-xl font-bold mb-3">Drug Discovery Revolution</h3>,
@@ -81,28 +80,25 @@ export default function AI20o26QuantumNeuralFusionBanner() {,
             <div className="text-sm text-gray-30o0">Computational Power</div>,
           </div>,
         </div>,
-        {/* CTA Buttons */,}
+        {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <Link,
+          <Link
             href="/ai-20o26-quantum-neural-fusion-breakthrough",
-            className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform shadow-lg",
-          >,
+            className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:scale-10o5 transition-transform shadow-lg">,
             ⚛️ Enter the Quantum Era,
           </Link>,
-          <Link,
+          <Link
             href="/case-studies/ai-20o26-quantum-neural-success",
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-colors",
-          >,
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-cyan-60o0 transition-colors">,
             📊 View Quantum Success Stories,
           </Link>,
-          <Link,
+          <Link
             href="/resources/ai-20o26-quantum-implementation-guide",
-            className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-colors",
-          >,
+            className="bg-white bg-opacity-20 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-opacity-30 transition-colors">,
             📚 Get Quantum Guide,
           </Link>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className="mt-12 text-center">,
           <p className="text-gray-30o0 text-sm mb-4">Pioneered by leading quantum computing researchers</p>,
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">,
@@ -123,11 +119,11 @@ export default function AI20o26QuantumNeuralFusionBanner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="text-center">,
-          {/* Main heading */,}
+          {/* Main heading */}
           <h1 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent animate-pulse">,
             ⚛️ AI 20o26 Quantum-Neural Fusion,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className="text-lg md: text-xl mb-8 text-gray-30o0 max-w-4xl mx-auto">,
             The most revolutionary breakthrough in AI historycombining quantum computing,
             with neural networks to deliver,
@@ -151,22 +147,20 @@ export default function AI20o26QuantumNeuralFusionBanner() {,
               <p className="text-sm text-gray-30o0">Instant communication</p>,
             </div>,
           </div>,
-          {/* Call to action buttons */,}
+          {/* Call to action buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/ai-20o26-quantum-neural-fusion-breakthrough",
-              className="bg-gradient-to-r from-cyan-60o0 to-purple-60o0 hover:from-cyan-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25",
-            >,
+              className="bg-gradient-to-r from-cyan-60o0 to-purple-60o0 hover:from-cyan-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25">,
               ⚛️ Explore Quantum Features,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white hover:bg-white hover:text-cyan-90o0 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-30o0 shadow-lg hover:shadow-white/25",
-            >,
+              className="border-2 border-white text-white hover:bg-white hover:text-cyan-90o0 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-30o0 shadow-lg hover:shadow-white/25">,
               🚀 Get Quantum Access,
             </Link>,
           </div>,
-          {/* Success metrics */,}
+          {/* Success metrics */}
           <div className="mt-12 grid grid-cols-1 md: grid-cols-4 gap-6">,
             <div className="text-center">,
               <div className="text-3xl font-bold text-yellow-40o0">15,0o00%</div>,
@@ -193,6 +187,4 @@ export default function AI20o26QuantumNeuralFusionBanner() {,
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-40o0 rounded-full animate-ping opacity-75 animation-delay-10o00"></div>,
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-40o0 rounded-full animate-ping opacity-75 animation-delay-20o00"></div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

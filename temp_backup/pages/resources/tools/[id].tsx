@@ -1,61 +1,56 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function ToolPage() {,
+export default function ToolPage() {
   const router = useRouter(),
   const { id } = router.query,
-,
   // This would typically come from a database or API,
   // For now, we'll show a generic tool page,
-  const tool = {,
-    id: id as string,;
+  const tool = {
+    id: id as string;
     title: (id as string),
       ?.replace(/-/g, ' '),
-      .replace(/\b\w/g, l => l.toUpperCase()),;
+      .replace(/\b\w/g, l => l.toUpperCase());
     description:,
-      'An interactive tool designed to help organizations assess and improve their automation capabilities.',;
-    type: 'Interactive Tool',;
-    estimatedTime: '15-30 minutes',;
-    features: [,
-      'Comprehensive assessment framework',;
-      'Real-time scoring and analysis',;
-      'Actionable recommendations',;
-      'Progress tracking',;
-      'Industry benchmarking',;
-    ],;
-    benefits: [,
-      'Identify automation opportunities',;
-      'Prioritize implementation efforts',;
-      'Measure current capabilities',;
-      'Plan transformation roadmap',;
-    ],;
+      'An interactive tool designed to help organizations assess and improve their automation capabilities.';
+    type: 'Interactive Tool';
+    estimatedTime: '15-30 minutes';
+    features: [
+      'Comprehensive assessment framework';
+      'Real-time scoring and analysis';
+      'Actionable recommendations';
+      'Progress tracking';
+      'Industry benchmarking';
+    ];
+    benefits: [
+      'Identify automation opportunities';
+      'Prioritize implementation efforts';
+      'Measure current capabilities';
+      'Plan transformation roadmap';
+    ];
   };
-,
-  if (!id) {,
-    return (,
+  if (!id) {
+    return (
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white flex items-center justify-center'>,
         <div className='text-center'>,
           <h1 className='text-2xl font-bold mb-4'>Loading...</h1>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <>,
       <Head>,
         <title>{tool.title} | Zion Tech Group</title>,
         <meta name='description' content={tool.description} />,
-        <meta property='og: title' content={tool.title,} />,
-        <meta property='og: description' content={tool.description,} />,
+        <meta property='og: title' content={tool.title} />,
+        <meta property='og: description' content={tool.description} />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/resources',
-                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                 ← Back to Resources,
               </Link>,
             </nav>,
@@ -66,10 +61,10 @@ export default function ToolPage() {,
                 </div>,
                 <div className='flex items-center gap-3 justify-center mb-4'>,
                   <span className='px-3 py-1 bg-green-40o0/20 text-green-40o0 text-sm rounded-full border border-green-40o0/30'>,
-                    {tool.type,}
+                    {tool.type}
                   </span>,
                   <span className='text-white/60 text-sm'>,
-                    Est. time: {tool.estimatedTime,}
+                    Est. time: {tool.estimatedTime}
                   </span>,
                 </div>,
                 <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-green-40o0 to-blue-40o0 bg-clip-text text-transparent'>,
@@ -97,15 +92,13 @@ export default function ToolPage() {,
                   Key Features,
                 </h2>,
                 <ul className='space-y-3'>,
-                  {tool.features.map((feature, index) => (,
-                    <li,
+                  {tool.features.map((feature, index) => (
+                    <li
                       key={index}
-                      className='text-white/90 flex items-center gap-3',
-                    >,
+                      className='text-white/90 flex items-center gap-3'>,
                       <div className='w-2 h-2 bg-fuchsia-40o0 rounded-full'></div>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
               </section>,
               <section className='mb-12'>,
@@ -113,15 +106,13 @@ export default function ToolPage() {,
                   Benefits,
                 </h2>,
                 <ul className='space-y-3'>,
-                  {tool.benefits.map((benefit, index) => (,
-                    <li,
+                  {tool.benefits.map((benefit, index) => (
+                    <li
                       key={index}
-                      className='text-white/90 flex items-center gap-3',
-                    >,
+                      className='text-white/90 flex items-center gap-3'>,
                       <div className='w-2 h-2 bg-blue-40o0 rounded-full'></div>,
                       {benefit}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
               </section>,
               <section className='mb-12'>,
@@ -173,7 +164,7 @@ export default function ToolPage() {,
                 </h2>,
                 <p className='text-white/90 mb-6'>,
                   Ready to assess your automation readiness? This tool will take,
-                  approximately {tool.estimatedTime,}
+                  approximately {tool.estimatedTime}
                   to complete and will provide you with valuable insights to,
                   guide your automation strategy.,
                 </p>,
@@ -186,10 +177,9 @@ export default function ToolPage() {,
                     the meantime, our team can provide a personalized assessment,
                     of your automation capabilities.,
                   </p>,
-                  <Link,
+                  <Link
                     href='/contact?tool=assessment',
-                    className='inline-flex items-center gap-2 bg-gradient-to-r from-green-40o0 to-blue-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-50o0 hover:to-blue-50o0 transition-all duration-30o0',
-                  >,
+                    className='inline-flex items-center gap-2 bg-gradient-to-r from-green-40o0 to-blue-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-50o0 hover:to-blue-50o0 transition-all duration-30o0'>,
                     Schedule Assessment,
                     <span aria-hidden>→</span>,
                   </Link>,
@@ -201,16 +191,14 @@ export default function ToolPage() {,
                 Explore More Resources,
               </h3>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/resources',
-                  className='px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0',
-                >,
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0'>,
                   View All Resources,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0',
-                >,
+                  className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-40o0/50 transition-all duration-30o0'>,
                   Case Studies,
                 </Link>,
               </div>,
@@ -218,7 +206,6 @@ export default function ToolPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

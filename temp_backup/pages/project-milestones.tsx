@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ProjectMilestonesPage() {,
-  return (,
+export default function ProjectMilestonesPage() {
+  return (
     <>,
       <Head>,
         <title>Project Milestones - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ProjectMilestonesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

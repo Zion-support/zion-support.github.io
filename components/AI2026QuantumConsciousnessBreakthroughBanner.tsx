@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o26QuantumConsciousnessBreakthroughBanner: React.FC = () => {,
-  return (,
+const AI20o26QuantumConsciousnessBreakthroughBanner: React.FC = () => {
+  return (
     <section className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden">,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="10o0" height="10o0" viewBox="0 0 10o0 10o0" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M50 50c0-27.614 22.386-50 50-50v10o0c-27.614 0-50-22.386-50-50z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>,
       </div>,
-      {/* Quantum Particles Animation */,}
+      {/* Quantum Particles Animation */}
       <div className="absolute top-20 left-10 w-24 h-24 bg-cyan-40o0 rounded-full opacity-30 animate-bounce"></div>,
       <div className="absolute top-40 right-16 w-16 h-16 bg-purple-40o0 rounded-full opacity-30 animate-ping"></div>,
       <div className="absolute bottom-32 left-1/3 w-20 h-20 bg-pink-40o0 rounded-full opacity-30 animate-pulse"></div>,
@@ -29,7 +28,7 @@ const AI20o26QuantumConsciousnessBreakthroughBanner: React.FC = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">,
-          {/* Left Column - Key Features */,}
+          {/* Left Column - Key Features */}
           <div className="space-y-8">,
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">,
               <div className="flex items-center mb-4">,
@@ -118,19 +117,17 @@ const AI20o26QuantumConsciousnessBreakthroughBanner: React.FC = () => {,
             </p>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="flex flex-col sm: flex-row gap-6 justify-center mb-8">,
-            <Link,
+            <Link
               href="/blog/ai-20o26-quantum-consciousness-breakthrough-ultimate-guide",
-              className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl",
-            >,
+              className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl">,
               Read Complete Guide,
             </Link>,
-            <Link,
+            <Link
               href="/services/quantum-ai",
-              className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Explore Quantum AI Solutions,
             </Link>,
           </div>,
@@ -145,8 +142,6 @@ const AI20o26QuantumConsciousnessBreakthroughBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26QuantumConsciousnessBreakthroughBanner,
+    </section>),
+};
+export default AI20o26QuantumConsciousnessBreakthroughBanner;

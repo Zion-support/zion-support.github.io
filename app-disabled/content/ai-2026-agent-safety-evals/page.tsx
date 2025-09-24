@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Safety Evaluations | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Safety Evaluations | Zion Tech Group';
   description:,
-    'A practical guide to building safety evaluation harnesses for autonomous agents: scenarios, metrics, and continuous monitoring.',;
+    'A practical guide to building safety evaluation harnesses for autonomous agents: scenarios, metrics, and continuous monitoring.';
 };
-,
-const AgentSafetyEvals20o26 = () => {,
-  return (,
+const AgentSafetyEvals20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Safety Evaluations',
         description='Design safety scenarios, define metrics, and integrate continuous evaluation gates to ship safer autonomous agents.',
         keywords='agent safety, evaluations, red teaming, safety metrics, AI 20o26',
@@ -50,23 +48,18 @@ const AgentSafetyEvals20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Safety Review,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgentSafetyEvals20o26,
-,
+    </div>),
+};
+export default AgentSafetyEvals20o26;

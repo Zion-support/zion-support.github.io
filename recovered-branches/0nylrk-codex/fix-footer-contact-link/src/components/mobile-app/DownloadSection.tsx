@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import { QrCodeIcon } from 'lucide-react',
 import { AppStoreButtons } from './AppStoreButtons',
-,
-export const DownloadSection: React.FC = () => {,
+export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config,
   const appStoreUrl = '#', // Replace with actual App Store URL when available,
   const googlePlayUrl = '#', // Replace with actual Google Play URL when available,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark'>,
       <div className='container mx-auto px-4'>,
         <div className='max-w-4xl mx-auto'>,
@@ -19,14 +18,13 @@ export const DownloadSection: React.FC = () => {,
                 Download the Zion app now and take your tech career or hiring,
                 needs to the next level. Available on iOS and Android.,
               </p>,
-              <AppStoreButtons,
+              <AppStoreButtons
                 className='mb-8',
-                appStoreUrl={appStoreUrl,}
+                appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console.log('App Store button clicked')}
+                onAppStoreClick={() => // console.log('App Store button clicked')}
                 onGooglePlayClick={() =>,
-                  console.log('Google Play button clicked'),
-                }
+                  // console.log('Google Play button clicked')}
               />,
               <div className='text-sm text-gray-40o0'>,
                 <p>Compatible with iOS 14+ and Android 8.0+</p>,
@@ -45,7 +43,4 @@ export const DownloadSection: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
+    </section>)};

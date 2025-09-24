@@ -1,34 +1,30 @@
 import React, { useMemo, useState } from 'react',
 import Head from 'next/head',
 import { getZionDesignMap } from '../utils/design-map',
-,
-export default function DesignMapPage() {,
+export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), []),
   const [screenName, setScreenName] = useState(''),
   const [role, setRole] = useState('Talent'),
   const [suggestion, setSuggestion] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(false),
-,
-  async function requestWireframe() {,
+  async function requestWireframe() {
     if (!screenName) return,
     setIsLoading(true),
     setSuggestion(null),
-    try {,
-      const res = await fetch('/api/figma/wireframe-suggest', {,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({ screenName, role }),;
+    try {
+      const res = await fetch('/api/figma/wireframe-suggest', {
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({ screenName, role });
       }),
       const json = await res.json(),
-      setSuggestion(json?.suggestion || 'No suggestion received'),
-    } catch (e: any) {,
+      setSuggestion(json?.suggestion || 'No suggestion received')} catch (e: any) {
       setSuggestion(e?.message || 'Failed to fetch suggestion'),
-    ,} finally {,
-      setIsLoading(false),
-    }
+    } finally {
+      setIsLoading(false)}
   }
 ,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Zion OS Design Map</title>,
@@ -37,49 +33,45 @@ export default function DesignMapPage() {,
         <div className='flex items-center justify-between'>,
           <h1 className='text-2xl font-semibold'>Zion OS Design Map</h1>,
           <div className='flex gap-2'>,
-            <a,
+            <a
               href='/api/design-map',
-              className='px-3 py-2 rounded bg-gray-90o0 text-white text-sm',
-            >,
+              className='px-3 py-2 rounded bg-gray-90o0 text-white text-sm'>,
               JSON,
             </a>,
-            <a,
+            <a
               href='/api/figma/export?kit=tailwind',
-              className='px-3 py-2 rounded bg-neon-blue text-black text-sm',
-            >,
+              className='px-3 py-2 rounded bg-neon-blue text-black text-sm'>,
               Export Tailwind,
             </a>,
-            <a,
+            <a
               href='/api/figma/export?kit=chakra',
-              className='px-3 py-2 rounded bg-neon-purple text-white text-sm',
-            >,
+              className='px-3 py-2 rounded bg-neon-purple text-white text-sm'>,
               Export Chakra,
             </a>,
-            <a,
+            <a
               href='/api/figma/export?kit=react',
-              className='px-3 py-2 rounded bg-neon-green text-black text-sm',
-            >,
+              className='px-3 py-2 rounded bg-neon-green text-black text-sm'>,
               Export React,
             </a>,
           </div>,
         </div>,
         <div className='grid md: grid-cols-2 gap-6'>,
-          <MapColumn,
+          <MapColumn
             title='Foundations',
-            sections={designMap.products.foundations,}
+            sections={designMap.products.foundations}
           />,
           <MapColumn title='Talent UI' sections={designMap.products.talent} />,
           <MapColumn title='Client UI' sections={designMap.products.client} />,
-          <MapColumn,
+          <MapColumn
             title='AI Tools UI',
             sections={designMap.products.aiTools}
           />,
           <MapColumn title='DAO & Token UI' sections={designMap.products.dao} />,
-          <MapColumn,
+          <MapColumn
             title='Admin Console',
             sections={designMap.products.admin}
           />,
-          <MapColumn,
+          <MapColumn
             title='Mobile Layouts',
             sections={designMap.products.mobile}
           />,
@@ -91,8 +83,8 @@ export default function DesignMapPage() {,
               <label className='block text-xs text-gray-50o0 mb-1'>,
                 Screen name,
               </label>,
-              <input,
-                value={screenName,}
+              <input
+                value={screenName}
                 onChange={e => setScreenName(e.target.value)}
                 className='w-full px-3 py-2 rounded border border-gray-30o0 dark: border-gray-70o0 bg-white/80 dark:bg-black/40',
                 placeholder='e.g., Talent Dashboard - Insights',
@@ -100,11 +92,10 @@ export default function DesignMapPage() {,
             </div>,
             <div>,
               <label className='block text-xs text-gray-50o0 mb-1'>Role</label>,
-              <select,
+              <select
                 value={role}
                 onChange={e => setRole(e.target.value)}
-                className='px-3 py-2 rounded border border-gray-30o0 dark: border-gray-70o0 bg-white/80 dark:bg-black/40',
-              >,
+                className='px-3 py-2 rounded border border-gray-30o0 dark: border-gray-70o0 bg-white/80 dark:bg-black/40'>,
                 <option>Talent</option>,
                 <option>Client</option>,
                 <option>Admin</option>,
@@ -113,60 +104,49 @@ export default function DesignMapPage() {,
                 <option>Mobile</option>,
               </select>,
             </div>,
-            <button,
-              onClick={requestWireframe,}
+            <button
+              onClick={requestWireframe}
               className='px-3 py-2 rounded bg-gray-90o0 text-white text-sm disabled: opacity-60',
-              disabled={isLoading || !screenName,}
+              disabled={isLoading || !screenName}
             >,
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
             </button>,
           </div>,
-          {suggestion && (,
+          {suggestion && (
             <pre className='mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark: bg-gray-90o0/40 border border-gray-20o0 dark:border-gray-80o0'>,
-              {suggestion,}
-            </pre>,
-          )}
+              {suggestion}
+            </pre>)}
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}
 ,
-function MapColumn({,
-  title,;
-  sections,;
-}: {,
+function MapColumn({
+  title;
+  sections;
+}: {
   title: string,
-  sections: {,
+  sections: {
     id: string,
     title: string,
-    items: { id: string, title: string ,}[],
-  }[],
-}) {,
-  return (,
+    items: { id: string, title: string }[]}[]}) {
+  return (
     <div className='space-y-3'>,
       <h3 className='text-lg font-semibold'>{title}</h3>,
       <div className='grid gap-3'>,
-        {sections.map(s => (,
-          <div,
+        {sections.map(s => (
+          <div
             key={s.id}
-            className='rounded-lg border border-gray-20o0 dark: border-gray-80o0 p-4 bg-white/60 dark:bg-black/40',
-          >,
-            <div className='font-medium mb-2'>{s.title,}</div>,
+            className='rounded-lg border border-gray-20o0 dark: border-gray-80o0 p-4 bg-white/60 dark:bg-black/40'>,
+            <div className='font-medium mb-2'>{s.title}</div>,
             <div className='flex flex-wrap gap-2'>,
-              {s.items.map(i => (,
-                <span,
+              {s.items.map(i => (
+                <span
                   key={i.id}
-                  className='text-xs px-2 py-1 rounded border border-gray-20o0 dark: border-gray-80o0',
-                >,
-                  {i.title,}
-                </span>,
-              ))}
+                  className='text-xs px-2 py-1 rounded border border-gray-20o0 dark: border-gray-80o0'>,
+                  {i.title}
+                </span>))}
             </div>,
-          </div>,
-        ))}
+          </div>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

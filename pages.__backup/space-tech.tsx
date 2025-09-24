@@ -1,21 +1,18 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
 SatelliteCheckCircleGlobe2,
-,
-export default function SpaceTechPage() {,
-  const features = [,
-    'Mission control dashboards and telemetry pipelines',;
-    'Satellite operations playbooks and anomaly response',;
-    'Ground station integrations and data delivery SLAs',;
-    'Secure communications and zero-trust segmentation',;
+export default function SpaceTechPage() {
+  const features = [
+    'Mission control dashboards and telemetry pipelines';
+    'Satellite operations playbooks and anomaly response';
+    'Ground station integrations and data delivery SLAs';
+    'Secure communications and zero-trust segmentation';
   ],
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>Space Technology | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Space mission controlsatellite operationsand secure communications consulting.',
         />,
@@ -47,29 +44,25 @@ export default function SpaceTechPage() {,
               Capabilities,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>,
-              {features.map(f => (,
-                <div,
-                  key={f,}
-                  className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60',
-                >,
+              {features.map(f => (
+                <div
+                  key={f}
+                  className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60'>,
                   <CheckCircle className='w-5 h-5 text-emerald-40o0 mt-0.5' />,
                   <span className='text-gray-20o0'>{f}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </section>,
           <section className='text-center'>,
-            <a,
+            <a
               href='/space-technology',
-              className='inline-flex items-center gap-2 text-cyan-30o0 hover: text-cyan-20o0',
-            >,
+              className='inline-flex items-center gap-2 text-cyan-30o0 hover: text-cyan-20o0'>,
               <Globe2 className='w-4 h-4' />,
               <span>Explore detailed Space Technology offerings</span>,
             </a>,
           </section>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

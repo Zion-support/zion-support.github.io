@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousCodeGenerationPage() {,
-  return (,
+export default function AiAutonomousCodeGenerationPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Code Generation - Zion Tech Group</title>,
@@ -18,7 +17,6 @@ export default function AiAutonomousCodeGenerationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

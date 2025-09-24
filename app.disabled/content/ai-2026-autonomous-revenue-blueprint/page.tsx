@@ -1,20 +1,18 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Revenue Blueprint',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Revenue Blueprint';
   description:,
-    'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.',;
+    'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <h1 className='text-3xl md:text-4xl font-bold text-gray-90o0'>,
         AI 20o26: Autonomous Revenue Blueprint,
       </h1>,
       <p className='mt-4 text-gray-70o0'>,
         Deploy outcome-driven go-to-market agents for demand generation, sales,
-        assist, and customer expansion. This blueprint details operating models,;
+        assist, and customer expansion. This blueprint details operating models;
         governance, and evaluation harnesses to scale safely.,
       </p>,
       <section className='mt-8 space-y-6'>,
@@ -62,7 +60,7 @@ export default function Page() {,
           <ul className='list-disc pl-6 mt-2 text-gray-70o0 space-y-1'>,
             <li>Message compliance checks and tone/style guardrails.</li>,
             <li>,
-              Success metrics: qualified meetings, cycle time, expansion rate,;
+              Success metrics: qualified meetings, cycle time, expansion rate;
               and risk incidents.,
             </li>,
             <li>,
@@ -72,20 +70,17 @@ export default function Page() {,
         </div>,
       </section>,
       <div className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-autonomous-revenue-agents',
-          className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Read Revenue Agents Guide,
         </Link>,
-        <Link,
+        <Link
           href='/content/ai-20o26-evaluation-harness-blueprint',
-          className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Evaluation Harness,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

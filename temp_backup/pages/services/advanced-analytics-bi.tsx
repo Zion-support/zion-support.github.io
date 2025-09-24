@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AdvancedAnalyticsBiPage() {,
-  return (,
+export default function AdvancedAnalyticsBiPage() {
+  return (
     <>,
       <Head>,
         <title>Advanced Analytics Bi - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function AdvancedAnalyticsBiPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

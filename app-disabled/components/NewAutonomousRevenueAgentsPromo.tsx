@@ -1,4 +1,3 @@
-export default function NewAutonomousRevenueAgentsPromo() {,
-  return null,
-}
+export default function NewAutonomousRevenueAgentsPromo() {
+  return null}
 ,

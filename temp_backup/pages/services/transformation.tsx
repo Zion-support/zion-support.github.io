@@ -1,118 +1,114 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Rocket,;
-  Zap,;
-  Shield,;
-  Cpu,;
-  Database,;
-  Users,;
-  ArrowRight,;
-  CheckCircle,;
-  Star,;
-  Clock,;
-  TrendingUp,;
-  Globe,;
+import {
+  Rocket;
+  Zap;
+  Shield;
+  Cpu;
+  Database;
+  Users;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  Clock;
+  TrendingUp;
+  Globe;
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
-,
-export default function DigitalTransformationPage() {,
-  const services = [,
-    {,
-      title: 'Digital Strategy & Roadmap',;
+export default function DigitalTransformationPage() {
+  const services = [
+    {
+      title: 'Digital Strategy & Roadmap';
       description:,
-        'Comprehensive digital transformation strategy and implementation planning',;
-      features: [,
-        'Technology Assessment',;
-        'Change Management',;
-        'ROI Planning',;
-        'Implementation Roadmap',;
-      ],;
-      price: 'From $15,0o00',;
-      icon: Rocket,;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-    },;
-    {,
-      title: 'Legacy System Modernization',;
-      description: 'Transform outdated systems into modern, scalable solutions',;
-      features: [,
-        'System Analysis',;
-        'Migration Planning',;
-        'Data Migration',;
-        'Performance Optimization',;
-      ],;
-      price: 'From $25,0o00',;
-      icon: Cpu,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-    },;
-    {,
-      title: 'Process Automation',;
+        'Comprehensive digital transformation strategy and implementation planning';
+      features: [
+        'Technology Assessment';
+        'Change Management';
+        'ROI Planning';
+        'Implementation Roadmap';
+      ];
+      price: 'From $15,0o00';
+      icon: Rocket;
+      color: 'from-yellow-50o0 to-orange-50o0';
+    };
+    {
+      title: 'Legacy System Modernization';
+      description: 'Transform outdated systems into modern, scalable solutions';
+      features: [
+        'System Analysis';
+        'Migration Planning';
+        'Data Migration';
+        'Performance Optimization';
+      ];
+      price: 'From $25,0o00';
+      icon: Cpu;
+      color: 'from-blue-50o0 to-cyan-50o0';
+    };
+    {
+      title: 'Process Automation';
       description:,
-        'AI-powered automation for improved efficiency and productivity',;
-      features: [,
-        'Workflow Analysis',;
-        'RPA Implementation',;
-        'Integration',;
-        'Monitoring',;
-      ],;
-      price: 'From $12,0o00',;
-      icon: Zap,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-    },;
-    {,
-      title: 'Change Management',;
-      description: 'Comprehensive change management and training programs',;
-      features: [,
-        'Stakeholder Engagement',;
-        'Training Programs',;
-        'Communication Strategy',;
-        'Success Metrics',;
-      ],;
-      price: 'From $8,0o00',;
-      icon: Users,;
-      color: 'from-emerald-50o0 to-teal-50o0',;
-    },;
+        'AI-powered automation for improved efficiency and productivity';
+      features: [
+        'Workflow Analysis';
+        'RPA Implementation';
+        'Integration';
+        'Monitoring';
+      ];
+      price: 'From $12,0o00';
+      icon: Zap;
+      color: 'from-purple-50o0 to-pink-50o0';
+    };
+    {
+      title: 'Change Management';
+      description: 'Comprehensive change management and training programs';
+      features: [
+        'Stakeholder Engagement';
+        'Training Programs';
+        'Communication Strategy';
+        'Success Metrics';
+      ];
+      price: 'From $8,0o00';
+      icon: Users;
+      color: 'from-emerald-50o0 to-teal-50o0';
+    };
   ],
-,
-  const stats = [,
-    { number: '50o0+', label: 'Transformations Completed', icon: Rocket ,},;
-    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp ,},;
-    { number: '30o0%', label: 'ROI Improvement', icon: Star ,},;
-    { number: '24/7', label: 'Support Available', icon: Clock ,},;
+  const stats = [
+    { number: '50o0+', label: 'Transformations Completed', icon: Rocket };
+    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp };
+    { number: '30o0%', label: 'ROI Improvement', icon: Star };
+    { number: '24/7', label: 'Support Available', icon: Clock };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
       <Head>,
         <title>Digital Transformation Services - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Digital Transformation Services - Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='End-to-end digital transformation solutions for modern businesses.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/services/transformation',
         />,
       </Head>,
       <EnhancedNavigation />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='mb-8',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'>,
             <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-yellow-40o0 via-orange-40o0 to-yellow-40o0 bg-clip-text text-transparent mb-6'>,
               Digital Transformation,
             </h1>,
@@ -122,11 +118,10 @@ export default function DigitalTransformationPage() {,
             </p>,
           </motion.div>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='mb-12',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb-12'>,
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>,
               From strategy development to implementation, we guide businesses,
               through complete digital transformation journeys that drive,
@@ -139,19 +134,18 @@ export default function DigitalTransformationPage() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <section className='py-16 px-6'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8'>,
-            {stats.map((stat, index) => (,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='text-center'>,
                 <div className='w-16 h-16 bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4'>,
                   <stat.icon className='w-8 h-8 text-orange-40o0' />,
                 </div>,
@@ -159,8 +153,7 @@ export default function DigitalTransformationPage() {,
                   {stat.number}
                 </div>,
                 <div className='text-white/70'>{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -168,12 +161,11 @@ export default function DigitalTransformationPage() {,
       <section className='py-20 px-6'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl font-bold text-white mb-6'>,
               Digital Transformation Services,
             </h2>,
@@ -183,17 +175,16 @@ export default function DigitalTransformationPage() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
-            {services.map((service, index) => (,
+            {services.map((service, index) => (
               <motion.div,
                 key={service.title}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover: border-orange-50o0/30 transition-all duration-30o0',
-              >,
-                <div,
-                  className={`w-16 h-16 bg-gradient-to-br ${service.color,} rounded-2xl flex items-center justify-center mb-6`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover: border-orange-50o0/30 transition-all duration-30o0'>,
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}
                 >,
                   <service.icon className='w-8 h-8 text-white' />,
                 </div>,
@@ -202,15 +193,13 @@ export default function DigitalTransformationPage() {,
                 </h3>,
                 <p className='text-white/70 mb-6'>{service.description}</p>,
                 <ul className='space-y-3 mb-6'>,
-                  {service.features.map(feature => (,
-                    <li,
+                  {service.features.map(feature => (
+                    <li
                       key={feature}
-                      className='flex items-center text-white/80',
-                    >,
+                      className='flex items-center text-white/80'>,
                       <CheckCircle className='w-5 h-5 text-orange-40o0 mr-3 flex-shrink-0' />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-2xl font-bold text-orange-40o0'>,
@@ -220,8 +209,7 @@ export default function DigitalTransformationPage() {,
                     Get Started,
                   </button>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -229,10 +217,10 @@ export default function DigitalTransformationPage() {,
       <section className='py-20 px-6'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl font-bold text-white mb-6'>,
               Ready to Transform Your Business?,
@@ -253,7 +241,6 @@ export default function DigitalTransformationPage() {,
         </div>,
       </section>,
       <EnhancedFooter />,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

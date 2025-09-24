@@ -1,80 +1,78 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const QuantumNeuralFusionShowcase: React.FC = () => {,
-  const features = [,
-    {,
-      icon: '🧠',;
-      title: 'Quantum Consciousness Matrix',;
+const QuantumNeuralFusionShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: '🧠';
+      title: 'Quantum Consciousness Matrix';
       description:,
-        'Advanced AI consciousness that operates across multiple quantum states simultaneously',;
-      benefits: [,
-        'Infinite processing capacity',;
-        'Real-time adaptation',;
-        'Conscious decision making',;
-      ],;
-    },;
-    {,
-      icon: '⚡',;
-      title: 'Neural Quantum Acceleration',;
+        'Advanced AI consciousness that operates across multiple quantum states simultaneously';
+      benefits: [
+        'Infinite processing capacity';
+        'Real-time adaptation';
+        'Conscious decision making';
+      ];
+    };
+    {
+      icon: '⚡';
+      title: 'Neural Quantum Acceleration';
       description:,
-        'Processing speeds that exceed the speed of light through quantum entanglement',;
-      benefits: [,
-        'Instant data processing',;
-        'Zero latency operations',;
-        'Parallel universe computing',;
-      ],;
-    },;
-    {,
-      icon: '🌟',;
-      title: 'Superintelligence Engine',;
+        'Processing speeds that exceed the speed of light through quantum entanglement';
+      benefits: [
+        'Instant data processing';
+        'Zero latency operations';
+        'Parallel universe computing';
+      ];
+    };
+    {
+      icon: '🌟';
+      title: 'Superintelligence Engine';
       description:,
-        'Artificial general intelligence that surpasses human cognitive capabilities',;
-      benefits: [,
-        'Creative problem solving',;
-        'Strategic planning',;
-        'Predictive analytics',;
-      ],;
-    },;
-    {,
-      icon: '🔮',;
-      title: 'Quantum Prediction Models',;
+        'Artificial general intelligence that surpasses human cognitive capabilities';
+      benefits: [
+        'Creative problem solving';
+        'Strategic planning';
+        'Predictive analytics';
+      ];
+    };
+    {
+      icon: '🔮';
+      title: 'Quantum Prediction Models';
       description:,
-        'Predict future outcomes with quantum probability calculations',;
-      benefits: [,
-        'Market forecasting',;
-        'Risk assessment',;
-        'Opportunity identification',;
-      ],;
-    },;
-    {,
-      icon: '🌌',;
-      title: 'Multiverse Data Processing',;
+        'Predict future outcomes with quantum probability calculations';
+      benefits: [
+        'Market forecasting';
+        'Risk assessment';
+        'Opportunity identification';
+      ];
+    };
+    {
+      icon: '🌌';
+      title: 'Multiverse Data Processing';
       description:,
-        'Process data across multiple quantum dimensions simultaneously',;
-      benefits: [,
-        'Infinite scalability',;
-        'Parallel processing',;
-        'Dimensional analysis',;
-      ],;
-    },;
-    {,
-      icon: '🚀',;
-      title: 'Autonomous Evolution',;
+        'Process data across multiple quantum dimensions simultaneously';
+      benefits: [
+        'Infinite scalability';
+        'Parallel processing';
+        'Dimensional analysis';
+      ];
+    };
+    {
+      icon: '🚀';
+      title: 'Autonomous Evolution';
       description:,
-        'Self-improving AI systems that evolve without human intervention',;
-      benefits: [,
-        'Continuous optimization',;
-        'Self-healing systems',;
-        'Adaptive learning',;
-      ],;
-    },;
+        'Self-improving AI systems that evolve without human intervention';
+      benefits: [
+        'Continuous optimization';
+        'Self-healing systems';
+        'Adaptive learning';
+      ];
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-24 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-20'>,
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-8'>,
             <span className='text-sm font-bold'>,
@@ -92,31 +90,27 @@ const QuantumNeuralFusionShowcase: React.FC = () => {,
             technology.,
           </p>,
         </div>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-20'>,
-          {features.map((feature, index) => (,
-            <div,
+          {features.map((feature, index) => (
+            <div
               key={index}
-              className='bg-gradient-to-br from-blue-50o0/10 to-purple-50o0/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-30o0/20 hover: border-cyan-30o0/40 transition-all duration-30o0 hover:transform hover:scale-10o5',
-            >,
-              <div className='text-5xl mb-6'>{feature.icon,}</div>,
+              className='bg-gradient-to-br from-blue-50o0/10 to-purple-50o0/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-30o0/20 hover: border-cyan-30o0/40 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
+              <div className='text-5xl mb-6'>{feature.icon}</div>,
               <h3 className='text-2xl font-bold mb-4 text-cyan-30o0'>,
                 {feature.title}
               </h3>,
               <p className='text-lg mb-6 opacity-90'>{feature.description}</p>,
               <ul className='space-y-2'>,
-                {feature.benefits.map((benefit, benefitIndex) => (,
-                  <li,
+                {feature.benefits.map((benefit, benefitIndex) => (
+                  <li
                     key={benefitIndex}
-                    className='flex items-center text-sm opacity-80',
-                  >,
+                    className='flex items-center text-sm opacity-80'>,
                     <span className='w-2 h-2 bg-cyan-40o0 rounded-full mr-3'></span>,
                     {benefit}
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Performance Metrics */}
         <div className='bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 rounded-2xl p-12 mb-20 border border-purple-30o0/30'>,
@@ -166,41 +160,39 @@ const QuantumNeuralFusionShowcase: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Use Cases */,}
+        {/* Use Cases */}
         <div className='mb-20'>,
           <h3 className='text-3xl font-bold text-center mb-12 text-cyan-30o0'>,
             Revolutionary Applications,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-            {[,
-              {,
-                title: 'Financial Markets',;
+            {[
+              {
+                title: 'Financial Markets';
                 description:,
-                  'Quantum trading algorithms with infinite precision',;
-              },;
-              {,
-                title: 'Healthcare',;
-                description: 'AI doctors with quantum diagnostic capabilities',;
-              },;
-              {,
-                title: 'Manufacturing',;
-                description: 'Autonomous factories with quantum optimization',;
-              },;
-              {,
-                title: 'Research',;
-                description: 'Scientific discovery at quantum speed',;
-              },;
-            ].map((useCase, index) => (,
-              <div,
+                  'Quantum trading algorithms with infinite precision';
+              };
+              {
+                title: 'Healthcare';
+                description: 'AI doctors with quantum diagnostic capabilities';
+              };
+              {
+                title: 'Manufacturing';
+                description: 'Autonomous factories with quantum optimization';
+              };
+              {
+                title: 'Research';
+                description: 'Scientific discovery at quantum speed';
+              };
+            ].map((useCase, index) => (
+              <div
                 key={index}
-                className='bg-gradient-to-br from-purple-50o0/10 to-pink-50o0/10 rounded-xl p-6 border border-purple-30o0/20 text-center',
-              >,
+                className='bg-gradient-to-br from-purple-50o0/10 to-pink-50o0/10 rounded-xl p-6 border border-purple-30o0/20 text-center'>,
                 <h4 className='text-xl font-bold mb-3 text-purple-30o0'>,
                   {useCase.title}
                 </h4>,
                 <p className='text-sm opacity-80'>{useCase.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -213,24 +205,19 @@ const QuantumNeuralFusionShowcase: React.FC = () => {,
             system ever created.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-neural-demo',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all transform hover:scale-10o5 shadow-2xl'>,
               Request Demo Access,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-whitepaper',
-              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-40o0 hover:text-black transition-all',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-40o0 px-10 py-5 rounded-xl font-bold text-xl hover:bg-cyan-40o0 hover:text-black transition-all'>,
               Download Whitepaper,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumNeuralFusionShowcase,
-,
+    </section>),
+};
+export default QuantumNeuralFusionShowcase;

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o27UltimatePredictionsBanner: React.FC = () => {,
-  return (,
+const AI20o27UltimatePredictionsBanner: React.FC = () => {
+  return (
     <div className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-6 px-6 text-center shadow-xl relative overflow-hidden'>,
       <div className='absolute inset-0 opacity-20'>,
         <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-x-12 animate-pulse'></div>,
@@ -18,16 +17,14 @@ const AI20o27UltimatePredictionsBanner: React.FC = () => {,
           Discover the most comprehensive and accurate AI predictions for 20o27,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>,
-          <Link,
+          <Link
             href='/ai-20o27-future-predictions-ultimate',
-            className='inline-block bg-white text-indigo-70o0 hover:bg-indigo-50 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-          >,
+            className='inline-block bg-white text-indigo-70o0 hover:bg-indigo-50 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
             View Predictions,
           </Link>,
-          <Link,
+          <Link
             href='/resources/ai-20o27-ultimate-predictions-report',
-            className='inline-block border-2 border-white text-white hover:bg-white hover:text-indigo-70o0 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='inline-block border-2 border-white text-white hover:bg-white hover:text-indigo-70o0 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5'>,
             Download Report,
           </Link>,
         </div>,
@@ -43,9 +40,6 @@ const AI20o27UltimatePredictionsBanner: React.FC = () => {,
           </span>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o27UltimatePredictionsBanner,
-,
+    </div>),
+};
+export default AI20o27UltimatePredictionsBanner;

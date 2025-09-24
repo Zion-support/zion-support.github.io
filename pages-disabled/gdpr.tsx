@@ -2,99 +2,96 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
-import {,
-  Shield,;
-  Lock,;
-  Eye,;
-  Database,;
-  UserCheck,;
-  FileText,;
-  AlertTriangle,;
-  CheckCircle,;
+import {
+  Shield;
+  Lock;
+  Eye;
+  Database;
+  UserCheck;
+  FileText;
+  AlertTriangle;
+  CheckCircle;
 } from 'lucide-react',
-,
-export default function GDPR() {,
-  const gdprPrinciples = [,
-    {,
-      icon: Shield,;
-      title: 'Lawfulness, Fairness & Transparency',;
+export default function GDPR() {
+  const gdprPrinciples = [
+    {
+      icon: Shield;
+      title: 'Lawfulness, Fairness & Transparency';
       description:,
-        'We process personal data lawfully, fairly, and in a transparent manner in relation to the data subject.',;
-    },;
-    {,
-      icon: Eye,;
-      title: 'Purpose Limitation',;
+        'We process personal data lawfully, fairly, and in a transparent manner in relation to the data subject.';
+    };
+    {
+      icon: Eye;
+      title: 'Purpose Limitation';
       description:,
-        'Personal data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.',;
-    },;
-    {,
-      icon: Database,;
-      title: 'Data Minimisation',;
+        'Personal data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.';
+    };
+    {
+      icon: Database;
+      title: 'Data Minimisation';
       description:,
-        'Personal data is adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.',;
-    },;
-    {,
-      icon: CheckCircle,;
-      title: 'Accuracy',;
+        'Personal data is adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.';
+    };
+    {
+      icon: CheckCircle;
+      title: 'Accuracy';
       description:,
-        'Personal data is accurate and, where necessary, kept up to date. We take reasonable steps to ensure inaccurate data is erased or rectified.',;
-    },;
-    {,
-      icon: Lock,;
-      title: 'Storage Limitation',;
+        'Personal data is accurate and, where necessary, kept up to date. We take reasonable steps to ensure inaccurate data is erased or rectified.';
+    };
+    {
+      icon: Lock;
+      title: 'Storage Limitation';
       description:,
-        'Personal data is kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data is processed.',;
-    },;
-    {,
-      icon: UserCheck,;
-      title: 'Integrity & Confidentiality',;
+        'Personal data is kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data is processed.';
+    };
+    {
+      icon: UserCheck;
+      title: 'Integrity & Confidentiality';
       description:,
-        'Personal data is processed in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing.',;
-    },;
+        'Personal data is processed in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing.';
+    };
   ],
-,
-  const dataRights = [,
-    {,
-      title: 'Right of Access',;
+  const dataRights = [
+    {
+      title: 'Right of Access';
       description:,
-        'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',;
-    },;
-    {,
-      title: 'Right to Rectification',;
+        'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.';
+    };
+    {
+      title: 'Right to Rectification';
       description:,
-        'You have the right to have inaccurate personal data corrected and incomplete personal data completed.',;
-    },;
-    {,
-      title: 'Right to Erasure',;
+        'You have the right to have inaccurate personal data corrected and incomplete personal data completed.';
+    };
+    {
+      title: 'Right to Erasure';
       description:,
-        'You have the right to request the deletion of your personal data under certain circumstances.',;
-    },;
-    {,
-      title: 'Right to Restrict Processing',;
+        'You have the right to request the deletion of your personal data under certain circumstances.';
+    };
+    {
+      title: 'Right to Restrict Processing';
       description:,
-        'You have the right to request the restriction of processing of your personal data.',;
-    },;
-    {,
-      title: 'Right to Data Portability',;
+        'You have the right to request the restriction of processing of your personal data.';
+    };
+    {
+      title: 'Right to Data Portability';
       description:,
-        'You have the right to receive your personal data in a structured, commonly used format.',;
-    },;
-    {,
-      title: 'Right to Object',;
+        'You have the right to receive your personal data in a structured, commonly used format.';
+    };
+    {
+      title: 'Right to Object';
       description:,
-        'You have the right to object to the processing of your personal data for direct marketing purposes.',;
-    },;
+        'You have the right to object to the processing of your personal data for direct marketing purposes.';
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>GDPR Compliance - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Learn about Zion Tech Group's GDPR compliance, data protection measures, and your privacy rights under the General Data Protection Regulation.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='GDPR, data protection, privacy, compliance, Zion Tech Group',
         />,
@@ -102,7 +99,7 @@ export default function GDPR() {,
       </Head>,
       <ModernHeader />,
       <main className='min-h-screen bg-gradient-to-br from-gray-50 to-blue-50'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center'>,
@@ -119,7 +116,7 @@ export default function GDPR() {,
             </div>,
           </div>,
         </section>,
-        {/* Introduction */,}
+        {/* Introduction */}
         <section className='py-16 bg-white'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-12'>,
@@ -129,7 +126,7 @@ export default function GDPR() {,
               <p className='text-lg text-gray-60o0 max-w-4xl mx-auto'>,
                 At Zion Tech Group, we are fully committed to complying with the,
                 General Data Protection Regulation (GDPR) and ensuring the,
-                highest standards of data protection for all our users, clients,;
+                highest standards of data protection for all our users, clients;
                 and partners.,
               </p>,
             </div>,
@@ -158,11 +155,10 @@ export default function GDPR() {,
               GDPR Principles We Follow,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {gdprPrinciples.map((principle, index) => (,
-                <div,
+              {gdprPrinciples.map((principle, index) => (
+                <div
                   key={index}
-                  className='bg-white p-6 rounded-xl shadow-lg border border-gray-20o0',
-                >,
+                  className='bg-white p-6 rounded-xl shadow-lg border border-gray-20o0'>,
                   <div className='flex items-center mb-4'>,
                     <principle.icon className='h-8 w-8 text-blue-60o0 mr-3' />,
                     <h3 className='text-xl font-semibold text-gray-90o0'>,
@@ -170,8 +166,7 @@ export default function GDPR() {,
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0'>{principle.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -182,17 +177,15 @@ export default function GDPR() {,
               Your Data Protection Rights,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {dataRights.map((right, index) => (,
-                <div,
+              {dataRights.map((right, index) => (
+                <div
                   key={index}
-                  className='bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-gray-20o0',
-                >,
+                  className='bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-gray-20o0'>,
                   <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>,
                     {right.title}
                   </h3>,
                   <p className='text-gray-60o0'>{right.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -211,7 +204,7 @@ export default function GDPR() {,
                   <li className='flex items-start'>,
                     <CheckCircle className='h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0' />,
                     <div>,
-                      <strong>Contact Information:</strong> Name, email address,;
+                      <strong>Contact Information:</strong> Name, email address;
                       phone number,
                     </div>,
                   </li>,
@@ -232,7 +225,7 @@ export default function GDPR() {,
                   <li className='flex items-start'>,
                     <CheckCircle className='h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0' />,
                     <div>,
-                      <strong>Technical Data:</strong> IP address, browser type,;
+                      <strong>Technical Data:</strong> IP address, browser type;
                       device information,
                     </div>,
                   </li>,
@@ -276,7 +269,7 @@ export default function GDPR() {,
             </div>,
           </div>,
         </section>,
-        {/* Contact Information */,}
+        {/* Contact Information */}
         <section className='py-16 bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -288,17 +281,15 @@ export default function GDPR() {,
               contact us.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='inline-flex items-center bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 <FileText className='h-5 w-5 mr-2' />,
                 Contact Our DPO,
               </Link>,
-              <Link,
+              <Link
                 href='/privacy',
-                className='inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-              >,
+                className='inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
                 <Shield className='h-5 w-5 mr-2' />,
                 Privacy Policy,
               </Link>,
@@ -307,7 +298,6 @@ export default function GDPR() {,
         </section>,
       </main>,
       <SimpleFooter />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

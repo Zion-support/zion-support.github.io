@@ -2,147 +2,143 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
-import {,
-  BarChart3,;
-  TrendingUp,;
-  Database,;
-  Brain,;
-  Eye,;
-  Target,;
-  CheckCircle,;
-  ArrowRight,;
-  PieChart,;
-  LineChart,;
-  Activity,;
-  Zap,;
-  Shield,;
-  Globe,;
+import {
+  BarChart3;
+  TrendingUp;
+  Database;
+  Brain;
+  Eye;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  PieChart;
+  LineChart;
+  Activity;
+  Zap;
+  Shield;
+  Globe;
 } from 'lucide-react',
-,
-export default function DataAnalytics() {,
-  const services = [,
-    {,
-      icon: Database,;
-      title: 'Data Engineering',;
+export default function DataAnalytics() {
+  const services = [
+    {
+      icon: Database;
+      title: 'Data Engineering';
       description:,
-        'Build robust data pipelines and infrastructure for real-time and batch processing.',;
-      features: [,
-        'ETL/ELT pipelines',;
-        'Data warehousing',;
-        'Real-time streaming',;
-        'Data quality assurance',;
-      ],;
-    },;
-    {,
-      icon: Brain,;
-      title: 'Machine Learning',;
+        'Build robust data pipelines and infrastructure for real-time and batch processing.';
+      features: [
+        'ETL/ELT pipelines';
+        'Data warehousing';
+        'Real-time streaming';
+        'Data quality assurance';
+      ];
+    };
+    {
+      icon: Brain;
+      title: 'Machine Learning';
       description:,
-        'Implement AI and ML models to extract insights and automate decision-making.',;
-      features: [,
-        'Predictive analytics',;
-        'Natural language processing',;
-        'Computer vision',;
-        'Recommendation systems',;
-      ],;
-    },;
-    {,
-      icon: BarChart3,;
-      title: 'Business Intelligence',;
+        'Implement AI and ML models to extract insights and automate decision-making.';
+      features: [
+        'Predictive analytics';
+        'Natural language processing';
+        'Computer vision';
+        'Recommendation systems';
+      ];
+    };
+    {
+      icon: BarChart3;
+      title: 'Business Intelligence';
       description:,
-        'Create interactive dashboards and reports for data-driven decision making.',;
-      features: [,
-        'Interactive dashboards',;
-        'Custom reports',;
-        'KPI tracking',;
-        'Data visualization',;
-      ],;
-    },;
-    {,
-      icon: Target,;
-      title: 'Advanced Analytics',;
+        'Create interactive dashboards and reports for data-driven decision making.';
+      features: [
+        'Interactive dashboards';
+        'Custom reports';
+        'KPI tracking';
+        'Data visualization';
+      ];
+    };
+    {
+      icon: Target;
+      title: 'Advanced Analytics';
       description:,
-        'Deep dive into your data with statistical analysis and predictive modeling.',;
-      features: [,
-        'Statistical analysis',;
-        'Predictive modeling',;
-        'A/B testing',;
-        'Cohort analysis',;
-      ],;
-    },;
+        'Deep dive into your data with statistical analysis and predictive modeling.';
+      features: [
+        'Statistical analysis';
+        'Predictive modeling';
+        'A/B testing';
+        'Cohort analysis';
+      ];
+    };
   ],
-,
-  const technologies = [,
-    {,
-      category: 'Data Processing',;
-      tools: [,
-        'Apache Spark',;
-        'Apache Kafka',;
-        'Apache Airflow',;
-        'Apache Beam',;
-        'Apache Flink',;
-      ],;
-    },;
-    {,
-      category: 'Machine Learning',;
-      tools: [,
-        'TensorFlow',;
-        'PyTorch',;
-        'Scikit-learn',;
-        'XGBoost',;
-        'Apache MLlib',;
-      ],;
-    },;
-    {,
-      category: 'Visualization',;
-      tools: ['Tableau', 'Power BI', 'Grafana', 'D3.js', 'Plotly'],;
-    },;
-    {,
-      category: 'Cloud Platforms',;
-      tools: [,
-        'AWS Analytics',;
-        'Azure Analytics',;
-        'Google Cloud Analytics',;
-        'Snowflake',;
-        'Databricks',;
-      ],;
-    },;
+  const technologies = [
+    {
+      category: 'Data Processing';
+      tools: [
+        'Apache Spark';
+        'Apache Kafka';
+        'Apache Airflow';
+        'Apache Beam';
+        'Apache Flink';
+      ];
+    };
+    {
+      category: 'Machine Learning';
+      tools: [
+        'TensorFlow';
+        'PyTorch';
+        'Scikit-learn';
+        'XGBoost';
+        'Apache MLlib';
+      ];
+    };
+    {
+      category: 'Visualization';
+      tools: ['Tableau', 'Power BI', 'Grafana', 'D3.js', 'Plotly'];
+    };
+    {
+      category: 'Cloud Platforms';
+      tools: [
+        'AWS Analytics';
+        'Azure Analytics';
+        'Google Cloud Analytics';
+        'Snowflake';
+        'Databricks';
+      ];
+    };
   ],
-,
-  const industries = [,
-    {,
-      name: 'E-commerce',;
+  const industries = [
+    {
+      name: 'E-commerce';
       description:,
-        'Customer behavior analysis, inventory optimization, and recommendation engines',;
-      icon: Globe,;
-    },;
-    {,
-      name: 'Healthcare',;
+        'Customer behavior analysis, inventory optimization, and recommendation engines';
+      icon: Globe;
+    };
+    {
+      name: 'Healthcare';
       description:,
-        'Patient outcome prediction, drug discovery, and operational efficiency',;
-      icon: Shield,;
-    },;
-    {,
-      name: 'Finance',;
-      description: 'Risk assessment, fraud detection, and algorithmic trading',;
-      icon: TrendingUp,;
-    },;
-    {,
-      name: 'Manufacturing',;
+        'Patient outcome prediction, drug discovery, and operational efficiency';
+      icon: Shield;
+    };
+    {
+      name: 'Finance';
+      description: 'Risk assessment, fraud detection, and algorithmic trading';
+      icon: TrendingUp;
+    };
+    {
+      name: 'Manufacturing';
       description:,
-        'Predictive maintenance, quality control, and supply chain optimization',;
-      icon: Activity,;
-    },;
+        'Predictive maintenance, quality control, and supply chain optimization';
+      icon: Activity;
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Data Analytics - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Expert data analytics services including machine learning, business intelligence, and data engineering. Transform your data into actionable insights.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='data analytics, machine learning, business intelligence, data engineering, predictive analytics',
         />,
@@ -161,24 +157,22 @@ export default function DataAnalytics() {,
                 comprehensive analytics and machine learning services,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center',
-                >,
+                  className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center'>,
                   Get Started,
                   <ArrowRight className='ml-2 h-5 w-5' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center',
-                >,
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center'>,
                   View Case Studies,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section className='py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -191,33 +185,29 @@ export default function DataAnalytics() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
-              {services.map((service, index) => (,
-                <div,
+              {services.map((service, index) => (
+                <div
                   key={index}
-                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow',
-                >,
+                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow'>,
                   <div className='flex items-center mb-6'>,
                     <div className='p-4 bg-purple-10o0 rounded-lg mr-4'>,
                       <service.icon className='h-8 w-8 text-purple-60o0' />,
                     </div>,
                     <h3 className='text-2xl font-semibold text-gray-90o0'>,
-                      {service.title,}
+                      {service.title}
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0 mb-6'>{service.description}</p>,
                   <ul className='space-y-3'>,
-                    {service.features.map((feature, idx) => (,
-                      <li,
+                    {service.features.map((feature, idx) => (
+                      <li
                         key={idx}
-                        className='flex items-center text-gray-70o0',
-                      >,
+                        className='flex items-center text-gray-70o0'>,
                         <CheckCircle className='h-5 w-5 text-green-50o0 mr-3 flex-shrink-0' />,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -234,23 +224,20 @@ export default function DataAnalytics() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-              {technologies.map((tech, index) => (,
+              {technologies.map((tech, index) => (
                 <div key={index} className='bg-gray-50 rounded-xl p-6'>,
                   <h3 className='text-xl font-semibold text-gray-90o0 mb-4'>,
                     {tech.category}
                   </h3>,
                   <div className='space-y-2'>,
-                    {tech.tools.map((tool, idx) => (,
-                      <div,
+                    {tech.tools.map((tool, idx) => (
+                      <div
                         key={idx}
-                        className='bg-white px-3 py-2 rounded-lg text-sm text-gray-70o0 shadow-sm',
-                      >,
+                        className='bg-white px-3 py-2 rounded-lg text-sm text-gray-70o0 shadow-sm'>,
                         {tool}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -267,22 +254,20 @@ export default function DataAnalytics() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {industries.map((industry, index) => (,
-                <div,
+              {industries.map((industry, index) => (
+                <div
                   key={index}
-                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow',
-                >,
+                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow'>,
                   <div className='flex items-center mb-4'>,
                     <div className='p-3 bg-blue-10o0 rounded-lg mr-4'>,
                       <industry.icon className='h-8 w-8 text-blue-60o0' />,
                     </div>,
                     <h3 className='text-2xl font-semibold text-gray-90o0'>,
-                      {industry.name,}
+                      {industry.name}
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0'>{industry.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -299,31 +284,31 @@ export default function DataAnalytics() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>,
-              {[,
-                {,
-                  step: '1',;
-                  title: 'Data Discovery',;
+              {[
+                {
+                  step: '1';
+                  title: 'Data Discovery';
                   description:,
-                    'Understand your data sources and business objectives',;
-                },;
-                {,
-                  step: '2',;
-                  title: 'Data Preparation',;
+                    'Understand your data sources and business objectives';
+                };
+                {
+                  step: '2';
+                  title: 'Data Preparation';
                   description:,
-                    'Clean, transform, and prepare data for analysis',;
-                },;
-                {,
-                  step: '3',;
-                  title: 'Model Development',;
+                    'Clean, transform, and prepare data for analysis';
+                };
+                {
+                  step: '3';
+                  title: 'Model Development';
                   description:,
-                    'Build and train analytics models and algorithms',;
-                },;
-                {,
-                  step: '4',;
-                  title: 'Deployment & Monitoring',;
-                  description: 'Deploy solutions and monitor performance',;
-                },;
-              ].map((process, index) => (,
+                    'Build and train analytics models and algorithms';
+                };
+                {
+                  step: '4';
+                  title: 'Deployment & Monitoring';
+                  description: 'Deploy solutions and monitor performance';
+                };
+              ].map((process, index) => (
                 <div key={index} className='text-center'>,
                   <div className='w-16 h-16 bg-purple-60o0 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>,
                     {process.step}
@@ -332,8 +317,7 @@ export default function DataAnalytics() {,
                     {process.title}
                   </h3>,
                   <p className='text-gray-60o0'>{process.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -348,17 +332,15 @@ export default function DataAnalytics() {,
               into strategic insights,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center',
-              >,
+                className='bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center'>,
                 Start Your Analytics Journey,
                 <ArrowRight className='ml-2 h-5 w-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='/pricing',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center'>,
                 View Pricing,
               </Link>,
             </div>,
@@ -366,7 +348,6 @@ export default function DataAnalytics() {,
         </section>,
       </main>,
       <SimpleFooter />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

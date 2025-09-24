@@ -1,48 +1,42 @@
 'use client',
 import React, { useState } from 'react',
 import Link from 'next/link',
-import {,
-  Calculator,;
-  DollarSign,;
-  TrendingUp,;
-  ArrowRight,;
-  Clock,;
+import {
+  Calculator;
+  DollarSign;
+  TrendingUp;
+  ArrowRight;
+  Clock;
 } from 'lucide-react',
-,
-export default function AI2026ROICalculator() {,
-  const [inputs, setInputs] = useState({,
-    annualRevenue: '',;
-    employees: '',;
-    currentEfficiency: '',;
-    expectedEfficiency: '',;
-    implementationCost: '',;
-    maintenanceCost: '',;
-    trainingCost: '',;
+export default function AI2026ROICalculator() {
+  const [inputs, setInputs] = useState({
+    annualRevenue: '';
+    employees: '';
+    currentEfficiency: '';
+    expectedEfficiency: '';
+    implementationCost: '';
+    maintenanceCost: '';
+    trainingCost: '';
   }),
-,
-  const [results, setResults] = useState({,
-    annualSavings: 0,;
-    totalCosts: 0,;
-    netBenefit: 0,;
-    roi: 0,;
-    paybackPeriod: 0,;
+  const [results, setResults] = useState({
+    annualSavings: 0;
+    totalCosts: 0;
+    netBenefit: 0;
+    roi: 0;
+    paybackPeriod: 0;
   }),
-,
-  const handleInputChange = (field: string, value: string) => {,
-    setInputs(prev => ({,
-      ...prev,;
-      [field]: value,;
-    })),
-  };
-,
-  const calculateROI = () => {,
+  const handleInputChange = (field: string, value: string) => {
+    setInputs(prev => ({
+      ...prev;
+      [field]: value;
+    }))};
+  const calculateROI = () => {
     const revenue = parseFloat(inputs.annualRevenue) || 0,
     const currentEff = parseFloat(inputs.currentEfficiency) || 0,
     const expectedEff = parseFloat(inputs.expectedEfficiency) || 0,
     const implCost = parseFloat(inputs.implementationCost) || 0,
     const maintCost = parseFloat(inputs.maintenanceCost) || 0,
     const trainCost = parseFloat(inputs.trainingCost) || 0,
-,
     const efficiencyGain = (expectedEff - currentEff) / 100,
     const annualSavings = revenue * efficiencyGain,
     const totalCosts = implCost + maintCost + trainCost,
@@ -50,21 +44,16 @@ export default function AI2026ROICalculator() {,
     const roi = totalCosts > 0 ? (netBenefit / totalCosts) * 100 : 0,
     const paybackPeriod =,
       annualSavings > 0 ? (totalCosts / annualSavings) * 12 : 0,
-,
-    setResults({ annualSavings, totalCosts, netBenefit, roi, paybackPeriod }),
-  };
-,
+    setResults({ annualSavings, totalCosts, netBenefit, roi, paybackPeriod })};
   const formatCurrency = (amount: number) =>,
-    new Intl.NumberFormat('en-US', {,
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,;
+    new Intl.NumberFormat('en-US', {
+      style: 'currency';
+      currency: 'USD';
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0;
     }).format(amount),
-,
-  const formatPercentage = (value: number) => `${value.toFixed(1),}%`,
-,
-  return (,
+  const formatPercentage = (value: number) => `${value.toFixed(1)}%`,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-green-50 to-blue-100'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
         <div className='bg-white rounded-2xl shadow-xl p-8'>,
@@ -81,7 +70,7 @@ export default function AI2026ROICalculator() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
-            {/* Input Form */,}
+            {/* Input Form */}
             <div className='space-y-6'>,
               <h2 className='text-xl font-semibold text-gray-900 mb-4'>,
                 Business Information,
@@ -90,12 +79,11 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Annual Revenue ($),
                 </label>,
-                <input,
+                <input
                   type='number',
                   value={inputs.annualRevenue}
                   onChange={e =>,
-                    handleInputChange('annualRevenue', e.target.value),
-                  }
+                    handleInputChange('annualRevenue', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter your annual revenue',
                 />,
@@ -104,12 +92,11 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Current Efficiency (%),
                 </label>,
-                <input,
+                <input
                   type='number',
-                  value={inputs.currentEfficiency,}
+                  value={inputs.currentEfficiency}
                   onChange={e =>,
-                    handleInputChange('currentEfficiency', e.target.value),
-                  }
+                    handleInputChange('currentEfficiency', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter current efficiency percentage',
                 />,
@@ -118,12 +105,11 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Expected Efficiency After AI (%),
                 </label>,
-                <input,
+                <input
                   type='number',
-                  value={inputs.expectedEfficiency,}
+                  value={inputs.expectedEfficiency}
                   onChange={e =>,
-                    handleInputChange('expectedEfficiency', e.target.value),
-                  }
+                    handleInputChange('expectedEfficiency', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter expected efficiency percentage',
                 />,
@@ -135,12 +121,11 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Implementation Cost ($),
                 </label>,
-                <input,
+                <input
                   type='number',
-                  value={inputs.implementationCost,}
+                  value={inputs.implementationCost}
                   onChange={e =>,
-                    handleInputChange('implementationCost', e.target.value),
-                  }
+                    handleInputChange('implementationCost', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter implementation cost',
                 />,
@@ -149,12 +134,11 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Annual Maintenance Cost ($),
                 </label>,
-                <input,
+                <input
                   type='number',
-                  value={inputs.maintenanceCost,}
+                  value={inputs.maintenanceCost}
                   onChange={e =>,
-                    handleInputChange('maintenanceCost', e.target.value),
-                  }
+                    handleInputChange('maintenanceCost', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter annual maintenance cost',
                 />,
@@ -163,24 +147,22 @@ export default function AI2026ROICalculator() {,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>,
                   Training Cost ($),
                 </label>,
-                <input,
+                <input
                   type='number',
-                  value={inputs.trainingCost,}
+                  value={inputs.trainingCost}
                   onChange={e =>,
-                    handleInputChange('trainingCost', e.target.value),
-                  }
+                    handleInputChange('trainingCost', e.target.value)}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-green-500 focus:border-transparent',
                   placeholder='Enter training cost',
                 />,
               </div>,
-              <button,
-                onClick={calculateROI,}
-                className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover: bg-green-700 transition-colors',
-              >,
+              <button
+                onClick={calculateROI}
+                className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover: bg-green-700 transition-colors'>,
                 Calculate ROI,
               </button>,
             </div>,
-            {/* Results */,}
+            {/* Results */}
             <div className='space-y-6'>,
               <h2 className='text-xl font-semibold text-gray-900 mb-4'>,
                 ROI Analysis Results,
@@ -262,31 +244,26 @@ export default function AI2026ROICalculator() {,
                   ROI Interpretation,
                 </h3>,
                 <div className='space-y-2 text-sm text-gray-700'>,
-                  {results.roi > 300 && (,
+                  {results.roi > 300 && (
                     <p className='text-green-600 font-medium'>,
                       Excellent ROI - Highly recommended for implementation,
-                    </p>,
-                  )}
-                  {results.roi >= 100 && results.roi <= 300 && (,
+                    </p>)}
+                  {results.roi >= 100 && results.roi <= 300 && (
                     <p className='text-blue-600 font-medium'>,
                       Good ROI - Recommended with proper planning,
-                    </p>,
-                  )}
-                  {results.roi >= 50 && results.roi < 100 && (,
+                    </p>)}
+                  {results.roi >= 50 && results.roi < 100 && (
                     <p className='text-yellow-600 font-medium'>,
                       Moderate ROI - Consider pilot implementation first,
-                    </p>,
-                  )}
-                  {results.roi < 50 && results.roi > 0 && (,
+                    </p>)}
+                  {results.roi < 50 && results.roi > 0 && (
                     <p className='text-orange-600 font-medium'>,
                       Low ROI - Review costs and expected benefits,
-                    </p>,
-                  )}
-                  {results.roi <= 0 && (,
+                    </p>)}
+                  {results.roi <= 0 && (
                     <p className='text-red-600 font-medium'>,
                       Negative ROI - Not recommended at current parameters,
-                    </p>,
-                  )}
+                    </p>)}
                 </div>,
               </div>,
               <div className='bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-6'>,
@@ -304,16 +281,14 @@ export default function AI2026ROICalculator() {,
             </div>,
           </div>,
           <div className='mt-8 text-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors',
-            >,
+              className='inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover: bg-blue-700 transition-colors'>,
               Get Expert Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

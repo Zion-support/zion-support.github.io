@@ -1,8 +1,7 @@
 import Link from 'next / link',
 import AnimatedBackground from './AnimatedBackground',
-,
-export default function FuturisticHero() {,
-  return (,
+export default function FuturisticHero() {
+  return (
     <section className='relative py-20 sm: py-28'>,
       <AnimatedBackground />,
       <div className='text-center max-w-4xl mx-auto'>,
@@ -19,8 +18,8 @@ export default function FuturisticHero() {,
 export default /**,
  * FuturisticHero - Function description,
  */,
-function FuturisticHero() {,
-  return (,
+function FuturisticHero() {
+  return (
     <section className='relative py - 20 sm:py - 28'>,
       <AnimatedBackground />,
       <div className='text - center max - w-4xl mx - auto'>,
@@ -38,19 +37,15 @@ function FuturisticHero() {,
             </a>,
           </Link>,
           <Link href='/services'>,
-,
             <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>,
-,
               Explore Services,
             </a>,
           </Link>,
-        </div>,
+        </div>),
+}
 ,
-  ),
-,}
-,
-export default function FuturisticHero() {,
-  return (,
+export default function FuturisticHero() {
+  return (
     <section className="relative py-20 sm: py-28">,
       <AnimatedBackground />,
       <div className="text-center max-w-4xl mx-auto">,
@@ -70,17 +65,15 @@ export default function FuturisticHero() {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,
+    </section>),
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>,
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>,
             Talent marketplace  Project accelerators  Secure contracts ,
             Integrated AI toolchain          </p > export default /**,
  * FuturisticHero - Function description,
  */,
-function FuturisticHero() {,
-  return (,
+function FuturisticHero() {
+  return (
     <section className="relative py - 20 sm:py - 28">,
       <AnimatedBackground />,
       <div className="text - center max - w-4xl mx - auto">,
@@ -101,12 +94,8 @@ function FuturisticHero() {,
         </div>,
       </div>,
     </section>),
-,}
-,
-}
-    </section>,
-  ),
 }
 }
-,
+    </section>)}
+}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

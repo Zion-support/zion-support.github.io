@@ -1,103 +1,89 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  ArrowRight, Phone, Mail, MapPin, Globe, Brain, Rocket, Atom, Shield, Cpu,;
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, Mail as MailIcon,;
-  Phone as PhoneIcon, MapPin as MapPinIcon, Clock, Users, Award, Star,;
-  ChevronRight, ExternalLink, Heart, Zap, Sparkles, Infinity, Target,
-} from 'lucide-react',
-,
-const UltraFuturisticFooter20o47: React.FC = () => {,
+import {
+  ArrowRight, Phone, Mail, MapPin, Globe, Brain, Rocket, Atom, Shield, Cpu;
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, Mail as MailIcon;
+  Phone as PhoneIcon, MapPin as MapPinIcon, Clock, Users, Award, Star;
+  ChevronRight, ExternalLink, Heart, Zap, Sparkles, Infinity, Target} from 'lucide-react',
+const UltraFuturisticFooter20o47: React.FC = () => {
   const [email, setEmail] = useState(''),
   const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [,
-    {,
-      title: 'Innovative Services 20o25',;
-      icon: <Rocket className="w-5 h-5"  />,;
-      color: 'from-emerald-50o0 to-cyan-50o0',;
-      links: [,
-        { name: 'AI Autonomous Ecosystem', href: '/20o25-innovative-services-showcase-v2' ,},;
-        { name: 'Quantum & Emerging Tech', href: '/20o25-innovative-services-showcase-v2' ,},;
-        { name: 'IT Infrastructure V2', href: '/20o25-innovative-services-showcase-v2' ,},;
-        { name: 'Space Technology', href: '/space-technology' ,}
-      ],
-    },;
-    {,
-      title: 'Revolutionary Services 20o46',;
-      icon: <Sparkles className="w-5 h-5"  />,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      links: [,
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o46' ,},;
-        { name: 'Quantum AI Neural Networks', href: '/quantum-ai-neural-network-platform-20o46' ,},;
-        { name: 'Autonomous Business Intelligence', href: '/autonomous-ai-business-intelligence-platform-20o46' ,},;
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-intelligence-platform-20o46' ,}
-      ],
-    },;
-    {,
-      title: 'Core Solutions',;
-      icon: <Target className="w-5 h-5"  />,;
-      color: 'from-blue-50o0 to-indigo-50o0',;
-      links: [,
-        { name: 'AI Services', href: '/ai-services' ,},;
-        { name: 'IT Infrastructure', href: '/it-infrastructure' ,},;
-        { name: 'Cybersecurity', href: '/cybersecurity' ,},;
-        { name: 'Business Solutions', href: '/business-solutions' ,}
-      ],
-    },;
-    {,
-      title: 'Company',;
-      icon: <Users className="w-5 h-5"  />,;
-      color: 'from-yellow-50o0 to-orange-50o0',;
-      links: [,
-        { name: 'About Us', href: '/about' ,},;
-        { name: 'Our Team', href: '/team' ,},;
-        { name: 'Careers', href: '/careers' ,},;
-        { name: 'Contact', href: '/contact' ,}
-      ],
-    }
+  const footerSections = [
+    {
+      title: 'Innovative Services 20o25';
+      icon: <Rocket className="w-5 h-5"  />;
+      color: 'from-emerald-50o0 to-cyan-50o0';
+      links: [
+        { name: 'AI Autonomous Ecosystem', href: '/20o25-innovative-services-showcase-v2' };
+        { name: 'Quantum & Emerging Tech', href: '/20o25-innovative-services-showcase-v2' };
+        { name: 'IT Infrastructure V2', href: '/20o25-innovative-services-showcase-v2' };
+        { name: 'Space Technology', href: '/space-technology' }
+      ]};
+    {
+      title: 'Revolutionary Services 20o46';
+      icon: <Sparkles className="w-5 h-5"  />;
+      color: 'from-purple-50o0 to-pink-50o0';
+      links: [
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o46' };
+        { name: 'Quantum AI Neural Networks', href: '/quantum-ai-neural-network-platform-20o46' };
+        { name: 'Autonomous Business Intelligence', href: '/autonomous-ai-business-intelligence-platform-20o46' };
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-intelligence-platform-20o46' }
+      ]};
+    {
+      title: 'Core Solutions';
+      icon: <Target className="w-5 h-5"  />;
+      color: 'from-blue-50o0 to-indigo-50o0';
+      links: [
+        { name: 'AI Services', href: '/ai-services' };
+        { name: 'IT Infrastructure', href: '/it-infrastructure' };
+        { name: 'Cybersecurity', href: '/cybersecurity' };
+        { name: 'Business Solutions', href: '/business-solutions' }
+      ]};
+    {
+      title: 'Company';
+      icon: <Users className="w-5 h-5"  />;
+      color: 'from-yellow-50o0 to-orange-50o0';
+      links: [
+        { name: 'About Us', href: '/about' };
+        { name: 'Our Team', href: '/team' };
+        { name: 'Careers', href: '/careers' };
+        { name: 'Contact', href: '/contact' }
+      ]}
   ],
-,
-  const socialLinks = [,
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-40o0' ,},;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-60o0' ,},;
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-50o0' ,},;
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-50o0' ,},;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-50o0' ,},;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-40o0' ,}
+  const socialLinks = [
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-40o0' };
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-60o0' };
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-50o0' };
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-50o0' };
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-50o0' };
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-40o0' }
   ],
-,
-  const stats = [,
-    { number: '50o00+', label: 'Innovative Services', icon: Star ,},;
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Zap ,},;
-    { number: '24/7', label: 'AI Intelligence', icon: Brain ,},;
-    { number: '30o0+', label: 'Countries Served', icon: Globe ,}
+  const stats = [
+    { number: '50o00+', label: 'Innovative Services', icon: Star };
+    { number: '99.99%', label: 'Uptime Guarantee', icon: Zap };
+    { number: '24/7', label: 'AI Intelligence', icon: Brain };
+    { number: '30o0+', label: 'Countries Served', icon: Globe }
   ],
-,
-  const handleNewsletterSubmit = (e: React.FormEvent) => {,
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle newsletter subscription,
-    console.log('Newsletter subscription:', email),
-    setEmail(''),
+    // console.log('Newsletter subscription:', email),
+    setEmail('')};
+  const fadeInUp ={
+    initial: { opacity: 0, y: 60 };
+    whileInView: { opacity: 1, y: 0 };
+    viewport: { once: true };
+    transition: { duration: 0.6 }
   };
-,
-  const fadeInUp ={,
-    initial: { opacity: 0, y: 60 ,},;
-    whileInView: { opacity: 1, y: 0 ,},;
-    viewport: { once: true ,},;
-    transition: { duration: 0.6 ,}
-  };
-,
-  const staggerContainer ={,
-    animate: {,
-      transition: {,
+  const staggerContainer ={
+    animate: {
+      transition: {
         staggerChildren: 0.1,
-      ,}
+      }
     }
   };
-,
-  return (,
+  return (
     <footer className="relative bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 text-white overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">,
@@ -108,27 +94,24 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
       <section className="relative py-16 px-4 sm: px-6 lg:px-8 border-b border-cyan-50o0/20">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            variants={staggerContainer,}
+            variants={staggerContainer}
             initial="initial",
             whileInView="animate",
-            viewport={{ once: true ,}}
-            className="grid grid-cols-2 md: grid-cols-4 gap-8",
-          >,
-            {stats.map((stat, index) => (,
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md: grid-cols-4 gap-8">,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={index}
                 variants={fadeInUp}
-                className="text-center group",
-              >,
+                className="text-center group">,
                 <div className="flex justify-center mb-4">,
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 flex items-center justify-center group-hover: scale-110 transition-all duration-30o0">,
                     <stat.icon className="w-8 h-8 text-cyan-40o0"  />,
                   </div>,
                 </div>,
-                <div className="text-3xl font-bold text-cyan-40o0 mb-2">{stat.number,}</div>,
+                <div className="text-3xl font-bold text-cyan-40o0 mb-2">{stat.number}</div>,
                 <div className="text-gray-30o0 text-sm">{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
         </div>,
       </section>,
@@ -136,18 +119,18 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">,
-            {/* Company Info */,}
+            {/* Company Info */}
             <div className="lg: col-span-2">,
               <motion.div,
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
-                transition={{ duration: 0.8 ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
               >,
                 <Link href="/" className="inline-flex items-center space-x-3 mb-6 group">,
                   <motion.div,
                     className="w-14 h-14 rounded-2xl bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center shadow-lg group-hover: shadow-cyan-50o0/50 transition-all duration-30o0",
-                    whileHover={{ scale: 1.0o5, rotate: 5 ,}}
+                    whileHover={{ scale: 1.0o5, rotate: 5 }}
                   >,
                     <Brain className="w-8 h-8 text-white"  />,
                   </motion.div>,
@@ -180,14 +163,14 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
                 </div>,
               </motion.div>,
             </div>,
-            {/* Footer Sections */,}
-            {footerSections.map((section, index) => (,
+            {/* Footer Sections */}
+            {footerSections.map((section, index) => (
               <motion.div,
                 key={section.title}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
-                transition={{ duration: 0.8, delay: index * 0.1 ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >,
                 <div className="flex items-center space-x-2 mb-6">,
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>,
@@ -196,22 +179,19 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
                   <h3 className="text-lg font-semibold text-white">{section.title}</h3>,
                 </div>,
                 <ul className="space-y-3">,
-                  {section.links.map((link) => (,
+                  {section.links.map((link) => (
                     <li key={link.name}>,
-                      <Link,
+                      <Link
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-40o0 transition-all duration-20o0 group hover:translate-x-1",
-                      >,
+                        className="flex items-center space-x-2 text-gray-40o0 hover: text-cyan-40o0 transition-all duration-20o0 group hover:translate-x-1">,
                         <ChevronRight className="w-4 h-4 text-cyan-40o0 group-hover:scale-110 transition-transform duration-20o0"  />,
                         <span className="text-sm group-hover:text-cyan-40o0 transition-colors duration-20o0">,
-                          {link.name,}
+                          {link.name}
                         </span>,
                       </Link>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -219,10 +199,10 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
       <section className="relative py-16 px-4 sm: px-6 lg:px-8 border-t border-cyan-50o0/20">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >,
             <h3 className="text-3xl font-bold text-white mb-4">,
               Stay Ahead with Innovation,
@@ -233,55 +213,52 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
             <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">,
               <div className="flex-1 relative">,
                 <MailIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-                <input,
+                <input
                   type="email",
                   placeholder="Enter your email",
-                  value={email,}
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-4 bg-gray-80o0/50 border border-cyan-50o0/20 rounded-xl text-gray-30o0 placeholder-gray-50o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0",
                   required,
                 />,
               </div>,
-              <button,
+              <button
                 type="submit",
-                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25",
-              >,
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25">,
                 Subscribe,
               </button>,
             </form>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Bottom Footer */,}
+      {/* Bottom Footer */}
       <section className="relative py-8 px-4 sm: px-6 lg:px-8 border-t border-cyan-50o0/20 bg-black/50">,
         <div className="max-w-7xl mx-auto">,
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">,
-            {/* Copyright */,}
+            {/* Copyright */}
             <div className="text-gray-40o0 text-sm text-center lg: text-left">,
-              <p>&copy, {currentYear,} Zion Tech Group. All rights reserved.</p>,
+              <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>,
               <p className="mt-1 flex items-center justify-center lg: justify-start">,
                 <span>Pioneering the future of technology since 20o25</span>,
                 <Heart className="w-4 h-4 text-red-40o0 mx-2"  />,
                 <span>Made with AI & Innovation</span>,
               </p>,
             </div>,
-            {/* Social Links */,}
+            {/* Social Links */}
             <div className="flex items-center space-x-4">,
-              {socialLinks.map((social) => {,
+              {socialLinks.map((social) => {
                 const IconComponent = social.icon,
-                return (,
-                  <Link,
+                return (
+                  <Link
                     key={social.name}
                     href={social.href}
                     target="_blank",
                     rel="noopener noreferrer",
-                    className={`p-3 rounded-xl bg-gray-80o0/50 border border-cyan-50o0/20 text-gray-40o0 ${social.color} transition-all duration-20o0 hover: scale-110 hover:border-cyan-50o0/50 hover:bg-gray-70o0/50`,}
+                    className={`p-3 rounded-xl bg-gray-80o0/50 border border-cyan-50o0/20 text-gray-40o0 ${social.color} transition-all duration-20o0 hover: scale-110 hover:border-cyan-50o0/50 hover:bg-gray-70o0/50`}
                     aria-label={social.name}
                   >,
                     <IconComponent className="w-5 h-5"  />,
-                  </Link>,
-                ),
-              })}
+                  </Link>)})}
             </div>,
             {/* Additional Links */}
             <div className="flex items-center space-x-6 text-sm text-gray-40o0">,
@@ -301,46 +278,43 @@ const UltraFuturisticFooter20o47: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">,
         <motion.div,
           className="absolute top-20 right-20 w-2 h-2 bg-cyan-40o0 rounded-full",
-          animate={{,
-            scale: [1, 2, 1],;
+          animate={{
+            scale: [1, 2, 1];
             opacity: [0.5, 1, 0.5]}}
-          transition={{,
-            duration: 3,;
-            repeat: Infinity as any,;
+          transition={{
+            duration: 3;
+            repeat: Infinity as any;
             ease: "easeInOut",
-          ,}}
+          }}
          />,
         <motion.div,
           className="absolute bottom-40 left-32 w-1 h-1 bg-blue-40o0 rounded-full",
-          animate={{,
-            scale: [1, 3, 1],;
+          animate={{
+            scale: [1, 3, 1];
             opacity: [0.3, 1, 0.3]}}
-          transition={{,
-            duration: 4,;
-            repeat: Infinity as any,;
-            ease: "easeInOut",;
+          transition={{
+            duration: 4;
+            repeat: Infinity as any;
+            ease: "easeInOut";
             delay: 1,
-          ,}}
+          }}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/4 w-1 h-1 bg-purple-40o0 rounded-full",
-          animate={{,
-            scale: [1, 2, 1],;
+          animate={{
+            scale: [1, 2, 1];
             opacity: [0.4, 1, 0.4]}}
-          transition={{,
-            duration: 5,;
-            repeat: Infinity as any,;
-            ease: "easeInOut",;
+          transition={{
+            duration: 5;
+            repeat: Infinity as any;
+            ease: "easeInOut";
             delay: 2,
-          ,}}
+          }}
          />,
       </div>,
-    </footer>,
-  ),
-};
-,
-export default UltraFuturisticFooter20o47,
+    </footer>)};
+export default UltraFuturisticFooter20o47;

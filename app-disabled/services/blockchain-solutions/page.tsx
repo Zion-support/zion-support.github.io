@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'blockchain-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'blockchain-solutions - Zion Tech Group';
   description:,
-    'Professional blockchain-solutions solutions for your business needs.',;
-  keywords: 'blockchain-solutions, services, business, technology',;
+    'Professional blockchain-solutions solutions for your business needs.';
+  keywords: 'blockchain-solutions, services, business, technology';
 };
-export default function BlockchainSolutionsPage() {,
-  return (,
+export default function BlockchainSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function BlockchainSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

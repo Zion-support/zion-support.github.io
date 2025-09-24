@@ -2,30 +2,26 @@ import { UseFormReturn } from 'react-hook-form',
 import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form',
 import { Textarea } from '@/components/ui/textarea',
 import { FormValues } from './useHireRequestForm',
-,
-interface ProjectDetailsFieldProps {,
+interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>,
-,}
+}
 ,
-export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {,
-  return (,
-    <FormField,
+export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
+  return (
+    <FormField
       control={form.control}
       name='projectOverview',
-      render={({ field }) => (,
+      render={({ field }) => (
         <FormItem>,
           <FormLabel className='text-white'>Project Overview</FormLabel>,
           <FormControl>,
-            <Textarea,
+            <Textarea
               placeholder='Describe your projectgoalsand requirements',
               className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]',
               {...field}
             />,
           </FormControl>,
           <FormMessage className='text-red-400' />,
-        </FormItem>,
-      )}
-    />,
-  ),
-}
+        </FormItem>)}
+    />)}
 ,

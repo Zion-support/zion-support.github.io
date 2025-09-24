@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import { Button } from '../components/ui/Button',
-,
-export default function AIFinancialRiskPage() {,
-  return (,
+export default function AIFinancialRiskPage() {
+  return (
     <UltraFuturisticBackground variant="neural" intensity="high">,
       <Head>,
         <title>AI Financial Risk Analytics | Zion Tech Group</title>,
@@ -55,7 +54,6 @@ export default function AIFinancialRiskPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-,}
+    </UltraFuturisticBackground>),
+}
 ,

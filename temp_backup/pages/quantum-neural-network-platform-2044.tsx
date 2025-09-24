@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QuantumNeuralNetworkPlatform20o44Page() {,
-  return (,
+export default function QuantumNeuralNetworkPlatform20o44Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Neural Network Platform 20o44 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quantum neural network platform 20o44 page',
         />,
@@ -21,7 +20,6 @@ export default function QuantumNeuralNetworkPlatform20o44Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

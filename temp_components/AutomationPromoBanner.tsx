@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AutomationPromoBanner() {,
-  return (,
+export default function AutomationPromoBanner() {
+  return (
     <div className='mx-auto my-6 max-w-5xl rounded-xl border border-white/10 bg-white/5 p-4 text-white'>,
       <div className='flex flex-col gap-2 md: flex-row md:items-center md:justify-between'>,
         <div className='text-lg font-semibold'>,
@@ -19,7 +18,6 @@ export default function AutomationPromoBanner() {,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

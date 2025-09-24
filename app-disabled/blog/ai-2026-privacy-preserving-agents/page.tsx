@@ -1,21 +1,19 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Privacy-Preserving Agents - Practical Techniques',;
+export const metadata = {
+  title: 'AI 20o26: Privacy-Preserving Agents - Practical Techniques';
   description:,
-    'Techniques for private-by-default agents: scoped memory, redaction, local-first inference, and secure enclaves.',;
-  keywords: [,
-    'privacy',;
-    'privacy-preserving',;
-    'agents',;
-    'confidential computing',;
-    'secure enclaves',;
-    'local-first',;
-  ],;
+    'Techniques for private-by-default agents: scoped memory, redaction, local-first inference, and secure enclaves.';
+  keywords: [
+    'privacy';
+    'privacy-preserving';
+    'agents';
+    'confidential computing';
+    'secure enclaves';
+    'local-first';
+  ];
 };
-,
-export default function PrivacyPreservingAgentsPage() {,
-  return (,
+export default function PrivacyPreservingAgentsPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <header className='mb-8'>,
         <div className='text-sm font-semibold text-rose-70o0 mb-2'>Article</div>,
@@ -23,7 +21,7 @@ export default function PrivacyPreservingAgentsPage() {,
           AI 20o26: Privacy-Preserving Agents,
         </h1>,
         <p className='text-gray-60o0 text-lg'>,
-          Build private-by-default agents using scoped memory, redaction,;
+          Build private-by-default agents using scoped memory, redaction;
           selective grounding, and confidential computing.,
         </p>,
       </header>,
@@ -78,20 +76,16 @@ export default function PrivacyPreservingAgentsPage() {,
         </p>,
       </article>,
       <footer className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-zero-trust-agent-architecture',
-          className='text-rose-70o0 font-semibold',
-        >,
+          className='text-rose-70o0 font-semibold'>,
           Zero-Trust Architecture →,
         </Link>,
-        <Link,
+        <Link
           href='/content/ai-20o26-agent-risk-management-framework',
-          className='text-rose-70o0 font-semibold',
-        >,
+          className='text-rose-70o0 font-semibold'>,
           Risk Framework →,
         </Link>,
       </footer>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

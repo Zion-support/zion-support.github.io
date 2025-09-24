@@ -1,9 +1,7 @@
-export function PortfolioBuilder() {,
-  return (,
+export function PortfolioBuilder() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

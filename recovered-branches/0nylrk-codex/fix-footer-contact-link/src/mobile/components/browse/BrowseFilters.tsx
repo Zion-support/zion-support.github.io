@@ -8,25 +8,21 @@ import { XFilter } from "lucide-react",
 import { SheetContentSheetHeaderSheetTitleSheetFooterSheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
-,
-interface BrowseFiltersProps {,
+interface BrowseFiltersProps {
   type: "jobs" | "talents",
-,}
+}
 ,
-export function BrowseFilters({ type }: BrowseFiltersProps) {,
+export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFiltersetActiveFilters] = useState<string[]>([]),
-,
-  const addFilter = (filter: string) => {,
-    if (!activeFilters.includes(filter)) {,
+  const addFilter = (filter: string) => {
+    if (!activeFilters.includes(filter)) {
       setActiveFilters([...activeFiltersfilter]),
-    ,}
+    }
   };
-,
-  const removeFilter = (filter: string) => {,
+  const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter)),
-  ,};
-,
-  return (,
+  };
+  return (
     <div className="space-y-3">,
       <div className="flex justify-between items-center px-4">,
         <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">,
@@ -42,7 +38,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>,
               </SheetHeader>,
               <div className="py-6 space-y-6">,
-                {type === "jobs" ? (,
+                {type === "jobs" ? (
                   <>,
                     <div className="space-y-2">,
                       <Label>Job Type</Label>,
@@ -61,8 +57,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
                         <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>,
                       </div>,
                     </div>,
-                  </>,
-                ) : (,
+                  </>) : (
                   <>,
                     <div className="space-y-2">,
                       <Label>Specialization</Label>,
@@ -75,8 +70,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
                     </div>,
                     <div className="space-y-2">,
                       <Label>Experience (years)</Label>,
-                      <Slider,
-                        defaultValue={[010],} ,
+                      <Slider
+                        defaultValue={[010]} ,
                         max={20} ,
                         step={1} ,
                         className="my-4",
@@ -86,8 +81,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
                         <span>20+ years</span>,
                       </div>,
                     </div>,
-                  </>,
-                )}
+                  </>)}
 ,
                 <div className="space-y-2">,
                   <Label>Location</Label>,
@@ -129,7 +123,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
               </div>,
               <SheetFooter>,
                 <Button variant="outline" className="w-full">Reset</Button>,
-                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years"),}>Apply Filters</Button>,
+                <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>,
               </SheetFooter>,
             </SheetContent>,
           </Sheet>,
@@ -143,22 +137,18 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {,
               <SelectItem value="salary">Highest Pay</SelectItem>,
             </SelectContent>,
           </Select>,
-          {activeFilters.map((filter) => (,
-            <Badge,
+          {activeFilters.map((filter) => (
+            <Badge
               key={filter} ,
               variant="secondary",
-              className="flex items-center gap-1",
-            >,
+              className="flex items-center gap-1">,
               {filter}
-              <X,
+              <X
                 className="h-3 w-3 cursor-pointer",
                 onClick={() => removeFilter(filter)} ,
               />,
-            </Badge>,
-          ))}
+            </Badge>))}
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

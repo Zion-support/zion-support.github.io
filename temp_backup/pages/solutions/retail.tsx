@@ -1,32 +1,30 @@
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
-import {,
-  ShoppingCart,;
-  Globe,;
-  Brain,;
-  Shield,;
-  Zap,;
-  Cpu,;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  BarChart3,;
-  Users,;
+import {
+  ShoppingCart;
+  Globe;
+  Brain;
+  Shield;
+  Zap;
+  Cpu;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  BarChart3;
+  Users;
 } from 'lucide-react',
-,
-export default function RetailSolutions() {,
-  return (,
+export default function RetailSolutions() {
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black'>,
         {/* Hero Section */}
         <section className='relative py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'>,
               <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-pink-40o0 via-purple-50o0 to-indigo-60o0 bg-clip-text text-transparent mb-6'>,
                 Retail & E-commerce Solutions,
               </h1>,
@@ -42,11 +40,10 @@ export default function RetailSolutions() {,
         <section className='py-20 px-4'>,
           <div className='container mx-auto max-w-6xl'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl font-bold text-white mb-4'>,
                 Our Retail Solutions,
               </h2>,
@@ -57,13 +54,12 @@ export default function RetailSolutions() {,
               </p>,
             </motion.div>,
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {/* E-commerce Platform */,}
+              {/* E-commerce Platform */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.3 ,}}
-                className='bg-gradient-to-br from-pink-90o0/20 to-purple-90o0/20 border border-pink-50o0/20 rounded-2xl p-8 hover: border-pink-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className='bg-gradient-to-br from-pink-90o0/20 to-purple-90o0/20 border border-pink-50o0/20 rounded-2xl p-8 hover: border-pink-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-pink-50o0/20 rounded-xl'>,
                     <ShoppingCart className='w-8 h-8 text-pink-40o0' />,
@@ -91,20 +87,18 @@ export default function RetailSolutions() {,
                     Customer experience,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=AI-E-commerce',
-                  className='inline-flex items-center gap-2 text-pink-40o0 hover: text-pink-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-pink-40o0 hover: text-pink-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
-              {/* Customer Analytics */,}
+              {/* Customer Analytics */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
-                className='bg-gradient-to-br from-blue-90o0/20 to-cyan-90o0/20 border border-blue-50o0/20 rounded-2xl p-8 hover: border-blue-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className='bg-gradient-to-br from-blue-90o0/20 to-cyan-90o0/20 border border-blue-50o0/20 rounded-2xl p-8 hover: border-blue-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-blue-50o0/20 rounded-xl'>,
                     <BarChart3 className='w-8 h-8 text-blue-40o0' />,
@@ -114,7 +108,7 @@ export default function RetailSolutions() {,
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Advanced customer analytics platform with behavioral insights,;
+                  Advanced customer analytics platform with behavioral insights;
                   predictive modeling, and personalized marketing automation.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -131,20 +125,18 @@ export default function RetailSolutions() {,
                     Marketing automation,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=Customer-Analytics',
-                  className='inline-flex items-center gap-2 text-blue-40o0 hover: text-blue-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-blue-40o0 hover: text-blue-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
-              {/* Omnichannel Retail */,}
+              {/* Omnichannel Retail */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.5 ,}}
-                className='bg-gradient-to-br from-green-90o0/20 to-emerald-90o0/20 border border-green-50o0/20 rounded-2xl p-8 hover: border-green-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className='bg-gradient-to-br from-green-90o0/20 to-emerald-90o0/20 border border-green-50o0/20 rounded-2xl p-8 hover: border-green-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-green-50o0/20 rounded-xl'>,
                     <Globe className='w-8 h-8 text-green-40o0' />,
@@ -171,20 +163,18 @@ export default function RetailSolutions() {,
                     Inventory sync,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=Omnichannel-Platform',
-                  className='inline-flex items-center gap-2 text-green-40o0 hover:text-green-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-green-40o0 hover:text-green-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
-              {/* Supply Chain */,}
+              {/* Supply Chain */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.6 ,}}
-                className='bg-gradient-to-br from-yellow-90o0/20 to-orange-90o0/20 border border-yellow-50o0/20 rounded-2xl p-8 hover: border-yellow-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className='bg-gradient-to-br from-yellow-90o0/20 to-orange-90o0/20 border border-yellow-50o0/20 rounded-2xl p-8 hover: border-yellow-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-yellow-50o0/20 rounded-xl'>,
                     <Zap className='w-8 h-8 text-yellow-40o0' />,
@@ -194,7 +184,7 @@ export default function RetailSolutions() {,
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Intelligent supply chain optimization with demand forecasting,;
+                  Intelligent supply chain optimization with demand forecasting;
                   inventory management, and logistics automation.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -211,20 +201,18 @@ export default function RetailSolutions() {,
                     Logistics automation,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=Supply-Chain-Optimization',
-                  className='inline-flex items-center gap-2 text-yellow-40o0 hover: text-yellow-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-yellow-40o0 hover: text-yellow-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
-              {/* Fraud Prevention */,}
+              {/* Fraud Prevention */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.7 ,}}
-                className='bg-gradient-to-br from-red-90o0/20 to-pink-90o0/20 border border-red-50o0/20 rounded-2xl p-8 hover: border-red-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className='bg-gradient-to-br from-red-90o0/20 to-pink-90o0/20 border border-red-50o0/20 rounded-2xl p-8 hover: border-red-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-red-50o0/20 rounded-xl'>,
                     <Shield className='w-8 h-8 text-red-40o0' />,
@@ -251,20 +239,18 @@ export default function RetailSolutions() {,
                     Risk assessment,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=Fraud-Prevention',
-                  className='inline-flex items-center gap-2 text-red-40o0 hover:text-red-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-red-40o0 hover:text-red-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
-              {/* Customer Service */,}
+              {/* Customer Service */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.8 ,}}
-                className='bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20 rounded-2xl p-8 hover: border-teal-40o0/40 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className='bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20 rounded-2xl p-8 hover: border-teal-40o0/40 transition-all duration-30o0'>,
                 <div className='flex items-center gap-3 mb-6'>,
                   <div className='p-3 bg-teal-50o0/20 rounded-xl'>,
                     <Users className='w-8 h-8 text-teal-40o0' />,
@@ -274,7 +260,7 @@ export default function RetailSolutions() {,
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Intelligent customer service platform with AI chatbots,;
+                  Intelligent customer service platform with AI chatbots;
                   automated support, and personalized assistance.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -291,23 +277,22 @@ export default function RetailSolutions() {,
                     Personalized assistance,
                   </li>,
                 </ul>,
-                <a,
+                <a
                   href='/contact?service=AI-Customer-Service',
-                  className='inline-flex items-center gap-2 text-teal-40o0 hover: text-teal-30o0 transition-colors',
-                >,
+                  className='inline-flex items-center gap-2 text-teal-40o0 hover: text-teal-30o0 transition-colors'>,
                   Learn More <ArrowRight className='w-4 h-4' />,
                 </a>,
               </motion.div>,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-pink-90o0/20 to-purple-90o0/20'>,
           <div className='container mx-auto max-w-4xl text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.9 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
             >,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Ready to Transform Retail?,
@@ -318,16 +303,14 @@ export default function RetailSolutions() {,
                 together.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <a,
+                <a
                   href='/contact?service=Retail-Solutions',
-                  className='px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-pink-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
+                  className='px-8 py-4 bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-pink-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                   Get Started Today,
                 </a>,
-                <a,
+                <a
                   href='/services?category=retail',
-                  className='px-8 py-4 border border-pink-50o0 text-pink-40o0 font-semibold rounded-xl hover:bg-pink-50o0/10 transition-all duration-30o0',
-                >,
+                  className='px-8 py-4 border border-pink-50o0 text-pink-40o0 font-semibold rounded-xl hover:bg-pink-50o0/10 transition-all duration-30o0'>,
                   View All Services,
                 </a>,
               </div>,
@@ -335,7 +318,6 @@ export default function RetailSolutions() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

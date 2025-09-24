@@ -1,6 +1,5 @@
 // Hook for useFetchResume,
-export const useUseFetchResume: unknown = () => {,
+export const useUseFetchResume: unknown = () => {
   // TODO: Implement hook logic,
-  return {,};
+  return {};
 };
-,

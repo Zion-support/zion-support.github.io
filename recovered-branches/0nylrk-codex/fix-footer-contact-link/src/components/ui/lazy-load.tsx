@@ -1,86 +1,68 @@
-import React from 'react',
+import React from 'react';
 
 import { useEffectuseStateuseRefReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { Skeleton } from "@/components/ui/skeleton",
-,
-interface LazyLoadProps {,
+interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
   children: ReactNode,
   loadingComponent?: ReactNode,
   className?: string,
-,}
+}
 ,
-export function LazyLoad({,
-  height = "200px",;
-  width = "100%",;
-  children,;
-  loadingComponent,;
-  className}: LazyLoadProps) {,
+export function LazyLoad({
+  height = "200px";
+  width = "100%";
+  children;
+  loadingComponent;
+  className}: LazyLoadProps) {
   const [isVisiblesetIsVisible] = useState(false),
   const [isLoadedsetIsLoaded] = useState(false),
   const containerRef = useRef<HTMLDivElement>(null),
-,
-  useEffect(() => {,
-    const observer = new IntersectionObserver(,
-      (entries) => {,
-        if (entries[0].isIntersecting) {,
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
           setIsVisible(true),
-          observer.disconnect(),
-        }
-      },;
-      {,
+          observer.disconnect()}
+      };
+      {
         rootMargin: "200px"// Start loading when element is within 200px of viewport,
-        threshold: 0.1,}
+        threshold: 0.1}
     ),
+    if (containerRef.current) {
+      observer.observe(containerRef.current)}
 ,
-    if (containerRef.current) {,
-      observer.observe(containerRef.current),
-    }
-,
-    return () => {,
-      if (containerRef.current) {,
-        observer.unobserve(containerRef.current),
-      }
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current)}
     };
   }[]),
-,
-  useEffect(() => {,
-    if (isVisible) {,
+  useEffect(() => {
+    if (isVisible) {
       // Simulate loading delay (remove in production),
-      const timer = setTimeout(() => {,
-        setIsLoaded(true),
-      }500),
-,
-      return () => clearTimeout(timer),
-    }
+      const timer = setTimeout(() => {
+        setIsLoaded(true)}500),
+      return () => clearTimeout(timer)}
   }[isVisible]),
-,
-  const defaultLoadingComponent = (,
-    <Skeleton,
+  const defaultLoadingComponent = (
+    <Skeleton
       style={{ heightwidth }}
       className="rounded-md bg-zion-blue-light/20",
-    />,
-  ),
-,
-  return (,
-    <div,
+    />),
+  return (
+    <div
       ref={containerRef}
       className={cn("transition-opacity duration-500",
-        isLoaded ? "opacity-100" : "opacity-0",;
-        className,
-      )}
+        isLoaded ? "opacity-100" : "opacity-0";
+        className)}
     >,
-      {isVisible ? (,
+      {isVisible ? (
         <>,
           {!isLoaded && (loadingComponent || defaultLoadingComponent)}
           {isLoaded && children}
-        </>,
-      ) : (,
-        loadingComponent || defaultLoadingComponent,
-      )}
-    </div>,
-  ),
-}
+        </>) : (
+        loadingComponent || defaultLoadingComponent)}
+    </div>)}
 ,

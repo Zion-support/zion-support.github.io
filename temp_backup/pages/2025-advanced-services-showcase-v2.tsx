@@ -5,51 +5,46 @@ import Link from 'next/link',
 import { advancedMicroSaasExpansion20o25V2 } from '../data/20o25-advanced-micro-saas-expansion-v2',
 import { advancedITInfrastructureExpansion20o25V2 } from '../data/20o25-advanced-it-infrastructure-expansion-v2',
 import { advancedAIServicesExpansion20o25V2 } from '../data/20o25-advanced-ai-services-expansion-v2',
-,
-export default function AdvancedServicesShowcase20o25V2() {,
-  const allServices = [,
-    ...advancedMicroSaasExpansion20o25V2,;
-    ...advancedITInfrastructureExpansion20o25V2,;
-    ...advancedAIServicesExpansion20o25V2,;
+export default function AdvancedServicesShowcase20o25V2() {
+  const allServices = [
+    ...advancedMicroSaasExpansion20o25V2;
+    ...advancedITInfrastructureExpansion20o25V2;
+    ...advancedAIServicesExpansion20o25V2;
   ],
-,
-  const categories = [,
-    'AI & Data',;
-    'Developer Tools',;
-    'Cloud & Infrastructure',;
-    'Security & Compliance',;
-    'Content & Marketing',;
-    'E-commerce & Analytics',;
-    'Financial Technology',;
-    'Research & Development',;
-    'Quantum Computing',;
-    'Edge Computing',;
-    'DevOps & Automation',;
-    'Testing & Quality Assurance',;
+  const categories = [
+    'AI & Data';
+    'Developer Tools';
+    'Cloud & Infrastructure';
+    'Security & Compliance';
+    'Content & Marketing';
+    'E-commerce & Analytics';
+    'Financial Technology';
+    'Research & Development';
+    'Quantum Computing';
+    'Edge Computing';
+    'DevOps & Automation';
+    'Testing & Quality Assurance';
   ],
-,
-  const getCategoryServices = (category: string) => {,
-    return allServices.filter(,
+  const getCategoryServices = (category: string) => {
+    return allServices.filter(
       service =>,
-        service.category.includes(category) || service.type.includes(category),
-    ),
-  ,};
-,
-  return (,
+        service.category.includes(category) || service.type.includes(category)),
+  };
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='20o25 Advanced Services Showcase V2 - Zion Tech Group',
         description='Discover our cutting-edge micro SAAS, IT infrastructure, and AI services for 20o25. Advanced solutions with AI-powered automation, quantum computing, and intelligent systems.',
-        keywords={[,
-          'micro SAAS',;
-          'IT services',;
-          'AI services',;
-          'quantum computing',;
-          'edge computing',;
-          'DevOps automation',;
-          'AI security',;
-          'content creation',;
-          'e-commerce analytics',;
+        keywords={[
+          'micro SAAS';
+          'IT services';
+          'AI services';
+          'quantum computing';
+          'edge computing';
+          'DevOps automation';
+          'AI security';
+          'content creation';
+          'e-commerce analytics';
         ]}
       />,
       <UltraFuturisticBackground>,
@@ -67,22 +62,20 @@ export default function AdvancedServicesShowcase20o25V2() {,
               automation, and quantum computing capabilities.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0',
-              >,
+                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border border-purple-40o0 text-purple-40o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-40o0 hover:text-white transition-all duration-30o0',
-              >,
+                className='border border-purple-40o0 text-purple-40o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-40o0 hover:text-white transition-all duration-30o0'>,
                 View All Services,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Contact Information Banner */,}
+        {/* Contact Information Banner */}
         <div className='relative z-10 bg-black/20 backdrop-blur-sm border border-purple-50o0/30 rounded-lg mx-4 mb-12 p-6'>,
           <div className='text-center'>,
             <h3 className='text-2xl font-bold text-white mb-4'>,
@@ -98,10 +91,9 @@ export default function AdvancedServicesShowcase20o25V2() {,
                 <p className='font-semibold text-purple-40o0'>,
                   Visit Our Website,
                 </p>,
-                <a,
+                <a
                   href='https://ziontechgroup.com',
-                  className='text-blue-40o0 hover:text-blue-30o0 transition-colors',
-                >,
+                  className='text-blue-40o0 hover:text-blue-30o0 transition-colors'>,
                   https://ziontechgroup.com,
                 </a>,
               </div>,
@@ -113,32 +105,28 @@ export default function AdvancedServicesShowcase20o25V2() {,
             </div>,
           </div>,
         </div>,
-        {/* Services by Category */,}
+        {/* Services by Category */}
         <div className='relative z-10 px-4 sm: px-6 lg:px-8 pb-20'>,
           <div className='max-w-7xl mx-auto'>,
-            {categories.map(category => {,
+            {categories.map(category => {
               const categoryServices = getCategoryServices(category),
               if (categoryServices.length === 0) return null,
-,
-              return (,
-                <div key={category,} className='mb-16'>,
+              return (
+                <div key={category} className='mb-16'>,
                   <h2 className='text-3xl md: text-4xl font-bold text-white mb-8 text-center'>,
                     <span className='bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
-                      {category,}
+                      {category}
                     </span>,
                   </h2>,
                   <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-                    {categoryServices.map(service => (,
-                      <AdvancedServiceCard20o25,
-                        key={service.id,}
+                    {categoryServices.map(service => (
+                      <AdvancedServiceCard20o25
+                        key={service.id}
                         service={service}
                         className='h-full',
-                      />,
-                    ))}
+                      />))}
                   </div>,
-                </div>,
-              ),
-            })}
+                </div>)})}
           </div>,
         </div>,
         {/* Market Overview Section */}
@@ -173,7 +161,7 @@ export default function AdvancedServicesShowcase20o25V2() {,
             </div>,
           </div>,
         </div>,
-        {/* Pricing Strategy Section */,}
+        {/* Pricing Strategy Section */}
         <div className='relative z-10 bg-black/20 backdrop-blur-sm border border-purple-50o0/30 rounded-lg mx-4 mb-12 p-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -252,7 +240,7 @@ export default function AdvancedServicesShowcase20o25V2() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='relative z-10 text-center px-4 sm: px-6 lg:px-8 pb-20'>,
           <div className='max-w-4xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -264,28 +252,24 @@ export default function AdvancedServicesShowcase20o25V2() {,
               accelerate growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0',
-              >,
+                className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0'>,
                 Start Your Transformation Today,
               </Link>,
-              <Link,
+              <Link
                 href='/quote',
-                className='border border-purple-40o0 text-purple-40o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-40o0 hover:text-white transition-all duration-30o0',
-              >,
+                className='border border-purple-40o0 text-purple-40o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-40o0 hover:text-white transition-all duration-30o0'>,
                 Get Custom Quote,
               </Link>,
             </div>,
             <p className='text-gray-40o0 mt-6'>,
-              Contact us at{' ',}
+              Contact us at{' '}
               <span className='text-purple-40o0'>kleber@ziontechgroup.com</span>{' '}
               or call <span className='text-purple-40o0'>+1 30o2 464 0950</span>,
             </p>,
           </div>,
         </div>,
       </UltraFuturisticBackground>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

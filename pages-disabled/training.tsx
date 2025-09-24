@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
+import {
   BookOpen,
   Users,
   Award,
@@ -13,213 +13,187 @@ import {,
   CheckCircle,
   Globe,
   Target,
-  Lightbulb,
-} from 'lucide-react',
-,
-export default function Training() {,
-  const trainingPrograms = [,
-  {,
-      title: 'AI & Machine Learning Fundamentals',;
-      description: 'Learn the basics of AI and machine learning with hands-on projects',;
-      duration: '40 hours',;
-      level: 'Beginner',;
-      format: 'Online',;
-      price: '$299',;
+  Lightbulb} from 'lucide-react',
+export default function Training() {
+  const trainingPrograms = [
+  {
+      title: 'AI & Machine Learning Fundamentals';
+      description: 'Learn the basics of AI and machine learning with hands-on projects';
+      duration: '40 hours';
+      level: 'Beginner';
+      format: 'Online';
+      price: '$299';
       rating: 4.9,
-      students: 1250,;
-      features: [,
-        'Introduction to AI concepts',;
+      students: 1250;
+      features: [
+        'Introduction to AI concepts';
       'Machine learning algorithms',
-        'Data preprocessing',;
+        'Data preprocessing';
       'Model training and evaluation',
-        'Real-world projects',;
-      'Certificate of completion',
-      ],
-      instructor: 'Dr. Sarah Johnson',;
+        'Real-world projects';
+      'Certificate of completion'],
+      instructor: 'Dr. Sarah Johnson';
       category: 'AI & ML',
-    ,}
-    {,
-      title: 'Cloud Architecture & DevOps',;
-      description: 'Master cloud computing and DevOps practices for scalable applications',;
-      duration: '60 hours',;
-      level: 'Intermediate',;
-      format: 'Hybrid',;
-      price: '$499',;
+    }
+    {
+      title: 'Cloud Architecture & DevOps';
+      description: 'Master cloud computing and DevOps practices for scalable applications';
+      duration: '60 hours';
+      level: 'Intermediate';
+      format: 'Hybrid';
+      price: '$499';
       rating: 4.8,
-      students: 890,;
-      features: [,
-        'Cloud platform fundamentals',;
+      students: 890;
+      features: [
+        'Cloud platform fundamentals';
       'Containerization with Docker',
-        'Kubernetes orchestration',;
+        'Kubernetes orchestration';
       'CI/CD pipelines',
-        'Infrastructure as Code',;
-      'Monitoring and logging',
-      ],
-      instructor: 'Michael Chen',;
+        'Infrastructure as Code';
+      'Monitoring and logging'],
+      instructor: 'Michael Chen';
       category: 'Cloud & DevOps',
-    ,}
-    {,
-      title: 'Cybersecurity Essentials',;
-      description: 'Comprehensive cybersecurity training for modern threats and defenses',;
-      duration: '50 hours',;
-      level: 'Intermediate',;
-      format: 'Online',;
-      price: '$399',;
+    }
+    {
+      title: 'Cybersecurity Essentials';
+      description: 'Comprehensive cybersecurity training for modern threats and defenses';
+      duration: '50 hours';
+      level: 'Intermediate';
+      format: 'Online';
+      price: '$399';
       rating: 4.9,
-      students: 110o0,;
-      features: [,
-        'Threat landscape analysis',;
+      students: 110o0;
+      features: [
+        'Threat landscape analysis';
       'Security frameworks',
-        'Penetration testing',;
+        'Penetration testing';
       'Incident response',
-        'Compliance and governance',;
-      'Security tools and techniques',
-      ],
-      instructor: 'Alex Rodriguez',;
+        'Compliance and governance';
+      'Security tools and techniques'],
+      instructor: 'Alex Rodriguez';
       category: 'Security',
-    ,}
-    {,
-      title: 'Full-Stack Development',;
-      description: 'Build complete web applications with modern technologies',;
-      duration: '80 hours',;
-      level: 'Beginner',;
-      format: 'Hybrid',;
-      price: '$599',;
+    }
+    {
+      title: 'Full-Stack Development';
+      description: 'Build complete web applications with modern technologies';
+      duration: '80 hours';
+      level: 'Beginner';
+      format: 'Hybrid';
+      price: '$599';
       rating: 4.7,
-      students: 210o0,;
-      features: [,
-        'Frontend development (React)',;
+      students: 210o0;
+      features: [
+        'Frontend development (React)';
       'Backend development (Node.js)',
-        'Database design',;
+        'Database design';
       'API development',
-        'Deployment strategies',;
-      'Project portfolio',
-      ],
-      instructor: 'Emily Davis',;
+        'Deployment strategies';
+      'Project portfolio'],
+      instructor: 'Emily Davis';
       category: 'Development',
-    ,}
+    }
   ],
-,
-  const certificationPaths = [,
-  {,
-      title: 'Zion Tech AI Specialist',;
-      description: 'Certify your expertise in AI and machine learning',;
-      duration: '3 months',;
+  const certificationPaths = [
+  {
+      title: 'Zion Tech AI Specialist';
+      description: 'Certify your expertise in AI and machine learning';
+      duration: '3 months';
       requirements: ['AI Fundamentals', 'ML Advanced', 'Project Portfolio'],
-      benefits: [,
-        'Industry recognition',;
+      benefits: [
+        'Industry recognition';
       'Career advancement',
-        'Exclusive resources',
-      ],
-    }
-    {,
-      title: 'Zion Tech Cloud Architect',;
-      description: 'Become a certified cloud architecture expert',;
-      duration: '4 months',;
-      requirements: [,
-        'Cloud Fundamentals',;
+        'Exclusive resources']}
+    {
+      title: 'Zion Tech Cloud Architect';
+      description: 'Become a certified cloud architecture expert';
+      duration: '4 months';
+      requirements: [
+        'Cloud Fundamentals';
       'DevOps Practices',
-        'Architecture Design',
-      ],
-      benefits: [,
-        'High-demand skills',;
+        'Architecture Design'],
+      benefits: [
+        'High-demand skills';
       'Salary increase',
-        'Consulting opportunities',
-      ],
-    }
-    {,
-      title: 'Zion Tech Security Professional',;
-      description: 'Master cybersecurity and become a security expert',;
-      duration: '3 months',;
-      requirements: [,
-        'Security Fundamentals',;
+        'Consulting opportunities']}
+    {
+      title: 'Zion Tech Security Professional';
+      description: 'Master cybersecurity and become a security expert';
+      duration: '3 months';
+      requirements: [
+        'Security Fundamentals';
       'Penetration Testing',
-        'Incident Response',
-      ],
-      benefits: [,
-        'Security clearance',;
+        'Incident Response'],
+      benefits: [
+        'Security clearance';
       'Government contracts',
-        'Leadership roles',
-      ],
-    }
+        'Leadership roles']}
   ],
-,
-  const learningFormats = [,
-  {,
-      title: 'Self-Paced Online',;
-      description: 'Learn at your own pace with pre-recorded videos and materials',;
-      icon: Play,;
-      features: [,
-        '24/7 access',;
+  const learningFormats = [
+  {
+      title: 'Self-Paced Online';
+      description: 'Learn at your own pace with pre-recorded videos and materials';
+      icon: Play;
+      features: [
+        '24/7 access';
       'Lifetime access',
-        'Mobile friendly',;
-      'Progress tracking',
-      ],
-    }
-    {,
-      title: 'Live Online Classes',;
-      description: 'Interactive live sessions with expert instructors',;
-      icon: Users,;
-      features: [,
-        'Real-time Q&A',;
+        'Mobile friendly';
+      'Progress tracking']}
+    {
+      title: 'Live Online Classes';
+      description: 'Interactive live sessions with expert instructors';
+      icon: Users;
+      features: [
+        'Real-time Q&A';
       'Group projects',
-        'Peer networking',;
-      'Instructor feedback',
-      ],
-    }
-    {,
-      title: 'In-Person Workshops',;
-      description: 'Hands-on training in our state-of-the-art facilities',;
-      icon: Globe,;
-      features: [,
-        'Lab access',;
+        'Peer networking';
+      'Instructor feedback']}
+    {
+      title: 'In-Person Workshops';
+      description: 'Hands-on training in our state-of-the-art facilities';
+      icon: Globe;
+      features: [
+        'Lab access';
       'Equipment training',
-        'Networking events',;
-      'Certification exams',
-      ],
-    }
-    {,
-      title: 'Corporate Training',;
-      description: 'Customized training programs for your organization',;
-      icon: Target,;
-      features: [,
-        'Custom curriculum',;
+        'Networking events';
+      'Certification exams']}
+    {
+      title: 'Corporate Training';
+      description: 'Customized training programs for your organization';
+      icon: Target;
+      features: [
+        'Custom curriculum';
       'Team training',
-        'On-site delivery',;
-      'ROI tracking',
-      ],
+        'On-site delivery';
+      'ROI tracking']}
+  ],
+  const testimonials = [
+    {
+      quote: 'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.';
+      author: 'Jennifer Liu';
+      title: 'AI Engineer';
+      company: 'Tech Corp';
+      rating: 5,
+    }
+    {
+      quote: 'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!';
+      author: 'David Park';
+      title: 'Cloud Architect';
+      company: 'Enterprise Solutions';
+      rating: 5,
+    }
+    {
+      quote: 'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.';
+      author: 'Maria Garcia';
+      title: 'Security Analyst';
+      company: 'Financial Services';
+      rating: 5,
     }
   ],
-,
-  const testimonials = [,
-    {,
-      quote: 'The AI training program completely transformed my career. I went from a traditional developer to an AI specialist in just 3 months.',;
-      author: 'Jennifer Liu',;
-      title: 'AI Engineer',;
-      company: 'Tech Corp',;
-      rating: 5,
-    ,}
-    {,
-      quote: 'The cloud architecture course gave me the skills I needed to lead our digital transformation initiative. Highly recommended!',;
-      author: 'David Park',;
-      title: 'Cloud Architect',;
-      company: 'Enterprise Solutions',;
-      rating: 5,
-    ,}
-    {,
-      quote: 'The cybersecurity training was comprehensive and practical. I now feel confident handling security challenges in my role.',;
-      author: 'Maria Garcia',;
-      title: 'Security Analyst',;
-      company: 'Financial Services',;
-      rating: 5,
-    ,}
-  ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Training & Education - Zion Tech Group</title>,
-        <meta,
+        <meta
           name="description",
           content="Professional training and certification programs in AI, cloud computing, cybersecurity, and software development. Advance your career with Zion Tech Group.",
          />,
@@ -253,7 +227,7 @@ export default function Training() {,
             </div>,
           </div>,
         </section>,
-        {/* Learning Formats */,}
+        {/* Learning Formats */}
         <section className="py-20 sm: py-32">,
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -265,31 +239,27 @@ export default function Training() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {learningFormats.map((format, index) => (,
-                <div,
+              {learningFormats.map((format, index) => (
+                <div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow",
-                >,
+                  className="bg-white rounded-xl shadow-lg p-6 text-center hover: shadow-xl transition-shadow">,
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <format.icon className="w-8 h-8 text-white"  />,
                   </div>,
                   <h3 className="text-xl font-bold text-gray-90o0 mb-3">,
-                    {format.title,}
+                    {format.title}
                   </h3>,
                   <p className="text-gray-60o0 mb-4">{format.description}</p>,
                   <ul className="space-y-2 text-left">,
-                    {format.features.map((feature, featureIndex) => (,
-                      <li,
+                    {format.features.map((feature, featureIndex) => (
+                      <li
                         key={featureIndex}
-                        className="flex items-center text-sm text-gray-70o0",
-                      >,
+                        className="flex items-center text-sm text-gray-70o0">,
                         <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -305,25 +275,23 @@ export default function Training() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-              {trainingPrograms.map((program, index) => (,
-                <div,
+              {trainingPrograms.map((program, index) => (
+                <div
                   key={index}
-                  className="bg-gray-50 rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow",
-                >,
+                  className="bg-gray-50 rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
                   <div className="flex items-start justify-between mb-6">,
                     <div className="flex-1">,
                       <div className="flex items-center space-x-3 mb-3">,
                         <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm font-semibold">,
-                          {program.category,}
+                          {program.category}
                         </span>,
-                        <span,
-                          className={`px-3 py-1 rounded-full text-sm font-semibold ${,
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-semibold ${
                             program.level === 'Beginner',
                               ? 'bg-green-10o0 text-green-80o0',
                               : program.level === 'Intermediate',
                                 ? 'bg-yellow-10o0 text-yellow-80o0',
-                                : 'bg-red-10o0 text-red-80o0',
-                          }`}
+                                : 'bg-red-10o0 text-red-80o0'}`}
                         >,
                           {program.level}
                         </span>,
@@ -362,25 +330,23 @@ export default function Training() {,
                   </div>,
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-gray-90o0 mb-3">,
-                      What You&apos,ll Learn: {' ',}
+                      What You&apos,ll Learn: {' '}
                     </h4>,
                     ',
                     <ul className="grid grid-cols-1 md: grid-cols-2 gap-2">,
-                      {program.features.map((feature, featureIndex) => (,
-                        <li,
+                      {program.features.map((feature, featureIndex) => (
+                        <li
                           key={featureIndex}
-                          className="flex items-center text-sm text-gray-70o0",
-                        >,
+                          className="flex items-center text-sm text-gray-70o0">,
                           <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />,
                           {feature}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <div className="flex items-center justify-between">,
                     <div className="text-sm text-gray-60o0">,
                       <p className="font-semibold">,
-                        Instructor: {program.instructor,}
+                        Instructor: {program.instructor}
                       </p>,
                     </div>,
                     <Link href="/contact">,
@@ -390,8 +356,7 @@ export default function Training() {,
                       </button>,
                     </Link>,
                   </div>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -407,51 +372,46 @@ export default function Training() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {certificationPaths.map((path, index) => (,
-                <div,
+              {certificationPaths.map((path, index) => (
+                <div
                   key={index}
-                  className="bg-white rounded-xl shadow-lg p-8 text-center hover: shadow-xl transition-shadow",
-                >,
+                  className="bg-white rounded-xl shadow-lg p-8 text-center hover: shadow-xl transition-shadow">,
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <Award className="w-8 h-8 text-white"  />,
                   </div>,
                   <h3 className="text-2xl font-bold text-gray-90o0 mb-3">,
-                    {path.title,}
+                    {path.title}
                   </h3>,
                   <p className="text-gray-60o0 mb-4">{path.description}</p>,
                   <div className="text-blue-60o0 font-semibold mb-6">,
-                    Duration: {path.duration,}
+                    Duration: {path.duration}
                   </div>,
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-gray-90o0 mb-3">,
                       Requirements: ,
                     </h4>,
                     <ul className="space-y-2">,
-                      {path.requirements.map((req, reqIndex) => (,
-                        <li,
+                      {path.requirements.map((req, reqIndex) => (
+                        <li
                           key={reqIndex}
-                          className="flex items-center text-sm text-gray-70o0",
-                        >,
+                          className="flex items-center text-sm text-gray-70o0">,
                           <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />,
                           {req}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-gray-90o0 mb-3">,
-                      Benefits: {' ',}
+                      Benefits: {' '}
                     </h4>,
                     <ul className="space-y-2">,
-                      {path.benefits.map((benefit, benefitIndex) => (,
-                        <li,
+                      {path.benefits.map((benefit, benefitIndex) => (
+                        <li
                           key={benefitIndex}
-                          className="flex items-center text-sm text-gray-70o0",
-                        >,
+                          className="flex items-center text-sm text-gray-70o0">,
                           <Lightbulb className="w-4 h-4 text-yellow-50o0 mr-2 flex-shrink-0"  />,
                           {benefit}
-                        </li>,
-                      ))}
+                        </li>))}
                     </ul>,
                   </div>,
                   <Link href="/contact">,
@@ -460,8 +420,7 @@ export default function Training() {,
                       <ArrowRight className="w-4 h-4 ml-2 inline"  />,
                     </button>,
                   </Link>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -477,15 +436,14 @@ export default function Training() {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-              {testimonials.map((testimonial, index) => (,
+              {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-8">,
                   <div className="flex items-center mb-4">,
-                    {[...Array(testimonial.rating)].map((_, i) => (,
-                      <Star,
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
                         key={i}
                         className="w-5 h-5 text-yellow-40o0 fill-current",
-                       />,
-                    ))}
+                       />))}
                   </div>,
                   <blockquote className="text-gray-70o0 mb-6 italic">,
                     "{testimonial.quote}",
@@ -504,8 +462,7 @@ export default function Training() {,
                       </p>,
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -535,7 +492,6 @@ export default function Training() {,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

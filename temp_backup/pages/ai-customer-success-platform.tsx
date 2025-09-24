@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AiCustomerSuccessPlatformPage() {,
-  return (,
+export default function AiCustomerSuccessPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Customer Success Platform - Zion Tech Group</title>,
@@ -19,7 +18,6 @@ export default function AiCustomerSuccessPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

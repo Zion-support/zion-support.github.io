@@ -1,53 +1,50 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeftIcon,;
-  CalendarIcon,;
-  ClockIcon,;
-  UserIcon,;
-  BuildingOfficeIcon,;
+import {
+  ArrowLeftIcon;
+  CalendarIcon;
+  ClockIcon;
+  UserIcon;
+  BuildingOfficeIcon;
 } from '@heroicons/react/24/outline',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story';
   description:,
-    'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',;
-  keywords: [,
-    'AI Transformation',;
-    'Manufacturing',;
-    'Fortune 10o0',;
-    '50K ROI',;
-    'Autonomous Operations',;
-  ],;
-  openGraph: {,
-    title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story',;
+    'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
+  keywords: [
+    'AI Transformation';
+    'Manufacturing';
+    'Fortune 10o0';
+    '50K ROI';
+    'Autonomous Operations';
+  ];
+  openGraph: {
+    title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story';
     description:,
-      'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'AI Transformation',;
-      'Manufacturing',;
-      'Fortune 10o0',;
-      '50K ROI',;
-      'Autonomous Operations',;
-    ],;
-  },;
+      'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
+    type: 'article';
+    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'AI Transformation';
+      'Manufacturing';
+      'Fortune 10o0';
+      '50K ROI';
+      'Autonomous Operations';
+    ];
+  };
 };
-,
-export default function CaseStudy() {,
-  return (,
+export default function CaseStudy() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Header */}
       <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='flex items-center mb-6'>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center text-white hover:text-gray-20o0 transition-colors',
-            >,
+              className='inline-flex items-center text-white hover:text-gray-20o0 transition-colors'>,
               <ArrowLeftIcon className='w-5 h-5 mr-2' />,
               Back to Case Studies,
             </Link>,
@@ -75,7 +72,7 @@ export default function CaseStudy() {,
           </h1>,
           <p className='text-xl md: text-2xl opacity-90 mb-8'>,
             Fortune 10o0 manufacturing conglomerate achieves unprecedented,
-            50,0o00% ROI through comprehensive AI transformation,;
+            50,0o00% ROI through comprehensive AI transformation;
             revolutionizing operations across 47 facilities worldwide.,
           </p>,
           <div className='flex flex-wrap gap-3'>,
@@ -97,7 +94,7 @@ export default function CaseStudy() {,
       {/* Content */}
       <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='prose prose-lg max-w-none'>,
-          {/* Executive Summary */,}
+          {/* Executive Summary */}
           <div className='bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-40o0 p-8 mb-12'>,
             <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>,
               Executive Summary,
@@ -544,7 +541,7 @@ export default function CaseStudy() {,
             </h3>,
             <ol className='list-decimal list-inside space-y-2 text-gray-70o0'>,
               <li>,
-                <strong>AI Transformation is Possible:</strong> Even large,;
+                <strong>AI Transformation is Possible:</strong> Even large;
                 complex organizations can achieve dramatic results,
               </li>,
               <li>,
@@ -562,7 +559,7 @@ export default function CaseStudy() {,
               </li>,
             </ol>,
           </div>,
-          {/* Client Testimonial */,}
+          {/* Client Testimonial */}
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-xl p-8 mt-12'>,
             <blockquote className='text-lg italic mb-4'>,
               "The AI transformation with Zion Tech Group has been nothing short,
@@ -588,23 +585,20 @@ export default function CaseStudy() {,
               the ideal partner for your AI transformation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-blue-60o0 transition-colors text-center',
-              >,
+                className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-60o0 hover:to-blue-60o0 transition-colors text-center'>,
                 Contact Our Team,
               </Link>,
-              <Link,
+              <Link
                 href='/tools/ai-roi-calculator',
-                className='bg-white text-gray-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-gray-90o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Calculate Your ROI,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

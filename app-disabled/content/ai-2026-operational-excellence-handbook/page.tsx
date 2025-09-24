@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI 20o26: Operational Excellence Handbook — Running Agent Platforms',;
+export const metadata = {
+  title: 'AI 20o26: Operational Excellence Handbook — Running Agent Platforms';
   description:,
-    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.',;
+    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>,
         <div className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -35,7 +34,5 @@ export default function Page() {,
           </ul>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

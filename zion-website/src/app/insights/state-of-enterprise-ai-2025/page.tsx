@@ -1,5 +1,5 @@
-export default function ArticleEnterpriseAI20o25() {,
-  return (,
+export default function ArticleEnterpriseAI20o25() {
+  return (
     <article className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
         <h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl'>,
@@ -20,13 +20,11 @@ export default function ArticleEnterpriseAI20o25() {,
             <li>Autonomous workflows reduce latency across core operations</li>,
           </ul>,
           <p>,
-            Leaders measure ROI with business KPIs, not model metrics alone,;
+            Leaders measure ROI with business KPIs, not model metrics alone;
             aligning initiatives to revenue growth, cost efficiencies, and risk,
             reduction.,
           </p>,
         </div>,
       </div>,
-    </article>,
-  ),
-}
+    </article>)}
 ,

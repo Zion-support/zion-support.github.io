@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'fintech-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'fintech-solutions - Zion Tech Group';
   description:,
-    'Professional fintech-solutions solutions for your business needs.',;
-  keywords: 'fintech-solutions, services, business, technology',;
+    'Professional fintech-solutions solutions for your business needs.';
+  keywords: 'fintech-solutions, services, business, technology';
 };
-export default function FintechSolutionsPage() {,
-  return (,
+export default function FintechSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function FintechSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

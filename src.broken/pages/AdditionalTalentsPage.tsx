@@ -1,9 +1,7 @@
-export function AdditionalTalentsPage() {,
-  return (,
+export function AdditionalTalentsPage() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

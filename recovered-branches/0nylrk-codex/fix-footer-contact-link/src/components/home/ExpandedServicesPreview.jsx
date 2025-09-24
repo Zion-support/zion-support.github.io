@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
-import {,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 import { ArrowRight, Star, Zap, TrendingUp } from 'lucide-react',
 import { SERVICE_CATEGORIES } from '@/data/expandedServices',
-export function ExpandedServicesPreview() {,
-  const getCategoryIcon = category => {,
-    switch (category) {,
+export function ExpandedServicesPreview() {
+  const getCategoryIcon = category => {
+    switch (category) {
       case 'AI Services':,
         return '🤖',
       case 'Micro SAAS':,
@@ -23,10 +23,10 @@ export function ExpandedServicesPreview() {,
         return '🚀',
       default: ,
         return '⚡',
-    ,}
+    }
   };
-  const getCategoryColor = category => {,
-    switch (category) {,
+  const getCategoryColor = category => {
+    switch (category) {
       case 'AI Services':,
         return 'from-purple-50o0 to-indigo-60o0',
       case 'Micro SAAS':,
@@ -37,9 +37,9 @@ export function ExpandedServicesPreview() {,
         return 'from-orange-50o0 to-red-60o0',
       default: ,
         return 'from-gray-50o0 to-slate-60o0',
-    ,}
+    }
   };
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-b from-gray-50 to-white'>,
       <div className='container mx-auto px-4'>,
         <div className='text-center mb-16'>,
@@ -54,14 +54,13 @@ export function ExpandedServicesPreview() {,
         </div>,
         {/* Service Categories Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
-          {SERVICE_CATEGORIES.map(category => (,
-            <Card,
-              key={category.id,}
-              className='group hover: shadow-xl transition-all duration-30o0 border-zion-blue-light',
-            >,
+          {SERVICE_CATEGORIES.map(category => (
+            <Card
+              key={category.id}
+              className='group hover: shadow-xl transition-all duration-30o0 border-zion-blue-light'>,
               <CardHeader className='text-center pb-4'>,
-                <div,
-                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name),} flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`,}
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name)} flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`}
                 >,
                   <div className='text-3xl'>,
                     {getCategoryIcon(category.name)}
@@ -79,17 +78,15 @@ export function ExpandedServicesPreview() {,
                   {category.services.length} Services,
                 </div>,
                 <Link to='/expanded-services'>,
-                  <Button,
+                  <Button
                     variant='outline',
-                    className='w-full group-hover: bg-zion-purple group-hover:text-white transition-colors',
-                  >,
+                    className='w-full group-hover: bg-zion-purple group-hover:text-white transition-colors'>,
                     Explore Services,
                     <ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />,
                   </Button>,
                 </Link>,
               </CardContent>,
-            </Card>,
-          )),}
+            </Card>))}
         </div>,
         {/* Featured Services Preview */}
         <div className='mb-16'>,
@@ -97,7 +94,7 @@ export function ExpandedServicesPreview() {,
             Featured Services,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-            {/* AI Customer Service */,}
+            {/* AI Customer Service */}
             <Card className='hover: shadow-lg transition-all duration-30o0'>,
               <CardHeader>,
                 <div className='flex items-center justify-between mb-2'>,
@@ -140,7 +137,7 @@ export function ExpandedServicesPreview() {,
                 </Link>,
               </CardContent>,
             </Card>,
-            {/* Smart Inventory */,}
+            {/* Smart Inventory */}
             <Card className='hover: shadow-lg transition-all duration-30o0'>,
               <CardHeader>,
                 <div className='flex items-center justify-between mb-2'>,
@@ -183,7 +180,7 @@ export function ExpandedServicesPreview() {,
                 </Link>,
               </CardContent>,
             </Card>,
-            {/* Cloud Migration */,}
+            {/* Cloud Migration */}
             <Card className='hover: shadow-lg transition-all duration-30o0'>,
               <CardHeader>,
                 <div className='flex items-center justify-between mb-2'>,
@@ -228,7 +225,7 @@ export function ExpandedServicesPreview() {,
             </Card>,
           </div>,
         </div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-8 text-white'>,
             <h3 className='text-2xl font-bold mb-4'>,
@@ -240,20 +237,18 @@ export function ExpandedServicesPreview() {,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link to='/expanded-services'>,
-                <Button,
+                <Button
                   size='lg',
-                  className='bg-white text-zion-purple hover:bg-gray-10o0',
-                >,
+                  className='bg-white text-zion-purple hover:bg-gray-10o0'>,
                   Explore All Services,
                   <ArrowRight className='ml-2 h-5 w-5' />,
                 </Button>,
               </Link>,
               <Link to='/contact'>,
-                <Button,
+                <Button
                   size='lg',
                   variant='outline',
-                  className='border-white text-white hover:bg-white hover:text-zion-purple',
-                >,
+                  className='border-white text-white hover:bg-white hover:text-zion-purple'>,
                   Contact Us,
                 </Button>,
               </Link>,
@@ -261,7 +256,6 @@ export function ExpandedServicesPreview() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

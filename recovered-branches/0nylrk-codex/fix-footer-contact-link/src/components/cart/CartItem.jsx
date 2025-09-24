@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button',
-export function CartItem({ item, onRemove, onUpdateQuantity }) {,
-  return (,
+export function CartItem({ item, onRemove, onUpdateQuantity }) {
+  return (
     <li className='flex items-center gap-4'>,
-      <img,
+      <img
         src={item.image || '/placeholder.svg'}
         alt={item.name}
         className='w-16 h-16 object-cover rounded',
@@ -13,13 +13,12 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {,
           ${item.price.toFixed(2)}
         </p>,
       </div>,
-      <input,
+      <input
         type='number',
         min={1}
         value={item.quantity}
         onChange={e =>,
-          onUpdateQuantity?.(item.id, parseInt(e.target.value || '1', 10)),
-        }
+          onUpdateQuantity?.(item.id, parseInt(e.target.value || '1', 10))}
         className='w-16 bg-transparent border border-input rounded p-1 text-center',
       />,
       <span className='w-20 text-right'>,
@@ -28,7 +27,5 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {,
       <Button variant='outline' size='sm' onClick={() => onRemove?.(item.id)}>,
         Remove,
       </Button>,
-    </li>,
-  ),
-}
+    </li>)}
 ,

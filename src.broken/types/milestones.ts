@@ -1,5 +1,4 @@
 // Type definitions for milestones,
-interface milestones {,
+interface milestones {
   // TODO: Add proper type definitions,
-,};
-,
+};

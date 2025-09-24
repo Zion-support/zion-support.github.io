@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DatabaseAdministrationChatPage() {,
-  return (,
+export default function DatabaseAdministrationChatPage() {
+  return (
     <>,
       <Head>,
         <title>Database Administration Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function DatabaseAdministrationChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

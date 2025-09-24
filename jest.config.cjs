@@ -1,26 +1,24 @@
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__tests__', '<rootDir>/__safe_tests__', '<rootDir>/__jest__'],
+  roots: ['<rootDir>/__safe_tests__'],
   testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
-      ]
-    }]
+    '^.+\\.(ts|tsx|js|jsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          ['@babel/preset-env', { targets: { node: 'current' } }],
+          ['@babel/preset-react', { runtime: 'automatic' }],
+          '@babel/preset-typescript'
+        ]
+      }
+    ]
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
-  testPathIgnorePatterns: [
-    '/node_modules/'
-  ],
-  modulePathIgnorePatterns: [
-    '<rootDir>/'
-  ]
+  testPathIgnorePatterns: ['/node_modules/']
 };

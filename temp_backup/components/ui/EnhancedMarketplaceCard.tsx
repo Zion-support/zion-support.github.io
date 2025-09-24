@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion',
 import { Star, ArrowRight } from 'lucide-react',
-,
-export type ServiceItem ={,
+export type ServiceItem ={
   id?: string,
   slug?: string,
   title: string,
@@ -11,24 +10,20 @@ export type ServiceItem ={,
   priceRangeUSD?: [number, number],
   categories: string[],
   rating?: number, // 0-5,
-,};
-,
-type Props ={,
+};
+type Props ={
   service: ServiceItem,
   onRequestQuote: (service: ServiceItem) => void,
-,};
-,
-export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Props) {,
+};
+export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Props) {
   const minPrice = service.priceFromUSD ?? (service.priceRangeUSD ? service.priceRangeUSD[0] : undefined),
-,
-  return (,
+  return (
     <motion.div,
-      whileHover={{ y: -4, scale: 1.0o1 ,}}
-      transition={{ type: 'spring', stiffness: 30o0, damping: 20 ,}}
-      className="group relative rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur p-5 shadow-[0_8px_30px_rgba(0,0,0,0.12)] overflow-hidden",
-    >,
+      whileHover={{ y: -4, scale: 1.0o1 }}
+      transition={{ type: 'spring', stiffness: 30o0, damping: 20 }}
+      className="group relative rounded-2xl border border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur p-5 shadow-[0_8px_30px_rgba(0,0,0,0.12)] overflow-hidden">,
       <div className="absolute inset-0 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 pointer-events-none",
-        style={{,
+        style={{
           background: 'radial-gradient(60o0px circle at var(--x,50%) var(--y,50%), rgba(56,189,248,0.15), transparent 40%)'}}
        />,
       <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full blur-3xl opacity-30 bg-gradient-to-tr from-cyan-40o0 via-blue-50o0 to-purple-50o0"  />,
@@ -39,39 +34,31 @@ export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Pro
           </h3>,
           <p className="mt-2 text-sm text-white/80 line-clamp-3">{service.description}</p>,
         </div>,
-        {typeof service.rating === 'number' && (,
+        {typeof service.rating === 'number' && (
           <div className="flex items-center gap-1 shrink-0">,
-            {Array.from({ length: 5 ,}).map((_, i) => (,
-              <Star key={i} size={16} className={i < (service.rating ?? 0) ? 'text-yellow-40o0 fill-yellow-40o0' : 'text-white/20'}  />,
-            ))}
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} size={16} className={i < (service.rating ?? 0) ? 'text-yellow-40o0 fill-yellow-40o0' : 'text-white/20'}  />))}
             <span className="ml-1 text-xs text-white/70">{service.rating?.toFixed(1)}</span>,
-          </div>,
-        )}
+          </div>)}
       </div>,
       <div className="mt-3 text-xs text-white/70">By {service.provider}</div>,
       <div className="mt-3 flex flex-wrap gap-2">,
-        {service.categories.map((cat) => (,
+        {service.categories.map((cat) => (
           <span key={cat} className="px-2 py-1 text-xs rounded-full border border-cyan-30o0/30 text-cyan-20o0 bg-cyan-40o0/10">,
             {cat}
-          </span>,
-        ))}
+          </span>))}
       </div>,
       <div className="mt-4 flex items-center justify-between">,
         <div className="text-sm">,
-          {minPrice !== undefined ? (,
-            <span className="text-white font-medium">From ${minPrice.toLocaleString()}</span>,
-          ) : (,
-            <span className="text-white/70">Custom pricing</span>,
-          )}
+          {minPrice !== undefined ? (
+            <span className="text-white font-medium">From ${minPrice.toLocaleString()}</span>) : (
+            <span className="text-white/70">Custom pricing</span>)}
         </div>,
-        <button,
+        <button
           onClick={() => onRequestQuote(service)}
-          className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50o0 via-blue-50o0 to-purple-50o0 text-white shadow hover: shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60",
-        >,
+          className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50o0 via-blue-50o0 to-purple-50o0 text-white shadow hover: shadow-lg focus:outline-none focus:ring-2 focus:ring-cyan-40o0/60">,
           Request Quote,
-          <ArrowRight size={16,}  />,
+          <ArrowRight size={16}  />,
         </button>,
       </div>,
-    </motion.div>,
-  ),
-}
+    </motion.div>)}

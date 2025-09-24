@@ -1,5 +1,5 @@
-export default function Navigation() {,
-  return (,
+export default function Navigation() {
+  return (
     <nav className='bg-gray-90o0 text-white p-4'>,
       <div className='container mx-auto flex justify-between items-center'>,
         <div className='text-xl font-bold'>Zion Tech Group</div>,
@@ -18,7 +18,6 @@ export default function Navigation() {,
           </a>,
         </div>,
       </div>,
-    </nav>,
-  ),
-,}
+    </nav>),
+}
 ,

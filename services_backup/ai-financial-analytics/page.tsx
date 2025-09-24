@@ -1,14 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-export const metadata ={,
-  title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',;
-  description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.',;
-  keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting',
-};
-,
-export default function AIFinancialAnalyticsPage() {,
-  return (,
+export const metadata ={
+  title: 'AI-Powered Financial Analytics Platform | Zion Tech Group';
+  description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.';
+  keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting'};
+export default function AIFinancialAnalyticsPage() {
+  return (
     <div className="space-y-16">,
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-emerald-50 to-blue-10o0 rounded-lg">,
@@ -20,21 +17,19 @@ export default function AIFinancialAnalyticsPage() {,
           Our platform provides 95% accuracy in financial predictions and reduces analysis time by 80%.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Platform Inquiry",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Get Free Analysis,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Advanced Financial Intelligence</h2>,
@@ -43,71 +38,65 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <FeatureCard,
+          <FeatureCard
             icon="📈",
             title="Predictive Financial Modeling",
             description="Advanced machine learning models predict market trends, cash flow, and financial performance with 95% accuracy.",
-            benefits={[,
-              "95% prediction accuracy",;
-              "Real-time market analysis",;
-              "Cash flow forecasting",;
-              "Revenue optimization",
-            ]}
+            benefits={[
+              "95% prediction accuracy";
+              "Real-time market analysis";
+              "Cash flow forecasting";
+              "Revenue optimization"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="⚠️",
             title="AI Risk Assessment",
             description="Comprehensive risk analysis using multiple data sources to identify potential financial threats and opportunities.",
-            benefits={[,
-              "Multi-factor risk analysis",;
-              "Early warning system",;
-              "Portfolio optimization",;
-              "Compliance monitoring",
-            ]}
+            benefits={[
+              "Multi-factor risk analysis";
+              "Early warning system";
+              "Portfolio optimization";
+              "Compliance monitoring"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="💰",
             title="Investment Intelligence",
             description="AI-powered investment recommendations based on market analysis, risk tolerance, and financial goals.",
-            benefits={[,
-              "Personalized recommendations",;
-              "Portfolio rebalancing",;
-              "Tax optimization",;
-              "Performance tracking",
-            ]}
+            benefits={[
+              "Personalized recommendations";
+              "Portfolio rebalancing";
+              "Tax optimization";
+              "Performance tracking"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📊",
             title="Automated Financial Reporting",
             description="Generate comprehensive financial reports, compliance documents, and stakeholder presentations automatically.",
-            benefits={[,
-              "Real-time dashboards",;
-              "Regulatory compliance",;
-              "Custom report templates",;
-              "Automated distribution",
-            ]}
+            benefits={[
+              "Real-time dashboards";
+              "Regulatory compliance";
+              "Custom report templates";
+              "Automated distribution"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🔍",
             title="Fraud Detection & Prevention",
             description="Advanced anomaly detection algorithms identify suspicious transactions and potential fraud in real-time.",
-            benefits={[,
-              "Real-time monitoring",;
-              "Pattern recognition",;
-              "False positive reduction",;
-              "Compliance reporting",
-            ]}
+            benefits={[
+              "Real-time monitoring";
+              "Pattern recognition";
+              "False positive reduction";
+              "Compliance reporting"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📱",
             title="Mobile Financial Insights",
             description="Access critical financial data and insights on-the-go with our mobile-optimized dashboard.",
-            benefits={[,
-              "Real-time notifications",;
-              "Mobile dashboards",;
-              "Offline access",;
-              "Secure authentication",
-            ]}
+            benefits={[
+              "Real-time notifications";
+              "Mobile dashboards";
+              "Offline access";
+              "Secure authentication"]}
            />,
         </div>,
       </section>,
@@ -120,51 +109,48 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
-          <PricingCard,
+          <PricingCard
             name="Starter",
             price="$199",
             period="per month",
             description="Perfect for small businesses and individuals",
-            features={[,
-              "Up to $1M portfolio analysis",;
-              "Basic AI predictions",;
-              "Monthly reports",;
-              "Email support",;
-              "Mobile app access",;
-              "Standard data sources",
-            ]}
+            features={[
+              "Up to $1M portfolio analysis";
+              "Basic AI predictions";
+              "Monthly reports";
+              "Email support";
+              "Mobile app access";
+              "Standard data sources"]}
             popular={false}
            />,
-          <PricingCard,
+          <PricingCard
             name="Professional",
             price="$499",
             period="per month",
             description="Most popular for growing businesses",
-            features={[,
-              "Up to $10M portfolio analysis",;
-              "Advanced AI features",;
-              "Real-time monitoring",;
-              "Priority support",;
-              "API access",;
-              "Custom integrations",;
-              "Advanced reporting",
-            ]}
+            features={[
+              "Up to $10M portfolio analysis";
+              "Advanced AI features";
+              "Real-time monitoring";
+              "Priority support";
+              "API access";
+              "Custom integrations";
+              "Advanced reporting"]}
             popular={true}
            />,
-          <PricingCard,
+          <PricingCard
             name="Enterprise",
             price="$1,299",
             period="per month",
             description="For large organizations and institutions",
-            features={[,
-              "Unlimited portfolio analysis",;
-              "All AI features",;
-              "Custom AI models",;
-              "White-label options",;
-              "Dedicated support",;
-              "Custom data sources",;
-              "SLA guarantee",
-            ]}
+            features={[
+              "Unlimited portfolio analysis";
+              "All AI features";
+              "Custom AI models";
+              "White-label options";
+              "Dedicated support";
+              "Custom data sources";
+              "SLA guarantee"]}
             popular={false}
            />,
         </div>,
@@ -178,21 +164,21 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <CaseStudy,
+          <CaseStudy
             company="Investment Partners LLC",
             industry="Investment Management",
             result="40% improvement in portfolio returns",
             description="Implemented AI-powered investment recommendations and risk assessment, resulting in 40% better returns and 60% reduction in risk exposure.",
             metrics={["40% better returns", "60% risk reduction", "80% faster analysis"]}
            />,
-          <CaseStudy,
+          <CaseStudy
             company="Retail Finance Corp",
             industry="Retail Banking",
             result="70% reduction in fraud losses",
             description="Deployed AI fraud detection and risk assessment to identify suspicious transactions and prevent financial losses.",
             metrics={["70% fraud reduction", "95% detection accuracy", "50% cost savings"]}
            />,
-          <CaseStudy,
+          <CaseStudy
             company="Tech Startup Inc",
             industry="Technology",
             result="50% improvement in cash flow management",
@@ -210,26 +196,25 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-          {[,
-            { name: "React", icon: "⚛️", description: "Frontend framework" ,},;
-            { name: "Python", icon: "🐍", description: "AI/ML backend" ,},;
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" ,},;
-            { name: "Redis", icon: "🔴", description: "Caching layer" ,},;
-            { name: "TensorFlow", icon: "🧠", description: "ML framework" ,},;
-            { name: "AWS", icon: "☁️", description: "Cloud platform" ,},;
-            { name: "Docker", icon: "🐳", description: "Containerization" ,},;
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" ,},;
-            { name: "Stripe", icon: "💳", description: "Payment processing" ,},;
-            { name: "Plaid", icon: "🏦", description: "Banking integration" ,},;
-            { name: "MongoDB", icon: "🍃", description: "Document store" ,},;
-            { name: "Grafana", icon: "📊", description: "Monitoring" ,}
-          ].map((tech, index) => (,
+          {[
+            { name: "React", icon: "⚛️", description: "Frontend framework" };
+            { name: "Python", icon: "🐍", description: "AI/ML backend" };
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" };
+            { name: "Redis", icon: "🔴", description: "Caching layer" };
+            { name: "TensorFlow", icon: "🧠", description: "ML framework" };
+            { name: "AWS", icon: "☁️", description: "Cloud platform" };
+            { name: "Docker", icon: "🐳", description: "Containerization" };
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" };
+            { name: "Stripe", icon: "💳", description: "Payment processing" };
+            { name: "Plaid", icon: "🏦", description: "Banking integration" };
+            { name: "MongoDB", icon: "🍃", description: "Document store" };
+            { name: "Grafana", icon: "📊", description: "Monitoring" }
+          ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
               <div className="text-2xl mb-2">{tech.icon}</div>,
               <h3 className="font-semibold text-gray-90o0 mb-1">{tech.name}</h3>,
               <p className="text-xs text-gray-60o0">{tech.description}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </section>,
       {/* Security & Compliance */}
@@ -241,45 +226,43 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
-          <SecurityFeature,
+          <SecurityFeature
             icon="🔒",
             title="SOC 2 Type II",
             description="Certified security controls and processes",
            />,
-          <SecurityFeature,
+          <SecurityFeature
             icon="🛡️",
             title="256-bit SSL Encryption",
             description="End-to-end data encryption",
            />,
-          <SecurityFeature,
+          <SecurityFeature
             icon="📋",
             title="GDPR Compliant",
             description="Full data protection compliance",
            />,
-          <SecurityFeature,
+          <SecurityFeature
             icon="✅",
             title="PCI DSS Level 1",
             description="Highest payment security standard",
            />,
         </div>,
       </section>,
-      {/* Contact CTA */,}
+      {/* Contact CTA */}
       <section className="py-12 bg-blue-60o0 rounded-lg text-white text-center">,
         <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Analysis?</h2>,
         <p className="text-xl mb-8 max-w-2xl mx-auto">,
           Join 20o0+ financial professionals using our AI platform to make smarter investment decisions.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Platform Demo",
-            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-          >,
+            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
             Get Free Analysis,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-          >,
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
@@ -288,79 +271,70 @@ export default function AIFinancialAnalyticsPage() {,
           <p>Email: kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-function FeatureCard({ icon, title, description, benefits }: {,
-  title: 'AI Financial Analytics Platform | Zion Tech Group',;
-  description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment insights. Make data-driven financial decisions with 95% accuracy predictions.',;
-  keywords: 'AI financial analytics, financial forecasting, investment analysis, risk assessment, financial planning, portfolio optimization',
-};
-,
-interface FeatureCardProps {,
+function FeatureCard({ icon, title, description, benefits }: {
+  title: 'AI Financial Analytics Platform | Zion Tech Group';
+  description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment insights. Make data-driven financial decisions with 95% accuracy predictions.';
+  keywords: 'AI financial analytics, financial forecasting, investment analysis, risk assessment, financial planning, portfolio optimization'};
+interface FeatureCardProps {
   icon: string,
   title: string,
   description: string,
   benefits: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
-      <div className="text-4xl mb-4">{icon,}</div>,
-}
+      <div className="text-4xl mb-4">{icon}</div>}
 ,
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {,
-  return (,
+function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
-      <div className="text-3xl mb-4">{icon,}</div>,
+      <div className="text-3xl mb-4">{icon}</div>,
       <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <ul className="space-y-2">,
-        {benefits.map((benefit, index) => (,
+        {benefits.map((benefit, index) => (
           <li key={index} className="text-sm text-gray-60o0 flex items-center">,
             <span className="w-1.5 h-1.5 bg-blue-50o0 rounded-full mr-2"></span>,
             {benefit}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({ name, price, period, description, features, popular }: {,
+function PricingCard({ name, price, period, description, features, popular }: {
   name: string,
   price: string,
   period: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
+}) {
+  return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'} shadow-lg`}>,
-function PricingTier({,
-  name,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular = false,
-}: {,
-  name: string, ,
-  price: string, ,
-  period: string, ,
-  description: string, ,
-  features: string[], ,
-  popular?: boolean, ,
-,}) {,
-  return (,
+function PricingTier({
+  name;
+  price;
+  period;
+  description;
+  features;
+  popular = false}: {
+  name: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular?: boolean,
+}) {
+  return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
-      {popular && (,
+      {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
           <span className="bg-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold">,
             Most Popular,
           </span>,
-        </div>,
-      )}
+        </div>)}
       <div className="text-center mb-6">,
         <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h3>,
         <div className="text-4xl font-bold text-blue-60o0 mb-2">,
@@ -370,37 +344,34 @@ function PricingTier({,
         <p className="text-gray-60o0">{description}</p>,
       </div>,
       <ul className="space-y-3 mb-8">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="flex items-center">,
             <svg className="w-5 h-5 text-green-50o0 mr-3" fill="currentColor" viewBox="0 0 20 20">,
               <path fillRule="evenodd" d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z" clipRule="evenodd"  />,
             </svg>,
             <span className="text-gray-70o0">{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
-        href="mailto: kleber@ziontechgroup.com?subject=AI Financial Analytics - {name,} Plan",
-        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${,
+      <a
+        href="mailto: kleber@ziontechgroup.com?subject=AI Financial Analytics - {name} Plan",
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
             : 'bg-gray-90o0 text-white hover:bg-gray-80o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function CaseStudy({ company, industry, result, description, metrics }: {,
+function CaseStudy({ company, industry, result, description, metrics }: {
   company: string,
   industry: string,
   result: string,
   description: string,
   metrics: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0">,
       <div className="flex items-center justify-between mb-4">,
         <h3 className="text-xl font-semibold text-gray-90o0">{company}</h3>,
@@ -410,33 +381,30 @@ function CaseStudy({ company, industry, result, description, metrics }: {,
       <div className="space-y-2">,
         <div className="text-sm">,
           <span className="font-semibold text-green-60o0">Result: </span>,
-          <span className="text-gray-70o0">{result,}</span>,
+          <span className="text-gray-70o0">{result}</span>,
         </div>,
         <div className="space-y-1">,
-          {metrics.map((metric, index) => (,
+          {metrics.map((metric, index) => (
             <div key={index} className="text-sm text-gray-60o0 flex items-center">,
               <span className="w-1.5 h-1.5 bg-green-50o0 rounded-full mr-2"></span>,
               {metric}
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function SecurityFeature({ icon, title, description }: {,
+function SecurityFeature({ icon, title, description }: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-20o0">,
       <div className="text-4xl mb-4">{icon}</div>,
       <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0">{description}</p>,
-export default function AIFinancialAnalyticsPage() {,
-  return (,
+export default function AIFinancialAnalyticsPage() {
+  return (
     <div className="space-y-16">,
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-10o0 rounded-lg">,
@@ -448,21 +416,19 @@ export default function AIFinancialAnalyticsPage() {,
           Achieve 95% accuracy in financial predictions and optimize your investment strategies with intelligent insights.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Demo",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Request Demo,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
       </section>,
-      {/* Key Features */,}
+      {/* Key Features */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Advanced AI Financial Intelligence</h2>,
@@ -471,77 +437,71 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          <FeatureCard,
+          <FeatureCard
             icon="📈",
             title="Predictive Financial Modeling",
             description="Advanced machine learning models that forecast revenue, expenses, and cash flow with 95% accuracy.",
-            benefits={[,
-              "Revenue forecasting",;
-              "Expense prediction",;
-              "Cash flow analysis",;
-              "Scenario modeling",;
-              "Risk-adjusted projections",
-            ]}
+            benefits={[
+              "Revenue forecasting";
+              "Expense prediction";
+              "Cash flow analysis";
+              "Scenario modeling";
+              "Risk-adjusted projections"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🎯",
             title="Investment Optimization",
             description="AI-driven portfolio optimization and investment recommendations based on risk tolerance and market conditions.",
-            benefits={[,
-              "Portfolio optimization",;
-              "Risk assessment",;
-              "Asset allocation",;
-              "Rebalancing alerts",;
-              "Performance tracking",
-            ]}
+            benefits={[
+              "Portfolio optimization";
+              "Risk assessment";
+              "Asset allocation";
+              "Rebalancing alerts";
+              "Performance tracking"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🔍",
             title="Risk Assessment & Management",
             description="Comprehensive risk analysis including market risk, credit risk, and operational risk with mitigation strategies.",
-            benefits={[,
-              "Market risk analysis",;
-              "Credit risk assessment",;
-              "Operational risk monitoring",;
-              "Stress testing",;
-              "Risk mitigation strategies",
-            ]}
+            benefits={[
+              "Market risk analysis";
+              "Credit risk assessment";
+              "Operational risk monitoring";
+              "Stress testing";
+              "Risk mitigation strategies"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="📊",
             title="Real-time Market Analysis",
             description="Continuous monitoring of market conditions, news sentiment, and economic indicators for informed decisions.",
-            benefits={[,
-              "Market sentiment analysis",;
-              "News impact assessment",;
-              "Economic indicator tracking",;
-              "Real-time alerts",;
-              "Trend identification",
-            ]}
+            benefits={[
+              "Market sentiment analysis";
+              "News impact assessment";
+              "Economic indicator tracking";
+              "Real-time alerts";
+              "Trend identification"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="🤖",
             title="Automated Reporting",
             description="AI-generated financial reports, insights, and recommendations tailored to your specific needs and goals.",
-            benefits={[,
-              "Custom report generation",;
-              "Automated insights",;
-              "Executive summaries",;
-              "Compliance reporting",;
-              "Performance dashboards",
-            ]}
+            benefits={[
+              "Custom report generation";
+              "Automated insights";
+              "Executive summaries";
+              "Compliance reporting";
+              "Performance dashboards"]}
            />,
-          <FeatureCard,
+          <FeatureCard
             icon="💡",
             title="Smart Recommendations",
             description="Personalized financial advice and recommendations based on your financial goals, risk profile, and market conditions.",
-            benefits={[,
-              "Personalized advice",;
-              "Goal-based planning",;
-              "Action recommendations",;
-              "Opportunity identification",;
-              "Strategy optimization",
-            ]}
+            benefits={[
+              "Personalized advice";
+              "Goal-based planning";
+              "Action recommendations";
+              "Opportunity identification";
+              "Strategy optimization"]}
            />,
         </div>,
       </section>,
@@ -576,7 +536,7 @@ export default function AIFinancialAnalyticsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Perfect For</h2>,
@@ -675,7 +635,7 @@ export default function AIFinancialAnalyticsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Pricing */,}
+      {/* Pricing */}
       <section className="py-12">,
         <div className="text-center mb-12">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Pricing Plans</h2>,
@@ -684,50 +644,47 @@ export default function AIFinancialAnalyticsPage() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
-          <PricingTier,
+          <PricingTier
             name="Professional",
             price="$299",
             period="month",
             description="Perfect for individual financial advisors and small firms",
-            features={[,
-              "Up to 5 users",;
-              "Basic AI analytics",;
-              "Portfolio optimization",;
-              "Risk assessment",;
-              "Standard reporting",;
-              "Email support",
-            ]}
+            features={[
+              "Up to 5 users";
+              "Basic AI analytics";
+              "Portfolio optimization";
+              "Risk assessment";
+              "Standard reporting";
+              "Email support"]}
            />,
-          <PricingTier,
+          <PricingTier
             name="Enterprise",
             price="$799",
             period="month",
             description="Most popular for mid-size financial institutions",
-            features={[,
-              "Up to 25 users",;
-              "Advanced AI models",;
-              "Custom analytics",;
-              "Real-time data feeds",;
-              "API access",;
-              "Priority support",;
-              "Custom integrations",
-            ]}
+            features={[
+              "Up to 25 users";
+              "Advanced AI models";
+              "Custom analytics";
+              "Real-time data feeds";
+              "API access";
+              "Priority support";
+              "Custom integrations"]}
             popular={true}
            />,
-          <PricingTier,
+          <PricingTier
             name="Institutional",
             price="$1,999",
             period="month",
             description="For large financial institutions and corporations",
-            features={[,
-              "Unlimited users",;
-              "Custom AI development",;
-              "White-label options",;
-              "Dedicated support",;
-              "On-premise deployment",;
-              "Advanced security",;
-              "Custom compliance",
-            ]}
+            features={[
+              "Unlimited users";
+              "Custom AI development";
+              "White-label options";
+              "Dedicated support";
+              "On-premise deployment";
+              "Advanced security";
+              "Custom compliance"]}
            />,
         </div>,
       </section>,
@@ -738,16 +695,14 @@ export default function AIFinancialAnalyticsPage() {,
           Join leading financial institutions already using our AI-powered analytics platform to make smarter, data-driven decisions.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Inquiry",
-            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-          >,
+            className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
             Start Free Trial,
           </a>,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-          >,
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
         </div>,
@@ -756,7 +711,5 @@ export default function AIFinancialAnalyticsPage() {,
           <p>📧 kleber@ziontechgroup.com</p>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 }})))

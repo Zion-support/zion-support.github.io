@@ -1,9 +1,7 @@
-export function BulkAddSkills() {,
-  return (,
+export function BulkAddSkills() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

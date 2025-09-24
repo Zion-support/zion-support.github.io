@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function TransportationLogisticsSolutions() {,
-  return (,
+export default function TransportationLogisticsSolutions() {
+  return (
     <>,
       <Head>,
         <title>Transportation & Logistics Solutions | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='AI and optimization solutions for transportation and logistics: routing, supply chain, and real-time visibility.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/transportation-logistics-solutions',
         />,
@@ -25,7 +24,5 @@ export default function TransportationLogisticsSolutions() {,
           </p>,
         </section>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

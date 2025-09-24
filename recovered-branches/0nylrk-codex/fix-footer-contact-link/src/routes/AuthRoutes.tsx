@@ -8,9 +8,8 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import Onboarding from '@/pages/Onboarding',
 import TalentOnboarding from '@/pages/TalentOnboarding',
 import ServiceOnboarding from '@/pages/ServiceOnboarding',
-,
-const AuthRoutes = () => {,
-  return (,
+const AuthRoutes = () => {
+  return (
     <Routes>,
       {/* Auth Routes */}
       <Route path='/login' element={<Login />} />,
@@ -18,33 +17,26 @@ const AuthRoutes = () => {,
       <Route path='/forgot-password' element={<ForgotPassword />} />,
       <Route path='/update-password' element={<UpdatePassword />} />,
       {/* Onboarding Routes */}
-      <Route,
+      <Route
         path='/onboarding',
-        element={,
+        element={
           <ProtectedRoute>,
             <Onboarding />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/talent-onboarding',
-        element={,
+        element={
           <ProtectedRoute>,
             <TalentOnboarding />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/service-onboarding',
-        element={,
+        element={
           <ProtectedRoute>,
             <ServiceOnboarding />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-,
-export default AuthRoutes,
-,
+    </Routes>)};
+export default AuthRoutes;

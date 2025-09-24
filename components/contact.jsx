@@ -1,37 +1,33 @@
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-function Contact() {,
-  const [formData, setFormData] = useState({,
-    name: '',;
-    email: '',;
-    company: '',;
-    service: '',;
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: '';
+    email: '';
+    company: '';
+    service: '';
     message: '',
-  ,}),
+  }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState(null),
-  const handleChange = (e) => {,
-    setFormData({,
-      ...formData,;
-      [e.target.name]: e.target.value,
-    }),
-  }
+  const handleChange = (e) => {
+    setFormData({
+      ...formData;
+      [e.target.name]: e.target.value})}
 ,
-  const handleSubmit = async (e) => {,
+  const handleSubmit = async (e) => {
     e.preventDefault(),
     setIsSubmitting(true),
     // Simulate form submission,
-    setTimeout(() => {,
+    setTimeout(() => {
       setIsSubmitting(false),
       setSubmitStatus('success'),
-      setFormData({ name: '', email: '', company: '', service: '', message: '' ,}),
+      setFormData({ name: '', email: '', company: '', service: '', message: '' }),
       // Reset status after 5 seconds,
-      setTimeout(() => setSubmitStatus(null), 50o00),
-    }, 20o00),
-  }
+      setTimeout(() => setSubmitStatus(null), 50o00)}, 20o00)}
 ,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Contact Us — Zion Tech Group</title>,
@@ -39,7 +35,7 @@ function Contact() {,
         <meta property="og: title" content="Contact Us — Zion Tech Group"  />,
         <meta property="og:description" content="Ready to transform your business? Get in touch with our team to discuss your IT and AI service needs."  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-blue-50 via-white to-purple-50">,
         <div className="container-max text-center">,
           <div className="animate-fade-in-up">,
@@ -57,25 +53,24 @@ function Contact() {,
       <section className="section-padding bg-white">,
         <div className="container-max">,
           <div className="grid lg: grid-cols-2 gap-12">,
-            {/* Contact Form */,}
+            {/* Contact Form */}
             <div className="animate-fade-in-left">,
               <div className="card p-8">,
                 <h2 className="text-2xl font-bold text-gray-90o0 mb-6">Send us a Message</h2>,
-                {submitStatus === 'success' && (,
+                {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-green-10o0 border border-green-40o0 text-green-70o0 rounded-lg">,
                     <div className="flex items-center">,
                       <span className="text-green-50o0 mr-2">✓</span>,
                       Thank you for your message! We will get back to you soon.,
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <form onSubmit={handleSubmit} className="space-y-6">,
                   <div>,
                     <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                       Full Name *,
                     </label>,
-                    <input,
+                    <input
                       type="text",
                       name="name",
                       value={formData.name}
@@ -89,10 +84,10 @@ function Contact() {,
                     <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                       Email Address *,
                     </label>,
-                    <input,
+                    <input
                       type="email",
                       name="email",
-                      value={formData.email,}
+                      value={formData.email}
                       onChange={handleChange}
                       required,
                       className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-all duration-20o0",
@@ -103,10 +98,10 @@ function Contact() {,
                     <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                       Company,
                     </label>,
-                    <input,
+                    <input
                       type="text",
                       name="company",
-                      value={formData.company,}
+                      value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-all duration-20o0",
                       placeholder="Enter your company name",
@@ -116,12 +111,11 @@ function Contact() {,
                     <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                       Service Interest,
                     </label>,
-                    <select,
+                    <select
                       name="service",
-                      value={formData.service,}
+                      value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-all duration-20o0",
-                    >,
+                      className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent transition-all duration-20o0">,
                       <option value="">Select a service</option>,
                       <option value="ai-solutions">AI Solutions</option>,
                       <option value="cloud-infrastructure">Cloud Infrastructure</option>,
@@ -136,9 +130,9 @@ function Contact() {,
                     <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                       Message *,
                     </label>,
-                    <textarea,
+                    <textarea
                       name="message",
-                      value={formData.message,}
+                      value={formData.message}
                       onChange={handleChange}
                       required,
                       rows="5",
@@ -146,19 +140,16 @@ function Contact() {,
                       placeholder="Tell us about your project or requirements...",
                      />,
                   </div>,
-                  <button,
+                  <button
                     type="submit",
-                    disabled={isSubmitting,}
-                    className="w-full btn-primary flex items-center justify-center",
-                  >,
-                    {isSubmitting ? (,
+                    disabled={isSubmitting}
+                    className="w-full btn-primary flex items-center justify-center">,
+                    {isSubmitting ? (
                       <>,
                         <div className="loading-spinner mr-2"></div>,
                         Sending...,
-                      </>,
-                    ) : (,
-                      'Send Message',
-                    )}
+                      </>) : (
+                      'Send Message')}
                   </button>,
                 </form>,
               </div>,
@@ -246,34 +237,29 @@ function Contact() {,
             </p>,
           </div>,
           <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">,
-            {[,
-              {,
-                question: "How quickly can you start a project?",;
+            {[
+              {
+                question: "How quickly can you start a project?";
                 answer: "We can typically begin new projects within 1-2 weeks after the initial consultation and project planning phase.",
-              ,},;
-              {,
-                question: "Do you provide ongoing support?",;
-                answer: "Yes, we offer comprehensive ongoing support and maintenance services to ensure optimal performance of your solutions.",
-              },;
-              {,
-                question: "What industries do you serve?",;
-                answer: "We serve clients across various industries including healthcare, finance, e-commerce, manufacturing, and technology.",
-              },;
-              {,
-                question: "Can you work with our existing systems?",;
+              };
+              {
+                question: "Do you provide ongoing support?";
+                answer: "Yes, we offer comprehensive ongoing support and maintenance services to ensure optimal performance of your solutions."};
+              {
+                question: "What industries do you serve?";
+                answer: "We serve clients across various industries including healthcare, finance, e-commerce, manufacturing, and technology."};
+              {
+                question: "Can you work with our existing systems?";
                 answer: "Absolutely! We specialize in integrating new solutions with existing systems and infrastructure.",
-              ,}
-            ].map((faq, index) => (,
-              <div key={index} className="card p-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.1,}s` }}>,
+              }
+            ].map((faq, index) => (
+              <div key={index} className="card p-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>,
                 <h3 className="text-lg font-semibold text-gray-90o0 mb-3">{faq.question}</h3>,
                 <p className="text-gray-60o0">{faq.answer}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}
 ,
-export default Contact,
+export default Contact;

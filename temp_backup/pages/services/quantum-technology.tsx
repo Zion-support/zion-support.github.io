@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumTechnologyPage() {,
-  return (,
+export default function QuantumTechnologyPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Technology - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumTechnologyPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,125 +1,122 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
-  MessageSquare,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Rocket,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  FileText,;
-  Image,;
-  Video,;
-  Music,;
-  Palette,;
-  Type,;
-  User,;
-  Search,;
-  Eye,;
-  Heart,;
-  ShoppingCart,;
-  Code,;
-  Database,;
-  Globe,;
-  Shield,;
-  Cpu,;
-  Users2,;
-  Award,;
-  CheckCircle,;
-  Target,;
-  BarChart3,;
-  TrendingUp,;
-  Lock,;
-  Server,;
-  Network,;
-  Monitor,;
-  Settings,;
-  RefreshCw,;
-  Play,;
-  Pause,;
-  AlertTriangle,;
-  CheckCircle2,;
-  Building,;
-  Wifi,;
-  HardDrive,;
-  Cloud,;
-  Smartphone,;
-  Link,;
-  Blocks,;
-  Wallet,;
-  CreditCard,;
-  PiggyBank,;
-  Building2,;
-  Activity,;
-  Waves,;
-  Zap,;
-  BrainCircuit,;
-  CpuIcon,;
-  MonitorHeart,;
-  Film,;
-  Headphones,;
-  Camera,;
-  Gamepad2,;
-  Tv,;
-  Radio,;
+import {
+  Brain;
+  Zap;
+  Target;
+  BarChart3;
+  Users;
+  TrendingUp;
+  MessageSquare;
+  Mail;
+  Phone;
+  MapPin;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Rocket;
+  Globe;
+  Shield;
+  Cpu;
+  FileText;
+  Image;
+  Video;
+  Music;
+  Palette;
+  Type;
+  User;
+  Search;
+  Eye;
+  Heart;
+  ShoppingCart;
+  Code;
+  Database;
+  Globe;
+  Shield;
+  Cpu;
+  Users2;
+  Award;
+  CheckCircle;
+  Target;
+  BarChart3;
+  TrendingUp;
+  Lock;
+  Server;
+  Network;
+  Monitor;
+  Settings;
+  RefreshCw;
+  Play;
+  Pause;
+  AlertTriangle;
+  CheckCircle2;
+  Building;
+  Wifi;
+  HardDrive;
+  Cloud;
+  Smartphone;
+  Link;
+  Blocks;
+  Wallet;
+  CreditCard;
+  PiggyBank;
+  Building2;
+  Activity;
+  Waves;
+  Zap;
+  BrainCircuit;
+  CpuIcon;
+  MonitorHeart;
+  Film;
+  Headphones;
+  Camera;
+  Gamepad2;
+  Tv;
+  Radio;
 } from 'lucide-react',
-,
-export const metadata: Metadata = {,
-  title: 'Entertainment Media Solutions | Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'Entertainment Media Solutions | Zion Tech Group';
   description:,
-    'Comprehensive entertainment and media technology solutions for modern digital experiences.',;
+    'Comprehensive entertainment and media technology solutions for modern digital experiences.';
   keywords:,
-    'entertainment media, digital media, streaming solutions, content creation, media technology',;
-  openGraph: {,
-    title: 'Entertainment Media Solutions | Zion Tech Group',;
+    'entertainment media, digital media, streaming solutions, content creation, media technology';
+  openGraph: {
+    title: 'Entertainment Media Solutions | Zion Tech Group';
     description:,
-      'Comprehensive entertainment and media technology solutions for modern digital experiences.',;
-    url: 'https://ziontechgroup.com/entertainment-media-solutions',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-entertainment-media.jpg',;
-        width: 1200,;
-        height: 630,;
-        alt: 'Entertainment Media Solutions',;
-      },;
-    ],;
-    locale: 'en_US',;
-    type: 'website',;
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Entertainment Media Solutions | Zion Tech Group',;
+      'Comprehensive entertainment and media technology solutions for modern digital experiences.';
+    url: 'https://ziontechgroup.com/entertainment-media-solutions';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-entertainment-media.jpg';
+        width: 1200;
+        height: 630;
+        alt: 'Entertainment Media Solutions';
+      };
+    ];
+    locale: 'en_US';
+    type: 'website';
+  };
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Entertainment Media Solutions | Zion Tech Group';
     description:,
-      'Comprehensive entertainment and media technology solutions for modern digital experiences.',;
-    images: ['https://ziontechgroup.com/og-image-entertainment-media.jpg'],;
-  },;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/entertainment-media-solutions',;
-  },;
+      'Comprehensive entertainment and media technology solutions for modern digital experiences.';
+    images: ['https://ziontechgroup.com/og-image-entertainment-media.jpg'];
+  };
+  alternates: {
+    canonical: 'https://ziontechgroup.com/entertainment-media-solutions';
+  };
 };
-,
-const contactInfo = {,
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-export default function EntertainmentMediaSolutions() {,
-  return (,
+export default function EntertainmentMediaSolutions() {
+  return (
     <div className='min-h-screen bg-black text-white'>,
       {/* Hero Section */}
       <section className='relative py-20 lg: py-32 overflow-hidden'>,
@@ -139,28 +136,25 @@ export default function EntertainmentMediaSolutions() {,
               and seamless content delivery.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>,
                 Get Started,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='#features',
-                className='inline-flex items-center px-8 py-4 border border-violet-500/30 rounded-xl font-semibold text-violet-300 hover:bg-violet-500/10 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-8 py-4 border border-violet-500/30 rounded-xl font-semibold text-violet-300 hover:bg-violet-500/10 transition-all duration-300'>,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
-      <section,
+      {/* Features Section */}
+      <section
         id='features',
-        className='py-20 bg-gradient-to-b from-black to-gray-900',
-      >,
+        className='py-20 bg-gradient-to-b from-black to-gray-900'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
             <h2 className='text-3xl lg:text-4xl font-bold mb-4'>,
@@ -238,7 +232,7 @@ export default function EntertainmentMediaSolutions() {,
               </h3>,
               <p className='text-gray-400'>,
                 Comprehensive analytics for audience engagement and content,
-                performance.,
+                window.performance.,
               </p>,
             </div>,
           </div>,
@@ -350,7 +344,7 @@ export default function EntertainmentMediaSolutions() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -410,7 +404,7 @@ export default function EntertainmentMediaSolutions() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases Section */,}
+      {/* Use Cases Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -497,24 +491,22 @@ export default function EntertainmentMediaSolutions() {,
             creativity.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>,
               Start Your Project,
               <ArrowRight className='ml-2 w-5 h-5' />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className='inline-flex items-center px-8 py-4 border border-violet-500/30 rounded-xl font-semibold text-violet-300 hover: bg-violet-500/10 transition-all duration-300',
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='inline-flex items-center px-8 py-4 border border-violet-500/30 rounded-xl font-semibold text-violet-300 hover: bg-violet-500/10 transition-all duration-300'>,
               <Phone className='mr-2 w-5 h-5' />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>,
@@ -527,20 +519,18 @@ export default function EntertainmentMediaSolutions() {,
               <div className='space-y-4'>,
                 <div className='flex items-center space-x-3'>,
                   <Phone className='w-5 h-5 text-violet-400' />,
-                  <a,
-                    href={`tel:${contactInfo.mobile,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.mobile,}
+                  <a
+                    href={`tel:${contactInfo.mobile}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
                   <Mail className='w-5 h-5 text-violet-400' />,
-                  <a,
-                    href={`mailto: ${contactInfo.email,}`}
-                    className='text-gray-300 hover: text-white transition-colors',
-                  >,
-                    {contactInfo.email,}
+                  <a
+                    href={`mailto: ${contactInfo.email}`}
+                    className='text-gray-300 hover: text-white transition-colors'>,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className='flex items-center space-x-3'>,
@@ -557,10 +547,9 @@ export default function EntertainmentMediaSolutions() {,
                 Let's discuss your entertainment media needs. Schedule a,
                 consultation with our team today.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover: from-violet-700 hover:to-purple-700 transition-all duration-300',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-violet-600 to-purple-600 rounded-xl font-semibold text-white hover: from-violet-700 hover:to-purple-700 transition-all duration-300'>,
                 Schedule Consultation,
                 <ArrowRight className='ml-2 w-4 h-4' />,
               </Link>,
@@ -568,7 +557,6 @@ export default function EntertainmentMediaSolutions() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

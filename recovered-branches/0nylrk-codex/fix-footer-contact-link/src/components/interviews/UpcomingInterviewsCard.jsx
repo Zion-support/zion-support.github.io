@@ -6,14 +6,14 @@ import { format, isPast, parseISO } from "date-fns",
 import { Link } from 'react-router-dom',
 import { Calendar, Clock, Video } from "lucide-react",
 import { Avatar } from "@/components/ui/avatar",
-export function UpcomingInterviewsCard() {,
+export function UpcomingInterviewsCard() {
     const { fetchInterviews } = useInterviews(),
     const [upcomingInterviews, setUpcomingInterviews] = useState([]),
     const [isLoading, setIsLoading] = useState(true),
-    useEffect(() => {,
-        const loadInterviews = async () => {,
+    useEffect(() => {
+        const loadInterviews = async () => {
             setIsLoading(true),
-            try {,
+            try {
                 const interviews = await fetchInterviews(),
                 // Filter for confirmed interviews in the future,
                 const upcoming = interviews,
@@ -21,18 +21,14 @@ export function UpcomingInterviewsCard() {,
                     !isPast(parseISO(interview.scheduled_date))),
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()),
                     .slice(0, 3), // Take only the next 3 interviews,
-                setUpcomingInterviews(upcoming),
-            }
-            catch (error) {,
-                console.error("Error loading upcoming interviews:", error),
-            }
-            finally {,
-                setIsLoading(false),
-            }
+                setUpcomingInterviews(upcoming)}
+            catch (error) {
+                console.error("Error loading upcoming interviews:", error)}
+            finally {
+                setIsLoading(false)}
         };
-        loadInterviews(),
-    }, []),
-    if (isLoading) {,
+        loadInterviews()}, []),
+    if (isLoading) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">,
         <CardHeader>,
           <CardTitle className="text-lg flex items-center">,
@@ -51,9 +47,8 @@ export function UpcomingInterviewsCard() {,
               </div>))}
           </div>,
         </CardContent>,
-      </Card>),
-    }
-    if (upcomingInterviews.length === 0) {,
+      </Card>)}
+    if (upcomingInterviews.length === 0) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">,
         <CardHeader>,
           <CardTitle className="text-lg flex items-center">,
@@ -70,8 +65,7 @@ export function UpcomingInterviewsCard() {,
             </Button>,
           </div>,
         </CardContent>,
-      </Card>),
-    }
+      </Card>)}
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">,
       <CardHeader>,
         <CardTitle className="text-lg flex items-center">,
@@ -81,7 +75,7 @@ export function UpcomingInterviewsCard() {,
       </CardHeader>,
       <CardContent>,
         <div className="space-y-4">,
-          {upcomingInterviews.map(interview => {,
+          {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -89,7 +83,7 @@ export function UpcomingInterviewsCard() {,
             const now = new Date(),
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 10o00 &&,
                 interviewDate.getTime() > now.getTime(),
-            return (<div key={interview.id,} className="flex items-center gap-3">,
+            return (<div key={interview.id} className="flex items-center gap-3">,
                 <Avatar className="h-10 w-10 bg-zion-purple/10">,
                   {interview.client_avatar || interview.talent_avatar ? (<img loading="lazy" src={interview.client_avatar || interview.talent_avatar} alt={interview.client_name || interview.talent_name} />) : (<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">,
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -109,8 +103,7 @@ export function UpcomingInterviewsCard() {,
                     {formattedDate} at {formattedTime}
                   </div>,
                 </div>,
-              </div>),
-        })}
+              </div>)})}
         </div>,
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">,
           <Button asChild size="sm" variant="outline" className="w-full">,
@@ -120,6 +113,5 @@ export function UpcomingInterviewsCard() {,
           </Button>,
         </div>,
       </CardContent>,
-    </Card>),
-}
+    </Card>)}
 ,

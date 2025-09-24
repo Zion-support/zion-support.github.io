@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function [topic]Page() {,
-  return (,
+export default function [topic]Page() {
+  return (
     <>,
       <Head>,
         <title>[Topic] - Zion Tech Group</title>,
@@ -16,6 +15,5 @@ export default function [topic]Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

@@ -1,4 +1,4 @@
-const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{', "loading": () => <p>Loading...</p,>}) "export": 'default ContactFormEnhanced' ,',
+const ContactFormEnhanced = dynamic(() => import("./ContactFormEnhanced"),{', "loading": () => <p>Loading...</p>}) "export": 'default ContactFormEnhanced' ,',
 </p>',
 </p>',
 </p>',

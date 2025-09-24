@@ -1,80 +1,65 @@
 import React, { useState, useEffect } from 'react',
-import {,
-  gitService,;
-  GitStatus,;
-  GitBranch,;
-  GitRemote,;
-  GitCommit,;
+import {
+  gitService;
+  GitStatus;
+  GitBranch;
+  GitRemote;
+  GitCommit;
 } from '../../services/gitService',
-,
-interface RepositoryInfo {,
+interface RepositoryInfo {
   name: string,
   remote: string,
   status: 'clean' | 'dirty' | 'ahead' | 'behind' | 'diverged',
-,}
+}
 ,
-const ChangesTab = () => {,
+const ChangesTab = () => {
   const [gitStatus, setGitStatus] = useState<GitStatus | null>(null),
   const [branches, setBranches] = useState<GitBranch[]>([]),
   const [remotes, setRemotes] = useState<GitRemote[]>([]),
   const [commitHistory, setCommitHistory] = useState<GitCommit[]>([]),
-  const [repositoryInfo, setRepositoryInfo] = useState<RepositoryInfo | null>(,
-    null,
-  ),
+  const [repositoryInfo, setRepositoryInfo] = useState<RepositoryInfo | null>(
+    null),
   const [isLoading, setIsLoading] = useState(true),
   const [activeTab, setActiveTab] = useState<,
-    'changes' | 'history' | 'branches' | 'remotes',
-  >('changes'),
+    'changes' | 'history' | 'branches' | 'remotes'>('changes'),
   const [commitMessage, setCommitMessage] = useState(''),
   const [showCommitModal, setShowCommitModal] = useState(false),
-,
-  useEffect(() => {,
-    const fetchGitData = async () => {,
+  useEffect(() => {
+    const fetchGitData = async () => {
       setIsLoading(true),
-      try {,
+      try {
         const [status, branchesData, remotesData, commitsData] =,
-          await Promise.all([,
-            gitService.getStatus(),;
-            gitService.getBranches(),;
-            gitService.getRemotes(),;
-            gitService.getCommitHistory(10),;
+          await Promise.all([
+            gitService.getStatus();
+            gitService.getBranches();
+            gitService.getRemotes();
+            gitService.getCommitHistory(10);
           ]),
-,
         setGitStatus(status),
         setBranches(branchesData),
         setRemotes(remotesData),
         setCommitHistory(commitsData),
-,
         // Determine repository status,
         let repoStatus: RepositoryInfo['status'] = 'clean',
-        if (status.ahead > 0 && status.behind > 0) {,
+        if (status.ahead > 0 && status.behind > 0) {
           repoStatus = 'diverged',
-        ,} else if (status.ahead > 0) {,
-          repoStatus = 'ahead',
-        } else if (status.behind > 0) {,
-          repoStatus = 'behind',
-        } else if (!status.isClean) {,
-          repoStatus = 'dirty',
-        }
+        } else if (status.ahead > 0) {
+          repoStatus = 'ahead'} else if (status.behind > 0) {
+          repoStatus = 'behind'} else if (!status.isClean) {
+          repoStatus = 'dirty'}
 ,
-        setRepositoryInfo({,
-          name: 'zion.app',;
-          remote: 'origin',;
-          status: repoStatus,;
-        }),
-      } catch (error) {,
+        setRepositoryInfo({
+          name: 'zion.app';
+          remote: 'origin';
+          status: repoStatus;
+        })} catch (error) {
         // Handle error silently or implement proper error handling,
-        console.warn('Failed to fetch Git data:', error),
-      } finally {,
-        setIsLoading(false),
-      }
+        console.warn('Failed to fetch Git data:', error)} finally {
+        setIsLoading(false)}
     };
-,
-    fetchGitData(),
-  }, []),
-,
-  const getStatusColor = (status: RepositoryInfo['status']) => {,
-    switch (status) {,
+    fetchGitData()}, []),
+  const getStatusColor = (status: RepositoryInfo['status']) => {
+    switch (status) {
       case 'clean':,
         return 'text-green-40o0',
       case 'dirty':,
@@ -87,11 +72,10 @@ const ChangesTab = () => {,
         return 'text-red-40o0',
       default:,
         return 'text-gray-40o0',
-    ,}
+    }
   };
-,
-  const getStatusIcon = (status: RepositoryInfo['status']) => {,
-    switch (status) {,
+  const getStatusIcon = (status: RepositoryInfo['status']) => {
+    switch (status) {
       case 'clean':,
         return '✅',
       case 'dirty':,
@@ -104,84 +88,68 @@ const ChangesTab = () => {,
         return '🔄',
       default:,
         return '❓',
-    ,}
+    }
   };
-,
-  const handleStageFile = async (filePath: string) => {,
-    try {,
+  const handleStageFile = async (filePath: string) => {
+    try {
       await gitService.stageFile(filePath),
       // Refresh data,
       const newStatus = await gitService.getStatus(),
       setGitStatus(newStatus),
-    ,} catch (error) {,
+    } catch (error) {
       // Handle error silently or implement proper error handling,
-      console.warn('Failed to stage file:', error),
-    }
+      console.warn('Failed to stage file:', error)}
   };
-,
-  const handleUnstageFile = async (filePath: string) => {,
-    try {,
+  const handleUnstageFile = async (filePath: string) => {
+    try {
       await gitService.unstageFile(filePath),
       // Refresh data,
       const newStatus = await gitService.getStatus(),
       setGitStatus(newStatus),
-    ,} catch (error) {,
+    } catch (error) {
       // Handle error silently or implement proper error handling,
-      console.warn('Failed to unstage file:', error),
-    }
+      console.warn('Failed to unstage file:', error)}
   };
-,
-  const handleCommitChanges = async () => {,
+  const handleCommitChanges = async () => {
     if (!commitMessage.trim()) return,
-,
-    try {,
+    try {
       await gitService.commitChanges(commitMessage),
       setCommitMessage(''),
       setShowCommitModal(false),
-,
       // Refresh data,
-      const [newStatus, newCommits] = await Promise.all([,
-        gitService.getStatus(),;
-        gitService.getCommitHistory(10),;
+      const [newStatus, newCommits] = await Promise.all([
+        gitService.getStatus();
+        gitService.getCommitHistory(10);
       ]),
       setGitStatus(newStatus),
-      setCommitHistory(newCommits),
-    } catch (error) {,
+      setCommitHistory(newCommits)} catch (error) {
       // Handle error silently or implement proper error handling,
-      console.warn('Failed to commit changes:', error),
-    }
+      console.warn('Failed to commit changes:', error)}
   };
-,
-  const handlePushChanges = async () => {,
-    try {,
+  const handlePushChanges = async () => {
+    try {
       await gitService.pushToRemote(),
       // Refresh data,
       const newStatus = await gitService.getStatus(),
-      setGitStatus(newStatus),
-    } catch (error) {,
+      setGitStatus(newStatus)} catch (error) {
       // Handle error silently or implement proper error handling,
-      console.warn('Failed to push changes:', error),
-    }
+      console.warn('Failed to push changes:', error)}
   };
-,
-  const handlePullChanges = async () => {,
-    try {,
+  const handlePullChanges = async () => {
+    try {
       await gitService.pullFromRemote(),
       // Refresh data,
-      const [newStatus, newBranches] = await Promise.all([,
-        gitService.getStatus(),;
-        gitService.getBranches(),;
+      const [newStatus, newBranches] = await Promise.all([
+        gitService.getStatus();
+        gitService.getBranches();
       ]),
       setGitStatus(newStatus),
-      setBranches(newBranches),
-    } catch (error) {,
+      setBranches(newBranches)} catch (error) {
       // Handle error silently or implement proper error handling,
-      console.warn('Failed to pull changes:', error),
-    }
+      console.warn('Failed to pull changes:', error)}
   };
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='min-h-screen bg-gray-90o0 text-white p-8'>,
         <div className='max-w-6xl mx-auto'>,
           <div className='animate-pulse'>,
@@ -190,11 +158,9 @@ const ChangesTab = () => {,
             <div className='h-32 bg-gray-80o0 rounded'></div>,
           </div>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className='min-h-screen bg-gray-90o0 text-white p-8'>,
       <div className='max-w-6xl mx-auto'>,
         {/* Header */}
@@ -204,10 +170,10 @@ const ChangesTab = () => {,
           </h1>,
           <div className='flex items-center space-x-4 text-sm'>,
             <span className='text-gray-40o0'>Repository: </span>,
-            <span className='text-white font-mono'>{repositoryInfo?.name,}</span>,
+            <span className='text-white font-mono'>{repositoryInfo?.name}</span>,
             <span className='text-gray-40o0'>Branch: </span>,
-            <span className='text-white font-mono'>{gitStatus?.branch,}</span>,
-            <span,
+            <span className='text-white font-mono'>{gitStatus?.branch}</span>,
+            <span
               className={`flex items-center space-x-2 ${getStatusColor(repositoryInfo?.status || 'clean')}`}
             >,
               <span>{getStatusIcon(repositoryInfo?.status || 'clean')}</span>,
@@ -217,33 +183,30 @@ const ChangesTab = () => {,
         </div>,
         {/* Navigation Tabs */}
         <div className='flex space-x-1 mb-6 bg-gray-80o0 p-1 rounded-lg'>,
-          {[,
-            { id: 'changes', label: 'Changes', icon: '📝' ,},;
-            { id: 'history', label: 'History', icon: '📚' ,},;
-            { id: 'branches', label: 'Branches', icon: '🌿' ,},;
-            { id: 'remotes', label: 'Remotes', icon: '🌐' ,},;
-          ].map(tab => (,
-            <button,
+          {[
+            { id: 'changes', label: 'Changes', icon: '📝' };
+            { id: 'history', label: 'History', icon: '📚' };
+            { id: 'branches', label: 'Branches', icon: '🌿' };
+            { id: 'remotes', label: 'Remotes', icon: '🌐' };
+          ].map(tab => (
+            <button
               key={tab.id}
               onClick={() =>,
-                setActiveTab(,
-                  tab.id as 'changes' | 'history' | 'branches' | 'remotes',
-                ),
-              }
-              className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-all duration-20o0 ${,
+                setActiveTab(
+                  tab.id as 'changes' | 'history' | 'branches' | 'remotes')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-all duration-20o0 ${
                 activeTab === tab.id,
                   ? 'bg-blue-60o0 text-white shadow-lg',
                   : 'text-gray-40o0 hover: text-white hover:bg-gray-70o0',
-              ,}`}
+              }`}
             >,
               <span>{tab.icon}</span>,
               <span>{tab.label}</span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Tab Content */}
         <div className='bg-gray-80o0 rounded-lg p-6 border border-gray-70o0'>,
-          {activeTab === 'changes' && (,
+          {activeTab === 'changes' && (
             <div className='space-y-6'>,
               {/* Repository Status */}
               <div className='bg-gray-70o0 rounded-lg p-4'>,
@@ -255,156 +218,138 @@ const ChangesTab = () => {,
                     <span className='text-green-40o0'>●</span>,
                     <span className='text-gray-40o0'>Staged:</span>,
                     <span className='text-white'>,
-                      {gitStatus?.staged.length || 0,} files,
+                      {gitStatus?.staged.length || 0} files,
                     </span>,
                   </div>,
                   <div className='flex items-center space-x-2'>,
                     <span className='text-yellow-40o0'>●</span>,
                     <span className='text-gray-40o0'>Modified: </span>,
                     <span className='text-white'>,
-                      {gitStatus?.unstaged.length || 0,} files,
+                      {gitStatus?.unstaged.length || 0} files,
                     </span>,
                   </div>,
                   <div className='flex items-center space-x-2'>,
                     <span className='text-red-40o0'>●</span>,
                     <span className='text-gray-40o0'>Untracked: </span>,
                     <span className='text-white'>,
-                      {gitStatus?.untracked.length || 0,} files,
+                      {gitStatus?.untracked.length || 0} files,
                     </span>,
                   </div>,
                 </div>,
-                {gitStatus?.ahead && gitStatus.ahead > 0 && (,
+                {gitStatus?.ahead && gitStatus.ahead > 0 && (
                   <div className='mt-3 text-blue-40o0 text-sm'>,
                     ⬆️ {gitStatus.ahead} commits ahead of origin/,
                     {gitStatus.branch}
-                  </div>,
-                )}
+                  </div>)}
               </div>,
               {/* Staged Changes */}
-              {gitStatus?.staged.length > 0 && (,
+              {gitStatus?.staged.length > 0 && (
                 <div className='bg-gray-70o0 rounded-lg p-4'>,
                   <h3 className='text-lg font-semibold mb-3 text-green-40o0'>,
                     Staged Changes,
                   </h3>,
                   <div className='space-y-2'>,
-                    {gitStatus.staged.map((file, index) => (,
-                      <div,
+                    {gitStatus.staged.map((file, index) => (
+                      <div
                         key={index}
-                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2',
-                      >,
+                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2'>,
                         <span className='text-white font-mono text-sm'>,
                           {file.path}
                         </span>,
-                        <button,
+                        <button
                           onClick={() => handleUnstageFile(file.path)}
-                          className='text-red-40o0 hover: text-red-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors',
-                        >,
+                          className='text-red-40o0 hover: text-red-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors'>,
                           Unstage,
                         </button>,
-                      </div>,
-                    )),}
+                      </div>))}
                   </div>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Unstaged Changes */}
-              {gitStatus?.unstaged.length > 0 && (,
+              {gitStatus?.unstaged.length > 0 && (
                 <div className='bg-gray-70o0 rounded-lg p-4'>,
                   <h3 className='text-lg font-semibold mb-3 text-yellow-40o0'>,
                     Modified Files,
                   </h3>,
                   <div className='space-y-2'>,
-                    {gitStatus.unstaged.map((file, index) => (,
-                      <div,
+                    {gitStatus.unstaged.map((file, index) => (
+                      <div
                         key={index}
-                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2',
-                      >,
+                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2'>,
                         <span className='text-white font-mono text-sm'>,
                           {file.path}
                         </span>,
                         <div className='flex space-x-2'>,
-                          <button,
+                          <button
                             onClick={() => handleStageFile(file.path)}
-                            className='text-green-40o0 hover: text-green-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors',
-                          >,
+                            className='text-green-40o0 hover: text-green-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors'>,
                             Stage,
                           </button>,
                           <button className='text-blue-40o0 hover:text-blue-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors'>,
                             View Diff,
                           </button>,
                         </div>,
-                      </div>,
-                    )),}
+                      </div>))}
                   </div>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Untracked Files */}
-              {gitStatus?.untracked.length > 0 && (,
+              {gitStatus?.untracked.length > 0 && (
                 <div className='bg-gray-70o0 rounded-lg p-4'>,
                   <h3 className='text-lg font-semibold mb-3 text-red-40o0'>,
                     Untracked Files,
                   </h3>,
                   <div className='space-y-2'>,
-                    {gitStatus.untracked.map((file, index) => (,
-                      <div,
+                    {gitStatus.untracked.map((file, index) => (
+                      <div
                         key={index}
-                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2',
-                      >,
+                        className='flex items-center justify-between bg-gray-60o0 rounded px-3 py-2'>,
                         <span className='text-white font-mono text-sm'>,
                           {file.path}
                         </span>,
-                        <button,
+                        <button
                           onClick={() => handleStageFile(file.path)}
-                          className='text-green-40o0 hover: text-green-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors',
-                        >,
+                          className='text-green-40o0 hover: text-green-30o0 text-sm px-2 py-1 rounded hover:bg-gray-50o0 transition-colors'>,
                           Add,
                         </button>,
-                      </div>,
-                    )),}
+                      </div>))}
                   </div>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Actions */}
               <div className='flex space-x-4 pt-4 border-t border-gray-60o0'>,
-                <button,
+                <button
                   onClick={() => setShowCommitModal(true)}
                   disabled={!gitStatus?.staged.length}
-                  className='px-6 py-3 bg-green-60o0 hover: bg-green-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors',
-                >,
+                  className='px-6 py-3 bg-green-60o0 hover: bg-green-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors'>,
                   Commit Changes,
                 </button>,
-                <button,
-                  onClick={handlePushChanges,}
+                <button
+                  onClick={handlePushChanges}
                   disabled={!gitStatus?.ahead}
-                  className='px-6 py-3 bg-blue-60o0 hover: bg-blue-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors',
-                >,
+                  className='px-6 py-3 bg-blue-60o0 hover: bg-blue-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors'>,
                   Push to Origin,
                 </button>,
-                <button,
-                  onClick={handlePullChanges,}
+                <button
+                  onClick={handlePullChanges}
                   disabled={!gitStatus?.behind}
-                  className='px-6 py-3 bg-gray-60o0 hover: bg-gray-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors',
-                >,
+                  className='px-6 py-3 bg-gray-60o0 hover: bg-gray-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors'>,
                   Pull from Origin,
                 </button>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
 ,
-          {activeTab === 'history' && (,
+          {activeTab === 'history' && (
             <div className='space-y-4'>,
               <h3 className='text-lg font-semibold mb-3 text-blue-40o0'>,
                 Recent Commits,
               </h3>,
               <div className='bg-gray-70o0 rounded-lg p-4'>,
                 <div className='space-y-3'>,
-                  {commitHistory.map(commit => (,
-                    <div,
+                  {commitHistory.map(commit => (
+                    <div
                       key={commit.hash}
-                      className='flex items-start space-x-3 p-3 bg-gray-60o0 rounded',
-                    >,
+                      className='flex items-start space-x-3 p-3 bg-gray-60o0 rounded'>,
                       <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2'></div>,
                       <div className='flex-1'>,
                         <div className='text-white font-semibold'>,
@@ -416,95 +361,83 @@ const ChangesTab = () => {,
                         <div className='text-gray-50o0 font-mono text-xs mt-1'>,
                           {commit.hash}
                         </div>,
-                        {commit.files.length > 0 && (,
+                        {commit.files.length > 0 && (
                           <div className='text-gray-40o0 text-xs mt-2'>,
                             Files: {commit.files.join(', ')}
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
-            </div>,
-          )}
+            </div>)}
 ,
-          {activeTab === 'branches' && (,
+          {activeTab === 'branches' && (
             <div className='space-y-4'>,
               <h3 className='text-lg font-semibold mb-3 text-blue-40o0'>,
                 Branches,
               </h3>,
               <div className='bg-gray-70o0 rounded-lg p-4'>,
                 <div className='space-y-2'>,
-                  {branches.map(branch => (,
-                    <div,
+                  {branches.map(branch => (
+                    <div
                       key={branch.name}
-                      className={`flex items-center justify-between p-3 rounded ${,
+                      className={`flex items-center justify-between p-3 rounded ${
                         branch.isCurrent,
                           ? 'bg-blue-60o0/20 border border-blue-50o0/30',
-                          : 'bg-gray-60o0',
-                      }`}
+                          : 'bg-gray-60o0'}`}
                     >,
                       <div className='flex items-center space-x-2'>,
-                        <span,
-                          className={,
+                        <span
+                          className={
                             branch.isCurrent,
                               ? 'text-blue-40o0',
-                              : 'text-gray-40o0',
-                          }
+                              : 'text-gray-40o0'}
                         >,
                           {branch.isCurrent ? '●' : '○'}
                         </span>,
-                        <span,
+                        <span
                           className={`font-semibold ${branch.isCurrent ? 'text-white' : 'text-gray-30o0'}`}
                         >,
                           {branch.name}
                         </span>,
-                        {branch.isCurrent && (,
+                        {branch.isCurrent && (
                           <span className='text-blue-40o0 text-sm'>,
                             (current),
-                          </span>,
-                        )}
+                          </span>)}
                       </div>,
                       <div className='text-right'>,
-                        {branch.ahead > 0 && (,
+                        {branch.ahead > 0 && (
                           <div className='text-blue-40o0 text-sm'>,
                             ⬆️ {branch.ahead} ahead,
-                          </div>,
-                        )}
-                        {branch.behind > 0 && (,
+                          </div>)}
+                        {branch.behind > 0 && (
                           <div className='text-orange-40o0 text-sm'>,
                             ⬇️ {branch.behind} behind,
-                          </div>,
-                        )}
-                        {branch.ahead === 0 && branch.behind === 0 && (,
+                          </div>)}
+                        {branch.ahead === 0 && branch.behind === 0 && (
                           <div className='text-green-40o0 text-sm'>,
                             ✓ Up to date,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <button className='mt-4 px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 text-white font-semibold rounded transition-colors'>,
                   Create New Branch,
                 </button>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
 ,
-          {activeTab === 'remotes' && (,
+          {activeTab === 'remotes' && (
             <div className='space-y-4'>,
               <h3 className='text-lg font-semibold mb-3 text-blue-40o0'>,
                 Remote Repositories,
               </h3>,
               <div className='bg-gray-70o0 rounded-lg p-4'>,
                 <div className='space-y-3'>,
-                  {remotes.map(remote => (,
-                    <div,
+                  {remotes.map(remote => (
+                    <div
                       key={remote.name}
-                      className='flex items-center justify-between p-3 bg-gray-60o0 rounded',
-                    >,
+                      className='flex items-center justify-between p-3 bg-gray-60o0 rounded'>,
                       <div>,
                         <div className='text-white font-semibold'>,
                           {remote.name}
@@ -519,19 +452,17 @@ const ChangesTab = () => {,
                           {remote.type}
                         </div>,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <button className='mt-4 px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 text-white font-semibold rounded transition-colors'>,
                   Add Remote,
                 </button>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
       </div>,
       {/* Commit Modal */}
-      {showCommitModal && (,
+      {showCommitModal && (
         <div className='fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50'>,
           <div className='bg-gray-80o0 rounded-lg p-6 w-full max-w-md mx-4 border border-gray-70o0'>,
             <h3 className='text-xl font-semibold text-white mb-4'>,
@@ -542,7 +473,7 @@ const ChangesTab = () => {,
                 <label className='block text-sm font-medium text-gray-30o0 mb-2'>,
                   Commit Message,
                 </label>,
-                <textarea,
+                <textarea
                   value={commitMessage}
                   onChange={e => setCommitMessage(e.target.value)}
                   placeholder='Enter commit message...',
@@ -550,30 +481,23 @@ const ChangesTab = () => {,
                 />,
               </div>,
               <div className='flex space-x-3'>,
-                <button,
-                  onClick={handleCommitChanges,}
+                <button
+                  onClick={handleCommitChanges}
                   disabled={!commitMessage.trim()}
-                  className='flex-1 px-4 py-2 bg-green-60o0 hover: bg-green-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-md transition-colors',
-                >,
+                  className='flex-1 px-4 py-2 bg-green-60o0 hover: bg-green-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white font-semibold rounded-md transition-colors'>,
                   Commit,
                 </button>,
-                <button,
-                  onClick={() => {,
+                <button
+                  onClick={() => {
                     setShowCommitModal(false),
                     setCommitMessage(''),
-                  ,}}
-                  className='flex-1 px-4 py-2 bg-gray-60o0 hover: bg-gray-70o0 text-white font-semibold rounded-md transition-colors',
-                >,
+                  }}
+                  className='flex-1 px-4 py-2 bg-gray-60o0 hover: bg-gray-70o0 text-white font-semibold rounded-md transition-colors'>,
                   Cancel,
                 </button>,
               </div>,
             </div>,
           </div>,
-        </div>,
-      ),}
-    </div>,
-  ),
-};
-,
-export default ChangesTab,
-,
+        </div>)}
+    </div>)};
+export default ChangesTab;

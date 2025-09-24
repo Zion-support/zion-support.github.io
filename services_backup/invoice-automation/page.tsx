@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Invoice Automation | Zion Tech Group',;
+export const metadata = {
+  title: 'Invoice Automation | Zion Tech Group';
   description:,
-    'AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.',;
+    'AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.';
 };
-,
-export default function InvoiceAutomationPage() {,
-  return (,
+export default function InvoiceAutomationPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -24,27 +22,27 @@ export default function InvoiceAutomationPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='AI Invoice Processing',
               description='Automatically extract data from invoices using OCR and AI, supporting 50+ languages and various formats.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Automated Approval Workflows',
               description='Smart routing and approval workflows based on amount, vendor, and department with customizable rules.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Real-time Payment Processing',
               description='Integrated payment processing with multiple payment methods, automated reconciliation, and fraud detection.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Expense Management',
               description='Comprehensive expense tracking, categorization, and reporting with receipt scanning and mobile app support.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Financial Reporting',
               description='Advanced analytics and reporting with real-time dashboards, budget tracking, and predictive insights.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Integration Ecosystem',
               description='Seamless integration with QuickBooks, Xero, SAP, and 10o0+ accounting and ERP systems.',
             />,
@@ -55,43 +53,43 @@ export default function InvoiceAutomationPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$39/month',
               description='Perfect for small businesses and freelancers',
-              features={[,
-                'Up to 10o0 invoices per month',;
-                'Basic AI processing',;
-                'Email support',;
-                'Basic reporting',;
-                'Mobile app access',;
+              features={[
+                'Up to 10o0 invoices per month';
+                'Basic AI processing';
+                'Email support';
+                'Basic reporting';
+                'Mobile app access';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$99/month',
               description='Ideal for growing businesses',
-              features={[,
-                'Up to 1,0o00 invoices per month',;
-                'Advanced AI processing',;
-                'Priority support',;
-                'Advanced reporting',;
-                'Custom workflows',;
-                'API access',;
+              features={[
+                'Up to 1,0o00 invoices per month';
+                'Advanced AI processing';
+                'Priority support';
+                'Advanced reporting';
+                'Custom workflows';
+                'API access';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$299/month',
               description='For large organizations with complex needs',
-              features={[,
-                'Unlimited invoices',;
-                'Custom AI training',;
-                '24/7 dedicated support',;
-                'On-premise deployment',;
-                'Custom integrations',;
-                'SLA guarantees',;
-                'Advanced security',;
+              features={[
+                'Unlimited invoices';
+                'Custom AI training';
+                '24/7 dedicated support';
+                'On-premise deployment';
+                'Custom integrations';
+                'SLA guarantees';
+                'Advanced security';
               ]}
             />,
           </div>,
@@ -102,15 +100,15 @@ export default function InvoiceAutomationPage() {,
           Why Choose Our Invoice Automation?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='95% Time Savings',
             description='Automated invoice processing reduces manual work by 95%, freeing up your team for strategic tasks.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='99.5% Accuracy Rate',
             description='AI-powered data extraction achieves 99.5% accuracy, reducing errors and improving financial accuracy.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Real-time Insights',
             description='Get instant visibility into your financial data with real-time dashboards and predictive analytics.',
           />,
@@ -126,16 +124,14 @@ export default function InvoiceAutomationPage() {,
           insights.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -144,26 +140,23 @@ export default function InvoiceAutomationPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-orange-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -174,49 +167,42 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-orange-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-orange-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

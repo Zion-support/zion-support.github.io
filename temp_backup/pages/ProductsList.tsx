@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ProductsList() {,
-  return (,
+export default function ProductsList() {
+  return (
     <>,
       <Head>,
         <title>Products List - Zion App</title>,
@@ -18,7 +17,6 @@ export default function ProductsList() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Production Agent Telemetry: A 20o25 Deep Dive',;
+export const metadata = {
+  title: 'Production Agent Telemetry: A 20o25 Deep Dive';
   description:,
-    'A practical guide to unified tracing, eval signals, and guardrail events for operating agent fleets reliably.',;
+    'A practical guide to unified tracing, eval signals, and guardrail events for operating agent fleets reliably.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-20 pb-24'>,
         <h1 className='text-3xl font-bold tracking-tight text-white sm: text-4xl'>,
@@ -44,7 +42,6 @@ export default function Page() {,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

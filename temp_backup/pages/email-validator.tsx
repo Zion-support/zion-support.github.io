@@ -1,136 +1,131 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react',;
-export default function EmailValidatorPage() {,
-  const [emails, setEmails] = useState(''),;
-  const [validationResults, setValidationResults] = useState<any[]>([]),;
-  const [isValidating, setIsValidating] = useState(false),;
-  const [bulkMode, setBulkMode] = useState(false),;
-  const validateEmails = async () => {,
-    if (!emails.trim()) return,;
-    setIsValidating(true),;
-    setValidationResults([]),;
-    const emailList = emails.split('\n').filter(email => email.trim()),;
-    const results = [],;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
+export default function EmailValidatorPage() {
+  const [emails, setEmails] = useState('');
+  const [validationResults, setValidationResults] = useState<any[]>([]);
+  const [isValidating, setIsValidating] = useState(false);
+  const [bulkMode, setBulkMode] = useState(false);
+  const validateEmails = async () => {
+    if (!emails.trim()) return;
+    setIsValidating(true);
+    setValidationResults([]);
+    const emailList = emails.split('\n').filter(email => email.trim());
+    const results = [];
     // Simulate email validation with realistic results,
-    for (let i = 0, i < emailList.length, i++) {,
-      await new Promise(resolve => setTimeout(resolve, 20o0)),;
-      const email = emailList[i].trim(),;
-      const result = validateSingleEmail(email),;
+    for (let i = 0, i < emailList.length, i++) {
+      await new Promise(resolve => setTimeout(resolve, 20o0));
+      const email = emailList[i].trim();
+      const result = validateSingleEmail(email);
       results.push(result)}
 ,
-    setValidationResults(results),;
-    setIsValidating(false)},;
-  const validateSingleEmail = (email: string) => {,
+    setValidationResults(results);
+    setIsValidating(false)};
+  const validateSingleEmail = (email: string) => {
     // Basic email regex,
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Check for common disposable email domains,
-    const disposableDomains = [,
-      'tempmail.orgguerrillamail.com', 'mailinator.com10minutemail.com',;
-      'throwaway.emailtemp-mail.org', 'sharklasers.comgetairmail.com',
-    ],;
+    const disposableDomains = [
+      'tempmail.orgguerrillamail.com', 'mailinator.com10minutemail.com';
+      'throwaway.emailtemp-mail.org', 'sharklasers.comgetairmail.com'];
     // Check for common typos,
-    const commonTypos ={,
-      'gmail.com': ['gmial.comgamil.com', 'gmai.com'],;
-      'yahoo.com': ['yaho.comyahooo.com', 'yhaoo.com'],;
-      'hotmail.com': ['hotmai.comhotmial.com', 'hotmeil.com'],;
-      'outlook.com': ['outlok.comoutloook.com', 'outlok.com'],
-    },;
-    const domain = email.split('@')[1],;
-    const isDisposable = disposableDomains.includes(domain),;
+    const commonTypos ={
+      'gmail.com': ['gmial.comgamil.com', 'gmai.com'];
+      'yahoo.com': ['yaho.comyahooo.com', 'yhaoo.com'];
+      'hotmail.com': ['hotmai.comhotmial.com', 'hotmeil.com'];
+      'outlook.com': ['outlok.comoutloook.com', 'outlok.com']};
+    const domain = email.split('@')[1];
+    const isDisposable = disposableDomains.includes(domain);
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>,
-      typos.includes(domain),
-    ),;
-    let status = 'valid',;
-    let score = 10o0,;
-    let issues = [],;
-    if (!emailRegex.test(email)) {,
-      status = 'invalid',;
-      score = 0,;
-      issues.push('Invalid email format')} else if (isDisposable) {,
-      status = 'disposable',;
-      score = 20,;
-      issues.push('Disposable email domain')} else if (hasTypo) {,
-      status = 'suspicious',;
-      score = 60,;
+      typos.includes(domain));
+    let status = 'valid';
+    let score = 10o0;
+    let issues = [];
+    if (!emailRegex.test(email)) {
+      status = 'invalid';
+      score = 0;
+      issues.push('Invalid email format')} else if (isDisposable) {
+      status = 'disposable';
+      score = 20;
+      issues.push('Disposable email domain')} else if (hasTypo) {
+      status = 'suspicious';
+      score = 60;
       issues.push('Possible typo in domain')}
 ,
     // Additional checks,
-    if (email.length > 254) {,
-      status = 'invalid',;
-      score = 0,;
+    if (email.length > 254) {
+      status = 'invalid';
+      score = 0;
       issues.push('Email too long')}
 ,
-    if (email.split('@')[0].length > 64) {,
-      status = 'invalid',;
-      score = 0,;
+    if (email.split('@')[0].length > 64) {
+      status = 'invalid';
+      score = 0;
       issues.push('Local part too long')}
 ,
-    return {,
-      email,;
-      status,;
-      score,;
-      issues,;
-      domain,;
-      isDisposable,;
-      hasTypo,;
+    return {
+      email;
+      status;
+      score;
+      issues;
+      domain;
+      isDisposable;
+      hasTypo;
       timestamp: new Date().toLocaleTimeString(),
-    ,}},;
-  const getStatusIcon = (status: string) => {,
-    switch (status) {,
+    }};
+  const getStatusIcon = (status: string) => {
+    switch (status) {
       case 'valid':,
-        return <CheckCircle className="w-5 h-5 text-green-40o0"  />,;
+        return <CheckCircle className="w-5 h-5 text-green-40o0"  />;
       case 'suspicious':,
-        return <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />,;
+        return <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />;
       case 'disposable':,
-        return <XCircle className="w-5 h-5 text-orange-40o0"  />,;
+        return <XCircle className="w-5 h-5 text-orange-40o0"  />;
       case 'invalid':,
-        return <XCircle className="w-5 h-5 text-red-40o0"  />,;
+        return <XCircle className="w-5 h-5 text-red-40o0"  />;
       default: ,
         return <AlertTriangle className="w-5 h-5 text-gray-40o0"  />,
-    ,}
-  },;
-  const getStatusColor = (status: string) => {,
-    switch (status) {,
+    }
+  };
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'valid':,
-        return 'text-green-40o0',;
+        return 'text-green-40o0';
       case 'suspicious':,
-        return 'text-yellow-40o0',;
+        return 'text-yellow-40o0';
       case 'disposable':,
-        return 'text-orange-40o0',;
+        return 'text-orange-40o0';
       case 'invalid':,
-        return 'text-red-40o0',;
+        return 'text-red-40o0';
       default: ,
         return 'text-gray-40o0',
-    ,}
-  },;
-  const getScoreColor = (score: number) => {,
-    if (score >= 80) return 'text-green-40o0',;
-    if (score >= 60) return 'text-yellow-40o0',;
-    if (score >= 40) return 'text-orange-40o0',;
-    return 'text-red-40o0',
-  },;
-  const copyResults = () => {,
+    }
+  };
+  const getScoreColor = (score: number) => {
+    if (score >= 80) return 'text-green-40o0';
+    if (score >= 60) return 'text-yellow-40o0';
+    if (score >= 40) return 'text-orange-40o0';
+    return 'text-red-40o0'};
+  const copyResults = () => {
     const resultsText = validationResults.map(result =>,
-      `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score,})`,
-    ).join('\n'),;
-    navigator.clipboard.writeText(resultsText)},;
-  const clearResults = () => {,
-    setValidationResults([]),;
-    setEmails('')},;
-  const getStats = () => {,
-    if (validationResults.length === 0) return null,;
-    const total = validationResults.length,;
-    const valid = validationResults.filter(r => r.status === 'valid').length,;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length,;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length,;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length,;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,;
-    return { total, valid, invalid, suspicious, disposable, avgScore }},;
-  const stats = getStats(),;
-  return (,
+      `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`).join('\n');
+    navigator.clipboard.writeText(resultsText)};
+  const clearResults = () => {
+    setValidationResults([]);
+    setEmails('')};
+  const getStats = () => {
+    if (validationResults.length === 0) return null;
+    const total = validationResults.length;
+    const valid = validationResults.filter(r => r.status === 'valid').length;
+    const invalid = validationResults.filter(r => r.status === 'invalid').length;
+    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
+    const disposable = validationResults.filter(r => r.status === 'disposable').length;
+    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
+    return { total, valid, invalid, suspicious, disposable, avgScore }};
+  const stats = getStats();
+  return (
     <>,
       <Head>,
         <title>Email Validator - Zion Tech Group</title>,
@@ -138,7 +133,7 @@ export default function EmailValidatorPage() {,
         <meta property="og: title" content="Email Validator - Zion Tech Group"  />,
         <meta property="og:description" content="Advanced email validation service to ensure deliverability and prevent typos."  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-90o0 via-indigo-90o0 to-purple-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div className="mb-8">,
@@ -151,7 +146,7 @@ export default function EmailValidatorPage() {,
             Email Validator,
           </h1>,
           <p className="text-xl text-blue-20o0 max-w-4xl mx-auto leading-relaxed">,
-            Validate email addresses with our advanced validation service. Check for typos, disposable domains,;
+            Validate email addresses with our advanced validation service. Check for typos, disposable domains;
             and ensure maximum deliverability for your email campaigns and user registrations.,
           </p>,
         </div>,
@@ -168,7 +163,7 @@ export default function EmailValidatorPage() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-            {/* Input Form */,}
+            {/* Input Form */}
             <Card className="p-8 bg-gray-80o0 border border-gray-70o0">,
               <div className="flex items-center justify-between mb-6">,
                 <h3 className="text-2xl font-bold text-white flex items-center">,
@@ -177,7 +172,7 @@ export default function EmailValidatorPage() {,
                 </h3>,
                 <div className="flex items-center space-x-2">,
                   <label className="text-sm text-gray-30o0">Bulk Mode</label>,
-                  <input,
+                  <input
                     type="checkbox",
                     checked={bulkMode}
                     onChange={(e) => setBulkMode(e.target.checked)}
@@ -186,61 +181,54 @@ export default function EmailValidatorPage() {,
                 </div>,
               </div>,
               <div className="space-y-6">,
-                {bulkMode ? (,
+                {bulkMode ? (
                   <div>,
                     <label className="block text-sm font-medium text-gray-30o0 mb-2">,
                       Email Addresses (One per line),
                     </label>,
-                    <textarea,
-                      value={emails,}
+                    <textarea
+                      value={emails}
                       onChange={(e) => setEmails(e.target.value)}
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net",
                       rows={8}
                       className="w-full px-4 py-3 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent resize-none",
                     />,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div>,
                     <label className="block text-sm font-medium text-gray-30o0 mb-2">,
                       Email Address,
                     </label>,
-                    <input,
+                    <input
                       type="email",
-                      value={emails,}
+                      value={emails}
                       onChange={(e) => setEmails(e.target.value)}
                       placeholder="Enter email address to validate",
                       className="w-full px-4 py-3 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent",
                     />,
-                  </div>,
-                ),}
+                  </div>)}
 ,
                 <div className="flex space-x-3">,
-                  <Button,
+                  <Button
                     onClick={validateEmails}
                     disabled={!emails.trim() || isValidating}
-                    className="flex-1 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 hover: from-blue-70o0 hover:to-indigo-70o0 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed",
-                  >,
-                    {isValidating ? (,
+                    className="flex-1 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 hover: from-blue-70o0 hover:to-indigo-70o0 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed">,
+                    {isValidating ? (
                       <>,
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin"  />,
                         Validating...,
-                      </>,
-                    ) : (,
+                      </>) : (
                       <>,
                         <CheckCircle className="w-5 h-5 mr-2"  />,
                         Validate Emails,
-                      </>,
-                    ),}
+                      </>)}
                   </Button>,
-                  {validationResults.length > 0 && (,
-                    <Button,
+                  {validationResults.length > 0 && (
+                    <Button
                       onClick={clearResults}
                       variant="outline",
-                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                    >,
+                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                       Clear,
-                    </Button>,
-                  ),}
+                    </Button>)}
                 </div>,
                 <div className="text-sm text-gray-40o0">,
                   <p>• Validates email format and syntax</p>,
@@ -257,54 +245,50 @@ export default function EmailValidatorPage() {,
                   <BarChart3 className="w-6 h-6 mr-3 text-indigo-40o0"  />,
                   Validation Results,
                 </h3>,
-                {validationResults.length > 0 && (,
-                  <Button,
+                {validationResults.length > 0 && (
+                  <Button
                     onClick={copyResults}
                     variant="outline",
                     size="sm",
-                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                  >,
+                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                     <Copy className="w-4 h-4 mr-2"  />,
                     Copy Results,
-                  </Button>,
-                ),}
+                  </Button>)}
               </div>,
-              {stats && (,
+              {stats && (
                 <div className="mb-6 p-4 bg-gray-90o0 rounded-lg border border-gray-70o0">,
                   <div className="grid grid-cols-2 gap-4 text-sm">,
                     <div>,
                       <span className="text-gray-40o0">Total: </span>,
-                      <span className="ml-2 text-white font-medium">{stats.total,}</span>,
+                      <span className="ml-2 text-white font-medium">{stats.total}</span>,
                     </div>,
                     <div>,
                       <span className="text-gray-40o0">Valid: </span>,
-                      <span className="ml-2 text-green-40o0 font-medium">{stats.valid,}</span>,
+                      <span className="ml-2 text-green-40o0 font-medium">{stats.valid}</span>,
                     </div>,
                     <div>,
                       <span className="text-gray-40o0">Invalid: </span>,
-                      <span className="ml-2 text-red-40o0 font-medium">{stats.invalid,}</span>,
+                      <span className="ml-2 text-red-40o0 font-medium">{stats.invalid}</span>,
                     </div>,
                     <div>,
                       <span className="text-gray-40o0">Avg Score: </span>,
-                      <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore),}`}>,
+                      <span className={`ml-2 font-medium ${getScoreColor(stats.avgScore)}`}>,
                         {stats.avgScore.toFixed(0)}
                       </span>,
                     </div>,
                   </div>,
-                </div>,
-              )}
+                </div>)}
 ,
-              {validationResults.length > 0 ? (,
+              {validationResults.length > 0 ? (
                 <div className="space-y-3 max-h-96 overflow-y-auto">,
-                  {validationResults.map((result, index) => (,
-                    <div,
+                  {validationResults.map((result, index) => (
+                    <div
                       key={index}
-                      className={`p-4 rounded-lg border ${,
+                      className={`p-4 rounded-lg border ${
                         result.status === 'valid' ? 'border-green-50o0/30 bg-green-50o0/10' :,
                         result.status === 'suspicious' ? 'border-yellow-50o0/30 bg-yellow-50o0/10' :,
                         result.status === 'disposable' ? 'border-orange-50o0/30 bg-orange-50o0/10' :,
-                        'border-red-50o0/30 bg-red-50o0/10',
-                      }`}
+                        'border-red-50o0/30 bg-red-50o0/10'}`}
                     >,
                       <div className="flex items-center justify-between mb-2">,
                         <div className="flex items-center space-x-3">,
@@ -314,49 +298,42 @@ export default function EmailValidatorPage() {,
                           </span>,
                         </div>,
                         <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>,
-                          Score: {result.score,}
+                          Score: {result.score}
                         </span>,
                       </div>,
                       <div className="text-sm text-gray-30o0 mb-2">,
                         <span className="text-gray-40o0">Domain: </span>,
-                        <span className="ml-2">{result.domain,}</span>,
+                        <span className="ml-2">{result.domain}</span>,
                       </div>,
-                      {result.issues.length > 0 && (,
+                      {result.issues.length > 0 && (
                         <div className="text-sm">,
                           <span className="text-gray-40o0">Issues: </span>,
                           <ul className="mt-1 space-y-1">,
-                            {result.issues.map((issue: string, issueIndex: number) => (,
-                              <li key={issueIndex,} className="text-red-30o0 flex items-center">,
+                            {result.issues.map((issue: string, issueIndex: number) => (
+                              <li key={issueIndex} className="text-red-30o0 flex items-center">,
                                 <XCircle className="w-3 h-3 mr-2 flex-shrink-0"  />,
                                 {issue}
-                              </li>,
-                            ))}
+                              </li>))}
                           </ul>,
-                        </div>,
-                      )}
+                        </div>)}
 ,
-                      {result.isDisposable && (,
+                      {result.isDisposable && (
                         <div className="mt-2 p-2 bg-orange-50o0/20 border border-orange-50o0/30 rounded text-sm text-orange-30o0">,
                           ⚠️ Disposable email domain detected,
-                        </div>,
-                      )}
+                        </div>)}
 ,
-                      {result.hasTypo && (,
+                      {result.hasTypo && (
                         <div className="mt-2 p-2 bg-yellow-50o0/20 border border-yellow-50o0/30 rounded text-sm text-yellow-30o0">,
                           💡 Possible typo detected in domain,
-                        </div>,
-                      )}
-                    </div>,
-                  ))}
-                </div>,
-              ) : (,
+                        </div>)}
+                    </div>))}
+                </div>) : (
                 <div className="bg-gray-90o0 p-6 rounded-lg border border-gray-70o0 text-center">,
                   <div className="text-6xl mb-4">📧</div>,
                   <p className="text-gray-40o0">,
                     Validation results will appear here. Enter an email address and click validate to get started.,
                   </p>,
-                </div>,
-              )}
+                </div>)}
             </Card>,
           </div>,
         </div>,
@@ -491,25 +468,22 @@ export default function EmailValidatorPage() {,
             Join thousands of businesses who trust our email validation service to improve deliverability and user experience.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Button,
+            <Button
               href="/contact",
               size="lg",
-              className="bg-white text-blue-60o0 hover:bg-gray-10o0",
-            >,
+              className="bg-white text-blue-60o0 hover:bg-gray-10o0">,
               Get Started Today,
               <ArrowRight className="w-5 h-5 ml-2"  />,
             </Button>,
-            <Button,
+            <Button
               href="/pricing",
               variant="outline",
               size="lg",
-              className="border-white text-white hover:bg-white hover:text-blue-60o0",
-            >,
+              className="border-white text-white hover:bg-white hover:text-blue-60o0">,
               View Pricing,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>),
+}

@@ -3,150 +3,129 @@ import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react',
 import { format } from 'date-fns',
 import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys',
 import { Button } from '@/components/ui/button',
-import {,
+import {
 import { Input } from '@/components/ui/input',
 import { Checkbox } from '@/components/ui/checkbox',
 import { Label } from '@/components/ui/label',
 import { Badge } from '@/components/ui/badge',
 import CodeBlock from './CodeBlock',
-,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardFooter;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger,;
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger;
 } from '@/components/ui/dialog',
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger,;
+  Popover;
+  PopoverContent;
+  PopoverTrigger;
 } from '@/components/ui/popover',
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
 } from '@/components/ui/dropdown-menu',
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle,;
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle;
 } from '@/components/ui/alert-dialog',
 ,
-,
-export function ApiKeysManager() {,
-  const {,
-    keys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    clearNewApiKey,;
+export function ApiKeysManager() {
+  const {
+    keys;
+    loading;
+    newApiKey;
+    fetchApiKeys;
+    createApiKey;
+    regenerateApiKey;
+    revokeApiKey;
+    clearNewApiKey;
   } = useApiKeys(),
-,
   const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(,
-    null,
-  ),
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(
+    null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<,
-    string | null,
-  >(null),
-,
+    string | null>(null),
   // Create key form state,
   const [keyName, setKeyName] = useState(''),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-,
   // Load keys on mount,
-  useState(() => {,
-    fetchApiKeys(),
-  }),
-,
-  const handleCreateKey = async () => {,
+  useState(() => {
+    fetchApiKeys()}),
+  const handleCreateKey = async () => {
     if (keyName.trim() === '' || selectedScopes.length === 0) return,
-,
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(''),
-    setSelectedScopes([]),
-  };
-,
-  const handleRegenerateKey = async (keyId: string) => {,
+    setSelectedScopes([])};
+  const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null),
-  ,};
-,
-  const handleRevokeKey = async (keyId: string) => {,
+  };
+  const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId),
     setShowDeleteConfirm(null),
-  ,};
-,
+  };
   // Scope options,
-  const scopeOptions: {,
+  const scopeOptions: {
     value: ApiKeyScope,
     label: string,
     description: string,
-  ,}[] = [,
-    {,
-      value: 'jobs:read',;
-      label: 'Read Jobs',;
-      description: 'Access to view job listings',;
-    },;
-    {,
-      value: 'jobs:write',;
-      label: 'Write Jobs',;
-      description: 'Create and manage job listings',;
-    },;
-    {,
-      value: 'talent:read',;
-      label: 'Read Talent',;
-      description: 'Access to view talent profiles',;
-    },;
-    {,
-      value: 'quotes:write',;
-      label: 'Write Quotes',;
-      description: 'Create and manage quotes',;
-    },;
-    {,
-      value: 'webhooks:manage',;
-      label: 'Manage Webhooks',;
-      description: 'Set up and manage webhook endpoints',;
-    },;
+  }[] = [
+    {
+      value: 'jobs:read';
+      label: 'Read Jobs';
+      description: 'Access to view job listings';
+    };
+    {
+      value: 'jobs:write';
+      label: 'Write Jobs';
+      description: 'Create and manage job listings';
+    };
+    {
+      value: 'talent:read';
+      label: 'Read Talent';
+      description: 'Access to view talent profiles';
+    };
+    {
+      value: 'quotes:write';
+      label: 'Write Quotes';
+      description: 'Create and manage quotes';
+    };
+    {
+      value: 'webhooks:manage';
+      label: 'Manage Webhooks';
+      description: 'Set up and manage webhook endpoints';
+    };
   ],
-,
   // Toggle a scope selection,
-  const toggleScope = (scope: ApiKeyScope) => {,
+  const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev =>,
-      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope],
-    ),
-  };
-,
-  const getExampleCode = (key: string) => {,
+      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope])};
+  const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\,
-  -H "Authorization: Bearer ${key,}" \\,
+  -H "Authorization: Bearer ${key}" \\,
   -H "Content-Type: application/json"`,
-  ,};
-,
+  };
   // Reset form when dialog closes,
-  const handleDialogClose = () => {,
+  const handleDialogClose = () => {
     setKeyName(''),
     setSelectedScopes([]),
-    setShowCreateDialog(false),
-  };
-,
-  return (,
+    setShowCreateDialog(false)};
+  return (
     <Card className='bg-zinc-90o0 border-zinc-80o0 text-white'>,
       <CardHeader>,
         <CardTitle className='text-xl flex items-center'>,
@@ -175,7 +154,7 @@ export function ApiKeysManager() {,
               <div className='space-y-4 py-4'>,
                 <div className='space-y-2'>,
                   <Label htmlFor='key-name'>Key Name</Label>,
-                  <Input,
+                  <Input
                     id='key-name',
                     value={keyName}
                     onChange={e => setKeyName(e.target.value)}
@@ -186,27 +165,24 @@ export function ApiKeysManager() {,
                 <div className='space-y-2'>,
                   <Label>Scopes</Label>,
                   <div className='grid gap-2 pt-2'>,
-                    {scopeOptions.map(scope => (,
-                      <div,
+                    {scopeOptions.map(scope => (
+                      <div
                         key={scope.value}
-                        className='flex items-center space-x-2',
-                      >,
-                        <Checkbox,
+                        className='flex items-center space-x-2'>,
+                        <Checkbox
                           id={scope.value}
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />,
-                        <Label,
+                        <Label
                           htmlFor={scope.value}
-                          className='text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70',
-                        >,
-                          {scope.label,}
+                          className='text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70'>,
+                          {scope.label}
                           <span className='block text-xs text-zinc-40o0 mt-1'>,
                             {scope.description}
                           </span>,
                         </Label>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               </div>,
@@ -214,11 +190,10 @@ export function ApiKeysManager() {,
                 <Button variant='outline' onClick={handleDialogClose}>,
                   Cancel,
                 </Button>,
-                <Button,
+                <Button
                   onClick={handleCreateKey}
-                  disabled={,
-                    keyName.trim() === '' || selectedScopes.length === 0,
-                  }
+                  disabled={
+                    keyName.trim() === '' || selectedScopes.length === 0}
                 >,
                   Create Key,
                 </Button>,
@@ -227,14 +202,14 @@ export function ApiKeysManager() {,
           </Dialog>,
         </div>,
         {/* New API Key Alert */}
-        {newApiKey && (,
+        {newApiKey && (
           <div className='mb-6 p-4 border border-green-80o0 bg-green-90o0/30 rounded-md'>,
             <div className='flex justify-between items-start mb-2'>,
               <span className='font-medium flex items-center'>,
                 <Check size={16} className='mr-2 text-green-50o0' /> New API Key,
                 Generated,
               </span>,
-              <Button,
+              <Button
                 variant='ghost',
                 size='icon',
                 className='h-6 w-6',
@@ -250,30 +225,26 @@ export function ApiKeysManager() {,
             <div className='text-sm text-zinc-40o0'>,
               <span className='font-medium'>Example usage: </span>,
             </div>,
-            <CodeBlock code={getExampleCode(newApiKey),} language='bash' />,
-          </div>,
-        )}
+            <CodeBlock code={getExampleCode(newApiKey)} language='bash' />,
+          </div>)}
 ,
         {/* API Keys List */}
         <div className='space-y-4'>,
-          {loading ? (,
+          {loading ? (
             <div className='text-center py-8 text-zinc-50o0'>,
               Loading API keys...,
-            </div>,
-          ) : keys.length === 0 ? (,
+            </div>) : keys.length === 0 ? (
             <div className='text-center py-8 text-zinc-50o0'>,
               <Key className='mx-auto mb-2 opacity-30' size={24} />,
               <p>No API keys found.</p>,
               <p className='text-sm mt-1'>,
                 Create one to access the Zion APIs.,
               </p>,
-            </div>,
-          ) : (,
-            keys.map(key => (,
-              <div,
+            </div>) : (
+            keys.map(key => (
+              <div
                 key={key.id}
-                className='p-4 border border-zinc-80o0 rounded-lg',
-              >,
+                className='p-4 border border-zinc-80o0 rounded-lg'>,
                 <div className='flex items-center justify-between'>,
                   <div className='flex items-center'>,
                     <div>,
@@ -282,43 +253,38 @@ export function ApiKeysManager() {,
                         <span className='text-sm text-zinc-40o0 font-mono'>,
                           {key.key_prefix}••••••••••••,
                         </span>,
-                        {key.is_active ? (,
+                        {key.is_active ? (
                           <Badge className='bg-green-70o0 text-white'>,
                             Active,
-                          </Badge>,
-                        ) : (,
-                          <Badge,
+                          </Badge>) : (
+                          <Badge
                             variant='secondary',
-                            className='bg-red-90o0 text-white border-red-80o0',
-                          >,
+                            className='bg-red-90o0 text-white border-red-80o0'>,
                             Revoked,
-                          </Badge>,
-                        )}
+                          </Badge>)}
                       </div>,
                     </div>,
                   </div>,
                   <DropdownMenu>,
                     <DropdownMenuTrigger asChild>,
-                      <Button,
+                      <Button
                         variant='ghost',
                         size='icon',
-                        aria-label='More options',
-                      >,
+                        aria-label='More options'>,
                         <MoreVertical size={16} />,
                       </Button>,
                     </DropdownMenuTrigger>,
-                    <DropdownMenuContent,
+                    <DropdownMenuContent
                       align='end',
-                      className='bg-zinc-90o0 border-zinc-80o0 text-white',
-                    >,
-                      <DropdownMenuItem,
+                      className='bg-zinc-90o0 border-zinc-80o0 text-white'>,
+                      <DropdownMenuItem
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer',
                         disabled={!key.is_active}
                       >,
                         <RefreshCw size={14} className='mr-2' /> Regenerate,
                       </DropdownMenuItem>,
-                      <DropdownMenuItem,
+                      <DropdownMenuItem
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-50o0',
                         disabled={!key.is_active}
@@ -329,15 +295,13 @@ export function ApiKeysManager() {,
                   </DropdownMenu>,
                 </div>,
                 <div className='mt-3 flex flex-wrap gap-2'>,
-                  {key.scopes.map(scope => (,
-                    <Badge,
+                  {key.scopes.map(scope => (
+                    <Badge
                       key={scope}
                       variant='secondary',
-                      className='bg-zinc-80o0 text-zinc-30o0 hover: bg-zinc-80o0',
-                    >,
-                      {scope,}
-                    </Badge>,
-                  ))}
+                      className='bg-zinc-80o0 text-zinc-30o0 hover: bg-zinc-80o0'>,
+                      {scope}
+                    </Badge>))}
                 </div>,
                 <div className='mt-3 text-xs text-zinc-50o0 flex items-center space-x-4'>,
                   <span>,
@@ -345,8 +309,8 @@ export function ApiKeysManager() {,
                   </span>,
                   <Popover>,
                     <PopoverTrigger className='flex items-center hover: text-zinc-30o0'>,
-                      <Clock size={12,} className='mr-1' />,
-                      Last used: {' ',}
+                      <Clock size={12} className='mr-1' />,
+                      Last used: {' '}
                       {key.last_used_at,
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy'),
                         : 'Never'}
@@ -355,23 +319,19 @@ export function ApiKeysManager() {,
                       <p className='text-sm mb-1'>Last Used</p>,
                       <p className='text-xs text-zinc-40o0'>,
                         {key.last_used_at,
-                          ? format(,
-                              new Date(key.last_used_at),;
-                              'MMM d, yyyy HH: mm:ss',
-                            ),
-                          : 'This API key has never been used',}
+                          ? format(
+                              new Date(key.last_used_at);
+                              'MMM d, yyyy HH: mm:ss'),
+                          : 'This API key has never been used'}
                       </p>,
                     </PopoverContent>,
                   </Popover>,
-                  {key.expires_at && (,
+                  {key.expires_at && (
                     <span>,
                       Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
-              </div>,
-            )),
-          )}
+              </div>)))}
         </div>,
       </CardContent>,
       <CardFooter className='justify-between border-t border-zinc-80o0 py-4'>,
@@ -384,7 +344,7 @@ export function ApiKeysManager() {,
         </Button>,
       </CardFooter>,
       {/* Regenerate Key Confirmation Dialog */}
-      <AlertDialog,
+      <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
       >,
@@ -400,20 +360,19 @@ export function ApiKeysManager() {,
             <AlertDialogCancel className='bg-transparent text-white hover: bg-zinc-80o0 border-zinc-70o0'>,
               Cancel,
             </AlertDialogCancel>,
-            <AlertDialogAction,
+            <AlertDialogAction
               onClick={() =>,
                 showRegenerateConfirm &&,
                 handleRegenerateKey(showRegenerateConfirm),
-              ,}
-              className='bg-blue-60o0 hover: bg-blue-70o0',
-            >,
+              }
+              className='bg-blue-60o0 hover: bg-blue-70o0'>,
               Regenerate,
             </AlertDialogAction>,
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-      {/* Delete Key Confirmation Dialog */,}
-      <AlertDialog,
+      {/* Delete Key Confirmation Dialog */}
+      <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
       >,
@@ -429,18 +388,16 @@ export function ApiKeysManager() {,
             <AlertDialogCancel className='bg-transparent text-white hover: bg-zinc-80o0 border-zinc-70o0'>,
               Cancel,
             </AlertDialogCancel>,
-            <AlertDialogAction,
+            <AlertDialogAction
               onClick={() =>,
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm),
-              ,}
-              className='bg-red-60o0 hover: bg-red-70o0',
-            >,
+              }
+              className='bg-red-60o0 hover: bg-red-70o0'>,
               Revoke,
             </AlertDialogAction>,
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </Card>,
-  ),
-,}
+    </Card>),
+}
 ,

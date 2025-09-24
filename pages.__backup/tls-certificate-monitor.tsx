@@ -1,25 +1,21 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
 ShieldCheckPhoneMailMapPinExternalLinkLock,
-export default function TLSCertificateMonitorPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+export default function TLSCertificateMonitorPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  const features = [,
-    'Expiry alerts with safe lead windows',;
-    'Chain trust and intermediate CA checks',;
-    'OCSP stapling and revocation status',;
-    'HSTS and weak cipher detection',;
-    'SAN/hostname drift and redirect loops',;
-    'Slack/Email/PagerDuty alerts with runbooks',
-  ],
-,
-  return (,
+  };
+  const features = [
+    'Expiry alerts with safe lead windows';
+    'Chain trust and intermediate CA checks';
+    'OCSP stapling and revocation status';
+    'HSTS and weak cipher detection';
+    'SAN/hostname drift and redirect loops';
+    'Slack/Email/PagerDuty alerts with runbooks'],
+  return (
     <Layout>,
       <Head>,
         <title>TLS/SSL Certificate Monitor | Zion Tech Group</title>,
@@ -40,9 +36,8 @@ export default function TLSCertificateMonitorPage() {,
               <p className="text-gray-30o0 mb-6">Continuously monitor TLS/SSL certificates across your critical domains and services. Catch issues like expiring certsmissing intermediatesbroken OCSP staplingweak ciphersand HSTS misconfigurations before customers notice.</p>,
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>,
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-30o0">,
-                {features.map((f) => (,
-                  <li key={f,} className="flex items-start gap-2 w-4 h-4 text-emerald-40o0 mt-0.5"><Check  /> <span>{f}</span></li>,
-                ))}
+                {features.map((f) => (
+                  <li key={f} className="flex items-start gap-2 w-4 h-4 text-emerald-40o0 mt-0.5"><Check  /> <span>{f}</span></li>))}
               </ul>,
             </div>,
             <div className="p-6 bg-black/40 border border-gray-70o0/50 p-6 bg-black/40 border border-gray-70o0/50 rounded-lg backdrop-blur-sm">,
@@ -54,15 +49,13 @@ export default function TLSCertificateMonitorPage() {,
                 <a href="https://ziontechgroup.com/tls-certificate-monitor" className="flex-1 border border-gray-60o0 text-gray-20o0 w-4 h-4 mr-2"><ExternalLink  /> Learn More</a>,
               </div>,
               <div className="mt-6 space-y-3 text-sm">,
-                <div className="flex items-center gap-2 text-cyan-40o0 w-4 h-4 hover:underline"><Phone  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g''),}`} >{contactInfo.mobile}</a></div>,
-                <div className="flex items-center gap-2 text-purple-40o0 w-4 h-4 hover: underline"><Mail  /><a href={`mailto:${contactInfo.email,}`} >{contactInfo.email}</a></div>,
-                <div className="flex items-center gap-2 text-green-40o0 w-4 h-4 text-xs hover: underline"><MapPin  /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`} target="_blank" rel="noopener noreferrer" >{contactInfo.address}</a></div>,
+                <div className="flex items-center gap-2 text-cyan-40o0 w-4 h-4 hover:underline"><Phone  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g'')}`} >{contactInfo.mobile}</a></div>,
+                <div className="flex items-center gap-2 text-purple-40o0 w-4 h-4 hover: underline"><Mail  /><a href={`mailto:${contactInfo.email}`} >{contactInfo.email}</a></div>,
+                <div className="flex items-center gap-2 text-green-40o0 w-4 h-4 text-xs hover: underline"><MapPin  /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{contactInfo.address}</a></div>,
               </div>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

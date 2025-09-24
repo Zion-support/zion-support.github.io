@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'invoice-automation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'invoice-automation - Zion Tech Group';
   description:,
-    'Professional invoice-automation solutions for your business needs.',;
-  keywords: 'invoice-automation, services, business, technology',;
+    'Professional invoice-automation solutions for your business needs.';
+  keywords: 'invoice-automation, services, business, technology';
 };
-export default function InvoiceAutomationPage() {,
-  return (,
+export default function InvoiceAutomationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function InvoiceAutomationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

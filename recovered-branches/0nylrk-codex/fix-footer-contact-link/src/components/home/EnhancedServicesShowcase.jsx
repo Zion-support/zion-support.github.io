@@ -1,45 +1,44 @@
 import { Link } from 'react-router-dom',
 import { Button } from '@/components/ui/button',
-import {,
+import {
 import { Badge } from '@/components/ui/badge',
 import { ENHANCED_SERVICES } from '@/data/enhancedServices',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  Brain,;
-  Cloud,;
-  Shield,;
-  Database,;
-  TrendingUp,;
-  Code,;
-  Zap,;
-  Heart,;
-  DollarSign,;
-  Link as LinkIcon,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
+  Brain;
+  Cloud;
+  Shield;
+  Database;
+  TrendingUp;
+  Code;
+  Zap;
+  Heart;
+  DollarSign;
+  Link as LinkIcon;
+  ArrowRight;
+  Star;
+  CheckCircle;
 } from 'lucide-react',
-const featuredServices = ENHANCED_SERVICES.filter(,
-  service => service.featured,
-).slice(0, 6),
-const serviceIcons = {,
-  'AI Automation': Brain,;
-  'Cloud Management': Cloud,;
-  Cybersecurity: Shield,;
-  'Data Engineering': Database,;
-  'Business Intelligence': TrendingUp,;
-  'Developer Tools': Code,;
-  'Digital Transformation': Zap,;
-  'Healthcare Technology': Heart,;
-  'Financial Technology': DollarSign,;
-  Blockchain: LinkIcon,;
+const featuredServices = ENHANCED_SERVICES.filter(
+  service => service.featured).slice(0, 6),
+const serviceIcons = {
+  'AI Automation': Brain;
+  'Cloud Management': Cloud;
+  Cybersecurity: Shield;
+  'Data Engineering': Database;
+  'Business Intelligence': TrendingUp;
+  'Developer Tools': Code;
+  'Digital Transformation': Zap;
+  'Healthcare Technology': Heart;
+  'Financial Technology': DollarSign;
+  Blockchain: LinkIcon;
 };
-export function EnhancedServicesShowcase() {,
-  return (,
+export function EnhancedServicesShowcase() {
+  return (
     <section className='py-20 bg-zion-blue-dark'>,
       <div className='container mx-auto px-4'>,
         <div className='text-center mb-16'>,
@@ -54,13 +53,12 @@ export function EnhancedServicesShowcase() {,
         </div>,
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {featuredServices.map(service => {,
+          {featuredServices.map(service => {
             const IconComponent = serviceIcons[service.category] || Code,
-            return (,
-              <Card,
-                key={service.id,}
-                className='bg-zion-blue border-zion-blue-light hover: border-zion-purple/50 transition-all duration-30o0 hover:translate-y-[-5px]',
-              >,
+            return (
+              <Card
+                key={service.id}
+                className='bg-zion-blue border-zion-blue-light hover: border-zion-purple/50 transition-all duration-30o0 hover:translate-y-[-5px]'>,
                 <CardHeader>,
                   <div className='flex items-center justify-between mb-4'>,
                     <div className='w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center'>,
@@ -71,7 +69,7 @@ export function EnhancedServicesShowcase() {,
                     </Badge>,
                   </div>,
                   <CardTitle className='text-white text-xl mb-2'>,
-                    {service.title,}
+                    {service.title}
                   </CardTitle>,
                   <CardDescription className='text-zion-slate-light'>,
                     {service.description.substring(0, 120)}...,
@@ -99,27 +97,24 @@ export function EnhancedServicesShowcase() {,
                     </div>,
                   </div>,
                   <div className='flex flex-wrap gap-2 mb-4'>,
-                    {service.tags.slice(0, 3).map((tag, index) => (,
-                      <Badge,
+                    {service.tags.slice(0, 3).map((tag, index) => (
+                      <Badge
                         key={index}
                         variant='outline',
-                        className='text-xs border-zion-purple/30 text-zion-purple',
-                      >,
+                        className='text-xs border-zion-purple/30 text-zion-purple'>,
                         {tag}
-                      </Badge>,
-                    ))}
+                      </Badge>))}
                   </div>,
                   <div className='flex items-center justify-between'>,
                     <div className='flex items-center gap-2 text-sm text-zion-slate-light'>,
                       <TrendingUp className='w-4 h-4' />,
-                      AI Score: {service.aiScore,}
+                      AI Score: {service.aiScore}
                     </div>,
-                    <Button,
+                    <Button
                       size='sm',
                       variant='outline',
                       className='border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10',
-                      asChild,
-                    >,
+                      asChild>,
                       <Link to='/enhanced-services'>,
                         Learn More,
                         <ArrowRight className='w-4 h-4 ml-2' />,
@@ -127,9 +122,8 @@ export function EnhancedServicesShowcase() {,
                     </Button>,
                   </div>,
                 </CardContent>,
-              </Card>,
-            ),
-          ,})}
+              </Card>),
+          })}
         </div>,
         {/* Service Categories Overview */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>,
@@ -234,28 +228,25 @@ export function EnhancedServicesShowcase() {,
             organization,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Button,
+            <Button
               size='lg',
               className='bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light',
-              asChild,
-            >,
+              asChild>,
               <Link to='/enhanced-services'>,
                 View All Services,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Link>,
             </Button>,
-            <Button,
+            <Button
               size='lg',
               variant='outline',
               className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10',
-              asChild,
-            >,
+              asChild>,
               <Link to='/contact'>Get Free Consultation</Link>,
             </Button>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

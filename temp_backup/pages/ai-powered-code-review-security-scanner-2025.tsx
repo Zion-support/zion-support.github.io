@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function AiPoweredCodeReviewSecurityScanner20o25Page() {,
-  return (,
+export default function AiPoweredCodeReviewSecurityScanner20o25Page() {
+  return (
     <>,
       <Head>,
         <title>,
           Ai Powered Code Review Security Scanner 20o25 - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='ai powered code review security scanner 20o25 page',
         />,
@@ -23,7 +22,6 @@ export default function AiPoweredCodeReviewSecurityScanner20o25Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,9 +1,7 @@
-export function PromptCard() {,
-  return (,
+export function PromptCard() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

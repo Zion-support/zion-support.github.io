@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateBreakthroughAnnouncementBanner() {,
-  return (,
+export default function AI20o25UltimateBreakthroughAnnouncementBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
       {/* Animated background */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 animate-pulse'></div>,
       {/* Content */}
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-red-50o0/20 border border-red-50o0/30 mb-8 animate-bounce'>,
             <span className='text-red-40o0 font-bold text-sm uppercase tracking-wider'>,
               🚀 BREAKTHROUGH ANNOUNCEMENT,
@@ -18,11 +17,11 @@ export default function AI20o25UltimateBreakthroughAnnouncementBanner() {,
           <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
             AI 20o25 Ultimate Breakthrough,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl font-semibold mb-4 text-blue-20o0'>,
             Revolutionary Technology Delivering,
           </p>,
-          {/* ROI highlight */,}
+          {/* ROI highlight */}
           <div className='text-5xl md: text-7xl font-black mb-8 bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent animate-pulse'>,
             5,0o00% ROI,
           </div>,
@@ -32,7 +31,7 @@ export default function AI20o25UltimateBreakthroughAnnouncementBanner() {,
             intelligence quantum computing fusionand autonomous operations to,
             deliver unprecedented business transformation and ROI.,
           </p>,
-          {/* Key features */,}
+          {/* Key features */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
             <div className='bg-gradient-to-br from-purple-80o0/30 to-pink-80o0/30 p-6 rounded-xl border border-purple-50o0/30'>,
               <div className='text-3xl mb-3'>🧠</div>,
@@ -64,26 +63,23 @@ export default function AI20o25UltimateBreakthroughAnnouncementBanner() {,
           </div>,
           {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-breakthrough-announcement',
-              className='px-8 py-4 bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white font-bold text-lg rounded-lg hover:from-green-60o0 hover:to-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='px-8 py-4 bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white font-bold text-lg rounded-lg hover:from-green-60o0 hover:to-emerald-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Learn More,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-transformation-breakthrough',
-              className='px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-bold text-lg rounded-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white font-bold text-lg rounded-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               View Success Stories,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-8 py-4 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-bold text-lg rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='px-8 py-4 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white font-bold text-lg rounded-lg hover:from-blue-60o0 hover:to-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Get Started,
             </Link>,
           </div>,
-          {/* Trust indicators */,}
+          {/* Trust indicators */}
           <div className='mt-12 flex flex-col sm: flex-row items-center justify-center gap-8 text-sm text-gray-40o0'>,
             <div className='flex items-center gap-2'>,
               <span className='text-green-40o0'>✓</span>,
@@ -107,7 +103,5 @@ export default function AI20o25UltimateBreakthroughAnnouncementBanner() {,
         <div className='absolute bottom-20 left-20 w-24 h-24 bg-pink-50o0/10 rounded-full animate-ping delay-20o00'></div>,
         <div className='absolute bottom-10 right-10 w-12 h-12 bg-cyan-50o0/10 rounded-full animate-ping delay-30o00'></div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

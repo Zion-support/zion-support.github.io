@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function Page() {,
-  return (,
+import React from 'react';
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <p className='text-sm text-blue-40o0'>Launch</p>,
@@ -36,7 +35,5 @@ export default function Page() {,
           </ul>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,48 +1,40 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check, Star, ArrowRight, Phone, Mail, MapPin,;
-  Brain, Atom, Rocket, Target, Server, Building,;
-  Shield, Globe, Zap, TrendingUp, Users, Award,;
-  DollarSign, Clock, Users as UsersIcon, Shield as ShieldIcon,
-} from 'lucide-react',
-,
+import {
+  Check, Star, ArrowRight, Phone, Mail, MapPin;
+  Brain, Atom, Rocket, Target, Server, Building;
+  Shield, Globe, Zap, TrendingUp, Users, Award;
+  DollarSign, Clock, Users as UsersIcon, Shield as ShieldIcon} from 'lucide-react',
 // Import all our new services,
 import { advancedAIAutomationPlatforms20o25 } from '../data/20o25-advanced-ai-automation-platforms',
 import { innovativeITInfrastructureSolutions20o25 } from '../data/20o25-innovative-it-infrastructure-solutions',
 import { specializedMicroSaasSolutions20o25 } from '../data/20o25-specialized-micro-saas-solutions',
 import { emergingTechnologyServices20o25 } from '../data/20o25-emerging-technology-services',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
-const PricingCard = ({ service, index }: { service: any, index: number ,}) => {,
+};
+const PricingCard = ({ service, index }: { service: any, index: number }) => {
   const [isHovered, setIsHovered] = useState(false),
-,
-  return (,
+  return (
     <motion.div,
-      initial={{ opacity: 0, y: 20 ,}}
-      animate={{ opacity: 1, y: 0 ,}}
-      transition={{ duration: 0.5, delay: index * 0.1 ,}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 ${,
-        service.popular ? 'ring-2 ring-blue-50o0 scale-10o5' : '',
-      } ${isHovered ? 'scale-10o5' : ''}`}
-      style={{,
-        background: `linear-gradient(135deg, ${service.color})`,
-      }}
+      className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 ${
+        service.popular ? 'ring-2 ring-blue-50o0 scale-10o5' : ''} ${isHovered ? 'scale-10o5' : ''}`}
+      style={{
+        background: `linear-gradient(135deg, ${service.color})`}}
     >,
-      {service.popular && (,
+      {service.popular && (
         <div className="absolute -right-2 -top-2 bg-blue-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold">,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
 ,
       <div className="text-white">,
         <div className="text-4xl mb-4">{service.icon}</div>,
@@ -65,56 +57,51 @@ const PricingCard = ({ service, index }: { service: any, index: number ,}) => {,
         <div className="mb-6">,
           <h4 className="font-semibold mb-3">Key Features: </h4>,
           <ul className="space-y-2">,
-            {service.features.slice(0, 5).map((feature: string, idx: number) => (,
-              <li key={idx,} className="text-sm flex items-start">,
+            {service.features.slice(0, 5).map((feature: string, idx: number) => (
+              <li key={idx} className="text-sm flex items-start">,
                 <Check className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0"  />,
                 {feature}
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
         <div className="mb-6">,
           <h4 className="font-semibold mb-2">Setup Time: </h4>,
           <div className="text-sm opacity-75 flex items-center">,
             <Clock className="w-4 h-4 mr-1"  />,
-            {service.price.setupTime,}
+            {service.price.setupTime}
           </div>,
         </div>,
         <div className="mb-6">,
           <h4 className="font-semibold mb-2">Trial Period: </h4>,
-          <div className="text-sm opacity-75">{service.price.trialDays,} days free trial</div>,
+          <div className="text-sm opacity-75">{service.price.trialDays} days free trial</div>,
         </div>,
         <div className="mb-6">,
           <h4 className="font-semibold mb-2">ROI Promise: </h4>,
-          <div className="text-sm opacity-75">{service.roi,}</div>,
+          <div className="text-sm opacity-75">{service.roi}</div>,
         </div>,
         <div className="space-y-3">,
-          <a,
+          <a
             href={service.link}
-            className="inline-flex items-center justify-center w-full px-4 py-3 bg-white text-gray-90o0 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-          >,
+            className="inline-flex items-center justify-center w-full px-4 py-3 bg-white text-gray-90o0 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
             Start Free Trial <ArrowRight className="w-4 h-4 ml-2"  />,
           </a>,
-          <a,
-            href={`tel:${contactInfo.mobile,}`}
-            className="inline-flex items-center justify-center w-full px-4 py-2 bg-transparent border border-white text-white rounded-lg font-semibold hover: bg-white hover:text-gray-90o0 transition-colors",
-          >,
+          <a
+            href={`tel:${contactInfo.mobile}`}
+            className="inline-flex items-center justify-center w-full px-4 py-2 bg-transparent border border-white text-white rounded-lg font-semibold hover: bg-white hover:text-gray-90o0 transition-colors">,
             <Phone className="w-4 h-4 mr-2"  />,
             Talk to Sales,
           </a>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-,};
-,
-const ServiceCategory = ({ title, services, icon: Icon, color, description }: {,
-  title: string, ,
-  services: any[], ,
-  icon: any, ,
+    </motion.div>),
+};
+const ServiceCategory = ({ title, services, icon: Icon, color, description }: {
+  title: string,
+  services: any[],
+  icon: any,
   color: string,
   description: string,
-,}) => (,
+}) => (
   <div className="mb-20">,
     <div className="text-center mb-12">,
       <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 ${color}`}>,
@@ -126,14 +113,11 @@ const ServiceCategory = ({ title, services, icon: Icon, color, description }: {,
       </p>,
     </div>,
     <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-      {services.map((service, index) => (,
-        <PricingCard key={service.id} service={service} index={index}  />,
-      ))}
+      {services.map((service, index) => (
+        <PricingCard key={service.id} service={service} index={index}  />))}
     </div>,
-  </div>,
-),
-,
-const ComparisonTable = () => (,
+  </div>),
+const ComparisonTable = () => (
   <div className="py-20 bg-gray-50">,
     <div className="max-w-7xl mx-auto px-6">,
       <div className="text-center mb-16">,
@@ -186,10 +170,8 @@ const ComparisonTable = () => (,
         </table>,
       </div>,
     </div>,
-  </div>,
-),
-,
-const ContactSection = () => (,
+  </div>),
+const ContactSection = () => (
   <div className="bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white py-20">,
     <div className="max-w-6xl mx-auto px-6 text-center">,
       <h2 className="text-4xl font-bold mb-8">Ready to Get Started?</h2>,
@@ -200,7 +182,7 @@ const ContactSection = () => (,
         <div className="text-center">,
           <Phone className="w-12 h-12 mx-auto mb-4 text-blue-20o0"  />,
           <h3 className="text-xl font-semibold mb-2">Call Us</h3>,
-          <p className="text-blue-10o0">{contactInfo.mobile,}</p>,
+          <p className="text-blue-10o0">{contactInfo.mobile}</p>,
           <p className="text-sm text-blue-20o0">Available 24/7</p>,
         </div>,
         <div className="text-center">,
@@ -217,26 +199,22 @@ const ContactSection = () => (,
         </div>,
       </div>,
       <div className="space-y-4">,
-        <a,
-          href={`tel: ${contactInfo.mobile,}`}
-          className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-colors mr-4",
-        >,
+        <a
+          href={`tel: ${contactInfo.mobile}`}
+          className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-colors mr-4">,
           <Phone className="w-5 h-5 mr-2"  />,
           Call Now,
         </a>,
-        <a,
-          href={`mailto:${contactInfo.email,}`}
-          className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors",
-        >,
+        <a
+          href={`mailto:${contactInfo.email}`}
+          className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors">,
           <Mail className="w-5 h-5 mr-2"  />,
           Send Email,
         </a>,
       </div>,
     </div>,
-  </div>,
-),
-,
-const BenefitsSection = () => (,
+  </div>),
+const BenefitsSection = () => (
   <div className="py-20 bg-white">,
     <div className="max-w-6xl mx-auto px-6">,
       <div className="text-center mb-16">,
@@ -276,13 +254,11 @@ const BenefitsSection = () => (,
         </div>,
       </div>,
     </div>,
-  </div>,
-),
-,
-export default function Pricing20o25Comprehensive() {,
-  return (,
+  </div>),
+export default function Pricing20o25Comprehensive() {
+  return (
     <div className="min-h-screen bg-white">,
-      <SEO,
+      <SEO
         title="20o25 Comprehensive Pricing - Zion Tech Group",
         description="Transparent pricing for our comprehensive portfolio of AI, IT, and micro SAAS services. Start your free trial today.",
         keywords={["pricing", "AI services", "IT solutions", "micro SAAS", "Zion Tech Group", "free trial"]}
@@ -291,69 +267,64 @@ export default function Pricing20o25Comprehensive() {,
       <div className="bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-pink-60o0 text-white py-20">,
         <div className="max-w-6xl mx-auto px-6 text-center">,
           <motion.h1,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-6xl font-bold mb-6",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-6xl font-bold mb-6">,
             20o25 Comprehensive Pricing,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className="text-2xl mb-8 max-w-4xl mx-auto",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-2xl mb-8 max-w-4xl mx-auto">,
             Transparent pricing for our innovative technology solutions. Start with a free trial and,
             scale as you grow. No hidden fees, no surprises.,
           </motion.p>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className="flex flex-col sm: flex-row gap-4 justify-center",
-          >,
-            <a,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm: flex-row gap-4 justify-center">,
+            <a
               href="#pricing",
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-colors",
-            >,
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-colors">,
               View Pricing <ArrowRight className="w-5 h-5 ml-2"  />,
             </a>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors">,
               <Phone className="w-5 h-5 mr-2"  />,
               Get Custom Quote,
             </a>,
           </motion.div>,
         </div>,
       </div>,
-      {/* Pricing Section */,}
+      {/* Pricing Section */}
       <div id="pricing" className="py-20">,
         <div className="max-w-6xl mx-auto px-6">,
-          <ServiceCategory,
+          <ServiceCategory
             title="Advanced AI Automation Platforms",
             services={advancedAIAutomationPlatforms20o25}
             icon={Brain}
             color="bg-gradient-to-r from-blue-50o0 to-cyan-50o0",
             description="Transform your business operations with AI-powered automation that learns and improves over time. Reduce manual work by up to 80% and improve efficiency by 30o0%.",
            />,
-          <ServiceCategory,
+          <ServiceCategory
             title="Innovative IT Infrastructure Solutions",
             services={innovativeITInfrastructureSolutions20o25}
             icon={Server}
             color="bg-gradient-to-r from-indigo-50o0 to-purple-50o0",
             description="Build future-proof infrastructure with quantum-ready databases, edge computing, and AI-powered DevOps. Achieve 90% latency reduction and 50o0% performance improvement.",
            />,
-          <ServiceCategory,
+          <ServiceCategory
             title="Specialized Micro SAAS Solutions",
             services={specializedMicroSaasSolutions20o25}
             icon={Target}
             color="bg-gradient-to-r from-orange-50o0 to-red-50o0",
             description="Industry-specific solutions for real estate, healthcare, legal, and manufacturing. Leverage AI and IoT to gain competitive advantages in your sector.",
            />,
-          <ServiceCategory,
+          <ServiceCategory
             title="Emerging Technology Services",
             services={emergingTechnologyServices20o25}
             icon={Rocket}
@@ -368,6 +339,4 @@ export default function Pricing20o25Comprehensive() {,
       <BenefitsSection  />,
       {/* Contact Section */}
       <ContactSection  />,
-    </div>,
-  ),
-}
+    </div>)}

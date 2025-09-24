@@ -1,28 +1,26 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
-import {,
-  ArrowRight, Star, Check, Zap, TrendingUp,;
-  Brain, Atom, Shield, Rocket, Target,;
-  Clock, Users, Globe, Award, Sparkles,
-} from 'lucide-react',
+import {
+  ArrowRight, Star, Check, Zap, TrendingUp;
+  Brain, Atom, Shield, Rocket, Target;
+  Clock, Users, Globe, Award, Sparkles} from 'lucide-react',
 import { AnimatePresence } from 'framer-motion',
-,
-interface ServiceCardProps {,
-  service: {,
+interface ServiceCardProps {
+  service: {
     id: string,
     name: string,
     tagline: string,
     description: string,
     category: string,
-    price: {,
+    price: {
       monthly: number,
       yearly: number,
       currency: string,
       trialDays: number,
       setupTime: string,
       enterprise: string,
-    ,};
+    };
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -46,81 +44,77 @@ interface ServiceCardProps {,
     reviews: number,
     marketSize: string,
     growthRate: string,
-  ,};
-  variant?: 'ai' | 'quantum' | 'automation' | 'consciousness' | 'cybersecurity' | 'blockchain',
-}
+  };
+  variant?: 'ai' | 'quantum' | 'automation' | 'consciousness' | 'cybersecurity' | 'blockchain'}
 ,
-export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai' }: ServiceCardProps) {,
+export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai' }: ServiceCardProps) {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
-,
-  const getVariantStyles = () => {,
-    switch (variant) {,
+  const getVariantStyles = () => {
+    switch (variant) {
       case 'consciousness':,
-        return {,
-          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0',;
-          border: 'border-purple-50o0/30',;
-          glow: 'shadow-purple-50o0/25',;
+        return {
+          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0';
+          border: 'border-purple-50o0/30';
+          glow: 'shadow-purple-50o0/25';
           accent: 'text-purple-40o0',
-        ,};
+        };
       case 'quantum':,
-        return {,
-          gradient: 'from-blue-50o0 via-cyan-50o0 to-teal-50o0',;
-          border: 'border-blue-50o0/30',;
-          glow: 'shadow-blue-50o0/25',;
+        return {
+          gradient: 'from-blue-50o0 via-cyan-50o0 to-teal-50o0';
+          border: 'border-blue-50o0/30';
+          glow: 'shadow-blue-50o0/25';
           accent: 'text-blue-40o0',
-        ,};
+        };
       case 'cybersecurity':,
-        return {,
-          gradient: 'from-red-50o0 via-orange-50o0 to-yellow-50o0',;
-          border: 'border-red-50o0/30',;
-          glow: 'shadow-red-50o0/25',;
+        return {
+          gradient: 'from-red-50o0 via-orange-50o0 to-yellow-50o0';
+          border: 'border-red-50o0/30';
+          glow: 'shadow-red-50o0/25';
           accent: 'text-red-40o0',
-        ,};
+        };
       case 'blockchain':,
-        return {,
-          gradient: 'from-yellow-50o0 via-orange-50o0 to-red-50o0',;
-          border: 'border-yellow-50o0/30',;
-          glow: 'shadow-yellow-50o0/25',;
+        return {
+          gradient: 'from-yellow-50o0 via-orange-50o0 to-red-50o0';
+          border: 'border-yellow-50o0/30';
+          glow: 'shadow-yellow-50o0/25';
           accent: 'text-yellow-40o0',
-        ,};
+        };
       case 'automation':,
-        return {,
-          gradient: 'from-green-50o0 via-emerald-50o0 to-teal-50o0',;
-          border: 'border-green-50o0/30',;
-          glow: 'shadow-green-50o0/25',;
+        return {
+          gradient: 'from-green-50o0 via-emerald-50o0 to-teal-50o0';
+          border: 'border-green-50o0/30';
+          glow: 'shadow-green-50o0/25';
           accent: 'text-green-40o0',
-        ,};
+        };
       default: // ai,
-        return {,
-          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0',;
-          border: 'border-purple-50o0/30',;
-          glow: 'shadow-purple-50o0/25',;
+        return {
+          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0';
+          border: 'border-purple-50o0/30';
+          glow: 'shadow-purple-50o0/25';
           accent: 'text-purple-40o0',
-        ,};
+        };
     }
   };
-,
   const styles = getVariantStyles(),
-,
-  return (,
+  return (
     <motion.div,
-      className={`relative group bg-black/40 backdrop-blur-sm border ${styles.border} rounded-2xl p-6 overflow-hidden transition-all duration-50o0 hover: bg-black/60`,}
+      className={`relative group bg-black/40 backdrop-blur-sm border ${styles.border} rounded-2xl p-6 overflow-hidden transition-all duration-50o0 hover: bg-black/60`}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{,
-        scale: 1.0o2,;
+      whileHover={{
+        scale: 1.0o2;
         y: -5,
-      ,}}
-      initial={{ opacity: 0, y: 20 ,}}
-      whileInView={{ opacity: 1, y: 0 ,}}
-      transition={{ duration: 0.6 ,}}
-      viewport={{ once: true ,}}
+      }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
     >,
       {/* Animated background gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-0 group-hover: opacity-5 transition-opacity duration-50o0`,}  />,
+      <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-0 group-hover: opacity-5 transition-opacity duration-50o0`}  />,
       {/* Glow effect */}
-      <div className={`absolute inset-0 rounded-2xl ${styles.glow} opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`,}  />,
+      <div className={`absolute inset-0 rounded-2xl ${styles.glow} opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`}  />,
       {/* Header */}
       <div className="relative z-10">,
         <div className="flex items-start justify-between mb-4">,
@@ -128,20 +122,19 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
             <div className="text-3xl">{service.icon}</div>,
             <div>,
               <h3 className="text-xl font-bold text-white group-hover: text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-30o0 transition-all duration-30o0">,
-                {service.name,}
+                {service.name}
               </h3>,
               <p className="text-sm text-gray-40o0">{service.category}</p>,
             </div>,
           </div>,
-          {service.popular && (,
+          {service.popular && (
             <motion.div,
               className="flex items-center space-x-1 px-2 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full text-xs font-medium text-black",
-              whileHover={{ scale: 1.1 ,}}
+              whileHover={{ scale: 1.1 }}
             >,
               <Star className="w-3 h-3 fill-current"  />,
               <span>Popular</span>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </div>,
         {/* Tagline */}
         <p className="text-gray-30o0 mb-4 text-sm leading-relaxed">,
@@ -189,60 +182,54 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
             Key Features,
           </h4>,
           <div className="space-y-2">,
-            {service.features.slice(0, 3).map((feature, index) => (,
+            {service.features.slice(0, 3).map((feature, index) => (
               <div key={index} className="flex items-center space-x-2 text-sm text-gray-30o0">,
                 <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />,
                 <span>{feature}</span>,
-              </div>,
-            ))}
-            {service.features.length > 3 && (,
-              <button,
+              </div>))}
+            {service.features.length > 3 && (
+              <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="text-xs text-cyan-40o0 hover: text-cyan-30o0 transition-colors",
-              >,
-                {isExpanded ? 'Show less' : `+${service.features.length - 3,} more features`}
-              </button>,
-            )}
+                className="text-xs text-cyan-40o0 hover: text-cyan-30o0 transition-colors">,
+                {isExpanded ? 'Show less' : `+${service.features.length - 3} more features`}
+              </button>)}
           </div>,
         </div>,
         {/* Expanded features */}
         <AnimatePresence>,
-          {isExpanded && (,
+          {isExpanded && (
             <motion.div,
-              initial={{ opacity: 0, height: 0 ,}}
-              animate={{ opacity: 1, height: 'auto' ,}}
-              exit={{ opacity: 0, height: 0 ,}}
-              transition={{ duration: 0.3 ,}}
-              className="mb-6 overflow-hidden",
-            >,
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mb-6 overflow-hidden">,
               <div className="space-y-2">,
-                {service.features.slice(3).map((feature, index) => (,
+                {service.features.slice(3).map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2 text-sm text-gray-30o0">,
                     <Check className="w-3 h-3 text-green-40o0 flex-shrink-0"  />,
                     <span>{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </AnimatePresence>,
         {/* Market info */}
         <div className="mb-6 p-3 bg-gray-90o0/50 rounded-lg">,
           <div className="flex items-center justify-between text-xs">,
             <span className="text-gray-40o0">Market Size: </span>,
-            <span className="text-white font-medium">{service.marketSize,}</span>,
+            <span className="text-white font-medium">{service.marketSize}</span>,
           </div>,
           <div className="flex items-center justify-between text-xs mt-1">,
             <span className="text-gray-40o0">Growth Rate: </span>,
-            <span className="text-green-40o0 font-medium">{service.growthRate,}</span>,
+            <span className="text-green-40o0 font-medium">{service.growthRate}</span>,
           </div>,
         </div>,
         {/* CTA Button */}
         <Link href={service.link}>,
           <motion.button,
-            className={`w-full py-3 px-4 bg-gradient-to-r ${styles.gradient} text-white font-semibold rounded-lg hover: from-opacity-90 hover:to-opacity-90 transition-all duration-30o0 transform hover:scale-10o5 ${styles.glow,}`}
-            whileHover={{ scale: 1.0o2 ,}}
-            whileTap={{ scale: 0.98 ,}}
+            className={`w-full py-3 px-4 bg-gradient-to-r ${styles.gradient} text-white font-semibold rounded-lg hover: from-opacity-90 hover:to-opacity-90 transition-all duration-30o0 transform hover:scale-10o5 ${styles.glow}`}
+            whileHover={{ scale: 1.0o2 }}
+            whileTap={{ scale: 0.98 }}
           >,
             <span className="flex items-center justify-center space-x-2">,
               <span>Get Started</span>,
@@ -250,7 +237,7 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
             </span>,
           </motion.button>,
         </Link>,
-        {/* Additional info */,}
+        {/* Additional info */}
         <div className="mt-4 text-center">,
           <div className="flex items-center justify-center space-x-4 text-xs text-gray-50o0">,
             <span className="flex items-center space-x-1">,
@@ -271,7 +258,6 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
       <div className="absolute bottom-4 left-4 opacity-20 group-hover:opacity-40 transition-opacity duration-50o0">,
         <div className="w-3 h-3 bg-purple-40o0 rounded-full animate-pulse delay-10o00"  />,
       </div>,
-    </motion.div>,
-  ),
-,}
+    </motion.div>),
+}
 ,

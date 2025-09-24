@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function EnterpriseTransformationSuccessBanner() {,
-  return (,
+export default function EnterpriseTransformationSuccessBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-green-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
       {/* Animated background */}
       <div className='absolute inset-0'>,
@@ -15,7 +14,7 @@ export default function EnterpriseTransformationSuccessBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-green-50o0 to-blue-50o0 text-sm font-bold mb-6 animate-bounce'>,
             🏆 SUCCESS STORY,
           </div>,
@@ -23,7 +22,7 @@ export default function EnterpriseTransformationSuccessBanner() {,
           <h1 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white via-green-20o0 to-blue-20o0 bg-clip-text text-transparent'>,
             AI 20o26 Enterprise Transformation Breakthrough,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             Fortune 50o0 company achieves 5,0o00% ROI through revolutionary AI,
             20o26 quantum-neural fusion implementation,
@@ -103,22 +102,20 @@ export default function EnterpriseTransformationSuccessBanner() {,
               <p className='text-sm text-gray-30o0'>73% faster lead times</p>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-enterprise-transformation-breakthrough',
-              className='bg-gradient-to-r from-green-60o0 to-blue-60o0 hover:from-green-70o0 hover:to-blue-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-green-60o0 to-blue-60o0 hover:from-green-70o0 hover:to-blue-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-transparent border-2 border-white hover:bg-white hover:text-green-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-transparent border-2 border-white hover:bg-white hover:text-green-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
               Start Your Transformation,
             </Link>,
           </div>,
-          {/* Additional info */,}
+          {/* Additional info */}
           <div className='mt-8 text-sm text-gray-40o0'>,
             <p>Real Fortune 50o0 success story with documented results</p>,
             <p className='mt-1'>,
@@ -131,7 +128,5 @@ export default function EnterpriseTransformationSuccessBanner() {,
       <div className='absolute top-20 right-10 w-4 h-4 bg-green-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-20 left-10 w-3 h-3 bg-blue-40o0 rounded-full animate-ping delay-10o00'></div>,
       <div className='absolute top-1/2 right-1/4 w-2 h-2 bg-purple-40o0 rounded-full animate-ping delay-20o00'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

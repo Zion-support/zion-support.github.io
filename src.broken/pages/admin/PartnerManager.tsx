@@ -1,9 +1,7 @@
-export function PartnerManager() {,
-  return (,
+export function PartnerManager() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,9 +1,7 @@
-export function SmartContractDeployment() {,
-  return (,
+export function SmartContractDeployment() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

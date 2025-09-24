@@ -1,6 +1,4 @@
 'use client',
-,
-export default function EnterpriseDataManagement() {,
-  return null,
-}
+export default function EnterpriseDataManagement() {
+  return null}
 ,

@@ -1,28 +1,26 @@
 import Link from 'next/link',
 import { ServiceProvider } from '../../data/providers/providers',
-,
-export type ProviderCardProps = {,
+export type ProviderCardProps = {
   provider: ServiceProvider,
-,};
-,
-export default function ProviderCard({ provider }: ProviderCardProps) {,
-  return (,
+};
+export default function ProviderCard({ provider }: ProviderCardProps) {
+  return (
     <div className='enhanced-card enhanced-hover border border-gray-10o0 dark: border-gray-80o0'>,
       <div className='flex items-start justify-between gap-4'>,
         <div>,
-          <h3 className='text-lg font-semibold mb-1'>{provider.title,}</h3>,
+          <h3 className='text-lg font-semibold mb-1'>{provider.title}</h3>,
           <p className='text-sm text-gray-60o0 dark: text-gray-30o0 mb-2'>,
-            {provider.description,}
+            {provider.description}
           </p>,
           <div className='flex flex-wrap items-center gap-2 text-xs'>,
             <span className='px-2 py-1 rounded bg-gray-10o0 dark: bg-gray-90o0/40 border border-gray-20o0 dark:border-gray-80o0'>,
-              {provider.category,}
+              {provider.category}
             </span>,
             <span className='px-2 py-1 rounded bg-blue-50 dark: bg-blue-90o0/30 text-blue-70o0 dark:text-blue-30o0 border border-blue-10o0 dark:border-blue-80o0'>,
-              AI match {provider.aiMatchScore,}%,
+              AI match {provider.aiMatchScore}%,
             </span>,
             <span className='px-2 py-1 rounded bg-amber-50 dark: bg-amber-90o0/30 text-amber-70o0 dark:text-amber-30o0 border border-amber-10o0 dark:border-amber-80o0'>,
-              ★ {provider.rating.toFixed(1),} ({provider.reviewsCount}),
+              ★ {provider.rating.toFixed(1)} ({provider.reviewsCount}),
             </span>,
           </div>,
         </div>,
@@ -39,7 +37,6 @@ export default function ProviderCard({ provider }: ProviderCardProps) {,
           </a>,
         </Link>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

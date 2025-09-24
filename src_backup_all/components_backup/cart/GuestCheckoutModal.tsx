@@ -1,52 +1,45 @@
-import React from 'react',
+import React from 'react';
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
 import { Label } from '@/components/ui/label',
 import { Textarea } from '@/components/ui/textarea',
-import {,
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
 } from '@/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react',
 import { isProdDomain } from '@/utils/getStripe',
-,
-interface GuestCheckoutModalProps {,
+interface GuestCheckoutModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
-  onSubmit: (details: { email: string, address: string ,}) => void,
-}
+  onSubmit: (details: { email: string, address: string }) => void}
 ,
-export default function GuestCheckoutModal({,
-  open,;
-  onOpenChange,;
-  onSubmit,;
-}: GuestCheckoutModalProps) {,
+export default function GuestCheckoutModal({
+  open;
+  onOpenChange;
+  onSubmit;
+}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState(''),
   const [address, setAddress] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-,
-    if (!email || !address) {,
+    if (!email || !address) {
       alert('Please fill in all required fields'),
       return,
-    ,}
+    }
 ,
     setIsSubmitting(true),
-    try {,
-      onSubmit({ email, address }),
-    } finally {,
-      setIsSubmitting(false),
-    }
+    try {
+      onSubmit({ email, address })} finally {
+      setIsSubmitting(false)}
   };
-,
-  return (,
+  return (
     <Dialog open={open} onOpenChange={onOpenChange}>,
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>,
         <DialogHeader>,
@@ -58,23 +51,21 @@ export default function GuestCheckoutModal({,
             Enter your details to complete your purchase as a guest.,
           </DialogDescription>,
         </DialogHeader>,
-        {!isProdDomain() && (,
+        {!isProdDomain() && (
           <div className='rounded-md bg-amber-50o0/20 p-2 text-center text-amber-40o0'>,
             Pay with test data – use card 4242 4242 4242 4242 and any future,
             date.,
-          </div>,
-        )}
+          </div>)}
 ,
         <form onSubmit={handleSubmit} className='space-y-4'>,
           <div className='space-y-2'>,
-            <Label,
+            <Label
               htmlFor='guest-email',
-              className='text-white flex items-center gap-2',
-            >,
+              className='text-white flex items-center gap-2'>,
               <Mail className='h-4 w-4 text-zion-cyan' />,
               Email Address,
             </Label>,
-            <Input,
+            <Input
               id='guest-email',
               type='email',
               value={email || ''}
@@ -85,16 +76,15 @@ export default function GuestCheckoutModal({,
             />,
           </div>,
           <div className='space-y-2'>,
-            <Label,
+            <Label
               htmlFor='guest-address',
-              className='text-white flex items-center gap-2',
-            >,
+              className='text-white flex items-center gap-2'>,
               <MapPin className='h-4 w-4 text-zion-cyan' />,
               Shipping Address,
             </Label>,
-            <Textarea,
+            <Textarea
               id='guest-address',
-              value={address || '',}
+              value={address || ''}
               onChange={e => setAddress(e.target.value || '')}
               placeholder='Enter your full shipping address...',
               required,
@@ -108,32 +98,26 @@ export default function GuestCheckoutModal({,
             </p>,
           </div>,
           <DialogFooter className='space-x-2'>,
-            <Button,
+            <Button
               type='button',
               variant='outline',
-              onClick={() => onOpenChange(false),}
-              className='border-zion-cyan/30 text-zion-slate-light hover: bg-zion-cyan/10',
-            >,
+              onClick={() => onOpenChange(false)}
+              className='border-zion-cyan/30 text-zion-slate-light hover: bg-zion-cyan/10'>,
               Cancel,
             </Button>,
-            <Button,
+            <Button
               type='submit',
-              disabled={isSubmitting || !email || !address,}
-              className='bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue',
-            >,
-              {isSubmitting ? (,
-                'Processing...',
-              ) : (,
+              disabled={isSubmitting || !email || !address}
+              className='bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue'>,
+              {isSubmitting ? (
+                'Processing...') : (
                 <>,
                   <CreditCard className='h-4 w-4 mr-2' />,
                   Continue to Payment,
-                </>,
-              ),}
+                </>)}
             </Button>,
           </DialogFooter>,
         </form>,
       </DialogContent>,
-    </Dialog>,
-  ),
-}
+    </Dialog>)}
 ,

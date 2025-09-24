@@ -1,14 +1,13 @@
 import Link from 'next/link',
-,
-export default function ComprehensiveSolutionsBanner20o25() {,
-  return (,
+export default function ComprehensiveSolutionsBanner20o25() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-indigo-90o0 text-white'>,
       {/* Animated background */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20'></div>,
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%20o0%20o60%20o60%22%20xmlns%3D%22http%3A//www.w3.org/20o00/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-50o0/20 to-blue-50o0/20 border border-purple-50o0/30 mb-8'>,
             <span className='text-purple-40o0 font-bold text-sm uppercase tracking-wide animate-pulse'>,
               🚀 COMPREHENSIVE AI SOLUTIONS 20o25,
@@ -24,11 +23,11 @@ export default function ComprehensiveSolutionsBanner20o25() {,
               Complete Platform 20o25,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed'>,
             The most complete AI transformation platform ever created.,
             <span className='text-purple-40o0 font-bold'>,
-              {' ',}
+              {' '}
               Quantum-neural fusion,
             </span>,
             <span className='text-blue-40o0 font-bold'>,
@@ -81,7 +80,7 @@ export default function ComprehensiveSolutionsBanner20o25() {,
               </div>,
             </div>,
           </div>,
-          {/* Industry solutions preview */,}
+          {/* Industry solutions preview */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 text-center'>,
               <div className='text-2xl mb-2'>🏭</div>,
@@ -137,59 +136,52 @@ export default function ComprehensiveSolutionsBanner20o25() {,
           </div>,
           {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-comprehensive-solutions',
-              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               🚀 Explore Complete Platform,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 shadow-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 shadow-lg'>,
               📞 Start Transformation,
             </Link>,
           </div>,
-          {/* Additional links */,}
+          {/* Additional links */}
           <div className='mt-8 flex flex-wrap justify-center gap-4 text-sm'>,
-            <Link,
+            <Link
               href='/ai-20o25-advanced-services-showcase',
-              className='text-purple-40o0 hover: text-purple-30o0 transition-colors',
-            >,
+              className='text-purple-40o0 hover: text-purple-30o0 transition-colors'>,
               🛠️ Advanced Services,
             </Link>,
             <span className='text-gray-50o0'>•</span>,
-            <Link,
+            <Link
               href='/ai-20o25-tools-utilities',
-              className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors',
-            >,
+              className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors'>,
               🧮 AI Tools Suite,
             </Link>,
             <span className='text-gray-50o0'>•</span>,
-            <Link,
+            <Link
               href='/tools/ai-20o25-roi-calculator',
-              className='text-green-40o0 hover:text-green-30o0 transition-colors',
-            >,
+              className='text-green-40o0 hover:text-green-30o0 transition-colors'>,
               📊 ROI Calculator,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Floating elements */,}
+      {/* Floating elements */}
       <div className='absolute top-10 left-10 w-20 h-20 bg-purple-40o0/20 rounded-full animate-bounce'></div>,
-      <div,
+      <div
         className='absolute top-20 right-20 w-16 h-16 bg-blue-40o0/20 rounded-full animate-bounce',
-        style={{ animationDelay: '1s' ,}}
+        style={{ animationDelay: '1s' }}
       ></div>,
-      <div,
+      <div
         className='absolute bottom-20 left-20 w-12 h-12 bg-cyan-40o0/20 rounded-full animate-bounce',
-        style={{ animationDelay: '2s' ,}}
+        style={{ animationDelay: '2s' }}
       ></div>,
-      <div,
+      <div
         className='absolute bottom-10 right-10 w-24 h-24 bg-pink-40o0/20 rounded-full animate-bounce',
-        style={{ animationDelay: '0.5s' ,}}
+        style={{ animationDelay: '0.5s' }}
       ></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

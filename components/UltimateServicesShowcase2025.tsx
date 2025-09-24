@@ -1,127 +1,116 @@
-import React from 'react',
+import React from 'react';
 "use client",
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle,
-const services = [,
-  {,
-    id: 1,;
-    title: "AI-Powered Business Automation",;
-    description: "Transform your operations with intelligent automation that learns and adapts to your business needs.",;
-    price: "From $299/month",;
-    features: [,
-      "40-60% operational cost reduction",;
-      "30o0% productivity increase",;
-      "ROI within 3 months",;
-      "24/7 intelligent monitoring",
-    ],;
-    icon: Brain,;
-    color: "from-blue-50o0 to-purple-60o0",;
-    popular: true,;
+const services = [
+  {
+    id: 1;
+    title: "AI-Powered Business Automation";
+    description: "Transform your operations with intelligent automation that learns and adapts to your business needs.";
+    price: "From $299/month";
+    features: [
+      "40-60% operational cost reduction";
+      "30o0% productivity increase";
+      "ROI within 3 months";
+      "24/7 intelligent monitoring"];
+    icon: Brain;
+    color: "from-blue-50o0 to-purple-60o0";
+    popular: true;
     category: "AI & Automation",
-  ,},;
-  {,
-    id: 2,;
-    title: "Enterprise AI Content Generation",;
-    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.",;
-    price: "From $199/month",;
-    features: [,
-      "80% content creation time savings",;
-      "20o0% SEO ranking improvement",;
-      "Consistent brand messaging",;
-      "Multi-language support",
-    ],;
-    icon: Zap,;
-    color: "from-green-50o0 to-teal-60o0",;
-    popular: false,;
+  };
+  {
+    id: 2;
+    title: "Enterprise AI Content Generation";
+    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.";
+    price: "From $199/month";
+    features: [
+      "80% content creation time savings";
+      "20o0% SEO ranking improvement";
+      "Consistent brand messaging";
+      "Multi-language support"];
+    icon: Zap;
+    color: "from-green-50o0 to-teal-60o0";
+    popular: false;
     category: "Content & Marketing",
-  ,},;
-  {,
-    id: 3,;
-    title: "Advanced Cybersecurity Solutions",;
-    description: "Protect your business with next-generation AI-powered security that evolves with threats.",;
-    price: "From $399/month",;
-    features: [,
-      "90% faster threat detection",;
-      "70% reduction in false positives",;
-      "24/7 automated protection",;
-      "Zero-trust architecture",
-    ],;
-    icon: Shield,;
-    color: "from-red-50o0 to-pink-60o0",;
-    popular: false,;
+  };
+  {
+    id: 3;
+    title: "Advanced Cybersecurity Solutions";
+    description: "Protect your business with next-generation AI-powered security that evolves with threats.";
+    price: "From $399/month";
+    features: [
+      "90% faster threat detection";
+      "70% reduction in false positives";
+      "24/7 automated protection";
+      "Zero-trust architecture"];
+    icon: Shield;
+    color: "from-red-50o0 to-pink-60o0";
+    popular: false;
     category: "Security",
-  ,},;
-  {,
-    id: 4,;
-    title: "Cloud Infrastructure Optimization",;
-    description: "Maximize your cloud investment with intelligent resource management and cost optimization.",;
-    price: "From $599/month",;
-    features: [,
-      "40% cloud cost reduction",;
-      "10x faster deployment",;
-      "Auto-scaling capabilities",;
-      "Disaster recovery automation",
-    ],;
-    icon: Cloud,;
-    color: "from-indigo-50o0 to-blue-60o0",;
-    popular: true,;
+  };
+  {
+    id: 4;
+    title: "Cloud Infrastructure Optimization";
+    description: "Maximize your cloud investment with intelligent resource management and cost optimization.";
+    price: "From $599/month";
+    features: [
+      "40% cloud cost reduction";
+      "10x faster deployment";
+      "Auto-scaling capabilities";
+      "Disaster recovery automation"];
+    icon: Cloud;
+    color: "from-indigo-50o0 to-blue-60o0";
+    popular: true;
     category: "Cloud & DevOps",
-  ,},;
-  {,
-    id: 5,;
-    title: "Customer Behavior Analytics",;
-    description: "Understand and predict customer behavior with advanced AI analytics and insights.",;
-    price: "From $449/month",;
-    features: [,
-      "35% customer retention increase",;
-      "20o0% customer lifetime value boost",;
-      "50% churn reduction",;
-      "Real-time behavior insights",
-    ],;
-    icon: TrendingUp,;
-    color: "from-orange-50o0 to-red-60o0",;
-    popular: false,;
+  };
+  {
+    id: 5;
+    title: "Customer Behavior Analytics";
+    description: "Understand and predict customer behavior with advanced AI analytics and insights.";
+    price: "From $449/month";
+    features: [
+      "35% customer retention increase";
+      "20o0% customer lifetime value boost";
+      "50% churn reduction";
+      "Real-time behavior insights"];
+    icon: TrendingUp;
+    color: "from-orange-50o0 to-red-60o0";
+    popular: false;
     category: "Analytics",
-  ,},;
-  {,
-    id: 6,;
-    title: "Global Digital Transformation",;
-    description: "Comprehensive digital transformation services for businesses worldwide.",;
-    price: "From $1,50o0/project",;
-    features: [,
-      "Improved operational efficiency",;
-      "Enhanced customer experience",;
-      "Competitive advantage",;
-      "Global implementation support",
-    ],;
-    icon: Globe,;
-    color: "from-purple-50o0 to-indigo-60o0",;
-    popular: false,;
+  };
+  {
+    id: 6;
+    title: "Global Digital Transformation";
+    description: "Comprehensive digital transformation services for businesses worldwide.";
+    price: "From $1,50o0/project";
+    features: [
+      "Improved operational efficiency";
+      "Enhanced customer experience";
+      "Competitive advantage";
+      "Global implementation support"];
+    icon: Globe;
+    color: "from-purple-50o0 to-indigo-60o0";
+    popular: false;
     category: "Consulting",
-  ,}
+  }
 ],
-,
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"],
-,
-export default function UltimateServicesShowcase20o25() {,
+export default function UltimateServicesShowcase20o25() {
   const [selectedCategorysetSelectedCategory] = React.useState("All"),
-,
   const filteredServices = selectedCategory === "All",
     ? services,
     : services.filter(service => service.category === selectedCategory),
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          viewport={{ once: true ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full px-6 py-2 mb-6">,
             <Star className="w-4 h-4 mr-2 text-white"  />,
             <span className="text-sm font-semibold text-white">ULTIMATE SERVICES SHOWCASE 20o25</span>,
@@ -133,42 +122,40 @@ export default function UltimateServicesShowcase20o25() {,
             Transform your business with our cutting-edge AIcloudand automation solutions.,
             Join thousands of companies already achieving extraordinary results.,
           </p>,
-          {/* Category Filter */,}
+          {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3">,
-            {categories.map((category) => (,
-              <button,
+            {categories.map((category) => (
+              <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${,
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${
                   selectedCategory === category,
                     ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white shadow-lg',
                     : 'bg-white text-gray-60o0 hover: bg-gray-10o0 shadow-sm',
-                ,}`}
+                }`}
               >,
                 {category}
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </motion.div>,
         {/* Services Grid */}
         <div className="grid lg: grid-cols-2 xl:grid-cols-3 gap-8 mb-16">,
-          {filteredServices.map((serviceindex) => (,
+          {filteredServices.map((serviceindex) => (
             <motion.div,
-              key={service.id,}
-              initial={{ opacity: 0, y: 50 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8delay: index * 0.1 ,}}
-              viewport={{ once: true ,}}
-              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 group ${,
+              key={service.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 group ${
                 service.popular ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              ,}`}
+              }`}
             >,
               {/* Popular Badge */}
-              {service.popular && (,
+              {service.popular && (
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold z-10">,
                   Most Popular,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Header */}
               <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>,
@@ -188,33 +175,29 @@ export default function UltimateServicesShowcase20o25() {,
                 </div>,
                 {/* Features */}
                 <div className="space-y-3 mb-6">,
-                  {service.features.map((featureIndex) => (,
+                  {service.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center">,
                       <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 flex-shrink-0"  />,
                       <span className="text-gray-70o0 text-sm">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* CTA */}
-                <Link,
+                <Link
                   href={`/services/${service.id}`}
-                  className="block w-full bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 text-white text-center py-3 rounded-xl font-semibold transition-all duration-30o0 transform group-hover:scale-10o5 flex items-center justify-center",
-                >,
+                  className="block w-full bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 text-white text-center py-3 rounded-xl font-semibold transition-all duration-30o0 transform group-hover:scale-10o5 flex items-center justify-center">,
                   Get Started Now,
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />,
                 </Link>,
               </div>,
-            </motion.div>,
-          )),}
+            </motion.div>))}
         </div>,
         {/* Stats Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          viewport={{ once: true ,}}
-          className="bg-white rounded-2xl shadow-xl p-8 mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-2xl shadow-xl p-8 mb-16">,
           <div className="text-center mb-8">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Proven Results Across Industries</h3>,
             <p className="text-gray-60o0">Our solutions deliver measurable impact for businesses worldwide</p>,
@@ -238,14 +221,13 @@ export default function UltimateServicesShowcase20o25() {,
             </div>,
           </div>,
         </motion.div>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          viewport={{ once: true ,}}
-          className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">,
           <h3 className="text-2xl md: text-3xl font-bold mb-4">,
             Ready to Transform Your Business?,
           </h3>,
@@ -254,23 +236,20 @@ export default function UltimateServicesShowcase20o25() {,
             Get a free consultation and custom implementation plan.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-blue-60o0 px-8 py-3 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center",
-            >,
+              className="bg-white text-blue-60o0 px-8 py-3 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors flex items-center justify-center">,
               <Zap className="w-5 h-5 mr-2"  />,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies",
-              className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center",
-            >,
+              className="border-2 border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center justify-center">,
               <TrendingUp className="w-5 h-5 mr-2"  />,
               View Success Stories,
             </Link>,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}

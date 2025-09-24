@@ -1,5 +1,5 @@
 import Head from "next/head",
-import {,
+import {
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground",
 import Button from "../components/ui/Button",
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services",
@@ -8,61 +8,51 @@ import Head from './next / head',
 import UltraAdvancedFuturisticBackground from "../components / ui / UltraAdvancedFuturisticBackground",
 import Button from "../components / ui / Button",
 import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micro - saas - services',
-
-,
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props),
-    this.state ={ hasError: false ,};
+    this.state ={ hasError: false };
   }
 ,
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 ,
-  componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
 ,
-  render() {,
-    if (this.state.hasError) {,
-      return <div>Something went wrong.</div>,
-    }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Brain,;
-  Star,;
-,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Brain,;
-  Star,;
-,
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Brain;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Brain;
+  Star;
 } from "lucide-react",
-,
-export default function QuantumAIBCIPage() {,
+export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>,
-    s && s.link.endsWith("/quantum-ai-brain-computer-interface"),;
-,
-  ),
+    s && s.link.endsWith("/quantum-ai-brain-computer-interface");
+),
   if (!service) return null,
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>{service && service.name} - Zion Tech Group</title>,
         <meta name="description" content={service && service.description}  />,
-        <link,
+        <link
           rel="canonical",
           href="https: //ziontechgroup && ziontechgroup.com/quantum-ai-brain-computer-interface",
          />,
@@ -72,7 +62,7 @@ export default function QuantumAIBCIPage() {,
           <div className="text-center mb-10">,
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent flex items-center justify-center gap-3">,
               <Brain className="w-10 h-10"  />,
-              {service && service.name,}
+              {service && service.name}
             </h1>,
             <p className="mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto">,
               {service && service.tagline}
@@ -81,16 +71,15 @@ export default function QuantumAIBCIPage() {,
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12">,
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-purple-50o0/30 p-6">,
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>,
-              <p className="text-slate-30o0 mb-6">{service && service.description,}</p>,
+              <p className="text-slate-30o0 mb-6">{service && service.description}</p>,
               <ul className="grid grid-cols-1 md: grid-cols-2 gap-3">,
-                {service && service.features.slice(0, 12).map((feat, i) => (,
-                  <li,
+                {service && service.features.slice(0, 12).map((feat, i) => (
+                  <li
                     key={i}
                     className="flex items-start space-x-3 text-slate-20o0">,
                     <Check className="w-5 h-5 text-purple-40o0 mt-0 && 0.5"  />,
                     <span>{feat}</span>,
-                  </li>,
-                ))}
+                  </li>))}
 ,
               </ul>,
             </div>,
@@ -104,7 +93,7 @@ export default function QuantumAIBCIPage() {,
                     </span>,
                   </div>,
                   <div className="text-slate-40o0">,
-                    {service.trialDays}-day free trial • Setup: {" ",}
+                    {service.trialDays}-day free trial • Setup: {" "}
                     {service.setupTime}
                   </div>,
                 </div>,
@@ -113,28 +102,27 @@ export default function QuantumAIBCIPage() {,
                   {service.rating.toFixed(1)}
                 </div>,
               </div>,
-              <Button,
+              <Button
                 href="/contact",
                 variant="quantum",
                 size="lg",
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Brain,;
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Brain;
   Star} from './lucide-react',
 export default /**,
  * QuantumAIBCIPage - Function description,
  */,
-function QuantumAIBCIPage() {,
+function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find ((s) =>,
     s.link.ends_with ("/quantum - ai - brain - computer - interface")),
   // Check condition,
-if (return null) {,
+if (return null) {
   $2,
-                className="w-full",
-              >,
+                className="w-full">,
                 Book a Demo,
                 <ArrowRight className="w-5 h-5 ml-2"  />,
               </Button>,
@@ -156,16 +144,14 @@ if (return null) {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-,
+    </UltraAdvancedFuturisticBackground>),
 }
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name="description" content={service.description}  />,
-        <link,
+        <link
           rel="canonical",
           href="https: //ziontechgroup.com / quantum - ai - brain - computer - interface",
          />,
@@ -175,7 +161,7 @@ if (return null) {,
           <div className="text - center mb - 10">,
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - purple - 40o0 via - pink - 40o0 to - cyan - 40o0 bg - clip - text text - transparent flex items - center justify - center gap - 3">,
               <Brain className="w - 10 h - 10"  />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className="mt - 4 text - xl text - slate - 30o0 max - w-3xl mx - auto">,
               {service.tagline}
@@ -184,13 +170,12 @@ if (return null) {,
           <div className="grid grid - cols - 1 lg: grid - cols - 3 gap - 6 mb - 12">,
             <div className="lg:col - span - 2 bg - black / 30 rounded - 2xl border border - purple - 50o0 / 30 p - 6">,
               <h2 className="text - 2xl font - semibold mb - 4">Capabilities</h2>,
-              <p className="text - slate - 30o0 mb - 6">{service.description,}</p>,
+              <p className="text - slate - 30o0 mb - 6">{service.description}</p>,
               <ul className="grid grid - cols - 1 md: grid - cols - 2 gap - 3">,
-                {service.features.slice (0, 12).map ((feat, i) => (,
-                  <li,
+                {service.features.slice (0, 12).map ((feat, i) => (
+                  <li
                     key={i}
-                    className="flex items - start space - x-3 text - slate - 20o0",
-                  >,
+                    className="flex items - start space - x-3 text - slate - 20o0">,
                     <Check className="w - 5 h - 5 text - purple - 40o0 mt - 0.5"  />,
                     <span>{feat}</span>,
                   </li>))}
@@ -206,8 +191,7 @@ if (return null) {,
                     </span>,
                   </div>,
                   <div className="text - slate - 40o0">,
-,
-                    {service.trial_days}-day free trial • Setup: {" ",}
+                    {service.trial_days}-day free trial • Setup: {" "}
 ,
                     {service.setup_time}
                   </div>,
@@ -217,12 +201,11 @@ if (return null) {,
                   {service.rating.to_fixed (1)}
                 </div>,
               </div>,
-              <Button,
+              <Button
                 href="/contact",
                 variant="quantum",
                 size="lg",
-                className="w - full",
-              >,
+                className="w - full">,
                 Book a Demo,
                 <ArrowRight className="w - 5 h - 5 ml - 2"  />,
               </Button>,
@@ -245,7 +228,5 @@ if (return null) {,
         </div>,
       </div>,
     </UltraAdvancedFuturisticBackground>),
-,
 }
-,
 }

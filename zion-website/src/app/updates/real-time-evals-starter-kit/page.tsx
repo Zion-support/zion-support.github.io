@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function RealTimeEvalsStarterKitPage() {,
-  return (,
+import React from 'react';
+export default function RealTimeEvalsStarterKitPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <div className='mb-4 flex items-center gap-3 text-xs text-gray-40o0'>,
@@ -42,7 +41,6 @@ export default function RealTimeEvalsStarterKitPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

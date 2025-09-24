@@ -1,93 +1,78 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const UltimateContent20o25ShowcaseBanner = () => {,
+const UltimateContent20o25ShowcaseBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isVisible, setIsVisible] = useState(true),
-,
-  const featuredContent = [,
-    {,
-      id: 'ultimate-business-transformation',;
-      title: 'AI 2025: The Ultimate Business Transformation Revolution',;
-      subtitle: '1,000% ROI Through Intelligent Automation',;
+  const featuredContent = [
+    {
+      id: 'ultimate-business-transformation';
+      title: 'AI 2025: The Ultimate Business Transformation Revolution';
+      subtitle: '1,000% ROI Through Intelligent Automation';
       description:,
-        'Discover how Fortune 500 companies are achieving unprecedented success with AI transformation, generating $500M+ annual savings and 99.8% operational efficiency.',;
-      url: '/blog/ai-2025-ultimate-business-transformation-revolution',;
-      type: 'blog',;
-      metrics: {,
-        roi: '1,000%',;
-        savings: '$500M+',;
-        efficiency: '99.9%',;
-        time: '18 min read',;
-      },;
-      badge: 'NEW',;
-      badgeColor: 'bg-red-500',;
-    },;
-    {,
-      id: 'fortune-500-success',;
-      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings',;
-      subtitle: 'Ultimate Success Story in 18 Months',;
+        'Discover how Fortune 500 companies are achieving unprecedented success with AI transformation, generating $500M+ annual savings and 99.8% operational efficiency.';
+      url: '/blog/ai-2025-ultimate-business-transformation-revolution';
+      type: 'blog';
+      metrics: {
+        roi: '1,000%';
+        savings: '$500M+';
+        efficiency: '99.9%';
+        time: '18 min read';
+      };
+      badge: 'NEW';
+      badgeColor: 'bg-red-500';
+    };
+    {
+      id: 'fortune-500-success';
+      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings';
+      subtitle: 'Ultimate Success Story in 18 Months';
       description:,
-        'Learn how Global Manufacturing Corp achieved 1,200% ROI and $2.8B in annual savings through comprehensive AI transformation across all operations.',;
-      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story',;
-      type: 'case-study',;
-      metrics: {,
-        roi: '1,200%',;
-        savings: '$2.8B',;
-        efficiency: '99.8%',;
-        timeline: '18 months',;
-      },;
-      badge: 'FEATURED',;
-      color: 'from-blue-600 to-indigo-600',;
-    },;
-    {,
-      id: 'implementation-roadmap',;
-      title: 'AI 2025 Implementation Ultimate Roadmap',;
-      subtitle: 'From Strategy to 1,200% ROI in 18 Months',;
+        'Learn how Global Manufacturing Corp achieved 1,200% ROI and $2.8B in annual savings through comprehensive AI transformation across all operations.';
+      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story';
+      type: 'case-study';
+      metrics: {
+        roi: '1,200%';
+        savings: '$2.8B';
+        efficiency: '99.8%';
+        timeline: '18 months';
+      };
+      badge: 'FEATURED';
+      color: 'from-blue-600 to-indigo-600';
+    };
+    {
+      id: 'implementation-roadmap';
+      title: 'AI 2025 Implementation Ultimate Roadmap';
+      subtitle: 'From Strategy to 1,200% ROI in 18 Months';
       description:,
-        'Complete step-by-step guide for achieving 1,200% ROI through AI implementation, based on analysis of 500+ successful enterprise transformations.',;
-      url: '/resources/ai-2025-implementation-ultimate-roadmap',;
-      type: 'resource',;
-      metrics: {,
-        roi: '1,200%',;
-        success: '98%',;
-        projects: '500+',;
-        timeline: '18 months',;
-      },;
-      badge: 'GUIDE',;
-      color: 'from-indigo-600 to-purple-600',;
-    },;
+        'Complete step-by-step guide for achieving 1,200% ROI through AI implementation, based on analysis of 500+ successful enterprise transformations.';
+      url: '/resources/ai-2025-implementation-ultimate-roadmap';
+      type: 'resource';
+      metrics: {
+        roi: '1,200%';
+        success: '98%';
+        projects: '500+';
+        timeline: '18 months';
+      };
+      badge: 'GUIDE';
+      color: 'from-indigo-600 to-purple-600';
+    };
   ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide(prev => (prev + 1) % featuredContent.length),
-    }, 5000),
-,
-    return () => clearInterval(timer),
-  }, []),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % featuredContent.length)}, 5000),
+    return () => clearInterval(timer)}, []),
+  const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateContent2025BannerDismissed', 'true'),
-  };
-,
-  useEffect(() => {,
-    const dismissed = localStorage.getItem(,
-      'ultimateContent2025BannerDismissed',
-    ),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
-    }
+    localStorage.setItem('ultimateContent2025BannerDismissed', 'true')};
+  useEffect(() => {
+    const dismissed = localStorage.getItem(
+      'ultimateContent2025BannerDismissed'),
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = featuredContent[currentSlide],
-,
-  return (,
+  return (
     <div className='relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse'></div>,
@@ -109,7 +94,7 @@ const UltimateContent20o25ShowcaseBanner = () => {,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto'>,
             Discover the ultimate AI transformation strategies that are,
-            delivering{' ',}
+            delivering{' '}
             <span className='font-bold text-yellow-300'>1,000%+ ROI</span> and{' '}
             <span className='font-bold text-green-300'>$500M+ savings</span> for,
             Fortune 500 companies,
@@ -118,17 +103,16 @@ const UltimateContent20o25ShowcaseBanner = () => {,
         {/* Main Content Card */}
         <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8 border border-white/20'>,
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-8 items-center'>,
-            {/* Content Info */,}
+            {/* Content Info */}
             <div className='space-y-6'>,
               <div className='flex items-center gap-3 mb-4'>,
-                <span,
-                  className={`px-3 py-1 rounded-full text-xs font-bold ${,
+                <span
+                  className={`px-3 py-1 rounded-full text-xs font-bold ${
                     currentContent.badge === 'NEW',
                       ? 'bg-green-500',
                       : currentContent.badge === 'FEATURED',
                         ? 'bg-blue-500',
-                        : 'bg-purple-500',
-                  }`}
+                        : 'bg-purple-500'}`}
                 >,
                   {currentContent.badge}
                 </span>,
@@ -137,7 +121,7 @@ const UltimateContent20o25ShowcaseBanner = () => {,
                 </span>,
               </div>,
               <h3 className='text-2xl md: text-3xl font-bold leading-tight'>,
-                {currentContent.title,}
+                {currentContent.title}
               </h3>,
               <p className='text-lg opacity-90 leading-relaxed'>,
                 {currentContent.description}
@@ -171,23 +155,21 @@ const UltimateContent20o25ShowcaseBanner = () => {,
                 </div>,
               </div>,
               <div className='flex space-x-4'>,
-                <Link,
+                <Link
                   href={currentContent.url}
-                  className='bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors',
-                >,
+                  className='bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors'>,
                   Read Now,
                 </Link>,
-                <Link,
+                <Link
                   href='/resources',
-                  className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors'>,
                   View All Resources,
                 </Link>,
               </div>,
             </div>,
-            {/* Visual Element */,}
+            {/* Visual Element */}
             <div className='relative'>,
-              <div,
+              <div
                 className={`bg-gradient-to-br ${currentContent.color} rounded-2xl p-8 text-center`}
               >,
                 <div className='text-6xl mb-4'>🤖</div>,
@@ -204,37 +186,34 @@ const UltimateContent20o25ShowcaseBanner = () => {,
         </div>,
         {/* Content Navigation */}
         <div className='flex justify-center items-center gap-4 mb-8'>,
-          {featuredContent.map((_, index) => (,
-            <button,
+          {featuredContent.map((_, index) => (
+            <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all ${,
-                index === currentSlide ? 'bg-white' : 'bg-white/40',
-              }`}
-            />,
-          ))}
+              className={`w-3 h-3 rounded-full transition-all ${
+                index === currentSlide ? 'bg-white' : 'bg-white/40'}`}
+            />))}
         </div>,
         {/* Additional Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-8'>,
-          {featuredContent.map((content, index) => (,
-            <div,
+          {featuredContent.map((content, index) => (
+            <div
               key={content.id}
-              className={`bg-white/5 rounded-xl p-6 border transition-all cursor-pointer ${,
+              className={`bg-white/5 rounded-xl p-6 border transition-all cursor-pointer ${
                 index === currentSlide,
                   ? 'border-white/40 bg-white/10',
                   : 'border-white/20 hover: border-white/30',
-              ,}`}
+              }`}
               onClick={() => setCurrentSlide(index)}
             >,
               <div className='flex items-center gap-2 mb-3'>,
-                <span,
-                  className={`px-2 py-1 rounded text-xs font-bold ${,
+                <span
+                  className={`px-2 py-1 rounded text-xs font-bold ${
                     content.badge === 'NEW',
                       ? 'bg-green-500',
                       : content.badge === 'FEATURED',
                         ? 'bg-blue-500',
-                        : 'bg-purple-500',
-                  }`}
+                        : 'bg-purple-500'}`}
                 >,
                   {content.badge}
                 </span>,
@@ -252,8 +231,7 @@ const UltimateContent20o25ShowcaseBanner = () => {,
                 {content.metrics.roi}
               </div>,
               <div className='text-xs opacity-80'>ROI</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Statistics */}
         <div className='bg-white/5 rounded-xl p-6 text-center'>,
@@ -283,17 +261,13 @@ const UltimateContent20o25ShowcaseBanner = () => {,
         </div>,
         {/* Dismiss Button */}
         <div className='flex justify-center mt-6'>,
-          <button,
+          <button
             onClick={handleDismiss}
-            className='text-white/60 hover: text-white text-sm transition-colors',
-          >,
+            className='text-white/60 hover: text-white text-sm transition-colors'>,
             Dismiss this banner,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContent2025ShowcaseBanner,
-,
+    </div>),
+};
+export default UltimateContent2025ShowcaseBanner;

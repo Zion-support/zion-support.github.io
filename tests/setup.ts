@@ -1,25 +1,20 @@
-import React from 'react',
+import React from 'react';
 // Minimal setup kept intentionally empty, environment is configured in jest.setup.ts,
 export {};
-const "@testing-library/jest-dom", jest.mock("next/router",() => ({ useRouter() { return { route: "/",pathname: "/",query: {,},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn(),}} }})) Object.defineProperty(window,"matchMedia",{ writable: "true",value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return, } observe() { return, } unobserve() { return, } } as any global.ResizeObserver = class ResizeObserver { disconnect() { return, } observe() { return, } unobserve() { return, } } as any'"'",
-interface SetupProps {,
-  // Add props here as needed,
-}
-export default function Setup({ }: SetupProps) {,
-  return (,
+const "@testing-library/jest-dom", jest.mock("next/router",() => ({ useRouter() { return { route: "/",pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()}} }})) Object.defineProperty(window,"matchMedia",{ writable: "true",value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return} observe() { return} unobserve() { return} } as any global.ResizeObserver = class ResizeObserver { disconnect() { return} observe() { return} unobserve() { return} } as any'"'",
+interface SetupProps {
+  // Add props here as needed}
+export default function Setup({ }: SetupProps) {
+  return (
     <div>,
       <h1>Setup</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
 // Ensure React Testing Library cleans up between tests,
-afterEach(() => {,
+afterEach(() => {
   cleanup(),
-  vi.restoreAllMocks(), // Changed from jest to vi,
-}),
-,
+  vi.restoreAllMocks(), // Changed from jest to vi}),
 // -----------------------------------------------------------------------------,
 // Jest-compatibility shim ------------------------------------------------------,
 // -----------------------------------------------------------------------------,
@@ -29,22 +24,21 @@ afterEach(() => {,
 // production bundles.,
 // deliberately attaching to global for test environment setup,
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/no-explicit-any,
-(globalThis as any).jest ={,
+(globalThis as any).jest ={
   // Core mocking utilities,
-  fn: vi.fn.bind(vi),;
-  mock: vi.mock.bind(vi),;
-  spyOn: vi.spyOn.bind(vi),;
+  fn: vi.fn.bind(vi);
+  mock: vi.mock.bind(vi);
+  spyOn: vi.spyOn.bind(vi);
   // Timing helpers,
-  useFakeTimers: vi.useFakeTimers.bind(vi),;
-  useRealTimers: vi.useRealTimers.bind(vi),;
-  advanceTimersByTime: vi.advanceTimersByTime.bind(vi),;
-  runAllTimers: vi.runAllTimers.bind(vi),;
+  useFakeTimers: vi.useFakeTimers.bind(vi);
+  useRealTimers: vi.useRealTimers.bind(vi);
+  advanceTimersByTime: vi.advanceTimersByTime.bind(vi);
+  runAllTimers: vi.runAllTimers.bind(vi);
   // Reset / clear mocks,
-  resetAllMocks: vi.resetAllMocks.bind(vi),;
-  restoreAllMocks: vi.restoreAllMocks.bind(vi),;
-  clearAllMocks: vi.clearAllMocks.bind(vi),;
+  resetAllMocks: vi.resetAllMocks.bind(vi);
+  restoreAllMocks: vi.restoreAllMocks.bind(vi);
+  clearAllMocks: vi.clearAllMocks.bind(vi);
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.,
   // We expose it so imports compile even if we don't use it.,
   // eslint-disable-next-line @typescript-eslint/no-empty-function,
-  SnapshotSerializer: () => {,}};
-,
+  SnapshotSerializer: () => {}};

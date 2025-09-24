@@ -7,17 +7,17 @@ import {TenantsList} from "@/components/admin/whitelabel/TenantsList",
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
 import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
-import React, { useState } from 'react',;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { SEO } from "@/components/SEO",;
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",;
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import React, { useState } from 'react';
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
 import { SEO } from '@/components / SEO',
@@ -26,27 +26,23 @@ import { TenantsList } from '@/components / admin / whitelabel / TenantsList',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs',
 import { use_auth } from '@/hooks / use_auth',
 import { Navigate } from './react-router-dom',
-
-,
-export default function WhitelabelManager() {,
+export default function WhitelabelManager() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("tenants"),
-,
-export default function WhitelabelManager() {,
+export default function WhitelabelManager() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("tenants"),
   // Check if user has admin role,
   // Check if user has admin role,
   const isAdmin = user?.role === "admin",
-export default function WhitelabelManager() {,
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("tenants"),;
+export default function WhitelabelManager() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role,
-  const isAdmin = user?.role === "admin",;
-  if (!isAdmin) {,
-    return <Navigate to="/unauthorized" />,
-  }
-  return (,
+  const isAdmin = user?.role === "admin";
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" />}
+  return (
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.,
                 </p>,
               </div>,
@@ -55,21 +51,18 @@ export default function WhitelabelManager() {,
         </div>,
       </main>,
       <Footer />,
-    </>,
-  ),
-export default function WhitelabelManager() {,
-  const { user } = useAuth(),;
-  const [activeTab, setActiveTab] = useState("tenants"),;
+    </>),
+export default function WhitelabelManager() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role,
   const isAdmin = user?.role === "admin",
-  if (!isAdmin) {,
-    return <Navigate to="/unauthorized" />,
-  }
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" />}
 ,
-  return (,
-,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="White-Label Management - Zion AI Marketplace",
         description="Create and manage white-label instances of the Zion AI Marketplace platform.",
       />,
@@ -82,29 +75,23 @@ export default function WhitelabelManager() {,
               Create and manage branded versions of the platform for agencies, startups, and enterprise clients.,
             </p>,
           </div>,
-,
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
             <TabsList className="mb-8">,
-,
 export default /**,
  * WhitelabelManager - Function description,
  */,
-function WhitelabelManager() {,
+function WhitelabelManager() {
   const { user } = use_auth (),
   const [active_tab, setActiveTab] = useState ("tenants"),
-,
   // Check if user has admin role,
   const is_admin = user?.role === "admin",
-,
   // Check condition,
-if ( {) {,
-  $2,
-}
-    return <Navigate to="/unauthorized" />,
-  }
-  return (,
+if ( {) {
+  $2}
+    return <Navigate to="/unauthorized" />}
+  return (
     <>,
-      <SEO,
+      <SEO
         title="White - Label Management - Zion AI Marketplace",
         description="Create and manage white - label instances of the Zion AI Marketplace platform.",
       />,
@@ -119,12 +106,10 @@ if ( {) {,
           </div>,
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">,
             <TabsList className="mb - 8">,
-,
               <TabsTrigger value="tenants">Tenants</TabsTrigger>,
               <TabsTrigger value="create">Create New</TabsTrigger>,
               <TabsTrigger value="docs">Documentation</TabsTrigger>,
             </TabsList>,
-,
             <TabsContent value="tenants" className="space - y-6">,
               <TenantsList />,
             </TabsContent>,
@@ -138,22 +123,18 @@ if ( {) {,
                 <p>,
                   To use a custom domain with your white - label instance, you need to configure the DNS records.,
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.,
-,
                 </p>,
                 <table>,
                   <thead>,
                     <tr>,
-,
                       <th > Record Type</th>,
                       <th > Name</th>,
                       <th > Value</th>,
                       <th > TTL</th>,
-,
                     </tr>,
                   </thead>,
                   <tbody>,
                     <tr>,
-,
                       <td > CNAME</td>,
                       <td > marketplace</td>,
                       <td > ziontechmarketplace.com</td>,
@@ -175,7 +156,7 @@ if ( {) {,
                 </ul>,
                 <h3 > Admin Access</h3>,
                 <p>,
-                  You can assign tenant administrators who will have access to manage their white - label instance,;
+                  You can assign tenant administrators who will have access to manage their white - label instance;
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.,
                 </p>,
               </div>,
@@ -184,10 +165,5 @@ if ( {) {,
         </div>,
       </main>,
       <Footer />,
-,
 }
-,
-,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}}}))
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}))

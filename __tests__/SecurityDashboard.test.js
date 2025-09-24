@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import SecurityDashboard from '../components/SecurityDashboard',
-,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityDashboard from "./components/SecurityDashboard" describe("SecurityDashboard",() => {" test("renders without crashing",() => {" render(<SecurityDashboard /  />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<SecurityDashboard /  />) }) test("handles user interactions",() => {" render(<SecurityDashboard /  />) }) test("applies correct styling",() => {" render(<SecurityDashboard /  />) }) })'"'",
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import SecurityDashboard from "./components/SecurityDashboard" describe("SecurityDashboard",() => {" test("renders without crashing",() => {" render(<SecurityDashboard /  />) expect(screen.getByTestId("securitydashboard")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<SecurityDashboard /  />) }) test("handles user interactions",() => {" render(<SecurityDashboard /  />) }) test("applies correct styling",() => {" render(<SecurityDashboard /  />) }) })'"'",

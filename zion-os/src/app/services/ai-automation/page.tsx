@@ -1,7 +1,6 @@
 'use client',
-,
-export default function AIAutomationPage() {,
-  return (,
+export default function AIAutomationPage() {
+  return (
     <div className='space-y-8'>,
       <div className='text-center space-y-4'>,
         <h1 className='text-4xl font-bold'>AI Workflow Automation</h1>,
@@ -10,7 +9,5 @@ export default function AIAutomationPage() {,
           by cutting-edge AI technology,
         </p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

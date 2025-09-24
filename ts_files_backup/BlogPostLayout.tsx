@@ -1,4 +1,4 @@
-interface BlogPost {,
+interface BlogPost {
   title: string,
   description: string,
   date: string,
@@ -7,30 +7,29 @@ interface BlogPost {,
   tags: string[],
   readingTime: string,
   featured: boolean,
-,}
+}
 ,
-interface BlogPostLayoutProps {,
+interface BlogPostLayoutProps {
   post: BlogPost,
   content: string,
-,}
+}
 ,
-export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {,
-  return (,
+export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {
+  return (
     <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-      {/* Header */,}
+      {/* Header */}
       <header className='mb-8'>,
         <div className='mb-4'>,
           <span className='inline-block bg-purple-10o0 text-purple-80o0 text-sm font-medium px-3 py-1 rounded-full'>,
             {post.category}
           </span>,
-          {post.featured && (,
+          {post.featured && (
             <span className='ml-2 inline-block bg-yellow-10o0 text-yellow-80o0 text-sm font-medium px-3 py-1 rounded-full'>,
               Featured,
-            </span>,
-          )}
+            </span>)}
         </div>,
         <h1 className='text-4xl md: text-5xl font-bold text-gray-90o0 mb-4 leading-tight'>,
-          {post.title,}
+          {post.title}
         </h1>,
         <p className='text-xl text-gray-60o0 mb-6 leading-relaxed'>,
           {post.description}
@@ -45,22 +44,18 @@ export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {,
           <span>{post.readingTime}</span>,
         </div>,
         <div className='flex flex-wrap gap-2 mb-8'>,
-          {post.tags.map(tag => (,
-            <span,
+          {post.tags.map(tag => (
+            <span
               key={tag}
-              className='inline-block bg-gray-10o0 text-gray-70o0 text-sm px-3 py-1 rounded-full',
-            >,
+              className='inline-block bg-gray-10o0 text-gray-70o0 text-sm px-3 py-1 rounded-full'>,
               #{tag}
-            </span>,
-          ))}
+            </span>))}
         </div>,
       </header>,
       {/* Content */}
-      <div,
+      <div
         className='prose prose-lg max-w-none prose-headings: text-gray-90o0 prose-p:text-gray-70o0 prose-a:text-purple-60o0 prose-strong:text-gray-90o0',
         dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br  />') }}
       />,
-    </article>,
-  ),
-}
+    </article>)}
 ,

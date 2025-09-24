@@ -1,75 +1,67 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const DocumentationPage: React.FC = () => {,
-  const sections = [,
-    {,
-      title: "Getting Started",;
-      description: "Quick start guide for new users",;
-      icon: "🚀",;
-      links: [,
-        { name: "Installation"href: "#installation"description: "Set up Zion App in minutes" ,},;
-        { name: "Quick Start"href: "#quick-start"description: "Build your first automation" ,},;
-        { name: "Configuration"href: "#configuration"description: "Customize your setup" ,}
-      ],
-    },;
-    {,
-      title: "Core Concepts",;
-      description: "Understanding the fundamentals",;
-      icon: "🧠",;
-      links: [,
-        { name: "Automations"href: "#automations"description: "How autonomous workflows work" ,},;
-        { name: "AI Integration"href: "#ai-integration"description: "Leveraging artificial intelligence" ,},;
-        { name: "Monitoring"href: "#monitoring"description: "Real-time system health" ,}
-      ],
-    },;
-    {,
-      title: "API Reference",;
-      description: "Complete API documentation",;
-      icon: "🔌",;
-      links: [,
-        { name: "REST API"href: "#rest-api"description: "HTTP endpoints and methods" ,},;
-        { name: "Webhooks"href: "#webhooks"description: "Event-driven integrations" ,},;
-        { name: "SDK"href: "#sdk"description: "Client libraries and tools" ,}
-      ],
-    },;
-    {,
-      title: "Automation Guide",;
-      description: "Building custom automations",;
-      icon: "⚙️",;
-      links: [,
-        { name: "Workflow Builder"href: "#workflow-builder"description: "Visual automation designer" ,},;
-        { name: "Triggers"href: "#triggers"description: "Event-based automation" ,},;
-        { name: "Actions"href: "#actions"description: "Available automation steps" ,}
-      ],
-    },;
-    {,
-      title: "Deployment",;
-      description: "Production deployment guide",;
-      icon: "🌐",;
-      links: [,
-        { name: "Netlify"href: "#netlify"description: "Deploy to Netlify" ,},;
-        { name: "Vercel"href: "#vercel"description: "Deploy to Vercel" ,},;
-        { name: "Docker"href: "#docker"description: "Containerized deployment" ,}
-      ],
-    },;
-    {,
-      title: "Troubleshooting",;
-      description: "Common issues and solutions",;
-      icon: "🔧",;
-      links: [,
-        { name: "FAQ"href: "#faq"description: "Frequently asked questions" ,},;
-        { name: "Debugging"href: "#debugging"description: "Debug common issues" ,},;
-        { name: "Support"href: "#support"description: "Get help when needed" ,}
-      ],
-    }
+const DocumentationPage: React.FC = () => {
+  const sections = [
+    {
+      title: "Getting Started";
+      description: "Quick start guide for new users";
+      icon: "🚀";
+      links: [
+        { name: "Installation"href: "#installation"description: "Set up Zion App in minutes" };
+        { name: "Quick Start"href: "#quick-start"description: "Build your first automation" };
+        { name: "Configuration"href: "#configuration"description: "Customize your setup" }
+      ]};
+    {
+      title: "Core Concepts";
+      description: "Understanding the fundamentals";
+      icon: "🧠";
+      links: [
+        { name: "Automations"href: "#automations"description: "How autonomous workflows work" };
+        { name: "AI Integration"href: "#ai-integration"description: "Leveraging artificial intelligence" };
+        { name: "Monitoring"href: "#monitoring"description: "Real-time system health" }
+      ]};
+    {
+      title: "API Reference";
+      description: "Complete API documentation";
+      icon: "🔌";
+      links: [
+        { name: "REST API"href: "#rest-api"description: "HTTP endpoints and methods" };
+        { name: "Webhooks"href: "#webhooks"description: "Event-driven integrations" };
+        { name: "SDK"href: "#sdk"description: "Client libraries and tools" }
+      ]};
+    {
+      title: "Automation Guide";
+      description: "Building custom automations";
+      icon: "⚙️";
+      links: [
+        { name: "Workflow Builder"href: "#workflow-builder"description: "Visual automation designer" };
+        { name: "Triggers"href: "#triggers"description: "Event-based automation" };
+        { name: "Actions"href: "#actions"description: "Available automation steps" }
+      ]};
+    {
+      title: "Deployment";
+      description: "Production deployment guide";
+      icon: "🌐";
+      links: [
+        { name: "Netlify"href: "#netlify"description: "Deploy to Netlify" };
+        { name: "Vercel"href: "#vercel"description: "Deploy to Vercel" };
+        { name: "Docker"href: "#docker"description: "Containerized deployment" }
+      ]};
+    {
+      title: "Troubleshooting";
+      description: "Common issues and solutions";
+      icon: "🔧";
+      links: [
+        { name: "FAQ"href: "#faq"description: "Frequently asked questions" };
+        { name: "Debugging"href: "#debugging"description: "Debug common issues" };
+        { name: "Support"href: "#support"description: "Get help when needed" }
+      ]}
   ],
-,
-  const codeExamples = [,
-    {,
-      title: "Basic Automation",;
-      language: "yaml",;
+  const codeExamples = [
+    {
+      title: "Basic Automation";
+      language: "yaml";
       code: `name: Basic Automation,
 on:,
   schedule:,
@@ -82,49 +74,40 @@ jobs:,
       - uses: actions/checkout@v4,
       - name: Run Automation,
         run: npm run automation:cloud`,
-    ,},;
-    {,
-      title: "AI Content Generation",;
-      language: "javascript",;
+    };
+    {
+      title: "AI Content Generation";
+      language: "javascript";
       code: `// AI-powered content generation,
-const generateContent = async (prompt) => {,
-  const response = await fetch('/api/ai/generate'{,
-    method: 'POST',;
-    headers: { 'Content-Type': 'application/json' ,},;
-    body: JSON.stringify({ prompt ,}),
-  }),
-  return response.json(),
-};
-,
+const generateContent = async (prompt) => {
+  const response = await fetch('/api/ai/generate'{
+    method: 'POST';
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ prompt })}),
+  return response.json()};
 // Usage,
-const content = await generateContent(,
-  'Create a blog post about autonomous automation',
-),`,
-    },;
-    {,
-      title: "Performance Monitoring",;
-      language: "typescript",;
-      code: `interface PerformanceMetrics {,
+const content = await generateContent(
+  'Create a blog post about autonomous automation'),`};
+    {
+      title: "Performance Monitoring";
+      language: "typescript";
+      code: `interface PerformanceMetrics {
   lighthouseScore: number,
   loadTime: number,
   seoScore: number,
   accessibilityScore: number,
-,}
+}
 ,
-const monitorPerformance = async (): Promise<PerformanceMetrics> => {,
+const monitorPerformance = async (): Promise<PerformanceMetrics> => {
   const metrics = await fetch('/api/performance/lighthouse'),
-  return metrics.json(),
-};
-,
+  return metrics.json()};
 // Real-time monitoring,
-setInterval(async () => {,
+setInterval(async () => {
   const metrics = await monitorPerformance(),
-  console.log('Performance: 'metrics),
-,}60o000), // Every minute`,
-    }
+  // console.log('Performance: 'metrics),
+}60o000), // Every minute`}
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Documentation - Zion App</title>,
@@ -146,32 +129,28 @@ setInterval(async () => {,
             </div>,
           </div>,
         </header>,
-        {/* Documentation Sections */,}
+        {/* Documentation Sections */}
         <section className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {sections.map((sectionindex) => (,
-              <div,
-                key={index,}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: border-blue-40o0/50 transition-all duration-30o0",
-              >,
-                <div className="text-4xl mb-4">{section.icon,}</div>,
+            {sections.map((sectionindex) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: border-blue-40o0/50 transition-all duration-30o0">,
+                <div className="text-4xl mb-4">{section.icon}</div>,
                 <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>,
                 <p className="text-blue-20o0 mb-6">{section.description}</p>,
                 <div className="space-y-3">,
-                  {section.links.map((linkIndex) => (,
+                  {section.links.map((linkIndex) => (
                     <div key={linkIndex} className="border-l-2 border-blue-40o0 pl-4">,
-                      <a,
+                      <a
                         href={link.href}
-                        className="text-blue-30o0 hover: text-blue-10o0 font-medium block mb-1",
-                      >,
-                        {link.name,}
+                        className="text-blue-30o0 hover: text-blue-10o0 font-medium block mb-1">,
+                        {link.name}
                       </a>,
                       <p className="text-blue-20o0 text-sm">{link.description}</p>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </section>,
         {/* Code Examples */}
@@ -180,19 +159,17 @@ setInterval(async () => {,
             Code Examples,
           </h2>,
           <div className="space-y-8">,
-            {codeExamples.map((exampleindex) => (,
-              <div,
-                key={index,}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20",
-              >,
+            {codeExamples.map((exampleindex) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">,
                 <h3 className="text-xl font-bold text-white mb-4">{example.title}</h3>,
                 <div className="bg-gray-80o0 rounded-lg p-4 overflow-x-auto">,
                   <pre className="text-green-40o0 text-sm">,
                     <code>{example.code}</code>,
                   </pre>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </section>,
         {/* Quick Start Guide */}
@@ -241,7 +218,7 @@ setInterval(async () => {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div className="text-center">,
             <h2 className="text-3xl font-bold text-white mb-6">,
@@ -251,22 +228,20 @@ setInterval(async () => {,
               Can't find what you're looking for? Our team is here to help.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-30o0",
-              >,
+                className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-30o0">,
                 Contact Support,
               </Link>,
-              <Link,
+              <Link
                 href="https://github.com/Zion-Holdings/zion.app/issues",
-                className="bg-transparent border border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-30o0",
-              >,
+                className="bg-transparent border border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-30o0">,
                 Report Issue,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Footer */,}
+        {/* Footer */}
         <footer className="border-t border-white/20 mt-16">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="text-center text-blue-20o0">,
@@ -275,8 +250,6 @@ setInterval(async () => {,
           </div>,
         </footer>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default DocumentationPage,
+    </>),
+};
+export default DocumentationPage;

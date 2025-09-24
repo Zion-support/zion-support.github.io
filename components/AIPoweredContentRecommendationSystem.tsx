@@ -1,208 +1,191 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Sparkles,
   TrendingUp,
   Target,
   Users,
   Clock,
-  Star,;
-  ArrowRight,;
-  BookOpen,;
-  Play,;
-  Download,;
-  Share2,;
-  Heart,;
-  Eye,;
-  Tag,;
-  Calendar,;
-  User,;
-  Zap,;
-  Cpu,;
-  Globe,;
-  Database,;
-  Cloud,;
-  Shield,;
-  CheckCircle,;
-  AlertCircle,;
-  RefreshCw,;
-  Filter,;
-  Search,;
-  Settings,;
-  BarChart3,;
-  Activity,;
-  Lightbulb,;
-  Rocket,;
-  Award,;
-  ThumbsUp,
-} from 'lucide-react',
-,
-const AIPoweredContentRecommendationSystem = () => {,
+  Star;
+  ArrowRight;
+  BookOpen;
+  Play;
+  Download;
+  Share2;
+  Heart;
+  Eye;
+  Tag;
+  Calendar;
+  User;
+  Zap;
+  Cpu;
+  Globe;
+  Database;
+  Cloud;
+  Shield;
+  CheckCircle;
+  AlertCircle;
+  RefreshCw;
+  Filter;
+  Search;
+  Settings;
+  BarChart3;
+  Activity;
+  Lightbulb;
+  Rocket;
+  Award;
+  ThumbsUp} from 'lucide-react',
+const AIPoweredContentRecommendationSystem = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [recommendationsetRecommendations] = useState([]),
   const [isLoadingsetIsLoading] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    generateRecommendations(),
-  }[selectedCategory]),
-,
-  const generateRecommendations = async () => {,
+    generateRecommendations()}[selectedCategory]),
+  const generateRecommendations = async () => {
     setIsLoading(true),
     // Simulate AI processing,
     await new Promise(resolve => setTimeout(resolve150o0)),
-,
-    const mockRecommendations = [,
-      {,
-        id: 1,;
-        title: 'AI 20o26: The Future of Autonomous Business Operations',;
-        type: 'blog',;
-        category: 'ai-innovation',;
-        confidence: 95,;
-        reason: 'High engagement with similar AI content',;
-        views: 15420,;
-        engagement: 892,;
-        publishedAt: '20o25-0o1-15',;
-        author: 'Dr. Sarah Chen',;
-        tags: ['ai', 'automation', 'business', '20o26'],;
-        featured: true,;
-        aiScore: 9.2,;
+    const mockRecommendations = [
+      {
+        id: 1;
+        title: 'AI 20o26: The Future of Autonomous Business Operations';
+        type: 'blog';
+        category: 'ai-innovation';
+        confidence: 95;
+        reason: 'High engagement with similar AI content';
+        views: 15420;
+        engagement: 892;
+        publishedAt: '20o25-0o1-15';
+        author: 'Dr. Sarah Chen';
+        tags: ['ai', 'automation', 'business', '20o26'];
+        featured: true;
+        aiScore: 9.2;
         trending: true,
-      ,},;
-      {,
-        id: 2,;
-        title: 'Quantum Computing Breakthrough: Real-World Applications',;
-        type: 'case-study',;
-        category: 'quantum-computing',;
-        confidence: 88,;
-        reason: 'Matches your interest in emerging technologies',;
-        views: 8930,;
-        engagement: 456,;
-        publishedAt: '20o25-0o1-14',;
-        author: 'Prof. Michael Rodriguez',;
-        tags: [', 'quantum', 'computing'applications'],;
-        featured: true,;
-        aiScore: 8.7,;
+      };
+      {
+        id: 2;
+        title: 'Quantum Computing Breakthrough: Real-World Applications';
+        type: 'case-study';
+        category: 'quantum-computing';
+        confidence: 88;
+        reason: 'Matches your interest in emerging technologies';
+        views: 8930;
+        engagement: 456;
+        publishedAt: '20o25-0o1-14';
+        author: 'Prof. Michael Rodriguez';
+        tags: [', 'quantum', 'computing'applications'];
+        featured: true;
+        aiScore: 8.7;
         trending: false,
-      ,},;
-      {,
-        id: 3,;
-        title: 'Neural Interface Revolution: A Complete Guide',;
-        type: 'tutorial',;
-        category: 'neural-interface',;
-        confidence: 92,;
-        reason: 'Based on your reading history and preferences',;
-        views: 6780,;
-        engagement: 234,;
-        publishedAt: '20o25-0o1-13',;
-        author: 'Emily Watson',;
-        tags: ['neural-'interface', 'guide'tutorial'],;
-        featured: false,;
-        aiScore: 9.0,;
+      };
+      {
+        id: 3;
+        title: 'Neural Interface Revolution: A Complete Guide';
+        type: 'tutorial';
+        category: 'neural-interface';
+        confidence: 92;
+        reason: 'Based on your reading history and preferences';
+        views: 6780;
+        engagement: 234;
+        publishedAt: '20o25-0o1-13';
+        author: 'Emily Watson';
+        tags: ['neural-'interface', 'guide'tutorial'];
+        featured: false;
+        aiScore: 9.0;
         trending: true,
-      ,},;
-      {,
-        id: 4,;
-        title: 'Edge AI Computing: Performance Optimization',;
-        type: 'research',;
-        category: 'edge-computing',;
-        confidence: 85,;
-        reason: 'Complementary to your recent AI research',;
-        views: 5420,;
-        engagement: 189,;
-        publishedAt: '20o25-0o1-12',;
-        author: 'Alex Thompson',;
-        tags: ['edge-'ai', 'performance'optimization'],;
-        featured: false,;
-        aiScore: 8.5,;
+      };
+      {
+        id: 4;
+        title: 'Edge AI Computing: Performance Optimization';
+        type: 'research';
+        category: 'edge-computing';
+        confidence: 85;
+        reason: 'Complementary to your recent AI research';
+        views: 5420;
+        engagement: 189;
+        publishedAt: '20o25-0o1-12';
+        author: 'Alex Thompson';
+        tags: ['edge-'ai', 'performance'optimization'];
+        featured: false;
+        aiScore: 8.5;
         trending: false,
-      ,},;
-      {,
-        id: 5,;
-        title: 'Machine Learning in Healthcare: Ethical Considerations',;
-        type: 'whitepaper',;
-        category: 'healthcare-ai',;
-        confidence: 90,;
-        reason: 'Aligns with your interest in AI ethics',;
-        views: 4320,;
-        engagement: 156,;
-        publishedAt: '20o25-0o1-11',;
-        author: 'Dr. Lisa Park',;
-        tags: [', 'ml', 'healthcare'ethics'],;
-        featured: false,;
-        aiScore: 8.9,;
+      };
+      {
+        id: 5;
+        title: 'Machine Learning in Healthcare: Ethical Considerations';
+        type: 'whitepaper';
+        category: 'healthcare-ai';
+        confidence: 90;
+        reason: 'Aligns with your interest in AI ethics';
+        views: 4320;
+        engagement: 156;
+        publishedAt: '20o25-0o1-11';
+        author: 'Dr. Lisa Park';
+        tags: [', 'ml', 'healthcare'ethics'];
+        featured: false;
+        aiScore: 8.9;
         trending: false,
-      ,},;
-      {,
-        id: 6,;
-        title: 'Blockchain and AI: Synergistic Applications',;
-        type: 'blog',;
-        category: 'blockchain-ai',;
-        confidence: 87,;
-        reason: 'Matches your interest in emerging tech convergence',;
-        views: 3890,;
-        engagement: 20o1,;
-        publishedAt: '20o25-0o1-10',;
-        author: 'James Wilson',;
-        tags: [', 'blockchain', 'ai'convergence'],;
-        featured: false,;
-        aiScore: 8.6,;
+      };
+      {
+        id: 6;
+        title: 'Blockchain and AI: Synergistic Applications';
+        type: 'blog';
+        category: 'blockchain-ai';
+        confidence: 87;
+        reason: 'Matches your interest in emerging tech convergence';
+        views: 3890;
+        engagement: 20o1;
+        publishedAt: '20o25-0o1-10';
+        author: 'James Wilson';
+        tags: [', 'blockchain', 'ai'convergence'];
+        featured: false;
+        aiScore: 8.6;
         trending: true,
-      ,}
+      }
     ],
-,
     setRecommendations(mockRecommendations),
-    setIsLoading(false),
-  };
-,
-  const categories = [,
-    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: 1247 ,},;
-    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Cpucount: 342 ,},;
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcount: 156 ,},;
-    { id: 'neural-'interface', 'name: 'Neural 'Interface', 'icon: Braincount: 89 ,},;
-    { id: 'edge-'computing', 'name: 'Edge 'Computing', 'icon: Cloudcount: 123 ,},;
-    { id: 'healthcare-'ai', 'name: 'Healthcare 'AI', 'icon: Shieldcount: 78 ,},;
-    { id: 'blockchain-'ai', 'name: 'Blockchain 'AI', 'icon: Databasecount: 45 ,}
+    setIsLoading(false)};
+  const categories = [
+    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: 1247 };
+    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Cpucount: 342 };
+    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcount: 156 };
+    { id: 'neural-'interface', 'name: 'Neural 'Interface', 'icon: Braincount: 89 };
+    { id: 'edge-'computing', 'name: 'Edge 'Computing', 'icon: Cloudcount: 123 };
+    { id: 'healthcare-'ai', 'name: 'Healthcare 'AI', 'icon: Shieldcount: 78 };
+    { id: 'blockchain-'ai', 'name: 'Blockchain 'AI', 'icon: Databasecount: 45 }
   ],
-,
-  const getConfidenceColor = (confidence) => {,
+  const getConfidenceColor = (confidence) => {
     if (confidence >= 90) return 'text-green-60o0 bg-green-10o0',
     if (confidence >= 80) return 'text-yellow-60o0 bg-yellow-10o0',
-    return 'text-orange-60o0 bg-orange-10o0',
-  };
-,
-  const getAIScoreColor = (score) => {,
+    return 'text-orange-60o0 bg-orange-10o0'};
+  const getAIScoreColor = (score) => {
     if (score >= 9.0) return 'text-green-60o0',
     if (score >= 8.0) return 'text-yellow-60o0',
-    return 'text-orange-60o0',
-  };
-,
-  const getTypeIcon = (type) => {,
-    switch (type) {,
+    return 'text-orange-60o0'};
+  const getTypeIcon = (type) => {
+    switch (type) {
       case 'blog': return BookOpen,
       case 'case-study': return Target,
       case 'tutorial': return Play,
       case 'research': return Cpu,
       case 'whitepaper': return Shield,
       default: return Database,
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-12",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12">,
           <div className="inline-flex items-center px-4 py-2 bg-purple-10o0 rounded-full text-purple-70o0 text-sm font-medium mb-6">,
             <Brain className="w-4 h-4 mr-2"  />,
             AI-Powered Recommendations,
@@ -218,88 +201,80 @@ const AIPoweredContentRecommendationSystem = () => {,
             Get personalized recommendations that match your reading patterns and preferences.,
           </p>,
         </motion.div>,
-        {/* AI Stats */,}
+        {/* AI Stats */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-          transition={{ duration: 0.8delay: 0.2 ,}}
-          className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12",
-        >,
-          {[,
-            { label: 'AI 'Accuracy', 'value: '94.2%'icon: Targetcolor: 'green' ,},;
-            { label: ''Personalization', 'value: '98.7%'icon: Userscolor: 'blue' ,},;
-            { label: 'Engagement 'Boost', 'value: '+67%'icon: TrendingUpcolor: 'purple' ,},;
-            { label: 'Content 'Matched', 'value: '1,247'icon: Databasecolor: 'orange' ,}
-          ].map((statindex) => (,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.2 }}
+          className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,
+          {[
+            { label: 'AI 'Accuracy', 'value: '94.2%'icon: Targetcolor: 'green' };
+            { label: ''Personalization', 'value: '98.7%'icon: Userscolor: 'blue' };
+            { label: 'Engagement 'Boost', 'value: '+67%'icon: TrendingUpcolor: 'purple' };
+            { label: 'Content 'Matched', 'value: '1,247'icon: Databasecolor: 'orange' }
+          ].map((statindex) => (
             <div key={index} className="bg-white rounded-xl p-6 shadow-lg text-center">,
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-${stat.color}-10o0 mb-4`}>,
                 <stat.icon className={`w-6 h-6 text-${stat.color}-60o0`}  />,
               </div>,
               <div className="text-2xl font-bold text-gray-90o0 mb-1">{stat.value}</div>,
               <div className="text-gray-60o0 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </motion.div>,
         {/* Category Filter */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="mb-8",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="mb-8">,
           <div className="flex flex-wrap gap-2 justify-center">,
-            {categories.map((category) => (,
-              <button,
+            {categories.map((category) => (
+              <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-30o0 ${,
+                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-30o0 ${
                   selectedCategory === category.id,
                     ? 'bg-purple-60o0 text-white shadow-lg',
                     : 'bg-white text-gray-60o0 hover: bg-purple-50 hover:text-purple-60o0',
-                ,}`}
+                }`}
               >,
                 <category.icon className="w-4 h-4 mr-2"  />,
                 {category.name}
                 <span className="ml-2 px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
                   {category.count}
                 </span>,
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </motion.div>,
         {/* AI Processing Indicator */}
-        {isLoading && (,
+        {isLoading && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            className="text-center mb-8",
-          >,
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center mb-8">,
             <div className="inline-flex items-center px-6 py-3 bg-purple-10o0 rounded-full text-purple-70o0">,
               <RefreshCw className="w-5 h-5 mr-2 animate-spin"  />,
               AI is analyzing your preferences and generating recommendations...,
             </div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
 ,
         {/* Recommendations Grid */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6",
-        >,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
           <AnimatePresence>,
-            {recommendations.map((itemindex) => {,
+            {recommendations.map((itemindex) => {
               const TypeIcon = getTypeIcon(item.type),
-              return (,
+              return (
                 <motion.div,
-                  key={item.id,}
-                  initial={{ opacity: 0, y: 20 ,}}
-                  animate={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.5delay: index * 0.1 ,}}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 group",
-                >,
-                  {/* Header */,}
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 group">,
+                  {/* Header */}
                   <div className="p-6 border-b border-gray-10o0">,
                     <div className="flex items-start justify-between mb-4">,
                       <div className="flex items-center">,
@@ -310,33 +285,30 @@ const AIPoweredContentRecommendationSystem = () => {,
                           <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-10o0 text-blue-80o0">,
                             {item.type}
                           </span>,
-                          {item.featured && (,
+                          {item.featured && (
                             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-10o0 text-yellow-80o0 ml-2">,
                               <Star className="w-3 h-3 mr-1"  />,
                               Featured,
-                            </span>,
-                          )}
+                            </span>)}
                         </div>,
                       </div>,
                       <div className="flex items-center space-x-2">,
-                        {item.trending && (,
+                        {item.trending && (
                           <div className="flex items-center text-orange-60o0 text-xs">,
                             <TrendingUp className="w-3 h-3 mr-1"  />,
                             Trending,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
                     </div>,
                     <h3 className="text-lg font-semibold text-gray-90o0 mb-2 group-hover: text-purple-60o0 transition-colors">,
-                      {item.title,}
+                      {item.title}
                     </h3>,
                     <p className="text-sm text-gray-60o0 mb-4">by {item.author}</p>,
                     <div className="flex flex-wrap gap-2 mb-4">,
-                      {item.tags.slice(0o3).map((tagIndex) => (,
+                      {item.tags.slice(0o3).map((tagIndex) => (
                         <span key={tagIndex} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full">,
                           #{tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                   {/* AI Insights */}
@@ -354,7 +326,7 @@ const AIPoweredContentRecommendationSystem = () => {,
                     <div className="flex items-center justify-between">,
                       <div className="flex items-center">,
                         <span className="text-sm text-gray-50o0 mr-2">AI Score: </span>,
-                        <span className={`font-semibold ${getAIScoreColor(item.aiScore),}`}>,
+                        <span className={`font-semibold ${getAIScoreColor(item.aiScore)}`}>,
                           {item.aiScore}/10,
                         </span>,
                       </div>,
@@ -370,7 +342,7 @@ const AIPoweredContentRecommendationSystem = () => {,
                       <div className="flex items-center space-x-4">,
                         <button className="flex items-center text-gray-50o0 hover: text-purple-60o0 transition-colors">,
                           <Heart className="w-4 h-4 mr-1"  />,
-                          {item.engagement,}
+                          {item.engagement}
                         </button>,
                         <button className="flex items-center text-gray-50o0 hover: text-blue-60o0 transition-colors">,
                           <Share2 className="w-4 h-4 mr-1"  />,
@@ -387,29 +359,24 @@ const AIPoweredContentRecommendationSystem = () => {,
                       </button>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ),
-            ,})}
+                </motion.div>),
+            })}
           </AnimatePresence>,
         </motion.div>,
         {/* Load More */}
         <motion.div,
-          initial={{ opacity: 0, y: 20 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-          transition={{ duration: 0.8delay: 0.8 ,}}
-          className="text-center mt-12",
-        >,
-          <button,
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="text-center mt-12">,
+          <button
             onClick={generateRecommendations}
-            className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center mx-auto group",
-          >,
+            className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center mx-auto group">,
             <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform"  />,
             Generate More Recommendations,
           </button>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIPoweredContentRecommendationSystem,
+    </div>),
+};
+export default AIPoweredContentRecommendationSystem;

@@ -1,6 +1,6 @@
 'use client',
-export default function RevolutionaryAIContent20o26Banner() {,
-  return (,
+export default function RevolutionaryAIContent20o26Banner() {
+  return (
     <section className='py-8 bg-gradient-to-r from-emerald-60o0 to-teal-70o0 text-white'>,
       <div className='max-w-6xl mx-auto px-4'>,
         <h2 className='text-2xl font-bold'>Revolutionary AI Content 20o26</h2>,
@@ -8,7 +8,5 @@ export default function RevolutionaryAIContent20o26Banner() {,
           The latest research-backed guidance for 20o26.,
         </p>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

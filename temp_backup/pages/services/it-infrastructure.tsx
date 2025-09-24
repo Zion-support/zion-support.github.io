@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ItInfrastructurePage() {,
-  return (,
+export default function ItInfrastructurePage() {
+  return (
     <>,
       <Head>,
         <title>It Infrastructure - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ItInfrastructurePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

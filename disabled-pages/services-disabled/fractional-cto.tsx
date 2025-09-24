@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function FractionalCTO(...args: any[]): any {,
-  return (,
+export default function FractionalCTO(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Fractional CTO — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Strategic technology leadership on-demand: roadmaps, org design, and vendor selection.',
         />,
@@ -48,7 +47,6 @@ export default function FractionalCTO(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

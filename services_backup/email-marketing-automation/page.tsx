@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'Email Marketing Automation | Zion Tech Group',;
+export const metadata = {
+  title: 'Email Marketing Automation | Zion Tech Group';
   description:,
-    'Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.',;
+    'Boost your email marketing ROI with AI-powered automation, personalized campaigns, and advanced analytics.';
 };
-,
-export default function EmailMarketingAutomationPage() {,
-  return (,
+export default function EmailMarketingAutomationPage() {
+  return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
         Email Marketing Automation,
@@ -15,31 +14,31 @@ export default function EmailMarketingAutomationPage() {,
         campaigns, and advanced analytics.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
-        <FeatureCard,
+        <FeatureCard
           title='AI-Powered Campaigns',
-          features={[,
-            'Personalized content generation',;
-            'Optimal send time prediction',;
-            'Subject line optimization',;
-            'A/B testing automation',;
+          features={[
+            'Personalized content generation';
+            'Optimal send time prediction';
+            'Subject line optimization';
+            'A/B testing automation';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Advanced Segmentation',
-          features={[,
-            'Behavioral targeting',;
-            'Demographic analysis',;
-            'Engagement scoring',;
-            'Dynamic lists',;
+          features={[
+            'Behavioral targeting';
+            'Demographic analysis';
+            'Engagement scoring';
+            'Dynamic lists';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Comprehensive Analytics',
-          features={[,
-            'ROI tracking',;
-            'Engagement metrics',;
-            'Conversion analysis',;
-            'Predictive insights',;
+          features={[
+            'ROI tracking';
+            'Engagement metrics';
+            'Conversion analysis';
+            'Predictive insights';
           ]}
         />,
       </div>,
@@ -105,130 +104,118 @@ export default function EmailMarketingAutomationPage() {,
           potential for improvement.,
         </p>,
         <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors',
-          >,
+            className='bg-pink-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-pink-60o0 text-pink-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-pink-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,
-function FeatureCard({,
-  title,;
-  features,;
-}: {,
+function FeatureCard({
+  title;
+  features;
+}: {
   title: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2 text-gray-60o0'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-pink-50o0 mr-2'>•</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <div className='mt-16'>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         Pricing Plans,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <Plan,
+        <Plan
           name='Starter',
           price='$49/mo',
-          features={[,
-            'Up to 5,0o00 subscribers',;
-            'Basic automation',;
-            'Email templates',;
-            'Email support',;
+          features={[
+            'Up to 5,0o00 subscribers';
+            'Basic automation';
+            'Email templates';
+            'Email support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Professional',
           price='$149/mo',
-          features={[,
-            'Up to 25,0o00 subscribers',;
-            'Advanced AI features',;
-            'A/B testing',;
-            'Priority support',;
-            'Custom integrations',;
+          features={[
+            'Up to 25,0o00 subscribers';
+            'Advanced AI features';
+            'A/B testing';
+            'Priority support';
+            'Custom integrations';
           ]}
           popular={true}
         />,
-        <Plan,
+        <Plan
           name='Enterprise',
           price='$399/mo',
-          features={[,
-            'Unlimited subscribers',;
-            'Custom AI models',;
-            'White-label solution',;
-            'Dedicated support',;
-            'Advanced analytics',;
+          features={[
+            'Unlimited subscribers';
+            'Custom AI models';
+            'White-label solution';
+            'Dedicated support';
+            'Advanced analytics';
           ]}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Plan({,
-  name,;
-  price,;
-  features,;
-  popular = false,;
-}: {,
+function Plan({
+  name;
+  price;
+  features;
+  popular = false;
+}: {
   name: string,
   price: string,
   features: string[],
   popular?: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-pink-50o0 ring-2 ring-pink-20o0' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-pink-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-pink-60o0 mb-4'>{price}</div>,
       <ul className='space-y-2 text-gray-60o0 mb-6'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${,
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular,
             ? 'bg-pink-60o0 text-white hover:bg-pink-70o0',
             : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

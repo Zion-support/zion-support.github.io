@@ -3,109 +3,104 @@ import { useApiKeys } from '../../hooks/useApiKeys',
 import { Button } from '../ui/button',
 import { Checkbox } from '../ui/checkbox',
 import { Label } from '../ui/label',
-import {,
+import {
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover',
 import CodeBlock from './CodeBlock',
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger,;
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogFooter;
+  DialogHeader;
+  DialogTitle;
+  DialogTrigger;
 } from '../ui/dialog',
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
 } from '../ui/dropdown-menu',
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogHeader,;
-  AlertDialogTitle,;
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogHeader;
+  AlertDialogTitle;
 } from '../ui/alert-dialog',
-  Copy,;
-  MoreHorizontal,;
-  Eye,;
-  EyeOff,;
-  RotateCcw,;
-  Trash2,;
-  Settings,;
+  Copy;
+  MoreHorizontal;
+  Eye;
+  EyeOff;
+  RotateCcw;
+  Trash2;
+  Settings;
 } from 'lucide-react',
-export default function ApiKeysManager() {,
-  const {,
-    apiKeys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    deleteApiKey,;
-    toggleApiKey,;
-    updateApiKeyScopes,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    clearNewApiKey,;
+export default function ApiKeysManager() {
+  const {
+    apiKeys;
+    loading;
+    newApiKey;
+    fetchApiKeys;
+    createApiKey;
+    deleteApiKey;
+    toggleApiKey;
+    updateApiKeyScopes;
+    regenerateApiKey;
+    revokeApiKey;
+    clearNewApiKey;
   } = useApiKeys(),
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [newKeyName, setNewKeyName] = useState(''),
   const [selectedScopes, setSelectedScopes] = useState([]),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(null),
-  const scopeOptions = [,
-    {,
-      value: 'jobs:read',;
-      label: 'Read Jobs',;
-      description: 'Access to view job listings',;
-    },;
-    {,
-      value: 'jobs:write',;
-      label: 'Write Jobs',;
-      description: 'Create and manage job listings',;
-    },;
-    {,
-      value: 'talent:read',;
-      label: 'Read Talent',;
-      description: 'Access to view talent profiles',;
-    },;
-    {,
-      value: 'quotes:write',;
-      label: 'Write Quotes',;
-      description: 'Create and manage quotes',;
-    },;
-    {,
-      value: 'webhooks:manage',;
-      label: 'Manage Webhooks',;
-      description: 'Set up and manage webhook endpoints',;
-    },;
+  const scopeOptions = [
+    {
+      value: 'jobs:read';
+      label: 'Read Jobs';
+      description: 'Access to view job listings';
+    };
+    {
+      value: 'jobs:write';
+      label: 'Write Jobs';
+      description: 'Create and manage job listings';
+    };
+    {
+      value: 'talent:read';
+      label: 'Read Talent';
+      description: 'Access to view talent profiles';
+    };
+    {
+      value: 'quotes:write';
+      label: 'Write Quotes';
+      description: 'Create and manage quotes';
+    };
+    {
+      value: 'webhooks:manage';
+      label: 'Manage Webhooks';
+      description: 'Set up and manage webhook endpoints';
+    };
   ],
-  const handleCreateKey = async () => {,
+  const handleCreateKey = async () => {
     if (!newKeyName.trim() || selectedScopes.length === 0) return,
     await createApiKey(newKeyName.trim(), selectedScopes),
     setNewKeyName(''),
     setSelectedScopes([]),
-    setShowCreateDialog(false),
-  };
-  const handleScopeToggle = scope => {,
+    setShowCreateDialog(false)};
+  const handleScopeToggle = scope => {
     setSelectedScopes(prev =>,
-      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope],
-    ),
-  };
-  const getExampleCode = apiKey => {,
+      prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope])};
+  const getExampleCode = apiKey => {
     return `curl -X GET "https: //ziontechgroup.com/api/v1/jobs" \\,
-  -H "Authorization: Bearer ${apiKey,}" \\,
+  -H "Authorization: Bearer ${apiKey}" \\,
   -H "Content-Type: application/json"`,
-  ,};
-  if (loading) {,
-    return (,
+  };
+  if (loading) {
+    return (
       <div className='flex items-center justify-center p-8'>,
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan'></div>,
-      </div>,
-    ),
-  }
-  return (,
+      </div>)}
+  return (
     <div className='space-y-6'>,
       <div className='flex items-center justify-between'>,
         <div>,
@@ -114,14 +109,13 @@ export default function ApiKeysManager() {,
             Manage your API keys for accessing Zion Tech Group APIs,
           </p>,
         </div>,
-        <Button,
+        <Button
           onClick={() => setShowCreateDialog(true)}
-          className='bg-zion-cyan hover: bg-zion-cyan-light text-zinc-90o0',
-        >,
+          className='bg-zion-cyan hover: bg-zion-cyan-light text-zinc-90o0'>,
           Create New API Key,
         </Button>,
       </div>,
-      {/* Create New API Key Dialog */,}
+      {/* Create New API Key Dialog */}
       <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>,
         <DialogTrigger asChild>,
           <span></span>,
@@ -138,7 +132,7 @@ export default function ApiKeysManager() {,
               <Label htmlFor='keyName' className='text-white'>,
                 Key Name,
               </Label>,
-              <input,
+              <input
                 id='keyName',
                 type='text',
                 value={newKeyName}
@@ -150,36 +144,33 @@ export default function ApiKeysManager() {,
             <div>,
               <Label className='text-white'>Permissions</Label>,
               <div className='space-y-2 mt-2'>,
-                {scopeOptions.map(scope => (,
-                  <Checkbox,
-                    key={scope.value,}
+                {scopeOptions.map(scope => (
+                  <Checkbox
+                    key={scope.value}
                     checked={selectedScopes.includes(scope.value)}
                     onChange={() => handleScopeToggle(scope.value)}
                     label={`${scope.label} - ${scope.description}`}
-                  />,
-                ))}
+                  />))}
               </div>,
             </div>,
           </div>,
           <DialogFooter>,
-            <Button,
+            <Button
               variant='outline',
               onClick={() => setShowCreateDialog(false)}
-              className='border-zinc-70o0 text-white hover: bg-zinc-80o0',
-            >,
+              className='border-zinc-70o0 text-white hover: bg-zinc-80o0'>,
               Cancel,
             </Button>,
-            <Button,
-              onClick={handleCreateKey,}
-              className='bg-zion-cyan hover: bg-zion-cyan-light text-zinc-90o0',
-            >,
+            <Button
+              onClick={handleCreateKey}
+              className='bg-zion-cyan hover: bg-zion-cyan-light text-zinc-90o0'>,
               Create Key,
             </Button>,
           </DialogFooter>,
         </DialogContent>,
       </Dialog>,
-      {/* New API Key Display */,}
-      {newApiKey && (,
+      {/* New API Key Display */}
+      {newApiKey && (
         <div className='bg-green-90o0/20 border border-green-50o0/30 rounded-lg p-4'>,
           <h3 className='text-green-40o0 font-semibold mb-2'>,
             New API Key Created!,
@@ -192,101 +183,87 @@ export default function ApiKeysManager() {,
             <p className='text-green-30o0 text-sm font-medium'>,
               Example Usage: ,
             </p>,
-            <CodeBlock code={getExampleCode(newApiKey),} language='bash' />,
+            <CodeBlock code={getExampleCode(newApiKey)} language='bash' />,
           </div>,
-          <Button,
+          <Button
             onClick={clearNewApiKey}
-            className='mt-3 bg-green-60o0 hover: bg-green-70o0',
-          >,
+            className='mt-3 bg-green-60o0 hover: bg-green-70o0'>,
             I've Copied the Key,
           </Button>,
-        </div>,
-      ),}
+        </div>)}
 ,
       {/* API Keys List */}
       <div className='space-y-4'>,
-        {apiKeys.map(apiKey => (,
-          <div,
+        {apiKeys.map(apiKey => (
+          <div
             key={apiKey.id}
-            className='bg-zinc-90o0 border border-zinc-80o0 rounded-lg p-4',
-          >,
+            className='bg-zinc-90o0 border border-zinc-80o0 rounded-lg p-4'>,
             <div className='flex items-center justify-between'>,
               <div className='flex-1'>,
                 <div className='flex items-center gap-3 mb-2'>,
                   <h3 className='text-white font-semibold'>{apiKey.name}</h3>,
-                  <span,
-                    className={`px-2 py-1 text-xs rounded-full ${,
+                  <span
+                    className={`px-2 py-1 text-xs rounded-full ${
                       apiKey.isActive,
                         ? 'bg-green-90o0/30 text-green-40o0 border border-green-50o0/30',
-                        : 'bg-red-90o0/30 text-red-40o0 border border-red-50o0/30',
-                    }`}
+                        : 'bg-red-90o0/30 text-red-40o0 border border-red-50o0/30'}`}
                   >,
                     {apiKey.isActive ? 'Active' : 'Inactive'}
                   </span>,
                 </div>,
                 <div className='flex items-center gap-4 text-sm text-zinc-40o0'>,
                   <span>,
-                    Created: {new Date(apiKey.createdAt).toLocaleDateString(),}
+                    Created: {new Date(apiKey.createdAt).toLocaleDateString()}
                   </span>,
-                  {apiKey.lastUsed && (,
+                  {apiKey.lastUsed && (
                     <span>,
-                      Last used: {' ',}
+                      Last used: {' '}
                       {new Date(apiKey.lastUsed).toLocaleDateString()}
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <div className='mt-2'>,
                   <span className='text-zinc-40o0 text-sm'>Permissions: </span>,
                   <div className='flex flex-wrap gap-1 mt-1'>,
-                    {apiKey.scopes.map(scope => (,
-                      <span,
-                        key={scope,}
-                        className='px-2 py-1 bg-zinc-80o0 text-zinc-30o0 text-xs rounded',
-                      >,
+                    {apiKey.scopes.map(scope => (
+                      <span
+                        key={scope}
+                        className='px-2 py-1 bg-zinc-80o0 text-zinc-30o0 text-xs rounded'>,
                         {scope}
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
               </div>,
               <div className='flex items-center gap-2'>,
-                <Button,
+                <Button
                   variant='ghost',
                   size='icon',
                   onClick={() => toggleApiKey(apiKey.id)}
-                  className='text-zinc-40o0 hover: text-white',
-                >,
-                  {apiKey.isActive ? (,
-                    <EyeOff className='h-4 w-4' />,
-                  ) : (,
-                    <Eye className='h-4 w-4' />,
-                  ),}
+                  className='text-zinc-40o0 hover: text-white'>,
+                  {apiKey.isActive ? (
+                    <EyeOff className='h-4 w-4' />) : (
+                    <Eye className='h-4 w-4' />)}
                 </Button>,
                 <DropdownMenu>,
                   <DropdownMenuTrigger asChild>,
-                    <Button,
+                    <Button
                       variant='ghost',
                       size='icon',
-                      className='text-zinc-40o0 hover: text-white',
-                    >,
+                      className='text-zinc-40o0 hover: text-white'>,
                       <MoreHorizontal className='h-4 w-4' />,
                     </Button>,
                   </DropdownMenuTrigger>,
-                  <DropdownMenuContent,
+                  <DropdownMenuContent
                     align='end',
-                    className='bg-zinc-90o0 border-zinc-80o0 text-white',
-                  >,
-                    <DropdownMenuItem,
-                      onClick={() => setShowRegenerateConfirm(apiKey.id),}
-                      className='cursor-pointer',
-                    >,
+                    className='bg-zinc-90o0 border-zinc-80o0 text-white'>,
+                    <DropdownMenuItem
+                      onClick={() => setShowRegenerateConfirm(apiKey.id)}
+                      className='cursor-pointer'>,
                       <RotateCcw className='h-4 w-4 mr-2' />,
                       Regenerate Key,
                     </DropdownMenuItem>,
-                    <DropdownMenuItem,
+                    <DropdownMenuItem
                       onClick={() => setShowDeleteConfirm(apiKey.id)}
-                      className='cursor-pointer text-red-50o0',
-                    >,
+                      className='cursor-pointer text-red-50o0'>,
                       <Trash2 className='h-4 w-4 mr-2' />,
                       Delete Key,
                     </DropdownMenuItem>,
@@ -309,12 +286,11 @@ export default function ApiKeysManager() {,
                     <code className='text-zinc-30o0 text-sm'>,
                       {apiKey.key.substring(0, 8)}...,
                     </code>,
-                    <Button,
+                    <Button
                       variant='ghost',
                       size='sm',
                       onClick={() => navigator.clipboard.writeText(apiKey.key)}
-                      className='w-full text-zinc-40o0 hover: text-white',
-                    >,
+                      className='w-full text-zinc-40o0 hover: text-white'>,
                       <Copy className='h-4 w-4 mr-2' />,
                       Copy Full Key,
                     </Button>,
@@ -322,11 +298,10 @@ export default function ApiKeysManager() {,
                 </PopoverContent>,
               </Popover>,
             </div>,
-          </div>,
-        )),}
+          </div>))}
       </div>,
       {/* Regenerate Confirmation Dialog */}
-      <AlertDialog,
+      <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={() => setShowRegenerateConfirm(null)}
       >,
@@ -342,22 +317,21 @@ export default function ApiKeysManager() {,
             <AlertDialogCancel className='bg-transparent text-white hover: bg-zinc-80o0 border-zinc-70o0'>,
               Cancel,
             </AlertDialogCancel>,
-            <AlertDialogAction,
-              onClick={() => {,
-                if (showRegenerateConfirm) {,
+            <AlertDialogAction
+              onClick={() => {
+                if (showRegenerateConfirm) {
                   regenerateApiKey(showRegenerateConfirm),
                   setShowRegenerateConfirm(null),
-                ,}
+                }
               }}
-              className='bg-blue-60o0 hover: bg-blue-70o0',
-            >,
+              className='bg-blue-60o0 hover: bg-blue-70o0'>,
               Regenerate Key,
             </AlertDialogAction>,
           </DialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-      {/* Delete Confirmation Dialog */,}
-      <AlertDialog,
+      {/* Delete Confirmation Dialog */}
+      <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={() => setShowDeleteConfirm(null)}
       >,
@@ -373,21 +347,19 @@ export default function ApiKeysManager() {,
             <AlertDialogCancel className='bg-transparent text-white hover: bg-zinc-80o0 border-zinc-70o0'>,
               Cancel,
             </AlertDialogCancel>,
-            <AlertDialogAction,
-              onClick={() => {,
-                if (showDeleteConfirm) {,
+            <AlertDialogAction
+              onClick={() => {
+                if (showDeleteConfirm) {
                   deleteApiKey(showDeleteConfirm),
                   setShowDeleteConfirm(null),
-                ,}
+                }
               }}
-              className='bg-red-60o0 hover: bg-red-70o0',
-            >,
+              className='bg-red-60o0 hover: bg-red-70o0'>,
               Delete Key,
             </AlertDialogAction>,
           </DialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

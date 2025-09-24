@@ -1,64 +1,57 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Factory, Zap, Target, Shield, TrendingUp, Globe,;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,;
-  Award, MessageCircle, Cpu,
-} from 'lucide-react',
-,
-export default function AIManufacturingPlatform() {,
-  const features = [,
-    {,
-      icon: <Factory className="w-6 h-6"  />,;
-      title: 'Predictive Maintenance',;
+import {
+  Factory, Zap, Target, Shield, TrendingUp, Globe;
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Cpu} from 'lucide-react',
+export default function AIManufacturingPlatform() {
+  const features = [
+    {
+      icon: <Factory className="w-6 h-6"  />;
+      title: 'Predictive Maintenance';
       description: 'Advanced AI-powered predictive maintenance with real-time equipment monitoring and failure prediction.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Quality Control',;
+    };
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Quality Control';
       description: 'Revolutionary quality control with AI algorithms that detect defects and ensure product excellence.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Production Optimization',;
+    };
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Production Optimization';
       description: 'Intelligent production optimization with AI-driven efficiency improvements and resource allocation.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Supply Chain Management',;
+    };
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Supply Chain Management';
       description: 'Advanced supply chain management with automated inventory control and demand forecasting.',
-    ,},;
-    {,
-      icon: <TrendingUp className="w-6 h-6"  />,;
-      title: 'Performance Analytics',;
+    };
+    {
+      icon: <TrendingUp className="w-6 h-6"  />;
+      title: 'Performance Analytics';
       description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.',
-    ,},;
-    {,
-      icon: <Globe className="w-6 h-6"  />,;
-      title: 'Global Operations',;
+    };
+    {
+      icon: <Globe className="w-6 h-6"  />;
+      title: 'Global Operations';
       description: '24/7 global manufacturing operations with AI-powered automation and remote monitoring.',
-    ,}
+    }
   ],
-,
-  const benefits = [,
-    'Reduce downtime by 80%',;
-    'Improve quality by 90%',;
-    'Increase efficiency by 20o0%',;
-    'Reduce costs by 60%',;
-    'Enable predictive maintenance',;
-    'Optimize production schedules',;
-    'Scale manufacturing globally',;
-    'Future-proof operations',
-  ],
-,
-  const useCases = [,
-    'Predictive Maintenance', 'Quality Control', 'Production Optimization',;
-    'Supply Chain Management', 'Performance Analytics', 'Inventory Control',;
-    'Equipment Monitoring', 'Process Automation', 'Demand Forecasting',;
-    'Manufacturing Analytics', 'Resource Planning', 'Operations Management',
-  ],
-,
-  return (,
+  const benefits = [
+    'Reduce downtime by 80%';
+    'Improve quality by 90%';
+    'Increase efficiency by 20o0%';
+    'Reduce costs by 60%';
+    'Enable predictive maintenance';
+    'Optimize production schedules';
+    'Scale manufacturing globally';
+    'Future-proof operations'],
+  const useCases = [
+    'Predictive Maintenance', 'Quality Control', 'Production Optimization';
+    'Supply Chain Management', 'Performance Analytics', 'Inventory Control';
+    'Equipment Monitoring', 'Process Automation', 'Demand Forecasting';
+    'Manufacturing Analytics', 'Resource Planning', 'Operations Management'],
+  return (
     <>,
       <Head>,
         <title>AI Manufacturing Platform | Zion Tech Group</title>,
@@ -71,16 +64,15 @@ export default function AIManufacturingPlatform() {,
         <link rel="canonical" href="https://ziontechgroup.com/ai-manufacturing-platform"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-slate-90o0/20 via-gray-90o0/20 to-zinc-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-50o0 to-gray-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Factory className="w-8 h-8 text-white"  />,
@@ -90,37 +82,34 @@ export default function AIManufacturingPlatform() {,
                 AI Manufacturing Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Revolutionize manufacturing with AI-powered predictive maintenance,;
+                Revolutionize manufacturing with AI-powered predictive maintenance;
                 quality control, and production optimization for maximum efficiency.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-slate-50o0 to-gray-60o0 text-white rounded-xl font-semibold text-lg hover: from-slate-60o0 hover:to-gray-70o0 transition-all duration-20o0 shadow-lg shadow-slate-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-slate-50o0 to-gray-60o0 text-white rounded-xl font-semibold text-lg hover: from-slate-60o0 hover:to-gray-70o0 transition-all duration-20o0 shadow-lg shadow-slate-50o0/25">,
                   Transform Manufacturing,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-slate-50o0/30 text-slate-40o0 rounded-xl font-semibold text-lg hover: bg-slate-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-slate-50o0/30 text-slate-40o0 rounded-xl font-semibold text-lg hover: bg-slate-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Revolutionary Manufacturing Features,
               </h2>,
@@ -130,23 +119,21 @@ export default function AIManufacturingPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-slate-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-slate-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-slate-50o0/20 to-gray-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-slate-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +141,10 @@ export default function AIManufacturingPlatform() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Manufacturing,
               </h2>,
@@ -168,20 +154,18 @@ export default function AIManufacturingPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-slate-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-slate-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-slate-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +173,10 @@ export default function AIManufacturingPlatform() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Manufacturing Solutions for Every Need,
               </h2>,
@@ -203,20 +186,18 @@ export default function AIManufacturingPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-slate-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-slate-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-slate-50o0/20 to-gray-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Cpu className="w-6 h-6 text-slate-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{useCase,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{useCase}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +205,9 @@ export default function AIManufacturingPlatform() {,
         <section className="py-20 bg-gradient-to-r from-slate-90o0/20 via-gray-90o0/20 to-zinc-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Manufacturing?,
@@ -237,17 +218,15 @@ export default function AIManufacturingPlatform() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-slate-50o0 to-gray-60o0 text-white rounded-xl font-semibold text-lg hover: from-slate-60o0 hover:to-gray-70o0 transition-all duration-20o0 shadow-lg shadow-slate-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-slate-50o0 to-gray-60o0 text-white rounded-xl font-semibold text-lg hover: from-slate-60o0 hover:to-gray-70o0 transition-all duration-20o0 shadow-lg shadow-slate-50o0/25">,
                   Transform Manufacturing Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-slate-50o0/30 text-slate-40o0 rounded-xl font-semibold text-lg hover: bg-slate-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-slate-50o0/30 text-slate-40o0 rounded-xl font-semibold text-lg hover: bg-slate-50o0/10 transition-all duration-20o0">,
                   Contact Manufacturing Team,
                 </motion.button>,
               </div>,
@@ -255,6 +234,5 @@ export default function AIManufacturingPlatform() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

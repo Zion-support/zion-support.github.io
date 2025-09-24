@@ -28,8 +28,8 @@ import ComprehensiveServices from '@/pages/ComprehensiveServices',
 import AIServices from '@/pages/AIServices',
 import ITServices from '@/pages/ITServices',
 import MicroSaaS from '@/pages/MicroSaaS',
-const ContentRoutes = () => {,
-  return (,
+const ContentRoutes = () => {
+  return (
     <Routes>,
       {/* Content Routes */}
       <Route path='/' element={<Home />} />,
@@ -39,7 +39,7 @@ const ContentRoutes = () => {,
       <Route path='/services' element={<Services />} />,
       {/* Solutions overview */}
       <Route path='/solutions' element={<Solutions />} />,
-      <Route,
+      <Route
         path='/comprehensive-services',
         element={<ComprehensiveServices />}
       />,
@@ -51,7 +51,7 @@ const ContentRoutes = () => {,
       <Route path='/services/devops-cloud' element={<DevOpsCloud />} />,
       <Route path='/services/it-infrastructure' element={<Infrastructure />} />,
       <Route path='/services/data-analytics' element={<DataAnalytics />} />,
-      <Route,
+      <Route
         path='/services/ai-business-intelligence',
         element={<AIBusinessIntelligence />}
       />,
@@ -86,15 +86,12 @@ const ContentRoutes = () => {,
       {/* Global Search Route */}
       <Route path='/search' element={<SearchPage />} />,
       {/* API Documentation Redirect */}
-      <Route,
+      <Route
         path='/api-docs',
         element={<Navigate to='/developers/docs' replace />}
       />,
       {/* Sitemap Pages */}
       <Route path='/sitemap' element={<Sitemap />} />,
       <Route path='/sitemap-page' element={<SitemapPage />} />,
-    </Routes>,
-  ),
-};
-export default ContentRoutes,
-,
+    </Routes>)};
+export default ContentRoutes;

@@ -1,7 +1,7 @@
 
 ,
-export default function Featured() {,
-  return (,
+export default function Featured() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue">,
@@ -15,13 +15,12 @@ export default function Featured() {,
               These featured listings represent the best that the Zion Marketplace has to offer.,
             </p>,
           </div>,
-import { Header ,} from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading",
-,
-export default function Featured() {,
-  return (,
+export default function Featured() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue">,
@@ -35,15 +34,12 @@ export default function Featured() {,
               These featured listings represent the best that the Zion Marketplace has to offer.,
             </p>,
           </div>,
-,
-          {/* Reuse the FeaturedListings component */,}
+          {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-}
+    </>)}
 ,
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -52,8 +48,8 @@ import { GradientHeading } from '@/components / GradientHeading',
 export default /**,
  * Featured - Function description,
  */,
-function Featured() {,
-  return (,
+function Featured() {
+  return (
     <>,
       <Header />,
       <div className="min - h-screen bg - zion - blue">,
@@ -67,14 +63,11 @@ function Featured() {,
               These featured listings represent the best that the Zion Marketplace has to offer.,
             </p>,
           </div>,
-          {/* Reuse the FeaturedListings component */,}
+          {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
+    </>)}
 }
-}
-,
-,)
+)

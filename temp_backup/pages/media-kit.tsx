@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MediaKitPage() {,
-  return (,
+export default function MediaKitPage() {
+  return (
     <>,
       <Head>,
         <title>Media Kit - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function MediaKitPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

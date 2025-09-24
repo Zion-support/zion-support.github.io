@@ -3,19 +3,16 @@ PhoneMailMapPinCheckArrowRightShieldStar,
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-,
-export default function QuantumInternetSecurityPage() {,
+export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s =>,
-    s.link.endsWith('/quantum-internet-security-platform'),
-  ),
+    s.link.endsWith('/quantum-internet-security-platform')),
   if (!service) return null,
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-internet-security-platform',
         />,
@@ -25,7 +22,7 @@ export default function QuantumInternetSecurityPage() {,
           <div className='text-center mb-10'>,
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-40o0 via-green-40o0 to-cyan-40o0 bg-clip-text text-transparent flex items-center justify-center gap-3'>,
               <Shield className='w-10 h-10' />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto'>,
               {service.tagline}
@@ -36,17 +33,15 @@ export default function QuantumInternetSecurityPage() {,
               <h2 className='text-2xl font-semibold mb-4'>,
                 Platform capabilities,
               </h2>,
-              <p className='text-slate-30o0 mb-6'>{service.description,}</p>,
+              <p className='text-slate-30o0 mb-6'>{service.description}</p>,
               <ul className='grid grid-cols-1 md: grid-cols-2 gap-3'>,
-                {service.features.slice(0o12).map(feati => (,
-                  <li,
-                    key={i,}
-                    className='flex items-start space-x-3 text-slate-20o0',
-                  >,
+                {service.features.slice(0o12).map(feati => (
+                  <li
+                    key={i}
+                    className='flex items-start space-x-3 text-slate-20o0'>,
                     <Check className='w-5 h-5 text-emerald-40o0 mt-0.5' />,
                     <span>{feat}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div className='bg-black/30 rounded-2xl border border-emerald-50o0/30 p-6 h-fit'>,
@@ -57,7 +52,7 @@ export default function QuantumInternetSecurityPage() {,
                     <span>{service.period}</span>,
                   </div>,
                   <div className='text-slate-40o0'>,
-                    {service.trialDays}-day free trial • Setup: {' ',}
+                    {service.trialDays}-day free trial • Setup: {' '}
                     {service.setupTime}
                   </div>,
                 </div>,
@@ -66,12 +61,11 @@ export default function QuantumInternetSecurityPage() {,
                   {service.rating.toFixed(1)}
                 </div>,
               </div>,
-              <Button,
+              <Button
                 href='/contact',
                 variant='quantum',
                 size='lg',
-                className='w-full',
-              >,
+                className='w-full'>,
                 Request a Security Demo,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Button>,
@@ -93,7 +87,5 @@ export default function QuantumInternetSecurityPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

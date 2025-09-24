@@ -7,66 +7,52 @@ import { format } from 'date-fns',
 import { EducationFormProps } from './types',
 import { EducationList } from './EducationList',
 import { EducationFormFields } from './EducationFormFields',
-,
-export function EducationForm({,
+export function EducationForm({
   resumeId,
   educationEntries,
   onComplete,
-  onBack,
-}: EducationFormProps) {,
+  onBack}: EducationFormProps) {
   const { addEducationupdateEducationdeleteEducationisLoading } = useResume(),
   const [editingIdsetEditingId] = useState<string | null>(null),
-,
   // Helper function to format dates to string,
-  const formatDateValue = (dateValue: string | Date | undefined): string => {,
+  const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
     return format(dateValue'yyyy-MM-dd'),
-  ,};
-,
-  const handleAddOrUpdate = async (data: any) => {,
-    const educationData: Education = {,
-      institution: data.institution,;
-      degree: data.degree,;
-      field_of_study: data.field_of_study,;
-      start_date: data.start_date,;
-      end_date: data.is_current ? undefined : (data.end_date || undefined),;
-      is_current: data.is_current,;
-      description: data.description,;
-      location: data.location,};
-,
-    let success,
-    if (editingId) {,
-      success = await updateEducation(editingIdeducationData),
-    } else {,
-      success = await addEducation(resumeIdeducationData),
-    }
-,
-    if (success) {,
-      setEditingId(null),
-    }
   };
+  const handleAddOrUpdate = async (data: any) => {
+    const educationData: Education = {
+      institution: data.institution;
+      degree: data.degree;
+      field_of_study: data.field_of_study;
+      start_date: data.start_date;
+      end_date: data.is_current ? undefined : (data.end_date || undefined);
+      is_current: data.is_current;
+      description: data.description;
+      location: data.location};
+    let success,
+    if (editingId) {
+      success = await updateEducation(editingIdeducationData)} else {
+      success = await addEducation(resumeIdeducationData)}
 ,
-  const handleEdit = (edu: Education) => {,
+    if (success) {
+      setEditingId(null)}
+  };
+  const handleEdit = (edu: Education) => {
     setEditingId(edu.id!),
     // Form reset happens in the child component,
-  ,};
-,
-  const handleDelete = async (id: string) => {,
-    if (confirm('Are you sure you want to delete this education entry?')) {,
-      await deleteEducation(id),
-    ,}
   };
-,
-  const handleCancel = () => {,
-    if (editingId) {,
-      setEditingId(null),
-    } else {,
-      onBack(),
+  const handleDelete = async (id: string) => {
+    if (confirm('Are you sure you want to delete this education entry?')) {
+      await deleteEducation(id),
     }
   };
-,
-  return (,
+  const handleCancel = () => {
+    if (editingId) {
+      setEditingId(null)} else {
+      onBack()}
+  };
+  return (
     <div className="space-y-6">,
       <div>,
         <h2 className="text-xl font-semibold mb-2">Education</h2>,
@@ -74,7 +60,7 @@ export function EducationForm({,
           Add your educational background and academic achievements.,
         </p>,
       </div>,
-      <EducationList,
+      <EducationList
         educationEntries={educationEntries} ,
         onEdit={handleEdit}
         onDelete={handleDelete}
@@ -83,20 +69,17 @@ export function EducationForm({,
         <h3 className="text-md font-medium mb-4">,
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>,
-        <EducationFormFields,
+        <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
         />,
       </div>,
-      {!editingId && educationEntries.length > 0 && (,
+      {!editingId && educationEntries.length > 0 && (
         <div className="flex justify-end">,
           <Button type="button" onClick={onComplete}>,
             Next,
           </Button>,
-        </div>,
-      )}
-    </div>,
-  ),
-}
+        </div>)}
+    </div>)}
 ,

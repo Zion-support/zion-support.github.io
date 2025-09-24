@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {,
-  return (,
+const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -127,22 +126,19 @@ const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-implementation-ultimate-success-roadmap',
-              className='bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Download Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-implementation',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors'>,
               Get Implementation Help,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors'>,
               Start Your Journey,
             </Link>,
           </div>,
@@ -154,9 +150,5 @@ const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default NewResource20o25ImplementationRoadmapBanner,
-,
+    </section>)};
+export default NewResource20o25ImplementationRoadmapBanner;

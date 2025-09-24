@@ -1,157 +1,152 @@
 import type { NextPage } from 'next',
 import MainLayout from '../../components/layout/MainLayout',
 import Link from 'next/link',
-import {,
-  ArrowRight,;
-  Brain,;
-  Zap,;
-  Shield,;
-  TrendingUp,;
-  Users,;
-  CheckCircle,;
+import {
+  ArrowRight;
+  Brain;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  CheckCircle;
 } from 'lucide-react',
-,
-const AIDevelopment: NextPage = () => {,
-  const aiServices = [,
-    {,
-      title: 'Machine Learning Models',;
+const AIDevelopment: NextPage = () => {
+  const aiServices = [
+    {
+      title: 'Machine Learning Models';
       description:,
-        'Custom ML models for predictive analytics, pattern recognition, and automated decision-making.',;
-      features: [,
-        'Predictive Analytics',;
-        'Classification Models',;
-        'Regression Analysis',;
-        'Clustering Algorithms',;
-      ],;
-    },;
-    {,
-      title: 'Natural Language Processing',;
+        'Custom ML models for predictive analytics, pattern recognition, and automated decision-making.';
+      features: [
+        'Predictive Analytics';
+        'Classification Models';
+        'Regression Analysis';
+        'Clustering Algorithms';
+      ];
+    };
+    {
+      title: 'Natural Language Processing';
       description:,
-        'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',;
-      features: [,
-        'Text Classification',;
-        'Sentiment Analysis',;
-        'Language Translation',;
-        'Chatbots & Virtual Assistants',;
-      ],;
-    },;
-    {,
-      title: 'Computer Vision',;
+        'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
+      features: [
+        'Text Classification';
+        'Sentiment Analysis';
+        'Language Translation';
+        'Chatbots & Virtual Assistants';
+      ];
+    };
+    {
+      title: 'Computer Vision';
       description:,
-        'Image and video processing solutions for object detection, recognition, and analysis.',;
-      features: [,
-        'Object Detection',;
-        'Image Classification',;
-        'Facial Recognition',;
-        'Video Analytics',;
-      ],;
-    },;
-    {,
-      title: 'AI Chatbots',;
+        'Image and video processing solutions for object detection, recognition, and analysis.';
+      features: [
+        'Object Detection';
+        'Image Classification';
+        'Facial Recognition';
+        'Video Analytics';
+      ];
+    };
+    {
+      title: 'AI Chatbots';
       description:,
-        'Intelligent conversational agents for customer service and business automation.',;
-      features: [,
-        'Natural Conversations',;
-        'Multi-language Support',;
-        'Integration APIs',;
-        'Analytics Dashboard',;
-      ],;
-    },;
-    {,
-      title: 'Recommendation Systems',;
+        'Intelligent conversational agents for customer service and business automation.';
+      features: [
+        'Natural Conversations';
+        'Multi-language Support';
+        'Integration APIs';
+        'Analytics Dashboard';
+      ];
+    };
+    {
+      title: 'Recommendation Systems';
       description:,
-        'Personalized recommendation engines for e-commerce and content platforms.',;
-      features: [,
-        'Product Recommendations',;
-        'Content Personalization',;
-        'Collaborative Filtering',;
-        'A/B Testing',;
-      ],;
-    },;
-    {,
-      title: 'Predictive Analytics',;
+        'Personalized recommendation engines for e-commerce and content platforms.';
+      features: [
+        'Product Recommendations';
+        'Content Personalization';
+        'Collaborative Filtering';
+        'A/B Testing';
+      ];
+    };
+    {
+      title: 'Predictive Analytics';
       description:,
-        'Data-driven insights and forecasting for business intelligence and decision-making.',;
-      features: [,
-        'Sales Forecasting',;
-        'Risk Assessment',;
-        'Customer Behavior Analysis',;
-        'Market Trends',;
-      ],;
-    },;
+        'Data-driven insights and forecasting for business intelligence and decision-making.';
+      features: [
+        'Sales Forecasting';
+        'Risk Assessment';
+        'Customer Behavior Analysis';
+        'Market Trends';
+      ];
+    };
   ],
-,
-  const benefits = [,
-    {,
-      title: 'Increased Efficiency',;
+  const benefits = [
+    {
+      title: 'Increased Efficiency';
       description:,
-        'Automate repetitive tasks and processes to improve operational efficiency.',;
-      icon: Zap,;
-    },;
-    {,
-      title: 'Better Decision Making',;
+        'Automate repetitive tasks and processes to improve operational efficiency.';
+      icon: Zap;
+    };
+    {
+      title: 'Better Decision Making';
       description:,
-        'Data-driven insights help make informed business decisions faster.',;
-      icon: TrendingUp,;
-    },;
-    {,
-      title: 'Enhanced Customer Experience',;
+        'Data-driven insights help make informed business decisions faster.';
+      icon: TrendingUp;
+    };
+    {
+      title: 'Enhanced Customer Experience';
       description:,
-        'Personalized interactions and recommendations improve customer satisfaction.',;
-      icon: Users,;
-    },;
-    {,
-      title: 'Cost Reduction',;
+        'Personalized interactions and recommendations improve customer satisfaction.';
+      icon: Users;
+    };
+    {
+      title: 'Cost Reduction';
       description:,
-        'Reduce operational costs through automation and optimization.',;
-      icon: Shield,;
-    },;
+        'Reduce operational costs through automation and optimization.';
+      icon: Shield;
+    };
   ],
-,
-  const process = [,
-    {,
-      step: '0o1',;
-      title: 'Data Assessment',;
+  const process = [
+    {
+      step: '0o1';
+      title: 'Data Assessment';
       description:,
-        'Evaluate your data quality, availability, and requirements for AI implementation.',;
-    },;
-    {,
-      step: '0o2',;
-      title: 'Model Design',;
+        'Evaluate your data quality, availability, and requirements for AI implementation.';
+    };
+    {
+      step: '0o2';
+      title: 'Model Design';
       description:,
-        'Design and architect the AI solution based on your specific business needs.',;
-    },;
-    {,
-      step: '0o3',;
-      title: 'Development & Training',;
+        'Design and architect the AI solution based on your specific business needs.';
+    };
+    {
+      step: '0o3';
+      title: 'Development & Training';
       description:,
-        'Develop and train AI models using your data and business logic.',;
-    },;
-    {,
-      step: '0o4',;
-      title: 'Testing & Validation',;
+        'Develop and train AI models using your data and business logic.';
+    };
+    {
+      step: '0o4';
+      title: 'Testing & Validation';
       description:,
-        'Thoroughly test and validate the AI solution to ensure accuracy and reliability.',;
-    },;
-    {,
-      step: '0o5',;
-      title: 'Deployment & Integration',;
+        'Thoroughly test and validate the AI solution to ensure accuracy and reliability.';
+    };
+    {
+      step: '0o5';
+      title: 'Deployment & Integration';
       description:,
-        'Deploy the AI solution and integrate it with your existing systems.',;
-    },;
-    {,
-      step: '0o6',;
-      title: 'Monitoring & Optimization',;
+        'Deploy the AI solution and integrate it with your existing systems.';
+    };
+    {
+      step: '0o6';
+      title: 'Monitoring & Optimization';
       description:,
-        'Continuously monitor performance and optimize the AI solution for better results.',;
-    },;
+        'Continuously monitor performance and optimize the AI solution for better results.';
+    };
   ],
-,
-  return (,
-    <MainLayout,
+  return (
+    <MainLayout
       title='AI Development Services - Zion Tech Group',
-      description='Custom AI solutions and machine learning models for your business. From predictive analytics to chatbots, we help you leverage artificial intelligence.',
-    >,
+      description='Custom AI solutions and machine learning models for your business. From predictive analytics to chatbots, we help you leverage artificial intelligence.'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-purple-90o0 via-pink-90o0 to-indigo-90o0 text-white py-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -162,7 +157,7 @@ const AIDevelopment: NextPage = () => {,
             <h1 className='text-5xl font-bold mb-6'>AI Development Services</h1>,
             <p className='text-xl max-w-3xl mx-auto'>,
               Transform your business with cutting-edge artificial intelligence,
-              solutions. From machine learning models to intelligent chatbots,;
+              solutions. From machine learning models to intelligent chatbots;
               we help you harness the power of AI to drive innovation and,
               growth.,
             </p>,
@@ -182,28 +177,24 @@ const AIDevelopment: NextPage = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {aiServices.map(service => (,
-              <div,
-                key={service.title,}
-                className='bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow',
-              >,
+            {aiServices.map(service => (
+              <div
+                key={service.title}
+                className='bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow'>,
                 <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>,
-                  {service.title,}
+                  {service.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>{service.description}</p>,
                 <ul className='space-y-2'>,
-                  {service.features.map(feature => (,
-                    <li,
+                  {service.features.map(feature => (
+                    <li
                       key={feature}
-                      className='flex items-center text-sm text-gray-60o0',
-                    >,
+                      className='flex items-center text-sm text-gray-60o0'>,
                       <CheckCircle className='h-4 w-4 text-green-50o0 mr-2' />,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -220,8 +211,8 @@ const AIDevelopment: NextPage = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {benefits.map(benefit => (,
-              <div key={benefit.title,} className='text-center'>,
+            {benefits.map(benefit => (
+              <div key={benefit.title} className='text-center'>,
                 <div className='bg-purple-60o0 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4'>,
                   <benefit.icon className='h-8 w-8' />,
                 </div>,
@@ -229,8 +220,7 @@ const AIDevelopment: NextPage = () => {,
                   {benefit.title}
                 </h3>,
                 <p className='text-gray-60o0'>{benefit.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -247,11 +237,10 @@ const AIDevelopment: NextPage = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {process.map(step => (,
-              <div,
-                key={step.step,}
-                className='bg-white rounded-lg shadow-lg p-8',
-              >,
+            {process.map(step => (
+              <div
+                key={step.step}
+                className='bg-white rounded-lg shadow-lg p-8'>,
                 <div className='bg-purple-60o0 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4 text-lg font-bold'>,
                   {step.step}
                 </div>,
@@ -259,8 +248,7 @@ const AIDevelopment: NextPage = () => {,
                   {step.title}
                 </h3>,
                 <p className='text-gray-60o0'>{step.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -277,29 +265,27 @@ const AIDevelopment: NextPage = () => {,
             </p>,
           </div>,
           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8'>,
-            {[,
-              'TensorFlow',;
-              'PyTorch',;
-              'Scikit-learn',;
-              'OpenAI',;
-              'Hugging Face',;
-              'AWS SageMaker',;
-              'Google Cloud AI',;
-              'Azure ML',;
-              'Keras',;
-              'Pandas',;
-              'NumPy',;
-              'NLTK',;
-            ].map(tech => (,
-              <div,
+            {[
+              'TensorFlow';
+              'PyTorch';
+              'Scikit-learn';
+              'OpenAI';
+              'Hugging Face';
+              'AWS SageMaker';
+              'Google Cloud AI';
+              'Azure ML';
+              'Keras';
+              'Pandas';
+              'NumPy';
+              'NLTK';
+            ].map(tech => (
+              <div
                 key={tech}
-                className='bg-white rounded-lg shadow-md p-6 text-center hover: shadow-lg transition-shadow',
-              >,
+                className='bg-white rounded-lg shadow-md p-6 text-center hover: shadow-lg transition-shadow'>,
                 <div className='text-lg font-semibold text-gray-90o0'>,
-                  {tech,}
+                  {tech}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -314,24 +300,19 @@ const AIDevelopment: NextPage = () => {,
             business and help you stay ahead of the competition.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors',
-            >,
+              className='bg-white text-purple-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>,
               Get AI Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors',
-            >,
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>,
               View All Services,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </MainLayout>,
-  ),
-,};
-,
-export default AIDevelopment,
-,
+    </MainLayout>),
+};
+export default AIDevelopment;

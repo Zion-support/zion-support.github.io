@@ -1,9 +1,7 @@
-export function ServiceDescriptionGenerator() {,
-  return (,
+export function ServiceDescriptionGenerator() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

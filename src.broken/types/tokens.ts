@@ -1,5 +1,4 @@
 // Type definitions for tokens,
-interface tokens {,
+interface tokens {
   // TODO: Add proper type definitions,
-,};
-,
+};

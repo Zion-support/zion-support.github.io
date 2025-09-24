@@ -1,142 +1,128 @@
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
-  Link2,;
-  BarChart3,;
-  Shield,;
-  Users,;
-  Zap,;
-  Target,;
-  TrendingUp,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Award,;
-  Star,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Monitor,;
-  Smartphone,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  DollarSign,;
-  Eye,;
-  Settings,;
-  FileText,;
-  MessageSquare,
-} from 'lucide-react',
-,
-export default function AffiliateMarketingTracking() {,
+import {
+  Link2;
+  BarChart3;
+  Shield;
+  Users;
+  Zap;
+  Target;
+  TrendingUp;
+  CheckCircle;
+  ArrowRight;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Monitor;
+  Smartphone;
+  Mail;
+  Phone;
+  MapPin;
+  DollarSign;
+  Eye;
+  Settings;
+  FileText;
+  MessageSquare} from 'lucide-react',
+export default function AffiliateMarketingTracking() {
   const title = 'Affiliate Marketing Tracking Software — Zion Tech Group',
   const description = 'Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.',
-,
-  const features = [,
-    {,
-      title: 'Advanced Attribution Tracking',;
-      description: 'Cross-device and cross-platform attribution with 99.9% accuracy',;
-      icon: Target,;
-      details: [,
-        'Multi-touch attribution modeling',;
-        'Cross-device user journey tracking',;
-        'Real-time conversion attribution',;
-        'Custom attribution windows',;
-        'Fraud detection and prevention',;
-        'Cookie-less tracking solutions',
-      ],
-},;
-    {,
-      title: 'Commission Management',;
-      description: 'Automated commission calculation and payout processing',;
-      icon: DollarSign,;
-      details: [,
-        'Flexible commission structures',;
-        'Automated payout scheduling',;
-        'Multi-currency support',;
-        'Tax reporting and compliance',;
-        'Performance-based bonuses',;
-        'Real-time earnings tracking',
-      ],
-},;
-    {,
-      title: 'Fraud Detection & Prevention',;
-      description: 'AI-powered fraud detection with real-time monitoring',;
-      icon: Shield,;
-      details: [,
-        'Machine learning fraud algorithms',;
-        'Real-time risk scoring',;
-        'IP and device fingerprinting',;
-        'Click fraud detection',;
-        'Bot traffic filtering',;
-        'Chargeback prevention',
-      ],
-},;
-    {,
-      title: 'Analytics & Reporting',;
-      description: 'Comprehensive analytics dashboard with actionable insights',;
-      icon: BarChart3,;
-      details: [,
-        'Real-time performance metrics',;
-        'Custom report builder',;
-        'ROI and LTV calculations',;
-        'A/B testing capabilities',;
-        'Export to popular BI tools',;
-        'White-label reporting',
-      ],
+  const features = [
+    {
+      title: 'Advanced Attribution Tracking';
+      description: 'Cross-device and cross-platform attribution with 99.9% accuracy';
+      icon: Target;
+      details: [
+        'Multi-touch attribution modeling';
+        'Cross-device user journey tracking';
+        'Real-time conversion attribution';
+        'Custom attribution windows';
+        'Fraud detection and prevention';
+        'Cookie-less tracking solutions']};
+    {
+      title: 'Commission Management';
+      description: 'Automated commission calculation and payout processing';
+      icon: DollarSign;
+      details: [
+        'Flexible commission structures';
+        'Automated payout scheduling';
+        'Multi-currency support';
+        'Tax reporting and compliance';
+        'Performance-based bonuses';
+        'Real-time earnings tracking']};
+    {
+      title: 'Fraud Detection & Prevention';
+      description: 'AI-powered fraud detection with real-time monitoring';
+      icon: Shield;
+      details: [
+        'Machine learning fraud algorithms';
+        'Real-time risk scoring';
+        'IP and device fingerprinting';
+        'Click fraud detection';
+        'Bot traffic filtering';
+        'Chargeback prevention']};
+    {
+      title: 'Analytics & Reporting';
+      description: 'Comprehensive analytics dashboard with actionable insights';
+      icon: BarChart3;
+      details: [
+        'Real-time performance metrics';
+        'Custom report builder';
+        'ROI and LTV calculations';
+        'A/B testing capabilities';
+        'Export to popular BI tools';
+        'White-label reporting']}
+  ],
+  const pricing = [
+    {
+      name: 'Starter';
+      price: '$299';
+      period: '/month';
+      description: 'Perfect for small businesses';
+      features: [
+        'Up to 10,0o00 clicks/month';
+        'Basic fraud detection';
+        'Standard reporting';
+        'Email support';
+        '1 admin user';
+        'Basic integrations'];
+      popular: false,
+};
+    {
+      name: 'Professional';
+      price: '$799';
+      period: '/month';
+      description: 'Ideal for growing businesses';
+      features: [
+        'Up to 10o0,0o00 clicks/month';
+        'Advanced fraud detection';
+        'Custom reporting';
+        'Priority support';
+        '5 admin users';
+        'API access';
+        'White-label options'];
+      popular: true,
+};
+    {
+      name: 'Enterprise';
+      price: 'Custom';
+      period: '';
+      description: 'For large-scale operations';
+      features: [
+        'Unlimited clicks';
+        'AI-powered fraud prevention';
+        'Custom analytics';
+        'Dedicated support';
+        'Unlimited users';
+        'Custom integrations';
+        'SLA guarantee'];
+      popular: false,
 }
   ],
-  const pricing = [,
-    {,
-      name: 'Starter',;
-      price: '$299',;
-      period: '/month',;
-      description: 'Perfect for small businesses',;
-      features: [,
-        'Up to 10,0o00 clicks/month',;
-        'Basic fraud detection',;
-        'Standard reporting',;
-        'Email support',;
-        '1 admin user',;
-        'Basic integrations',
-      ],;
-      popular: false,
-,},;
-    {,
-      name: 'Professional',;
-      price: '$799',;
-      period: '/month',;
-      description: 'Ideal for growing businesses',;
-      features: [,
-        'Up to 10o0,0o00 clicks/month',;
-        'Advanced fraud detection',;
-        'Custom reporting',;
-        'Priority support',;
-        '5 admin users',;
-        'API access',;
-        'White-label options',
-      ],;
-      popular: true,
-,},;
-    {,
-      name: 'Enterprise',;
-      price: 'Custom',;
-      period: '',;
-      description: 'For large-scale operations',;
-      features: [,
-        'Unlimited clicks',;
-        'AI-powered fraud prevention',;
-        'Custom analytics',;
-        'Dedicated support',;
-        'Unlimited users',;
-        'Custom integrations',;
-        'SLA guarantee',
-      ],;
-      popular: false,
-,}
-  ],
-  return (,
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -144,7 +130,7 @@ export default function AffiliateMarketingTracking() {,
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,
         <link rel="canonical" href="https: //ziontechgroup.com/services/affiliate-marketing-tracking"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -156,7 +142,7 @@ export default function AffiliateMarketingTracking() {,
               Advanced Affiliate Marketing Tracking Software,
             </h1>,
             <p className="mt-6 text-lg leading-8 text-gray-60o0">,
-              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection,;
+              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection;
               cross-device attribution, and automated commission management.,
             </p>,
             <div className="mt-8 flex items-center justify-center gap-x-6">,
@@ -170,7 +156,7 @@ export default function AffiliateMarketingTracking() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-24 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center mb-16">,
@@ -182,27 +168,25 @@ export default function AffiliateMarketingTracking() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg:grid-cols-2">,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <div key={index} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-30o0 hover:border-blue-30o0">,
                 <div className="flex items-center gap-x-3 mb-6">,
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-60o0 group-hover:bg-blue-70o0 transition-colors">,
                     <feature.icon className="h-7 w-7 text-white"  />,
                   </div>,
                   <div>,
-                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title,}</h3>,
+                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title}</h3>,
                     <p className="text-sm text-blue-60o0 font-medium">{feature.description}</p>,
                   </div>,
                 </div>,
                 <ul className="space-y-3">,
-                  {feature.details.map((detail, detailIndex) => (,
+                  {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{detail}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -218,15 +202,14 @@ export default function AffiliateMarketingTracking() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg: grid-cols-3">,
-            {pricing.map((plan, index) => (,
+            {pricing.map((plan, index) => (
               <div key={index} className={`relative rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-60o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="inline-flex items-center rounded-full bg-blue-60o0 px-4 py-1 text-sm font-semibold text-white">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
                 <div className="text-center">,
                   <h3 className="text-xl font-semibold text-gray-90o0">{plan.name}</h3>,
                   <p className="mt-2 text-sm text-gray-60o0">{plan.description}</p>,
@@ -236,20 +219,18 @@ export default function AffiliateMarketingTracking() {,
                   </div>,
                 </div>,
                 <ul className="mt-8 space-y-4">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className="mt-8">,
-                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0',}`}>,
+                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}>,
                     Get Started,
                   </Link>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -289,7 +270,7 @@ export default function AffiliateMarketingTracking() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-blue-60o0 py-16 sm: py-24">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -310,7 +291,7 @@ export default function AffiliateMarketingTracking() {,
           </div>,
         </div>,
       </section>,
-      {/* Contact Info */,}
+      {/* Contact Info */}
       <section className="py-16 bg-gray-50">,
         <div className="mx-auto max-w-7xl px-6 lg: px-8">,
           <div className="text-center">,
@@ -332,6 +313,4 @@ export default function AffiliateMarketingTracking() {,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}

@@ -1,29 +1,23 @@
 "use client",
 import React, { useState, useEffect } from 'react',
-,
-const AdvancedSecurityDashboard: React.FC = () => {,
-  const [securityMetricsetSecurityMetrics] = useState({,
-    threatsBlocked: 0,;
-    vulnerabilitiesFixed: 0,;
-    securityScore: 0,;
+const AdvancedSecurityDashboard: React.FC = () => {
+  const [securityMetricsetSecurityMetrics] = useState({
+    threatsBlocked: 0;
+    vulnerabilitiesFixed: 0;
+    securityScore: 0;
     lastScan: '',
-  ,}),
-,
-  useEffect(() => {,
+  }),
+  useEffect(() => {
     // Simulate security metrics,
-    const interval = setInterval(() => {,
-      setSecurityMetrics({,
-        threatsBlocked: Math.floor(Math.random() * 10o00) + 50o0,;
-        vulnerabilitiesFixed: Math.floor(Math.random() * 50) + 10,;
-        securityScore: Math.floor(Math.random() * 20) + 80,;
+    const interval = setInterval(() => {
+      setSecurityMetrics({
+        threatsBlocked: Math.floor(Math.random() * 10o00) + 50o0;
+        vulnerabilitiesFixed: Math.floor(Math.random() * 50) + 10;
+        securityScore: Math.floor(Math.random() * 20) + 80;
         lastScan: new Date().toLocaleTimeString(),
-      ,}),
-    }30o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  return (,
+      })}30o00),
+    return () => clearInterval(interval)}[]),
+  return (
     <div className="bg-gradient-to-br from-red-90o0/20 to-orange-90o0/20 rounded-xl p-6 border border-red-50o0/30">,
       <div className="flex items-center justify-between mb-6">,
         <h3 className="text-xl font-bold text-white">Security Dashboard</h3>,
@@ -54,9 +48,9 @@ const AdvancedSecurityDashboard: React.FC = () => {,
           <span className="text-green-40o0 font-bold text-xl">{securityMetrics.securityScore}%</span>,
         </div>,
         <div className="w-full bg-gray-70o0 rounded-full h-3">,
-          <div,
+          <div
             className="bg-gradient-to-r from-red-50o0 via-yellow-50o0 to-green-50o0 h-3 rounded-full transition-all duration-10o00",
-            style={{ width: `${securityMetrics.securityScore,}%` }}
+            style={{ width: `${securityMetrics.securityScore}%` }}
           ></div>,
         </div>,
       </div>,
@@ -80,8 +74,5 @@ const AdvancedSecurityDashboard: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AdvancedSecurityDashboard,
+    </div>)};
+export default AdvancedSecurityDashboard;

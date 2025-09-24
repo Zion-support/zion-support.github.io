@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Production Readiness Checklist for Autonomous Agents | Zion Tech Group',;
+    'AI 20o26: Production Readiness Checklist for Autonomous Agents | Zion Tech Group';
   description:,
-    'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.',;
+    'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.';
 };
-,
-export default function ProductionReadinessChecklist20o26() {,
-  return (,
+export default function ProductionReadinessChecklist20o26() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Production Readiness Checklist for Autonomous Agents',
         description='A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.',
         keywords='production readiness, autonomous agents, SRE, observability, reliability, rollout',
@@ -26,7 +24,7 @@ export default function ProductionReadinessChecklist20o26() {,
             AI 20o26: Production Readiness Checklist for Autonomous Agents,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            A comprehensive go-live checklist spanning reliability, security,;
+            A comprehensive go-live checklist spanning reliability, security;
             observability, and governance for enterprise agent systems.,
           </p>,
         </header>,
@@ -63,21 +61,18 @@ export default function ProductionReadinessChecklist20o26() {,
           </ul>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Launch Review,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

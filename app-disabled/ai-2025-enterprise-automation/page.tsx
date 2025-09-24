@@ -1,21 +1,19 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Enterprise Automation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Enterprise Automation - Zion Tech Group';
   description:,
-    'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.',;
-  keywords: [,
-    'enterprise automation',;
-    'AI automation',;
-    'business process automation',;
-    'workflow automation',;
-    'intelligent automation',;
-  ],;
+    'Transform your enterprise with intelligent automation solutions. Streamline operations, reduce costs, and boost productivity with AI-powered automation.';
+  keywords: [
+    'enterprise automation';
+    'AI automation';
+    'business process automation';
+    'workflow automation';
+    'intelligent automation';
+  ];
 };
-,
-export default function AI20o25EnterpriseAutomationPage() {,
-  return (,
+export default function AI20o25EnterpriseAutomationPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-orange-90o0 via-red-90o0 to-pink-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
@@ -35,23 +33,21 @@ export default function AI20o25EnterpriseAutomationPage() {,
               across all departments.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5'>,
                 Automate Your Business,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all'>,
                 View Solutions,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Automation Solutions Section */,}
+      {/* Automation Solutions Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -166,7 +162,7 @@ export default function AI20o25EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Industry Applications Section */,}
+      {/* Industry Applications Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-center mb-12'>,
@@ -204,7 +200,7 @@ export default function AI20o25EnterpriseAutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold mb-6'>,
@@ -215,22 +211,19 @@ export default function AI20o25EnterpriseAutomationPage() {,
             achieve unprecedented efficiency and cost savings.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-orange-60o0 to-red-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-70o0 hover:to-red-70o0 transition-all transform hover:scale-10o5'>,
               Start Automation Journey,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-90o0 transition-all'>,
               View All Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

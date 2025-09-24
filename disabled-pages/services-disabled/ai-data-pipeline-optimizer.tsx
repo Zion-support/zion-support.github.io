@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function AIDataPipelineOptimizer(...args: any[]): any {,
-  return (,
+export default function AIDataPipelineOptimizer(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>AI Data Pipeline Optimizer — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Reduce spend and latency in ETL/ELT and LLM RAG pipelines with AI tuning.',
         />,
@@ -22,7 +21,7 @@ export default function AIDataPipelineOptimizer(...args: any[]): any {,
           AI Data Pipeline Optimizer,
         </h1>,
         <p className='mt-4 text-white/80'>,
-          Profile and optimize data/AI pipelines across Spark, Snowflake,;
+          Profile and optimize data/AI pipelines across Spark, Snowflake;
           Airflow, dbt, Kafka, and RAG stores.,
         </p>,
         <ul className='mt-6 space-y-2 text-white/80 list-disc pl-5'>,
@@ -43,7 +42,6 @@ export default function AIDataPipelineOptimizer(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

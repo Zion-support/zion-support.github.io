@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group';
   description:,
-    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.',;
+    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.';
 };
-,
-export default function AgentFleetManagementHandbook20o26() {,
-  return (,
+export default function AgentFleetManagementHandbook20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Fleet Management Handbook',
         description='Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls.',
         keywords='agent fleet management, AI ops, guardrails, SLOs, cost controls',
@@ -56,16 +54,14 @@ export default function AgentFleetManagementHandbook20o26() {,
             <p className='mb-2 font-semibold text-purple-80o0'>,
               Need help operating at scale?,
             </p>,
-            <Link,
+            <Link
               href='/contact',
-              className='text-purple-70o0 font-semibold hover: text-purple-90o0',
-            >,
+              className='text-purple-70o0 font-semibold hover: text-purple-90o0'>,
               Talk to our platform team →,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

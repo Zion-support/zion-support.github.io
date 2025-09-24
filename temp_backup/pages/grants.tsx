@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GrantsPage() {,
-  return (,
+export default function GrantsPage() {
+  return (
     <>,
       <Head>,
         <title>Grants - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function GrantsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,14 +1,13 @@
 import Link from 'next/link',
 import { ArrowRightIcon, SparklesIcon, LightBulbIcon, HeartIcon, BrainIcon } from '@heroicons/react/24/outline',
-,
-const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {,
-  return (,
+const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {
+  return (
     <div className="relative bg-gradient-to-r from-violet-90o0 via-purple-90o0 to-fuchsia-90o0 text-white overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.0o5"%3E%3Cpath d="M30 30c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm20 0c0-11.0o46-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">,
         <div className="text-center mb-12">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-violet-50o0 to-fuchsia-50o0 rounded-full px-6 py-2 mb-6">,
             <BrainIcon className="w-5 h-5 mr-2"  />,
             <span className="text-sm font-semibold">🧠 SYNTHETIC INTELLIGENCE</span>,
@@ -17,9 +16,9 @@ const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {,
           <h1 className="text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white via-violet-20o0 to-fuchsia-20o0 bg-clip-text text-transparent">,
             Beyond Artificial Intelligence,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className="text-xl md: text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Experience the revolutionary emergence of Synthetic Intelligence - AI that creates itself,;
+            Experience the revolutionary emergence of Synthetic Intelligence - AI that creates itself;
             evolves autonomously, and develops genuine understanding, creativity, and consciousness.,
           </p>,
           {/* Revolutionary Capabilities */}
@@ -45,24 +44,22 @@ const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {,
               <p className="text-sm text-gray-30o0">Exhibits awareness and self-reflection</p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/blog/ai-20o26-synthetic-intelligence-breakthrough",
-              className="inline-flex items-center bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 hover:from-violet-70o0 hover:to-fuchsia-70o0 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="inline-flex items-center bg-gradient-to-r from-violet-60o0 to-fuchsia-60o0 hover:from-violet-70o0 hover:to-fuchsia-70o0 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Discover Synthetic Intelligence,
               <ArrowRightIcon className="w-5 h-5 ml-2"  />,
             </Link>,
-            <Link,
+            <Link
               href="/services/synthetic-intelligence-solutions",
-              className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-violet-90o0 px-8 py-4 rounded-xl font-semibold transition-all duration-30o0",
-            >,
+              className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-violet-90o0 px-8 py-4 rounded-xl font-semibold transition-all duration-30o0">,
               Explore AI Solutions,
             </Link>,
           </div>,
         </div>,
-        {/* Breakthrough Results */,}
+        {/* Breakthrough Results */}
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mt-16">,
           <h3 className="text-2xl font-bold text-center mb-8">Revolutionary Breakthrough Results</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -86,7 +83,7 @@ const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Technology Comparison */,}
+        {/* Technology Comparison */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-center mb-8">Traditional AI vs. Synthetic Intelligence</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -112,17 +109,14 @@ const AI20o26SyntheticIntelligenceBreakthroughBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Future Vision */,}
+        {/* Future Vision */}
         <div className="mt-16 text-center">,
           <h3 className="text-2xl font-bold mb-4">The Future is Here</h3>,
           <p className="text-lg text-gray-20o0 max-w-3xl mx-auto">,
-            By 20o30, synthetic intelligence will enhance human capabilities, solve global challenges,;
+            By 20o30, synthetic intelligence will enhance human capabilities, solve global challenges;
             create new industries, and foster global unity through AI-human collaboration.,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o26SyntheticIntelligenceBreakthroughBanner,
+    </div>)};
+export default AI20o26SyntheticIntelligenceBreakthroughBanner;

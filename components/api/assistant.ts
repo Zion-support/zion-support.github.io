@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
-,
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY ,}),
-,
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to: ,
 - Greet users warmly and concisely,
 - Answer FAQs accurately,
@@ -23,43 +21,33 @@ Style: ,
 - Use bullets and short paragraphs,
 - Be helpful but concise,
 - Provide actionable next steps when possible`,
-,
-export default async function handler(,
-  req: NextApiRequest,;
-  res: NextApiResponse,
-) {,
-  if (req.method !== 'POST') {,
+export default async function handler(
+  req: NextApiRequest;
+  res: NextApiResponse) {
+  if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST'),
-    return res.status(405).json({ error: 'Method Not Allowed' ,}),
-  }
+    return res.status(405).json({ error: 'Method Not Allowed' })}
 ,
-  try {,
-    const { messages } = req.body as {,
-      messages?: Array<{,
+  try {
+    const { messages } = req.body as {
+      messages?: Array<{
         role: 'user' | 'assistant' | 'system',
         content: string,
-      ,}>,
-    };
+      }>};
+    if (!messages || !Array.isArray(messages)) {
+      return res.status(400).json({ error: 'Messages array is required' })}
 ,
-    if (!messages || !Array.isArray(messages)) {,
-      return res.status(400).json({ error: 'Messages array is required' ,}),
-    }
-,
-    const completion = await openai.chat.completions.create({,
-      model: 'gpt-4o',;
-      messages: [{ role: 'system', content: SYSTEM_PROMPT ,}, ...messages],;
-      max_tokens: 500,;
-      temperature: 0.7,;
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o';
+      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages];
+      max_tokens: 500;
+      temperature: 0.7;
     }),
-,
     const response =,
       completion.choices[0]?.message?.content ||,
       'I apologize, but I was unable to generate a response.',
-,
-    return res.status(200).json({ response }),
-  } catch (error) {,
+    return res.status(200).json({ response })} catch (error) {
     console.error('Error in assistant API:', error),
-    return res.status(500).json({ error: 'Failed to process request' ,}),
-  }
+    return res.status(500).json({ error: 'Failed to process request' })}
 }
 ,

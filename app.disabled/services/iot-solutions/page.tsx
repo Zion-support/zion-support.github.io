@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'iot-solutions - Zion Tech Group',;
-  description: 'Professional iot-solutions solutions for your business needs.',;
-  keywords: 'iot-solutions, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'iot-solutions - Zion Tech Group';
+  description: 'Professional iot-solutions solutions for your business needs.';
+  keywords: 'iot-solutions, services, business, technology';
 };
-export default function IotSolutionsPage() {,
-  return (,
+export default function IotSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function IotSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

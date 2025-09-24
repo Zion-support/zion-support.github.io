@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AgentSafetyWhitepaperPage() {,
-  return (,
+import React from 'react';
+export default function AgentSafetyWhitepaperPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <div className='text-center'>,
@@ -35,17 +34,16 @@ export default function AgentSafetyWhitepaperPage() {,
           </ul>,
           <h2>Download</h2>,
           <p>,
-            Get the full PDF:{' ',}
-            <a,
+            Get the full PDF:{' '}
+            <a
               className='text-blue-40o0 hover: text-blue-30o0',
-              href='/downloads/agent-safety-framework.pdf',
-            >,
+              href='/downloads/agent-safety-framework.pdf'>,
               AI Agent Safety Framework (PDF),
             </a>,
           </p>,
           <h2>Contact</h2>,
           <p>,
-            Interested in a safety assessment or implementation workshop?{' ',}
+            Interested in a safety assessment or implementation workshop?{' '}
             <a className='text-blue-40o0 hover: text-blue-30o0' href='/contact'>,
               Contact our team,
             </a>,
@@ -53,7 +51,6 @@ export default function AgentSafetyWhitepaperPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

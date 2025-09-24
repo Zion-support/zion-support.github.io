@@ -1,8 +1,7 @@
 import Link from 'next/link',
 ArrowRightTrendingUpDollarSignStarCheckCircleTarget,
-,
-export default function AI20o25GlobalEnterpriseTransformation50o000ROIPromotionBanner() {,
-  return (,
+export default function AI20o25GlobalEnterpriseTransformation50o000ROIPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-green-90o0 to-slate-90o0 border border-green-50o0/30 rounded-2xl my-8'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 bg-gradient-to-r from-green-60o0/10 to-blue-60o0/10 animate-pulse'></div>,
@@ -14,16 +13,15 @@ export default function AI20o25GlobalEnterpriseTransformation50o000ROIPromotionB
       </div>,
       <div className='relative z-10 p-8'>,
         <div className='flex flex-col lg: flex-row items-center justify-between gap-6'>,
-          {/* Left content */,}
+          {/* Left content */}
           <div className='flex-1'>,
             <div className='flex items-center gap-2 mb-4'>,
               <div className='flex items-center gap-1'>,
-                {[...Array(5)].map(_i => (,
-                  <Star,
+                {[...Array(5)].map(_i => (
+                  <Star
                     key={i}
                     className='h-4 w-4 text-yellow-40o0 fill-current',
-                  />,
-                ))}
+                  />))}
               </div>,
               <span className='text-sm font-semibold text-yellow-40o0 uppercase tracking-wide'>,
                 Success Story,
@@ -62,22 +60,20 @@ export default function AI20o25GlobalEnterpriseTransformation50o000ROIPromotionB
               </div>,
             </div>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/case-studies/ai-20o25-global-enterprise-transformation-50o000-roi',
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
                 Read Full Case Study,
                 <ArrowRight className='ml-2 h-4 w-4' />,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0'>,
                 View All Case Studies,
               </Link>,
             </div>,
           </div>,
-          {/* Right content - ROI visualization */,}
+          {/* Right content - ROI visualization */}
           <div className='flex-shrink-0'>,
             <div className='relative'>,
               {/* ROI chart visualization */}
@@ -112,7 +108,5 @@ export default function AI20o25GlobalEnterpriseTransformation50o000ROIPromotionB
       </div>,
       {/* Bottom gradient overlay */}
       <div className='absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-green-50o0 via-blue-50o0 to-purple-50o0'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

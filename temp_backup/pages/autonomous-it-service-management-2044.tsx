@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AutonomousItServiceManagement20o44Page() {,
-  return (,
+export default function AutonomousItServiceManagement20o44Page() {
+  return (
     <>,
       <Head>,
         <title>Autonomous It Service Management 20o44 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='autonomous it service management 20o44 page',
         />,
@@ -21,7 +20,6 @@ export default function AutonomousItServiceManagement20o44Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

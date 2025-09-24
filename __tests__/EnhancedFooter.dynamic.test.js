@@ -1,27 +1,18 @@
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import EnhancedFooter from '../components/EnhancedFooter',
-import React from 'react',
+import React from 'react';
 import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic',
-,
-describe('EnhancedFooter', () => {,
-  test('renders without crashing', () => {,
+describe('EnhancedFooter', () => {
+  test('renders without crashing', () => {
     render(<EnhancedFooter  />),
-    expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument(),
-  }),
-,
-  test('displays correct content', () => {,
-    render(<EnhancedFooter  />),
-  }),
-,
-  test('handles user interactions', () => {,
-    render(<EnhancedFooter  />),
-  }),
-,
-  test('applies correct styling', () => {,
-    render(<EnhancedFooter  />),
-  }),
-}),
+    expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument()}),
+  test('displays correct content', () => {
+    render(<EnhancedFooter  />)}),
+  test('handles user interactions', () => {
+    render(<EnhancedFooter  />)}),
+  test('applies correct styling', () => {
+    render(<EnhancedFooter  />)})}),
 const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic", describe("EnhancedFooterdynamic",() => { test("renders without crashing",() => { render(<EnhancedFooterdynamic  />), expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedFooterdynamic  />)}), test("handles user interactions",() => { render(<EnhancedFooterdynamic  />)}), test("applies correct styling",() => { render(<EnhancedFooterdynamic  />)})}),''",
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
@@ -31,7 +22,4 @@ describe('EnhancedFooterdynamic',
   test('displays correct content',
   test('handles user interactions',
   test('applies correct styling',
-const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic", describe('EnhancedFooterdynamic', () => { test("renders without crashing",() => { render(<EnhancedFooterdynamic  />), expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedFooterdynamic  />)}), test("handles user interactions",() => { render(<EnhancedFooterdynamic  />)}), test("applies correct styling",
-}),
-}),
-,)))))))
+const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic", describe('EnhancedFooterdynamic', () => { test("renders without crashing",() => { render(<EnhancedFooterdynamic  />), expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedFooterdynamic  />)}), test("handles user interactions",() => { render(<EnhancedFooterdynamic  />)}), test("applies correct styling"})}))))))))

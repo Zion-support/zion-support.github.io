@@ -1,17 +1,16 @@
 import { BellFileTextHomeMailSearchSettingsUsers } from 'lucide-react',
-import {,
-  Sidebar,;
-  SidebarContent,;
-  SidebarGroup,;
-  SidebarMenu,;
-  SidebarMenuItem,;
-  SidebarMenuButton,;
-  SidebarGroupLabel,;
-  SidebarGroupContent,;
+import {
+  Sidebar;
+  SidebarContent;
+  SidebarGroup;
+  SidebarMenu;
+  SidebarMenuItem;
+  SidebarMenuButton;
+  SidebarGroupLabel;
+  SidebarGroupContent;
 } from '@/components/ui/sidebar',
-,
-export function AppSidebar() {,
-  return (,
+export function AppSidebar() {
+  return (
     <Sidebar>,
       <SidebarContent>,
         <SidebarGroup>,
@@ -92,7 +91,5 @@ export function AppSidebar() {,
           </SidebarGroupContent>,
         </SidebarGroup>,
       </SidebarContent>,
-    </Sidebar>,
-  ),
-}
+    </Sidebar>)}
 ,

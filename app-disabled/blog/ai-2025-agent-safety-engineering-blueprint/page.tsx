@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AgentSafetyEngineeringBlueprint20o25 = () => {,
-  return (,
+const AgentSafetyEngineeringBlueprint20o25 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o25: Agent Safety Engineering Blueprint',
         description='Practical guardrails, evaluations, and controls to deploy safe, reliable enterprise AI agents.',
         keywords='AI safety, agent safety, red teaming, evals, governance, enterprise AI',
@@ -27,7 +26,7 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {,
           <h2>Why Safety Engineering Matters</h2>,
           <p>,
             Agentic systems act, integrate, and make decisions. Without explicit,
-            safety engineering, organizations inherit risks across security,;
+            safety engineering, organizations inherit risks across security;
             privacy, compliance, integrity, and brand. This blueprint,
             operationalizes safety as a first-class capability.,
           </p>,
@@ -53,28 +52,23 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {,
           <h2>Operating Model</h2>,
           <p>,
             Stand up a cross-functional AI Safety Council and an Agent,
-            Reliability Engineering (ARE) practice responsible for controls,;
+            Reliability Engineering (ARE) practice responsible for controls;
             incident response, and post-incident reviews.,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Design Your Safety Program,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AgentSafetyEngineeringBlueprint20o25,
-,
+    </div>),
+};
+export default AgentSafetyEngineeringBlueprint20o25;

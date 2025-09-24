@@ -1,12 +1,10 @@
 import { Button } from '@/components/ui/button',
 import { Download, Settings } from 'lucide-react',
 import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace',
-,
-export function AdminHeader() {,
+export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available,
   const { company } = useCompanyWorkspace(),
-,
-  return (,
+  return (
     <div className='space-y-4'>,
       <div className='flex items-center justify-between'>,
         <div>,
@@ -32,7 +30,7 @@ export function AdminHeader() {,
         <div className='bg-card rounded-lg p-4 border border-border'>,
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>,
           <div className='text-xl font-medium'>,
-            {company?.plan || 'Enterprise',}
+            {company?.plan || 'Enterprise'}
           </div>,
         </div>,
         <div className='bg-card rounded-lg p-4 border border-border'>,
@@ -51,7 +49,7 @@ export function AdminHeader() {,
       <div className='bg-muted/50 rounded-lg p-4 flex items-center justify-between'>,
         <div className='flex items-center gap-4'>,
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center'>,
-            <img,
+            <img
               src={company?.logoUrl || '/placeholder.svg'}
               alt={company?.name || 'Company'}
               className='max-h-10 max-w-10',
@@ -61,13 +59,11 @@ export function AdminHeader() {,
           <div>,
             <h2 className='font-medium'>{company?.name || 'Company Name'}</h2>,
             <p className='text-sm text-muted-foreground'>,
-              Workspace URL: {company?.workspaceUrl || 'loading...',}
+              Workspace URL: {company?.workspaceUrl || 'loading...'}
             </p>,
           </div>,
         </div>,
         <Button>Customize Workspace</Button>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

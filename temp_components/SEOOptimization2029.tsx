@@ -1,8 +1,7 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   Search,
   TrendingUp,
   Target,
@@ -10,232 +9,205 @@ import {,
   Globe,
   Eye,
   Users,
-  MousePointer,;
-  Zap,;
-  CheckCircle,;
-  AlertTriangle,;
-  Info,;
-  ArrowUp,;
-  ArrowDown,;
-  Minus,;
-  Star,;
-  Award,;
-  BookOpen,;
-  Code,;
-  Settings,;
-  Play,;
-  Pause,;
-  RotateCcw,;
-  Maximize,;
-  Minimize,;
-  Filter,;
-  SortAsc,;
-  SortDesc,
-} from 'lucide-react',
-,
-const SEOOptimization20o29 = () => {,
+  MousePointer;
+  Zap;
+  CheckCircle;
+  AlertTriangle;
+  Info;
+  ArrowUp;
+  ArrowDown;
+  Minus;
+  Star;
+  Award;
+  BookOpen;
+  Code;
+  Settings;
+  Play;
+  Pause;
+  RotateCcw;
+  Maximize;
+  Minimize;
+  Filter;
+  SortAsc;
+  SortDesc} from 'lucide-react',
+const SEOOptimization20o29 = () => {
   const [activeMetricsetActiveMetric] = useState('ranking'),
   const [isAnalyzingsetIsAnalyzing] = useState(false),
   const [analysisProgressetAnalysisProgress] = useState(0),
   const [currentKeywordsetCurrentKeyword] = useState(0),
-,
-  const seoMetrics ={,
-    ranking: {,
-      title: 'Search Rankings',;
-      subtitle: 'Track your position in search results',;
-      icon: Target,;
-      color: 'from-green-50o0 to-emerald-50o0',;
-      currentValue: 8.5,;
-      targetValue: 10,;
-      unit: '/10',;
-      description: 'Average ranking score',;
-      improvements: [,
-        'Keyword optimization',;
-        'Content quality enhancement',;
-        'Technical SEO fixes',;
-        'Backlink building',;
-        'User experience improvement',;
-        'Page speed optimization',
-      ],
-    },;
-    traffic: {,
-      title: 'Organic Traffic',;
-      subtitle: 'Monitor your organic search traffic growth',;
-      icon: TrendingUp,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      currentValue: 1250o00,;
-      targetValue: 20o0000,;
-      unit: 'visitors/month',;
-      description: 'Monthly organic visitors',;
-      improvements: [,
-        'Content marketing strategy',;
-        'Long-tail keyword targeting',;
-        'Featured snippet optimization',;
-        'Local SEO enhancement',;
-        'Voice search optimization',;
-        'Mobile-first indexing',
-      ],
-    },;
-    visibility: {,
-      title: 'Search Visibility',;
-      subtitle: 'Measure your overall search presence',;
-      icon: Eye,;
-      color: 'from-purple-50o0 to-indigo-50o0',;
-      currentValue: 65,;
-      targetValue: 85,;
-      unit: '%',;
-      description: 'Search visibility score',;
-      improvements: [,
-        'Schema markup implementation',;
-        'Rich snippets optimization',;
-        'Image SEO enhancement',;
-        'Video SEO strategy',;
-        'FAQ optimization',;
-        'Knowledge panel targeting',
-      ],
-    },;
-    conversion: {,
-      title: 'Conversion Rate',;
-      subtitle: 'Track SEO-driven conversions',;
-      icon: MousePointer,;
-      color: 'from-orange-50o0 to-red-50o0',;
-      currentValue: 3.2,;
-      targetValue: 5.5,;
-      unit: '%',;
-      description: 'SEO conversion rate',;
-      improvements: [,
-        'Landing page optimization',;
-        'Call-to-action enhancement',;
-        'User journey mapping',;
-        'A/B testing implementation',;
-        'Conversion tracking setup',;
-        'Goal configuration',
-      ],
-    }
+  const seoMetrics ={
+    ranking: {
+      title: 'Search Rankings';
+      subtitle: 'Track your position in search results';
+      icon: Target;
+      color: 'from-green-50o0 to-emerald-50o0';
+      currentValue: 8.5;
+      targetValue: 10;
+      unit: '/10';
+      description: 'Average ranking score';
+      improvements: [
+        'Keyword optimization';
+        'Content quality enhancement';
+        'Technical SEO fixes';
+        'Backlink building';
+        'User experience improvement';
+        'Page speed optimization']};
+    traffic: {
+      title: 'Organic Traffic';
+      subtitle: 'Monitor your organic search traffic growth';
+      icon: TrendingUp;
+      color: 'from-blue-50o0 to-cyan-50o0';
+      currentValue: 1250o00;
+      targetValue: 20o0000;
+      unit: 'visitors/month';
+      description: 'Monthly organic visitors';
+      improvements: [
+        'Content marketing strategy';
+        'Long-tail keyword targeting';
+        'Featured snippet optimization';
+        'Local SEO enhancement';
+        'Voice search optimization';
+        'Mobile-first indexing']};
+    visibility: {
+      title: 'Search Visibility';
+      subtitle: 'Measure your overall search presence';
+      icon: Eye;
+      color: 'from-purple-50o0 to-indigo-50o0';
+      currentValue: 65;
+      targetValue: 85;
+      unit: '%';
+      description: 'Search visibility score';
+      improvements: [
+        'Schema markup implementation';
+        'Rich snippets optimization';
+        'Image SEO enhancement';
+        'Video SEO strategy';
+        'FAQ optimization';
+        'Knowledge panel targeting']};
+    conversion: {
+      title: 'Conversion Rate';
+      subtitle: 'Track SEO-driven conversions';
+      icon: MousePointer;
+      color: 'from-orange-50o0 to-red-50o0';
+      currentValue: 3.2;
+      targetValue: 5.5;
+      unit: '%';
+      description: 'SEO conversion rate';
+      improvements: [
+        'Landing page optimization';
+        'Call-to-action enhancement';
+        'User journey mapping';
+        'A/B testing implementation';
+        'Conversion tracking setup';
+        'Goal configuration']}
   };
-,
-  const keywords = [,
-    {,
-      keyword: 'AI technology 20o29',;
-      position: 3,;
-      volume: 1250o0,;
-      difficulty: 'Medium',;
-      trend: 'up',;
-      change: '+2',;
+  const keywords = [
+    {
+      keyword: 'AI technology 20o29';
+      position: 3;
+      volume: 1250o0;
+      difficulty: 'Medium';
+      trend: 'up';
+      change: '+2';
       icon: Star,
-    ,},;
-    {,
-      keyword: 'quantum computing',;
-      position: 7,;
-      volume: 890o0,;
-      difficulty: 'High',;
-      trend: 'up',;
-      change: '+1',;
+    };
+    {
+      keyword: 'quantum computing';
+      position: 7;
+      volume: 890o0;
+      difficulty: 'High';
+      trend: 'up';
+      change: '+1';
       icon: Zap,
-    ,},;
-    {,
-      keyword: 'machine learning',;
-      position: 2,;
-      volume: 1560o0,;
-      difficulty: 'Medium',;
-      trend: 'up',;
-      change: '+3',;
+    };
+    {
+      keyword: 'machine learning';
+      position: 2;
+      volume: 1560o0;
+      difficulty: 'Medium';
+      trend: 'up';
+      change: '+3';
       icon: Brain,
-    ,},;
-    {,
-      keyword: 'artificial intelligence',;
-      position: 5,;
-      volume: 2210o0,;
-      difficulty: 'High',;
-      trend: 'down',;
-      change: '-1',;
+    };
+    {
+      keyword: 'artificial intelligence';
+      position: 5;
+      volume: 2210o0;
+      difficulty: 'High';
+      trend: 'down';
+      change: '-1';
       icon: Cpu,
-    ,}
-  ],
-,
-  const seoFeatures = [,
-    {,
-      title: 'AI-Powered SEO Analysis',;
-      description: 'Advanced AI algorithms analyze your content and provide optimization recommendations',;
-      icon: Brain,;
-      status: 'Active',;
-      impact: 'High',
-    ,},;
-    {,
-      title: 'Real-time Ranking Tracking',;
-      description: 'Monitor your search rankings across multiple search engines in real-time',;
-      icon: Target,;
-      status: 'Deployed',;
-      impact: 'Critical',
-    ,},;
-    {,
-      title: 'Content Optimization',;
-      description: 'Automated content analysis and optimization suggestions',;
-      icon: BookOpen,;
-      status: 'Beta',;
-      impact: 'Medium',
-    ,},;
-    {,
-      title: 'Technical SEO Audit',;
-      description: 'Comprehensive technical SEO analysis and fix recommendations',;
-      icon: Settings,;
-      status: 'Active',;
-      impact: 'High',
-    ,}
-  ],
-,
-  const realTimeData = [,
-    { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' ,},;
-    { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' ,},;
-    { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' ,},;
-    { label: 'Conversion Rate'value: '3.2%'change: '+0.5%'trend: 'up' ,}
-  ],
-,
-  useEffect(() => {,
-    if (isAnalyzing) {,
-      const interval = setInterval(() => {,
-        setAnalysisProgress(prev => {,
-          if (prev >= 10o0) {,
-            setIsAnalyzing(false),
-            return 10o0,
-          }
-          return prev + 3,
-        }),
-      }10o0),
-      return () => clearInterval(interval),
     }
+  ],
+  const seoFeatures = [
+    {
+      title: 'AI-Powered SEO Analysis';
+      description: 'Advanced AI algorithms analyze your content and provide optimization recommendations';
+      icon: Brain;
+      status: 'Active';
+      impact: 'High',
+    };
+    {
+      title: 'Real-time Ranking Tracking';
+      description: 'Monitor your search rankings across multiple search engines in real-time';
+      icon: Target;
+      status: 'Deployed';
+      impact: 'Critical',
+    };
+    {
+      title: 'Content Optimization';
+      description: 'Automated content analysis and optimization suggestions';
+      icon: BookOpen;
+      status: 'Beta';
+      impact: 'Medium',
+    };
+    {
+      title: 'Technical SEO Audit';
+      description: 'Comprehensive technical SEO analysis and fix recommendations';
+      icon: Settings;
+      status: 'Active';
+      impact: 'High',
+    }
+  ],
+  const realTimeData = [
+    { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' };
+    { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' };
+    { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' };
+    { label: 'Conversion Rate'value: '3.2%'change: '+0.5%'trend: 'up' }
+  ],
+  useEffect(() => {
+    if (isAnalyzing) {
+      const interval = setInterval(() => {
+        setAnalysisProgress(prev => {
+          if (prev >= 10o0) {
+            setIsAnalyzing(false),
+            return 10o0}
+          return prev + 3})}10o0),
+      return () => clearInterval(interval)}
   }[isAnalyzing]),
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentKeyword(prev => (prev + 1) % keywords.length),
-    }30o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const startAnalysis = () => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentKeyword(prev => (prev + 1) % keywords.length)}30o00),
+    return () => clearInterval(interval)}[]),
+  const startAnalysis = () => {
     setIsAnalyzing(true),
-    setAnalysisProgress(0),
-  };
-,
-  return (,
+    setAnalysisProgress(0)};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-green-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-green-60o0/20 to-emerald-60o0/20"  />,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
           <motion.div,
-            initial={{ opacity: 0y: 20 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center">,
             <div className="flex items-center justify-center gap-3 mb-6">,
               <motion.div,
-                animate={{ rotate: 360 ,}}
-                transition={{ duration: 3repeat: Infinityease: "linear" ,}}
-                className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center",
-              >,
+                animate={{ rotate: 360 }}
+                transition={{ duration: 3repeat: Infinityease: "linear" }}
+                className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center">,
                 <Search className="w-6 h-6 text-white"  />,
               </motion.div>,
               <span className="text-lg font-semibold text-green-30o0 uppercase tracking-wider">,
@@ -251,29 +223,25 @@ const SEOOptimization20o29 = () => {,
             </p>,
             <div className="flex flex-wrap justify-center gap-4 mb-12">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={startAnalysis}
                 disabled={isAnalyzing}
-                className="px-8 py-4 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0 disabled:opacity-50",
-              >,
-                {isAnalyzing ? (,
+                className="px-8 py-4 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0 disabled:opacity-50">,
+                {isAnalyzing ? (
                   <>,
                     <Search className="inline-block mr-2 animate-spin"  />,
                     Analyzing...,
-                  </>,
-                ) : (,
+                  </>) : (
                   <>,
                     <Search className="inline-block mr-2"  />,
                     Start SEO Analysis,
-                  </>,
-                ),}
+                  </>)}
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 border-2 border-green-40o0 rounded-full text-green-40o0 font-semibold text-lg hover: bg-green-40o0 hover:text-white transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-green-40o0 rounded-full text-green-40o0 font-semibold text-lg hover: bg-green-40o0 hover:text-white transition-all duration-30o0">,
                 <BarChart3 className="inline-block mr-2"  />,
                 View Reports,
               </motion.button>,
@@ -281,7 +249,7 @@ const SEOOptimization20o29 = () => {,
           </motion.div>,
         </div>,
       </div>,
-      {/* Real-time Metrics */,}
+      {/* Real-time Metrics */}
       <div className="py-16 bg-black/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-12">,
@@ -289,24 +257,21 @@ const SEOOptimization20o29 = () => {,
             <p className="text-xl text-gray-30o0">Live monitoring of your search performance</p>,
           </div>,
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">,
-            {realTimeData.map((metricindex) => (,
+            {realTimeData.map((metricindex) => (
               <motion.div,
-                key={metric.label,}
-                initial={{ opacity: 0y: 20 ,}}
-                animate={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-6 text-center",
-              >,
+                key={metric.label}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-6 text-center">,
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>,
                 <div className="text-sm text-gray-40o0 mb-2">{metric.label}</div>,
-                <div className={`flex items-center justify-center gap-1 text-sm ${,
-                  metric.trend === 'up' ? 'text-green-40o0' : 'text-red-40o0',
-                }`}>,
+                <div className={`flex items-center justify-center gap-1 text-sm ${
+                  metric.trend === 'up' ? 'text-green-40o0' : 'text-red-40o0'}`}>,
                   {metric.trend === 'up' ? <ArrowUp className="w-4 h-4"  /> : <ArrowDown className="w-4 h-4"  />}
                   {metric.change}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </div>,
@@ -317,38 +282,36 @@ const SEOOptimization20o29 = () => {,
             <h2 className="text-4xl md:text-5xl font-bold mb-4">SEO Performance Metrics</h2>,
             <p className="text-xl text-gray-30o0">Choose a metric to explore optimization strategies</p>,
           </div>,
-          {/* Metric Navigation */,}
+          {/* Metric Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">,
-            {Object.entries(seoMetrics).map(([keymetric]) => (,
+            {Object.entries(seoMetrics).map(([keymetric]) => (
               <motion.button,
                 key={key}
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveMetric(key)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${,
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeMetric === key,
                     ? 'bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white',
                     : 'bg-gray-80o0 text-gray-30o0 hover: bg-gray-70o0',
-                ,}`}
+                }`}
               >,
                 <metric.icon className="inline-block mr-2"  />,
                 {metric.title}
-              </motion.button>,
-            ))}
+              </motion.button>))}
           </div>,
           {/* Metric Content */}
           <AnimatePresence mode="wait">,
             <motion.div,
               key={activeMetric}
-              initial={{ opacity: 0y: 20 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              exit={{ opacity: 0y: -20 ,}}
-              transition={{ duration: 0.5 ,}}
-              className="space-y-8",
-            >,
+              initial={{ opacity: 0y: 20 }}
+              animate={{ opacity: 1y: 0 }}
+              exit={{ opacity: 0y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-8">,
               <div className="text-center mb-12">,
                 <h3 className="text-3xl md: text-4xl font-bold mb-4">,
-                  {seoMetrics[activeMetric].title,}
+                  {seoMetrics[activeMetric].title}
                 </h3>,
                 <p className="text-xl text-gray-30o0 mb-4">,
                   {seoMetrics[activeMetric].subtitle}
@@ -360,7 +323,7 @@ const SEOOptimization20o29 = () => {,
                   <h4 className="text-2xl font-bold mb-6">Current Performance</h4>,
                   <div className="text-center">,
                     <div className="text-6xl font-bold text-green-40o0 mb-2">,
-                      {seoMetrics[activeMetric].currentValue.toLocaleString(),}
+                      {seoMetrics[activeMetric].currentValue.toLocaleString()}
                       <span className="text-2xl text-gray-40o0">{seoMetrics[activeMetric].unit}</span>,
                     </div>,
                     <div className="text-gray-30o0">{seoMetrics[activeMetric].description}</div>,
@@ -378,7 +341,7 @@ const SEOOptimization20o29 = () => {,
                 </div>,
               </div>,
               {/* Analysis Progress */}
-              {isAnalyzing && (,
+              {isAnalyzing && (
                 <div className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 mb-12">,
                   <h4 className="text-2xl font-bold mb-6">SEO Analysis Progress</h4>,
                   <div className="space-y-4">,
@@ -389,30 +352,27 @@ const SEOOptimization20o29 = () => {,
                     <div className="w-full bg-gray-70o0 rounded-full h-3">,
                       <motion.div,
                         className="h-3 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full",
-                        style={{ width: `${analysisProgress,}%` }}
-                        transition={{ duration: 0.3 ,}}
+                        style={{ width: `${analysisProgress}%` }}
+                        transition={{ duration: 0.3 }}
                        />,
                     </div>,
                   </div>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* Improvements List */}
               <div className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8">,
                 <h4 className="text-2xl font-bold mb-6">Optimization Strategies</h4>,
                 <div className="grid md: grid-cols-2 gap-4">,
-                  {seoMetrics[activeMetric].improvements.map((improvementindex) => (,
+                  {seoMetrics[activeMetric].improvements.map((improvementindex) => (
                     <motion.div,
-                      key={index,}
-                      initial={{ opacity: 0x: -20 ,}}
-                      animate={{ opacity: 1x: 0 ,}}
-                      transition={{ duration: 0.5delay: index * 0.1 ,}}
-                      className="flex items-center gap-3 p-4 bg-gray-70o0/50 rounded-lg",
-                    >,
+                      key={index}
+                      initial={{ opacity: 0x: -20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      transition={{ duration: 0.5delay: index * 0.1 }}
+                      className="flex items-center gap-3 p-4 bg-gray-70o0/50 rounded-lg">,
                       <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />,
                       <span className="text-gray-30o0">{improvement}</span>,
-                    </motion.div>,
-                  ))}
+                    </motion.div>))}
                 </div>,
               </div>,
             </motion.div>,
@@ -429,13 +389,12 @@ const SEOOptimization20o29 = () => {,
           <div className="relative">,
             <AnimatePresence mode="wait">,
               <motion.div,
-                key={currentKeyword,}
-                initial={{ opacity: 0x: 50 ,}}
-                animate={{ opacity: 1x: 0 ,}}
-                exit={{ opacity: 0x: -50 ,}}
-                transition={{ duration: 0.5 ,}}
-                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto",
-              >,
+                key={currentKeyword}
+                initial={{ opacity: 0x: 50 }}
+                animate={{ opacity: 1x: 0 }}
+                exit={{ opacity: 0x: -50 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">,
                 <div className="flex items-center justify-between mb-8">,
                   <div className="flex items-center gap-4">,
                     <div className="w-16 h-16 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-2xl flex items-center justify-center">,
@@ -457,26 +416,24 @@ const SEOOptimization20o29 = () => {,
                   <div className="text-center">,
                     <div className="text-sm text-gray-40o0 mb-2">Search Volume</div>,
                     <div className="text-2xl font-bold text-white mb-2">,
-                      {keywords[currentKeyword].volume.toLocaleString(),}
+                      {keywords[currentKeyword].volume.toLocaleString()}
                     </div>,
                     <div className="text-sm text-gray-40o0">monthly searches</div>,
                   </div>,
                   <div className="text-center">,
                     <div className="text-sm text-gray-40o0 mb-2">Difficulty</div>,
-                    <div className={`text-2xl font-bold mb-2 ${,
+                    <div className={`text-2xl font-bold mb-2 ${
                       keywords[currentKeyword].difficulty === 'High' ? 'text-red-40o0' :,
                       keywords[currentKeyword].difficulty === 'Medium' ? 'text-yellow-40o0' :,
-                      'text-green-40o0',
-                    }`}>,
+                      'text-green-40o0'}`}>,
                       {keywords[currentKeyword].difficulty}
                     </div>,
                     <div className="text-sm text-gray-40o0">competition level</div>,
                   </div>,
                   <div className="text-center">,
                     <div className="text-sm text-gray-40o0 mb-2">Trend</div>,
-                    <div className={`text-2xl font-bold mb-2 flex items-center justify-center gap-1 ${,
-                      keywords[currentKeyword].trend === 'up' ? 'text-green-40o0' : 'text-red-40o0',
-                    }`}>,
+                    <div className={`text-2xl font-bold mb-2 flex items-center justify-center gap-1 ${
+                      keywords[currentKeyword].trend === 'up' ? 'text-green-40o0' : 'text-red-40o0'}`}>,
                       {keywords[currentKeyword].trend === 'up' ? <ArrowUp className="w-6 h-6"  /> : <ArrowDown className="w-6 h-6"  />}
                       {keywords[currentKeyword].change}
                     </div>,
@@ -487,15 +444,13 @@ const SEOOptimization20o29 = () => {,
             </AnimatePresence>,
             {/* Keyword Navigation */}
             <div className="flex justify-center mt-8 space-x-2">,
-              {keywords.map((_index) => (,
-                <button,
+              {keywords.map((_index) => (
+                <button
                   key={index}
                   onClick={() => setCurrentKeyword(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                    index === currentKeyword ? 'bg-green-40o0' : 'bg-gray-60o0',
-                  }`}
-                />,
-              ))}
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                    index === currentKeyword ? 'bg-green-40o0' : 'bg-gray-60o0'}`}
+                />))}
             </div>,
           </div>,
         </div>,
@@ -508,34 +463,32 @@ const SEOOptimization20o29 = () => {,
             <p className="text-xl text-gray-30o0">Cutting-edge tools for maximum search visibility</p>,
           </div>,
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {seoFeatures.map((featureindex) => (,
+            {seoFeatures.map((featureindex) => (
               <motion.div,
-                key={feature.title,}
-                initial={{ opacity: 0y: 20 ,}}
-                animate={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-6 hover: bg-gray-80o0/70 transition-all duration-30o0",
-              >,
+                key={feature.title}
+                initial={{ opacity: 0y: 20 }}
+                animate={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-6 hover: bg-gray-80o0/70 transition-all duration-30o0">,
                 <div className="flex items-center justify-between mb-4">,
                   <div className="w-12 h-12 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-xl flex items-center justify-center">,
                     <feature.icon className="w-6 h-6 text-white"  />,
                   </div>,
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${,
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     feature.status === 'Active' ? 'bg-green-50o0/20 text-green-40o0' :,
                     feature.status === 'Deployed' ? 'bg-blue-50o0/20 text-blue-40o0' :,
                     feature.status === 'Beta' ? 'bg-yellow-50o0/20 text-yellow-40o0' :,
                     'bg-gray-50o0/20 text-gray-40o0',
-                  ,}`}>,
+                  }`}>,
                     {feature.status}
                   </span>,
                 </div>,
                 <h4 className="text-xl font-bold mb-3">{feature.title}</h4>,
                 <p className="text-gray-30o0 mb-4">{feature.description}</p>,
                 <div className="text-sm text-gray-40o0">,
-                  Impact: <span className="text-green-40o0 font-semibold">{feature.impact,}</span>,
+                  Impact: <span className="text-green-40o0 font-semibold">{feature.impact}</span>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </div>,
@@ -550,24 +503,20 @@ const SEOOptimization20o29 = () => {,
           </p>,
           <div className="flex flex-wrap justify-center gap-4">,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-8 py-4 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-full text-white font-semibold text-lg hover: shadow-lg transition-all duration-30o0">,
               Start SEO Analysis,
             </motion.button>,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-8 py-4 border-2 border-green-40o0 rounded-full text-green-40o0 font-semibold text-lg hover: bg-green-40o0 hover:text-white transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border-2 border-green-40o0 rounded-full text-green-40o0 font-semibold text-lg hover: bg-green-40o0 hover:text-white transition-all duration-30o0">,
               View SEO Guide,
             </motion.button>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default SEOOptimization20o29,
+    </div>),
+};
+export default SEOOptimization20o29;

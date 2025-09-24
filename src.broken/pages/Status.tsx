@@ -1,9 +1,7 @@
-export function Status() {,
-  return (,
+export function Status() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

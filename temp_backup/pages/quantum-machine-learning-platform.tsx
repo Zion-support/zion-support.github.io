@@ -1,36 +1,35 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-import {,
-  Brain,;
-  Atom,;
-  Zap,;
-  Target,;
-  Network,;
-  Globe,;
-  Users,;
-  TrendingUp,;
+import {
+  Brain;
+  Atom;
+  Zap;
+  Target;
+  Network;
+  Globe;
+  Users;
+  TrendingUp;
 } from 'lucide-react',
-,
-const QuantumMachineLearningPlatformPage: React.FC = () => {,
-  return (,
+const QuantumMachineLearningPlatformPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>Quantum Machine Learning Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
-          content="Accelerate AI with Zion Tech Group's quantum machine learning platform. Quantum algorithms, hybrid quantum-classical computing, and breakthrough performance.",
+          content="Accelerate AI with Zion Tech Group's quantum machine learning platform. Quantum algorithms, hybrid quantum-classical computing, and breakthrough window.performance.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='quantum machine learning, quantum AI, quantum algorithms, hybrid computing, Zion Tech Group',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-machine-learning-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -46,7 +45,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
             </p>,
           </div>,
         </section>,
-        {/* Platform Overview */,}
+        {/* Platform Overview */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
@@ -66,7 +65,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
                   Quantum Algorithms,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Specialized quantum algorithms for optimization,;
+                  Specialized quantum algorithms for optimization;
                   classification, and pattern recognition tasks.,
                 </p>,
               </div>,
@@ -136,7 +135,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
                   </h3>,
                   <p className='text-gray-30o0'>,
                     Combined quantum-classical training algorithms for optimal,
-                    model performance.,
+                    model window.performance.,
                   </p>,
                 </div>,
                 <div className='bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-slate-70o0'>,
@@ -161,7 +160,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Algorithms */,}
+        {/* Quantum Algorithms */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-16'>,
@@ -225,7 +224,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Use Cases */,}
+        {/* Use Cases */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-7xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-16'>,
@@ -267,7 +266,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
                     Image Recognition,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Quantum-enhanced computer vision for medical imaging,;
+                    Quantum-enhanced computer vision for medical imaging;
                     security, and autonomous systems.,
                   </p>,
                 </div>,
@@ -276,7 +275,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
                     Natural Language Processing,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Quantum algorithms for language understanding, translation,;
+                    Quantum algorithms for language understanding, translation;
                     and text generation.,
                   </p>,
                 </div>,
@@ -483,7 +482,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Get Started */,}
+        {/* Get Started */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -527,9 +526,6 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default QuantumMachineLearningPlatformPage,
-,
+    </>),
+};
+export default QuantumMachineLearningPlatformPage;

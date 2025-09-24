@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ECommercePage() {,
-  return (,
+export default function ECommercePage() {
+  return (
     <>,
       <Head>,
         <title>E Commerce - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ECommercePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import FeatureCard from './components/FeatureCard',
-,
-export default function HomePage(): React.ReactElement {,
-  return (,
+export default function HomePage(): React.ReactElement {
+  return (
     <div className='min-h-screen'>,
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>,
@@ -30,7 +29,7 @@ export default function HomePage(): React.ReactElement {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-white/5'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='text-center mb-16 animate-slide-up'>,
@@ -44,95 +43,94 @@ export default function HomePage(): React.ReactElement {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {[,
-              {,
-                icon: '🤖',;
-                title: 'AI-Powered Intelligence',;
+            {[
+              {
+                icon: '🤖';
+                title: 'AI-Powered Intelligence';
                 description:,
-                  'ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.',;
-                features: [,
-                  'ZionGPT Core Integration',;
-                  'Resume Builder + Proposal AI',;
-                  'Autonomous Decision Engine',;
-                  'AI Moderation System',;
-                ],;
-                gradient: 'bg-gradient-to-r from-blue-60o0 to-purple-60o0',;
-              },;
-              {,
-                icon: '🏪',;
-                title: 'Complete Marketplace',;
+                  'ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.';
+                features: [
+                  'ZionGPT Core Integration';
+                  'Resume Builder + Proposal AI';
+                  'Autonomous Decision Engine';
+                  'AI Moderation System';
+                ];
+                gradient: 'bg-gradient-to-r from-blue-60o0 to-purple-60o0';
+              };
+              {
+                icon: '🏪';
+                title: 'Complete Marketplace';
                 description:,
-                  'Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.',;
-                features: [,
-                  'Job & Talent Marketplace',;
-                  'Token System + Rewards',;
-                  'On-chain Contract Builder',;
-                  'Multi-currency Support',;
-                ],;
-                gradient: 'bg-gradient-to-r from-green-60o0 to-emerald-60o0',;
-              },;
-              {,
-                icon: '🗳️',;
-                title: 'Governance & DAO',;
+                  'Jobs, talent, projects, and token systems create a thriving digital economy ecosystem.';
+                features: [
+                  'Job & Talent Marketplace';
+                  'Token System + Rewards';
+                  'On-chain Contract Builder';
+                  'Multi-currency Support';
+                ];
+                gradient: 'bg-gradient-to-r from-green-60o0 to-emerald-60o0';
+              };
+              {
+                icon: '🗳️';
+                title: 'Governance & DAO';
                 description:,
-                  'Flexible governance from admin control to full DAO systems with dual governance options.',;
-                features: [,
-                  'DAO Proposal Voting',;
-                  'Dual Governance (Local + Global)',;
-                  'Sovereign Treasury',;
-                  'KYC/AML + ID Verification',;
-                ],;
-                gradient: 'bg-gradient-to-r from-purple-60o0 to-pink-60o0',;
-              },;
-              {,
-                icon: '⚡',;
-                title: 'Enterprise Infrastructure',;
+                  'Flexible governance from admin control to full DAO systems with dual governance options.';
+                features: [
+                  'DAO Proposal Voting';
+                  'Dual Governance (Local + Global)';
+                  'Sovereign Treasury';
+                  'KYC/AML + ID Verification';
+                ];
+                gradient: 'bg-gradient-to-r from-purple-60o0 to-pink-60o0';
+              };
+              {
+                icon: '⚡';
+                title: 'Enterprise Infrastructure';
                 description:,
-                  'Built for scale with regional dashboards, partner APIs, and white-label solutions.',;
-                features: [,
-                  'Regional Dashboards',;
-                  'Partner API Access',;
-                  'White-label Vendor Plugin',;
-                  'Web3 Login + DID',;
-                ],;
-                gradient: 'bg-gradient-to-r from-orange-60o0 to-red-60o0',;
-              },;
-              {,
-                icon: '🎓',;
-                title: 'Education & Growth',;
+                  'Built for scale with regional dashboards, partner APIs, and white-label solutions.';
+                features: [
+                  'Regional Dashboards';
+                  'Partner API Access';
+                  'White-label Vendor Plugin';
+                  'Web3 Login + DID';
+                ];
+                gradient: 'bg-gradient-to-r from-orange-60o0 to-red-60o0';
+              };
+              {
+                icon: '🎓';
+                title: 'Education & Growth';
                 description:,
-                  'Zion Academy, incubator programs, and grants foster innovation and community growth.',;
-                features: [,
-                  'Zion Academy',;
-                  'Incubator + Grants',;
-                  'Regional Job Categories',;
-                  'Wage Baselines',;
-                ],;
-                gradient: 'bg-gradient-to-r from-teal-60o0 to-cyan-60o0',;
-              },;
-              {,
-                icon: '🚀',;
-                title: 'One-Click Deployment',;
+                  'Zion Academy, incubator programs, and grants foster innovation and community growth.';
+                features: [
+                  'Zion Academy';
+                  'Incubator + Grants';
+                  'Regional Job Categories';
+                  'Wage Baselines';
+                ];
+                gradient: 'bg-gradient-to-r from-teal-60o0 to-cyan-60o0';
+              };
+              {
+                icon: '🚀';
+                title: 'One-Click Deployment';
                 description:,
-                  'Launch your complete digital economy in minutes with our unified deployment protocol.',;
-                features: [,
-                  'Automated Orchestration',;
-                  'CMS Instance Generation',;
-                  'Landing + Auth Flows',;
-                  'Blog + Roadmap Setup',;
-                ],;
-                gradient: 'bg-gradient-to-r from-indigo-60o0 to-blue-60o0',;
-              },;
-            ].map((feature, index) => (,
-              <FeatureCard,
+                  'Launch your complete digital economy in minutes with our unified deployment protocol.';
+                features: [
+                  'Automated Orchestration';
+                  'CMS Instance Generation';
+                  'Landing + Auth Flows';
+                  'Blog + Roadmap Setup';
+                ];
+                gradient: 'bg-gradient-to-r from-indigo-60o0 to-blue-60o0';
+              };
+            ].map((feature, index) => (
+              <FeatureCard
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
                 features={feature.features}
                 gradient={feature.gradient}
-              />,
-            ))}
+              />))}
           </div>,
         </div>,
       </section>,
@@ -148,23 +146,21 @@ export default function HomePage(): React.ReactElement {,
               sovereign AI-powered digital economy today.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='/multiverse/launch',
-                className='btn-primary hover-lift text-lg px-8 py-4',
-              >,
+                className='btn-primary hover-lift text-lg px-8 py-4'>,
                 🚀 Start Building Now,
               </a>,
-              <a,
+              <a
                 href='/admin/instances',
-                className='btn-secondary hover-lift text-lg px-8 py-4',
-              >,
+                className='btn-secondary hover-lift text-lg px-8 py-4'>,
                 📊 Explore Examples,
               </a>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white/5'>,
         <div className='max-w-7xl mx-auto'>,
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
@@ -174,26 +170,24 @@ export default function HomePage(): React.ReactElement {,
               </div>,
               <div className='text-white/70'>Features Available</div>,
             </div>,
-            <div className='animate-fade-in' style={{ animationDelay: '0.1s' ,}}>,
+            <div className='animate-fade-in' style={{ animationDelay: '0.1s' }}>,
               <div className='text-3xl font-bold text-purple-40o0 mb-2'>,
                 50+,
               </div>,
               <div className='text-white/70'>Deployment Options</div>,
             </div>,
-            <div className='animate-fade-in' style={{ animationDelay: '0.2s' ,}}>,
+            <div className='animate-fade-in' style={{ animationDelay: '0.2s' }}>,
               <div className='text-3xl font-bold text-green-40o0 mb-2'>,
                 24/7,
               </div>,
               <div className='text-white/70'>AI Orchestration</div>,
             </div>,
-            <div className='animate-fade-in' style={{ animationDelay: '0.3s' ,}}>,
+            <div className='animate-fade-in' style={{ animationDelay: '0.3s' }}>,
               <div className='text-3xl font-bold text-orange-40o0 mb-2'>∞</div>,
               <div className='text-white/70'>Scalability</div>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

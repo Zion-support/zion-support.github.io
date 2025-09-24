@@ -1,23 +1,22 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function AIHealthcareMedicalAutomation() {,
-  return (,
+export default function AIHealthcareMedicalAutomation() {
+  return (
     <>,
       <Head>,
         <title>,
           AI in Healthcare: Transforming Medical Care Through Intelligent,
           Automation | Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='AI in Healthcare: Transforming Medical Care Through Intelligent Automation',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Discover how AI is revolutionizing healthcare through intelligent automation, diagnostic assistance, personalized medicine, and improved patient outcomes.',
         />,
@@ -27,10 +26,9 @@ export default function AIHealthcareMedicalAutomation() {,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors'>,
                 ← Back to Blog,
               </Link>,
             </nav>,
@@ -98,7 +96,7 @@ export default function AIHealthcareMedicalAutomation() {,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
                   One of the most promising applications of AI in healthcare is,
-                  diagnostic assistance. AI systems can analyze medical images,;
+                  diagnostic assistance. AI systems can analyze medical images;
                   lab results, and patient data to help physicians make more,
                   accurate diagnoses: ,
                 </p>,
@@ -152,7 +150,7 @@ export default function AIHealthcareMedicalAutomation() {,
                   </li>,
                   <li>,
                     • <strong>Treatment Optimization: </strong> Machine learning,
-                    models consider patient characteristics, medical history,;
+                    models consider patient characteristics, medical history;
                     and treatment responses to recommend optimal therapy,
                     regimens,
                   </li>,
@@ -164,12 +162,12 @@ export default function AIHealthcareMedicalAutomation() {,
                   </li>,
                   <li>,
                     • <strong>Dosage Optimization: </strong> Intelligent systems,
-                    adjust medication dosages based on real-time patient data,;
+                    adjust medication dosages based on real-time patient data;
                     ensuring optimal therapeutic levels,
                   </li>,
                 </ul>,
                 <p className='text-white/90 mb-4'>,
-                  This personalized approach leads to better patient outcomes,;
+                  This personalized approach leads to better patient outcomes;
                   reduced side effects, and more efficient use of healthcare,
                   resources.,
                 </p>,
@@ -190,7 +188,7 @@ export default function AIHealthcareMedicalAutomation() {,
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Population Health Management: </strong> AI systems can,
-                  identify trends and patterns across patient populations,;
+                  identify trends and patterns across patient populations;
                   helping healthcare organizations allocate resources more,
                   effectively and develop targeted prevention programs.,
                 </p>,
@@ -215,7 +213,7 @@ export default function AIHealthcareMedicalAutomation() {,
                       Epidemiological Modeling,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      AI models predict disease outbreaks and spread patterns,;
+                      AI models predict disease outbreaks and spread patterns;
                       helping public health officials prepare and respond,
                       effectively.,
                     </p>,
@@ -237,8 +235,8 @@ export default function AIHealthcareMedicalAutomation() {,
                   and improving data accuracy.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  <strong>Appointment Scheduling and Management: </strong>{' ',}
-                  Intelligent scheduling systems can optimize appointment times,;
+                  <strong>Appointment Scheduling and Management: </strong>{' '}
+                  Intelligent scheduling systems can optimize appointment times;
                   reduce no-shows, and automatically reschedule appointments,
                   when necessary.,
                 </p>,
@@ -249,7 +247,7 @@ export default function AIHealthcareMedicalAutomation() {,
                   cash flow.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  <strong>Staff Scheduling and Resource Allocation: </strong>{' ',}
+                  <strong>Staff Scheduling and Resource Allocation: </strong>{' '}
                   Machine learning algorithms can predict patient volumes and,
                   optimize staff scheduling accordingly, ensuring adequate,
                   coverage while controlling costs.,
@@ -330,7 +328,7 @@ export default function AIHealthcareMedicalAutomation() {,
                   Implementation Challenges and Ethical Considerations,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  While AI offers tremendous potential in healthcare,;
+                  While AI offers tremendous potential in healthcare;
                   implementation comes with unique challenges: ,
                 </p>,
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>,
@@ -387,7 +385,7 @@ export default function AIHealthcareMedicalAutomation() {,
                   </li>,
                   <li>,
                     • <strong>Brain-Computer Interfaces: </strong> AI will enable,
-                    direct communication between the brain and computers,;
+                    direct communication between the brain and computers;
                     potentially restoring function for patients with paralysis,
                     or neurological disorders,
                   </li>,
@@ -404,7 +402,7 @@ export default function AIHealthcareMedicalAutomation() {,
                 </ul>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Quantum Computing: </strong> Quantum AI will enable,
-                  more sophisticated molecular modeling and drug discovery,;
+                  more sophisticated molecular modeling and drug discovery;
                   potentially revolutionizing pharmaceutical development.,
                 </p>,
               </section>,
@@ -435,22 +433,19 @@ export default function AIHealthcareMedicalAutomation() {,
                 Share this article,
               </h3>,
               <div className='flex gap-4'>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-blue-60o0 hover: bg-blue-70o0 rounded-lg text-white transition-colors'>,
                   Twitter,
                 </a>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors'>,
                   LinkedIn,
                 </a>,
-                <a,
+                <a
                   href='#',
-                  className='px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors',
-                >,
+                  className='px-4 py-2 bg-green-60o0 hover:bg-green-70o0 rounded-lg text-white transition-colors'>,
                   Email,
                 </a>,
               </div>,
@@ -458,7 +453,6 @@ export default function AIHealthcareMedicalAutomation() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

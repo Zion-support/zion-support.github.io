@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='prose mx-auto px-6 py-16'>,
       <h1>AI 20o26: Operationalizing Live Evals in Production — Deep Dive</h1>,
       <p className='text-gray-60o0'>,
@@ -28,7 +28,6 @@ export default function Page() {,
         Need help implementing eval-driven releases? Contact us to get,
         production-ready in weeks.,
       </p>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

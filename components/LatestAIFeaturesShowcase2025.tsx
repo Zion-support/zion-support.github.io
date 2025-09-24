@@ -1,71 +1,69 @@
 import Link from 'next/link',
 ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle,
-,
-export default function LatestAIFeaturesShowcase20o25() {,
-  const features = [,
-    {,
-      icon: Brain,;
-      title: 'Neural Interface Technology',;
+export default function LatestAIFeaturesShowcase20o25() {
+  const features = [
+    {
+      icon: Brain;
+      title: 'Neural Interface Technology';
       description:,
-        'Direct brain-computer interfaces enabling seamless human-AI communication and unprecedented productivity gains.',;
-      color: 'from-purple-50o0 to-purple-60o0',;
-      bgColor: 'bg-purple-50',;
-      iconColor: 'text-purple-60o0',;
-      stats: '85% faster decision making',;
-    },;
-    {,
-      icon: Zap,;
-      title: 'Quantum AI Fusion',;
+        'Direct brain-computer interfaces enabling seamless human-AI communication and unprecedented productivity gains.';
+      color: 'from-purple-50o0 to-purple-60o0';
+      bgColor: 'bg-purple-50';
+      iconColor: 'text-purple-60o0';
+      stats: '85% faster decision making';
+    };
+    {
+      icon: Zap;
+      title: 'Quantum AI Fusion';
       description:,
-        'Revolutionary combination of quantum computing and AI delivering unprecedented processing power and capabilities.',;
-      color: 'from-blue-50o0 to-blue-60o0',;
-      bgColor: 'bg-blue-50',;
-      iconColor: 'text-blue-60o0',;
-      stats: '10o00x processing speed',;
-    },;
-    {,
-      icon: Globe,;
-      title: 'Autonomous Business Systems',;
+        'Revolutionary combination of quantum computing and AI delivering unprecedented processing power and capabilities.';
+      color: 'from-blue-50o0 to-blue-60o0';
+      bgColor: 'bg-blue-50';
+      iconColor: 'text-blue-60o0';
+      stats: '10o00x processing speed';
+    };
+    {
+      icon: Globe;
+      title: 'Autonomous Business Systems';
       description:,
-        'Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.',;
-      color: 'from-green-50o0 to-green-60o0',;
-      bgColor: 'bg-green-50',;
-      iconColor: 'text-green-60o0',;
-      stats: '50o0% productivity increase',;
-    },;
-    {,
-      icon: Shield,;
-      title: 'AI Security Fortress',;
+        'Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.';
+      color: 'from-green-50o0 to-green-60o0';
+      bgColor: 'bg-green-50';
+      iconColor: 'text-green-60o0';
+      stats: '50o0% productivity increase';
+    };
+    {
+      icon: Shield;
+      title: 'AI Security Fortress';
       description:,
-        'Next-generation AI-powered security systems that predict and prevent cyber threats before they occur.',;
-      color: 'from-red-50o0 to-red-60o0',;
-      bgColor: 'bg-red-50',;
-      iconColor: 'text-red-60o0',;
-      stats: '99.9% threat prevention',;
-    },;
-    {,
-      icon: Target,;
-      title: 'Predictive Analytics Engine',;
+        'Next-generation AI-powered security systems that predict and prevent cyber threats before they occur.';
+      color: 'from-red-50o0 to-red-60o0';
+      bgColor: 'bg-red-50';
+      iconColor: 'text-red-60o0';
+      stats: '99.9% threat prevention';
+    };
+    {
+      icon: Target;
+      title: 'Predictive Analytics Engine';
       description:,
-        'Advanced AI systems that predict market trendscustomer behaviorand business outcomes with incredible accuracy.',;
-      color: 'from-orange-50o0 to-orange-60o0',;
-      bgColor: 'bg-orange-50',;
-      iconColor: 'text-orange-60o0',;
-      stats: '95% prediction accuracy',;
-    },;
-    {,
-      icon: Users,;
-      title: 'Synthetic Intelligence',;
+        'Advanced AI systems that predict market trendscustomer behaviorand business outcomes with incredible accuracy.';
+      color: 'from-orange-50o0 to-orange-60o0';
+      bgColor: 'bg-orange-50';
+      iconColor: 'text-orange-60o0';
+      stats: '95% prediction accuracy';
+    };
+    {
+      icon: Users;
+      title: 'Synthetic Intelligence';
       description:,
-        'Artificially created consciousness that rivals human intelligencecapable of creative thinking and emotional understanding.',;
-      color: 'from-indigo-50o0 to-indigo-60o0',;
-      bgColor: 'bg-indigo-50',;
-      iconColor: 'text-indigo-60o0',;
-      stats: 'Human-level reasoning',;
-    },;
+        'Artificially created consciousness that rivals human intelligencecapable of creative thinking and emotional understanding.';
+      color: 'from-indigo-50o0 to-indigo-60o0';
+      bgColor: 'bg-indigo-50';
+      iconColor: 'text-indigo-60o0';
+      stats: 'Human-level reasoning';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4'>,
         {/* Header */}
@@ -88,18 +86,17 @@ export default function LatestAIFeaturesShowcase20o25() {,
         </div>,
         {/* Features Grid */}
         <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {features.map(featureindex => (,
-            <div,
-              key={index,}
-              className='group bg-white rounded-2xl p-8 shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2',
-            >,
-              <div,
-                className={`w-16 h-16 ${feature.bgColor,} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+          {features.map(featureindex => (
+            <div
+              key={index}
+              className='group bg-white rounded-2xl p-8 shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2'>,
+              <div
+                className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}
               >,
                 <feature.icon className={`w-8 h-8 ${feature.iconColor}`} />,
               </div>,
               <h3 className='text-2xl font-bold text-gray-90o0 mb-4 group-hover: text-blue-60o0 transition-colors'>,
-                {feature.title,}
+                {feature.title}
               </h3>,
               <p className='text-gray-60o0 mb-6 leading-relaxed'>,
                 {feature.description}
@@ -108,7 +105,7 @@ export default function LatestAIFeaturesShowcase20o25() {,
                 <div className='text-sm font-semibold text-gray-50o0'>,
                   {feature.stats}
                 </div>,
-                <div,
+                <div
                   className={`w-2 h-2 bg-gradient-to-r ${feature.color} rounded-full`}
                 ></div>,
               </div>,
@@ -116,8 +113,7 @@ export default function LatestAIFeaturesShowcase20o25() {,
                 <span>Learn More</span>,
                 <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Success Metrics */}
         <div className='bg-white rounded-2xl p-12 shadow-lg mb-16'>,
@@ -199,7 +195,7 @@ export default function LatestAIFeaturesShowcase20o25() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <h3 className='text-4xl font-bold text-gray-90o0 mb-6'>,
             Ready to Implement These Technologies?,
@@ -209,20 +205,18 @@ export default function LatestAIFeaturesShowcase20o25() {,
             technologies that deliver extraordinary results.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-10 py-5 rounded-xl font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
               <span className='flex items-center justify-center'>,
                 <Star className='w-5 h-5 mr-2' />,
                 Start Your Transformation,
                 <ArrowRight className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
               </span>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='group border-2 border-gray-30o0 text-gray-70o0 px-10 py-5 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='group border-2 border-gray-30o0 text-gray-70o0 px-10 py-5 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span className='flex items-center justify-center'>,
                 <Users className='w-5 h-5 mr-2' />,
                 View Success Stories,
@@ -232,7 +226,6 @@ export default function LatestAIFeaturesShowcase20o25() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

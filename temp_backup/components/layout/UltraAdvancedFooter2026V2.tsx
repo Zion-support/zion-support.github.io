@@ -1,189 +1,182 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Atom,;
-  Bot,;
-  Heart,;
-  Shield,;
-  Rocket,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  CheckCircle,;
-  Code,;
-  Database,;
-  Cloud,;
-  Lock,;
-  Eye,;
-  Target,;
-  BarChart3,;
-  Lightbulb,;
-  TestTube,;
-  Leaf,;
-  Car,;
-  Microscope,;
-  BrainCircuit,;
-  ArrowRight,;
-  ExternalLink,;
-  Github,;
-  Twitter,;
-  Linkedin,;
-  Facebook,;
-  Instagram,;
-  Youtube,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Zap;
+  Brain;
+  Atom;
+  Bot;
+  Heart;
+  Shield;
+  Rocket;
+  Star;
+  TrendingUp;
+  Users;
+  CheckCircle;
+  Code;
+  Database;
+  Cloud;
+  Lock;
+  Eye;
+  Target;
+  BarChart3;
+  Lightbulb;
+  TestTube;
+  Leaf;
+  Car;
+  Microscope;
+  BrainCircuit;
+  ArrowRight;
+  ExternalLink;
+  Github;
+  Twitter;
+  Linkedin;
+  Facebook;
+  Instagram;
+  Youtube;
 } from 'lucide-react',
-,
-export default function UltraAdvancedFooter20o26V2() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function UltraAdvancedFooter20o26V2() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  const serviceCategories = [,
-    {,
-      title: 'AI Services',;
-      icon: <Brain className='w-5 h-5' />,;
-      services: [,
-        {,
-          name: 'AI Consciousness Platform',;
-          href: '/services/ai-consciousness-platform',;
-        },;
-        {,
-          name: 'AI Healthcare Diagnostics',;
-          href: '/services/ai-healthcare-diagnostics-v2',;
-        },;
-        {,
-          name: 'AI Content Creation Studio',;
-          href: '/services/ai-content-creation-studio-v2',;
-        },;
-        {,
-          name: 'AI Autonomous Robotics',;
-          href: '/services/ai-autonomous-robotics-platform',;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Quantum Computing',;
-      icon: <Atom className='w-5 h-5' />,;
-      services: [,
-        {,
-          name: 'Quantum Financial Trading',;
-          href: '/services/ai-quantum-financial-trading-v2',;
-        },;
-        {,
-          name: 'Quantum Space Technology',;
-          href: '/services/quantum-space-tech-platform-v2',;
-        },;
-        {,
-          name: 'Quantum Drug Discovery',;
-          href: '/services/ai-quantum-drug-discovery-platform',;
-        },;
-        {,
-          name: 'Quantum Climate Modeling',;
-          href: '/services/ai-quantum-climate-modeling-platform',;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Emerging Tech',;
-      icon: <Rocket className='w-5 h-5' />,;
-      services: [,
-        {,
-          name: 'Metaverse Platform',;
-          href: '/services/metaverse-digital-reality-platform-v2',;
-        },;
-        {,
-          name: 'Autonomous Vehicles',;
-          href: '/services/ai-autonomous-vehicle-platform-v2',;
-        },;
-        {,
-          name: 'Biotech AI Research',;
-          href: '/services/biotech-ai-research-platform-v2',;
-        },;
-        {,
-          name: 'Brain-Computer Interface',;
-          href: '/services/quantum-ai-brain-computer-interface',;
-        },;
-      ],;
-    },;
-    {,
-      title: 'Enterprise IT',;
-      icon: <Database className='w-5 h-5' />,;
-      services: [,
-        {,
-          name: 'Cybersecurity Platform',;
-          href: '/services/ai-cybersecurity-threat-intelligence-v2',;
-        },;
-        {,
-          name: 'Autonomous Manufacturing',;
-          href: '/services/ai-autonomous-manufacturing-v2',;
-        },;
-        {,
-          name: 'Financial Risk Management',;
-          href: '/services/ai-quantum-financial-risk-management',;
-        },;
-        { name: 'Cloud Infrastructure', href: '/services/cloud-platform' ,},;
-      ],;
-    },;
+  const serviceCategories = [
+    {
+      title: 'AI Services';
+      icon: <Brain className='w-5 h-5' />;
+      services: [
+        {
+          name: 'AI Consciousness Platform';
+          href: '/services/ai-consciousness-platform';
+        };
+        {
+          name: 'AI Healthcare Diagnostics';
+          href: '/services/ai-healthcare-diagnostics-v2';
+        };
+        {
+          name: 'AI Content Creation Studio';
+          href: '/services/ai-content-creation-studio-v2';
+        };
+        {
+          name: 'AI Autonomous Robotics';
+          href: '/services/ai-autonomous-robotics-platform';
+        };
+      ];
+    };
+    {
+      title: 'Quantum Computing';
+      icon: <Atom className='w-5 h-5' />;
+      services: [
+        {
+          name: 'Quantum Financial Trading';
+          href: '/services/ai-quantum-financial-trading-v2';
+        };
+        {
+          name: 'Quantum Space Technology';
+          href: '/services/quantum-space-tech-platform-v2';
+        };
+        {
+          name: 'Quantum Drug Discovery';
+          href: '/services/ai-quantum-drug-discovery-platform';
+        };
+        {
+          name: 'Quantum Climate Modeling';
+          href: '/services/ai-quantum-climate-modeling-platform';
+        };
+      ];
+    };
+    {
+      title: 'Emerging Tech';
+      icon: <Rocket className='w-5 h-5' />;
+      services: [
+        {
+          name: 'Metaverse Platform';
+          href: '/services/metaverse-digital-reality-platform-v2';
+        };
+        {
+          name: 'Autonomous Vehicles';
+          href: '/services/ai-autonomous-vehicle-platform-v2';
+        };
+        {
+          name: 'Biotech AI Research';
+          href: '/services/biotech-ai-research-platform-v2';
+        };
+        {
+          name: 'Brain-Computer Interface';
+          href: '/services/quantum-ai-brain-computer-interface';
+        };
+      ];
+    };
+    {
+      title: 'Enterprise IT';
+      icon: <Database className='w-5 h-5' />;
+      services: [
+        {
+          name: 'Cybersecurity Platform';
+          href: '/services/ai-cybersecurity-threat-intelligence-v2';
+        };
+        {
+          name: 'Autonomous Manufacturing';
+          href: '/services/ai-autonomous-manufacturing-v2';
+        };
+        {
+          name: 'Financial Risk Management';
+          href: '/services/ai-quantum-financial-risk-management';
+        };
+        { name: 'Cloud Infrastructure', href: '/services/cloud-platform' };
+      ];
+    };
   ],
-,
-  const quickLinks = [,
-    { name: 'Home', href: '/' ,},;
-    { name: 'Services', href: '/services' ,},;
-    {,
-      name: '20o26 Showcase',;
-      href: '/revolutionary-20o26-services-showcase-v2',;
-    },;
-    { name: 'Solutions', href: '/solutions' ,},;
-    { name: 'About', href: '/about' ,},;
-    { name: 'Contact', href: '/contact' ,},;
-    { name: 'Blog', href: '/blog' ,},;
-    { name: 'Case Studies', href: '/case-studies' ,},;
+  const quickLinks = [
+    { name: 'Home', href: '/' };
+    { name: 'Services', href: '/services' };
+    {
+      name: '20o26 Showcase';
+      href: '/revolutionary-20o26-services-showcase-v2';
+    };
+    { name: 'Solutions', href: '/solutions' };
+    { name: 'About', href: '/about' };
+    { name: 'Contact', href: '/contact' };
+    { name: 'Blog', href: '/blog' };
+    { name: 'Case Studies', href: '/case-studies' };
   ],
-,
-  const companyInfo = [,
-    { name: 'Careers', href: '/careers' ,},;
-    { name: 'Privacy Policy', href: '/privacy' ,},;
-    { name: 'Terms of Service', href: '/terms' ,},;
-    { name: 'Cookie Policy', href: '/cookies' ,},;
-    { name: 'Support', href: '/support' ,},;
-    { name: 'Documentation', href: '/docs' ,},;
+  const companyInfo = [
+    { name: 'Careers', href: '/careers' };
+    { name: 'Privacy Policy', href: '/privacy' };
+    { name: 'Terms of Service', href: '/terms' };
+    { name: 'Cookie Policy', href: '/cookies' };
+    { name: 'Support', href: '/support' };
+    { name: 'Documentation', href: '/docs' };
   ],
-,
-  const socialLinks = [,
-    {,
-      name: 'LinkedIn',;
-      href: 'https://linkedin.com/company/ziontechgroup',;
-      icon: <Linkedin className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'Twitter',;
-      href: 'https://twitter.com/ziontechgroup',;
-      icon: <Twitter className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'GitHub',;
-      href: 'https://github.com/ziontechgroup',;
-      icon: <Github className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'YouTube',;
-      href: 'https://youtube.com/@ziontechgroup',;
-      icon: <Youtube className='w-5 h-5' />,;
-    },;
+  const socialLinks = [
+    {
+      name: 'LinkedIn';
+      href: 'https://linkedin.com/company/ziontechgroup';
+      icon: <Linkedin className='w-5 h-5' />;
+    };
+    {
+      name: 'Twitter';
+      href: 'https://twitter.com/ziontechgroup';
+      icon: <Twitter className='w-5 h-5' />;
+    };
+    {
+      name: 'GitHub';
+      href: 'https://github.com/ziontechgroup';
+      icon: <Github className='w-5 h-5' />;
+    };
+    {
+      name: 'YouTube';
+      href: 'https://youtube.com/@ziontechgroup';
+      icon: <Youtube className='w-5 h-5' />;
+    };
   ],
-,
   const currentYear = new Date().getFullYear(),
-,
-  return (,
+  return (
     <footer className='relative bg-black/90 backdrop-blur-sm border-t border-white/10 overflow-hidden'>,
       {/* Background Elements */}
       <div className='absolute inset-0 overflow-hidden'>,
@@ -192,11 +185,11 @@ export default function UltraAdvancedFooter20o26V2() {,
         <div className='absolute top-1/2 left-0 w-64 h-64 bg-pink-50o0/5 rounded-full blur-3xl'></div>,
       </div>,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Main Footer Content */,}
+        {/* Main Footer Content */}
         <div className='py-16'>,
           {/* Top Section */}
           <div className='grid grid-cols-1 lg: grid-cols-2 gap-12 mb-16'>,
-            {/* Company Info */,}
+            {/* Company Info */}
             <div>,
               <div className='flex items-center space-x-3 mb-6'>,
                 <div className='relative'>,
@@ -237,19 +230,17 @@ export default function UltraAdvancedFooter20o26V2() {,
               </div>,
               {/* Social Links */}
               <div className='flex gap-4 mt-6'>,
-                {socialLinks.map(social => (,
-                  <Link,
+                {socialLinks.map(social => (
+                  <Link
                     key={social.name}
                     href={social.href}
                     target='_blank',
                     rel='noopener noreferrer',
-                    className='p-3 bg-white/5 hover: bg-white/10 border border-white/10 hover:border-purple-50o0/50 rounded-xl transition-all duration-30o0 group',
-                  >,
+                    className='p-3 bg-white/5 hover: bg-white/10 border border-white/10 hover:border-purple-50o0/50 rounded-xl transition-all duration-30o0 group'>,
                     <div className='text-gray-40o0 group-hover:text-purple-40o0 transition-colors duration-30o0'>,
-                      {social.icon,}
+                      {social.icon}
                     </div>,
-                  </Link>,
-                ))}
+                  </Link>))}
               </div>,
             </div>,
             {/* CTA Section */}
@@ -263,31 +254,29 @@ export default function UltraAdvancedFooter20o26V2() {,
                   experience unprecedented growth and innovation.,
                 </p>,
                 <div className='space-y-3'>,
-                  <Link,
+                  <Link
                     href='/revolutionary-20o26-services-showcase-v2',
-                    className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover: from-purple-60o0 hover:to-pink-60o0 text-white rounded-xl font-medium transition-all duration-30o0 transform hover:scale-10o5',
-                  >,
+                    className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover: from-purple-60o0 hover:to-pink-60o0 text-white rounded-xl font-medium transition-all duration-30o0 transform hover:scale-10o5'>,
                     Explore 20o26 Services,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='block w-full text-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl border border-white/20 hover:border-white/30 transition-all duration-30o0',
-                  >,
+                    className='block w-full text-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl border border-white/20 hover:border-white/30 transition-all duration-30o0'>,
                     Get Started Today,
                   </Link>,
                 </div>,
               </div>,
             </div>,
           </div>,
-          {/* Services Grid */,}
+          {/* Services Grid */}
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16'>,
-            {serviceCategories.map((category, index) => (,
+            {serviceCategories.map((category, index) => (
               <motion.div,
                 key={category.title}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >,
                 <div className='flex items-center gap-2 mb-4'>,
                   <div className='p-2 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-lg'>,
@@ -298,19 +287,16 @@ export default function UltraAdvancedFooter20o26V2() {,
                   </h4>,
                 </div>,
                 <ul className='space-y-2'>,
-                  {category.services.map(service => (,
+                  {category.services.map(service => (
                     <li key={service.name}>,
-                      <Link,
+                      <Link
                         href={service.href}
-                        className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm hover:translate-x-1 inline-block',
-                      >,
-                        {service.name,}
+                        className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm hover:translate-x-1 inline-block'>,
+                        {service.name}
                       </Link>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
           {/* Quick Links */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
@@ -319,31 +305,27 @@ export default function UltraAdvancedFooter20o26V2() {,
                 Quick Links,
               </h4>,
               <ul className='space-y-2'>,
-                {quickLinks.map(link => (,
-                  <li key={link.name,}>,
-                    <Link,
+                {quickLinks.map(link => (
+                  <li key={link.name}>,
+                    <Link
                       href={link.href}
-                      className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm',
-                    >,
-                      {link.name,}
+                      className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm'>,
+                      {link.name}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div>,
               <h4 className='text-lg font-semibold text-white mb-4'>Company</h4>,
               <ul className='space-y-2'>,
-                {companyInfo.map(link => (,
+                {companyInfo.map(link => (
                   <li key={link.name}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm',
-                    >,
-                      {link.name,}
+                      className='text-gray-40o0 hover: text-purple-40o0 transition-colors duration-20o0 text-sm'>,
+                      {link.name}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div>,
@@ -355,7 +337,7 @@ export default function UltraAdvancedFooter20o26V2() {,
                 breakthroughs.,
               </p>,
               <div className='flex gap-2'>,
-                <input,
+                <input
                   type='email',
                   placeholder='Enter your email',
                   className='flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent',
@@ -367,15 +349,14 @@ export default function UltraAdvancedFooter20o26V2() {,
             </div>,
           </div>,
         </div>,
-        {/* Bottom Section */,}
+        {/* Bottom Section */}
         <div className='border-t border-white/10 py-8'>,
           <div className='flex flex-col md: flex-row justify-between items-center gap-4'>,
             <div className='text-gray-40o0 text-sm'>,
-              © {currentYear,} Zion Tech Group. All rights reserved. |,
-              <Link,
+              © {currentYear} Zion Tech Group. All rights reserved. |,
+              <Link
                 href='/privacy',
-                className='hover: text-purple-40o0 transition-colors duration-20o0 ml-1',
-              >,
+                className='hover: text-purple-40o0 transition-colors duration-20o0 ml-1'>,
                 Privacy Policy,
               </Link>,
             </div>,
@@ -396,7 +377,7 @@ export default function UltraAdvancedFooter20o26V2() {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className='absolute top-20 right-20 text-purple-40o0/20'>,
         <Brain className='w-16 h-16' />,
       </div>,
@@ -406,7 +387,5 @@ export default function UltraAdvancedFooter20o26V2() {,
       <div className='absolute top-1/2 right-10 text-pink-40o0/20'>,
         <Bot className='w-12 h-12' />,
       </div>,
-    </footer>,
-  ),
-}
+    </footer>)}
 ,

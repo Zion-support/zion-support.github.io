@@ -1,267 +1,258 @@
 import Link from 'next/link',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  ArrowRight,;
-  Sparkles,;
-  Brain,;
-  Atom,;
-  Shield,;
-  DollarSign,;
-  FileText,;
-  BarChart3,;
-  MessageSquare,;
-  Truck,;
-  Users,;
-  Database,;
-  Cpu,;
-  Cloud,;
-  Play,;
-  Search,;
-  ShieldCheck,;
-  TrendingUp,;
-  Rocket,;
-  Zap,;
-  Check,;
-  Star,;
-  Clock,;
-  Target,;
-  Building,;
-  Award,;
-  ChartBar,;
-  Lock,;
-  Smartphone,;
-  Palette,;
-  Calendar,;
-  CreditCard,;
-  Settings,;
-  Code,;
-  BookOpen,;
-  Activity,;
-  Bot,;
-  ChevronRight as ChevronRightIcon,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Youtube,;
-  Github,;
-  ExternalLink,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  ArrowRight;
+  Sparkles;
+  Brain;
+  Atom;
+  Shield;
+  DollarSign;
+  FileText;
+  BarChart3;
+  MessageSquare;
+  Truck;
+  Users;
+  Database;
+  Cpu;
+  Cloud;
+  Play;
+  Search;
+  ShieldCheck;
+  TrendingUp;
+  Rocket;
+  Zap;
+  Check;
+  Star;
+  Clock;
+  Target;
+  Building;
+  Award;
+  ChartBar;
+  Lock;
+  Smartphone;
+  Palette;
+  Calendar;
+  CreditCard;
+  Settings;
+  Code;
+  BookOpen;
+  Activity;
+  Bot;
+  ChevronRight as ChevronRightIcon;
+  Facebook;
+  Twitter;
+  Linkedin;
+  Instagram;
+  Youtube;
+  Github;
+  ExternalLink;
 } from 'lucide-react',
 import Button from '../ui/Button',
-,
-export default function NeoFuturisticFooter() {,
-  const contactInfo = {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+export default function NeoFuturisticFooter() {
+  const contactInfo = {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  const serviceCategories = [,
-    {,
-      name: 'Quantum Computing & AI',;
-      services: [,
-        {,
-          name: 'Quantum AI Platform',;
-          href: '/services?category=Quantum Computing',;
-        },;
-        {,
-          name: 'Quantum Optimization',;
-          href: '/services?category=Quantum Computing',;
-        },;
-        {,
-          name: 'Quantum Simulation',;
-          href: '/services?category=Quantum Computing',;
-        },;
-      ],;
-    },;
-    {,
-      name: 'Autonomous Systems',;
-      services: [,
-        {,
-          name: 'AI Content Creation',;
-          href: '/services?category=AI & Machine Learning',;
-        },;
-        {,
-          name: 'ML Model Training',;
-          href: '/services?category=AI & Machine Learning',;
-        },;
-        {,
-          name: 'AI Analytics',;
-          href: '/services?category=AI & Machine Learning',;
-        },;
-      ],;
-    },;
-    {,
-      name: 'Healthcare & Biotechnology',;
-      services: [,
-        { name: 'Quantum Security', href: '/services?category=Cybersecurity' ,},;
-        {,
-          name: 'AI Threat Detection',;
-          href: '/services?category=Cybersecurity',;
-        },;
-        {,
-          name: 'Zero Trust Security',;
-          href: '/services?category=Cybersecurity',;
-        },;
-      ],;
-    },;
-    {,
-      name: 'Space Technology',;
-      services: [,
-        {,
-          name: 'Space Technology Platform',;
-          link: 'https://ziontechgroup.com/space-technology',;
-        },;
-        {,
-          name: 'Satellite Management',;
-          link: 'https://ziontechgroup.com/satellite-management',;
-        },;
-        {,
-          name: 'Space Data Analytics',;
-          link: 'https://ziontechgroup.com/space-analytics',;
-        },;
-      ],;
-    },;
-    {,
-      name: 'Metaverse & VR/AR',;
-      services: [,
-        {,
-          name: 'Metaverse Development Platform',;
-          link: 'https://ziontechgroup.com/metaverse-platform',;
-        },;
-        {,
-          name: 'VR/AR Solutions',;
-          link: 'https://ziontechgroup.com/vr-ar-solutions',;
-        },;
-        {,
-          name: '3D World Building',;
-          link: 'https://ziontechgroup.com/3d-world-building',;
-        },;
-      ],;
-    },;
-    {,
-      name: 'Financial Technology',;
-      services: [,
-        {,
-          name: 'Quantum Finance Platform',;
-          link: 'https://ziontechgroup.com/quantum-finance',;
-        },;
-        {,
-          name: 'AI Trading Platform',;
-          link: 'https://ziontechgroup.com/ai-trading',;
-        },;
-        {,
-          name: 'Risk Management AI',;
-          link: 'https://ziontechgroup.com/risk-management',;
-        },;
-      ],;
-    },;
+  const serviceCategories = [
+    {
+      name: 'Quantum Computing & AI';
+      services: [
+        {
+          name: 'Quantum AI Platform';
+          href: '/services?category=Quantum Computing';
+        };
+        {
+          name: 'Quantum Optimization';
+          href: '/services?category=Quantum Computing';
+        };
+        {
+          name: 'Quantum Simulation';
+          href: '/services?category=Quantum Computing';
+        };
+      ];
+    };
+    {
+      name: 'Autonomous Systems';
+      services: [
+        {
+          name: 'AI Content Creation';
+          href: '/services?category=AI & Machine Learning';
+        };
+        {
+          name: 'ML Model Training';
+          href: '/services?category=AI & Machine Learning';
+        };
+        {
+          name: 'AI Analytics';
+          href: '/services?category=AI & Machine Learning';
+        };
+      ];
+    };
+    {
+      name: 'Healthcare & Biotechnology';
+      services: [
+        { name: 'Quantum Security', href: '/services?category=Cybersecurity' };
+        {
+          name: 'AI Threat Detection';
+          href: '/services?category=Cybersecurity';
+        };
+        {
+          name: 'Zero Trust Security';
+          href: '/services?category=Cybersecurity';
+        };
+      ];
+    };
+    {
+      name: 'Space Technology';
+      services: [
+        {
+          name: 'Space Technology Platform';
+          link: 'https://ziontechgroup.com/space-technology';
+        };
+        {
+          name: 'Satellite Management';
+          link: 'https://ziontechgroup.com/satellite-management';
+        };
+        {
+          name: 'Space Data Analytics';
+          link: 'https://ziontechgroup.com/space-analytics';
+        };
+      ];
+    };
+    {
+      name: 'Metaverse & VR/AR';
+      services: [
+        {
+          name: 'Metaverse Development Platform';
+          link: 'https://ziontechgroup.com/metaverse-platform';
+        };
+        {
+          name: 'VR/AR Solutions';
+          link: 'https://ziontechgroup.com/vr-ar-solutions';
+        };
+        {
+          name: '3D World Building';
+          link: 'https://ziontechgroup.com/3d-world-building';
+        };
+      ];
+    };
+    {
+      name: 'Financial Technology';
+      services: [
+        {
+          name: 'Quantum Finance Platform';
+          link: 'https://ziontechgroup.com/quantum-finance';
+        };
+        {
+          name: 'AI Trading Platform';
+          link: 'https://ziontechgroup.com/ai-trading';
+        };
+        {
+          name: 'Risk Management AI';
+          link: 'https://ziontechgroup.com/risk-management';
+        };
+      ];
+    };
   ],
-,
-  const marketInsights = [,
-    {,
-      metric: '$8.5B',;
-      label: 'Quantum Finance Market',;
-      growth: '450% annually',;
-    },;
-    {,
-      metric: '$12.3B',;
-      label: 'Autonomous Manufacturing',;
-      growth: '320% annually',;
-    },;
-    {,
-      metric: '$6.8B',;
-      label: 'Quantum Cybersecurity',;
-      growth: '380% annually',;
-    },;
-    { metric: '$4.2B', label: 'Space Technology', growth: '290% annually' ,},;
-    {,
-      metric: '$3.6B',;
-      label: 'Metaverse Development',;
-      growth: '40o0% annually',;
-    },;
-    { metric: '$3.2B', label: 'Biomedical AI', growth: '20o0% annually' ,},;
+  const marketInsights = [
+    {
+      metric: '$8.5B';
+      label: 'Quantum Finance Market';
+      growth: '450% annually';
+    };
+    {
+      metric: '$12.3B';
+      label: 'Autonomous Manufacturing';
+      growth: '320% annually';
+    };
+    {
+      metric: '$6.8B';
+      label: 'Quantum Cybersecurity';
+      growth: '380% annually';
+    };
+    { metric: '$4.2B', label: 'Space Technology', growth: '290% annually' };
+    {
+      metric: '$3.6B';
+      label: 'Metaverse Development';
+      growth: '40o0% annually';
+    };
+    { metric: '$3.2B', label: 'Biomedical AI', growth: '20o0% annually' };
   ],
-,
-  const companyLinks = [,
-    { name: 'About Us', href: '/about' ,},;
-    { name: 'Our Mission', href: '/mission' ,},;
-    { name: 'Leadership Team', href: '/team' ,},;
-    { name: 'Careers', href: '/careers' ,},;
-    { name: 'News & Updates', href: '/news' ,},;
-    { name: 'Press Kit', href: '/press' ,},;
+  const companyLinks = [
+    { name: 'About Us', href: '/about' };
+    { name: 'Our Mission', href: '/mission' };
+    { name: 'Leadership Team', href: '/team' };
+    { name: 'Careers', href: '/careers' };
+    { name: 'News & Updates', href: '/news' };
+    { name: 'Press Kit', href: '/press' };
   ],
-,
-  const resourceLinks = [,
-    { name: 'Documentation', href: '/docs' ,},;
-    { name: 'API Reference', href: '/api' ,},;
-    { name: 'Blog & Insights', href: '/blog' ,},;
-    { name: 'Case Studies', href: '/case-studies' ,},;
-    { name: 'Support Center', href: '/support' ,},;
-    { name: 'Community Forum', href: '/community' ,},;
+  const resourceLinks = [
+    { name: 'Documentation', href: '/docs' };
+    { name: 'API Reference', href: '/api' };
+    { name: 'Blog & Insights', href: '/blog' };
+    { name: 'Case Studies', href: '/case-studies' };
+    { name: 'Support Center', href: '/support' };
+    { name: 'Community Forum', href: '/community' };
   ],
-,
-  const legalLinks = [,
-    { name: 'Privacy Policy', href: '/privacy' ,},;
-    { name: 'Terms of Service', href: '/terms' ,},;
-    { name: 'Cookie Policy', href: '/cookies' ,},;
-    { name: 'GDPR Compliance', href: '/gdpr' ,},;
-    { name: 'Security', href: '/security' ,},;
-    { name: 'Compliance', href: '/compliance' ,},;
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' };
+    { name: 'Terms of Service', href: '/terms' };
+    { name: 'Cookie Policy', href: '/cookies' };
+    { name: 'GDPR Compliance', href: '/gdpr' };
+    { name: 'Security', href: '/security' };
+    { name: 'Compliance', href: '/compliance' };
   ],
-,
-  const socialLinks = [,
-    {,
-      name: 'Facebook',;
-      href: 'https://www.facebook.com/ziontechgroup',;
-      icon: <Facebook className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'Twitter',;
-      href: 'https://twitter.com/ziontechgroup',;
-      icon: <Twitter className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'LinkedIn',;
-      href: 'https://www.linkedin.com/company/ziontechgroup',;
-      icon: <Linkedin className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'Instagram',;
-      href: 'https://www.instagram.com/ziontechgroup',;
-      icon: <Instagram className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'YouTube',;
-      href: 'https://www.youtube.com/@ziontechgroup',;
-      icon: <Youtube className='w-5 h-5' />,;
-    },;
-    {,
-      name: 'GitHub',;
-      href: 'https://github.com/ziontechgroup',;
-      icon: <Github className='w-5 h-5' />,;
-    },;
+  const socialLinks = [
+    {
+      name: 'Facebook';
+      href: 'https://www.facebook.com/ziontechgroup';
+      icon: <Facebook className='w-5 h-5' />;
+    };
+    {
+      name: 'Twitter';
+      href: 'https://twitter.com/ziontechgroup';
+      icon: <Twitter className='w-5 h-5' />;
+    };
+    {
+      name: 'LinkedIn';
+      href: 'https://www.linkedin.com/company/ziontechgroup';
+      icon: <Linkedin className='w-5 h-5' />;
+    };
+    {
+      name: 'Instagram';
+      href: 'https://www.instagram.com/ziontechgroup';
+      icon: <Instagram className='w-5 h-5' />;
+    };
+    {
+      name: 'YouTube';
+      href: 'https://www.youtube.com/@ziontechgroup';
+      icon: <Youtube className='w-5 h-5' />;
+    };
+    {
+      name: 'GitHub';
+      href: 'https://github.com/ziontechgroup';
+      icon: <Github className='w-5 h-5' />;
+    };
   ],
-,
-  const stats = [,
-    { number: '50o0+', label: 'Revolutionary Services' ,},;
-    { number: '21', label: 'Day Free Trials' ,},;
-    { number: '99.9%', label: 'Uptime Guarantee' ,},;
-    { number: '24/7', label: 'AI-Powered Support' ,},;
-    { number: '50+', label: 'Countries Served' ,},;
-    { number: '1M+', label: 'Happy Users' ,},;
+  const stats = [
+    { number: '50o0+', label: 'Revolutionary Services' };
+    { number: '21', label: 'Day Free Trials' };
+    { number: '99.9%', label: 'Uptime Guarantee' };
+    { number: '24/7', label: 'AI-Powered Support' };
+    { number: '50+', label: 'Countries Served' };
+    { number: '1M+', label: 'Happy Users' };
   ],
-,
-  return (,
+  return (
     <footer className='bg-black/90 backdrop-blur-xl border-t border-gray-70o0/50'>,
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 py-16'>,
         <div className='grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-4 gap-8 mb-12'>,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className='lg: col-span-2'>,
             <div className='flex items-center space-x-3 mb-6'>,
               <div className='relative'>,
@@ -282,7 +273,7 @@ export default function NeoFuturisticFooter() {,
               quantum AI and autonomous systems. Transform your business with,
               cutting-edge technology solutions.,
             </p>,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div className='space-y-3 mb-6'>,
               <div className='flex items-center space-x-3'>,
                 <Phone className='w-5 h-5 text-cyan-40o0' />,
@@ -304,23 +295,22 @@ export default function NeoFuturisticFooter() {,
               </div>,
             </div>,
             {/* CTA Button */}
-            <Button,
+            <Button
               href='/services',
               variant='quantum',
               size='lg',
-              className='group',
-            >,
+              className='group'>,
               Explore 50o0+ Services,
               <ArrowRight className='w-5 h-5 ml-2 group-hover: translate-x-1 transition-transform' />,
             </Button>,
           </div>,
-          {/* Service Categories */,}
+          {/* Service Categories */}
           <div>,
             <h3 className='text-white font-semibold text-lg mb-6'>,
               Popular Services,
             </h3>,
             <div className='space-y-4'>,
-              {serviceCategories.slice(0, 2).map((category, index) => (,
+              {serviceCategories.slice(0, 2).map((category, index) => (
                 <div key={index} className='group'>,
                   <div className='flex items-center space-x-3 mb-3'>,
                     <div className='text-cyan-40o0 group-hover: text-cyan-30o0 transition-colors'>,
@@ -329,26 +319,23 @@ export default function NeoFuturisticFooter() {,
                     </div>,
                     <div>,
                       <h4 className='text-white font-medium group-hover: text-cyan-40o0 transition-colors'>,
-                        {category.name,}
+                        {category.name}
                       </h4>,
                       <p className='text-gray-40o0 text-sm'>{category.name}</p>,
                     </div>,
                   </div>,
                   <div className='ml-8 space-y-2'>,
-                    {category.services.map((service, serviceIndex) => (,
-                      <Link,
+                    {category.services.map((service, serviceIndex) => (
+                      <Link
                         key={serviceIndex}
                         href={service.link}
                         target='_blank',
                         rel='noopener noreferrer',
-                        className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors text-sm',
-                      >,
-                        {service.name,}
-                      </Link>,
-                    ))}
+                        className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors text-sm'>,
+                        {service.name}
+                      </Link>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Quick Links */}
@@ -357,29 +344,25 @@ export default function NeoFuturisticFooter() {,
               Quick Links,
             </h3>,
             <div className='space-y-3'>,
-              {companyLinks.slice(0, 4).map((link, index) => (,
-                <Link,
+              {companyLinks.slice(0, 4).map((link, index) => (
+                <Link
                   key={index}
                   href={link.href}
-                  className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors',
-                >,
-                  {link.name,}
-                </Link>,
-              ))}
+                  className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors'>,
+                  {link.name}
+                </Link>))}
             </div>,
             <h3 className='text-white font-semibold text-lg mb-6 mt-8'>,
               Resources,
             </h3>,
             <div className='space-y-3'>,
-              {resourceLinks.slice(0, 4).map((link, index) => (,
-                <Link,
+              {resourceLinks.slice(0, 4).map((link, index) => (
+                <Link
                   key={index}
                   href={link.href}
-                  className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors',
-                >,
-                  {link.name,}
-                </Link>,
-              ))}
+                  className='block text-gray-40o0 hover: text-cyan-40o0 transition-colors'>,
+                  {link.name}
+                </Link>))}
             </div>,
           </div>,
         </div>,
@@ -392,7 +375,7 @@ export default function NeoFuturisticFooter() {,
             </p>,
           </div>,
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6'>,
-            {stats.map((stat, index) => (,
+            {stats.map((stat, index) => (
               <div key={index} className='text-center'>,
                 <div className='bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-xl p-4 border border-cyan-50o0/30'>,
                   <div className='text-2xl font-bold text-cyan-40o0 mb-2'>,
@@ -400,43 +383,39 @@ export default function NeoFuturisticFooter() {,
                   </div>,
                   <div className='text-gray-30o0 text-sm'>{stat.label}</div>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Bottom Section */}
         <div className='border-t border-gray-70o0/50 pt-8'>,
           <div className='flex flex-col lg: flex-row items-center justify-between space-y-4 lg:space-y-0'>,
-            {/* Copyright */,}
+            {/* Copyright */}
             <div className='text-gray-40o0 text-sm'>,
               © 20o24 Zion Tech Group. All rights reserved. Revolutionary,
               technology solutions.,
             </div>,
             {/* Social Links */}
             <div className='flex items-center space-x-4'>,
-              {socialLinks.map((social, index) => (,
-                <a,
+              {socialLinks.map((social, index) => (
+                <a
                   key={index}
                   href={social.href}
                   className='p-2 text-gray-40o0 hover: text-cyan-40o0 hover:bg-cyan-40o0/10 rounded-lg transition-all duration-30o0',
-                  aria-label={social.name,}
+                  aria-label={social.name}
                 >,
                   {social.icon}
-                </a>,
-              ))}
+                </a>))}
             </div>,
           </div>,
           {/* Legal Links */}
           <div className='flex flex-wrap items-center justify-center space-x-6 mt-6 text-sm'>,
-            {legalLinks.map((link, index) => (,
-              <Link,
+            {legalLinks.map((link, index) => (
+              <Link
                 key={index}
                 href={link.href}
-                className='text-gray-50o0 hover: text-cyan-40o0 transition-colors',
-              >,
-                {link.name,}
-              </Link>,
-            ))}
+                className='text-gray-50o0 hover: text-cyan-40o0 transition-colors'>,
+                {link.name}
+              </Link>))}
           </div>,
         </div>,
       </div>,
@@ -452,7 +431,7 @@ export default function NeoFuturisticFooter() {,
               technologies. Join thousands of forward-thinking professionals.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>,
-              <input,
+              <input
                 type='email',
                 placeholder='Enter your email address',
                 className='flex-1 px-4 py-3 bg-gray-90o0/50 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent',
@@ -489,7 +468,7 @@ export default function NeoFuturisticFooter() {,
             </Button>,
           </div>,
           <div className='mt-6 text-gray-40o0 text-sm'>,
-            <span className='text-cyan-40o0 font-semibold'>50o0+</span>{' ',}
+            <span className='text-cyan-40o0 font-semibold'>50o0+</span>{' '}
             Revolutionary Services •,
             <span className='text-green-40o0 font-semibold'> 21-Day</span> Free,
             Trials •,
@@ -498,7 +477,5 @@ export default function NeoFuturisticFooter() {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-}
+    </footer>)}
 ,

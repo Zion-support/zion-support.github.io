@@ -1,33 +1,31 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
-  title: 'Quantum Computing Business Applications 20o25 | Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'Quantum Computing Business Applications 20o25 | Zion Tech Group';
   description:,
-    'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 20o25.',;
-  keywords: [,
-    'quantum computing',;
-    'business applications',;
-    'future technology',;
-    'innovation',;
-    'optimization',;
-    'cryptography',;
-  ],;
-  openGraph: {,
-    title: 'Quantum Computing Business Applications 20o25',;
+    'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 20o25.';
+  keywords: [
+    'quantum computing';
+    'business applications';
+    'future technology';
+    'innovation';
+    'optimization';
+    'cryptography';
+  ];
+  openGraph: {
+    title: 'Quantum Computing Business Applications 20o25';
     description:,
-      'Revolutionary applications transforming industries with quantum advantage',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-14',;
-    authors: ['Zion Tech Group'],;
-  },;
+      'Revolutionary applications transforming industries with quantum advantage';
+    type: 'article';
+    publishedTime: '20o25-0o1-14';
+    authors: ['Zion Tech Group'];
+  };
 };
-,
-export default function QuantumComputingBusinessApplicationsPage() {,
-  return (,
+export default function QuantumComputingBusinessApplicationsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Quantum Computing Business Applications 20o25',
         description='Explore how quantum computing is revolutionizing business operations',
         keywords='quantum computing, business applications, future technology, innovation, optimization, cryptography',
@@ -64,7 +62,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Article Content */,}
+      {/* Article Content */}
       <article className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='prose prose-lg max-w-none'>,
           <h2>The Quantum Revolution is Here</h2>,
@@ -427,10 +425,9 @@ export default function QuantumComputingBusinessApplicationsPage() {,
               Our quantum computing experts can help you discover how quantum,
               computing can transform your business.,
             </p>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block'>,
               Get Your Quantum Consultation,
             </Link>,
           </div>,
@@ -438,7 +435,7 @@ export default function QuantumComputingBusinessApplicationsPage() {,
             <p className='text-sm text-gray-70o0'>,
               <strong>Note:</strong> The quantum computing landscape is rapidly,
               evolving. This article reflects current capabilities and,
-              projections as of January 20o25. For the latest developments,;
+              projections as of January 20o25. For the latest developments;
               consult our quantum computing experts.,
             </p>,
           </div>,
@@ -458,10 +455,9 @@ export default function QuantumComputingBusinessApplicationsPage() {,
                 Discover how AI automation achieved 50o0% ROI for a Fortune 50o0,
                 company.,
               </p>,
-              <Link,
+              <Link
                 href='/blog/ai-automation-success-story-20o25',
-                className='text-purple-60o0 font-semibold',
-              >,
+                className='text-purple-60o0 font-semibold'>,
                 Read More →,
               </Link>,
             </div>,
@@ -474,10 +470,9 @@ export default function QuantumComputingBusinessApplicationsPage() {,
                 Explore how brain-computer interfaces are transforming business,
                 operations.,
               </p>,
-              <Link,
+              <Link
                 href='/case-studies/neural-interface-revolution-20o25',
-                className='text-purple-60o0 font-semibold',
-              >,
+                className='text-purple-60o0 font-semibold'>,
                 Learn More →,
               </Link>,
             </div>,
@@ -495,7 +490,6 @@ export default function QuantumComputingBusinessApplicationsPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

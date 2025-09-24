@@ -1,124 +1,115 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Zap,;
-  Shield,;
-  Brain,;
-  Cloud,;
-  Lock,;
-  Smartphone,;
-  Globe,;
-  BarChart3,;
-  Users,;
-  Award,;
-  Rocket,;
-  CheckCircle,
-} from 'lucide-react',
-,
-const NewFeaturesShowcase: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Brain,;
-      title: "AI-Powered Analytics",;
-      description: "Advanced machine learning algorithms that provide deep insights into your business performance and predict future trends.",;
-      color: "from-purple-50o0 to-pink-50o0",;
+import {
+  Zap;
+  Shield;
+  Brain;
+  Cloud;
+  Lock;
+  Smartphone;
+  Globe;
+  BarChart3;
+  Users;
+  Award;
+  Rocket;
+  CheckCircle} from 'lucide-react',
+const NewFeaturesShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: Brain;
+      title: "AI-Powered Analytics";
+      description: "Advanced machine learning algorithms that provide deep insights into your business performance and predict future trends.";
+      color: "from-purple-50o0 to-pink-50o0";
       stats: "95% accuracy rate",
-    ,},;
-    {,
-      icon: Shield,;
-      title: "Enterprise Security",;
-      description: "Military-grade encryption and security protocols to protect your most sensitive data and operations.",;
-      color: "from-blue-50o0 to-cyan-50o0",;
+    };
+    {
+      icon: Shield;
+      title: "Enterprise Security";
+      description: "Military-grade encryption and security protocols to protect your most sensitive data and operations.";
+      color: "from-blue-50o0 to-cyan-50o0";
       stats: "99.9% uptime guarantee",
-    ,},;
-    {,
-      icon: Rocket,;
-      title: "Lightning Performance",;
-      description: "Optimized infrastructure that delivers blazing-fast response times and seamless user experiences.",;
-      color: "from-green-50o0 to-emerald-50o0",;
+    };
+    {
+      icon: Rocket;
+      title: "Lightning Performance";
+      description: "Optimized infrastructure that delivers blazing-fast response times and seamless user experiences.";
+      color: "from-green-50o0 to-emerald-50o0";
       stats: "50% faster loading",
-    ,},;
-    {,
-      icon: Users,;
-      title: "Collaborative Workspace",;
-      description: "Real-time collaboration tools that enable your team to work together seamlessly from anywhere in the world.",;
-      color: "from-orange-50o0 to-red-50o0",;
-      stats: "10,0o00+ active users",
+    };
+    {
+      icon: Users;
+      title: "Collaborative Workspace";
+      description: "Real-time collaboration tools that enable your team to work together seamlessly from anywhere in the world.";
+      color: "from-orange-50o0 to-red-50o0";
+      stats: "10,0o00+ active users"}
+  ],
+  const testimonials = [
+    {
+      name: "Sarah Johnson";
+      role: "CEO, TechCorp";
+      content: "Zion Tech Group transformed our digital infrastructure completely. The ROI was evident within the first month.";
+      avatar: "👩‍💼",
+    };
+    {
+      name: "Michael Chen";
+      role: "CTO, InnovateLab";
+      content: "Their AI solutions helped us automate 80% of our processes. The team's expertise is unmatched.";
+      avatar: "👨‍💻",
+    };
+    {
+      name: "Emily Rodriguez";
+      role: "Director, FutureSystems";
+      content: "The security and performance improvements have been game-changing for our business operations.";
+      avatar: "👩‍🔬",
     }
   ],
-,
-  const testimonials = [,
-    {,
-      name: "Sarah Johnson",;
-      role: "CEO, TechCorp",;
-      content: "Zion Tech Group transformed our digital infrastructure completely. The ROI was evident within the first month.",;
-      avatar: "👩‍💼",
-    ,},;
-    {,
-      name: "Michael Chen",;
-      role: "CTO, InnovateLab",;
-      content: "Their AI solutions helped us automate 80% of our processes. The team's expertise is unmatched.",;
-      avatar: "👨‍💻",
-    ,},;
-    {,
-      name: "Emily Rodriguez",;
-      role: "Director, FutureSystems",;
-      content: "The security and performance improvements have been game-changing for our business operations.",;
-      avatar: "👩‍🔬",
-    ,}
-  ],
-,
-  const pricingTiers = [,
-    {,
-      name: "Starter",;
-      price: "$99",;
-      period: "/month",;
-      features: [,
-        "Basic AI Analytics",;
-        "Standard Security",;
-        "Email Support",;
-        "Up to 5 users",
-      ],;
+  const pricingTiers = [
+    {
+      name: "Starter";
+      price: "$99";
+      period: "/month";
+      features: [
+        "Basic AI Analytics";
+        "Standard Security";
+        "Email Support";
+        "Up to 5 users"];
       popular: false,
-    ,},;
-    {,
-      name: "Professional",;
-      price: "$299",;
-      period: "/month",;
-      features: [,
-        "Advanced AI Analytics",;
-        "Enhanced Security",;
-        "Priority Support",;
-        "Up to 25 users",;
-        "Custom Integrations",
-      ],;
+    };
+    {
+      name: "Professional";
+      price: "$299";
+      period: "/month";
+      features: [
+        "Advanced AI Analytics";
+        "Enhanced Security";
+        "Priority Support";
+        "Up to 25 users";
+        "Custom Integrations"];
       popular: true,
-    ,},;
-    {,
-      name: "Enterprise",;
-      price: "Custom",;
-      period: "",;
-      features: [,
-        "Full AI Suite",;
-        "Military-Grade Security",;
-        "Dedicated Support",;
-        "Unlimited Users",;
-        "Custom Development",
-      ],;
+    };
+    {
+      name: "Enterprise";
+      price: "Custom";
+      period: "";
+      features: [
+        "Full AI Suite";
+        "Military-Grade Security";
+        "Dedicated Support";
+        "Unlimited Users";
+        "Custom Development"];
       popular: false,
-    ,}
+    }
   ],
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/10 to-purple-60o0/10"></div>,
         <div className="container mx-auto text-center relative z-10">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <div className="inline-flex items-center px-4 py-2 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium mb-6">,
               <Rocket className="w-4 h-4 mr-2"  />,
@@ -134,24 +125,22 @@ const NewFeaturesShowcase: React.FC = () => {,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg font-semibold text-lg shadow-lg hover: shadow-xl transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white rounded-lg font-semibold text-lg shadow-lg hover: shadow-xl transition-all duration-30o0">,
                 Start Free Trial,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 border-2 border-blue-60o0 text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-blue-50 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-blue-60o0 text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-blue-50 transition-all duration-30o0">,
                 Watch Demo,
               </motion.button>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-20 px-4">,
         <div className="container mx-auto">,
           <div className="text-center mb-16">,
@@ -163,15 +152,14 @@ const NewFeaturesShowcase: React.FC = () => {,
             </p>,
           </div>,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className="bg-white p-8 rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0",
-              >,
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color,} rounded-xl flex items-center justify-center mb-6`}>,
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 border border-gray-10o0">,
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-6`}>,
                   <feature.icon className="w-8 h-8 text-white"  />,
                 </div>,
                 <h3 className="text-xl font-bold text-gray-90o0 mb-3">,
@@ -183,8 +171,7 @@ const NewFeaturesShowcase: React.FC = () => {,
                 <div className="text-sm font-medium text-blue-60o0">,
                   {feature.stats}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -200,14 +187,13 @@ const NewFeaturesShowcase: React.FC = () => {,
             </p>,
           </div>,
           <div className="grid md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonial, index) => (,
+            {testimonials.map((testimonial, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.2 ,}}
-                className="bg-gray-50 p-8 rounded-2xl border border-gray-20o0",
-              >,
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="bg-gray-50 p-8 rounded-2xl border border-gray-20o0">,
                 <div className="text-4xl mb-4">{testimonial.avatar}</div>,
                 <p className="text-gray-70o0 mb-6 italic">,
                   "{testimonial.content}",
@@ -216,8 +202,7 @@ const NewFeaturesShowcase: React.FC = () => {,
                   <div className="font-bold text-gray-90o0">{testimonial.name}</div>,
                   <div className="text-gray-60o0">{testimonial.role}</div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -233,23 +218,21 @@ const NewFeaturesShowcase: React.FC = () => {,
             </p>,
           </div>,
           <div className="grid md: grid-cols-3 gap-8 max-w-5xl mx-auto">,
-            {pricingTiers.map((tier, index) => (,
+            {pricingTiers.map((tier, index) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className={`bg-white p-8 rounded-2xl shadow-lg border-2 ${,
-                  tier.popular ? 'border-blue-50o0 relative' : 'border-gray-20o0',
-                }`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-white p-8 rounded-2xl shadow-lg border-2 ${
+                  tier.popular ? 'border-blue-50o0 relative' : 'border-gray-20o0'}`}
               >,
-                {tier.popular && (,
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="bg-blue-50o0 text-white px-4 py-2 rounded-full text-sm font-medium">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
                 <div className="text-center mb-8">,
                   <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{tier.name}</h3>,
                   <div className="text-4xl font-bold text-gray-90o0 mb-2">,
@@ -258,26 +241,24 @@ const NewFeaturesShowcase: React.FC = () => {,
                   </div>,
                 </div>,
                 <ul className="space-y-4 mb-8">,
-                  {tier.features.map((feature, featureIndex) => (,
+                  {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">,
                       <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 flex-shrink-0"  />,
                       <span className="text-gray-70o0">{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                     tier.popular,
                       ? 'bg-blue-60o0 text-white hover: bg-blue-70o0',
                       : 'border-2 border-gray-30o0 text-gray-70o0 hover:border-blue-60o0 hover:text-blue-60o0',
-                  ,}`}
+                  }`}
                 >,
                   Get Started,
                 </motion.button>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -285,9 +266,9 @@ const NewFeaturesShowcase: React.FC = () => {,
       <section className="py-20 px-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0">,
         <div className="container mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-4xl font-bold text-white mb-6">,
               Ready to Transform Your Business?,
@@ -297,25 +278,21 @@ const NewFeaturesShowcase: React.FC = () => {,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-50 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-50 transition-all duration-30o0">,
                 Start Your Free Trial,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-all duration-30o0">,
                 Contact Sales,
               </motion.button>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default NewFeaturesShowcase,
+    </div>),
+};
+export default NewFeaturesShowcase;

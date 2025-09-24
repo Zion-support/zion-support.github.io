@@ -1,44 +1,42 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o25ContentShowcase: React.FC = () => {,
-  const contentItems = [,
-    {,
-      title: 'AI 20o25: Enterprise Automation Revolution',;
+const AI20o25ContentShowcase: React.FC = () => {
+  const contentItems = [
+    {
+      title: 'AI 20o25: Enterprise Automation Revolution';
       description:,
-        'Discover how AI automation is transforming enterprise operations with real-world case studies and implementation strategies.',;
-      category: 'Blog Post',;
-      readTime: '12 min read',;
-      image: '🤖',;
-      href: '/blog/ai-20o25-enterprise-automation-revolution',;
-      featured: true,;
-    },;
-    {,
-      title: 'Fortune 50o0 AI Transformation Success',;
+        'Discover how AI automation is transforming enterprise operations with real-world case studies and implementation strategies.';
+      category: 'Blog Post';
+      readTime: '12 min read';
+      image: '🤖';
+      href: '/blog/ai-20o25-enterprise-automation-revolution';
+      featured: true;
+    };
+    {
+      title: 'Fortune 50o0 AI Transformation Success';
       description:,
-        'How a Fortune 50o0 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.',;
-      category: 'Case Study',;
-      readTime: '15 min read',;
-      image: '🏆',;
-      href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success',;
-      featured: true,;
-    },;
-    {,
-      title: 'AI Implementation Master Guide 20o25',;
+        'How a Fortune 50o0 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.';
+      category: 'Case Study';
+      readTime: '15 min read';
+      image: '🏆';
+      href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
+      featured: true;
+    };
+    {
+      title: 'AI Implementation Master Guide 20o25';
       description:,
-        'The complete guide to implementing AI in your enterprise, with step-by-step strategies and real-world examples.',;
-      category: 'Resource',;
-      readTime: '45 min read',;
-      image: '📚',;
-      href: '/resources/ai-implementation-master-guide-20o25-comprehensive',;
-      featured: true,;
-    },;
+        'The complete guide to implementing AI in your enterprise, with step-by-step strategies and real-world examples.';
+      category: 'Resource';
+      readTime: '45 min read';
+      image: '📚';
+      href: '/resources/ai-implementation-master-guide-20o25-comprehensive';
+      featured: true;
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium'>✨ NEW CONTENT 20o25</span>,
@@ -47,19 +45,19 @@ const AI20o25ContentShowcase: React.FC = () => {,
             Latest AI Content & Insights,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed'>,
-            Stay ahead with our comprehensive collection of AI content,;
+            Stay ahead with our comprehensive collection of AI content;
             featuring the latest trends, success stories, and implementation,
             guides.,
           </p>,
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {contentItems.map((item, index) => (,
-            <div,
+          {contentItems.map((item, index) => (
+            <div
               key={index}
-              className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
+              className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
                 item.featured ? 'ring-2 ring-blue-50o0' : '',
-              ,}`}
+              }`}
             >,
               {/* Image */}
               <div className='h-48 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-t-2xl flex items-center justify-center'>,
@@ -71,11 +69,10 @@ const AI20o25ContentShowcase: React.FC = () => {,
                   <span className='bg-blue-10o0 text-blue-80o0 text-xs font-semibold px-3 py-1 rounded-full'>,
                     {item.category}
                   </span>,
-                  {item.featured && (,
+                  {item.featured && (
                     <span className='bg-yellow-10o0 text-yellow-80o0 text-xs font-semibold px-3 py-1 rounded-full'>,
                       FEATURED,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 line-clamp-2'>,
                   {item.title}
@@ -87,16 +84,14 @@ const AI20o25ContentShowcase: React.FC = () => {,
                   <span className='text-sm text-gray-50o0'>,
                     {item.readTime}
                   </span>,
-                  <Link,
+                  <Link
                     href={item.href}
-                    className='bg-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: bg-blue-70o0 transition-colors text-sm',
-                  >,
+                    className='bg-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: bg-blue-70o0 transition-colors text-sm'>,
                     Read More →,
                   </Link>,
                 </div>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Additional Content Preview */}
         <div className='bg-white rounded-2xl shadow-lg p-8 mb-16'>,
@@ -140,7 +135,7 @@ const AI20o25ContentShowcase: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white'>,
           <h3 className='text-3xl font-bold mb-4'>,
             Ready to Transform Your Business with AI?,
@@ -150,24 +145,19 @@ const AI20o25ContentShowcase: React.FC = () => {,
             growth, efficiency, and innovation.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-blue-60o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transition-colors'>,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-blue-60o0 transition-colors'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25ContentShowcase,
-,
+    </section>),
+};
+export default AI20o25ContentShowcase;

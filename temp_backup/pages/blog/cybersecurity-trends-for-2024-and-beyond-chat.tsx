@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CybersecurityTrendsFor20o24AndBeyondChatPage() {,
-  return (,
+export default function CybersecurityTrendsFor20o24AndBeyondChatPage() {
+  return (
     <>,
       <Head>,
         <title>Cybersecurity Trends For 20o24 And Beyond Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function CybersecurityTrendsFor20o24AndBeyondChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

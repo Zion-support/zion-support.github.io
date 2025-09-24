@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SecurityAuditingChatPage() {,
-  return (,
+export default function SecurityAuditingChatPage() {
+  return (
     <>,
       <Head>,
         <title>Security Auditing Chat - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SecurityAuditingChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

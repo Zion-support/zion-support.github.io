@@ -3,16 +3,16 @@ import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react',
 import { Button } from './button',
 import { Badge } from './badge',
-export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {,
+export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
     const [selectedItem, setSelectedItem] = useState(null),
     const [viewMode, setViewMode] = useState('grid'),
-    const [filters, setFilters] = useState({,
-        category: [],;
-        status: [],;
-        complexity: [],;
-        verified: false,;
+    const [filters, setFilters] = useState({
+        category: [];
+        status: [];
+        complexity: [];
+        verified: false;
         featured: false,
-    ,}),
+    }),
     const [searchQuery, setSearchQuery] = useState(''),
     const [sortBy, setSortBy] = useState('rating'),
     const [sortOrder, setSortOrder] = useState('desc'),
@@ -21,7 +21,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const galleryRef = useRef(null),
     // Filter and sort items,
     const filteredAndSortedItems = items,
-        .filter(item => {,
+        .filter(item => {
         const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
             item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -30,11 +30,10 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         const matchesComplexity = filters.complexity.length === 0 || filters.complexity.includes(item.metadata.complexity),
         const matchesVerified = !filters.verified || item.metadata.verified,
         const matchesFeatured = !filters.featured || item.metadata.featured,
-        return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured,
-    }),
-        .sort((a, b) => {,
+        return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured}),
+        .sort((a, b) => {
         let aValue, bValue,
-        switch (sortBy) {,
+        switch (sortBy) {
             case 'rating':,
                 aValue = a.rating,
                 bValue = b.rating,
@@ -53,35 +52,29 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 break,
             default: ,
                 return 0,
-        ,}
-        if (sortOrder === 'asc') {,
-            return aValue > bValue ? 1 : -1,
         }
-        else {,
-            return aValue < bValue ? 1 : -1,
-        }
+        if (sortOrder === 'asc') {
+            return aValue > bValue ? 1 : -1}
+        else {
+            return aValue < bValue ? 1 : -1}
     }),
     // Auto-play carousel,
-    useEffect(() => {,
+    useEffect(() => {
         if (!isPlaying || viewMode !== 'carousel' || filteredAndSortedItems.length === 0),
             return,
-        const interval = setInterval(() => {,
-            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length),
-        }, 30o00),
-        return () => clearInterval(interval),
-    }, [isPlaying, viewMode, filteredAndSortedItems.length]),
+        const interval = setInterval(() => {
+            setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length)}, 30o00),
+        return () => clearInterval(interval)}, [isPlaying, viewMode, filteredAndSortedItems.length]),
     // Handle card click,
-    const handleCardClick = useCallback((item) => {,
+    const handleCardClick = useCallback((item) => {
         setSelectedItem(item),
-        onCardClick?.(item),
-    }, [onCardClick]),
+        onCardClick?.(item)}, [onCardClick]),
     // Handle action click,
-    const handleActionClick = useCallback((itemId, action) => {,
-        onAction?.(itemId, action),
-    }, [onAction]),
+    const handleActionClick = useCallback((itemId, action) => {
+        onAction?.(itemId, action)}, [onAction]),
     // Get status color,
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'active':,
                 return 'border-green-50o0/50 bg-green-50o0/10 text-green-40o0',
             case 'beta':,
@@ -92,11 +85,11 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
                 return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0',
-        ,}
+        }
     };
     // Get complexity color,
-    const getComplexityColor = (complexity) => {,
-        switch (complexity) {,
+    const getComplexityColor = (complexity) => {
+        switch (complexity) {
             case 'beginner':,
                 return 'border-green-50o0/50 bg-green-50o0/10 text-green-40o0',
             case 'intermediate':,
@@ -107,21 +100,19 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
                 return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0',
-        ,}
+        }
     };
     // Get category icon,
-    const getCategoryIcon = (category) => {,
-        const iconMap ={,
-            'AI & ML': Brain,;
-            'Cybersecurity': Shield,;
-            'Cloud': Globe,;
-            'Development': Rocket,;
-            'Analytics': Zap,;
-            'Infrastructure': Settings,;
-            'Research': TrendingUp,
-        };
-        return iconMap[category] || Globe,
-    };
+    const getCategoryIcon = (category) => {
+        const iconMap ={
+            'AI & ML': Brain;
+            'Cybersecurity': Shield;
+            'Cloud': Globe;
+            'Development': Rocket;
+            'Analytics': Zap;
+            'Infrastructure': Settings;
+            'Research': TrendingUp};
+        return iconMap[category] || Globe};
     if (!enabled || filteredAndSortedItems.length === 0),
         return null,
     return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>,
@@ -138,7 +129,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           <div className="flex bg-zion-blue/20 rounded-lg p-1">,
             {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode,
                 ? 'bg-zion-cyan text-zion-blue-dark',
-                : 'text-zinc-40o0 hover: text-white',}`}>,
+                : 'text-zinc-40o0 hover: text-white'}`}>,
                 {mode === 'grid' ? <Grid className="w-4 h-4" /> :,
                 mode === 'list' ? <List className="w-4 h-4" /> :,
                     <Play className="w-4 h-4" />}
@@ -147,12 +138,12 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           {/* Carousel Controls */}
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">,
               <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-40o0 hover: text-white p-2">,
-                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />,}
+                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>,
               <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-40o0 hover: text-white p-2">,
                 <RotateCcw className="w-4 h-4" />,
               </Button>,
-            </div>),}
+            </div>)}
 ,
           {/* Sort Controls */}
           <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-sm focus: border-zion-cyan focus:outline-none">,
@@ -161,8 +152,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <option value="lastUpdated">Sort by Date</option>,
             <option value="title">Sort by Title</option>,
           </select>,
-          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc'),} className="border-zion-blue-light/30 text-zinc-30o0 hover: text-white">,
-            {sortOrder === 'asc' ? '↑' : '↓',}
+          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-30o0 hover: text-white">,
+            {sortOrder === 'asc' ? '↑' : '↓'}
           </Button>,
         </div>,
       </div>,
@@ -173,42 +164,40 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-40o0" />,
             <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-40o0 focus: outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>,
           </div>,
-          {/* Filter Chips */,}
+          {/* Filter Chips */}
           <div className="flex flex-wrap gap-2">,
-            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, verified: !prev.verified ,}))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white',}>,
+            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, verified: !prev.verified }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white'}>,
               <Shield className="w-4 h-4 mr-1" />,
               Verified Only,
             </Button>,
-            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, featured: !prev.featured ,}))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white',}>,
+            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, featured: !prev.featured }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white'}>,
               <Star className="w-4 h-4 mr-1" />,
               Featured Only,
             </Button>,
             {/* Category Filters */}
-            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={() => setFilters(prev => ({,
-                    ...prev,;
+            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={() => setFilters(prev => ({
+                    ...prev;
                     category: prev.category.includes(category),
                         ? prev.category.filter(c => c !== category),
-                        : [...prev.category, category],
-                }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white',}>,
+                        : [...prev.category, category]}))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white'}>,
                 {category}
               </Button>))}
           </div>,
         </div>)}
 ,
       {/* Grid View */}
-      {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 md: grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4',}`}>,
+      {viewMode === 'grid' && (<div className={`grid gap-6 ${columns === 2 ? 'grid-cols-1 md: grid-cols-2' : columns === 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>,
           {filteredAndSortedItems.map((item, index) => (<Card3D key={item.id} item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon}/>))}
         </div>)}
 ,
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-4">,
-          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-20o0 cursor-pointer" initial={{ opacity: 0, y: 20 ,}} whileInView={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.4, delay: index * 0.0o5 ,}} onClick={() => handleCardClick(item)}>,
+          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-20o0 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.0o5 }} onClick={() => handleCardClick(item)}>,
               {/* Image */}
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">,
-                {(() => {,
+                {(() => {
                     const CategoryIcon = getCategoryIcon(item.category),
-                    return <CategoryIcon className="w-8 h-8 text-white" />,
-                })()}
+                    return <CategoryIcon className="w-8 h-8 text-white" />})()}
               </div>,
               {/* Content */}
               <div className="flex-1">,
@@ -234,10 +223,9 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               </div>,
               {/* Actions */}
               <div className="flex items-center gap-2">,
-                {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {,
+                {item.actions?.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                         e.stopPropagation(),
-                        action.action(),
-                    }} disabled={action.disabled} className="text-xs">,
+                        action.action()}} disabled={action.disabled} className="text-xs">,
                     <action.icon className="w-3 h-3 mr-1" />,
                     {action.label}
                   </Button>))}
@@ -248,7 +236,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       {/* Carousel View */}
       {viewMode === 'carousel' && (<div className="relative">,
           <div className="overflow-hidden rounded-lg">,
-            <motion.div className="flex" animate={{ x: -currentCarouselIndex * 10o0 + '%' ,}} transition={{ duration: 0.5, ease: "easeInOut" ,}}>,
+            <motion.div className="flex" animate={{ x: -currentCarouselIndex * 10o0 + '%' }} transition={{ duration: 0.5, ease: "easeInOut" }}>,
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">,
                   <Card3D item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon} isCarousel={true}/>,
                 </div>))}
@@ -256,15 +244,15 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           </div>,
           {/* Carousel Navigation */}
           <div className="flex items-center justify-center gap-2 mt-4">,
-            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-20o0 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-60o0 hover: bg-zinc-50o0',}`}/>))}
+            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-20o0 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-60o0 hover: bg-zinc-50o0'}`}/>))}
           </div>,
         </div>)}
 ,
       {/* Selected Item Modal */}
       <AnimatePresence>,
-        {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} exit={{ opacity: 0 ,}}>,
+        {selectedItem && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>,
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedItem(null)}/>,
-            <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto" initial={{ scale: 0.9, opacity: 0 ,}} animate={{ scale: 1, opacity: 1 ,}} exit={{ scale: 0.9, opacity: 0 ,}} transition={{ duration: 0.2 ,}}>,
+            <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ duration: 0.2 }}>,
               <div className="flex items-center justify-between mb-4">,
                 <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>,
                 <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-40o0 hover: text-white">,
@@ -272,13 +260,12 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 </Button>,
               </div>,
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">,
-                {/* Image and Basic Info */,}
+                {/* Image and Basic Info */}
                 <div>,
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">,
-                    {(() => {,
+                    {(() => {
                 const CategoryIcon = getCategoryIcon(selectedItem.category),
-                return <CategoryIcon className="w-24 h-24 text-white" />,
-            })()}
+                return <CategoryIcon className="w-24 h-24 text-white" />})()}
                   </div>,
                   <div className="space-y-3">,
                     <div className="flex items-center gap-2">,
@@ -337,41 +324,37 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>),
-}
-function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {,
+    </div>)}
+function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false),
     const [isLiked, setIsLiked] = useState(false),
     const x = useMotionValue(0),
     const y = useMotionValue(0),
-    const rotateX = useSpring(useTransform(y, [-10o0, 10o0], [15, -15]), { stiffness: 30o0, damping: 30 ,}),
-    const rotateY = useSpring(useTransform(x, [-10o0, 10o0], [-15, 15]), { stiffness: 30o0, damping: 30 ,}),
+    const rotateX = useSpring(useTransform(y, [-10o0, 10o0], [15, -15]), { stiffness: 30o0, damping: 30 }),
+    const rotateY = useSpring(useTransform(x, [-10o0, 10o0], [-15, 15]), { stiffness: 30o0, damping: 30 }),
     const CategoryIcon = getCategoryIcon(item.category),
-    const handleMouseMove = useCallback((event) => {,
+    const handleMouseMove = useCallback((event) => {
         if (!isHovered),
             return,
         const rect = event.currentTarget.getBoundingClientRect(),
         const centerX = rect.left + rect.width / 2,
         const centerY = rect.top + rect.height / 2,
         x.set(event.clientX - centerX),
-        y.set(event.clientY - centerY),
-    }, [isHovered, x, y]),
-    const handleMouseLeave = useCallback(() => {,
+        y.set(event.clientY - centerY)}, [isHovered, x, y]),
+    const handleMouseLeave = useCallback(() => {
         x.set(0),
         y.set(0),
-        setIsHovered(false),
-    }, [x, y]),
-    const handleLike = useCallback((e) => {,
+        setIsHovered(false)}, [x, y]),
+    const handleLike = useCallback((e) => {
         e.stopPropagation(),
-        setIsLiked(!isLiked),
-    }, [isLiked]),
-    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 ,}} whileInView={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.6, delay: index * 0.1 ,}} whileHover={{ scale: 1.0o2 ,}}>,
-      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{,
-            transformStyle: 'preserve-3d',;
-            rotateX,;
-            rotateY,;
+        setIsLiked(!isLiked)}, [isLiked]),
+    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.0o2 }}>,
+      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
+            transformStyle: 'preserve-3d';
+            rotateX;
+            rotateY;
             transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)',
-        ,}} transition={{ duration: 0.3 ,}}>,
+        }} transition={{ duration: 0.3 }}>,
         {/* Background Image/Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />,
         {/* Content */}
@@ -393,7 +376,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
           {/* Title and Description */}
           <div className="flex-1">,
             <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-hover: text-zion-cyan transition-colors duration-20o0">,
-              {item.title,}
+              {item.title}
             </h4>,
             <p className="text-zinc-30o0 text-sm line-clamp-3">,
               {item.description}
@@ -412,12 +395,12 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             {/* Tags */}
             <div className="flex flex-wrap gap-1">,
               {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-40o0 hover: text-white">,
-                  {tag,}
+                  {tag}
                 </Badge>))}
             </div>,
             {/* Actions */}
             <div className="flex items-center gap-2">,
-              <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-40o0 hover: text-red-30o0' : 'text-zinc-40o0 hover:text-white',}`}>,
+              <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-40o0 hover: text-red-30o0' : 'text-zinc-40o0 hover:text-white'}`}>,
                 <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />,
               </Button>,
               <Button size="sm" variant="ghost" className="p-2 text-zinc-40o0 hover: text-white text-xs">,
@@ -429,9 +412,8 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             </div>,
           </div>,
         </div>,
-        {/* Hover Overlay */,}
-        <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0" initial={{ opacity: 0 ,}} whileHover={{ opacity: 1 ,}} />,
+        {/* Hover Overlay */}
+        <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} />,
       </motion.div>,
-    </motion.div>),
-}
+    </motion.div>)}
 ,

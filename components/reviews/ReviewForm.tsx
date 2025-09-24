@@ -1,27 +1,22 @@
 "use client",
 import React{ useState } from 'react',
 import StarRating from './StarRating',
-,
-export type ReviewFormValues = {,
+export type ReviewFormValues = {
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string,
   rating: number,
   text: string,
-  categories?: {,
+  categories?: {
     communication?: number,
     qualityOfWork?: number,
     timeliness?: number,
     wouldWorkWithAgain?: boolean,
-  ,};
-  anonymous?: boolean,
-};
-,
-type Props = {,
-  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>,
-};
-,
-const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
+  };
+  anonymous?: boolean};
+type Props = {
+  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>};
+const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [ratingsetRating] = useState(0),
   const [textsetText] = useState(''),
   const [anonymousetAnonymous] = useState(false),
@@ -31,38 +26,35 @@ const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
   const [wouldWorkWithAgainsetWouldWorkWithAgain] = useState<boolean>(false),
   const [submittingsetSubmitting] = useState(false),
   const [messagesetMessage] = useState<string | null>(null),
-,
-  async function handleSubmit(e: React.FormEvent) {,
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault(),
     setSubmitting(true),
     setMessage(null),
-    try {,
-      const res = await fetch('/api/reviews/submit'{,
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' ,},;
-        body: JSON.stringify({,
-          projectId: initial.projectId,;
-          fromRole: initial.fromRole,;
-          fromId: initial.fromId,;
-          rating,;
-          text,;
-          anonymous,;
-          categories: {,
-            communication,;
-            qualityOfWork,;
-            timeliness,;
+    try {
+      const res = await fetch('/api/reviews/submit'{
+        method: 'POST';
+        headers: { 'Content-Type': 'application/json' };
+        body: JSON.stringify({
+          projectId: initial.projectId;
+          fromRole: initial.fromRole;
+          fromId: initial.fromId;
+          rating;
+          text;
+          anonymous;
+          categories: {
+            communication;
+            qualityOfWork;
+            timeliness;
             wouldWorkWithAgain}})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
-      setMessage('Review submitted! Pending admin approval.'),
-    } catch (err: any) {,
+      setMessage('Review submitted! Pending admin approval.')} catch (err: any) {
       setMessage(err.message),
-    ,} finally {,
-      setSubmitting(false),
-    }
+    } finally {
+      setSubmitting(false)}
   }
 ,
-  return (,
+  return (
     <form onSubmit={handleSubmit} className="space-y-6">,
       <div>,
         <label className="block text-sm font-medium mb-2">Overall Rating</label>,
@@ -70,9 +62,9 @@ const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
       </div>,
       <div>,
         <label className="block text-sm font-medium mb-2">Your Review</label>,
-        <textarea,
+        <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500",
-          rows={5,}
+          rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
           required,
@@ -86,7 +78,7 @@ const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
         <div className="enhanced-card">,
           <div className="flex items-center justify-between mb-2">,
             <span className="text-sm">Communication</span>,
-            <StarRating value={communication || 0,} onChange={(v) => setCommunication(v)} />,
+            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />,
           </div>,
           <span className="pill">Optional</span>,
         </div>,
@@ -112,7 +104,7 @@ const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
           <span className="pill">Optional</span>,
         </div>,
       </div>,
-      <button,
+      <button
         type="submit",
         className="enhanced-button enhanced-button-primary",
         disabled={submitting}
@@ -120,9 +112,5 @@ const ReviewForm: React.FC<Props> = ({ initial ,}) => {,
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>,
       {message && <p className="text-sm">{message}</p>}
-    </form>,
-  ),
-};
-,
-export default ReviewForm,
-,
+    </form>)};
+export default ReviewForm;

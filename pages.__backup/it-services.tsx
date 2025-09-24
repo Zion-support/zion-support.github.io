@@ -1,68 +1,58 @@
 import Head from 'next/head',
 CloudCpuServerDatabaseSettingsShieldPhoneMailMapPinCheck,
 import Layout from '../components/layout/Layout',
-,
 import ServiceAds from '../components/sections/ServiceAds',
-,
-export default function ITServicesPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+export default function ITServicesPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  const offerings = [,
-    { icon: <Cloud className="w-6 h-6 text-cyan-40o0"  />title: 'Cloud Platform Engineering'desc: 'Landing zonesmulti-account architecturesand secure-by-default foundations on AWSAzureand GCP.' ,},;
-    { icon: <Cpu className="w-6 h-6 text-purple-40o0"  />title: 'DevOps & Platform Ops'desc: 'CI/CDIaC (Terraform/Pulumi)GitOps (ArgoCD/Flux)golden imagesinternal platforms.' ,},;
-    { icon: <Server className="w-6 h-6 text-amber-40o0"  />title: 'SRE & Reliability'desc: 'SLOs/SLIserror budgetsincident responsechaos testingcapacity planning and autoscaling.' ,},;
-    { icon: <Database className="w-6 h-6 text-emerald-40o0"  />title: 'Data & Observability'desc: 'ELK/OpensearchPrometheus/GrafanaOpenTelemetrycost-aware logging and tracing.' ,},;
-    { icon: <Settings className="w-6 h-6 text-rose-40o0"  />title: 'FinOps & Cost Optimization'desc: 'Rightsizingsavings plansK8s bin-packingstorage lifecyclemulti-cloud egress control.' ,},;
-    { icon: <Shield className="w-6 h-6 text-blue-40o0"  />title: 'Governance & Compliance'desc: 'SOC 2ISO 270o01HIPAA baselinespolicy-as-code with OPA/Conftest and drift detection.' ,},;
+  };
+  const offerings = [
+    { icon: <Cloud className="w-6 h-6 text-cyan-40o0"  />title: 'Cloud Platform Engineering'desc: 'Landing zonesmulti-account architecturesand secure-by-default foundations on AWSAzureand GCP.' };
+    { icon: <Cpu className="w-6 h-6 text-purple-40o0"  />title: 'DevOps & Platform Ops'desc: 'CI/CDIaC (Terraform/Pulumi)GitOps (ArgoCD/Flux)golden imagesinternal platforms.' };
+    { icon: <Server className="w-6 h-6 text-amber-40o0"  />title: 'SRE & Reliability'desc: 'SLOs/SLIserror budgetsincident responsechaos testingcapacity planning and autoscaling.' };
+    { icon: <Database className="w-6 h-6 text-emerald-40o0"  />title: 'Data & Observability'desc: 'ELK/OpensearchPrometheus/GrafanaOpenTelemetrycost-aware logging and tracing.' };
+    { icon: <Settings className="w-6 h-6 text-rose-40o0"  />title: 'FinOps & Cost Optimization'desc: 'Rightsizingsavings plansK8s bin-packingstorage lifecyclemulti-cloud egress control.' };
+    { icon: <Shield className="w-6 h-6 text-blue-40o0"  />title: 'Governance & Compliance'desc: 'SOC 2ISO 270o01HIPAA baselinespolicy-as-code with OPA/Conftest and drift detection.' };
   ],
-,
-  const packages = [,
-    { name: 'Kickstart'price: '$4,90o0 fixed'items: ['Cloud baseline review'CI/CD quickstart'Observability lite'Cost 30-day plan'] ,},;
-    { name: 'Scale'price: '$9,90o0 fixed'items: ['Secure landing zone'GitOps platform'SLOs + alerts'FinOps automation'] ,},;
-    { name: 'Managed'price: 'From $2,0o00/month'items: ['Ops on-call 24/7'Release & env mgmt'Weekly tune-ups'Monthly executive report'] ,},;
+  const packages = [
+    { name: 'Kickstart'price: '$4,90o0 fixed'items: ['Cloud baseline review'CI/CD quickstart'Observability lite'Cost 30-day plan'] };
+    { name: 'Scale'price: '$9,90o0 fixed'items: ['Secure landing zone'GitOps platform'SLOs + alerts'FinOps automation'] };
+    { name: 'Managed'price: 'From $2,0o00/month'items: ['Ops on-call 24/7'Release & env mgmt'Weekly tune-ups'Monthly executive report'] };
   ],
-,
-  const featuredITAds = [,
-    {,
-      title: '💸 Cloud Cost Optimizer Pro',;
-      description: 'Rightsizingstorage lifecycleanomaly detection and K8s bin-packing insights.',;
-      price: 'Starting at $99/month',;
-      features: ['Rightsizing & schedules'Lifecycle policies'Anomaly alerts'IaC outputs'],;
-      link: 'https://ziontechgroup.com/cloud-cost-optimizer',;
-      contactInfo,
-    },;
-    {,
-      title: '🗄️ Database Performance Monitor',;
-      description: 'Slow query captureAI index suggestionscapacity forecasting for Postgres/MySQL.',;
-      price: 'Starting at $79/month',;
-      features: ['Slow query ranking'AI index advice'Pool tuning'SLA/SLO dashboards'],;
-      link: 'https://ziontechgroup.com/database-performance-monitor',;
-      contactInfo,
-    },;
-    {,
-      title: '🔐 API Security Scanner',;
-      description: 'Automated OpenAPI/GraphQL scanningauth/Z checksand dependency audit.',;
-      price: 'Starting at $59/month',;
-      features: ['Auth/Z misconfig checks'OWASP top-10 tests'CI gate'Fix guidance'],;
-      link: 'https://ziontechgroup.com/api-security-scanner',;
-      contactInfo,
-    },;
-    {,
-      title: '📈 API Observability & SLA Guard',;
-      description: 'OpenTelemetry-based tracingerror budgetsand SLO enforcement for services.',;
-      price: 'Starting at $69/month',;
-      features: ['OTel traces/metrics/logs'SLOs & error budgets'Alerting'Dashboards'],;
-      link: 'https://ziontechgroup.com/api-observability',;
-      contactInfo,
-    }
+  const featuredITAds = [
+    {
+      title: '💸 Cloud Cost Optimizer Pro';
+      description: 'Rightsizingstorage lifecycleanomaly detection and K8s bin-packing insights.';
+      price: 'Starting at $99/month';
+      features: ['Rightsizing & schedules'Lifecycle policies'Anomaly alerts'IaC outputs'];
+      link: 'https://ziontechgroup.com/cloud-cost-optimizer';
+      contactInfo};
+    {
+      title: '🗄️ Database Performance Monitor';
+      description: 'Slow query captureAI index suggestionscapacity forecasting for Postgres/MySQL.';
+      price: 'Starting at $79/month';
+      features: ['Slow query ranking'AI index advice'Pool tuning'SLA/SLO dashboards'];
+      link: 'https://ziontechgroup.com/database-performance-monitor';
+      contactInfo};
+    {
+      title: '🔐 API Security Scanner';
+      description: 'Automated OpenAPI/GraphQL scanningauth/Z checksand dependency audit.';
+      price: 'Starting at $59/month';
+      features: ['Auth/Z misconfig checks'OWASP top-10 tests'CI gate'Fix guidance'];
+      link: 'https://ziontechgroup.com/api-security-scanner';
+      contactInfo};
+    {
+      title: '📈 API Observability & SLA Guard';
+      description: 'OpenTelemetry-based tracingerror budgetsand SLO enforcement for services.';
+      price: 'Starting at $69/month';
+      features: ['OTel traces/metrics/logs'SLOs & error budgets'Alerting'Dashboards'];
+      link: 'https://ziontechgroup.com/api-observability';
+      contactInfo}
   ],
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>IT Services | Zion Tech Group</title>,
@@ -70,38 +60,35 @@ export default function ITServicesPage() {,
         <link rel="canonical" href="https: //ziontechgroup.com/it-services"  />,
       </Head>,
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">,
-        <ServiceAds heading="Featured IT Services" subheading="Production-grade solutions with clear pricing." items={featuredITAds,}  />,
+        <ServiceAds heading="Featured IT Services" subheading="Production-grade solutions with clear pricing." items={featuredITAds}  />,
         <div className="text-center max-w-4xl mx-auto mb-12">,
           <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-6">Modern IT Services</h1>,
           <p className="text-xl text-gray-30o0">Outcome-driven cloudplatformand reliability engineering to accelerate delivery and reduce costs.</p>,
         </div>,
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">,
-          {offerings.map((o) => (,
-            <div key={o.title,} className="bg-black/30 border border-gray-70o0/50 rounded-2xl p-6">,
+          {offerings.map((o) => (
+            <div key={o.title} className="bg-black/30 border border-gray-70o0/50 rounded-2xl p-6">,
               <div className="mb-4">{o.icon}</div>,
               <h3 className="text-white font-semibold mb-2">{o.title}</h3>,
               <p className="text-gray-40o0 text-sm">{o.desc}</p>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className="max-w-6xl mx-auto mb-20">,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-            {packages.map((p) => (,
-              <div key={p.name,} className="bg-black/30 border border-gray-70o0/50 rounded-2xl p-6">,
+            {packages.map((p) => (
+              <div key={p.name} className="bg-black/30 border border-gray-70o0/50 rounded-2xl p-6">,
                 <h3 className="text-2xl font-bold text-white mb-2">{p.name}</h3>,
                 <div className="text-cyan-40o0 font-semibold mb-4">{p.price}</div>,
                 <ul className="space-y-2 text-gray-30o0 text-sm">,
-                  {p.items.map((i) => (,
-                    <li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-40o0"><Check  /> <span>{i}</span></li>,
-                  ))}
+                  {p.items.map((i) => (
+                    <li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-40o0"><Check  /> <span>{i}</span></li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         <div className="max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-50o0/30">,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm mb-4">,
-            <div className="flex items-center justify-center gap-2 text-cyan-40o0 w-4 h-4"><Phone  /><span>{contactInfo.mobile,}</span></div>,
+            <div className="flex items-center justify-center gap-2 text-cyan-40o0 w-4 h-4"><Phone  /><span>{contactInfo.mobile}</span></div>,
             <div className="flex items-center justify-center gap-2 text-purple-40o0 w-4 h-4"><Mail  /><span>{contactInfo.email}</span></div>,
             <div className="flex items-center justify-center gap-2 text-green-40o0 w-4 h-4 text-xs"><MapPin  /><span >{contactInfo.address}</span></div>,
           </div>,
@@ -110,7 +97,5 @@ export default function ITServicesPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

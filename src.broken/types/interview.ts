@@ -1,5 +1,4 @@
 // Type definitions for interview,
-interface interview {,
+interface interview {
   // TODO: Add proper type definitions,
-,};
-,
+};

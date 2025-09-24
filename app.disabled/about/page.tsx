@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'About | Zion Tech Group',;
+export const metadata = {
+  title: 'About | Zion Tech Group';
   description:,
-    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",;
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.";
 };
-,
-export default function AboutPage() {,
-  return (,
+export default function AboutPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='max-w-4xl mx-auto'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
@@ -62,7 +61,5 @@ export default function AboutPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

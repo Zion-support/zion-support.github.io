@@ -1,19 +1,18 @@
 import Head from 'next/head',
-,
-export default function ServicePage() {,
-  return (,
+export default function ServicePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>API Integration - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Professional api integration services to accelerate your business growth and digital transformation.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='api integration, services, technology, business, digital transformation',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/services/rapid-17555750o55896-tihq3e',
         />,
@@ -46,7 +45,7 @@ export default function ServicePage() {,
         <section className='mb-8'>,
           <h2 className='text-2xl font-bold mb-4'>🎯 What We Deliver</h2>,
           <p className='text-white/80'>,
-            Our comprehensive approach includes strategy development,;
+            Our comprehensive approach includes strategy development;
             implementation, training, and ongoing support to ensure your success,
             with api integration.,
           </p>,
@@ -55,15 +54,13 @@ export default function ServicePage() {,
           <p className='text-white/75 mb-4'>,
             Ready to transform your business with api integration?,
           </p>,
-          <a,
+          <a
             href='https: //ziontechgroup.com/contact',
-            className='inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors',
-          >,
+            className='inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors'>,
             Get Started Today,
           </a>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

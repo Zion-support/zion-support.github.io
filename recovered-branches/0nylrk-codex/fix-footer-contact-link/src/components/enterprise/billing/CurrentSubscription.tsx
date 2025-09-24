@@ -1,24 +1,22 @@
-import React from 'react',
+import React from 'react';
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
-,
-export function CurrentSubscription() {,
+export function CurrentSubscription() {
   // Mock subscription data,
-  const subscription = {,
-    plan: 'Business',;
-    status: 'active',;
-    billingCycle: 'Annual',;
-    startDate: 'May 12025',;
-    nextBillingDate: 'May 12026',;
-    amount: '$1,999.00',;
-    teamSeats: {,
-      used: 32,;
-      total: 50,;
-    },;
+  const subscription = {
+    plan: 'Business';
+    status: 'active';
+    billingCycle: 'Annual';
+    startDate: 'May 12025';
+    nextBillingDate: 'May 12026';
+    amount: '$1,999.00';
+    teamSeats: {
+      used: 32;
+      total: 50;
+    };
   };
-,
-  return (,
+  return (
     <Card>,
       <CardHeader>,
         <div className='flex items-center justify-between'>,
@@ -37,7 +35,7 @@ export function CurrentSubscription() {,
             <p className='text-sm font-medium leading-none text-muted-foreground'>,
               Plan,
             </p>,
-            <p className='text-lg font-bold'>{subscription.plan,}</p>,
+            <p className='text-lg font-bold'>{subscription.plan}</p>,
           </div>,
           <div className='space-y-1'>,
             <p className='text-sm font-medium leading-none text-muted-foreground'>,
@@ -89,7 +87,5 @@ export function CurrentSubscription() {,
         <Button variant='outline'>Change Plan</Button>,
         <Button variant='destructive'>Cancel Subscription</Button>,
       </CardFooter>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

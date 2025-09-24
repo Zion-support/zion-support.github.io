@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI 20o26: Agent Platform Operations',;
+export const metadata = {
+  title: 'AI 20o26: Agent Platform Operations';
   description:,
-    'Reference operating model for running agent platforms: SLOs, incident response, change management, and continuous evaluations.',;
+    'Reference operating model for running agent platforms: SLOs, incident response, change management, and continuous evaluations.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <h1 className='text-3xl md:text-4xl font-bold text-gray-90o0'>,
         AI 20o26: Agent Platform Operations,
@@ -58,7 +57,5 @@ export default function Page() {,
           </ul>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

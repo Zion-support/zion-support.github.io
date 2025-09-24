@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function ModelPage() {,
-  return (,
+export default function ModelPage() {
+  return (
     <>,
       <Head>,
         <title>Model - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function ModelPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

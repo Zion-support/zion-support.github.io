@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const TechTrends20o25_20o30PromotionBanner = () => {,
-  return (,
+const TechTrends20o25_20o30PromotionBanner = () => {
+  return (
     <div className='relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -12,24 +11,24 @@ const TechTrends20o25_20o30PromotionBanner = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-purple-40o0 to-pink-40o0 text-black px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg animate-bounce'>,
             🔮 NEW: TECH TRENDS 20o25-20o30,
           </div>,
-          {/* Main Heading */,}
+          {/* Main Heading */}
           <h2 className='text-3xl md: text-5xl font-bold mb-6 leading-tight'>,
             Future of Innovation,
             <span className='block text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0'>,
               20o25-20o30,
             </span>,
           </h2>,
-          {/* Description */,}
+          {/* Description */}
           <p className='text-lg md: text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Discover the revolutionary technology trends that will reshape,
             industries and transform human experience over the next five years.,
             From AI consciousness to quantum supremacy.,
           </p>,
-          {/* Trends Grid */,}
+          {/* Trends Grid */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20'>,
               <div className='text-2xl mb-2'>🧠</div>,
@@ -48,7 +47,7 @@ const TechTrends20o25_20o30PromotionBanner = () => {,
               <div className='text-sm font-semibold'>Autonomous Systems</div>,
             </div>,
           </div>,
-          {/* Timeline */,}
+          {/* Timeline */}
           <div className='grid grid-cols-2 gap-6 mb-8 max-w-2xl mx-auto'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-purple-40o0'>,
@@ -65,40 +64,36 @@ const TechTrends20o25_20o30PromotionBanner = () => {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/tech-trends-20o25-20o30',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 text-lg shadow-2xl transform hover:scale-10o5 inline-flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 text-lg shadow-2xl transform hover:scale-10o5 inline-flex items-center justify-center'>,
               🔮 Explore Future Trends,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/ai-innovation-hub',
-              className='border-2 border-purple-40o0 text-purple-30o0 px-8 py-4 rounded-xl font-bold hover: bg-purple-40o0 hover:text-black transition-all duration-30o0 text-lg inline-flex items-center justify-center',
-            >,
+              className='border-2 border-purple-40o0 text-purple-30o0 px-8 py-4 rounded-xl font-bold hover: bg-purple-40o0 hover:text-black transition-all duration-30o0 text-lg inline-flex items-center justify-center'>,
               🧠 AI Innovation Hub,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9.663 17h4.673M12 3v1m6.364 1.636l-.70o7.70o7M21 12h-1M4 12H3m3.343-5.657l-.70o7-.70o7m2.828 9.9a5 5 0 117.0o72 0l-.548.547A3.374 3.374 0 0o014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
                 />,
               </svg>,
@@ -118,9 +113,5 @@ const TechTrends20o25_20o30PromotionBanner = () => {,
       <div className='absolute top-8 right-8 w-3 h-3 bg-pink-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-4 left-8 w-2 h-2 bg-blue-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-8 right-4 w-3 h-3 bg-purple-40o0 rounded-full animate-ping'></div>,
-    </div>,
-  ),
-};
-,
-export default TechTrends20o25_20o30PromotionBanner,
-,
+    </div>)};
+export default TechTrends20o25_20o30PromotionBanner;

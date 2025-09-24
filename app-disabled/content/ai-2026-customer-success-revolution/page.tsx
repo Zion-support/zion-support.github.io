@@ -1,28 +1,25 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o26: Customer Success Revolution - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'AI 20o26: Customer Success Revolution - Zion Tech Group';
   description:,
-    'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.',;
-  keywords: [,
-    'AI customer success',;
-    'predictive analytics',;
-    'customer retention',;
-    'AI support',;
-    'customer experience',;
-  ],;
+    'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.';
+  keywords: [
+    'AI customer success';
+    'predictive analytics';
+    'customer retention';
+    'AI support';
+    'customer experience';
+  ];
 };
-,
-export default function AI20o26CustomerSuccessRevolution() {,
-  return (,
+export default function AI20o26CustomerSuccessRevolution() {
+  return (
     <div className='min-h-screen bg-white'>,
       <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
         <div className='mb-8'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 hover:text-purple-80o0 font-medium',
-          >,
+            className='text-purple-60o0 hover:text-purple-80o0 font-medium'>,
             ← Back to Content,
           </Link>,
         </div>,
@@ -149,7 +146,7 @@ export default function AI20o26CustomerSuccessRevolution() {,
               Intelligent Health Scoring,
             </h3>,
             <p className='text-gray-70o0 mb-4'>,
-              Real-time customer health scores that combine usage metrics,;
+              Real-time customer health scores that combine usage metrics;
               support interactions, and business outcomes to provide actionable,
               insights for customer success teams.,
             </p>,
@@ -255,23 +252,20 @@ export default function AI20o26CustomerSuccessRevolution() {,
               drive unprecedented growth.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/services/customer-success',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors text-center'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

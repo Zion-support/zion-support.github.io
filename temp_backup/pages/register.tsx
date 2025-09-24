@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function RegisterPage() {,
-  return (,
+export default function RegisterPage() {
+  return (
     <>,
       <Head>,
         <title>Register - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function RegisterPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

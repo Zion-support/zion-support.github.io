@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DebugPage() {,
-  return (,
+export default function DebugPage() {
+  return (
     <>,
       <Head>,
         <title>Debug - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function DebugPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

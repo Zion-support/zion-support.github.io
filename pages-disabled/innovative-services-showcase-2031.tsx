@@ -1,55 +1,52 @@
 import React from 'react.ts',
 import { Helmet } from 'react-helmet-async.ts',
-import {,
-  innovativeMicroSaasServices20o31,;
-  innovativeITInfrastructureServices20o31,;
-  innovativeAIServices20o31,;
+import {
+  innovativeMicroSaasServices20o31;
+  innovativeITInfrastructureServices20o31;
+  innovativeAIServices20o31;
 } from '../src/data/innovativeServices20o31',
-  Brain,;
-  Cloud,;
-  CheckCircle,;
-  TrendingUp,;
-  Users,;
-  Phone,;
-  Mail,;
-  Globe,;
-  MapPin,;
-  ArrowRight,;
-  Rocket,;
-  Target,;
-  Award,;
-  Clock,;
+  Brain;
+  Cloud;
+  CheckCircle;
+  TrendingUp;
+  Users;
+  Phone;
+  Mail;
+  Globe;
+  MapPin;
+  ArrowRight;
+  Rocket;
+  Target;
+  Award;
+  Clock;
 } from 'lucide-react.ts',
-,
-const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
-  const scrollToContact = () => {,
+const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {
+  const scrollToContact = () => {
     document,
       .getElementById('contact-section'),
-      ?.scrollIntoView({ behavior: 'smooth' ,}),
-  };
-,
-  return (,
+      ?.scrollIntoView({ behavior: 'smooth' })};
+  return (
     <>,
       <Head>,
         <title>,
-          Innovative Services 20o31 - Zion Tech Group | Cutting-Edge Micro SAAS,;
+          Innovative Services 20o31 - Zion Tech Group | Cutting-Edge Micro SAAS;
           IT & AI Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content="Discover Zion Tech Group's revolutionary 20o31 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='innovative services 20o31, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/innovative-services-showcase-20o31',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -61,7 +58,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>,
               The Future of,
               <span className='bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
-                {' ',}
+                {' '}
                 Technology,
               </span>,
               <br />,
@@ -75,31 +72,27 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
               revolutionize your business in 20o31 and beyond.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <button,
-                onClick={scrollToContact,}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <button
+                onClick={scrollToContact}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Get Started Today,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </button>,
-              <button,
+              <button
                 onClick={() =>,
                   document,
                     .getElementById('services-overview'),
-                    ?.scrollIntoView({ behavior: 'smooth' ,}),
-                }
-                className='inline-flex items-center px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0',
-              >,
+                    ?.scrollIntoView({ behavior: 'smooth' })}
+                className='inline-flex items-center px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover: bg-purple-40o0 hover:text-white transition-all duration-30o0'>,
                 Explore Services,
               </button>,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
-        <section,
+        {/* Services Overview */}
+        <section
           id='services-overview',
-          className='py-20 px-4 sm: px-6 lg:px-8 bg-white/5 backdrop-blur-sm',
-        >,
+          className='py-20 px-4 sm: px-6 lg:px-8 bg-white/5 backdrop-blur-sm'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
               <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>,
@@ -112,7 +105,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
               </p>,
             </div>,
             <div className='grid md: grid-cols-3 gap-8'>,
-              {/* Micro SAAS Services */,}
+              {/* Micro SAAS Services */}
               <div className='bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 p-8 rounded-2xl border border-purple-50o0/30 backdrop-blur-sm'>,
                 <div className='text-center mb-6'>,
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-4'>,
@@ -226,16 +219,15 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
               </p>,
             </div>,
             <div className='space-y-8'>,
-              {innovativeMicroSaasServices20o31.map(service => (,
-                <div,
-                  key={service.id,}
-                  className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-purple-50o0/50 transition-all duration-30o0',
-                >,
+              {innovativeMicroSaasServices20o31.map(service => (
+                <div
+                  key={service.id}
+                  className='bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-purple-50o0/50 transition-all duration-30o0'>,
                   <div className='grid lg:grid-cols-2 gap-8'>,
                     <div>,
                       <div className='flex items-center mb-4'>,
                         <span className='inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-10o0 text-purple-80o0 mr-3'>,
-                          {service.category,}
+                          {service.category}
                         </span>,
                         <span className='text-sm text-gray-40o0'>,
                           {service.pricing}
@@ -253,7 +245,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                         </span>,
                         <span className='text-gray-40o0 ml-2'>/month</span>,
                         <span className='ml-4 text-sm text-gray-40o0'>,
-                          Market: {service.marketPrice,}
+                          Market: {service.marketPrice}
                         </span>,
                       </div>,
                       <div className='grid grid-cols-2 gap-4 mb-6'>,
@@ -277,7 +269,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                           Innovation Level: ,
                         </span>,
                         <span className='inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white'>,
-                          {service.innovationLevel,}
+                          {service.innovationLevel}
                         </span>,
                       </div>,
                     </div>,
@@ -289,15 +281,13 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                         <div className='grid grid-cols-1 gap-2'>,
                           {service.features,
                             .slice(0, 6),
-                            .map((feature, index) => (,
-                              <div,
+                            .map((feature, index) => (
+                              <div
                                 key={index}
-                                className='flex items-center text-sm text-gray-30o0',
-                              >,
+                                className='flex items-center text-sm text-gray-30o0'>,
                                 <CheckCircle className='w-4 h-4 text-purple-40o0 mr-2 flex-shrink-0' />,
                                 {feature}
-                              </div>,
-                            ))}
+                              </div>))}
                         </div>,
                       </div>,
                       <div className='mb-6'>,
@@ -307,37 +297,31 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                         <div className='space-y-2'>,
                           {service.benefits,
                             .slice(0, 3),
-                            .map((benefit, index) => (,
-                              <div,
+                            .map((benefit, index) => (
+                              <div
                                 key={index}
-                                className='flex items-center text-sm text-gray-30o0',
-                              >,
+                                className='flex items-center text-sm text-gray-30o0'>,
                                 <TrendingUp className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />,
                                 {benefit}
-                              </div>,
-                            ))}
+                              </div>))}
                         </div>,
                       </div>,
                       <div className='flex flex-wrap gap-2 mb-6'>,
-                        {service.tags.slice(0, 4).map((tag, index) => (,
-                          <span,
+                        {service.tags.slice(0, 4).map((tag, index) => (
+                          <span
                             key={index}
-                            className='px-2 py-1 bg-white/10 text-xs text-gray-30o0 rounded',
-                          >,
+                            className='px-2 py-1 bg-white/10 text-xs text-gray-30o0 rounded'>,
                             {tag}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
-                      <button,
+                      <button
                         onClick={scrollToContact}
-                        className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0',
-                      >,
+                        className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold py-3 px-6 rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0'>,
                         Get Started,
                       </button>,
                     </div>,
                   </div>,
-                </div>,
-              )),}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -437,7 +421,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                     <label className='block text-white font-medium mb-2'>,
                       Name,
                     </label>,
-                    <input,
+                    <input
                       type='text',
                       className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-50o0',
                       placeholder='Your full name',
@@ -447,7 +431,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                     <label className='block text-white font-medium mb-2'>,
                       Email,
                     </label>,
-                    <input,
+                    <input
                       type='email',
                       className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-50o0',
                       placeholder='your.email@company.com',
@@ -457,7 +441,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                     <label className='block text-white font-medium mb-2'>,
                       Company,
                     </label>,
-                    <input,
+                    <input
                       type='text',
                       className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-50o0',
                       placeholder='Your company name',
@@ -481,16 +465,14 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
                     <label className='block text-white font-medium mb-2'>,
                       Message,
                     </label>,
-                    <textarea,
-                      rows={4,}
+                    <textarea
+                      rows={4}
                       className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-purple-50o0',
-                      placeholder='Tell us about your project or requirements...',
-                    ></textarea>,
+                      placeholder='Tell us about your project or requirements...'></textarea>,
                   </div>,
-                  <button,
+                  <button
                     type='submit',
-                    className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0',
-                  >,
+                    className='w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0'>,
                     Send Message,
                   </button>,
                 </form>,
@@ -498,7 +480,7 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>,
@@ -510,26 +492,21 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {,
               Group's innovative services.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <button,
-                onClick={scrollToContact,}
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+              <button
+                onClick={scrollToContact}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Start Your Transformation,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </button>,
-              <a,
+              <a
                 href='https://ziontechgroup.com',
-                className='inline-flex items-center px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-white transition-all duration-30o0',
-              >,
+                className='inline-flex items-center px-8 py-4 border-2 border-purple-40o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-40o0 hover:text-white transition-all duration-30o0'>,
                 Visit Our Website,
               </a>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default InnovativeServicesShowcase20o31,
-,
+    </>),
+};
+export default InnovativeServicesShowcase20o31;

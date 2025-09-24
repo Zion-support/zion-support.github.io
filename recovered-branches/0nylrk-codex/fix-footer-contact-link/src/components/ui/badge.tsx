@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 
 import * as React from "react",
 import { cn } from "@/lib/utils",
 import { badgeVariants } from "@/components/ui/badge-variants",
 export interface BadgeProps,
-  extends React.HTMLAttributes<HTMLSpanElement> {,
+  extends React.HTMLAttributes<HTMLSpanElement> {
   variant?:,
     | "default",
     | "secondary",
@@ -12,14 +12,11 @@ export interface BadgeProps,
     | "outline",
     | "success",
     | "warning",
-    | "info",
-}
+    | "info"}
 ,
-function Badge({ classNamevariant...props }: BadgeProps) {,
-  return (,
-    <span className={cn(badgeVariants({ variant })className)} {...props} />,
-  ),
-}
+function Badge({ classNamevariant...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ variant })className)} {...props} />)}
 ,
 export { BadgebadgeVariants }
 ,

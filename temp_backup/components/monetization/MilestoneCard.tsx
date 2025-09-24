@@ -1,32 +1,26 @@
 "use client",
 import React{ useState } from 'react',
 import { Milestone } from '../../utils/types/milestones',
-,
-type Props ={,
+type Props ={
   milestone: Milestone,
   projectId: string,
   role: 'client' | 'talent' | 'admin',
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid'milestoneId: string) => Promise<void> | void,
-,};
-,
+};
 const statusSteps = ['Pending'In Progress'Submitted'Approved'Paid'] as const,
-,
-export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props) {,
+export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props) {
   const [expandedsetExpanded] = useState(false),
-,
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status),
-,
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending',
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress',
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted',
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved',
-,
-  return (,
+  return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">,
       <div className="flex items-start justify-between">,
         <div>,
           <h3 className="text-lg font-semibold">{milestone.title}</h3>,
-          <p className="text-sm text-gray-60o0">Due: {new Date(milestone.dueDate).toLocaleDateString(),}</p>,
+          <p className="text-sm text-gray-60o0">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>,
         </div>,
         <button className="text-sm text-blue-60o0" onClick={() => setExpanded((v) => !v)}>,
           {expanded ? 'Hide' : 'Details'}
@@ -34,77 +28,65 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
       </div>,
       <div className="mt-3">,
         <div className="flex items-center gap-2">,
-          {statusSteps.map((stepidx) => (,
+          {statusSteps.map((stepidx) => (
             <div key={step} className="flex items-center">,
-              <div,
-                className={,
-                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0'),
-                }
+              <div
+                className={
+                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0')}
                 title={step}
                />,
-              {idx < statusSteps.length - 1 && (,
-                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0')}  />,
-              )}
-            </div>,
-          ))}
+              {idx < statusSteps.length - 1 && (
+                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0')}  />)}
+            </div>))}
         </div>,
-        <div className="mt-2 text-xs text-gray-70o0">Status: {milestone.status,}</div>,
+        <div className="mt-2 text-xs text-gray-70o0">Status: {milestone.status}</div>,
       </div>,
-      {expanded && (,
+      {expanded && (
         <div className="mt-4 space-y-2 text-sm text-gray-80o0">,
           {milestone.description && <p>{milestone.description}</p>}
-          <div>Amount: ${milestone.amountUsd.toFixed(2),}</div>,
-          {milestone.attachments && milestone.attachments.length > 0 && (,
+          <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>,
+          {milestone.attachments && milestone.attachments.length > 0 && (
             <div>,
               <div className="font-medium">Attachments</div>,
               <ul className="list-disc ml-5">,
-                {milestone.attachments.map((a) => (,
+                {milestone.attachments.map((a) => (
                   <li key={a.id}>,
                     <a className="text-blue-60o0 underline" href={a.url} target="_blank" rel="noreferrer">,
                       {a.label || a.url}
                     </a>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </div>,
-          )}
-        </div>,
-      )}
+            </div>)}
+        </div>)}
 ,
       <div className="mt-4 flex flex-wrap gap-2">,
-        {canClientMarkInProgress && (,
-          <button,
+        {canClientMarkInProgress && (
+          <button
             className="px-3 py-1 text-sm rounded bg-indigo-60o0 text-white hover: bg-indigo-70o0",
-            onClick={() => onAction('in_progress'milestone.id),}
+            onClick={() => onAction('in_progress'milestone.id)}
           >,
             Mark In Progress,
-          </button>,
-        )}
-        {canTalentSubmit && (,
-          <button,
+          </button>)}
+        {canTalentSubmit && (
+          <button
             className="px-3 py-1 text-sm rounded bg-amber-60o0 text-white hover: bg-amber-70o0",
-            onClick={() => onAction('submitted'milestone.id),}
+            onClick={() => onAction('submitted'milestone.id)}
           >,
             Submit Work,
-          </button>,
-        )}
-        {canClientApprove && (,
-          <button,
+          </button>)}
+        {canClientApprove && (
+          <button
             className="px-3 py-1 text-sm rounded bg-green-60o0 text-white hover: bg-green-70o0",
-            onClick={() => onAction('approved'milestone.id),}
+            onClick={() => onAction('approved'milestone.id)}
           >,
             Approve,
-          </button>,
-        )}
-        {canClientMarkPaid && (,
-          <button,
+          </button>)}
+        {canClientMarkPaid && (
+          <button
             className="px-3 py-1 text-sm rounded bg-slate-70o0 text-white hover: bg-slate-80o0",
-            onClick={() => onAction('paid'milestone.id),}
+            onClick={() => onAction('paid'milestone.id)}
           >,
             Mark as Paid,
-          </button>,
-        )}
+          </button>)}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

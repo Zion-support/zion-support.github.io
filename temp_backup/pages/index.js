@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export export export default function Home()      {,
-  return (,
+export export export default function Home()      {
+  return (
     <>,
       <Head>,
         <title>Zion App - Home</title>,
@@ -18,6 +17,5 @@ export export export default function Home()      {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

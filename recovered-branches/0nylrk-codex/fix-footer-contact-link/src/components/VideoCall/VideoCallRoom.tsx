@@ -1,19 +1,17 @@
-import React from 'react',
+import React from 'react';
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
-,
-interface VideoCallRoomProps {,
+interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
-  className?: string,
-}
+  className?: string}
 ,
-export function VideoCallRoom({,
-  roomtokenserverUrlonDisconnectclassName,;
-}: VideoCallRoomProps) {,
-  return (,
+export function VideoCallRoom({
+  roomtokenserverUrlonDisconnectclassName;
+}: VideoCallRoomProps) {
+  return (
     <Card className={className || 'w-full max-w-3xl mx-auto'}>,
       <CardHeader>,
         <CardTitle>Video Call</CardTitle>,
@@ -27,7 +25,5 @@ export function VideoCallRoom({,
           <Button onClick={onDisconnect}>Close</Button>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

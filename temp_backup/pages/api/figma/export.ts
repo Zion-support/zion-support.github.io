@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import JSZip from 'jszip',
 import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map',
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  try {,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
     const kit = (req.query.kit as string) || 'tailwind',
     const kind = (['tailwind','chakra','react'].includes(kit) ? kit : 'tailwind') as UIKitKind,
     const zip = new JSZip(),
@@ -16,12 +16,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const uiFolder = zip.folder('uikit')!,
     Object.entries(uikit).forEach(([path, content]) => uiFolder.file(path, content)),
     // README,
-    zip.file('README.md', `# Zion OS Design Export\n\n- kit: ${kind,}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`),
-    const buffer = await zip.generateAsync({ type: 'nodebuffer' ,}),
+    zip.file('README.md', `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`),
+    const buffer = await zip.generateAsync({ type: 'nodebuffer' }),
     res.setHeader('Content-Type', 'application/zip'),
     res.setHeader('Content-Disposition', `attachment, filename=zion-design-${kind}.zip`),
-    res.status(20o0).send(buffer),
-  } catch (e: any) {,
-    res.status(50o0).json({ error: e?.message || 'Export failed' ,}),
-  }
+    res.status(20o0).send(buffer)} catch (e: any) {
+    res.status(50o0).json({ error: e?.message || 'Export failed' })}
 }

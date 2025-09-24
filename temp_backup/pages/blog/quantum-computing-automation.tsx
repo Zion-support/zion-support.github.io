@@ -1,22 +1,21 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function QuantumComputingAutomation() {,
-  return (,
+export default function QuantumComputingAutomation() {
+  return (
     <>,
       <Head>,
         <title>,
           Quantum Computing Automation: The Next Frontier | Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Explore how quantum computing is revolutionizing automation and what it means for the future of AI systems.',
         />,
-        <meta,
+        <meta
           property='og:title',
           content='Quantum Computing Automation: The Next Frontier',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Discover the transformative potential of quantum computing in automation systems.',
         />,
@@ -25,16 +24,15 @@ export default function QuantumComputingAutomation() {,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-4xl mx-auto'>,
-            {/* Breadcrumb */,}
+            {/* Breadcrumb */}
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 transition-colors'>,
                 ← Back to Blog,
               </Link>,
             </nav>,
-            {/* Article Header */,}
+            {/* Article Header */}
             <header className='mb-12'>,
               <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>,
                 Quantum Computing Automation: The Next Frontier,
@@ -186,7 +184,7 @@ export default function QuantumComputingAutomation() {,
               <h2 className='text-3xl font-bold text-white mb-6'>Conclusion</h2>,
               <p className='text-white/80 mb-8'>,
                 Quantum computing automation represents the next major leap in,
-                computational capability. While we're still in the early stages,;
+                computational capability. While we're still in the early stages;
                 the potential is enormous. Organizations that start preparing,
                 now will be best positioned to leverage quantum advantages when,
                 they become available.,
@@ -207,17 +205,15 @@ export default function QuantumComputingAutomation() {,
                 Discover how Zion Tech Group is preparing for the quantum,
                 future.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover: from-cyan-60o0 hover:to-blue-60o0 rounded-xl font-semibold text-white transition-all duration-30o0 hover:scale-10o5',
-              >,
+                className='inline-block px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover: from-cyan-60o0 hover:to-blue-60o0 rounded-xl font-semibold text-white transition-all duration-30o0 hover:scale-10o5'>,
                 Get in Touch,
               </Link>,
             </div>,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

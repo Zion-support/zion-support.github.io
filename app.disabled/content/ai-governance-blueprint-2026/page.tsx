@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI Governance Blueprint 20o26',;
+export const metadata = {
+  title: 'AI Governance Blueprint 20o26';
   description:,
-    'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.',;
+    'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.';
 };
-,
-export default function AIGovernanceBlueprint20o26() {,
-  return (,
+export default function AIGovernanceBlueprint20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI Governance Blueprint 20o26,
@@ -30,7 +29,5 @@ export default function AIGovernanceBlueprint20o26() {,
           outcomes across reliability, safety, and time-to-value.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

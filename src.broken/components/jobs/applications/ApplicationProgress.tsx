@@ -1,9 +1,7 @@
-export function ApplicationProgress() {,
-  return (,
+export function ApplicationProgress() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

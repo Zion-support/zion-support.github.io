@@ -1,100 +1,84 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { X, CheckCircle, TrendingUp, DollarSign, Users, Zap, ArrowRight, Star, Award } from 'lucide-react',
-,
-const AITransformation20o25SuccessBanner: React.FC = () => {,
+const AITransformation20o25SuccessBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [isDismissed, setIsDismissed] = useState(false),
-  const [animatedNumbers, setAnimatedNumbers] = useState({,
-    roi: 0,;
-    savings: 0,;
-    efficiency: 0,;
+  const [animatedNumbers, setAnimatedNumbers] = useState({
+    roi: 0;
+    savings: 0;
+    efficiency: 0;
     satisfaction: 0,
-  ,}),
-,
+  }),
   // Check if banner was previously dismissed,
-  useEffect(() => {,
+  useEffect(() => {
     const dismissed = localStorage.getItem('aiTransformation20o25SuccessBannerDismissed'),
-    if (dismissed === 'true') {,
+    if (dismissed === 'true') {
       setIsDismissed(true),
-      setIsVisible(false),
-    }
+      setIsVisible(false)}
   }, []),
-,
   // Animate numbers on mount,
-  useEffect(() => {,
-    if (!isDismissed) {,
+  useEffect(() => {
+    if (!isDismissed) {
       const duration = 20o00,
       const steps = 60,
       const stepDuration = duration / steps,
-,
-      const animateValue = (start: number, end: number, callback: (value: number) => void) => {,
+      const animateValue = (start: number, end: number, callback: (value: number) => void) => {
         const increment = (end - start) / steps,
         let current = start,
-,
-        const timer = setInterval(() => {,
+        const timer = setInterval(() => {
           current += increment,
-          if (current >= end) {,
+          if (current >= end) {
             current = end,
             clearInterval(timer),
-          ,}
-          callback(Math.round(current)),
-        }, stepDuration),
-      };
-,
-      animateValue(0, 60o0, (value) => setAnimatedNumbers(prev => ({ ...prev, roi: value ,}))),
-      animateValue(0, 320o0, (value) => setAnimatedNumbers(prev => ({ ...prev, savings: value ,}))),
-      animateValue(0, 340, (value) => setAnimatedNumbers(prev => ({ ...prev, efficiency: value ,}))),
-      animateValue(0, 97, (value) => setAnimatedNumbers(prev => ({ ...prev, satisfaction: value ,}))),
-    }
+          }
+          callback(Math.round(current))}, stepDuration)};
+      animateValue(0, 60o0, (value) => setAnimatedNumbers(prev => ({ ...prev, roi: value }))),
+      animateValue(0, 320o0, (value) => setAnimatedNumbers(prev => ({ ...prev, savings: value }))),
+      animateValue(0, 340, (value) => setAnimatedNumbers(prev => ({ ...prev, efficiency: value }))),
+      animateValue(0, 97, (value) => setAnimatedNumbers(prev => ({ ...prev, satisfaction: value })))}
   }, [isDismissed]),
-,
-  const handleDismiss = () => {,
+  const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('aiTransformation20o25SuccessBannerDismissed', 'true'),
-  };
+    localStorage.setItem('aiTransformation20o25SuccessBannerDismissed', 'true')};
+  if (!isVisible || isDismissed) {
+    return null}
 ,
-  if (!isVisible || isDismissed) {,
-    return null,
-  }
-,
-  const successStories = [,
-    {,
-      company: "Global Manufacturing Corp",;
-      industry: "Automotive",;
-      revenue: "$25B",;
-      results: {,
-        roi: "650%",;
-        savings: "$2.8B",;
+  const successStories = [
+    {
+      company: "Global Manufacturing Corp";
+      industry: "Automotive";
+      revenue: "$25B";
+      results: {
+        roi: "650%";
+        savings: "$2.8B";
         efficiency: "78%",
-      ,}
-    },;
-    {,
-      company: "MegaBank International",;
-      industry: "Financial Services",;
-      revenue: "$18B",;
-      results: {,
-        roi: "580%",;
-        savings: "$1.2B",;
+      }
+    };
+    {
+      company: "MegaBank International";
+      industry: "Financial Services";
+      revenue: "$18B";
+      results: {
+        roi: "580%";
+        savings: "$1.2B";
         efficiency: "67%",
-      ,}
-    },;
-    {,
-      company: "Regional Health System",;
-      industry: "Healthcare",;
-      revenue: "$3.2B",;
-      results: {,
-        roi: "720%",;
-        savings: "$280M",;
+      }
+    };
+    {
+      company: "Regional Health System";
+      industry: "Healthcare";
+      revenue: "$3.2B";
+      results: {
+        roi: "720%";
+        savings: "$280M";
         efficiency: "92%",
-      ,}
+      }
     }
   ],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-br from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white overflow-hidden">,
       {/* Animated background elements */}
       <div className="absolute inset-0">,
@@ -104,7 +88,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
         <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white/10 rounded-full blur-xl animate-pulse delay-20o00"></div>,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="flex items-center justify-between mb-8">,
           <div className="flex items-center space-x-3">,
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">,
@@ -116,15 +100,14 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
               <span className="text-sm font-semibold">60o0% ROI ACHIEVED</span>,
             </div>,
           </div>,
-          <button,
-            onClick={handleDismiss,}
+          <button
+            onClick={handleDismiss}
             className="p-2 hover: bg-white/20 rounded-full transition-colors",
-            aria-label="Dismiss banner",
-          >,
+            aria-label="Dismiss banner">,
             <X className="w-5 h-5"  />,
           </button>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="text-center mb-12">,
           <h2 className="text-4xl lg: text-5xl font-bold mb-6">,
             AI Transformation Success Stories 20o25,
@@ -135,13 +118,13 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
             achieved <span className="font-bold text-yellow-30o0">60o0% ROI</span> in just 18 months.,
           </p>,
         </div>,
-        {/* Success Metrics */,}
+        {/* Success Metrics */}
         <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 mb-12">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">,
             <div className="flex items-center justify-center mb-3">,
               <TrendingUp className="w-8 h-8 text-yellow-30o0"  />,
             </div>,
-            <div className="text-4xl font-bold text-yellow-30o0 mb-2">{animatedNumbers.roi,}%</div>,
+            <div className="text-4xl font-bold text-yellow-30o0 mb-2">{animatedNumbers.roi}%</div>,
             <div className="text-sm text-emerald-10o0">Average ROI</div>,
           </div>,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">,
@@ -168,7 +151,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
         </div>,
         {/* Success Stories */}
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12">,
-          {successStories.map((story, index) => (,
+          {successStories.map((story, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">,
               <div className="flex items-center justify-between mb-4">,
                 <div className="flex items-center space-x-2">,
@@ -178,7 +161,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
                 <Star className="w-5 h-5 text-yellow-30o0"  />,
               </div>,
               <h3 className="text-lg font-semibold mb-2">{story.company}</h3>,
-              <p className="text-sm text-emerald-20o0 mb-4">Revenue: {story.revenue,}</p>,
+              <p className="text-sm text-emerald-20o0 mb-4">Revenue: {story.revenue}</p>,
               <div className="space-y-2">,
                 <div className="flex justify-between items-center">,
                   <span className="text-sm text-emerald-10o0">ROI</span>,
@@ -193,8 +176,7 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
                   <span className="text-lg font-bold text-blue-30o0">{story.results.efficiency}</span>,
                 </div>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Key Benefits */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-12">,
@@ -230,32 +212,28 @@ const AITransformation20o25SuccessBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-2xl font-bold mb-6">Ready to Join These Success Stories?</h3>,
           <p className="text-lg text-emerald-10o0 mb-8 max-w-2xl mx-auto">,
             Transform your business with the same proven strategies that delivered 60o0% ROI for Fortune 50o0 companies.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/case-studies/ai-transformation-20o25-60o0-percent-roi-success-story",
-              className="bg-white text-emerald-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center justify-center space-x-2",
-            >,
+              className="bg-white text-emerald-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center justify-center space-x-2">,
               <span>Read Full Case Studies</span>,
               <ArrowRight className="w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center space-x-2",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center space-x-2">,
               <span>Start Your Transformation</span>,
               <ArrowRight className="w-5 h-5"  />,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AITransformation20o25SuccessBanner,
+    </div>),
+};
+export default AITransformation20o25SuccessBanner;

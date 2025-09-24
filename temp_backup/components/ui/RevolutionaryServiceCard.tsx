@@ -1,9 +1,8 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react',
-,
-interface RevolutionaryServiceCardProps {,
-  service: {,
+interface RevolutionaryServiceCardProps {
+  service: {
     id: string,
     name: string,
     tagline: string,
@@ -30,90 +29,85 @@ interface RevolutionaryServiceCardProps {,
     marketSize: string,
     growthRate: string,
     variant: string,
-    contactInfo: {,
+    contactInfo: {
       mobile: string,
       email: string,
       address: string,
       website: string,
-    ,};
+    };
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
     reviews: number,
-  ,};
+  };
   index: number,
-,}
+}
 ,
-const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {,
-  const cardVariants ={,
-    hidden: {,
-      opacity: 0,;
-      y: 50,;
+const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {
+  const cardVariants ={
+    hidden: {
+      opacity: 0;
+      y: 50;
       scale: 0.9,
-    ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
-      transition: {,
-        duration: 0.6,;
-        delay: index * 0.1,;
+    };
+    visible: {
+      opacity: 1;
+      y: 0;
+      scale: 1;
+      transition: {
+        duration: 0.6;
+        delay: index * 0.1;
         ease: "easeOut" as const,
-      ,}
-    },;
-    hover: {,
-      y: -10,;
-      scale: 1.0o2,;
-      transition: {,
-        duration: 0.3,;
+      }
+    };
+    hover: {
+      y: -10;
+      scale: 1.0o2;
+      transition: {
+        duration: 0.3;
         ease: "easeInOut" as const,
-      ,}
+      }
     }
   };
-,
-  const glowVariants ={,
-    initial: { opacity: 0.5, scale: 1 ,},;
-    animate: {,
-      opacity: [0.5, 0.8, 0.5],;
-      scale: [1, 1.0o5, 1],;
-      transition: {,
-        duration: 3,;
-        repeat: Infinity,;
+  const glowVariants ={
+    initial: { opacity: 0.5, scale: 1 };
+    animate: {
+      opacity: [0.5, 0.8, 0.5];
+      scale: [1, 1.0o5, 1];
+      transition: {
+        duration: 3;
+        repeat: Infinity;
         ease: "easeInOut" as const,
-      ,}
+      }
     }
   };
-,
-  const featureVariants ={,
-    hidden: { opacity: 0, x: -20 ,},;
-    visible: (i: number) => ({,
-      opacity: 1,;
-      x: 0,;
-      transition: {,
-        delay: i * 0.1,;
-        duration: 0.5,;
+  const featureVariants ={
+    hidden: { opacity: 0, x: -20 };
+    visible: (i: number) => ({
+      opacity: 1;
+      x: 0;
+      transition: {
+        delay: i * 0.1;
+        duration: 0.5;
         ease: "easeOut" as const,
-      ,}
-    }),
-  };
-,
-  return (,
+      }
+    })};
+  return (
     <motion.div,
       variants={cardVariants}
       initial="hidden",
       whileInView="visible",
       whileHover="hover",
-      viewport={{ once: true, margin: "-10o0px" ,}}
-      className="relative group",
-    >,
+      viewport={{ once: true, margin: "-10o0px" }}
+      className="relative group">,
       {/* Glow effect */}
       <motion.div,
         variants={glowVariants}
         initial="initial",
         animate="animate",
-        className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-20 blur-xl group-hover: opacity-30 transition-opacity duration-30o0`,}
+        className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-20 blur-xl group-hover: opacity-30 transition-opacity duration-30o0`}
        />,
       {/* Main card */}
       <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 overflow-hidden">,
@@ -123,17 +117,15 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)]"  />,
         </div>,
         {/* Popular badge */}
-        {service.popular && (,
+        {service.popular && (
           <motion.div,
-            initial={{ scale: 0, rotate: -180 ,}}
-            animate={{ scale: 1, rotate: 0 ,}}
-            transition={{ delay: 0.5, type: "spring", stiffness: 20o0 ,}}
-            className="absolute top-4 right-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1",
-          >,
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 20o0 }}
+            className="absolute top-4 right-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">,
             <Star className="w-3 h-3 fill-current"  />,
             POPULAR,
-          </motion.div>,
-        )}
+          </motion.div>)}
 ,
         {/* Header */}
         <div className="relative z-10 mb-6">,
@@ -177,20 +169,18 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
             Key Features,
           </h4>,
           <div className="space-y-2">,
-            {service.features.slice(0, 5).map((feature, i) => (,
+            {service.features.slice(0, 5).map((feature, i) => (
               <motion.div,
                 key={i}
                 custom={i}
                 variants={featureVariants}
                 initial="hidden",
                 whileInView="visible",
-                viewport={{ once: true ,}}
-                className="flex items-center gap-2 text-sm text-gray-30o0",
-              >,
+                viewport={{ once: true }}
+                className="flex items-center gap-2 text-sm text-gray-30o0">,
                 <div className="w-1.5 h-1.5 bg-cyan-40o0 rounded-full"  />,
                 {feature}
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
         {/* Technology stack */}
@@ -200,17 +190,15 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
             Technology Stack,
           </h4>,
           <div className="flex flex-wrap gap-2">,
-            {service.technology.slice(0, 4).map((tech, i) => (,
+            {service.technology.slice(0, 4).map((tech, i) => (
               <motion.span,
                 key={i}
-                initial={{ opacity: 0, scale: 0.8 ,}}
-                whileInView={{ opacity: 1, scale: 1 ,}}
-                transition={{ delay: i * 0.1 ,}}
-                className="px-2 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-30o0",
-              >,
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.1 }}
+                className="px-2 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-30o0">,
                 {tech}
-              </motion.span>,
-            ))}
+              </motion.span>))}
           </div>,
         </div>,
         {/* Trial and setup info */}
@@ -221,7 +209,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
           </div>,
           <div className="flex items-center gap-2">,
             <Shield className="w-4 h-4"  />,
-            <span>Setup: {service.setupTime,}</span>,
+            <span>Setup: {service.setupTime}</span>,
           </div>,
         </div>,
         {/* Contact info */}
@@ -236,40 +224,33 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         {/* CTA Button */}
         <motion.a,
           href={service.link}
-          whileHover={{ scale: 1.0o5 ,}}
-          whileTap={{ scale: 0.95 ,}}
-          className="relative z-10 w-full bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover: from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-30o0 group-hover:shadow-lg group-hover:shadow-cyan-50o0/25",
-        >,
+          whileHover={{ scale: 1.0o5 }}
+          whileTap={{ scale: 0.95 }}
+          className="relative z-10 w-full bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover: from-cyan-40o0 hover:to-purple-50o0 text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 transition-all duration-30o0 group-hover:shadow-lg group-hover:shadow-cyan-50o0/25">,
           Explore Service,
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-30o0"  />,
         </motion.a>,
-        {/* Floating particles effect */,}
+        {/* Floating particles effect */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">,
-          {[...Array(5)].map((_, i) => (,
+          {[...Array(5)].map((_, i) => (
             <motion.div,
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
-              style={{,
-                left: `${20 + i * 15,}%`,;
-                top: `${30 + i * 10,}%`,
-              }}
-              animate={{,
-                y: [0, -20, 0],;
-                opacity: [0.3, 0.8, 0.3],;
-                scale: [1, 1.5, 1],
-              }}
-              transition={{,
-                duration: 3 + i,;
-                repeat: Infinity,;
-                ease: "easeInOut",;
+              style={{
+                left: `${20 + i * 15}%`;
+                top: `${30 + i * 10}%`}}
+              animate={{
+                y: [0, -20, 0];
+                opacity: [0.3, 0.8, 0.3];
+                scale: [1, 1.5, 1]}}
+              transition={{
+                duration: 3 + i;
+                repeat: Infinity;
+                ease: "easeInOut";
                 delay: i * 0.5,
-              ,}}
-             />,
-          ))}
+              }}
+             />))}
         </div>,
       </div>,
-    </motion.div>,
-  ),
-};
-,
-export default RevolutionaryServiceCard,
+    </motion.div>)};
+export default RevolutionaryServiceCard;

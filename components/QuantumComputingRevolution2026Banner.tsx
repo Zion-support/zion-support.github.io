@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumComputingRevolution20o26Banner() {,
-  return (,
+export default function QuantumComputingRevolution20o26Banner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       {/* Animated background */}
       <div className='absolute inset-0'>,
@@ -15,7 +14,7 @@ export default function QuantumComputingRevolution20o26Banner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-sm font-bold mb-6 animate-bounce'>,
             ⚛️ QUANTUM BREAKTHROUGH,
           </div>,
@@ -23,7 +22,7 @@ export default function QuantumComputingRevolution20o26Banner() {,
           <h1 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-white via-indigo-20o0 to-purple-20o0 bg-clip-text text-transparent'>,
             Quantum Computing Revolution 20o26,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             Error-corrected quantum computers achieving quantum supremacy with,
             25,0o00% ROI potential across industries,
@@ -83,20 +82,18 @@ export default function QuantumComputingRevolution20o26Banner() {,
           </div>,
           {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-computing-revolution-20o26',
-              className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 hover:from-indigo-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 hover:from-indigo-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Explore Quantum Solutions,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/quantum-computing-20o26-success',
-              className='bg-transparent border-2 border-white hover:bg-white hover:text-indigo-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-transparent border-2 border-white hover:bg-white hover:text-indigo-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
               View Success Stories,
             </Link>,
           </div>,
-          {/* Additional info */,}
+          {/* Additional info */}
           <div className='mt-8 text-sm text-gray-40o0'>,
             <p>,
               Revolutionary quantum computing technology solving previously,
@@ -113,7 +110,5 @@ export default function QuantumComputingRevolution20o26Banner() {,
       <div className='absolute top-24 right-12 w-4 h-4 bg-indigo-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-24 left-12 w-3 h-3 bg-purple-40o0 rounded-full animate-ping delay-10o00'></div>,
       <div className='absolute top-1/2 right-1/3 w-2 h-2 bg-pink-40o0 rounded-full animate-ping delay-20o00'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

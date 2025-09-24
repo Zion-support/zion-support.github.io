@@ -1,165 +1,154 @@
 import React, { useState } from 'react',
-import {,
+import {
 import { Input } from '@/components/ui/input',
 import { Button } from '@/components/ui/button',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { Badge } from '@/components/ui/badge',
 import { Search, Filter } from 'lucide-react',
 import { SEO } from '@/components/SEO',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue;
 } from '@/components/ui/select',
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow;
 } from '@/components/ui/table',
 // Mock data for support requests,
-const MOCK_SUPPORT_REQUESTS = [,
-  {,
-    id: 'SR-10o01',;
-    user: 'john.doe@example.com',;
-    userId: 'user-123',;
-    issue: 'Cannot access account after password reset',;
-    status: 'open',;
-    priority: 'high',;
-    createdAt: '20o23-12-15T14:30:0o0Z',;
-    lastUpdated: '20o23-12-15T15:45:0o0Z',;
-    category: 'authentication',;
-  },;
-  {,
-    id: 'SR-10o02',;
-    user: 'sarah.smith@company.co',;
-    userId: 'user-456',;
-    issue: 'Payment failed but funds were deducted',;
-    status: 'in-progress',;
-    priority: 'high',;
-    createdAt: '20o23-12-14T09:15:0o0Z',;
-    lastUpdated: '20o23-12-15T13:20:0o0Z',;
-    category: 'billing',;
-  },;
-  {,
-    id: 'SR-10o03',;
-    user: 'tech.guru@startup.io',;
-    userId: 'user-789',;
-    issue: 'Unable to download invoice PDF',;
-    status: 'open',;
-    priority: 'medium',;
-    createdAt: '20o23-12-15T11:0o0:0o0Z',;
-    lastUpdated: '20o23-12-15T11:0o0:0o0Z',;
-    category: 'billing',;
-  },;
-  {,
-    id: 'SR-10o04',;
-    user: 'developer@codelab.dev',;
-    userId: 'user-235',;
-    issue: 'API integration documentation is outdated',;
-    status: 'open',;
-    priority: 'low',;
-    createdAt: '20o23-12-13T16:45:0o0Z',;
-    lastUpdated: '20o23-12-13T16:45:0o0Z',;
-    category: 'api',;
-  },;
-  {,
-    id: 'SR-10o05',;
-    user: 'maria.rodriguez@design.co',;
-    userId: 'user-567',;
-    issue: 'Dispute with freelancer over delivered work quality',;
-    status: 'in-progress',;
-    priority: 'high',;
-    createdAt: '20o23-12-12T10:30:0o0Z',;
-    lastUpdated: '20o23-12-15T09:15:0o0Z',;
-    category: 'disputes',;
-  },;
-  {,
-    id: 'SR-10o06',;
-    user: 'alex.wong@datacompany.com',;
-    userId: 'user-890',;
-    issue: 'Profile verification pending for over 7 days',;
-    status: 'resolved',;
-    priority: 'medium',;
-    createdAt: '20o23-12-08T13:20:0o0Z',;
-    lastUpdated: '20o23-12-15T08:30:0o0Z',;
-    category: 'verification',;
-  },;
-  {,
-    id: 'SR-10o07',;
-    user: 'jamie.taylor@tech.org',;
-    userId: 'user-345',;
-    issue: 'Cannot upload portfolio images',;
-    status: 'resolved',;
-    priority: 'medium',;
-    createdAt: '20o23-12-10T15:10:0o0Z',;
-    lastUpdated: '20o23-12-13T11:25:0o0Z',;
-    category: 'profile',;
-  },;
+const MOCK_SUPPORT_REQUESTS = [
+  {
+    id: 'SR-10o01';
+    user: 'john.doe@example.com';
+    userId: 'user-123';
+    issue: 'Cannot access account after password reset';
+    status: 'open';
+    priority: 'high';
+    createdAt: '20o23-12-15T14:30:0o0Z';
+    lastUpdated: '20o23-12-15T15:45:0o0Z';
+    category: 'authentication';
+  };
+  {
+    id: 'SR-10o02';
+    user: 'sarah.smith@company.co';
+    userId: 'user-456';
+    issue: 'Payment failed but funds were deducted';
+    status: 'in-progress';
+    priority: 'high';
+    createdAt: '20o23-12-14T09:15:0o0Z';
+    lastUpdated: '20o23-12-15T13:20:0o0Z';
+    category: 'billing';
+  };
+  {
+    id: 'SR-10o03';
+    user: 'tech.guru@startup.io';
+    userId: 'user-789';
+    issue: 'Unable to download invoice PDF';
+    status: 'open';
+    priority: 'medium';
+    createdAt: '20o23-12-15T11:0o0:0o0Z';
+    lastUpdated: '20o23-12-15T11:0o0:0o0Z';
+    category: 'billing';
+  };
+  {
+    id: 'SR-10o04';
+    user: 'developer@codelab.dev';
+    userId: 'user-235';
+    issue: 'API integration documentation is outdated';
+    status: 'open';
+    priority: 'low';
+    createdAt: '20o23-12-13T16:45:0o0Z';
+    lastUpdated: '20o23-12-13T16:45:0o0Z';
+    category: 'api';
+  };
+  {
+    id: 'SR-10o05';
+    user: 'maria.rodriguez@design.co';
+    userId: 'user-567';
+    issue: 'Dispute with freelancer over delivered work quality';
+    status: 'in-progress';
+    priority: 'high';
+    createdAt: '20o23-12-12T10:30:0o0Z';
+    lastUpdated: '20o23-12-15T09:15:0o0Z';
+    category: 'disputes';
+  };
+  {
+    id: 'SR-10o06';
+    user: 'alex.wong@datacompany.com';
+    userId: 'user-890';
+    issue: 'Profile verification pending for over 7 days';
+    status: 'resolved';
+    priority: 'medium';
+    createdAt: '20o23-12-08T13:20:0o0Z';
+    lastUpdated: '20o23-12-15T08:30:0o0Z';
+    category: 'verification';
+  };
+  {
+    id: 'SR-10o07';
+    user: 'jamie.taylor@tech.org';
+    userId: 'user-345';
+    issue: 'Cannot upload portfolio images';
+    status: 'resolved';
+    priority: 'medium';
+    createdAt: '20o23-12-10T15:10:0o0Z';
+    lastUpdated: '20o23-12-13T11:25:0o0Z';
+    category: 'profile';
+  };
 ],
-export default function SupportRequests() {,
+export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [statusFilter, setStatusFilter] = useState(null),
   const [priorityFilter, setPriorityFilter] = useState(null),
   const [categoryFilter, setCategoryFilter] = useState(null),
   // Apply filters to the request data,
-  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {,
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter,
-    if (,
+    if (
       searchQuery &&,
       !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&,
       !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&,
-      !request.id.toLowerCase().includes(searchQuery.toLowerCase()),
-    ) {,
-      return false,
-    }
+      !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false}
     // Apply status filter,
-    if (statusFilter && request.status !== statusFilter) {,
-      return false,
-    }
+    if (statusFilter && request.status !== statusFilter) {
+      return false}
     // Apply priority filter,
-    if (priorityFilter && request.priority !== priorityFilter) {,
-      return false,
-    }
+    if (priorityFilter && request.priority !== priorityFilter) {
+      return false}
     // Apply category filter,
-    if (categoryFilter && request.category !== categoryFilter) {,
-      return false,
-    }
-    return true,
-  }),
+    if (categoryFilter && request.category !== categoryFilter) {
+      return false}
+    return true}),
   // Count by status for the summary dashboard,
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(,
-    r => r.status === 'open',
-  ).length,
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(,
-    r => r.status === 'in-progress',
-  ).length,
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(,
-    r => r.status === 'resolved',
-  ).length,
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(
+    r => r.status === 'open').length,
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(
+    r => r.status === 'in-progress').length,
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(
+    r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
-  const resetFilters = () => {,
+  const resetFilters = () => {
     setSearchQuery(''),
     setStatusFilter(null),
     setPriorityFilter(null),
-    setCategoryFilter(null),
-  };
-  return (,
-    (,
-      <SEO,
+    setCategoryFilter(null)};
+  return (
+    (
+      <SEO
         title='Support Requests | Admin Dashboard',
         description='Manage and track user support requests and issues',
-      />,
-    ),;
-    (,
+      />);
+    (
       <div className='container mx-auto px-4 py-8'>,
         <div className='flex flex-col md: flex-row items-start md:items-center justify-between mb-8'>,
           <div>,
@@ -176,11 +165,11 @@ export default function SupportRequests() {,
             </Button>,
           </div>,
         </div>,
-        {/* Status Cards */,}
+        {/* Status Cards */}
         <div className='grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>,
           <Card>,
             <CardHeader className='pb-2'>,
-              <CardTitle className='text-2xl font-bold'>{openCount,}</CardTitle>,
+              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>,
               <CardDescription>Open Requests</CardDescription>,
             </CardHeader>,
           </Card>,
@@ -219,14 +208,14 @@ export default function SupportRequests() {,
             <div className='flex flex-col md: flex-row gap-4 mb-6'>,
               <div className='relative flex-1'>,
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0' />,
-                <Input,
+                <Input
                   placeholder='Search by ID, user or issue...',
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10',
                 />,
               </div>,
-              <Select,
+              <Select
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
               >,
@@ -240,7 +229,7 @@ export default function SupportRequests() {,
                   <SelectItem value='resolved'>Resolved</SelectItem>,
                 </SelectContent>,
               </Select>,
-              <Select,
+              <Select
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
               >,
@@ -254,7 +243,7 @@ export default function SupportRequests() {,
                   <SelectItem value='low'>Low</SelectItem>,
                 </SelectContent>,
               </Select>,
-              <Select,
+              <Select
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
               >,
@@ -271,15 +260,14 @@ export default function SupportRequests() {,
                   <SelectItem value='profile'>Profile</SelectItem>,
                 </SelectContent>,
               </Select>,
-              <Button,
+              <Button
                 variant='outline',
                 onClick={resetFilters}
-                className='md: w-auto',
-              >,
+                className='md: w-auto'>,
                 <Filter className='h-4 w-4 mr-2' /> Reset Filters,
               </Button>,
             </div>,
-            {/* Support Requests Table */,}
+            {/* Support Requests Table */}
             <Card>,
               <CardContent className='p-0'>,
                 <Table>,
@@ -297,7 +285,7 @@ export default function SupportRequests() {,
                     </TableRow>,
                   </TableHeader>,
                   <TableBody>,
-                    {filteredRequests.map(request => (,
+                    {filteredRequests.map(request => (
                       <TableRow key={request.id}>,
                         <TableCell className='font-medium'>,
                           {request.id}
@@ -307,27 +295,25 @@ export default function SupportRequests() {,
                           {request.issue}
                         </TableCell>,
                         <TableCell>,
-                          <Badge,
-                            variant={,
+                          <Badge
+                            variant={
                               request.status === 'open',
                                 ? 'default',
                                 : request.status === 'in-progress',
                                   ? 'secondary',
-                                  : 'outline',
-                            }
+                                  : 'outline'}
                           >,
                             {request.status}
                           </Badge>,
                         </TableCell>,
                         <TableCell>,
-                          <Badge,
-                            variant={,
+                          <Badge
+                            variant={
                               request.priority === 'high',
                                 ? 'destructive',
                                 : request.priority === 'medium',
                                   ? 'default',
-                                  : 'outline',
-                            }
+                                  : 'outline'}
                           >,
                             {request.priority}
                           </Badge>,
@@ -347,8 +333,7 @@ export default function SupportRequests() {,
                             Assign,
                           </Button>,
                         </TableCell>,
-                      </TableRow>,
-                    ))}
+                      </TableRow>))}
                   </TableBody>,
                 </Table>,
               </CardContent>,
@@ -382,8 +367,5 @@ export default function SupportRequests() {,
             </div>,
           </TabsContent>,
         </Tabs>,
-      </div>,
-    ),
-  ),
-}
+      </div>))}
 ,

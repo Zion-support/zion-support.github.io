@@ -1,5 +1,5 @@
-export default function Testimonials() {,
-  return (,
+export default function Testimonials() {
+  return (
     <section className='py-16 bg-gray-10o0'>,
       <div className='container mx-auto text-center'>,
         <h2 className='text-3xl font-bold mb-8'>What Our Clients Say</h2>,
@@ -25,7 +25,5 @@ export default function Testimonials() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

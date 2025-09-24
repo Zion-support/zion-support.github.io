@@ -1,5 +1,4 @@
 // Type definitions for tutorial,
-interface tutorial {,
+interface tutorial {
   // TODO: Add proper type definitions,
-,};
-,
+};

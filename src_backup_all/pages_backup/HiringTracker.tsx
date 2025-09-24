@@ -1,10 +1,10 @@
-return (,
+return (
     <>,
-      <SEO,
-export default function HiringTracker() {,
-  return (,
+      <SEO
+export default function HiringTracker() {
+  return (
     <ProtectedRoute>,
-      <SEO,
+      <SEO
         title="Hiring Tracker | Zion AI Marketplace",
         description="Manage your candidate pipeline in the Zion AI Marketplace.",
        />,
@@ -33,16 +33,11 @@ export default function HiringTracker() {,
           </TabsContent>,
         </Tabs>,
       </main>,
-    </>,
-  ),
-}
+    </>)}
 ,
-export default function HiringTracker() {,
-  return (,
+export default function HiringTracker() {
+  return (
     <ProtectedRoute>,
       <HiringTrackerContent  />,
-    </ProtectedRoute>,
-  ),
-}
-,
-,)
+    </ProtectedRoute>)}
+)

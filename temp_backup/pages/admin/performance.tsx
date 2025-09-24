@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PerformancePage() {,
-  return (,
+export default function PerformancePage() {
+  return (
     <>,
       <Head>,
         <title>Performance - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function PerformancePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

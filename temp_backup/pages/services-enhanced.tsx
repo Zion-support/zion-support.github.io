@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ServicesEnhancedPage() {,
-  return (,
+export default function ServicesEnhancedPage() {
+  return (
     <>,
       <Head>,
         <title>Services Enhanced - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ServicesEnhancedPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

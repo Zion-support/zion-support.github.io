@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MissionPage() {,
-  return (,
+export default function MissionPage() {
+  return (
     <>,
       <Head>,
         <title>Mission - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function MissionPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

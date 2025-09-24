@@ -1,80 +1,65 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const UltimateAutonomousAIRevolutionBanner = () => {,
+const UltimateAutonomousAIRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isVisible, setIsVisible] = useState(true),
-,
-  const content = [,
-    {,
-      title: "AI 20o25: The Ultimate Autonomous AI Revolution",;
-      subtitle: "15,0o00% ROI Through Fully Autonomous Business Operations",;
-      description: "Revolutionary autonomous AI systems delivering $75B+ in annual savings with 99.97% accuracy and 4,20o0% efficiency gains.",;
-      metrics: {,
-        roi: "15,0o00%",;
-        savings: "$75.2B",;
-        accuracy: "99.97%",;
-        efficiency: "4,20o0%",
-      },;
-      cta: "Explore Ultimate Guide",;
+  const content = [
+    {
+      title: "AI 20o25: The Ultimate Autonomous AI Revolution";
+      subtitle: "15,0o00% ROI Through Fully Autonomous Business Operations";
+      description: "Revolutionary autonomous AI systems delivering $75B+ in annual savings with 99.97% accuracy and 4,20o0% efficiency gains.";
+      metrics: {
+        roi: "15,0o00%";
+        savings: "$75.2B";
+        accuracy: "99.97%";
+        efficiency: "4,20o0%"};
+      cta: "Explore Ultimate Guide";
       link: "/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough",
-    ,},;
-    {,
-      title: "Fortune 50o0 Autonomous AI Success Story",;
-      subtitle: "$75.2B Annual Savings - 15,0o00% ROI Achievement",;
-      description: "How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation.",;
-      metrics: {,
-        roi: "15,0o00%",;
-        savings: "$75.2B",;
-        company: "$12.8B",;
+    };
+    {
+      title: "Fortune 50o0 Autonomous AI Success Story";
+      subtitle: "$75.2B Annual Savings - 15,0o00% ROI Achievement";
+      description: "How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation.";
+      metrics: {
+        roi: "15,0o00%";
+        savings: "$75.2B";
+        company: "$12.8B";
         timeline: "18 months",
-      ,},;
-      cta: "Read Success Story",;
+      };
+      cta: "Read Success Story";
       link: "/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story",
-    ,},;
-    {,
-      title: "Ultimate Implementation Guide 20o25",;
-      subtitle: "Complete Roadmap to 15,0o00% ROI",;
-      description: "Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories.",;
-      metrics: {,
-        roi: "15,0o00%",;
-        timeline: "18 months",;
-        success: "99.7%",;
+    };
+    {
+      title: "Ultimate Implementation Guide 20o25";
+      subtitle: "Complete Roadmap to 15,0o00% ROI";
+      description: "Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories.";
+      metrics: {
+        roi: "15,0o00%";
+        timeline: "18 months";
+        success: "99.7%";
         guide: "45 min read",
-      ,},;
-      cta: "Get Implementation Guide",;
+      };
+      cta: "Get Implementation Guide";
       link: "/resources/ultimate-autonomous-ai-implementation-guide-20o25",
-    ,}
-  ],
-,
-  useEffect(() => {,
-    const timer = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % content.length),
-    }, 50o00),
-,
-    return () => clearInterval(timer),
-  }, [content.length]),
-,
-  const handleDismiss = () => {,
-    setIsVisible(false),
-    localStorage.setItem('ultimate-autonomous-ai-banner-dismissed', 'true'),
-  };
-,
-  useEffect(() => {,
-    const dismissed = localStorage.getItem('ultimate-autonomous-ai-banner-dismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
     }
+  ],
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % content.length)}, 50o00),
+    return () => clearInterval(timer)}, [content.length]),
+  const handleDismiss = () => {
+    setIsVisible(false),
+    localStorage.setItem('ultimate-autonomous-ai-banner-dismissed', 'true')};
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimate-autonomous-ai-banner-dismissed'),
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }, []),
-,
   if (!isVisible) return null,
-,
   const currentContent = content[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -87,45 +72,42 @@ const UltimateAutonomousAIRevolutionBanner = () => {,
       <div className="relative z-10">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
           <div className="flex items-center justify-between">,
-            {/* Content */,}
+            {/* Content */}
             <div className="flex-1 pr-8">,
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4">,
                 <span className="text-sm font-medium">🚀 ULTIMATE AUTONOMOUS AI REVOLUTION 20o25</span>,
               </div>,
               <h2 className="text-3xl md: text-4xl font-bold mb-3">,
-                {currentContent.title,}
+                {currentContent.title}
               </h2>,
               <h3 className="text-xl md: text-2xl text-blue-20o0 mb-4">,
-                {currentContent.subtitle,}
+                {currentContent.subtitle}
               </h3>,
               <p className="text-lg text-gray-20o0 mb-6 max-w-3xl">,
                 {currentContent.description}
               </p>,
               {/* Metrics Grid */}
               <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-6">,
-                {Object.entries(currentContent.metrics).map(([key, value]) => (,
+                {Object.entries(currentContent.metrics).map(([key, value]) => (
                   <div key={key} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center">,
                     <div className="text-2xl font-bold text-yellow-30o0">{value}</div>,
                     <div className="text-xs text-gray-30o0 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
-                  href={currentContent.link,}
-                  className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover: from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
-                  {currentContent.cta,}
+                <Link
+                  href={currentContent.link}
+                  className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-3 rounded-lg font-bold hover: from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5">,
+                  {currentContent.cta}
                 </Link>,
-                <Link,
+                <Link
                   href="/services",
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-90o0 transition-all duration-30o0",
-                >,
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-90o0 transition-all duration-30o0">,
                   Get Consultation,
                 </Link>,
               </div>,
             </div>,
-            {/* Visual Elements */,}
+            {/* Visual Elements */}
             <div className="hidden lg: block flex-shrink-0">,
               <div className="relative">,
                 <div className="w-64 h-64 bg-gradient-to-br from-purple-50o0/20 to-blue-50o0/20 rounded-full flex items-center justify-center">,
@@ -136,32 +118,26 @@ const UltimateAutonomousAIRevolutionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Progress Indicators */,}
+          {/* Progress Indicators */}
           <div className="flex justify-center mt-8 space-x-2">,
-            {content.map((_, index) => (,
-              <button,
+            {content.map((_, index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                  index === currentSlide ? 'bg-yellow-40o0' : 'bg-white/30',
-                }`}
-              />,
-            ))}
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                  index === currentSlide ? 'bg-yellow-40o0' : 'bg-white/30'}`}
+              />))}
           </div>,
         </div>,
         {/* Dismiss Button */}
-        <button,
+        <button
           onClick={handleDismiss}
           className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors",
-          aria-label="Dismiss banner",
-        >,
+          aria-label="Dismiss banner">,
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
           </svg>,
         </button>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default UltimateAutonomousAIRevolutionBanner,
+    </div>)};
+export default UltimateAutonomousAIRevolutionBanner;

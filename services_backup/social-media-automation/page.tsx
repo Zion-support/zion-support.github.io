@@ -1,45 +1,44 @@
-export const metadata = {,
-  title: 'Social Media Automation | Zion Tech Group',;
+export const metadata = {
+  title: 'Social Media Automation | Zion Tech Group';
   description:,
-    'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.',;
+    'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.';
 };
-,
-export default function SocialMediaAutomationPage() {,
-  return (,
+export default function SocialMediaAutomationPage() {
+  return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
         Social Media Automation,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Automate your social media presence with AI-powered content creation,;
+        Automate your social media presence with AI-powered content creation;
         intelligent scheduling, and engagement optimization.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
-        <FeatureCard,
+        <FeatureCard
           title='AI Content Creation',
-          features={[,
-            'Auto-generated posts',;
-            'Trend-based content',;
-            'Brand voice consistency',;
-            'Multi-platform adaptation',;
+          features={[
+            'Auto-generated posts';
+            'Trend-based content';
+            'Brand voice consistency';
+            'Multi-platform adaptation';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Smart Scheduling',
-          features={[,
-            'Optimal timing analysis',;
-            'Cross-platform posting',;
-            'Content calendar management',;
-            'Automated reposting',;
+          features={[
+            'Optimal timing analysis';
+            'Cross-platform posting';
+            'Content calendar management';
+            'Automated reposting';
           ]}
         />,
-        <FeatureCard,
+        <FeatureCard
           title='Engagement Analytics',
-          features={[,
-            'Performance tracking',;
-            'Audience insights',;
-            'ROI measurement',;
-            'Growth recommendations',;
+          features={[
+            'Performance tracking';
+            'Audience insights';
+            'ROI measurement';
+            'Growth recommendations';
           ]}
         />,
       </div>,
@@ -106,130 +105,118 @@ export default function SocialMediaAutomationPage() {,
           the potential for growth.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-          >,
+            className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,
-function FeatureCard({,
-  title,;
-  features,;
-}: {,
+function FeatureCard({
+  title;
+  features;
+}: {
   title: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2 text-gray-60o0'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-purple-50o0 mr-2'>•</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <div className='mt-16'>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         Pricing Plans,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-        <Plan,
+        <Plan
           name='Starter',
           price='$199/mo',
-          features={[,
-            '3 social media accounts',;
-            '50 posts per month',;
-            'Basic analytics',;
-            'Email support',;
+          features={[
+            '3 social media accounts';
+            '50 posts per month';
+            'Basic analytics';
+            'Email support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Professional',
           price='$499/mo',
-          features={[,
-            '10 social media accounts',;
-            'Unlimited posts',;
-            'Advanced AI content',;
-            'Priority support',;
-            'Custom hashtag research',;
+          features={[
+            '10 social media accounts';
+            'Unlimited posts';
+            'Advanced AI content';
+            'Priority support';
+            'Custom hashtag research';
           ]}
           popular={true}
         />,
-        <Plan,
+        <Plan
           name='Agency',
           price='$999/mo',
-          features={[,
-            'Unlimited accounts',;
-            'White-label dashboard',;
-            'Client management',;
-            'Dedicated support',;
-            'Custom integrations',;
+          features={[
+            'Unlimited accounts';
+            'White-label dashboard';
+            'Client management';
+            'Dedicated support';
+            'Custom integrations';
           ]}
         />,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Plan({,
-  name,;
-  price,;
-  features,;
-  popular = false,;
-}: {,
+function Plan({
+  name;
+  price;
+  features;
+  popular = false;
+}: {
   name: string,
   price: string,
   features: string[],
   popular?: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-purple-50o0 ring-2 ring-purple-20o0' : 'border-gray-20o0'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-purple-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-purple-60o0 mb-4'>{price}</div>,
       <ul className='space-y-2 text-gray-60o0 mb-6'>,
-        {features.map(f => (,
+        {features.map(f => (
           <li key={f} className='flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span> {f}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${,
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular,
             ? 'bg-purple-60o0 text-white hover:bg-purple-70o0',
             : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
