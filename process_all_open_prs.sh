@@ -28,8 +28,20 @@ process_pr() {
     local pr_num=$1
     log "🔍 Processing PR #$pr_num..."
     
-    # Get PR details from GitHub API
-    local pr_info=$(curl -s -H "Accept: application/vnd.github.v3+json" \
+    # Prepare auth header if GITHUB_TOKEN is available; try to extract from git remote if not set
+    if [ -z "$GITHUB_TOKEN" ]; then
+        remote_url=$(git remote get-url origin 2>/dev/null || echo "")
+        if echo "$remote_url" | grep -q "x-access-token:"; then
+            GITHUB_TOKEN=$(echo "$remote_url" | sed -n 's#.*x-access-token:\([^@]*\)@github.com.*#\1#p')
+        fi
+    fi
+    AUTH_HEADER=""
+    if [ -n "$GITHUB_TOKEN" ]; then
+        AUTH_HEADER="-H Authorization: token $GITHUB_TOKEN"
+    fi
+
+    # Get PR details from GitHub API (authenticated if possible)
+    local pr_info=$(curl -s -H "Accept: application/vnd.github.v3+json" $AUTH_HEADER \
         "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_num" 2>/dev/null)
     
     if [ -z "$pr_info" ] || [ "$pr_info" = "null" ]; then
