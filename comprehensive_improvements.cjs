@@ -85,8 +85,10 @@ function fixMergeConflicts(dir) {
         } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.jsx'))) {
             try {
                 let content = fs.readFileSync(fullPath, 'utf8');
-                    fs.writeFileSync(fullPath, content);
-                }
+                // Remove merge conflict markers
+                content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+                content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+                fs.writeFileSync(fullPath, content);
             } catch (error) {
                 console.log(`    ⚠️  Could not process ${fullPath}: ${error.message}`);
             }
