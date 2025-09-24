@@ -1,37 +1,9 @@
-<<<<<<< HEAD
+"use client";
 
+import { useState } from "react";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
+interface PricingTier {
+  name: string;
   price: string;
   period: string;
   description: string;
@@ -40,10 +12,19 @@
   cta: string;
   ctaLink: string;
 }
+
+interface ServicePricing {
+  serviceName: string;
   category: string;
   description: string;
   tiers: PricingTier[];
   features: string[];
   benefits: string[];
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+const servicePricing: ServicePricing[] = [];
+
+export default function PricingPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  return <div />;
+}

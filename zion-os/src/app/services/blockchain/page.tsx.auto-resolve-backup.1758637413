@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-export default function BlockchainServicesPage() {return (;
-export default function BlockchainServicesPage() {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-
-export default /**
- * BlockchainServicesPage - Function description
- */
-function BlockchainServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-
-export default function BlockchainServicesPage() {;
-  return (;
-=======
 
 
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
@@ -55,7 +38,6 @@ export default function BlockchainServicesPage() {;
               <p className="text-zinc-300 mb-6 text-lg">;
 
                 Build next-generation decentralized finance platforms with lending, borrowing;
-=======
 
                 Build next-generation decentralized finance platforms with lending, borrowing,;
 
@@ -404,7 +386,6 @@ export default function BlockchainServicesPage() {;
       </section>;
     </div>);
 }
-=======
 export default function BlockchainServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
@@ -814,4 +795,3 @@ export default function BlockchainServicesPage() {
     </div>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616
