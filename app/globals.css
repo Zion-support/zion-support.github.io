@@ -1,21 +1,7 @@
-/* Minimal globals to unblock build (Tailwind temporarily disabled) */
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-  }
-}
-
+/* Minimal globals to ensure Next.js build succeeds */
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
-  color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb));
+  height: 100%;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
