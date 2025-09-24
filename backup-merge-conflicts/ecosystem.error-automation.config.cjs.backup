@@ -1,0 +1,7 @@
+module.exports = {
+  "apps": [    // Main Error Detection and Fixing Service
+    {
+      name: 'error-detection-service',
+      "script": 'scripts/pm2/error-detection-service.js',
+=======
+module.exports = {

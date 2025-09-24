@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-09-23T21:50:21.312Z",
+  "status": "unhealthy",
+  "checks": {
+    "buildHealth": {
+      "status": "fail",
+      "message": "Build directory not found",
+      "details": {
+        "error": "No .next directory found"
+      }
+    },
+    "dependencies": {
+      "status": "pass",
+      "message": "Dependencies are properly configured",
+      "details": {
+        "dependencies": 21,
+        "devDependencies": 32,
+        "total": 53
+      }
+    },
+    "fileStructure": {
+      "status": "pass",
+      "message": "All required files present",
+      "details": {
+        "checkedFiles": 4
+      }
+    },
+    "performance": {
+      "status": "skip",
+      "message": "No build found, skipping performance check",
+      "details": {}
+    },
+    "security": {
+      "status": "warning",
+      "message": "Potentially insecure scripts found",
+      "details": {
+        "insecureScripts": [
+          "build:clean",
+          "dev:clean",
+          "clean"
+        ]
+      }
+    }
+  },
+  "metrics": {}
+}
