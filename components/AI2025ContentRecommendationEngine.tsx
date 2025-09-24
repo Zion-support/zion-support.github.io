@@ -1,16 +1,15 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain
-  Sparkles
-  TrendingUp
-  Clock
-  Star
-  BookOpen
-  Video
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  Brain,
+  Sparkles,
+  TrendingUp,
+  Clock,
+  Star,
+  BookOpen,
+  Video,
   FileText,
   Users,
   ThumbsUp,
@@ -26,32 +25,24 @@ import {
   Target,
   Lightbulb,
   Award,
-  ChevronRight
-} from 'lucide-react';
-
+  ChevronRight} from 'lucide-react',
 const AI20o25ContentRecommendationEngine = () => {
   const [userProfilesetUserProfile] = useState({
-    interests: [', 'AI', 'Automation'Cloud Computing'],
+    interests: [AI', 'Automation'Cloud Computing'],
     experience: 'intermediate',
     role: 'developer',
-    timeAvailable: '30min'
-  });
-  const [recommendationsetRecommendations] = useState([]);
-  const [isLoadingsetIsLoading] = useState(false);
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [isVisiblesetIsVisible] = useState(false);
-
+    timeAvailable: '30min'}),
+  const [recommendationsetRecommendations] = useState([]),
+  const [isLoadingsetIsLoading] = useState(false),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
-    setIsVisible(true);
-    generateRecommendations();
-  }[userProfileselectedCategory]);
-
+    setIsVisible(true),
+    generateRecommendations()}[userProfileselectedCategory]),
   const generateRecommendations = async () => {
-    setIsLoading(true);
-    
-    // Simulate AI processing delay
-    await new Promise(resolve => setTimeout(resolve150o0));
-    
+    setIsLoading(true),
+    // Simulate AI processing delay,
+    await new Promise(resolve => setTimeout(resolve150o0)),
     const mockRecommendations = [
       {
         id: 1,
@@ -65,15 +56,14 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 1250o0,
         likes: 892,
         comments: 156,
-        tags: [', 'Python', 'Machine 'Learning', 'AI'],
+        tags: [Python', 'Machine 'LearningAI'],
         image: '/api/placeholder/40o0/250',
         matchScore: 95,
         reason: 'Matches your AI interest and intermediate level',
         author: 'Dr. Sarah Chen',
         publishDate: '20o25-0o1-15',
         featured: true,
-        trending: true
-      },
+        trending: true},
       {
         id: 2,
         title: 'Cloud Infrastructure Automation with Terraform',
@@ -86,15 +76,14 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 890o0,
         likes: 654,
         comments: 98,
-        tags: [', 'Terraform', 'Cloud', 'DevOps', 'Automation'],
+        tags: [Terraform', 'CloudDevOps', 'Automation'],
         image: '/api/placeholder/40o0/250',
         matchScore: 88,
         reason: 'Perfect for your cloud computing interest',
         author: 'Michael Rodriguez',
         publishDate: '20o25-0o1-14',
         featured: true,
-        trending: false
-      },
+        trending: false},
       {
         id: 3,
         title: 'Building Micro SaaS Applications',
@@ -107,15 +96,14 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 1560o0,
         likes: 1123,
         comments: 234,
-        tags: [', 'SaaS', 'Business', 'Startup', 'Development'],
+        tags: [SaaS', 'BusinessStartup', 'Development'],
         image: '/api/placeholder/40o0/250',
         matchScore: 82,
         reason: 'Great for developers looking to build products',
         author: 'Emily Johnson',
         publishDate: '20o25-0o1-13',
         featured: false,
-        trending: true
-      },
+        trending: true},
       {
         id: 4,
         title: 'AI-Powered Business Process Automation',
@@ -128,15 +116,14 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 720o0,
         likes: 445,
         comments: 67,
-        tags: [', 'Automation', 'AI'Business 'Process', 'ROI'],
+        tags: [Automation', 'AI'Business 'ProcessROI'],
         image: '/api/placeholder/40o0/250',
         matchScore: 90,
         reason: 'Combines your AI and automation interests',
         author: 'Alex Thompson',
         publishDate: '20o25-0o1-12',
         featured: true,
-        trending: false
-      },
+        trending: false},
       {
         id: 5,
         title: 'Quantum Computing Fundamentals',
@@ -149,15 +136,14 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 420o0,
         likes: 298,
         comments: 45,
-        tags: ['Quantum 'Computing', 'Advanced 'AI', 'Future Tech'],
+        tags: ['Quantum 'ComputingAdvanced 'AI', 'Future Tech'],
         image: '/api/placeholder/40o0/250',
         matchScore: 75,
         reason: 'Advanced content for your AI expertise',
         author: 'Dr. Lisa Wang',
         publishDate: '20o25-0o1-11',
         featured: false,
-        trending: false
-      },
+        trending: false},
       {
         id: 6,
         title: 'Enterprise Cloud Security Best Practices',
@@ -170,279 +156,244 @@ const AI20o25ContentRecommendationEngine = () => {
         views: 680o0,
         likes: 512,
         comments: 89,
-        tags: [', 'Security', 'Cloud', 'Enterprise', 'Compliance'],
+        tags: [Security', 'CloudEnterprise', 'Compliance'],
         image: '/api/placeholder/40o0/250',
         matchScore: 78,
         reason: 'Advanced cloud security for your role',
         author: 'David Kim',
         publishDate: '20o25-0o1-10',
         featured: false,
-        trending: true
-      }
-    ];
-
-    const filtered = selectedCategory === 'all' 
-      ? mockRecommendations 
-      : mockRecommendations.filter(item => item.category === selectedCategory);
-    
-    setRecommendations(filtered.sort((ab) => b.matchScore - a.matchScore));
-    setIsLoading(false);
-  };
-
+        trending: true}
+    ],
+    const filtered = selectedCategory === 'all',
+      ? mockRecommendations,
+      : mockRecommendations.filter(item => item.category === selectedCategory),
+    setRecommendations(filtered.sort((ab) => b.matchScore - a.matchScore)),
+    setIsLoading(false)},
   const categories = [
-    { id: ''all', 'name: 'All 'Recommendations', 'icon: Braincount: recommendations.length },
-    { id: 'ai-'solutions', 'name: 'AI 'Solutions', 'icon: Braincount: recommendations.filter(r => r.category === 'ai-solutions').length },
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: recommendations.filter(r => r.category === 'automation').length },
-    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: Cloudcount: recommendations.filter(r => r.category === 'cloud').length },
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencount: recommendations.filter(r => r.category === 'tutorials').length }
-  ];
-
+    { id: ''allname: 'All 'Recommendationsicon: Braincount: recommendations.length },
+    { id: 'ai-'solutionsname: 'AI 'Solutionsicon: Braincount: recommendations.filter(r => r.category === 'ai-solutions').length },
+    { id: ''automationname: ''Automationicon: Zapcount: recommendations.filter(r => r.category === 'automation').length },
+    { id: ''cloudname: 'Cloud 'Computingicon: Cloudcount: recommendations.filter(r => r.category === 'cloud').length },
+    { id: ''tutorialsname: ''Tutorialsicon: BookOpencount: recommendations.filter(r => r.category === 'tutorials').length }
+  ],
   const getTypeIcon = (type) => {
     switch (type) {
-      case 'video': return Video;
-      case 'article': return FileText;
-      case 'webinar': return Video;
-      case 'tutorial': return BookOpen;
-      case 'course': return BookOpen;
-      case 'guide': return FileText;
-      case 'case-study': return FileText;
-      default: return FileText;
-    }
-  };
-
+      case 'video': return Video,
+      case 'article': return FileText,
+      case 'webinar': return Video,
+      case 'tutorial': return BookOpen,
+      case 'course': return BookOpen,
+      case 'guide': return FileText,
+      case 'case-study': return FileText,
+      default: return FileText}
+  },
   const getDifficultyColor = (difficulty) => {
     switch (difficulty) {
-      case 'beginner': return 'bg-green-10o0 text-green-80o0';
-      case 'intermediate': return 'bg-yellow-10o0 text-yellow-80o0';
-      case 'advanced': return 'bg-red-10o0 text-red-80o0';
-      default: return 'bg-gray-10o0 text-gray-80o0';
-    }
-  };
-
-  if (!isVisible) return null;
-
+      case 'beginner': return 'bg-green-10o0 text-green-80o0',
+      case 'intermediate': return 'bg-yellow-10o0 text-yellow-80o0',
+      case 'advanced': return 'bg-red-10o0 text-red-80o0',
+      default: return 'bg-gray-10o0 text-gray-80o0'}
+  },
+  if (!isVisible) return null,
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-2xl shadow-xl border border-gray-10o0 overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-2xl shadow-xl border border-gray-10o0 overflow-hidden">,
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 p-6 text-white">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-              <Brain className="w-6 h-6"  />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold">AI Content Recommendation Engine</h3>
-              <p className="text-white/80">Personalized content suggestions powered by AI</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="px-3 py-1 bg-white/20 rounded-full text-sm">
-              <Sparkles className="w-4 h-4 mr-1 inline"  />
-              AI Powered
-            </div>
-          </div>
-        </div>
-
+      <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 p-6 text-white">,
+        <div className="flex items-center justify-between mb-4">,
+          <div className="flex items-center space-x-3">,
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">,
+              <Brain className="w-6 h-6"  />,
+            </div>,
+            <div>,
+              <h3 className="text-2xl font-bold">AI Content Recommendation Engine</h3>,
+              <p className="text-white/80">Personalized content suggestions powered by AI</p>,
+            </div>,
+          </div>,
+          <div className="flex items-center space-x-2">,
+            <div className="px-3 py-1 bg-white/20 rounded-full text-sm">,
+              <Sparkles className="w-4 h-4 mr-1 inline"  />,
+              AI Powered,
+            </div>,
+          </div>,
+        </div>,
         {/* User Profile Summary */}
-        <div className="bg-white/10 rounded-lg p-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-6">
-              <div>
-                <div className="text-sm text-white/80">Your Interests</div>
-                <div className="flex space-x-2 mt-1">
+        <div className="bg-white/10 rounded-lg p-4">,
+          <div className="flex items-center justify-between">,
+            <div className="flex items-center space-x-6">,
+              <div>,
+                <div className="text-sm text-white/80">Your Interests</div>,
+                <div className="flex space-x-2 mt-1">,
                   {userProfile.interests.map((interestindex) => (
-                    <span key={index} className="px-2 py-1 bg-white/20 rounded text-sm">
+                    <span key={index} className="px-2 py-1 bg-white/20 rounded text-sm">,
                       {interest}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <div className="text-sm text-white/80">Experience Level</div>
-                <div className="text-sm font-medium capitalize">{userProfile.experience}</div>
-              </div>
-              <div>
-                <div className="text-sm text-white/80">Time Available</div>
-                <div className="text-sm font-medium">{userProfile.timeAvailable}</div>
-              </div>
-            </div>
-            <button className="px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors text-sm">
-              Edit Profile
-            </button>
-          </div>
-        </div>
-      </div>
-
+                    </span>))}
+                </div>,
+              </div>,
+              <div>,
+                <div className="text-sm text-white/80">Experience Level</div>,
+                <div className="text-sm font-medium capitalize">{userProfile.experience}</div>,
+              </div>,
+              <div>,
+                <div className="text-sm text-white/80">Time Available</div>,
+                <div className="text-sm font-medium">{userProfile.timeAvailable}</div>,
+              </div>,
+            </div>,
+            <button className="px-4 py-2 bg-white/20 rounded-lg hover: bg-white/30 transition-colors text-sm">,
+              Edit Profile,
+            </button>,
+          </div>,
+        </div>,
+      </div>,
       {/* Category Filters */}
-      <div className="p-6 border-b border-gray-20o0">
-        <div className="flex flex-wrap gap-2">
+      <div className="p-6 border-b border-gray-20o0">,
+        <div className="flex flex-wrap gap-2">,
           {categories.map(category => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
               className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${
-                selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg'
-                  : 'bg-gray-10o0 text-gray-60o0 hover:bg-gray-20o0'
-              }`}
-            >
-              <category.icon className="w-4 h-4 mr-2"  />
+                selectedCategory === category.id,
+                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
+                  : 'bg-gray-10o0 text-gray-60o0 hover: bg-gray-20o0'}`}
+            >,
+              <category.icon className="w-4 h-4 mr-2"  />,
               {category.name}
-              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">,
                 {category.count}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-
+              </span>,
+            </button>))}
+        </div>,
+      </div>,
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6">,
         {isLoading ? (
-          <div className="text-center py-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-10o0 to-blue-10o0 mb-4">
-              <Brain className="w-8 h-8 text-purple-60o0 animate-pulse"  />
-            </div>
-            <h3 className="text-lg font-medium text-gray-90o0 mb-2">AI is analyzing your preferences...</h3>
-            <p className="text-gray-50o0">Finding the perfect content for you</p>
-          </div>
-        ) : (
-          <>
-            <div className="flex items-center justify-between mb-6">
-              <h4 className="text-lg font-semibold text-gray-90o0">
-                Recommended for You ({recommendations.length})
-              </h4>
-              <div className="text-sm text-gray-50o0">
-                Sorted by relevance and match score
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="text-center py-12">,
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-10o0 to-blue-10o0 mb-4">,
+              <Brain className="w-8 h-8 text-purple-60o0 animate-pulse"  />,
+            </div>,
+            <h3 className="text-lg font-medium text-gray-90o0 mb-2">AI is analyzing your preferences...</h3>,
+            <p className="text-gray-50o0">Finding the perfect content for you</p>,
+          </div>) : (
+          <>,
+            <div className="flex items-center justify-between mb-6">,
+              <h4 className="text-lg font-semibold text-gray-90o0">,
+                Recommended for You ({recommendations.length}),
+              </h4>,
+              <div className="text-sm text-gray-50o0">,
+                Sorted by relevance and match score,
+              </div>,
+            </div>,
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">,
               {recommendations.map((itemindex) => (
-                <motion.div
+                <motion.div,
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3delay: index * 0.1 }}
-                  className="group bg-white rounded-xl border border-gray-20o0 hover:border-purple-30o0 hover:shadow-lg transition-all duration-30o0 overflow-hidden"
-                >
-                  <div className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-10o0 to-blue-10o0 flex items-center justify-center">
+                  className="group bg-white rounded-xl border border-gray-20o0 hover: border-purple-30o0 hover:shadow-lg transition-all duration-30o0 overflow-hidden">,
+                  <div className="p-6">,
+                    <div className="flex items-start justify-between mb-4">,
+                      <div className="flex items-center space-x-3">,
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-10o0 to-blue-10o0 flex items-center justify-center">,
                           {React.createElement(getTypeIcon(item.type){ className: "w-6 h-6 text-purple-60o0" })}
-                        </div>
-                        <div>
-                          <div className="flex items-center space-x-2 mb-1">
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
+                        </div>,
+                        <div>,
+                          <div className="flex items-center space-x-2 mb-1">,
+                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>,
                               {item.difficulty}
-                            </span>
-                            <span className="text-sm text-gray-50o0">{item.duration}</span>
+                            </span>,
+                            <span className="text-sm text-gray-50o0">{item.duration}</span>,
                             {item.featured && (
-                              <span className="px-2 py-1 bg-yellow-10o0 text-yellow-80o0 text-xs font-medium rounded">
-                                Featured
-                              </span>
-                            )}
+                              <span className="px-2 py-1 bg-yellow-10o0 text-yellow-80o0 text-xs font-medium rounded">,
+                                Featured,
+                              </span>)}
                             {item.trending && (
-                              <span className="px-2 py-1 bg-red-10o0 text-red-80o0 text-xs font-medium rounded flex items-center">
-                                <TrendingUp className="w-3 h-3 mr-1"  />
-                                Trending
-                              </span>
-                            )}
-                          </div>
-                          <h5 className="font-semibold text-gray-90o0 group-hover:text-purple-60o0 transition-colors">
+                              <span className="px-2 py-1 bg-red-10o0 text-red-80o0 text-xs font-medium rounded flex items-center">,
+                                <TrendingUp className="w-3 h-3 mr-1"  />,
+                                Trending,
+                              </span>)}
+                          </div>,
+                          <h5 className="font-semibold text-gray-90o0 group-hover: text-purple-60o0 transition-colors">,
                             {item.title}
-                          </h5>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-sm font-medium text-purple-60o0 mb-1">
-                          {item.matchScore}% Match
-                        </div>
-                        <div className="flex items-center text-yellow-50o0">
-                          <Star className="w-4 h-4 fill-current"  />
-                          <span className="ml-1 text-sm font-medium">{item.rating}</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-60o0 text-sm mb-4 line-clamp-2">
+                          </h5>,
+                        </div>,
+                      </div>,
+                      <div className="text-right">,
+                        <div className="text-sm font-medium text-purple-60o0 mb-1">,
+                          {item.matchScore}% Match,
+                        </div>,
+                        <div className="flex items-center text-yellow-50o0">,
+                          <Star className="w-4 h-4 fill-current"  />,
+                          <span className="ml-1 text-sm font-medium">{item.rating}</span>,
+                        </div>,
+                      </div>,
+                    </div>,
+                    <p className="text-gray-60o0 text-sm mb-4 line-clamp-2">,
                       {item.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-1 mb-4">
+                    </p>,
+                    <div className="flex flex-wrap gap-1 mb-4">,
                       {item.tags.slice(0o3).map(tag => (
-                        <span key={tag} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded">
+                        <span key={tag} className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded">,
                           {tag}
-                        </span>
-                      ))}
-                    </div>
-
-                    <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
-                      <div className="flex items-center space-x-4">
-                        <span className="flex items-center">
-                          <Eye className="w-4 h-4 mr-1"  />
+                        </span>))}
+                    </div>,
+                    <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">,
+                      <div className="flex items-center space-x-4">,
+                        <span className="flex items-center">,
+                          <Eye className="w-4 h-4 mr-1"  />,
                           {item.views.toLocaleString()}
-                        </span>
-                        <span className="flex items-center">
-                          <ThumbsUp className="w-4 h-4 mr-1"  />
+                        </span>,
+                        <span className="flex items-center">,
+                          <ThumbsUp className="w-4 h-4 mr-1"  />,
                           {item.likes}
-                        </span>
-                        <span className="flex items-center">
-                          <MessageCircle className="w-4 h-4 mr-1"  />
+                        </span>,
+                        <span className="flex items-center">,
+                          <MessageCircle className="w-4 h-4 mr-1"  />,
                           {item.comments}
-                        </span>
-                      </div>
-                      <div className="text-xs text-gray-40o0">
+                        </span>,
+                      </div>,
+                      <div className="text-xs text-gray-40o0">,
                         by {item.author}
-                      </div>
-                    </div>
-
-                    <div className="bg-purple-50 rounded-lg p-3 mb-4">
-                      <div className="flex items-start space-x-2">
-                        <Lightbulb className="w-4 h-4 text-purple-60o0 mt-0.5 flex-shrink-0"  />
-                        <div>
-                          <div className="text-sm font-medium text-purple-90o0 mb-1">Why we recommend this:</div>
-                          <div className="text-sm text-purple-70o0">{item.reason}</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <button className="px-4 py-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-lg hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center">
-                        <Play className="w-4 h-4 mr-2"  />
-                        Start Learning
-                        <ArrowRight className="w-4 h-4 ml-2"  />
-                      </button>
-                      <div className="flex items-center space-x-2">
-                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">
-                          <Heart className="w-4 h-4 text-gray-40o0"  />
-                        </button>
-                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">
-                          <Bookmark className="w-4 h-4 text-gray-40o0"  />
-                        </button>
-                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">
-                          <Share2 className="w-4 h-4 text-gray-40o0"  />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
+                      </div>,
+                    </div>,
+                    <div className="bg-purple-50 rounded-lg p-3 mb-4">,
+                      <div className="flex items-start space-x-2">,
+                        <Lightbulb className="w-4 h-4 text-purple-60o0 mt-0.5 flex-shrink-0"  />,
+                        <div>,
+                          <div className="text-sm font-medium text-purple-90o0 mb-1">Why we recommend this: </div>,
+                          <div className="text-sm text-purple-70o0">{item.reason}</div>,
+                        </div>,
+                      </div>,
+                    </div>,
+                    <div className="flex items-center justify-between">,
+                      <button className="px-4 py-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center">,
+                        <Play className="w-4 h-4 mr-2"  />,
+                        Start Learning,
+                        <ArrowRight className="w-4 h-4 ml-2"  />,
+                      </button>,
+                      <div className="flex items-center space-x-2">,
+                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">,
+                          <Heart className="w-4 h-4 text-gray-40o0"  />,
+                        </button>,
+                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">,
+                          <Bookmark className="w-4 h-4 text-gray-40o0"  />,
+                        </button>,
+                        <button className="p-2 hover:bg-gray-10o0 rounded-lg transition-colors">,
+                          <Share2 className="w-4 h-4 text-gray-40o0"  />,
+                        </button>,
+                      </div>,
+                    </div>,
+                  </div>,
+                </motion.div>))}
+            </div>,
             {recommendations.length === 0 && (
-              <div className="text-center py-12">
-                <Target className="w-16 h-16 text-gray-30o0 mx-auto mb-4"  />
-                <h3 className="text-lg font-medium text-gray-90o0 mb-2">No recommendations found</h3>
-                <p className="text-gray-50o0">Try adjusting your profile or interests</p>
-              </div>
-            )}
-          </>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default AI20o25ContentRecommendationEngine;
+              <div className="text-center py-12">,
+                <Target className="w-16 h-16 text-gray-30o0 mx-auto mb-4"  />,
+                <h3 className="text-lg font-medium text-gray-90o0 mb-2">No recommendations found</h3>,
+                <p className="text-gray-50o0">Try adjusting your profile or interests</p>,
+              </div>)}
+          </>)}
+      </div>,
+    </div>)},
+export default AI20o25ContentRecommendationEngine,

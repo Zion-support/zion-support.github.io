@@ -1,13 +1,11 @@
 
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 interface FeaturedListingsSectionProps {
-  showTitle?: boolean;
-}
-
+  showTitle?: boolean}
+,
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
   const featuredListings = [
     {
@@ -25,8 +23,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       author: {
         name: "TechAI Labs",
         id: "tech-ai-labs",
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
-      }
+        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"}
     },
     {
       id: "image-generation-service",
@@ -42,14 +39,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 89,
       author: {
         name: "VisualAI",
-        id: "visual-ai"
-      }
+        id: "visual-ai"}
     },
     {
       id: "fullstack-ai-dev",
       title: "Full-Stack AI Development",
       description: "End-to-end development for AI-powered applications",
-      price: null// Custom pricing
+      price: null// Custom pricing,
       currency: "$",
       category: "Services",
       tags: ["Development"Full-stack"AI"],
@@ -59,8 +55,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 56,
       author: {
         name: "DataMinds Consulting",
-        id: "dataminds-consulting"
-      }
+        id: "dataminds-consulting"}
     },
     {
       id: "sentiment-analysis-api",
@@ -76,44 +71,37 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       reviewCount: 72,
       author: {
         name: "SocialAI",
-        id: "social-ai"
-      }
-    }];
-
+        id: "social-ai"}
+    }],
   return (
-    <section id="featured" className="py-12 px-4 bg-zion-blue-dark">
-      <div className="container mx-auto">
+    <section id="featured" className="py-12 px-4 bg-zion-blue-dark">,
+      <div className="container mx-auto">,
         {showTitle && (
-          <div className="text-center mb-12">
-            <GradientHeading className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Listings
-            </GradientHeading>
-            <p className="text-zion-slate-light max-w-3xl mx-auto">
-              Discover our handpicked selection of top AI products and services
-            </p>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-12">,
+            <GradientHeading className="text-3xl md: text-4xl font-bold mb-4">,
+              Featured Listings,
+            </GradientHeading>,
+            <p className="text-zion-slate-light max-w-3xl mx-auto">,
+              Discover our handpicked selection of top AI products and services,
+            </p>,
+          </div>)}
+,
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
           {featuredListings.map((listing) => (
             <ProductListingCard
               key={listing.id}
               listing={listing}
-              view="grid"
+              view="grid",
               onRequestQuote={() => {}}
-            />
-          ))}
-        </div>
-        
-        <div className="mt-10 text-center">
-          <Button 
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-            asChild
-          >
-            <Link to="/marketplace">View All Listings</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  );
-}
+            />))}
+        </div>,
+        <div className="mt-10 text-center">,
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6",
+            asChild>,
+            <Link to="/marketplace">View All Listings</Link>,
+          </Button>,
+        </div>,
+      </div>,
+    </section>)}
+,

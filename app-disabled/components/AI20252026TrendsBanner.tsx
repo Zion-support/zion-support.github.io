@@ -1,57 +1,53 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 export default function AI20o252026TrendsBanner() {
   return (
-    <section className='py-8 bg-gradient-to-r from-purple-90o0 via-indigo-90o0 to-purple-90o0'>
-      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20'>
-          <div className='flex flex-col lg:flex-row items-center justify-between gap-6'>
-            <div className='flex-1'>
-              <div className='inline-flex items-center bg-purple-50o0/20 rounded-full px-4 py-2 mb-3'>
-                <span className='text-sm font-semibold text-purple-30o0'>
-                  🚀 ULTIMATE GUIDE
-                </span>
-              </div>
-              <h2 className='text-2xl lg:text-3xl font-bold text-white mb-3'>
-                AI 20o25-20o26: Ultimate Business Transformation Guide
-              </h2>
-              <p className='text-gray-30o0 text-lg mb-4 max-w-2xl'>
-                Discover the revolutionary AI trends and technologies that will
-                reshape industries in 20o25-20o26. Expert insights on quantum
-                AI, autonomous systems, and enterprise automation.
-              </p>
-              <div className='flex flex-wrap gap-4 text-sm text-gray-30o0'>
-                <span className='flex items-center gap-2'>
-                  <span className='w-2 h-2 bg-purple-40o0 rounded-full'></span>
-                  Quantum AI Revolution
-                </span>
-                <span className='flex items-center gap-2'>
-                  <span className='w-2 h-2 bg-blue-40o0 rounded-full'></span>
-                  Autonomous Systems
-                </span>
-                <span className='flex items-center gap-2'>
-                  <span className='w-2 h-2 bg-green-40o0 rounded-full'></span>
-                  Neural Interfaces
-                </span>
-              </div>
-            </div>
-            <div className='flex flex-col sm:flex-row gap-3 shrink-0'>
+    <section className='py-8 bg-gradient-to-r from-purple-90o0 via-indigo-90o0 to-purple-90o0'>,
+      <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+        <div className='bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20'>,
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6'>,
+            <div className='flex-1'>,
+              <div className='inline-flex items-center bg-purple-50o0/20 rounded-full px-4 py-2 mb-3'>,
+                <span className='text-sm font-semibold text-purple-30o0'>,
+                  🚀 ULTIMATE GUIDE,
+                </span>,
+              </div>,
+              <h2 className='text-2xl lg:text-3xl font-bold text-white mb-3'>,
+                AI 20o25-20o26: Ultimate Business Transformation Guide,
+              </h2>,
+              <p className='text-gray-30o0 text-lg mb-4 max-w-2xl'>,
+                Discover the revolutionary AI trends and technologies that will,
+                reshape industries in 20o25-20o26. Expert insights on quantum,
+                AI, autonomous systems, and enterprise automation.,
+              </p>,
+              <div className='flex flex-wrap gap-4 text-sm text-gray-30o0'>,
+                <span className='flex items-center gap-2'>,
+                  <span className='w-2 h-2 bg-purple-40o0 rounded-full'></span>,
+                  Quantum AI Revolution,
+                </span>,
+                <span className='flex items-center gap-2'>,
+                  <span className='w-2 h-2 bg-blue-40o0 rounded-full'></span>,
+                  Autonomous Systems,
+                </span>,
+                <span className='flex items-center gap-2'>,
+                  <span className='w-2 h-2 bg-green-40o0 rounded-full'></span>,
+                  Neural Interfaces,
+                </span>,
+              </div>,
+            </div>,
+            <div className='flex flex-col sm: flex-row gap-3 shrink-0'>,
               <Link
-                href='/ai-20o25-20o26-ultimate-transformation'
-                className='bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'
-              >
-                Read the Guide
-              </Link>
+                href='/ai-20o25-20o26-ultimate-transformation',
+                className='bg-white text-purple-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
+                Read the Guide,
+              </Link>,
               <Link
-                href='/contact'
-                className='border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center'
-              >
-                Get Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+                href='/contact',
+                className='border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center'>,
+                Get Consultation,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>)}
+,

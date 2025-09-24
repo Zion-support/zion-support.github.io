@@ -1,24 +1,21 @@
-import React from 'react';
-
-export default function CostAwareModelRoutingPage() {
+import React from 'react',
+export default function CostAwareModelRoutingPage() {,
   return (
     <div className='bg-black min-h-screen'>
-      <div className='mx-auto max-w-3xl px-6 pt-24 pb-16 lg:px-8'>
-        <div className='mb-6 flex items-center gap-3 text-xs text-gray-40o0'>
-          <span className='rounded-full bg-blue-50o0/10 px-2 py-0.5 text-blue-30o0'>
-            Guide
-          </span>
-          <time dateTime='20o25-09-15'>September 15, 20o25</time>
+      <div className='mx-auto max-w-3xl px-6 pt-24 pb-16 lg: px-8'>
+        <div className='mb-6 flex items-center gap-3 text-xs text-gray-4000'>
+          <span className='rounded-full bg-blue-5000/10 px-2 py-0.5 text-blue-3000'>
+            Guide,
+          </span>,
+          <time dateTime='2025-09-15'>September 15, 2025</time>
         </div>
         <h1 className='text-4xl font-bold tracking-tight text-white'>
-          Cost-Aware Model Routing (20o25)
+          Cost-Aware Model Routing (2025)
         </h1>
-        <p className='mt-4 text-lg leading-8 text-gray-30o0'>
-          Strategies to optimize quality, latency, and cost with dynamic model
-          selection and guardrails. Learn how to blend small, medium, and large
-          models with evaluators and backstops for reliable outcomes.
+        <p className='mt-4 text-lg leading-8 text-gray-3000'>
+          Strategies to optimize quality, latency, and cost with dynamic model: selection and guardrails. Learn how to blend small, medium, and large: models with evaluators and backstops for reliable outcomes.,
         </p>
-        <div className='mt-10 space-y-6 text-gray-30o0'>
+        <div className='mt-10 space-y-6 text-gray-3000'>
           <ul className='list-disc list-inside space-y-2'>
             <li>Policy and budget constraints for routing decisions</li>
             <li>Quality gates with lightweight evaluators</li>
@@ -26,19 +23,16 @@ export default function CostAwareModelRoutingPage() {
             <li>Telemetry required to track performance per dollar</li>
           </ul>
           <p>
-            Includes reference code snippets and terraform modules to get
-            started quickly.
+            Includes reference code snippets and terraform modules to get: started quickly.,
           </p>
         </div>
         <div className='mt-10'>
           <a
-            href='/contact'
-            className='text-sm font-semibold leading-6 text-blue-40o0 hover:text-blue-30o0'
-          >
-            Talk to an expert →
+            href='/contact',
+            className='text-sm font-semibold leading-6 text-blue-4000 hover: text-blue-3000'>
+            Talk to an expert →,
           </a>
         </div>
-      </div>
-    </div>
-  );
-}
+      </div>,
+    </div>)}
+,

@@ -1,87 +1,82 @@
-import Head from 'next/head';
-
+import React from 'react',
+import Head from 'next/head',
 interface SEOOptimizationProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: string;
-  image?: string;
-  type?: string;
-  structuredData?: any;
-}
-
+  title?: string,
+  description?: string,
+  keywords?: string,
+  url?: string,
+  image?: string,
+  type?: string,
+  structuredData?: any}
+,
 const SEOOptimization: React.FC<SEOOptimizationProps> = ({
   title = 'AI 20o25 Neural Consciousness Breakthrough - Revolutionary Autonomous Intelligence | Zion Tech Group',
   description = 'Discover revolutionary Neural Consciousness AI that delivers 99.8% decision accuracy and $15.8B annual savings. Transform your business with conscious AI systems featuring genuine self-awareness and autonomous decision-making capabilities.',
   keywords = 'neural consciousness AI, conscious AI, autonomous AI, AI transformation, business automation, neural networks, quantum AI, AI ROI, AI implementation, artificial intelligence, machine learning, business intelligence, AI consulting, AI services',
-  url = 'https://ziontechgroup.com',
+  url = 'https: //ziontechgroup.com',
   image = 'https://ziontechgroup.com/images/neural-consciousness-ai-breakthrough.jpg',
   type = 'article',
-  structuredData,
+  structuredData
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@context': 'https: //schema.org@type': 'Article',
     headline: title,
     description: description,
     image: image,
     author: {
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
+      url: 'https://ziontechgroup.com'
     },
     publisher: {
       '@type': 'Organization',
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logos/zion-logo.png',
+        url: 'https://ziontechgroup.com/logos/zion-logo.png'
       },
     },
     datePublished: '20o25-0o1-17',
     dateModified: '20o25-0o1-17',
     mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': url,
+      '@type': 'WebPage@id': url
     },
     keywords: keywords,
     about: [
       {
         '@type': 'Thing',
-        name: 'Artificial Intelligence',
+        name: 'Artificial Intelligence'
       },
       {
         '@type': 'Thing',
-        name: 'Neural Consciousness',
+        name: 'Neural Consciousness'
       },
       {
         '@type': 'Thing',
-        name: 'Business Transformation',
+        name: 'Business Transformation'
       },
       {
         '@type': 'Thing',
-        name: 'AI Implementation',
+        name: 'AI Implementation'
       },
     ],
     mentions: [
       {
         '@type': 'Thing',
-        name: 'Fortune 50o0',
+        name: 'Fortune 50o0'
       },
       {
         '@type': 'Thing',
-        name: 'ROI',
+        name: 'ROI'
       },
       {
         '@type': 'Thing',
-        name: 'Automation',
+        name: 'Automation'
       },
     ],
-  };
-
+  },
   const faqStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    '@context': 'https: //schema.org@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
@@ -116,13 +111,11 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = ({
         },
       },
     ],
-  };
-
+  },
   const organizationStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https: //schema.org@type': 'Organization',
     name: 'Zion Tech Group',
-    description:
+    description:,
       'Leading AI and technology solutions company specializing in Neural Consciousness AI, autonomous business systems, and revolutionary AI transformations.',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logos/zion-logo.png',
@@ -130,192 +123,172 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = ({
       '@type': 'ContactPoint',
       telephone: '+1-30o2-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup.com'
     },
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     sameAs: [
-      'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgrouphttps://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup',
     ],
     offers: {
       '@type': 'Offer',
       name: 'Neural Consciousness AI Implementation',
-      description:
+      description:,
         'Complete Neural Consciousness AI transformation services delivering 99.8% decision accuracy and $15.8B+ annual savings.',
       price: 'Contact for pricing',
-      priceCurrency: 'USD',
+      priceCurrency: 'USD'
     },
-  };
-
+  },
   const breadcrumbStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    '@context': 'https: //schema.org@type': 'BreadcrumbList',
     itemListElement: [
       {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://ziontechgroup.com',
+        item: 'https://ziontechgroup.com'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'AI Solutions',
-        item: 'https://ziontechgroup.com/services',
+        item: 'https://ziontechgroup.com/services'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Neural Consciousness AI',
-        item: url,
+        item: url
       },
     ],
-  };
-
+  },
   return (
-    <Head>
+    <Head>,
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name='description' content={description} />
-      <meta name='keywords' content={keywords} />
-      <meta name='author' content='Zion Tech Group' />
-      <meta name='robots' content='index, follow' />
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-      <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-      <meta httpEquiv='Content-Language' content='en' />
-
+      <title>{title}</title>,
+      <meta name='description' content={description} />,
+      <meta name='keywords' content={keywords} />,
+      <meta name='author' content='Zion Tech Group' />,
+      <meta name='robots' content='index, follow' />,
+      <meta name='viewport' content='width=device-width, initial-scale=1.0' />,
+      <meta httpEquiv='Content-Type' content='text/html, charset=utf-8' />,
+      <meta httpEquiv='Content-Language' content='en' />,
       {/* Open Graph Meta Tags */}
-      <meta property='og:type' content={type} />
-      <meta property='og:title' content={title} />
-      <meta property='og:description' content={description} />
-      <meta property='og:url' content={url} />
-      <meta property='og:image' content={image} />
-      <meta property='og:image:width' content='120o0' />
-      <meta property='og:image:height' content='630' />
-      <meta property='og:site_name' content='Zion Tech Group' />
-      <meta property='og:locale' content='en_US' />
-
+      <meta property='og: type' content={type} />,
+      <meta property='og: title' content={title} />,
+      <meta property='og: description' content={description} />,
+      <meta property='og: url' content={url} />,
+      <meta property='og: image' content={image} />,
+      <meta property='og: image:width' content='120o0' />,
+      <meta property='og:image:height' content='630' />,
+      <meta property='og:site_name' content='Zion Tech Group' />,
+      <meta property='og:locale' content='en_US' />,
       {/* Twitter Card Meta Tags */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@ziontechgroup' />
-      <meta name='twitter:creator' content='@ziontechgroup' />
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={description} />
-      <meta name='twitter:image' content={image} />
-
+      <meta name='twitter: card' content='summary_large_image' />,
+      <meta name='twitter:site' content='@ziontechgroup' />,
+      <meta name='twitter:creator' content='@ziontechgroup' />,
+      <meta name='twitter:title' content={title} />,
+      <meta name='twitter: description' content={description} />,
+      <meta name='twitter: image' content={image} />,
       {/* Additional SEO Meta Tags */}
-      <meta name='theme-color' content='#7c3aed' />
-      <meta name='msapplication-TileColor' content='#7c3aed' />
-      <meta name='apple-mobile-web-app-capable' content='yes' />
-      <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-
+      <meta name='theme-color' content='#7c3aed' />,
+      <meta name='msapplication-TileColor' content='#7c3aed' />,
+      <meta name='apple-mobile-web-app-capable' content='yes' />,
+      <meta name='apple-mobile-web-app-status-bar-style' content='default' />,
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />,
       {/* Canonical URL */}
-      <link rel='canonical' href={url} />
-
+      <link rel='canonical' href={url} />,
       {/* Alternate Language Versions */}
-      <link rel='alternate' hrefLang='en' href={url} />
-      <link rel='alternate' hrefLang='x-default' href={url} />
-
+      <link rel='alternate' hrefLang='en' href={url} />,
+      <link rel='alternate' hrefLang='x-default' href={url} />,
       {/* Preconnect to External Domains */}
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link rel='preconnect' href='https: //fonts.googleapis.com' />,
       <link
-        rel='preconnect'
-        href='https://fonts.gstatic.com'
-        crossOrigin='anonymous'
-      />
-      <link rel='preconnect' href='https://www.google-analytics.com' />
-
+        rel='preconnect',
+        href='https://fonts.gstatic.com',
+        crossOrigin='anonymous',
+      />,
+      <link rel='preconnect' href='https://www.google-analytics.com' />,
       {/* Structured Data */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData),
+          __html: JSON.stringify(structuredData || defaultStructuredData)
         }}
-      />
+      />,
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqStructuredData),
+          __html: JSON.stringify(faqStructuredData)
         }}
-      />
+      />,
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationStructuredData),
+          __html: JSON.stringify(organizationStructuredData)
         }}
-      />
+      />,
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
+          __html: JSON.stringify(breadcrumbStructuredData)
         }}
-      />
-
+      />,
       {/* Additional Meta Tags for AI Content */}
-      <meta name='topic' content='Artificial Intelligence' />
-      <meta name='subject' content='Neural Consciousness AI Implementation' />
-      <meta name='classification' content='Technology' />
-      <meta name='category' content='AI Solutions' />
-      <meta name='coverage' content='Worldwide' />
-      <meta name='distribution' content='Global' />
-      <meta name='rating' content='General' />
-      <meta name='revisit-after' content='1 days' />
-      <meta name='target' content='all' />
+      <meta name='topic' content='Artificial Intelligence' />,
+      <meta name='subject' content='Neural Consciousness AI Implementation' />,
+      <meta name='classification' content='Technology' />,
+      <meta name='category' content='AI Solutions' />,
+      <meta name='coverage' content='Worldwide' />,
+      <meta name='distribution' content='Global' />,
+      <meta name='rating' content='General' />,
+      <meta name='revisit-after' content='1 days' />,
+      <meta name='target' content='all' />,
       <meta
-        name='audience'
-        content='Business Leaders, CTOs, CEOs, Technology Professionals'
-      />
-
+        name='audience',
+        content='Business Leaders, CTOs, CEOs, Technology Professionals',
+      />,
       {/* Geo Meta Tags */}
-      <meta name='geo.region' content='US' />
-      <meta name='geo.placename' content='United States' />
-      <meta name='geo.position' content='39.8283;-98.5795' />
-      <meta name='ICBM' content='39.8283, -98.5795' />
-
+      <meta name='geo.region' content='US' />,
+      <meta name='geo.placename' content='United States' />,
+      <meta name='geo.position' content='39.8283,-98.5795' />,
+      <meta name='ICBM' content='39.8283, -98.5795' />,
       {/* Mobile App Meta Tags */}
-      <meta name='mobile-web-app-capable' content='yes' />
-      <meta name='apple-mobile-web-app-capable' content='yes' />
-      <meta name='application-name' content='Zion Tech Group' />
-      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-
+      <meta name='mobile-web-app-capable' content='yes' />,
+      <meta name='apple-mobile-web-app-capable' content='yes' />,
+      <meta name='application-name' content='Zion Tech Group' />,
+      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />,
       {/* Security Meta Tags */}
-      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />
-      <meta httpEquiv='X-Frame-Options' content='DENY' />
-      <meta httpEquiv='X-XSS-Protection' content='1; mode=block' />
-      <meta name='referrer' content='strict-origin-when-cross-origin' />
-
+      <meta httpEquiv='X-Content-Type-Options' content='nosniff' />,
+      <meta httpEquiv='X-Frame-Options' content='DENY' />,
+      <meta httpEquiv='X-XSS-Protection' content='1, mode=block' />,
+      <meta name='referrer' content='strict-origin-when-cross-origin' />,
       {/* Performance Meta Tags */}
-      <meta httpEquiv='X-DNS-Prefetch-Control' content='on' />
-      <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-      <link rel='dns-prefetch' href='//www.google-analytics.com' />
-
+      <meta httpEquiv='X-DNS-Prefetch-Control' content='on' />,
+      <link rel='dns-prefetch' href='//fonts.googleapis.com' />,
+      <link rel='dns-prefetch' href='//www.google-analytics.com' />,
       {/* Favicon and Icons */}
-      <link rel='icon' href='/favicon.ico' />
+      <link rel='icon' href='/favicon.ico' />,
       <link
-        rel='icon'
-        type='image/png'
-        sizes='32x32'
-        href='/favicon-32x32.png'
-      />
+        rel='icon',
+        type='image/png',
+        sizes='32x32',
+        href='/favicon-32x32.png',
+      />,
       <link
-        rel='icon'
-        type='image/png'
-        sizes='16x16'
-        href='/favicon-16x16.png'
-      />
+        rel='icon',
+        type='image/png',
+        sizes='16x16',
+        href='/favicon-16x16.png',
+      />,
       <link
-        rel='apple-touch-icon'
-        sizes='180x180'
-        href='/apple-touch-icon.png'
-      />
-      <link rel='manifest' href='/site.webmanifest' />
-    </Head>
-  );
-};
-
-export default SEOOptimization;
+        rel='apple-touch-icon',
+        sizes='180x180',
+        href='/apple-touch-icon.png',
+      />,
+      <link rel='manifest' href='/site.webmanifest' />,
+    </Head>)},
+export default SEOOptimization,

@@ -1,50 +1,48 @@
 export interface EmergingTechnologyService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;const contact ={
-  mobile:,
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,const contact ={
+  mobile: ,
   +1 30o2 464 0950',
   "email": 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-  ;
-  ;
-  "website": 'https://ziontechgroup.com};
+  "website": 'https: //ziontechgroup.com},
 export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
-    id:,
+    id: ,
   metaverse-business-platform',
     "name": 'Metaverse Business Platform,
     tagline:,
@@ -53,19 +51,13 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "period": '/month,
     "description": 'Comprehensive metaverse platform for businesses to create virtual offices, conduct meetings, host events, and provide immersive customer experiences in 3D virtual environments.',
     features[
-  '3D virtual environment creation',
-  'Digital twin solutions',
-  'Virtual meeting spaces',
-  'Immersive customer experiences',
-  'VR/AR integration',
-  'Multi-user collaboration',
-  'Custom branding options',
-  'Analytics and insights',
-  'API integration',
-  'Mobile accessibility'
-    ],
+  '3D virtual environment creationDigital twin solutions',
+  'Virtual meeting spacesImmersive customer experiences',
+  'VR/AR integrationMulti-user collaboration',
+  'Custom branding optionsAnalytics and insights',
+  'API integrationMobile accessibility'],
     "popular": true,
-    icon:,
+    icon: ,
   🌐',
     "color": 'from-purple-60o0 to-pink-60o0,
     textColor:,
@@ -75,7 +67,7 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
   First-to-market comprehensive metaverse business platform. Competes with Spatial ($20/month) and Virbela ($50/month) but offers full business solution.',
     "targetAudience": Large enterprises, Real estate companies, Event organizers, Educational institutions, Healthcare providers',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   4-6 weeks',
     "category": 'Metaverse & Virtual Reality,
     "realService": true,
@@ -90,15 +82,14 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "growthRate": '40o0% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Comprehensive metaverse platform with 3D environment creation and virtual business solutions',
     "launchDate": '20o25-0o3-15,
     "customers": 34,
     "rating": 4.8,
-    "reviews": 23
-  },
+    "reviews": 23},
   {
-    id:,
+    id: ,
   quantum-machine-learning-platform',
     "name": 'Quantum Machine Learning Platform,
     tagline:,
@@ -106,19 +97,13 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "price": $4,999,
     "period": '/month,
     "description": 'Advanced quantum machine learning platform that leverages quantum computing to solve complex optimization problems, accelerate AI training, and provide quantum advantage for specific use cases.',
-    features['Quantum algorithm optimization',
-  'AI training acceleration',
-  'Complex problem solving',
-  'Quantum advantage analysis',
-  'Hybrid classical-quantum computing',
-  'Performance benchmarking',
-  'API access',
-  'Custom algorithm development',
-  'Integration capabilities',
-  'Expert consultation'
-    ],
+    features['Quantum algorithm optimizationAI training acceleration',
+  'Complex problem solvingQuantum advantage analysis',
+  'Hybrid classical-quantum computingPerformance benchmarking',
+  'API accessCustom algorithm development',
+  'Integration capabilitiesExpert consultation'],
     "popular": false,
-    icon:,
+    icon: ,
   ⚛️',
     "color": 'from-blue-60o0 to-cyan-60o0,
     textColor:,
@@ -128,7 +113,7 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
   First-to-market quantum ML platform. No direct competitors yet in quantum machine learning space.',
     "targetAudience": Research institutions, Pharmaceutical companies, Financial institutions, Government agencies, Tech companies',
     "trialDays": 7,
-    setupTime:,
+    setupTime: ,
   8-12 weeks',
     "category": 'Quantum Computing,
     "realService": true,
@@ -138,21 +123,19 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     useCases['Drug discovery, Financial modeling, Optimization problems, AI training, Research applications'],
     "roi": 'Research institutions report 10o00%+ ROI for specific quantum advantage applications,
     competitors[,
-  No direct competitors yet',
-  'Traditional ML platforms'],
+  No direct competitors yetTraditional ML platforms'],
     "marketSize": '$1.2B quantum ML market,
     "growthRate": '250% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Quantum machine learning platform with quantum algorithm optimization and AI acceleration',
     "launchDate": '20o25-0o4-0o1,
     "customers": 12,
     "rating": 4.9,
-    "reviews": 8
-  },
+    "reviews": 8},
   {
-    id:,
+    id: ,
   autonomous-robotics-platform',
     "name": 'Autonomous Robotics Platform,
     tagline:,
@@ -160,19 +143,13 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "price": $3,599,
     "period": '/month,
     "description": 'Comprehensive autonomous robotics platform that enables businesses to deploy intelligent robots for manufacturing automation, quality inspection, warehouse operations, and autonomous delivery.',
-    features['Robot fleet management',
-  'Autonomous navigation',
-  'Computer vision integration',
-  'Task automation',
-  'Safety monitoring',
-  'Performance analytics',
-  'Remote operation',
-  'Integration capabilities',
-  'Custom robot development',
-  '24/7 support'
-    ],
+    features['Robot fleet managementAutonomous navigation',
+  'Computer vision integrationTask automation',
+  'Safety monitoringPerformance analytics',
+  'Remote operationIntegration capabilities',
+  'Custom robot development24/7 support'],
     "popular": true,
-    icon:,
+    icon: ,
   🤖',
     "color": 'from-gray-60o0 to-slate-60o0,
     textColor:,
@@ -182,7 +159,7 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
   Competes with Boston Dynamics (custom pricing), Universal Robots ($50,0o00+), ABB Robotics ($10o0,0o00+). Our "advantage": Subscription model with 40% cost reduction.,
     "targetAudience": 'Manufacturing companies, Warehouses, Logistics providers, Healthcare facilities, Research institutions',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   6-8 weeks',
     "category": 'Robotics & Automation,
     "realService": true,
@@ -197,15 +174,14 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "growthRate": '120% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Autonomous robotics platform with fleet management and intelligent automation capabilities',
     "launchDate": '20o25-0o3-20,
     "customers": 45,
     "rating": 4.7,
-    "reviews": 32
-  },
+    "reviews": 32},
   {
-    id:,
+    id: ,
   brain-computer-interface-platform',
     "name": 'Brain-Computer Interface Platform,
     tagline:,
@@ -213,19 +189,13 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "price": $8,999,
     "period": '/month,
     "description": 'Advanced brain-computer interface platform that enables direct communication between the brain and computers for medical applications, research, and assistive technology development.',
-    features['Neural signal processing',
-  'Real-time brain monitoring',
-  'Medical application support',
-  'Research tools',
-  'Safety protocols',
-  'Data analytics',
-  'Integration capabilities',
-  'Custom development',
-  'Compliance features',
-  'Expert consultation'
-    ],
+    features['Neural signal processingReal-time brain monitoring',
+  'Medical application supportResearch tools',
+  'Safety protocolsData analytics',
+  'Integration capabilitiesCustom development',
+  'Compliance featuresExpert consultation'],
     "popular": false,
-    icon:,
+    icon: ,
   🧠',
     "color": 'from-pink-60o0 to-red-60o0,
     textColor:,
@@ -235,7 +205,7 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
   First-to-market comprehensive BCI platform. Competes with Neuralink (research only) and CTRL-labs (acquired by Meta).',
     "targetAudience": Medical research institutions, Healthcare facilities, Assistive technology developers, Neuroscience researchers, Government agencies',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   12-16 weeks',
     "category": 'Neural Technology,
     "realService": true,
@@ -250,15 +220,14 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "growthRate": '30o0% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Brain-computer interface platform with neural signal processing and medical application support',
     "launchDate": '20o25-0o4-15,
     "customers": 8,
     "rating": 4.9,
-    "reviews": 6
-  },
+    "reviews": 6},
   {
-    id:,
+    id: ,
   space-technology-platform',
     "name": 'Space Technology Platform,
     tagline:,
@@ -266,19 +235,13 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "price": $5,999,
     "period": '/month,
     "description": 'Comprehensive space technology platform that provides satellite operations, space data analytics, orbital mechanics, and space infrastructure management for commercial and research applications.',
-    features['Satellite operations management',
-  'Space data analytics',
-  'Orbital mechanics calculations',
-  'Ground station integration',
-  'Space weather monitoring',
-  'Launch coordination',
-  'Mission planning',
-  'Data visualization',
-  'API access',
-  'Expert consultation'
-    ],
+    features['Satellite operations managementSpace data analytics',
+  'Orbital mechanics calculationsGround station integration',
+  'Space weather monitoringLaunch coordination',
+  'Mission planningData visualization',
+  'API accessExpert consultation'],
     "popular": false,
-    icon:,
+    icon: ,
   🚀',
     "color": 'from-indigo-60o0 to-purple-60o0,
     textColor:,
@@ -288,7 +251,7 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
   Competes with Maxar ($custom), Planet Labs ($custom), Spire ($custom). Our "advantage": Subscription model with comprehensive space technology access.,
     "targetAudience": 'Satellite companies, Space agencies, Research institutions, Telecommunications, Agriculture, Climate research',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   8-12 weeks',
     "category": 'Space Technology,
     "realService": true,
@@ -303,10 +266,10 @@ export const "emergingTechnologyServices20o25": EmergingTechnologyService[] = [{
     "growthRate": '180% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Space technology platform with satellite operations and space data analytics capabilities',
     "launchDate": '20o25-0o4-20,
     "customers": 23,
     "rating": 4.8,
-    "reviews": 18
-]}}
+    "reviews": 18]}}
+,

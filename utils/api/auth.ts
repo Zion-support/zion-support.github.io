@@ -1,29 +1,16 @@
 
-import { NextApiRequest, NextApiResponse } from 'next';
-export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session;
-  const authHeader = req.headers.authorization;
-  if (!authHeader |!authHeader.startsWith('Bearer ')) {
-    return null;
+export type User = {
+  id: string,
+  email: string
+} | null,
+
+export function getUserFromRequest(req: { headers?: Record<string string | undefined> }): User {
+  const authHeader = req?.headers?.authorization,
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return null,
   }
-  return user;
+  // This is a stub. Replace with real token parsing if needed.
+  return {
+    id: 'user_stub',
+    email: 'stub@example.com'},
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

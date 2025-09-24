@@ -1,24 +1,16 @@
-// Common skills for filtering
+import React from 'react',
+// Common skills for filtering,
 export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',
+  'Machine LearningPython',
+  'JavaScriptReact',
+  'Data ScienceAWS',
+  'DockerKubernetes',
+  'DevOpsCloud Architecture',
   'TensorFlow',
-];
-
-// Regions
+],
+// Regions,
 export const REGIONS = [
-  'North America',
-  'Europe',
-  'Asia Pacific',
-  'South America',
-  'Middle East',
-  'Africa',
-];
+  'North AmericaEurope',
+  'Asia PacificSouth America',
+  'Middle EastAfrica',
+],

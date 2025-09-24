@@ -1,13 +1,11 @@
 
-import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-
+import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form",
+import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
 interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-}
-
+  form: UseFormReturn<FormValues>}
+,
 export function TimelineField({ form }: TimelineFieldProps) {
   const timelineOptions = [
     { value: "Less than 1 week"label: "Less than 1 week" },
@@ -17,36 +15,32 @@ export function TimelineField({ form }: TimelineFieldProps) {
     { value: "3-6 months"label: "3-6 months" },
     { value: "6+ months"label: "6+ months" },
     { value: "Ongoing"label: "Ongoing" }
-  ];
-
+  ],
   return (
     <FormField
       control={form.control}
-      name="timeline"
+      name="timeline",
       render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Timeline</FormLabel>
-          <FormControl>
-            <Select 
-              onValueChange={field.onChange} 
+        <FormItem>,
+          <FormLabel className="text-white">Project Timeline</FormLabel>,
+          <FormControl>,
+            <Select
+              onValueChange={field.onChange} ,
               value={field.value}
               defaultValue={field.value}
-            >
-              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">
-                <SelectValue placeholder="Select estimated timeline" />
-              </SelectTrigger>
-              <SelectContent>
+            >,
+              <SelectTrigger className="bg-zion-blue-light/20 border-zion-blue-light text-white">,
+                <SelectValue placeholder="Select estimated timeline" />,
+              </SelectTrigger>,
+              <SelectContent>,
                 {timelineOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
+                  <SelectItem key={option.value} value={option.value}>,
                     {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-}
+                  </SelectItem>))}
+              </SelectContent>,
+            </Select>,
+          </FormControl>,
+          <FormMessage />,
+        </FormItem>)}
+    />)}
+,

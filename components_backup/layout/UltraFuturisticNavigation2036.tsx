@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import {
   Menu,
   ChevronDown,
@@ -63,34 +63,31 @@ import {
   Shield as Security,
   Brain as AI,
   Rocket as Launch,
-} from 'lucide-react';
-
+} from 'lucide-react',
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  color?: string;
-}
-
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  color?: string}
+,
 const contactInfo = {
   mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 10o08 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
+  website: 'https://ziontechgroup.com'
+},
 const navigationItems: NavigationItem[] = [
   {
     name: 'Home',
     href: '/',
     icon: <Home className='w-5 h-5' />,
     description: 'Welcome to Zion Tech Group',
-    color: 'from-cyan-50o0 to-blue-50o0',
+    color: 'from-cyan-50o0 to-blue-50o0'
   },
   {
     name: 'All Services',
@@ -104,42 +101,42 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'View All Services',
         href: '/comprehensive-services-showcase-20o25',
-        description: 'Complete services portfolio',
+        description: 'Complete services portfolio'
       },
       {
         name: 'Service Categories',
         href: '/comprehensive-services-showcase-20o25#categories',
-        description: 'Browse by category',
+        description: 'Browse by category'
       },
       {
         name: 'Pricing Comparison',
         href: '/comprehensive-services-showcase-20o25#pricing',
-        description: 'Compare service costs',
+        description: 'Compare service costs'
       },
       {
         name: 'Service Search',
         href: '/comprehensive-services-showcase-20o25#search',
-        description: 'Find specific services',
+        description: 'Find specific services'
       },
       {
         name: 'Latest Innovations',
         href: '/revolutionary-20o25-services-showcase',
-        description: 'Cutting-edge solutions',
+        description: 'Cutting-edge solutions'
       },
       {
         name: '20o26 Services',
         href: '/revolutionary-20o26-services',
-        description: 'Next generation solutions',
+        description: 'Next generation solutions'
       },
       {
         name: '20o27 Services',
         href: '/revolutionary-20o27-services-showcase',
-        description: 'Future-ready services',
+        description: 'Future-ready services'
       },
       {
         name: 'Ultimate 20o26',
         href: '/ultimate-20o26-services-showcase',
-        description: 'Premium service collection',
+        description: 'Premium service collection'
       },
     ],
   },
@@ -160,57 +157,57 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'AI Business Intelligence',
         href: '/ai-business-intelligence-suite',
-        description: 'AI-powered business insights',
+        description: 'AI-powered business insights'
       },
       {
         name: 'AI Content Marketing',
         href: '/ai-content-marketing-platform',
-        description: 'AI-driven content creation',
+        description: 'AI-driven content creation'
       },
       {
         name: 'AI Customer Success',
         href: '/ai-customer-success-platform',
-        description: 'Predict and prevent churn',
+        description: 'Predict and prevent churn'
       },
       {
         name: 'AI Sales Intelligence',
         href: '/ai-sales-intelligence-suite',
-        description: 'Transform your sales team',
+        description: 'Transform your sales team'
       },
       {
         name: 'AI HR & Recruitment',
         href: '/ai-hr-recruitment-platform',
-        description: 'AI-powered hiring solutions',
+        description: 'AI-powered hiring solutions'
       },
       {
         name: 'AI Financial Analytics',
         href: '/ai-financial-analytics-platform',
-        description: 'Data-driven financial insights',
+        description: 'Data-driven financial insights'
       },
       {
         name: 'AI Supply Chain',
         href: '/ai-supply-chain-optimization',
-        description: 'Optimize your supply chain',
+        description: 'Optimize your supply chain'
       },
       {
         name: 'AI Legal Tech',
         href: '/ai-legal-document-analysis',
-        description: 'Legal document analysis',
+        description: 'Legal document analysis'
       },
       {
         name: 'AI Healthcare',
         href: '/ai-healthcare-analytics-platform',
-        description: 'Healthcare analytics platform',
+        description: 'Healthcare analytics platform'
       },
       {
         name: 'AI Real Estate',
         href: '/ai-real-estate-analytics',
-        description: 'Real estate market insights',
+        description: 'Real estate market insights'
       },
       {
         name: 'AI Education',
         href: '/ai-education-technology-platform',
-        description: 'Personalized learning platform',
+        description: 'Personalized learning platform'
       },
     ],
   },
@@ -226,102 +223,102 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-20o25',
-        description: 'Emotional intelligence and self-awareness',
+        description: 'Emotional intelligence and self-awareness'
       },
       {
         name: 'AI Autonomous Business Operations',
         href: '/ai-autonomous-business-operations',
-        description: 'Fully autonomous business management',
+        description: 'Fully autonomous business management'
       },
       {
         name: 'AI Autonomous Research',
         href: '/ai-autonomous-research-assistant',
-        description: 'Self-directed AI research',
+        description: 'Self-directed AI research'
       },
       {
         name: 'AI Emotional Intelligence',
         href: '/ai-emotional-intelligence-training',
-        description: 'EQ training platform',
+        description: 'EQ training platform'
       },
       {
         name: 'AI Predictive Maintenance',
         href: '/ai-predictive-maintenance-platform',
-        description: 'Equipment failure prediction',
+        description: 'Equipment failure prediction'
       },
       {
         name: 'AI Content Personalization',
         href: '/ai-content-personalization-engine',
-        description: 'Personalized content delivery',
+        description: 'Personalized content delivery'
       },
       {
         name: 'AI Autonomous Ecosystem',
         href: '/ai-autonomous-ecosystem-manager',
-        description: 'Self-managing AI systems',
+        description: 'Self-managing AI systems'
       },
       {
         name: 'AI Ethics & Governance',
         href: '/ai-ethics-governance-framework',
-        description: 'Ethical AI frameworks',
+        description: 'Ethical AI frameworks'
       },
       {
         name: 'AI Creativity Studio',
         href: '/ai-creativity-studio',
-        description: 'AI-powered creative content',
+        description: 'AI-powered creative content'
       },
       {
         name: 'AI Education Platform',
         href: '/ai-education-platform',
-        description: 'Personalized AI learning',
+        description: 'Personalized AI learning'
       },
       {
         name: 'AI Healthcare Diagnostics',
         href: '/ai-healthcare-diagnostics',
-        description: 'Medical AI solutions',
+        description: 'Medical AI solutions'
       },
       {
         name: 'AI Financial Intelligence',
         href: '/ai-financial-intelligence',
-        description: 'Financial AI analytics',
+        description: 'Financial AI analytics'
       },
       {
         name: 'AI Sustainability Platform',
         href: '/ai-sustainability-platform',
-        description: 'Environmental AI solutions',
+        description: 'Environmental AI solutions'
       },
       {
         name: 'AI Legal Contract Analyzer',
         href: '/ai-legal-contract-analyzer',
-        description: 'Legal document analysis',
+        description: 'Legal document analysis'
       },
       {
         name: 'AI Autonomous Code Generation',
         href: '/ai-autonomous-code-generation',
-        description: 'AI that writes code',
+        description: 'AI that writes code'
       },
       {
         name: 'AI Autonomous Marketing',
         href: '/ai-autonomous-marketing-platform',
-        description: 'Autonomous marketing AI',
+        description: 'Autonomous marketing AI'
       },
       {
         name: 'AI Autonomous Sales',
         href: '/ai-autonomous-sales-platform',
-        description: 'AI that closes deals',
+        description: 'AI that closes deals'
       },
       {
         name: 'AI Autonomous Customer Service',
         href: '/ai-autonomous-customer-service',
-        description: 'Autonomous support AI',
+        description: 'Autonomous support AI'
       },
       {
         name: 'AI Autonomous HR',
         href: '/ai-autonomous-hr-platform',
-        description: 'Autonomous HR management',
+        description: 'Autonomous HR management'
       },
       {
         name: 'Advanced AI Automation',
         href: '/advanced-ai-automation-services',
-        description:
+        description:,
           'AI automation for development, testing, DevOps, security, and data',
       },
     ],
@@ -338,72 +335,72 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Quantum-Secure Cloud Infrastructure',
         href: '/quantum-secure-cloud-infrastructure',
-        description: 'Unbreakable quantum encryption',
+        description: 'Unbreakable quantum encryption'
       },
       {
         name: 'Quantum Financial Trading Platform',
         href: '/quantum-financial-trading',
-        description: 'Ultra-fast quantum trading',
+        description: 'Ultra-fast quantum trading'
       },
       {
         name: 'Quantum Internet Security Platform',
         href: '/quantum-internet-security',
-        description: 'Future-proof internet security',
+        description: 'Future-proof internet security'
       },
       {
         name: 'Space Resource Mining',
         href: '/space-resource-mining-platform',
-        description: 'Asteroid mining and space resources',
+        description: 'Asteroid mining and space resources'
       },
       {
         name: 'Quantum Internet Security',
         href: '/quantum-internet-security-platform',
-        description: 'Unbreakable encryption',
+        description: 'Unbreakable encryption'
       },
       {
         name: 'Brain-Computer Interface',
         href: '/brain-computer-interface-platform',
-        description: 'Neural interface technology',
+        description: 'Neural interface technology'
       },
       {
         name: 'Quantum Materials Discovery',
         href: '/quantum-materials-discovery-platform',
-        description: 'Materials science acceleration',
+        description: 'Materials science acceleration'
       },
       {
         name: 'Autonomous Vehicle AI',
         href: '/autonomous-vehicle-ai-platform',
-        description: 'Self-driving AI systems',
+        description: 'Self-driving AI systems'
       },
       {
         name: 'Quantum Bio-Computing',
         href: '/quantum-bio-computing-platform',
-        description: 'Quantum-biological hybrid processing',
+        description: 'Quantum-biological hybrid processing'
       },
       {
         name: 'Quantum Energy Platform',
         href: '/quantum-energy-platform',
-        description: 'Fusion power simulation',
+        description: 'Fusion power simulation'
       },
       {
         name: 'Space Technology',
         href: '/space-technology',
-        description: 'Advanced space solutions',
+        description: 'Advanced space solutions'
       },
       {
         name: 'Metaverse Development',
         href: '/metaverse-ai-development-platform',
-        description: 'Virtual world creation',
+        description: 'Virtual world creation'
       },
       {
         name: 'Biotech AI Research',
         href: '/biotech-ai-research-platform',
-        description: 'Biological AI research',
+        description: 'Biological AI research'
       },
       {
         name: 'Autonomous Manufacturing',
         href: '/autonomous-manufacturing',
-        description: 'Smart factory solutions',
+        description: 'Smart factory solutions'
       },
     ],
   },
@@ -419,57 +416,57 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Zero Trust Security Architecture',
         href: '/zero-trust-network-architecture',
-        description: 'Advanced security framework',
+        description: 'Advanced security framework'
       },
       {
         name: 'Quantum Cybersecurity Services',
         href: '/quantum-cybersecurity-services',
-        description: 'Future-proof security',
+        description: 'Future-proof security'
       },
       {
         name: 'Enterprise AI Operations Center',
         href: '/enterprise-ai-operations-center',
-        description: 'AI-powered operations',
+        description: 'AI-powered operations'
       },
       {
         name: 'Advanced IT Infrastructure',
         href: '/advanced-it-infrastructure-services',
-        description: 'Next-gen infrastructure',
+        description: 'Next-gen infrastructure'
       },
       {
         name: 'Comprehensive IT Services',
         href: '/comprehensive-it-services',
-        description: 'Full IT solutions',
+        description: 'Full IT solutions'
       },
       {
         name: 'Cutting-Edge IT Services',
         href: '/cutting-edge-it-services',
-        description: 'Innovative IT solutions',
+        description: 'Innovative IT solutions'
       },
       {
         name: 'Enterprise IT 20o25',
         href: '/enterprise-it-20o25-services',
-        description: '20o25 IT services',
+        description: '20o25 IT services'
       },
       {
         name: 'Enterprise IT 20o26',
         href: '/enterprise-it-20o26-services',
-        description: '20o26 IT services',
+        description: '20o26 IT services'
       },
       {
         name: 'Enterprise IT 20o29',
         href: '/enterprise-it-20o29-services',
-        description: '20o29 IT services',
+        description: '20o29 IT services'
       },
       {
         name: 'Enterprise IT 20o31',
         href: '/enterprise-it-20o31-services',
-        description: '20o31 IT services',
+        description: '20o31 IT services'
       },
       {
         name: 'Enterprise IT 20o32',
         href: '/enterprise-it-20o32-services',
-        description: '20o32 IT services',
+        description: '20o32 IT services'
       },
     ],
   },
@@ -477,7 +474,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Business Solutions',
     href: '/business-solutions',
     icon: <Target className='w-5 h-5' />,
-    description:
+    description:,
       'AI-powered business intelligence, marketing, sales, and HR solutions',
     badge: 'Business',
     featured: true,
@@ -486,47 +483,47 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Innovative Business Solutions',
         href: '/innovative-business-solutions',
-        description: 'AI-powered business solutions',
+        description: 'AI-powered business solutions'
       },
       {
         name: 'Advanced AI Automation',
         href: '/advanced-ai-automation-services',
-        description: 'AI automation services',
+        description: 'AI automation services'
       },
       {
         name: 'Innovative Business Solutions 20o25',
         href: '/innovative-business-solutions-20o25',
-        description: '20o25 business solutions',
+        description: '20o25 business solutions'
       },
       {
         name: 'Professional Services',
         href: '/professional-services',
-        description: 'Professional business services',
+        description: 'Professional business services'
       },
       {
         name: 'Industry Real Services',
         href: '/industry-real-services',
-        description: 'Industry-specific solutions',
+        description: 'Industry-specific solutions'
       },
       {
         name: 'Fintech Financial 20o25',
         href: '/fintech-financial-20o25',
-        description: 'Financial technology solutions',
+        description: 'Financial technology solutions'
       },
       {
         name: 'Healthcare Biotech 20o25',
         href: '/healthcare-biotech-20o25',
-        description: 'Healthcare technology',
+        description: 'Healthcare technology'
       },
       {
         name: 'Blockchain Web3 20o25',
         href: '/blockchain-web3-20o25',
-        description: 'Blockchain solutions',
+        description: 'Blockchain solutions'
       },
       {
         name: 'Education E-Learning 20o25',
         href: '/education-elearning-20o25',
-        description: 'Educational technology',
+        description: 'Educational technology'
       },
     ],
   },
@@ -542,72 +539,72 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Revolutionary 20o25 Innovations',
         href: '/revolutionary-20o25-innovations',
-        description: '20o25 breakthrough innovations',
+        description: '20o25 breakthrough innovations'
       },
       {
         name: 'Revolutionary 20o26 Innovations',
         href: '/revolutionary-20o26-innovations',
-        description: '20o26 breakthrough innovations',
+        description: '20o26 breakthrough innovations'
       },
       {
         name: 'Revolutionary 20o27 Innovations',
         href: '/revolutionary-20o27-innovations',
-        description: '20o27 breakthrough innovations',
+        description: '20o27 breakthrough innovations'
       },
       {
         name: 'Next-Gen AI 20o26',
         href: '/next-gen-ai-20o26-services',
-        description: 'Next generation AI',
+        description: 'Next generation AI'
       },
       {
         name: 'Next-Gen AI Services',
         href: '/next-generation-ai-services',
-        description: 'Advanced AI services',
+        description: 'Advanced AI services'
       },
       {
         name: 'Next-Gen Innovations 20o25',
         href: '/next-gen-innovations-20o25',
-        description: '20o25 innovations',
+        description: '20o25 innovations'
       },
       {
         name: 'Emerging Tech 20o25',
         href: '/emerging-tech-20o25-innovations',
-        description: '20o25 emerging tech',
+        description: '20o25 emerging tech'
       },
       {
         name: 'Emerging Tech 20o26',
         href: '/emerging-tech-20o26-services',
-        description: '20o26 emerging tech',
+        description: '20o26 emerging tech'
       },
       {
         name: 'Emerging Tech 20o27',
         href: '/emerging-tech-20o27-services',
-        description: '20o27 emerging tech',
+        description: '20o27 emerging tech'
       },
       {
         name: 'Emerging Tech Services',
         href: '/emerging-technology-services',
-        description: 'Emerging technology',
+        description: 'Emerging technology'
       },
       {
         name: 'Space Tech Services',
         href: '/space-tech-services',
-        description: 'Space technology solutions',
+        description: 'Space technology solutions'
       },
       {
         name: 'Quantum Advanced Services',
         href: '/quantum-advanced-services',
-        description: 'Advanced quantum solutions',
+        description: 'Advanced quantum solutions'
       },
       {
         name: 'Quantum AI Services 20o25',
         href: '/quantum-ai-services-20o25',
-        description: '20o25 quantum AI',
+        description: '20o25 quantum AI'
       },
       {
         name: 'Quantum Space Services',
         href: '/quantum-space-services',
-        description: 'Quantum space solutions',
+        description: 'Quantum space solutions'
       },
     ],
   },
@@ -622,32 +619,32 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Market Pricing',
         href: '/market-pricing',
-        description: 'Competitive market pricing',
+        description: 'Competitive market pricing'
       },
       {
         name: 'Pricing 20o33',
         href: '/pricing-20o33',
-        description: 'Future pricing models',
+        description: 'Future pricing models'
       },
       {
         name: 'Pricing Enhanced 20o26',
         href: '/pricing-enhanced-20o26',
-        description: 'Enhanced 20o26 pricing',
+        description: 'Enhanced 20o26 pricing'
       },
       {
         name: 'Revolutionary 20o25 Pricing',
         href: '/revolutionary-20o25-pricing',
-        description: '20o25 revolutionary pricing',
+        description: '20o25 revolutionary pricing'
       },
       {
         name: 'Revolutionary 20o26 Pricing',
         href: '/revolutionary-20o26-pricing',
-        description: '20o26 revolutionary pricing',
+        description: '20o26 revolutionary pricing'
       },
       {
         name: 'Revolutionary 20o28 Pricing',
         href: '/revolutionary-20o28-pricing',
-        description: '20o28 revolutionary pricing',
+        description: '20o28 revolutionary pricing'
       },
     ],
   },
@@ -661,27 +658,27 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'News & Updates',
         href: '/news',
-        description: 'Latest news and updates',
+        description: 'Latest news and updates'
       },
       {
         name: 'API Documentation',
         href: '/api-documentation-generator',
-        description: 'API documentation',
+        description: 'API documentation'
       },
       {
         name: 'Analytics Dashboard',
         href: '/analytics',
-        description: 'Analytics and insights',
+        description: 'Analytics and insights'
       },
       {
         name: 'Automation Tools',
         href: '/automation',
-        description: 'Automation solutions',
+        description: 'Automation solutions'
       },
       {
         name: 'Support Center',
         href: '/support',
-        description: 'Customer support',
+        description: 'Customer support'
       },
     ],
   },
@@ -695,317 +692,274 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Contact Us',
         href: '/contact',
-        description: 'Get in touch with us',
+        description: 'Get in touch with us'
       },
       {
         name: 'About Us',
         href: '/about',
-        description: 'Learn about our company',
+        description: 'Learn about our company'
       },
       {
         name: 'Terms of Service',
         href: '/terms',
-        description: 'Terms and conditions',
+        description: 'Terms and conditions'
       },
       {
         name: 'Privacy Policy',
         href: '/privacy',
-        description: 'Privacy and data protection',
+        description: 'Privacy and data protection'
       },
       {
         name: 'Security',
         href: '/security',
-        description: 'Security information',
+        description: 'Security information'
       },
     ],
   },
-];
-
+],
 export default function UltraFuturisticNavigation20o36() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+      setIsScrolled(window.scrollY > 20)},
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
-
+    setActiveDropdown(null),
+    setIsOpen(false)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
-        isScrolled
-          ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50'
-          : 'bg-transparent'
-      }`}
-    >
+        isScrolled,
+          ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50',
+          : 'bg-transparent'}`}
+    >,
       {/* Top Contact Bar */}
-      <div className='bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50 border-b border-white/10'>
-        <div className='max-w-7xl mx-auto px-4 py-2'>
-          <div className='flex items-center justify-between text-sm'>
-            <div className='flex items-center gap-6 text-gray-30o0'>
+      <div className='bg-gradient-to-r from-purple-90o0/50 to-pink-90o0/50 border-b border-white/10'>,
+        <div className='max-w-7xl mx-auto px-4 py-2'>,
+          <div className='flex items-center justify-between text-sm'>,
+            <div className='flex items-center gap-6 text-gray-30o0'>,
               <a
-                href={`tel:${contactInfo.mobile}`}
-                className='flex items-center gap-2 hover:text-white transition-colors'
-              >
-                <Phone className='w-4 h-4' />
+                href={`tel: ${contactInfo.mobile}`}
+                className='flex items-center gap-2 hover: text-white transition-colors'>,
+                <Phone className='w-4 h-4' />,
                 {contactInfo.mobile}
-              </a>
+              </a>,
               <a
-                href={`mailto:${contactInfo.email}`}
-                className='flex items-center gap-2 hover:text-white transition-colors'
-              >
-                <Mail className='w-4 h-4' />
+                href={`mailto: ${contactInfo.email}`}
+                className='flex items-center gap-2 hover: text-white transition-colors'>,
+                <Mail className='w-4 h-4' />,
                 {contactInfo.email}
-              </a>
-            </div>
-            <div className='flex items-center gap-4'>
+              </a>,
+            </div>,
+            <div className='flex items-center gap-4'>,
               <a
-                href='/contact'
-                className='text-purple-40o0 hover:text-white transition-colors font-medium'
-              >
-                Get Started
-              </a>
+                href='/contact',
+                className='text-purple-40o0 hover: text-white transition-colors font-medium'>,
+                Get Started,
+              </a>,
               <a
-                href='/support'
-                className='text-gray-40o0 hover:text-white transition-colors'
-              >
-                Support
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+                href='/support',
+                className='text-gray-40o0 hover:text-white transition-colors'>,
+                Support,
+              </a>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
       {/* Main Navigation */}
-      <div className='max-w-7xl mx-auto px-4'>
-        <div className='flex items-center justify-between h-20'>
+      <div className='max-w-7xl mx-auto px-4'>,
+        <div className='flex items-center justify-between h-20'>,
           {/* Logo */}
           <Link
-            href='/'
-            className='flex items-center gap-3 group'
+            href='/',
+            className='flex items-center gap-3 group',
             onClick={closeAllDropdowns}
-          >
-            <div className='relative'>
-              <div className='w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0'>
-                <Zap className='w-6 h-6 text-white' />
-              </div>
-              <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0' />
-            </div>
-            <div className='hidden sm:block'>
-              <div className='text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent'>
-                Zion Tech Group
-              </div>
-              <div className='text-xs text-gray-40o0'>
-                Innovation • Technology • Future
-              </div>
-            </div>
-          </Link>
-
+          >,
+            <div className='relative'>,
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0'>,
+                <Zap className='w-6 h-6 text-white' />,
+              </div>,
+              <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0' />,
+            </div>,
+            <div className='hidden sm:block'>,
+              <div className='text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent'>,
+                Zion Tech Group,
+              </div>,
+              <div className='text-xs text-gray-40o0'>,
+                Innovation • Technology • Future,
+              </div>,
+            </div>,
+          </Link>,
           {/* Desktop Navigation */}
-          <div className='hidden lg:flex items-center gap-8'>
+          <div className='hidden lg: flex items-center gap-8'>,
             {navigationItems.map(item => (
-              <div key={item.name} className='relative group'>
+              <div key={item.name} className='relative group'>,
                 <button
                   onClick={() => toggleDropdown(item.name)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
-                    activeDropdown === item.name
-                      ? 'text-white bg-white/10'
-                      : 'text-gray-30o0 hover:text-white hover:bg-white/5'
-                  }`}
-                >
+                    activeDropdown === item.name,
+                      ? 'text-white bg-white/10',
+                      : 'text-gray-30o0 hover: text-white hover:bg-white/5'}`}
+                >,
                   {item.icon}
                   {item.name}
                   {item.badge && (
                     <span
                       className={`px-2 py-1 text-xs font-bold rounded-full ${
-                        item.badge === 'New'
-                          ? 'bg-green-50o0 text-black'
-                          : item.badge === 'Hot'
-                            ? 'bg-red-50o0 text-white'
-                            : item.badge === 'Enterprise'
-                              ? 'bg-blue-50o0 text-white'
-                              : item.badge === 'Business'
-                                ? 'bg-emerald-50o0 text-white'
-                                : item.badge === 'Innovation'
-                                  ? 'bg-pink-50o0 text-white'
-                                  : item.badge === 'Pricing'
-                                    ? 'bg-yellow-50o0 text-black'
-                                    : item.badge === 'Showcase'
-                                      ? 'bg-purple-50o0 text-white'
-                                      : 'bg-gray-50o0 text-white'
-                      }`}
-                    >
+                        item.badge === 'New',
+                          ? 'bg-green-50o0 text-black',
+                          : item.badge === 'Hot',
+                            ? 'bg-red-50o0 text-white',
+                            : item.badge === 'Enterprise',
+                              ? 'bg-blue-50o0 text-white',
+                              : item.badge === 'Business',
+                                ? 'bg-emerald-50o0 text-white',
+                                : item.badge === 'Innovation',
+                                  ? 'bg-pink-50o0 text-white',
+                                  : item.badge === 'Pricing',
+                                    ? 'bg-yellow-50o0 text-black',
+                                    : item.badge === 'Showcase',
+                                      ? 'bg-purple-50o0 text-white',
+                                      : 'bg-gray-50o0 text-white'}`}
+                    >,
                       {item.badge}
-                    </span>
-                  )}
+                    </span>)}
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-30o0 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-
+                      activeDropdown === item.name ? 'rotate-180' : ''}`}
+                  />,
+                </button>,
                 {/* Dropdown Menu */}
-                <AnimatePresence>
+                <AnimatePresence>,
                   {activeDropdown === item.name && (
-                    <motion.div
+                    <motion.div,
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-                    >
-                      <div className='p-4'>
-                        <div className='mb-4'>
-                          <h3 className='text-lg font-bold text-white mb-2'>
+                      className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'>,
+                      <div className='p-4'>,
+                        <div className='mb-4'>,
+                          <h3 className='text-lg font-bold text-white mb-2'>,
                             {item.name}
-                          </h3>
-                          <p className='text-sm text-gray-40o0'>
+                          </h3>,
+                          <p className='text-sm text-gray-40o0'>,
                             {item.description}
-                          </p>
-                        </div>
-                        <div className='space-y-1'>
+                          </p>,
+                        </div>,
+                        <div className='space-y-1'>,
                           {item.children?.map(child => (
                             <Link
                               key={child.name}
                               href={child.href}
                               onClick={closeAllDropdowns}
-                              className='flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group'
-                            >
-                              <div className='w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full group-hover:scale-150 transition-transform duration-20o0' />
-                              <div className='flex-1'>
-                                <div className='text-white font-medium group-hover:text-purple-40o0 transition-colors duration-20o0'>
+                              className='flex items-center gap-3 p-3 rounded-lg hover: bg-white/5 transition-colors duration-20o0 group'>,
+                              <div className='w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full group-hover:scale-150 transition-transform duration-20o0' />,
+                              <div className='flex-1'>,
+                                <div className='text-white font-medium group-hover:text-purple-40o0 transition-colors duration-20o0'>,
                                   {child.name}
-                                </div>
-                                <div className='text-sm text-gray-40o0'>
+                                </div>,
+                                <div className='text-sm text-gray-40o0'>,
                                   {child.description}
-                                </div>
-                              </div>
-                              <ArrowRight className='w-4 h-4 text-gray-50o0 group-hover:text-purple-40o0 transition-colors duration-20o0' />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-
+                                </div>,
+                              </div>,
+                              <ArrowRight className='w-4 h-4 text-gray-50o0 group-hover: text-purple-40o0 transition-colors duration-20o0' />,
+                            </Link>))}
+                        </div>,
+                      </div>,
+                    </motion.div>)}
+                </AnimatePresence>,
+              </div>))}
+          </div>,
           {/* Right Side Actions */}
-          <div className='hidden lg:flex items-center gap-4'>
-            <Link href='/contact'>
-              <button className='px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25'>
-                Get Started
-              </button>
-            </Link>
-          </div>
-
+          <div className='hidden lg: flex items-center gap-4'>,
+            <Link href='/contact'>,
+              <button className='px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-cyan-50o0/25'>,
+                Get Started,
+              </button>,
+            </Link>,
+          </div>,
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className='lg:hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors'
-          >
+            className='lg: hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors'>,
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-          </button>
-        </div>
-      </div>
-
+          </button>,
+        </div>,
+      </div>,
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence>,
         {isOpen && (
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 overflow-hidden'
-          >
-            <div className='px-4 py-6 space-y-4'>
+            className='lg: hidden bg-black/95 backdrop-blur-xl border-t border-white/10 overflow-hidden'>,
+            <div className='px-4 py-6 space-y-4'>,
               {navigationItems.map(item => (
-                <div key={item.name}>
+                <div key={item.name}>,
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className='w-full flex items-center justify-between p-3 rounded-lg text-left text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors'
-                  >
-                    <div className='flex items-center gap-3'>
+                    className='w-full flex items-center justify-between p-3 rounded-lg text-left text-gray-30o0 hover: text-white hover:bg-white/5 transition-colors'>,
+                    <div className='flex items-center gap-3'>,
                       {item.icon}
-                      <span className='font-medium'>{item.name}</span>
+                      <span className='font-medium'>{item.name}</span>,
                       {item.badge && (
                         <span
                           className={`px-2 py-1 text-xs font-bold rounded-full ${
-                            item.badge === 'New'
-                              ? 'bg-green-50o0 text-black'
-                              : item.badge === 'Hot'
-                                ? 'bg-red-50o0 text-white'
-                                : item.badge === 'Enterprise'
-                                  ? 'bg-blue-50o0 text-white'
-                                  : item.badge === 'Business'
-                                    ? 'bg-emerald-50o0 text-white'
-                                    : item.badge === 'Innovation'
-                                      ? 'bg-pink-50o0 text-white'
-                                      : item.badge === 'Pricing'
-                                        ? 'bg-yellow-50o0 text-black'
-                                        : item.badge === 'Showcase'
-                                          ? 'bg-purple-50o0 text-white'
-                                          : 'bg-gray-50o0 text-white'
-                          }`}
-                        >
+                            item.badge === 'New',
+                              ? 'bg-green-50o0 text-black',
+                              : item.badge === 'Hot',
+                                ? 'bg-red-50o0 text-white',
+                                : item.badge === 'Enterprise',
+                                  ? 'bg-blue-50o0 text-white',
+                                  : item.badge === 'Business',
+                                    ? 'bg-emerald-50o0 text-white',
+                                    : item.badge === 'Innovation',
+                                      ? 'bg-pink-50o0 text-white',
+                                      : item.badge === 'Pricing',
+                                        ? 'bg-yellow-50o0 text-black',
+                                        : item.badge === 'Showcase',
+                                          ? 'bg-purple-50o0 text-white',
+                                          : 'bg-gray-50o0 text-white'}`}
+                        >,
                           {item.badge}
-                        </span>
-                      )}
-                    </div>
+                        </span>)}
+                    </div>,
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-30o0 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </button>
-
+                        activeDropdown === item.name ? 'rotate-180' : ''}`}
+                    />,
+                  </button>,
                   {activeDropdown === item.name && (
-                    <div className='ml-6 mt-2 space-y-2'>
+                    <div className='ml-6 mt-2 space-y-2'>,
                       {item.children?.map(child => (
                         <Link
                           key={child.name}
                           href={child.href}
                           onClick={closeAllDropdowns}
-                          className='block p-3 rounded-lg text-gray-40o0 hover:text-white hover:bg-white/5 transition-colors'
-                        >
-                          <div className='font-medium'>{child.name}</div>
-                          <div className='text-sm'>{child.description}</div>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              <div className='pt-4 border-t border-white/10'>
-                <Link href='/contact'>
-                  <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0'>
-                    Get Started
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-}
+                          className='block p-3 rounded-lg text-gray-40o0 hover: text-white hover:bg-white/5 transition-colors'>,
+                          <div className='font-medium'>{child.name}</div>,
+                          <div className='text-sm'>{child.description}</div>,
+                        </Link>))}
+                    </div>)}
+                </div>))}
+,
+              <div className='pt-4 border-t border-white/10'>,
+                <Link href='/contact'>,
+                  <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover: from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0'>,
+                    Get Started,
+                  </button>,
+                </Link>,
+              </div>,
+            </div>,
+          </motion.div>)}
+      </AnimatePresence>,
+    </nav>)}
+,

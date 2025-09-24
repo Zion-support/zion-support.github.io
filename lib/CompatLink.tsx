@@ -1,11 +1,12 @@
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import React from 'react',
+import NextLink, { LinkProps as NextLinkProps } from 'next/link',
 
-type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>;
+type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement>,
 
 type CompatLinkProps = NextLinkProps &
   AnchorProps & {
-    children?: React.ReactNode;
-  };
+    children?: React.ReactNode,
+  },
 
 // A compatibility wrapper that ensures a single anchor child is provided to Next.js Link
 // and gracefully supports multiple children by wrapping them inside the anchor.
@@ -34,5 +35,5 @@ export default function Link({
     >
       <a {...anchorProps}>{children}</a>
     </NextLink>
-  );
+  ),
 }

@@ -1,9 +1,8 @@
-import { createNotification } from './createNotification';
-import { SystemNotificationParams } from './types';
-
-/**
- * Creates a system notification for a user
- */
+import { createNotification } from './createNotification',
+import { SystemNotificationParams } from './types',
+/**,
+ * Creates a system notification for a user,
+ */,
 export async function createSystemNotification({
   userId,
   title,
@@ -19,6 +18,6 @@ export async function createSystemNotification({
     type: 'system',
     sendEmail,
     actionUrl,
-    actionText,
-  });
-}
+    actionText
+  })}
+,

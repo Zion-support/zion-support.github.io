@@ -1,191 +1,179 @@
-// SEO is deprecated in Next 15; relying on metadata export
-import Link from 'next/link';
-
+// SEO is deprecated in Next 15, relying on metadata export,
+import Link from 'next/link',
 export const metadata = {
   title: 'AI 20o25 Advanced Automation - Revolutionary Business Transformation',
-  description:
+  description:,
     'Discover the future of AI automation in 20o25. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 10o00% ROI.',
   keywords: [
-    'AI automation 20o25',
-    'advanced neural networks',
-    'autonomous business systems',
-    'AI transformation',
+    'AI automation 20o25advanced neural networks',
+    'autonomous business systemsAI transformation',
     'intelligent automation',
-  ],
-};
-
+  ]
+},
 export default function AI20o25AdvancedAutomationPage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0'>
+    <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0'>,
       {/* SEO handled by metadata API */}
-
+,
       {/* Hero Section */}
-      <section className='py-20 px-4'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full px-6 py-2 mb-6'>
-            <span className='text-sm font-medium text-white'>
-              🚀 NEW 20o25 BREAKTHROUGH
-            </span>
-          </div>
-          <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
-            AI 20o25 Advanced Automation
-          </h1>
-          <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>
-            Revolutionary AI automation technologies that transform businesses
-            with 10o00% ROI. Advanced neural networks, autonomous systems, and
-            intelligent processes.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+      <section className='py-20 px-4'>,
+        <div className='max-w-6xl mx-auto text-center'>,
+          <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full px-6 py-2 mb-6'>,
+            <span className='text-sm font-medium text-white'>,
+              🚀 NEW 20o25 BREAKTHROUGH,
+            </span>,
+          </div>,
+          <h1 className='text-5xl md: text-7xl font-bold text-white mb-6'>,
+            AI 20o25 Advanced Automation,
+          </h1>,
+          <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
+            Revolutionary AI automation technologies that transform businesses,
+            with 10o00% ROI. Advanced neural networks, autonomous systems, and,
+            intelligent processes.,
+          </p>,
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
             <Link
-              href='/contact'
-              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'
-            >
-              Get Started Today
-            </Link>
+              href='/contact',
+              className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
+              Get Started Today,
+            </Link>,
             <Link
-              href='/ai-20o25-advanced-automation/case-studies'
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'
-            >
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
+              href='/ai-20o25-advanced-automation/case-studies',
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
+              View Case Studies,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
       {/* Key Features */}
-      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Revolutionary AI Automation Features
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>
-              <div className='text-4xl mb-4'>🧠</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Advanced Neural Networks
-              </h3>
-              <p className='text-gray-30o0'>
-                Next-generation neural architectures that learn and adapt in
-                real-time, delivering unprecedented automation capabilities.
-              </p>
-            </div>
-            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>
-              <div className='text-4xl mb-4'>🤖</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Autonomous Systems
-              </h3>
-              <p className='text-gray-30o0'>
-                Self-managing AI systems that operate independently, making
-                intelligent decisions without human intervention.
-              </p>
-            </div>
-            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>
-              <div className='text-4xl mb-4'>⚡</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Real-time Processing
-              </h3>
-              <p className='text-gray-30o0'>
-                Lightning-fast AI processing that handles complex tasks in
-                milliseconds, delivering instant results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>,
+            Revolutionary AI Automation Features,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
+            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>,
+              <div className='text-4xl mb-4'>🧠</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Advanced Neural Networks,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Next-generation neural architectures that learn and adapt in,
+                real-time, delivering unprecedented automation capabilities.,
+              </p>,
+            </div>,
+            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>,
+              <div className='text-4xl mb-4'>🤖</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Autonomous Systems,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Self-managing AI systems that operate independently, making,
+                intelligent decisions without human intervention.,
+              </p>,
+            </div>,
+            <div className='bg-white/20 backdrop-blur-sm p-8 rounded-xl'>,
+              <div className='text-4xl mb-4'>⚡</div>,
+              <h3 className='text-2xl font-bold text-white mb-4'>,
+                Real-time Processing,
+              </h3>,
+              <p className='text-gray-30o0'>,
+                Lightning-fast AI processing that handles complex tasks in,
+                milliseconds, delivering instant results.,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* ROI Statistics */}
-      <section className='py-16 px-4'>
-        <div className='max-w-6xl mx-auto text-center'>
-          <h2 className='text-4xl font-bold text-white mb-12'>
-            Proven Results & ROI
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            <div className='bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>10o00%</div>
-              <div className='text-green-10o0'>Average ROI Increase</div>
-            </div>
-            <div className='bg-gradient-to-br from-blue-50o0 to-cyan-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>95%</div>
-              <div className='text-blue-10o0'>Process Automation</div>
-            </div>
-            <div className='bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>80%</div>
-              <div className='text-purple-10o0'>Cost Reduction</div>
-            </div>
-            <div className='bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl'>
-              <div className='text-4xl font-bold text-white mb-2'>24/7</div>
-              <div className='text-orange-10o0'>Autonomous Operation</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4'>,
+        <div className='max-w-6xl mx-auto text-center'>,
+          <h2 className='text-4xl font-bold text-white mb-12'>,
+            Proven Results & ROI,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
+            <div className='bg-gradient-to-br from-green-50o0 to-emerald-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>10o00%</div>,
+              <div className='text-green-10o0'>Average ROI Increase</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-blue-50o0 to-cyan-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>95%</div>,
+              <div className='text-blue-10o0'>Process Automation</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-purple-50o0 to-pink-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>80%</div>,
+              <div className='text-purple-10o0'>Cost Reduction</div>,
+            </div>,
+            <div className='bg-gradient-to-br from-orange-50o0 to-red-60o0 p-8 rounded-xl'>,
+              <div className='text-4xl font-bold text-white mb-2'>24/7</div>,
+              <div className='text-orange-10o0'>Autonomous Operation</div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Implementation Process */}
-      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Implementation Process
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            <div className='text-center'>
-              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>
-                1
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>Assessment</h3>
-              <p className='text-gray-30o0'>
-                Analyze your current processes and identify automation
-                opportunities
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>
-                2
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>Design</h3>
-              <p className='text-gray-30o0'>
-                Create custom AI automation solutions tailored to your needs
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>
-                3
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>Deploy</h3>
-              <p className='text-gray-30o0'>
-                Implement and integrate AI systems into your infrastructure
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>
-                4
-              </div>
-              <h3 className='text-xl font-bold text-white mb-2'>Optimize</h3>
-              <p className='text-gray-30o0'>
-                Continuously monitor and optimize for maximum performance
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-white text-center mb-12'>,
+            Implementation Process,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>,
+                1,
+              </div>,
+              <h3 className='text-xl font-bold text-white mb-2'>Assessment</h3>,
+              <p className='text-gray-30o0'>,
+                Analyze your current processes and identify automation,
+                opportunities,
+              </p>,
+            </div>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>,
+                2,
+              </div>,
+              <h3 className='text-xl font-bold text-white mb-2'>Design</h3>,
+              <p className='text-gray-30o0'>,
+                Create custom AI automation solutions tailored to your needs,
+              </p>,
+            </div>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>,
+                3,
+              </div>,
+              <h3 className='text-xl font-bold text-white mb-2'>Deploy</h3>,
+              <p className='text-gray-30o0'>,
+                Implement and integrate AI systems into your infrastructure,
+              </p>,
+            </div>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4'>,
+                4,
+              </div>,
+              <h3 className='text-xl font-bold text-white mb-2'>Optimize</h3>,
+              <p className='text-gray-30o0'>,
+                Continuously monitor and optimize for maximum performance,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* CTA Section */}
-      <section className='py-20 px-4'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <h2 className='text-4xl font-bold text-white mb-6'>
-            Ready to Transform Your Business?
-          </h2>
-          <p className='text-xl text-gray-30o0 mb-8'>
-            Join thousands of companies already using AI 20o25 Advanced
-            Automation to achieve unprecedented growth and efficiency.
-          </p>
+      <section className='py-20 px-4'>,
+        <div className='max-w-4xl mx-auto text-center'>,
+          <h2 className='text-4xl font-bold text-white mb-6'>,
+            Ready to Transform Your Business?,
+          </h2>,
+          <p className='text-xl text-gray-30o0 mb-8'>,
+            Join thousands of companies already using AI 20o25 Advanced,
+            Automation to achieve unprecedented growth and efficiency.,
+          </p>,
           <Link
-            href='/contact'
-            className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'
-          >
-            Start Your AI Transformation
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
-}
+            href='/contact',
+            className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-purple-70o0 hover:to-pink-70o0 transition-all transform hover:scale-10o5'>,
+            Start Your AI Transformation,
+          </Link>,
+        </div>,
+      </section>,
+    </div>)}
+,

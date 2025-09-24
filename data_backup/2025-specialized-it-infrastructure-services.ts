@@ -1,50 +1,48 @@
 export interface SpecializedITInfrastructureService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;const contact ={
-  mobile:,
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,const contact ={
+  mobile: ,
   +1 30o2 464 0950',
   "email": 'kleber@ziontechgroup.com,
   address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-  ;
-  ;
-  "website": 'https://ziontechgroup.com};
+  "website": 'https: //ziontechgroup.com},
 export const "specializedITInfrastructureServices20o25": SpecializedITInfrastructureService[] = [{
-    id:,
+    id: ,
   edge-computing-optimization-platform',
     "name": 'Edge Computing Optimization Platform,
     tagline:,
@@ -53,19 +51,13 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "period": '/month,
     "description": 'Advanced edge computing optimization platform that intelligently distributes workloads, manages resources, and optimizes performance across distributed edge locations for maximum efficiency and cost savings.',
     features[
-  'Intelligent workload distribution',
-  'Resource optimization',
-  'Performance monitoring',
-  'Cost management',
-  'Edge location management',
-  'Load balancing',
-  'Real-time analytics',
-  'Automated scaling',
-  'Security management',
-  'Compliance monitoring'
-    ],
+  'Intelligent workload distributionResource optimization',
+  'Performance monitoringCost management',
+  'Edge location managementLoad balancing',
+  'Real-time analyticsAutomated scaling',
+  'Security managementCompliance monitoring'],
     "popular": true,
-    icon:,
+    icon: ,
   🌐',
     "color": 'from-blue-60o0 to-indigo-60o0,
     textColor:,
@@ -75,7 +67,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   Competes with AWS Outposts ($1,0o00/month), Azure Stack Edge ($50o0/month). Our "advantage": 40% cost reduction with 60% performance improvement.,
     "targetAudience": 'Cloud providers, IoT companies, Manufacturing, Healthcare, Financial services',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   3-4 weeks',
     "category": 'Edge Computing,
     "realService": true,
@@ -90,15 +82,14 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "growthRate": '10o5% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Edge computing optimization platform with intelligent workload distribution and resource management',
     "launchDate": '20o25-0o2-25,
     "customers": 78,
     "rating": 4.7,
-    "reviews": 56
-  },
+    "reviews": 56},
   {
-    id:,
+    id: ,
   quantum-ready-network-infrastructure',
     "name": 'Quantum-Ready Network Infrastructure,
     tagline:,
@@ -106,19 +97,13 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "price": $3,299,
     "period": '/month,
     "description": 'Next-generation network infrastructure designed to be quantum-ready, featuring quantum-resistant encryption, advanced routing algorithms, and future-proof architecture for the quantum computing era.',
-    features['Quantum-resistant encryption',
-  'Advanced routing algorithms',
-  'Network virtualization',
-  'SDN capabilities',
-  'Security monitoring',
-  'Performance optimization',
-  'Scalability management',
-  'Compliance features',
-  'API integration',
-  'Analytics dashboard'
-    ],
+    features['Quantum-resistant encryptionAdvanced routing algorithms',
+  'Network virtualizationSDN capabilities',
+  'Security monitoringPerformance optimization',
+  'Scalability managementCompliance features',
+  'API integrationAnalytics dashboard'],
     "popular": false,
-    icon:,
+    icon: ,
   🔮',
     "color": 'from-purple-60o0 to-pink-60o0,
     textColor:,
@@ -128,7 +113,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   First-to-market quantum-ready network infrastructure. No direct competitors yet in quantum-ready networking.',
     "targetAudience": Government agencies, Financial institutions, Healthcare, Defense contractors, Research institutions',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   6-8 weeks',
     "category": 'Quantum Computing,
     "realService": true,
@@ -138,21 +123,19 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     useCases['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks'],
     "roi": 'Critical infrastructure organizations report priceless value for future security,
     competitors[,
-  No direct competitors yet',
-  'Traditional network vendors'],
+  No direct competitors yetTraditional network vendors'],
     "marketSize": '$2.1B quantum networking market,
     "growthRate": '20o0% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Quantum-ready network infrastructure with quantum-resistant encryption and advanced routing',
     "launchDate": '20o25-0o3-0o1,
     "customers": 23,
     "rating": 4.9,
-    "reviews": 18
-  },
+    "reviews": 18},
   {
-    id:,
+    id: ,
   autonomous-devops-automation-platform',
     "name": 'Autonomous DevOps Automation Platform,
     tagline:,
@@ -160,19 +143,13 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "price": $1,599,
     "period": '/month,
     "description": 'Intelligent DevOps automation platform that autonomously manages deployment pipelines, infrastructure provisioning, monitoring, and optimization using AI and machine learning for maximum efficiency.',
-    features['Automated CI/CD pipelines',
-  'Infrastructure as Code',
-  'Intelligent monitoring',
-  'Auto-scaling',
-  'Performance optimization',
-  'Security scanning',
-  'Compliance automation',
-  'Cost optimization',
-  'Real-time analytics',
-  'Integration capabilities'
-    ],
+    features['Automated CI/CD pipelinesInfrastructure as Code',
+  'Intelligent monitoringAuto-scaling',
+  'Performance optimizationSecurity scanning',
+  'Compliance automationCost optimization',
+  'Real-time analyticsIntegration capabilities'],
     "popular": true,
-    icon:,
+    icon: ,
   ⚡',
     "color": 'from-green-60o0 to-emerald-60o0,
     textColor:,
@@ -182,7 +159,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   Competes with GitLab ($99/user/month), Jenkins (free), CircleCI ($50/month). Our "advantage": 90% automation with 70% faster deployments.,
     "targetAudience": 'DevOps teams, Software companies, IT departments, Cloud providers, Startups',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   2-3 weeks',
     "category": 'DevOps & Automation,
     "realService": true,
@@ -197,15 +174,14 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "growthRate": '95% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Autonomous DevOps automation platform with AI-powered workflow management and optimization',
     "launchDate": '20o25-0o2-28,
     "customers": 134,
     "rating": 4.8,
-    "reviews": 89
-  },
+    "reviews": 89},
   {
-    id:,
+    id: ,
   zero-trust-security-framework',
     "name": 'Zero Trust Security Framework,
     tagline:,
@@ -213,19 +189,13 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "price": $2,499,
     "period": '/month,
     "description": 'Comprehensive zero trust security framework that continuously verifies every user, device, and connection while providing adaptive access control and real-time threat detection.',
-    features['Continuous verification',
-  'Adaptive access control',
-  'Threat detection',
-  'Identity management',
-  'Device trust scoring',
-  'Network segmentation',
-  'Behavioral analytics',
-  'Compliance reporting',
-  'API security',
-  'Integration capabilities'
-    ],
+    features['Continuous verificationAdaptive access control',
+  'Threat detectionIdentity management',
+  'Device trust scoringNetwork segmentation',
+  'Behavioral analyticsCompliance reporting',
+  'API securityIntegration capabilities'],
     "popular": true,
-    icon:,
+    icon: ,
   🛡️',
     "color": 'from-red-60o0 to-orange-60o0,
     textColor:,
@@ -235,7 +205,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   Competes with Okta ($2/month/user), Palo Alto ($50/month), CrowdStrike ($8/month). Our "advantage": 99.9% threat detection with zero false positives.,
     "targetAudience": 'Enterprise companies, Government agencies, Financial institutions, Healthcare, Educational institutions',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   4-6 weeks',
     "category": 'Cybersecurity,
     "realService": true,
@@ -250,35 +220,28 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "growthRate": '85% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Zero trust security framework with continuous verification and adaptive access control',
     "launchDate": '20o25-0o3-0o5,
     "customers": 89,
     "rating": 4.9,
-    "reviews": 67
-  },
+    "reviews": 67},
   {
-    id:,
+    id: ,
   intelligent-data-center-management',
     "name": 'Intelligent Data Center Management,
     tagline:,
   AI-powered data center optimization for maximum efficiency and cost savings',
     "price": $2,899,
     "period": '/month,
-    "description": 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and performance.',
-    features['Power optimization',
-  'Cooling management',
-  'Server utilization',
-  'Capacity planning',
-  'Energy efficiency',
-  'Performance monitoring',
-  'Predictive maintenance',
-  'Cost analytics',
-  'Compliance reporting',
-  'Integration capabilities'
-    ],
+    "description": 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and window.window.performance.',
+    features['Power optimizationCooling management',
+  'Server utilizationCapacity planning',
+  'Energy efficiencyPerformance monitoring',
+  'Predictive maintenanceCost analytics',
+  'Compliance reportingIntegration capabilities'],
     "popular": false,
-    icon:,
+    icon: ,
   🏢',
     "color": 'from-gray-60o0 to-slate-60o0,
     textColor:,
@@ -288,7 +251,7 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
   Competes with Schneider Electric ($1,0o00/month), Eaton ($80o0/month), Vertiv ($1,20o0/month). Our "advantage": 35% energy cost reduction with AI optimization.,
     "targetAudience": 'Data center operators, Cloud providers, Enterprise companies, Colocation providers, Hosting companies',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   5-7 weeks',
     "category": 'Data Center Management,
     "realService": true,
@@ -303,10 +266,10 @@ export const "specializedITInfrastructureServices20o25": SpecializedITInfrastruc
     "growthRate": '75% annual growth',
     "contactInfo": contact,
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   AI-powered data center management platform with energy optimization and performance monitoring',
     "launchDate": '20o25-0o3-10,
     "customers": 56,
     "rating": 4.6,
-    "reviews": 34
-]}}
+    "reviews": 34]}}
+,

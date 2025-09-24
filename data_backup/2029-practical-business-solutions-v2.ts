@@ -1,44 +1,44 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from "../types/service-variants",
 export interface PracticalBusinessSolution20o29 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessSolution20o29[] = [// AI-Powered Business Intelligence
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,export const practicalBusinessSolutions20o29: PracticalBusinessSolution20o29[] = [// AI-Powered Business Intelligence,
   {
-    id:,
+    id: ,
   ai-business-intelligence-suite',
     "name": 'AI Business Intelligence Suite,
     tagline:,
@@ -47,19 +47,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "period": '/month,
     "description": 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
     features[
-  'Real-time data analytics',
-  'Predictive business modeling',
-  'Automated report generation',
-  'Custom dashboard creation',
-  'Data visualization tools',
-  'Business trend analysis',
-  'Performance benchmarking',
-  'ROI tracking automation',
-  'Market opportunity identification',
-  'Competitive intelligence'
-    ],
+  'Real-time data analyticsPredictive business modeling',
+  'Automated report generationCustom dashboard creation',
+  'Data visualization toolsBusiness trend analysis',
+  'Performance benchmarkingROI tracking automation',
+  'Market opportunity identificationCompetitive intelligence'],
     "popular": true,
-    icon:,
+    icon: ,
   📊',
     "color": 'from-blue-50o0 via-indigo-50o0 to-purple-50o0,
     textColor:,
@@ -69,7 +63,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
     "targetAudience": Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   2-3 weeks',
     "category": 'AI Business Intelligence,
     "realService": true,
@@ -81,7 +75,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   Tableau, Power BI, Qlik, Looker, Domo'],
     "marketSize": '$18B market,
-    growthRate:,
+    growthRate: ,
   280% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -90,19 +84,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',
     "launchDate": '20o24-0o7-0o1,
     "customers": 95,
     "rating": 4.8,
-    "reviews": 167
-  },
-  // Intelligent Customer Experience Platform
+    "reviews": 167},
+  // Intelligent Customer Experience Platform,
   {
-    id:,
+    id: ,
   intelligent-customer-experience-platform',
     "name": 'Intelligent Customer Experience Platform,
     tagline:,
@@ -110,19 +102,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $1,899,
     "period": '/month,
     "description": 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
-    features['AI-powered personalization',
-  'Customer journey mapping',
-  'Real-time optimization',
-  'Multi-channel integration',
-  'Behavioral analytics',
-  'Predictive customer insights',
-  'Automated A/B testing',
-  'Customer sentiment analysis',
-  'Loyalty program optimization',
-  'Revenue optimization'
-    ],
+    features['AI-powered personalizationCustomer journey mapping',
+  'Real-time optimizationMulti-channel integration',
+  'Behavioral analyticsPredictive customer insights',
+  'Automated A/B testingCustomer sentiment analysis',
+  'Loyalty program optimizationRevenue optimization'],
     "popular": true,
-    icon:,
+    icon: ,
   🎯',
     "color": 'from-green-50o0 via-emerald-50o0 to-teal-50o0,
     textColor:,
@@ -132,7 +118,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.',
     "targetAudience": E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   1-2 weeks',
     "category": 'Customer Experience,
     "realService": true,
@@ -144,7 +130,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
     "marketSize": '$22B market,
-    growthRate:,
+    growthRate: ,
   320% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -153,19 +139,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.',
     "launchDate": '20o24-08-15,
     "customers": 78,
     "rating": 4.9,
-    "reviews": 134
-  },
-  // Smart Supply Chain Optimization
+    "reviews": 134},
+  // Smart Supply Chain Optimization,
   {
-    id:,
+    id: ,
   smart-supply-chain-optimization',
     "name": 'Smart Supply Chain Optimization,
     tagline:,
@@ -173,19 +157,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $3,999,
     "period": '/month,
     "description": 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.',
-    features['AI demand forecasting',
-  'Inventory optimization',
-  'Supply chain risk management',
-  'Real-time monitoring',
-  'Cost optimization',
-  'Supplier performance tracking',
-  'Logistics optimization',
-  'Sustainability tracking',
-  'Compliance automation',
-  'Performance analytics'
-    ],
+    features['AI demand forecastingInventory optimization',
+  'Supply chain risk managementReal-time monitoring',
+  'Cost optimizationSupplier performance tracking',
+  'Logistics optimizationSustainability tracking',
+  'Compliance automationPerformance analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   🚚',
     "color": 'from-orange-50o0 via-red-50o0 to-pink-50o0,
     textColor:,
@@ -195,7 +173,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Leading AI supply chain platform. 40% cost reduction compared to traditional supply chain management.',
     "targetAudience": Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   3-4 weeks',
     "category": 'Supply Chain Management,
     "realService": true,
@@ -207,7 +185,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
     "marketSize": '$28B market,
-    growthRate:,
+    growthRate: ,
   350% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -216,19 +194,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.',
     "launchDate": '20o24-09-0o1,
     "customers": 65,
     "rating": 4.8,
-    "reviews": 98
-  },
-  // Intelligent HR Management System
+    "reviews": 98},
+  // Intelligent HR Management System,
   {
-    id:,
+    id: ,
   intelligent-hr-management-system',
     "name": 'Intelligent HR Management System,
     tagline:,
@@ -236,19 +212,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $1,599,
     "period": '/month,
     "description": 'Next-generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data-driven HR strategies that drive business success.',
-    features['AI-powered recruitment',
-  'Employee engagement analytics',
-  'Turnover prediction',
-  'Performance optimization',
-  'Skills gap analysis',
-  'Training recommendations',
-  'Diversity and inclusion tracking',
-  'Compliance automation',
-  'Employee sentiment analysis',
-  'HR analytics dashboard'
-    ],
+    features['AI-powered recruitmentEmployee engagement analytics',
+  'Turnover predictionPerformance optimization',
+  'Skills gap analysisTraining recommendations',
+  'Diversity and inclusion trackingCompliance automation',
+  'Employee sentiment analysisHR analytics dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   👥',
     "color": 'from-purple-50o0 via-violet-50o0 to-indigo-50o0,
     textColor:,
@@ -258,7 +228,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Advanced AI HR platform. 50% better employee retention than traditional HR systems.',
     "targetAudience": Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   2-3 weeks',
     "category": 'Human Resources,
     "realService": true,
@@ -270,7 +240,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   Workday, BambooHR, ADP, Gusto, Zenefits'],
     "marketSize": '$15B market,
-    growthRate:,
+    growthRate: ,
   30o0% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -279,19 +249,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production HR management system with AI recruitment, employee analytics, and performance optimization.',
     "launchDate": '20o24-10-0o1,
     "customers": 112,
     "rating": 4.7,
-    "reviews": 189
-  },
-  // Smart Financial Management Platform
+    "reviews": 189},
+  // Smart Financial Management Platform,
   {
-    id:,
+    id: ,
   smart-financial-management-platform',
     "name": 'Smart Financial Management Platform,
     tagline:,
@@ -299,19 +267,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $2,999,
     "period": '/month,
     "description": 'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real-time financial insights for better business decisions.',
-    features['AI cash flow optimization',
-  'Financial risk prediction',
-  'Automated accounting',
-  'Real-time financial insights',
-  'Budget optimization',
-  'Expense tracking automation',
-  'Financial forecasting',
-  'Tax optimization',
-  'Compliance monitoring',
-  'Performance analytics'
-    ],
+    features['AI cash flow optimizationFinancial risk prediction',
+  'Automated accountingReal-time financial insights',
+  'Budget optimizationExpense tracking automation',
+  'Financial forecastingTax optimization',
+  'Compliance monitoringPerformance analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   💼',
     "color": 'from-emerald-50o0 via-teal-50o0 to-cyan-50o0,
     textColor:,
@@ -321,7 +283,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Leading AI financial platform. 45% better financial optimization than traditional financial tools.',
     "targetAudience": Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2-4 weeks',
     "category": 'Financial Management,
     "realService": true,
@@ -333,7 +295,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   QuickBooks, Xero, FreshBooks, Wave, Sage'],
     "marketSize": '$20B market,
-    growthRate:,
+    growthRate: ,
   280% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -342,19 +304,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced financial management platform with AI optimization, risk prediction, and automated accounting.',
     "launchDate": '20o24-11-15,
     "customers": 89,
     "rating": 4.8,
-    "reviews": 156
-  },
-  // Intelligent Marketing Automation
+    "reviews": 156},
+  // Intelligent Marketing Automation,
   {
-    id:,
+    id: ,
   intelligent-marketing-automation',
     "name": 'Intelligent Marketing Automation,
     tagline:,
@@ -362,19 +322,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $1,299,
     "period": '/month,
     "description": 'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.',
-    features['AI campaign optimization',
-  'Content personalization',
-  'Customer behavior prediction',
-  'Marketing workflow automation',
-  'ROI optimization',
-  'Multi-channel campaign management',
-  'A/B testing automation',
-  'Customer segmentation',
-  'Lead scoring automation',
-  'Performance analytics'
-    ],
+    features['AI campaign optimizationContent personalization',
+  'Customer behavior predictionMarketing workflow automation',
+  'ROI optimizationMulti-channel campaign management',
+  'A/B testing automationCustomer segmentation',
+  'Lead scoring automationPerformance analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   📢',
     "color": 'from-pink-50o0 via-rose-50o0 to-red-50o0,
     textColor:,
@@ -384,7 +338,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Advanced AI marketing platform. 55% better campaign performance than traditional marketing tools.',
     "targetAudience": Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   1-2 weeks',
     "category": 'Marketing Automation,
     "realService": true,
@@ -396,7 +350,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
     "marketSize": '$25B market,
-    growthRate:,
+    growthRate: ,
   320% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -405,19 +359,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production marketing automation platform with AI optimization, personalization, and workflow automation.',
     "launchDate": '20o24-12-0o1,
     "customers": 156,
     "rating": 4.9,
-    "reviews": 234
-  },
-  // Smart Project Management
+    "reviews": 234},
+  // Smart Project Management,
   {
-    id:,
+    id: ,
   smart-project-management',
     "name": 'Smart Project Management,
     tagline:,
@@ -426,19 +378,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     period:,
   /month',
     "description": Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
-    features['AI workflow optimization',
-  'Project risk prediction',
-  'Task automation',
-  'Team collaboration tools',
-  'Resource optimization',
-  'Timeline prediction',
-  'Quality assurance automation',
-  'Progress tracking',
-  'Communication optimization',
-  'Performance analytics'
-    ],
+    features['AI workflow optimizationProject risk prediction',
+  'Task automationTeam collaboration tools',
+  'Resource optimizationTimeline prediction',
+  'Quality assurance automationProgress tracking',
+  'Communication optimizationPerformance analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   📋',
     "color": 'from-cyan-50o0 via-blue-50o0 to-indigo-50o0,
     textColor:,
@@ -448,7 +394,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Advanced AI project management platform. 40% better project success rate than traditional tools.',
     "targetAudience": Project managers, Development teams, Consulting firms, Construction companies, Event planners',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   1-2 weeks',
     "category": 'Project Management,
     "realService": true,
@@ -460,7 +406,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   Asana, Monday.com, Trello, Jira, Basecamp'],
     "marketSize": '$12B market,
-    growthRate:,
+    growthRate: ,
   280% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -469,19 +415,17 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced project management platform with AI optimization, risk prediction, and workflow automation.',
     "launchDate": '20o25-0o1-0o1,
     "customers": 20o3,
     "rating": 4.8,
-    "reviews": 312
-  },
-  // Intelligent Sales Optimization
+    "reviews": 312},
+  // Intelligent Sales Optimization,
   {
-    id:,
+    id: ,
   intelligent-sales-optimization',
     "name": 'Intelligent Sales Optimization,
     tagline:,
@@ -489,19 +433,13 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     "price": $1,799,
     "period": '/month,
     "description": 'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.',
-    features['AI lead scoring',
-  'Customer behavior prediction',
-  'Sales process optimization',
-  'Revenue optimization',
-  'Pipeline management',
-  'Forecasting automation',
-  'Customer insights',
-  'Sales training optimization',
-  'Performance tracking',
-  'ROI analytics'
-    ],
+    features['AI lead scoringCustomer behavior prediction',
+  'Sales process optimizationRevenue optimization',
+  'Pipeline managementForecasting automation',
+  'Customer insightsSales training optimization',
+  'Performance trackingROI analytics'],
     "popular": true,
-    icon:,
+    icon: ,
   💰',
     "color": 'from-yellow-50o0 via-orange-50o0 to-red-50o0,
     textColor:,
@@ -511,7 +449,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
   Advanced AI sales platform. 50% better sales performance than traditional sales tools.',
     "targetAudience": Sales teams, B2B companies, SaaS businesses, Real estate, Financial services',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   2-3 weeks',
     "category": 'Sales Optimization,
     "realService": true,
@@ -523,7 +461,7 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
     competitors[,
   Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
     "marketSize": '$18B market,
-    growthRate:,
+    growthRate: ,
   30o0% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -532,25 +470,24 @@ reviews: number;export const practicalBusinessSolutions20o29: PracticalBusinessS
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',
     "launchDate": '20o25-0o2-0o1,
     "customers": 134,
     "rating": 4.9,
-    "reviews": 198
-];
-export const getPopularPracticalBusinessSolutions20o29 = () => {;
-  return practicalBusinessSolutions20o29.filter(service => service.popular)};
-export const getPracticalBusinessSolutions20o29ByCategory = ("category": string) => {;
-  return practicalBusinessSolutions20o29.filter(service => service.category === category)};
-export const getPopularPracticalBusinessSolutions20o29 = () => {;
-  return practicalBusinessSolutions20o29.filter(service => service.popular)};
-export const getPracticalBusinessSolutions20o29ByCategory = ("category": string) => {;
-  return practicalBusinessSolutions20o29.filter(service => service.category === category)};
-export const getPracticalBusinessSolutions20o29ByPriceRange = ("minPrice": number, "maxPrice": number) => {;
-  return practicalBusinessSolutions20o29.filter(service => {;
-const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+    "reviews": 198],
+export const getPopularPracticalBusinessSolutions20o29 = () => {
+  return practicalBusinessSolutions20o29.filter(service => service.popular)},
+export const getPracticalBusinessSolutions20o29ByCategory = ("category": string) => {
+  return practicalBusinessSolutions20o29.filter(service => service.category === category)},
+export const getPopularPracticalBusinessSolutions20o29 = () => {
+  return practicalBusinessSolutions20o29.filter(service => service.popular)},
+export const getPracticalBusinessSolutions20o29ByCategory = ("category": string) => {
+  return practicalBusinessSolutions20o29.filter(service => service.category === category)},
+export const getPracticalBusinessSolutions20o29ByPriceRange = ("minPrice": number, "maxPrice": number) => {
+  return practicalBusinessSolutions20o29.filter(service => {
+const price = parseInt(service.price.replace(/[^0-9]/g, '')),
 return price >= minPrice && price <= maxPrice})}}}
+,

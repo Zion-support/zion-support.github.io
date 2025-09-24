@@ -1,153 +1,124 @@
 
-
-import type { NextApiRequest, NextApiResponse } from 'next';
+,
+import type { NextApiRequest, NextApiResponse } from 'next',
 import {
-
-  authenticateRequest
-  listApiKeys
-  saveApiKeys;
   authenticateRequest,
-  listApiKeys,;
-  saveApiKeys,;
-
-} from '../../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
+  listApiKeys,
+  saveApiKeys,
+  authenticateRequest,
+  listApiKeys,
+  saveApiKeys,
+} from '../../../utils/api/partnerAuth',
+import { v4 as uuidv4 } from 'uuid',
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {;
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
+  req: NextApiRequest,
+  res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST'),
+    return res.status(405).json({ error: 'Method Not Allowed' })}
+  const auth = await authenticateRequest(req),
   if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-
-
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
+    return res.status(401).json({ error: 'Unauthorized' })}
+  const { apiKey } = auth,
+  const keys = await listApiKeys(),
+  // Deactivate old key,
+  const existing = keys.find(k => k.id === apiKey.id),  if (existing) existing.active = false,
+  // Create new key,
+  const now = new Date().toISOString(),
+  const newKey = {import type { NextApiRequest, NextApiResponse } from "next",
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth",
+import { v4 as uuidv4 } from "uuid",
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" })
-  }
-  const auth = await authenticateRequest(req);
+    res.setHeader("Allow", "POST"),
+    return res.status(405).json({ error: "Method Not Allowed" })}
+  const auth = await authenticateRequest(req),
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys.find((k) => k.id === apiKey.id);
-  if (existing) existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-
+    return res.status(401).json({ error: "Unauthorized" })}
+  const { apiKey } = auth,
+  const keys = await listApiKeys(),
+  // Deactivate old key,
+  const existing = keys.find((k) => k.id === apiKey.id),
+  if (existing) existing.active = false,
+  // Create new key,
+  const now = new Date().toISOString(),
   const newKey = {
     id: uuidv4(), partnerId: auth.partner.id,
     key: uuidv4(), active: true,
     createdAt: now,
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
-  keys.push(newKey as any);
-  await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key })
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
+  keys.push(newKey as any),
+  await saveApiKeys(keys),
+  return res.status(201).json({ apiKey: newKey.key })}
 }
-
-
-
-
-
-
-
-}
-    res.set_header ('Allow', 'POST');
-    return res.status (405).json ({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticate_request (req);
-  // Check condition
+    res.set_header ('AllowPOST'),
+    return res.status (405).json ({ error: 'Method Not Allowed' })}
+  const auth = await authenticate_request (req),
+  // Check condition,
 if ( {) {
-  $2
-}
-
-
-
-
-    return res.status (401).json ({ error: 'Unauthorized' });  }
-  const { api_key } = auth;
-  const keys = await listApiKeys ();
-  // Deactivate old key;
-  const existing = keys.find (key => k.id === api_key.id);  // Check condition
+  $2}
+,
+    return res.status (401).json ({ error: 'Unauthorized' })}
+  const { api_key } = auth,
+  const keys = await listApiKeys (),
+  // Deactivate old key,
+  const existing = keys.find (key => k.id === api_key.id),  // Check condition,
 if (existing.active = false) {
-  $2
-}
-  // Create new key;
-  const now = new Date ().toISOString ();
-  const new_key = {import type { NextApiRequest, NextApiResponse } from './next';
-import { authenticate_request, listApiKeys, saveApiKeys  } from '../../../utils / api / partner_auth';
-import { v4 as uuidv4  } from './uuid';
-export default async /**
- * handler - Function description
- */
+  $2}
+  // Create new key,
+  const now = new Date ().toISOString (),
+  const new_key = {import type { NextApiRequest, NextApiResponse } from './next',
+import { authenticate_request, listApiKeys, saveApiKeys  } from '../../../utils / api / partner_auth',
+import { v4 as uuidv4  } from './uuid',
+export default async /**,
+ * handler - Function description,
+ */,
 function handler() {
-  // Check condition
+  // Check condition,
 if ( {) {
-  $2
-}
-    res.set_header ("Allow", "POST");
-    return res.status (405).json ({ error: "Method Not Allowed" });
-  }
-  const auth = await authenticate_request (req);
-  // Check condition
+  $2}
+    res.set_header ("Allow", "POST"),
+    return res.status (405).json ({ error: "Method Not Allowed" })}
+  const auth = await authenticate_request (req),
+  // Check condition,
 if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: "Unauthorized" });
-  const { api_key } = auth;
-  const keys = await listApiKeys ();
-  // Deactivate old key;
-  const existing = keys.find (key => k.id === api_key.id);  const existing = keys.find ((k) => k.id === api_key.id);
-  // Check condition
+  $2}
+    return res.status (401).json ({ error: "Unauthorized" }),
+  const { api_key } = auth,
+  const keys = await listApiKeys (),
+  // Deactivate old key,
+  const existing = keys.find (key => k.id === api_key.id),  const existing = keys.find ((k) => k.id === api_key.id),
+  // Check condition,
 if (existing.active = false) {
-  $2
-}
-  // Create new key;
-  const now = new Date ().toISOString ();
+  $2}
+  // Create new key,
+  const now = new Date ().toISOString (),
   const new_key = {
     id: uuidv4 (),
     partner_id: auth.partner.id,
     key: uuidv4 (),
     active: true,
     created_at: now,
-    rateLimitPerMinute: api_key.rateLimitPerMinute ?? 60,
+    rateLimitPerMinute: api_key.rateLimitPerMinute ?? 60
   }
-  keys.push (new_key as any);
-  await saveApiKeys (keys);
-  return res.status (201).json ({ api_key: new_key.key });    id: uuidv4 ();
-    partner_id: auth.partner.id;
-    key: uuidv4 ();
-    active: true;
-    created_at: now;
+  keys.push (new_key as any),
+  await saveApiKeys (keys),
+  return res.status (201).json ({ api_key: new_key.key }),    id: uuidv4 (),
+    partner_id: auth.partner.id,
+    key: uuidv4 (),
+    active: true,
+    created_at: now,
     rateLimitPerMinute: api_key.rateLimitPerMinute ?? 60}
-  keys.push (new_key as any);
-  await saveApiKeys (keys);
-  return res.status (201).json ({ api_key: new_key.key });
-  }
-  const { apiKey } = auth
-  const keys = await listApiKeys()
-  // Deactivate old key
-  const existing = keys.find((k) => k.id === apiKey.id)
+  keys.push (new_key as any),
+  await saveApiKeys (keys),
+  return res.status (201).json ({ api_key: new_key.key })}
+  const { apiKey } = auth,
+  const keys = await listApiKeys(),
+  // Deactivate old key,
+  const existing = keys.find((k) => k.id === apiKey.id),
   if (existing) existing.active = false,
-  // Create new key
-  const now = new Date().toISOString()
+  // Create new key,
+  const now = new Date().toISOString(),
   const newKey = {
     id: uuidv4(),
     partnerId: auth.partner.id,
@@ -157,15 +128,5 @@ if (existing.active = false) {
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
   keys.push(newKey as any),
   await saveApiKeys(keys),
-  return res.status(201).json({ apiKey: newKey.key })
-
-
-}
-
-
-
-
-
-
-
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
+  return res.status(201).json({ apiKey: newKey.key })}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

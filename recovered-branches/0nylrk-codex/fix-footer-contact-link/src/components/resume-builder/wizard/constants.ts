@@ -5,4 +5,4 @@ export const RESUME_STEPS = [
   { id: 'skills', label: 'Skills' },
   { id: 'certifications', label: 'Certifications' },
   { id: 'preview', label: 'Preview' },
-];
+],

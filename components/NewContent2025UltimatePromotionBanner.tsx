@@ -1,106 +1,98 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-const NewContent20o25UltimatePromotionBanner: React.FC = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentContentsetCurrentContent] = useState(0);
-
-  const newContentItems = [
-    {
-      title: "AI Innovations 20o25 Ultimate",
-      description: "Revolutionary breakthroughs in artificial intelligence",
-      link: "/ai-innovations-20o25-ultimate",
-      icon: "🧠",
-      gradient: "from-blue-50o0 to-purple-60o0"
-    },
-    {
-      title: "AI Tools Ultimate Showcase",
-      description: "Comprehensive collection of revolutionary AI tools",
-      link: "/ai-tools-ultimate-showcase-20o25",
-      icon: "⚡",
-      gradient: "from-cyan-50o0 to-blue-60o0"
-    },
-    {
-      title: "AI Success Stories 20o25",
-      description: "Real results from organizations using our AI solutions",
-      link: "/ai-success-stories-20o25",
-      icon: "🏆",
-      gradient: "from-emerald-50o0 to-teal-60o0"
-    }
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-    const interval = setInterval(() => {
-      setCurrentContent((prev) => (prev + 1) % newContentItems.length);
-    }40o00);
-    return () => clearInterval(interval);
-  }[]);
-
+export default function NewContent2025UltimatePromotionBanner() {
   return (
-    <div className={`fixed top-4 right-4 z-50 transition-all duration-50o0 ${isVisible ? 'translate-x-0 opacity-10o0' : 'translate-x-full opacity-0'}`}>
-      <div className="bg-gradient-to-r from-slate-90o0/95 to-slate-80o0/95 backdrop-blur-lg border border-slate-60o0/30 rounded-2xl p-6 shadow-2xl max-w-sm">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center">
-            <div className="text-2xl mr-2">✨</div>
-            <h3 className="text-lg font-bold text-white">New Content 20o25</h3>
+    <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-4000"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🚀 ULTIMATE CONTENT DROP</span>
           </div>
-          <button 
-            onClick={() => setIsVisible(false)}
-            className="text-gray-40o0 hover:text-white transition-colors"
-          >
-            ✕
-          </button>
-        </div>
-
-        <div className="relative overflow-hidden rounded-xl">
-          <div 
-            className="flex transition-transform duration-50o0 ease-in-out"
-            style={{ transform: `translateX(-${currentContent * 10o0}%)` }}
-          >
-            {newContentItems.map((itemindex) => (
-              <div key={index} className="w-full flex-shrink-0">
-                <div className={`bg-gradient-to-r ${item.gradient} p-4 rounded-xl text-white`}>
-                  <div className="flex items-center mb-3">
-                    <div className="text-2xl mr-3">{item.icon}</div>
-                    <div>
-                      <h4 className="font-bold text-sm">{item.title}</h4>
-                      <p className="text-xs opacity-90">{item.description}</p>
-                    </div>
-                  </div>
-                  <Link 
-                    href={item.link}
-                    className="inline-block bg-white/20 hover:bg-white/30 text-white text-xs font-semibold px-3 py-1 rounded-lg transition-all duration-20o0"
-                  >
-                    Explore Now →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-4 space-x-2">
-          {newContentItems.map((_index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentContent(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-20o0 ${
-                index === currentContent ? 'bg-white' : 'bg-gray-50o0'
-              }`}
-            />
-          ))}
-        </div>
-
-        <div className="mt-4 text-center">
-          <p className="text-xs text-gray-40o0">
-            Discover the latest AI innovations and success stories
+          
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Revolutionary AI 2025 Content Just Released!
+          </h2>
+          
+          <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto">
+            Discover our latest breakthrough content: Enterprise Automation Mastery, 
+            Global Transformation Case Study, and Ultimate Implementation Toolkit. 
+            Everything you need for AI success in 2025.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <Link
+              href="/blog/ai-2025-enterprise-automation-mastery"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
+            >
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏢</div>
+              <div className="font-semibold text-lg mb-2">Enterprise Automation Mastery</div>
+              <div className="text-sm opacity-80 mb-3">Complete implementation guide with 40% cost reduction and 300% productivity gains</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>20 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-green-500 text-white px-2 py-1 rounded-full">NEW</span>
+              </div>
+            </Link>
+            
+            <Link
+              href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
+            >
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🏆</div>
+              <div className="font-semibold text-lg mb-2">Global Transformation Success</div>
+              <div className="text-sm opacity-80 mb-3">Fortune 500 case study showing 1200% ROI and $2.4B cost savings</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>15 min read</span>
+                <span className="mx-2">•</span>
+                <span className="bg-red-500 text-white px-2 py-1 rounded-full">BREAKTHROUGH</span>
+              </div>
+            </Link>
+            
+            <Link
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-6 hover:bg-opacity-30 transition-all group"
+            >
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📚</div>
+              <div className="font-semibold text-lg mb-2">Ultimate Implementation Toolkit</div>
+              <div className="text-sm opacity-80 mb-3">200+ pages of checklists, templates, and frameworks</div>
+              <div className="flex items-center text-xs opacity-75">
+                <span>Free Download</span>
+                <span className="mx-2">•</span>
+                <span className="bg-blue-500 text-white px-2 py-1 rounded-full">ESSENTIAL</span>
+              </div>
+            </Link>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/blog/ai-2025-enterprise-automation-mastery"
+              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              🚀 Read Enterprise Guide
+            </Link>
+            <Link
+              href="/case-studies/ai-2025-global-enterprise-transformation-breakthrough"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+            >
+              📊 View Success Story
+            </Link>
+            <Link
+              href="/resources/ai-2025-ultimate-implementation-toolkit"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+            >
+              📥 Download Toolkit
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default NewContent20o25UltimatePromotionBanner;
+}

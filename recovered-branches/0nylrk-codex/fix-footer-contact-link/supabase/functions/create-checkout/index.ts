@@ -1,33 +1,26 @@
-import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
-import Stripe from 'https://esm.sh/stripe@14.21.0';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.0';
-
+import { serve } from 'https: //deno.land/std@0.190.0/http/server.ts',
+import Stripe from 'https://esm.sh/stripe@14.21.0',
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.45.0',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers':
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
     'authorization, x-client-info, apikey, content-type',
-};
-
+},
 serve(async req => {
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders });
-  }
-
+    return new Response(null, { headers: corsHeaders })}
+,
   const supabaseClient = createClient(
     Deno.env.get('SUPABASE_URL') ?? '',
-    Deno.env.get('SUPABASE_ANON_KEY') ?? ''
-  );
-
-  // Create service client for writing to database
+    Deno.env.get('SUPABASE_ANON_KEY') ?? ''),
+  // Create service client for writing to database,
   const supabaseAdmin = createClient(
     Deno.env.get('SUPABASE_URL') ?? '',
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
     { auth: { persistSession: false } }
-  );
-
+  ),
   try {
-    // Retrieve the request body
-    const requestData = await req.json();
+    // Retrieve the request body,
+    const requestData = await req.json(),
     const {
       amount,
       serviceId = null,
@@ -37,45 +30,37 @@ serve(async req => {
       currency = 'usd',
       successUrl,
       cancelUrl,
-    } = requestData;
-
-    // Verify the amount is valid
+    } = requestData,
+    // Verify the amount is valid,
     if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {
-      throw new Error('Invalid payment amount');
-    }
-
-    // Authenticate the user
-    const authHeader = req.headers.get('Authorization')!;
-    const token = authHeader.replace('Bearer ', '');
+      throw new Error('Invalid payment amount')}
+,
+    // Authenticate the user,
+    const authHeader = req.headers.get('Authorization')!,
+    const token = authHeader.replace('Bearer ', ''),
     const {
       data: { user },
-    } = await supabaseClient.auth.getUser(token);
-
-    if (!user?.email) throw new Error('User not authenticated');
-
+    } = await supabaseClient.auth.getUser(token),
+    if (!user?.email) throw new Error('User not authenticated'),
     const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
-      apiVersion: '2023-10-16',
-    });
-
-    // Check if customer exists
+      apiVersion: '2023-10-16'
+    }),
+    // Check if customer exists,
     const customers = await stripe.customers.list({
       email: user.email,
-      limit: 1,
-    });
-    let customerId;
+      limit: 1
+    }),
+    let customerId,
     if (customers.data.length > 0) {
-      customerId = customers.data[0].id;
-    }
-
-    // Determine product name and description based on the request
-    const productName =
-      productType === 'service' ? 'Service Payment' : 'Premium Subscription';
-
-    const productDescription = escrow
-      ? 'Payment held in escrow until service completion'
-      : 'Direct payment for services';
-
-    // Create the session
+      customerId = customers.data[0].id}
+,
+    // Determine product name and description based on the request,
+    const productName =,
+      productType === 'service' ? 'Service Payment' : 'Premium Subscription',
+    const productDescription = escrow,
+      ? 'Payment held in escrow until service completion',
+      : 'Direct payment for services',
+    // Create the session,
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : user.email,
@@ -85,14 +70,14 @@ serve(async req => {
             currency: currency,
             product_data: {
               name: productName,
-              description: productDescription,
+              description: productDescription
             },
-            unit_amount: amount * 100, // Convert to cents
-            ...(productType === 'subscription'
+            unit_amount: amount * 100, // Convert to cents,
+            ...(productType === 'subscription',
               ? { recurring: { interval: 'month' } }
               : {}),
           },
-          quantity: 1,
+          quantity: 1
         },
       ],
       mode: productType === 'subscription' ? 'subscription' : 'payment',
@@ -103,11 +88,10 @@ serve(async req => {
         serviceId: serviceId,
         providerId: providerId,
         escrow: escrow.toString(),
-        productType: productType,
+        productType: productType
       },
-    });
-
-    // Record transaction in database
+    }),
+    // Record transaction in database,
     if (serviceId && providerId) {
       await supabaseAdmin.from('transactions').insert({
         user_id: user.id,
@@ -118,19 +102,16 @@ serve(async req => {
         currency: currency,
         status: 'pending',
         in_escrow: escrow,
-        created_at: new Date().toISOString(),
-      });
-    }
-
+        created_at: new Date().toISOString()
+      })}
+,
     return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 200,
-    });
-  } catch (error) {
-    console.error('Checkout error:', error.message);
+      status: 200
+    })} catch (error) {
+    console.error('Checkout error:', error.message),
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      status: 500,
-    });
-  }
-});
+      status: 500
+    })}
+}),

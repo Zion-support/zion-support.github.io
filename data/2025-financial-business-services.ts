@@ -7,312 +7,262 @@ export interface FinancialBusinessService {
   pricing: {
     basic: string;
     professional: string;
-    enterprise: string;
-  };
+    enterprise: string};
   category: string;
   tags: string[];
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
 }
-
+;
 export const financialBusinessServices20o25: FinancialBusinessService[] = [
   {
-    id: 'fintech-platform',
-    name: 'Fintech Innovation Platform',
-    description:
-      'Comprehensive fintech solution for digital banking, payment processing, and financial services automation.',
+    id: 'fintech-platform';
+    name: 'Fintech Innovation Platform';
+    description:;
+      'Comprehensive fintech solution for digital banking, payment processing, and financial services automation.';
     features: [
-      'Digital banking infrastructure',
-      'Payment processing systems',
-      'Cryptocurrency integration',
-      'Regulatory compliance tools',
-      'AI-powered fraud detection',
-    ],
+      'Digital banking infrastructurePayment processing systems';
+      'Cryptocurrency integrationRegulatory compliance tools';
+      'AI-powered fraud detection';
+    ];
     benefits: [
-      'Reduced operational costs',
-      'Enhanced security',
-      'Improved customer experience',
-      'Regulatory compliance',
-    ],
+      'Reduced operational costsEnhanced security';
+      'Improved customer experienceRegulatory compliance';
+    ];
     pricing: {
-      basic: '$5,50o0/month',
-      professional: '$22,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Fintech',
+      basic: '$5,50o0/month';
+      professional: '$22,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Fintech';
     tags: [
-      'fintech',
-      'digital-banking',
-      'payments',
-      'cryptocurrency',
-      'compliance',
-    ],
+      'fintechdigital-banking';
+      'paymentscryptocurrency';
+      'compliance';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'investment-analytics',
-    name: 'Investment Analytics Platform',
-    description:
-      'Advanced investment analysis and portfolio management platform with AI-driven insights and risk assessment.',
+    id: 'investment-analytics';
+    name: 'Investment Analytics Platform';
+    description:;
+      'Advanced investment analysis and portfolio management platform with AI-driven insights and risk assessment.';
     features: [
-      'Portfolio optimization',
-      'Risk assessment tools',
-      'Market analysis algorithms',
-      'Performance tracking',
-      'Compliance reporting',
-    ],
+      'Portfolio optimizationRisk assessment tools';
+      'Market analysis algorithmsPerformance tracking';
+      'Compliance reporting';
+    ];
     benefits: [
-      'Improved investment decisions',
-      'Risk mitigation',
-      'Enhanced returns',
-      'Regulatory compliance',
-    ],
+      'Improved investment decisionsRisk mitigation';
+      'Enhanced returnsRegulatory compliance';
+    ];
     pricing: {
-      basic: '$4,20o0/month',
-      professional: '$18,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Investment Management',
+      basic: '$4,20o0/month';
+      professional: '$18,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Investment Management';
     tags: [
-      'investment',
-      'portfolio-management',
-      'risk-assessment',
-      'analytics',
-      'compliance',
-    ],
+      'investmentportfolio-management';
+      'risk-assessmentanalytics';
+      'compliance';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'insurance-tech-suite',
-    name: 'Insurance Technology Suite',
-    description:
-      'Modern insurance platform with automated underwriting, claims processing, and customer management.',
+    id: 'insurance-tech-suite';
+    name: 'Insurance Technology Suite';
+    description:;
+      'Modern insurance platform with automated underwriting, claims processing, and customer management.';
     features: [
-      'Automated underwriting',
-      'Claims processing automation',
-      'Customer portal',
-      'Risk assessment tools',
-      'Policy management system',
-    ],
+      'Automated underwritingClaims processing automation';
+      'Customer portalRisk assessment tools';
+      'Policy management system';
+    ];
     benefits: [
-      'Faster claims processing',
-      'Reduced fraud',
-      'Improved customer satisfaction',
-      'Cost optimization',
-    ],
+      'Faster claims processingReduced fraud';
+      'Improved customer satisfactionCost optimization';
+    ];
     pricing: {
-      basic: '$3,80o0/month',
-      professional: '$16,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Insurance Technology',
+      basic: '$3,80o0/month';
+      professional: '$16,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Insurance Technology';
     tags: [
-      'insurance',
-      'underwriting',
-      'claims-processing',
-      'automation',
-      'risk-assessment',
-    ],
+      'insuranceunderwriting';
+      'claims-processingautomation';
+      'risk-assessment';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'regtech-solutions',
-    name: 'RegTech Compliance Solutions',
-    description:
-      'Regulatory technology platform for automated compliance monitoring, reporting, and risk management.',
+    id: 'regtech-solutions';
+    name: 'RegTech Compliance Solutions';
+    description:;
+      'Regulatory technology platform for automated compliance monitoring, reporting, and risk management.';
     features: [
-      'Automated compliance monitoring',
-      'Regulatory reporting tools',
-      'Risk assessment dashboards',
-      'Audit trail management',
-      'Policy enforcement automation',
-    ],
+      'Automated compliance monitoringRegulatory reporting tools';
+      'Risk assessment dashboardsAudit trail management';
+      'Policy enforcement automation';
+    ];
     benefits: [
-      'Reduced compliance costs',
-      'Improved accuracy',
-      'Real-time monitoring',
-      'Risk mitigation',
-    ],
+      'Reduced compliance costsImproved accuracy';
+      'Real-time monitoringRisk mitigation';
+    ];
     pricing: {
-      basic: '$3,20o0/month',
-      professional: '$14,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Regulatory Technology',
+      basic: '$3,20o0/month';
+      professional: '$14,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Regulatory Technology';
     tags: [
-      'regtech',
-      'compliance',
-      'risk-management',
-      'automation',
-      'reporting',
-    ],
+      'regtechcompliance';
+      'risk-managementautomation';
+      'reporting';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'wealth-management-platform',
-    name: 'Digital Wealth Management Platform',
-    description:
-      'Comprehensive wealth management solution for financial advisors and high-net-worth individuals.',
+    id: 'wealth-management-platform';
+    name: 'Digital Wealth Management Platform';
+    description:;
+      'Comprehensive wealth management solution for financial advisors and high-net-worth individuals.';
     features: [
-      'Client relationship management',
-      'Portfolio tracking',
-      'Financial planning tools',
-      'Tax optimization',
-      'Estate planning modules',
-    ],
+      'Client relationship managementPortfolio tracking';
+      'Financial planning toolsTax optimization';
+      'Estate planning modules';
+    ];
     benefits: [
-      'Enhanced client relationships',
-      'Improved portfolio performance',
-      'Streamlined operations',
-      'Increased client satisfaction',
-    ],
+      'Enhanced client relationshipsImproved portfolio performance';
+      'Streamlined operationsIncreased client satisfaction';
+    ];
     pricing: {
-      basic: '$4,80o0/month',
-      professional: '$20,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Wealth Management',
+      basic: '$4,80o0/month';
+      professional: '$20,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Wealth Management';
     tags: [
-      'wealth-management',
-      'financial-planning',
-      'portfolio-tracking',
-      'tax-optimization',
-      'estate-planning',
-    ],
+      'wealth-managementfinancial-planning';
+      'portfolio-trackingtax-optimization';
+      'estate-planning';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'lending-automation',
-    name: 'Lending Automation Platform',
-    description:
-      'AI-powered lending platform for automated loan processing, risk assessment, and customer management.',
+    id: 'lending-automation';
+    name: 'Lending Automation Platform';
+    description:;
+      'AI-powered lending platform for automated loan processing, risk assessment, and customer management.';
     features: [
-      'Automated loan processing',
-      'AI risk assessment',
-      'Customer onboarding',
-      'Payment processing',
-      'Collections management',
-    ],
+      'Automated loan processingAI risk assessment';
+      'Customer onboardingPayment processing';
+      'Collections management';
+    ];
     benefits: [
-      'Faster loan processing',
-      'Reduced default rates',
-      'Improved customer experience',
-      'Cost optimization',
-    ],
+      'Faster loan processingReduced default rates';
+      'Improved customer experienceCost optimization';
+    ];
     pricing: {
-      basic: '$3,50o0/month',
-      professional: '$15,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Lending Technology',
+      basic: '$3,50o0/month';
+      professional: '$15,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Lending Technology';
     tags: [
-      'lending',
-      'automation',
-      'risk-assessment',
-      'loan-processing',
-      'collections',
-    ],
+      'lendingautomation';
+      'risk-assessmentloan-processing';
+      'collections';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'trading-platform',
-    name: 'Advanced Trading Platform',
-    description:
-      'Professional trading platform with algorithmic trading, market analysis, and risk management tools.',
+    id: 'trading-platform';
+    name: 'Advanced Trading Platform';
+    description:;
+      'Professional trading platform with algorithmic trading, market analysis, and risk management tools.';
     features: [
-      'Algorithmic trading',
-      'Real-time market data',
-      'Risk management tools',
-      'Portfolio analytics',
-      'Compliance monitoring',
-    ],
+      'Algorithmic tradingReal-time market data';
+      'Risk management toolsPortfolio analytics';
+      'Compliance monitoring';
+    ];
     benefits: [
-      'Improved trading performance',
-      'Risk mitigation',
-      'Automated execution',
-      'Enhanced analytics',
-    ],
+      'Improved trading performanceRisk mitigation';
+      'Automated executionEnhanced analytics';
+    ];
     pricing: {
-      basic: '$6,50o0/month',
-      professional: '$28,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Trading Technology',
+      basic: '$6,50o0/month';
+      professional: '$28,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Trading Technology';
     tags: [
-      'trading',
-      'algorithmic-trading',
-      'market-data',
-      'risk-management',
-      'analytics',
-    ],
+      'tradingalgorithmic-trading';
+      'market-datarisk-management';
+      'analytics';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
   {
-    id: 'financial-data-analytics',
-    name: 'Financial Data Analytics Platform',
-    description:
-      'Comprehensive financial data analysis platform with predictive modeling and business intelligence.',
+    id: 'financial-data-analytics';
+    name: 'Financial Data Analytics Platform';
+    description:;
+      'Comprehensive financial data analysis platform with predictive modeling and business intelligence.';
     features: [
-      'Data aggregation',
-      'Predictive modeling',
-      'Business intelligence dashboards',
-      'Real-time reporting',
-      'Data visualization tools',
-    ],
+      'Data aggregationPredictive modeling';
+      'Business intelligence dashboardsReal-time reporting';
+      'Data visualization tools';
+    ];
     benefits: [
-      'Data-driven decisions',
-      'Improved forecasting',
-      'Enhanced insights',
-      'Competitive advantage',
-    ],
+      'Data-driven decisionsImproved forecasting';
+      'Enhanced insightsCompetitive advantage';
+    ];
     pricing: {
-      basic: '$4,50o0/month',
-      professional: '$19,50o0/month',
-      enterprise: 'Custom pricing',
-    },
-    category: 'Financial Analytics',
+      basic: '$4,50o0/month';
+      professional: '$19,50o0/month';
+      enterprise: 'Custom pricing'
+    };
+    category: 'Financial Analytics';
     tags: [
-      'analytics',
-      'data-analysis',
-      'predictive-modeling',
-      'business-intelligence',
-      'reporting',
-    ],
+      'analyticsdata-analysis';
+      'predictive-modelingbusiness-intelligence';
+      'reporting';
+    ];
     contactInfo: {
-      phone: '+1 30o2 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      phone: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      website: 'https://ziontechgroup.com'
+    };
+  };
 ];

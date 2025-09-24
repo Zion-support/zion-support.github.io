@@ -1,6 +1,5 @@
-import '@testing-library/jest-dom';
-
-// Mock Next.js router
+import '@testing-library/jest-dom',
+// Mock Next.js router,
 jest.mock('next/router', () => ({
   useRouter() {
     return {
@@ -17,13 +16,12 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
+        emit: jest.fn()
       },
-    };
+    },
   },
-}));
-
-// Mock Next.js navigation
+})),
+// Mock Next.js navigation,
 jest.mock('next/navigation', () => ({
   useRouter() {
     return {
@@ -31,21 +29,18 @@ jest.mock('next/navigation', () => ({
       replace: jest.fn(),
       back: jest.fn(),
       forward: jest.fn(),
-      refresh: jest.fn(),
-    };
+      refresh: jest.fn()
+    },
   },
   useSearchParams() {
-    return new URLSearchParams();
-  },
+    return new URLSearchParams()},
   usePathname() {
-    return '/';
-  },
-}));
-
-// Mock IntersectionObserver
+    return '/'},
+})),
+// Mock IntersectionObserver,
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
+},

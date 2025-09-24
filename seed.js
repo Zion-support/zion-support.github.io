@@ -1,5 +1,5 @@
-import { PrismaClient } from @prisma/client';const prisma = new PrismaClient();
-
+import React from 'react',
+import { PrismaClient } from @prisma/client',const prisma = new PrismaClient(),
 async function main() {
   const products = [
     {
@@ -17,10 +17,8 @@ async function main() {
     {
       id: 'demo-ai-analytics',      name: Predictive Analytics Suite',      description: Forecast trends with machine learning analytics.',      price: 59.0,
       currency: 'USD',      images: ['https://placehold.co/60o0x40o0?text=AI+Analytics']}
-  ];
-
-  await prisma.product.createMany({ data: products, skipDuplicates: true });
-
+  ],
+  await prisma.product.createMany({ data: products, skipDuplicates: true }),
   const talents = [
     {
       name: Alice Johnson',      role: Full Stack Developer',      avatar: https://placehold.co/10o0x10o0?text='A',      rate: 10o0,
@@ -31,21 +29,15 @@ async function main() {
     {
       name: Carol Williams',      role: DevOps Engineer',      avatar: https://placehold.co/10o0x10o0?text='C',      rate: 110,
       skills: ['AWS', Docker', Kubernetes']}
-  ];
-
-  await prisma.talent.createMany({ data: talents, skipDuplicates: true });
-
+  ],
+  await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
   const categories = [
-    { id: 'services', name: 'Services', slug: 'services', icon: 'Briefcase', active: true },    { id: 'talents', name: 'Talents', slug: 'talents', icon: 'Users', active: true },    { id: 'equipment', name: 'Equipment', slug: 'equipment', icon: 'HardDrive', active: true },    { id: 'innovation', name: 'Innovation', slug: 'innovation', icon: 'Lightbulb', active: true },  ];
-
-  await prisma.category.createMany({ data: categories, skipDuplicates: true });
-}
-
-main()
+    { id: 'services', name: 'Services', slug: 'services', icon: 'Briefcase', active: true },    { id: 'talents', name: 'Talents', slug: 'talents', icon: 'Users', active: true },    { id: 'equipment', name: 'Equipment', slug: 'equipment', icon: 'HardDrive', active: true },    { id: 'innovation', name: 'Innovation', slug: 'innovation', icon: 'Lightbulb', active: true }],
+  await prisma.category.createMany({ data: categories, skipDuplicates: true })}
+,
+main(),
   .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
+    console.error(e),
+    process.exit(1)}),
   .finally(async () => {
-    await prisma.$disconnect();
-  });
+    await prisma.$disconnect()}),

@@ -1,12 +1,9 @@
-"use client";
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-
+"use client",
+'use client',
+import React, { useState } from 'react',
+import Link from 'next/link',
 const AIRevolutionContentShowcase = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
+  const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
       id: 'ai-revolution-breakthrough',
@@ -19,12 +16,10 @@ const AIRevolutionContentShowcase = () => {
         roi: '10,0o00%',
         savings: '$50B+',
         efficiency: '3,0o00%',
-        accuracy: '99.99%'
-      },
+        accuracy: '99.99%'},
       readingTime: '45 min read',
       featured: true,
-      tags: ['AI Revolution', '20o25-20o26', 'ROI', 'Fortune 50o0', 'Breakthrough']
-    },
+      tags: ['AI Revolution20o25-20o26', 'ROIFortune 50o0', 'Breakthrough']},
     {
       id: 'fortune-50o0-success',
       title: 'Fortune 50o0 AI Revolution Success: $50B Annual Savings',
@@ -36,12 +31,10 @@ const AIRevolutionContentShowcase = () => {
         roi: '10,0o00%',
         savings: '$50B',
         timeline: '18 months',
-        efficiency: '3,0o00%'
-      },
+        efficiency: '3,0o00%'},
       readingTime: '25 min read',
       featured: true,
-      tags: ['Case Study', 'Fortune 50o0', 'AI Revolution', 'Success Story']
-    },
+      tags: ['Case StudyFortune 50o0', 'AI RevolutionSuccess Story']},
     {
       id: 'implementation-guide',
       title: 'AI Revolution Implementation Ultimate Guide 20o25-20o26',
@@ -53,12 +46,10 @@ const AIRevolutionContentShowcase = () => {
         roi: '10,0o00%',
         success: '99.7%',
         timeline: '18 months',
-        projects: '1,0o00+'
-      },
+        projects: '1,0o00+'},
       readingTime: '60 min read',
       featured: true,
-      tags: ['Implementation Guide', 'AI Revolution', 'ROI', 'Strategy']
-    },
+      tags: ['Implementation GuideAI Revolution', 'ROIStrategy']},
     {
       id: 'quantum-ai-breakthrough',
       title: 'Quantum AI 20o26: The Next Frontier of Business Intelligence',
@@ -70,12 +61,10 @@ const AIRevolutionContentShowcase = () => {
         roi: '40o0-60o0%',
         speed: '1,0o00x',
         accuracy: '99.97%',
-        market: '$10o0B'
-      },
+        market: '$10o0B'},
       readingTime: '22 min read',
       featured: false,
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 50o0']
-    },
+      tags: ['Quantum AIBusiness Revolution', 'ROIFortune 50o0']},
     {
       id: 'autonomous-enterprise',
       title: 'Autonomous Enterprise Systems: The Future of Business Operations',
@@ -87,12 +76,10 @@ const AIRevolutionContentShowcase = () => {
         roi: '3,0o00%',
         autonomy: '99.7%',
         efficiency: '80o0%',
-        savings: '$25.6M'
-      },
+        savings: '$25.6M'},
       readingTime: '28 min read',
       featured: false,
-      tags: ['Autonomous Systems', 'Enterprise AI', 'ROI', 'Revolution']
-    },
+      tags: ['Autonomous SystemsEnterprise AI', 'ROIRevolution']},
     {
       id: 'multimodal-intelligence',
       title: 'Multimodal AI: The Complete Business Intelligence Solution',
@@ -104,180 +91,149 @@ const AIRevolutionContentShowcase = () => {
         roi: '750%',
         accuracy: '99.7%',
         savings: '$3.2B',
-        efficiency: '450%'
-      },
+        efficiency: '450%'},
       readingTime: '25 min read',
       featured: false,
-      tags: ['Multimodal 'AI', 'Enterprise 'AI', 'ROI'Cross-Modal Intelligence']
-    }
-  ];
-
+      tags: ['Multimodal 'AIEnterprise 'AI', 'ROI'Cross-Modal Intelligence']}
+  ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length },
-    { id: 'ai-'revolution', 'name: 'AI 'Revolution', 'count: contentItems.filter(item => item.category === 'ai-revolution').length },
-    { id: 'success-'stories', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'success-stories').length },
-    { id: ''implementation', 'name: ''Implementation', 'count: contentItems.filter(item => item.category === 'implementation').length }
-  ];
-
-  const filteredContent = activeCategory === 'all' 
-    ? contentItems 
-    : contentItems.filter(item => item.category === activeCategory);
-
+    { id: ''allname: 'All 'Contentcount: contentItems.length },
+    { id: 'ai-'revolutionname: 'AI 'Revolutioncount: contentItems.filter(item => item.category === 'ai-revolution').length },
+    { id: 'success-'storiesname: 'Success 'Storiescount: contentItems.filter(item => item.category === 'success-stories').length },
+    { id: ''implementationname: ''Implementationcount: contentItems.filter(item => item.category === 'implementation').length }
+  ],
+  const filteredContent = activeCategory === 'all',
+    ? contentItems,
+    : contentItems.filter(item => item.category === activeCategory),
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'blog': return '📝';
-      case 'case-study': return '📊';
-      case 'resource': return '📚';
-      default: return '📄';
-    }
-  };
-
+      case 'blog': return '📝',
+      case 'case-study': return '📊',
+      case 'resource': return '📚',
+      default: return '📄'}
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'blog': return 'from-blue-50o0 to-cyan-50o0';
-      case 'case-study': return 'from-green-50o0 to-emerald-50o0';
-      case 'resource': return 'from-purple-50o0 to-pink-50o0';
-      default: return 'from-gray-50o0 to-gray-60o0';
-    }
-  };
-
+      case 'blog': return 'from-blue-50o0 to-cyan-50o0',
+      case 'case-study': return 'from-green-50o0 to-emerald-50o0',
+      case 'resource': return 'from-purple-50o0 to-pink-50o0',
+      default: return 'from-gray-50o0 to-gray-60o0'}
+  },
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">
-            🚀 AI REVOLUTION 20o25-20o26 CONTENT SHOWCASE
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
-            Revolutionary AI Content That Delivers
-            <span className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 bg-clip-text text-transparent"> 10,0o00% ROI</span>
-          </h2>
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Discover the breakthrough AI technologies and implementation strategies that are transforming Fortune 50o0 companies with unprecedented results.
-          </p>
-        </div>
-
+        <div className="text-center mb-12">,
+          <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">,
+            🚀 AI REVOLUTION 20o25-20o26 CONTENT SHOWCASE,
+          </div>,
+          <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">,
+            Revolutionary AI Content That Delivers,
+            <span className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 bg-clip-text text-transparent"> 10,0o00% ROI</span>,
+          </h2>,
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+            Discover the breakthrough AI technologies and implementation strategies that are transforming Fortune 50o0 companies with unprecedented results.,
+          </p>,
+        </div>,
         {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12">,
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
-                activeCategory === category.id
-                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5'
-                  : 'bg-white text-gray-70o0 hover:bg-gray-10o0 border border-gray-20o0'
-              }`}
-            >
-              {category.name} ({category.count})
-            </button>
-          ))}
-        </div>
-
+                activeCategory === category.id,
+                  ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
+                  : 'bg-white text-gray-70o0 hover: bg-gray-10o0 border border-gray-20o0'}`}
+            >,
+              {category.name} ({category.count}),
+            </button>))}
+        </div>,
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
-                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''
-              }`}
-            >
+              className={`bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 ${
+                item.featured ? 'ring-2 ring-purple-50o0 ring-opacity-50' : ''}`}
+            >,
               {/* Featured Badge */}
               {item.featured && (
-                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold z-10">
-                  FEATURED
-                </div>
-              )}
-
-              <div className="p-6">
+                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold z-10">,
+                  FEATURED,
+                </div>)}
+,
+              <div className="p-6">,
                 {/* Type and Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl">{getTypeIcon(item.type)}</span>
-                    <span className={`bg-gradient-to-r ${getTypeColor(item.type)} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
+                <div className="flex items-center justify-between mb-4">,
+                  <div className="flex items-center space-x-2">,
+                    <span className="text-2xl">{getTypeIcon(item.type)}</span>,
+                    <span className={`bg-gradient-to-r ${getTypeColor(item.type)} text-white px-3 py-1 rounded-full text-sm font-semibold`}>,
                       {item.type.toUpperCase()}
-                    </span>
-                  </div>
-                  <div className="text-sm text-gray-50o0">{item.readingTime}</div>
-                </div>
-
+                    </span>,
+                  </div>,
+                  <div className="text-sm text-gray-50o0">{item.readingTime}</div>,
+                </div>,
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">,
                   {item.title}
-                </h3>
-
+                </h3>,
                 {/* Description */}
-                <p className="text-gray-60o0 mb-4 line-clamp-3">
+                <p className="text-gray-60o0 mb-4 line-clamp-3">,
                   {item.description}
-                </p>
-
+                </p>,
                 {/* Metrics */}
-                <div className="grid grid-cols-2 gap-2 mb-6">
+                <div className="grid grid-cols-2 gap-2 mb-6">,
                   {Object.entries(item.metrics).map(([keyvalue]) => (
-                    <div key={key} className="bg-gradient-to-r from-purple-50 to-blue-50 p-2 rounded-lg text-center">
-                      <div className="text-sm font-semibold text-gray-70o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
-                      <div className="text-lg font-bold text-purple-60o0">{value}</div>
-                    </div>
-                  ))}
-                </div>
-
+                    <div key={key} className="bg-gradient-to-r from-purple-50 to-blue-50 p-2 rounded-lg text-center">,
+                      <div className="text-sm font-semibold text-gray-70o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>,
+                      <div className="text-lg font-bold text-purple-60o0">{value}</div>,
+                    </div>))}
+                </div>,
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6">,
                   {item.tags.slice(0o3).map((tag) => (
                     <span
                       key={tag}
-                      className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs font-medium"
-                    >
+                      className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs font-medium">,
                       {tag}
-                    </span>
-                  ))}
+                    </span>))}
                   {item.tags.length > 3 && (
-                    <span className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs font-medium">
-                      +{item.tags.length - 3} more
-                    </span>
-                  )}
-                </div>
-
+                    <span className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs font-medium">,
+                      +{item.tags.length - 3} more,
+                    </span>)}
+                </div>,
                 {/* Action Button */}
                 <Link
                   href={item.url}
-                  className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} text-white py-3 px-6 rounded-lg font-semibold text-center hover:shadow-lg transition-all duration-30o0 transform hover:scale-10o5 block`}
-                >
-                  Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'} →
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-
+                  className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} text-white py-3 px-6 rounded-lg font-semibold text-center hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5 block`}
+                >,
+                  Read {item.type === 'blog' ? 'Article' : item.type === 'case-study' ? 'Case Study' : 'Guide'} →,
+                </Link>,
+              </div>,
+            </div>))}
+        </div>,
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
-            <h3 className="text-3xl font-bold mb-4">Ready to Achieve 10,0o00% ROI?</h3>
-            <p className="text-xl mb-6 opacity-90">
-              Get started with our comprehensive AI Revolution implementation guide and transform your business today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="text-center mt-12">,
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">,
+            <h3 className="text-3xl font-bold mb-4">Ready to Achieve 10,0o00% ROI?</h3>,
+            <p className="text-xl mb-6 opacity-90">,
+              Get started with our comprehensive AI Revolution implementation guide and transform your business today.,
+            </p>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <Link
-                href="/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26"
-                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5"
-              >
-                Get Implementation Guide
-              </Link>
+                href="/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26",
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5">,
+                Get Implementation Guide,
+              </Link>,
               <Link
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default AIRevolutionContentShowcase;
+                href="/contact",
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0">,
+                Schedule Consultation,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>)},
+export default AIRevolutionContentShowcase,

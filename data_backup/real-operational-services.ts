@@ -1,17 +1,17 @@
 export interface RealOperationalService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "realOperationalServices": RealOperationalService[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "realOperationalServices": RealOperationalService[] = [{
     id: "operational-intelligence",
     "name": "Operational Intelligence Platform",
     "tagline": "Real-time operational insights and optimization",
@@ -22,13 +22,12 @@ address: string};export const "realOperationalServices": RealOperationalService[
       "Performance analytics",
       "Operational insights",
       "Optimization recommendations",
-      "Alert system"
-    ],
+      "Alert system"],
     "link": "/services/operational-intelligence",
     "category": "Operational Services",
     "realImplementation": true,
     "contactInfo": {
       mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-]}}}
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
+,

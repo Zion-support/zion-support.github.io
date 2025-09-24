@@ -1,62 +1,51 @@
 
-import React{ useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  getTalentRateSuggestion
+import React{ useState } from "react",
+import { Button } from "@/components/ui/button",
+import {
+  getTalentRateSuggestion,
   PricingSuggestion,
   TalentRateParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
-
+  trackPricingSuggestion} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
 interface TalentRateRecommenderProps {
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  onSuggestionApplied: (value: number) => void;
-  rateType: "hourly" | "fixed";
-}
-
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  onSuggestionApplied: (value: number) => void,
+  rateType: "hourly" | "fixed"}
+,
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills,
   yearsExperience,
   location,
   onSuggestionApplied,
   rateType}) => {
-  const [isLoadingsetIsLoading] = useState(false);
-  const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
-
+  const [isLoadingsetIsLoading] = useState(false),
+  const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth(),
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
-      return;
-    }
-
-    setIsLoading(true);
+      return}
+,
+    setIsLoading(true),
     try {
       const params: TalentRateParams = {
         skills,
         yearsExperience,
-        location};
-
-      const result = await getTalentRateSuggestion(params);
-      setSuggestion(result);
-    } catch (error) {
-      console.error("Error generating rate suggestion:"error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
+        location},
+      const result = await getTalentRateSuggestion(params),
+      setSuggestion(result)} catch (error) {
+      console.error("Error generating rate suggestion: "error)} finally {
+      setIsLoading(false)}
+  },
   const handleApplySuggestion = () => {
     if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2);
-      onSuggestionApplied(suggestedRate);
-      
-      // Track this suggestion application
+      // We'll use the middle of the range as the suggested rate,
+      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
+      onSuggestionApplied(suggestedRate),
+      // Track this suggestion application,
       if (user) {
         trackPricingSuggestion({
           userId: user.id,
@@ -64,34 +53,26 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
           actualValue: suggestedRate,
-          accepted: true
-        });
-      }
+          accepted: true})}
     }
-  };
-
+  },
   return (
-    <div className="space-y-4">
-      <div>
+    <div className="space-y-4">,
+      <div>,
         {!suggestion && !isLoading ? (
           <Button
-            type="button"
-            variant="outline"
+            type="button",
+            variant="outline",
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
+            className="w-full">,
+            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI,
+          </Button>) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType={rateType}
-          />
-        )}
-      </div>
-    </div>
-  );
-};
+          />)}
+      </div>,
+    </div>)},

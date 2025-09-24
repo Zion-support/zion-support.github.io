@@ -1,16 +1,12 @@
-'use client';
-
+'use client',
 type SEOProps = {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  url?: string;
-};
-
+  title?: string,
+  description?: string,
+  keywords?: string,
+  url?: string},
 export default function SEO(_props: SEOProps) {
-  return null;
-}
-
+  return null}
+,
 export default function SEO({
   title,
   description,
@@ -18,16 +14,13 @@ export default function SEO({
   canonical,
   url,
 }: SEOProps) {
-  // This component is deprecated in Next.js 13+ app directory
-  // Use the metadata API in page.tsx files instead
+  // This component is deprecated in Next.js 13+ app directory,
+  // Use the metadata API in page.tsx files instead,
   console.warn(
-    'SEO component is deprecated. Use the metadata API in page.tsx files instead.'
-  );
-
-  return null;
-}
-
-// Helper function to generate metadata for pages
+    'SEO component is deprecated. Use the metadata API in page.tsx files instead.'),
+  return null}
+,
+// Helper function to generate metadata for pages,
 export function generateMetadata({
   title,
   description,
@@ -38,18 +31,19 @@ export function generateMetadata({
   return {
     title,
     description,
-    keywords: keywords ? keywords.split(',').map(k => k.trim()) : undefined,
+    keywords: keywords ? keywords.split().map(k => k.trim()) : undefined,
     alternates: canonical ? { canonical } : undefined,
     openGraph: {
       title,
       description,
       type: 'article',
-      url,
+      url
     },
     twitter: {
       card: 'summary_large_image',
       title,
-      description,
+      description
     },
-  };
+  },
 }
+,

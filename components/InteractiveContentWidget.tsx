@@ -1,107 +1,93 @@
-"use client";
-import React{ useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
+"use client",
+import React{ useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 const InteractiveContentWidget = () => {
-  const [selectedCategorysetSelectedCategory] = useState('ai');
-  const [hoveredItemsetHoveredItem] = useState(null);
-
+  const [selectedCategorysetSelectedCategory] = useState('ai'),
+  const [hoveredItemsetHoveredItem] = useState(null),
   const contentCategories ={
     ai: {
       title: 'AI & Machine Learning',
       icon: '🤖',
       items: [
-        { title: 'Advanced AI Services 20o25'description: 'Revolutionary automation 'solutions', 'link: '/ai-services-20o25'featured: true },
-        { title: 'Neural Network 'Architectures', 'description: 'Next-gen AI brain 'designs', 'link: '/neural-architectures' },
-        { title: 'Machine Learning 'Mastery', 'description: 'Complete ML implementation 'guide', 'link: '/ml-mastery' },
-        { title: 'AI Ethics & 'Governance', 'description: 'Responsible AI 'development', 'link: '/ai-ethics' }
-      ]
-    },
+        { title: 'Advanced AI Services 20o25'description: 'Revolutionary automation 'solutionslink: '/ai-services-20o25'featured: true },
+        { title: 'Neural Network 'Architecturesdescription: 'Next-gen AI brain 'designslink: '/neural-architectures' },
+        { title: 'Machine Learning 'Masterydescription: 'Complete ML implementation 'guidelink: '/ml-mastery' },
+        { title: 'AI Ethics & 'Governancedescription: 'Responsible AI 'developmentlink: '/ai-ethics' }
+      ]},
     quantum: {
       title: 'Quantum Computing',
       icon: '⚛️',
       items: [
-        { title: 'Quantum Supremacy 20o25'description: 'Error-corrected quantum 'computers', 'link: '/quantum-'supremacy', 'featured: true },
-        { title: 'Quantum 'Algorithms', 'description: 'Revolutionary problem-solving 'methods', 'link: '/quantum-algorithms' },
-        { title: 'Quantum Machine 'Learning', 'description: 'AI meets quantum 'computing', 'link: '/quantum-ml' },
-        { title: 'Quantum 'Cryptography', 'description: 'Unbreakable security 'systems', 'link: '/quantum-crypto' }
-      ]
-    },
+        { title: 'Quantum Supremacy 20o25'description: 'Error-corrected quantum 'computerslink: '/quantum-'supremacyfeatured: true },
+        { title: 'Quantum 'Algorithmsdescription: 'Revolutionary problem-solving 'methodslink: '/quantum-algorithms' },
+        { title: 'Quantum Machine 'Learningdescription: 'AI meets quantum 'computinglink: '/quantum-ml' },
+        { title: 'Quantum 'Cryptographydescription: 'Unbreakable security 'systemslink: '/quantum-crypto' }
+      ]},
     automation: {
       title: 'Business Automation',
       icon: '🔄',
       items: [
-        { title: 'Autonomous 'Operations', 'description: 'Self-managing business 'systems', 'link: '/autonomous-'ops', 'featured: true },
-        { title: 'Process 'Optimization', 'description: 'Streamline your 'workflows', 'link: '/process-optimization' },
-        { title: 'Intelligent 'Automation', 'description: 'Smart business process 'automation', 'link: '/intelligent-automation' },
-        { title: 'ROI 'Optimization', 'description: 'Maximize your 'returns', 'link: '/roi-optimization' }
-      ]
-    },
+        { title: 'Autonomous 'Operationsdescription: 'Self-managing business 'systemslink: '/autonomous-'opsfeatured: true },
+        { title: 'Process 'Optimizationdescription: 'Streamline your 'workflowslink: '/process-optimization' },
+        { title: 'Intelligent 'Automationdescription: 'Smart business process 'automationlink: '/intelligent-automation' },
+        { title: 'ROI 'Optimizationdescription: 'Maximize your 'returnslink: '/roi-optimization' }
+      ]},
     future: {
       title: 'Future Technologies',
       icon: '🔮',
       items: [
-        { title: '20o30 Technology 'Predictions', 'description: 'What the future 'holds', 'link: '/20o30-'predictions', 'featured: true },
-        { title: 'Neural Interface 'Revolution', 'description: 'Brain-computer 'integration', 'link: '/neural-interfaces' },
-        { title: 'Transcendent 'AI', 'description: 'Beyond human 'intelligence', 'link: '/transcendent-ai' },
-        { title: 'Omniversal 'Computing', 'description: 'Computing beyond 'reality', 'link: '/omniversal-computing' }
-      ]
-    }
-  };
-
+        { title: '20o30 Technology 'Predictionsdescription: 'What the future 'holdslink: '/20o30-'predictionsfeatured: true },
+        { title: 'Neural Interface 'Revolutiondescription: 'Brain-computer 'integrationlink: '/neural-interfaces' },
+        { title: 'Transcendent 'AIdescription: 'Beyond human 'intelligencelink: '/transcendent-ai' },
+        { title: 'Omniversal 'Computingdescription: 'Computing beyond 'realitylink: '/omniversal-computing' }
+      ]}
+  },
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">
-      <div className="container mx-auto px-4">
-        <motion.div
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
+      <div className="container mx-auto px-4">,
+        <motion.div,
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">
-            🎯 Interactive Content Discovery
-          </h2>
-          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-            Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.
-          </p>
-        </motion.div>
-
+          className="text-center mb-16">,
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 bg-clip-text text-transparent">,
+            🎯 Interactive Content Discovery,
+          </h2>,
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
+            Explore our revolutionary content through this interactive widget. Click on categories to discover cutting-edge technologies and solutions.,
+          </p>,
+        </motion.div>,
         {/* Category Selector */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
+          className="flex flex-wrap justify-center gap-4 mb-12">,
           {Object.entries(contentCategories).map(([keycategory]) => (
             <button
               key={key}
               onClick={() => setSelectedCategory(key)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
-                selectedCategory === key
-                  ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white transform scale-10o5'
-                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
+                selectedCategory === key,
+                  ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white transform scale-10o5',
+                  : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}
+            >,
+              <span className="mr-2">{category.icon}</span>,
               {category.title}
-            </button>
-          ))}
-        </motion.div>
-
+            </button>))}
+        </motion.div>,
         {/* Content Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
+        <AnimatePresence mode="wait">,
+          <motion.div,
             key={selectedCategory}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
-          >
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-6">,
             {contentCategories[selectedCategory].items.map((itemindex) => (
-              <motion.div
+              <motion.div,
                 key={item.title}
                 initial={{ opacity: 0scale: 0.9 }}
                 animate={{ opacity: 1scale: 1 }}
@@ -109,67 +95,52 @@ const InteractiveContentWidget = () => {
                 onHoverStart={() => setHoveredItem(item.title)}
                 onHoverEnd={() => setHoveredItem(null)}
                 className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-30o0 cursor-pointer ${
-                  item.featured 
-                    ? 'border-gradient-to-r from-cyan-40o0 to-purple-40o0 border-2' 
-                    : 'border-white/20 hover:border-white/40'
-                } ${hoveredItem === item.title ? 'transform scale-10o5 shadow-2xl' : ''}`}
-              >
+                  item.featured,
+                    ? 'border-gradient-to-r from-cyan-40o0 to-purple-40o0 border-2',
+                    : 'border-white/20 hover: border-white/40'} ${hoveredItem === item.title ? 'transform scale-10o5 shadow-2xl' : ''}`}
+              >,
                 {item.featured && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold">
-                    🔥 FEATURED
-                  </div>
-                )}
-                
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl mb-2">{contentCategories[selectedCategory].icon}</div>
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold">,
+                    🔥 FEATURED,
+                  </div>)}
+,
+                <div className="flex items-start justify-between mb-4">,
+                  <div className="text-3xl mb-2">{contentCategories[selectedCategory].icon}</div>,
                   {item.featured && (
-                    <div className="text-yellow-40o0 text-2xl">⭐</div>
-                  )}
-                </div>
-                
-                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
-                <p className="text-gray-30o0 mb-6">{item.description}</p>
-                
-                <Link 
+                    <div className="text-yellow-40o0 text-2xl">⭐</div>)}
+                </div>,
+                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>,
+                <p className="text-gray-30o0 mb-6">{item.description}</p>,
+                <Link
                   href={item.link}
                   className={`inline-flex items-center font-semibold transition-colors duration-30o0 ${
-                    item.featured 
-                      ? 'text-cyan-40o0 hover:text-cyan-30o0' 
-                      : 'text-purple-40o0 hover:text-purple-30o0'
-                  }`}
-                >
-                  Explore Now →
-                </Link>
-                
+                    item.featured,
+                      ? 'text-cyan-40o0 hover: text-cyan-30o0',
+                      : 'text-purple-40o0 hover:text-purple-30o0'}`}
+                >,
+                  Explore Now →,
+                </Link>,
                 {hoveredItem === item.title && (
-                  <motion.div
+                  <motion.div,
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 to-purple-50o0/10 rounded-2xl pointer-events-none"
-                   />
-                )}
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-
+                    className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/10 to-purple-50o0/10 rounded-2xl pointer-events-none",
+                   />)}
+              </motion.div>))}
+          </motion.div>,
+        </AnimatePresence>,
         {/* Call to Action */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <Link 
-            href="/content-library" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-full text-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
-          >
-            🚀 Access Full Content Library
-          </Link>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default InteractiveContentWidget;
+          className="text-center mt-16">,
+          <Link
+            href="/content-library",
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-full text-lg hover: from-cyan-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
+            🚀 Access Full Content Library,
+          </Link>,
+        </motion.div>,
+      </div>,
+    </section>)},
+export default InteractiveContentWidget,

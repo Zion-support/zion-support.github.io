@@ -1,13 +1,12 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight
-  CheckCircle
-  TrendingUp
-  Users
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
   DollarSign,
   Clock,
   Target,
@@ -18,19 +17,14 @@ import {
   BarChart3,
   Zap,
   Shield,
-  Globe
-} from 'lucide-react';
-
+  Globe} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase20o26 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeCasetActiveCase] = useState(0);
-  const [isVideoPlayingsetIsVideoPlaying] = useState(false);
-
+  const [isVisiblesetIsVisible] = useState(false),
+  const [activeCasetActiveCase] = useState(0),
+  const [isVideoPlayingsetIsVideoPlaying] = useState(false),
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)30o0);
-    return () => clearTimeout(timer);
-  }[]);
-
+    const timer = setTimeout(() => setIsVisible(true)30o0),
+    return () => clearTimeout(timer)}[]),
   const caseStudies = [
     {
       id: 'fintech-transformation',
@@ -45,16 +39,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '50o0%',
         efficiency: '30o0%',
         costReduction: '60%',
-        customerSatisfaction: '95%'
-      },
+        customerSatisfaction: '95%'},
       timeline: '6 months',
       team: '15 experts',
-      technologies: ['AI/'ML', 'Blockchain'Cloud 'Infrastructure', 'Real-time Analytics'],
+      technologies: ['AI/'MLBlockchain'Cloud 'InfrastructureReal-time Analytics'],
       testimonial: {
         name: 'Sarah Chen',
         role: 'CTO',
-        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'
-      }
+        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'}
     },
     {
       id: 'healthcare-ai',
@@ -69,16 +61,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '40o0%',
         efficiency: '10o00%',
         costReduction: '45%',
-        customerSatisfaction: '98%'
-      },
+        customerSatisfaction: '98%'},
       timeline: '8 months',
       team: '20 experts',
-      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT Integration'],
+      technologies: ['Computer 'VisionNLP'Predictive 'AnalyticsIoT Integration'],
       testimonial: {
         name: 'Dr. Michael Rodriguez',
         role: 'Chief Medical Officer',
-        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'
-      }
+        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'}
     },
     {
       id: 'ecommerce-automation',
@@ -93,16 +83,14 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '60o0%',
         efficiency: '40o0%',
         costReduction: '50%',
-        customerSatisfaction: '92%'
-      },
+        customerSatisfaction: '92%'},
       timeline: '10 months',
       team: '25 experts',
-      technologies: ['Machine 'Learning', 'NLP'Computer 'Vision', 'Cloud Computing'],
+      technologies: ['Machine 'LearningNLP'Computer 'VisionCloud Computing'],
       testimonial: {
         name: 'Jennifer Walsh',
         role: 'CEO',
-        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'
-      }
+        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'}
     },
     {
       id: 'manufacturing-iot',
@@ -117,217 +105,190 @@ const RevolutionaryCaseStudiesShowcase20o26 = () => {
         roi: '350%',
         efficiency: '250%',
         costReduction: '40%',
-        customerSatisfaction: '97%'
-      },
+        customerSatisfaction: '97%'},
       timeline: '12 months',
       team: '18 experts',
-      technologies: [', 'IoT', 'Edge 'Computing', 'Predictive 'Analytics', 'Digital Twins'],
+      technologies: [IoT', 'Edge 'ComputingPredictive 'Analytics', 'Digital Twins'],
       testimonial: {
         name: 'Robert Kim',
         role: 'Operations Director',
-        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'
-      }
+        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'}
     }
-  ];
-
+  ],
   const overallStats = [
-    { label: 'Projects 'Completed', 'value: '20o0+'icon: CheckCircle },
-    { label: 'Average 'ROI', 'value: '450%'icon: TrendingUp },
-    { label: 'Client 'Satisfaction', 'value: '96%'icon: Star },
-    { label: 'Years 'Experience', 'value: '8+'icon: Award }
-  ];
-
-  if (!isVisible) return null;
-
+    { label: 'Projects 'Completedvalue: '20o0+'icon: CheckCircle },
+    { label: 'Average 'ROIvalue: '450%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '96%'icon: Star },
+    { label: 'Years 'Experiencevalue: '8+'icon: Award }
+  ],
+  if (!isVisible) return null,
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-10o0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-10o0">,
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* Header */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
-            Revolutionary Case Studies 20o26
-          </h2>
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.
-          </p>
-        </motion.div>
-
+          className="text-center mb-16">,
+          <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-6">,
+            Revolutionary Case Studies 20o26,
+          </h2>,
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+            Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.,
+          </p>,
+        </motion.div>,
         {/* Overall Stats */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-        >
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
           {overallStats.map((statindex) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-10o0 rounded-full mb-4">
-                <stat.icon className="w-8 h-8 text-blue-60o0"  />
-              </div>
-              <div className="text-3xl font-bold text-gray-90o0 mb-2">{stat.value}</div>
-              <div className="text-gray-60o0">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-
+            <div key={index} className="text-center">,
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-10o0 rounded-full mb-4">,
+                <stat.icon className="w-8 h-8 text-blue-60o0"  />,
+              </div>,
+              <div className="text-3xl font-bold text-gray-90o0 mb-2">{stat.value}</div>,
+              <div className="text-gray-60o0">{stat.label}</div>,
+            </div>))}
+        </motion.div>,
         {/* Case Study Selector */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-        >
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
           {caseStudies.map((caseStudyindex) => (
             <button
               key={caseStudy.id}
               onClick={() => setActiveCase(index)}
               className={`p-6 rounded-xl transition-all duration-30o0 ${
-                activeCase === index
-                  ? 'bg-white shadow-xl scale-10o5 border-2 border-blue-50o0'
-                  : 'bg-white shadow-lg hover:shadow-xl'
-              }`}
-            >
-              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center mb-4 mx-auto`}>
-                <caseStudy.icon className="w-6 h-6 text-white"  />
-              </div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-90o0">{caseStudy.title}</h3>
-              <p className="text-sm text-gray-60o0">{caseStudy.company}</p>
-              <p className="text-xs text-gray-50o0 mt-1">{caseStudy.industry}</p>
-            </button>
-          ))}
-        </motion.div>
-
+                activeCase === index,
+                  ? 'bg-white shadow-xl scale-10o5 border-2 border-blue-50o0',
+                  : 'bg-white shadow-lg hover: shadow-xl'}`}
+            >,
+              <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center mb-4 mx-auto`}>,
+                <caseStudy.icon className="w-6 h-6 text-white"  />,
+              </div>,
+              <h3 className="font-semibold text-lg mb-2 text-gray-90o0">{caseStudy.title}</h3>,
+              <p className="text-sm text-gray-60o0">{caseStudy.company}</p>,
+              <p className="text-xs text-gray-50o0 mt-1">{caseStudy.industry}</p>,
+            </button>))}
+        </motion.div>,
         {/* Active Case Study Details */}
-        <AnimatePresence mode="wait">
-          <motion.div
+        <AnimatePresence mode="wait">,
+          <motion.div,
             key={activeCase}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="bg-white rounded-2xl shadow-xl p-8 mb-12"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            className="bg-white rounded-2xl shadow-xl p-8 mb-12">,
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
               {/* Left Column - Details */}
-              <div>
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${caseStudies[activeCase].color}`}>
-                    <caseStudies[activeCase].icon className="w-8 h-8 text-white"  />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-90o0 mb-2">
+              <div>,
+                <div className="flex items-start space-x-4 mb-6">,
+                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${caseStudies[activeCase].color}`}>,
+                    <caseStudies[activeCase].icon className="w-8 h-8 text-white"  />,
+                  </div>,
+                  <div>,
+                    <h3 className="text-2xl font-bold text-gray-90o0 mb-2">,
                       {caseStudies[activeCase].title}
-                    </h3>
-                    <p className="text-gray-60o0 text-lg">{caseStudies[activeCase].company}</p>
-                    <p className="text-gray-50o0">{caseStudies[activeCase].industry}</p>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-90o0 mb-2">Challenge</h4>
-                    <p className="text-gray-60o0">{caseStudies[activeCase].challenge}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-90o0 mb-2">Solution</h4>
-                    <p className="text-gray-60o0">{caseStudies[activeCase].solution}</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-90o0 mb-2">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-2">
+                    </h3>,
+                    <p className="text-gray-60o0 text-lg">{caseStudies[activeCase].company}</p>,
+                    <p className="text-gray-50o0">{caseStudies[activeCase].industry}</p>,
+                  </div>,
+                </div>,
+                <div className="space-y-6">,
+                  <div>,
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Challenge</h4>,
+                    <p className="text-gray-60o0">{caseStudies[activeCase].challenge}</p>,
+                  </div>,
+                  <div>,
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Solution</h4>,
+                    <p className="text-gray-60o0">{caseStudies[activeCase].solution}</p>,
+                  </div>,
+                  <div>,
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Technologies Used</h4>,
+                    <div className="flex flex-wrap gap-2">,
                       {caseStudies[activeCase].technologies.map((techindex) => (
-                        <span key={index} className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm">
+                        <span key={index} className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm">,
                           {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+                        </span>))}
+                    </div>,
+                  </div>,
+                </div>,
+              </div>,
               {/* Right Column - Results & Testimonial */}
-              <div>
-                <h4 className="font-semibold text-gray-90o0 mb-4">Results</h4>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 bg-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-60o0">{caseStudies[activeCase].results.roi}</div>
-                    <div className="text-sm text-gray-60o0">ROI</div>
-                  </div>
-                  <div className="p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-60o0">{caseStudies[activeCase].results.efficiency}</div>
-                    <div className="text-sm text-gray-60o0">Efficiency</div>
-                  </div>
-                  <div className="p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-60o0">{caseStudies[activeCase].results.costReduction}</div>
-                    <div className="text-sm text-gray-60o0">Cost Reduction</div>
-                  </div>
-                  <div className="p-4 bg-orange-50 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-60o0">{caseStudies[activeCase].results.customerSatisfaction}</div>
-                    <div className="text-sm text-gray-60o0">Satisfaction</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-6 mb-6 text-sm text-gray-60o0">
-                  <div className="flex items-center space-x-2">
-                    <Clock className="w-4 h-4"  />
-                    <span>{caseStudies[activeCase].timeline}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Users className="w-4 h-4"  />
-                    <span>{caseStudies[activeCase].team}</span>
-                  </div>
-                </div>
-
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <h4 className="font-semibold text-gray-90o0 mb-3">Client Testimonial</h4>
-                  <p className="text-gray-60o0 italic mb-4">"{caseStudies[activeCase].testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-gray-90o0">{caseStudies[activeCase].testimonial.name}</div>
-                    <div className="text-gray-50o0 text-sm">{caseStudies[activeCase].testimonial.role}{caseStudies[activeCase].company}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
+              <div>,
+                <h4 className="font-semibold text-gray-90o0 mb-4">Results</h4>,
+                <div className="grid grid-cols-2 gap-4 mb-6">,
+                  <div className="p-4 bg-green-50 rounded-lg">,
+                    <div className="text-2xl font-bold text-green-60o0">{caseStudies[activeCase].results.roi}</div>,
+                    <div className="text-sm text-gray-60o0">ROI</div>,
+                  </div>,
+                  <div className="p-4 bg-blue-50 rounded-lg">,
+                    <div className="text-2xl font-bold text-blue-60o0">{caseStudies[activeCase].results.efficiency}</div>,
+                    <div className="text-sm text-gray-60o0">Efficiency</div>,
+                  </div>,
+                  <div className="p-4 bg-purple-50 rounded-lg">,
+                    <div className="text-2xl font-bold text-purple-60o0">{caseStudies[activeCase].results.costReduction}</div>,
+                    <div className="text-sm text-gray-60o0">Cost Reduction</div>,
+                  </div>,
+                  <div className="p-4 bg-orange-50 rounded-lg">,
+                    <div className="text-2xl font-bold text-orange-60o0">{caseStudies[activeCase].results.customerSatisfaction}</div>,
+                    <div className="text-sm text-gray-60o0">Satisfaction</div>,
+                  </div>,
+                </div>,
+                <div className="flex items-center space-x-6 mb-6 text-sm text-gray-60o0">,
+                  <div className="flex items-center space-x-2">,
+                    <Clock className="w-4 h-4"  />,
+                    <span>{caseStudies[activeCase].timeline}</span>,
+                  </div>,
+                  <div className="flex items-center space-x-2">,
+                    <Users className="w-4 h-4"  />,
+                    <span>{caseStudies[activeCase].team}</span>,
+                  </div>,
+                </div>,
+                <div className="bg-gray-50 rounded-lg p-6">,
+                  <h4 className="font-semibold text-gray-90o0 mb-3">Client Testimonial</h4>,
+                  <p className="text-gray-60o0 italic mb-4">"{caseStudies[activeCase].testimonial.content}"</p>,
+                  <div>,
+                    <div className="font-semibold text-gray-90o0">{caseStudies[activeCase].testimonial.name}</div>,
+                    <div className="text-gray-50o0 text-sm">{caseStudies[activeCase].testimonial.role}{caseStudies[activeCase].company}</div>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+          </motion.div>,
+        </AnimatePresence>,
         {/* CTA Section */}
-        <motion.div
+        <motion.div,
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6delay: 0.8 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Create Your Success Story?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join hundreds of companies that have transformed their operations with our AI solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-60o0 px-8 py-4 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center">
-                <Target className="w-5 h-5 mr-2"  />
-                Start Your Project
-                <ArrowRight className="w-5 h-5 ml-2"  />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2"  />
-                Watch Case Study Video
-              </button>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default RevolutionaryCaseStudiesShowcase20o26;
+          className="text-center">,
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-12 text-white">,
+            <h3 className="text-3xl font-bold mb-4">,
+              Ready to Create Your Success Story?,
+            </h3>,
+            <p className="text-xl mb-8 opacity-90">,
+              Join hundreds of companies that have transformed their operations with our AI solutions,
+            </p>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+              <button className="bg-white text-blue-60o0 px-8 py-4 rounded-full font-semibold hover:bg-gray-10o0 transition-colors duration-30o0 flex items-center justify-center">,
+                <Target className="w-5 h-5 mr-2"  />,
+                Start Your Project,
+                <ArrowRight className="w-5 h-5 ml-2"  />,
+              </button>,
+              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-60o0 transition-colors duration-30o0 flex items-center justify-center">,
+                <Play className="w-5 h-5 mr-2"  />,
+                Watch Case Study Video,
+              </button>,
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>)},
+export default RevolutionaryCaseStudiesShowcase20o26,

@@ -1,17 +1,17 @@
 export interface ExtraService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "extraServices": ExtraService[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "extraServices": ExtraService[] = [{
     id: "cloud-migration-expert",
     "name": "Cloud Migration Expert",
     "tagline": "Seamless cloud migration and optimization",
@@ -22,16 +22,14 @@ address: string};export const "extraServices": ExtraService[] = [{
       "Performance optimization",
       "Cost analysis",
       "Security implementation",
-      "24/7 support"
-    ],
+      "24/7 support"],
     "link": "/services/cloud-migration-expert",
     "category": "Cloud Services",
     "realImplementation": true,
     "contactInfo": {
       mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-  },
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"},
   {
     "id": "cybersecurity-audit",
     "name": "Cybersecurity Audit Pro",
@@ -42,13 +40,12 @@ address: string};export const "extraServices": ExtraService[] = [{
       "Penetration testing",
       "Security policy review",
       "Compliance audit",
-      "Remediation guidance"
-    ],
+      "Remediation guidance"],
     "link": "/services/cybersecurity-audit",
     "category": "Security",
     "realImplementation": true,
     "contactInfo": {
       mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-]}}}}
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}}
+,

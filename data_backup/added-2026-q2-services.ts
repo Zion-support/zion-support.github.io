@@ -1,8 +1,8 @@
 export interface Added20o26Q2Service {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
   features: string[]}
 export const "added20o26Q2Services": Added20o26Q2Service[] = [{
     id: 'q2-20o26-service-1',
@@ -10,8 +10,7 @@ export const "added20o26Q2Services": Added20o26Q2Service[] = [{
     "tagline": 'Second quarter 20o26 service',
     "price": '$799',
     "features": [
-      '20o26 Q2 features',
-      'Advanced capabilities',
-      'Enhanced performance',
+      '20o26 Q2 featuresAdvanced capabilities',
+      'Enhanced performance'
     ]},
-];
+],

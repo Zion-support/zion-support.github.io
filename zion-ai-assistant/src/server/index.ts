@@ -4,7 +4,7 @@ import cors from 'cors';
 import { z } from 'zod';
 import {
   MilestoneSuggestionInput,
-  MilestoneSuggestionResponse,
+  MilestoneSuggestionResponse
 } from '../shared/types.js';
 import { generateMilestones } from './milestoneGenerator.js';
 
@@ -22,21 +22,21 @@ const inputSchema = z.object({
     'DevOps',
     'Mobile',
     'Data Engineering',
-    'Other',
-  ]),
+    'Other'
+  ])
 });
 
 app.post('/api/ai/milestones', async (req, res) => {
   try {
     const input = inputSchema.parse(req.body) as MilestoneSuggestionInput;
-    const response: MilestoneSuggestionResponse =
-      await generateMilestones(input);
+    const response: MilestoneSuggestionResponse = await generateMilestones(input);
     res.json(response);
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return res
-        .status(400)
-        .json({ error: 'Invalid input', details: error.issues });
+      return res.status(400).json({
+        error: 'Invalid input',
+        details: error.issues
+      });
     }
     console.error(error);
     res.status(500).json({ error: 'Failed to generate milestones' });
@@ -45,5 +45,5 @@ app.post('/api/ai/milestones', async (req, res) => {
 
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {
-  console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+  // console.log(`zion-ai-assistant listening on http://localhost:${port}`)
 });

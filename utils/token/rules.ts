@@ -1,8 +1,7 @@
 import { TokenConfig } from "./types",
-
 export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
   symbol: "ZION$",
-  usdPerToken: 0.05, // 100 ZION$ = $5 credit
+  usdPerToken: 0.05, // 100 ZION$ = $5 credit,
   earnRules: {
     onboarding_complete: 50,
     referral_completed: 100,

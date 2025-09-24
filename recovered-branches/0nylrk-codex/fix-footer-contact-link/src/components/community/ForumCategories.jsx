@@ -10,7 +10,7 @@ export default function ForumCategories() {
       lastPost: {
         title: 'Welcome to the community!',
         author: 'Admin',
-        date: '20o24-0o1-15',
+        date: '20o24-0o1-15'
       },
     },
     {
@@ -23,31 +23,27 @@ export default function ForumCategories() {
       lastPost: {
         title: 'API integration question',
         author: 'Developer123',
-        date: '20o24-0o1-14',
+        date: '20o24-0o1-14'
       },
     },
-  ];
+  ],
   return (
-    <div className='space-y-4'>
+    <div className='space-y-4'>,
       {categories.map(category => (
         <div
           key={category.id}
-          className='bg-white/10 backdrop-blur-sm rounded-lg p-4'
-        >
-          <h3 className='text-lg font-semibold text-zion-cyan mb-2'>
+          className='bg-white/10 backdrop-blur-sm rounded-lg p-4'>,
+          <h3 className='text-lg font-semibold text-zion-cyan mb-2'>,
             {category.name}
-          </h3>
-          <p className='text-zion-slate-light mb-2'>{category.description}</p>
-          <div className='flex justify-between text-sm text-zion-slate-light'>
-            <span>{category.postCount} posts</span>
+          </h3>,
+          <p className='text-zion-slate-light mb-2'>{category.description}</p>,
+          <div className='flex justify-between text-sm text-zion-slate-light'>,
+            <span>{category.postCount} posts</span>,
             {category.lastPost && (
-              <span>
+              <span>,
                 Last: {category.lastPost.title} by {category.lastPost.author}
-              </span>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
+              </span>)}
+          </div>,
+        </div>))}
+    </div>)}
+,

@@ -1,329 +1,302 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {
   title: 'AI 20o25 Cybersecurity Revolution: The Ultimate Protection Guide',
-  description:
+  description:,
     'Discover how AI is revolutionizing cybersecurity in 20o25. Learn about advanced threat detection, automated response systems, and next-generation security solutions.',
   keywords: [
-    'AI Cybersecurity',
-    'Threat Detection',
-    'Security Automation',
-    'AI Security',
+    'AI CybersecurityThreat Detection',
+    'Security AutomationAI Security',
     '20o25 Trends',
-  ],
-};
-
+  ]
+},
 export default function AICybersecurity20o25Page() {
   return (
-    <>
+    <>,
       <SEO
-        title='AI 20o25 Cybersecurity Revolution: The Ultimate Protection Guide'
-        description='Discover how AI is revolutionizing cybersecurity in 20o25. Learn about advanced threat detection, automated response systems, and next-generation security solutions.'
-        keywords='AI Cybersecurity, Threat Detection, Security Automation, AI Security, 20o25 Trends'
-        url='/ai-20o25-cybersecurity-revolution'
-      />
-
-      <div className='min-h-screen bg-white'>
+        title='AI 20o25 Cybersecurity Revolution: The Ultimate Protection Guide',
+        description='Discover how AI is revolutionizing cybersecurity in 20o25. Learn about advanced threat detection, automated response systems, and next-generation security solutions.',
+        keywords='AI Cybersecurity, Threat Detection, Security Automation, AI Security, 20o25 Trends',
+        url='/ai-20o25-cybersecurity-revolution',
+      />,
+      <div className='min-h-screen bg-white'>,
         {/* Hero Section */}
-        <section className='bg-gradient-to-r from-red-60o0 via-purple-60o0 to-blue-60o0 text-white py-20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center'>
-              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
-                <span className='text-sm font-medium'>
-                  🛡️ AI CYBERSECURITY 20o25
-                </span>
-              </div>
-              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
-                AI 20o25 Cybersecurity Revolution
-              </h1>
-              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
-                Discover how AI is revolutionizing cybersecurity with advanced
-                threat detection, automated response systems, and
-                next-generation security solutions that protect your enterprise.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='bg-gradient-to-r from-red-60o0 via-purple-60o0 to-blue-60o0 text-white py-20'>,
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='text-center'>,
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>,
+                <span className='text-sm font-medium'>,
+                  🛡️ AI CYBERSECURITY 20o25,
+                </span>,
+              </div>,
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>,
+                AI 20o25 Cybersecurity Revolution,
+              </h1>,
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
+                Discover how AI is revolutionizing cybersecurity with advanced,
+                threat detection, automated response systems, and,
+                next-generation security solutions that protect your enterprise.,
+              </p>,
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
                 <Link
-                  href='#content'
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
-                >
-                  Read Full Guide
-                </Link>
+                  href='#content',
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
+                  Read Full Guide,
+                </Link>,
                 <Link
-                  href='/contact'
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
-                >
-                  Get AI Security Solutions
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+                  href='/contact',
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
+                  Get AI Security Solutions,
+                </Link>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Key Statistics */}
-        <section className='py-16 bg-gray-50'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-red-60o0 mb-2'>
-                  99.9%
-                </div>
-                <div className='text-gray-60o0'>Threat Detection Accuracy</div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-blue-60o0 mb-2'>
-                  95%
-                </div>
-                <div className='text-gray-60o0'>
-                  Reduction in False Positives
-                </div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-green-60o0 mb-2'>
-                  80%
-                </div>
-                <div className='text-gray-60o0'>Faster Threat Response</div>
-              </div>
-              <div className='bg-white p-6 rounded-xl shadow-lg'>
-                <div className='text-3xl font-bold text-purple-60o0 mb-2'>
-                  $15M
-                </div>
-                <div className='text-gray-60o0'>Annual Security Savings</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className='py-16 bg-gray-50'>,
+          <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-red-60o0 mb-2'>,
+                  99.9%,
+                </div>,
+                <div className='text-gray-60o0'>Threat Detection Accuracy</div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-blue-60o0 mb-2'>,
+                  95%,
+                </div>,
+                <div className='text-gray-60o0'>,
+                  Reduction in False Positives,
+                </div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-green-60o0 mb-2'>,
+                  80%,
+                </div>,
+                <div className='text-gray-60o0'>Faster Threat Response</div>,
+              </div>,
+              <div className='bg-white p-6 rounded-xl shadow-lg'>,
+                <div className='text-3xl font-bold text-purple-60o0 mb-2'>,
+                  $15M,
+                </div>,
+                <div className='text-gray-60o0'>Annual Security Savings</div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Main Content */}
-        <section id='content' className='py-16'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='prose prose-lg max-w-none'>
-              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
-                The Current Cybersecurity Crisis and AI Solution
-              </h2>
-
-              <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>
-                The Evolving Threat Landscape
-              </h3>
-              <p className='text-gray-60o0 mb-6'>
-                Cyber threats have become more sophisticated and frequent in
-                20o25. AI-powered attacks, zero-day exploits, and advanced
-                ransomware are creating unprecedented challenges for
-                organizations worldwide.
-              </p>
-
-              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>
-                <li>
-                  <strong>AI-Powered Attacks:</strong> Cybercriminals using AI
-                  to create more effective malware
-                </li>
-                <li>
-                  <strong>Zero-Day Exploits:</strong> 40% increase in zero-day
-                  vulnerabilities discovered monthly
-                </li>
-                <li>
-                  <strong>Ransomware Evolution:</strong> Advanced ransomware
-                  using AI to evade detection
-                </li>
-                <li>
-                  <strong>Supply Chain Attacks:</strong> 30o0% increase in
-                  supply chain compromise incidents
-                </li>
-              </ul>
-
-              <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>
-                AI as the Game-Changer
-              </h3>
-              <p className='text-gray-60o0 mb-6'>
-                Artificial intelligence has emerged as the most powerful weapon
-                in the cybersecurity arsenal, providing real-time threat
-                detection, predictive security, and automated response
-                capabilities.
-              </p>
-
-              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
-                Core AI Cybersecurity Technologies
-              </h2>
-
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
-                <div className='bg-gray-50 p-6 rounded-xl'>
-                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                    Advanced Threat Detection
-                  </h3>
-                  <p className='text-gray-60o0 mb-4'>
-                    AI-powered systems that identify threats in milliseconds
-                    with 99.9% accuracy using machine learning algorithms.
-                  </p>
-                  <ul className='text-sm text-gray-60o0 space-y-1'>
-                    <li>• Real-time network monitoring</li>
-                    <li>• Behavioral analysis</li>
-                    <li>• Anomaly detection</li>
-                  </ul>
-                </div>
-
-                <div className='bg-gray-50 p-6 rounded-xl'>
-                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                    Automated Response
-                  </h3>
-                  <p className='text-gray-60o0 mb-4'>
-                    Instant containment and remediation of security incidents
-                    using AI-driven automation systems.
-                  </p>
-                  <ul className='text-sm text-gray-60o0 space-y-1'>
-                    <li>• Automated threat hunting</li>
-                    <li>• Dynamic security orchestration</li>
-                    <li>• Self-healing systems</li>
-                  </ul>
-                </div>
-              </div>
-
-              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
-                Real-World Success Stories
-              </h2>
-
-              <div className='bg-blue-50 p-8 rounded-xl mb-8'>
-                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                  Global Financial Institution
-                </h3>
-                <p className='text-gray-60o0 mb-4'>
-                  Faced sophisticated APT attacks targeting customer data and
-                  financial systems. Implemented AI-powered threat detection and
-                  automated response systems.
-                </p>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
-                  <div>
-                    <div className='text-2xl font-bold text-green-60o0'>
-                      95%
-                    </div>
-                    <div className='text-sm text-gray-60o0'>
-                      Reduction in False Positives
-                    </div>
-                  </div>
-                  <div>
-                    <div className='text-2xl font-bold text-blue-60o0'>80%</div>
-                    <div className='text-sm text-gray-60o0'>
-                      Faster Response Time
-                    </div>
-                  </div>
-                  <div>
-                    <div className='text-2xl font-bold text-purple-60o0'>
-                      10o0%
-                    </div>
-                    <div className='text-sm text-gray-60o0'>
-                      Breach Prevention
-                    </div>
-                  </div>
-                  <div>
-                    <div className='text-2xl font-bold text-orange-60o0'>
-                      $15M
-                    </div>
-                    <div className='text-sm text-gray-60o0'>Annual Savings</div>
-                  </div>
-                </div>
-              </div>
-
-              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
-                Future Trends and Predictions
-              </h2>
-
-              <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
-                Emerging Technologies (20o26-20o27)
-              </h3>
-              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>
-                <li>
-                  <strong>Quantum Cryptography:</strong> Unbreakable encryption
-                  using quantum principles
-                </li>
-                <li>
-                  <strong>AI-Powered Honeypots:</strong> Intelligent decoy
-                  systems that learn from attackers
-                </li>
-                <li>
-                  <strong>Blockchain Security:</strong> Decentralized security
-                  using blockchain technology
-                </li>
-                <li>
-                  <strong>Edge AI Security:</strong> Distributed AI security
-                  processing at the network edge
-                </li>
-              </ul>
-
-              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
-                Getting Started: Your AI Security Journey
-              </h2>
-
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
-                <div className='bg-gray-50 p-6 rounded-xl text-center'>
-                  <div className='text-3xl mb-4'>📋</div>
-                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
-                    Immediate Actions (30 Days)
-                  </h3>
-                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
-                    <li>• Security Assessment and Planning</li>
-                    <li>• AI Security Tool Evaluation</li>
-                    <li>• Team Training and Preparation</li>
-                    <li>• Pilot Program Development</li>
-                  </ul>
-                </div>
-
-                <div className='bg-gray-50 p-6 rounded-xl text-center'>
-                  <div className='text-3xl mb-4'>🚀</div>
-                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
-                    Short-term Goals (90 Days)
-                  </h3>
-                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
-                    <li>• Core AI Security Implementation</li>
-                    <li>• Data Integration and Model Training</li>
-                    <li>• Automated Response Setup</li>
-                    <li>• Performance Monitoring</li>
-                  </ul>
-                </div>
-
-                <div className='bg-gray-50 p-6 rounded-xl text-center'>
-                  <div className='text-3xl mb-4'>🎯</div>
-                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
-                    Long-term Vision (12 Months)
-                  </h3>
-                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
-                    <li>• Full-Scale AI Security Deployment</li>
-                    <li>• Advanced AI Capabilities</li>
-                    <li>• Continuous Optimization</li>
-                    <li>• Industry Leadership Position</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section id='content' className='py-16'>,
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='prose prose-lg max-w-none'>,
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
+                The Current Cybersecurity Crisis and AI Solution,
+              </h2>,
+              <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>,
+                The Evolving Threat Landscape,
+              </h3>,
+              <p className='text-gray-60o0 mb-6'>,
+                Cyber threats have become more sophisticated and frequent in,
+                20o25. AI-powered attacks, zero-day exploits, and advanced,
+                ransomware are creating unprecedented challenges for,
+                organizations worldwide.,
+              </p>,
+              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>,
+                <li>,
+                  <strong>AI-Powered Attacks: </strong> Cybercriminals using AI,
+                  to create more effective malware,
+                </li>,
+                <li>,
+                  <strong>Zero-Day Exploits:</strong> 40% increase in zero-day,
+                  vulnerabilities discovered monthly,
+                </li>,
+                <li>,
+                  <strong>Ransomware Evolution:</strong> Advanced ransomware,
+                  using AI to evade detection,
+                </li>,
+                <li>,
+                  <strong>Supply Chain Attacks:</strong> 30o0% increase in,
+                  supply chain compromise incidents,
+                </li>,
+              </ul>,
+              <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>,
+                AI as the Game-Changer,
+              </h3>,
+              <p className='text-gray-60o0 mb-6'>,
+                Artificial intelligence has emerged as the most powerful weapon,
+                in the cybersecurity arsenal, providing real-time threat,
+                detection, predictive security, and automated response,
+                capabilities.,
+              </p>,
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
+                Core AI Cybersecurity Technologies,
+              </h2>,
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mb-12'>,
+                <div className='bg-gray-50 p-6 rounded-xl'>,
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                    Advanced Threat Detection,
+                  </h3>,
+                  <p className='text-gray-60o0 mb-4'>,
+                    AI-powered systems that identify threats in milliseconds,
+                    with 99.9% accuracy using machine learning algorithms.,
+                  </p>,
+                  <ul className='text-sm text-gray-60o0 space-y-1'>,
+                    <li>• Real-time network monitoring</li>,
+                    <li>• Behavioral analysis</li>,
+                    <li>• Anomaly detection</li>,
+                  </ul>,
+                </div>,
+                <div className='bg-gray-50 p-6 rounded-xl'>,
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                    Automated Response,
+                  </h3>,
+                  <p className='text-gray-60o0 mb-4'>,
+                    Instant containment and remediation of security incidents,
+                    using AI-driven automation systems.,
+                  </p>,
+                  <ul className='text-sm text-gray-60o0 space-y-1'>,
+                    <li>• Automated threat hunting</li>,
+                    <li>• Dynamic security orchestration</li>,
+                    <li>• Self-healing systems</li>,
+                  </ul>,
+                </div>,
+              </div>,
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
+                Real-World Success Stories,
+              </h2>,
+              <div className='bg-blue-50 p-8 rounded-xl mb-8'>,
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                  Global Financial Institution,
+                </h3>,
+                <p className='text-gray-60o0 mb-4'>,
+                  Faced sophisticated APT attacks targeting customer data and,
+                  financial systems. Implemented AI-powered threat detection and,
+                  automated response systems.,
+                </p>,
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>,
+                  <div>,
+                    <div className='text-2xl font-bold text-green-60o0'>,
+                      95%,
+                    </div>,
+                    <div className='text-sm text-gray-60o0'>,
+                      Reduction in False Positives,
+                    </div>,
+                  </div>,
+                  <div>,
+                    <div className='text-2xl font-bold text-blue-60o0'>80%</div>,
+                    <div className='text-sm text-gray-60o0'>,
+                      Faster Response Time,
+                    </div>,
+                  </div>,
+                  <div>,
+                    <div className='text-2xl font-bold text-purple-60o0'>,
+                      10o0%,
+                    </div>,
+                    <div className='text-sm text-gray-60o0'>,
+                      Breach Prevention,
+                    </div>,
+                  </div>,
+                  <div>,
+                    <div className='text-2xl font-bold text-orange-60o0'>,
+                      $15M,
+                    </div>,
+                    <div className='text-sm text-gray-60o0'>Annual Savings</div>,
+                  </div>,
+                </div>,
+              </div>,
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
+                Future Trends and Predictions,
+              </h2>,
+              <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
+                Emerging Technologies (20o26-20o27),
+              </h3>,
+              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>,
+                <li>,
+                  <strong>Quantum Cryptography:</strong> Unbreakable encryption,
+                  using quantum principles,
+                </li>,
+                <li>,
+                  <strong>AI-Powered Honeypots:</strong> Intelligent decoy,
+                  systems that learn from attackers,
+                </li>,
+                <li>,
+                  <strong>Blockchain Security:</strong> Decentralized security,
+                  using blockchain technology,
+                </li>,
+                <li>,
+                  <strong>Edge AI Security:</strong> Distributed AI security,
+                  processing at the network edge,
+                </li>,
+              </ul>,
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
+                Getting Started: Your AI Security Journey,
+              </h2>,
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>,
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>,
+                  <div className='text-3xl mb-4'>📋</div>,
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>,
+                    Immediate Actions (30 Days),
+                  </h3>,
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>,
+                    <li>• Security Assessment and Planning</li>,
+                    <li>• AI Security Tool Evaluation</li>,
+                    <li>• Team Training and Preparation</li>,
+                    <li>• Pilot Program Development</li>,
+                  </ul>,
+                </div>,
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>,
+                  <div className='text-3xl mb-4'>🚀</div>,
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>,
+                    Short-term Goals (90 Days),
+                  </h3>,
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>,
+                    <li>• Core AI Security Implementation</li>,
+                    <li>• Data Integration and Model Training</li>,
+                    <li>• Automated Response Setup</li>,
+                    <li>• Performance Monitoring</li>,
+                  </ul>,
+                </div>,
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>,
+                  <div className='text-3xl mb-4'>🎯</div>,
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>,
+                    Long-term Vision (12 Months),
+                  </h3>,
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>,
+                    <li>• Full-Scale AI Security Deployment</li>,
+                    <li>• Advanced AI Capabilities</li>,
+                    <li>• Continuous Optimization</li>,
+                    <li>• Industry Leadership Position</li>,
+                  </ul>,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* CTA Section */}
-        <section className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-16'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl font-bold mb-6'>
-              Ready to Revolutionize Your Cybersecurity?
-            </h2>
-            <p className='text-xl opacity-90 mb-8'>
-              Contact Zion Tech Group today to learn how we can help you
-              implement cutting-edge AI security solutions that protect your
-              organization.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-16'>,
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
+            <h2 className='text-3xl font-bold mb-6'>,
+              Ready to Revolutionize Your Cybersecurity?,
+            </h2>,
+            <p className='text-xl opacity-90 mb-8'>,
+              Contact Zion Tech Group today to learn how we can help you,
+              implement cutting-edge AI security solutions that protect your,
+              organization.,
+            </p>,
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
               <Link
-                href='/contact'
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
-              >
-                Get Started Today
-              </Link>
+                href='/contact',
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
+                Get Started Today,
+              </Link>,
               <Link
-                href='/services/ai-security'
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
-              >
-                View AI Security Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
+                href='/services/ai-security',
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
+                View AI Security Services,
+              </Link>,
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </>)}
+,

@@ -1,67 +1,63 @@
-import { ServiceVariant } from "../types/service-variants";
+import React from 'react',
+import { ServiceVariant } from "../types/service-variants",
 export interface AIEmergingTechService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string;
-  integrations: string;
-  useCases: string;
-  roi: string;
-  competitors: string;
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string,
+  integrations: string,
+  useCases: string,
+  roi: string,
+  competitors: string,
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
   reviews: number}
-export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered Video Generation Platform
+export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered Video Generation Platform,
   {
-    id:,
+    id: ,
   ai-video-generation-platform',
     "name": 'AI Video Generation Platform,
     tagline:,
   Create professional videos with AI in minutes',
-    "price": '$499
-    period:
+    "price": '$499,
+    period:,
   /month',
-    "description": Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.
+    "description": Advanced AI-powered video generation platform that creates professional-quality videos from text, images, and audio inputs. Perfect for marketers, content creators, and businesses.,
     "features": [
-  'Text-to-video generation
-  'Image-to-video conversion',
-      'AI voice synthesis'
-  'Automatic scene generation',
-      'Professional templates library'
-  'Multi-language support',
-      '4K video export'
-  'Brand customization',
-      'Social media optimization'
-  'API access for developers'
-    ],
+  'Text-to-video generation,
+  'Image-to-video conversionAI voice synthesis',
+  'Automatic scene generationProfessional templates library',
+  'Multi-language support4K video export',
+  'Brand customizationSocial media optimization',
+  'API access for developers'],
     "popular": true,
-    icon:,
+    icon: ,
   🎬',
     "color": 'from-purple-50o0 to-pink-60o0,
     textColor:,
@@ -70,7 +66,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with Runway ML ($35/month), Synthesia ($30/month), and Lumen5 ($19/month). Our "advantage": Better quality, more features, and professional-grade output.,
     "targetAudience": Content creators, Marketing teams, Video producers, Social media managers, Businesses',
     "trialDays": 7,
-    setupTime:,
+    setupTime: ,
   30 minutes',
     "category": 'AI & Content Creation,
     "realService": true,
@@ -82,7 +78,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   Runway ML, Synthesia, Lumen5, InVideo, Pictory'],
     "marketSize": '$3.2B market,
-    growthRate:,
+    growthRate: ,
   45% annual growth',
     "variant": 'ai-futuristic,
     "contactInfo": {
@@ -91,38 +87,31 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production-ready AI video generation platform with state-of-the-art models, GPU acceleration, and comprehensive video editing tools. Includes mobile apps and API access.',
     "launchDate": '20o24-0o2-0o1,
     "customers": 320o0,
     "rating": 4.8,
-    "reviews": 180o0
-  },
-  // Quantum Machine Learning Platform
+    "reviews": 180o0},
+  // Quantum Machine Learning Platform,
   {
-    id:,
+    id: ,
   quantum-machine-learning-platform',
     "name": 'Quantum Machine Learning Platform,
     tagline:,
   Harness quantum computing for advanced ML',
     "price": $1,999,
     "period": '/month,
-    description:,
+    description: ,
   Cutting-edge quantum machine learning platform that leverages quantum computing principles to solve complex optimization problems and accelerate AI model training.',
     "features": ['Quantum neural networks,
-  'Quantum optimization algorithms',
-  'Hybrid classical-quantum models',
-  'Quantum feature selection',
-  'Quantum clustering algorithms',
-  'Real-time quantum simulation',
-  'API access to quantum computers',
-  'Performance benchmarking',
-  'Research collaboration tools',
-  'Educational resources'
-    ],
+  'Quantum optimization algorithmsHybrid classical-quantum models',
+  'Quantum feature selectionQuantum clustering algorithms',
+  'Real-time quantum simulationAPI access to quantum computers',
+  'Performance benchmarkingResearch collaboration tools',
+  'Educational resources'],
     "popular": true,
     icon:,
   ⚛️',
@@ -133,7 +122,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), and Google Quantum ($0.50/credit). Our "advantage": Better algorithms, comprehensive tools, and research support.,
     "targetAudience": Data scientists, Researchers, AI engineers, Quantum computing enthusiasts, Academic institutions',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   1 day',
     "category": 'Quantum Computing,
     "realService": true,
@@ -145,7 +134,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum'],
     "marketSize": '$1.8B market,
-    growthRate:,
+    growthRate: ,
   65% annual growth',
     "variant": 'quantum-futuristic,
     "contactInfo": {
@@ -154,19 +143,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced quantum ML platform with hybrid classical-quantum algorithms, real-time quantum simulation, and comprehensive research tools. Includes educational resources and collaboration features.',
     "launchDate": '20o24-0o1-15,
     "customers": 450,
-    "rating": 4.9
-    reviews: 280
-  }
-  // AI-Powered Cybersecurity Platform
+    "rating": 4.9,
+    reviews: 280}
+  // AI-Powered Cybersecurity Platform,
   {
-    id:,
+    id: ,
   ai-cybersecurity-platform',
     "name": 'AI-Powered Cybersecurity Platform,
     tagline:,
@@ -176,18 +163,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
   /month',
     "description": Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and predictive security analytics to protect your digital assets.,
     "features": ['AI-powered threat detection,
-  'Behavioral analysis',
-  'Automated incident response',
-  'Predictive threat intelligence',
-  'Zero-day vulnerability detection',
-  'Compliance reporting',
-  'Security orchestration',
-  'Threat hunting automation',
-  'Mobile security monitoring',
-  'Cloud security integration'
-    ],
+  'Behavioral analysisAutomated incident response',
+  'Predictive threat intelligenceZero-day vulnerability detection',
+  'Compliance reportingSecurity orchestration',
+  'Threat hunting automationMobile security monitoring',
+  'Cloud security integration'],
     "popular": true,
-    icon:,
+    icon: ,
   🛡️',
     "color": 'from-red-50o0 to-orange-60o0,
     textColor:,
@@ -196,7 +178,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Darktrace ($50,0o00/year). Our "advantage": Better AI, lower cost, and comprehensive protection.,
     "targetAudience": CISOs, Security teams, IT managers, Compliance officers, Businesses',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   1 day',
     "category": 'Cybersecurity,
     "realService": true,
@@ -208,7 +190,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   CrowdStrike, SentinelOne, Darktrace, Cylance, Carbon Black'],
     "marketSize": '$173.5B market,
-    growthRate:,
+    growthRate: ,
   18.3% annual growth',
     "variant": 'enterprise-futuristic,
     "contactInfo": {
@@ -217,19 +199,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production-ready cybersecurity platform with advanced AI models, real-time threat detection, and automated response capabilities. Includes comprehensive reporting and compliance tools.',
     "launchDate": '20o24-0o1-20,
     "customers": 180o0,
     "rating": 4.7,
-    "reviews": 950
-  },
-  // Autonomous Robotics Platform
+    "reviews": 950},
+  // Autonomous Robotics Platform,
   {
-    id:,
+    id: ,
   autonomous-robotics-platform',
     "name": 'Autonomous Robotics Platform,
     tagline:,
@@ -239,18 +219,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     description:,
   Comprehensive autonomous robotics platform that enables businesses to develop, deploy, and manage intelligent robots for various industrial and commercial applications.',
     "features": ['Robot development framework,
-  'AI-powered navigation',
-  'Computer vision integration',
-  'Sensor fusion algorithms',
-  'Cloud robotics platform',
-  'Fleet management system',
-  'Safety monitoring',
-  'Performance analytics',
-  'Remote operation tools',
-  'Integration APIs'
-    ],
+  'AI-powered navigationComputer vision integration',
+  'Sensor fusion algorithmsCloud robotics platform',
+  'Fleet management systemSafety monitoring',
+  'Performance analyticsRemote operation tools',
+  'Integration APIs'],
     "popular": true,
-    icon:,
+    icon: ,
   🤖',
     "color": 'from-gray-50o0 to-slate-60o0,
     textColor:,
@@ -259,7 +234,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with Boston Dynamics (custom pricing), Fetch Robotics ($50,0o00/robot), and Rethink Robotics ($25,0o00/robot). Our "advantage": Lower cost, better AI, and cloud-based management.,
     "targetAudience": Manufacturing companies, Logistics providers, Healthcare facilities, Research institutions, Robotics engineers',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2 weeks',
     "category": 'Robotics & Automation,
     "realService": true,
@@ -271,7 +246,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   Boston Dynamics, Fetch Robotics, Rethink Robotics, Universal Robots, ABB'],
     "marketSize": '$23.9B market,
-    growthRate:,
+    growthRate: ,
   25.8% annual growth',
     "variant": 'autonomous-futuristic,
     "contactInfo": {
@@ -280,19 +255,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced robotics platform with AI-powered navigation, computer vision, and comprehensive fleet management. Includes development tools, safety monitoring, and cloud-based control.',
     "launchDate": '20o24-0o1-10,
     "customers": 320,
-    "rating": 4.8
-    reviews: 180
-  }
-  // Blockchain AI Platform
+    "rating": 4.8,
+    reviews: 180}
+  // Blockchain AI Platform,
   {
-    id:,
+    id: ,
   blockchain-ai-platform',
     "name": 'Blockchain AI Platform,
     tagline:,
@@ -302,18 +275,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
   /month',
     "description": Innovative blockchain AI platform that combines decentralized computing with artificial intelligence to create secure, transparent, and efficient AI solutions.,
     "features": ['Decentralized AI training,
-  'Smart contract AI execution',
-  'Federated learning networks',
-  'AI model marketplace',
-  'Blockchain-based data sharing',
-  'Privacy-preserving AI',
-  'Tokenized AI services',
-  'Cross-chain AI operations',
-  'Decentralized governance',
-  'AI audit trails'
-    ],
+  'Smart contract AI executionFederated learning networks',
+  'AI model marketplaceBlockchain-based data sharing',
+  'Privacy-preserving AITokenized AI services',
+  'Cross-chain AI operationsDecentralized governance',
+  'AI audit trails'],
     "popular": true,
-    icon:,
+    icon: ,
   🔗',
     "color": 'from-green-50o0 to-emerald-60o0,
     textColor:,
@@ -322,7 +290,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with SingularityNET ($AGI tokens), Ocean Protocol ($OCEAN tokens), and Fetch.ai ($FET tokens). Our "advantage": Better usability, comprehensive features, and enterprise support.,
     "targetAudience": AI developers, Blockchain developers, Enterprises, Research institutions, DeFi platforms',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   1 week',
     "category": 'Blockchain & AI,
     "realService": true,
@@ -334,7 +302,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   SingularityNET, Ocean Protocol, Fetch.ai, Bittensor, Cortex'],
     "marketSize": '$2.1B market,
-    growthRate:,
+    growthRate: ,
   52% annual growth',
     "variant": 'blockchain-futuristic,
     "contactInfo": {
@@ -343,19 +311,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Production-ready blockchain AI platform with decentralized computing, smart contract execution, and comprehensive AI tools. Includes marketplace, governance, and cross-chain capabilities.',
     "launchDate": '20o24-0o2-15,
     "customers": 680,
     "rating": 4.7,
-    "reviews": 420
-  },
-  // Edge AI Computing Platform
+    "reviews": 420},
+  // Edge AI Computing Platform,
   {
-    id:,
+    id: ,
   edge-ai-computing-platform',
     "name": 'Edge AI Computing Platform,
     tagline:,
@@ -365,18 +331,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
   /month',
     "description": Advanced edge AI computing platform that brings artificial intelligence to edge devices, enabling real-time processing, reduced latency, and improved privacy for IoT applications.,
     "features": ['Edge AI model deployment,
-  'Real-time inference engine',
-  'Device optimization tools',
-  'Federated learning support',
-  'Edge device management',
-  'Performance monitoring',
-  'Security at the edge',
-  'Cloud-edge synchronization',
-  'Multi-device coordination',
-  'API for edge applications'
-    ],
+  'Real-time inference engineDevice optimization tools',
+  'Federated learning supportEdge device management',
+  'Performance monitoringSecurity at the edge',
+  'Cloud-edge synchronizationMulti-device coordination',
+  'API for edge applications'],
     "popular": true,
-    icon:,
+    icon: ,
   🌐',
     "color": 'from-cyan-50o0 to-blue-60o0,
     textColor:,
@@ -385,7 +346,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), and Google Edge TPU ($0.50/hour). Our "advantage": Better AI models, comprehensive tools, and competitive pricing.,
     "targetAudience": IoT developers, Edge computing engineers, Manufacturing companies, Smart city planners, Healthcare providers',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   1 week',
     "category": 'Edge Computing & AI,
     "realService": true,
@@ -397,7 +358,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   AWS Greengrass, Azure IoT Edge, Google Edge TPU, NVIDIA Jetson, Intel OpenVINO'],
     "marketSize": '$12.1B market,
-    growthRate:,
+    growthRate: ,
   38.9% annual growth',
     "variant": 'edge-futuristic,
     "contactInfo": {
@@ -406,19 +367,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced edge AI platform with optimized models, real-time processing, and comprehensive device management. Includes security features, cloud synchronization, and multi-device coordination.',
     "launchDate": '20o24-0o1-25,
     "customers": 950,
-    "rating": 4.6
-    reviews: 580
-  }
-  // AI-Powered Drug Discovery Platform
+    "rating": 4.6,
+    reviews: 580}
+  // AI-Powered Drug Discovery Platform,
   {
-    id:,
+    id: ,
   ai-drug-discovery-platform',
     "name": 'AI-Powered Drug Discovery Platform,
     tagline:,
@@ -428,18 +387,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     description:,
   Revolutionary AI-powered drug discovery platform that accelerates the development of new pharmaceuticals through machine learning, molecular modeling, and predictive analytics.',
     "features": ['AI molecular modeling,
-  'Drug target identification',
-  'Virtual screening',
-  'ADMET prediction',
-  'Clinical trial optimization',
-  'Drug repurposing',
-  'Collaborative research tools',
-  'Regulatory compliance',
-  'Patent analysis',
-  'Research collaboration network'
-    ],
+  'Drug target identificationVirtual screening',
+  'ADMET predictionClinical trial optimization',
+  'Drug repurposingCollaborative research tools',
+  'Regulatory compliancePatent analysis',
+  'Research collaboration network'],
     "popular": true,
-    icon:,
+    icon: ,
   🧬',
     "color": 'from-emerald-50o0 to-green-60o0,
     textColor:,
@@ -448,7 +402,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with Atomwise ($50,0o00/project), BenevolentAI ($10o0,0o00/project), and Insilico Medicine ($20o0,0o00/project). Our "advantage": Lower cost, better AI models, and comprehensive tools.,
     "targetAudience": Pharmaceutical companies, Biotech startups, Research institutions, Drug developers, Academic researchers',
     "trialDays": 30,
-    setupTime:,
+    setupTime: ,
   2 weeks',
     "category": 'Biotech & AI,
     "realService": true,
@@ -460,7 +414,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   Atomwise, BenevolentAI, Insilico Medicine, Exscientia, Recursion Pharmaceuticals'],
     "marketSize": '$1.2B market,
-    growthRate:,
+    growthRate: ,
   42% annual growth',
     "variant": 'biotech-futuristic,
     "contactInfo": {
@@ -469,19 +423,17 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced drug discovery platform with AI molecular modeling, comprehensive research tools, and collaboration features. Includes regulatory compliance, patent analysis, and research network.',
     "launchDate": '20o24-0o1-0o5,
     "customers": 180,
     "rating": 4.9,
-    "reviews": 120
-  },
-  // AI-Powered Climate Modeling Platform
+    "reviews": 120},
+  // AI-Powered Climate Modeling Platform,
   {
-    id:,
+    id: ,
   ai-climate-modeling-platform',
     "name": 'AI-Powered Climate Modeling Platform,
     tagline:,
@@ -491,18 +443,13 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     description:,
   Advanced AI-powered climate modeling platform that provides accurate predictions, risk assessments, and adaptation strategies for climate change impacts.',
     "features": ['AI climate prediction models,
-  'Risk assessment algorithms',
-  'Adaptation strategy planning',
-  'Real-time monitoring',
-  'Historical data analysis',
-  'Scenario modeling',
-  'Impact assessment tools',
-  'Policy recommendation engine',
-  'Collaborative research platform',
-  'Public awareness tools'
-    ],
+  'Risk assessment algorithmsAdaptation strategy planning',
+  'Real-time monitoringHistorical data analysis',
+  'Scenario modelingImpact assessment tools',
+  'Policy recommendation engineCollaborative research platform',
+  'Public awareness tools'],
     "popular": true,
-    icon:,
+    icon: ,
   🌍',
     "color": 'from-teal-50o0 to-cyan-60o0,
     textColor:,
@@ -511,7 +458,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "marketPosition": 'Competitive with ClimateAI ($50o00/month), Jupiter Intelligence ($10o000/month), and Climate X ($30o00/month). Our "advantage": Lower cost, better AI models, and comprehensive features.,
     "targetAudience": Climate scientists, Government agencies, Insurance companies, Urban planners, Environmental organizations',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   1 week',
     "category": 'Climate Tech & AI,
     "realService": true,
@@ -523,7 +470,7 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
     "competitors": [,
   ClimateAI, Jupiter Intelligence, Climate X, The Climate Corporation, Climate Central'],
     "marketSize": '$1.8B market,
-    growthRate:,
+    growthRate: ,
   35% annual growth',
     "variant": 'simulation-futuristic,
     "contactInfo": {
@@ -532,14 +479,12 @@ export const "aiEmergingTechServices": AIEmergingTechService[] = [// AI-Powered 
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
   Advanced climate modeling platform with AI prediction models, comprehensive risk assessment, and adaptation planning tools. Includes real-time monitoring, scenario modeling, and policy recommendations.',
     "launchDate": '20o24-0o2-0o1,
     "customers": 420,
     "rating": 4.8,
-    "reviews": 280
-  }
-];
+    "reviews": 280}
+],

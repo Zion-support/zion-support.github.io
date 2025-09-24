@@ -1,17 +1,17 @@
 export interface InnovativeMicroSaasV3 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "innovativeMicroSaasServicesV3": InnovativeMicroSaasV3[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "innovativeMicroSaasServicesV3": InnovativeMicroSaasV3[] = [{
     id: "ai-customer-support",
     "name": "AI Customer Support Platform",
     "tagline": "24/7 intelligent customer support automation",
@@ -22,13 +22,12 @@ address: string};export const "innovativeMicroSaasServicesV3": InnovativeMicroSa
       "Multi-language support",
       "Ticket management",
       "Analytics dashboard",
-      "CRM integration"
-    ],
+      "CRM integration"],
     "link": "/services/ai-customer-support",
     "category": "Customer Support",
     "realImplementation": true,
     "contactInfo": {
       mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-]}}}
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
+,

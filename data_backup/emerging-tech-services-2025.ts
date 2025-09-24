@@ -1,17 +1,17 @@
 export interface EmergingTechService20o25 {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-address: string};export const "emergingTechServices20o25": EmergingTechService20o25[] = [{
+    mobile: string,
+    email: string,
+address: string},export const "emergingTechServices20o25": EmergingTechService20o25[] = [{
     id: "metaverse-platform",
     "name": "Metaverse Development Platform",
     "tagline": "Create immersive virtual experiences",
@@ -22,13 +22,12 @@ address: string};export const "emergingTechServices20o25": EmergingTechService20
       "Avatar customization",
       "Virtual commerce",
       "Social interactions",
-      "Cross-platform support"
-    ],
+      "Cross-platform support"],
     "link": "/services/metaverse-platform",
     "category": "Emerging Tech 20o25",
     "realImplementation": true,
     "contactInfo": {
       mobile: "+1 30o2 464 0950",
       "email": "kleber@ziontechgroup.com",
-      "address": "364 E Main St STE 10o08 Middletown DE 19709"
-]}}}
+      "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
+,

@@ -1,35 +1,26 @@
-'use client';
-import React from 'react';
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline';
+'use client'
+import React from 'react'
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, HeartIcon } from '@heroicons/react/24/outline'
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   const footerLinks = {
     services: [
       { name: 'AI Solutions', href: '/services/ai' },
       { name: 'Cloud Infrastructure', href: '/services/cloud' },
       { name: 'Cybersecurity', href: '/services/security' },
-      { name: 'Consulting', href: '/services/consulting' },
-    ],
+      { name: 'Consulting', href: '/services/consulting' }],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
-      { name: 'News', href: '/news' },
-    ],
+      { name: 'News', href: '/news' }],
     support: [
       { name: 'Documentation', href: '/docs' },
       { name: 'Help Center', href: '/help' },
       { name: 'Contact Support', href: '/support' },
-      { name: 'Status', href: '/status' },
-    ],
-  };
+      { name: 'Status', href: '/status' }]}
 
   return (
     <footer className='bg-gray-900 text-white'>
@@ -39,8 +30,7 @@ export default function Footer() {
           <div className='lg:col-span-1'>
             <h3 className='text-2xl font-bold mb-4'>Zion Tech Group</h3>
             <p className='text-gray-400 mb-6'>
-              Transforming businesses with cutting-edge AI, cloud
-              infrastructure, and cybersecurity solutions.
+              Transforming businesses with cutting-edge AI, cloud, infrastructure, and cybersecurity solutions.
             </p>
             <div className='space-y-3'>
               <div className='flex items-center text-gray-400'>
@@ -57,51 +47,39 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Services</h4>
             <ul className='space-y-2'>
               {footerLinks.services.map(link => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200'
-                  >
+                  <a href={link.href} className='text-gray-400 hover:text-white transition-colors duration-200'>
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Company</h4>
             <ul className='space-y-2'>
               {footerLinks.company.map(link => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200'
-                  >
+                  <a href={link.href} className='text-gray-400 hover:text-white transition-colors duration-200'>
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
           {/* Support */}
           <div>
             <h4 className='text-lg font-semibold mb-4'>Support</h4>
             <ul className='space-y-2'>
               {footerLinks.support.map(link => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors duration-200'
-                  >
+                  <a href={link.href} className='text-gray-400 hover:text-white transition-colors duration-200'>
                     {link.name}
                   </a>
                 </li>
@@ -109,26 +87,17 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
         {/* Bottom Section */}
         <div className='border-t border-gray-800 mt-8 pt-8'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='flex items-center text-gray-400 mb-4 md:mb-0'>
-              <span>
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </span>
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
             </div>
             <div className='flex items-center space-x-6'>
-              <a
-                href='/privacy'
-                className='text-gray-400 hover:text-white transition-colors duration-200'
-              >
+              <a href='/privacy' className='text-gray-400 hover:text-white transition-colors duration-200'>
                 Privacy Policy
               </a>
-              <a
-                href='/terms'
-                className='text-gray-400 hover:text-white transition-colors duration-200'
-              >
+              <a href='/terms' className='text-gray-400 hover:text-white transition-colors duration-200'>
                 Terms of Service
               </a>
               <div className='flex items-center text-gray-400'>
@@ -141,5 +110,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

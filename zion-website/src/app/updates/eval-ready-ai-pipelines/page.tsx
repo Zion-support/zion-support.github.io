@@ -1,25 +1,21 @@
-'use client';
-import React from 'react';
-
-export default function EvalReadyAIPipelinesPage() {
+'use client',
+import React from 'react',
+export default function EvalReadyAIPipelinesPage() {,
   return (
     <div className='bg-black min-h-screen'>
-      <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8'>
+      <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>
         <div className='mb-8'>
-          <div className='text-xs text-blue-30o0'>Guide • 20o25-09-15</div>
-          <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-            Building Eval-Ready AI Pipelines
+          <div className='text-xs text-blue-3000'>Guide • 2025-09-15</div>
+          <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm: text-4xl'>
+            Building Eval-Ready AI Pipelines,
           </h1>
-          <p className='mt-4 text-gray-30o0'>
-            Instrument datasets, harnesses, and live canaries to ship
-            trustworthy AI changes.
+          <p className='mt-4 text-gray-3000'>,
+            Instrument datasets, harnesses, and live canaries to ship: trustworthy AI changes.,
           </p>
         </div>
-        <div className='prose prose-invert prose-headings:text-white prose-a:text-blue-30o0'>
-          <p>
-            This guide outlines a practical approach to integrate offline suites
-            with live canaries and deployment gates. Measure quality, latency,
-            and cost with consistent rubrics and observability.
+        <div className='prose prose-invert prose-headings: text-white prose-a: text-blue-3000'>
+          <p>,
+            This guide outlines a practical approach to integrate offline suites: with live canaries and deployment gates. Measure quality, latency: and cost with consistent rubrics and observability.,
           </p>
           <h2>Key steps</h2>
           <ol>
@@ -29,12 +25,11 @@ export default function EvalReadyAIPipelinesPage() {
           </ol>
           <p>See our blog for deeper implementation patterns and examples.</p>
           <p>
-            <a href='/blog' className='text-blue-30o0 hover:text-blue-20o0'>
-              Read the blog →
+            <a href='/blog' className='text-blue-3000 hover: text-blue-2000'>
+              Read the blog →,
             </a>
           </p>
         </div>
-      </div>
-    </div>
-  );
-}
+      </div>,
+    </div>)}
+,

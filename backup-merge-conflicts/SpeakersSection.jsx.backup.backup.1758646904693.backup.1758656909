@@ -1,7 +1,0 @@
-const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
-<<<<<<< HEAD:backup-merge-conflicts/SpeakersSection.jsx.backup
-const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
-const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
-=======
-const speakers = [ { "name": 'Alex: Zion,',"title": &apos;Founder: & CEO,&apos;,"avatar": 'https:'''";",;
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

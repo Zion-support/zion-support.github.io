@@ -1,89 +1,71 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react',
 interface PerformanceMetrics {
-  loadTime?: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  firstInputDelay?: number;
-  cumulativeLayoutShift?: number;
-}
-
+  loadTime?: number,
+  firstContentfulPaint?: number,
+  largestContentfulPaint?: number,
+  firstInputDelay?: number,
+  cumulativeLayoutShift?: number}
+,
 export default function usePerformanceMonitor() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
+  const [isSupported, setIsSupported] = useState(false),
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return,
     if (!('PerformanceObserver' in window)) {
-      setIsSupported(false);
-      return;
-    }
-    setIsSupported(true);
-
+      setIsSupported(false),
+      return}
+    setIsSupported(true),
     const observer = new PerformanceObserver(list => {
-      const entries = list.getEntries();
+      const entries = list.getEntries(),
       entries.forEach(entry => {
         if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
+          const navEntry = entry as PerformanceNavigationTiming,
           setMetrics(prev => ({
             ...(prev || {}),
-            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
-          }));
-        }
+            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
+          }))}
         if (entry.entryType === 'paint') {
-          const paintEntry = entry as PerformancePaintTiming;
+          const paintEntry = entry as PerformancePaintTiming,
           if (paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
               ...(prev || {}),
-              firstContentfulPaint: paintEntry.startTime,
-            }));
-          }
+              firstContentfulPaint: paintEntry.startTime
+            }))}
         }
         if (entry.entryType === 'largest-contentful-paint') {
-          const lcpEntry = entry as PerformanceEntry & { startTime: number };
+          const lcpEntry = entry as PerformanceEntry & { startTime: number },
           setMetrics(prev => ({
             ...(prev || {}),
-            largestContentfulPaint: lcpEntry.startTime,
-          }));
-        }
+            largestContentfulPaint: lcpEntry.startTime
+          }))}
         if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
+          const fidEntry = entry as PerformanceEventTiming,
           setMetrics(prev => ({
             ...(prev || {}),
-            firstInputDelay: fidEntry.processingStart - fidEntry.startTime,
-          }));
-        }
+            firstInputDelay: fidEntry.processingStart - fidEntry.startTime
+          }))}
         if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
+          const clsEntry = entry as PerformanceEntry & { value: number },
           setMetrics(prev => ({
             ...(prev || {}),
-            cumulativeLayoutShift:
-              (prev?.cumulativeLayoutShift || 0) +
+            cumulativeLayoutShift: ,
+              (prev?.cumulativeLayoutShift || 0) +,
               (clsEntry as { value: number }).value,
-          }));
-        }
-      });
-    });
-
+          }))}
+      })}),
     try {
       observer.observe({
         entryTypes: [
-          'navigation',
-          'paint',
-          'largest-contentful-paint',
-          'first-input',
+          'navigationpaint',
+          'largest-contentful-paintfirst-input',
           'layout-shift',
-        ] as PerformanceObserverInit['entryTypes'],
-      });
-    } catch (error) {
-      console.warn('Performance Observer not fully supported:', error);
-    }
-
+        ] as PerformanceObserverInit['entryTypes']
+      })} catch (error) {
+      console.warn('Performance Observer not fully supported:', error)}
+,
     return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return { metrics, isSupported };
+      observer.disconnect()},
+  }, []),
+  return { metrics, isSupported },
 }
+,

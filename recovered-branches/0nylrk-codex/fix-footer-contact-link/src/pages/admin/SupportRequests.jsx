@@ -1,33 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import {
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { Badge } from '@/components/ui/badge',
+import { Search, Filter } from 'lucide-react',
+import { SEO } from '@/components/SEO',
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
+} from '@/components/ui/card',
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import {
+} from '@/components/ui/select',
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Search, Filter } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-// Mock data for support requests
+} from '@/components/ui/table',
+// Mock data for support requests,
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: 'SR-10o01',
@@ -38,7 +36,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'high',
     createdAt: '20o23-12-15T14:30:0o0Z',
     lastUpdated: '20o23-12-15T15:45:0o0Z',
-    category: 'authentication',
+    category: 'authentication'
   },
   {
     id: 'SR-10o02',
@@ -49,7 +47,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'high',
     createdAt: '20o23-12-14T09:15:0o0Z',
     lastUpdated: '20o23-12-15T13:20:0o0Z',
-    category: 'billing',
+    category: 'billing'
   },
   {
     id: 'SR-10o03',
@@ -60,7 +58,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'medium',
     createdAt: '20o23-12-15T11:0o0:0o0Z',
     lastUpdated: '20o23-12-15T11:0o0:0o0Z',
-    category: 'billing',
+    category: 'billing'
   },
   {
     id: 'SR-10o04',
@@ -71,7 +69,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'low',
     createdAt: '20o23-12-13T16:45:0o0Z',
     lastUpdated: '20o23-12-13T16:45:0o0Z',
-    category: 'api',
+    category: 'api'
   },
   {
     id: 'SR-10o05',
@@ -82,7 +80,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'high',
     createdAt: '20o23-12-12T10:30:0o0Z',
     lastUpdated: '20o23-12-15T09:15:0o0Z',
-    category: 'disputes',
+    category: 'disputes'
   },
   {
     id: 'SR-10o06',
@@ -93,7 +91,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'medium',
     createdAt: '20o23-12-08T13:20:0o0Z',
     lastUpdated: '20o23-12-15T08:30:0o0Z',
-    category: 'verification',
+    category: 'verification'
   },
   {
     id: 'SR-10o07',
@@ -104,302 +102,270 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: 'medium',
     createdAt: '20o23-12-10T15:10:0o0Z',
     lastUpdated: '20o23-12-13T11:25:0o0Z',
-    category: 'profile',
+    category: 'profile'
   },
-];
+],
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [statusFilter, setStatusFilter] = useState(null);
-  const [priorityFilter, setPriorityFilter] = useState(null);
-  const [categoryFilter, setCategoryFilter] = useState(null);
-  // Apply filters to the request data
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [statusFilter, setStatusFilter] = useState(null),
+  const [priorityFilter, setPriorityFilter] = useState(null),
+  const [categoryFilter, setCategoryFilter] = useState(null),
+  // Apply filters to the request data,
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
+    // Apply search query filter,
     if (
-      searchQuery &&
-      !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-      !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-      !request.id.toLowerCase().includes(searchQuery.toLowerCase())
-    ) {
-      return false;
-    }
-    // Apply status filter
+      searchQuery &&,
+      !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&,
+      !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&,
+      !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false}
+    // Apply status filter,
     if (statusFilter && request.status !== statusFilter) {
-      return false;
-    }
-    // Apply priority filter
+      return false}
+    // Apply priority filter,
     if (priorityFilter && request.priority !== priorityFilter) {
-      return false;
-    }
-    // Apply category filter
+      return false}
+    // Apply category filter,
     if (categoryFilter && request.category !== categoryFilter) {
-      return false;
-    }
-    return true;
-  });
-  // Count by status for the summary dashboard
+      return false}
+    return true}),
+  // Count by status for the summary dashboard,
   const openCount = MOCK_SUPPORT_REQUESTS.filter(
-    r => r.status === 'open'
-  ).length;
+    r => r.status === 'open').length,
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(
-    r => r.status === 'in-progress'
-  ).length;
+    r => r.status === 'in-progress').length,
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(
-    r => r.status === 'resolved'
-  ).length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
+    r => r.status === 'resolved').length,
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
   const resetFilters = () => {
-    setSearchQuery('');
-    setStatusFilter(null);
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
+    setSearchQuery(''),
+    setStatusFilter(null),
+    setPriorityFilter(null),
+    setCategoryFilter(null)},
   return (
     (
       <SEO
-        title='Support Requests | Admin Dashboard'
-        description='Manage and track user support requests and issues'
-      />
-    ),
+        title='Support Requests | Admin Dashboard',
+        description='Manage and track user support requests and issues',
+      />),
     (
-      <div className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>
-          <div>
-            <h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>
-              Support Requests
-            </h1>
-            <p className='text-zion-slate-light mt-2'>
-              Manage and respond to user support requests and issues
-            </p>
-          </div>
-
-          <div className='mt-4 md:mt-0'>
-            <Button className='bg-zion-purple hover:bg-zion-purple-light'>
-              New Support Case
-            </Button>
-          </div>
-        </div>
-
+      <div className='container mx-auto px-4 py-8'>,
+        <div className='flex flex-col md: flex-row items-start md:items-center justify-between mb-8'>,
+          <div>,
+            <h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>,
+              Support Requests,
+            </h1>,
+            <p className='text-zion-slate-light mt-2'>,
+              Manage and respond to user support requests and issues,
+            </p>,
+          </div>,
+          <div className='mt-4 md:mt-0'>,
+            <Button className='bg-zion-purple hover:bg-zion-purple-light'>,
+              New Support Case,
+            </Button>,
+          </div>,
+        </div>,
         {/* Status Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>
-              <CardDescription>Open Requests</CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
+        <div className='grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>,
+          <Card>,
+            <CardHeader className='pb-2'>,
+              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>,
+              <CardDescription>Open Requests</CardDescription>,
+            </CardHeader>,
+          </Card>,
+          <Card>,
+            <CardHeader className='pb-2'>,
+              <CardTitle className='text-2xl font-bold'>,
                 {inProgressCount}
-              </CardTitle>
-              <CardDescription>In Progress</CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
+              </CardTitle>,
+              <CardDescription>In Progress</CardDescription>,
+            </CardHeader>,
+          </Card>,
+          <Card>,
+            <CardHeader className='pb-2'>,
+              <CardTitle className='text-2xl font-bold'>,
                 {resolvedCount}
-              </CardTitle>
-              <CardDescription>Resolved</CardDescription>
-            </CardHeader>
-          </Card>
-
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
-              <CardDescription>Total Requests</CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-
-        <Tabs defaultValue='all' className='mb-8'>
-          <TabsList>
-            <TabsTrigger value='all'>All Requests</TabsTrigger>
-            <TabsTrigger value='escalated'>Escalated</TabsTrigger>
-            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>
-            <TabsTrigger value='need-response'>Need Response</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value='all' className='mt-6'>
+              </CardTitle>,
+              <CardDescription>Resolved</CardDescription>,
+            </CardHeader>,
+          </Card>,
+          <Card>,
+            <CardHeader className='pb-2'>,
+              <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>,
+              <CardDescription>Total Requests</CardDescription>,
+            </CardHeader>,
+          </Card>,
+        </div>,
+        <Tabs defaultValue='all' className='mb-8'>,
+          <TabsList>,
+            <TabsTrigger value='all'>All Requests</TabsTrigger>,
+            <TabsTrigger value='escalated'>Escalated</TabsTrigger>,
+            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>,
+            <TabsTrigger value='need-response'>Need Response</TabsTrigger>,
+          </TabsList>,
+          <TabsContent value='all' className='mt-6'>,
             {/* Search and Filters */}
-            <div className='flex flex-col md:flex-row gap-4 mb-6'>
-              <div className='relative flex-1'>
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0' />
+            <div className='flex flex-col md: flex-row gap-4 mb-6'>,
+              <div className='relative flex-1'>,
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0' />,
                 <Input
-                  placeholder='Search by ID, user or issue...'
+                  placeholder='Search by ID, user or issue...',
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  className='pl-10'
-                />
-              </div>
-
+                  className='pl-10',
+                />,
+              </div>,
               <Select
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Status' />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Statuses</SelectItem>
-                  <SelectItem value='open'>Open</SelectItem>
-                  <SelectItem value='in-progress'>In Progress</SelectItem>
-                  <SelectItem value='resolved'>Resolved</SelectItem>
-                </SelectContent>
-              </Select>
-
+              >,
+                <SelectTrigger className='w-[180px]'>,
+                  <SelectValue placeholder='Status' />,
+                </SelectTrigger>,
+                <SelectContent>,
+                  <SelectItem value=''>All Statuses</SelectItem>,
+                  <SelectItem value='open'>Open</SelectItem>,
+                  <SelectItem value='in-progress'>In Progress</SelectItem>,
+                  <SelectItem value='resolved'>Resolved</SelectItem>,
+                </SelectContent>,
+              </Select>,
               <Select
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Priority' />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Priorities</SelectItem>
-                  <SelectItem value='high'>High</SelectItem>
-                  <SelectItem value='medium'>Medium</SelectItem>
-                  <SelectItem value='low'>Low</SelectItem>
-                </SelectContent>
-              </Select>
-
+              >,
+                <SelectTrigger className='w-[180px]'>,
+                  <SelectValue placeholder='Priority' />,
+                </SelectTrigger>,
+                <SelectContent>,
+                  <SelectItem value=''>All Priorities</SelectItem>,
+                  <SelectItem value='high'>High</SelectItem>,
+                  <SelectItem value='medium'>Medium</SelectItem>,
+                  <SelectItem value='low'>Low</SelectItem>,
+                </SelectContent>,
+              </Select>,
               <Select
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Category' />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Categories</SelectItem>
-                  <SelectItem value='authentication'>Authentication</SelectItem>
-                  <SelectItem value='billing'>Billing</SelectItem>
-                  <SelectItem value='api'>API</SelectItem>
-                  <SelectItem value='disputes'>Disputes</SelectItem>
-                  <SelectItem value='verification'>Verification</SelectItem>
-                  <SelectItem value='profile'>Profile</SelectItem>
-                </SelectContent>
-              </Select>
-
+              >,
+                <SelectTrigger className='w-[180px]'>,
+                  <SelectValue placeholder='Category' />,
+                </SelectTrigger>,
+                <SelectContent>,
+                  <SelectItem value=''>All Categories</SelectItem>,
+                  <SelectItem value='authentication'>Authentication</SelectItem>,
+                  <SelectItem value='billing'>Billing</SelectItem>,
+                  <SelectItem value='api'>API</SelectItem>,
+                  <SelectItem value='disputes'>Disputes</SelectItem>,
+                  <SelectItem value='verification'>Verification</SelectItem>,
+                  <SelectItem value='profile'>Profile</SelectItem>,
+                </SelectContent>,
+              </Select>,
               <Button
-                variant='outline'
+                variant='outline',
                 onClick={resetFilters}
-                className='md:w-auto'
-              >
-                <Filter className='h-4 w-4 mr-2' /> Reset Filters
-              </Button>
-            </div>
-
+                className='md: w-auto'>,
+                <Filter className='h-4 w-4 mr-2' /> Reset Filters,
+              </Button>,
+            </div>,
             {/* Support Requests Table */}
-            <Card>
-              <CardContent className='p-0'>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>ID</TableHead>
-                      <TableHead>User</TableHead>
-                      <TableHead>Issue</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Priority</TableHead>
-                      <TableHead>Category</TableHead>
-                      <TableHead>Created</TableHead>
-                      <TableHead>Last Updated</TableHead>
-                      <TableHead>Actions</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
+            <Card>,
+              <CardContent className='p-0'>,
+                <Table>,
+                  <TableHeader>,
+                    <TableRow>,
+                      <TableHead>ID</TableHead>,
+                      <TableHead>User</TableHead>,
+                      <TableHead>Issue</TableHead>,
+                      <TableHead>Status</TableHead>,
+                      <TableHead>Priority</TableHead>,
+                      <TableHead>Category</TableHead>,
+                      <TableHead>Created</TableHead>,
+                      <TableHead>Last Updated</TableHead>,
+                      <TableHead>Actions</TableHead>,
+                    </TableRow>,
+                  </TableHeader>,
+                  <TableBody>,
                     {filteredRequests.map(request => (
-                      <TableRow key={request.id}>
-                        <TableCell className='font-medium'>
+                      <TableRow key={request.id}>,
+                        <TableCell className='font-medium'>,
                           {request.id}
-                        </TableCell>
-                        <TableCell>{request.user}</TableCell>
-                        <TableCell className='max-w-xs truncate'>
+                        </TableCell>,
+                        <TableCell>{request.user}</TableCell>,
+                        <TableCell className='max-w-xs truncate'>,
                           {request.issue}
-                        </TableCell>
-                        <TableCell>
+                        </TableCell>,
+                        <TableCell>,
                           <Badge
                             variant={
-                              request.status === 'open'
-                                ? 'default'
-                                : request.status === 'in-progress'
-                                  ? 'secondary'
-                                  : 'outline'
-                            }
-                          >
+                              request.status === 'open',
+                                ? 'default',
+                                : request.status === 'in-progress',
+                                  ? 'secondary',
+                                  : 'outline'}
+                          >,
                             {request.status}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>
+                          </Badge>,
+                        </TableCell>,
+                        <TableCell>,
                           <Badge
                             variant={
-                              request.priority === 'high'
-                                ? 'destructive'
-                                : request.priority === 'medium'
-                                  ? 'default'
-                                  : 'outline'
-                            }
-                          >
+                              request.priority === 'high',
+                                ? 'destructive',
+                                : request.priority === 'medium',
+                                  ? 'default',
+                                  : 'outline'}
+                          >,
                             {request.priority}
-                          </Badge>
-                        </TableCell>
-                        <TableCell>{request.category}</TableCell>
-                        <TableCell>
+                          </Badge>,
+                        </TableCell>,
+                        <TableCell>{request.category}</TableCell>,
+                        <TableCell>,
                           {new Date(request.createdAt).toLocaleDateString()}
-                        </TableCell>
-                        <TableCell>
+                        </TableCell>,
+                        <TableCell>,
                           {new Date(request.lastUpdated).toLocaleDateString()}
-                        </TableCell>
-                        <TableCell>
-                          <Button variant='ghost' size='sm'>
-                            View
-                          </Button>
-                          <Button variant='ghost' size='sm'>
-                            Assign
-                          </Button>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value='escalated' className='mt-6'>
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
-              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
-              <p className='text-zion-slate-light'>
-                This tab will show support requests that have been escalated by
-                agents or the system.
-              </p>
-            </div>
-          </TabsContent>
-
-          <TabsContent value='ai-flagged' className='mt-6'>
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
-              <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>
-              <p className='text-zion-slate-light'>
-                This tab shows issues that our AI system has identified as
-                requiring human attention.
-              </p>
-            </div>
-          </TabsContent>
-
-          <TabsContent value='need-response' className='mt-6'>
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
-              <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>
-              <p className='text-zion-slate-light'>
-                These support requests have been waiting for an agent response
-                for over 24 hours.
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    )
-  );
-}
+                        </TableCell>,
+                        <TableCell>,
+                          <Button variant='ghost' size='sm'>,
+                            View,
+                          </Button>,
+                          <Button variant='ghost' size='sm'>,
+                            Assign,
+                          </Button>,
+                        </TableCell>,
+                      </TableRow>))}
+                  </TableBody>,
+                </Table>,
+              </CardContent>,
+            </Card>,
+          </TabsContent>,
+          <TabsContent value='escalated' className='mt-6'>,
+            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>,
+              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>,
+              <p className='text-zion-slate-light'>,
+                This tab will show support requests that have been escalated by,
+                agents or the system.,
+              </p>,
+            </div>,
+          </TabsContent>,
+          <TabsContent value='ai-flagged' className='mt-6'>,
+            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>,
+              <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>,
+              <p className='text-zion-slate-light'>,
+                This tab shows issues that our AI system has identified as,
+                requiring human attention.,
+              </p>,
+            </div>,
+          </TabsContent>,
+          <TabsContent value='need-response' className='mt-6'>,
+            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>,
+              <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>,
+              <p className='text-zion-slate-light'>,
+                These support requests have been waiting for an agent response,
+                for over 24 hours.,
+              </p>,
+            </div>,
+          </TabsContent>,
+        </Tabs>,
+      </div>))}
+,

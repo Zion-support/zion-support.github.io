@@ -1,11 +1,9 @@
-import Head from 'next/head';
-
+import Head from 'next/head',
 const AdvancedSEOStructuredData = () => {
   const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@context': 'https: //schema.org@type': 'Organization',
     name: 'Zion Tech Group',
-    description:
+    description:,
       'Leading AI and technology solutions provider specializing in enterprise automationquantum computingand revolutionary AI innovations.',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
@@ -13,59 +11,53 @@ const AdvancedSEOStructuredData = () => {
     founders: [
       {
         '@type': 'Person',
-        name: 'Zion Tech Group Founders',
+        name: 'Zion Tech Group Founders'
       },
     ],
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-ZION-TECH',
       contactType: 'customer service',
-      availableLanguage: 'English',
+      availableLanguage: 'English'
     },
     sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgrouphttps://linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Holdings',
     ],
     offers: {
       '@type': 'Offer',
-      description:
+      description:,
         'AI automation solutionsquantum computing servicesand enterprise technology consulting',
-      category: 'Technology Services',
+      category: 'Technology Services'
     },
-  };
-
+  },
   const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    '@context': 'https: //schema.org@type': 'WebSite',
     name: 'Zion Tech Group - AI & Technology Solutions',
     url: 'https://zion.app',
-    description:
+    description:,
       'Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.',
     publisher: {
       '@type': 'Organization',
-      name: 'Zion Tech Group',
+      name: 'Zion Tech Group'
     },
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://zion.app/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
+      target: 'https://zion.app/search?q={search_term_string}query-input': 'required name=search_term_string',
     },
-  };
-
+  },
   const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
+    '@context': 'https: //schema.org@type': 'Service',
     name: 'AI Automation Solutions',
-    description:
+    description:,
       'Comprehensive AI automation services for enterprise transformation',
     provider: {
       '@type': 'Organization',
-      name: 'Zion Tech Group',
+      name: 'Zion Tech Group'
     },
     serviceType: 'Technology Consulting',
     areaServed: 'Worldwide',
@@ -78,7 +70,7 @@ const AdvancedSEOStructuredData = () => {
           itemOffered: {
             '@type': 'Service',
             name: 'AI Automation Implementation',
-            description:
+            description:,
               'End-to-end AI automation solutions for business processes',
           },
         },
@@ -87,7 +79,7 @@ const AdvancedSEOStructuredData = () => {
           itemOffered: {
             '@type': 'Service',
             name: 'Quantum Computing Solutions',
-            description:
+            description:,
               'Quantum computing consulting and implementation services',
           },
         },
@@ -96,49 +88,45 @@ const AdvancedSEOStructuredData = () => {
           itemOffered: {
             '@type': 'Service',
             name: 'Enterprise AI Consulting',
-            description:
+            description:,
               'Strategic AI consulting for large-scale enterprise transformation',
           },
         },
       ],
     },
-  };
-
+  },
   const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    '@context': 'https: //schema.org@type': 'BreadcrumbList',
     itemListElement: [
       {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://zion.app',
+        item: 'https://zion.app'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'AI Solutions',
-        item: 'https://zion.app/ai-solutions',
+        item: 'https://zion.app/ai-solutions'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Content Hub',
-        item: 'https://zion.app/content-hub',
+        item: 'https://zion.app/content-hub'
       },
     ],
-  };
-
+  },
   const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    '@context': 'https: //schema.org@type': 'FAQPage',
     mainEntity: [
       {
         '@type': 'Question',
         name: 'What AI services does Zion Tech Group offer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Zion Tech Group offers comprehensive AI automation solutionsquantum computing servicesenterprise AI consultingand revolutionary technology implementations for businesses of all sizes.',
+          text: 'Zion Tech Group offers comprehensive AI automation solutionsquantum computing servicesenterprise AI consultingand revolutionary technology implementations for businesses of all sizes.'
         },
       },
       {
@@ -154,85 +142,72 @@ const AdvancedSEOStructuredData = () => {
         name: 'What makes Zion Tech Group different from other AI companies?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We specialize in cutting-edge quantum computing integrationrevolutionary AI architecturesand provide end-to-end solutions with proven results and comprehensive support.',
+          text: 'We specialize in cutting-edge quantum computing integrationrevolutionary AI architecturesand provide end-to-end solutions with proven results and comprehensive support.'
         },
       },
     ],
-  };
-
+  },
   return (
-    <Head>
+    <Head>,
       {/* Organization Schema */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
+          __html: JSON.stringify(organizationSchema)
         }}
-      />
-
+      />,
       {/* Website Schema */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema),
+          __html: JSON.stringify(websiteSchema)
         }}
-      />
-
+      />,
       {/* Service Schema */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
+          __html: JSON.stringify(serviceSchema)
         }}
-      />
-
+      />,
       {/* Breadcrumb Schema */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: JSON.stringify(breadcrumbSchema)
         }}
-      />
-
+      />,
       {/* FAQ Schema */}
       <script
-        type='application/ld+json'
+        type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
+          __html: JSON.stringify(faqSchema)
         }}
-      />
-
+      />,
       {/* Additional SEO Meta Tags */}
       <meta
-        name='robots'
-        content='indexfollowmax-image-preview:largemax-snippet:-1max-video-preview:-1'
-      />
-      <meta name='googlebot' content='indexfollow' />
-      <meta name='bingbot' content='indexfollow' />
-
+        name='robots',
+        content='indexfollowmax-image-preview: largemax-snippet:-1max-video-preview:-1',
+      />,
+      <meta name='googlebot' content='indexfollow' />,
+      <meta name='bingbot' content='indexfollow' />,
       {/* Open Graph Enhanced */}
-      <meta property='og:type' content='website' />
-      <meta property='og:site_name' content='Zion Tech Group' />
-      <meta property='og:locale' content='en_US' />
-
+      <meta property='og: type' content='website' />,
+      <meta property='og:site_name' content='Zion Tech Group' />,
+      <meta property='og:locale' content='en_US' />,
       {/* Twitter Card Enhanced */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@ziontechgroup' />
-      <meta name='twitter:creator' content='@ziontechgroup' />
-
+      <meta name='twitter: card' content='summary_large_image' />,
+      <meta name='twitter:site' content='@ziontechgroup' />,
+      <meta name='twitter:creator' content='@ziontechgroup' />,
       {/* Additional Performance Hints */}
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
+      <link rel='preconnect' href='https: //fonts.googleapis.com' />,
       <link
-        rel='preconnect'
-        href='https://fonts.gstatic.com'
-        crossOrigin='anonymous'
-      />
-      <link rel='dns-prefetch' href='https://api.zion.app' />
-
+        rel='preconnect',
+        href='https://fonts.gstatic.com',
+        crossOrigin='anonymous',
+      />,
+      <link rel='dns-prefetch' href='https://api.zion.app' />,
       {/* Canonical URL */}
-      <link rel='canonical' href='https://zion.app' />
-    </Head>
-  );
-};
-
-export default AdvancedSEOStructuredData;
+      <link rel='canonical' href='https: //zion.app' />,
+    </Head>)},
+export default AdvancedSEOStructuredData,

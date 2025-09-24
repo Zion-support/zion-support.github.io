@@ -1,44 +1,44 @@
-import { ServiceVariant } from "../types/service-variants";
+import { ServiceVariant } from "../types/service-variants",
 export interface InnovativeITInfrastructureService {
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
-  "realImplementation": boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-reviews: number;export const innovativeITInfrastructureServices20o25: InnovativeITInfrastructureService[] = [// Quantum-Secure Cloud Infrastructure
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  "realImplementation": boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+reviews: number,export const innovativeITInfrastructureServices20o25: InnovativeITInfrastructureService[] = [// Quantum-Secure Cloud Infrastructure,
   {
-    id:,
+    id: ,
   quantum-secure-cloud-infrastructure',
     "name": 'Quantum-Secure Cloud Infrastructure Platform,
     tagline:,
@@ -47,19 +47,13 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
     "period": '/month,
     "description": 'Revolutionary cloud infrastructure platform that implements quantum-resistant encryption algorithms, ensuring data security against future quantum computing threats.',
     features[
-  'Quantum-resistant encryption algorithms',
-  'Post-quantum cryptography implementation',
-  'Multi-cloud orchestration',
-  'Zero-trust security architecture',
-  'Automated compliance monitoring',
-  'Real-time threat detection',
-  'Quantum key distribution (QKD)',
-  'Hybrid classical-quantum security',
-  'Performance optimization',
-  'Comprehensive monitoring dashboard'
-    ],
+  'Quantum-resistant encryption algorithmsPost-quantum cryptography implementation',
+  'Multi-cloud orchestrationZero-trust security architecture',
+  'Automated compliance monitoringReal-time threat detection',
+  'Quantum key distribution (QKD)Hybrid classical-quantum security',
+  'Performance optimizationComprehensive monitoring dashboard'],
     "popular": true,
-    icon:,
+    icon: ,
   🔐',
     "color": 'from-indigo-60o0 to-purple-60o0,
     textColor:,
@@ -69,7 +63,7 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
   First quantum-secure cloud infrastructure platform. Our "advantage": Future-proof security against quantum computing threats with 99.99% uptime guarantee.,
     "targetAudience": 'Financial institutions, Healthcare organizations, Government agencies, Defense contractors, Enterprise businesses',
     "trialDays": 14,
-    setupTime:,
+    setupTime: ,
   3-4 weeks',
     "category": 'Quantum-Secure Infrastructure,
     "realService": true,
@@ -81,7 +75,7 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
     competitors[,
   AWS, Azure, Google Cloud, IBM Cloud'],
     "marketSize": '$45.2B cloud infrastructure market,
-    growthRate:,
+    growthRate: ,
   28% annual growth',
     "variant": 'quantum-secure-enterprise,
     "contactInfo": {
@@ -90,19 +84,17 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.',
     "launchDate": '20o25-0o1-15,
     "customers": 12,
     "rating": 4.9,
-    "reviews": 8
-  },
-  // Edge Computing Orchestration Platform
+    "reviews": 8},
+  // Edge Computing Orchestration Platform,
   {
-    id:,
+    id: ,
   edge-computing-orchestration',
     "name": 'Edge Computing Orchestration Platform,
     tagline:,
@@ -110,19 +102,13 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
     "price": $1,899,
     "period": '/month,
     "description": 'Advanced platform for orchestrating distributed edge computing resources, optimizing workload distribution, and ensuring seamless edge-to-cloud connectivity.',
-    features['Intelligent workload distribution',
-  'Edge-to-cloud synchronization',
-  'Real-time performance optimization',
-  'Multi-edge location management',
-  'Automated failover and recovery',
-  'Edge security and compliance',
-  'Resource utilization analytics',
-  'Custom edge application deployment',
-  'IoT device integration',
-  'Edge AI model deployment'
-    ],
+    features['Intelligent workload distributionEdge-to-cloud synchronization',
+  'Real-time performance optimizationMulti-edge location management',
+  'Automated failover and recoveryEdge security and compliance',
+  'Resource utilization analyticsCustom edge application deployment',
+  'IoT device integrationEdge AI model deployment'],
     "popular": true,
-    icon:,
+    icon: ,
   🌐',
     "color": 'from-cyan-60o0 to-blue-60o0,
     textColor:,
@@ -132,7 +118,7 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
   Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.08/hour). Our "advantage": Intelligent orchestration reduces latency by 70% and improves resource utilization by 60%.,
     "targetAudience": 'IoT companies, Manufacturing firms, Smart city initiatives, Retail chains, Healthcare providers',
     "trialDays": 21,
-    setupTime:,
+    setupTime: ,
   2-3 weeks',
     "category": 'Edge Computing & IoT,
     "realService": true,
@@ -140,11 +126,11 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
   Kubernetes Edge, Docker Edge, MQTT, WebSocket, Redis, PostgreSQL, Node.js, Python'],
     integrations['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, Custom IoT platforms'],
     useCases['IoT deployment, Smart manufacturing, Retail analytics, Healthcare monitoring, Smart cities'],
-    "roi": 'IoT deployments achieve 30o0% ROI through reduced latency and improved performance.,
+    "roi": 'IoT deployments achieve 30o0% ROI through reduced latency and improved window.window.performance.,
     competitors[,
   AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'],
     "marketSize": '$15.8B edge computing market,
-    growthRate:,
+    growthRate: ,
   35% annual growth',
     "variant": 'edge-computing-enterprise,
     "contactInfo": {
@@ -153,276 +139,251 @@ reviews: number;export const innovativeITInfrastructureServices20o25: Innovative
       "email": 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 10o08 Middletown DE 19709',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
-    implementationDetails:,
+    implementationDetails: ,
   Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.',
     "launchDate": '20o25-0o1-20,
     "customers": 45,
     "rating": 4.8,
-    "reviews": 32
-  },
-  // Neuromorphic Computing Infrastructure
+    "reviews": 32},
+  // Neuromorphic Computing Infrastructure,
   {
-    id:,
+    id: ,
   neuromorphic-computing-infrastructure',
     "name": 'Neuromorphic Computing Infrastructure Platform,
     tagline:,
   Brain-inspired computing architecture for ultra-efficient AI processing',
     "price": $5,999,
     "period": '/month,
-    "description": 'Revolutionary neuromorphic computing infrastructure that mimics the human brain\'s neural architecture for ultra-efficient AI processing and machine learning workloads.
+    "description": 'Revolutionary neuromorphic computing infrastructure that mimics the human brain\'s neural architecture for ultra-efficient AI processing and machine learning workloads.,
   ',
-    features['Brain-inspired neural architecture
+    features['Brain-inspired neural architecture,
+  Ultra-low power consumption,
   ',
-      'Ultra-low power consumption
+      'Real-time learning capabilities,
+  Spiking neural networks,
   ',
-      'Real-time learning capabilities
+      'Adaptive processing algorithms,
+  Hardware-software co-design,
   ',
-      'Spiking neural networks
+      'Scalable neural processing units,
+  Energy-efficient AI training,
   ',
-      'Adaptive processing algorithms
-  ',
-      'Hardware-software co-design
-  ',
-      'Scalable neural processing units
-  ',
-      'Energy-efficient AI training
-  ',
-      'Neuromorphic chip integration
-  ',
-      'Advanced neural simulation tools
-  '
-    ],
+      'Neuromorphic chip integration,
+  Advanced neural simulation tools,
+  '],
     "popular": false,
     icon:,
-  🧠
+  🧠,
   ',
     "color": 'from-purple-60o0 to-pink-60o0,
     textColor:,
-  text-purple-40o0
+  text-purple-40o0,
   ',
-    "link": 'https://ziontechgroup.com/neuromorphic-computing,
+    "link": 'https: //ziontechgroup.com/neuromorphic-computing,
     marketPosition:,
   First commercial neuromorphic computing infrastructure. Our "advantage": 10o00x more energy-efficient than traditional AI processing with real-time learning capabilities.,
-    "targetAudience": 'AI research institutions, Autonomous vehicle companies, Robotics firms, Healthcare AI, Defense contractors
+    "targetAudience": 'AI research institutions, Autonomous vehicle companies, Robotics firms, Healthcare AI, Defense contractors,
   ',
     "trialDays": 30,
     setupTime:,
-  6-8 weeks
+  6-8 weeks,
   ',
     "category": 'Neuromorphic Computing,
     "realService": true,
     technology[,
-  Spiking neural networks, Neuromorphic chips, FPGA, ASIC, Python, C++, Custom neural frameworks
+  Spiking neural networks, Neuromorphic chips, FPGA, ASIC, Python, C++, Custom neural frameworks,
   '],
-    integrations['TensorFlow, PyTorch, Custom AI frameworks, Robotics platforms, Autonomous systems
+    integrations['TensorFlow, PyTorch, Custom AI frameworks, Robotics platforms, Autonomous systems,
   '],
-    useCases['Autonomous vehicles, Robotics, Healthcare AI, Defense systems, Research applications
+    useCases['Autonomous vehicles, Robotics, Healthcare AI, Defense systems, Research applications,
   '],
     "roi": 'AI applications achieve 80o0% ROI through energy efficiency and real-time processing capabilities.,
     competitors[,
-  Intel Loihi, IBM TrueNorth, BrainChip, Custom solutions
+  Intel Loihi, IBM TrueNorth, BrainChip, Custom solutions,
   '],
     "marketSize": '$2.1B neuromorphic computing market,
     growthRate:,
-  65% annual growth
+  65% annual growth,
   ',
     "variant": 'neuromorphic-enterprise,
     "contactInfo": {
       mobile:,
-  +1 30o2 464 0950
+  +1 30o2 464 0950,
   ',
       "email": 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 10o08 Middletown DE 19709
+  364 E Main St STE 10o08 Middletown DE 19709,
   ',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
-  Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.
+  Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.,
   ',
     "launchDate": '20o25-0o2-0o1,
     "customers": 8,
     "rating": 4.9,
-    "reviews": 6
-  },
-  // Hybrid Quantum-Classical Infrastructure
+    "reviews": 6},
+  // Hybrid Quantum-Classical Infrastructure,
   {
     id:,
-  hybrid-quantum-classical-infrastructure
+  hybrid-quantum-classical-infrastructure,
   ',
     "name": 'Hybrid Quantum-Classical Infrastructure Platform,
     tagline:,
-  Seamless integration of quantum and classical computing resources
+  Seamless integration of quantum and classical computing resources,
   ',
     "price": $4,999,
     "period": '/month,
-    "description": 'Advanced infrastructure platform that seamlessly integrates quantum computing resources with classical computing systems, enabling hybrid algorithms and optimal resource utilization.
+    "description": 'Advanced infrastructure platform that seamlessly integrates quantum computing resources with classical computing systems, enabling hybrid algorithms and optimal resource utilization.,
   ',
-    features['Quantum-classical resource orchestration
+    features['Quantum-classical resource orchestration,
+  Hybrid algorithm optimization,
   ',
-      'Hybrid algorithm optimization
+      'Quantum error correction,
+  Classical-quantum synchronization,
   ',
-      'Quantum error correction
+      'Resource allocation optimization,
+  Performance monitoring and analytics,
   ',
-      'Classical-quantum synchronization
+      'Multi-quantum processor support,
+  Classical computing integration,
   ',
-      'Resource allocation optimization
-  ',
-      'Performance monitoring and analytics
-  ',
-      'Multi-quantum processor support
-  ',
-      'Classical computing integration
-  ',
-      'Quantum algorithm libraries
-  ',
-      'Hybrid workflow automation
-  '
-    ],
+      'Quantum algorithm libraries,
+  Hybrid workflow automation,
+  '],
     "popular": true,
     icon:,
-  ⚛️
+  ⚛️,
   ',
     "color": 'from-blue-60o0 to-cyan-60o0,
     textColor:,
-  text-blue-40o0
+  text-blue-40o0,
   ',
-    "link": 'https://ziontechgroup.com/hybrid-quantum-classical,
+    "link": 'https: //ziontechgroup.com/hybrid-quantum-classical,
     marketPosition:,
   First hybrid quantum-classical infrastructure platform. Our "advantage": Seamless integration reduces quantum algorithm development time by 80% and improves resource utilization by 70%.,
-    "targetAudience": 'Quantum computing companies, Research institutions, Financial services, Pharmaceutical companies, Aerospace firms
+    "targetAudience": 'Quantum computing companies, Research institutions, Financial services, Pharmaceutical companies, Aerospace firms,
   ',
     "trialDays": 21,
     setupTime:,
-  4-6 weeks
+  4-6 weeks,
   ',
     "category": 'Hybrid Quantum Computing,
     "realService": true,
     technology[,
-  Qiskit, Cirq, PennyLane, Python, C++, Quantum simulators, Classical computing frameworks
+  Qiskit, Cirq, PennyLane, Python, C++, Quantum simulators, Classical computing frameworks,
   '],
-    integrations['IBM Quantum, Google Quantum, Microsoft Azure Quantum, Custom quantum processors
+    integrations['IBM Quantum, Google Quantum, Microsoft Azure Quantum, Custom quantum processors,
   '],
-    useCases['Quantum algorithm development, Financial modeling, Drug discovery, Optimization problems, Research applications
+    useCases['Quantum algorithm development, Financial modeling, Drug discovery, Optimization problems, Research applications,
   '],
     "roi": 'Quantum applications achieve 50o0% ROI through faster development and improved resource utilization.,
     competitors[,
-  IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave
+  IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave,
   '],
     "marketSize": '$3.2B quantum computing market,
     growthRate:,
-  55% annual growth
+  55% annual growth,
   ',
     "variant": 'hybrid-quantum-enterprise,
     "contactInfo": {
       mobile:,
-  +1 30o2 464 0950
+  +1 30o2 464 0950,
   ',
       "email": 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 10o08 Middletown DE 19709
+  364 E Main St STE 10o08 Middletown DE 19709,
   ',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
-  Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.
+  Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.,
   ',
     "launchDate": '20o25-0o1-25,
     "customers": 15,
     "rating": 4.8,
-    "reviews": 12
-  },
-  // Autonomous Data Center Management
+    "reviews": 12},
+  // Autonomous Data Center Management,
   {
     id:,
-  autonomous-data-center-management
+  autonomous-data-center-management,
   ',
     "name": 'Autonomous Data Center Management Platform,
     tagline:,
-  Fully autonomous data center operations with AI-powered optimization
+  Fully autonomous data center operations with AI-powered optimization,
   ',
     "price": $2,999,
     "period": '/month,
-    "description": 'Revolutionary platform that autonomously manages data center operations, including cooling, power management, security, and resource allocation, with zero human intervention.
+    "description": 'Revolutionary platform that autonomously manages data center operations, including cooling, power management, security, and resource allocation, with zero human intervention.,
   ',
-    features['Autonomous cooling optimization
+    features['Autonomous cooling optimization,
+  AI-powered power management,
   ',
-      'AI-powered power management
+      'Predictive maintenance automation,
+  Security threat response,
   ',
-      'Predictive maintenance automation
+      'Resource allocation optimization,
+  Energy efficiency maximization,
   ',
-      'Security threat response
+      'Real-time performance monitoring,
+  Automated incident response,
   ',
-      'Resource allocation optimization
-  ',
-      'Energy efficiency maximization
-  ',
-      'Real-time performance monitoring
-  ',
-      'Automated incident response
-  ',
-      'Capacity planning automation
-  ',
-      'Comprehensive analytics dashboard
-  '
-    ],
+      'Capacity planning automation,
+  Comprehensive analytics dashboard,
+  '],
     "popular": true,
     icon:,
-  🏢
+  🏢,
   ',
     "color": 'from-green-60o0 to-emerald-60o0,
     textColor:,
-  text-green-40o0
+  text-green-40o0,
   ',
-    "link": 'https://ziontechgroup.com/autonomous-data-center,
+    "link": 'https: //ziontechgroup.com/autonomous-data-center,
     marketPosition:,
   First fully autonomous data center management platform. Our "advantage": Zero human intervention reduces operational costs by 60% and improves efficiency by 80%.,
-    "targetAudience": 'Data center operators, Cloud providers, Enterprise organizations, Colocation facilities, Government agencies
+    "targetAudience": 'Data center operators, Cloud providers, Enterprise organizations, Colocation facilities, Government agencies,
   ',
     "trialDays": 30,
     setupTime:,
-  3-4 weeks
+  3-4 weeks,
   ',
     "category": 'Autonomous Infrastructure,
     "realService": true,
     technology[,
-  AI/ML, IoT sensors, Predictive analytics, Automation frameworks, Real-time monitoring, Control systems
+  AI/ML, IoT sensors, Predictive analytics, Automation frameworks, Real-time monitoring, Control systems,
   '],
-    integrations['Building management systems, Power management systems, Security systems, Monitoring platforms
+    integrations['Building management systems, Power management systems, Security systems, Monitoring platforms,
   '],
-    useCases['Data center automation, Energy optimization, Predictive maintenance, Security automation, Capacity planning
+    useCases['Data center automation, Energy optimization, Predictive maintenance, Security automation, Capacity planning,
   '],
     "roi": 'Data center operators achieve 40o0% ROI through reduced operational costs and improved efficiency.,
     competitors[,
-  Schneider Electric, Siemens, Johnson Controls, Custom solutions
+  Schneider Electric, Siemens, Johnson Controls, Custom solutions,
   '],
     "marketSize": '$18.5B data center management market,
     growthRate:,
-  22% annual growth
+  22% annual growth,
   ',
     "variant": 'autonomous-infrastructure-enterprise,
     "contactInfo": {
       mobile:,
-  +1 30o2 464 0950
+  +1 30o2 464 0950,
   ',
       "email": 'kleber@ziontechgroup.com,
       address:,
-  364 E Main St STE 10o08 Middletown DE 19709
+  364 E Main St STE 10o08 Middletown DE 19709,
   ',
-      "website": 'https://ziontechgroup.com
-    },
+      "website": 'https: //ziontechgroup.com},
     "realImplementation": true,
     implementationDetails:,
-  Autonomous data center management platform with AI-powered optimization and zero human intervention.
+  Autonomous data center management platform with AI-powered optimization and zero human intervention.,
   ',
     "launchDate": '20o25-0o2-0o5,
     "customers": 28,
     "rating": 4.9,
-    "reviews": 18
-];
+    "reviews": 18],
 export default innovativeITInfrastructureServices20o25}}
+,

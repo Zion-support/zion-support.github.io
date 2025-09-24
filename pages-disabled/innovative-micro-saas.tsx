@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Link from 'next/link',
+import Layout from '../components/Layout',
 import {
   ArrowRight,
   Brain,
@@ -414,14 +414,11 @@ import {
   Mirza10,
   Allocebus10,
   Phaner10,
-  Cheirogaleus10
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
-
+  Cheirogaleus10} from 'lucide-react',
+import PageTransition from '../src/components/PageTransition',
 export default function InnovativeMicroSaaS() {
-  const title = 'Innovative Micro SaaS & AI Services — Zion Tech Group';
-  const description = 'Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services for modern businesses.';
-
+  const title = 'Innovative Micro SaaS & AI Services — Zion Tech Group',
+  const description = 'Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services for modern businesses.',
   const microSaaSServices = [
     {
       id: 'ai-email-responder',
@@ -430,18 +427,13 @@ export default function InnovativeMicroSaaS() {
       icon: Mai l,
       category: 'AI Automation',
       features: [
-        'Smart email categorization and prioritization',
-        'Automated response generation with human-like quality',
-        'Sentiment analysis and urgency detection',
-        'Integration with all major email platforms',
-        'Custom response templates and workflows',
-        'Real-time analytics and performance metrics'
-      ],
+        'Smart email categorization and prioritizationAutomated response generation with human-like quality',
+        'Sentiment analysis and urgency detectionIntegration with all major email platforms',
+        'Custom response templates and workflowsReal-time analytics and performance metrics'],
       pricing: {
         starter: '$29/month',
         professional: '$79/month',
-        enterprise: '$199/month'
-      },
+        enterprise: '$199/month'},
       delivery: '2-3 weeks',
       benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%',
       roi: 'Expected ROI: 30 0-50o0% within 3 months',
@@ -449,8 +441,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'mobile-survey-tool',
@@ -459,18 +450,13 @@ export default function InnovativeMicroSaaS() {
       icon: MessageSquar e,
       category: 'Data Collection',
       features: [
-        'Adaptive questioning based on responses',
-        'Mobile-optimized interface with offline capability',
-        'Real-time analytics and data visualization',
-        'Advanced branching logic and conditional questions',
-        'Multi-language support and accessibility features',
-        'Integration with CRM and marketing tools'
-      ],
+        'Adaptive questioning based on responsesMobile-optimized interface with offline capability',
+        'Real-time analytics and data visualizationAdvanced branching logic and conditional questions',
+        'Multi-language support and accessibility featuresIntegration with CRM and marketing tools'],
       pricing: {
         starter: '$19/month',
         professional: '$49/month',
-        enterprise: '$129/month'
-      },
+        enterprise: '$129/month'},
       delivery: '3-4 weeks',
       benefits: 'Increase survey completion rates by 150% and improve data quality by 70%',
       roi: 'Expected ROI: 25 0-40o0% within 4 months',
@@ -478,8 +464,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'productivity-planner',
@@ -488,18 +473,13 @@ export default function InnovativeMicroSaaS() {
       icon: Targe t,
       category: 'Productivity',
       features: [
-        'AI-powered task prioritization and scheduling',
-        'Industry-specific templates and workflows',
-        'Goal tracking with predictive analytics',
-        'Team collaboration and project management',
-        'Time tracking and productivity insights',
-        'Integration with popular productivity tools'
-      ],
+        'AI-powered task prioritization and schedulingIndustry-specific templates and workflows',
+        'Goal tracking with predictive analyticsTeam collaboration and project management',
+        'Time tracking and productivity insightsIntegration with popular productivity tools'],
       pricing: {
         starter: '$24/month',
         professional: '$59/month',
-        enterprise: '$149/month'
-      },
+        enterprise: '$149/month'},
       delivery: '4-5 weeks',
       benefits: 'Increase productivity by 20o0% and reduce project completion time by 45%',
       roi: 'Expected ROI: 35 0-550% within 5 months',
@@ -507,8 +487,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'event-management',
@@ -517,18 +496,13 @@ export default function InnovativeMicroSaaS() {
       icon: Calenda r,
       category: 'Event Management',
       features: [
-        'AI-powered event optimization and recommendations',
-        'Automated guest management and RSVP tracking',
-        'Dynamic pricing and ticket sales management',
-        'Real-time event analytics and feedback collection',
-        'Integration with social media and marketing tools',
-        'Mobile app for attendees and organizers'
-      ],
+        'AI-powered event optimization and recommendationsAutomated guest management and RSVP tracking',
+        'Dynamic pricing and ticket sales managementReal-time event analytics and feedback collection',
+        'Integration with social media and marketing toolsMobile app for attendees and organizers'],
       pricing: {
         starter: '$49/month',
         professional: '$129/month',
-        enterprise: '$299/month'
-      },
+        enterprise: '$299/month'},
       delivery: '6-8 weeks',
       benefits: 'Increase event attendance by 120% and reduce planning time by 65%',
       roi: 'Expected ROI: 40 0-60o0% within 6 months',
@@ -536,8 +510,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'content-creation-ai',
@@ -546,18 +519,13 @@ export default function InnovativeMicroSaaS() {
       icon: FileTex t,
       category: 'Content Marketing',
       features: [
-        'Multi-format content generation (text, images, videos)',
-        'Brand voice consistency across all content',
-        'SEO optimization and keyword integration',
-        'Content calendar and scheduling automation',
-        'Performance analytics and optimization suggestions',
-        'Team collaboration and approval workflows'
-      ],
+        'Multi-format content generation (text, images, videos)Brand voice consistency across all content',
+        'SEO optimization and keyword integrationContent calendar and scheduling automation',
+        'Performance analytics and optimization suggestionsTeam collaboration and approval workflows'],
       pricing: {
         starter: '$39/month',
         professional: '$99/month',
-        enterprise: '$249/month'
-      },
+        enterprise: '$249/month'},
       delivery: '5-7 weeks',
       benefits: 'Reduce content creation time by 75% and increase engagement by 180%',
       roi: 'Expected ROI: 30 0-50o0% within 4 months',
@@ -565,8 +533,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'customer-support-platform',
@@ -575,18 +542,13 @@ export default function InnovativeMicroSaaS() {
       icon: Headphone s,
       category: 'Customer Support',
       features: [
-        'AI-powered ticket categorization and routing',
-        'Intelligent chatbot with natural language processing',
-        'Knowledge base automation and maintenance',
-        'Multi-channel support (email, chat, phone, social)',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM and business tools'
-      ],
+        'AI-powered ticket categorization and routingIntelligent chatbot with natural language processing',
+        'Knowledge base automation and maintenanceMulti-channel support (email, chat, phone, social)',
+        'Customer satisfaction tracking and analyticsIntegration with CRM and business tools'],
       pricing: {
         starter: '$49/month',
         professional: '$129/month',
-        enterprise: '$299/month'
-      },
+        enterprise: '$299/month'},
       delivery: '4-6 weeks',
       benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%',
       roi: 'Expected ROI: 25 0-40o0% within 3 months',
@@ -594,8 +556,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'affiliate-tracking',
@@ -604,18 +565,13 @@ export default function InnovativeMicroSaaS() {
       icon: Link 2,
       category: 'Marketing',
       features: [
-        'Automated affiliate link generation and tracking',
-        'Real-time commission calculations and payouts',
-        'Performance analytics and conversion tracking',
-        'Fraud detection and prevention systems',
-        'Multi-tier affiliate program management',
-        'Integration with e-commerce and payment platforms'
-      ],
+        'Automated affiliate link generation and trackingReal-time commission calculations and payouts',
+        'Performance analytics and conversion trackingFraud detection and prevention systems',
+        'Multi-tier affiliate program managementIntegration with e-commerce and payment platforms'],
       pricing: {
         starter: '$29/month',
         professional: '$79/month',
-        enterprise: '$199/month'
-      },
+        enterprise: '$199/month'},
       delivery: '3-5 weeks',
       benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%',
       roi: 'Expected ROI: 40 0-70o0% within 4 months',
@@ -623,8 +579,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'website-analytics',
@@ -633,18 +588,13 @@ export default function InnovativeMicroSaaS() {
       icon: BarChart 3,
       category: 'Analytics',
       features: [
-        'Simplified analytics without technical complexity',
-        'Actionable insights and recommendations',
-        'Custom dashboard creation and sharing',
-        'Automated reporting and alerts',
-        'Integration with Google Analytics and social media',
-        'Mobile app for on-the-go insights'
-      ],
+        'Simplified analytics without technical complexityActionable insights and recommendations',
+        'Custom dashboard creation and sharingAutomated reporting and alerts',
+        'Integration with Google Analytics and social mediaMobile app for on-the-go insights'],
       pricing: {
         starter: '$19/month',
         professional: '$49/month',
-        enterprise: '$99/month'
-      },
+        enterprise: '$99/month'},
       delivery: '2-4 weeks',
       benefits: 'Improve decision-making speed by 30o0% and increase ROI by 20o0%',
       roi: 'Expected ROI: 25 0-40o0% within 3 months',
@@ -652,8 +602,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'it-helpdesk',
@@ -662,18 +611,13 @@ export default function InnovativeMicroSaaS() {
       icon: Setting s,
       category: 'IT Management',
       features: [
-        'Automated ticket routing and prioritization',
-        'SLA tracking and compliance monitoring',
-        'Client portal with self-service options',
-        'Asset management and inventory tracking',
-        'Remote desktop and support tools integration',
-        'Comprehensive reporting and analytics'
-      ],
+        'Automated ticket routing and prioritizationSLA tracking and compliance monitoring',
+        'Client portal with self-service optionsAsset management and inventory tracking',
+        'Remote desktop and support tools integrationComprehensive reporting and analytics'],
       pricing: {
         starter: '$49/month',
         professional: '$129/month',
-        enterprise: '$299/month'
-      },
+        enterprise: '$299/month'},
       delivery: '5-7 weeks',
       benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%',
       roi: 'Expected ROI: 30 0-50o0% within 6 months',
@@ -681,8 +625,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'ecommerce-returns',
@@ -691,18 +634,13 @@ export default function InnovativeMicroSaaS() {
       icon: RotateCc w,
       category: 'E-Commerce',
       features: [
-        'Automated return request processing',
-        'Intelligent fraud detection and prevention',
-        'Return label generation and tracking',
-        'Inventory management and restocking automation',
-        'Customer communication and status updates',
-        'Analytics and return pattern analysis'
-      ],
+        'Automated return request processingIntelligent fraud detection and prevention',
+        'Return label generation and trackingInventory management and restocking automation',
+        'Customer communication and status updatesAnalytics and return pattern analysis'],
       pricing: {
         starter: '$29/month',
         professional: '$79/month',
-        enterprise: '$199/month'
-      },
+        enterprise: '$199/month'},
       delivery: '3-5 weeks',
       benefits: 'Reduce return processing time by 80% and decrease fraud by 90%',
       roi: 'Expected ROI: 35 0-550% within 4 months',
@@ -710,11 +648,9 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
-  ];
-
+  ],
   const aiServices = [
     {
       id: 'ai-chatbot-platform',
@@ -723,18 +659,13 @@ export default function InnovativeMicroSaaS() {
       icon: Bo t,
       category: 'AI Development',
       features: [
-        'Natural language processing and understanding',
-        'Multi-channel deployment (web, mobile, social)',
-        'Custom training with your business data',
-        'Sentiment analysis and emotion detection',
-        'Integration with CRM and business systems',
-        'Analytics and conversation optimization'
-      ],
+        'Natural language processing and understandingMulti-channel deployment (web, mobile, social)',
+        'Custom training with your business dataSentiment analysis and emotion detection',
+        'Integration with CRM and business systemsAnalytics and conversation optimization'],
       pricing: {
         starter: '$99/month',
         professional: '$299/month',
-        enterprise: '$799/month'
-      },
+        enterprise: '$799/month'},
       delivery: '4-6 weeks',
       benefits: 'Reduce customer service costs by 60% and improve response time by 95%',
       roi: 'Expected ROI: 40 0-80o0% within 6 months',
@@ -742,8 +673,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'ai-data-analytics',
@@ -752,18 +682,13 @@ export default function InnovativeMicroSaaS() {
       icon: Brai n,
       category: 'AI Analytics',
       features: [
-        'Automated data analysis and pattern recognition',
-        'Predictive modeling and forecasting',
-        'Natural language query interface',
-        'Real-time insights and recommendations',
-        'Custom dashboard creation',
-        'Integration with existing data sources'
-      ],
+        'Automated data analysis and pattern recognitionPredictive modeling and forecasting',
+        'Natural language query interfaceReal-time insights and recommendations',
+        'Custom dashboard creationIntegration with existing data sources'],
       pricing: {
         starter: '$199/month',
         professional: '$599/month',
-        enterprise: '$1,499/month'
-      },
+        enterprise: '$1,499/month'},
       delivery: '6-8 weeks',
       benefits: 'Accelerate data insights by 50o0% and improve decision accuracy by 80%',
       roi: 'Expected ROI: 60 0-10o00% within 8 months',
@@ -771,8 +696,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'ai-process-automation',
@@ -781,18 +705,13 @@ export default function InnovativeMicroSaaS() {
       icon: Workflo w,
       category: 'Process Automation',
       features: [
-        'Cognitive process automation with decision making',
-        'Document processing and data extraction',
-        'Workflow optimization and learning',
-        'Exception handling and escalation',
-        'Integration with enterprise systems',
-        'Performance monitoring and optimization'
-      ],
+        'Cognitive process automation with decision makingDocument processing and data extraction',
+        'Workflow optimization and learningException handling and escalation',
+        'Integration with enterprise systemsPerformance monitoring and optimization'],
       pricing: {
         starter: '$299/month',
         professional: '$899/month',
-        enterprise: '$2,499/month'
-      },
+        enterprise: '$2,499/month'},
       delivery: '8-12 weeks',
       benefits: 'Reduce manual work by 90% and improve process efficiency by 30o0%',
       roi: 'Expected ROI: 50 0-90o0% within 10 months',
@@ -800,11 +719,9 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
-  ];
-
+  ],
   const itServices = [
     {
       id: 'cloud-migration',
@@ -813,18 +730,13 @@ export default function InnovativeMicroSaaS() {
       icon: Clou d,
       category: 'Cloud Services',
       features: [
-        'Automated cloud migration planning and execution',
-        'Cost optimization and resource management',
-        'Security and compliance implementation',
-        'Performance monitoring and optimization',
-        'Disaster recovery and backup solutions',
-        '24/7 cloud infrastructure management'
-      ],
+        'Automated cloud migration planning and executionCost optimization and resource management',
+        'Security and compliance implementationPerformance monitoring and optimization',
+        'Disaster recovery and backup solutions24/7 cloud infrastructure management'],
       pricing: {
         starter: '$2,999/project',
         professional: '$9,999/project',
-        enterprise: '$24,999/project'
-      },
+        enterprise: '$24,999/project'},
       delivery: '4-8 weeks',
       benefits: 'Reduce infrastructure costs by 40% and improve scalability by 20o0%',
       roi: 'Expected ROI: 30 0-60o0% within 12 months',
@@ -832,8 +744,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'cybersecurity-audit',
@@ -842,18 +753,13 @@ export default function InnovativeMicroSaaS() {
       icon: Shiel d,
       category: 'Cybersecurity',
       features: [
-        'Comprehensive security vulnerability assessment',
-        'Penetration testing and ethical hacking',
-        'Security framework implementation (ISO 270o01, NIST)',
-        'Incident response planning and training',
-        'Security monitoring and threat detection',
-        'Compliance audit and certification support'
-      ],
+        'Comprehensive security vulnerability assessmentPenetration testing and ethical hacking',
+        'Security framework implementation (ISO 270o01, NIST)Incident response planning and training',
+        'Security monitoring and threat detectionCompliance audit and certification support'],
       pricing: {
         starter: '$4,999/assessment',
         professional: '$14,999/implementation',
-        enterprise: '$39,999/comprehensive'
-      },
+        enterprise: '$39,999/comprehensive'},
       delivery: '6-12 weeks',
       benefits: 'Reduce security risks by 95% and ensure compliance with industry standards',
       roi: 'Expected ROI: 20 0-40o0% within 18 months',
@@ -861,8 +767,7 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     },
     {
       id: 'devops-transformation',
@@ -871,18 +776,13 @@ export default function InnovativeMicroSaaS() {
       icon: GitBranc h,
       category: 'DevOps',
       features: [
-        'CI/CD pipeline design and implementation',
-        'Infrastructure as Code (IaC) setup',
-        'Container orchestration and microservices',
-        'Monitoring and observability implementation',
-        'Team training and best practices',
-        'Performance optimization and scaling'
-      ],
+        'CI/CD pipeline design and implementationInfrastructure as Code (IaC) setup',
+        'Container orchestration and microservicesMonitoring and observability implementation',
+        'Team training and best practicesPerformance optimization and scaling'],
       pricing: {
         starter: '$7,999/transformation',
         professional: '$19,999/comprehensive',
-        enterprise: '$49,999/enterprise'
-      },
+        enterprise: '$49,999/enterprise'},
       delivery: '8-16 weeks',
       benefits: 'Reduce deployment time by 80% and improve system reliability by 90%',
       roi: 'Expected ROI: 40 0-80o0% within 15 months',
@@ -890,348 +790,307 @@ export default function InnovativeMicroSaaS() {
       link: 'https://ziontechgroup.com/contact',
       contact: {
         phone: '+1 30o2 464 0950',
-        email: 'kleber@ziontechgroup.com'
-      }
+        email: 'kleber@ziontechgroup.com'}
     }
-  ];
-
+  ],
   return (
-    <Layout>
-      <PageTransition>
-        <Head>
-          <title>{title}</title>
-          <meta name="description" content={description}   />
-          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development"   />
-          <link rel="canonical" href="https://ziontechgroup.com/innovative-micro-saas"   />
-        </Head>
-
+    <Layout>,
+      <PageTransition>,
+        <Head>,
+          <title>{title}</title>,
+          <meta name="description" content={description}   />,
+          <meta name="keywords" content="micro SaaS, AI services, IT solutions, business automation, software development"   />,
+          <link rel="canonical" href="https: //ziontechgroup.com/innovative-micro-saas"   />,
+        </Head>,
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm: p y-32">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <div className="flex items-center justify-center mb-6">
-                <Rocket className="h-8 w-8 text-blue-60o0 mr-3"   />
-                <span className="text-lg font-semibold leading-7 text-blue-60o0">Innovative Solutions</span>
-              </div>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-90o0 sm: tex t-6xl">
-                Micro SaaS & AI Services
-              </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-60o0">
-                Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services designed to transform your business operations and drive unprecedented growth.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+        <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 sm: p y-32">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="mx-auto max-w-4xl text-center">,
+              <div className="flex items-center justify-center mb-6">,
+                <Rocket className="h-8 w-8 text-blue-60o0 mr-3"   />,
+                <span className="text-lg font-semibold leading-7 text-blue-60o0">Innovative Solutions</span>,
+              </div>,
+              <h1 className="text-4xl font-bold tracking-tight text-gray-90o0 sm: tex t-6xl">,
+                Micro SaaS & AI Services,
+              </h1>,
+              <p className="mt-6 text-xl leading-8 text-gray-60o0">,
+                Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services designed to transform your business operations and drive unprecedented growth.,
+              </p>,
+              <div className="mt-10 flex items-center justify-center gap-x-6">,
                 <Link
-                  href="/contact"
-                  className="rounded-md bg-blue-60o0 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-blue-50o0 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-blue-60o0 transition-all duration-20o0"
-                >
-                  Get Started Today
-                </Link>
+                  href="/contact",
+                  className="rounded-md bg-blue-60o0 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-blue-50o0 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-blue-60o0 transition-all duration-20o0">,
+                  Get Started Today,
+                </Link>,
                 <Link
-                  href="/services"
-                  className="text-sm font-semibold leading-6 text-gray-90o0 hover: tex t-blue-60o0 transition-colors"
-                >
-                  View All Services <ArrowRight className="inline h-4 w-4 ml-1"   />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+                  href="/services",
+                  className="text-sm font-semibold leading-6 text-gray-90o0 hover: tex t-blue-60o0 transition-colors">,
+                  View All Services <ArrowRight className="inline h-4 w-4 ml-1"   />,
+                </Link>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Contact Information Banner */}
-        <section className="bg-blue-60o0 py-8">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-              <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-white">
-                <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 mr-2"   />
-                  <a href="tel:+130o24640950" className="hover: tex t-blue-20o0 transition-colors">
-                    +1 30o2 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 mr-2"   />
-                  <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-20o0 transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Globe className="h-5 w-5 mr-2"   />
-                  <span>364 E Main St STE 10o08, Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <section className="bg-blue-60o0 py-8">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="text-center">,
+              <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>,
+              <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-white">,
+                <div className="flex items-center justify-center">,
+                  <Phone className="h-5 w-5 mr-2"   />,
+                  <a href="tel:+130o24640950" className="hover: tex t-blue-20o0 transition-colors">,
+                    +1 30o2 464 0950,
+                  </a>,
+                </div>,
+                <div className="flex items-center justify-center">,
+                  <Mail className="h-5 w-5 mr-2"   />,
+                  <a href="mailto: klebe r@ziontechgroup.com" className="hover: tex t-blue-20o0 transition-colors">,
+                    kleber@ziontechgroup.com,
+                  </a>,
+                </div>,
+                <div className="flex items-center justify-center">,
+                  <Globe className="h-5 w-5 mr-2"   />,
+                  <span>364 E Main St STE 10o08, Middletown DE 19709</span>,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Micro SaaS Services */}
-        <section className="py-16 sm: p y-24">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
-                Micro SaaS Solutions
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-60o0">
-                Specialized software solutions designed to solve specific business challenges with maximum efficiency and minimal complexity.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg: gri d-cols-2">
+        <section className="py-16 sm: p y-24">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="mx-auto max-w-2xl text-center mb-16">,
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">,
+                Micro SaaS Solutions,
+              </h2>,
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">,
+                Specialized software solutions designed to solve specific business challenges with maximum efficiency and minimal complexity.,
+              </p>,
+            </div>,
+            <div className="grid gap-8 lg: gri d-cols-2">,
               {microSaaSServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-blue-30o0">
-                  <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-60o0 group-hover: b g-blue-70o0 transition-colors">
-                      <service.icon className="h-8 w-8 text-white"  />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
-                      <p className="text-sm text-blue-60o0 font-medium">{service.category}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-60o0 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-blue-30o0">,
+                  <div className="flex items-center gap-x-4 mb-6">,
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-60o0 group-hover: b g-blue-70o0 transition-colors">,
+                      <service.icon className="h-8 w-8 text-white"  />,
+                    </div>,
+                    <div>,
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>,
+                      <p className="text-sm text-blue-60o0 font-medium">{service.category}</p>,
+                    </div>,
+                  </div>,
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>,
+                  <div className="mb-6">,
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features: </h4>,
+                    <ul className="space-y-2">,
                       {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-blue-60o0 flex-shrink-0"   />
-                          <span className="text-sm text-gray-70o0">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
-                      <div className="space-y-1">
-                        <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
-                        <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
-                        <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Delivery:</h4>
-                      <p className="text-sm text-gray-60o0">{service.delivery}</p>
-                      <p className="text-xs text-gray-50o0 mt-1">Market Price: {service.marketPrice}</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits:</h4>
-                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
-                      <Clock className="h-4 w-4"   />
-                      <span>{service.delivery} delivery</span>
-                    </div>
+                        <li key={index} className="flex items-center gap-x-3">,
+                          <CheckCircle className="h-4 w-4 text-blue-60o0 flex-shrink-0"   />,
+                          <span className="text-sm text-gray-70o0">{feature}</span>,
+                        </li>))}
+                    </ul>,
+                  </div>,
+                  <div className="grid grid-cols-2 gap-4 mb-6">,
+                    <div>,
+                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing: </h4>,
+                      <div className="space-y-1">,
+                        <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>,
+                        <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>,
+                        <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>,
+                      </div>,
+                    </div>,
+                    <div>,
+                      <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Delivery: </h4>,
+                      <p className="text-sm text-gray-60o0">{service.delivery}</p>,
+                      <p className="text-xs text-gray-50o0 mt-1">Market Price: {service.marketPrice}</p>,
+                    </div>,
+                  </div>,
+                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">,
+                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits: </h4>,
+                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>,
+                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>,
+                  </div>,
+                  <div className="flex items-center justify-between">,
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">,
+                      <Clock className="h-4 w-4"   />,
+                      <span>{service.delivery} delivery</span>,
+                    </div>,
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-blue-60o0 hover: tex t-blue-50o0 transition-colors group"
-                    >
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+                      className="inline-flex items-center text-sm font-semibold text-blue-60o0 hover: tex t-blue-50o0 transition-colors group">,
+                      Get Started,
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />,
+                    </Link>,
+                  </div>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
         {/* AI Services */}
-        <section className="py-16 sm: p y-24 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
-                AI-Powered Solutions
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-60o0">
-                Advanced artificial intelligence services that automate complex processes and provide intelligent insights for your business.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg: gri d-cols-3">
+        <section className="py-16 sm: p y-24 bg-gray-50">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="mx-auto max-w-2xl text-center mb-16">,
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">,
+                AI-Powered Solutions,
+              </h2>,
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">,
+                Advanced artificial intelligence services that automate complex processes and provide intelligent insights for your business.,
+              </p>,
+            </div>,
+            <div className="grid gap-8 lg: gri d-cols-3">,
               {aiServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-purple-30o0">
-                  <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-60o0 group-hover: b g-purple-70o0 transition-colors">
-                      <service.icon className="h-8 w-8 text-white"  />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
-                      <p className="text-sm text-purple-60o0 font-medium">{service.category}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-60o0 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-purple-30o0">,
+                  <div className="flex items-center gap-x-4 mb-6">,
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-purple-60o0 group-hover: b g-purple-70o0 transition-colors">,
+                      <service.icon className="h-8 w-8 text-white"  />,
+                    </div>,
+                    <div>,
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>,
+                      <p className="text-sm text-purple-60o0 font-medium">{service.category}</p>,
+                    </div>,
+                  </div>,
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>,
+                  <div className="mb-6">,
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features: </h4>,
+                    <ul className="space-y-2">,
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-purple-60o0 flex-shrink-0"   />
-                          <span className="text-sm text-gray-70o0">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
-                    <div className="space-y-1">
-                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
-                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
-                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
-                    </div>
-                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>
-                  </div>
-
-                  <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-purple-90o0 mb-2">Benefits:</h4>
-                    <p className="text-sm text-purple-80o0 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-purple-70o0 font-medium">{service.roi}</p>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
-                      <Clock className="h-4 w-4"   />
-                      <span>{service.delivery} delivery</span>
-                    </div>
+                        <li key={index} className="flex items-center gap-x-3">,
+                          <CheckCircle className="h-4 w-4 text-purple-60o0 flex-shrink-0"   />,
+                          <span className="text-sm text-gray-70o0">{feature}</span>,
+                        </li>))}
+                    </ul>,
+                  </div>,
+                  <div className="mb-6">,
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing: </h4>,
+                    <div className="space-y-1">,
+                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>,
+                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>,
+                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>,
+                    </div>,
+                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>,
+                  </div>,
+                  <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-4 mb-6">,
+                    <h4 className="text-sm font-semibold text-purple-90o0 mb-2">Benefits: </h4>,
+                    <p className="text-sm text-purple-80o0 mb-2">{service.benefits}</p>,
+                    <p className="text-xs text-purple-70o0 font-medium">{service.roi}</p>,
+                  </div>,
+                  <div className="flex items-center justify-between">,
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">,
+                      <Clock className="h-4 w-4"   />,
+                      <span>{service.delivery} delivery</span>,
+                    </div>,
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-purple-60o0 hover: tex t-purple-50o0 transition-colors group"
-                    >
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+                      className="inline-flex items-center text-sm font-semibold text-purple-60o0 hover: tex t-purple-50o0 transition-colors group">,
+                      Get Started,
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />,
+                    </Link>,
+                  </div>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
         {/* IT Services */}
-        <section className="py-16 sm: p y-24">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">
-                IT Infrastructure Services
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-60o0">
-                Comprehensive IT solutions that modernize your infrastructure, enhance security, and optimize performance.
-              </p>
-            </div>
-
-            <div className="grid gap-8 lg: gri d-cols-3">
+        <section className="py-16 sm: p y-24">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="mx-auto max-w-2xl text-center mb-16">,
+              <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm: tex t-4xl">,
+                IT Infrastructure Services,
+              </h2>,
+              <p className="mt-6 text-lg leading-8 text-gray-60o0">,
+                Comprehensive IT solutions that modernize your infrastructure, enhance security, and optimize window.window.performance.,
+              </p>,
+            </div>,
+            <div className="grid gap-8 lg: gri d-cols-3">,
               {itServices.map((service) => (
-                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-green-30o0">
-                  <div className="flex items-center gap-x-4 mb-6">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-60o0 group-hover: b g-green-70o0 transition-colors">
-                      <service.icon className="h-8 w-8 text-white"  />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>
-                      <p className="text-sm text-green-60o0 font-medium">{service.category}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-60o0 mb-6">{service.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
+                <div key={service.id} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shado w-xl transition-all duration-30o0 hover: borde r-green-30o0">,
+                  <div className="flex items-center gap-x-4 mb-6">,
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-green-60o0 group-hover: b g-green-70o0 transition-colors">,
+                      <service.icon className="h-8 w-8 text-white"  />,
+                    </div>,
+                    <div>,
+                      <h3 className="text-xl font-semibold text-gray-90o0">{service.title}</h3>,
+                      <p className="text-sm text-green-60o0 font-medium">{service.category}</p>,
+                    </div>,
+                  </div>,
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>,
+                  <div className="mb-6">,
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-3">Key Features: </h4>,
+                    <ul className="space-y-2">,
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center gap-x-3">
-                          <CheckCircle className="h-4 w-4 text-green-60o0 flex-shrink-0"   />
-                          <span className="text-sm text-gray-70o0">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing:</h4>
-                    <div className="space-y-1">
-                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>
-                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>
-                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>
-                    </div>
-                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>
-                  </div>
-
-                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">
-                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits:</h4>
-                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>
-                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
-                      <Clock className="h-4 w-4"   />
-                      <span>{service.delivery} delivery</span>
-                    </div>
+                        <li key={index} className="flex items-center gap-x-3">,
+                          <CheckCircle className="h-4 w-4 text-green-60o0 flex-shrink-0"   />,
+                          <span className="text-sm text-gray-70o0">{feature}</span>,
+                        </li>))}
+                    </ul>,
+                  </div>,
+                  <div className="mb-6">,
+                    <h4 className="text-sm font-semibold text-gray-90o0 mb-2">Pricing: </h4>,
+                    <div className="space-y-1">,
+                      <p className="text-sm text-gray-60o0">Starter: {service.pricing.starter}</p>,
+                      <p className="text-sm text-gray-60o0">Pro: {service.pricing.professional}</p>,
+                      <p className="text-sm text-gray-60o0">Enterprise: {service.pricing.enterprise}</p>,
+                    </div>,
+                    <p className="text-xs text-gray-50o0 mt-2">Market Price: {service.marketPrice}</p>,
+                  </div>,
+                  <div className="bg-green-50 border border-green-20o0 rounded-lg p-4 mb-6">,
+                    <h4 className="text-sm font-semibold text-green-90o0 mb-2">Benefits: </h4>,
+                    <p className="text-sm text-green-80o0 mb-2">{service.benefits}</p>,
+                    <p className="text-xs text-green-70o0 font-medium">{service.roi}</p>,
+                  </div>,
+                  <div className="flex items-center justify-between">,
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">,
+                      <Clock className="h-4 w-4"   />,
+                      <span>{service.delivery} delivery</span>,
+                    </div>,
                     <Link
                       href={service.link}
-                      className="inline-flex items-center text-sm font-semibold text-green-60o0 hover: tex t-green-50o0 transition-colors group"
-                    >
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+                      className="inline-flex items-center text-sm font-semibold text-green-60o0 hover: tex t-green-50o0 transition-colors group">,
+                      Get Started,
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"   />,
+                    </Link>,
+                  </div>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-16 sm: p y-24">
-          <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-blue-10o0">
-                Join hundreds of businesses that have already transformed their operations with our innovative solutions. 
-                Get started today with a free consultation and discover how we can help you achieve unprecedented growth.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+        <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-16 sm: p y-24">,
+          <div className="mx-auto max-w-7xl px-6 lg: p x-8">,
+            <div className="mx-auto max-w-2xl text-center">,
+              <h2 className="text-3xl font-bold tracking-tight text-white sm: tex t-4xl">,
+                Ready to Transform Your Business?,
+              </h2>,
+              <p className="mt-6 text-lg leading-8 text-blue-10o0">,
+                Join hundreds of businesses that have already transformed their operations with our innovative solutions.,
+                Get started today with a free consultation and discover how we can help you achieve unprecedented growth.,
+              </p>,
+              <div className="mt-10 flex items-center justify-center gap-x-6">,
                 <Link
-                  href="/contact"
-                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-60o0 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white transition-all duration-20o0"
-                >
-                  Get Free Consultation
-                </Link>
+                  href="/contact",
+                  className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-60o0 shadow-sm hover: b g-gray-50 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-white transition-all duration-20o0">,
+                  Get Free Consultation,
+                </Link>,
                 <a
-                  href="tel:+130o24640950"
-                  className="text-sm font-semibold leading-6 text-white hover: tex t-blue-20o0 transition-colors"
-                >
-                  Call +1 30o2 464 0950
-                </a>
-              </div>
-              <div className="mt-8 text-center">
-                <p className="text-sm text-blue-10o0">
+                  href="tel:+130o24640950",
+                  className="text-sm font-semibold leading-6 text-white hover: tex t-blue-20o0 transition-colors">,
+                  Call +1 30o2 464 0950,
+                </a>,
+              </div>,
+              <div className="mt-8 text-center">,
+                <p className="text-sm text-blue-10o0">,
                   Or email us at{' '}
-                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-20o0 underline">
-                    kleber@ziontechgroup.com
-                  </a>
-                </p>
-                <p className="text-sm text-blue-10o0 mt-2">
-                  364 E Main St STE 10o08, Middletown DE 19709
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </PageTransition>
-    </Layout>
-  );
-}
+                  <a href="mailto: klebe r@ziontechgroup.com" className="text-white hover: tex t-blue-20o0 underline">,
+                    kleber@ziontechgroup.com,
+                  </a>,
+                </p>,
+                <p className="text-sm text-blue-10o0 mt-2">,
+                  364 E Main St STE 10o08, Middletown DE 19709,
+                </p>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
+      </PageTransition>,
+    </Layout>)}

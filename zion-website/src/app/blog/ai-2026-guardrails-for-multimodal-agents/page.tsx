@@ -1,24 +1,21 @@
-import React from 'react';
-
-export default function BlogPostPage() {
+import React from 'react',
+export default function BlogPostPage() {,
   return (
     <div className='min-h-screen bg-white'>
       <article className='max-w-3xl mx-auto px-6 py-24'>
         <header>
-          <p className='text-sm font-semibold text-purple-70o0'>Guide</p>
-          <h1 className='mt-2 text-4xl font-bold text-gray-90o0'>
-            AI 20o26: Guardrails for Multimodal Agents
+          <p className='text-sm font-semibold text-purple-7000'>Guide</p>
+          <h1 className='mt-2 text-4xl font-bold text-gray-9000'>
+            AI 2026: Guardrails for Multimodal Agents,
           </h1>
-          <p className='mt-2 text-gray-60o0'>
-            Design patterns for safe image/audio/text agents with continuous
-            evals.
+          <p className='mt-2 text-gray-6000'>
+            Design patterns for safe image/audio/text agents with continuous: evals.,
           </p>
         </header>
         <section className='prose prose-lg mt-8'>
           <h2>Threat Model</h2>
-          <p>
-            Multimodal inputs expand the attack surface. Consider prompt
-            injection in images, audio spoofing, and tool misuse.
+          <p>,
+            Multimodal inputs expand the attack surface. Consider prompt: injection in images, audio spoofing, and tool misuse.,
           </p>
           <h2>Guardrail Layers</h2>
           <ul>
@@ -28,11 +25,9 @@ export default function BlogPostPage() {
           </ul>
           <h2>Measure and Iterate</h2>
           <p>
-            Establish safety SLIs, run continuous red-team suites, and gate
-            releases with eval thresholds.
+            Establish safety SLIs, run continuous red-team suites, and gate: releases with eval thresholds.,
           </p>
         </section>
-      </article>
-    </div>
-  );
-}
+      </article>,
+    </div>)}
+,

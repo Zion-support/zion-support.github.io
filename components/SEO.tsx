@@ -1,75 +1,32 @@
 import Head from 'next/head';
-import type { ReactNode } from 'react';
 
-interface SEOHeadProps {
+interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string[];
+  keywords?: string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
-  structuredData?: object;
-  children?: ReactNode;
+  url?: string;
+  noindex?: boolean;
 }
 
-export default function SEOHead({
-  title = 'Zion Tech Group - Advanced AI and Technology Solutions',
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
-  keywords = [
-    'AI',
-    'artificial intelligence',
-    'cloud services',
-    'cybersecurity',
-    'technology solutions',
-    'enterprise software',
-    'digital transformation',
-  ],
+export default function SEO({ 
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords,
   canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
-  structuredData,
-  children,
-}: SEOHeadProps) {
-  const fullTitle = title.includes('Zion Tech Group')
-    ? title
-    : `${title} | Zion Tech Group`;
-  const canonicalUrl =
-    canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
+  url,
+  noindex = false
+}: SEOProps) {
   return (
     <Head>
-      <title>{fullTitle}</title>
-      <meta name='description' content={description} />
-      <meta name='keywords' content={keywords.join(', ')} />
-      {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
-      {noIndex && <meta name='robots' content='noindex,nofollow' />}
-
-      {/* Open Graph */}
-      <meta property='og:title' content={fullTitle} />
-      <meta property='og:description' content={description} />
-      <meta property='og:type' content={ogType} />
-      <meta property='og:image' content={ogImage} />
-      {canonicalUrl && <meta property='og:url' content={canonicalUrl} />}
-
-      {/* Twitter */}
-      <meta name='twitter:card' content={twitterCard} />
-      <meta name='twitter:title' content={fullTitle} />
-      <meta name='twitter:description' content={description} />
-      <meta name='twitter:image' content={ogImage} />
-
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
-
-      {children}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      {url && <meta property="og:url" content={url} />}
+      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
   );
 }

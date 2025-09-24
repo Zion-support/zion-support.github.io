@@ -1,24 +1,22 @@
 import {
   MilestoneSuggestionInput,
   MilestoneSuggestionResponse,
-  SuggestedMilestoneItem,
+  SuggestedMilestoneItem
 } from '../shared/types.js';
 
 const OPENAI_API_KEY =
   process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN;
 
-async function callOpenAI(
-  input: MilestoneSuggestionInput
-): Promise<SuggestedMilestoneItem[] | null> {
+async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {
   if (!OPENAI_API_KEY) return null;
 
-  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`;
+  const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key "milestones": [...]`;
 
   const user = {
     scopeOfWork: input.scopeOfWork,
     startDateIso: input.startDateIso,
     endDateIso: input.endDateIso,
-    projectType: input.projectType,
+    projectType: input.projectType
   };
 
   const body = {
@@ -27,19 +25,19 @@ async function callOpenAI(
       { role: 'system', content: system },
       {
         role: 'user',
-        content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}`,
-      },
+        content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {"milestones": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}`
+      }
     ],
-    temperature: 0.3,
+    temperature: 0.3
   } as any;
 
   const resp = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
+      Authorization: `Bearer ${OPENAI_API_KEY}`
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify(body)
   });
 
   if (!resp.ok) return null;
@@ -49,9 +47,7 @@ async function callOpenAI(
 
   try {
     const parsed = JSON.parse(content);
-    const milestones: SuggestedMilestoneItem[] = Array.isArray(
-      parsed?.milestones
-    )
+    const milestones: SuggestedMilestoneItem[] = Array.isArray(parsed?.milestones)
       ? parsed.milestones
       : [];
     if (!milestones.length) return null;
@@ -63,16 +59,14 @@ async function callOpenAI(
         1,
         parseInt(String(m.estimatedEffortHours), 10) || 8
       ),
-      tags: ['AI Suggested'],
+      tags: ['AI Suggested']
     }));
   } catch {
     return null;
   }
 }
 
-function createHeuristicPlan(
-  input: MilestoneSuggestionInput
-): SuggestedMilestoneItem[] {
+function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMilestoneItem[] {
   const start = new Date(input.startDateIso);
   const end = new Date(input.endDateIso);
   const totalDays = Math.max(
@@ -81,48 +75,45 @@ function createHeuristicPlan(
   );
   const phases = Math.min(6, Math.max(3, Math.round(totalDays / 14)));
   const perPhaseDays = Math.max(5, Math.round(totalDays / phases));
-
   const titlesByType: Record<string, string[]> = {
     'Web Dev': [
       'Discovery & Planning',
       'Design',
       'Implementation',
       'QA & UAT',
-      'Deployment',
+      'Deployment'
     ],
     'AI/ML': [
       'Problem Framing & Data Audit',
       'Data Pipeline & EDA',
       'Model Baseline',
       'Iteration & Evaluation',
-      'Integration & Monitoring',
+      'Integration & Monitoring'
     ],
     DevOps: [
       'Infrastructure Assessment',
       'CI/CD Setup',
       'Observability',
       'Security Hardening',
-      'Scaling & Cost Ops',
+      'Scaling & Cost Ops'
     ],
     Mobile: [
       'Requirements & Wireframes',
       'App Skeleton',
       'Feature Implementation',
       'Testing & Beta',
-      'Store Release',
+      'Store Release'
     ],
     'Data Engineering': [
       'Requirements & Modeling',
       'Ingestion Pipelines',
       'Transformations & Quality',
       'Serving Layer',
-      'Monitoring & Docs',
+      'Monitoring & Docs'
     ],
-    Other: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5'],
+    Other: ['Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5']
   };
-
   const pool = titlesByType[input.projectType] || titlesByType.Other;
-
   const milestones: SuggestedMilestoneItem[] = [];
   let phaseStart = new Date(start);
   for (let i = 0; i < phases; i++) {
@@ -130,22 +121,20 @@ function createHeuristicPlan(
     due.setDate(due.getDate() + perPhaseDays);
     const title = pool[i] || `Phase ${i + 1}`;
     const description = `${title} for: ${input.scopeOfWork.substring(0, 300)}...`;
-    const estimatedEffortHours = perPhaseDays * 6; // approx 6h per day
+    const estimatedEffortHours = perPhaseDays * 6;
     milestones.push({
       title,
       description,
       suggestedDueDateIso: due.toISOString(),
       estimatedEffortHours,
-      tags: ['AI Suggested'],
+      tags: ['AI Suggested']
     });
     phaseStart = due;
   }
   return milestones;
 }
 
-export async function generateMilestones(
-  input: MilestoneSuggestionInput
-): Promise<MilestoneSuggestionResponse> {
+export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {
   const ai = await callOpenAI(input);
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
   return { milestones };

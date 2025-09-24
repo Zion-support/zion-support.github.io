@@ -1,152 +1,137 @@
-import Link from 'next/link';
-ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap
-
+import Link from 'next/link',
+ArrowRightAwardTargetTrendingUpUsersGlobeCheckCircleZap,
 export default function AI20o25ContentRevolution50o00ROIBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-green-90o0 rounded-3xl p-8 md:p-12 mb-16 border border-green-50o0/20">
+    <div className="relative overflow-hidden bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-green-90o0 rounded-3xl p-8 md: p-12 mb-16 border border-green-50o0/20">,
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230o59669" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%230o59669" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
+      <div className="relative z-10">,
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
-            <Award className="w-4 h-4"  />
-            Fortune 50o0 Success Story
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            AI 20o25 Content Revolution
-            <br  />
-            <span className="bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent">5,0o00% ROI Success</span>
-          </h2>
-          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto mb-8">
-            Discover how a Fortune 50o0 technology leader achieved unprecedented 5,0o00% ROI 
-            through our revolutionary AI content optimization breakthroughtransforming their 
-            global marketing operations across 50+ markets.
-          </p>
-        </div>
-
+        <div className="text-center mb-8">,
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">,
+            <Award className="w-4 h-4"  />,
+            Fortune 50o0 Success Story,
+          </div>,
+          <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">,
+            AI 20o25 Content Revolution,
+            <br  />,
+            <span className="bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent">5,0o00% ROI Success</span>,
+          </h2>,
+          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto mb-8">,
+            Discover how a Fortune 50o0 technology leader achieved unprecedented 5,0o00% ROI,
+            through our revolutionary AI content optimization breakthroughtransforming their,
+            global marketing operations across 50+ markets.,
+          </p>,
+        </div>,
         {/* Key Metrics */}
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-            <div className="text-4xl font-bold text-green-40o0 mb-2">5,0o00%</div>
-            <div className="text-white font-semibold mb-1">ROI Increase</div>
-            <div className="text-gray-30o0 text-sm">From 2.3% to 115% engagement</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-            <div className="text-4xl font-bold text-blue-40o0 mb-2">99.9%</div>
-            <div className="text-white font-semibold mb-1">Accuracy Rate</div>
-            <div className="text-gray-30o0 text-sm">Content optimization precision</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-            <div className="text-4xl font-bold text-purple-40o0 mb-2">$50M</div>
-            <div className="text-white font-semibold mb-1">Cost Savings</div>
-            <div className="text-gray-30o0 text-sm">Annual operational savings</div>
-          </div>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-            <div className="text-4xl font-bold text-yellow-40o0 mb-2">+$2.5B</div>
-            <div className="text-white font-semibold mb-1">Revenue Increase</div>
-            <div className="text-gray-30o0 text-sm">Additional annual revenue</div>
-          </div>
-        </div>
-
+        <div className="grid md: grid-cols-4 gap-6 mb-8">,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">,
+            <div className="text-4xl font-bold text-green-40o0 mb-2">5,0o00%</div>,
+            <div className="text-white font-semibold mb-1">ROI Increase</div>,
+            <div className="text-gray-30o0 text-sm">From 2.3% to 115% engagement</div>,
+          </div>,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">,
+            <div className="text-4xl font-bold text-blue-40o0 mb-2">99.9%</div>,
+            <div className="text-white font-semibold mb-1">Accuracy Rate</div>,
+            <div className="text-gray-30o0 text-sm">Content optimization precision</div>,
+          </div>,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">,
+            <div className="text-4xl font-bold text-purple-40o0 mb-2">$50M</div>,
+            <div className="text-white font-semibold mb-1">Cost Savings</div>,
+            <div className="text-gray-30o0 text-sm">Annual operational savings</div>,
+          </div>,
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">,
+            <div className="text-4xl font-bold text-yellow-40o0 mb-2">+$2.5B</div>,
+            <div className="text-white font-semibold mb-1">Revenue Increase</div>,
+            <div className="text-gray-30o0 text-sm">Additional annual revenue</div>,
+          </div>,
+        </div>,
         {/* Client Testimonial */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center">
-              <Users className="w-8 h-8 text-white"  />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Sarah Chen</h3>
-              <p className="text-green-30o0">Chief Marketing OfficerFortune 50o0 Technology Leader</p>
-            </div>
-          </div>
-          <blockquote className="text-lg text-gray-30o0 italic mb-6">
-            "The AI 20o25 Content Revolution breakthrough has completely transformed our global content operations. 
-            'We', 've achieved unprecedented 5,0o00% ROI and reduced our content costs by 95% while dramatically 
-            improving engagement across all markets. This is truly revolutionary technology."
-          </blockquote>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-40o0">+4,90o0%</div>
-              <div className="text-sm text-gray-40o0">Content Engagement</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-40o0">+3,20o0%</div>
-              <div className="text-sm text-gray-40o0">Conversion Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-40o0">+8,50o0%</div>
-              <div className="text-sm text-gray-40o0">Creation Speed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-40o0">-95%</div>
-              <div className="text-sm text-gray-40o0">Cost per Acquisition</div>
-            </div>
-          </div>
-        </div>
-
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">,
+          <div className="flex items-center gap-4 mb-6">,
+            <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center">,
+              <Users className="w-8 h-8 text-white"  />,
+            </div>,
+            <div>,
+              <h3 className="text-xl font-bold text-white">Sarah Chen</h3>,
+              <p className="text-green-30o0">Chief Marketing OfficerFortune 50o0 Technology Leader</p>,
+            </div>,
+          </div>,
+          <blockquote className="text-lg text-gray-30o0 italic mb-6">,
+            "The AI 20o25 Content Revolution breakthrough has completely transformed our global content operations.,
+            'We', 've achieved unprecedented 5,0o00% ROI and reduced our content costs by 95% while dramatically,
+            improving engagement across all markets. This is truly revolutionary technology.",
+          </blockquote>,
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
+            <div className="text-center">,
+              <div className="text-2xl font-bold text-green-40o0">+4,90o0%</div>,
+              <div className="text-sm text-gray-40o0">Content Engagement</div>,
+            </div>,
+            <div className="text-center">,
+              <div className="text-2xl font-bold text-blue-40o0">+3,20o0%</div>,
+              <div className="text-sm text-gray-40o0">Conversion Rate</div>,
+            </div>,
+            <div className="text-center">,
+              <div className="text-2xl font-bold text-purple-40o0">+8,50o0%</div>,
+              <div className="text-sm text-gray-40o0">Creation Speed</div>,
+            </div>,
+            <div className="text-center">,
+              <div className="text-2xl font-bold text-yellow-40o0">-95%</div>,
+              <div className="text-sm text-gray-40o0">Cost per Acquisition</div>,
+            </div>,
+          </div>,
+        </div>,
         {/* Implementation Timeline */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Implementation Timeline</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-white"  />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">Phase 1: Analysis</h4>
-              <p className="text-gray-30o0 text-sm mb-2">Quantum content analysis across all markets</p>
-              <div className="text-purple-40o0 font-semibold">2 weeks</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-6 h-6 text-white"  />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">Phase 2: Optimization</h4>
-              <p className="text-gray-30o0 text-sm mb-2">Autonomous content optimization systems</p>
-              <div className="text-blue-40o0 font-semibold">4 weeks</div>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-white"  />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-2">Phase 3: Rollout</h4>
-              <p className="text-gray-30o0 text-sm mb-2">Global deployment across 50+ markets</p>
-              <div className="text-green-40o0 font-semibold">6 weeks</div>
-            </div>
-          </div>
-        </div>
-
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">,
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">Implementation Timeline</h3>,
+          <div className="grid md: grid-cols-3 gap-6">,
+            <div className="text-center">,
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-4">,
+                <Zap className="w-6 h-6 text-white"  />,
+              </div>,
+              <h4 className="text-lg font-bold text-white mb-2">Phase 1: Analysis</h4>,
+              <p className="text-gray-30o0 text-sm mb-2">Quantum content analysis across all markets</p>,
+              <div className="text-purple-40o0 font-semibold">2 weeks</div>,
+            </div>,
+            <div className="text-center">,
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full flex items-center justify-center mx-auto mb-4">,
+                <Target className="w-6 h-6 text-white"  />,
+              </div>,
+              <h4 className="text-lg font-bold text-white mb-2">Phase 2: Optimization</h4>,
+              <p className="text-gray-30o0 text-sm mb-2">Autonomous content optimization systems</p>,
+              <div className="text-blue-40o0 font-semibold">4 weeks</div>,
+            </div>,
+            <div className="text-center">,
+              <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-4">,
+                <TrendingUp className="w-6 h-6 text-white"  />,
+              </div>,
+              <h4 className="text-lg font-bold text-white mb-2">Phase 3: Rollout</h4>,
+              <p className="text-gray-30o0 text-sm mb-2">Global deployment across 50+ markets</p>,
+              <div className="text-green-40o0 font-semibold">6 weeks</div>,
+            </div>,
+          </div>,
+        </div>,
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link 
-              href="/case-studies/ai-20o25-content-revolution-50o00-roi-success" 
-              className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <Award className="w-5 h-5"  />
-              Read Full Case Study
-              <ArrowRight className="w-5 h-5"  />
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-30o0 flex items-center gap-2 backdrop-blur-sm border border-white/20"
-            >
-              <Users className="w-5 h-5"  />
-              Start Your Success Story
-              <ArrowRight className="w-5 h-5"  />
-            </Link>
-          </div>
-          <p className="text-green-20o0 text-sm">
-            Join 50o0+ companies achieving breakthrough results with AI 20o25
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+        <div className="text-center">,
+          <div className="flex flex-wrap justify-center gap-4 mb-6">,
+            <Link
+              href="/case-studies/ai-20o25-content-revolution-50o00-roi-success",
+              className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-full font-bold text-lg hover: from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">,
+              <Award className="w-5 h-5"  />,
+              Read Full Case Study,
+              <ArrowRight className="w-5 h-5"  />,
+            </Link>,
+            <Link
+              href="/contact",
+              className="bg-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-30o0 flex items-center gap-2 backdrop-blur-sm border border-white/20">,
+              <Users className="w-5 h-5"  />,
+              Start Your Success Story,
+              <ArrowRight className="w-5 h-5"  />,
+            </Link>,
+          </div>,
+          <p className="text-green-20o0 text-sm">,
+            Join 50o0+ companies achieving breakthrough results with AI 20o25,
+          </p>,
+        </div>,
+      </div>,
+    </div>)}

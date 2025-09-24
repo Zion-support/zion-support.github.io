@@ -1,21 +1,19 @@
-import { UserProfile, UserDetails } from '@/types/auth';
+import { UserProfile, UserDetails } from '@/types/auth',
 import {
   Message,
   Conversation,
   ConversationContextData,
-} from '@/types/messaging';
-import { useConversationState } from './useConversationState';
-import { useConversations } from './useConversations';
-import { useMessages } from './useMessages';
-
-// Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null;
-
-/**
- * Hook that combines all messaging operations
- */
+} from '@/types/messaging',
+import { useConversationState } from './useConversationState',
+import { useConversations } from './useConversations',
+import { useMessages } from './useMessages',
+// Allow either UserProfile or UserDetails,
+type UserWithProfile = UserProfile | UserDetails | null,
+/**,
+ * Hook that combines all messaging operations,
+ */,
 export function useMessagingOperations(user: UserWithProfile) {
-  // State management
+  // State management,
   const {
     messages,
     setMessages,
@@ -29,17 +27,14 @@ export function useMessagingOperations(user: UserWithProfile) {
     setActiveConversation,
     isLoading,
     setIsLoading,
-  } = useConversationState();
-
-  // Conversations management
+  } = useConversationState(),
+  // Conversations management,
   const { fetchConversations, createConversation } = useConversations(
     user,
     setConversations,
     setUnreadCount,
-    setIsLoading
-  );
-
-  // Messages management
+    setIsLoading),
+  // Messages management,
   const { loadMessages, sendMessage, markAsRead } = useMessages(
     user,
     activeConversation,
@@ -49,11 +44,9 @@ export function useMessagingOperations(user: UserWithProfile) {
     setConversations,
     setUnreadCount,
     setIsLoading,
-    fetchConversations
-  );
-
+    fetchConversations),
   return {
-    // State
+    // State,
     messages,
     activeMessages,
     setActiveMessages,
@@ -64,12 +57,12 @@ export function useMessagingOperations(user: UserWithProfile) {
     activeConversation,
     setActiveConversation,
     isLoading,
-
-    // Operations
+    // Operations,
     sendMessage,
     createConversation,
     markAsRead,
     fetchConversations,
     loadMessages,
-  };
+  },
 }
+,

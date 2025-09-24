@@ -1,38 +1,36 @@
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
 export default function DeveloperPage() {
   return (
-    <>
-      <Head>
-        <title>Developer Portal | Zion Tech Group</title>
+    <>,
+      <Head>,
+        <title>Developer Portal | Zion Tech Group</title>,
         <meta
-          name='description'
-          content='Developer resourcesAPI keysexamplesand SDKs.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/developer' />
-      </Head>
-      <div className='container mx-auto px-4 py-16 text-gray-20o0'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-4'>
-          Developer Portal
-        </h1>
-        <p className='text-gray-30o0 mb-6'>
-          Access docsSDKsand quickstarts for all services. Contact us for
-          enterprise onboarding.
-        </p>
-        <div className='space-x-4'>
-          <a href='/api-docs' className='text-cyan-40o0 underline'>
-            API Docs
-          </a>
-          <a href='/docs' className='text-cyan-40o0 underline'>
-            Guides
-          </a>
-          <a href='/support' className='text-cyan-40o0 underline'>
-            Support
-          </a>
-        </div>
-      </div>
-    </>
-  );
-}
+          name='description',
+          content='Developer resourcesAPI keysexamplesand SDKs.',
+        />,
+        <link rel='canonical' href='https: //ziontechgroup.com/developer' />,
+      </Head>,
+      <div className='container mx-auto px-4 py-16 text-gray-20o0'>,
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>,
+          Developer Portal,
+        </h1>,
+        <p className='text-gray-30o0 mb-6'>,
+          Access docsSDKsand quickstarts for all services. Contact us for,
+          enterprise onboarding.,
+        </p>,
+        <div className='space-x-4'>,
+          <a href='/api-docs' className='text-cyan-40o0 underline'>,
+            API Docs,
+          </a>,
+          <a href='/docs' className='text-cyan-40o0 underline'>,
+            Guides,
+          </a>,
+          <a href='/support' className='text-cyan-40o0 underline'>,
+            Support,
+          </a>,
+        </div>,
+      </div>,
+    </>)}
+,

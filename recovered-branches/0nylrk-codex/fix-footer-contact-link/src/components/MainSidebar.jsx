@@ -1,5 +1,5 @@
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { Link, useLocation } from 'react-router-dom',
+import { cn } from '@/lib/utils',
 import {
   Home,
   ShoppingCart,
@@ -16,9 +16,9 @@ import {
   Calendar,
   Globe,
   Zap,
-} from 'lucide-react';
+} from 'lucide-react',
 export function MainSidebar() {
-  const location = useLocation();
+  const location = useLocation(),
   const sidebarSections = [
     {
       title: 'Main',
@@ -27,31 +27,31 @@ export function MainSidebar() {
           key: 'home',
           href: '/',
           icon: <Home className='w-4 h-4' />,
-          label: 'Home',
+          label: 'Home'
         },
         {
           key: 'marketplace',
           href: '/marketplace',
           icon: <ShoppingCart className='w-4 h-4' />,
-          label: 'Marketplace',
+          label: 'Marketplace'
         },
         {
           key: 'services',
           href: '/services',
           icon: <Settings className='w-4 h-4' />,
-          label: 'Services',
+          label: 'Services'
         },
         {
           key: 'talent',
           href: '/talent',
           icon: <Users className='w-4 h-4' />,
-          label: 'Talent',
+          label: 'Talent'
         },
         {
           key: 'equipment',
           href: '/equipment',
           icon: <BarChart3 className='w-4 h-4' />,
-          label: 'Equipment',
+          label: 'Equipment'
         },
       ],
     },
@@ -62,25 +62,25 @@ export function MainSidebar() {
           key: 'about',
           href: '/about',
           icon: <Building className='w-4 h-4' />,
-          label: 'About Us',
+          label: 'About Us'
         },
         {
           key: 'careers',
           href: '/careers',
           icon: <Briefcase className='w-4 h-4' />,
-          label: 'Careers',
+          label: 'Careers'
         },
         {
           key: 'partners',
           href: '/partners',
           icon: <Users className='w-4 h-4' />,
-          label: 'Partners',
+          label: 'Partners'
         },
         {
           key: 'contact',
           href: '/contact',
           icon: <Mail className='w-4 h-4' />,
-          label: 'Contact',
+          label: 'Contact'
         },
       ],
     },
@@ -91,25 +91,25 @@ export function MainSidebar() {
           key: 'blog',
           href: '/blog',
           icon: <FileText className='w-4 h-4' />,
-          label: 'Blog',
+          label: 'Blog'
         },
         {
           key: 'community',
           href: '/community',
           icon: <Globe className='w-4 h-4' />,
-          label: 'Community',
+          label: 'Community'
         },
         {
           key: 'green-it',
           href: '/green-it',
           icon: <Leaf className='w-4 h-4' />,
-          label: 'Green IT',
+          label: 'Green IT'
         },
         {
           key: 'zion-hire-ai',
           href: '/zion-hire-ai',
           icon: <Zap className='w-4 h-4' />,
-          label: 'AI Hiring',
+          label: 'AI Hiring'
         },
       ],
     },
@@ -120,87 +120,78 @@ export function MainSidebar() {
           key: 'help',
           href: '/help',
           icon: <HelpCircle className='w-4 h-4' />,
-          label: 'Help Center',
+          label: 'Help Center'
         },
         {
           key: 'developers',
           href: '/developers',
           icon: <Code className='w-4 h-4' />,
-          label: 'Developer Portal',
+          label: 'Developer Portal'
         },
         {
           key: 'api-docs',
           href: '/api-docs',
           icon: <Code className='w-4 h-4' />,
-          label: 'API Docs',
+          label: 'API Docs'
         },
         {
           key: 'sitemap',
           href: '/sitemap',
           icon: <Calendar className='w-4 h-4' />,
-          label: 'Sitemap',
+          label: 'Sitemap'
         },
       ],
     },
-  ];
+  ],
   const isActive = href => {
     if (href === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(href);
-  };
+      return location.pathname === '/'}
+    return location.pathname.startsWith(href)},
   return (
-    <aside className='w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4'>
-      <div className='mb-8'>
-        <Link to='/' className='flex items-center space-x-2'>
-          <span className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'>
-            ZION
-          </span>
-        </Link>
-        <p className='text-zion-slate-light text-sm mt-2'>
-          Tech & AI Marketplace
-        </p>
-      </div>
-
-      <nav className='space-y-6'>
+    <aside className='w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4'>,
+      <div className='mb-8'>,
+        <Link to='/' className='flex items-center space-x-2'>,
+          <span className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'>,
+            ZION,
+          </span>,
+        </Link>,
+        <p className='text-zion-slate-light text-sm mt-2'>,
+          Tech & AI Marketplace,
+        </p>,
+      </div>,
+      <nav className='space-y-6'>,
         {sidebarSections.map(section => (
-          <div key={section.title}>
-            <h3 className='text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3'>
+          <div key={section.title}>,
+            <h3 className='text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3'>,
               {section.title}
-            </h3>
-            <ul className='space-y-1'>
+            </h3>,
+            <ul className='space-y-1'>,
               {section.items.map(item => (
-                <li key={item.key}>
+                <li key={item.key}>,
                   <Link
                     to={item.href}
                     className={cn(
                       'flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors',
-                      isActive(item.href)
-                        ? 'bg-zion-purple/20 text-zion-cyan'
-                        : 'text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    )}
-                  >
+                      isActive(item.href),
+                        ? 'bg-zion-purple/20 text-zion-cyan',
+                        : 'text-zion-slate-light hover: bg-zion-purple/10 hover:text-zion-cyan')}
+                  >,
                     {item.icon}
-                    <span>{item.label}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </nav>
-
-      <div className='mt-8 pt-6 border-t border-zion-blue-light'>
-        <div className='text-zion-slate-light text-xs'>
-          <p className='mb-2'>Need help?</p>
+                    <span>{item.label}</span>,
+                  </Link>,
+                </li>))}
+            </ul>,
+          </div>))}
+      </nav>,
+      <div className='mt-8 pt-6 border-t border-zion-blue-light'>,
+        <div className='text-zion-slate-light text-xs'>,
+          <p className='mb-2'>Need help?</p>,
           <Link
-            to='/contact'
-            className='text-zion-cyan hover:text-zion-purple transition-colors'
-          >
-            Contact Support
-          </Link>
-        </div>
-      </div>
-    </aside>
-  );
-}
+            to='/contact',
+            className='text-zion-cyan hover: text-zion-purple transition-colors'>,
+            Contact Support,
+          </Link>,
+        </div>,
+      </div>,
+    </aside>)}
+,

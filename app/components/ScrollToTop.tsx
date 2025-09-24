@@ -1,32 +1,29 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { ArrowUpIcon } from '@heroicons/react/24/outline';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ArrowUpIcon } from '@heroicons/react/24/outline'
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true);
+        setIsVisible(true)
       } else {
-        setIsVisible(false);
+        setIsVisible(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   if (!isVisible) {
-    return null;
+    return null
   }
 
   return (
@@ -37,5 +34,5 @@ export default function ScrollToTop() {
     >
       <ArrowUpIcon className='h-5 w-5' />
     </button>
-  );
+  )
 }

@@ -1,9 +1,8 @@
+import React from 'react',
 import type { ParsedFilters } from './parser',
 import { TALENT_PROFILES } from '../../data/talent',
 import type { TalentProfile } from '../../data/talent',
-
 export type AccessLevel = 'public' | 'member' | 'admin',
-
 export type SearchResult = {
   type: 'talent' | 'job' | 'project',
   id: string,
@@ -17,9 +16,7 @@ export type SearchResult = {
   verified?: boolean,
   visibility?: AccessLevel,
   description?: string,
-  relevance: number
-},
-
+  relevance: number},
 function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
   if (!keywords.length) return 0,
   const lower = text.toLowerCase(),
@@ -29,14 +26,13 @@ function computeRelevanceScore(text: string, keywords: string[], weight = 1): nu
   }
   return score,
 }
-
+,
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
   const set = new Set(skills.map((s) => s.toLowerCase())),
   let score = 0,
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
-  return score
-}
-
+  return score}
+,
 function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (!candidate) return 0,
   let score = 0,
@@ -44,33 +40,33 @@ function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (min && candidate >= min) score += 0.5,
   return score,
 }
-
+,
 function availabilityMatches(candidate?: string, requested?: string): boolean {
   if (!requested) return true,
   if (!candidate) return false,
   return candidate.toLowerCase() === requested.toLowerCase(),
 }
-
+,
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
   const level = visibility || 'public',
-  const order: AccessLevel[] = ['publicmember', 'admin'],
+  const order: AccessLevel[] = ['publicmemberadmin'],
   return order.indexOf(access) >= order.indexOf(level),
 }
-
+,
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
-  const talent: SearchResult[] = TALENT_PROFILES
-    .filter((p) => availabilityMatches(p.availability, filters.availability))
+  const talent: SearchResult[] = TALENT_PROFILES,
+    .filter((p) => availabilityMatches(p.availability, filters.availability)),
     .filter((p) => {
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
       return true,
-    })
+    }),
     .filter((p) => {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
       }
       return true,
-    })
+    }),
     .map<SearchResult>((p) => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills),
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),
@@ -90,21 +86,20 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
         visibility: 'public',
         description: p.bio,
         relevance},
-    })
-    .filter((r) => passesRls(r.visibility, access))
+    }),
+    .filter((r) => passesRls(r.visibility, access)),
     .sort((a, b) => b.relevance - a.relevance),
-
   const jobs: SearchResult[] = [],
   const projects: SearchResult[] = [],
-
   const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance),
   return { all, talent, jobs, projects },
 }
-
+,
 export function suggestDidYouMean(query: string): string | null {
-  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
+  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM",
   const q = query.toLowerCase(),
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM',
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',
   return null,
 }
+,

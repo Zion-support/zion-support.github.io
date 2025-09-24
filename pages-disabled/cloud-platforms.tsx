@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { ModernHeader } from '../src/components/header/ModernHeader';
-import { SimpleFooter } from '../src/components/layout/SimpleFooter';
+import Head from 'next/head',
+import Link from 'next/link',
+import { ModernHeader } from '../src/components/header/ModernHeader',
+import { SimpleFooter } from '../src/components/layout/SimpleFooter',
 import {
   Cloud,
   Server,
@@ -15,258 +15,228 @@ import {
   BarChart3,
   Lock,
   Settings,
-} from 'lucide-react';
-
+} from 'lucide-react',
 export default function CloudPlatforms() {
   const features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Strategy',
-      description:
+      description:,
         'Seamlessly integrate and manage workloads across AWS, Azure, and Google Cloud platforms.',
       benefits: [
-        'Cost optimization',
-        'Vendor independence',
+        'Cost optimizationVendor independence',
         'Enhanced reliability',
-      ],
+      ]
     },
     {
       icon: Server,
       title: 'Infrastructure as Code',
-      description:
+      description:,
         'Automate infrastructure provisioning and management with Terraform, Ansible, and CloudFormation.',
-      benefits: ['Consistent deployments', 'Version control', 'Rapid scaling'],
+      benefits: ['Consistent deploymentsVersion control', 'Rapid scaling'],
     },
     {
       icon: Database,
       title: 'Managed Database Services',
-      description:
+      description:,
         'Fully managed database solutions with automated backups, scaling, and monitoring.',
-      benefits: ['High availability', 'Auto-scaling', '24/7 monitoring'],
+      benefits: ['High availabilityAuto-scaling', '24/7 monitoring'],
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description:
+      description:,
         'Enterprise-grade security with compliance frameworks including SOC 2, HIPAA, and GDPR.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails'],
+      benefits: ['Data encryptionAccess controls', 'Audit trails'],
     },
     {
       icon: Zap,
       title: 'Auto-Scaling',
-      description:
+      description:,
         'Dynamic resource allocation based on demand to optimize performance and costs.',
       benefits: [
-        'Cost efficiency',
-        'Performance optimization',
+        'Cost efficiencyPerformance optimization',
         'Zero downtime',
-      ],
+      ]
     },
     {
       icon: Globe,
       title: 'Global CDN',
-      description:
+      description:,
         'Content delivery network for fast, reliable access to your applications worldwide.',
-      benefits: ['Low latency', 'High availability', 'Global reach'],
+      benefits: ['Low latencyHigh availability', 'Global reach'],
     },
-  ];
-
+  ],
   const platforms = [
     {
       name: 'Amazon Web Services (AWS)',
       description: 'Comprehensive cloud services with global infrastructure',
-      services: ['EC2', 'S3', 'RDS', 'Lambda', 'CloudFront'],
+      services: ['EC2S3', 'RDSLambda', 'CloudFront'],
     },
     {
       name: 'Microsoft Azure',
       description: 'Enterprise-focused cloud platform with hybrid capabilities',
       services: [
-        'Virtual Machines',
-        'Blob Storage',
-        'SQL Database',
-        'Functions',
+        'Virtual MachinesBlob Storage',
+        'SQL DatabaseFunctions',
         'CDN',
-      ],
+      ]
     },
     {
       name: 'Google Cloud Platform',
       description: 'AI and machine learning focused cloud services',
       services: [
-        'Compute Engine',
-        'Cloud Storage',
-        'Cloud SQL',
-        'Cloud Functions',
+        'Compute EngineCloud Storage',
+        'Cloud SQLCloud Functions',
         'Cloud CDN',
-      ],
+      ]
     },
-  ];
-
+  ],
   return (
-    <>
-      <Head>
-        <title>Cloud Platforms - Zion Tech Group</title>
+    <>,
+      <Head>,
+        <title>Cloud Platforms - Zion Tech Group</title>,
         <meta
-          name='description'
-          content='Expert cloud platform services including AWS, Azure, and Google Cloud. Infrastructure as Code, managed databases, and enterprise security.'
-        />
+          name='description',
+          content='Expert cloud platform services including AWS, Azure, and Google Cloud. Infrastructure as Code, managed databases, and enterprise security.',
+        />,
         <meta
-          name='keywords'
-          content='cloud platforms, AWS, Azure, Google Cloud, infrastructure as code, managed services'
-        />
-      </Head>
-
-      <ModernHeader />
-
-      <main className='min-h-screen bg-gray-50'>
+          name='keywords',
+          content='cloud platforms, AWS, Azure, Google Cloud, infrastructure as code, managed services',
+        />,
+      </Head>,
+      <ModernHeader />,
+      <main className='min-h-screen bg-gray-50'>,
         {/* Hero Section */}
-        <section className='bg-gradient-to-br from-blue-90o0 via-blue-80o0 to-indigo-90o0 text-white py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center'>
-              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
-                Cloud Platform Solutions
-              </h1>
-              <p className='text-xl md:text-2xl text-blue-10o0 mb-8 max-w-3xl mx-auto'>
-                Harness the power of leading cloud platforms with our expert
-                implementation and management services
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='bg-gradient-to-br from-blue-90o0 via-blue-80o0 to-indigo-90o0 text-white py-20'>,
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='text-center'>,
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>,
+                Cloud Platform Solutions,
+              </h1>,
+              <p className='text-xl md:text-2xl text-blue-10o0 mb-8 max-w-3xl mx-auto'>,
+                Harness the power of leading cloud platforms with our expert,
+                implementation and management services,
+              </p>,
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
                 <Link
-                  href='/contact'
-                  className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'
-                >
-                  Get Started
-                  <ArrowRight className='ml-2 h-5 w-5' />
-                </Link>
+                  href='/contact',
+                  className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'>,
+                  Get Started,
+                  <ArrowRight className='ml-2 h-5 w-5' />,
+                </Link>,
                 <Link
-                  href='/pricing'
-                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'
-                >
-                  View Pricing
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
+                  href='/pricing',
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'>,
+                  View Pricing,
+                </Link>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
         {/* Features Section */}
-        <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-90o0 mb-4'>
-                Comprehensive Cloud Solutions
-              </h2>
-              <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
-                From infrastructure setup to ongoing management, we provide
-                end-to-end cloud platform services
-              </p>
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <section className='py-20'>,
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='text-center mb-16'>,
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-90o0 mb-4'>,
+                Comprehensive Cloud Solutions,
+              </h2>,
+              <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
+                From infrastructure setup to ongoing management, we provide,
+                end-to-end cloud platform services,
+              </p>,
+            </div>,
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className='bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow'
-                >
-                  <div className='flex items-center mb-4'>
-                    <div className='p-3 bg-blue-10o0 rounded-lg mr-4'>
-                      <feature.icon className='h-8 w-8 text-blue-60o0' />
-                    </div>
-                    <h3 className='text-xl font-semibold text-gray-90o0'>
+                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow'>,
+                  <div className='flex items-center mb-4'>,
+                    <div className='p-3 bg-blue-10o0 rounded-lg mr-4'>,
+                      <feature.icon className='h-8 w-8 text-blue-60o0' />,
+                    </div>,
+                    <h3 className='text-xl font-semibold text-gray-90o0'>,
                       {feature.title}
-                    </h3>
-                  </div>
-                  <p className='text-gray-60o0 mb-4'>{feature.description}</p>
-                  <ul className='space-y-2'>
+                    </h3>,
+                  </div>,
+                  <p className='text-gray-60o0 mb-4'>{feature.description}</p>,
+                  <ul className='space-y-2'>,
                     {feature.benefits.map((benefit, idx) => (
                       <li
                         key={idx}
-                        className='flex items-center text-sm text-gray-70o0'
-                      >
-                        <CheckCircle className='h-4 w-4 text-green-50o0 mr-2 flex-shrink-0' />
+                        className='flex items-center text-sm text-gray-70o0'>,
+                        <CheckCircle className='h-4 w-4 text-green-50o0 mr-2 flex-shrink-0' />,
                         {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+                      </li>))}
+                  </ul>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
         {/* Platform Support */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-90o0 mb-4'>
-                Supported Cloud Platforms
-              </h2>
-              <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
-                We work with all major cloud providers to give you the best
-                solution for your needs
-              </p>
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+        <section className='py-20 bg-white'>,
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
+            <div className='text-center mb-16'>,
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-90o0 mb-4'>,
+                Supported Cloud Platforms,
+              </h2>,
+              <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
+                We work with all major cloud providers to give you the best,
+                solution for your needs,
+              </p>,
+            </div>,
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
               {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className='bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow'
-                >
-                  <h3 className='text-2xl font-semibold text-gray-90o0 mb-4'>
+                  className='bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow'>,
+                  <h3 className='text-2xl font-semibold text-gray-90o0 mb-4'>,
                     {platform.name}
-                  </h3>
-                  <p className='text-gray-60o0 mb-6'>{platform.description}</p>
-                  <div>
-                    <h4 className='font-semibold text-gray-90o0 mb-3'>
-                      Key Services:
-                    </h4>
-                    <div className='flex flex-wrap gap-2'>
+                  </h3>,
+                  <p className='text-gray-60o0 mb-6'>{platform.description}</p>,
+                  <div>,
+                    <h4 className='font-semibold text-gray-90o0 mb-3'>,
+                      Key Services: ,
+                    </h4>,
+                    <div className='flex flex-wrap gap-2'>,
                       {platform.services.map((service, idx) => (
                         <span
                           key={idx}
-                          className='bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm'
-                        >
+                          className='bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm'>,
                           {service}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+                        </span>))}
+                    </div>,
+                  </div>,
+                </div>))}
+            </div>,
+          </div>,
+        </section>,
         {/* CTA Section */}
-        <section className='py-20 bg-blue-90o0 text-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-              Ready to Scale Your Cloud Infrastructure?
-            </h2>
-            <p className='text-xl text-blue-10o0 mb-8 max-w-3xl mx-auto'>
-              Let our cloud experts help you design, implement, and manage your
-              cloud platform strategy
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <section className='py-20 bg-blue-90o0 text-white'>,
+          <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>,
+              Ready to Scale Your Cloud Infrastructure?,
+            </h2>,
+            <p className='text-xl text-blue-10o0 mb-8 max-w-3xl mx-auto'>,
+              Let our cloud experts help you design, implement, and manage your,
+              cloud platform strategy,
+            </p>,
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link
-                href='/contact'
-                className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'
-              >
-                Start Your Cloud Journey
-                <ArrowRight className='ml-2 h-5 w-5' />
-              </Link>
+                href='/contact',
+                className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'>,
+                Start Your Cloud Journey,
+                <ArrowRight className='ml-2 h-5 w-5' />,
+              </Link>,
               <Link
-                href='/case-studies'
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'
-              >
-                View Case Studies
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <SimpleFooter />
-    </>
-  );
-}
+                href='/case-studies',
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'>,
+                View Case Studies,
+              </Link>,
+            </div>,
+          </div>,
+        </section>,
+      </main>,
+      <SimpleFooter />,
+    </>)}
+,

@@ -1,6 +1,6 @@
-import { ActiveFilters } from '@/components/talent/ActiveFilters';
-import { ResultsHeader } from '@/components/talent/ResultsHeader';
-import { TalentGrid } from '@/components/talent/TalentGrid';
+import { ActiveFilters } from '@/components/talent/ActiveFilters',
+import { ResultsHeader } from '@/components/talent/ResultsHeader',
+import { TalentGrid } from '@/components/talent/TalentGrid',
 export function TalentResults({
   talents,
   totalCount,
@@ -12,13 +12,11 @@ export function TalentResults({
   activeFiltersProps,
 }) {
   return (
-    <div className='flex-1'>
+    <div className='flex-1'>,
       {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
-
+      <ActiveFilters {...activeFiltersProps} />,
       {/* Results count */}
-      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
-
+      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />,
       {/* Talents grid */}
       <TalentGrid
         talents={talents}
@@ -28,7 +26,6 @@ export function TalentResults({
         handleMessage={handleMessage}
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
-      />
-    </div>
-  );
-}
+      />,
+    </div>)}
+,

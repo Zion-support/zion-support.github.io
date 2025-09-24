@@ -1,16 +1,15 @@
-"use client";
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search
-  Filter
-  Grid
-  List
-  Star
-  Clock
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  Star,
+  Clock,
   TrendingUp,
   ArrowRight,
   Play,
@@ -29,31 +28,25 @@ import {
   Target,
   Users,
   ChevronDown,
-  X
-} from 'lucide-react';
-
+  X} from 'lucide-react',
 const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [sortBysetSortBy] = useState('trending');
-  const [isFilterOpensetIsFilterOpen] = useState(false);
-  const [selectedContentsetSelectedContent] = useState(null);
-  const [isVisiblesetIsVisible] = useState(false);
-
+  const [searchQuerysetSearchQuery] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [viewModesetViewMode] = useState('grid'),
+  const [sortBysetSortBy] = useState('trending'),
+  const [isFilterOpensetIsFilterOpen] = useState(false),
+  const [selectedContentsetSelectedContent] = useState(null),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
-
+    setIsVisible(true)}[]),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcount: 156 },
+    { id: ''allname: 'All 'Contenticon: Gridcount: 156 },
     { id: 'ai-20o25'name: 'AI 20o25'icon: Braincount: 42 },
     { id: 'ai-20o26'name: 'AI 20o26'icon: Cpucount: 38 },
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Zapcount: 24 },
-    { id: ''automation', 'name: ''Automation', 'icon: Targetcount: 32 },
-    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcount: 20 }
-  ];
-
+    { id: ''quantumname: 'Quantum 'Computingicon: Zapcount: 24 },
+    { id: ''automationname: ''Automationicon: Targetcount: 32 },
+    { id: 'future-'techname: 'Future 'Techicon: Rocketcount: 20 }
+  ],
   const contentItems = [
     {
       id: 1,
@@ -70,8 +63,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'Dr. Sarah Chen',
       publishedAt: '20o25-0o1-15',
-      tags: [', 'AI', 'Consciousness'Neural 'Networks', 'Future Tech']
-    },
+      tags: [AI', 'Consciousness'Neural 'NetworksFuture Tech']},
     {
       id: 2,
       title: 'Quantum-Neural Fusion: Computing Revolution',
@@ -87,8 +79,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'Prof. Michael Rodriguez',
       publishedAt: '20o25-0o1-12',
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'AI'Technology']
-    },
+      tags: ['Quantum 'ComputingNeural 'Networks', 'AI'Technology']},
     {
       id: 3,
       title: 'AI 20o26: Global Ecosystem Vision',
@@ -104,8 +95,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'AI Research Team',
       publishedAt: '20o25-0o1-10',
-      tags: ['AI 20o26'Global 'Ecosystem', 'Future 'Vision', 'Technology']
-    },
+      tags: ['AI 20o26'Global 'EcosystemFuture 'Vision', 'Technology']},
     {
       id: 4,
       title: 'Autonomous Business Operations 20o25',
@@ -121,8 +111,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'Business AI Team',
       publishedAt: '20o25-0o1-08',
-      tags: [', 'Automation', 'Business', 'AI', 'Operations']
-    },
+      tags: [Automation', 'BusinessAI', 'Operations']},
     {
       id: 5,
       title: 'Space-Age AI Computing Systems',
@@ -138,8 +127,7 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'Space Tech Division',
       publishedAt: '20o25-0o1-0o5',
-      tags: [', 'Space', 'AI', 'Computing', 'Future Tech']
-    },
+      tags: [Space', 'AIComputing', 'Future Tech']},
     {
       id: 6,
       title: 'Conscious AI Beings: The Next Frontier',
@@ -155,390 +143,340 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       image: '/api/placeholder/40o0/250',
       author: 'Consciousness Research Lab',
       publishedAt: '20o25-0o1-0o3',
-      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy']
-    }
-  ];
-
+      tags: [Consciousness', 'AIFuture', 'Philosophy']}
+  ],
   const filteredContent = contentItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory}),
   const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
-      case 'trending':
-        return b.views - a.views;
-      case 'newest':
-        return new Date(b.publishedAt) - new Date(a.publishedAt);
-      case 'popular':
-        return b.likes - a.likes;
-      default:
-        return 0;
-    }
-  });
-
+      case 'trending':,
+        return b.views - a.views,
+      case 'newest':,
+        return new Date(b.publishedAt) - new Date(a.publishedAt),
+      case 'popular':,
+        return b.likes - a.likes,
+      default: ,
+        return 0}
+  }),
   const getTypeIcon = (type) => {
     switch (type) {
-      case 'video': return Play;
-      case 'interactive': return Zap;
-      case 'guide': return Bookmark;
-      default: return Eye;
-    }
-  };
-
+      case 'video': return Play,
+      case 'interactive': return Zap,
+      case 'guide': return Bookmark,
+      default: return Eye}
+  },
   const getCategoryIcon = (categoryId) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Grid;
-  };
-
+    const category = categories.find(cat => cat.id === categoryId),
+    return category ? category.icon : Grid},
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
+    <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
-      <motion.div
+      <motion.div,
         initial={{ opacity: 0, y: -20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="mb-8"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Discover Revolutionary Content
-        </h2>
-        <p className="text-gray-30o0 text-lg">
-          Explore cutting-edge AI researchbreakthrough technologiesand future innovations
-        </p>
-      </motion.div>
-
+        className="mb-8">,
+        <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
+          Discover Revolutionary Content,
+        </h2>,
+        <p className="text-gray-30o0 text-lg">,
+          Explore cutting-edge AI researchbreakthrough technologiesand future innovations,
+        </p>,
+      </motion.div>,
       {/* Search and Filters */}
-      <motion.div
+      <motion.div,
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6delay: 0.2 }}
-        className="bg-slate-80o0/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
-      >
-        <div className="flex flex-col lg:flex-row gap-4">
+        className="bg-slate-80o0/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">,
+        <div className="flex flex-col lg: flex-row gap-4">,
           {/* Search */}
-          <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
+          <div className="flex-1 relative">,
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
             <input
-              type="text"
-              placeholder="Search contentagsor authors..."
+              type="text",
+              placeholder="Search contentagsor authors...",
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-slate-70o0/50 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
-            />
-          </div>
-
+              className="w-full pl-12 pr-4 py-3 bg-slate-70o0/50 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20",
+            />,
+          </div>,
           {/* Category Filter */}
-          <div className="relative">
+          <div className="relative">,
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
-            >
+              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus: outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20">,
               {categories.map(category => (
-                <option key={category.id} value={category.id} className="bg-slate-80o0">
-                  {category.name} ({category.count})
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />
-          </div>
-
+                <option key={category.id} value={category.id} className="bg-slate-80o0">,
+                  {category.name} ({category.count}),
+                </option>))}
+            </select>,
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />,
+          </div>,
           {/* Sort */}
-          <div className="relative">
+          <div className="relative">,
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
-            >
-              <option value="trending" className="bg-slate-80o0">Trending</option>
-              <option value="newest" className="bg-slate-80o0">Newest</option>
-              <option value="popular" className="bg-slate-80o0">Most Popular</option>
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />
-          </div>
-
+              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus: outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20">,
+              <option value="trending" className="bg-slate-80o0">Trending</option>,
+              <option value="newest" className="bg-slate-80o0">Newest</option>,
+              <option value="popular" className="bg-slate-80o0">Most Popular</option>,
+            </select>,
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />,
+          </div>,
           {/* View Mode */}
-          <div className="flex bg-slate-70o0/50 rounded-xl p-1">
+          <div className="flex bg-slate-70o0/50 rounded-xl p-1">,
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover:text-white'
-              }`}
-            >
-              <Grid className="w-5 h-5"  />
-            </button>
+                viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
+            >,
+              <Grid className="w-5 h-5"  />,
+            </button>,
             <button
               onClick={() => setViewMode('list')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover:text-white'
-              }`}
-            >
-              <List className="w-5 h-5"  />
-            </button>
-          </div>
-        </div>
-      </motion.div>
-
+                viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
+            >,
+              <List className="w-5 h-5"  />,
+            </button>,
+          </div>,
+        </div>,
+      </motion.div>,
       {/* Content Grid */}
-      <motion.div
+      <motion.div,
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : {}}
         transition={{ duration: 0.6delay: 0.4 }}
         className={`grid gap-6 ${
-          viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-1'
-        }`}
-      >
-        <AnimatePresence>
+          viewMode === 'grid',
+            ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
+            : 'grid-cols-1'}`}
+      >,
+        <AnimatePresence>,
           {sortedContent.map((itemindex) => {
-            const TypeIcon = getTypeIcon(item.type);
-            const CategoryIcon = getCategoryIcon(item.category);
-            
+            const TypeIcon = getTypeIcon(item.type),
+            const CategoryIcon = getCategoryIcon(item.category),
             return (
-              <motion.div
+              <motion.div,
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
-                className={`bg-slate-80o0/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-40o0/50 transition-all duration-30o0 group cursor-pointer ${
-                  viewMode === 'list' ? 'flex' : ''
-                }`}
+                className={`bg-slate-80o0/50 backdrop-blur-sm rounded-2xl border border-white/20 hover: border-purple-40o0/50 transition-all duration-30o0 group cursor-pointer ${
+                  viewMode === 'list' ? 'flex' : ''}`}
                 onClick={() => setSelectedContent(item)}
-              >
+              >,
                 {viewMode === 'grid' ? (
-                  <>
+                  <>,
                     {/* Image */}
-                    <div className="relative h-48 rounded-t-2xl overflow-hidden">
+                    <div className="relative h-48 rounded-t-2xl overflow-hidden">,
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-10o5 transition-transform duration-30o0"
-                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"  />
-                      
+                        className="w-full h-full object-cover group-hover: scale-10o5 transition-transform duration-30o0",
+                       />,
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"  />,
                       {/* Badges */}
-                      <div className="absolute top-4 left-4 flex gap-2">
+                      <div className="absolute top-4 left-4 flex gap-2">,
                         {item.featured && (
-                          <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                            <Star className="w-3 h-3"  />
-                            Featured
-                          </span>
-                        )}
+                          <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">,
+                            <Star className="w-3 h-3"  />,
+                            Featured,
+                          </span>)}
                         {item.trending && (
-                          <span className="bg-red-50o0 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                            <TrendingUp className="w-3 h-3"  />
-                            Trending
-                          </span>
-                        )}
-                      </div>
-
+                          <span className="bg-red-50o0 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">,
+                            <TrendingUp className="w-3 h-3"  />,
+                            Trending,
+                          </span>)}
+                      </div>,
                       {/* Type Icon */}
-                      <div className="absolute top-4 right-4">
-                        <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">
-                          <TypeIcon className="w-5 h-5 text-white"  />
-                        </div>
-                      </div>
-
+                      <div className="absolute top-4 right-4">,
+                        <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">,
+                          <TypeIcon className="w-5 h-5 text-white"  />,
+                        </div>,
+                      </div>,
                       {/* Category */}
-                      <div className="absolute bottom-4 left-4">
-                        <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-2">
-                          <CategoryIcon className="w-4 h-4 text-white"  />
-                          <span className="text-white text-sm font-medium">
+                      <div className="absolute bottom-4 left-4">,
+                        <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-2">,
+                          <CategoryIcon className="w-4 h-4 text-white"  />,
+                          <span className="text-white text-sm font-medium">,
                             {categories.find(cat => cat.id === item.category)?.name}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
+                          </span>,
+                        </div>,
+                      </div>,
+                    </div>,
                     {/* Content */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-40o0 transition-colors">
+                    <div className="p-6">,
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-40o0 transition-colors">,
                         {item.title}
-                      </h3>
-                      <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">
+                      </h3>,
+                      <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">,
                         {item.description}
-                      </p>
-
+                      </p>,
                       {/* Meta */}
-                      <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4"  />
+                      <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">,
+                        <div className="flex items-center gap-4">,
+                          <span className="flex items-center gap-1">,
+                            <Clock className="w-4 h-4"  />,
                             {item.readTime}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Eye className="w-4 h-4"  />
+                          </span>,
+                          <span className="flex items-center gap-1">,
+                            <Eye className="w-4 h-4"  />,
                             {item.views.toLocaleString()}
-                          </span>
-                        </div>
-                        <span>{item.author}</span>
-                      </div>
-
+                          </span>,
+                        </div>,
+                        <span>{item.author}</span>,
+                      </div>,
                       {/* Stats */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1 text-gray-40o0">
-                            <Heart className="w-4 h-4"  />
+                      <div className="flex items-center justify-between">,
+                        <div className="flex items-center gap-4">,
+                          <span className="flex items-center gap-1 text-gray-40o0">,
+                            <Heart className="w-4 h-4"  />,
                             {item.likes}
-                          </span>
-                          <span className="flex items-center gap-1 text-gray-40o0">
-                            <MessageCircle className="w-4 h-4"  />
+                          </span>,
+                          <span className="flex items-center gap-1 text-gray-40o0">,
+                            <MessageCircle className="w-4 h-4"  />,
                             {item.comments}
-                          </span>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover:translate-x-1 transition-transform"  />
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  /* List View */
-                  <>
-                    <div className="w-48 h-32 rounded-l-2xl overflow-hidden flex-shrink-0">
+                          </span>,
+                        </div>,
+                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover: translate-x-1 transition-transform"  />,
+                      </div>,
+                    </div>,
+                  </>) : (
+                  /* List View */,
+                  <>,
+                    <div className="w-48 h-32 rounded-l-2xl overflow-hidden flex-shrink-0">,
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-cover"
-                       />
-                    </div>
-                    <div className="flex-1 p-6">
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-purple-40o0 transition-colors">
+                        className="w-full h-full object-cover",
+                       />,
+                    </div>,
+                    <div className="flex-1 p-6">,
+                      <div className="flex items-start justify-between mb-2">,
+                        <h3 className="text-xl font-bold text-white group-hover: text-purple-40o0 transition-colors">,
                           {item.title}
-                        </h3>
-                        <div className="flex gap-2">
+                        </h3>,
+                        <div className="flex gap-2">,
                           {item.featured && (
-                            <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold">
-                              Featured
-                            </span>
-                          )}
-                          <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">
-                            <TypeIcon className="w-4 h-4 text-white"  />
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-gray-30o0 mb-4">{item.description}</p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-6 text-sm text-gray-40o0">
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4"  />
+                            <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold">,
+                              Featured,
+                            </span>)}
+                          <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">,
+                            <TypeIcon className="w-4 h-4 text-white"  />,
+                          </div>,
+                        </div>,
+                      </div>,
+                      <p className="text-gray-30o0 mb-4">{item.description}</p>,
+                      <div className="flex items-center justify-between">,
+                        <div className="flex items-center gap-6 text-sm text-gray-40o0">,
+                          <span className="flex items-center gap-1">,
+                            <Clock className="w-4 h-4"  />,
                             {item.readTime}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Eye className="w-4 h-4"  />
+                          </span>,
+                          <span className="flex items-center gap-1">,
+                            <Eye className="w-4 h-4"  />,
                             {item.views.toLocaleString()}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Heart className="w-4 h-4"  />
+                          </span>,
+                          <span className="flex items-center gap-1">,
+                            <Heart className="w-4 h-4"  />,
                             {item.likes}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <MessageCircle className="w-4 h-4"  />
+                          </span>,
+                          <span className="flex items-center gap-1">,
+                            <MessageCircle className="w-4 h-4"  />,
                             {item.comments}
-                          </span>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover:translate-x-1 transition-transform"  />
-                      </div>
-                    </div>
-                  </>
-                )}
-              </motion.div>
-            );
-          })}
-        </AnimatePresence>
-      </motion.div>
-
+                          </span>,
+                        </div>,
+                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover: translate-x-1 transition-transform"  />,
+                      </div>,
+                    </div>,
+                  </>)}
+              </motion.div>)})}
+        </AnimatePresence>,
+      </motion.div>,
       {/* Content Detail Modal */}
-      <AnimatePresence>
+      <AnimatePresence>,
         {selectedContent && (
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4",
             onClick={() => setSelectedContent(null)}
-          >
-            <motion.div
+          >,
+            <motion.div,
               initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
-              className="bg-slate-80o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-slate-80o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto",
               onClick={(e) => e.stopPropagation()}
-            >
-              <div className="relative">
+            >,
+              <div className="relative">,
                 <img
                   src={selectedContent.image}
                   alt={selectedContent.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
-                 />
+                  className="w-full h-64 object-cover rounded-t-2xl",
+                 />,
                 <button
                   onClick={() => setSelectedContent(null)}
-                  className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/70 transition-colors"
-                >
-                  <X className="w-5 h-5"  />
-                </button>
-              </div>
-              
-              <div className="p-8">
-                <h2 className="text-3xl font-bold text-white mb-4">
+                  className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 text-white hover: bg-black/70 transition-colors">,
+                  <X className="w-5 h-5"  />,
+                </button>,
+              </div>,
+              <div className="p-8">,
+                <h2 className="text-3xl font-bold text-white mb-4">,
                   {selectedContent.title}
-                </h2>
-                <p className="text-gray-30o0 text-lg mb-6">
+                </h2>,
+                <p className="text-gray-30o0 text-lg mb-6">,
                   {selectedContent.description}
-                </p>
-                
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-gray-40o0"  />
-                    <span className="text-gray-40o0">{selectedContent.readTime}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Eye className="w-5 h-5 text-gray-40o0"  />
-                    <span className="text-gray-40o0">{selectedContent.views.toLocaleString()} views</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Heart className="w-5 h-5 text-gray-40o0"  />
-                    <span className="text-gray-40o0">{selectedContent.likes} likes</span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mb-6">
+                </p>,
+                <div className="flex items-center gap-4 mb-6">,
+                  <div className="flex items-center gap-2">,
+                    <Clock className="w-5 h-5 text-gray-40o0"  />,
+                    <span className="text-gray-40o0">{selectedContent.readTime}</span>,
+                  </div>,
+                  <div className="flex items-center gap-2">,
+                    <Eye className="w-5 h-5 text-gray-40o0"  />,
+                    <span className="text-gray-40o0">{selectedContent.views.toLocaleString()} views</span>,
+                  </div>,
+                  <div className="flex items-center gap-2">,
+                    <Heart className="w-5 h-5 text-gray-40o0"  />,
+                    <span className="text-gray-40o0">{selectedContent.likes} likes</span>,
+                  </div>,
+                </div>,
+                <div className="flex flex-wrap gap-2 mb-6">,
                   {selectedContent.tags.map((tagindex) => (
                     <span
                       key={index}
-                      className="bg-purple-60o0/20 text-purple-30o0 px-3 py-1 rounded-full text-sm"
-                    >
+                      className="bg-purple-60o0/20 text-purple-30o0 px-3 py-1 rounded-full text-sm">,
                       {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <button className="bg-purple-60o0 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-70o0 transition-colors flex items-center gap-2">
-                    <Play className="w-5 h-5"  />
+                    </span>))}
+                </div>,
+                <div className="flex gap-4">,
+                  <button className="bg-purple-60o0 text-white px-6 py-3 rounded-xl font-semibold hover: bg-purple-70o0 transition-colors flex items-center gap-2">,
+                    <Play className="w-5 h-5"  />,
                     {selectedContent.type === 'video' ? 'Watch Now' : 'Read More'}
-                  </button>
-                  <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
-                    <Bookmark className="w-5 h-5"  />
-                    Save
-                  </button>
-                  <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
-                    <Share2 className="w-5 h-5"  />
-                    Share
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
-
-export default InteractiveContentDiscoveryWidget20o25_20o26;
+                  </button>,
+                  <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover: bg-white/10 transition-colors flex items-center gap-2">,
+                    <Bookmark className="w-5 h-5"  />,
+                    Save,
+                  </button>,
+                  <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">,
+                    <Share2 className="w-5 h-5"  />,
+                    Share,
+                  </button>,
+                </div>,
+              </div>,
+            </motion.div>,
+          </motion.div>)}
+      </AnimatePresence>,
+    </div>)},
+export default InteractiveContentDiscoveryWidget20o25_20o26,
