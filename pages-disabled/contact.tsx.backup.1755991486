@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-export default function Contact(){
-  return <div style={{padding:20}}>Contact</div>
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

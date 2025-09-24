@@ -1,17 +1,56 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
-=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const automationFiles = ['automation/dependency-fixer.cjs']
+  'automation/typescript-fixer.cjs'
+  'automation/health-check.cjs'
+  'automation/security-scanner.cjs'
+  'automation/performance-optimizer.cjs'
+    let content = fs.readFileSync(filePath, 'utf8')
+    const fileName = path.basename(filePath, '.cjs')
+    let className = ''
+      case 'dependency-fixer'
+        className = 'DependencyFixer'
+      case 'typescript-fixer'
+        className = 'TypeScriptFixer'
+      case 'health-check'
+        className = 'HealthChecker'
+      case 'security-scanner'
+        className = 'SecurityScanner'
+      case 'performance-optimizer'
+        className = 'PerformanceOptimizer'
+      .replace(/\[\],/g, '[];')
+      .replace(/\{\},/g, '{};')
+      .replace(/\),/g, ');'
+      .replace(/\],/g, '];')
+      .replace(/\[\];/g, '[];')
+      .replace(/\{\};/g, '{};')
+      .replace(/\);/g, ');'
+      .replace(/\];/g, '];')
+      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, '')
+      .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {'})
+      .replace(/^\s*;\s*$/gm, '')
+      .replace(/:\s*\[\],/g, ': [];')
+      .replace(/:\s*\{\},/g, ': {};')
+      .replace(/\(\s*\[\],/g, '([];')
+      .replace(/\(\s*\{\},/g, '({};')
+
+
+      .replace(/script1\."async")
+      .replace(/script1\."src")
+      .replace(/['"]react;['"]/g, ")
+      .replace(/['"]framer-motion;['"]/g, ")
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 console.log('🔧 Starting Comprehensive Automation Fixer...');
 
 class ComprehensiveAutomationFixer {
@@ -91,150 +130,10 @@ class ComprehensiveAutomationFixer {
         this.log('✅ Fixed index.html', 'SUCCESS');
         this.fixes.push('index.html');
       }
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const automationFiles = ['automation/dependency-fixer.cjs']
-  'automation/typescript-fixer.cjs'
-  'automation/health-check.cjs'
-  'automation/security-scanner.cjs'
-  'automation/performance-optimizer.cjs'
-    let content = fs.readFileSync(filePath, 'utf8')
-    const fileName = path.basename(filePath, '.cjs')
-    let className = ''
-      case 'dependency-fixer'
-        className = 'DependencyFixer'
-      case 'typescript-fixer'
-        className = 'TypeScriptFixer'
-      case 'health-check'
-        className = 'HealthChecker'
-      case 'security-scanner'
-        className = 'SecurityScanner'
-      case 'performance-optimizer'
-        className = 'PerformanceOptimizer'
-      .replace(/\[\],/g, '[];')
-      .replace(/\{\},/g, '{};')
-      .replace(/\),/g, ');'
-      .replace(/\],/g, '];')
-      .replace(/\[\];/g, '[];')
-      .replace(/\{\};/g, '{};')
-      .replace(/\);/g, ');'
-      .replace(/\];/g, '];')
-      .replace(/\/[^\/]*\/gi,/g, (match) => match.replace(/,$/, '')
-      .replace(/return files\.filter\(file => ;/g, 'return files.filter(file => {'})
-      .replace(/^\s*;\s*$/gm, '')
-      .replace(/:\s*\[\],/g, ': [];')
-      .replace(/:\s*\{\},/g, ': {};')
-      .replace(/\(\s*\[\],/g, '([];')
-      .replace(/\(\s*\{\},/g, '({};')
-<<<<<<< HEAD
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
-    } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message)}
-}
-// Fix all automation files
-automationFiles.forEach(fixAutomationFile);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      .replace(/script1\."async")
-      .replace(/script1\."src")
-      .replace(/['"]react;['"]/g, ")
-      .replace(/['"]framer-motion;['"]/g, ")
-<<<<<<< HEAD
 
-=======
-      .replace(/['"]lucide-react;['"]/g, ")
-#!/usr/bin/env node
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting Comprehensive Automation Fixer...');
-
-class ComprehensiveAutomationFixer {
-=======
-
-class ComprehensiveAutomationFixer {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixes = [];
-    this.improvements = [];
-    this.errors = [];
-
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message};
-    console.log(logMessage);
-
-  // Fix critical files;
-  fixCriticalFiles() {
-
-    // Fix index.html;
-    this.fixIndexHtml();
-    // Fix main.tsx;
-    this.fixMainTsx();
-    // Fix jest config;
-    this.fixJestConfig();
-    // Fix performance monitor;
-    this.fixPerformanceMonitor();
-    // Fix health monitor;
-    this.fixHealthMonitor();
-    // Fix sitemap generator;
-    this.fixSitemapGenerator();
-    // Fix search index generator;
-    this.fixSearchIndexGenerator();
-    // Fix enhanced orchestrator;
-    this.fixEnhancedOrchestrator();
-    // Fix AI code quality analyzer;
-    this.fixAICodeQualityAnalyzer();
-
-  fixIndexHtml() {
-    try {
-  // TODO: Implement
-
-        // Remove merge conflict markers;
-        content = content.replace(/[\s\S]*?
-        content = content.replace(/
-        // Ensure proper HTML structure;)
-
-<html lang="en">"
-</html>
-  <head>
-</head>"
-    <meta charset="UTF-8" />"
-</meta>"
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />"
-</link>"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
-</meta>
-    <title>Zion Tech Group</title>
-  </head>
-  <body>
-</body>"
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>"
-  </body>`;
-</html>`;"
-
-</html>`;
-<<<<<<< HEAD
-        }
-        
-        fs.writeFileSync(indexPath, content);
-        this.log('✅ Fixed index.html', 'SUCCESS');
-        this.fixes.push('index.html');
-      }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     } catch (error) {
       this.log(`❌ Error fixing index.html: ${error.message}`, 'ERROR');
     }
@@ -245,22 +144,14 @@ class ComprehensiveAutomationFixer {
       const mainPath = path.join(this.projectRoot, 'src/main.tsx');
       if (fs.existsSync(mainPath)) {
         let content = fs.readFileSync(mainPath, 'utf8');
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Remove merge conflict markers and fix syntax
         content = content.replace(/[\s\S]*?
         content = content.replace(/
         content = content.replace(/;\s*;/g, ';');
         content = content.replace(/ReactDOM\.createRoot\([^)]+\)\.render\(;/g, 'ReactDOM.createRoot(document.getElementById(\'root\')!).render(');
         content = content.replace(/import React from 'react',/g, 'import React from \'react\';');
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('import React from \'react\'')) {
           content = `import React from 'react';
@@ -269,21 +160,12 @@ import App from './App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   <React.StrictMode>
-
     <App />
-
-  </React.StrictMode>`;
+  </React.StrictMode>
 );`;
-<<<<<<< HEAD
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(mainPath, content);
         this.log('✅ Fixed src/main.tsx', 'SUCCESS');
         this.fixes.push('src/main.tsx');
@@ -298,17 +180,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       const jestPath = path.join(this.projectRoot, 'jest.config.smoke.cjs');
       if (fs.existsSync(jestPath)) {
         let content = fs.readFileSync(jestPath, 'utf8');
-<<<<<<< HEAD
-
-        // Remove extra closing braces
-        content = content.replace(/};\s*$/g, '};');
-
-=======
         
         // Remove extra closing braces
         content = content.replace(/};\s*$/g, '};');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('module.exports')) {
           content = `module.exports = {
@@ -333,11 +208,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   },
 };`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(jestPath, content);
         this.log('✅ Fixed jest.config.smoke.cjs', 'SUCCESS');
         this.fixes.push('jest.config.smoke.cjs');
@@ -352,19 +223,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       const perfPath = path.join(this.projectRoot, 'scripts/performance-monitor.js');
       if (fs.existsSync(perfPath)) {
         let content = fs.readFileSync(perfPath, 'utf8');
-<<<<<<< HEAD
-
-        // Fix syntax errors
-        content = content.replace(/module\.exports = PerformanceMonitor;#!/usr/bin/env node/g, 'module.exports = PerformanceMonitor;');
-        content = content.replace(/return recommendations;/g, 'return recommendations;');
-
-=======
         
         // Fix syntax errors
         content = content.replace(/module\.exports = PerformanceMonitor;#!/usr/bin/env node/g, 'module.exports = PerformanceMonitor;');
         content = content.replace(/return recommendations;/g, 'return recommendations;');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('class PerformanceMonitor')) {
           content = `#!/usr/bin/env node
@@ -387,16 +250,14 @@ class PerformanceMonitor {
   }
 }
 
+
+
 const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
 
 module.exports = PerformanceMonitor;`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(perfPath, content);
         this.log('✅ Fixed scripts/performance-monitor.js', 'SUCCESS');
         this.fixes.push('scripts/performance-monitor.js');
@@ -411,17 +272,10 @@ module.exports = PerformanceMonitor;`;
       const healthPath = path.join(this.projectRoot, 'scripts/health-monitor-enhanced.cjs');
       if (fs.existsSync(healthPath)) {
         let content = fs.readFileSync(healthPath, 'utf8');
-<<<<<<< HEAD
-
-        // Remove duplicate require statements
-        content = content.replace(/const path = require\('path'\);\s*const path = require\('path'\);/g, 'const path = require(\'path\');');
-
-=======
         
         // Remove duplicate require statements
         content = content.replace(/const path = require\('path'\);\s*const path = require\('path'\);/g, 'const path = require(\'path\');');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('class HealthMonitor')) {
           content = `#!/usr/bin/env node
@@ -444,11 +298,7 @@ monitor.run().catch(console.error);
 
 module.exports = HealthMonitor;`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(healthPath, content);
         this.log('✅ Fixed scripts/health-monitor-enhanced.cjs', 'SUCCESS');
         this.fixes.push('scripts/health-monitor-enhanced.cjs');
@@ -463,17 +313,10 @@ module.exports = HealthMonitor;`;
       const sitemapPath = path.join(this.projectRoot, 'scripts/generate-sitemap.cjs');
       if (fs.existsSync(sitemapPath)) {
         let content = fs.readFileSync(sitemapPath, 'utf8');
-<<<<<<< HEAD
-
-        // Fix template literal syntax
-        content = content.replace(/`<urlset xmlns="http: \/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">`, const footer = `'/g, '`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;\n    const footer = `');
-
-=======
         
         // Fix template literal syntax
         content = content.replace(/`<urlset xmlns="http: \/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">`, const footer = `'/g, '`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;\n    const footer = `');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('const fs = require')) {
           content = `#!/usr/bin/env node
@@ -485,11 +328,7 @@ console.log('✅ Sitemap generation completed');
 
 module.exports = {};`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(sitemapPath, content);
         this.log('✅ Fixed scripts/generate-sitemap.cjs', 'SUCCESS');
         this.fixes.push('scripts/generate-sitemap.cjs');
@@ -504,17 +343,10 @@ module.exports = {};`;
       const searchPath = path.join(this.projectRoot, 'scripts/generate-search-index.cjs');
       if (fs.existsSync(searchPath)) {
         let content = fs.readFileSync(searchPath, 'utf8');
-<<<<<<< HEAD
-
-        // Fix syntax errors
-        content = content.replace(/'Home';/g, "'Home'");
-
-=======
         
         // Fix syntax errors
         content = content.replace(/'Home';/g, "'Home'");
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('const fs = require')) {
           content = `#!/usr/bin/env node
@@ -526,11 +358,7 @@ console.log('✅ Search index generation completed');
 
 module.exports = {};`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(searchPath, content);
         this.log('✅ Fixed scripts/generate-search-index.cjs', 'SUCCESS');
         this.fixes.push('scripts/generate-search-index.cjs');
@@ -545,17 +373,10 @@ module.exports = {};`;
       const orchestratorPath = path.join(this.projectRoot, 'automation/enhanced-master-automation-orchestrator.cjs');
       if (fs.existsSync(orchestratorPath)) {
         let content = fs.readFileSync(orchestratorPath, 'utf8');
-<<<<<<< HEAD
-
-        // Fix object property syntax
-        content = content.replace(/output:\s*error\.stdout\s*\|\|\s*error\.stderr,/g, 'output: error.stdout || error.stderr');
-
-=======
         
         // Fix object property syntax
         content = content.replace(/output:\s*error\.stdout\s*\|\|\s*error\.stderr,/g, 'output: error.stdout || error.stderr');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('class EnhancedMasterAutomationOrchestrator')) {
           content = `#!/usr/bin/env node
@@ -587,11 +408,7 @@ orchestrator.run().catch(console.error);
 
 module.exports = EnhancedMasterAutomationOrchestrator;`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(orchestratorPath, content);
         this.log('✅ Fixed automation/enhanced-master-automation-orchestrator.cjs', 'SUCCESS');
         this.fixes.push('automation/enhanced-master-automation-orchestrator.cjs');
@@ -606,17 +423,10 @@ module.exports = EnhancedMasterAutomationOrchestrator;`;
       const analyzerPath = path.join(this.projectRoot, 'scripts/automation/ai-code-quality-analyzer.cjs');
       if (fs.existsSync(analyzerPath)) {
         let content = fs.readFileSync(analyzerPath, 'utf8');
-<<<<<<< HEAD
-
-        // Fix await outside async function
-        content = content.replace(/await fs\.mkdir/g, 'fs.mkdirSync');
-
-=======
         
         // Fix await outside async function
         content = content.replace(/await fs\.mkdir/g, 'fs.mkdirSync');
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Ensure proper structure
         if (!content.includes('class AICodeQualityAnalyzer')) {
           content = `#!/usr/bin/env node
@@ -639,11 +449,7 @@ analyzer.run().catch(console.error);
 
 module.exports = AICodeQualityAnalyzer;`;
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(analyzerPath, content);
         this.log('✅ Fixed scripts/automation/ai-code-quality-analyzer.cjs', 'SUCCESS');
         this.fixes.push('scripts/automation/ai-code-quality-analyzer.cjs');
@@ -693,11 +499,7 @@ class UltimateAutomationSuite {
 
   async runAllAutomations() {
     this.log('🚀 Running ultimate automation suite...');
-<<<<<<< HEAD
-
-=======
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     const automations = [
       { name: 'Build Check', command: 'npm run build' },
       { name: 'Lint Check', command: 'npm run lint:check' },
@@ -733,11 +535,7 @@ class UltimateAutomationSuite {
 
     const reportPath = path.join(this.projectRoot, 'ultimate-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-
-=======
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(\`📊 Report generated: \${reportPath}\`, 'SUCCESS');
     this.log(\`✅ \${report.summary.successful}/\${report.summary.total} automations successful\`, 'SUCCESS');
   }
@@ -768,18 +566,6 @@ class ContinuousImprovement {
 
   async run() {
     this.log('🔄 Running continuous improvement...');
-<<<<<<< HEAD
-
-    // Monitor file changes
-    this.monitorFileChanges();
-
-    // Run quality checks
-    this.runQualityChecks();
-
-    // Optimize performance
-    this.optimizePerformance();
-
-=======
     
     // Monitor file changes
     this.monitorFileChanges();
@@ -790,7 +576,6 @@ class ContinuousImprovement {
     // Optimize performance
     this.optimizePerformance();
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log('✅ Continuous improvement completed', 'SUCCESS');
   }
 
@@ -822,19 +607,11 @@ module.exports = ContinuousImprovement;
       try {
         const fullPath = path.join(this.projectRoot, script.path);
         const dir = path.dirname(fullPath);
-<<<<<<< HEAD
-
-        if (!fs.existsSync(dir)) {
-          fs.mkdirSync(dir, { recursive: true });
-        }
-
-=======
         
         if (!fs.existsSync(dir)) {
           fs.mkdirSync(dir, { recursive: true });
         }
         
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         fs.writeFileSync(fullPath, script.content);
         this.log(\`✅ Created: \${script.path}\`, 'SUCCESS');
         this.improvements.push(script.path);
@@ -847,19 +624,11 @@ module.exports = ContinuousImprovement;
   // Update package.json with new scripts
   updatePackageScripts() {
     this.log('📦 Updating package.json scripts...');
-<<<<<<< HEAD
-
-    try {
-      const packagePath = path.join(this.projectRoot, 'package.json');
-      const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-
-=======
     
     try {
       const packagePath = path.join(this.projectRoot, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       const newScripts = {
         'automation:ultimate': 'node automation/ultimate-automation-suite.cjs',
         'automation:continuous': 'node automation/continuous-improvement.cjs',
@@ -902,11 +671,7 @@ module.exports = ContinuousImprovement;
 
     const reportPath = path.join(this.projectRoot, 'comprehensive-automation-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-
-=======
     
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(\`📊 Comprehensive report generated: \${reportPath}\`, 'SUCCESS');
     this.log(\`✅ Fixed \${this.fixes.length} files\`, 'SUCCESS');
     this.log(\`✅ Created \${this.improvements.length} improvements\`, 'SUCCESS');
@@ -917,20 +682,12 @@ module.exports = ContinuousImprovement;
   async run() {
     try {
       this.log('🚀 Starting comprehensive automation fixer...');
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.fixCriticalFiles();
       this.createAdditionalScripts();
       this.updatePackageScripts();
       this.generateReport();
-<<<<<<< HEAD
-
-=======
       
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       this.log('🎉 Comprehensive automation fixer completed!', 'SUCCESS');
     } catch (error) {
       this.log(\`❌ Fatal error: \${error.message}\`, 'ERROR');
@@ -946,39 +703,17 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationFixer;
-<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
+
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
       .replace(/script1\."async")
       .replace(/script1\."src")
       .replace(/['"]react;['"]/g, ")
       .replace(/['"]framer-motion;['"]/g, ")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> origin/automation-improvements-final
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      .replace(/['"]lucide-react;['"]/g, ")
-      .replace(/['"]lucide-react;['"]/g, ")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        fs.writeFileSync(mainPath, content);"
 
-
-  fixJestConfig() {
-  // TODO: Implement
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -1,324 +1,88 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+,
 export function ServiceProcessSteps() {
-=======
-export function ServiceProcessSteps() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   return (
-    <div className="my-20">"
-      <h2 className="text-2xl font-bold text-white text-center mb-12">;
-        How Our IT Onsite Service Works;
-      </h2>
-"
-      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">"
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">"
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
-            1;
-          </div>"
-          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>"
-          <p className="text-zion-slate-light">
-            Choose the country where you need onsite IT support services.
-          </p>
-        </div>
-"
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">"
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
-            2;
-          </div>"
-          <h3 className="text-lg font-bold text-white mb-3">
-            Purchase Service;
-          </h3>"
-          <p className="text-zion-slate-light">
-            Complete the secure payment for your selected location.
-          </p>
-        </div>
-"
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">"
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
-            3;
-          </div>"
-          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>"
-          <p className="text-zion-slate-light">
-            Share your site information and technical requirements with our;
-            team.
-          </p>
-        </div>
-"
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">"
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
-            4;
-          </div>"
-          <h3 className="text-lg font-bold text-white mb-3">
-            Service Delivery;
-          </h3>"
-          <p className="text-zion-slate-light">
-            Our local technicians arrive at your site within the guaranteed;
-            response time.
-          </p>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export function ServiceProcessSteps() {;
-  return (;
-
-    <div className="my-20">;
-      <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>;
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>;
-          <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>;
-          <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>;
-          <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>;
-          <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>;
-        </div>;
-      </div>;
-    </div>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  );
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-  );
-}
-
-}
-export /**
- * ServiceProcessSteps - Function description
- */
+    <div className="my-20">,
+      <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>,
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>,
+          <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>,
+          <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>,
+          <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>,
+          <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>,
+        </div>,
+      </div>,
+    </div>),
+export function ServiceProcessSteps() {
+  return (
+    <div className="my-20">,
+      <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>,
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>,
+          <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>,
+          <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>,
+          <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>,
+        </div>,
+        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">,
+          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>,
+          <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>,
+          <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>,
+        </div>,
+      </div>,
+    </div>)}
+,
+export /**,
+ * ServiceProcessSteps - Function description,
+ */,
 function ServiceProcessSteps() {
   return (
-    <div className="my - 20">;
-      <h2 className="text - 2xl font - bold text - white text - center mb - 12">How Our IT Onsite Service Works</h2>;
-      <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">;
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">1</div>;
-          <h3 className="text - lg font - bold text - white mb - 3">Select Country</h3>;
-          <p className="text - zion - slate - light">Choose the country where you need onsite IT support services.</p>;
-      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>;
-          <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>;
-        </div>;
-
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>;
-          <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>;
-        </div>;
-
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>;
-          <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>;
-        </div>;
-
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>;
-          <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>;
-          <p className="text-zion-slate-light">Our local technicians arrive at your site within the guaranteed response time.</p>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-    </div>;
-  );=======
-=======
-  );
-
-
-
-
-  );
-}
-
-}
-
-export /**;
- * ServiceProcessSteps - Function description;
- */
-function ServiceProcessSteps() {}
-  return ("
-    <div className="my - 20">;"
-      <h2 className="text - 2xl font - bold text - white text - center mb - 12">How Our IT Onsite Service Works</h2>;"
-      <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">;"
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">1</div>;"
-          <h3 className="text - lg font - bold text - white mb - 3">Select Country</h3>;"
-          <p className="text - zion - slate - light">Choose the country where you need onsite IT support services.</p>;
-        </div>;"
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">2</div>;"
-          <h3 className="text - lg font - bold text - white mb - 3">Purchase Service</h3>;"
-          <p className="text - zion - slate - light">Complete the secure payment for your selected location.</p>;
-        </div>;"
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">3</div>;"
-          <h3 className="text - lg font - bold text - white mb - 3">Provide Details</h3>;"
-          <p className="text - zion - slate - light">Share your site information and technical requirements with our team.</p>;
-        </div>;"
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">4</div>;"
-          <h3 className="text - lg font - bold text - white mb - 3">Service Delivery</h3>;"
-          <p className="text - zion - slate - light">Our local technicians arrive at your site within the guaranteed response time.</p>;
-        </div>;
-      </div>;
-    </div>);
-}
-
-
-;
-
-"
-} </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >2</div> <h3 className="text-lg font-bold text-white mb-3" >Purchase Service</h3> <p className="text-zion-slate-light" >Complete the secure payment for your selected location.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >3</div> <h3 className="text-lg font-bold text-white mb-3" >Provide Details</h3> <p className="text-zion-slate-light" >Share your site information and technical requirements with our team.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >4</div> <h3 className="text-lg font-bold text-white mb-3" >Service Delivery</h3> <p className="text-zion-slate-light" >Our local technicians arrive at your site within the guaranteed response time.</p> </div> </div> </div> 
-}
-;
-
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </div>);
-}
-
-;
-
-;
-
-} </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >2</div> <h3 className="text-lg font-bold text-white mb-3" >Purchase Service</h3> <p className="text-zion-slate-light" >Complete the secure payment for your selected location.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >3</div> <h3 className="text-lg font-bold text-white mb-3" >Provide Details</h3> <p className="text-zion-slate-light" >Share your site information and technical requirements with our team.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >4</div> <h3 className="text-lg font-bold text-white mb-3" >Service Delivery</h3> <p className="text-zion-slate-light" >Our local technicians arrive at your site within the guaranteed response time.</p> </div> </div> </div> 
-}
-;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>;
-  );    <div className="my-20">"
-
-    <div className="my-20">"
-</div>"
-      <h2 className="text-2xl font-bold text-white text-center mb-12">"
-</h2>
-"
-      <div className="grid grid-cols-1 md: grid-cols-4 gap-8">"
-        <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">"
-          <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">"
-</div>
-          <h3 className="text-lg font-bold text-white mb-3">Select Country</h3>""
-          <p className="text-zion-slate-light">"
-</p>
-          <h3 className="text-lg font-bold text-white mb-3">"
-</h3>
-          </h3>"
-          <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>""
-    <div className="my - 20">;"
-      <h2 className="text - 2xl font - bold text - white text - center mb - 12">How Our IT Onsite Service Works</h2>;""
-      <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">;"
-        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">1</div>;""
-          <h3 className="text - lg font - bold text - white mb - 3">Select Country</h3>;""
-          <p className="text - zion - slate - light">Choose the country where you need onsite IT support services.</p>;"
-        </div>;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">2</div>;""
-          <h3 className="text - lg font - bold text - white mb - 3">Purchase Service</h3>;""
-          <p className="text - zion - slate - light">Complete the secure payment for your selected location.</p>;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">3</div>;""
-          <h3 className="text - lg font - bold text - white mb - 3">Provide Details</h3>;""
-          <p className="text - zion - slate - light">Share your site information and technical requirements with our team.</p>;"
-          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">4</div>;""
-          <h3 className="text - lg font - bold text - white mb - 3">Service Delivery</h3>;""
-          <p className="text - zion - slate - light">Our local technicians arrive at your site within the guaranteed response time.</p>;"
-        </div>;
-      </div>;)
-    </div>);"
-} </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >2</div> <h3 className="text-lg font-bold text-white mb-3" >Purchase Service</h3> <p className="text-zion-slate-light" >Complete the secure payment for your selected location.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >3</div> <h3 className="text-lg font-bold text-white mb-3" >Provide Details</h3> <p className="text-zion-slate-light" >Share your site information and technical requirements with our team.</p> </div> <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative" > <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold" >4</div> <h3 className="text-lg font-bold text-white mb-3" >Service Delivery</h3> <p className="text-zion-slate-light" >Our local technicians arrive at your site within the guaranteed response time.</p> </div> </div> </div>""
-pr-12325
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    <div className="my - 20">,
+      <h2 className="text - 2xl font - bold text - white text - center mb - 12">How Our IT Onsite Service Works</h2>,
+      <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">,
+        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">,
+          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">1</div>,
+          <h3 className="text - lg font - bold text - white mb - 3">Select Country</h3>,
+          <p className="text - zion - slate - light">Choose the country where you need onsite IT support services.</p>,
+        </div>,
+        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">,
+          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">2</div>,
+          <h3 className="text - lg font - bold text - white mb - 3">Purchase Service</h3>,
+          <p className="text - zion - slate - light">Complete the secure payment for your selected location.</p>,
+        </div>,
+        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">,
+          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">3</div>,
+          <h3 className="text - lg font - bold text - white mb - 3">Provide Details</h3>,
+          <p className="text - zion - slate - light">Share your site information and technical requirements with our team.</p>,
+        </div>,
+        <div className="bg - zion - blue - dark p - 6 rounded - lg border border - zion - blue - light relative">,
+          <div className="absolute -top - 4 -left - 4 w - 8 h - 8 rounded - full bg - zion - purple flex items - center justify - center text - white font - bold">4</div>,
+          <h3 className="text - lg font - bold text - white mb - 3">Service Delivery</h3>,
+          <p className="text - zion - slate - light">Our local technicians arrive at your site within the guaranteed response time.</p>,
+        </div>,
+      </div>,
+    </div>)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

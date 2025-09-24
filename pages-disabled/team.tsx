@@ -1,314 +1,377 @@
-<<<<<<< HEAD
-}
-key={index}
-                className=\"text-center\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-4xl font-bold text-purple-600 mb-2\" />
-                  {stat.number}
-                </div>
-                <div className=\"text-gray-600\" />{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"text-center mb-12\" />
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
-              Leadership Team
-            </h2>
-            <p className=\"text-xl text-gray-600\" />
-              Visionary leaders driving innovation and growth
-            </p>
-          </div>
-
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="text-center mb-4">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white text-2xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-=======
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\" />
-            {teamMembers.slice(0, 3).map((member, index) => (}
-              <motion.div;}
-key={member.id}
-                className=\"bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-center mb-4\" />
-                  <img
-src={member.image}
-                    alt={member.name}
-                    className=\"w-24 h-24 rounded-full mx-auto mb-4 object-cover\"
-                  />
-                  <h3 className=\"text-xl font-bold text-gray-900\" />
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
-                    {member.name}
-                  </h3>
-                  <p className=\"text-purple-600 font-semibold\" />
-                    {member.position}
-                  </p>
-                </div>
-                <p className=\"text-gray-600 text-sm mb-4\" />{member.bio}</p>
-                <div className=\"flex flex-wrap gap-2 mb-4\" />
-                  {member.expertise.slice(0, 2).map((skill) => (}
-                    <span;}
-key={skill}
-                      className=\"px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs\"
-                     />
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className=\"flex justify-center space-x-4\" />
-                  <a
-href={member.linkedin}
-                    className=\"text-gray-400 hover:text-blue-600 transition-colors\"
-                   />
-                    <Linkedin className=\"w-5 h-5\" />
-                  </a>
-                  <a
-href={member.twitter}
-                    className=\"text-gray-400 hover:text-blue-400 transition-colors\"
-                   />
-                    <Twitter className=\"w-5 h-5\" />
-                  </a>
-                  <a
-href={member.github}
-                    className=\"text-gray-400 hover:text-gray-600 transition-colors\"
-                   />
-                    <Github className=\"w-5 h-5\" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* Departments */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Departments
-=======
-      {/* All Team Members */}
-      <section className=\"py-16 bg-gray-50\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"text-center mb-12\" />
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
-              Our Expert Team
-            </h2>
-            <p className=\"text-xl text-gray-600\" />
-              Dedicated professionals across all departments
-            </p>
-          </div>
-
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\" />
-            {teamMembers.map((member, index) => (}
-              <motion.div;}
-key={member.id}
-                className=\"bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-center mb-4\" />
-                  <img
-src={member.image}
-                    alt={member.name}
-                    className=\"w-20 h-20 rounded-full mx-auto mb-3 object-cover\"
-                  />
-                  <h3 className=\"text-lg font-bold text-gray-900\" />
-                    {member.name}
-                  </h3>
-                  <p className=\"text-purple-600 font-semibold text-sm\" />
-                    {member.position}
-                  </p>
-                  <p className=\"text-gray-500 text-xs\" />{member.department}</p>
-                </div>
-                <p className=\"text-gray-600 text-sm mb-4\" />{member.bio}</p>
-                <div className=\"flex flex-wrap gap-1 mb-4\" />
-                  {member.expertise.slice(0, 3).map((skill) => (}
-                    <span;}
-key={skill}
-                      className=\"px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs\"
-                     />
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <div className=\"flex justify-center space-x-3\" />
-                  <a
-href={member.linkedin}
-                    className=\"text-gray-400 hover:text-blue-600 transition-colors\"
-                   />
-                    <Linkedin className=\"w-4 h-4\" />
-                  </a>
-                  <a
-href={member.twitter}
-                    className=\"text-gray-400 hover:text-blue-400 transition-colors\"
-                   />
-                    <Twitter className=\"w-4 h-4\" />
-                  </a>
-                  <a
-href={member.github}
-                    className=\"text-gray-400 hover:text-gray-600 transition-colors\"
-                   />
-                    <Github className=\"w-4 h-4\" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Departments */}
-      <section className=\"py-16 bg-white\" />
-        <div className=\"container mx-auto px-4\" />
-          <div className=\"text-center mb-12\" />
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\" />
-              Our Departments
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
-            </h2>
-            <p className=\"text-xl text-gray-600\" />
-              Specialized teams working together to deliver excellence
-            </p>
-          </div>
-
-          <div className=\"grid md:grid-cols-2 lg:grid-cols-4 gap-6\" />
-            {departments.map((dept, index) => (}
-              <motion.div;}
-key={dept.name}
-                className=\"text-center p-6 rounded-lg hover:bg-gray-50 transition-colors\"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-               />
-                <div className=\"text-4xl mb-4\" />{dept.icon}</div>
-                <h3 className=\"text-lg font-semibold mb-2\" />{dept.name}</h3>
-                <p className=\"text-gray-600 text-sm mb-2\" />{dept.description}</p>
-                <div className=\"text-purple-600 font-semibold\" />
-                  {dept.count} members
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Join Our Team CTA */}
-      <section className=\"py-16 bg-purple-600 text-white\" />
-        <div className=\"container mx-auto px-4 text-center\" />
-          <h2 className=\"text-3xl font-bold mb-4\" />Join Our Growing Team</h2>
-          <p className=\"text-xl mb-8 text-purple-100 max-w-3xl mx-auto\" />
-            We're always looking for talented individuals who share our passion
-for technology and innovation.
-          </p>
-          <div className=\"flex flex-col sm:flex-row justify-center gap-4\" />
-            <Link
-href=\"/careers\"
-              className=\"bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors\"
-             />
-              View Open Positions
-            </Link>
-            <Link
-href=\"/contact\"
-              className=\"bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors\"
-             />
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className=\"py-20 bg-gray-50\" />
-        <div className=\"container mx-auto px-4 text-center\" />
-          <h2 className=\"text-4xl font-bold mb-6\" />
-            Ready to Work with Our Expert Team?
-          </h2>
-          <p className=\"text-xl mb-8 text-gray-600 max-w-3xl mx-auto\" />
-            Let's discuss how our experienced team can help transform your
-business with cutting-edge technology solutions.
-          </p>
-          <div className=\"flex flex-col sm:flex-row justify-center gap-4 mb-8\" />
-            <Link
-href=\"/contact\"
-              className=\"bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg\"
-             />
-              Get Free Consultation
-            </Link>
-          </div>
-
-          {/* Contact Information */}
-          <div className=\"grid md:grid-cols-3 gap-8 mt-12\" />
-            <div className=\"flex items-center justify-center\" />
-              <Phone className=\"w-6 h-6 mr-2\" />
-              <span />+1 302 464 0950</span>
-            </div>
-            <div className=\"flex items-center justify-center\" />
-              <Mail className=\"w-6 h-6 mr-2\" />
-              <span />kleber@ziontechgroup.com</span>
-            </div>
-            <div className=\"flex items-center justify-center\" />
-              <MapPin className=\"w-6 h-6 mr-2\" />
-              <span />364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  )
-<<<<<<< HEAD
-}
-=======
-}
-}
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-064d
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-import React from 'react';''
-import MainLayout from '../components/layout/MainLayout';'
-const Page = () => {
+import Head from 'next/head',
+import Link from 'next/link',
+export default function TeamPage() {
   return (
-    <MainLayout;
-      title="Team - Zion Tech Group"""
-      description="Meet our team""
-    >
-"
-      <div className="min-h-screen bg-gray-50">"
-</div>"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Team</h1>""
-          <p className="text-xl text-gray-600">Coming soon...</p>"
-        </div>
-    )"
-      </div>
-    </MainLayout>)"
-
->>>>>>> origin/main
+    <>,
+      <Head>,
+        <title>,
+          Our Team | Zion Tech Group - Expert Technology Professionals,
+        </title>,
+        <meta
+          name='description',
+          content='Meet the expert team at Zion Tech Group. Our professionals bring decades of experience in AI, cybersecurity, cloud computing, and enterprise technology solutions.',
+        />,
+        <link rel='canonical' href='https: //ziontechgroup.com/team' />,
+      </Head>,
+      <main className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
+        <div className='container mx-auto px-6 py-16'>,
+          {/* Hero Section */}
+          <section className='text-center mb-16'>,
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent'>,
+              Our Team,
+            </h1>,
+            <p className='text-xl text-white/80 max-w-3xl mx-auto mb-8'>,
+              Meet the brilliant minds behind Zion Tech Group. Our team of,
+              experts brings together decades of experience in cutting-edge,
+              technologies, AI, cybersecurity, and enterprise solutions.,
+            </p>,
+            <div className='flex flex-wrap justify-center gap-4'>,
+              <Link
+                href='/contact',
+                className='px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-fuchsia-60o0 text-white rounded-lg hover: from-cyan-60o0 hover:to-fuchsia-70o0 transition-all duration-20o0'>,
+                Join Our Team,
+              </Link>,
+              <Link
+                href='/services',
+                className='px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'>,
+                Our Services,
+              </Link>,
+            </div>,
+          </section>,
+          {/* Leadership Team */}
+          <section className='mb-16'>,
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
+              Leadership Team,
+            </h2>,
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-cyan-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-24 h-24 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-3'>,
+                    K,
+                  </div>,
+                  <h3 className='text-xl font-semibold text-cyan-40o0'>,
+                    Kleber,
+                  </h3>,
+                  <p className='text-fuchsia-40o0 font-medium'>Founder & CEO</p>,
+                </div>,
+                <p className='text-white/70 text-center mb-4'>,
+                  Visionary leader with over 15 years of experience in,
+                  technology innovation and business transformation.,
+                </p>,
+                <div className='text-center'>,
+                  <span className='inline-block px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full'>,
+                    AI Strategy,
+                  </span>,
+                  <span className='inline-block px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full ml-2'>,
+                    Innovation,
+                  </span>,
+                </div>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-fuchsia-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-24 h-24 bg-gradient-to-r from-fuchsia-40o0 to-purple-40o0 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-3'>,
+                    M,
+                  </div>,
+                  <h3 className='text-xl font-semibold text-fuchsia-40o0'>,
+                    Dr. Sarah Chen,
+                  </h3>,
+                  <p className='text-purple-40o0 font-medium'>,
+                    Chief Technology Officer,
+                  </p>,
+                </div>,
+                <p className='text-white/70 text-center mb-4'>,
+                  PhD in Computer Science with expertise in AI, machine,
+                  learning, and autonomous systems.,
+                </p>,
+                <div className='text-center'>,
+                  <span className='inline-block px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full'>,
+                    AI Research,
+                  </span>,
+                  <span className='inline-block px-3 py-1 bg-purple-40o0/20 text-purple-40o0 text-sm rounded-full ml-2'>,
+                    ML,
+                  </span>,
+                </div>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover: border-purple-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-24 h-24 bg-gradient-to-r from-purple-40o0 to-blue-40o0 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-3'>,
+                    J,
+                  </div>,
+                  <h3 className='text-xl font-semibold text-purple-40o0'>,
+                    James Rodriguez,
+                  </h3>,
+                  <p className='text-blue-40o0 font-medium'>,
+                    Chief Security Officer,
+                  </p>,
+                </div>,
+                <p className='text-white/70 text-center mb-4'>,
+                  Cybersecurity expert with 20+ years protecting Fortune 50o0,
+                  companies and government agencies.,
+                </p>,
+                <div className='text-center'>,
+                  <span className='inline-block px-3 py-1 bg-purple-40o0/20 text-purple-40o0 text-sm rounded-full'>,
+                    Security,
+                  </span>,
+                  <span className='inline-block px-3 py-1 bg-blue-40o0/20 text-blue-40o0 text-sm rounded-full ml-2'>,
+                    Compliance,
+                  </span>,
+                </div>,
+              </div>,
+            </div>,
+          </section>,
+          {/* Core Team */}
+          <section className='mb-16'>,
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
+              Core Team,
+            </h2>,
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-green-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-green-40o0 to-emerald-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    A,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-green-40o0'>,
+                    Alex Kim,
+                  </h3>,
+                  <p className='text-emerald-40o0 text-sm'>AI Engineer</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Specializes in deep learning and neural network architectures.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-blue-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    R,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-blue-40o0'>,
+                    Rachel Wang,
+                  </h3>,
+                  <p className='text-cyan-40o0 text-sm'>Cloud Architect</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Expert in AWS, Azure, and multi-cloud strategies.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover: border-yellow-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    D,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-yellow-40o0'>,
+                    David Park,
+                  </h3>,
+                  <p className='text-orange-40o0 text-sm'>DevOps Engineer</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Kubernetes and infrastructure automation specialist.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-red-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-red-40o0 to-pink-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    L,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-red-40o0'>,
+                    Lisa Thompson,
+                  </h3>,
+                  <p className='text-pink-40o0 text-sm'>Data Scientist</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Expert in predictive analytics and ML model development.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-indigo-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-indigo-40o0 to-purple-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    M,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-indigo-40o0'>,
+                    Mike Johnson,
+                  </h3>,
+                  <p className='text-purple-40o0 text-sm'>Security Engineer</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Penetration testing and threat intelligence expert.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-teal-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-teal-40o0 to-green-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    S,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-teal-40o0'>,
+                    Sophie Chen,
+                  </h3>,
+                  <p className='text-green-40o0 text-sm'>UX Designer</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Creates intuitive user experiences for complex systems.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-rose-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-rose-40o0 to-red-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    T,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-rose-40o0'>,
+                    Tom Wilson,
+                  </h3>,
+                  <p className='text-red-40o0 text-sm'>Product Manager</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Drives product strategy and customer success.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 hover:border-violet-40o0/50 transition-all duration-20o0'>,
+                <div className='text-center mb-4'>,
+                  <div className='w-20 h-20 bg-gradient-to-r from-violet-40o0 to-purple-40o0 rounded-full flex items-center justify-center text-white text-xl font-bold mx-auto mb-3'>,
+                    E,
+                  </div>,
+                  <h3 className='text-lg font-semibold text-violet-40o0'>,
+                    Emma Davis,
+                  </h3>,
+                  <p className='text-purple-40o0 text-sm'>Business Analyst</p>,
+                </div>,
+                <p className='text-white/70 text-sm text-center'>,
+                  Bridges technology and business requirements.,
+                </p>,
+              </div>,
+            </div>,
+          </section>,
+          {/* Team Culture */}
+          <section className='mb-16'>,
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
+              Our Culture,
+            </h2>,
+            <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6'>,
+                <h3 className='text-2xl font-semibold mb-4 text-cyan-40o0'>,
+                  Innovation First,
+                </h3>,
+                <p className='text-white/70 mb-4'>,
+                  We foster a culture of continuous learning and,
+                  experimentation, encouraging our team to push boundaries and,
+                  explore new technologies.,
+                </p>,
+                <ul className='text-white/60 space-y-2'>,
+                  <li>• Weekly innovation sessions</li>,
+                  <li>• Hackathons and innovation challenges</li>,
+                  <li>• Continuous learning programs</li>,
+                  <li>• Research and development initiatives</li>,
+                </ul>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6'>,
+                <h3 className='text-2xl font-semibold mb-4 text-fuchsia-40o0'>,
+                  Collaboration & Growth,
+                </h3>,
+                <p className='text-white/70 mb-4'>,
+                  We believe in the power of teamwork and personal development;
+                  creating an environment where everyone can thrive and grow.,
+                </p>,
+                <ul className='text-white/60 space-y-2'>,
+                  <li>• Cross-functional collaboration</li>,
+                  <li>• Mentorship programs</li>,
+                  <li>• Professional development</li>,
+                  <li>• Knowledge sharing sessions</li>,
+                </ul>,
+              </div>,
+            </div>,
+          </section>,
+          {/* Values */}
+          <section className='mb-16'>,
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
+              Our Values,
+            </h2>,
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 text-center'>,
+                <div className='w-16 h-16 bg-gradient-to-r from-cyan-40o0 to-blue-40o0 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4'>,
+                  🎯,
+                </div>,
+                <h3 className='text-xl font-semibold mb-3 text-cyan-40o0'>,
+                  Excellence,
+                </h3>,
+                <p className='text-white/70'>,
+                  We strive for excellence in everything we do, from code,
+                  quality to customer service.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 text-center'>,
+                <div className='w-16 h-16 bg-gradient-to-r from-fuchsia-40o0 to-purple-40o0 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4'>,
+                  🤝,
+                </div>,
+                <h3 className='text-xl font-semibold mb-3 text-fuchsia-40o0'>,
+                  Integrity,
+                </h3>,
+                <p className='text-white/70'>,
+                  We maintain the highest ethical standards and build trust with,
+                  our clients and partners.,
+                </p>,
+              </div>,
+              <div className='bg-white/5 border border-white/10 rounded-lg p-6 text-center'>,
+                <div className='w-16 h-16 bg-gradient-to-r from-green-40o0 to-emerald-40o0 rounded-full flex items-center justify-center text-white text-2xl mx-auto mb-4'>,
+                  🚀,
+                </div>,
+                <h3 className='text-xl font-semibold mb-3 text-green-40o0'>,
+                  Innovation,
+                </h3>,
+                <p className='text-white/70'>,
+                  We embrace change and continuously innovate to stay ahead of,
+                  technology trends.,
+                </p>,
+              </div>,
+            </div>,
+          </section>,
+          {/* Join Our Team */}
+          <section className='mb-16'>,
+            <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
+              Join Our Team,
+            </h2>,
+            <div className='bg-white/5 border border-white/10 rounded-lg p-8 text-center'>,
+              <p className='text-white/80 mb-6 max-w-2xl mx-auto'>,
+                We're always looking for talented individuals who are passionate,
+                about technology and innovation. Join us in building the future,
+                of AI and enterprise solutions.,
+              </p>,
+              <div className='flex flex-wrap justify-center gap-4'>,
+                <Link
+                  href='/careers',
+                  className='px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-fuchsia-60o0 text-white rounded-lg hover: from-cyan-60o0 hover:to-fuchsia-70o0 transition-all duration-20o0'>,
+                  View Open Positions,
+                </Link>,
+                <Link
+                  href='/contact',
+                  className='px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'>,
+                  Contact Us,
+                </Link>,
+              </div>,
+            </div>,
+          </section>,
+          {/* CTA Section */}
+          <section className='text-center'>,
+            <div className='bg-gradient-to-r from-cyan-50o0/10 to-fuchsia-50o0/10 border border-cyan-40o0/30 rounded-lg p-8'>,
+              <h2 className='text-2xl font-bold mb-4 text-white'>,
+                Ready to Work with Our Expert Team?,
+              </h2>,
+              <p className='text-white/80 mb-6 max-w-2xl mx-auto'>,
+                Our team of experts is ready to help you transform your business,
+                with cutting-edge technology solutions.,
+              </p>,
+              <div className='flex flex-wrap justify-center gap-4'>,
+                <Link
+                  href='/contact',
+                  className='px-8 py-3 bg-gradient-to-r from-cyan-50o0 to-fuchsia-60o0 text-white rounded-lg hover: from-cyan-60o0 hover:to-fuchsia-70o0 transition-all duration-20o0'>,
+                  Get Started Today,
+                </Link>,
+                <Link
+                  href='/services',
+                  className='px-8 py-3 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-20o0'>,
+                  Explore Our Services,
+                </Link>,
+              </div>,
+            </div>,
+          </section>,
+        </div>,
+      </main>,
+    </>)}
+,

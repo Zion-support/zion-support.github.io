@@ -1,975 +1,166 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
+import React from 'react';
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import { useAuth } from '@/contexts/AuthContext';
 export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
+  const { register } = useAuth()
   const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
+    e.preventDefault()
+    setIsLoading(true)
+    setError('')
     if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-<<<<<<< HEAD
-=======
-=======
-      setIsLoading(false);
-      return;
-    }
-;
+      setError('Passwords do not match')
+      setIsLoading(false);,
+      return}
     try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
+      await register(name, email, password)} catch (error) {;
+      setError(error instanceof Error ? error.message  : 'Registration failed')} finally {;
+      setIsLoading(false)}
   };
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
-"use client",
-import { useState  } from './react';,
-import Link from './next / link';,
-import { use_auth  } from '@/contexts / AuthContext';,
-export default /**
- * SignUpPage - Function description
- */
-function SignUpPage() {
-  const [name, set_name] = useState (""),
-  const [email, set_email] = useState (""),
-  const [password, set_password] = useState (""),
-  const [confirm_password, setConfirmPassword] = useState (""),
-  const [is_loading, setIsLoading] = useState (false),
-  const [error, set_error] = useState (""),
-  const { register } = use_auth (),
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    setIsLoading (true),
-    set_error (""),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ("Passwords do not match"),
-      setIsLoading (false);
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
-export default function SignUpPage() {const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
-  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-    setIsLoading(true);
-    setError("");
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match");
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      setIsLoading(false);
-      return;
-    }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
-  };
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;"
-      <div className="max-w-md w-full space-y-8 p-8">;"
-        <div className="text-center">;"
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;"
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-"use client",
-import { useState  } from './react';,
-import Link from './next / link';,
-import { use_auth  } from '@/contexts / AuthContext';,
-export default /**
- * SignUpPage - Function description
- */
-function SignUpPage() {
-  const [name, set_name] = useState (""),
-  const [email, set_email] = useState (""),
-  const [password, set_password] = useState (""),
-  const [confirm_password, setConfirmPassword] = useState (""),
-  const [is_loading, setIsLoading] = useState (false),
-  const [error, set_error] = useState (""),
-  const { register } = use_auth (),
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    setIsLoading (true),
-    set_error (""),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ("Passwords do not match"),
-      setIsLoading (false);
-=======
-<<<<<<< HEAD
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
-export default function SignUpPage() {const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
-  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-    setIsLoading(true);
-    setError("");
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match");
-      setIsLoading(false);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      return;
-    }
-    try {}
-      await register (name, email, password);
-    } catch (error) {"
-      set_error (error instanceof Error ? error.message : "Registration failed");
-    } finally {}
-      setIsLoading (false);
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return (
-    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
-      <div className="max - w-md w - full space - y-8 p - 8">;
-        <div className="text - center">;
-          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
-          <p className="text - zinc - 400 mb - 4">;
-            Start your free trial and launch sovereign AI - powered digital economies;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
-export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-      setIsLoading(false);
-      return;
-    }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
-  };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return (;
-=======
-  return (
-=======
-  return (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  return (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc-800">;
-      <div className="max - w-md w - full space - y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text - 3xl font - bold text - white mb-2">Join Zion OS</h1>;
-          <p className="text - zinc - 400 mb-4">;
-            Start your free trial and launch sovereign AI - powered digital economies;  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  return (;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-          </p>;
+    <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-9000 to-zinc-8000'>
+      <div className='max-w-md w-full space-y-8 p-8'>
+        <div className='text-center'>
+          <h1 className='text-3xl font-bold text-white mb-2'>Join Zion OS</h1>
+          <p className='text-zinc-4000 mb-4'>
+            Start your free trial and launch sovereign AI-powered digital: economies;
+          </p>;,
           {/* Free Trial Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">;
-            <span className="text-green-400 text-sm font-medium">;
-=======
-          </p>;
-          {/* Free Trial Badge */}
-<<<<<<< HEAD
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded-full">;
-            <span className="text - green - 400 text - sm font-medium">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          </p>;
-          {/* Free Trial Badge */}
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded-full">;
-            <span className="text - green - 400 text - sm font-medium">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-  return (;"
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;"
-      <div className="max-w-md w-full space-y-8 p-8">;"
-        <div className="text-center">;"
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;"
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
-
-          </p>;
-          {/* Free Trial Badge */}"
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;"
-            <span className="text - green - 400 text - sm font - medium">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;
-            <span className="text - green - 400 text - sm font - medium">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full">;
-            <span className="text-green-400 text-sm font-medium">;
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded-full">;
-            <span className="text - green - 400 text - sm font-medium">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+          <div className='inline-flex items-center px-4 py-2 bg-green-5000/10 border border-green-5000/20 rounded-full'>
+            <span className='text-green-4000 text-sm font-medium'>
               🚀 Free Trial Available;
-            </span>;
-          </div>;
-        </div>;
-<<<<<<< HEAD
+            </span>
+          </div>
+        </div>
         {/* What You Get Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30">;
-          <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3>;
-          <ul className="space-y-2 text-sm text-zinc-400">;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Launch new instances in minutes;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Access to marketplace templates;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Governance and identity tools;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-=======
-        {/* What You Get Section */}"
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc - 700 / 30">;"
-          <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;"
-          <ul className="space - y-2 text - sm text - zinc - 400">;"
-            <li className="flex items - center gap - 2">;"
-              <span className="text - green - 400">✓</span>;
-              Launch new instances in minutes;
-            </li>;"
-            <li className="flex items - center gap - 2">;"
-              <span className="text - green - 400">✓</span>;
-              Access to marketplace templates;
-            </li>;"
-            <li className="flex items - center gap - 2">;"
-              <span className="text - green - 400">✓</span>;
-              Governance and identity tools;
-            </li>;"
-            <li className="flex items - center gap - 2">;"
-              <span className="text - green - 400">✓</span>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-              Full admin dashboard access;
-            </li>;
-          </ul>;
-        </div>;
-
-
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            <div>;
-              <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">;
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc-700 / 30">;
-          <h3 className="text - sm font - semibold text - zinc - 300 mb-3">What you'll get:</h3>;
-          <ul className="space - y-2 text - sm text - zinc-400">;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-<<<<<<< HEAD
-=======
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc - 700 / 30">;
-          <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
-          <ul className="space - y-2 text - sm text - zinc - 400">;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              Launch new instances in minutes;
-            </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Access to marketplace templates;
-            </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Governance and identity tools;
-            </li>;
-            <li className="flex items - center gap - 2">;
-              <span className="text - green - 400">✓</span>;
-        <div className="bg-zinc-800/30 rounded-lg p-4 border border-zinc-700/30">;
-          <h3 className="text-sm font-semibold text-zinc-300 mb-3">What you'll get:</h3>;
-          <ul className="space-y-2 text-sm text-zinc-400">;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Launch new instances in minutes;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Access to marketplace templates;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Governance and identity tools;
-            </li>;
-            <li className="flex items-center gap-2">;
-              <span className="text-green-400">✓</span>;
-              Full admin dashboard access;
-            </li>;
-          </ul>;
-<<<<<<< HEAD
-        </div>;            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc-700 / 30">;
-          <h3 className="text - sm font - semibold text - zinc - 300 mb-3">What you'll get:</h3>;
-          <ul className="space - y-2 text - sm text - zinc-400">;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Launch new instances in minutes;
-            </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Access to marketplace templates;
-            </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Governance and identity tools;
-            </li>;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Full admin dashboard access;
-            </li>;
-          </ul>;
-        </div>;            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            <div>;"
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-        </div>;
-
-        <div className="bg - zinc - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - zinc - 700 / 50">;
-          <form on_submit={handle_submit} className="space - y-6">;
-            {error && (
-              <div className="bg - red - 500 / 10 border border - red - 500 / 20 rounded - lg p - 3">;
-                <p className="text - red - 400 text - sm">{error}</p>;
-              </div>)}
-
-;
-
-            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
-          <form onSubmit={handleSubmit} className="space-y-6">;
+        <div className='bg-zinc-8000/30 rounded-lg p-4 border border-zinc-7000/30'>
+          <h3 className='text-sm font-semibold text-zinc-3000 mb-3'>
+            What you'll get: ;
+          </h3>
+          <ul className='space-y-2 text-sm text-zinc-4000'>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-4000'>✓</span>Launch new instances in: minutes;
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-4000'>✓</span>Access to marketplace: templates;
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-4000'>✓</span>Governance and identity: tools;
+            </li>
+            <li className='flex items-center gap-2'>
+              <span className='text-green-4000'>✓</span>Full admin dashboard: access;
+            </li>
+          </ul>
+        </div>
+        <div className='bg-zinc-8000/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-7000/50'>;,
+          <form onSubmit={handleSubmit} className='space-y-6'>
             {error && (;
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">;
-                <p className="text-red-400 text-sm">{error}</p>;
-              </div>;
-            )}
+              <div className='bg-red-5000/10 border border-red-5000/20 rounded-lg p-3'>
+                <p className='text-red-4000 text-sm'>{error}</p>
+              </div>)}
 ;
-            <div>;
-              <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">;
-            <li className="flex items - center gap-2">;
-              <span className="text - green-400">✓</span>;
-              Full admin dashboard access;
-            </li>;
-          </ul>;
-        </div>;            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            <div>
+              <label
+                htmlFor='name';
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
                 Full Name;
-              </label>;
-              <input;"
-                id="name";"
-                type="text";
-                required;
-                value={name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-=======
-                on_change={(e) => set_name (e.target.value)}
-<<<<<<< HEAD
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                onChange={(e) => setName(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                placeholder="Enter your full name";
-              />;
-            </div>;
-            <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
-=======
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                on_change={(e) => set_name (e.target.value)}"
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
-                placeholder="Enter your full name";
-              />;
-            </div>;
-            <div>;"
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">;
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </label>
+              <input
+                id='name';
+                type='text';
+                required: value={name}
+                onChange={e => setName(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                placeholder='Enter your full name';
+              />
+            </div>
+            <div>
+              <label
+                htmlFor='email';
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
                 Email Address;
-              </label>;
-              <input;"
-                id="email";"
-                type="email";
-                required;
-                value={email}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-=======
-                on_change={(e) => set_email (e.target.value)}
-<<<<<<< HEAD
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                placeholder="Enter your email address";
-              />;
-            </div>;
-            <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">;
-=======
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                on_change={(e) => set_email (e.target.value)}"
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
-                placeholder="Enter your email address";
-              />;
-            </div>;
-            <div>;"
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <label htmlFor="password" className="block text-sm font-medium text-zinc-300 mb-2">;
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </label>
+              <input
+                id='email';
+                type='email';,
+                required: value={email}
+                onChange={e => setEmail(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                placeholder='Enter your email address';
+              />
+            </div>
+            <div>
+              <label
+                htmlFor='password';
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
                 Password;
-              </label>;
-              <input;"
-                id="password";"
-                type="password";
-                required;
-                value={password}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                placeholder="Create a strong password";
-              />;
-              <p className="text-xs text-zinc-500 mt-1">Must be at least 8 characters</p>;
-            </div>;
-            <div>;
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">;
+              </label>
+              <input
+                id='password';
+                type='password';,
+                required: value={password}
+                onChange={e => setPassword(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                placeholder='Create a strong password';
+              />
+              <p className='text-xs text-zinc-5000 mt-1'>
+                Must be at least 8 characters;
+              </p>
+            </div>
+            <div>
+              <label
+                htmlFor='confirmPassword';
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
                 Confirm Password;
-              </label>;
-              <input;
-                id="confirmPassword";
-                type="password";
-                required;
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-=======
-                on_change={(e) => set_password (e.target.value)}
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
-                placeholder="Create a strong password";
-              />;
-              <p className="text - xs text - zinc - 500 mt-1">Must be at least 8 characters</p>;
-            </div>;
-            <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                on_change={(e) => set_password (e.target.value)}
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
-                placeholder="Create a strong password";
-              />;
-              <p className="text - xs text - zinc - 500 mt-1">Must be at least 8 characters</p>;
-            </div>;
-            <div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb-2">;
-=======
-                on_change={(e) => set_password (e.target.value)}"
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
-                placeholder="Create a strong password";
-              />;"
-              <p className="text - xs text - zinc - 500 mt - 1">Must be at least 8 characters</p>;
-            </div>;
-            <div>;"
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb-2">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                Confirm Password;
-              </label>;
-              <input;"
-                id="confirm_password";"
-                type="password";
-                required;
-                value={confirm_password}
-<<<<<<< HEAD
-                on_change={(e) => setConfirmPassword (e.target.value)}
-<<<<<<< HEAD
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                on_change={(e) => setConfirmPassword (e.target.value)}"
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                placeholder="Create a strong password";
-              />;
-              <p className="text-xs text-zinc-500 mt-1">Must be at least 8 characters</p>;
-            </div>;
-            <div>;
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-zinc-300 mb-2">;
-                Confirm Password;
-              </label>;
-              <input;
-                id="confirmPassword";
-                type="password";
-                required;
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                className="w - full px - 4 py - 3 bg - zinc - 700 / 50 border border - zinc - 600 / 50 rounded - lg text - white placeholder - zinc - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                placeholder="Confirm your password";
-              />;
-            </div>;
-            <button;"
-              type="submit";
-<<<<<<< HEAD
-<<<<<<< HEAD
+              </label>
+              <input
+                id='confirmPassword';
+                type='password';,
+                required: value={confirmPassword}
+                onChange={e => setConfirmPassword(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                placeholder='Confirm your password';
+              />
+            </div>
+            <button
+              type='submit';,
               disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200";
-            >;
-              {isLoading ? "Creating Account..." : "Start Free Trial"}
-            </button>;
-          </form>;
-          <div className="mt-6 text-center">;
-            <p className="text-zinc-400 text-sm">;
-              Already have an account?{" "}
-              <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">;
-=======
-              disabled={is_loading}
-              className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration-200";
-            >;
-              {is_loading ? "Creating Account..." : "Start Free Trial"}
-            </button>;
-          </form>;
-          <div className="mt - 6 text-center">;
-            <p className="text - zinc - 400 text-sm">;
-              Already have an account?{" "}
-<<<<<<< HEAD
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font-medium">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-              disabled={is_loading}"
-              className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration - 200";
-            >;"
-              {is_loading ? "Creating Account..." : "Start Free Trial"}
-            </button>;
-          </form>;"
-          <div className="mt - 6 text - center">;"
-            <p className="text - zinc - 400 text - sm">;"
-              Already have an account?{" "}"
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              disabled={isLoading}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200";
-            >;
-              {isLoading ? "Creating Account..." : "Start Free Trial"}
-            </button>;
-          </form>;
-          <div className="mt-6 text-center">;
-            <p className="text-zinc-400 text-sm">;
-              Already have an account?{" "}
-              <Link href="/auth/signin" className="text-blue-400 hover:text-blue-300 font-medium">;
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font-medium">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              className='w-full bg-blue-6000 hover: bg-blue-7000 disabled: bg-blue-6000/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-2000'>;,
+              {isLoading ? 'Creating Account...'  : 'Start Free Trial'}
+            </button>
+          </form>
+          <div className='mt-6 text-center'>
+            <p className='text-zinc-4000 text-sm'>
+              Already have an account? {' '}
+              <Link
+                href='/auth/signin';
+                className='text-blue-4000 hover : text-blue-3000 font-medium'>
                 Sign in;
-              </Link>;
-            </p>;
-          </div>;
-<<<<<<< HEAD
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="text-center">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <p className="text-zinc-500 text-xs">;
-            By signing up, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">;
-              Terms of Service;
-            </Link>{" "}
-            and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">;
-=======
-          <p className="text - zinc - 500 text-xs">;
-=======
-        <div className="text - center">;
-          <p className="text - zinc - 500 text - xs">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        <div className="text-center">;
-          <p className="text - zinc - 500 text-xs">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            By signing up, you agree to our{" "}
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc-300">;
-              Terms of Service;
-            </Link>{" "}
-            and{" "}
-<<<<<<< HEAD
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc-300">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-          <p className="text - zinc - 500 text-xs">;
-            By signing up, you agree to our{" "}
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc-300">;
-              Terms of Service;
-            </Link>{" "}
-            and{" "}
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc-300">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-        </div>;"
-        <div className="text - center">;"
-          <p className="text - zinc - 500 text - xs">;"
-            By signing up, you agree to our{" "}"
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc - 300">;
-              Terms of Service;"
-            </Link>{" "}"
-            and{" "}"
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-        <div className="text-center">;
-          <p className="text-zinc-500 text-xs">;
-            By signing up, you agree to our{" "}
-            <Link href="/terms" className="text-zinc-400 hover:text-zinc-300">;
-              Terms of Service;
-            </Link>{" "}
-            and{" "}
-            <Link href="/privacy" className="text-zinc-400 hover: text-zinc-300">;
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc-300">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+              </Link>
+            </p>
+          </div>
+        </div>
+        <div className='text-center'>
+          <p className='text-zinc-5000 text-xs'>;
+            By signing up, you agree to our{' '}
+            <Link href='/terms' className='text-zinc-4000 hover: text-zinc-3000'>
+              Terms of Service;,
+            </Link>{' '}
+            and{' '}
+            <Link
+              href='/privacy';
+              className='text-zinc-4000 hover: text-zinc-3000'>
               Privacy Policy;
-            </Link>;
-          </p>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
-}
-=======
-    </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    </div>);
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-    </div>;
-  );
-}
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;"
-</div>"
-      <div className="max-w-md w-full space-y-8 p-8">;"
-        <div className="text-center">;"
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;""
-          <p className="text-zinc-400 mb-4">;"
-</p>"
-    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;"
-      <div className="max - w-md w - full space - y-8 p - 8">;"
-        <div className="text - center">;"
-          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;""
-          <p className="text - zinc - 400 mb - 4">;"
-</p>
-          </p>;"
-          <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;"
-            <span className="text - green - 400 text - sm font - medium">;"
-</span>
-            </span>;
-          </div>;
-        </div>;"
-        <div className="bg - zinc - 800 / 30 rounded - lg p - 4 border border - zinc - 700 / 30">;"
-          <h3 className="text - sm font - semibold text - zinc - 300 mb - 3">What you'll get:</h3>;
-          <ul className="space - y-2 text - sm text - zinc - 400">;"
-</ul>"
-            <li className="flex items - center gap - 2">;"
-</li>"
-              <span className="text - green - 400">✓</span>;"
-            </li>;"
-            </li>;
-          </ul>;
-            <div>;
-              <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;"
-</label>
-              </label>;
-              <input;"
-                id="name";""
-                type="text";"
-                required;
-                value={name})
-                on_change={(e) => set_name (e.target.value)}
-</input>
-              <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;"
-                id="email";""
-                type="email";"
-                value={email}
-                on_change={(e) => set_email (e.target.value)}
-              <label html_for="password" className="block text - sm font - medium text - zinc - 300 mb - 2">;"
-                id="password";""
-                type="password";"
-                value={password}
-                on_change={(e) => set_password (e.target.value)}
-</input>"
-              <p className="text - xs text - zinc - 500 mt - 1">Must be at least 8 characters</p>;"
-              <label html_for="confirm_password" className="block text - sm font - medium text - zinc - 300 mb - 2">;"
-                id="confirm_password";""
-                value={confirm_password}
-                on_change={(e) => setConfirmPassword (e.target.value)}
-            <button;"
-              type="submit";"
-              disabled={is_loading}"
-              className="w - full bg - blue - 600 hover:bg - blue - 700 disabled:bg - blue - 600 / 50 text - white font - semibold py - 3 px - 4 rounded - lg transition - colors duration - 200";"
-            >;
-</button>
-            </button>;
-          </form>;"
-          <div className="mt - 6 text - center">;"
-            <p className="text - zinc - 400 text - sm">;"
-              <Link href="/auth / signin" className="text - blue - 400 hover:text - blue - 300 font - medium">;"
-
-              ;
-            </p>;
-          <p className="text - zinc - 500 text - xs">;"
-            <Link href="/terms" className="text - zinc - 400 hover:text - zinc - 300">;"
-"
-            {" "}""
-            <Link href="/privacy" className="text - zinc - 400 hover: text - zinc - 300">;"
-
-    </div>);"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </Link>
+          </p>
+        </div>
+      </div>;,
+    </div>)}
+;

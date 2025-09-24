@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-export default function BlockchainSolutions() {
-  return <div className="py-10">Blockchain Solutions Overview</div>;
-}
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

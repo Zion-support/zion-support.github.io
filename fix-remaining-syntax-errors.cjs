@@ -1,93 +1,114 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const { execSync } = require('child_process');
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-console.log('🔧 Fixing remaining syntax errors...');
-
-// List of files with known syntax errors
-const filesToFix = [
-  '/workspace/src/components/Footer.tsx',
-  '/workspace/src/components/Header.tsx',
-  '/workspace/src/components/HeroSection.tsx',
-  '/workspace/src/components/LoadingSpinner.tsx',
-  '/workspace/src/components/Navigation.tsx',
-  '/workspace/src/components/ServicesSection.tsx'
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
-      return false;
-    }
-
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
 
     // Fix common syntax errors
-    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{const\s+(\w+)\s*=\s*([^;]+)([^;])/g, 'const $1: React.FC = () => {\n  const $2 = $3;\n');
-    content = content.replace(/}\s*const\s+/g, '}\n\nconst ');
-    content = content.replace(/;\s*const\s+/g, ';\n\nconst ');
-    content = content.replace(/}\s*export\s+/g, '}\n\nexport ');
-    content = content.replace(/;\s*export\s+/g, ';\n\nexport ');
-    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
-    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
-    content = content.replace(/;\s*title\s*:\s*string;/g, ';\n  title?: string;');
-    content = content.replace(/;\s*description\s*:\s*string;/g, ';\n  description?: string;');
-    content = content.replace(/;\s*className\s*:\s*string;/g, ';\n  className?: string;');
-    content = content.replace(/;\s*onClick\s*:\s*\(\)\s*=>\s*void;/g, ';\n  onClick?: () => void;');
-    content = content.replace(/;\s*children\s*:\s*React\.ReactNode;/g, ';\n  children: React.ReactNode;');
-    content = content.replace(/;\s*}\s*const\s+/g, ';\n}\n\nconst ');
-    content = content.replace(/;\s*}\s*export\s+/g, ';\n}\n\nexport ');
-    content = content.replace(/;\s*}\s*\)\s*}\s*export\s+/g, ';\n  );\n}\n\nexport ');
-    content = content.replace(/;\s*}\s*\)\s*}\s*const\s+/g, ';\n  );\n}\n\nconst ');
-    content = content.replace(/;\s*}\s*\)\s*}\s*;\s*export\s+/g, ';\n  );\n};\n\nexport ');
-    content = content.replace(/;\s*}\s*\)\s*}\s*;\s*const\s+/g, ';\n  );\n};\n\nconst ');
+
+    // Fix unnecessary escape characters
+    content = content.replace(/\\:/g, ':');
+    content = content.replace(/\\,/g, ',');
+    content = content.replace(/\\;/g, ';');
+    content = content.replace(/\\}/g, '}');
+    content = content.replace(/\\{/g, '{');
+    content = content.replace(/\\\[/g, '[');
+    content = content.replace(/\\\]/g, ']');
+    content = content.replace(/\\\(/g, '(');
+    content = content.replace(/\\\)/g, ')');
 
     // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*const\s+/g, '$1 = $2;\n  const ');
-    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*const\s+/g, '$1 = $2;\n}\n\nconst ');
-    content = content.replace(/(\w+)\s*=\s*([^;]+)([^;])\s*}\s*export\s+/g, '$1 = $2;\n}\n\nexport ');
+    content = content.replace(/([^;])\s*$/gm, '$1;');
 
-    // Fix malformed JSX
-    content = content.replace(/return\s*\(\s*<div;\s*className/g, 'return (\n    <div\n      className');
-    content = content.replace(/className={`([^`]+)`}\s*>\s*;/g, 'className={`$1`}>\n');
-    content = content.replace(/;\s*>\s*;/g, '>\n');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
 
-    // Fix interface definitions
-    content = content.replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}\s*const\s+/g, 'interface $1 {\n  $2\n}\n\nconst ');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
 
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    } else {
-      console.log(`⚠️  No changes needed: ${filePath}`);
-      return false;
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
     }
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
+    }
+
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+
+    if (openBrackets > closeBrackets) {
+      const missingBrackets = openBrackets - closeBrackets;
+      content += ']'.repeat(missingBrackets);
+      modified = true;
+    }
+
+    // Fix duplicate imports
+    const importLines = content
+      .split('\n')
+      .filter(line => line.trim().startsWith('import'));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {
+      const nonImportLines = content
+        .split('\n')
+        .filter(line => !line.trim().startsWith('import'));
+      content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
+      modified = true;
+    }
+
+    // Fix missing React import
+    if (content.includes('React') && !content.includes('import React')) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+    }
+
+    return modified;
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-let fixedCount = 0;
-filesToFix.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-});
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
 
-<<<<<<< HEAD
-module.exports = SyntaxErrorFixer;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-console.log(`\n📊 Fixed ${fixedCount} files`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += processDirectory(filePath);
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
+      if (fixSyntaxErrors(filePath)) fixedCount++;
+    }
+  }
+
+  return fixedCount;
+}
+
+console.log('Starting syntax error fixes...');
+const fixedCount = processDirectory('.');
+console.log(`Fixed ${fixedCount} files`);

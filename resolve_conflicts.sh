@@ -1,76 +1,39 @@
 #!/bin/bash
 
+# Script to resolve merge conflicts by keeping HEAD version
+# This will resolve conflicts by taking the current (HEAD) version of all conflicted files
 
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
+echo "Resolving merge conflicts by keeping HEAD version..."
 
 # Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
-
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-echo "Starting conflict resolution..."
-
-# First, let's merge main into our branch
-git merge main
-
-# For most conflicts, we'll take the main branch version
-# But we want to keep our netlify.toml fix
-git checkout --ours netlify.toml
-
-# For other critical files, take main branch version
-git checkout --theirs package.json
-git checkout --theirs vite.config.ts
-git checkout --theirs tsconfig.json
-git checkout --theirs src/App.tsx
-git checkout --theirs src/main.tsx
-git checkout --theirs index.html
-git checkout --theirs src/index.css
-
-# For all other conflicts, take main branch version
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    if [ "$file" != "netlify.toml" ]; then
-        echo "Resolving conflict in $file (taking main branch version)"
-        git checkout --theirs "$file"
+for file in $conflicted_files; do
+    echo "Resolving conflicts in: $file"
+    
+    # Check if file exists
+    if [ -f "$file" ]; then
+        # Extract HEAD version (between <<<<<<< HEAD and =======)
+        # Remove conflict markers and keep only the HEAD version
+        sed -n '/^<<<<<<< HEAD$/,/^=======$/p' "$file" | sed '1d;$d' > "${file}.head"
+        
+        # Check if we have a HEAD section
+        if [ -s "${file}.head" ]; then
+            # Replace the entire file with HEAD version
+            cp "${file}.head" "$file"
+            echo "  ✓ Resolved by keeping HEAD version"
+        else
+            echo "  ⚠ No HEAD section found, keeping original"
+        fi
+        
+        # Clean up temporary file
+        rm -f "${file}.head"
+        
+        # Mark as resolved
         git add "$file"
+    else
+        echo "  ⚠ File not found: $file"
     fi
 done
 
-# Add all resolved files
-git add .
-
-echo "Conflict resolution completed. Checking status..."
-git status
-
-# Script to automatically resolve merge conflicts by choosing main branch version
-echo "Resolving merge conflicts by choosing main branch version..."
-
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- | while read file; do
-    echo "Resolving conflict in: $file"
-    # Choose the main branch version (ours)
-    git checkout --ours "$file"
-    git add "$file"
-done
-
-# Handle modify/delete conflicts by removing the files
-git status --porcelain | grep "^DU" | cut -c4- | while read file; do
-    echo "Removing deleted file: $file"
-    git rm "$file"
-done
-
-echo "All conflicts resolved. Committing merge..."
-git commit -m "Merge PR #11903: Expand services advertise and build project - Resolved conflicts by choosing main branch version"
-
-
+echo "All conflicts resolved. Files marked for commit."

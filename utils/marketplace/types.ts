@@ -1,524 +1,64 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
-export type Milestone = {;
-  id: string;
-  title: string;
-  dueDateIso?: string;
-  amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
-};
-export type PaymentTerms =;
-  | { type: "hourly", hourlyRateUsd: number }
-  | { type: "fixed", fixedAmountUsd: number }
-  | { type: "milestone", milestones: Milestone[] };
-export type OfferStatus =;
-  | "SENT";
-  | "CONFIRMED";
-  | "CHANGES_REQUESTED";
-  | "DECLINED";
-export type Offer = {;
-=======
 
-// Marketplace types
+,
 export interface Offer {
-
-
-
-
-export interface Offer {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-// Marketplace types;
-export interface Offer {};
-export interface Offer {;
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-// Marketplace types
-export interface Offer {
-export interface Offer {;
-
-export interface Offer {;
-
-export interface Offer {;
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  id: string;
-  createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
-  startDateIso: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";
-  changeRequestNote?: string;
-  projectId?: string;
-}
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
+  id: string,
+  createdAtIso: string,
+  client_id: string,
+  talent_slug: string,
+  startDateIso: string,
+  scopeSummary: string,
+  paymentTerms: PaymentTerms,
+  agreementUrl?: string,
+  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED',
+  changeRequestNote?: string,
+  projectId?: string}
 export interface PaymentTerms {
-  type: "hourly" | "fixed" | "milestone";
-  amount?: number;
-  currency?: string;
+  type: 'hourly' | 'fixed' | 'milestone',
+  amount?: number,
+  currency?: string,
   milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-<<<<<<< HEAD
-  agreementUrl?: string;
-  status: OfferStatus;
-  changeRequestNote?: string;
-  projectId?: string;
-<<<<<<< HEAD
-};
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
-export type ProjectDocument = {;
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-};
-export type ProjectNote = {;
-  id: string;
-  authorId: string;
-  authorRole: "client" | "talent";
-  content: string;
-  createdAtIso: string;
-};
-export type Project = {;
-=======
-}
-export interface PaymentTerms {
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
+    title: string,
+    amount: number,
+    dueDateIso: string}>}
 export interface Project {
-
-export interface PaymentTerms {;
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-
-export interface Project {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
-  changeRequestNote?: string;
-  projectId?: string;
-}
 export interface PaymentTerms {
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
+  type: 'hourly' | 'fixed' | 'milestone',
+  amount?: number,
+  currency?: string,
   milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
+    title: string,
+    amount: number,
+    dueDateIso: string}>}
+,
 export interface Project {
-
-export interface PaymentTerms {;
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-
-export interface Project {;
-
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  id: string;
-  title: string;
-  summary: string;
-  client_id: string;
-  talent_slug: string;
-  startDateIso: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  status: ProjectStatus;
-  timeline: Milestone[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-};
-export type MarketplaceDb = {;
-  offers: Offer[];
-  projects: Project[];
-};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
-=======
-<<<<<<< HEAD
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-=======
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
-
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-=======
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-  timeline: any[];
-<<<<<<< HEAD
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  timeline: any[];
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";  timeline: any[];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  id: string,
+  title: string,
+  summary: string,
+  client_id: string,
+  talent_slug: string,
+  startDateIso: string,
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED',
+  timeline: any[],
+  documents: ProjectDocument[],
+  notes: ProjectNote[]}
+export interface ProjectDocument {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+  id: string,
+  name: string,
+  url?: string,
+  uploadedAtIso: string}
+,
+  id: string,
+  authorId: string,
+  authorRole: string,
+  content: string,
+  createdAtIso: string}
+,
 export interface ProjectNote {
-=======
-
-export interface ProjectNote {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
-export type Milestone = {;
-  id: string;
-  title: string;
-  dueDateIso?: string;
-  amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
-};
-export type PaymentTerms =;
-  | { type: "hourly", hourlyRateUsd: number }
-  | { type: "fixed", fixedAmountUsd: number }
-  | { type: "milestone", milestones: Milestone[] };
-export type OfferStatus =;
-  | "SENT";
-  | "CONFIRMED";
-  | "CHANGES_REQUESTED";
-  | "DECLINED";
-export type Offer = {;
-  id: string;
-  createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: OfferStatus;
-  changeRequestNote?: string;
-  projectId?: string;
-};
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
-export type ProjectDocument = {;
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-};
-export type ProjectNote = {;
-  id: string;
-  authorId: string;
-  authorRole: "client" | "talent";
-  content: string;
-  createdAtIso: string;
-};
-export type Project = {;
-  id: string;
-  title: string;
-  summary: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  status: ProjectStatus;
-  timeline: Milestone[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-};
-export type MarketplaceDb = {;
-  offers: Offer[];
-  projects: Project[];
-};
-
-
-
-// Marketplace types;
-export interface Offer {
-  // TODO: Implement
-}
-export interface Offer {;
-
-
-
-  id: string;,
-  createdAtIso: string;
-  client_id: string;,
-  talent_slug: string;
-  startDateIso: string;,
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-
-  status: "SENT" | "CONFIRMED" | "CHANGES_REQUESTED" | "DECLINED";"
-  changeRequestNote?: string;
-  projectId?: string;
-
-export interface PaymentTerms {
-  // TODO: Implement
-}"
-  type: "hourly" | "fixed" | "milestone";"
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;,
-  amount: number;
-    dueDateIso: string;
-
-  }>;
-
-
-
-
-  scopeSummary: string;,
-
-
-
-
-  title: string;
-  summary: string;,
-  client_id: string;
-
-  talent_slug: string;,
-  startDateIso: string;"
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";","
-  status: "ACTIVE" | "COMPLETED" | "CANCELLED";"
-  timeline: any[];,
-
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-
-
-export interface ProjectNote {
-  // TODO: Implement
-  authorId: string;
-
-  authorRole: string;,
-  content: string;
-  createdAtIso: string;
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-"
-pr-12325
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+  id: string,
+  authorId: string,
+  authorRole: string,
+  content: string,
+  createdAtIso: string}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

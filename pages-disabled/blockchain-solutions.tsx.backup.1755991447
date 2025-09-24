@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export default function BlockchainSolutions() { return <div>Blockchain Solutions</div>; }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

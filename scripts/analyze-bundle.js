@@ -1,74 +1,68 @@
-const { BundleAnalyzerPlugin } = // // require('webpack-bundle-analyzer');
-<<<<<<< HEAD
-module.exports = (nextConfig = {}) => {}
-  return Object.assign({;}, nextConfig, {}
-    webpack(config, { isServer }) {}
-      if ( {}
-        config.plugins.push(
-          new BundleAnalyzerPlugin({'
-            "analyzerMode": 'server','"
-            "analyzerPort": 'isServer ? 8888 : 8889','"
-            "openAnalyzer": 'true'})
-        )}
-      return config) {}
-     {}
-        config.plugins.push(
-          new BundleAnalyzerPlugin({'"
-            "analyzerMode": 'server',"
-            "analyzerPort": isServer ? 8888 : 8889,"
-            "openAnalyzer": true})
-        )}
-<<<<<<<< HEAD:backup-problematic-files/scripts/analyze-bundle.js
-========
-<<<<<<< HEAD:scripts/analyze-bundle.js
-      return config}}})}
-const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/analyze-bundle.js
-=======
-module.exports = (nextConfig = {}) => {
-  return Object.assign({;}, nextConfig, {)
-    webpack(config, { isServer }) {
-      if ( {
-        config.plugins.push(
-          new BundleAnalyzerPlugin({
-            "analyzerMode": 'server',
-            "analyzerPort": 'isServer ? 8888 : 8889',')
-            "openAnalyzer": 'true'})
-        )}
-      return config) {
-     {
-            "analyzerPort": isServer ? 8888 : 8889,")"
-            "openAnalyzer": true})"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return config;
-  }},
-  })}
-      return config}}})}
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
-      return config}}})}
-const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
-      return config}}})}
-const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/analyze-bundle.js
-=======
-      return config;
-  }},
-  })}
-      return config}}})}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from 'react';
+#!/usr/bin/env node,
+import { execSync } from 'child_process',
+const BUNDLE_ANALYZER_PACKAGE = '@next/bundle-analyzer',
+async function analyzeBundle() {
+  // // console.log('🔍 Analyzing bundle size...\n'),
+  try {
+    // Check if bundle analyzer is installed,
+    try {
+      require.resolve(BUNDLE_ANALYZER_PACKAGE)} catch {
+      // // console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`),
+      execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit' })}
+    // Build the project,
+    // // console.log('🏗️  Building project...'),
+    execSync('npm run build', { stdio: 'inherit' }),
+    // Analyze bundle,
+    // // console.log('📊 Analyzing bundle...'),
+    execSync('npx @next/bundle-analyzer dist', { stdio: 'inherit' }),
+    // Generate bundle report,
+    generateBundleReport()} catch (error) {
+    console.error('❌ Bundle analysis failed:', error.message),
+    process.exit(1)}
+}
+function generateBundleReport() {
+  const distPath = path.join(process.cwd(), 'dist'),
+  const jsPath = path.join(distPath, 'js'),
+  if (!fs.existsSync(jsPath)) {
+    // // console.log('⚠️  No dist/js directory found. Run build first.'),
+    return}
+  const jsFiles = fs.readdirSync(jsPath),
+    .filter(file => file.endsWith('.js')),
+    .map(file => {
+      const filePath = path.join(jsPath, file),
+      const stats = fs.statSync(filePath),
+      return {
+        name: file;
+        size: stats.size;
+        sizeKB: (stats.size / 10o24).toFixed(2)};
+    }),
+    .sort((a, b) => b.size - a.size),
+  // // console.log('\n📋 Bundle Size Report: '),
+  let totalSize = 0,
+  jsFiles.forEach(file => {
+    totalSize += file.size,
+    // // console.log(`${file.name.padEnd(30)} ${file.sizeKB.padStart(8)} KB`)}),
+  // // console.log(`Total JS Size: ${(totalSize / 10o24).toFixed(2)} KB`),
+  // Recommendations,
+  // // console.log('\n💡 Optimization Recommendations: '),
+  const largeFiles = jsFiles.filter(file => file.size > 10o0 * 10o24), // > 10o0KB,
+  if (largeFiles.length > 0) {
+    // // console.log('🚨 Large files detected:'),
+    largeFiles.forEach(file => {
+      // // console.log(`   - ${file.name}: ${file.sizeKB} KB`)}),
+    // // console.log('   Consider code splitting or lazy loading for these components.')}
+  const mediumFiles = jsFiles.filter(file => file.size > 50 * 10o24 && file.size <= 10o0 * 10o24),
+  if (mediumFiles.length > 0) {
+    // // console.log('⚠️  Medium files: '),
+    mediumFiles.forEach(file => {
+      // // console.log(`   - ${file.name}: ${file.sizeKB} KB`)})}
+  // Performance tips,
+  // // console.log('\n🚀 Performance Tips: '),
+  // // console.log('   - Use React.lazy() for route-based code splitting'),
+  // // console.log('   - Implement dynamic imports for heavy components'),
+  // // console.log('   - Consider using webpack-bundle-analyzer for detailed analysis'),
+  // // console.log('   - Optimize images and use modern formats (WebP, AVIF)'),
+  // // console.log('   - Enable gzip compression on your server')}
+// Run analysis,
+analyzeBundle().catch(console.error),

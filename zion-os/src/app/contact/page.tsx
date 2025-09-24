@@ -1,1678 +1,363 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+'use client';
 import Link from 'next/link';
-export default function ContactPage() {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-
-
-
-import Link from 'next/link';
-export default function ContactPage() {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-import Link from 'next/link';
-export default function ContactPage() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+export default function ContactPage() {;
   return (
-    <div className="min-h-screen bg-white">
-
+    <div className='min-h-screen bg-white'>
       {/* Hero Section */}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
-          <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
-            Get in Touch;
-          </h1>;
-          <p className=&quot;text - xl md:text - 2xl text - indigo - 100 max - w-3xl mx - auto & quot;>;'
-            Ready to transform your business? Let's discuss how our AI - powered solutions can drive your success.;
-          </p>;
-        </div>;
-      </section>;
-=======
-
-
-
-
-import Link from 'next/link';
-export default function ContactPage() {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-
-
-<<<<<<< HEAD
-
-
-      {/* Contact Form & Info */}
-      <section className=&quot;py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
-          <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
-            {/* Contact Form */}
-
-
-
-
-            <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
-              <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
-              <form className=&quot;space - y-6 & quot;>;
-                <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 gap - 6&quot;>;
-                  <div>;
-                    <label html_for=&quot;first_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      First Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;first_name & quot;
-                      name=&quot;first_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your first name & quot;
-                    />;
-                  </div>;
-                  <div>;
-                    <label html_for=&quot;last_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      Last Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;last_name & quot;
-                      name=&quot;last_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your last name & quot;
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-                  <label html_for=&quot;email & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Email Address *;
-                  </label>;
-                  <input;
-                    type=&quot;email & quot;
-                    id=&quot;email & quot;
-                    name=&quot;email & quot;
-                    required;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your email address & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;company & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Company;
-                  </label>;
-                  <input;
-                    type=&quot;text & quot;
-                    id=&quot;company & quot;
-                    name=&quot;company & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your company name & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;phone & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Phone Number;
-                  </label>;
-                  <input;
-                    type=&quot;tel & quot;
-                    id=&quot;phone & quot;
-                    name=&quot;phone & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your phone number & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;service & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Service of Interest;
-                  </label>;
-                  <select;
-                    id=&quot;service & quot;
-                    name=&quot;service & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                  >;"
-                    <option value="&quot;>Select a service</option>;
-                    <option value=&quot;ai - automation & quot;>AI & Automation</option>;
-                    <option value=&quot;cybersecurity & quot;>Cybersecurity</option>;
-                    <option value=&quot;it - infrastructure & quot;>IT Infrastructure</option>;
-                    <option value=&quot;research - development & quot;>Research & Development</option>;
-                    <option value=&quot;quantum - computing & quot;>Quantum Computing</option>;
-                    <option value=&quot;other & quot;>Other</option>;
-                  </select>;
-                </div>;
-                <div>;"
-                  <label html_for=&quot;message" className="block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Message *;
-                  </label>;
-                  <textarea;
-                    id=&quot;message & quot;"
-                    name=&quot;message";
-
-
-
-
-
-
-                    rows={5}
-                    required;"
-                    className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Tell us about your project or inquiry...&quot;
-
-
-
-
-                  ></textarea>;
-                </div>;
-                <button;"
-                  type=&quot;submit";"
-                  className="w - full bg - blue - 600 text - white py - 3 px - 6 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
-                >;
-                  Send Message;
-                </button>;
-              </form>;
-            </div>;
-            {/* Contact Information */}"
-            <div className="space - y-8">;
-              <div>;"
-                <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">Contact Information</h2>;"
-                <p className="text - lg text - gray - 600 mb - 8">;'
-                  We're here to help you succeed. Reach out to us through any of the channels below.;
-                </p>;
-              </div>;"
-              <div className="space - y-6">;"
-                <div className="flex items - start space - x-4">;"
-                  <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - blue - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;"
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Office Address</h3>;"
-                    <p className="text - gray - 600">;
-                      Zion Tech Group < br />;
-                      123 Innovation Drive < br />;
-                      Tech Valley, CA 94000 < br />;
-                      United States;
-                    </p>;
-                  </div>;
-                </div>;"
-                <div className="flex items - start space - x-4">;"
-                  <div className="w - 12 h - 12 bg - green - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - green - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;"
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Contact Details</h3>;"
-                    <p className="text - gray - 600">;"
-                      <a href="tel:+13024640950" className="hover:text - blue - 600">+1 (302) 464 - 0950</Link><br />;"
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text - blue - 600">kleber@ziontechgroup.com</Link><br />;"
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text - blue - 600">info@ziontechgroup.com</Link>;
-                    </p>;
-                  </div>;
-                </div>;"
-                <div className="flex items - start space - x-4">;"
-                  <div className="w - 12 h - 12 bg - purple - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - purple - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
-                    </svg>;
-                  </div>;
-                  <div>;"
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Business Hours</h3>;"
-                    <p className="text - gray - 600">;
-                      Monday - Friday: 9:00 AM - 6:00 PM PST < br />;
-                      Saturday: 10:00 AM - 2:00 PM PST < br />;
-                      Sunday: Closed < br />;"
-                      <span className="text - sm text - gray - 500">24 / 7 Emergency Support Available</span>;
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-
-
-
-
-
-
-              {/* Social Media Links */}
-<<<<<<< HEAD
-=======
-                    rows={5}
-                    required;
-                    className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border-transparent & quot;
-                    placeholder=&quot;Tell us about your project or inquiry...&quot;              {/* Social Media Links */}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              <div>;
-                <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
-                <div className="flex space-x-4">;
-                  <a href="https://linkedin.com / company / ziontechgroup" className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center hover:bg - blue - 700 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M20.447 20.452h - 3.554v - 5.569c0 - 1.328-.027 - 3.037 - 1.852 - 3.037 - 1.853 0 - 2.136 1.445 - 2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637 - 1.85 3.37 - 1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c - 1.144 0 - 2.063-.926 - 2.063 - 2.065 0 - 1.138.92 - 2.063 2.063 - 2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>;
-                    </svg>;
-                  </Link>;
-                  <a href="https://twitter.com / ziontechgroup" className="w - 10 h - 10 bg - blue - 400 rounded - lg flex items - center justify - center hover:bg - blue - 500 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M23.953 4.57a10 10 0 01 - 2.825.775 4.958 4.958 0 002.163 - 2.723c-.951.555 - 2.005.959 - 3.127 1.184a4.92 4.92 0 00 - 8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01 - 2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01 - 2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01 - 6.102 2.105c-.39 0-.779-.023 - 1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998 - 7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>;
-                    </svg>;
-                  </Link>;
-<<<<<<< HEAD
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition - colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-=======
-              <div>;"
-                <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;"
-                <div className="flex space - x-4">;"
-                  <a href="https://linkedin.com / company / ziontechgroup" className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center hover:bg - blue - 700 transition - colors">;"
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path d=&quot;M20.447 20.452h - 3.554v - 5.569c0 - 1.328-.027 - 3.037 - 1.852 - 3.037 - 1.853 0 - 2.136 1.445 - 2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637 - 1.85 3.37 - 1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c - 1.144 0 - 2.063-.926 - 2.063 - 2.065 0 - 1.138.92 - 2.063 2.063 - 2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065 - 2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>;
-                    </svg>;
-                  </Link>;"
-                  <a href="https://twitter.com / ziontechgroup" className="w - 10 h - 10 bg - blue - 400 rounded - lg flex items - center justify - center hover:bg - blue - 500 transition - colors">;"
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path d=&quot;M23.953 4.57a10 10 0 01 - 2.825.775 4.958 4.958 0 002.163 - 2.723c-.951.555 - 2.005.959 - 3.127 1.184a4.92 4.92 0 00 - 8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01 - 2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01 - 2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01 - 6.102 2.105c-.39 0-.779-.023 - 1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998 - 7.496 13.998 - 13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>;
-                    </svg>;
-                  </Link>;"
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition - colors">;"
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12 - 12z"/>;
-=======
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return (
-    <div className="min-h-screen bg-white">
-
-      {/* Hero Section */}
-
-
-
-
-
-
-      <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
-          <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
-            Get in Touch;
-          </h1>;
-          <p className=&quot;text - xl md:text - 2xl text - indigo - 100 max - w-3xl mx - auto & quot;>;
-            Ready to transform your business? Let's discuss how our AI - powered solutions can drive your success.;
-          </p>;
-        </div>;
-      </section>;
-
-
-
-
-
-
-
-
-
-
-      {/* Contact Form & Info */}
-      <section className=&quot;py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
-          <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
-            {/* Contact Form */}
-
-
-
-
-
-
-
-
-
-
-            <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
-              <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
-              <form className=&quot;space - y-6 & quot;>;
-                <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 gap - 6&quot;>;
-                  <div>;
-                    <label html_for=&quot;first_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      First Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;first_name & quot;
-                      name=&quot;first_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your first name & quot;
-                    />;
-                  </div>;
-                  <div>;
-                    <label html_for=&quot;last_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      Last Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;last_name & quot;
-                      name=&quot;last_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your last name & quot;
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-                  <label html_for=&quot;email & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Email Address *;
-                  </label>;
-                  <input;
-                    type=&quot;email & quot;
-                    id=&quot;email & quot;
-                    name=&quot;email & quot;
-                    required;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your email address & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;company & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Company;
-                  </label>;
-                  <input;
-                    type=&quot;text & quot;
-                    id=&quot;company & quot;
-                    name=&quot;company & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your company name & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;phone & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Phone Number;
-                  </label>;
-                  <input;
-                    type=&quot;tel & quot;
-                    id=&quot;phone & quot;
-                    name=&quot;phone & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your phone number & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;service & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Service of Interest;
-                  </label>;
-                  <select;
-                    id=&quot;service & quot;
-                    name=&quot;service & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                  >;
-                    <option value="&quot;>Select a service</option>;
-                    <option value=&quot;ai - automation & quot;>AI & Automation</option>;
-                    <option value=&quot;cybersecurity & quot;>Cybersecurity</option>;
-                    <option value=&quot;it - infrastructure & quot;>IT Infrastructure</option>;
-                    <option value=&quot;research - development & quot;>Research & Development</option>;
-                    <option value=&quot;quantum - computing & quot;>Quantum Computing</option>;
-                    <option value=&quot;other & quot;>Other</option>;
-                  </select>;
-                </div>;
-                <div>;
-                  <label html_for=&quot;message" className="block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Message *;
-                  </label>;
-                  <textarea;
-                    id=&quot;message & quot;
-                    name=&quot;message";
-
-
-
-
-
-
-
-
-
-
-
-
-                    rows={5}
-                    required;
-                    className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Tell us about your project or inquiry...&quot;
-
-
-
-
-
-
-
-
-
-
-                  ></textarea>;
-                </div>;
-                <button;
-                  type=&quot;submit";
-                  className="w - full bg - blue - 600 text - white py - 3 px - 6 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
-                >;
-                  Send Message;
-                </button>;
-              </form>;
-            </div>;
-            {/* Contact Information */}
-            <div className="space - y-8">;
-              <div>;
-                <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">Contact Information</h2>;
-                <p className="text - lg text - gray - 600 mb - 8">;
-                  We're here to help you succeed. Reach out to us through any of the channels below.;
-                </p>;
-              </div>;
-              <div className="space - y-6">;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - blue - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Office Address</h3>;
-                    <p className="text - gray - 600">;
-                      Zion Tech Group < br />;
-                      123 Innovation Drive < br />;
-                      Tech Valley, CA 94000 < br />;
-                      United States;
-                    </p>;
-                  </div>;
-                </div>;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - green - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - green - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Contact Details</h3>;
-                    <p className="text - gray - 600">;
-                      <a href="tel:+13024640950" className="hover:text - blue - 600">+1 (302) 464 - 0950</Link><br />;
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text - blue - 600">kleber@ziontechgroup.com</Link><br />;
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text - blue - 600">info@ziontechgroup.com</Link>;
-                    </p>;
-                  </div>;
-                </div>;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - purple - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - purple - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Business Hours</h3>;
-                    <p className="text - gray - 600">;
-                      Monday - Friday: 9:00 AM - 6:00 PM PST < br />;
-                      Saturday: 10:00 AM - 2:00 PM PST < br />;
-                      Sunday: Closed < br />;
-                      <span className="text - sm text - gray - 500">24 / 7 Emergency Support Available</span>;
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-
-
-
-
-
-
-
-
-
-
-
-
-              {/* Social Media Links */}
-                    rows={5}
-                    required;
-                    className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border-transparent & quot;
-                    placeholder=&quot;Tell us about your project or inquiry...&quot;              {/* Social Media Links */}
-              <div>;
-                <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
-                <div className="flex space-x-4">;
-                  <a href="https://linkedin.com / company / ziontechgroup" className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center hover:bg - blue - 700 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M20.447 20.452h - 3.554v - 5.569c0 - 1.328-.027 - 3.037 - 1.852 - 3.037 - 1.853 0 - 2.136 1.445 - 2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637 - 1.85 3.37 - 1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c - 1.144 0 - 2.063-.926 - 2.063 - 2.065 0 - 1.138.92 - 2.063 2.063 - 2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>;
-                    </svg>;
-                  </Link>;
-                  <a href="https://twitter.com / ziontechgroup" className="w - 10 h - 10 bg - blue - 400 rounded - lg flex items - center justify - center hover:bg - blue - 500 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M23.953 4.57a10 10 0 01 - 2.825.775 4.958 4.958 0 002.163 - 2.723c-.951.555 - 2.005.959 - 3.127 1.184a4.92 4.92 0 00 - 8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01 - 2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01 - 2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01 - 6.102 2.105c-.39 0-.779-.023 - 1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998 - 7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>;
-                    </svg>;
-                  </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12-12z"/>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12-12z"/>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition - colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12 - 12z"/>;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition-colors">;
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; viewBox=&quot;0 0 24 24 & quot;>;
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12-12z"/>;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    </svg>;
-                  </Link>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import Link from 'next/link';
-export default function ContactPage() {
-<<<<<<< HEAD
-  return (;
-    <div className=&quot;min-h-screen bg-white&quot;>
-=======
-  return (
-    <div className="min-h-screen bg-white">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      {/* Hero Section */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import Link from 'next/link';
-export default function ContactPage() {
-  return (;
-    <div className=&quot;min-h-screen bg-white&quot;>
-import Link from 'next/link';
-export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">
-=======
-
-'
-import Link from 'next/link';
-export default function ContactPage() {}
-      {/* Hero Section */}"
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-            Get in Touch;
-          </h1>"
-          <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
+      <section className='bg-gradient-to-r from-indigo-6000 to-purple-7000 text-white py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8 text-center'>
+          <h1 className='text-4xl md: text-6xl font-bold mb-6'>Get in Touch</h1>
+          <p className='text-xl md: text-2xl text-indigo-1000 max-w-3xl mx-auto'>
+            Ready to transform your business? Let's discuss how our AI-powered : solutions can drive your success.;
           </p>
         </div>
-      </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      </section>;,
       {/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-      {/* Contact Form & Info */}"
-      <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}"
-            <div className="bg-gray-50 p-8 rounded-xl">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>"
-              <form className="space-y-6">"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>"
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name *
+      <section className='py-20'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8'>
+          <div className='grid grid-cols-1 lg: grid-cols-2 gap-12'>;,
+            {/* Contact Form */}
+            <div className='bg-gray-50 p-8 rounded-xl'>
+              <h2 className='text-2xl font-bold text-gray-9000 mb-6'>
+                Send us a Message;
+              </h2>
+              <form className='space-y-6' id='contact-form'>
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
+                  <div>
+                    <label
+                      htmlFor='firstName';
+                      className='block text-sm font-medium text-gray-7000 mb-2'>
+                      First Name *;
                     </label>
-                    <input"
-                      type="text""
-                      id="firstName""
-                      name="firstName"
-                      required"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="Enter your first name"
+                    <input
+                      type='text';
+                      id='firstName';
+                      name='firstName';
+                      required: className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                      placeholder='Enter your first name';
                     />
                   </div>
-                  <div>"
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name *
+                  <div>
+                    <label
+                      htmlFor='lastName';
+                      className='block text-sm font-medium text-gray-7000 mb-2'>
+                      Last Name *;
                     </label>
-                    <input"
-                      type="text""
-                      id="lastName""
-                      name="lastName"
-                      required"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                      placeholder="Enter your last name"
+                    <input
+                      type='text';
+                      id='lastName';
+                      name='lastName';
+                      required: className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                      placeholder='Enter your last name';
                     />
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
-                <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                  <label
+                    htmlFor='email';
+                    className='block text-sm font-medium text-gray-7000 mb-2'>
+                    Email Address *;
                   </label>
-                  <input"
-                    type="email""
-                    id="email""
-                    name="email"
-                    required"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                    placeholder="Enter your email address"
+                  <input
+                    type='email';
+                    id='email';
+                    name='email';
+                    required: className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                    placeholder='Enter your email address';
                   />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
-                <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor='company';
+                    className='block text-sm font-medium text-gray-7000 mb-2'>
                     Company;
                   </label>
-                  <input"
-                    type="text""
-                    id="company""
-                    name="company""
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                    placeholder="Enter your company name"
+                  <input
+                    type='text';
+                    id='company';
+                    name='company';
+                    className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                    placeholder='Enter your company name';
                   />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
-                <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor='phone';
+                    className='block text-sm font-medium text-gray-7000 mb-2'>
                     Phone Number;
                   </label>
-                  <input"
-                    type="tel""
-                    id="phone""
-                    name="phone""
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                    placeholder="Enter your phone number"
+                  <input
+                    type='tel';
+                    id='phone';
+                    name='phone';
+                    className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                    placeholder='Enter your phone number';
                   />
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
-                <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor='service';
+                    className='block text-sm font-medium text-gray-7000 mb-2'>
                     Service of Interest;
                   </label>
-                  <select"
-                    id="service""
-                    name="service""
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >"
-                    <option value="">Select a service</option>"
-                    <option value="ai-automation">AI & Automation</option>"
-                    <option value="cybersecurity">Cybersecurity</option>"
-                    <option value="it-infrastructure">IT Infrastructure</option>"
-                    <option value="research-development">Research & Development</option>"
-                    <option value="quantum-computing">Quantum Computing</option>"
-                    <option value="other">Other</option>
+                  <select
+                    id='service';
+                    name='service';
+                    className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent'>
+                    <option value=''>Select a service</option>
+                    <option value='ai-automation'>AI & Automation</option>
+                    <option value='cybersecurity'>Cybersecurity</option>
+                    <option value='it-infrastructure'>IT Infrastructure</option>
+                    <option value='research-development'>
+                      Research & Development;
+                    </option>
+                    <option value='quantum-computing'>Quantum Computing</option>
+                    <option value='other'>Other</option>
                   </select>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <div>
-=======
-                <div>"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                  <label
+                    htmlFor='message';
+                    className='block text-sm font-medium text-gray-7000 mb-2'>
+                    Message *;
                   </label>
-                  <textarea"
-                    id="message""
-                    name="message"
+                  <textarea
+                    id='message';
+                    name='message';,
                     rows={5}
-                    required"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                    placeholder="Tell us about your project or inquiry..."
-                  ></textarea>
+                    required: className='w-full px-4 py-3 border border-gray-3000 rounded-lg focus: ring-2 focus: ring-blue-5000 focus: border-transparent';
+                    placeholder='Tell us about your project or inquiry...'></textarea>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 <button
-                  type="submit"
-=======
-                <button"
-                  type="submit""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                >
+                  type='submit';
+                  className='w-full bg-blue-6000 text-white py-3 px-6 rounded-lg font-semibold hover: bg-blue-7000 transition-colors'>
                   Send Message;
                 </button>
               </form>
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </div>;,
             {/* Contact Information */}
-=======
-            {/* Contact Information */}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            <div className="space-y-8">
-              <div>"
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>"
-                <p className="text-lg text-gray-600 mb-8">'
-                  We're here to help you succeed. Reach out to us through any of the channels below.
+            <div className='space-y-8'>
+              <div>
+                <h2 className='text-2xl font-bold text-gray-9000 mb-6'>
+                  Contact Information;
+                </h2>
+                <p className='text-lg text-gray-6000 mb-8'>
+                  We're here to help you succeed. Reach out to us through any of: the channels below.;
                 </p>
-<<<<<<< HEAD
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
-              </div>"
-              <div className="space-y-6">"
-                <div className="flex items-start space-x-4">"
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
+              <div className='space-y-6'>
+                <div className='flex items-start space-x-4'>
+                  <div className='w-12 h-12 bg-blue-1000 rounded-lg flex items-center justify-center flex-shrink-0'>
+                    <svg
+                      className='w-6 h-6 text-blue-6000';
+                      fill='none';
+                      stroke='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path
+                        strokeLinecap='round';
+                        strokeLinejoin='round';,
+                        strokeWidth={2}
+                        d='M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 000-2-2H6a2 2 0 000-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z';
+                      />
                     </svg>
                   </div>
-                  <div>"
-                    <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>"
-                    <p className="text-gray-600">
-                      Zion Tech Group<br />
-                      123 Innovation Drive<br />
-                      Tech Valley, CA 94000<br />
+                  <div>
+                    <h3 className='font-semibold text-gray-9000 mb-1'>
+                      Office Address;
+                    </h3>
+                    <p className='text-gray-6000'>
+                      Zion Tech Group;
+                      <br />
+                      123 Innovation Drive;
+                      <br />
+                      Tech Valley, CA 940000;
+                      <br />
                       United States;
                     </p>
                   </div>
-<<<<<<< HEAD
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
-                </div>"
-                <div className="flex items-start space-x-4">"
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
+                <div className='flex items-start space-x-4'>
+                  <div className='w-12 h-12 bg-green-1000 rounded-lg flex items-center justify-center flex-shrink-0'>
+                    <svg
+                      className='w-6 h-6 text-green-6000';
+                      fill='none';
+                      stroke='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path
+                        strokeLinecap='round';
+                        strokeLinejoin='round';
+                        strokeWidth={2}
+                        d='M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 000-2-2H6a2 2 0 000-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z';
+                      />
                     </svg>
                   </div>
-                  <div>"
-                    <h3 className="font-semibold text-gray-900 mb-1">Contact Details</h3>"
-                    <p className="text-gray-600">"
-                      <a href="tel:+13024640950" className="hover:text-blue-600">+1 (302) 464-0950</Link><br />"
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</Link><br />"
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-600">info@ziontechgroup.com</Link>
-                    </p>
-                  </div>
-<<<<<<< HEAD
-                </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-=======
-                </div>"
-                <div className="flex items-start space-x-4">"
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>"
-                    <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>"
-                    <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM PST<br />
-                      Saturday: 10:00 AM - 2:00 PM PST<br />
-                      Sunday: Closed<br />"
-                      <span className="text-sm text-gray-500">24/7 Emergency Support Available</span>
+                  <div>
+                    <h3 className='font-semibold text-gray-9000 mb-1'>
+                      Contact Details;
+                    </h3>
+                    <p className='text-gray-6000'>
+                      <a
+                        href='tel: +13024640950';
+                        className='hover: text-blue-6000'>
+                        +1 (302) 464-0950;
+                      </a>
+                      <br />
+                      <a
+                        href='mailto: kleber@ziontechgroup.com';
+                        className='hover: text-blue-6000'>
+                        kleber@ziontechgroup.com;
+                      </a>
+                      <br />
+                      <a
+                        href='mailto: info@ziontechgroup.com';
+                        className='hover: text-blue-6000'>
+                        info@ziontechgroup.com;
+                      </a>
                     </p>
                   </div>
                 </div>
-              </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                <div className='flex items-start space-x-4'>
+                  <div className='w-12 h-12 bg-purple-1000 rounded-lg flex items-center justify-center flex-shrink-0'>
+                    <svg
+                      className='w-6 h-6 text-purple-6000';
+                      fill='none';
+                      stroke='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path
+                        strokeLinecap='round';
+                        strokeLinejoin='round';,
+                        strokeWidth={2}
+                        d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z';
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className='font-semibold text-gray-9000 mb-1'>
+                      Business Hours;
+                    </h3>
+                    <p className='text-gray-6000'>
+                      Monday - Friday: 9:000 AM - 6: 000 PM PST;
+                      <br />
+                      Saturday: 10:000 AM - 2: 000 PM PST;
+                      <br />
+                      Sunday: Closed;
+                      <br />
+                      <span className='text-sm text-gray-5000'>
+                        24/7 Emergency Support Available;
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>;,
               {/* Social Media Links */}
-              <div>"
-                <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>"
-                <div className="flex space-x-4">"
-                  <a href="https://linkedin.com/company/ziontechgroup" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">"
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">"
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              <div>
+                <h3 className='font-semibold text-gray-9000 mb-4'>Follow Us</h3>
+                <div className='flex space-x-4'>
+                  <a
+                    href='https: //linkedin.com/company/ziontechgroup';
+                    className='w-10 h-10 bg-blue-6000 rounded-lg flex items-center justify-center hover: bg-blue-7000 transition-colors'>
+                    <svg
+                      className='w-5 h-5 text-white';
+                      fill='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.0003z' />
                     </svg>
-                  </Link>"
-                  <a href="https://twitter.com/ziontechgroup" className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">"
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">"
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </a>
+                  <a
+                    href='https://twitter.com/ziontechgroup';
+                    className='w-10 h-10 bg-blue-4000 rounded-lg flex items-center justify-center hover: bg-blue-5000 transition-colors'>
+                    <svg
+                      className='w-5 h-5 text-white';
+                      fill='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path d='M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 0002.163-2.723c-.951.555-2.0005.959-3.127 1.184a4.92 4.92 0 000-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 000-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 0003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 0004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 00024 4.59z' />
                     </svg>
-                  </Link>"
-                  <a href="https://github.com/ziontechgroup" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors">"
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">"
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </a>
+                  <a
+                    href='https://github.com/ziontechgroup';
+                    className='w-10 h-10 bg-gray-8000 rounded-lg flex items-center justify-center hover: bg-gray-9000 transition-colors'>
+                    <svg
+                      className='w-5 h-5 text-white';
+                      fill='currentColor';
+                      viewBox='0 0 24 24'>
+                      <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.0008-.322 3.301 1.23.957-.266 1.983-.399 3.0003-.404 1.02.0005 2.047.138 3.0006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      </section>;,
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+      <section className='py-20 bg-gray-50'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl md: text-4xl font-bold text-gray-9000 mb-4'>
               Frequently Asked Questions;
-            </h2>;
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                How quickly can you start a project?;
-              </h3>;
-              <p className="text-gray-600">;
-                Most projects can begin within 1-2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
+            </h2>
+            <p className='text-xl text-gray-6000 max-w-2xl mx-auto'>
+              Get quick answers to common questions about our services and: processes;
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
+            <div className='bg-white p-6 rounded-lg shadow-sm'>
+              <h3 className='text-lg font-semibold text-gray-9000 mb-3'>
+                How quickly can you start a project? ;
+              </h3>
+              <p className='text-gray-6000'>
+                Most projects can begin within 1-2 weeks of initial : consultation. We'll work with your timeline to ensure smooth: project initiation.;
+              </p>
+            </div>
+            <div className='bg-white p-6 rounded-lg shadow-sm'>
+              <h3 className='text-lg font-semibold text-gray-9000 mb-3'>
                 Do you offer ongoing support?;
-              </h3>;
-              <p className="text-gray-600">;
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What industries do you serve?;
-              </h3>;
-              <p className="text-gray-600">;
-                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry-agnostic.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Can you work with existing systems?;
-              </h3>;
-              <p className="text-gray-600">;
-=======
-=======
-
-
-
-
-
-
-
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      {/* FAQ Section */}
-      <section className="py - 20 bg - gray-50">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="text - center mb-16">;
-            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-              Frequently Asked Questions;
-            </h2>;
-            <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                How quickly can you start a project?;
-              </h3>;
-              <p className="text - gray-600">;
-                Most projects can begin within 1 - 2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                Do you offer ongoing support?;
-              </h3>;
-              <p className="text - gray-600">;
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                What industries do you serve?;
-              </h3>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {/* FAQ Section */}
-      <section className="py - 20 bg - gray-50">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="text - center mb-16">;
-            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb-4">;
-              Frequently Asked Questions;
-            </h2>;
-            <p className="text - xl text - gray - 600 max - w-2xl mx-auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                How quickly can you start a project?;
-              </h3>;
-              <p className="text - gray-600">;
-                Most projects can begin within 1 - 2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                Do you offer ongoing support?;
-              </h3>;
-              <p className="text - gray-600">;
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                What industries do you serve?;
-              </h3>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-              <p className="text - gray-600">;
-=======
-              <p className="text - gray - 600">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-              <p className="text - gray-600">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry - agnostic.;
-              </p>;
-            </div>;
-            <div className="bg - white p - 6 rounded - lg shadow-sm">;
-              <h3 className="text - lg font - semibold text - gray - 900 mb-3">;
-                Can you work with existing systems?;
-              </h3>;
-<<<<<<< HEAD
-              <p className="text - gray-600">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-      {/* FAQ Section */}"
-      <section className="py - 20 bg - gray - 50">;"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="text - center mb - 16">;"
-            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;
-              Frequently Asked Questions;
-            </h2>;"
-            <p className="text - xl text - gray - 600 max - w-2xl mx - auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;"
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;"
-            <div className="bg - white p - 6 rounded - lg shadow - sm">;"
-              <h3 className="text - lg font - semibold text - gray - 900 mb - 3">;
-                How quickly can you start a project?;
-              </h3>;"
-              <p className="text - gray - 600">;'
-                Most projects can begin within 1 - 2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;"
-            <div className="bg - white p - 6 rounded - lg shadow - sm">;"
-              <h3 className="text - lg font - semibold text - gray - 900 mb - 3">;
-                Do you offer ongoing support?;
-              </h3>;"
-              <p className="text - gray - 600">;
-<<<<<<< HEAD
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;"
-            <div className="bg - white p - 6 rounded - lg shadow - sm">;"
-              <h3 className="text - lg font - semibold text - gray - 900 mb - 3">;
-                What industries do you serve?;
-              </h3>;"
-              <p className="text - gray - 600">;
-                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry - agnostic.;
-              </p>;
-            </div>;"
-            <div className="bg - white p - 6 rounded - lg shadow - sm">;"
-              <h3 className="text - lg font - semibold text - gray - 900 mb - 3">;
-                Can you work with existing systems?;
-              </h3>;"
-              <p className="text - gray - 600">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-              <p className="text - gray - 600">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Frequently Asked Questions;
-            </h2>;
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
-              Get quick answers to common questions about our services and processes;
-            </p>;
-          </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                How quickly can you start a project?;
-              </h3>;
-              <p className="text-gray-600">;
-                Most projects can begin within 1-2 weeks of initial consultation. We'll work with your timeline to ensure smooth project initiation.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Do you offer ongoing support?;
-              </h3>;
-              <p className="text-gray-600">;
-                Yes, we provide comprehensive ongoing support, monitoring, and optimization services to ensure your solutions continue to deliver value.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                What industries do you serve?;
-              </h3>;
-              <p className="text-gray-600">;
-                We serve clients across all industries including healthcare, finance, manufacturing, retail, and technology. Our solutions are industry-agnostic.;
-              </p>;
-            </div>;
-            <div className="bg-white p-6 rounded-lg shadow-sm">;
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">;
-                Can you work with existing systems?;
-              </h3>;
-              <p className="text-gray-600">;
-              <p className="text - gray-600">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                Absolutely! We specialize in integrating with existing infrastructure and can work with your current systems to enhance and optimize them.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-<<<<<<< HEAD
+              </h3>
+              <p className='text-gray-6000'>;,
+                Yes, we provide comprehensive ongoing support, monitoring, and: optimization services to ensure your solutions continue to: deliver value.;
+              </p>
+            </div>
+            <div className='bg-white p-6 rounded-lg shadow-sm'>
+              <h3 className='text-lg font-semibold text-gray-9000 mb-3'>
+                What industries do you serve? ;
+              </h3>
+              <p className='text-gray-6000'>;,
+                We serve clients across all industries including healthcare : finance, manufacturing, retail, and technology. Our solutions: are industry-agnostic.;
+              </p>
+            </div>
+            <div className='bg-white p-6 rounded-lg shadow-sm'>
+              <h3 className='text-lg font-semibold text-gray-9000 mb-3'>
+                Can you work with existing systems? ;
+              </h3>
+              <p className='text-gray-6000'>
+                Absolutely! We specialize in integrating with existing : infrastructure and can work with your current systems to enhance: and optimize them.;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>;,
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
+      <section className='py-20 bg-blue-6000 text-white'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8 text-center'>
+          <h2 className='text-3xl md: text-4xl font-bold mb-6'>
+            Ready to Get Started? ;
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't wait to transform your business. Contact us today to schedule a consultation and discover how we can help you achieve your goals.
+          <p className='text-xl text-blue-1000 mb-8 max-w-2xl mx-auto'>
+            Don't wait to transform your business. Contact us today to schedule : a consultation and discover how we can help you achieve your goals.;
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact-form" className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Schedule a Call
-            </Link>
-            <Link href="/solutions" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Explore Solutions
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-=======
-<section className="py - 20 bg - blue - 600 text - white">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
-=======
-      {/* CTA Section */}"
-<section className="py - 20 bg - blue - 600 text - white">;"
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-=======
-<section className="py - 20 bg - blue - 600 text-white">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-            Ready to Get Started?;
-<<<<<<< HEAD
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx-auto">;
-            Don't wait to transform your business. Contact us today to schedule a consultation and discover how we can help you achieve your goals.;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
-            <a href="#contact - form" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition-colors">;
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+            <a
+              href='#contact-form';
+              className='bg-white text-blue-6000 px-8 py-3 rounded-lg text-lg font-semibold hover: bg-gray-1000 transition-colors'>
               Schedule a Call;
-            </Link>;
-<<<<<<< HEAD
-=======
-          </h2>;"
-          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;'
-            Don't wait to transform your business. Contact us today to schedule a consultation and discover how we can help you achieve your goals.;
-          </p>;"
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
-            <a href="#contact - form" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition - colors">;
-              Schedule a Call;
-            </Link>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-=======
-<section className="py - 20 bg - blue - 600 text-white">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
-=======
-<section className="py - 20 bg - blue - 600 text - white">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-<section className="py - 20 bg - blue - 600 text-white">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text-center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            Ready to Get Started?;
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx-auto">;
-            Don't wait to transform your business. Contact us today to schedule a consultation and discover how we can help you achieve your goals.;
-          </p>;
-          <div className="flex flex - col sm:flex - row gap - 4 justify-center">;
-            <a href="#contact - form" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition-colors">;
-              Schedule a Call;
-            </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition-colors">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </a>
+            <a
+              href='/solutions';
+              className='border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover: bg-white hover: text-blue-6000 transition-colors'>
               Explore Solutions;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </div>);
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't wait to transform your business. Contact us today to schedule a consultation and discover how we can help you achieve your goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact-form" className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Schedule a Call
-            </Link>
-            <Link href="/solutions" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Explore Solutions
-            </Link>
+            </a>
           </div>
         </div>
-      </section>
-    </div>
-  )
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-
-import Link from 'next/link';
-export default function ContactPage() {
-
-  return (
-    <div className="min-h-screen bg-white">"
-</div>
-      <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
-</section>
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
-          <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
-</h1>
-          </h1>;
-          <p className=&quot;text - xl md:text - 2xl text - indigo - 100 max - w-3xl mx - auto & quot;>;
-</p>
-          </p>;
-        </div>;
-      </section>;
-      <section className=&quot;py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
-          <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
-            <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
-              <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
-              <form className=&quot;space - y-6 & quot;>;
-</form>
-                <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 gap - 6&quot;>;
-                  <div>;
-                    <label html_for=&quot;first_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-</label>
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;first_name & quot;
-                      name=&quot;first_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your first name & quot;
-                    />;
-</input>
-                    <label html_for=&quot;last_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      id=&quot;last_name & quot;
-                      name=&quot;last_name & quot;
-                      placeholder=&quot;Enter your last name & quot;
-                  <label html_for=&quot;email & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    type=&quot;email & quot;
-                    id=&quot;email & quot;
-                    name=&quot;email & quot;
-                    placeholder=&quot;Enter your email address & quot;
-                  <label html_for=&quot;company & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    id=&quot;company & quot;
-                    name=&quot;company & quot;
-                    placeholder=&quot;Enter your company name & quot;
-                  <label html_for=&quot;phone & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    type=&quot;tel & quot;
-                    id=&quot;phone & quot;
-                    name=&quot;phone & quot;
-                    placeholder=&quot;Enter your phone number & quot;
-                  <label html_for=&quot;service & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                  <select;
-                    id=&quot;service & quot;
-                    name=&quot;service & quot;
-                  >;
-</select>"
-                    <option value="&quot;>Select a service</option>;"
-                    <option value=&quot;ai - automation & quot;>AI & Automation</option>;
-                    <option value=&quot;cybersecurity & quot;>Cybersecurity</option>;
-                    <option value=&quot;it - infrastructure & quot;>IT Infrastructure</option>;
-                    <option value=&quot;research - development & quot;>Research & Development</option>;
-                    <option value=&quot;quantum - computing & quot;>Quantum Computing</option>;
-                    <option value=&quot;other & quot;>Other</option>;
-                  </select>;
-</div>"
-                  <label html_for=&quot;message" className="block text - sm font - medium text - gray - 700 mb - 2&quot;>;"
-                  <textarea;
-                    id=&quot;message & quot;"
-                    name=&quot;message";"
-                    rows={5}
-                    required;"
-                    className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;"
-                    placeholder=&quot;Tell us about your project or inquiry...&quot;
-
-
-                  ></textarea>;
-                <button;"
-                  type=&quot;submit";""
-                  className="w - full bg - blue - 600 text - white py - 3 px - 6 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";"
-</button>
-                </button>;
-              </form>;
-            </div>;"
-            <div className="space - y-8">;"
-                <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">Contact Information</h2>;""
-                <p className="text - lg text - gray - 600 mb - 8">;"
-              <div className="space - y-6">;"
-                <div className="flex items - start space - x-4">;"
-                  <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - blue - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-</svg>"
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;"
-</path>
-                    </svg>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Office Address</h3>;""
-                    <p className="text - gray - 600">;"
-                      Zion Tech Group < br />;
-                      123 Innovation Drive < br />;
-                      Tech Valley, CA 94000 < br />;
-                      United States;
-                  <div className="w - 12 h - 12 bg - green - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - green - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Contact Details</h3>;""
-</p>)"
-                      <a href="tel:+13024640950" className="hover:text - blue - 600">+1 (302) 464 - 0950<br />;"
-</a>"
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text - blue - 600">kleber@ziontechgroup.com<br />;"
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text - blue - 600">info@ziontechgroup.com;"
-</a>
-                  <div className="w - 12 h - 12 bg - purple - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;"
-                    <svg className="w - 6 h - 6 text - purple - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;"
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Business Hours</h3>;""
-                      Monday - Friday: 9:00 AM - 6:00 PM PST < br />;,
-  Saturday: 10: 00 AM - 2:00 PM PST < br />;,
-  Sunday: Closed < br />;"
-                      <span className="text - sm text - gray - 500">24 / 7 Emergency Support Available</span>;"
-                <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;""
-                <div className="flex space - x-4">;"
-                  <a href="https://linkedin.com / company / ziontechgroup" className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center hover:bg - blue - 700 transition - colors">;"
-                    <svg className="w - 5 h - 5 text - white & quot; fill=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;"
-                      <path d=&quot;M20.447 20.452h - 3.554v - 5.569c0 - 1.328-.027 - 3.037 - 1.852 - 3.037 - 1.853 0 - 2.136 1.445 - 2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637 - 1.85 3.37 - 1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c - 1.144 0 - 2.063-.926 - 2.063 - 2.065 0 - 1.138.92 - 2.063 2.063 - 2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065 - 2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>;"
-                  ;"
-                  <a href="https://twitter.com / ziontechgroup" className="w - 10 h - 10 bg - blue - 400 rounded - lg flex items - center justify - center hover:bg - blue - 500 transition - colors">;"
-                      <path d=&quot;M23.953 4.57a10 10 0 01 - 2.825.775 4.958 4.958 0 002.163 - 2.723c-.951.555 - 2.005.959 - 3.127 1.184a4.92 4.92 0 00 - 8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01 - 2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01 - 2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01 - 6.102 2.105c-.39 0-.779-.023 - 1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998 - 7.496 13.998 - 13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>;"
-                  <a href="https://github.com / ziontechgroup" className="w - 10 h - 10 bg - gray - 800 rounded - lg flex items - center justify - center hover:bg - gray - 900 transition - colors">;"
-                      <path d=&quot;M12 0c - 6.626 0 - 12 5.373 - 12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v - 2.234c - 3.338.726 - 4.033 - 1.416 - 4.033 - 1.416-.546 - 1.387 - 1.333 - 1.756 - 1.333 - 1.756 - 1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418 - 1.305.762 - 1.604 - 2.665-.305 - 5.467 - 1.334 - 5.467 - 5.931 0 - 1.311.469 - 2.381 1.236 - 3.221-.124-.303-.535 - 1.524.117 - 3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291 - 1.552 3.297 - 1.23 3.297 - 1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609 - 2.807 5.624 - 5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765 - 1.589 8.199 - 6.086 8.199 - 11.386 0 - 6.627 - 5.373 - 12 - 12 - 12z"/>;"
-                  ;
-    <div className=&quot;min-h-screen bg-white&quot;>
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">"
-</section>"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">"
-          </h1>"
-          <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">"
-      <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
-            <div className="bg-gray-50 p-8 rounded-xl">"
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>""
-              <form className="space-y-6">"
-</form>"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">"
-                    <input;"
-                      type="text"""
-                      id="firstName"""
-                      name="firstName""
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-                      placeholder="Enter your first name""
-                    />
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">"
-                      id="lastName"""
-                      name="lastName""
-                      placeholder="Enter your last name""
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"
-                    type="email"""
-                    id="email"""
-                    name="email""
-                    placeholder="Enter your email address""
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"
-                    id="company"""
-                    name="company"""
-                    placeholder="Enter your company name""
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">"
-                    type="tel"""
-                    id="phone"""
-                    name="phone"""
-                    placeholder="Enter your phone number""
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">"
-                  <select;"
-                    id="service"""
-                    name="service"""
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                  >
-                    <option value="">Select a service</option>""
-                    <option value="ai-automation">AI & Automation</option>""
-                    <option value="cybersecurity">Cybersecurity</option>""
-                    <option value="it-infrastructure">IT Infrastructure</option>""
-                    <option value="research-development">Research & Development</option>""
-                    <option value="quantum-computing">Quantum Computing</option>""
-                    <option value="other">Other</option>"
-                  </select>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"
-                  <textarea;"
-                    id="message"""
-                    name="message""
-                    placeholder="Tell us about your project or inquiry...""
-                  ></textarea>
-                  type="submit"""
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors""
-            <div className="space-y-8">"
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>""
-                <p className="text-lg text-gray-600 mb-8">"
-              <div className="space-y-6">"
-                <div className="flex items-start space-x-4">"
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />"
-                    </svg>
-                    <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>""
-                    <p className="text-gray-600">"
-                      Zion Tech Group<br />
-</br>
-                      123 Innovation Drive<br />
-                      Tech Valley, CA 94000<br />
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                    <h3 className="font-semibold text-gray-900 mb-1">Contact Details</h3>""
-</p>"
-                      <a href="tel:+13024640950" className="hover:text-blue-600">+1 (302) 464-0950<br />"
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com<br />"
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-600">info@ziontechgroup.com"
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />"
-                    <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>""
-                      Monday - Friday: 9:00 AM - 6:00 PM PST<br />
-                      Saturday: 10:00 AM - 2:00 PM PST<br />
-                      Sunday: Closed<br />
-</br>"
-                      <span className="text-sm text-gray-500">24/7 Emergency Support Available</span>"
-                <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>""
-                <div className="flex space-x-4">"
-                  <a href="https://linkedin.com/company/ziontechgroup" className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors">"
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">"
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>"
-                  "
-                  <a href="https://twitter.com/ziontechgroup" className="w-10 h-10 bg-blue-400 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors">"
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>"
-                  <a href="https://github.com/ziontechgroup" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-900 transition-colors">"
-                      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>"
-                  
-      <section className="py - 20 bg - gray - 50">;"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="text - center mb - 16">;"
-            <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 4">;"
-</h2>
-            </h2>;"
-            <p className="text - xl text - gray - 600 max - w-2xl mx - auto">;"
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;"
-            <div className="bg - white p - 6 rounded - lg shadow - sm">;"
-              <h3 className="text - lg font - semibold text - gray - 900 mb - 3">;"
-</h3>
-              </h3>;"
-      </section>;"
-<section className="py - 20 bg - blue - 600 text - white">;"
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;"
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;"
-          <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;"
-          </p>;"
-          <div className="flex flex - col sm:flex - row gap - 4 justify - center">;"
-            <a href="#contact - form" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - gray - 100 transition - colors">;"
-            <Link href="/solutions" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg text - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;"
-
-    </div>);"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      </section>;,
+    </div>)}
+;
