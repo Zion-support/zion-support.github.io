@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -9,74 +9,58 @@ function Contact() {
     company: '',
     message: '',
     service: ''
-  })
-  const [formErrors, setFormErrors] = useState({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitSuccess, setSubmitSuccess] = useState(false)
+  });
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const validateForm = () => {
-    const errors = {}
-    
+    const errors = {};
     if (!formData.name.trim()) {
-      errors.name = 'Name is required'
+      errors.name = 'Name is required';
     }
-    
     if (!formData.email.trim()) {
-      errors.email = 'Email is required'
+      errors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Please enter a valid email address'
+      errors.email = 'Please enter a valid email address';
     }
-    
     if (!formData.message.trim()) {
-      errors.message = 'Message is required'
+      errors.message = 'Message is required';
     }
-    
-    setFormErrors(errors)
-    return Object.keys(errors).length === 0
-  }
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value
-    })
-    
-    // Clear error when user starts typing
+    });
     if (formErrors[name]) {
       setFormErrors({
         ...formErrors,
         [name]: ''
-      })
+      });
     }
-  }
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    
+    e.preventDefault();
     if (!validateForm()) {
-      return
+      return;
     }
-    
-    setIsSubmitting(true)
-    
+    setIsSubmitting(true);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // Form submitted successfully
-      setSubmitSuccess(true)
-      setFormData({ name: '', email: '', company: '', message: '', service: '' })
-      setFormErrors({})
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitSuccess(false), 5000)
-    } catch (error) {
-      // Swallow error in demo form
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setSubmitSuccess(true);
+      setFormData({ name: '', email: '', company: '', message: '', service: '' });
+      setFormErrors({});
+      setTimeout(() => setSubmitSuccess(false), 5000);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -85,8 +69,6 @@ function Contact() {
         <meta name="description" content="Get in touch with Zion Tech Group for your IT and AI service needs. We're here to help transform your business." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
-      {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -100,25 +82,17 @@ function Contact() {
           </div>
         </div>
       </nav>
-
       <main className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Contact <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Us</span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> 8db9e4c4e068 (chore: fix page lint issues, scope ESLint and TS to pages, and validate Next.js production build)
-              Ready to transform your business with cutting-edge technology? Let&apos;s discuss your project and how we can help you achieve your goals.
+              Ready to transform your business with cutting-edge technology? Let's discuss your project and how we can help you achieve your goals.
             </p>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -132,12 +106,10 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
-                        formErrors.name ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
-                      }`}
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${formErrors['name'] ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'}`}
                       placeholder="Your full name"
                     />
-                    {formErrors.name && <p className="text-red-400 text-sm mt-1">{formErrors.name}</p>}
+                    {formErrors['name'] && <p className="text-red-400 text-sm mt-1">{formErrors['name']}</p>}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-white font-semibold mb-2">Email *</label>
@@ -148,15 +120,12 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
-                        formErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
-                      }`}
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${formErrors['email'] ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'}`}
                       placeholder="your.email@company.com"
                     />
-                    {formErrors.email && <p className="text-red-400 text-sm mt-1">{formErrors.email}</p>}
+                    {formErrors['email'] && <p className="text-red-400 text-sm mt-1">{formErrors['email']}</p>}
                   </div>
                 </div>
-                
                 <div>
                   <label htmlFor="company" className="block text-white font-semibold mb-2">Company</label>
                   <input
@@ -169,7 +138,6 @@ function Contact() {
                     placeholder="Your company name"
                   />
                 </div>
-
                 <div>
                   <label htmlFor="service" className="block text-white font-semibold mb-2">Service Interest</label>
                   <select
@@ -188,7 +156,6 @@ function Contact() {
                     <option value="other">Other</option>
                   </select>
                 </div>
-
                 <div>
                   <label htmlFor="message" className="block text-white font-semibold mb-2">Message *</label>
                   <textarea
@@ -198,35 +165,25 @@ function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
-                      formErrors.message ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'
-                    }`}
+                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${formErrors['message'] ? 'border-red-500 focus:ring-red-500' : 'border-white/20 focus:ring-purple-500'}`}
                     placeholder="Tell us about your project and how we can help..."
                   />
-                  {formErrors.message && <p className="text-red-400 text-sm mt-1">{formErrors.message}</p>}
+                  {formErrors['message'] && <p className="text-red-400 text-sm mt-1">{formErrors['message']}</p>}
                 </div>
-
                 {submitSuccess && (
                   <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
-                    Thank you for your message! We&apos;ll get back to you soon.
+                    Thank you for your message! We'll get back to you soon.
                   </div>
                 )}
-                
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-4 rounded-lg font-semibold transition-all transform ${
-                    isSubmitting
-                      ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
-                      : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 hover:scale-105'
-                  }`}
+                  className={`w-full py-4 rounded-lg font-semibold transition-all transform ${isSubmitting ? 'bg-gray-600 text-gray-300 cursor-not-allowed' : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 hover:scale-105'}`}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
-
-            {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -261,7 +218,6 @@ function Contact() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -287,8 +243,6 @@ function Contact() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
       <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-400">
@@ -303,7 +257,7 @@ function Contact() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

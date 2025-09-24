@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description:
@@ -12,13 +11,20 @@ export const metadata = {
     'Consulting',
     'Digital Transformation',
     'Automation',
-    'Machine Learning'],
+    'Machine Learning'
+  ],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  formatDetection: { email: false, address: false, telephone: false },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
   metadataBase: new URL('https://zion.app'),
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/'
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -26,13 +32,15 @@ export const metadata = {
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    siteName: 'Zion Tech Group'},
+    siteName: 'Zion Tech Group'
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    creator: '@ziontech'},
+    creator: '@ziontech'
+  },
   robots: {
     index: true,
     follow: true,
@@ -41,7 +49,10 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1}}};
+      'max-snippet': -1
+    }
+  }
+} as const;
 
 import PerformanceMetrics from './components/PerformanceMetrics';
 import ROICalculator from './components/ROICalculator';
@@ -59,10 +70,10 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Transform your business with cutting-edge AI, cloud infrastructure, cybersecurity solutions, and autonomous systems that drive unprecedented growth and efficiency.
+            Transform your business with cutting-edge AI, cloud infrastructure, cybersecurity solutions, and autonomous
+            systems that drive unprecedented growth and efficiency.
           </p>
         </div>
-
         {/* Features Grid */}
         <section className="grid md:grid-cols-2 gap-8 mb-16" aria-labelledby="features-heading">
           <h2 id="features-heading" className="sr-only">
@@ -77,12 +88,9 @@ export default function HomePage() {
             <ROICalculator />
           </article>
         </section>
-
         {/* Services Section */}
         <section className="text-center" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">
-            Our Services
-          </h2>
+          <h2 id="services-heading" className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Our Services</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <article className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">AI Solutions</h3>
