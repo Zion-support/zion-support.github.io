@@ -5950,7 +5950,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"critters@npm:0.0.25":
+"critters@npm:^0.0.25":
   version: 0.0.25
   resolution: "critters@npm:0.0.25"
   dependencies:
@@ -10761,7 +10761,7 @@ __metadata:
     class-variance-authority: "npm:^0.7.0"
     clsx: "npm:^2.1.0"
     cmdk: "npm:^0.2.1"
-    critters: "npm:0.0.25"
+    critters: "npm:^0.0.25"
     cypress: "npm:^12.17.2"
     date-fns: "npm:^3.3.1"
     embla-carousel-react: "npm:^8.0.0-rc19"
