@@ -351,3 +351,5 @@
 2025-09-24 18:08:02 - Resolving conflicts in out/404.html for branch cursor/check-fix-push-and-merge-to-main-0601
 2025-09-24 18:08:02 - Resolving conflicts in out/404/index.html for branch cursor/check-fix-push-and-merge-to-main-0601
 2025-09-24 18:08:02 - Resolving conflicts in tsconfig.tsbuildinfo for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:06 - Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-196b
+2025-09-24 18:08:06 - Resolving conflicts in package.json for branch cursor/check-fix-push-and-merge-to-main-196b
