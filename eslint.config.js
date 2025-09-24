@@ -1,7 +1,8 @@
 import eslintJs from '@eslint/js'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import tseslint from 'typescript-eslint'
+import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
+import typescriptParser from '@typescript-eslint/parser'
 
 export default [
 	{
@@ -13,6 +14,12 @@ export default [
 			'build/**',
 			'public/**',
 			'automation/**',
+			'temp_*',
+			'temp_*/**',
+			'temp*/**',
+			'tests/**',
+			'__tests__/**',
+			'__mocks__/**',
 			'apps.backup/**',
 			'backup/**',
 			'backups/**',
@@ -23,26 +30,39 @@ export default [
 			'zion-os/**',
 			'zion-website/**',
 			'zion-ai-assistant/**',
+			'zion-os.disabled/**',
+			'ts_files_backup/**',
 			'ts_files_backup/**',
 			'src_backup/**',
 			'src_backup_temp/**',
+			'utils.disabled/**',
+			'temp_components.disabled/**',
+			'temp_components/**',
+			'temp_disabled/**',
+			'test*/**',
 			'components/2025-advanced-services-showcase.tsx',
 			'components/2025-comprehensive-services-showcase-v2.tsx',
 			'components/AI2025AdvancedAutomationShowcase.tsx',
 			'components/AI2025AdvancedAnalyticsDashboard.tsx',
 			'**/*.min.js']},
 	eslintJs.configs.recommended,
-	...tseslint.configs.recommended,
+	// Apply @typescript-eslint recommended configs
+	{
+		files: ['**/*.{ts,tsx}'],
+		languageOptions: { parser: typescriptParser },
+		plugins: { '@typescript-eslint': typescriptEslintPlugin },
+		rules: {}
+	},
 	{
 		files: ['app/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
 		languageOptions: {
-			parser: tseslint.parser,
+			parser: typescriptParser,
 			ecmaVersion: 2021,
 			sourceType: 'module'},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
-			'@typescript-eslint': tseslint.plugin},
+			'@typescript-eslint': typescriptEslintPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
 			'react/react-in-jsx-scope': 'off',

@@ -1,5 +1,5 @@
 import React from 'react';
-export const services = [] as const: export interface Service {;
+export const services = [] as const: export interface Service {
   id: string: name: string: category:;
     | 'AI Services';
     | 'IT Services';
@@ -10,13 +10,13 @@ export const services = [] as const: export interface Service {;
     | 'Cloud & DevOps';
     | 'Data & Analytics';
   description: string: features: string[];
-  pricing: {;
+  pricing: {;,
     starter: string: professional: string: enterprise: string: custom?: string};
   technologyStack: string[];
   benefits: string[];
   useCases: string[];
   status: 'active' | 'beta' | 'coming-soon';
-  priority: number: demoUrl?: string: documentationUrl?: string: contactInfo: {;
+  priority: number: demoUrl?: string: documentationUrl?: string: contactInfo: {;,
     email: string: phone: string: address: string};
 }
 ;
@@ -26,10 +26,10 @@ export const services: Service[] = [;
     id: 'ai-code-assistant';
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
-    description:;
+    description:;,
       'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.';
     features: ['Real-time code completion and suggestions';
-      'Automated code review and optimization';
+      'Automated code review and optimization';,
       'Multi-language support (Python, JavaScript, Go, Rust)';
       'Security vulnerability detection';
       'Code documentation generation';
@@ -39,7 +39,7 @@ export const services: Service[] = [;
       starter: '$29/month';
       professional: '$99/month';
       enterprise: '$299/month';
-      custom: 'Contact for enterprise pricing';
+      custom: 'Contact for enterprise pricing';,
     };
     technologyStack: ['OpenAI GPT-4';
       'Claude 3';
@@ -63,14 +63,14 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   {;
     id: 'ai-content-generator';
     name: 'ContentForge AI';
     category: 'AI Services';
-    description:;
+    description:;,
       'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.';
     features: ['Multi-format content generation (blogs, emails, social media)';
       'Brand voice training and consistency';
@@ -82,7 +82,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$49/month';
       professional: '$149/month';
-      enterprise: '$399/month';
+      enterprise: '$399/month';,
     };
     technologyStack: ['GPT-4';
       'Claude 3';
@@ -105,14 +105,14 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   {;
     id: 'ai-data-analytics';
     name: 'InsightAI Analytics';
     category: 'AI Services';
-    description:;
+    description:;,
       'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.';
     features: ['Automated data preprocessing and cleaning';
       'Predictive modeling and forecasting';
@@ -124,7 +124,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$79/month';
       professional: '$199/month';
-      enterprise: '$599/month';
+      enterprise: '$599/month';,
     };
     technologyStack: ['Python';
       'TensorFlow';
@@ -147,7 +147,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // IT Services;
@@ -155,10 +155,10 @@ export const services: Service[] = [;
     id: 'managed-it-services';
     name: 'ZionTech Managed IT';
     category: 'IT Services';
-    description:;
+    description:;,
       'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.';
     features: ['24/7 network monitoring and support';
-      'Cybersecurity threat detection and response';
+      'Cybersecurity threat detection and response';,
       'Cloud infrastructure management (AWS, Azure, GCP)';
       'Backup and disaster recovery';
       'Help desk and user support';
@@ -167,7 +167,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$99/month per user';
       professional: '$149/month per user';
-      enterprise: '$199/month per user';
+      enterprise: '$199/month per user';,
     };
     technologyStack: ['Microsoft 365';
       'AWS';
@@ -190,7 +190,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   {;
@@ -199,14 +199,14 @@ export const services: Service[] = [;
     category: 'IT Services';
     description:;
       'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.';
-    features: ['Vulnerability assessment and scanning';
+    features: ['Vulnerability assessment and scanning';,
       'Penetration testing (web, mobile, network)';
       'Social engineering testing';
       'Security policy review and development';
       'Compliance gap analysis (SOC2, ISO270001, HIPAA)';
       'Incident response planning';
       'Security awareness training';];
-    pricing: {;
+    pricing: {;,
       starter: '$2,999/assessment';
       professional: '$5,999/comprehensive';
       enterprise: '$12,999/enterprise';
@@ -231,7 +231,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // Micro SAAS;
@@ -251,7 +251,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$19/month';
       professional: '$49/month';
-      enterprise: '$99/month';
+      enterprise: '$99/month';,
     };
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'];
     benefits: ['Reduce invoice processing time by 90%';
@@ -269,14 +269,14 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   {;
     id: 'project-management';
     name: 'TaskMaster Pro';
     category: 'Micro SAAS';
-    description:;
+    description:;,
       'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.';
     features: ['AI-powered task prioritization';
       'Resource allocation optimization';
@@ -288,7 +288,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$15/month per user';
       professional: '$25/month per user';
-      enterprise: '$35/month per user';
+      enterprise: '$35/month per user';,
     };
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'];
     benefits: ['Increase team productivity by 30%';
@@ -306,7 +306,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // Blockchain Services;
@@ -314,7 +314,7 @@ export const services: Service[] = [;
     id: 'smart-contract-audit';
     name: 'BlockAudit Pro';
     category: 'Blockchain';
-    description:;
+    description:;,
       'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.';
     features: ['Comprehensive security analysis';
       'Gas optimization recommendations';
@@ -323,7 +323,7 @@ export const services: Service[] = [;
       'Compliance checking';
       'Post-deployment monitoring';
       'Emergency response support';];
-    pricing: {;
+    pricing: {;,
       starter: '$5,0000/audit';
       professional: '$15,0000/audit';
       enterprise: '$50,0000/audit';
@@ -344,7 +344,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // IoT & Edge Computing;
@@ -364,7 +364,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$10/device/month';
       professional: '$25/device/month';
-      enterprise: '$50/device/month';
+      enterprise: '$50/device/month';,
     };
     technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'];
     benefits: ['Reduce equipment downtime by 60%';
@@ -382,7 +382,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // Cloud & DevOps;
@@ -390,7 +390,7 @@ export const services: Service[] = [;
     id: 'devops-automation';
     name: 'DevOps Flow';
     category: 'Cloud & DevOps';
-    description:;
+    description:;,
       'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.';
     features: ['Automated CI/CD pipelines';
       'Infrastructure as Code (Terraform)';
@@ -402,7 +402,7 @@ export const services: Service[] = [;
     pricing: {;
       starter: '$99/month';
       professional: '$299/month';
-      enterprise: '$799/month';
+      enterprise: '$799/month';,
     };
     technologyStack: ['Docker';
       'Kubernetes';
@@ -424,7 +424,7 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
   // Data & Analytics;
@@ -432,7 +432,7 @@ export const services: Service[] = [;
     id: 'data-warehouse';
     name: 'DataVault Enterprise';
     category: 'Data & Analytics';
-    description:;
+    description:;,
       'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.';
     features: ['Real-time data ingestion';
       'Advanced analytics and ML';
@@ -443,7 +443,7 @@ export const services: Service[] = [;
       'Multi-cloud support';];
     pricing: {;
       starter: '$199/month';
-      professional: '$499/month';
+      professional: '$499/month';,
       enterprise: '$1,299/month';
     };
     technologyStack: ['Snowflake';
@@ -466,13 +466,13 @@ export const services: Service[] = [;
     contactInfo: {;
       email: 'kleber@ziontechgroup.com';
       phone: '+1 302 464 0950';
-      address: '364 E Main St STE 10008 Middletown DE 19709';
+      address: '364 E Main St STE 10008 Middletown DE 19709';,
     };
   };
 ];
-export const getServicesByCategory = (category: Service['category']) => {;
+export const getServicesByCategory = (category: Service['category']) => {;,
   return services.filter(service => service.category === category)};
-export const getServiceById = (id: string) => {;
+export const getServiceById = (id: string) => {;,
   return services.find(service => service.id === id)};
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)))};
