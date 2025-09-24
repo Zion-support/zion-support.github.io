@@ -1,32 +1,29 @@
-export interface RealMarketAugmentation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+export interface RealMarketAugmentation20o25 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[],
 }
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
+export const realMarketAugmentations20o25: RealMarketAugmentation20o25[] = [
   {
-    id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
-  }
-export interface RealMarketAugmentation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+    id: 'market-augmentation-1';
+    name: 'Market Augmentation Service 1';
+    tagline: 'Enhance your market presence';
+    price: '$299';
+    features: ['Market analysis', 'Strategy development', 'Implementation support']}
+export interface RealMarketAugmentation20o25 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[],
 }
-export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
+export const realMarketAugmentations20o25: RealMarketAugmentation20o25[] = [
   {
-    id: 'market-augmentation-1',
-    name: 'Market Augmentation Service 1',
-    tagline: 'Enhance your market presence',
-    price: '$299',
-    features: ['Market analysis', 'Strategy development', 'Implementation support']
-  }
-];
-];
+    id: 'market-augmentation-1';
+    name: 'Market Augmentation Service 1';
+    tagline: 'Enhance your market presence';
+    price: '$299';
+    features: ['Market analysis', 'Strategy development', 'Implementation support']}
+]],

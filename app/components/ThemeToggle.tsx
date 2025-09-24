@@ -1,47 +1,46 @@
 'use client'
-
-import { Sun, Moon, Monitor } from 'lucide-react'
-import { useTheme } from './ThemeProvider'
-import { clsx } from 'clsx'
+import React, { useState, useEffect } from 'react'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const [isDark, setIsDark] = useState(false)
 
-  const themes = [
-    { value: 'light', icon: Sun, label: 'Light' },
-    { value: 'dark', icon: Moon, label: 'Dark' },
-    { value: 'system', icon: Monitor, label: 'System' }
-  ] as const
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
 
-  const currentTheme = themes.find(t => t.value === theme) || themes[2]
-  const CurrentIcon = currentTheme.icon
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
 
-  const cycleTheme = () => {
-    const currentIndex = themes.findIndex(t => t.value === theme)
-    const nextIndex = (currentIndex + 1) % themes.length
-    setTheme(themes[nextIndex].value)
+  const toggleTheme = () => {
+    const newTheme = !isDark
+    setIsDark(newTheme)
+
+    if (newTheme) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
   }
 
   return (
     <button
-      onClick={cycleTheme}
-      className={clsx(
-        'relative p-2 rounded-lg',
-        'text-gray-300 hover:text-white',
-        'hover:bg-white/10 transition-all duration-200',
-        'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2',
-        'group'
-      )}
-      aria-label={`Switch to ${themes[(themes.findIndex(t => t.value === theme) + 1) % themes.length].label} theme`}
-      title={`Current: ${currentTheme.label}. Click to switch to ${themes[(themes.findIndex(t => t.value === theme) + 1) % themes.length].label}`}
+      onClick={toggleTheme}
+      className='p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200'
+      aria-label='Toggle theme'
     >
-      <CurrentIcon className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
-      
-      {/* Tooltip */}
-      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
-        {currentTheme.label}
-        <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
-      </div>
+      {isDark ? (
+        <SunIcon className='h-5 w-5 text-yellow-500' />
+      ) : (
+        <MoonIcon className='h-5 w-5 text-gray-600' />
+      )}
     </button>
   )
 }

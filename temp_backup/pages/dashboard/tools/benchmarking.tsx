@@ -1,10 +1,7 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { useEffect } from 'react',
 export default function BenchmarkingRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/salary-insights');
-  }, [router]);
-  return null;
-}
+    router.replace('/salary-insights')}, [router]),
+  return null}
+,

@@ -1,20 +1,28 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-// Stub translation function
-const translateTextViaAI = async (text: string, target: string): Promise<string> => {
-  // Simulate API call
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(`${text} (${target})`);
-    }, 100);
+// Simulated translator
+async function translateTextViaAI(
+  text: string,
+  target: string): Promise<string> {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(`${text} (${target})`), 100);
   });
-};
+}
 
 export type UseAutoTranslateResult = {
-  translations: Record<string, string>;
+  translations: Record<string string>;
   loading: boolean;
   error?: string;
-}
+};
+
+export function useAutoTranslate(
+  text: string,
+  targets: string[],
+  debounceMs = 300): UseAutoTranslateResult {
+  const [translations, setTranslations] = useState<Record<string string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+
   useEffect(() => {
     if (!text || targets.length === 0) {
       setTranslations({});
@@ -26,10 +34,14 @@ export type UseAutoTranslateResult = {
       try {
         setLoading(true);
         setError(undefined);
-        const res = await translateTextViaAI(text, targets);
-        if (!cancelled) setTranslations(res);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed');
+        const results: Record<string string> = {};
+        for (const target of targets) {
+          results[target] = await translateTextViaAI(text, target);
+        }
+        if (!cancelled) setTranslations(results);
+      } catch (e: unknown) {
+        const message = e instanceof Error ? e.message : 'Translation failed';
+        if (!cancelled) setError(message);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -39,9 +51,7 @@ export type UseAutoTranslateResult = {
       cancelled = true;
       clearTimeout(timer);
     };
-
-    translateAll();
-  }, [text, targets]);
+  }, [text, targets.join(','), debounceMs]);
 
   return { translations, loading, error };
 }

@@ -1,272 +1,198 @@
-
-<<<<<<< HEAD
-import { Route, Routes  } from 'react-router-dom.ts';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-=======
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
->>>>>>> origin/auto/autonomy-17186719616
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
-<<<<<<< HEAD
-// MessagingInbox import removed - page not found
-=======
-import MessagingInbox from "@/pages/MessagingInbox";
->>>>>>> origin/auto/autonomy-17186719616
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
-<<<<<<< HEAD
-// Referrals import removed - page not found
-import DeveloperPortal from "@/pages/DeveloperPortal";
-// WalletPage import removed - page not found
-import OrdersPage from "@/pages/Orders";
-import OrderDetailPage from "@/pages/OrderDetail";
-import ContractBuilder from "@/pages/ContractBuilder";
-import Projects from "@/pages/Projects";
-=======
-import Referrals from "@/pages/Referrals";
-import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
-import ContractBuilder from "@/pages/ContractBuilder";
->>>>>>> origin/auto/autonomy-17186719616
-
+import { Route, Routes } from 'react-router-dom.ts',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import Dashboard from '@/pages/Dashboard',
+import ClientDashboard from '@/pages/ClientDashboard',
+import TalentDashboard from '@/pages/TalentDashboard',
+import CreatorDashboard from '@/pages/CreatorDashboard',
+import Analytics from '@/pages/Analytics',
+import ProjectMilestones from '@/pages/ProjectMilestones',
+import ProjectDetails from '@/pages/ProjectDetails',
+import ProjectRoom from '@/pages/ProjectRoom',
+// MessagingInbox import removed - page not found,
+import Payments from '@/pages/Payments',
+import Interviews from '@/pages/Interviews',
+import Notifications from '@/pages/Notifications',
+import ApplicationStatusTracker from '@/pages/ApplicationStatusTracker',
+import HiringTracker from '@/pages/HiringTracker',
+import PortfolioBuilder from '@/pages/PortfolioBuilder',
+// Referrals import removed - page not found,
+import DeveloperPortal from '@/pages/DeveloperPortal',
+// WalletPage import removed - page not found,
+import OrdersPage from '@/pages/Orders',
+import OrderDetailPage from '@/pages/OrderDetail',
+import ContractBuilder from '@/pages/ContractBuilder',
+import Projects from '@/pages/Projects',
 const DashboardRoutes = () => {
   return (
-    <Routes>
+    <Routes>,
       {/* Dashboard Routes */}
-      <Route 
-        path="/dashboard" 
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/client-dashboard" 
-        element={
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/talent-dashboard" 
-        element={
-          <ProtectedRoute>
-            <TalentDashboard />
-          </ProtectedRoute>
-        }
-      />
-      <Route 
-        path="/creator-dashboard" 
-        element={
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/analytics" 
-        element={
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/project/:id/milestones" 
-        element={
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        } 
-      />
       <Route
-        path="/project/:id"
+        path='/dashboard',
         element={
-          <ProtectedRoute>
-            <ProjectDetails />
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <Dashboard />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/project/:id/room"
+        path='/client-dashboard',
         element={
-          <ProtectedRoute>
-            <ProjectRoom />
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <ClientDashboard />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/messages"
+        path='/talent-dashboard',
         element={
-          <ProtectedRoute>
-<<<<<<< HEAD
-            <div>Messages Page</div>
-=======
-            <MessagingInbox />
->>>>>>> origin/auto/autonomy-17186719616
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/inbox" 
-        element={
-          <ProtectedRoute>
-<<<<<<< HEAD
-            <div>Inbox Page</div>
-=======
-            <MessagingInbox />
->>>>>>> origin/auto/autonomy-17186719616
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/payments" 
-        element={
-          <ProtectedRoute>
-            <Payments />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/interviews" 
-        element={
-          <ProtectedRoute>
-            <Interviews />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/notifications" 
-        element={
-          <ProtectedRoute>
-            <Notifications />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/applications/track" 
-        element={
-          <ProtectedRoute>
-            <ApplicationStatusTracker />
-          </ProtectedRoute>
-        } 
-      />
-<<<<<<< HEAD
+          <ProtectedRoute>,
+            <TalentDashboard />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/hiring-tracker"
-=======
-      <Route 
-        path="/hiring-tracker" 
->>>>>>> origin/auto/autonomy-17186719616
+        path='/creator-dashboard',
         element={
-          <ProtectedRoute>
-            <HiringTracker />
-          </ProtectedRoute>
-<<<<<<< HEAD
-        }
-      />
+          <ProtectedRoute>,
+            <CreatorDashboard />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/projects"
+        path='/analytics',
         element={
-          <ProtectedRoute>
-            <Projects />
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <Analytics />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/portfolio-builder"
-=======
-        } 
-      />
-      <Route 
-        path="/portfolio-builder" 
->>>>>>> origin/auto/autonomy-17186719616
+        path='/project/:id/milestones',
         element={
-          <ProtectedRoute>
-            <PortfolioBuilder />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/referrals" 
-        element={
-          <ProtectedRoute>
-<<<<<<< HEAD
-            <div>Referrals Page</div>
-=======
-            <Referrals />
->>>>>>> origin/auto/autonomy-17186719616
-          </ProtectedRoute>
-        } 
-      />
+          <ProtectedRoute>,
+            <ProjectMilestones />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/developers"
+        path='/project/:id',
         element={
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <ProjectDetails />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/wallet"
+        path='/project/:id/room',
         element={
-          <ProtectedRoute>
-<<<<<<< HEAD
-            <div>Wallet Page</div>
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <ProjectRoom />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/orders"
+        path='/messages',
         element={
-          <ProtectedRoute>
-            <OrdersPage />
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <div>Messages Page</div>,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/orders/:orderId"
+        path='/inbox',
         element={
-          <ProtectedRoute>
-            <OrderDetailPage />
-=======
-            <WalletPage />
->>>>>>> origin/auto/autonomy-17186719616
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>,
+            <div>Inbox Page</div>,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/dashboard/api-access"
+        path='/payments',
         element={
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
-        } 
-      />
+          <ProtectedRoute>,
+            <Payments />,
+          </ProtectedRoute>}
+      />,
       <Route
-        path="/contract-builder"
+        path='/interviews',
         element={
-          <ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
-        } 
-      />
-    </Routes>
-  );
-};
-
+          <ProtectedRoute>,
+            <Interviews />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/notifications',
+        element={
+          <ProtectedRoute>,
+            <Notifications />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/applications/track',
+        element={
+          <ProtectedRoute>,
+            <ApplicationStatusTracker />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/hiring-tracker',
+        element={
+          <ProtectedRoute>,
+            <HiringTracker />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/projects',
+        element={
+          <ProtectedRoute>,
+            <Projects />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/portfolio-builder',
+        element={
+          <ProtectedRoute>,
+            <PortfolioBuilder />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/referrals',
+        element={
+          <ProtectedRoute>,
+            <div>Referrals Page</div>,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/developers',
+        element={
+          <ProtectedRoute>,
+            <DeveloperPortal />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/wallet',
+        element={
+          <ProtectedRoute>,
+            <div>Wallet Page</div>,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/orders',
+        element={
+          <ProtectedRoute>,
+            <OrdersPage />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/orders/:orderId',
+        element={
+          <ProtectedRoute>,
+            <OrderDetailPage />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/dashboard/api-access',
+        element={
+          <ProtectedRoute>,
+            <DeveloperPortal />,
+          </ProtectedRoute>}
+      />,
+      <Route
+        path='/contract-builder',
+        element={
+          <ProtectedRoute>,
+            <ContractBuilder />,
+          </ProtectedRoute>}
+      />,
+    </Routes>)};
 export default DashboardRoutes;

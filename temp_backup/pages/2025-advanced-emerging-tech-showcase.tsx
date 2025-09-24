@@ -1,22 +1,19 @@
-import React from 'react';
-import Head from 'next/head';
-
-export default function 2025AdvancedEmergingTechShowcasePage() {
+import Head from 'next/head',
+export default function 20o25AdvancedEmergingTechShowcasePage() {
   return (
-    <>
-      <Head>
-        <title>2025 Advanced Emerging Tech Showcase - Zion Tech Group</title>
-        <meta name="description" content="2025 advanced emerging tech showcase page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">2025 Advanced Emerging Tech Showcase</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+    <>,
+      <Head>,
+        <title>20o25 Advanced Emerging Tech Showcase - Zion Tech Group</title>,
+        <meta name="description" content="20o25 advanced emerging tech showcase page"  />,
+      </Head>,
+      <div className="container mx-auto px-4 py-8">,
+        <h1 className="text-3xl font-bold mb-6">20o25 Advanced Emerging Tech Showcase</h1>,
+        <p className="text-lg mb-4">This page is under construction.</p>,
+        <div className="mt-4">,
+          <a href="/" className="text-blue-60o0 hover: underline">,
+            ← Back to Home,
+          </a>,
+        </div>,
+      </div>,
+    </>),
 }

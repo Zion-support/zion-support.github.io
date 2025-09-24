@@ -129,7 +129,6 @@ export const innovative2025AIAutonomousEcosystem = [
 
   // AI-Powered Autonomous Sales Intelligence Platform
   {
-<<<<<<< HEAD
     id: 'autonomous-devops-intelligence-2045',
     name: 'Autonomous DevOps Intelligence Platform 2045',
     description: 'AI-powered DevOps optimization with autonomous decision-making and continuous improvement',
@@ -143,38 +142,6 @@ export const innovative2025AIAutonomousEcosystem = [
       'Performance Optimization',
       'Continuous Learning'
     ],
-<<<<<<< HEAD
-    popular: false,
-    icon: '🌟',
-    color: 'from-indigo-600 via-purple-600 to-pink-600',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-development-platform',
-    marketPosition: 'First platform for developing conscious AI systems with emotional intelligence',
-    targetAudience: 'AI research institutions, Technology companies, Government research labs, Academic institutions',
-    trialDays: 60,
-    setupTime: '4-6 weeks',
-    category: 'AI Consciousness',
-    realService: true,
-    technology: ['Advanced AI, Consciousness Theory, Emotional Intelligence, Neural Networks, Cognitive Science'],
-    integrations: ['AI frameworks, Cloud platforms, Research tools, Development environments, Testing platforms'],
-    useCases: ['AI research, Consciousness development, Emotional intelligence training, Ethical AI development'],
-    roi: 'Accelerate AI consciousness research by 500%. Reduce development time by 80%.',
-    competitors: ['No direct competitors - revolutionary technology'],
-    marketSize: '$15B AI research market',
-    growthRate: '200% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-=======
-    pricing: {
-      starter: '$2,800/month',
-      professional: '$9,500/month',
-      enterprise: '$28,000/month'
->>>>>>> origin/main
-=======
     id: 'ai-autonomous-sales-intelligence-2025',
     name: 'AI Autonomous Sales Intelligence Platform 2025',
     tagline: 'Fully autonomous sales intelligence with predictive analytics and lead scoring',
@@ -186,7 +153,6 @@ export const innovative2025AIAutonomousEcosystem = [
       professional: '$1,299/month',
       enterprise: '$3,499/month',
       custom: 'Contact for pricing'
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     },
     features: [
       'Fully autonomous lead generation',

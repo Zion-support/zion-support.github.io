@@ -1,5 +1,5 @@
-// Hook for useAdminQuotes;
+// Hook for useAdminQuotes,
 export const useUseAdminQuotes: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

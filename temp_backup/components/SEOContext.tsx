@@ -1,11 +1,9 @@
-import React, { createContext, useContext, MutableRefObject } from 'react';
-
+import React, { createContext, useContext, MutableRefObject } from 'react',
 export interface SEOContextValue {
-  renderedRef: MutableRefObject<boolean>;
+  renderedRef: MutableRefObject<boolean>,
 }
-
-export const SEOContext = createContext<SEOContextValue | null>(null);
-
+,
+export const SEOContext = createContext<SEOContextValue | null>(null),
 export function useSEOContext(): SEOContextValue | null {
-  return useContext(SEOContext);
-}
+  return useContext(SEOContext)}
+,

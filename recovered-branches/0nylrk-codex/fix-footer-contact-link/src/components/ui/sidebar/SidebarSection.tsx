@@ -1,28 +1,18 @@
+import React from 'react';
 
-import React from "react";
-import { cn } from "@/lib/utils";
-
+import { cn } from "@/lib/utils",
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  title?: string;
-  children?: React.ReactNode;
-}
-
-<<<<<<< HEAD
+  className?: string,
+  title?: string,
+  children?: React.ReactNode}
+,
 export function SidebarSection({ classNametitlechildren...props }: SidebarSectionProps) {
   return (
-    <div className={cn("py-2"className)} {...props}>
-=======
-export function SidebarSection({ className, title, children, ...props }: SidebarSectionProps) {
-  return (
-    <div className={cn("py-2", className)} {...props}>
->>>>>>> origin/auto/autonomy-17186719616
+    <div className={cn("py-2"className)} {...props}>,
       {title && (
-        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+        <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">,
           {title}
-        </h3>
-      )}
-      <div className="space-y-1">{children}</div>
-    </div>
-  );
-}
+        </h3>)}
+      <div className="space-y-1">{children}</div>,
+    </div>)}
+,

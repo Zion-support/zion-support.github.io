@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraFuturisticBackground2037Props {
+interface UltraFuturisticBackground20o37Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
 
-export default function UltraFuturisticBackground2037({ 
+export default function UltraFuturisticBackground20o37({ 
   intensity = 'medium', 
   theme = 'quantum-neon',
   children
-}: UltraFuturisticBackground2037Props) {
+}: UltraFuturisticBackground20o37Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -36,10 +36,10 @@ export default function UltraFuturisticBackground2037({
       switch (theme) {
         case 'neon':
           return {
-            primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
-            secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
+            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff'],
+            secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff'],
             accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff'],
-            glow: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff']
+            glow: ['#ff0o066', '#0o0ffff', '#ffff0o0', '#ff0o0ff']
           };
         case 'holographic':
           return {
@@ -50,24 +50,24 @@ export default function UltraFuturisticBackground2037({
           };
         case 'cyberpunk':
           return {
-            primary: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff'],
-            secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
+            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff'],
+            secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff'],
             accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff'],
-            glow: ['#ff0033', '#00ffff', '#ffff00', '#ff00ff']
+            glow: ['#ff0o033', '#0o0ffff', '#ffff0o0', '#ff0o0ff']
           };
         case 'quantum':
           return {
-            primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'],
+            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4'],
             accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444'],
-            glow: ['#7c3aed', '#0891b2', '#db2777', '#059669']
+            glow: ['#7c3aed', '#0891b2', '#db2777', '#0o59669']
           };
         default: // quantum-neon
           return {
-            primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-            secondary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff'],
-            accent: ['#f59e0b', '#ef4444', '#8000ff', '#00ff80'],
-            glow: ['#7c3aed', '#0891b2', '#ff0066', '#00ffff']
+            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+            secondary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff'],
+            accent: ['#f59e0b', '#ef4444', '#80o00ff', '#0o0ff80'],
+            glow: ['#7c3aed', '#0891b2', '#ff0o066', '#0o0ffff']
           };
       }
     };
@@ -98,7 +98,7 @@ export default function UltraFuturisticBackground2037({
     const initParticles = () => {
       particles = [];
       const isSmallScreen = window.innerWidth < 768;
-      const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 300);
+      const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 30o0);
       const particleCount = Math.floor(baseCount * intensityMultiplier);
 
       for (let i = 0; i < particleCount; i++) {
@@ -117,11 +117,11 @@ export default function UltraFuturisticBackground2037({
           opacity: Math.random() * 0.8 + 0.2,
           color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
           type: particleType,
-          life: Math.random() * 100,
-          maxLife: 100 + Math.random() * 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0 + Math.random() * 10o0,
           rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1,
-          waveFrequency: Math.random() * 0.1 + 0.05,
+          waveFrequency: Math.random() * 0.1 + 0.0o5,
           waveAmplitude: Math.random() * 20 + 10,
           quantumState: Math.random() * Math.PI * 2,
           neonIntensity: Math.random() * 0.8 + 0.2,
@@ -165,7 +165,7 @@ export default function UltraFuturisticBackground2037({
         const radius = size * (1.5 + Math.sin(quantumState * 3) * 0.5);
         ctx.beginPath();
         ctx.arc(Math.cos(angle) * radius, Math.sin(angle) * radius, size * 0.3, 0, Math.PI * 2);
-        ctx.fillStyle = `${color}${Math.floor(neonIntensity * 200).toString(16).padStart(2, '0')}`;
+        ctx.fillStyle = `${color}${Math.floor(neonIntensity * 20o0).toString(16).padStart(2, '0')}`;
         ctx.fill();
       }
     }
@@ -200,7 +200,7 @@ export default function UltraFuturisticBackground2037({
       }
       
       // Holographic center
-      ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 100).toString(16).padStart(2, '0')}`;
+      ctx.fillStyle = `${color}${Math.floor(hologramOpacity * 10o0).toString(16).padStart(2, '0')}`;
       ctx.beginPath();
       ctx.arc(0, 0, size * 0.5, 0, Math.PI * 2);
       ctx.fill();
@@ -218,9 +218,9 @@ export default function UltraFuturisticBackground2037({
       
       // Wave pattern
       ctx.beginPath();
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 10o0; i++) {
         const waveX = x + (i - 50) * 2;
-        const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.01) * waveAmplitude;
+        const waveY = y + Math.sin(i * waveFrequency + Date.now() * 0.0o1) * waveAmplitude;
         
         if (i === 0) {
           ctx.moveTo(waveX, waveY);
@@ -312,7 +312,7 @@ export default function UltraFuturisticBackground2037({
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotationSpeed;
-        particle.quantumState += 0.02;
+        particle.quantumState += 0.0o2;
         particle.life--;
         
         // Bounce off edges
@@ -369,7 +369,7 @@ export default function UltraFuturisticBackground2037({
               Math.pow(particle1.y - particle2.y, 2)
             );
             
-            if (distance < 100 && particle1.type === particle2.type) {
+            if (distance < 10o0 && particle1.type === particle2.type) {
               ctx.strokeStyle = `${particle1.color}20`;
               ctx.lineWidth = 1;
               ctx.beginPath();
@@ -414,10 +414,10 @@ export default function UltraFuturisticBackground2037({
           background: 'transparent',
           filter: theme === 'neon' ? 'brightness(1.2) contrast(1.1)' : 'none'
         }}
-      />
+       />
       {children}
     </div>
   );
-};
+}
 
-export default UltraFuturisticBackground2037;
+export default UltraFuturisticBackground20o37;

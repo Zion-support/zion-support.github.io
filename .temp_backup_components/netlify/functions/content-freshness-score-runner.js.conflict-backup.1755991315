@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
@@ -55,34 +54,4 @@ exports.handler = async () => {
   logs.push('git exit=' + (git.status || 0));
 
   return { statusCode: 200, body: logs.join('\n') };
-=======
-// Auto-generated function for content-freshness-score-runner
-exports.handler = async function(event, context) {
-  try {
-    // Basic health check response
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: 'Function content-freshness-score-runner is operational',
-        timestamp: new Date().toISOString(),
-        status: 'healthy'
-      })
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        message: 'Function content-freshness-score-runner encountered an error',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      })
-    };
-  }
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 };

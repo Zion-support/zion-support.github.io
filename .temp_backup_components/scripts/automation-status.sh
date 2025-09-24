@@ -108,7 +108,6 @@ echo "   View all logs: tail -f logs/cron-*.log"
 echo "   Check cron jobs: crontab -l"
 echo "   Remove automation jobs: ./scripts/remove-cron-automation.sh"
 echo "   Start manual automation: ./scripts/start-master-automation.sh"
-<<<<<<< HEAD
 echo "   View master scheduler logs: tail -f logs/master-automation-scheduler.log"
     } catch (error) {
       logger.error('Error in Script:', error);
@@ -147,5 +146,3 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-=======
->>>>>>> 4ce2a75a87f0dab25bdc62451fc0e765f8a2b858

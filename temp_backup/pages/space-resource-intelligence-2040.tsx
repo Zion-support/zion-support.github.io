@@ -1,22 +1,25 @@
-import React from 'react';
-import Head from 'next/head';
-
-export default function SpaceResourceIntelligence2040Page() {
+import Head from 'next/head',
+export default function SpaceResourceIntelligence20o40Page() {
   return (
-    <>
-      <Head>
-        <title>Space Resource Intelligence 2040 - Zion Tech Group</title>
-        <meta name="description" content="space resource intelligence 2040 page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Space Resource Intelligence 2040</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+    <>,
+      <Head>,
+        <title>Space Resource Intelligence 20o40 - Zion Tech Group</title>,
+        <meta
+          name='description',
+          content='space resource intelligence 20o40 page',
+        />,
+      </Head>,
+      <div className='container mx-auto px-4 py-8'>,
+        <h1 className='text-3xl font-bold mb-6'>,
+          Space Resource Intelligence 20o40,
+        </h1>,
+        <p className='text-lg mb-4'>This page is under construction.</p>,
+        <div className='mt-4'>,
+          <a href='/' className='text-blue-60o0 hover: underline'>,
+            ← Back to Home,
+          </a>,
+        </div>,
+      </div>,
+    </>),
 }
+,

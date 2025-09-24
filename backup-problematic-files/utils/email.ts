@@ -1,10 +1,8 @@
 
-
-  toUserId: string;
-  toAddress?: string | null;
-  subject: string;
-  body: string;
+,
+  toUserId: string,
+  toAddress?: string | null,
+  subject: string,
+  body: string,
 }
-
-
-
+,

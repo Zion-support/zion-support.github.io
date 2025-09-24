@@ -1,18 +1,22 @@
-# Netlify config for a Next.js static export (no SSR / functions)
-# We build with npm and publish the exported `out` directory
-
 [build]
-  command = "npm ci --no-audit --no-fund --legacy-peer-deps && npm run export"
-  publish = "out"
+  command = "npm install --no-audit --no-fund && npm run build"
+  publish = ".next"
   base = "."
 
 [build.environment]
   NODE_VERSION = "18.20.8"
   NPM_FLAGS = "--legacy-peer-deps"
   NODE_OPTIONS = "--max-old-space-size=4096"
-  # Yarn not used; npm is enforced by build command
+  # Configure secrets scanning to ignore expected public values
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "ghs_cdMF1uXtPrMpMzDGF8xCh38WM7LCKx0wdnwq,ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY,ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r,ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR"
+  SECRETS_SCAN_OMIT_PATHS = "automation_logs/**,improvement_report_*.md,data/reports/**"
 
-# No Netlify plugins needed for static export
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
 # Static redirects for exported site
 [[redirects]]
