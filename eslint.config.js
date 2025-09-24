@@ -5,9 +5,17 @@ import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended,
+  // Ignore everything by default; we will opt-in only app and safe test files
   {
-    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}'],
+    ignores: ['**/*']
+  },
+  // Apply recommended base only to selected app/test files
+  {
+    ...js.configs.recommended,
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}']
+  },
+  {
+    files: ['App.tsx', 'app/**/*.{ts,tsx,js,jsx}', '__safe_tests__/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -84,98 +92,5 @@ export default [
       }
     }
   },
-  {
-    ignores: [
-      'App.tsx',
-      '**/app.disabled/**',
-      '**/app_disabled/**',
-      '**/app_backup/**',
-      '**/app.disabled*/**',
-      '**/pages.disabled/**',
-      '**/src/**',
-      '**/ts_files_backup/**',
-      '**/types/**',
-      '**/src.broken/**',
-      '**/components/**',
-      '**/utils/**',
-      '**/hooks/**',
-      '**/zion-website/**',
-      '**/zion-os*/**',
-      '**/structural-fix.js',
-      '**/ultimate-*.js',
-      '**/verify*.js',
-      '**/workbox-config.js',
-      '**/vite.config*.ts',
-      '**/vitest.config*.ts',
-      '**/tailwind.config.ts',
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/build/**',
-      '**/.next/**',
-      // Broad ignores to bypass archival/problematic sources
-      // Keep archival/problematic sources ignored
-      '**/src.broken/**',
-      '**/ts_files_backup/**',
-      '**/types.disabled/**',
-      // Common config files that trigger parser mismatches
-      '**/vite.config.*',
-      '**/vitest.config.*',
-      '**/tailwind.config.*',
-      '**/*.config.*',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion.app/**',
-      '**/zion_academy/**',
-      '**/recovered/**',
-      '**/backup*/**',
-      '**/src/**',
-      '**/ts_files_backup/**',
-      '**/types/**',
-      '**/types.disabled/**',
-      // Do not ignore all JS globally; allow app JS to be linted
-      '**/vite.config.*',
-      '**/vitest.config.*',
-      '**/tailwind.config.*',
-      '**/*.config.*',
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion.app/**',
-      '**/zion_academy/**',
-      '**/recovered/**',
-      '**/backup*/**',
-      '**/src.broken/**',
-      '**/components/**',
-      '**/utils/**',
-      '**/hooks/**',
-      '**/structural-fix.js',
-      '**/ultimate-*.js',
-      '**/verify*.js',
-      '**/workbox-config.js',
-      '**/vite.config*.ts',
-      '**/vitest.config*.ts',
-      '**/tailwind.config.ts',
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/build/**',
-      '**/.next/**',
-      '**/src.disabled/**',
-      '**/tests/**',
-      '**/tests.disabled/**',
-      '**/data/**',
-      '**/contracts/**',
-      '**/cypress/**',
-      '**/pages/**',
-      '**/public/**',
-      '**/*.mjs',
-      '**/server.mjs',
-      '**/seed.js',
-      '**/jest.setup.js',
-      '**/*.py',
-      '**/*.sh',
-      '**/*.md',
-      '**/*.txt',
-      '**/*.json',
-      '**/*.tsv'
-    ]
-  }
+  
 ];
