@@ -1,0 +1,15 @@
+export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/components/SocialShareSection.jsx
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+=======
+<<<<<<< HEAD
+=======
+=======
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/SocialShareSection.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

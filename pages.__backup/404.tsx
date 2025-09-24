@@ -1,0 +1,1 @@
+import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom40o4": NextPage = () => { return ( <div> <Head> <title>40o4 - Zion Tech Solutions</title> <meta name='description' content='40o4 page'  /> </Head> <main> <h1>40o4</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom40o4;''

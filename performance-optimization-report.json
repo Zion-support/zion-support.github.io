@@ -1,32 +1,17 @@
 {
-  "timestamp": "2025-09-21T14:13:45.286Z",
+  "timestamp": "2025-09-05T22:25:16.020Z",
+  "metrics": {
+    "bundleSize": 8568279,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
   "optimizations": [
-    {
-      "type": "bundle-analysis",
-      "current": 9862714,
-      "recommendation": "Bundle size is acceptable"
-    },
-    {
-      "type": "image-optimization",
-      "found": 0,
-      "recommendation": "Image count is reasonable"
-    },
-    {
-      "type": "dependencies",
-      "production": 33,
-      "development": 31,
-      "recommendation": "Dependency count is reasonable"
-    },
-    {
-      "type": "code-quality",
-      "largeFiles": 39,
-      "recommendation": "Consider splitting large files into smaller modules"
-    }
+    "Bundle analysis completed",
+    "Found 3 images for optimization"
   ],
-  "recommendations": [],
   "summary": {
-    "totalOptimizations": 4,
-    "criticalIssues": 2,
-    "status": "good"
+    "totalOptimizations": 2,
+    "bundleSize": 8568279,
+    "performanceScore": 0
   }
 }

@@ -1,92 +1,123 @@
 import { useEffect, useState } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0,
-  });
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Web Vitals monitoring
+    const vitals = {};
 
-    // Web Vitals measurement
-    const measureWebVitals = () => {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+    getCLS(metric => {
+      vitals.CLS = metric.value;
+      console.log('CLS:', metric);
+    });
+
+    getFID(metric => {
+      vitals.FID = metric.value;
+      console.log('FID:', metric);
+    });
+
+    getFCP(metric => {
+      vitals.FCP = metric.value;
+      console.log('FCP:', metric);
+    });
+
+    getLCP(metric => {
+      vitals.LCP = metric.value;
+      console.log('LCP:', metric);
+    });
+
+    getTTFB(metric => {
+      vitals.TTFB = metric.value;
+      console.log('TTFB:', metric);
+    });
+
+    setMetrics(vitals);
+
+    // Performance API monitoring
+    if ('performance' in window) {
+      const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: Math.round(entry.startTime) }));
+          if (entry.entryType === 'measure') {
+            console.log('Performance measure:', entry.name, entry.duration);
+          }
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+          if (entry.entryType === 'paint') {
+            console.log('Paint timing:', entry.name, entry.startTime);
           }
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+    }
 
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          setMetrics(prev => ({ ...prev, fid: Math.round(entry.processingStart - entry.startTime) }));
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
-          }
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0];
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: Math.round(navigationEntry.responseStart - navigationEntry.requestStart) 
-        }));
+    // Error tracking
+    const handleError = event => {
+      console.error('JavaScript error:', event.error);
+      // Send to analytics service
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.error?.message || 'Unknown error',
+          fatal: false,
+        });
       }
     };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {
-      window.addEventListener('load', measureWebVitals);
-    }
+    const handleUnhandledRejection = event => {
+      console.error('Unhandled promise rejection:', event.reason);
+      // Send to analytics service
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.reason?.message || 'Unhandled promise rejection',
+          fatal: false,
+        });
+      }
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
 
     return () => {
-      window.removeEventListener('load', measureWebVitals);
+      window.removeEventListener('error', handleError);
+      window.removeEventListener(
+        'unhandledrejection',
+        handleUnhandledRejection
+      );
     };
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') return null;
+  // Development mode performance panel
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className='fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50'>
+        <div className='flex items-center gap-2 mb-2'>
+          <span>Performance Monitor</span>
+          <button
+            onClick={() => setIsVisible(!isVisible)}
+            className='text-blue-40o0 hover:text-blue-30o0'
+          >
+            {isVisible ? 'Hide' : 'Show'}
+          </button>
+        </div>
+        {isVisible && (
+          <div className='space-y-1'>
+            {Object.entries(metrics).map(([key, value]) => (
+              <div key={key} className='flex justify-between gap-4'>
+                <span>{key}:</span>
+                <span className='text-green-40o0'>
+                  {value?.toFixed(2) || 'N/A'}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>FCP: {metrics.fcp}ms</div>
-      <div>LCP: {metrics.lcp}ms</div>
-      <div>FID: {metrics.fid}ms</div>
-      <div>CLS: {metrics.cls}</div>
-      <div>TTFB: {metrics.ttfb}ms</div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
+  return null;
+}

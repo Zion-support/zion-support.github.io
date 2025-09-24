@@ -1,161 +1,177 @@
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } } function main() {  cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } }        } main();
 #!/usr/bin/env node
-
+import { glob } from 'glob';
 /**
- * Repository Cleanup Script
- * Removes temporary files and optimizes repository structure
+ * Repository cleanup script for Zion Tech Group
+ * Removes disabled, backup, and unnecessary files
  */
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class RepositoryCleanup {
-  constructor() {
-    this.removedFiles = [];
-    this.removedDirs = [];
-    this.errors = [];
+const CLEANUP_PATTERNS = [// Disabled directories
+  'src.disabled/**',
+  'pages.disabled/**',
+  'pages.disabled_auto/**',
+  'components.disabled/**',
+  'lib.disabled/**',
+  'types.disabled/**',
+  'hooks.disabled/**',
+  'contracts.disabled/**',
+  // Backup directories
+  'automation_backup/**',
+  'backup-pages/**',
+  'pages.__backup/**',
+  'pages_backup/**',
+  'lib_backup/**',
+  'broken_files_backup/**',
+  // API backup
+  'api-backup/**',
+  // Temporary files
+  '**/*.backup',
+  '**/*.disabled',
+  '**/*.old',
+  '**/*.bak',
+  '**/*.tmp',
+  '**/*.temp',
+  // Build artifacts that shouldn't be in repo
+  '.next/**',
+  'out/**',
+  'dist/**',
+  'build/**',
+  // Log files
+  '**/*.log',
+  '**/logs/**',
+  // Cache directories
+  '.cache/**',
+  'node_modules/.cache/**',
+  // IDE files
+  '.vscode/**',
+  '.idea/**',
+  '*.swp',
+  '*.swo',
+  '*~',
+  // OS files
+  '.DS_Store',
+  'Thumbs.db',
+  'desktop.ini',
+];
+const KEEP_PATTERNS = [// Keep important config files
+  'package.json',
+  'package-lock.json',
+  'yarn.lock',
+  'next.config.js',
+  'next.config.cjs',
+  'next.config.mjs',
+  'tsconfig.json',
+  'tailwind.config.js',
+  'postcss.config.js',
+  'eslint.config.js',
+  // Keep documentation
+  'README.md',
+  'CHANGELOG.md',
+  'LICENSE',
+  'docs/**',
+  // Keep scripts (but clean them)
+  'scripts/**',
+  // Keep automation (but clean backups)
+  'automation/**',
+  // Keep tests
+  '__tests__/**',
+  '**/*.test.*',
+  '**/*.spec.*',
+  // Keep public assets
+  'public/**',
+  // Keep source code
+  'pages/**',
+  'components/**',
+  'src/**',
+  'lib/**',
+  'utils/**',
+  'hooks/**',
+  'types/**',
+  'api/**',
+];
+function shouldKeepFile(filePath) {
+  // Check if file matches keep patterns
+  
   }
-
-  // Files and directories to remove
-  getCleanupList() {
-    return {
-      files: [
-        // Backup and temporary files
-        'next.config.cjs.backup',
-        'eslint.config.cjs.disabled2',
-        'next.config.js.complex',
-        'performance.config.js',
-        
-        // Report files (keep latest ones)
-        'batch-pr-merge-report.json',
-        'comprehensive-pr-merge-report.json',
-        'quick-merge-report.json',
-        'retry-failed-merges-report.json',
-        'pr-processing-report.json',
-        
-        // Python scripts (if not needed)
-        'advanced_merge_resolver.py',
-        'batch_merge_processor.py',
-        'continue_merge_batches.py',
-        'final_merge_pusher.py',
-        
-        // JS merge scripts (if not needed)
-        'advanced_merge_resolver.js',
-        'batch_merge_processor.js',
-        'continue_merge_batches.js',
-        'final_merge_pusher.js',
-        'comprehensive_pr_merger.js',
-        'continue_pr_merges.js',
-        'merge_prs_batch.js',
-        'merge_specific_branches.js',
-        'process_remaining_prs.js',
-        'quick_merge_fix.js',
-        'retry_failed_merges.js',
-        'fix_divergent_branches.js',
-        'fix-all-duplicates.js',
-        'fix-duplicate-properties.js',
-        'fix-incomplete-services.js',
-        'fix-remaining-variants.js',
-        'fix-variants.js',
-        
-        // Shell scripts (if not needed)
-        'merge_branches.sh',
-        'merge_recent_branches.sh',
-        'build.sh',
-        
-        // Root component files (should be in components/)
-        'Footer.jsx',
-        'Header.jsx',
-        'ThemeProvider.js',
-        
-        // Config files (keep only the active ones)
-        'vite.config.js', // Using Next.js, not Vite
-        'index.html', // Next.js handles this
-      ],
-      directories: [
-        'backup',
-      ]
-    };
+  return false}
+function shouldRemoveFile(filePath) {
+  // Don't remove files that should be kept
+  if (shouldKeepFile(filePath)) {
+    return false}
+  // Check if file matches cleanup patterns
+  
   }
+  return false}
+function removeFile(filePath) {
+  try {
+    const stats = fs.statSync(filePath);
+    if (stats.isDirectory()) {
+      fs.rmSync(filePath, { "recursive": true, "force": true });
+      console.log(`  Removed "directory": ${filePath}`)} else {
+      fs.unlinkSync(filePath);
+      console.log(` Removed "file": ${filePath}`)}
+    return true} catch (error) {
+    console.error(` Error removing ${filePath}:`, error.message);
+    return false}
 
-  async cleanup() {
-    console.log('🧹 Starting repository cleanup...');
-    
-    const cleanupList = this.getCleanupList();
-    
-    // Remove files
-    for (const file of cleanupList.files) {
-      await this.removeFile(file);
+function cleanScripts() {
+  const scriptsDir = 'scripts';
+  if (!fs.existsSync(scriptsDir)) {
+    return}
+  const scriptFiles = glob.sync('scripts/**/*', { "nodir": true });
+  let cleanedCount = 0;
+  
     }
-    
-    // Remove directories
-    for (const dir of cleanupList.directories) {
-      await this.removeDirectory(dir);
-    }
-    
-    this.generateReport();
   }
-
-  async removeFile(filePath) {
-    try {
-      if (fs.existsSync(filePath)) {
-        fs.unlinkSync(filePath);
-        this.removedFiles.push(filePath);
-        console.log(`✅ Removed file: ${filePath}`);
+  console.log(` Cleaned ${cleanedCount} temporary script files`)}
+function cleanRootFiles() {
+  const rootFiles = glob.sync('*', { "nodir": true });
+  let cleanedCount = 0;
+  
+    }
+  }
+  console.log(` Cleaned ${cleanedCount} temporary root files`)}
+function cleanReportFiles() {
+  const reportFiles = glob.sync('**/*-report.json', { "nodir": true });
+  let cleanedCount = 0;
+  
+    }
+  }
+  console.log(` Cleaned ${cleanedCount} temporary report files`)}
+function main() {
+  console.log(' Starting repository cleanup...');
+  // Clean scripts first
+  cleanScripts();
+  // Clean root files
+  cleanRootFiles();
+  // Clean report files
+  cleanReportFiles();
+  // Clean disabled/backup directories
+  let totalRemoved = 0;
+  );
+    
       }
-    } catch (error) {
-      this.errors.push(`Failed to remove ${filePath}: ${error.message}`);
-      console.error(`❌ Failed to remove ${filePath}:`, error.message);
     }
   }
+  console.log("\n Cleanup "Summary": ");
+  console.log(`   Total items removed: ${totalRemoved}`);
+  console.log('\n Repository cleanup completed!');
+  console.log('\n Next "steps": ');
+  console.log('   1. Run: npm install');
+  console.log('   2. Run: npm run build');
+  console.log('   3. Test the application');
+  console.log('   4. Commit the changes')}
+main();
 
-  async removeDirectory(dirPath) {
-    try {
-      if (fs.existsSync(dirPath)) {
-        fs.rmSync(dirPath, { recursive: true, force: true });
-        this.removedDirs.push(dirPath);
-        console.log(`✅ Removed directory: ${dirPath}`);
-      }
-    } catch (error) {
-      this.errors.push(`Failed to remove ${dirPath}: ${error.message}`);
-      console.error(`❌ Failed to remove ${dirPath}:`, error.message);
-    }
-  }
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: 'false' }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0; for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0; for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0; for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }); for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+ursor/add-new-services-and-deploy-updates-0o462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      removedFiles: this.removedFiles,
-      removedDirectories: this.removedDirs,
-      errors: this.errors,
-      summary: {
-        filesRemoved: this.removedFiles.length,
-        directoriesRemoved: this.removedDirs.length,
-        errors: this.errors.length
-      }
-    };
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: 'true' }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)} function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)} function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }); let cleanedCount = 0;  } } console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)} function main() { console.log('🧹 Starting repository cleanup...'); cleanScripts(); cleanRootFiles(); cleanReportFiles(); let totalRemoved = 0; );  } } } console.log(`\n📊 Cleanup Summary:`); console.log(` Total items removed: ${totalRemoved}`); console.log('\n✨ Repository cleanup completed!'); console.log('\n📝 Next steps:'); console.log(' 1. Run: npm install'); console.log(' 2. Run: npm run build'); console.log(' 3. Test the application'); console.log(' 4. Commit the changes')} main();
 
-    fs.writeFileSync('cleanup-report.json', JSON.stringify(report, null, 2));
-    
-    console.log('\n📊 Cleanup Report');
-    console.log('==================');
-    console.log(`Files removed: ${this.removedFiles.length}`);
-    console.log(`Directories removed: ${this.removedDirs.length}`);
-    console.log(`Errors: ${this.errors.length}`);
-    
-    if (this.errors.length > 0) {
-      console.log('\n❌ Errors:');
-      this.errors.forEach(error => console.log(`  - ${error}`));
-    }
-    
-    console.log('\n✅ Repository cleanup completed!');
-  }
-}
-
-// Run cleanup if called directly
-if (require.main === module) {
-  const cleanup = new RepositoryCleanup();
-  cleanup.cleanup().catch(console.error);
-}
-
-module.exports = RepositoryCleanup;

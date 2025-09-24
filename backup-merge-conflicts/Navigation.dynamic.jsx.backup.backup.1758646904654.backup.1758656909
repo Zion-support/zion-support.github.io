@@ -1,0 +1,10 @@
+=======
+const Navigation = dynamic(() => import("./Navigation"),{"; loading: () => <p>Loading.</p,>}) export: "default Navigation" ,"""
+<<<<<<< HEAD
+=======
+const Navigation = dynamic(() => import("./Navigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Navigation' ,'
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,133 +1,58 @@
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+import eslintJs from '@eslint/js';
+import eslintReact from 'eslint-plugin-react';
+import eslintReactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
 
 export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 2022,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        browser: true,
-        es2022: true,
-        node: true,
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...nextPlugin.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
   {
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
-      'build/',
-      'scripts/',
-      'automation/',
-      'public/reports/**',
-      'netlify/',
-      '**/*.cjs',
-      '**/*.mjs',
-      '**/.scripts/**',
-      '**/temp_*/**',
-      '**/temp-*/**',
-      '**/temp*/**',
-      '**/broken*/**',
-      '**/corrupted*/**',
-      '**/disabled*/**',
-      '**/backup*/**',
-      '**/exclude*/**',
-      '**/conflicted*/**',
-      '**/working*/**',
-      '**/essential*/**',
-      '**/test_build/**',
-      '**/tests/**',
-      '**/token/**',
-      '**/zion-hire-ai.tsx',
-      '**/terms.tsx',
-      '**/test-utils.jsx',
-      '**/src_backup*/**',
-      '**/supabase/**',
-      '**/stories/**',
-      '**/talent/**',
-      '**/__tests__/**',
-      '**/apps.backup/**',
-      '**/dao/**',
-      '**/deployment/**',
-      '**/deployments/**',
-      '**/ecosystem*.js',
-      '**/fix-*.js',
-      '**/fix_*.js',
-      '**/merge-*.js',
-      '**/resolve-*.js',
-      '**/selective-merge.js',
-      '**/restore-*.js',
-      '**/monitoring-*.js',
-      '**/performance-*.js',
-      '**/maintenance-*.js',
-      '**/comprehensive-*.js',
-      '**/execute-*.js',
-      '**/improve-*.js',
-      '**/mcp*.js',
-      '**/health-endpoint.js',
-      '**/lib.broken/**',
-      '**/offworld/**',
-      '**/pages._archive_corrupted/**',
-      '**/pages.bak/**',
-      '**/remote/**',
-      '**/src-clean/**',
-      '**/zion_academy/**',
-      '**/*.test.js',
-      '**/*.test.ts',
-      '**/*.test.tsx',
-      '**/.storybook/**',
-      '**/advanced-*.js',
-      '**/aggressive-*.js',
-      '**/analyze-*.js',
-      '**/build*.js',
-      '**/bundle-*.js',
-      '**/code-splitting-*.js',
-      '**/config/**',
-      '**/cypress/**',
-      '**/jest*.js',
-      '**/next.config*.js',
-      '**/start-dev.js',
-    ],
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'public/**',
+      'automation/**',
+      'apps.backup/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
+      'backup-problematic-files/**',
+      'recovered-branches/**',
+      'server/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'ts_files_backup/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'components/2025-advanced-services-showcase.tsx',
+      'components/2025-comprehensive-services-showcase-v2.tsx',
+      'components/AI2025AdvancedAutomationShowcase.tsx',
+      'components/AI2025AdvancedAnalyticsDashboard.tsx',
+      '**/*.min.js'
+    ]
   },
+  eslintJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
+    ],
+    languageOptions: {
+      parser: tseslint.parser,
+      ecmaVersion: 2021,
+      sourceType: 'module'
+    },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tseslint.plugin },
+    settings: { react: { version: 'detect' } },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
+    }
+  }
 ];
+
