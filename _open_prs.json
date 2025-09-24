@@ -1,3 +1,10 @@
-[
-
-]
+{
+  "url": "https://github.com/Zion-Holdings/zion.app/pull/new/cursor/create-and-deploy-new-content-7f6b",
+  "prs": [
+    {
+      "title": "feat(content): add Evidence‑Led Governance Blueprint blog page and promote on homepage",
+      "head": "cursor/create-and-deploy-new-content-7f6b",
+      "base": "main"
+    }
+  ]
+}

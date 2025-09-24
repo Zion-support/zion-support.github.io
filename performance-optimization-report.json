@@ -1,26 +1,17 @@
 {
-  "timestamp": "2025-09-22T01:07:17.689Z",
-  "duration": 2,
+  "timestamp": "2025-09-05T22:25:16.020Z",
+  "metrics": {
+    "bundleSize": 8568279,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
   "optimizations": [
-    {
-      "type": "image-optimization",
-      "timestamp": "2025-09-22T01:07:17.689Z",
-      "status": "completed"
-    },
-    {
-      "type": "css-optimization",
-      "timestamp": "2025-09-22T01:07:17.689Z",
-      "status": "completed"
-    },
-    {
-      "type": "javascript-optimization",
-      "timestamp": "2025-09-22T01:07:17.689Z",
-      "status": "completed"
-    }
+    "Bundle analysis completed",
+    "Found 3 images for optimization"
   ],
   "summary": {
-    "totalOptimizations": 3,
-    "successfulOptimizations": 3,
-    "failedOptimizations": 0
+    "totalOptimizations": 2,
+    "bundleSize": 8568279,
+    "performanceScore": 0
   }
 }

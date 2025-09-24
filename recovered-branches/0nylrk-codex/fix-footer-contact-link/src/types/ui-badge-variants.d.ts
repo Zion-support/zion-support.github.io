@@ -1,48 +1,9 @@
-
-  | "info",
-// Additional type declaration for the badge variants
-declare type BadgeVariant =
-  | "default"
-  | "secondary"
-  | "destructive"
-  | "outline"
-  | "success"
-  | "warning"
-  | "info",
-
-// Additional type declaration for the badge variants;
-declare type BadgeVariant = ;
-  | "info";
-
-  | "info",
-  | "info",
-
-// Additional type declaration for the badge variants;
-declare type BadgeVariant =;
-  | "default";
-  | "secondary";
-  | "destructive";
-  | "outline";
-  | "success";
-  | "warning";
-
-  | "info",;
-
-  | "info";
-  | "info",;
-  | "info",;
-// Additional type declaration for the badge variants;
-declare type BadgeVariant =
-  | "default""
-  | "secondary""
-  | "destructive""
-  | "outline""
-  | "success""
-  | "warning""
-  | "info";
-"
-
-// Additional type declaration for the badge variants
-
-declare type BadgeVariant = any;
-
+// Additional type declaration for the badge variants,
+declare type BadgeVariant =,
+  | 'default',
+  | 'secondary',
+  | 'destructive',
+  | 'outline',
+  | 'success',
+  | 'warning',
+  | 'info',

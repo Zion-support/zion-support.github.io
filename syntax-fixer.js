@@ -1,58 +1,43 @@
-#!/usr/bin/env node;
-import fs from 'fs';'
+#!/usr/bin/env node
 import { execSync } from 'child_process';
-'
-console.log('🔧 Running comprehensive syntax fixer...');
+import fs from 'fs';
 
-function fixSyntaxErrors() { return null; }
-  const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" | head -50', { encoding: 'utf8' })'
+function fixSyntaxErrors() {
+  const fileList = execSync(
+    "find . -type f \( -name '*.tsx' -o -name '*.ts' -o -name '*.js' \) | head -100",
+    { encoding: 'utf8' }
+  )
     .split('\n')
-    .filter(f => f.trim());
+    .map(f => f.trim())
+    .filter(Boolean);
 
   let fixedCount = 0;
 
-  for (const file of files) {}
-    try {'
-      let content = fs.readFileSync(file, 'utf8');
-      let originalContent = content;
+  for (const filePath of fileList) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
 
-      // Fix common syntax issues'"
-      content = content.replace(/import React from "react",/g, 'import React from "react";');'"
-      content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");'"
-      content = content.replace(/import Link from 'next\/link',/g, "import Link from 'next/link';");'"
-      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");'"
-      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");'"
-      content = content.replace(/from '..\/components\/Layout',/g, "from '../components/Layout';");'"
-      content = content.replace(/from '..\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';");
+      // No-op placeholder: keep here for quick targeted text fixes when needed
+      // Example safe normalizations (no trailing commas or invalid punctuation)
+      content = content.replace(/import React from \"react\",/g, 'import React from "react";');
+      content = content.replace(/import Head from 'next\\/head',/g, "import Head from 'next/head';");
+      content = content.replace(/import Link from 'next\\/link',/g, "import Link from 'next/link';");
+      content = content.replace(/} from 'lucide-react',/g, "} from 'lucide-react';");
+      content = content.replace(/} from 'framer-motion',/g, "} from 'framer-motion';");
+      content = content.replace(/from '\.\.\/components\/Layout',/g, "from '../components/Layout';");
+      content = content.replace(/from '\.\.\/components\/layout\/MainLayout',/g, "from '../components/layout/MainLayout';");
 
-      if (content !== originalContent) {}
-        fs.writeFileSync(file, content);
-        fixedCount++;
-        console.log(`✅ Fixed ${file}`);
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        fixedCount += 1;
       }
-    } catch (error) {}`
-      console.log(`❌ Error fixing ${file}: ${error.message}`);
+    } catch {
+      // ignore individual file errors
     }
-
-    // Fix malformed metadata objects
-    if (content.includes(',}')) {
-      content = content.replace(/,\s*}/g, '\n}');
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
-    }
-
-    return modified;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
   }
-`
-  console.log(`\n📊 Fixed ${fixedCount} files`);
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
 fixSyntaxErrors();
-'"`

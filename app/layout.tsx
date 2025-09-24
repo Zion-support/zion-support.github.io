@@ -3,7 +3,12 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ErrorBoundary from './components/ErrorBoundary'
 import PerformanceMonitor from './components/PerformanceMonitor'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './components/ThemeProvider'
+import StructuredData, { organizationSchema, websiteSchema, serviceSchema } from './components/StructuredData'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityChecker from './components/AccessibilityChecker'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,12 +48,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={websiteSchema} />
+        <StructuredData data={serviceSchema} />
+      </head>
       <body className={inter.className}>
-        <ErrorBoundary>
-          {children}
-          <ScrollToTop />
-          <PerformanceMonitor />
-        </ErrorBoundary>
+        <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
+          <ErrorBoundary>
+            {children}
+            <ScrollToTop />
+            <PerformanceMonitor />
+            <PerformanceOptimizer />
+            <SEOOptimizer />
+            <AccessibilityChecker />
+          </ErrorBoundary>
+        </ThemeProvider>
       </body>
     </html>
   )

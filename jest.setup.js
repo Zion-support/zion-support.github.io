@@ -1,152 +1,70 @@
-require('@testing-library/jest-dom');
-import "@testing-library/jest-dom";
+// Jest setup for safe tests
+import '@testing-library/jest-dom';
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
+// Make setup idempotent if loaded multiple times
+if (!global.__JEST_SETUP_INITIALIZED__) {
+  // Mock Next.js Image only if available in this workspace (guard for non-Next setups)
+  try {
+    require.resolve('next/image')
+    jest.mock('next/image', () => ({
+      __esModule: true,
+      default: function MockImage() {
+        return null
+      }
+    }))
+  } catch (error) {
+    // not a Next.js environment; skip mock
+  }
 
-// Mock Next.js router
-jest.mock("next/router", () => ({
-  useRouter() {
-    return {
-route: "/",
-      pathname: "/",
-      query: {},"
-      asPath: "/",
+  // matchMedia mock
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation((query) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn()
+    }))
+  })
 
-// Jest setup file
+  // Observers
+  global.IntersectionObserver = class IntersectionObserver {
+    disconnect() {}
+    observe() {}
+    unobserve() {}
+  }
 
-// Mock Next.js router
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/';,
-      pathname: '/';,
-      query: {;},
-      asPath: '/';,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+  global.ResizeObserver = class ResizeObserver {
+    disconnect() {}
+    observe() {}
+    unobserve() {}
+  }
 
-      push: jest.fn(),
-      pop: jest.fn(),
-      reload: jest.fn(),
-      back: jest.fn(),
-prefetch: jest.fn(),
-      prefetch: jest.fn().mockResolvedValue(undefined),
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-      prefetch: jest.fn(),
-      beforePopState: jest.fn(),
-      events: {}
-        on: jest.fn(),
-        off: jest.fn(),
-        emit: jest.fn(),
-      },
-isFallback: false,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-      push: jest.fn();,
-      pop: jest.fn();,
-      reload: jest.fn();,
-      back: jest.fn();,
-      prefetch: jest.fn();,
-      prefetch: jest.fn().mockResolvedValue(undefined);,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-      prefetch: jest.fn().mockResolvedValue(undefined);,
-pr-12325
-      beforePopState: jest.fn();,
-      events: {
-        on: jest.fn();,
-        off: jest.fn();,
-        emit: jest.fn();,
-      },
-      isFallback: false;,
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-pr-12325
-    };
-}));
+  // Optional: silence noisy console logs during CI tests
+  const jestSetupOriginalError = global.console.error;
+  const jestSetupOriginalWarn = global.console.warn;
 
-// Mock Next.js Image component
-jest.mock("next/image", () => {
-  const React = require("react");
-  return function MockedImage({ src, alt, ...props }) {
-    return React.createElement("img", { src, alt, ...props });
-  };
-});
+  beforeAll(() => {
+    if (process.env.CI) {
+      global.console.error = (...args) => {
+        if (typeof args[0] === 'string' && args[0].includes('TestingLibraryElementError')) {
+          return jestSetupOriginalError(...args);
+        }
+      };
+      global.console.warn = () => {};
+    }
+  });
 
-// Mock Next.js Link component
-jest.mock("next/link", () => {
-  const React = require("react");
-  return {
-    _esModule: true;,
-    default: ({ children;, href, ...props }) => {
-      return React.createElement("a", { href, ...props }, children);
-    },
-  };
-});
+  afterAll(() => {
+    global.console.error = jestSetupOriginalError;
+    global.console.warn = jestSetupOriginalWarn;
+  });
 
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
-  writable: true;,
-  value: jest.fn().mockImplementation((query) => ({
-matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-
-// Mock IntersectionObserver;
-global.IntersectionObserver = class IntersectionObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {}
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-// Mock matchMedia
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-
-    "media": query,
-    "onchange": null,
-    "addListener": jest.fn(), // deprecated
-    "removeListener": jest.fn(), // deprecated
-    "addEventListener": jest.fn(),
-    "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-
-// Global test setup
-beforeEach(() => {
-  jest.clearAllMocks();
-});
-
-});
-main
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true;,
-  default: (props) => {
-    return <img {...props} />;
-  },
-}));
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-  jest.clearAllMocks();
-pr-12325
+  // mark initialized
+  // eslint-disable-next-line no-underscore-dangle
+  global.__JEST_SETUP_INITIALIZED__ = true;
+}

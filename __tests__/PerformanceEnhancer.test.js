@@ -1,48 +1,11 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceEnhancer from '../components/PerformanceEnhancer';
-
-<<<<<<< HEAD
-describe('PerformanceEnhancer', () => {
-  test('renders without crashing', () => {
-    render(<PerformanceEnhancer />);
-    expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();
-  });
-  
-  test('displays correct content', () => {
-    render(<PerformanceEnhancer />);
-  });
-  
-  test('handles user interactions', () => {
-    render(<PerformanceEnhancer />);
-  });
-  
-  test('applies correct styling', () => {
-    render(<PerformanceEnhancer />);
-  });
-});
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
-
-
-=======
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-ursor/fix-syntax-push-and-merge-to-main-40de
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceEnhancer from "./components/PerformanceEnhancer" describe("PerformanceEnhancer",() => {" test("renders without crashing",() => {" render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PerformanceEnhancer / />) }) test("handles user interactions",() => {" render(<PerformanceEnhancer / />) }) test("applies correct styling",() => {" render(<PerformanceEnhancer / />) }) })'"'"
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceEnhancer from "./components/PerformanceEnhancer" describe("PerformanceEnhancer",() => {" test("renders without crashing",() => {" render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<PerformanceEnhancer / />) }) test("handles user interactions",() => {" render(<PerformanceEnhancer / />) }) test("applies correct styling",() => {" render(<PerformanceEnhancer / />) }) })'"'"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/integrate-build-improve-and-re-verify-8f7d
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import PerformanceEnhancer from '../components/PerformanceEnhancer" describe('PerformanceEnhancer',() => {' test('renders without crashing',() => {' render(<PerformanceEnhancer / />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<PerformanceEnhancer / />) }) test('handles user interactions',() => {' render(<PerformanceEnhancer / />) }) test('applies correct styling',() => {' render(<PerformanceEnhancer / />) }) })
-=======
->>>>>>> origin/merge-pr-12271
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import PerformanceEnhancer from '../components/PerformanceEnhancer',
+ursor/fix-syntax-push-and-merge-to-main-40de,
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceEnhancer from "./components/PerformanceEnhancer" describe("PerformanceEnhancer",() => {" test("renders without crashing",() => {" render(<PerformanceEnhancer /  />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<PerformanceEnhancer /  />) }) test("handles user interactions",() => {" render(<PerformanceEnhancer /  />) }) test("applies correct styling",() => {" render(<PerformanceEnhancer /  />) }) })'"'",
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import PerformanceEnhancer from "./components/PerformanceEnhancer" describe("PerformanceEnhancer",() => {" test("renders without crashing",() => {" render(<PerformanceEnhancer /  />) expect(screen.getByTestId("performanceenhancer")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<PerformanceEnhancer /  />) }) test("handles user interactions",() => {" render(<PerformanceEnhancer /  />) }) test("applies correct styling",() => {" render(<PerformanceEnhancer /  />) }) })'"'",
+ursor/add-new-services-and-deploy-updates-0o462,
+ursor/fix-syntax-push-and-merge-to-main-40de,
+ursor/integrate-build-improve-and-re-verify-8f7d,
+ursor/fix-syntax-push-and-merge-to-main-40de,

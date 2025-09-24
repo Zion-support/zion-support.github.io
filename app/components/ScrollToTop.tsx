@@ -1,8 +1,6 @@
 'use client'
-
-import { useState, useEffect } from 'react'
-import { ChevronUp } from 'lucide-react'
-import Button from './Button'
+import React, { useState, useEffect } from 'react'
+import { ArrowUpIcon } from '@heroicons/react/24/outline'
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
@@ -21,10 +19,7 @@ export default function ScrollToTop() {
   }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   if (!isVisible) {
@@ -32,16 +27,12 @@ export default function ScrollToTop() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      <Button
-        onClick={scrollToTop}
-        variant="primary"
-        size="sm"
-        className="rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-        aria-label="Scroll to top"
-      >
-        <ChevronUp className="w-5 h-5" />
-      </Button>
-    </div>
+    <button
+      onClick={scrollToTop}
+      className='fixed bottom-8 right-8 z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110'
+      aria-label='Scroll to top'
+    >
+      <ArrowUpIcon className='h-5 w-5' />
+    </button>
   )
 }
