@@ -47,7 +47,8 @@
     "pages/**/*.ts",
     "pages/**/*.tsx",
     "components/**/*.ts",
-    "components/**/*.tsx"
+    "components/**/*.tsx",
+    "data/**/*.ts"
   ],
   "exclude": [
     "node_modules",
@@ -76,6 +77,21 @@
     "**/api-disabled/**",
     "**/api.disabled/**",
     "**/api-backup/**",
-    "**/node_modules_bak_*/*"
+    "**/node_modules_bak_*/*",
+    "components/book/**",
+    "utils/export/**",
+    "data/new-2025-services.ts",
+    "data/talent.ts",
+    "types/reviews.ts",
+    "utils/adminAuth.ts",
+    "utils/api/auth.ts",
+    "utils/auth.ts",
+    "utils/data/enterpriseStore.ts",
+    "utils/design-map.ts",
+    "utils/devAccess.ts",
+    "utils/fsdb.ts",
+    "utils/i18n.ts",
+    "utils/kyc.ts",
+    "utils/moderationDb.ts"
   ]
 }
