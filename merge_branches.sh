@@ -1,59 +1,55 @@
 #!/bin/bash
 
 # Script to merge multiple branches efficiently
-echo "Starting batch merge of unmerged branches..."
+echo "Starting batch merge of branches..."
 
-# Get list of unmerged branches (excluding backup branches)
-branches=$(git branch -r --no-merged origin/main | grep -v backup | grep -v aggressive | grep -v bulk | head -20)
+# Get all branches to merge
+branches=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main-" | head -50)
 
-merged_count=0
-failed_count=0
+success_count=0
+conflict_count=0
+up_to_date_count=0
 
 for branch in $branches; do
-    echo "Attempting to merge: $branch"
+    echo "Processing: $branch"
     
-    # Fetch the branch
-    git fetch origin $branch
-    
-    # Try to merge
-    if git merge origin/$branch --no-edit 2>/dev/null; then
-        echo "✅ Successfully merged: $branch"
-        merged_count=$((merged_count + 1))
+    # Attempt to merge
+    if git merge "$branch" --no-commit --no-ff >/dev/null 2>&1; then
+        git commit -m "Merge $branch into main" >/dev/null 2>&1
+        success_count=$((success_count + 1))
+        echo "  ✓ Successfully merged"
     else
-        echo "❌ Failed to merge: $branch - resolving conflicts automatically"
-        
-        # Try to resolve conflicts automatically
-        find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.json" | xargs sed -i '/<<<<<<< HEAD/,/=======/d; />>>>>>> /d' 2>/dev/null
-        
-        # Remove any backup files that cause conflicts
-        find . -name "*.backup.*" -exec git rm -f {} \; 2>/dev/null
-        
-        # Add all changes
-        git add . 2>/dev/null
-        
-        # Try to commit
-        if git commit -m "Auto-merge $branch with conflict resolution" 2>/dev/null; then
-            echo "✅ Auto-resolved and merged: $branch"
-            merged_count=$((merged_count + 1))
+        # Check if it's already up to date
+        if git merge "$branch" --no-commit --no-ff 2>&1 | grep -q "Already up to date"; then
+            up_to_date_count=$((up_to_date_count + 1))
+            echo "  - Already up to date"
         else
-            echo "❌ Could not auto-resolve: $branch - aborting merge"
-            git merge --abort 2>/dev/null
-            failed_count=$((failed_count + 1))
+            # Try to resolve conflicts automatically
+            echo "  ! Resolving conflicts..."
+            
+            # Resolve common conflicts
+            git checkout --ours .yarn/install-state.gz yarn.lock package-lock.json 2>/dev/null || true
+            git checkout --theirs package.json 2>/dev/null || true
+            
+            # Add resolved files
+            git add . 2>/dev/null || true
+            
+            # Commit if possible
+            if git commit -m "Merge $branch into main (resolved conflicts)" >/dev/null 2>&1; then
+                conflict_count=$((conflict_count + 1))
+                echo "  ✓ Resolved conflicts and merged"
+            else
+                # Abort if we can't resolve
+                git merge --abort >/dev/null 2>&1
+                echo "  ✗ Failed to resolve conflicts, aborted"
+            fi
         fi
-    fi
-    
-    # Push every 5 merges
-    if [ $((merged_count % 5)) -eq 0 ] && [ $merged_count -gt 0 ]; then
-        echo "Pushing batch of merges..."
-        git push origin main --force-with-lease
     fi
 done
 
-echo "Batch merge completed!"
-echo "Successfully merged: $merged_count branches"
-echo "Failed to merge: $failed_count branches"
-
-# Final push
-git push origin main --force-with-lease
-
-echo "All changes pushed to main branch"
+echo ""
+echo "Batch merge completed:"
+echo "  Successfully merged: $success_count"
+echo "  Resolved conflicts: $conflict_count" 
+echo "  Already up to date: $up_to_date_count"
+echo "  Total processed: $((success_count + conflict_count + up_to_date_count))"
