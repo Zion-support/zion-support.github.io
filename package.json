@@ -9,21 +9,21 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "tsc -p tsconfig.typecheck.app.json --noEmit && next build",
+    "build": "npm run type-check && next build",
     "start": "next start",
-    "lint": "eslint app src",
+    "lint": "eslint app",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-    "lint:fix": "eslint app src --fix",
+    "lint:fix": "eslint app --fix",
     "type-check": "tsc -p tsconfig.typecheck.app.json --noEmit",
     "test": "jest --config jest.config.cjs",
     "test:watch": "jest --config jest.config.cjs --watch",
-    "preview": "yarn run build && yarn run start",
+    "preview": "npm run build && npm run start",
     "test:coverage": "jest --config jest.config.cjs --coverage",
     "clean": "rm -rf .next node_modules/.cache",
     "export": "next build && next export",
-    "deploy": "yarn run build && next export",
+    "deploy": "npm run build && npm run export",
     "postinstall": "npm run type-check || echo 'Type-check skipped (non-blocking)'"
   },
   "dependencies": {
@@ -61,7 +61,7 @@
     "tailwindcss": "^3.4.0",
     "ts-jest": "29.4.4",
     "typescript": "5.9.2",
-    "typescript-eslint": "8.44.1",
+    "typescript-eslint": "^8.44.1",
     "whatwg-fetch": "3.6.20"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
