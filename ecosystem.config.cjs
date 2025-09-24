@@ -1,138 +1,191 @@
-const path = require('path');
-const rootDir = __dirname; // repository root
-
-// Local PM2-managed automations (safe for local run; no secrets required).
-// Cloud equivalents continue to run via Netlify Scheduled Functions and GitHub Actions.
-
 module.exports = {
   apps: [
-    // Continuous front enhancement cycle (every 5 minutes)
+    // Main application
     {
-      name: 'continuous-front',
-      cwd: rootDir,
-      script: 'automation/continuous-front-runner.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/5 * * * *',
+      name: 'zion-app',
+      script: 'npm',
+      args: 'start',
+      cwd: './',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
       env: {
-        CANONICAL_URL: 'https://ziontechgroup.com'
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      }
+    },
+    
+    // Backend server
+    {
+      name: 'zion-backend',
+      script: 'npm',
+      args: 'start',
+      cwd: './server',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
       }
     },
 
-    // Autonomous content creator + homepage advertiser (every 30 minutes)
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
-      name: 'content-creator',
-      cwd: rootDir,
-      script: 'automation/content-creator.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '* * * * *',
+      name: 'console-error-fixer',
+      script: './scripts/automation/console-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
       env: {
-        CANONICAL_URL: 'https://ziontechgroup.com'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     },
 
-    // Guardian pass to heal/fix and keep agents fresh (every 10 minutes)
+    // Continuous link checker - runs every 30 minutes
     {
-      name: 'automation-guardian-10m',
-      cwd: rootDir,
-      script: 'automation/automation-guardian-10min.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/10 * * * *'
+      name: 'link-checker',
+      script: './scripts/automation/link-checker.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     },
 
-    // Internal link crawl (every 6 hours)
+    // Continuous improvement - runs every 2 hours
     {
-      name: 'links-crawl',
-      cwd: rootDir,
-      script: 'automation/site-link-crawler.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/10 * * * *'
+      name: 'continuous-improvement',
+      script: './scripts/automation/continuous-improvement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     },
 
-    // Internal link fix (every 6 hours, offset a few minutes)
+    // Continuous build and test - runs every hour
     {
-      name: 'links-fix',
-      cwd: rootDir,
-      script: 'automation/site-link-fixer.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/5 * * * *'
+      name: 'daily-build-test',
+      script: './scripts/automation/daily-build-test.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      }
     },
 
-    // Sitemap (daily)
+    // Continuous security audit - runs every 4 hours
+    {
+      name: 'security-audit',
+      script: './scripts/automation/security-audit.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous dependency updates - runs every 6 hours
+    {
+      name: 'dependency-updates',
+      script: './scripts/automation/dependency-updates.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Continuous performance monitoring - runs every 2 hours
+    {
+      name: 'performance-monitor',
+      script: './scripts/automation/performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous quality checks - runs every 3 hours
+    {
+      name: 'quality-checks',
+      script: './scripts/automation/quality-checks.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
+      }
+    },
+
+    // Continuous link integrity checker - runs every 2 hours
+    {
+      name: 'link-integrity',
+      script: './scripts/automation/link-integrity.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: 'front-maximizer',
+      script: './scripts/automation/front-maximizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous sitemap runner - runs every 6 hours
     {
       name: 'sitemap-runner',
-      cwd: rootDir,
-      script: 'automation/sitemap-runner.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/7 * * * *'
-    },
-
-    // Git sync (every 15 minutes)
-    {
-      name: 'git-sync',
-      cwd: rootDir,
-      script: 'automation/git-sync.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '*/5 * * * *'
-    }
-    ,
-
-    // Continuous Git autosync loop (runs perpetually; PM2 will keep it alive)
-    {
-      name: 'git-autosync-loop',
-      cwd: rootDir,
-      script: 'automation/pm2-git-autosync.cjs',
-      interpreter: 'node',
-      time: true,
+      script: './scripts/automation/sitemap-runner.cjs',
+      instances: 1,
       autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
       env: {
-        SYNC_INTERVAL_SECONDS: '60',
-        TARGET_BRANCH: 'main'
-      }
-    }
-    ,
-
-    // Content Completer — improves pages continuously (every 1 minute)
-    {
-      name: 'content-completer',
-      cwd: rootDir,
-      script: 'automation/content-completer.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '* * * * *',
-      env: {
-        CANONICAL_URL: 'https://ziontechgroup.com'
-      }
-    }
-    ,
-
-    // Chat → Agents Orchestrator — research-driven agent generation (every 1 minute)
-    {
-      name: 'chat-to-agents',
-      cwd: rootDir,
-      script: 'automation/chat-to-agents-orchestrator.cjs',
-      interpreter: 'node',
-      time: true,
-      autorestart: false,
-      cron_restart: '* * * * *',
-      env: {
-        ALIGNMENT_CHAT_URL: 'https://chatgpt.com/share/688b6030-1aa0-800b-9b63-ec9a269ea62d',
-        ALIGNMENT_DOC_URL: 'https://docs.google.com/document/d/1Q3-QbWjIIj83VYX_Hx258kmvEyF9qBR2nF09IOi4ppM/edit?usp=sharing',
-        SITE_URL: 'https://ziontechgroup.netlify.app'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     }
   ]
