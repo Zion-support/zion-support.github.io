@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import { Metadata as _Metadata } from 'next';
 
 export function optimizeImages() {
   return {
