@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -56,13 +54,10 @@ const NextGenInnovationHub2026: React.FC = () => {
               <li>• Quantum machine learning</li>
               <li>• Neural architecture search</li>
               <li>• Explainable AI</li>
->>>>>>> cursor/create-and-deploy-new-content-c963
             </ul>
           </motion.div>
 
           <motion.div
-<<<<<<< HEAD
-=======
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -289,10 +284,8 @@ const NextGenInnovationHub2026: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/create-and-deploy-new-content-c963
     </div>
   );
 };
-
 
 export default NextGenInnovationHub2026;

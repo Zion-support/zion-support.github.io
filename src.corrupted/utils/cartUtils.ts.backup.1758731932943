@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-// Cart utilities for handling shopping cart operations
-
-=======
 // Cart utilities for managing shopping cart functionality
->>>>>>> cursor/create-and-deploy-new-content-7720
 export interface CartItem {
   id: string;
   name: string;
@@ -26,17 +21,6 @@ export interface Cart {
 }
 
 export const cartUtils = {
-<<<<<<< HEAD
-  // Create empty cart
-  createEmptyCart: (): Cart => ({
-    items: [],
-    total: 0,
-    itemCount: 0
-  }),
-
-  // Add item to cart
-  addItem: (cart: Cart, item: Omit<CartItem, 'quantity'>): Cart => {
-=======
   // Create a new empty cart
   createEmptyCart(): Cart {
     return {
@@ -58,15 +42,11 @@ export const cartUtils = {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
->>>>>>> cursor/create-and-deploy-new-content-7720
     }
     return item;
   });
 
   // Remove item from cart
-<<<<<<< HEAD
-  removeItem: (cart: Cart, itemId: string): Cart => {
-=======
   removeItem(cart: Cart, itemId: string): Cart {
     const newItems = cart.items.filter(item => item.id !== itemId);
     return cartUtils.calculateTotals({ ...cart, items: newItems });
@@ -77,7 +57,6 @@ export const cartUtils = {
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
->>>>>>> cursor/create-and-deploy-new-content-7720
 
 export function calculateCartTotals(cart: Cart): Cart {
   const subtotal = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -94,9 +73,6 @@ export function calculateCartTotals(cart: Cart): Cart {
   const total = subtotal + shipping + tax - cart.discount;
 
   // Calculate totals
-<<<<<<< HEAD
-  calculateTotals: (cart: Cart): Cart => {
-=======
   calculateTotals(cart: Cart): Cart {
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const itemCount = cart.items.reduce((sum, item) => sum + item.quantity, 0);
@@ -105,22 +81,10 @@ export function calculateCartTotals(cart: Cart): Cart {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
       itemCount,
->>>>>>> cursor/create-and-deploy-new-content-7720
     };
   }
 
   // Clear cart
-<<<<<<< HEAD
-  clearCart: (): Cart => cartUtils.createEmptyCart(),
-
-  // Get item by ID
-  getItem: (cart: Cart, itemId: string): CartItem | undefined => {
-    return cart.items.find(item => item.id === itemId);
-  },
-
-  // Check if item exists in cart
-  hasItem: (cart: Cart, itemId: string): boolean => {
-=======
   clearCart(cart: Cart): Cart {
     return cartUtils.createEmptyCart();
   },
@@ -168,4 +132,3 @@ export function calculateCartTotals(cart: Cart): Cart {
 }
 
 export default cartUtils;
->>>>>>> cursor/create-and-deploy-new-content-7720

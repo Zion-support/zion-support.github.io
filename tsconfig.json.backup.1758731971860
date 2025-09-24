@@ -32,9 +32,6 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "noImplicitOverride": false,
-<<<<<<< HEAD
-    "types": ["node", "react", "react-dom"]
-=======
     "types": [
       "node",
       "react",
@@ -47,7 +44,6 @@
       }
     ],
     "strictNullChecks": true
->>>>>>> e545662d053839859ba7b72b8986404a58258d97
   },
   "include": [
     "src-clean/src/**/*",

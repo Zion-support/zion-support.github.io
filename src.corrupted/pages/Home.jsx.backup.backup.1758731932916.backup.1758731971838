@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -130,7 +127,6 @@ export default function Home() {
       rating: 5
     }
   ];
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const Home = () => {
   return (
@@ -140,9 +136,6 @@ const Home = () => {
           <h1 className="text-5xl font-bold mb-6">Home</h1>
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <divdiv 
@@ -435,7 +428,6 @@ const Home = () => {
           </divdiv>
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-79ca
     </div>
   );
 };

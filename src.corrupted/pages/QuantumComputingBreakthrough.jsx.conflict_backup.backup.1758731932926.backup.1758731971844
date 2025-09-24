@@ -2,8 +2,6 @@ import React from 'react';
 
 const QuantumComputingBreakthrough = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -37,12 +35,10 @@ const QuantumComputingBreakthrough = () => {
               Real-world quantum computing applications and use cases.
             </p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>
   );
 };
-
 
 export default QuantumComputingBreakthrough;
