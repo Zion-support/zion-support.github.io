@@ -32,8 +32,8 @@ export class SitemapGenerator {
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
-  </url>`,
-    }).join('\n'),
+  </url>`;
+    }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -81,8 +81,8 @@ Crawl-delay: 1`
       return `  <sitemap>
     <loc>${sitemap}</loc>
     <lastmod>${lastmod}</lastmod>
-  </sitemap>`,
-    }).join('\n'),
+  </sitemap>`;
+    }).join('\n');
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
@@ -94,10 +94,10 @@ ${sitemapEntries}
    * Generate JSON-LD structured data for sitemap
    */
   generateStructuredData(): string {
-    const { baseUrl } = this.config,
+    const { baseUrl } = this.config;
     
     const structuredData = {
-      "@context": "https: //schema.org";
+      "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zion Tech Group",
       "url": baseUrl,
@@ -111,11 +111,11 @@ ${sitemapEntries}
         "query-input": "required name=search_term_string"
       },
       "sameAs": [
-        "https: //linkedin.com/company/zion-tech-group";
-        "https: //twitter.com/ziontechgroup"
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup"
       ]
     };
-    return JSON.stringify(structuredData, null, 2),
+    return JSON.stringify(structuredData, null, 2);
   }
 }
 

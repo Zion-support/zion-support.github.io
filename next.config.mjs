@@ -23,9 +23,14 @@ const nextConfig = {
 	experimental: {
 		optimizeCss: true,
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+		// Force SWC to use JavaScript fallback if native binary fails
+		swcMinify: true,
 		// Disable SWC binary download to force JavaScript fallback
 		forceSwcTransforms: true,
 	},
+	
+	// SWC configuration - force JavaScript fallback
+	swcMinify: true,
 	
 	// Webpack optimizations
 	webpack: (config, { dev, isServer }) => {

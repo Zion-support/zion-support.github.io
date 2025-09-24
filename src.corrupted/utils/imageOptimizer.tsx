@@ -1,247 +1,186 @@
-import React from "react"
-interface ImageOptimizationOptions {;
-  width?: number,;
-  height?: number,;
-  quality?: number,;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png',;
-  lazy?: boolean,;
-  placeholder?: 'blur' | 'empty',;
-  blurDataURL?: string,;
-};
+import React, { useState, useEffect, useRef } from 'react';
 
-interface OptimizedImageProps {;
-  src: string,alt: string;
-  width?: number,;
-  height?: number,;
-  className?: string,;
-  priority?: boolean,;
-  loading?: 'lazy' | 'eager',;
-  placeholder?: 'blur' | 'empty',;
-  blurDataURL?: string;
-};
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  loading?: 'lazy' | 'eager';
+  placeholder?: 'blur' | 'empty';
+}
 
-class ImageOptimizer {;
+class ImageOptimizer {
   private static instance: ImageOptimizer;
-  private observer?: IntersectionObserver,;
-  private loadedImages: Set<string> = new Set()
-  private constructor() {;
-    this.initializeIntersectionObserver()
-  };
+  private observer: IntersectionObserver | null = null;
+  private loadedImages: Set<string> = new Set();
 
-  public static getInstance(): ImageOptimizer {;
-    if (!ImageOptimizer.instance) {;
-      ImageOptimizer.instance = new ImageOptimizer(),;
-    };
-    return ImageOptimizer.instance,;
-  };
+  private constructor() {
+    this.setupIntersectionObserver();
+  }
 
-  private initializeIntersectionObserver(): void {;
-    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-      return,;
-    };
+  public static getInstance(): ImageOptimizer {
+    if (!ImageOptimizer.instance) {
+      ImageOptimizer.instance = new ImageOptimizer();
+    }
+    return ImageOptimizer.instance;
+  }
 
-    this.observer = new IntersectionObserver(;
-      (entries) => {;
-        entries.forEach((entry) => {;
-          if (entry.isIntersecting) {;
-            const img = entry.target as HTMLImageElement;
-            this.loadImage(img),;
-          };
-        }),;
-      },;
-      {;
-        rootMargin: '50px 0px',threshold: 0.01;
-      };
-    );
-  };
+  private setupIntersectionObserver(): void {
+    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                this.loadedImages.add(img.dataset.src);
+                this.observer?.unobserve(img);
+              }
+            }
+          });
+        },
+        {
+          rootMargin: '50px 0px',
+          threshold: 0.1,
+        }
+      );
+    }
+  }
 
-  private loadImage(img: HTMLImageElement): void {;
-    const src = img.dataset.src
-    if (!src || this.loadedImages.has(src)) {
-      return;
-    };
+  public optimizeImageUrl(src: string, options: { width?: number; height?: number; quality?: number } = {}): string {
+    if (!src) return src;
 
-    this.loadedImages.add(src),;
-    ;
-    //[^;]*
-    const imageLoader = new Image()
-    imageLoader.onload = () => {;
-      img.src = src,;
-      img.classList.remove('opacity-0'),;
-      img.classList.add('opacity-100'),;
-      ;
-      //[^;]*
-      this.observer?.unobserve(img),;
-    },;
-    ;
-    imageLoader.onerror = () => {;
-      console.error(`Failed to load image: ${src}`)
-      img.classList.add('error'),;
-    },;
-    ;
-    imageLoader.src = src,;
-  };
-
-  public optimizeImageUrl(;
-    src: string,options: ImageOptimizationOptions = {};
-  ): string {;
-    const {;
-      width;
-      height,;
-      quality = 80,;
-      format = 'webp'
-    } = options,;
-
-    //[^;]*
-    if (src.startsWith('http') || src.startsWith('data: ')) {
+    const { width, height, quality = 80 } = options;
+    
+    // If it's already an optimized URL or external, return as is
+    if (src.startsWith('data:') || src.startsWith('blob:') || src.includes('http')) {
       return src;
-    };
+    }
 
-    //[^;]*
-    //[^;]*
-    let optimizedUrl = src;
-    ;
-    if (width || height || quality !== 80 || format !== 'webp') {
-      const params = new URLSearchParams()
-      ;
-      if (width) params.append('w', width.toString()),;
-      if (height) params.append('h', height.toString()),;
-      if (quality !== 80) params.append('q', quality.toString()),;
-      if (format !== 'webp') params.append('f', format),;
-      ;
-      optimizedUrl = `${src}?${params.toString()}`,;
-    };
+    // For local images, we could add optimization parameters here
+    // This is a placeholder for future optimization logic
+    return src;
+  }
 
-    return optimizedUrl,;
-  };
+  public observeImage(img: HTMLImageElement): void {
+    if (this.observer && img.dataset.src) {
+      this.observer.observe(img);
+    }
+  }
 
-  public observeImage(img: HTMLImageElement): void {;
-    if (this.observer && img.dataset.src) {;&& img.dataset.src) {; img.dataset.src) {
-      this.observer.observe(img)
-    };
-  };
+  public generateBlurDataURL(width: number = 10, height: number = 10): string {
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      const gradient = ctx.createLinearGradient(0, 0, width, height);
+      gradient.addColorStop(0, '#f3f4f6');
+      gradient.addColorStop(1, '#e5e7eb');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+    }
+    return canvas.toDataURL('image/jpeg', 0.1);
+  }
 
-  public generateBlurDataURL(width: number = 10, height: number = 10): string {;
-    //[^;]*
-    const canvas = document.createElement('canvas')
-    canvas.width = width,;
-    canvas.height = height,;
-    const ctx = canvas.getContext('2d')
-    ;
-    if (ctx) {;
-      //[^;]*
-      const gradient = ctx.createLinearGradient(0, 0, width, height)
-      gradient.addColorStop(0, '#f3f4f6'),;
-      gradient.addColorStop(1, '#e5e7eb'),;
-      ;
-      ctx.fillStyle = gradient,;
-      ctx.fillRect(0, 0, width, height),;
-    };
-    ;
-    return canvas.toDataURL('image/jpeg', 0.1),;
-  };
+  public preloadImage(src: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve();
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
 
-  public preloadImage(src: string): Promise<void> {;
-    return new Promise((resolve, reject) => {;
-      const img = new Image()
-      img.onload = () => resolve(),;
-      img.onerror = reject,;
-      img.src = src,;
-    }),;
-  };
-
-  public preloadImages(srcs: string[]): Promise<void[]> {;
+  public preloadImages(srcs: string[]): Promise<void[]> {
     return Promise.all(srcs.map(src => this.preloadImage(src)));
-  };
+  }
 
-  public cleanup(): void {;
-    this.observer?.disconnect()
-    this.loadedImages.clear(),;
+  public cleanup(): void {
+    this.observer?.disconnect();
+    this.loadedImages.clear();
+  }
+}
+
+export const useImageOptimization = () => {
+  const optimizer = ImageOptimizer.getInstance();
+  return {
+    optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),
+    observeImage: optimizer.observeImage.bind(optimizer),
+    generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer),
+    preloadImage: optimizer.preloadImage.bind(optimizer),
+    preloadImages: optimizer.preloadImages.bind(optimizer)
   };
 };
 
-//[^;]*
-export const useImageOptimization = () => {;
-  const optimizer = ImageOptimizer.getInstance()
-  return {;
-    optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer),preloadImage: optimizer.preloadImage.bind(optimizer),preloadImages: optimizer.preloadImages.bind(optimizer)
-  };
-},;
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  loading = 'lazy',
+  placeholder = 'blur'
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const { optimizeUrl, observeImage, generateBlurDataURL } = useImageOptimization();
 
-//[^;]*
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-  src;
-  alt,;
-  width,;
-  height,;
-  className = '',;
-  priority = false,;
-  loading = 'lazy',;
-  placeholder = 'blur',;
-  blurDataURL;
-}) => {;
-  const { optimizeUrl, observeImage, generateBlurDataURL } = useImageOptimization(),;
-  const [imageRef, setImageRef] = React.useState<HTMLImageElement | null>(null),;
-  const [isLoaded, setIsLoaded] = React.useState(false),;
-
-  const optimizedSrc = optimizeUrl(src, {;
-    width,;
-    height,;
-    format: 'webp'
+  const optimizedSrc = optimizeUrl(src, {
+    width,
+    height,
+    quality: 80
   });
-  const placeholderDataURL = blurDataURL || generateBlurDataURL()
 
-  React.useEffect(() => {;
-    if (imageRef && loading === 'lazy' && !priority) {;&& loading === 'lazy' && !priority) {; loading === 'lazy' && !priority) {
-      observeImage(imageRef),;
-    };
-  }, [imageRef, loading, priority, observeImage]),;
+  useEffect(() => {
+    if (imageRef.current && loading === 'lazy' && !priority) {
+      observeImage(imageRef.current);
+    }
+  }, [imageRef, loading, priority, observeImage]);
 
-  const handleLoad = () => {;
-    setIsLoaded(true),;
-  },;
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
 
-  const handleError = () => {;
-    console.error(`Failed to load image: ${src}`)
-  },;
-
-  if (priority || loading === 'eager') {
-    return (
-      <img;
-        src={optimizedSrc};
-        alt={alt};
-        width={width};
-        height={height};
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-        onLoad={handleLoad};
-        onError={handleError};
-      />;
-    ),;
+  const handleError = () => {
+    setHasError(true);
   };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>;
-      {placeholder === 'blur' && !isLoaded && (;&& !isLoaded && (; !isLoaded && (
-        <div;
-          className="[^"]*"
-          style={{;
-            backgroundImage: `url(${placeholderDataURL})`
-            backgroundSize: 'cover',backgroundPosition: 'center',filter: 'blur(10px)',transform: 'scale(1.1)'
-          }};
-        />;
-      )};
-      <img;
-        ref={setImageRef};
-        data-src={optimizedSrc};
-        alt={alt};
-        width={width};
-        height={height};
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-        onLoad={handleLoad};
-        onError={handleError};
-      />;
-    </[^>]*>
+    <div className={`relative overflow-hidden ${className}`}>
+      {!hasError ? (
+        <img
+          ref={imageRef}
+          src={priority ? optimizedSrc : undefined}
+          data-src={!priority ? optimizedSrc : undefined}
+          alt={alt}
+          width={width}
+          height={height}
+          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={handleLoad}
+          onError={handleError}
+        />
+      ) : (
+        <div className="flex items-center justify-center bg-gray-200 text-gray-500" style={{ width, height }}>
+          Image failed to load
+        </div>
+      )}
+      {placeholder === 'blur' && !isLoaded && (
+        <div
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{
+            backgroundImage: `url(${generateBlurDataURL(width || 100, height || 100)})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+      )}
+    </div>
   );
-},;
-
-export default ImageOptimizer;
+};
