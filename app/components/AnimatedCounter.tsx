@@ -15,7 +15,7 @@ export default function AnimatedCounter({
   duration = 2000,
   prefix = '',
   suffix = '',
-  className = '',
+  className = ''
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);

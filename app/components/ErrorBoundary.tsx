@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 
@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 			componentStack: errorInfo.componentStack,
 			timestamp: new Date().toISOString(),
 			userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
-			url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+			url: typeof window !== 'undefined' ? window.location.href : 'unknown'
 		};
 
 		if (process.env.NODE_ENV === 'development') {
