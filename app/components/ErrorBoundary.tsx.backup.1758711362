@@ -52,6 +52,10 @@ class ErrorBoundary extends React.Component<
 			console.groupEnd();
 		}
 
+<<<<<<< HEAD
+		if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
+			((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'exception', {
+=======
 		if (
 			typeof window !== 'undefined' &&
 			typeof (window as unknown as {
@@ -61,6 +65,7 @@ class ErrorBoundary extends React.Component<
 			((window as unknown as {
 				gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
 			}).gtag)('event', 'exception', {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a2ef
 				description: error.message,
 				fatal: true});
 		}
