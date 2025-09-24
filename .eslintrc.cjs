@@ -73,6 +73,7 @@ module.exports = {
     'lib/**',
     'utils/**',
     'api/',
+    'app/',
     'app_backup/',
     'app-disabled/',
     'app-minimal/',
