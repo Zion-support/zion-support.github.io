@@ -343,3 +343,11 @@
 2025-09-24 18:07:53 - Resolving conflicts in components/ui/Card.tsx for branch bulk-merge-backup-20250923-140330
 2025-09-24 18:07:53 - Resolving conflicts in middleware.ts for branch bulk-merge-backup-20250923-140330
 2025-09-24 18:07:54 - Resolving conflicts in package.json for branch bulk-merge-backup-20250923-140330
+2025-09-24 18:08:02 - Merge conflicts detected in cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in .next/build-manifest.json for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in .next/cache/webpack/server-production/index.pack for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in .next/server/pages-manifest.json for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in .next/trace for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in out/404.html for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in out/404/index.html for branch cursor/check-fix-push-and-merge-to-main-0601
+2025-09-24 18:08:02 - Resolving conflicts in tsconfig.tsbuildinfo for branch cursor/check-fix-push-and-merge-to-main-0601
