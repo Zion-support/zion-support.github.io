@@ -1,136 +1,100 @@
-const fs = require('fs-extra');
+const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-function readFileSafe(filePath) {
-  try {
-    return fs.readFileSync(filePath, 'utf8');
-  } catch (e) {
-    return '';
-  }
-}
+function ensureDir(dirPath) { fs.mkdirSync(dirPath, { recursive: true }); }
 
-function extractInterfacesAndTypes(source) {
-  const results = [];
-
-  const interfaceRegex = /export\s+interface\s+(\w+)\s*\{([\s\S]*?)\}/g;
-  let match;
-  while ((match = interfaceRegex.exec(source)) !== null) {
-    results.push({ kind: 'interface', name: match[1], body: match[2] });
-  }
-
-  const typeRegex = /export\s+type\s+(\w+)\s*=\s*\{([\s\S]*?)\};?/g;
-  while ((match = typeRegex.exec(source)) !== null) {
-    results.push({ kind: 'type', name: match[1], body: match[2] });
-  }
-
-  return results;
-}
-
-function parseProps(body) {
-  const lines = body.split('\n');
-  const props = [];
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line || line.startsWith('//')) continue;
-    // Capture optional trailing comma/semicolon
-    const propMatch = /^(\w+)\??:\s*([^;]+?)[;,]?$/.exec(line);
-    if (propMatch) {
-      // look for preceding comment lines
-      const comments = [];
-      for (let j = i - 1; j >= 0; j--) {
-        const prev = lines[j].trim();
-        if (prev.startsWith('//')) {
-          comments.unshift(prev.replace(/^\/\//, '').trim());
-        } else if (prev === '' || prev === '}' || prev === '{') {
-          continue;
-        } else {
-          break;
-        }
+function listFilesRecursive(dir, exts) {
+  const files = [];
+  const stack = [dir];
+  while (stack.length) {
+    const cur = stack.pop();
+    const stat = fs.statSync(cur);
+    if (stat.isDirectory()) {
+      for (const ent of fs.readdirSync(cur)) {
+        if (ent.startsWith('.')) continue;
+        stack.push(path.join(cur, ent));
       }
-      props.push({ name: propMatch[1], type: propMatch[2].trim(), description: comments.join(' ') });
+    } else if (exts.includes(path.extname(cur))) {
+      files.push(cur);
     }
   }
-  return props;
+  return files;
 }
 
-function generateDocsForFile(filePath) {
-  const source = readFileSafe(filePath);
-  const defs = extractInterfacesAndTypes(source).filter(d => /Props$/i.test(d.name) || d.name === 'Props');
-  const docs = [];
-  for (const def of defs) {
-    const props = parseProps(def.body);
-    if (props.length > 0) {
-      docs.push({ definitionName: def.name, props });
-    }
+function extractPropsAndComponents(content) {
+  const interfaces = [];
+  const types = [];
+  const components = [];
+
+  const interfaceRegex = /interface\s+([A-Za-z0-9_]+Props?)\s*\{[\s\S]*?\}/g;
+  const typeRegex = /type\s+([A-Za-z0-9_]+Props?)\s*=\s*[\s\S]*?;/g;
+  const exportFunctionRegex = /export\s+(default\s+)?function\s+([A-Za-z0-9_]+)\s*\(/g;
+  const constComponentRegex = /export\s+const\s+([A-Za-z0-9_]+)\s*=\s*\(/g;
+
+  let m;
+  while ((m = interfaceRegex.exec(content))) interfaces.push(m[1]);
+  while ((m = typeRegex.exec(content))) types.push(m[1]);
+  while ((m = exportFunctionRegex.exec(content))) components.push(m[2]);
+  while ((m = constComponentRegex.exec(content))) components.push(m[1]);
+
+  return { interfaces: Array.from(new Set(interfaces)), types: Array.from(new Set(types)), components: Array.from(new Set(components)) };
+}
+
+function generateDocs(componentsDir, outDir) {
+  const files = listFilesRecursive(componentsDir, ['.tsx', '.ts', '.jsx', '.js']);
+  const entries = [];
+  for (const file of files) {
+    const rel = path.relative(componentsDir, file);
+    const content = fs.readFileSync(file, 'utf8');
+    const { interfaces, types, components } = extractPropsAndComponents(content);
+    entries.push({ file: rel, interfaces, types, components });
   }
-  return docs;
+  const totalComponents = entries.reduce((acc, e) => acc + e.components.length, 0);
+
+  ensureDir(outDir);
+  fs.writeFileSync(path.join(outDir, 'components-props.json'), JSON.stringify({ generatedAt: new Date().toISOString(), totalFiles: files.length, totalComponents, entries }, null, 2));
+
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Component Props Docs</title>
+<style>
+  body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:#0b1220; color:#e5e7eb; margin:0; padding:2rem; }
+  h1 { margin:0 0 1rem; }
+  .muted { color:#9ca3af; }
+  .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1rem; margin: 0.5rem 0; }
+  code { background: rgba(255,255,255,0.1); padding: 0.2rem 0.3rem; border-radius: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 0.75rem; }
+</style>
+</head>
+<body>
+  <h1>Component Props Docs</h1>
+  <p class="muted">Auto-generated from files in <code>components/</code>. Shows detected components and props type interfaces.</p>
+  <p>Total files: ${files.length} • Components detected: ${totalComponents}</p>
+  <div class="grid">
+    ${entries.map(e => `<div class=card>
+      <div><strong>${e.file}</strong></div>
+      ${e.components.length ? `<div>Components: ${e.components.map(c=>`<code>${c}</code>`).join(' ')}</div>` : '<div class=muted>No exported components detected</div>'}
+      ${e.interfaces.length ? `<div>Interfaces: ${e.interfaces.map(i=>`<code>${i}</code>`).join(' ')}</div>` : ''}
+      ${e.types.length ? `<div>Types: ${e.types.map(t=>`<code>${t}</code>`).join(' ')}</div>` : ''}
+    </div>`).join('')}
+  </div>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf8');
+
+  console.log(`[component-props-docs] Processed ${files.length} files, found ${totalComponents} components.`);
 }
 
 function main() {
-  const componentsDir = path.resolve(__dirname, '..', 'components');
-  const outputMarkdown = path.resolve(__dirname, '..', 'docs', 'components-props.md');
-  const outputJson = path.resolve(__dirname, '..', 'public', 'components-props.json');
-
-  const pattern = path.join(componentsDir, '**', '*.{ts,tsx,js,jsx}');
-  const files = glob.sync(pattern, { nodir: true });
-
-  const summary = [];
-
-  for (const file of files) {
-    const rel = path.relative(path.resolve(__dirname, '..'), file);
-    const base = path.basename(file);
-    const componentName = base.replace(/\.(tsx?|jsx?)$/, '');
-    const docs = generateDocsForFile(file);
-    if (docs.length > 0) {
-      summary.push({ file: rel, component: componentName, docs });
-    }
-  }
-
-  // Write JSON
-  fs.ensureDirSync(path.dirname(outputJson));
-  fs.writeFileSync(outputJson, JSON.stringify({ generatedAt: new Date().toISOString(), items: summary }, null, 2));
-
-  // Write Markdown
-  const mdParts = [];
-  mdParts.push('# Component Props Documentation');
-  mdParts.push('');
-  mdParts.push(`Generated at ${new Date().toISOString()}`);
-  mdParts.push('');
-  for (const item of summary) {
-    mdParts.push(`## ${item.component}`);
-    mdParts.push(`File: \
-${item.file}`);
-    for (const def of item.docs) {
-      mdParts.push('');
-      mdParts.push(`### ${def.definitionName}`);
-      mdParts.push('');
-      if (def.props.length === 0) {
-        mdParts.push('_No props detected_');
-      } else {
-        for (const p of def.props) {
-          const desc = p.description ? ` — ${p.description}` : '';
-          mdParts.push(`- ${p.name}: \
-${p.type}${desc}`);
-        }
-      }
-      mdParts.push('');
-    }
-    mdParts.push('');
-  }
-  fs.ensureDirSync(path.dirname(outputMarkdown));
-  fs.writeFileSync(outputMarkdown, mdParts.join('\n'));
-
-  console.log(`Wrote ${outputJson}`);
-  console.log(`Wrote ${outputMarkdown}`);
+  const projectRoot = path.resolve(__dirname, '..');
+  const componentsDir = path.join(projectRoot, 'components');
+  const outDir = path.join(projectRoot, 'public', 'reports', 'components');
+  generateDocs(componentsDir, outDir);
 }
 
 if (require.main === module) {
-  try {
-    main();
-    process.exit(0);
-  } catch (e) {
-    console.error(e);
-    process.exit(1);
-  }
+  try { main(); process.exit(0); } catch (e) { console.error(e); process.exit(1); }
 }
