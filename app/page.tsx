@@ -3,21 +3,60 @@ import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { LoadingSpinner } from '../components/LoadingSpinner';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
-// Temporarily disable heavy advanced components not present to allow build
+// Import new advanced AI components
+import AdvancedContentRecommendationEngine from '../src/components/AdvancedContentRecommendationEngine';
+import RealTimePerformanceDashboard from '../src/components/RealTimePerformanceDashboard';
+import IntelligentSearchEngine from '../src/components/IntelligentSearchEngine';
+import AdvancedAIAssistant from '../src/components/AdvancedAIAssistant';
+import BusinessIntelligenceDashboard from '../src/components/BusinessIntelligenceDashboard';
+import AdvancedSecurityMonitor from '../src/components/AdvancedSecurityMonitor';
+import AdvancedAnalyticsEngine from '../src/components/AdvancedAnalyticsEngine';
+import AutomationWorkflowEngine from '../src/components/AutomationWorkflowEngine';
+import EnterpriseDataManagement from '../src/components/EnterpriseDataManagement';
+import APIManagementSystem from '../src/components/APIManagementSystem';
 
 // Lazy load heavy components
-const StructuredData = lazy(() => import('../src/components/StructuredData'));
+const ROICalculator = lazy(() => import('../src/components/ROICalculator'));
+const StructuredData = lazy(() => import('../components/StructuredData'));
+const PerformanceMetrics = lazy(() => import('../src/components/PerformanceMetrics'));
+const TechnologyStack = lazy(() => import('../src/components/TechnologyStack'));
 
 // Import key promotional components
-// Disable missing promotional components
+import NewContentPromotionBanner from '../src/components/NewContentPromotionBanner';
+import InteractiveContentDiscoveryWidget from '../src/components/InteractiveContentDiscoveryWidget';
+import ComprehensiveSolutionsBanner2025 from '../src/components/ComprehensiveSolutionsBanner2025';
+import NewServicesShowcase2025 from '../src/components/NewServicesShowcase2025';
+import EnhancedContentPromotionBanner from '../src/components/EnhancedContentPromotionBanner';
+import NewContent2026Showcase from '../src/components/NewContent2026Showcase';
+import RevolutionaryContent2026Banner from '../src/components/RevolutionaryContent2026Banner';
+import FeaturedContentShowcase2026 from '../src/components/FeaturedContentShowcase2026';
+import EnhancedContentPromotionBanner2026 from '../src/components/EnhancedContentPromotionBanner2026';
+import ComprehensiveContentShowcase2026 from '../src/components/ComprehensiveContentShowcase2026';
+import RevolutionaryContent2025Banner from '../src/components/RevolutionaryContent2025Banner';
+import UltimateContentShowcase2025 from '../src/components/UltimateContentShowcase2025';
+// Import new 2026 promotional components
+import UltimatePromotionBanner2026 from '../src/components/UltimatePromotionBanner2026';
+import UltimateContentShowcase2026 from '../src/components/UltimateContentShowcase2026';
+import SuccessMetricsShowcase2026 from '../src/components/SuccessMetricsShowcase2026';
 
 // Import additional promotional components
-// Disable additional promotional imports
+import AI2025BreakthroughBanner from '../src/components/AI2025BreakthroughBanner';
+import NewContent2025PromotionBanner from '../src/components/NewContent2025PromotionBanner';
+import LatestContentShowcase2025 from '../src/components/LatestContentShowcase2025';
+import RevolutionaryAIContentBanner from '../src/components/RevolutionaryAIContentBanner';
+import NewContent2025UltimateBanner from '../src/components/NewContent2025UltimateBanner';
 
 // Import new AI 2026 promotional components
-// Disable further missing imports
+import AI2026QuantumRevolutionBanner from '../src/components/AI2026QuantumRevolutionBanner';
+import AI2026AutonomousSystemsBanner from '../src/components/AI2026AutonomousSystemsBanner';
+import AI2026UltimateShowcaseBanner from '../src/components/AI2026UltimateShowcaseBanner';
+import QuantumAI2026BreakthroughBanner from '../src/components/QuantumAI2026BreakthroughBanner';
+import QuantumAIContentShowcase2026 from '../src/components/QuantumAIContentShowcase2026';
+import RevolutionaryContentBanner2025 from '../src/components/RevolutionaryContentBanner2025';
 
 // Import new promotional banners for latest content
 import QuantumAI2026RevolutionBanner from '../src/components/QuantumAI2026RevolutionBanner';
@@ -402,18 +441,30 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {[
-              { title: 'Micro SaaS', href: '/services/micro-saas', description: 'End-to-end product engineering with billing, auth, analytics and growth.', icon: '🚀' },
-              { title: 'AI Services', href: '/services/ai-services', description: 'LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.', icon: '🤖' },
-              { title: 'Edge Computing', href: '/services/edge-computing', description: 'Real-time processing, IoT integration, and distributed infrastructure solutions.', icon: '⚡' },
-              { title: 'IT Services', href: '/services/it-services', description: 'Cloud migration, DevOps, SRE, security hardening and cost optimization.', icon: '⚙️' }
-            ].map((item) => (
-              <Link key={item.title} href={item.href} className='block p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow bg-white'>
-                <div className='text-3xl mb-2'>{item.icon}</div>
-                <h3 className='text-lg font-semibold mb-1 text-gray-900'>{item.title}</h3>
-                <p className='text-sm text-gray-600'>{item.description}</p>
-              </Link>
-            ))}
+            <Card
+              title='Micro SaaS'
+              href='/services/micro-saas'
+              description='End-to-end product engineering with billing, auth, analytics and growth.'
+              icon='🚀'
+            />
+            <Card
+              title='AI Services'
+              href='/services/ai-services'
+              description='LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps.'
+              icon='🤖'
+            />
+            <Card
+              title='Edge Computing'
+              href='/services/edge-computing'
+              description='Real-time processing, IoT integration, and distributed infrastructure solutions.'
+              icon='⚡'
+            />
+            <Card
+              title='IT Services'
+              href='/services/it-services'
+              description='Cloud migration, DevOps, SRE, security hardening and cost optimization.'
+              icon='⚙️'
+            />
           </div>
         </div>
       </section>
@@ -521,17 +572,22 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {[
-              { title: 'Fast Delivery', description: 'Rapid prototyping and deployment with modern tools and practices.' },
-              { title: 'Scalable Architecture', description: 'Built for growth with cloud-native, microservices architecture.' },
-              { title: '24/7 Support', description: 'Round-the-clock monitoring and support for your critical systems.' },
-              { title: 'Cost Effective', description: 'Optimized solutions that reduce operational costs and improve efficiency.' }
-            ].map((item) => (
-              <div key={item.title} className='p-6 rounded-lg border bg-white'>
-                <h3 className='text-lg font-semibold mb-2 text-gray-900'>{item.title}</h3>
-                <p className='text-sm text-gray-600'>{item.description}</p>
-              </div>
-            ))}
+            <FeatureCard
+              title='Fast Delivery'
+              description='Rapid prototyping and deployment with modern tools and practices.'
+            />
+            <FeatureCard
+              title='Scalable Architecture'
+              description='Built for growth with cloud-native, microservices architecture.'
+            />
+            <FeatureCard
+              title='24/7 Support'
+              description='Round-the-clock monitoring and support for your critical systems.'
+            />
+            <FeatureCard
+              title='Cost Effective'
+              description='Optimized solutions that reduce operational costs and improve efficiency.'
+            />
           </div>
         </div>
       </section>
@@ -548,37 +604,27 @@ export default function HomePage() {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {[
-              {
-                company: 'TechStart Inc.',
-                industry: 'SaaS',
-                result: '300% increase in customer satisfaction',
-                description: 'AI automation reduced support response time from 4 hours to 2 minutes',
-                savings: '$50K monthly savings'
-              },
-              {
-                company: 'RetailMax',
-                industry: 'E-commerce',
-                result: '90% reduction in manual tasks',
-                description: 'Automated inventory management and order processing systems',
-                savings: '$75K annual cost reduction'
-              },
-              {
-                company: 'ConsultPro',
-                industry: 'Professional Services',
-                result: '40% increase in proposal win rate',
-                description: 'AI-powered proposal generation and client management',
-                savings: '20 hours saved per week'
-              }
-            ].map((t) => (
-              <div key={t.company} className='bg-white p-6 rounded-lg shadow-sm'>
-                <div className='mb-2 text-sm text-gray-600'>{t.industry}</div>
-                <h4 className='font-semibold text-gray-900 mb-2'>{t.company}</h4>
-                <p className='text-gray-700 mb-2'>{t.description}</p>
-                <div className='text-sm text-green-700 font-medium'>{t.result}</div>
-                <div className='text-sm text-blue-700'>{t.savings}</div>
-              </div>
-            ))}
+            <TestimonialCard
+              company="TechStart Inc."
+              industry="SaaS"
+              result="300% increase in customer satisfaction"
+              description="AI automation reduced support response time from 4 hours to 2 minutes"
+              savings="$50K monthly savings"
+            />
+            <TestimonialCard
+              company="RetailMax"
+              industry="E-commerce"
+              result="90% reduction in manual tasks"
+              description="Automated inventory management and order processing systems"
+              savings="$75K annual cost reduction"
+            />
+            <TestimonialCard
+              company="ConsultPro"
+              industry="Professional Services"
+              result="40% increase in proposal win rate"
+              description="AI-powered proposal generation and client management"
+              savings="20 hours saved per week"
+            />
           </div>
         </div>
       </section>
@@ -1207,15 +1253,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Performance Metrics Section - temporarily disabled */}
-      {/* <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
+      {/* Performance Metrics Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading metrics..." />}>
         <PerformanceMetrics />
-      </Suspense> */}
+      </Suspense>
 
-      {/* Technology Stack Section - temporarily disabled */}
-      {/* <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
+      {/* Technology Stack Section */}
+      <Suspense fallback={<LoadingSpinner size="md" text="Loading tech stack..." />}>
         <TechnologyStack />
-      </Suspense> */}
+      </Suspense>
 
       {/* Newsletter Signup Section */}
       <section className='py-16 bg-gradient-to-r from-blue-50 to-indigo-50'>
