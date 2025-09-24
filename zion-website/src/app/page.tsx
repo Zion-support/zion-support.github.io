@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
 import React from 'react'
 import {
   ChartBarIcon,
@@ -88,33 +84,13 @@ const solutions = [
 
 const whatsNew = [
   {
-<<<<<<< HEAD
-    title: 'Agent Safety Red Teaming 2025',
-    desc: 'Practical playbooks to probe, stress, and harden multi‑agent systems.',
-    href: '/blog/agent-safety-red-teaming-2025',
-    tag: 'New',
-  },
-  {
-    title: 'AI Automation Case Studies 2025',
-    desc: 'Five deployments with measurable KPIs from MTTR to margin uplift.',
-    href: '/blog/ai-automation-case-studies-2025',
-    tag: 'New',
-  },
-  {
-=======
->>>>>>> cursor/create-and-deploy-new-content-2def
     title: 'Edge AI Inference v1.2',
     desc: 'Run models 3x faster on edge devices with quantization-aware serving.',
     href: '/solutions/edge-ai-inference',
     tag: 'New',
   },
-<<<<<<< HEAD
-]
-
-=======
 import { getLatestUpdates } from '../data/updates'
 
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
   {
     title: 'GenAI Content Studio',
@@ -139,42 +115,23 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="rounded-2xl border border-blue-500/30 bg-blue-500/10 p-4 sm:p-5 text-center">
             <p className="text-sm sm:text-base font-semibold text-blue-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
               New: Real-Time AI Analytics Dashboard v3.0 —
               <a href="/updates/real-time-ai-analytics-dashboard-v3-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">analytics dashboard</a>
               <span className="mx-2 text-blue-300/60">|</span>
               AI Agent Orchestration Platform v2.0 —
               <a href="/updates/ai-agent-orchestration-platform-2-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">orchestration platform</a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
-=======
               New: AI Autonomous Workflow Engine v1.0 —
               <a href="/updates/ai-autonomous-workflow-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">workflow engine</a>
 =======
               New: Real-Time Agent Cost Controller v1.0 —
               <a href="/updates/real-time-agent-cost-controller-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white ml-1">cost controller</a>
->>>>>>> cursor/create-and-deploy-new-content-2def
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-analytics-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">analytics launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-security-copilot-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">security launch</a>
               <span className="mx-2 text-blue-300/60">|</span>
               <a href="/updates/autonomous-decision-engine-1-0" className="underline decoration-blue-300/60 underline-offset-4 hover:text-white">decision engine</a>
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8472
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-3afb
 >>>>>>> 8431d4330936f866c5677d40e9bd7fbc17755535
 =======
 >>>>>>> cursor/create-and-deploy-new-content-2def
