@@ -7,7 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['app/**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -86,6 +86,10 @@ export default [
   },
          {
            ignores: [
+            '**/app.disabled/**',
+            '**/app_disabled/**',
+            '**/app_backup/**',
+            '**/pages.disabled/**',
             '**/src/**',
             '**/ts_files_backup/**',
             '**/types/**',
