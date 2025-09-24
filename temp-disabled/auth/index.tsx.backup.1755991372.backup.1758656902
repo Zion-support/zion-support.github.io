@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default function AuthIndexPage() {
+  return <div>Auth</div>;
+}
+export default function AuthIndex() {
+  return <div className="py-10">Auth Portal</div>;
+}
+=======
+export default function AuthIndex() { return <div>Auth coming soon.</div>; }
+>>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
