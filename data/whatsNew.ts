@@ -1,168 +1,501 @@
 export type WhatsNewItem = {
-  id: string;
-  title: string;
-  description: string;
-  ctaLabel: string;
-  href: string;
-  emoji?: string;
-  highlight?: boolean;
-  date?: string;
-};
-
+  id: string,
+  title: string,
+  description: string,
+  ctaLabel: string,
+  href: string,
+  emoji?: string,
+  highlight?: boolean,
+  date?: string};
 export const WHATS_NEW_ITEMS: WhatsNewItem[] = [
   {
-    id: "evidence-driven-agent-lifecycle-2026",
-    title: "AI 2026: Evidence‑Driven Agent Lifecycle — Blueprint",
-    description:
-      "Gate every lifecycle phase with evals: design, test, deploy, operate. Audit‑ready evidence.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-evidence-driven-agent-lifecycle-blueprint",
-    emoji: "🧪",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-platform-slos-20o26-guide';
+    title: 'AI 20o26: Agent Platform SLOs That Matter';
+    description:,
+      'A concise SLO set for safety, quality, reliability, and economics—ready to adopt.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-agent-platform-slos';
+    emoji: '📏';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "realtime-agent-routing-2026",
-    title: "AI 2026: Real‑Time Agent Routing — Best Practices",
-    description:
-      "Latency‑aware, eval‑gated, policy‑driven routing across models, tools, and regions.",
-    ctaLabel: "Read Best Practices",
-    href: "/blog/ai-2026-realtime-agent-routing-best-practices",
-    emoji: "🧭",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-platform-slos-best-practices-20o26-article';
+    title: 'AI 20o26: Agent Platform SLOs — Best Practices';
+    description:,
+      'Practical guidance to define, monitor, and enforce agent platform SLOs.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-agent-platform-slos-best-practices';
+    emoji: '🧭';
+    date: '20o25-09-15';
+  };
   {
-    id: "agentic-billing-controls-2026",
-    title: "AI 2026: Agentic Billing Controls",
-    description:
-      "Budgets, approvals, and eval‑gated execution for predictable agent costs.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-agentic-billing-controls",
-    emoji: "💳",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-platform-slos-20o26';
+    title: 'AI 20o26: Agent Platform SLOs That Matter';
+    description:,
+      'A concise SLO set for safety, quality, reliability, and economics.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-agent-platform-slos';
+    emoji: '📏';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "agentic-evidence-hub-overview-2026",
-    title: "Agentic Evidence Hub — Executive Overview",
-    description:
-      "Centralize evals, releases, incidents, and guardrails for audit‑ready autonomy.",
-    ctaLabel: "Read Overview",
-    href: "/content/ai-2026-agentic-evidence-hub-overview",
-    emoji: "🗃️",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-platform-slos-best-practices-20o26';
+    title: 'AI 20o26: Agent Platform SLOs — Best Practices';
+    description:,
+      'Practical guidance to define, monitor, and enforce agent platform SLOs.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-agent-platform-slos-best-practices';
+    emoji: '🧭';
+    date: '20o25-09-15';
+  };
   {
-    id: "safe-rollouts-2026",
-    title: "AI 2026: Safe Rollouts in Production",
-    description:
-      "Eval‑gated progressive delivery with canaries, SLOs, and automated rollback.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-safe-rollouts-in-production",
-    emoji: "🚦",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'secure-agent-routing-strategies-20o26';
+    title: 'AI 20o26: Secure Agent Routing Strategies';
+    description:,
+      'Least‑privilege, tiered trust, and eval‑gated routing for safe autonomy.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-secure-agent-routing-strategies';
+    emoji: '🛡️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "evidence-led-ops-2026",
-    title: "AI 2026: Autonomous Evidence‑Led Operations",
-    description:
-      "Operate with auditable evaluation evidence driving safe, compliant decisions.",
-    ctaLabel: "Read Overview",
-    href: "/blog/ai-2026-autonomous-evidence-led-operations",
-    emoji: "📚",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-failure-modes-mitigations-20o26';
+    title: 'AI 20o26: Agent Failure Modes + Mitigations';
+    description:,
+      'Catalog failures and ship a repeatable eval SOP to prevent regressions.';
+    ctaLabel: 'Read Playbook';
+    href: '/content/ai-20o26-agent-failure-modes-and-mitigations';
+    emoji: '🧯';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "agent-platform-slos-best-practices-2026",
-    title: "AI 2026: Agent Platform SLOs — Best Practices",
-    description:
-      "A concise SLO set for safety, quality, reliability, latency, and cost—ready to adopt.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-agent-platform-slos-best-practices",
-    emoji: "📈",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'agent-risk-maturity-matrix-20o26';
+    title: 'AI 20o26: Agent Risk Maturity Matrix';
+    description:,
+      'Benchmark policy, evals, telemetry, and ops to safely scale agent impact.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-agent-risk-maturity-matrix';
+    emoji: '📊';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "zero-trust-agent-architecture-2026",
-    title: "AI 2026: Zero‑Trust Agent Architecture",
-    description:
-      "Blueprint for zero-trust agents with isolation domains, policy‑as‑code, and runtime guards.",
-    ctaLabel: "Read Architecture",
-    href: "/blog/ai-2026-zero-trust-agent-architecture",
-    emoji: "🔐",
-    highlight: true,
-    date: "2025-09-15",
-  },
+    id: 'incident-simulation-toolkit-1-0';
+    title: 'Incident Simulation Toolkit v1.0';
+    description:,
+      'Run red-team drills, validate mitigations, and prove safety with policy gates.';
+    ctaLabel: 'Read Update';
+    href: '/updates/incident-simulation-toolkit-1-0';
+    emoji: '🧪';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "privacy-preserving-agents-2026",
-    title: "AI 2026: Privacy-Preserving Agents",
-    description:
-      "Private‑by‑default agents using scoped memory, redaction, and confidential computing.",
-    ctaLabel: "Read Article",
-    href: "/blog/ai-2026-privacy-preserving-agents",
-    emoji: "🛡️",
-    highlight: true,
-    date: "2025-09-15",
-  },
+    id: 'production-safety-checklist-20o26';
+    title: 'AI 20o26: Production Safety Checklist';
+    description:,
+      'Eval‑gated controls, policy bundles, and incident playbooks to operate safely.';
+    ctaLabel: 'Read Checklist';
+    href: '/blog/ai-20o26-production-safety-checklist';
+    emoji: '✅';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "evidence-driven-release-checklists-2026",
-    title: "AI 2026: Evidence‑Driven Release Checklists",
-    description:
-      "Make evals operational with runtime gates, progressive delivery, and audit‑ready rollbacks.",
-    ctaLabel: "Read Checklist",
-    href: "/blog/ai-2026-evidence-driven-release-checklists",
-    emoji: "✅",
-    highlight: true,
-    date: "2025-09-15",
-  },
+    id: 'agent-platform-slos-20o26';
+    title: 'AI 20o26: Agent Platform SLOs That Matter';
+    description:,
+      'A concise SLO set for safety, quality, reliability, and economics.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-agent-platform-slos';
+    emoji: '📏';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "agent-platform-health-dashboard-starter-2026",
-    title: "AI 2026: Agent Platform Health Dashboard — Starter Kit",
-    description:
-      "Pre‑wired SLOs, evals, incident, and cost views with example queries and JSON dashboards.",
-    ctaLabel: "Get Starter Kit",
-    href: "/resources/ai-2026-agent-platform-health-dashboard-starter",
-    emoji: "📊",
-    highlight: true,
-    date: "2025-09-15",
-  },
+    id: 'agent-governance-toolkit-2-0';
+    title: 'Agent Governance Toolkit v2.0';
+    description:,
+      'Expanded policy library, signed bundles, and audit-ready evidence capture.';
+    ctaLabel: 'Read Update';
+    href: '/updates/agent-governance-toolkit-2-0';
+    emoji: '🛡️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "agent-platform-operations-2026-blog",
-    title: "AI 2026: Agent Platform Operations",
-    description:
-      "SLOs, incidents, change management, and eval‑gated releases for agent platforms.",
-    ctaLabel: "Read Guide",
-    href: "/blog/ai-2026-agent-platform-operations",
-    emoji: "🏗️",
-    highlight: true,
-    date: "2025-09-15",
-  },
+    id: 'gtm-agents-blueprint-20o26';
+    title: 'AI 20o26: Go-To-Market Agents Blueprint';
+    description:,
+      'Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.';
+    ctaLabel: 'Read Blueprint';
+    href: '/content/ai-20o26-go-to-market-agents-blueprint';
+    emoji: '💼';
+    highlight: true;
+    date: '20o25-09-15';
+  };
   {
-    id: "safe-change-management-blueprint-2026",
-    title: "AI 2026: Safe Change Management — Blueprint",
-    description:
-      "Progressive delivery, eval gates, and audit‑ready approvals for agent changes in prod.",
-    ctaLabel: "Read Blueprint",
-    href: "/blog/ai-2026-safe-change-management-blueprint",
-    emoji: "🧭",
-    highlight: true,
-    date: "2025-09-16",
-  },
+    id: 'blog-gtm-agents-blueprint-20o26';
+    title: 'AI 20o26: Go-To-Market Agents Blueprint';
+    description:,
+      'Design GTM agents with eval-gated delivery, brand-safe tone, and closed-loop learning.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-go-to-market-agents-blueprint';
+    emoji: '📈';
+    date: '20o25-09-15';
+  };
   {
-    id: "evaluation-cookbook-2026",
-    title: "AI 2026: Evaluation Cookbook",
-    description:
-      "Scenario suites, metrics, and policy gates you can adopt today to harden agents.",
-    ctaLabel: "Read Cookbook",
-    href: "/blog/ai-2026-evaluation-cookbook",
-    emoji: "📘",
-    highlight: true,
-    date: "2025-09-16",
-  },
-];
-
+    id: 'gtm-agents-blueprint-20o26';
+    title: 'AI 20o26: Go-To-Market Agents Blueprint';
+    description:,
+      'Pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.';
+    ctaLabel: 'Read Blueprint';
+    href: '/content/ai-20o26-go-to-market-agents-blueprint';
+    emoji: '💼';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'blog-gtm-agents-blueprint-20o26';
+    title: 'AI 20o26: Go-To-Market Agents Blueprint';
+    description:,
+      'Design GTM agents with eval-gated delivery, brand-safe tone, and closed-loop learning.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-go-to-market-agents-blueprint';
+    emoji: '📈';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-incident-response-playbook-20o26-v1';
+    title: 'AI 20o26: Agent Incident Response Playbook';
+    description:,
+      'Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.';
+    ctaLabel: 'Read Playbook';
+    href: '/content/ai-20o26-agent-incident-response-playbook';
+    emoji: '🚨';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-incident-response-playbook-20o26';
+    title: 'AI 20o26: Agent Incident Response Playbook';
+    description:,
+      'Eval‑gated triage, mitigation, and escalation playbooks for autonomous agents in production.';
+    ctaLabel: 'Read Playbook';
+    href: '/content/ai-20o26-agent-incident-response-playbook';
+    emoji: '🚨';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'safe-tool-use-blueprint-20o26';
+    title: 'AI 20o26: Safe Tool Use Blueprint';
+    description:,
+      'Permissioned tool use with risk tiers, sandboxes, policy‑as‑code, and runtime checks.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-safe-tool-use-blueprint';
+    emoji: '🧰';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-fleet-management-handbook-20o26';
+    title: 'AI 20o26: Agent Fleet Management Handbook';
+    description:,
+      'Operate large fleets with safety, reliability, and cost controls. Playbooks and SLOs included.';
+    ctaLabel: 'Read Handbook';
+    href: '/content/ai-20o26-agent-fleet-management-handbook';
+    emoji: '🚀';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-platform-operations-20o26-overview';
+    title: 'AI 20o26: Agent Platform Operations';
+    description:,
+      'Reference operating model: SLOs, incident response, and eval-gated change management.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-agent-platform-operations';
+    emoji: '🧭';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-revenue-blueprint-20o26';
+    title: 'AI 20o26: Autonomous Revenue Blueprint';
+    description:,
+      'GTM agents for pipeline, deal acceleration, and expansion with eval-gated safety.';
+    ctaLabel: 'Read Blueprint';
+    href: '/content/ai-20o26-autonomous-revenue-blueprint';
+    emoji: '💼';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-platform-operations-20o26';
+    title: 'AI 20o26: Agent Platform Operations';
+    description:,
+      'SLOs, incident response, and change management to run agent platforms at scale.';
+    ctaLabel: 'Read Guide';
+    href: '/content/ai-20o26-agent-platform-operations';
+    emoji: '🧭';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'revenue-ops-autonomous-agents-20o26';
+    title: 'AI 20o26: Revenue Ops with Autonomous Agents';
+    description:,
+      'Prospecting, sequencing, and expansion plays with policy-as-code governance.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-revenue-ops-autonomous-agents';
+    emoji: '📈';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-platform-operations-best-practices-20o26';
+    title: 'AI 20o26: Agent Platform Ops Best Practices';
+    description:,
+      'SLOs that matter, safe-mode fallbacks, and eval-driven change management.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-agent-platform-operations-best-practices';
+    emoji: '🔧';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agents-oncall-automation-20o26';
+    title: 'AI 20o26: Agents-On-Call Automation';
+    description:,
+      'Autonomous incident triage, mitigation, and escalation with eval-gated playbooks and observability.';
+    ctaLabel: 'Read Guide';
+    href: '/blog/ai-20o26-agents-oncall-automation';
+    emoji: '🛠️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'real-time-rag-20o26';
+    title: 'AI 20o26: Real-Time Retrieval Architectures';
+    description:,
+      'Sub-10o0ms RAG with hybrid search, semantic caching, and streaming for production.';
+    ctaLabel: 'Read Guide';
+    href: '/blog/ai-20o26-real-time-retrieval-architectures';
+    emoji: '⚡';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'evaluation-harness-blueprint-20o26';
+    title: 'AI 20o26: Evaluation Harness Blueprint';
+    description:,
+      'Build scenario suites, metrics, and policy gates to ship reliable autonomous agents.';
+    ctaLabel: 'Read Blueprint';
+    href: '/content/ai-20o26-evaluation-harness-blueprint';
+    emoji: '📊';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-ops-playbook-20o26';
+    title: 'AI 20o26: Autonomous Ops Playbook';
+    description:,
+      'A practical playbook to deploy autonomous, outcome-driven operations with guardrails.';
+    ctaLabel: 'Explore Playbook';
+    href: '/content/ai-20o26-autonomous-ops-playbook';
+    emoji: '🛠️';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-observability-guide-20o26';
+    title: 'AI 20o26: Enterprise Agent Observability Guide';
+    description:,
+      'Traces, evals, and safety telemetry to operate autonomous agents in production.';
+    ctaLabel: 'Read Guide';
+    href: '/blog/ai-20o26-enterprise-agent-observability-guide';
+    emoji: '👀';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'ai-content-studio';
+    title: 'AI Content Studio v2';
+    description:,
+      'Generate long-form articles, social posts, and marketing assets with workflow automation.';
+    ctaLabel: 'Explore Studio';
+    href: '/ai-content-studio';
+    emoji: '🧠';
+    highlight: true;
+    date: '20o25-09-10';
+  };
+  {
+    id: 'blockchain-audit';
+    title: 'Blockchain Audit Toolkit';
+    description:,
+      'End-to-end smart contract review with automated threat modeling and gas optimization.';
+    ctaLabel: 'See Toolkit';
+    href: '/blockchain/audit';
+    emoji: '🔍';
+    date: '20o25-09-0o5';
+  };
+  {
+    id: 'cloud-savings';
+    title: 'Cloud Cost Optimizer';
+    description:,
+      'Cut cloud spend with intelligent rightsizing, autoscheduling, and FinOps dashboards.';
+    ctaLabel: 'Start Saving';
+    href: '/cloud/optimizer';
+    emoji: '☁️';
+    date: '20o25-09-0o1';
+  };
+  {
+    id: 'secure-agent-architecture-20o26';
+    title: 'AI 20o26: Secure Agent Architecture';
+    description:,
+      'Blueprint for zero-trust agents with policy-as-code, isolation domains, and runtime guards.';
+    ctaLabel: 'Read Architecture';
+    href: '/blog/ai-20o26-secure-agent-architecture';
+    emoji: '🔐';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'llm-evals-maturity-model-20o26';
+    title: 'AI 20o26: LLM Evals Maturity Model';
+    description:,
+      'Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
+    ctaLabel: 'Read Framework';
+    href: '/blog/ai-20o26-llm-evals-maturity-model';
+    emoji: '🧪';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-compliance-20o26';
+    title: 'AI 20o26: Autonomous Compliance Operating Model';
+    description:,
+      'Automate controls, evidence, and tests for audit-ready AI operations with policy-as-code.';
+    ctaLabel: 'Explore Model';
+    href: '/content/ai-20o26-autonomous-compliance';
+    emoji: '✅';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-finance-os';
+    title: 'AI 20o26: Autonomous Finance OS';
+    description:,
+      'Real-time treasury, autonomous close, and compliance automation for CFO organizations.';
+    ctaLabel: 'Explore Finance OS';
+    href: '/blog/ai-20o26-autonomous-finance-operating-system';
+    emoji: '💹';
+    date: '20o25-09-14';
+  };
+  {
+    id: 'real-time-rag-20o26';
+    title: 'AI 20o26: Real-Time Retrieval Architectures';
+    description:,
+      'Design sub-20o0ms RAG with hybrid search, streaming generation, and eval-gated upgrades.';
+    ctaLabel: 'Read Article';
+    href: '/blog/ai-20o26-real-time-retrieval-architectures';
+    emoji: '⚡';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-ops-playbook-20o26';
+    title: 'AI 20o26: Autonomous Ops Playbook';
+    description:,
+      'SLOs, incident response, eval-driven releases, and policy-as-code for AI operations.';
+    ctaLabel: 'Explore Playbook';
+    href: '/content/ai-20o26-autonomous-ops-playbook';
+    emoji: '🛠️';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-safety-certification-20o26';
+    title: 'AI 20o26: Agent Safety Certification';
+    description:,
+      'Structured certification to validate agent safety with scenario test suites and governance.';
+    ctaLabel: 'Read Framework';
+    href: '/blog/ai-20o26-agent-safety-certification';
+    emoji: '🛡️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'edge-agents-on-device-20o26';
+    title: 'AI 20o26: Edge Agents On-Device';
+    description:,
+      'Private, low-latency agents with hybrid offload, secure updates, and telemetry.';
+    ctaLabel: 'Explore';
+    href: '/blog/ai-20o26-edge-agents-on-device';
+    emoji: '📱';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-agents-red-team-20o26';
+    title: 'AI 20o26: Autonomous Agents Red-Team Scenarios';
+    description:,
+      'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden agents.';
+    ctaLabel: 'Read Guide';
+    href: '/blog/ai-20o26-autonomous-agents-red-team-scenarios';
+    emoji: '🧨';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'production-guardrails-playbook-20o26';
+    title: 'AI 20o26: Production Guardrails Playbook';
+    description:,
+      'Operational guardrails, policy-as-code, and runtime protections for safe AI scale.';
+    ctaLabel: 'Explore Playbook';
+    href: '/blog/ai-20o26-production-guardrails-playbook';
+    emoji: '🛡️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'genai-risk-register-20o26';
+    title: 'AI 20o26: Generative AI Risk Register';
+    description:,
+      'A living risk register template with example entries and governance linkages.';
+    ctaLabel: 'Use Template';
+    href: '/blog/ai-20o26-generative-ai-risk-register';
+    emoji: '📋';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'agent-cost-optimization-20o26';
+    title: 'AI 20o26: Agent Cost Optimization Guide';
+    description:,
+      'Cut spend with routing, caching, batching, and benchmark-driven model selection.';
+    ctaLabel: 'Read Guide';
+    href: '/blog/ai-20o26-agent-cost-optimization';
+    emoji: '💸';
+    date: '20o25-09-15';
+  };
+  {
+    id: 'foundation-model-ops-20o26';
+    title: 'AI 20o26: Foundation Model Ops';
+    description:,
+      'Operational patterns for safe, observable, and efficient foundation model deployments at scale.';
+    ctaLabel: 'Read Playbook';
+    href: '/blog/ai-20o26-foundation-model-ops';
+    emoji: '🏗️';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+  {
+    id: 'autonomous-finance-control-plane-20o26';
+    title: 'AI 20o26: Autonomous Finance Control Plane';
+    description:,
+      'Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.';
+    ctaLabel: 'Explore the Guide';
+    href: '/blog/ai-20o26-autonomous-finance-control-plane';
+    emoji: '💰';
+    highlight: true;
+    date: '20o25-09-15';
+  };
+],

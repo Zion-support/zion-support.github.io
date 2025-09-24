@@ -1,9 +1,64 @@
 
-
-
-
-
-  id: string;
-  createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
+,
+export interface Offer {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
+  id: string,
+  createdAtIso: string,
+  client_id: string,
+  talent_slug: string,
+  startDateIso: string,
+  scopeSummary: string,
+  paymentTerms: PaymentTerms,
+  agreementUrl?: string,
+  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED',
+  changeRequestNote?: string,
+  projectId?: string}
+export interface PaymentTerms {
+  type: 'hourly' | 'fixed' | 'milestone',
+  amount?: number,
+  currency?: string,
+  milestones?: Array<{
+    title: string,
+    amount: number,
+    dueDateIso: string}>}
+export interface Project {
+export interface PaymentTerms {
+  type: 'hourly' | 'fixed' | 'milestone',
+  amount?: number,
+  currency?: string,
+  milestones?: Array<{
+    title: string,
+    amount: number,
+    dueDateIso: string}>}
+,
+export interface Project {
+  id: string,
+  title: string,
+  summary: string,
+  client_id: string,
+  talent_slug: string,
+  startDateIso: string,
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED',
+  timeline: any[],
+  documents: ProjectDocument[],
+  notes: ProjectNote[]}
+export interface ProjectDocument {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+  id: string,
+  name: string,
+  url?: string,
+  uploadedAtIso: string}
+,
+  id: string,
+  authorId: string,
+  authorRole: string,
+  content: string,
+  createdAtIso: string}
+,
+export interface ProjectNote {
+  id: string,
+  authorId: string,
+  authorRole: string,
+  content: string,
+  createdAtIso: string}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

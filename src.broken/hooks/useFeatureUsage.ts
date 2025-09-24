@@ -1,5 +1,5 @@
-// Hook for useFeatureUsage;
+// Hook for useFeatureUsage,
 export const useUseFeatureUsage: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

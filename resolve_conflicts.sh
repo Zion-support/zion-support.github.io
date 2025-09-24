@@ -1,42 +1,39 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-echo "Resolving merge conflicts by accepting our changes..."
+# Script to resolve merge conflicts by keeping HEAD version
+# This will resolve conflicts by taking the current (HEAD) version of all conflicted files
 
-# Find all files with merge conflicts
-find /workspace/src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
+echo "Resolving merge conflicts by keeping HEAD version..."
+
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
+
+for file in $conflicted_files; do
     echo "Resolving conflicts in: $file"
-    # Accept our changes (HEAD)
-    git checkout --ours "$file"
-  fi
-done
-
-echo "All merge conflicts resolved!"
-=======
-echo "Resolving merge conflicts..."
-
-# Function to resolve merge conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
     
-    # Remove merge conflict markers and keep the HEAD version
-    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> .*$/d' "$file"
-}
-
-# Find all files with merge conflicts in src directory
-find ./src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
-    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-        resolve_conflicts "$file"
+    # Check if file exists
+    if [ -f "$file" ]; then
+        # Extract HEAD version (between <<<<<<< HEAD and =======)
+        # Remove conflict markers and keep only the HEAD version
+        sed -n '/^<<<<<<< HEAD$/,/^=======$/p' "$file" | sed '1d;$d' > "${file}.head"
+        
+        # Check if we have a HEAD section
+        if [ -s "${file}.head" ]; then
+            # Replace the entire file with HEAD version
+            cp "${file}.head" "$file"
+            echo "  ✓ Resolved by keeping HEAD version"
+        else
+            echo "  ⚠ No HEAD section found, keeping original"
+        fi
+        
+        # Clean up temporary file
+        rm -f "${file}.head"
+        
+        # Mark as resolved
+        git add "$file"
+    else
+        echo "  ⚠ File not found: $file"
     fi
 done
 
-echo "Merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-d9c7
+echo "All conflicts resolved. Files marked for commit."

@@ -1,5 +1,5 @@
-// Hook for useMilestones;
+// Hook for useMilestones,
 export const useUseMilestones: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };
