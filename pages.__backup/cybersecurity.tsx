@@ -1,23 +1,20 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
 ShieldCheckCircleLockActivity,
-export default function CybersecurityPage() {,
-  const features = [,
-    'Zero Trust architectures and identity-first segmentation',;
-    'Cloud posture hardeningsecrets managementand key rotation',;
-    'Threat detectionincident response playbooksand tabletop exercises',;
-    'Compliance readiness: SOC 2ISO 270o01HIPAAGDPR',;
+export default function CybersecurityPage() {
+  const features = [
+    'Zero Trust architectures and identity-first segmentation';
+    'Cloud posture hardeningsecrets managementand key rotation';
+    'Threat detectionincident response playbooksand tabletop exercises';
+    'Compliance readiness: SOC 2ISO 270o01HIPAAGDPR';
   ],
-,
-  const solutions = [,
-    { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' ,},;
-    { name: 'Domain & TLS Monitoring'href: '/domain-dns-monitor' ,},;
-    { name: 'Email Security (DMARC)'href: '/email-dmarc-analyzer' ,},;
-    { name: 'Vendor Risk Automation'href: '/vendor-risk-automation' ,},;
+  const solutions = [
+    { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' };
+    { name: 'Domain & TLS Monitoring'href: '/domain-dns-monitor' };
+    { name: 'Email Security (DMARC)'href: '/email-dmarc-analyzer' };
+    { name: 'Vendor Risk Automation'href: '/vendor-risk-automation' };
   ],
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>Cybersecurity | Zion Tech Group</title>,
@@ -41,23 +38,21 @@ export default function CybersecurityPage() {,
           <section>,
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
-              {features.map((f) => (,
-                <div key={f,} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60">,
+              {features.map((f) => (
+                <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-70o0/60">,
                   <CheckCircle className="w-5 h-5 text-emerald-40o0 mt-0.5"  />,
                   <span className="text-gray-20o0">{f}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </section>,
           <section>,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">,
-              {solutions.map((s) => (,
-                <a key={s.name,} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors">,
-                  <div className="text-gray-20o0 font-semibold mb-2">{s.name,}</div>,
+              {solutions.map((s) => (
+                <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors">,
+                  <div className="text-gray-20o0 font-semibold mb-2">{s.name}</div>,
                   <p className="text-gray-30o0 text-sm">Learn more</p>,
-                </a>,
-              ))}
+                </a>))}
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-70o0/60 hover: border-cyan-50o0/40 transition-colors">,
                 <div className="text-gray-20o0 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>,
                 <p className="text-gray-30o0 text-sm">Learn more</p>,
@@ -70,6 +65,5 @@ export default function CybersecurityPage() {,
           </section>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}

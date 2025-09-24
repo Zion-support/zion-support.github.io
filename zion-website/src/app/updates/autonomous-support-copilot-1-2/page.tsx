@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function AutonomousSupportCopilot12Page() {,
-  return (,
+import React from 'react';
+export default function AutonomousSupportCopilot12Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <h1 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>,
@@ -35,7 +34,5 @@ export default function AutonomousSupportCopilot12Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

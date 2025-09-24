@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function Pm2Orchestration() {,
-  return (,
+export default function Pm2Orchestration() {
+  return (
     <>,
       <Head>,
         <title>PM2 Orchestration — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Process management, auto‑restart, and clustering with PM2.',
         />,
@@ -33,7 +32,6 @@ export default function Pm2Orchestration() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

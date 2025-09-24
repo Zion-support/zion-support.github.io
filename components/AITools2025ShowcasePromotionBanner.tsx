@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AITools20o25ShowcasePromotionBanner() {,
-  return (,
+export default function AITools20o25ShowcasePromotionBanner() {
+  return (
     <div className='bg-gradient-to-r from-green-50o0 via-blue-50o0 to-purple-60o0 text-white py-4 px-4 relative overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0 opacity-20'>,
@@ -23,36 +22,32 @@ export default function AITools20o25ShowcasePromotionBanner() {,
           </div>,
         </div>,
         <div className='flex flex-col sm:flex-row gap-3'>,
-          <Link,
+          <Link
             href='/ai-tools-20o25-ultimate-showcase',
-            className='bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold text-sm hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center',
-          >,
+            className='bg-white text-purple-60o0 px-6 py-2 rounded-lg font-semibold text-sm hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center'>,
             Explore Tools,
           </Link>,
-          <Link,
+          <Link
             href='/tools/ai-20o25-roi-calculator',
-            className='bg-transparent border-2 border-white text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 text-center',
-          >,
+            className='bg-transparent border-2 border-white text-white px-6 py-2 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 text-center'>,
             Try ROI Calculator,
           </Link>,
         </div>,
       </div>,
-      {/* Close button */,}
-      <button,
+      {/* Close button */}
+      <button
         className='absolute top-2 right-2 text-white hover: text-gray-20o0 transition-colors z-20',
-        onClick={() => {,
+        onClick={() => {
           const banner = document.querySelector('.ai-tools-banner'),
           if (banner) banner.style.display = 'none',
-        ,}}
-        aria-label='Close banner',
-      >,
-        <svg,
+        }}
+        aria-label='Close banner'>,
+        <svg
           className='w-5 h-5',
           fill='none',
           stroke='currentColor',
-          viewBox='0 0 24 24',
-        >,
-          <path,
+          viewBox='0 0 24 24'>,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
             strokeWidth={2}
@@ -60,7 +55,5 @@ export default function AITools20o25ShowcasePromotionBanner() {,
           />,
         </svg>,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

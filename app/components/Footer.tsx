@@ -4,8 +4,7 @@ import {
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
-  HeartIcon,
-} from '@heroicons/react/24/outline'
+  HeartIcon} from '@heroicons/react/24/outline'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -15,21 +14,17 @@ export default function Footer() {
       { name: 'AI Solutions', href: '/services/ai' },
       { name: 'Cloud Infrastructure', href: '/services/cloud' },
       { name: 'Cybersecurity', href: '/services/security' },
-      { name: 'Consulting', href: '/services/consulting' },
-    ],
+      { name: 'Consulting', href: '/services/consulting' }],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
-      { name: 'News', href: '/news' },
-    ],
+      { name: 'News', href: '/news' }],
     support: [
       { name: 'Documentation', href: '/docs' },
       { name: 'Help Center', href: '/help' },
       { name: 'Contact Support', href: '/support' },
-      { name: 'Status', href: '/status' },
-    ],
-  }
+      { name: 'Status', href: '/status' }]}
 
   return (
     <footer className='bg-gray-900 text-white'>

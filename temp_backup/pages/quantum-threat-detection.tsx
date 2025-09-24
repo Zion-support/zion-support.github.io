@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumThreatDetectionPage() {,
-  return (,
+export default function QuantumThreatDetectionPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Threat Detection - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumThreatDetectionPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

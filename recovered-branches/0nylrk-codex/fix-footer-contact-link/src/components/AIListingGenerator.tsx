@@ -8,28 +8,27 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SparklesArrowRight } from "@/components/icons",
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
-,
-interface GeneratedContent {,
+interface GeneratedContent {
   description: string,
   tags: string[],
-  suggestedPrice: {,
+  suggestedPrice: {
     min: number,
     max: number,
-  ,};
+  };
   keyPoints: string[],
-,}
+}
 ,
-interface AIListingGeneratorProps {,
+interface AIListingGeneratorProps {
   onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {,
+  initialValues?: {
     title?: string,
     category?: string,
     keyFeatures?: string,
     targetAudience?: string,
-  ,};
+  };
 }
 ,
-export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {,
+export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast(),
   const [titlesetTitle] = useState(initialValues.title || ""),
   const [categorysetCategory] = useState(initialValues.category || ""),
@@ -37,9 +36,8 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
   const [targetAudiencesetTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoadingsetIsLoading] = useState(false),
   const [generatedContentsetGeneratedContent] = useState(null as GeneratedContent | null),
-,
-  const handleInputChange = (e: { target: { value: string ,} }field: string) => {,
-    switch(field) {,
+  const handleInputChange = (e: { target: { value: string } }field: string) => {
+    switch(field) {
       case 'title':,
         setTitle(e.target.value),
         break,
@@ -52,62 +50,50 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
       case 'targetAudience':,
         setTargetAudience(e.target.value),
         break,
-    ,}
-  };
-,
-  const handleGenerate = async () => {,
-    if (!title || !category) {,
-      toast({,
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-        variant: "destructive",
-      ,}),
-      return,
     }
+  };
+  const handleGenerate = async () => {
+    if (!title || !category) {
+      toast({
+        title: "Missing required fields";
+        description: "Please provide at least a title and category.";
+        variant: "destructive",
+      }),
+      return}
 ,
     setIsLoading(true),
-,
-    try {,
-      const { dataerror } = await supabase.functions.invoke('ai-listing-generator'{,
-        body: { titlecategorykeyFeaturestargetAudience ,}
+    try {
+      const { dataerror } = await supabase.functions.invoke('ai-listing-generator'{
+        body: { titlecategorykeyFeaturestargetAudience }
       }),
+      if (error) {
+        throw new Error(error.message)}
 ,
-      if (error) {,
-        throw new Error(error.message),
-      }
-,
-      if (data.error) {,
-        throw new Error(data.error),
-      }
+      if (data.error) {
+        throw new Error(data.error)}
 ,
       setGeneratedContent(data.generated),
-      toast({,
-        title: "Content Generated",;
+      toast({
+        title: "Content Generated";
         description: "AI has created optimized listing content for you.",
-      ,}),
-    } catch (error) {,
+      })} catch (error) {
       console.error("Error generating content: "error),
-      toast({,
-        title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
+      toast({
+        title: "Generation Failed";
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.";
         variant: "destructive",
-      ,}),
-    } finally {,
-      setIsLoading(false),
-    }
+      })} finally {
+      setIsLoading(false)}
   };
-,
-  const handleApply = () => {,
-    if (generatedContent && onApplyGenerated) {,
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
-      toast({,
-        title: "Content Applied",;
+      toast({
+        title: "Content Applied";
         description: "The generated content has been applied to your listing.",
-      ,}),
-    }
+      })}
   };
-,
-  return (,
+  return (
     <div className="space-y-6">,
       <Card className="border border-zion-blue-light bg-zion-blue-dark">,
         <CardHeader>,
@@ -122,7 +108,7 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
         <CardContent className="space-y-4">,
           <div className="space-y-2">,
             <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>,
-            <Input,
+            <Input
               id="title",
               value={title}
               onChange={(e) => handleInputChange(e'title')}
@@ -133,7 +119,7 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
           </div>,
           <div className="space-y-2">,
             <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>,
-            <Input,
+            <Input
               id="category",
               value={category}
               onChange={(e) => handleInputChange(e'category')}
@@ -144,7 +130,7 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
           </div>,
           <div className="space-y-2">,
             <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>,
-            <Textarea,
+            <Textarea
               id="keyFeatures",
               value={keyFeatures}
               onChange={(e) => handleInputChange(e'keyFeatures')}
@@ -155,7 +141,7 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
           </div>,
           <div className="space-y-2">,
             <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>,
-            <Input,
+            <Input
               id="targetAudience",
               value={targetAudience}
               onChange={(e) => handleInputChange(e'targetAudience')}
@@ -164,23 +150,20 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
               disabled={isLoading}
             />,
           </div>,
-          <Button,
+          <Button
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white mt-2",
-          >,
-            {isLoading ? (,
-              <>Generating Optimized Content...</>,
-            ) : (,
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white mt-2">,
+            {isLoading ? (
+              <>Generating Optimized Content...</>) : (
               <>,
                 <Sparkles className="h-4 w-4 mr-2" />,
                 Generate Optimized Content,
-              </>,
-            ),}
+              </>)}
           </Button>,
         </CardContent>,
       </Card>,
-      {isLoading && (,
+      {isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">,
           <CardHeader>,
             <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />,
@@ -188,21 +171,18 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
           <CardContent className="space-y-4">,
             <Skeleton className="h-32 w-full bg-zion-blue-light/20" />,
             <div className="flex flex-wrap gap-2">,
-              {[...Array(5)].map((_i) => (,
-                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />,
-              ))}
+              {[...Array(5)].map((_i) => (
+                <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />))}
             </div>,
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />,
             <div className="space-y-2">,
-              {[...Array(3)].map((_i) => (,
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />,
-              ))}
+              {[...Array(3)].map((_i) => (
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />))}
             </div>,
           </CardContent>,
-        </Card>,
-      )}
+        </Card>)}
 ,
-      {generatedContent && !isLoading && (,
+      {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">,
           <CardHeader>,
             <CardTitle className="text-white">Generated Content</CardTitle>,
@@ -215,9 +195,8 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
             <div>,
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>,
               <div className="flex flex-wrap gap-2">,
-                {generatedContent.tags.map((tagindex) => (,
-                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover: bg-zion-purple/30">{tag,}</Badge>,
-                ))}
+                {generatedContent.tags.map((tagindex) => (
+                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover: bg-zion-purple/30">{tag}</Badge>))}
               </div>,
             </div>,
             <div>,
@@ -227,24 +206,19 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
             <div>,
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>,
               <ul className="list-disc pl-5 text-white space-y-1">,
-                {generatedContent.keyPoints.map((pointindex) => (,
-                  <li key={index}>{point}</li>,
-                ))}
+                {generatedContent.keyPoints.map((pointindex) => (
+                  <li key={index}>{point}</li>))}
               </ul>,
             </div>,
           </CardContent>,
           <CardFooter>,
-            <Button,
+            <Button
               onClick={handleApply}
-              className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white",
-            >,
+              className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white">,
               Apply to My Listing,
               <ArrowRight className="ml-2 h-4 w-4" />,
             </Button>,
           </CardFooter>,
-        </Card>,
-      ),}
-    </div>,
-  ),
-}
+        </Card>)}
+    </div>)}
 ,

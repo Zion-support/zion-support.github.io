@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function QuantumBioComputingPlatformPage() {,
-  return (,
+export default function QuantumBioComputingPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>Quantum Bio-Computing Platform | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Hybrid quantum-biological computing research and platform services.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-bio-computing-platform',
         />,
@@ -23,7 +22,6 @@ export default function QuantumBioComputingPlatformPage() {,
           computing.,
         </p>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumComputing20o26PromotionBanner() {,
-  return (,
+export default function QuantumComputing20o26PromotionBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-60o0 py-12 px-4">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/10">,
@@ -62,22 +61,19 @@ export default function QuantumComputing20o26PromotionBanner() {,
         </div>,
         <div className="text-center">,
           <div className="flex flex-wrap justify-center gap-4">,
-            <Link,
+            <Link
               href="/quantum-computing-20o26-breakthrough",
-              className="bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-30o0 hover:scale-10o5">,
               Explore Quantum Tech,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o26-ultimate-breakthrough-predictions",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 hover:scale-10o5">,
               AI Predictions,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies/ai-20o26-global-transformation-success",
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 hover:scale-10o5",
-            >,
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 hover:scale-10o5">,
               Success Stories,
             </Link>,
           </div>,
@@ -86,6 +82,4 @@ export default function QuantumComputing20o26PromotionBanner() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}

@@ -3,25 +3,21 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import { Button } from '../components/ui/Button',
 import Card from '../components/ui/Card',
 import { Check, Phone, Mail, MapPin, ExternalLink, Lock } from 'lucide-react',
-,
-export default function TLSCertificateMonitorPage() {,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+export default function TLSCertificateMonitorPage() {
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
-  const features = [,
-    'Expiry alerts with safe lead windows',;
-    'Chain trust and intermediate CA checks',;
-    'OCSP stapling and revocation status',;
-    'HSTS and weak cipher detection',;
-    'SAN/hostname drift and redirect loops',;
-    'Slack/Email/PagerDuty alerts with runbooks',
-  ],
-,
-  return (,
+  };
+  const features = [
+    'Expiry alerts with safe lead windows';
+    'Chain trust and intermediate CA checks';
+    'OCSP stapling and revocation status';
+    'HSTS and weak cipher detection';
+    'SAN/hostname drift and redirect loops';
+    'Slack/Email/PagerDuty alerts with runbooks'],
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>TLS/SSL Certificate Monitor | Zion Tech Group</title>,
@@ -42,9 +38,8 @@ export default function TLSCertificateMonitorPage() {,
               <p className="text-gray-30o0 mb-6">Continuously monitor TLS/SSL certificates across your critical domains and services. Catch issues like expiring certs, missing intermediates, broken OCSP stapling, weak ciphers, and HSTS misconfigurations before customers notice.</p>,
               <h3 className="text-lg font-semibold text-white mb-3">Key Features</h3>,
               <ul className="grid grid-cols-1 md: grid-cols-2 gap-3 text-gray-30o0">,
-                {features.map((f) => (,
-                  <li key={f,} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-40o0 mt-0.5"  /> <span>{f}</span></li>,
-                ))}
+                {features.map((f) => (
+                  <li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 text-emerald-40o0 mt-0.5"  /> <span>{f}</span></li>))}
               </ul>,
             </Card>,
             <Card className="p-6 bg-black/40 border border-gray-70o0/50">,
@@ -56,15 +51,13 @@ export default function TLSCertificateMonitorPage() {,
                 <Link href="https://ziontechgroup.com/tls-certificate-monitor" variant="outline" className="flex-1 border border-gray-60o0 text-gray-20o0"><ExternalLink className="w-4 h-4 mr-2"  /> Learn More</Button>,
               </div>,
               <div className="mt-6 space-y-3 text-sm">,
-                <div className="flex items-center gap-2 text-cyan-40o0"><Phone className="w-4 h-4"  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover: underline">{contactInfo.mobile,}</a></div>,
-                <div className="flex items-center gap-2 text-purple-40o0"><Mail className="w-4 h-4"  /><a href={`mailto: ${contactInfo.email,}`} className="hover: underline">{contactInfo.email,}</a></div>,
-                <div className="flex items-center gap-2 text-green-40o0"><MapPin className="w-4 h-4"  /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address),}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address,}</a></div>,
+                <div className="flex items-center gap-2 text-cyan-40o0"><Phone className="w-4 h-4"  /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover: underline">{contactInfo.mobile}</a></div>,
+                <div className="flex items-center gap-2 text-purple-40o0"><Mail className="w-4 h-4"  /><a href={`mailto: ${contactInfo.email}`} className="hover: underline">{contactInfo.email}</a></div>,
+                <div className="flex items-center gap-2 text-green-40o0"><MapPin className="w-4 h-4"  /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover: underline">{contactInfo.address}</a></div>,
               </div>,
             </Card>,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

@@ -2,107 +2,98 @@ import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/u
 import { Input } from '@/components/ui/input',
 import { UseFormReturn } from 'react-hook-form',
 import { CertificationFormValues } from './types',
-,
-interface CertificationFormFieldsProps {,
+interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>,
-,}
+}
 ,
-export function CertificationFormFields({,
-  form,;
-}: CertificationFormFieldsProps) {,
-  return (,
+export function CertificationFormFields({
+  form;
+}: CertificationFormFieldsProps) {
+  return (
     <>,
       <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-        <FormField,
-          control={form.control,}
+        <FormField
+          control={form.control}
           name='name',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Certification Name</FormLabel>,
               <FormControl>,
-                <Input,
+                <Input
                   placeholder='AWS Certified Solutions ArchitectPMPetc.',
                   {...field}
                 />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
-        <FormField,
+        <FormField
           control={form.control}
           name='issuing_organization',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Issuing Organization</FormLabel>,
               <FormControl>,
                 <Input placeholder='Amazon Web ServicesPMIetc.' {...field} />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-        <FormField,
-          control={form.control,}
+        <FormField
+          control={form.control}
           name='issue_date',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Issue Date</FormLabel>,
               <FormControl>,
                 <Input type='date' {...field} value={field.value || ''} />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
-        <FormField,
+        <FormField
           control={form.control}
           name='expiration_date',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Expiration Date (Optional)</FormLabel>,
               <FormControl>,
                 <Input type='date' {...field} value={field.value || ''} />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-        <FormField,
-          control={form.control,}
+        <FormField
+          control={form.control}
           name='credential_id',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Credential ID (Optional)</FormLabel>,
               <FormControl>,
                 <Input placeholder='ABC123XYZ' {...field} />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
-        <FormField,
+        <FormField
           control={form.control}
           name='credential_url',
-          render={({ field }) => (,
+          render={({ field }) => (
             <FormItem>,
               <FormLabel>Credential URL (Optional)</FormLabel>,
               <FormControl>,
-                <Input,
+                <Input
                   placeholder='https: //www.credential.com/verify/abc123',
-                  {...field,}
+                  {...field}
                 />,
               </FormControl>,
               <FormMessage />,
-            </FormItem>,
-          )}
+            </FormItem>)}
         />,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

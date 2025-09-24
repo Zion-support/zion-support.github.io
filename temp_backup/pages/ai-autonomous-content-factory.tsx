@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiAutonomousContentFactoryPage() {,
-  return (,
+export default function AiAutonomousContentFactoryPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Autonomous Content Factory - Zion Tech Group</title>,
@@ -18,7 +17,6 @@ export default function AiAutonomousContentFactoryPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

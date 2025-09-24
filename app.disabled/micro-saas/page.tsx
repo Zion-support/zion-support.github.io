@@ -1,30 +1,28 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
-  title: 'Micro SaaS Solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'Micro SaaS Solutions - Zion Tech Group';
   description:,
-    'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',;
-  keywords: [,
-    'micro saas',;
-    'custom software',;
-    'business solutions',;
-    'scalable applications',;
-  ],;
-  openGraph: {,
-    title: 'Micro SaaS Solutions - Zion Tech Group',;
+    'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
+  keywords: [
+    'micro saas';
+    'custom software';
+    'business solutions';
+    'scalable applications';
+  ];
+  openGraph: {
+    title: 'Micro SaaS Solutions - Zion Tech Group';
     description:,
-      'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',;
-    type: 'website',;
-    url: '/micro-saas',;
-  },;
+      'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
+    type: 'website';
+    url: '/micro-saas';
+  };
 };
-,
-export default function MicroSaaS() {,
-  return (,
+export default function MicroSaaS() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='Micro SaaS Solutions - Zion Tech Group',
         description='Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',
         keywords='micro saas, custom software, business solutions, scalable applications',
@@ -48,23 +46,21 @@ export default function MicroSaaS() {,
                 challenges with modern, scalable solutions.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Started,
                 </Link>,
-                <Link,
+                <Link
                   href='/consultation',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Schedule Consultation,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className='py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center'>,
@@ -98,7 +94,5 @@ export default function MicroSaaS() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

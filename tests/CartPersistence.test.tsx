@@ -6,13 +6,13 @@ import { CartProvider } from '@/context/CartContext',
 import { AuthContext } from '@/context/auth/AuthContext',
 import { safeStorage } from '@/utils/safeStorage',
 import { getCartKey } from '@/utils/cartUtils',
-vi.mock('next/router', () => ({,
-  useRouter: () => ({ push: vi.fn() ,}),;
+vi.mock('next/router', () => ({
+  useRouter: () => ({ push: vi.fn() });
 })),
-const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 ,};
-function renderCart(user: any) {,
-  return render(,
-    <AuthContext.Provider value={{ user, isLoading: false ,} as any}>,
+const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
+function renderCart(user: any) {
+  return render(
+    <AuthContext.Provider value={{ user, isLoading: false } as any}>,
       <CartProvider>,
         <MemoryRouter initialEntries={['/cart']}>,
           <Routes>,
@@ -21,18 +21,16 @@ function renderCart(user: any) {,
           </Routes>,
         </MemoryRouter>,
       </CartProvider>,
-    </AuthContext.Provider>,
-  ),
-}
-describe('cart persistence', () => {,
-  it('shows item added before login after logging in', () => {,
+    </AuthContext.Provider>)}
+describe('cart persistence', () => {
+  it('shows item added before login after logging in', () => {
     safeStorage.setItem(getCartKey(), JSON.stringify([item])),
     const { rerender } = renderCart(null),
     expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument(),
     expect(screen.getByText('Login to Checkout')).toBeInTheDocument(),
-    rerender(,
+    rerender(
       <AuthContext.Provider,
-        value={{ user: { id: 'u1' ,}, isLoading: false ,} as any}
+        value={{ user: { id: 'u1' }, isLoading: false } as any}
       >,
         <CartProvider>,
           <MemoryRouter initialEntries={['/cart']}>,
@@ -42,10 +40,6 @@ describe('cart persistence', () => {,
             </Routes>,
           </MemoryRouter>,
         </CartProvider>,
-      </AuthContext.Provider>,
-    ),
+      </AuthContext.Provider>),
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument(),
-    expect(screen.getByText('Checkout')).toBeInTheDocument(),
-  }),
-}),
-,
+    expect(screen.getByText('Checkout')).toBeInTheDocument()})}),

@@ -1,21 +1,19 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o26: Enterprise Automation Revolution - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'AI 20o26: Enterprise Automation Revolution - Zion Tech Group';
   description:,
-    'Discover the revolutionary AI automation solutions that will transform enterprises in 20o26. Advanced workflows, intelligent process automation, and autonomous business operations.',;
-  keywords: [,
-    'AI automation 20o26',;
-    'enterprise automation',;
-    'intelligent workflows',;
-    'autonomous business',;
-    'AI transformation',;
-  ],;
+    'Discover the revolutionary AI automation solutions that will transform enterprises in 20o26. Advanced workflows, intelligent process automation, and autonomous business operations.';
+  keywords: [
+    'AI automation 20o26';
+    'enterprise automation';
+    'intelligent workflows';
+    'autonomous business';
+    'AI transformation';
+  ];
 };
-,
-export default function AI20o26EnterpriseAutomationRevolution() {,
-  return (,
+export default function AI20o26EnterpriseAutomationRevolution() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
       <div className='container mx-auto px-4 py-12'>,
         <div className='max-w-4xl mx-auto'>,
@@ -65,7 +63,7 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </div>,
-          {/* Key Technologies */,}
+          {/* Key Technologies */}
           <section className='mb-12'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
               Key Technologies Driving the Revolution,
@@ -183,7 +181,7 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </section>,
-          {/* Business Impact */,}
+          {/* Business Impact */}
           <section className='mb-12'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>,
               Expected Business Impact,
@@ -253,7 +251,7 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </section>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-xl p-8 text-white text-center'>,
             <h2 className='text-2xl font-bold mb-4'>,
               Ready to Transform Your Enterprise?,
@@ -263,30 +261,27 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
               and growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Explore Our AI Solutions,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Schedule Consultation,
               </Link>,
             </div>,
           </div>,
-          {/* Related Content */,}
+          {/* Related Content */}
           <div className='mt-12'>,
             <h3 className='text-xl font-bold text-gray-90o0 mb-6'>,
               Related Content,
             </h3>,
             <div className='grid md: grid-cols-2 gap-6'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-autonomous-enterprise-blueprint',
-                className='bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow',
-              >,
+                className='bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow'>,
                 <h4 className='font-bold text-gray-90o0 mb-2'>,
                   AI 20o26: Autonomous Enterprise Blueprint,
                 </h4>,
@@ -295,10 +290,9 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
                   operations.,
                 </p>,
               </Link>,
-              <Link,
+              <Link
                 href='/blog/ai-20o25-multimodal-agents-in-the-enterprise',
-                className='bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow',
-              >,
+                className='bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow'>,
                 <h4 className='font-bold text-gray-90o0 mb-2'>,
                   Multimodal Agents in the Enterprise,
                 </h4>,
@@ -311,7 +305,5 @@ export default function AI20o26EnterpriseAutomationRevolution() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,31 +1,28 @@
 import { Link } from 'react-router-dom',
 import { SEO } from './SEO',
 import { completeSitemap } from '../config/sitemap',
-export default function SitemapPage() {,
+export default function SitemapPage() {
   const publicRoutes = completeSitemap.filter(route => !route.requiredAuth),
-  const talentRoutes = completeSitemap.filter(,
+  const talentRoutes = completeSitemap.filter(
     route =>,
       route.requiredAuth &&,
       route.requiredRoles &&,
       (route.requiredRoles.includes('jobSeeker') ||,
-        route.requiredRoles.includes('creator')),
-  ),
-  const employerRoutes = completeSitemap.filter(,
+        route.requiredRoles.includes('creator'))),
+  const employerRoutes = completeSitemap.filter(
     route =>,
       route.requiredAuth &&,
       route.requiredRoles &&,
       (route.requiredRoles.includes('employer') ||,
-        route.requiredRoles.includes('buyer')),
-  ),
-  const adminRoutes = completeSitemap.filter(,
+        route.requiredRoles.includes('buyer'))),
+  const adminRoutes = completeSitemap.filter(
     route =>,
       route.requiredAuth &&,
       route.requiredRoles &&,
-      route.requiredRoles.includes('admin'),
-  ),
-  return (,
+      route.requiredRoles.includes('admin')),
+  return (
     <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>,
-      <SEO,
+      <SEO
         title='Sitemap',
         description='Complete navigation guide for Zion Tech Group website',
         keywords='sitemap, navigation, website structure, Zion Tech Group',
@@ -39,22 +36,20 @@ export default function SitemapPage() {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
-          {/* Public Routes */,}
+          {/* Public Routes */}
           <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>,
             <h2 className='text-2xl font-semibold text-zion-cyan mb-4'>,
               Public Pages,
             </h2>,
             <ul className='space-y-2'>,
-              {publicRoutes.map(route => (,
+              {publicRoutes.map(route => (
                 <li key={route.path}>,
-                  <Link,
+                  <Link
                     to={route.path}
-                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block',
-                  >,
-                    {route.label || route.title,}
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block'>,
+                    {route.label || route.title}
                   </Link>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
           </div>,
           {/* Talent Routes */}
@@ -63,16 +58,14 @@ export default function SitemapPage() {,
               Talent & Job Seeker Pages,
             </h2>,
             <ul className='space-y-2'>,
-              {talentRoutes.map(route => (,
+              {talentRoutes.map(route => (
                 <li key={route.path}>,
-                  <Link,
+                  <Link
                     to={route.path}
-                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block',
-                  >,
-                    {route.label || route.title,}
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block'>,
+                    {route.label || route.title}
                   </Link>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
           </div>,
           {/* Employer Routes */}
@@ -81,16 +74,14 @@ export default function SitemapPage() {,
               Employer & Buyer Pages,
             </h2>,
             <ul className='space-y-2'>,
-              {employerRoutes.map(route => (,
+              {employerRoutes.map(route => (
                 <li key={route.path}>,
-                  <Link,
+                  <Link
                     to={route.path}
-                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block',
-                  >,
-                    {route.label || route.title,}
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block'>,
+                    {route.label || route.title}
                   </Link>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
           </div>,
           {/* Admin Routes */}
@@ -99,16 +90,14 @@ export default function SitemapPage() {,
               Administrative Pages,
             </h2>,
             <ul className='space-y-2'>,
-              {adminRoutes.map(route => (,
+              {adminRoutes.map(route => (
                 <li key={route.path}>,
-                  <Link,
+                  <Link
                     to={route.path}
-                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block',
-                  >,
-                    {route.label || route.title,}
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block'>,
+                    {route.label || route.title}
                   </Link>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
           </div>,
         </div>,
@@ -118,13 +107,12 @@ export default function SitemapPage() {,
             Complete Route List,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'>,
-            {completeSitemap.map(route => (,
-              <div key={route.path,} className='bg-white/5 rounded p-3'>,
-                <Link,
+            {completeSitemap.map(route => (
+              <div key={route.path} className='bg-white/5 rounded p-3'>,
+                <Link
                   to={route.path}
-                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium',
-                >,
-                  {route.path,}
+                  className='text-zion-cyan hover: text-zion-cyan-light transition-colors font-medium'>,
+                  {route.path}
                 </Link>,
                 <span className='ml-2 text-xs italic text-zion-slate-light'>,
                   ({route.priority}),
@@ -132,12 +120,9 @@ export default function SitemapPage() {,
                 <p className='text-sm text-zion-slate-light mt-1'>,
                   {route.description}
                 </p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

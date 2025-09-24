@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function UltimateContentShowcaseBanner() {,
-  return (,
+export default function UltimateContentShowcaseBanner() {
+  return (
     <div className='bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-pink-60o0 text-white py-8 mb-8 rounded-2xl shadow-2xl'>,
       <div className='max-w-6xl mx-auto px-4'>,
         <div className='text-center mb-6'>,
@@ -31,21 +30,18 @@ export default function UltimateContentShowcaseBanner() {,
           </div>,
         </div>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             href='/ultimate-content-showcase-20o26',
-            className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors',
-          >,
+            className='bg-white text-blue-60o0 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-colors'>,
             Explore All Content,
           </Link>,
-          <Link,
+          <Link
             href='/blog/ai-20o25-ultimate-automation-revolution',
-            className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors',
-          >,
+            className='bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors'>,
             Latest Breakthrough,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

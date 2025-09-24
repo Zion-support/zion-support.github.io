@@ -2,122 +2,105 @@ import React, { useState, useEffect, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react',
 import { Button } from './button',
-export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {,
+export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false),
-    const [settings, setSettings] = useState({,
-        highContrast: false,;
-        largeText: false,;
-        reducedMotion: false,;
-        screenReader: false,;
-        fontSize: 16,;
+    const [settings, setSettings] = useState({
+        highContrast: false;
+        largeText: false;
+        reducedMotion: false;
+        screenReader: false;
+        fontSize: 16;
         colorBlindMode: 'normal',
-    ,}),
+    }),
     // Apply accessibility settings to document,
-    useEffect(() => {,
+    useEffect(() => {
         if (!enabled),
             return,
         const root = document.documentElement,
         // High contrast,
-        if (settings.highContrast) {,
-            root.classList.add('high-contrast'),
-        }
-        else {,
-            root.classList.remove('high-contrast'),
-        }
+        if (settings.highContrast) {
+            root.classList.add('high-contrast')}
+        else {
+            root.classList.remove('high-contrast')}
         // Large text,
-        if (settings.largeText) {,
-            root.style.fontSize = '18px',
-        }
-        else {,
-            root.style.fontSize = '16px',
-        }
+        if (settings.largeText) {
+            root.style.fontSize = '18px'}
+        else {
+            root.style.fontSize = '16px'}
         // Reduced motion,
-        if (settings.reducedMotion) {,
-            root.style.setProperty('--reduced-motion', 'reduce'),
-        }
-        else {,
-            root.style.setProperty('--reduced-motion', 'no-preference'),
-        }
+        if (settings.reducedMotion) {
+            root.style.setProperty('--reduced-motion', 'reduce')}
+        else {
+            root.style.setProperty('--reduced-motion', 'no-preference')}
         // Font size,
         root.style.setProperty('--font-size', `${settings.fontSize}px`),
         // Color blind mode,
         root.setAttribute('data-color-blind', settings.colorBlindMode),
         // Notify parent component,
-        onSettingsChange?.(settings),
-    }, [settings, enabled, onSettingsChange]),
+        onSettingsChange?.(settings)}, [settings, enabled, onSettingsChange]),
     // Load saved settings from localStorage,
-    useEffect(() => {,
+    useEffect(() => {
         const saved = localStorage.getItem('accessibility-settings'),
-        if (saved) {,
-            try {,
+        if (saved) {
+            try {
                 const parsed = JSON.parse(saved),
-                setSettings(prev => ({ ...prev, ...parsed })),
-            }
-            catch {,
-                // Silently handle parsing errors,
-            }
+                setSettings(prev => ({ ...prev, ...parsed }))}
+            catch {
+                // Silently handle parsing errors}
         }
     }, []),
     // Save settings to localStorage,
-    const saveSettings = useCallback((newSettings) => {,
+    const saveSettings = useCallback((newSettings) => {
         setSettings(newSettings),
-        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-    }, []),
+        localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []),
     // Toggle settings,
-    const toggleSetting = useCallback((key, value) => {,
-        const newSettings ={,
-            ...settings,;
-            [key]: value !== undefined ? value : !settings[key],
-        };
-        saveSettings(newSettings),
-    }, [settings, saveSettings]),
+    const toggleSetting = useCallback((key, value) => {
+        const newSettings ={
+            ...settings;
+            [key]: value !== undefined ? value : !settings[key]};
+        saveSettings(newSettings)}, [settings, saveSettings]),
     // Reset to defaults,
-    const resetSettings = useCallback(() => {,
-        const defaults ={,
-            highContrast: false,;
-            largeText: false,;
-            reducedMotion: false,;
-            screenReader: false,;
-            fontSize: 16,;
+    const resetSettings = useCallback(() => {
+        const defaults ={
+            highContrast: false;
+            largeText: false;
+            reducedMotion: false;
+            screenReader: false;
+            fontSize: 16;
             colorBlindMode: 'normal',
-        ,};
-        saveSettings(defaults),
-    }, [saveSettings]),
+        };
+        saveSettings(defaults)}, [saveSettings]),
     // Font size controls,
-    const increaseFontSize = useCallback(() => {,
-        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24)),
-    }, [settings.fontSize, toggleSetting]),
-    const decreaseFontSize = useCallback(() => {,
-        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12)),
-    }, [settings.fontSize, toggleSetting]),
+    const increaseFontSize = useCallback(() => {
+        toggleSetting('fontSize', Math.min(settings.fontSize + 2, 24))}, [settings.fontSize, toggleSetting]),
+    const decreaseFontSize = useCallback(() => {
+        toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12))}, [settings.fontSize, toggleSetting]),
     // Screen reader announcement,
-    const announceToScreenReader = useCallback((message) => {,
-        if (settings.screenReader) {,
+    const announceToScreenReader = useCallback((message) => {
+        if (settings.screenReader) {
             const announcement = document.createElement('div'),
             announcement.setAttribute('aria-live', 'polite'),
             announcement.setAttribute('aria-atomic', 'true'),
             announcement.className = 'sr-only',
             announcement.textContent = message,
             document.body.appendChild(announcement),
-            setTimeout(() => {,
-                document.body.removeChild(announcement),
-            }, 10o00),
-        }
+            setTimeout(() => {
+                document.body.removeChild(announcement)}, 10o00)}
     }, [settings.screenReader]),
     if (!enabled),
         return null,
     return (<>,
       {/* Accessibility Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover: bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-30o0 ${className,}`} whileHover={{ scale: 1.1 ,}} whileTap={{ scale: 0.9 ,}} aria-label="Accessibility settings">,
+      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover: bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-30o0 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">,
         <Accessibility className="w-6 h-6" />,
       </motion.button>,
       {/* Accessibility Panel */}
       <AnimatePresence>,
-        {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} exit={{ opacity: 0 ,}} transition={{ duration: 0.2 ,}}>,
+        {isOpen && (<motion.div className="fixed inset-0 z-40" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>,
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>,
             {/* Panel */}
-            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(10o0vh-2rem)] overflow-y-auto" initial={{ opacity: 0, x: 30o0, scale: 0.95 ,}} animate={{ opacity: 1, x: 0, scale: 1 ,}} exit={{ opacity: 0, x: 30o0, scale: 0.95 ,}} transition={{ duration: 0.3, ease: "easeOut" ,}}>,
+            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(10o0vh-2rem)] overflow-y-auto" initial={{ opacity: 0, x: 30o0, scale: 0.95 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 30o0, scale: 0.95 }} transition={{ duration: 0.3, ease: "easeOut" }}>,
               {/* Header */}
               <div className="flex items-center justify-between mb-6">,
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>,
@@ -125,7 +108,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <X className="w-5 h-5 text-zinc-40o0" />,
                 </button>,
               </div>,
-              {/* Visual Settings */,}
+              {/* Visual Settings */}
               <div className="space-y-4">,
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Visual</h3>,
                 {/* High Contrast */}
@@ -152,7 +135,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 <div className="space-y-2">,
                   <div className="flex items-center gap-3">,
                     <Type className="w-5 h-5 text-zion-cyan" />,
-                    <span className="text-zinc-30o0">Font Size: {settings.fontSize,}px</span>,
+                    <span className="text-zinc-30o0">Font Size: {settings.fontSize}px</span>,
                   </div>,
                   <div className="flex items-center gap-2 ml-8">,
                     <Button size="sm" variant="outline" onClick={decreaseFontSize} disabled={settings.fontSize <= 12} className="p-1">,
@@ -177,7 +160,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   </select>,
                 </div>,
               </div>,
-              {/* Motion Settings */,}
+              {/* Motion Settings */}
               <div className="space-y-4 mt-6">,
                 <h3 className="text-white font-semibold text-sm uppercase tracking-wider">Motion</h3>,
                 <div className="flex items-center justify-between">,
@@ -206,10 +189,10 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               {/* Test Announcement */}
               {settings.screenReader && (<div className="mt-4 p-3 bg-zion-blue/20 rounded-lg">,
                   <p className="text-zinc-30o0 text-sm mb-2">Test screen reader announcement: </p>,
-                  <Button size="sm" onClick={() => announceToScreenReader('This is a test announcement for screen readers'),} className="bg-zion-cyan hover: bg-zion-cyan-light text-zion-blue-dark">,
+                  <Button size="sm" onClick={() => announceToScreenReader('This is a test announcement for screen readers')} className="bg-zion-cyan hover: bg-zion-cyan-light text-zion-blue-dark">,
                     Test Announcement,
                   </Button>,
-                </div>),}
+                </div>)}
 ,
               {/* Reset Button */}
               <div className="mt-6 pt-6 border-t border-zion-blue-light/20">,
@@ -217,7 +200,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   Reset to Defaults,
                 </Button>,
               </div>,
-              {/* Help Text */,}
+              {/* Help Text */}
               <div className="mt-4 text-xs text-zinc-40o0 text-center">,
                 <p>These settings are saved locally and will persist across sessions.</p>,
                 <p className="mt-1">For more accessibility options, check your browser settings.</p>,
@@ -226,9 +209,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </motion.div>)}
       </AnimatePresence>,
       {/* Screen Reader Only Class */}
-      <style dangerouslySetInnerHTML={{,
+      <style dangerouslySetInnerHTML={{
             __html: `,
-          .sr-only {,
+          .sr-only {
             position: absolute,
             width: 1px,
             height: 1px,
@@ -238,9 +221,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             clip: rect(0, 0, 0, 0),
             white-space: nowrap,
             border: 0,
-          ,}
+          }
 ,
-          .high-contrast {,
+          .high-contrast {
             --zion-cyan: #0o0ffff,
             --zion-blue: #0o066ff,
             --zion-purple: #990o0ff,
@@ -249,46 +232,45 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             --zion-cyan-light: #33ffff,
             --zion-purple-dark: #660o0cc,
             --zion-purple-light: #cc33ff,
-          ,}
+          }
 ,
-          [data-color-blind="protanopia"] {,
+          [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter'),
-          ,}
+          }
 ,
-          [data-color-blind="deuteranopia"] {,
+          [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter'),
-          ,}
+          }
 ,
-          [data-color-blind="tritanopia"] {,
+          [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter'),
-          ,}
+          }
 ,
-          :root {,
+          :root {
             --font-size: 16px,
             --reduced-motion: no-preference,
-          ,}
+          }
 ,
-          * {,
+          * {
             font-size: var(--font-size),
-          ,}
+          }
 ,
-          @media (prefers-reduced-motion: reduce) {,
-            * {,
+          @media (prefers-reduced-motion: reduce) {
+            * {
               animation-duration: 0.0o1ms !important,
               animation-iteration-count: 1 !important,
               transition-duration: 0.0o1ms !important,
-            ,}
+            }
           }
 ,
-          [style*="--reduced-motion: reduce"] * {,
+          [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.0o1ms !important,
             animation-iteration-count: 1 !important,
             transition-duration: 0.0o1ms !important,
-          ,}
-        `,
-        }} />,
+          }
+        `}} />,
       {/* SVG Filters for Color Blind Modes */}
-      <svg style={{ position: 'absolute', width: 0, height: 0 ,}}>,
+      <svg style={{ position: 'absolute', width: 0, height: 0 }}>,
         <defs>,
           <filter id="protanopia-filter">,
             <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0" />,
@@ -301,6 +283,5 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>,
         </defs>,
       </svg>,
-    </>),
-}
+    </>)}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GlobalPage() {,
-  return (,
+export default function GlobalPage() {
+  return (
     <>,
       <Head>,
         <title>Global - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function GlobalPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -73,7 +73,6 @@ import UltimateTechRevolution20o26 from './src/pages/UltimateTechRevolution20o26
 import ConsciousnessComputing20o26 from './src/pages/ConsciousnessComputing20o26',
 import RevolutionaryAdBanner from './src/components/RevolutionaryAdBanner',
 import UltimateContentShowcase from './src/components/UltimateContentShowcase',
-,
 // Import NEW 20o25 CONTENT,
 import AdvancedAIConsciousness20o25 from './src/pages/AdvancedAIConsciousness20o25',
 import QuantumComputingBreakthrough20o25 from './src/pages/QuantumComputingBreakthrough20o25',
@@ -81,7 +80,6 @@ import NeuralInterfaceRevolution20o25 from './src/pages/NeuralInterfaceRevolutio
 import NewContentPromoBanner20o25 from './src/components/NewContentPromoBanner20o25',
 import EnhancedContentShowcase20o25 from './src/components/EnhancedContentShowcase20o25',
 import EnhancedContentSearch20o25 from './src/components/EnhancedContentSearch20o25',
-,
 // Import NEW 20o34-20o36 CONTENT,
 import NextGenAIRevolution20o34 from './src/pages/NextGenAIRevolution20o34',
 import QuantumRealityManipulation20o35 from './src/pages/QuantumRealityManipulation20o35',
@@ -89,13 +87,11 @@ import TranscendentConsciousness20o36 from './src/pages/TranscendentConsciousnes
 import RevolutionaryContentBanner20o34_20o36 from './src/components/RevolutionaryContentBanner20o34-20o36',
 import InteractiveContentShowcase20o34_20o36 from './src/components/InteractiveContentShowcase20o34-20o36',
 import UltimateContentPromotionBanner from './src/components/UltimateContentPromotionBanner',
-,
 // Import NEW REVOLUTIONARY TECH BREAKTHROUGH 20o25 CONTENT,
 import RevolutionaryTechBreakthroughBanner20o25 from './src/components/RevolutionaryTechBreakthroughBanner20o25',
 import InteractiveTechShowcase20o25 from './src/components/InteractiveTechShowcase20o25',
 import EnhancedNewsletterSignup20o25 from './src/components/EnhancedNewsletterSignup20o25',
 import UltimateContentPromotionBanner20o25 from './src/components/UltimateContentPromotionBanner20o25',
-,
 // Import NEW REVOLUTIONARY TECH 20o27-20o30 CONTENT,
 import QuantumConsciousnessRevolution20o27 from './src/pages/QuantumConsciousnessRevolution20o27',
 import InterdimensionalRealityEngine20o28 from './src/pages/InterdimensionalRealityEngine20o28',
@@ -104,17 +100,16 @@ import TranscendentRealityControl20o30 from './src/pages/TranscendentRealityCont
 import RevolutionaryTechBanner20o27_20o30 from './src/components/RevolutionaryTechBanner20o27-20o30',
 import UltimateTechShowcase20o27_20o30 from './src/components/UltimateTechShowcase20o27-20o30',
 import InteractiveContentExplorer20o27_20o30 from './src/components/InteractiveContentExplorer20o27-20o30',
-,
-export default function App(): JSX.Element {,
-  return (,
+export default function App(): JSX.Element {
+  return (
     <Router>,
       <div className='min-h-screen bg-white'>,
         <ScrollToTop />,
         <Header />,
         <Routes>,
-          <Route,
+          <Route
             path='/',
-            element={,
+            element={
               <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
                 <main className='container mx-auto px-4 py-8'>,
                   {/* Enhanced Search Section */}
@@ -143,59 +138,53 @@ export default function App(): JSX.Element {,
                       <p className='text-2xl opacity-95 mb-8 max-w-6xl mx-auto'>,
                         Experience the most advanced technology content,
                         featuring AI Revolutionary Breakthrough, Quantum,
-                        Computing Revolution, Neural Interface Technology,;
+                        Computing Revolution, Neural Interface Technology;
                         Biotech Revolution, Space Tech Innovation, and Advanced,
                         Robotics,
                       </p>,
                       <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto mb-8'>,
-                        <a,
+                        <a
                           href='/pages/AIRevolutionaryBreakthrough20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           🧠 AI Revolutionary Breakthrough →,
                         </a>,
-                        <a,
+                        <a
                           href='/pages/QuantumComputingRevolution20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           ⚡ Quantum Computing Revolution →,
                         </a>,
-                        <a,
+                        <a
                           href='/pages/NeuralInterfaceRevolution20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           🧬 Neural Interface Revolution →,
                         </a>,
-                        <a,
+                        <a
                           href='/pages/SpaceTechInnovation20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           🚀 Space Tech Innovation →,
                         </a>,
-                        <a,
+                        <a
                           href='/pages/AdvancedRobotics20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           🤖 Advanced Robotics →,
                         </a>,
-                        <a,
+                        <a
                           href='/pages/UltimateTechRevolution20o26',
-                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg',
-                        >,
+                          className='inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-4 rounded-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-bold border border-white/30 text-lg'>,
                           🌟 Ultimate Tech Revolution →,
                         </a>,
                       </div>,
                     </div>,
                   </div>,
-                  {/* Revolutionary Ad Banner */,}
+                  {/* Revolutionary Ad Banner */}
                   <RevolutionaryAdBanner />,
-                  {/* NEW: 20o25 Content Promotional Banner */,}
+                  {/* NEW: 20o25 Content Promotional Banner */}
                   <NewContentPromoBanner20o25 />,
-                  {/* NEW: 20o34-20o36 Revolutionary Content Banner */,}
+                  {/* NEW: 20o34-20o36 Revolutionary Content Banner */}
                   <RevolutionaryContentBanner20o34_20o36 />,
-                  {/* NEW: Revolutionary Tech Breakthrough 20o25 Banner */,}
+                  {/* NEW: Revolutionary Tech Breakthrough 20o25 Banner */}
                   <RevolutionaryTechBreakthroughBanner20o25 />,
-                  {/* NEW: Revolutionary Tech 20o27-20o30 Banner */,}
+                  {/* NEW: Revolutionary Tech 20o27-20o30 Banner */}
                   <RevolutionaryTechBanner20o27_20o30 />,
                   {/* Enhanced Content Showcase */}
                   <div className='mb-12'>,
@@ -262,10 +251,9 @@ export default function App(): JSX.Element {,
                           Automate prospecting, personalize outreach, and,
                           accelerate pipeline with conversational AI.,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/InnovativeServicesShowcase20o25',
-                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                           Learn more →,
                         </a>,
                       </div>,
@@ -275,13 +263,12 @@ export default function App(): JSX.Element {,
                           Cloud Cost Optimizer,
                         </h3>,
                         <p className='text-gray-60o0 mb-4'>,
-                          Cut multi-cloud spend with automated rightsizing,;
+                          Cut multi-cloud spend with automated rightsizing;
                           scheduling, and anomaly detection.,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/InnovativeServicesShowcase20o25',
-                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                           Learn more →,
                         </a>,
                       </div>,
@@ -294,24 +281,22 @@ export default function App(): JSX.Element {,
                           Unify threat feeds and correlate signals with AI to,
                           reduce alert fatigue.,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/ComprehensiveServices20o25',
-                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                           Learn more →,
                         </a>,
                       </div>,
                     </div>,
                     <div className='text-center mt-6'>,
-                      <a,
+                      <a
                         href='/pages/ComprehensiveServices20o25',
-                        className='inline-block bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold',
-                      >,
+                        className='inline-block bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold'>,
                         View all services,
                       </a>,
                     </div>,
                   </section>,
-                  {/* Services Grid */,}
+                  {/* Services Grid */}
                   <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
                     <div className='bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow'>,
                       <div className='text-4xl mb-4'>🤖</div>,
@@ -322,10 +307,9 @@ export default function App(): JSX.Element {,
                         Cutting-edge artificial intelligence solutions for your,
                         business needs.,
                       </p>,
-                      <a,
+                      <a
                         href='/pages/InnovativeServicesShowcase20o25',
-                        className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                      >,
+                        className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                         View AI Services →,
                       </a>,
                     </div>,
@@ -336,10 +320,9 @@ export default function App(): JSX.Element {,
                         Secure, decentralized solutions powered by blockchain,
                         technology.,
                       </p>,
-                      <a,
+                      <a
                         href='/pages/InnovationLanding20o25',
-                        className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                      >,
+                        className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                         Explore Blockchain →,
                       </a>,
                     </div>,
@@ -351,15 +334,14 @@ export default function App(): JSX.Element {,
                       <p className='text-gray-60o0 mb-4'>,
                         Scalable cloud infrastructure and deployment solutions.,
                       </p>,
-                      <a,
+                      <a
                         href='/pages/InnovativeServicesShowcase20o25',
-                        className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                      >,
+                        className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                         Cloud Solutions →,
                       </a>,
                     </div>,
                   </div>,
-                  {/* Success Stories Section */,}
+                  {/* Success Stories Section */}
                   <div className='bg-gradient-to-br from-blue-50 to-indigo-10o0 rounded-2xl p-8 mb-12'>,
                     <div className='text-center mb-8'>,
                       <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -388,10 +370,9 @@ export default function App(): JSX.Element {,
                           operational costs by 40% and increased productivity by,
                           30o0%.,
                         </p>,
-                        <a,
+                        <a
                           href='/case-studies/ai-transformation',
-                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                           Read Case Study →,
                         </a>,
                       </div>,
@@ -412,10 +393,9 @@ export default function App(): JSX.Element {,
                           streamlined supply chain operations and saved $2M,
                           annually.,
                         </p>,
-                        <a,
+                        <a
                           href='/case-studies/blockchain-implementation',
-                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                           Learn More →,
                         </a>,
                       </div>,
@@ -431,18 +411,17 @@ export default function App(): JSX.Element {,
                         </h3>,
                         <p className='text-gray-60o0 mb-4'>,
                           Migrated legacy systems to cloud infrastructure,
-                          achieving 99.9% uptime and 60% faster performance.,
+                          achieving 99.9% uptime and 60% faster window.performance.,
                         </p>,
-                        <a,
+                        <a
                           href='/case-studies/cloud-migration',
-                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover:text-blue-70o0 font-semibold'>,
                           View Results →,
                         </a>,
                       </div>,
                     </div>,
                   </div>,
-                  {/* Latest News Section */,}
+                  {/* Latest News Section */}
                   <div className='bg-white rounded-2xl p-8 shadow-lg mb-12'>,
                     <div className='text-center mb-8'>,
                       <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>,
@@ -469,10 +448,9 @@ export default function App(): JSX.Element {,
                           Discover the most significant trends shaping our,
                           digital future...,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/BlogPost20o25',
-                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                           Read Full Article →,
                         </a>,
                       </div>,
@@ -492,10 +470,9 @@ export default function App(): JSX.Element {,
                           Revolutionary AI systems that operate independently,
                           and continuously evolve...,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/NewShowcase20o25',
-                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                           Explore Autonomous AI →,
                         </a>,
                       </div>,
@@ -515,10 +492,9 @@ export default function App(): JSX.Element {,
                           Direct brain-computer interfaces enabling,
                           thought-controlled devices...,
                         </p>,
-                        <a,
+                        <a
                           href='/pages/NeuralInterfaceFuture',
-                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold',
-                        >,
+                          className='text-blue-60o0 hover: text-blue-70o0 font-semibold'>,
                           Explore Neural Tech →,
                         </a>,
                       </div>,
@@ -535,279 +511,277 @@ export default function App(): JSX.Element {,
                       succeed in the digital age.,
                     </p>,
                     <div className='flex justify-center space-x-4'>,
-                      <a,
+                      <a
                         href='/pages/InnovationLanding20o25',
-                        className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold',
-                      >,
+                        className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold'>,
                         Start Your Journey,
                       </a>,
-                      <a,
+                      <a
                         href='/contact',
-                        className='border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors',
-                      >,
+                        className='border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors'>,
                         Contact Us,
                       </a>,
                     </div>,
                   </div>,
                 </main>,
               </div>,
-            ,}
+            }
           />,
-          <Route,
+          <Route
             path='/pages/InnovationLanding20o25',
             element={<InnovationLanding20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/InnovativeServicesShowcase20o25',
             element={<InnovativeServicesShowcase20o25 />}
           />,
           <Route path='/pages/BlogPost20o25' element={<BlogPost20o25 />} />,
-          <Route,
+          <Route
             path='/pages/AdvancedTechSolutions20o25',
             element={<AdvancedTechSolutions20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/FutureTechTrends20o25',
             element={<FutureTechTrends20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/ComprehensiveServices20o25',
             element={<ComprehensiveServices20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AIInnovationPlaybook20o25',
             element={<AIInnovationPlaybook20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/TechnologyInsights20o25',
             element={<TechnologyInsights20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AITransformationGuide20o25',
             element={<AITransformationGuide20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumComputingSolutions20o25',
             element={<QuantumComputingSolutions20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/NewAIUseCases20o25',
             element={<NewAIUseCases20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/EdgeAIandIoT20o25',
             element={<EdgeAIandIoT20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AIInnovationHub20o25',
             element={<AIInnovationHub20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/DigitalTransformation20o25',
             element={<DigitalTransformation20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AdvancedAnalytics20o25',
             element={<AdvancedAnalytics20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/CybersecurityFortress20o25',
             element={<CybersecurityFortress20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AIRevolution20o25',
             element={<AIRevolution20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumComputingBreakthrough',
             element={<QuantumComputingBreakthrough />}
           />,
-          <Route,
+          <Route
             path='/pages/NeuralInterfaceFuture',
             element={<NeuralInterfaceFuture />}
           />,
-          <Route,
+          <Route
             path='/pages/AIEnterpriseCopilot20o25',
             element={<AIEnterpriseCopilot20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/NewShowcase20o25',
             element={<NewShowcase20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/SyntheticIntelligence20o26',
             element={<SyntheticIntelligence20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumNeuralFusion20o26',
             element={<QuantumNeuralFusion20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/RevolutionaryTechInsights20o25',
             element={<RevolutionaryTechInsights20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/UltimateTechShowcase20o25',
             element={<UltimateTechShowcase20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/NextGenSpaceTech20o26',
             element={<NextGenSpaceTech20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/AdvancedTechTrends20o27',
             element={<AdvancedTechTrends20o27 />}
           />,
-          <Route,
+          <Route
             path='/pages/ConsciousnessComputingRevolution20o34',
             element={<ConsciousnessComputingRevolution20o34 />}
           />,
-          <Route,
+          <Route
             path='/pages/RevolutionaryTechBreakthrough20o35',
             element={<RevolutionaryTechBreakthrough20o35 />}
           />,
-          <Route,
+          <Route
             path='/pages/AdvancedQuantumComputing20o26',
             element={<AdvancedQuantumComputing20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/NeuralInterfaceRevolution20o26',
             element={<NeuralInterfaceRevolution20o26 />}
           />,
-          <Route,
+          <Route
             path='/enhanced-showcase',
             element={<EnhancedContentShowcase />}
           />,
-          <Route,
+          <Route
             path='/pages/NextGenAIRevolution20o26',
             element={<NextGenAIRevolution20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumComputingRevolution20o26',
             element={<QuantumComputingRevolution20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/RevolutionaryTechBlog20o26',
             element={<RevolutionaryTechBlog20o26 />}
           />,
-          <Route,
+          <Route
             path='/revolutionary-showcase',
             element={<RevolutionaryContentShowcase />}
           />,
-          <Route,
+          <Route
             path='/pages/ComprehensiveTechInsights20o26',
             element={<ComprehensiveTechInsights20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/AdvancedAITransformation20o26',
             element={<AdvancedAITransformation20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/NextGenTechShowcase20o26',
             element={<NextGenTechShowcase20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/AdvancedAISystems20o26',
             element={<AdvancedAISystems20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/SpaceTechAI20o25',
             element={<SpaceTechAI20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/BiotechAIRevolution20o25',
             element={<BiotechAIRevolution20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/AIRevolutionaryBreakthrough20o26',
             element={<AIRevolutionaryBreakthrough20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumReality20o26',
             element={<QuantumReality20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/NeuralInterfaceEvolution20o26',
             element={<NeuralInterfaceEvolution20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/UltimateTechRevolution20o26',
             element={<UltimateTechRevolution20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/ConsciousnessComputing20o26',
             element={<ConsciousnessComputing20o26 />}
           />,
-          <Route,
+          <Route
             path='/pages/AIAutonomousResearchAssistant',
             element={<AIAutonomousResearchAssistant />}
           />,
-          <Route,
+          <Route
             path='/pages/AIContentGenerator',
             element={<AIContentGenerator />}
           />,
           <Route path='/pages/AIMatcher' element={<AIMatcher />} />,
-          <Route,
+          <Route
             path='/pages/AIPoweredITAssetManagement',
             element={<AIPoweredITAssetManagement />}
           />,
           <Route path='/pages/AIServicesPage' element={<AIServicesPage />} />,
-          <Route,
+          <Route
             path='/pages/AIServicesShowcase',
             element={<AIServicesShowcase />}
           />,
           <Route path='/case-studies/:slug' element={<CaseStudyPage />} />,
           {/* NEW REVOLUTIONARY 20o27 CONTENT ROUTES */}
-          <Route,
+          <Route
             path='/pages/QuantumConsciousnessRevolution20o27',
             element={<QuantumConsciousnessRevolution20o27 />}
           />,
-          <Route,
+          <Route
             path='/pages/InterdimensionalRealityEngine20o28',
             element={<InterdimensionalRealityEngine20o28 />}
           />,
-          <Route,
+          <Route
             path='/pages/OmniversalAIConsciousness20o29',
             element={<OmniversalAIConsciousness20o29 />}
           />,
-          <Route,
+          <Route
             path='/pages/TranscendentRealityControl20o30',
             element={<TranscendentRealityControl20o30 />}
           />,
           {/* NEW 20o25 CONTENT ROUTES */}
-          <Route,
+          <Route
             path='/pages/AdvancedAIConsciousness20o25',
             element={<AdvancedAIConsciousness20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumComputingBreakthrough20o25',
             element={<QuantumComputingBreakthrough20o25 />}
           />,
-          <Route,
+          <Route
             path='/pages/NeuralInterfaceRevolution20o25',
             element={<NeuralInterfaceRevolution20o25 />}
           />,
           {/* NEW 20o34-20o36 CONTENT ROUTES */}
-          <Route,
+          <Route
             path='/pages/NextGenAIRevolution20o34',
             element={<NextGenAIRevolution20o34 />}
           />,
-          <Route,
+          <Route
             path='/pages/QuantumRealityManipulation20o35',
             element={<QuantumRealityManipulation20o35 />}
           />,
-          <Route,
+          <Route
             path='/pages/TranscendentConsciousness20o36',
             element={<TranscendentConsciousness20o36 />}
           />,
           {/* NEW REVOLUTIONARY TECH BREAKTHROUGH 20o25 CONTENT ROUTES */}
-          <Route,
+          <Route
             path='/pages/RevolutionaryTechBreakthrough20o25',
             element={<RevolutionaryTechBreakthrough20o25 />}
           />,
-          <Route,
+          <Route
             path='/blog',
-            element={,
+            element={
               <main className='container mx-auto px-4 py-16'>,
                 <div className='text-center'>,
                   <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
@@ -817,12 +791,11 @@ export default function App(): JSX.Element {,
                     Coming soon - Latest insights and updates,
                   </p>,
                 </div>,
-              </main>,
-            }
+              </main>}
           />,
-          <Route,
+          <Route
             path='/contact',
-            element={,
+            element={
               <main className='container mx-auto px-4 py-16'>,
                 <div className='text-center'>,
                   <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
@@ -832,12 +805,11 @@ export default function App(): JSX.Element {,
                     Get in touch with our team,
                   </p>,
                 </div>,
-              </main>,
-            }
+              </main>}
           />,
-          <Route,
+          <Route
             path='*',
-            element={,
+            element={
               <main className='container mx-auto px-4 py-16 text-center'>,
                 <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
                   Page Not Found,
@@ -845,13 +817,10 @@ export default function App(): JSX.Element {,
                 <p className='text-xl text-gray-60o0'>,
                   The page you're looking for doesn't exist.,
                 </p>,
-              </main>,
-            }
+              </main>}
           />,
         </Routes>,
         <EnhancedFooter />,
       </div>,
-    </Router>,
-  ),
-}
+    </Router>)}
 ,

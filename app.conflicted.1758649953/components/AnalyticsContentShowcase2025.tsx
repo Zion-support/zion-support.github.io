@@ -1,6 +1,4 @@
 'use client',
-,
-export default function AnalyticsContentShowcase20o25() {,
-  return null,
-}
+export default function AnalyticsContentShowcase20o25() {
+  return null}
 ,

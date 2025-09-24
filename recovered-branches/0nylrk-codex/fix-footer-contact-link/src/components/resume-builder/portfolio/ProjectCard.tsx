@@ -5,89 +5,75 @@ import { Badge } from '@/components/ui/badge',
 import { AlertDialogActionAlertDialogCancelAlertDialogContentAlertDialogDescriptionAlertDialogFooterAlertDialogHeaderAlertDialogTitle } from '@/components/ui/alert-dialog',
 EditTrash2GithubLinkFileText,
 import { PortfolioProject } from '@/types/resume',
-,
-interface ProjectCardProps {,
+interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
   onDelete: (projectId: string) => void,
-,}
+}
 ,
-export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {,
+export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {
   const [deleteDialogOpensetDeleteDialogOpen] = useState(false),
-,
-  const handleDelete = () => {,
-    if (project.id) {,
-      onDelete(project.id),
-    }
-    setDeleteDialogOpen(false),
-  };
-,
-  return (,
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id)}
+    setDeleteDialogOpen(false)};
+  return (
     <Card className='h-full flex flex-col'>,
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>,
-        {project.image_url ? (,
-          <img,
+        {project.image_url ? (
+          <img
             src={project.image_url}
             alt={project.title}
             className='w-full h-full object-cover',
-          />,
-        ) : (,
+          />) : (
           <div className='w-full h-full flex items-center justify-center bg-muted'>,
             <FileText className='h-12 w-12 text-muted-foreground/50' />,
-          </div>,
-        )}
+          </div>)}
       </div>,
       <CardContent className='flex-grow pt-6'>,
         <div className='space-y-2'>,
           <h3 className='font-semibold text-lg'>{project.title}</h3>,
-          {project.description && (,
+          {project.description && (
             <p className='text-sm text-muted-foreground line-clamp-3'>,
               {project.description}
-            </p>,
-          )}
+            </p>)}
 ,
-          {project.technologies && project.technologies.length > 0 && (,
+          {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>,
-              {project.technologies.map(techindex => (,
+              {project.technologies.map(techindex => (
                 <Badge key={index} variant='secondary' className='text-xs'>,
                   {tech}
-                </Badge>,
-              ))}
-            </div>,
-          )}
+                </Badge>))}
+            </div>)}
         </div>,
       </CardContent>,
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>,
         <div className='flex gap-2'>,
-          {project.github_url && (,
-            <a,
+          {project.github_url && (
+            <a
               href={project.github_url}
               target='_blank',
-              rel='noopener noreferrer',
-            >,
+              rel='noopener noreferrer'>,
               <Button variant='ghost' size='icon'>,
                 <Github className='h-4 w-4' />,
               </Button>,
-            </a>,
-          )}
+            </a>)}
 ,
-          {project.demo_url && (,
-            <a,
+          {project.demo_url && (
+            <a
               href={project.demo_url}
               target='_blank',
-              rel='noopener noreferrer',
-            >,
+              rel='noopener noreferrer'>,
               <Button variant='ghost' size='icon'>,
                 <Link className='h-4 w-4' />,
               </Button>,
-            </a>,
-          )}
+            </a>)}
         </div>,
         <div className='flex gap-2'>,
           <Button variant='ghost' size='icon' onClick={() => onEdit(project)}>,
             <Edit className='h-4 w-4' />,
           </Button>,
-          <Button,
+          <Button
             variant='ghost',
             size='icon',
             onClick={() => setDeleteDialogOpen(true)}
@@ -107,16 +93,13 @@ export function ProjectCard({ projectonEditonDelete }: ProjectCardProps) {,
           </AlertDialogHeader>,
           <AlertDialogFooter>,
             <AlertDialogCancel>Cancel</AlertDialogCancel>,
-            <AlertDialogAction,
+            <AlertDialogAction
               onClick={handleDelete}
-              className='bg-destructive text-destructive-foreground',
-            >,
+              className='bg-destructive text-destructive-foreground'>,
               Delete,
             </AlertDialogAction>,
           </AlertDialogFooter>,
         </AlertDialogContent>,
       </AlertDialog>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

@@ -1,191 +1,184 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Shield,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Zap,;
-  Sparkles,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Users,;
-  Briefcase,;
-  BookOpen,;
-  MessageCircle,;
-  TrendingUp,;
-  Target,;
-  Layers,;
-  Globe,;
-  Brain,;
-  Atom,;
-  Building,;
-  Network,;
-  Eye,;
-  Key,;
-  Server,;
-  LockKeyhole,;
-  Fingerprint,;
-  ShieldCheck,;
+import {
+  Shield;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Phone;
+  Mail;
+  MapPin;
+  Zap;
+  Sparkles;
+  Lock;
+  Cpu;
+  Database;
+  Cloud;
+  Users;
+  Briefcase;
+  BookOpen;
+  MessageCircle;
+  TrendingUp;
+  Target;
+  Layers;
+  Globe;
+  Brain;
+  Atom;
+  Building;
+  Network;
+  Eye;
+  Key;
+  Server;
+  LockKeyhole;
+  Fingerprint;
+  ShieldCheck;
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const features = [,
-  'Identity verification',;
-  'Device trust scoring',;
-  'Continuous monitoring',;
-  'Micro-segmentation',;
-  'Least privilege access',;
-  'Real-time threat detection',;
-  'Automated response',;
-  'Compliance automation',;
+const features = [
+  'Identity verification';
+  'Device trust scoring';
+  'Continuous monitoring';
+  'Micro-segmentation';
+  'Least privilege access';
+  'Real-time threat detection';
+  'Automated response';
+  'Compliance automation';
 ],
-,
-const benefits = [,
-  'Eliminate network perimeter',;
-  'Reduce attack surface',;
-  'Improve compliance',;
-  'Enhanced visibility',;
-  'Automated security',;
-  'Cost-effective protection',;
+const benefits = [
+  'Eliminate network perimeter';
+  'Reduce attack surface';
+  'Improve compliance';
+  'Enhanced visibility';
+  'Automated security';
+  'Cost-effective protection';
 ],
-,
-const useCases = [,
-  'Enterprise organizations',;
-  'Government agencies',;
-  'Healthcare institutions',;
-  'Financial services',;
-  'Educational institutions',;
-  'Manufacturing companies',;
+const useCases = [
+  'Enterprise organizations';
+  'Government agencies';
+  'Healthcare institutions';
+  'Financial services';
+  'Educational institutions';
+  'Manufacturing companies';
 ],
-,
-const technology = [,
-  'Zero Trust Architecture',;
-  'Identity Management',;
-  'Network Security',;
-  'AI-Powered Analytics',;
-  'Automation Systems',;
-  'Compliance Tools',;
+const technology = [
+  'Zero Trust Architecture';
+  'Identity Management';
+  'Network Security';
+  'AI-Powered Analytics';
+  'Automation Systems';
+  'Compliance Tools';
 ],
-,
-const pricingPlans = [,
-  {,
-    name: 'Zero Trust Starter',;
-    price: '$29,999',;
-    period: '/month',;
-    description: 'Perfect for small to medium enterprises',;
-    features: [,
-      'Basic identity verification',;
-      'Device trust scoring',;
-      'Network monitoring',;
-      'Basic support',;
-      'Training modules',;
-    ],;
-    popular: false,;
-  },;
-  {,
-    name: 'Zero Trust Enterprise',;
-    price: '$59,999',;
-    period: '/month',;
-    description: 'For large enterprises and organizations',;
-    features: [,
-      'Advanced identity management',;
-      'Full micro-segmentation',;
-      'AI threat detection',;
-      'Priority support',;
-      'Custom training',;
-      'Integration services',;
-    ],;
-    popular: true,;
-  },;
-  {,
-    name: 'Zero Trust Government',;
-    price: '$119,999',;
-    period: '/month',;
-    description: 'For government and military organizations',;
-    features: [,
-      'Military-grade security',;
-      'Custom compliance',;
-      'On-site deployment',;
-      '24/7 dedicated support',;
-      'Full compliance certification',;
-      'Complete training program',;
-    ],;
-    popular: false,;
-  },;
+const pricingPlans = [
+  {
+    name: 'Zero Trust Starter';
+    price: '$29,999';
+    period: '/month';
+    description: 'Perfect for small to medium enterprises';
+    features: [
+      'Basic identity verification';
+      'Device trust scoring';
+      'Network monitoring';
+      'Basic support';
+      'Training modules';
+    ];
+    popular: false;
+  };
+  {
+    name: 'Zero Trust Enterprise';
+    price: '$59,999';
+    period: '/month';
+    description: 'For large enterprises and organizations';
+    features: [
+      'Advanced identity management';
+      'Full micro-segmentation';
+      'AI threat detection';
+      'Priority support';
+      'Custom training';
+      'Integration services';
+    ];
+    popular: true;
+  };
+  {
+    name: 'Zero Trust Government';
+    price: '$119,999';
+    period: '/month';
+    description: 'For government and military organizations';
+    features: [
+      'Military-grade security';
+      'Custom compliance';
+      'On-site deployment';
+      '24/7 dedicated support';
+      'Full compliance certification';
+      'Complete training program';
+    ];
+    popular: false;
+  };
 ],
-,
-export default function ZeroTrustNetworkArchitecture20o29() {,
-  return (,
+export default function ZeroTrustNetworkArchitecture20o29() {
+  return (
     <>,
       <Head>,
         <title>Zero Trust Network Architecture 20o29 | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='zero trust, network security, cybersecurity, 20o29 technology, network architecture',
         />,
         <meta name='author' content='Zion Tech Group' />,
         <meta name='robots' content='index, follow' />,
         {/* Open Graph */}
-        <meta,
+        <meta
           property='og: title',
           content='Zero Trust Network Architecture 20o29',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.',
         />,
         <meta property='og:type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/zero-trust-network-architecture-20o29',
         />,
-        <meta,
+        <meta
           property='og:image',
           content='https://ziontechgroup.com/og-image.jpg',
         />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta name='twitter: card' content='summary_large_image' />,
-        <meta,
+        <meta
           name='twitter:title',
           content='Zero Trust Network Architecture 20o29',
         />,
-        <meta,
+        <meta
           name='twitter:description',
           content='Revolutionary zero trust network architecture that eliminates traditional network perimeters and provides continuous security verification for all users and devices.',
         />,
-        <meta,
+        <meta
           name='twitter:image',
           content='https://ziontechgroup.com/twitter-image.jpg',
         />,
-        {/* Additional Meta Tags */,}
+        {/* Additional Meta Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />,
         <meta name='theme-color' content='#8b5cf6' />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/zero-trust-network-architecture-20o29',
         />,
       </Head>,
       <UltraFuturisticNavigation20o29 />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-90o0/20 to-black'>,
         {/* Background Elements */}
         <div className='absolute inset-0'>,
@@ -195,11 +188,10 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
         {/* Main Content */}
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='mb-8',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'>,
             <div className='w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-3xl flex items-center justify-center'>,
               <Shield className='w-12 h-12 text-white' />,
             </div>,
@@ -215,7 +207,7 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
               traditional network perimeters and provides continuous security,
               verification.,
             </p>,
-            {/* Key Stats */,}
+            {/* Key Stats */}
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6 max-w-3xl mx-auto mb-8'>,
               <div className='text-center'>,
                 <div className='text-3xl font-bold text-purple-40o0 mb-2'>,
@@ -236,19 +228,17 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
                 <div className='text-gray-40o0'>Security Monitoring</div>,
               </div>,
             </div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='group bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-purple-50o0/25 flex items-center space-x-2',
-              >,
+                className='group bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-purple-50o0/25 flex items-center space-x-2'>,
                 <span>Get Started Today</span>,
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />,
               </Link>,
-              <Link,
+              <Link
                 href='#pricing',
-                className='group border-2 border-purple-50o0/50 hover:border-purple-40o0 text-purple-40o0 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 hover:bg-purple-50o0/20 flex items-center space-x-2',
-              >,
+                className='group border-2 border-purple-50o0/50 hover:border-purple-40o0 text-purple-40o0 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 hover:bg-purple-50o0/20 flex items-center space-x-2'>,
                 <span>View Pricing</span>,
                 <Star className='w-5 h-5 group-hover:rotate-12 transition-transform' />,
               </Link>,
@@ -256,16 +246,15 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-gray-90o0 to-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Revolutionary Features,
             </h2>,
@@ -275,23 +264,21 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <motion.div,
                 key={feature}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0'>,
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-30o0'>,
                   <ShieldCheck className='w-8 h-8 text-white' />,
                 </div>,
                 <h3 className='text-lg font-semibold text-white mb-2'>,
-                  {feature,}
+                  {feature}
                 </h3>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -299,12 +286,11 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
       <section className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Transformative Benefits,
             </h2>,
@@ -314,15 +300,14 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-            {benefits.map((benefit, index) => (,
+            {benefits.map((benefit, index) => (
               <motion.div,
                 key={benefit}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='flex items-start space-x-4',
-              >,
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='flex items-start space-x-4'>,
                 <div className='w-8 h-8 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>,
                   <CheckCircle className='w-5 h-5 text-white' />,
                 </div>,
@@ -331,8 +316,7 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
                     {benefit}
                   </h3>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -340,12 +324,11 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
       <section className='py-20 bg-gradient-to-b from-black to-gray-90o0'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Ideal Use Cases,
             </h2>,
@@ -355,23 +338,21 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {useCases.map((useCase, index) => (,
+            {useCases.map((useCase, index) => (
               <motion.div,
                 key={useCase}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0'>,
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-30o0'>,
                   <Building className='w-8 h-8 text-white' />,
                 </div>,
                 <h3 className='text-lg font-semibold text-white mb-2'>,
-                  {useCase,}
+                  {useCase}
                 </h3>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -379,12 +360,11 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
       <section className='py-20 bg-gray-90o0'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Cutting-Edge Technology,
             </h2>,
@@ -394,23 +374,21 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {technology.map((tech, index) => (,
+            {technology.map((tech, index) => (
               <motion.div,
                 key={tech}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-6 text-center group hover: border-purple-50o0/60 transition-all duration-30o0'>,
                 <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-30o0'>,
                   <Network className='w-8 h-8 text-white' />,
                 </div>,
                 <h3 className='text-lg font-semibold text-white mb-2'>,
-                  {tech,}
+                  {tech}
                 </h3>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -418,12 +396,11 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
       <section id='pricing' className='py-20 bg-black'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className='text-center mb-16',
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'>,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Pricing Plans,
             </h2>,
@@ -432,22 +409,21 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-            {pricingPlans.map((plan, index) => (,
+            {pricingPlans.map((plan, index) => (
               <motion.div,
                 key={plan.name}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className={`relative ${plan.popular ? 'scale-10o5' : ''}`}
               >,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>,
                     <span className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold'>,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
 ,
                 <div className='bg-gradient-to-br from-gray-80o0/80 to-gray-90o0/80 backdrop-blur-xl border border-purple-50o0/30 rounded-2xl p-8 h-full'>,
                   <div className='text-center mb-8'>,
@@ -463,22 +439,19 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
                     </div>,
                   </div>,
                   <ul className='space-y-4 mb-8'>,
-                    {plan.features.map(feature => (,
+                    {plan.features.map(feature => (
                       <li key={feature} className='flex items-center space-x-3'>,
                         <CheckCircle className='w-5 h-5 text-purple-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0'>{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='block w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white text-center py-3 rounded-xl font-semibold transition-all duration-20o0 transform hover:scale-10o5',
-                  >,
+                    className='block w-full bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white text-center py-3 rounded-xl font-semibold transition-all duration-20o0 transform hover:scale-10o5'>,
                     Get Started,
                   </Link>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -486,10 +459,10 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
       <section className='py-20 bg-gradient-to-b from-gray-90o0 to-black'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Ready for Zero Trust?,
@@ -502,7 +475,7 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
               <div className='flex flex-col items-center space-y-2'>,
                 <Phone className='w-6 h-6 text-purple-40o0' />,
                 <span className='text-white font-semibold'>,
-                  {contactInfo.mobile,}
+                  {contactInfo.mobile}
                 </span>,
                 <span className='text-gray-40o0 text-sm'>Call Us</span>,
               </div>,
@@ -521,17 +494,15 @@ export default function ZeroTrustNetworkArchitecture20o29() {,
                 <span className='text-gray-40o0 text-sm'>Visit Us</span>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-block bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-purple-50o0/25',
-            >,
+              className='inline-block bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-purple-50o0/25'>,
               Contact Us Today,
             </Link>,
           </motion.div>,
         </div>,
       </section>,
       <UltraFuturisticFooter20o29 />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

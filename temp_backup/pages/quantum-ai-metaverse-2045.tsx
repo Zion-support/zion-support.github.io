@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumAiMetaverse20o45Page() {,
-  return (,
+export default function QuantumAiMetaverse20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Ai Metaverse 20o45 - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumAiMetaverse20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

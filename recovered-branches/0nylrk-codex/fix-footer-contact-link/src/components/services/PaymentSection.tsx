@@ -2,32 +2,27 @@ import {MapPin} from "lucide-react",
 import {PaymentButton} from "@/components/transactions/PaymentButton",
 import {CountryPricing} from "@/data/onsiteServicePricing",
 import {toast} from "@/hooks/use-toast",
-import { MapPin } from "lucide-react",;
-import { PaymentButton } from "@/components/transactions/PaymentButton",;
+import { MapPin } from "lucide-react";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { toast } from "@/hooks/use-toast",
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-import { toast } from "@/hooks/use-toast",;
-
-,
-interface PaymentSectionProps {,
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { toast } from "@/hooks/use-toast";
+interface PaymentSectionProps {
   selected_country: CountryPricing,
-,}
+}
 ,
-  const handlePaymentInitiated = () => {,
-    toast({,
+  const handlePaymentInitiated = () => {
+    toast({
       title: "Processing your request",
       description:,
         "You'll be redirected to our secure payment portal momentarily.",
-    ,}),
-  }
+    })}
 ,
-      title: "Processing your request",;
-      description: "You'll be redirected to our secure payment portal momentarily.",}),
-  };
-      description: "You'll be redirected to our secure payment portal momentarily.",}),
-  },;
-  return (,
+      title: "Processing your request";
+      description: "You'll be redirected to our secure payment portal momentarily."})};
+      description: "You'll be redirected to our secure payment portal momentarily."})};
+  return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">,
@@ -35,46 +30,40 @@ interface PaymentSectionProps {,
         {selectedCountry.country}
       </h4>,
       <p className="text-2xl font-bold text-zion-cyan mb-6">,
-interface PaymentSectionProps {,
+interface PaymentSectionProps {
   selectedCountry: CountryPricing,
-,}
+}
 ,
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {,
+export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,
-  const handlePaymentInitiated = () => {,
-    toast({,
+  const handlePaymentInitiated = () => {
+    toast({
       title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily.",}),
-  };
-  return (,
+      description: "You'll be redirected to our secure payment portal momentarily."})};
+  return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">,
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />,
         {selectedCountry.country}
       </h4>,
-      <p className="text-2xl font-bold text-zion-cyan mb-6">,
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
+      <p className="text-2xl font-bold text-zion-cyan mb-6">>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>,
-      <PaymentButton,
+      <PaymentButton
         amount={selectedCountry.pricePerIncident}
 ,
-interface PaymentSectionProps {,
+interface PaymentSectionProps {
   selectedCountry: CountryPricing,
-,}
+}
 ,
-export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {,
+export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,
-  const handlePaymentInitiated = () => {,
-    toast({,
-      title: "Processing your request",;
-      description: "You'll be redirected to our secure payment portal momentarily.",}),
-  };
-,
-  return (,
+  const handlePaymentInitiated = () => {
+    toast({
+      title: "Processing your request";
+      description: "You'll be redirected to our secure payment portal momentarily."})};
+  return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">,
@@ -84,7 +73,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
       <p className="text-2xl font-bold text-zion-cyan mb-6">,
         ${selectedCountry && selectedCountry.pricePerIncident.toFixed(2)}
       </p>,
-      <PaymentButton,
+      <PaymentButton
         amount={selectedCountry && selectedCountry.pricePerIncident}
 ,
         serviceId="it-onsite-service",
@@ -93,35 +82,28 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white w-full py-6",
         redirectUrl="/it-onsite-services?success=true",
-        onPaymentInitiated={handlePaymentInitiated,}
+        onPaymentInitiated={handlePaymentInitiated}
       />,
       <p className="text-xs text-zion-slate-light mt-2">,
         Price includes transportation and first hour onsite. Additional hours billed separately.,
       </p>,
-    </div>,
-  ),
-}
+    </div>)}
 =======,
         Price includes transportation and first hour onsite. Additional hours,
         billed separately.,
       </p>,
-    </div>,
-  ),
-}
-  ),
-}
+    </div>)}
+  )}
 ,
 export /**,
  * PaymentSection - Function description,
  */,
-function PaymentSection() {,
+function PaymentSection() {
   // Handle successful payment,
-  const handlePaymentInitiated = () =>: any {,
-    toast ({,
-      title: "Processing your request",;
+  const handlePaymentInitiated = () =>: any {
+    toast ({
+      title: "Processing your request";
       description:,
-        "You'll be redirected to our secure payment portal momentarily.",;
-    }),
-  }
-,
+        "You'll be redirected to our secure payment portal momentarily.";
+    })}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

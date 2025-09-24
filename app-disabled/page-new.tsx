@@ -1,18 +1,17 @@
 import Link from 'next/link',
-import {,
-  ArrowRight,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Users,;
-  TrendingUp,;
-  Star,;
-  CheckCircle,;
-  ArrowRight,;
+import {
+  ArrowRight;
+  Zap;
+  Shield;
+  Globe;
+  Users;
+  TrendingUp;
+  Star;
+  CheckCircle;
+  ArrowRight;
 } from 'lucide-react',
-,
-export default function HomePage() {,
-  return (,
+export default function HomePage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0'>,
       {/* Hero Section */}
       <section className='relative overflow-hidden'>,
@@ -30,26 +29,24 @@ export default function HomePage() {,
               </span>,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-              Leading provider of revolutionary AI autonomous operations,;
+              Leading provider of revolutionary AI autonomous operations;
               quantum computing breakthroughs, and advanced automation solutions,
               delivering unprecedented ROI and transformative results.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center mb-12'>,
-              <Link,
+              <Link
                 href='/services',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-2xl',
-              >,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-2xl'>,
                 Explore Services,
                 <ArrowRight className='ml-2 w-5 h-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0 backdrop-blur-sm',
-              >,
+                className='inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0 backdrop-blur-sm'>,
                 Get Started,
               </Link>,
             </div>,
-            {/* Stats */,}
+            {/* Stats */}
             <div className='grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto'>,
               <div className='text-center'>,
                 <div className='text-3xl md:text-4xl font-bold text-blue-40o0 mb-2'>,
@@ -79,7 +76,7 @@ export default function HomePage() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className='py-24 bg-black/20 backdrop-blur-sm'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center mb-16'>,
@@ -92,96 +89,92 @@ export default function HomePage() {,
             </p>,
           </div>,
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {[,
-              {,
-                icon: <Zap className='w-8 h-8 text-blue-40o0' />,;
-                title: 'AI Autonomous Operations',;
+            {[
+              {
+                icon: <Zap className='w-8 h-8 text-blue-40o0' />;
+                title: 'AI Autonomous Operations';
                 description:,
-                  'Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.',;
-                features: [,
-                  'Real-time Decision Making',;
-                  'Predictive Analytics',;
-                  'Autonomous Optimization',;
-                ],;
-              },;
-              {,
-                icon: <Shield className='w-8 h-8 text-purple-40o0' />,;
-                title: 'Quantum Computing',;
+                  'Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.';
+                features: [
+                  'Real-time Decision Making';
+                  'Predictive Analytics';
+                  'Autonomous Optimization';
+                ];
+              };
+              {
+                icon: <Shield className='w-8 h-8 text-purple-40o0' />;
+                title: 'Quantum Computing';
                 description:,
-                  'Breakthrough quantum computing solutions delivering exponential computational power and security.',;
-                features: [,
-                  'Quantum Supremacy',;
-                  'Error-Corrected Quantum',;
-                  'Quantum Internet',;
-                ],;
-              },;
-              {,
-                icon: <Globe className='w-8 h-8 text-cyan-40o0' />,;
-                title: 'Advanced Automation',;
+                  'Breakthrough quantum computing solutions delivering exponential computational power and security.';
+                features: [
+                  'Quantum Supremacy';
+                  'Error-Corrected Quantum';
+                  'Quantum Internet';
+                ];
+              };
+              {
+                icon: <Globe className='w-8 h-8 text-cyan-40o0' />;
+                title: 'Advanced Automation';
                 description:,
-                  'Intelligent process automation that streamlines operations and eliminates manual tasks.',;
-                features: [,
-                  'Process Automation',;
-                  'Smart Resource Management',;
-                  'Predictive Maintenance',;
-                ],;
-              },;
-              {,
-                icon: <Users className='w-8 h-8 text-green-40o0' />,;
-                title: 'Enterprise Solutions',;
+                  'Intelligent process automation that streamlines operations and eliminates manual tasks.';
+                features: [
+                  'Process Automation';
+                  'Smart Resource Management';
+                  'Predictive Maintenance';
+                ];
+              };
+              {
+                icon: <Users className='w-8 h-8 text-green-40o0' />;
+                title: 'Enterprise Solutions';
                 description:,
-                  'Comprehensive enterprise-grade solutions designed for scalability and reliability.',;
-                features: [,
-                  'Scalable Architecture',;
-                  'Enterprise Security',;
-                  '24/7 Support',;
-                ],;
-              },;
-              {,
-                icon: <TrendingUp className='w-8 h-8 text-yellow-40o0' />,;
-                title: 'Business Intelligence',;
+                  'Comprehensive enterprise-grade solutions designed for scalability and reliability.';
+                features: [
+                  'Scalable Architecture';
+                  'Enterprise Security';
+                  '24/7 Support';
+                ];
+              };
+              {
+                icon: <TrendingUp className='w-8 h-8 text-yellow-40o0' />;
+                title: 'Business Intelligence';
                 description:,
-                  'Advanced analytics and insights that drive data-driven decision making and growth.',;
-                features: [,
-                  'Real-time Analytics',;
-                  'Predictive Insights',;
-                  'Performance Optimization',;
-                ],;
-              },;
-              {,
-                icon: <Star className='w-8 h-8 text-pink-40o0' />,;
-                title: 'Innovation Hub',;
+                  'Advanced analytics and insights that drive data-driven decision making and growth.';
+                features: [
+                  'Real-time Analytics';
+                  'Predictive Insights';
+                  'Performance Optimization';
+                ];
+              };
+              {
+                icon: <Star className='w-8 h-8 text-pink-40o0' />;
+                title: 'Innovation Hub';
                 description:,
-                  'Cutting-edge research and development in emerging technologies and future solutions.',;
-                features: [,
-                  'R&D Excellence',;
-                  'Future Technologies',;
-                  'Innovation Labs',;
-                ],;
-              },;
-            ].map((feature, index) => (,
-              <div,
+                  'Cutting-edge research and development in emerging technologies and future solutions.';
+                features: [
+                  'R&D Excellence';
+                  'Future Technologies';
+                  'Innovation Labs';
+                ];
+              };
+            ].map((feature, index) => (
+              <div
                 key={index}
-                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-30o0',
-              >,
-                <div className='mb-6'>{feature.icon,}</div>,
+                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-30o0'>,
+                <div className='mb-6'>{feature.icon}</div>,
                 <h3 className='text-2xl font-bold text-white mb-4'>,
                   {feature.title}
                 </h3>,
                 <p className='text-gray-30o0 mb-6'>{feature.description}</p>,
                 <ul className='space-y-2'>,
-                  {feature.features.map((item, idx) => (,
-                    <li,
+                  {feature.features.map((item, idx) => (
+                    <li
                       key={idx}
-                      className='flex items-center text-sm text-gray-30o0',
-                    >,
+                      className='flex items-center text-sm text-gray-30o0'>,
                       <CheckCircle className='w-4 h-4 text-green-40o0 mr-3 flex-shrink-0' />,
                       {item}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -196,23 +189,20 @@ export default function HomePage() {,
             growth with our revolutionary AI and automation solutions.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-2xl',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-2xl'>,
               Start Your Transformation,
               <ArrowRight className='ml-2 w-5 h-5' />,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-30o0 backdrop-blur-sm'>,
               View Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

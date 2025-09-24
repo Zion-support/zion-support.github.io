@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Team Collaboration Hub | Zion Tech Group',;
+export const metadata = {
+  title: 'Team Collaboration Hub | Zion Tech Group';
   description:,
-    'AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.',;
+    'AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.';
 };
-,
-export default function TeamCollaborationHubPage() {,
-  return (,
+export default function TeamCollaborationHubPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,27 +23,27 @@ export default function TeamCollaborationHubPage() {,
             Features & Capabilities,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               title='AI-Powered Project Management',
               description='Intelligent task assignment, deadline prediction, and resource optimization using machine learning algorithms.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Smart Communication Tools',
               description='AI-enhanced messaging, video conferencing, and collaboration features with automatic translation and transcription.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Productivity Analytics',
               description='Advanced analytics and insights into team performance, productivity patterns, and collaboration effectiveness.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Virtual Workspaces',
               description='Immersive virtual workspaces with customizable environments for different project types and team preferences.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Document Collaboration',
               description='Real-time document editing, version control, and AI-powered content suggestions for better collaboration.',
             />,
-            <FeatureItem,
+            <FeatureItem
               title='Integration Ecosystem',
               description='Seamless integration with 20o0+ tools including Slack, Microsoft Teams, Google Workspace, and project management platforms.',
             />,
@@ -56,43 +54,43 @@ export default function TeamCollaborationHubPage() {,
             Pricing & Plans,
           </h2>,
           <div className='space-y-4'>,
-            <PricingCard,
+            <PricingCard
               plan='Starter',
               price='$19/month',
               description='Perfect for small teams and startups',
-              features={[,
-                'Up to 10 team members',;
-                'Basic project management',;
-                'Email support',;
-                'Standard integrations',;
-                '5GB storage',;
+              features={[
+                'Up to 10 team members';
+                'Basic project management';
+                'Email support';
+                'Standard integrations';
+                '5GB storage';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Professional',
               price='$49/month',
               description='Ideal for growing teams',
-              features={[,
-                'Up to 50 team members',;
-                'Advanced AI features',;
-                'Priority support',;
-                'All integrations',;
-                '10o0GB storage',;
-                'Advanced analytics',;
+              features={[
+                'Up to 50 team members';
+                'Advanced AI features';
+                'Priority support';
+                'All integrations';
+                '10o0GB storage';
+                'Advanced analytics';
               ]}
             />,
-            <PricingCard,
+            <PricingCard
               plan='Enterprise',
               price='$149/month',
               description='For large organizations',
-              features={[,
-                'Unlimited team members',;
-                'Custom AI models',;
-                '24/7 dedicated support',;
-                'On-premise deployment',;
-                'Unlimited storage',;
-                'Custom integrations',;
-                'SLA guarantees',;
+              features={[
+                'Unlimited team members';
+                'Custom AI models';
+                '24/7 dedicated support';
+                'On-premise deployment';
+                'Unlimited storage';
+                'Custom integrations';
+                'SLA guarantees';
               ]}
             />,
           </div>,
@@ -103,15 +101,15 @@ export default function TeamCollaborationHubPage() {,
           Why Choose Our Team Collaboration Hub?,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             title='40% Productivity Boost',
             description='AI-powered features and intelligent automation help teams achieve 40% higher productivity and better collaboration.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Seamless Remote Work',
             description='Comprehensive tools and features designed specifically for remote and hybrid teams to work effectively from anywhere.',
           />,
-          <BenefitCard,
+          <BenefitCard
             title='Data-Driven Insights',
             description='Advanced analytics provide actionable insights into team performance and collaboration patterns for continuous improvement.',
           />,
@@ -126,16 +124,14 @@ export default function TeamCollaborationHubPage() {,
           productivity, improve communication, and drive better results.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
@@ -144,26 +140,23 @@ export default function TeamCollaborationHubPage() {,
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='flex-shrink-0 w-6 h-6 bg-indigo-50o0 rounded-full flex items-center justify-center mt-1'>,
-        <svg,
+        <svg
           className='w-4 h-4 text-white',
           fill='currentColor',
-          viewBox='0 0 20 20',
-        >,
-          <path,
+          viewBox='0 0 20 20'>,
+          <path
             fillRule='evenodd',
             d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z',
             clipRule='evenodd',
@@ -174,49 +167,42 @@ function FeatureItem({,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  plan,;
-  price,;
-  description,;
-  features,;
-}: {,
+function PricingCard({
+  plan;
+  price;
+  description;
+  features;
+}: {
   plan: string,
   price: string,
   description: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>,
       <div className='text-3xl font-bold text-indigo-60o0 mb-2'>{price}</div>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-sm text-gray-60o0'>,
             <span className='text-indigo-50o0 mr-2'>•</span> {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  title;
+  description;
+}: {
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

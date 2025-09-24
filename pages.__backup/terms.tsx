@@ -1,32 +1,30 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function TermsPage() {,
-  return (,
+export default function TermsPage() {
+  return (
     <>,
       <Head>,
         <title>Terms of Service — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Terms of Service and legal agreements for Zion Tech Group services.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Terms of Service — Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Terms of Service and legal agreements for Zion Tech Group services.',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
-          {/* Header */,}
+          {/* Header */}
           <div className='mb-12'>,
-            <Link,
+            <Link
               href='/',
-              className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 mb-8',
-            >,
+              className='inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 mb-8'>,
               <span className='mr-2'>←</span>,
               Back to Home,
             </Link>,
@@ -35,7 +33,7 @@ export default function TermsPage() {,
               Last updated: January 1720o25,
             </p>,
           </div>,
-          {/* Terms Content */,}
+          {/* Terms Content */}
           <div className='prose prose-invert max-w-4xl mx-auto'>,
             <section className='mb-8'>,
               <h2 className='text-2xl font-semibold mb-4 text-cyan-40o0'>,
@@ -145,35 +143,31 @@ export default function TermsPage() {,
                 <p className='text-white/90'>Zion Tech Group</p>,
                 <p className='text-white/80'>Email: legal@zion.tech</p>,
                 <p className='text-white/80'>,
-                  Website:{' ',}
-                  <a,
+                  Website:{' '}
+                  <a
                     href='/contact',
-                    className='text-cyan-40o0 hover: text-cyan-30o0',
-                  >,
+                    className='text-cyan-40o0 hover: text-cyan-30o0'>,
                     Contact Page,
                   </a>,
                 </p>,
               </div>,
             </section>,
           </div>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <div className='mt-12 text-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-6 py-3 bg-cyan-40o0 hover: bg-cyan-30o0 text-black font-semibold rounded-lg transition-colors mr-4',
-            >,
+              className='px-6 py-3 bg-cyan-40o0 hover: bg-cyan-30o0 text-black font-semibold rounded-lg transition-colors mr-4'>,
               Contact Us,
             </Link>,
-            <Link,
+            <Link
               href='/privacy',
-              className='px-6 py-3 border border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-semibold rounded-lg transition-colors',
-            >,
+              className='px-6 py-3 border border-cyan-40o0 text-cyan-40o0 hover:bg-cyan-40o0 hover:text-black font-semibold rounded-lg transition-colors'>,
               Privacy Policy,
             </Link>,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

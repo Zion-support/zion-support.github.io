@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {,
-  return (,
+const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -27,7 +26,7 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {,
               Autonomous Decision-Making,
             </h3>,
             <p className='text-gray-20o0 mb-4'>,
-              AI systems that make complex business decisions independently,;
+              AI systems that make complex business decisions independently;
               delivering 89% improvement in decision-making speed.,
             </p>,
             <div className='text-2xl font-bold text-green-30o0'>,
@@ -49,7 +48,7 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {,
             <div className='text-4xl mb-4'>🎯</div>,
             <h3 className='text-xl font-bold mb-4'>Predictive Automation</h3>,
             <p className='text-gray-20o0 mb-4'>,
-              Processes that anticipate needs and act before problems occur,;
+              Processes that anticipate needs and act before problems occur;
               delivering 78% increase in employee satisfaction.,
             </p>,
             <div className='text-2xl font-bold text-blue-30o0'>,
@@ -94,22 +93,19 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-enterprise-automation-revolutionary-breakthrough',
-              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Read Full Article,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-automation',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Explore AI Services,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Get Started Today,
             </Link>,
           </div>,
@@ -121,9 +117,5 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default NewContent20o25EnterpriseAutomationBanner,
-,
+    </section>)};
+export default NewContent20o25EnterpriseAutomationBanner;

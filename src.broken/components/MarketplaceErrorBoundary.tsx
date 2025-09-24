@@ -1,9 +1,7 @@
-export function MarketplaceErrorBoundary() {,
-  return (,
+export function MarketplaceErrorBoundary() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

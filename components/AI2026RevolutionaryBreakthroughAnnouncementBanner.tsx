@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o26RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {,
-  return (,
+const AI20o26RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {
+  return (
     <div className='relative bg-gradient-to-r from-red-50o0 via-orange-50o0 to-yellow-50o0 py-6 px-4 overflow-hidden'>,
-      {/* Animated background elements */,}
+      {/* Animated background elements */}
       <div className='absolute inset-0 bg-black bg-opacity-10'></div>,
       <div className='absolute top-0 left-0 w-full h-full'>,
         <div className='absolute top-4 left-4 w-2 h-2 bg-white rounded-full animate-ping'></div>,
@@ -14,7 +13,7 @@ const AI20o26RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto'>,
         <div className='flex flex-col md: flex-row items-center justify-between gap-4'>,
-          {/* Left side - Announcement */,}
+          {/* Left side - Announcement */}
           <div className='flex-1 text-center md: text-left'>,
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-bold mb-2 animate-pulse'>,
               🚨 BREAKING NEWS - JUST ANNOUNCED 🚨,
@@ -30,31 +29,25 @@ const AI20o26RevolutionaryBreakthroughAnnouncementBanner: React.FC = () => {,
           </div>,
           {/* Right side - CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-3'>,
-            <Link,
+            <Link
               href='/ai-20o26-revolutionary-breakthrough-announcement',
-              className='bg-white text-red-60o0 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg whitespace-nowrap',
-            >,
+              className='bg-white text-red-60o0 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg whitespace-nowrap'>,
               🔥 Explore Breakthrough,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-red-60o0 transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap',
-            >,
+              className='bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-red-60o0 transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap'>,
               Get Early Access,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Floating elements */,}
+      {/* Floating elements */}
       <div className='absolute top-2 right-2 text-white text-2xl animate-bounce'>,
         🚀,
       </div>,
       <div className='absolute bottom-2 left-2 text-white text-2xl animate-pulse'>,
         ⚡,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o26RevolutionaryBreakthroughAnnouncementBanner,
-,
+    </div>)};
+export default AI20o26RevolutionaryBreakthroughAnnouncementBanner;

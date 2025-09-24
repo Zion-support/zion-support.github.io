@@ -1,38 +1,37 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-import {,
-  Brain,;
-  BarChart3,;
-  TrendingUp,;
-  Target,;
-  Zap,;
-  Users,;
-  Globe,;
-  Shield,;
+import {
+  Brain;
+  BarChart3;
+  TrendingUp;
+  Target;
+  Zap;
+  Users;
+  Globe;
+  Shield;
 } from 'lucide-react',
-,
-const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
-  return (,
+const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>,
           AI-Powered Business Intelligence Platform - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content="Transform your business with Zion Tech Group's AI-powered business intelligence platform. Advanced analytics, predictive insights, and data-driven decision making.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI business intelligence, business analytics, predictive insights, data analytics, Zion Tech Group',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-powered-business-intelligence-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-emerald-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -43,7 +42,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
             </h1>,
             <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
               Transform raw data into actionable intelligence with our,
-              AI-powered business intelligence platform. Make smarter decisions,;
+              AI-powered business intelligence platform. Make smarter decisions;
               faster.,
             </p>,
           </div>,
@@ -95,7 +94,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Core Features */,}
+        {/* Core Features */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-7xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-16'>,
@@ -175,7 +174,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
                   Financial Intelligence,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Revenue analysis, cost optimization, profitability insights,;
+                  Revenue analysis, cost optimization, profitability insights;
                   and financial forecasting.,
                 </p>,
               </div>,
@@ -184,7 +183,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
                   Operational Intelligence,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Process optimization, efficiency metrics, resource allocation,;
+                  Process optimization, efficiency metrics, resource allocation;
                   and performance tracking.,
                 </p>,
               </div>,
@@ -424,7 +423,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
                   </h3>,
                   <p className='text-gray-30o0'>,
                     Scalable cloud hosting with AWS, Azure, or Google Cloud for,
-                    reliability and performance.,
+                    reliability and window.performance.,
                   </p>,
                 </div>,
               </div>,
@@ -555,7 +554,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Get Started */,}
+        {/* Get Started */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -598,9 +597,6 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default AIPoweredBusinessIntelligencePlatformPage,
-,
+    </>),
+};
+export default AIPoweredBusinessIntelligencePlatformPage;

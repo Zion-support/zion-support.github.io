@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {,
-  return (,
+export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {
+  return (
     <section className='relative bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-70o0 text-white py-12 overflow-hidden'>,
       {/* Background Animation */}
       <div className='absolute inset-0'>,
@@ -13,7 +12,7 @@ export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center px-6 py-2 bg-red-50o0 text-white text-sm font-bold rounded-full mb-6 shadow-lg animate-pulse'>,
             🏆 BREAKTHROUGH SUCCESS STORY,
           </div>,
@@ -30,7 +29,7 @@ export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {,
             our revolutionary AI solutions achieving unprecedented results in,
             just 6 months.,
           </p>,
-          {/* Key Metrics */,}
+          {/* Key Metrics */}
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20'>,
               <div className='text-3xl font-bold text-yellow-40o0 mb-1'>,
@@ -67,26 +66,23 @@ export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-transformation-breakthrough',
-              className='bg-red-60o0 hover:bg-red-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-red-60o0 hover:bg-red-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🏆 Read Full Success Story,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-green-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-white text-green-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               💬 Start Your Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-implementation-toolkit',
-              className='bg-yellow-50o0 text-gray-90o0 hover:bg-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-yellow-50o0 text-gray-90o0 hover:bg-yellow-40o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               📚 Get Implementation Guide,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-8 flex flex-col sm: flex-row items-center justify-center gap-6 text-green-20o0 text-sm'>,
             <div className='flex items-center gap-2'>,
               <span className='text-yellow-40o0'>✓</span>,
@@ -103,7 +99,6 @@ export default function AI20o25GlobalTransformation150o00ROIPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

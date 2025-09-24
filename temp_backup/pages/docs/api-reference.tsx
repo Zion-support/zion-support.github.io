@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ApiReferencePage() {,
-  return (,
+export default function ApiReferencePage() {
+  return (
     <>,
       <Head>,
         <title>Api Reference - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ApiReferencePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,12 +1,9 @@
 'use client',
-,
-import React from 'react',
-,
-export default function RevolutionaryContentBanner2026() {,
-  return null,
-}
-const RevolutionaryContentBanner20o26 = () => {,
-  return (,
+import React from 'react';
+export default function RevolutionaryContentBanner2026() {
+  return null}
+const RevolutionaryContentBanner20o26 = () => {
+  return (
     <section className='py-12 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 relative overflow-hidden'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/90 via-blue-60o0/90 to-indigo-60o0/90'></div>,
@@ -20,7 +17,7 @@ const RevolutionaryContentBanner20o26 = () => {,
       </div>,
       <div className='relative max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-semibold text-white'>,
               🚀 REVOLUTIONARY CONTENT 20o26,
@@ -33,9 +30,9 @@ const RevolutionaryContentBanner20o26 = () => {,
               Here Today,
             </span>,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover groundbreaking insights on autonomous AI operations,;
+            Discover groundbreaking insights on autonomous AI operations;
             quantum computing applications, and the next generation of business,
             technology that's transforming industries worldwide.,
           </p>,
@@ -72,42 +69,38 @@ const RevolutionaryContentBanner20o26 = () => {,
               </p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/blog',
-              className='inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='inline-flex items-center bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Explore Revolutionary Content,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M17 8l4 4m0 0l-4 4m4-4H3',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               View Success Stories,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
@@ -134,9 +127,6 @@ const RevolutionaryContentBanner20o26 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryContentBanner20o26,
-,
+    </section>),
+};
+export default RevolutionaryContentBanner20o26;

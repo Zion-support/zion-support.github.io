@@ -1,9 +1,7 @@
-export function ProfilePage() {,
-  return (,
+export function ProfilePage() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

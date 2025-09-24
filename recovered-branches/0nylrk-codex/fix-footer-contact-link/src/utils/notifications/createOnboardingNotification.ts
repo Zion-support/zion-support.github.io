@@ -1,21 +1,19 @@
 import { createNotification } from './createNotification',
 import { OnboardingNotificationParams } from './types',
-,
 /**,
  * Creates an onboarding notification for a user,
  */,
-export async function createOnboardingNotification({,
-  userId,;
-  missingMilestone,;
-  userRole,;
-}: OnboardingNotificationParams) {,
+export async function createOnboardingNotification({
+  userId;
+  missingMilestone;
+  userRole;
+}: OnboardingNotificationParams) {
   let title = '',
   let message = '',
   let actionUrl = '',
   let actionText = '',
-,
-  if (userRole === 'talent') {,
-    switch (missingMilestone) {,
+  if (userRole === 'talent') {
+    switch (missingMilestone) {
       case 'profile_completed':,
         title = 'Complete your profile',
         message = 'Complete your profile to get discovered by clients',
@@ -34,10 +32,9 @@ export async function createOnboardingNotification({,
           'Set your availability to help clients know when you can work',
         actionUrl = '/profile/settings',
         actionText = 'Set Availability',
-        break,
-    }
-  } else {,
-    switch (missingMilestone) {,
+        break}
+  } else {
+    switch (missingMilestone) {
       case 'job_posted':,
         title = 'Post your first job',
         message = 'Post your first job to start finding talent',
@@ -55,18 +52,16 @@ export async function createOnboardingNotification({,
         message = 'Invite talent to speed up your hiring process',
         actionUrl = '/talent',
         actionText = 'Find Talent',
-        break,
-    }
+        break}
   }
 ,
-  return createNotification({,
-    userId,;
-    title,;
-    message,;
-    type: 'onboarding',;
-    sendEmail: false,;
-    actionUrl,;
-    actionText,;
-  }),
-}
+  return createNotification({
+    userId;
+    title;
+    message;
+    type: 'onboarding';
+    sendEmail: false;
+    actionUrl;
+    actionText;
+  })}
 ,

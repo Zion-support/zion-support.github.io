@@ -1,9 +1,7 @@
-export function ExpoHero() {,
-  return (,
+export function ExpoHero() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

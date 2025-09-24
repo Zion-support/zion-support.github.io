@@ -1,90 +1,73 @@
 "use client",
 import React, { useState, useEffect } from 'react',
-,
-const InteractiveROICalculator20o25_20o26: React.FC = () => {,
-  const [inputs, setInputs] = useState({,
+const InteractiveROICalculator20o25_20o26: React.FC = () => {
+  const [inputs, setInputs] = useState({
     currentRevenue: 10o0000000, // $10o0M,
     currentCosts: 80o000000,    // $80M,
-    industry: 'manufacturing',;
-    companySize: 'large',;
+    industry: 'manufacturing';
+    companySize: 'large';
     implementationTime: 8,
-  ,}),
-,
-  const [results, setResults] = useState({,
-    additionalRevenue: 0,;
-    costSavings: 0,;
-    efficiencyGains: 0,;
-    totalBenefits: 0,;
-    totalInvestment: 0,;
-    roi: 0,;
+  }),
+  const [results, setResults] = useState({
+    additionalRevenue: 0;
+    costSavings: 0;
+    efficiencyGains: 0;
+    totalBenefits: 0;
+    totalInvestment: 0;
+    roi: 0;
     paybackPeriod: 0,
-  ,}),
-,
-  const industryMultipliers ={,
-    manufacturing: { revenue: 3.0, cost: 0.85, efficiency: 4.0 ,},;
-    financial: { revenue: 2.5, cost: 0.80, efficiency: 3.5 ,},;
-    healthcare: { revenue: 2.8, cost: 0.82, efficiency: 3.8 ,},;
-    retail: { revenue: 2.2, cost: 0.78, efficiency: 3.2 ,},;
-    technology: { revenue: 3.2, cost: 0.88, efficiency: 4.2 ,}
+  }),
+  const industryMultipliers ={
+    manufacturing: { revenue: 3.0, cost: 0.85, efficiency: 4.0 };
+    financial: { revenue: 2.5, cost: 0.80, efficiency: 3.5 };
+    healthcare: { revenue: 2.8, cost: 0.82, efficiency: 3.8 };
+    retail: { revenue: 2.2, cost: 0.78, efficiency: 3.2 };
+    technology: { revenue: 3.2, cost: 0.88, efficiency: 4.2 }
   };
-,
-  const sizeMultipliers ={,
-    small: 0.3,;
-    medium: 0.6,;
-    large: 1.0,;
+  const sizeMultipliers ={
+    small: 0.3;
+    medium: 0.6;
+    large: 1.0;
     enterprise: 1.5,
-  ,};
-,
-  const calculateROI = () => {,
+  };
+  const calculateROI = () => {
     const industry = industryMultipliers[inputs.industry as keyof typeof industryMultipliers],
     const sizeMultiplier = sizeMultipliers[inputs.companySize as keyof typeof sizeMultipliers],
-,
     // Calculate benefits,
     const additionalRevenue = inputs.currentRevenue * industry.revenue * sizeMultiplier,
     const costSavings = inputs.currentCosts * (1 - industry.cost) * sizeMultiplier,
     const efficiencyGains = inputs.currentRevenue * (industry.efficiency - 1) * sizeMultiplier,
     const totalBenefits = additionalRevenue + costSavings + efficiencyGains,
-,
     // Calculate investment (based on company size and implementation complexity),
     const baseInvestment = inputs.currentRevenue * 0.0o04, // 0.4% of revenue,
     const totalInvestment = baseInvestment * sizeMultiplier * (inputs.implementationTime / 8),
-,
     // Calculate ROI,
     const roi = ((totalBenefits - totalInvestment) / totalInvestment) * 10o0,
     const paybackPeriod = totalInvestment / (totalBenefits / 12), // months,
-    setResults({,
-      additionalRevenue,;
-      costSavings,;
-      efficiencyGains,;
-      totalBenefits,;
-      totalInvestment,;
-      roi,;
-      paybackPeriod,
-    }),
-  };
-,
-  useEffect(() => {,
-    calculateROI(),
-  }, [inputs]),
-,
-  const formatCurrency = (amount: number) => {,
-    return new Intl.NumberFormat('en-US', {,
-      style: 'currency',;
-      currency: 'USD',;
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,}).format(amount),
-  };
-,
-  const formatNumber = (num: number) => {,
-    return new Intl.NumberFormat('en-US', {,
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0,}).format(num),
-  };
-,
-  return (,
+    setResults({
+      additionalRevenue;
+      costSavings;
+      efficiencyGains;
+      totalBenefits;
+      totalInvestment;
+      roi;
+      paybackPeriod})};
+  useEffect(() => {
+    calculateROI()}, [inputs]),
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency';
+      currency: 'USD';
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0}).format(amount)};
+  const formatNumber = (num: number) => {
+    return new Intl.NumberFormat('en-US', {
+      minimumFractionDigits: 0;
+      maximumFractionDigits: 0}).format(num)};
+  return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-6">,
             🧮 INTERACTIVE ROI CALCULATOR,
@@ -97,7 +80,7 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-          {/* Input Form */,}
+          {/* Input Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-8">Your Business Details</h3>,
             <div className="space-y-6">,
@@ -108,10 +91,10 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50o0">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={inputs.currentRevenue}
-                    onChange={(e) => setInputs({...inputs, currentRevenue: Number(e.target.value),})}
+                    onChange={(e) => setInputs({...inputs, currentRevenue: Number(e.target.value)})}
                     className="w-full pl-8 pr-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
                     placeholder="10o0,0o00,0o00",
                   />,
@@ -124,10 +107,10 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
                 </label>,
                 <div className="relative">,
                   <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-50o0">$</span>,
-                  <input,
+                  <input
                     type="number",
                     value={inputs.currentCosts}
-                    onChange={(e) => setInputs({...inputs, currentCosts: Number(e.target.value),})}
+                    onChange={(e) => setInputs({...inputs, currentCosts: Number(e.target.value)})}
                     className="w-full pl-8 pr-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
                     placeholder="80,0o00,0o00",
                   />,
@@ -138,11 +121,10 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Industry,
                 </label>,
-                <select,
+                <select
                   value={inputs.industry}
-                  onChange={(e) => setInputs({...inputs, industry: e.target.value,})}
-                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
-                >,
+                  onChange={(e) => setInputs({...inputs, industry: e.target.value})}
+                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent">,
                   <option value="manufacturing">Manufacturing</option>,
                   <option value="financial">Financial Services</option>,
                   <option value="healthcare">Healthcare</option>,
@@ -150,33 +132,32 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
                   <option value="technology">Technology</option>,
                 </select>,
               </div>,
-              {/* Company Size */,}
+              {/* Company Size */}
               <div>,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Company Size,
                 </label>,
-                <select,
+                <select
                   value={inputs.companySize}
-                  onChange={(e) => setInputs({...inputs, companySize: e.target.value,})}
-                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
-                >,
+                  onChange={(e) => setInputs({...inputs, companySize: e.target.value})}
+                  className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent">,
                   <option value="small">Small (1-50 employees)</option>,
                   <option value="medium">Medium (51-50o0 employees)</option>,
                   <option value="large">Large (50o1-50o00 employees)</option>,
                   <option value="enterprise">Enterprise (50o00+ employees)</option>,
                 </select>,
               </div>,
-              {/* Implementation Time */,}
+              {/* Implementation Time */}
               <div>,
                 <label className="block text-sm font-medium text-gray-70o0 mb-2">,
                   Implementation Timeline (months),
                 </label>,
-                <input,
+                <input
                   type="range",
                   min="4",
                   max="12",
                   value={inputs.implementationTime}
-                  onChange={(e) => setInputs({...inputs, implementationTime: Number(e.target.value),})}
+                  onChange={(e) => setInputs({...inputs, implementationTime: Number(e.target.value)})}
                   className="w-full",
                 />,
                 <div className="flex justify-between text-sm text-gray-50o0 mt-1">,
@@ -261,7 +242,7 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Bottom CTA */,}
+        {/* Bottom CTA */}
         <div className="mt-16 text-center">,
           <div className="bg-white rounded-2xl shadow-xl p-8">,
             <h3 className="text-3xl font-bold text-gray-90o0 mb-4">,
@@ -281,8 +262,6 @@ const InteractiveROICalculator20o25_20o26: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InteractiveROICalculator20o25_20o26,
+    </section>),
+};
+export default InteractiveROICalculator20o25_20o26;

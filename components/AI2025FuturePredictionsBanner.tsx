@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25FuturePredictionsBanner() {,
-  return (,
+export default function AI20o25FuturePredictionsBanner() {
+  return (
     <section className='bg-gradient-to-r from-indigo-80o0 via-purple-80o0 to-pink-80o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
@@ -18,20 +17,18 @@ export default function AI20o25FuturePredictionsBanner() {,
             opportunities that will shape 20o25 and beyond.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/ai-20o25-future-predictions',
-              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-3 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-black px-8 py-3 rounded-lg font-semibold hover:from-cyan-30o0 hover:to-blue-40o0 transition-all transform hover:scale-10o5'>,
               Explore Predictions,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all'>,
               Get Started,
             </Link>,
           </div>,
-          {/* Key Predictions Preview */,}
+          {/* Key Predictions Preview */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mt-12'>,
             <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-lg p-6 border border-white border-opacity-20'>,
               <div className='text-3xl mb-3'>🧠</div>,
@@ -51,7 +48,6 @@ export default function AI20o25FuturePredictionsBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

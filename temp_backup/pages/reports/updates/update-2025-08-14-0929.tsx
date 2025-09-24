@@ -1,37 +1,36 @@
 import Head from 'next/head',
-,
-export default function UpdatePage() {,
-  return (,
+export default function UpdatePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>,
           Autonomous Playbook — DevSecOps for AI (20o25-08-14 09: 29 UTC),
         </title>,
-        <meta,
+        <meta
           name='description',
           content='Autonomously generated update with curated highlights.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI, automation, autonomous systems, product updates, engineering, Trends',
         />,
         <link rel='canonical' href='https: //ziontechgroup.com' />,
-        <meta,
+        <meta
           property='og:title',
           content='Autonomous Playbook — DevSecOps for AI (20o25-08-14 09:29 UTC)',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Innovative, useful guidance to decrease unit cost per request.',
         />,
         <meta name='twitter: card' content='summary_large_image' />,
         <script type='application/ld+json'>,
-          {JSON.stringify({,
-            '@context': 'https://schema.org',;
-            '@type': 'Article',;
-            headline: '${title,}',;
-            description: '${subtitle,}',;
-            author: { '@type': 'Organization', name: 'Zion Tech Group' ,},;
+          {JSON.stringify({
+            '@context': 'https://schema.org';
+            '@type': 'Article';
+            headline: '${title}';
+            description: '${subtitle}';
+            author: { '@type': 'Organization', name: 'Zion Tech Group' };
           })}
         </script>,
       </Head>,
@@ -51,19 +50,17 @@ export default function UpdatePage() {,
           </li>,
         </ul>,
         <p className='mt-6'>,
-          Learn more at{' ',}
-          <a,
+          Learn more at{' '}
+          <a
             className='text-cyan-30o0 underline',
             href='https: //ziontechgroup.com',
             target='_blank',
-            rel='noopener noreferrer',
-          >,
+            rel='noopener noreferrer'>,
             https://ziontechgroup.com,
           </a>,
           .,
         </p>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

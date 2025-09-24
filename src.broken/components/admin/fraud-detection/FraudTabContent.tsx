@@ -1,9 +1,7 @@
-export function FraudTabContent() {,
-  return (,
+export function FraudTabContent() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

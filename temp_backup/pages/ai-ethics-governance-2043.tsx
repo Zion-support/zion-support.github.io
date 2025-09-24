@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function AiEthicsGovernance20o43Page() {,
-  return (,
+export default function AiEthicsGovernance20o43Page() {
+  return (
     <>,
       <Head>,
         <title>Ai Ethics Governance 20o43 - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function AiEthicsGovernance20o43Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

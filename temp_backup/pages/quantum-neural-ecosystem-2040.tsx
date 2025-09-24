@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function QuantumNeuralEcosystem20o40Page() {,
-  return (,
+export default function QuantumNeuralEcosystem20o40Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Neural Ecosystem 20o40 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='quantum neural ecosystem 20o40 page',
         />,
@@ -21,7 +20,6 @@ export default function QuantumNeuralEcosystem20o40Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

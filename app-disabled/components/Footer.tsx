@@ -1,5 +1,5 @@
-export default function Footer() {,
-  return (,
+export default function Footer() {
+  return (
     <footer className='bg-gray-90o0 text-white py-12'>,
       <div className='container mx-auto px-4'>,
         <div className='grid md: grid-cols-4 gap-8'>,
@@ -40,7 +40,6 @@ export default function Footer() {,
           <p>&copy, 20o24 Zion Tech Group. All rights reserved.</p>,
         </div>,
       </div>,
-    </footer>,
-  ),
-,}
+    </footer>),
+}
 ,

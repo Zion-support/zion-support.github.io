@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'cloud-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'cloud-solutions - Zion Tech Group';
   description:,
-    'Professional cloud-solutions solutions for your business needs.',;
-  keywords: 'cloud-solutions, services, business, technology',;
+    'Professional cloud-solutions solutions for your business needs.';
+  keywords: 'cloud-solutions, services, business, technology';
 };
-export default function CloudSolutionsPage() {,
-  return (,
+export default function CloudSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function CloudSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

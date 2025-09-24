@@ -1,7 +1,6 @@
 'use client',
-,
-export default function SecureAgentOperationsBlueprint20o26Page() {,
-  return (,
+export default function SecureAgentOperationsBlueprint20o26Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <header className='mb-10'>,
@@ -15,7 +14,7 @@ export default function SecureAgentOperationsBlueprint20o26Page() {,
             Secure Agent Operations 20o26,
           </h1>,
           <p className='mt-4 text-lg leading-8 text-gray-30o0 max-w-2xl'>,
-            End-to-end controls, telemetry, and incident response for safe,;
+            End-to-end controls, telemetry, and incident response for safe;
             compliant, and resilient agent ops.,
           </p>,
         </header>,
@@ -36,8 +35,6 @@ export default function SecureAgentOperationsBlueprint20o26Page() {,
           </ol>,
         </article>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
 // duplicate default export removed,

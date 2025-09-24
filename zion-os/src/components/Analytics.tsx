@@ -1,4 +1,3 @@
-export default function Analytics() {,
-  return null,
-}
+export default function Analytics() {
+  return null}
 ,

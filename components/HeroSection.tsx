@@ -1,17 +1,16 @@
-import React from 'react',
+import React from 'react';
 import Link from '../lib/CompatLink',
 import { ArrowRight, Play, Star, Users, Award, Globe } from 'lucide-react',
-,
-const HeroSection: React.FC = () => {,
-  return (,
+const HeroSection: React.FC = () => {
+  return (
     <>,
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0'>,
-        {/* Animated Background */,}
+        {/* Animated Background */}
         <div className='absolute inset-0'>,
-          <div,
+          <div
             className='absolute inset-0 opacity-20',
-            style={{,
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,;
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
             }}
           ></div>,
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-black/20'></div>,
@@ -33,30 +32,28 @@ const HeroSection: React.FC = () => {,
               <br />,
               <span className='text-white'>Technology Solutions</span>,
             </h1>,
-            {/* Subtitle */,}
+            {/* Subtitle */}
             <p className='text-xl md: text-2xl mb-8 max-w-4xl mx-auto text-gray-20o0 leading-relaxed'>,
-              Transform your business with cutting-edge AI, cloud architecture,;
+              Transform your business with cutting-edge AI, cloud architecture;
               and innovative development services. Join the future of technology,
               with Zion Tech Group.,
             </p>,
             {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4 justify-center mb-16'>,
-              <Link,
+              <Link
                 href='/services',
-                className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2',
-              >,
+                className='group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 flex items-center justify-center space-x-2'>,
                 <span>Explore Services</span>,
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-90o0 transition-all duration-30o0 flex items-center justify-center space-x-2',
-              >,
+                className='group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-90o0 transition-all duration-30o0 flex items-center justify-center space-x-2'>,
                 <Play className='w-5 h-5' />,
                 <span>Watch Demo</span>,
               </Link>,
             </div>,
-            {/* Stats */,}
+            {/* Stats */}
             <div className='grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto'>,
               <div className='text-center'>,
                 <div className='text-3xl md:text-4xl font-bold text-blue-40o0 mb-2'>,
@@ -93,15 +90,11 @@ const HeroSection: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Floating Elements */,}
+        {/* Floating Elements */}
         <div className='absolute top-20 left-10 w-20 h-20 bg-blue-50o0/20 rounded-full blur-xl animate-pulse'></div>,
         <div className='absolute top-40 right-20 w-32 h-32 bg-purple-50o0/20 rounded-full blur-xl animate-pulse delay-10o00'></div>,
         <div className='absolute bottom-20 left-20 w-24 h-24 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-20o00'></div>,
         <div className='absolute bottom-40 right-10 w-28 h-28 bg-indigo-50o0/20 rounded-full blur-xl animate-pulse delay-30o00'></div>,
       </section>,
-    </>,
-  ),
-};
-,
-export default HeroSection,
-,
+    </>)};
+export default HeroSection;

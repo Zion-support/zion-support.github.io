@@ -1,71 +1,69 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Shield,;
-  Star,;
-  MessageSquare,;
-  Brain,;
-  BarChart3,;
-  TrendingUp,;
-  Users,;
-  Zap,;
-  Globe,;
-  Lock,;
-  Target,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Shield;
+  Star;
+  MessageSquare;
+  Brain;
+  BarChart3;
+  TrendingUp;
+  Users;
+  Zap;
+  Globe;
+  Lock;
+  Target;
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
-,
-export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
-  const service = {,
-    name: 'AI-Powered Customer Feedback Analyzer',;
-    tagline: 'Transform customer feedback into actionable insights with AI',;
-    price: '$299',;
-    period: '/month',;
+export default function AIPoweredCustomerFeedbackAnalyzerPage() {
+  const service = {
+    name: 'AI-Powered Customer Feedback Analyzer';
+    tagline: 'Transform customer feedback into actionable insights with AI';
+    price: '$299';
+    period: '/month';
     description:,
-      'Intelligent feedback analysis platform that uses natural language processing and sentiment analysis to automatically categorize, analyze, and extract actionable insights from customer feedback across multiple channels.',;
-    features: [,
-      'Multi-channel feedback collection',;
-      'AI-powered sentiment analysis',;
-      'Automatic feedback categorization',;
-      'Trend analysis and reporting',;
-      'Real-time alert system',;
-      'Integration with CRM platforms',;
-      'Custom dashboard and reports',;
-      'Multi-language support',;
-      'API for custom integrations',;
-    ],;
-    rating: 4.8,;
-    trialDays: 14,;
-    setupTime: '1 week',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
+      'Intelligent feedback analysis platform that uses natural language processing and sentiment analysis to automatically categorize, analyze, and extract actionable insights from customer feedback across multiple channels.';
+    features: [
+      'Multi-channel feedback collection';
+      'AI-powered sentiment analysis';
+      'Automatic feedback categorization';
+      'Trend analysis and reporting';
+      'Real-time alert system';
+      'Integration with CRM platforms';
+      'Custom dashboard and reports';
+      'Multi-language support';
+      'API for custom integrations';
+    ];
+    rating: 4.8;
+    trialDays: 14;
+    setupTime: '1 week';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
   };
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-powered-customer-feedback-analyzer',
         />,
-        <meta,
+        <meta
           property='og:title',
-          content={`${service.name,} - Zion Tech Group`}
+          content={`${service.name} - Zion Tech Group`}
         />,
-        <meta property='og: description' content={service.description,} />,
-        <meta,
+        <meta property='og: description' content={service.description} />,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
         />,
@@ -73,11 +71,11 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
       </Head>,
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <div className='text-center mb-12'>,
             <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-blue-40o0 via-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent flex items-center justify-center gap-3'>,
               <MessageSquare className='w-12 h-12' />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-6 text-xl text-slate-30o0 max-w-4xl mx-auto leading-relaxed'>,
               {service.tagline}
@@ -88,24 +86,22 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
           </div>,
           {/* Main Content Grid */}
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-12'>,
-            {/* Features Section */,}
+            {/* Features Section */}
             <div className='lg: col-span-2 space-y-8'>,
-              {/* Core Capabilities */,}
+              {/* Core Capabilities */}
               <div className='bg-black/30 rounded-2xl border border-cyan-50o0/30 p-8'>,
                 <h2 className='text-3xl font-semibold mb-6 flex items-center gap-3'>,
                   <Brain className='w-8 h-8 text-cyan-40o0' />,
                   Core Capabilities,
                 </h2>,
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-                  {service.features.map((feat, i) => (,
-                    <div,
+                  {service.features.map((feat, i) => (
+                    <div
                       key={i}
-                      className='flex items-start space-x-3 text-slate-20o0',
-                    >,
+                      className='flex items-start space-x-3 text-slate-20o0'>,
                       <Check className='w-5 h-5 text-cyan-40o0 mt-1 flex-shrink-0' />,
                       <span className='text-sm leading-relaxed'>{feat}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Use Cases */}
@@ -147,7 +143,7 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                       Market Research,
                     </h3>,
                     <p className='text-slate-30o0 text-sm'>,
-                      Gain insights into customer preferences, market trends,;
+                      Gain insights into customer preferences, market trends;
                       and competitive positioning.,
                     </p>,
                   </div>,
@@ -165,20 +161,19 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                       Core Technologies,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'Python & TensorFlow',;
-                        'React & Node.js',;
-                        'PostgreSQL & Redis',;
-                        'NLP & Sentiment Analysis',;
-                        'Real-time Processing',;
-                      ].map((tech, i) => (,
+                      {[
+                        'Python & TensorFlow';
+                        'React & Node.js';
+                        'PostgreSQL & Redis';
+                        'NLP & Sentiment Analysis';
+                        'Real-time Processing';
+                      ].map((tech, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {tech}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   <div>,
@@ -186,20 +181,19 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                       Integrations,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'Salesforce & HubSpot',;
-                        'Zendesk & Shopify',;
-                        'WooCommerce & Mailchimp',;
-                        'Custom APIs',;
-                        'Webhook Support',;
-                      ].map((integration, i) => (,
+                      {[
+                        'Salesforce & HubSpot';
+                        'Zendesk & Shopify';
+                        'WooCommerce & Mailchimp';
+                        'Custom APIs';
+                        'Webhook Support';
+                      ].map((integration, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {integration}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                 </div>,
@@ -227,15 +221,14 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                   </div>,
                   <div className='text-slate-40o0 text-sm space-y-1'>,
                     <div>{service.trialDays}-day free trial</div>,
-                    <div>Setup: {service.setupTime,}</div>,
+                    <div>Setup: {service.setupTime}</div>,
                   </div>,
                 </div>,
-                <Button,
+                <Button
                   href='/contact',
                   variant='quantum',
                   size='lg',
-                  className='w-full mb-4',
-                >,
+                  className='w-full mb-4'>,
                   Start Free Trial,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </Button>,
@@ -265,12 +258,11 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                   </div>,
                 </div>,
                 <div className='mt-6 pt-4 border-t border-cyan-50o0/30'>,
-                  <Button,
+                  <Button
                     href={service.contactInfo.website}
                     variant='outline',
                     size='sm',
-                    className='w-full',
-                  >,
+                    className='w-full'>,
                     Visit Website,
                   </Button>,
                 </div>,
@@ -381,7 +373,7 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
             </h2>,
             <p className='text-lg text-slate-30o0 mb-6 max-w-2xl mx-auto'>,
               Join 234+ organizations already using our AI-Powered Customer,
-              Feedback Analyzer to improve customer satisfaction, reduce churn,;
+              Feedback Analyzer to improve customer satisfaction, reduce churn;
               and drive business growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -389,11 +381,10 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
                 Start Free Trial,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Button>,
-              <Button,
-                href={`tel:${service.contactInfo.mobile,}`}
+              <Button
+                href={`tel:${service.contactInfo.mobile}`}
                 variant='outline',
-                size='lg',
-              >,
+                size='lg'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Call Now,
               </Button>,
@@ -401,7 +392,5 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

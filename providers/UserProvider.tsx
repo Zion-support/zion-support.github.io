@@ -23,8 +23,7 @@ const DEFAULT_USER: User = {
   id: 'u_001',
   name: 'Jordan Lee',
   role: 'client',
-  onboardingCompleted: false,
-}
+  onboardingCompleted: false}
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
@@ -56,8 +55,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     user,
     setUser,
     logout: () => setUser(null),
-    completeOnboarding: () => setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
-  }), [user])
+    completeOnboarding: () => setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev))}), [user])
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

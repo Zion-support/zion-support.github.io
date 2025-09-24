@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Operational Guardrails',;
+export const metadata = {
+  title: 'AI 20o26: Operational Guardrails';
   description:,
-    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.',;
+    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.';
 };
-,
-export default function OperationalGuardrails20o26Page() {,
-  return (,
+export default function OperationalGuardrails20o26Page() {
+  return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
         AI 20o26: Operational Guardrails,
@@ -34,26 +33,23 @@ export default function OperationalGuardrails20o26Page() {,
           </h2>,
           <ul className='list-disc pl-6 text-gray-70o0 space-y-1'>,
             <li>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-production-guardrails-playbook',
-                className='text-purple-70o0 hover: underline',
-              >,
+                className='text-purple-70o0 hover: underline'>,
                 Production Guardrails Playbook,
               </Link>,
             </li>,
             <li>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-agent-risk-management-framework',
-                className='text-purple-70o0 hover:underline',
-              >,
+                className='text-purple-70o0 hover:underline'>,
                 Agent Risk Management Framework,
               </Link>,
             </li>,
             <li>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-autonomous-ops-playbook',
-                className='text-purple-70o0 hover:underline',
-              >,
+                className='text-purple-70o0 hover:underline'>,
                 Autonomous Ops Playbook,
               </Link>,
             </li>,
@@ -68,22 +64,19 @@ export default function OperationalGuardrails20o26Page() {,
             protections.,
           </p>,
           <div className='flex flex-wrap gap-3'>,
-            <Link,
+            <Link
               href='/content/ai-20o26-agent-governance-policy-as-code',
-              className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-            >,
+              className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
               Policy-as-Code,
             </Link>,
-            <Link,
+            <Link
               href='/content/ai-20o26-evaluation-harness-blueprint',
-              className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Eval Harness,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

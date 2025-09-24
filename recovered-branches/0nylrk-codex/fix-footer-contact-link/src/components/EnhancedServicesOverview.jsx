@@ -1,79 +1,76 @@
-import {,
+import {
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Link } from 'react-router-dom',
-  ENHANCED_SERVICES,;
-  ENHANCED_SERVICE_CATEGORIES,;
+  ENHANCED_SERVICES;
+  ENHANCED_SERVICE_CATEGORIES;
 } from '@/data/enhancedServices',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
-  Brain,;
-  Shield,;
-  Database,;
-  Briefcase,;
-  DollarSign,;
-  Heart,;
-  GraduationCap,;
-  Truck,;
-  Home,;
-  Zap,;
-  Users,;
-  BarChart3,;
-  Lock,;
-  TrendingUp,;
-  CheckCircle,;
-  Star,;
-  Globe,;
-  Clock,;
-  Mail,;
-  Phone,;
-  MapPin,;
+  Brain;
+  Shield;
+  Database;
+  Briefcase;
+  DollarSign;
+  Heart;
+  GraduationCap;
+  Truck;
+  Home;
+  Zap;
+  Users;
+  BarChart3;
+  Lock;
+  TrendingUp;
+  CheckCircle;
+  Star;
+  Globe;
+  Clock;
+  Mail;
+  Phone;
+  MapPin;
 } from 'lucide-react',
-const ServiceCategory = ({ category, services }) => {,
+const ServiceCategory = ({ category, services }) => {
   const categoryServices = services.filter(service =>,
-    service.category.toLowerCase().includes(category.toLowerCase()),
-  ),
+    service.category.toLowerCase().includes(category.toLowerCase())),
   if (categoryServices.length === 0) return null,
-  const getCategoryIcon = categoryName => {,
-    const iconMap = {,
-      'AI & Machine Learning': <Brain className='w-6 h-6' />,;
-      'Cybersecurity & Compliance': <Shield className='w-6 h-6' />,;
-      'Data & Analytics': <Database className='w-6 h-6' />,;
-      'Business Process': <Briefcase className='w-6 h-6' />,;
-      'Marketing & Sales': <TrendingUp className='w-6 h-6' />,;
-      'Financial Services': <DollarSign className='w-6 h-6' />,;
-      'Healthcare & Life Sciences': <Heart className='w-6 h-6' />,;
-      'Education & Training': <GraduationCap className='w-6 h-6' />,;
-      'Supply Chain & Logistics': <Truck className='w-6 h-6' />,;
-      'Real Estate & Property': <Home className='w-6 h-6' />,;
-      'Legal & Compliance': <Lock className='w-6 h-6' />,;
+  const getCategoryIcon = categoryName => {
+    const iconMap = {
+      'AI & Machine Learning': <Brain className='w-6 h-6' />;
+      'Cybersecurity & Compliance': <Shield className='w-6 h-6' />;
+      'Data & Analytics': <Database className='w-6 h-6' />;
+      'Business Process': <Briefcase className='w-6 h-6' />;
+      'Marketing & Sales': <TrendingUp className='w-6 h-6' />;
+      'Financial Services': <DollarSign className='w-6 h-6' />;
+      'Healthcare & Life Sciences': <Heart className='w-6 h-6' />;
+      'Education & Training': <GraduationCap className='w-6 h-6' />;
+      'Supply Chain & Logistics': <Truck className='w-6 h-6' />;
+      'Real Estate & Property': <Home className='w-6 h-6' />;
+      'Legal & Compliance': <Lock className='w-6 h-6' />;
     };
-    return iconMap[categoryName] || <Briefcase className='w-6 h-6' />,
-  };
-  const getCategoryColor = categoryName => {,
-    const colorMap = {,
-      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0',;
-      'Cybersecurity & Compliance': 'from-red-50o0 to-pink-60o0',;
-      'Data & Analytics': 'from-blue-50o0 to-cyan-60o0',;
-      'Business Process': 'from-green-50o0 to-emerald-60o0',;
-      'Marketing & Sales': 'from-orange-50o0 to-red-60o0',;
-      'Financial Services': 'from-yellow-50o0 to-orange-60o0',;
-      'Healthcare & Life Sciences': 'from-pink-50o0 to-rose-60o0',;
-      'Education & Training': 'from-indigo-50o0 to-purple-60o0',;
-      'Supply Chain & Logistics': 'from-teal-50o0 to-green-60o0',;
-      'Real Estate & Property': 'from-amber-50o0 to-yellow-60o0',;
-      'Legal & Compliance': 'from-slate-50o0 to-gray-60o0',;
+    return iconMap[categoryName] || <Briefcase className='w-6 h-6' />};
+  const getCategoryColor = categoryName => {
+    const colorMap = {
+      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0';
+      'Cybersecurity & Compliance': 'from-red-50o0 to-pink-60o0';
+      'Data & Analytics': 'from-blue-50o0 to-cyan-60o0';
+      'Business Process': 'from-green-50o0 to-emerald-60o0';
+      'Marketing & Sales': 'from-orange-50o0 to-red-60o0';
+      'Financial Services': 'from-yellow-50o0 to-orange-60o0';
+      'Healthcare & Life Sciences': 'from-pink-50o0 to-rose-60o0';
+      'Education & Training': 'from-indigo-50o0 to-purple-60o0';
+      'Supply Chain & Logistics': 'from-teal-50o0 to-green-60o0';
+      'Real Estate & Property': 'from-amber-50o0 to-yellow-60o0';
+      'Legal & Compliance': 'from-slate-50o0 to-gray-60o0';
     };
-    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark',
-  };
-  return (,
+    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
+  return (
     <div className='space-y-6'>,
       <div className='flex items-center space-x-3 mb-6'>,
-        <div,
+        <div
           className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`}
         >,
           {getCategoryIcon(category)}
@@ -86,24 +83,21 @@ const ServiceCategory = ({ category, services }) => {,
         </div>,
       </div>,
       <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-        {categoryServices.map(service => (,
-          <Card,
-            key={service.id,}
-            className='h-full border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-30o0',
-          >,
+        {categoryServices.map(service => (
+          <Card
+            key={service.id}
+            className='h-full border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-30o0'>,
             <CardHeader className='pb-3'>,
               <div className='flex items-start justify-between mb-2'>,
-                <Badge,
+                <Badge
                   variant='secondary',
-                  className='bg-zion-purple/20 text-zion-cyan border-zion-purple/30',
-                >,
-                  {service.category,}
+                  className='bg-zion-purple/20 text-zion-cyan border-zion-purple/30'>,
+                  {service.category}
                 </Badge>,
-                {service.featured && (,
+                {service.featured && (
                   <Badge className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>,
                     Featured,
-                  </Badge>,
-                )}
+                  </Badge>)}
               </div>,
               <CardTitle className='text-white text-lg leading-tight'>,
                 {service.title}
@@ -116,15 +110,13 @@ const ServiceCategory = ({ category, services }) => {,
               <div className='space-y-4'>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2'>,
-                  {service.tags.slice(0, 3).map(tag => (,
-                    <Badge,
+                  {service.tags.slice(0, 3).map(tag => (
+                    <Badge
                       key={tag}
                       variant='outline',
-                      className='text-xs border-zion-blue-light text-zion-slate-light',
-                    >,
+                      className='text-xs border-zion-blue-light text-zion-slate-light'>,
                       {tag}
-                    </Badge>,
-                  ))}
+                    </Badge>))}
                 </div>,
                 {/* Metrics */}
                 <div className='flex items-center justify-between text-sm text-zion-slate-light'>,
@@ -159,12 +151,11 @@ const ServiceCategory = ({ category, services }) => {,
                       Starting from,
                     </div>,
                   </div>,
-                  <Button,
+                  <Button
                     size='sm',
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white',
                     onClick={() =>,
-                      window.open('https://ziontechgroup.com', '_blank'),
-                    }
+                      window.open('https://ziontechgroup.com', '_blank')}
                   >,
                     Get Started,
                   </Button>,
@@ -176,13 +167,10 @@ const ServiceCategory = ({ category, services }) => {,
                 </div>,
               </div>,
             </CardContent>,
-          </Card>,
-        ))}
+          </Card>))}
       </div>,
-    </div>,
-  ),
-};
-const BenefitsSection = () => (,
+    </div>)};
+const BenefitsSection = () => (
   <section className='py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg'>,
     <div className='container mx-auto px-4'>,
       <div className='text-center mb-12'>,
@@ -266,9 +254,8 @@ const BenefitsSection = () => (,
         </div>,
       </div>,
     </div>,
-  </section>,
-),
-const ContactSection = () => (,
+  </section>),
+const ContactSection = () => (
   <section className='py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg'>,
     <div className='container mx-auto px-4 text-center'>,
       <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -283,10 +270,9 @@ const ContactSection = () => (,
           <Mail className='w-6 h-6 text-zion-cyan' />,
           <div className='text-left'>,
             <p className='font-medium text-white'>Email</p>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='text-zion-cyan hover:underline text-sm',
-            >,
+              className='text-zion-cyan hover:underline text-sm'>,
               kleber@ziontechgroup.com,
             </a>,
           </div>,
@@ -295,10 +281,9 @@ const ContactSection = () => (,
           <Phone className='w-6 h-6 text-zion-cyan' />,
           <div className='text-left'>,
             <p className='font-medium text-white'>Phone</p>,
-            <a,
+            <a
               href='tel:+130o24640950',
-              className='text-zion-cyan hover:underline text-sm',
-            >,
+              className='text-zion-cyan hover:underline text-sm'>,
               +1 30o2 464 0950,
             </a>,
           </div>,
@@ -316,16 +301,15 @@ const ContactSection = () => (,
         </div>,
       </div>,
       <div className='flex flex-wrap justify-center gap-4'>,
-        <Button,
+        <Button
           size='lg',
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white',
           onClick={() =>,
-            window.open('mailto:kleber@ziontechgroup.com', '_blank'),
-          }
+            window.open('mailto:kleber@ziontechgroup.com', '_blank')}
         >,
           Contact Sales Team,
         </Button>,
-        <Button,
+        <Button
           size='lg',
           variant='outline',
           className='border-zion-purple text-zion-cyan hover: bg-zion-purple/10',
@@ -334,22 +318,20 @@ const ContactSection = () => (,
           Visit Our Website,
         </Button>,
         <Link to='/services-comparison'>,
-          <Button,
+          <Button
             size='lg',
             variant='outline',
-            className='border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10',
-          >,
+            className='border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10'>,
             Compare Services,
           </Button>,
         </Link>,
       </div>,
     </div>,
-  </section>,
-),
-export default function EnhancedServicesOverview() {,
-  return (,
+  </section>),
+export default function EnhancedServicesOverview() {
+  return (
     <div className='space-y-16'>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className='text-center'>,
         <h1 className='text-4xl md: text-6xl font-bold text-white mb-6'>,
           Comprehensive Micro SAAS Services,
@@ -360,7 +342,7 @@ export default function EnhancedServicesOverview() {,
           startups to enterprises, we have the tools you need to succeed.,
         </p>,
         <div className='flex flex-wrap justify-center gap-4'>,
-          <Button,
+          <Button
             size='lg',
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white',
             onClick={() => window.open('https://ziontechgroup.com', '_blank')}
@@ -368,31 +350,27 @@ export default function EnhancedServicesOverview() {,
             Get Started Today,
           </Button>,
           <Link to='/services-comparison'>,
-            <Button,
+            <Button
               size='lg',
               variant='outline',
-              className='border-zion-purple text-zion-cyan hover: bg-zion-purple/10',
-            >,
+              className='border-zion-purple text-zion-cyan hover: bg-zion-purple/10'>,
               Compare Services,
             </Button>,
           </Link>,
         </div>,
       </div>,
-      {/* Service Categories */,}
+      {/* Service Categories */}
       <div className='space-y-16'>,
-        {ENHANCED_SERVICE_CATEGORIES.map(category => (,
-          <ServiceCategory,
+        {ENHANCED_SERVICE_CATEGORIES.map(category => (
+          <ServiceCategory
             key={category.value}
             category={category.label}
             services={ENHANCED_SERVICES}
-          />,
-        ))}
+          />))}
       </div>,
       {/* Benefits Section */}
       <BenefitsSection />,
       {/* Contact Section */}
       <ContactSection />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

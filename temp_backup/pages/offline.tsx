@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function OfflinePage() {,
-  return (,
+export default function OfflinePage() {
+  return (
     <>,
       <Head>,
         <title>Offline - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function OfflinePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

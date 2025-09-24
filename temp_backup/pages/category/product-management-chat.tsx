@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ProductManagementChatPage() {,
-  return (,
+export default function ProductManagementChatPage() {
+  return (
     <>,
       <Head>,
         <title>Product Management Chat - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ProductManagementChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

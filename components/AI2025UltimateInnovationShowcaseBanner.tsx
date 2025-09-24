@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25UltimateInnovationShowcaseBanner = () => {,
-  return (,
+const AI20o25UltimateInnovationShowcaseBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -26,21 +25,19 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {,
             systems, explore the future of technology.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-ultimate-innovation-showcase-latest-trends',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-30o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Full Article,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-transformation-30o00-roi-ultimate-success',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               View Success Story,
             </Link>,
           </div>,
         </div>,
-        {/* Key Features Grid */,}
+        {/* Key Features Grid */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0'>,
             <div className='text-4xl mb-4'>🧠</div>,
@@ -103,24 +100,19 @@ const AI20o25UltimateInnovationShowcaseBanner = () => {,
             Ready to transform your business with cutting-edge AI solutions?,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-50o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-blue-50o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-blue-50o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Get Free Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore Services,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25UltimateInnovationShowcaseBanner,
-,
+    </section>),
+};
+export default AI20o25UltimateInnovationShowcaseBanner;

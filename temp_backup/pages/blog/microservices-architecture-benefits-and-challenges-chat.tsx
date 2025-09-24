@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MicroservicesArchitectureBenefitsAndChallengesChatPage() {,
-  return (,
+export default function MicroservicesArchitectureBenefitsAndChallengesChatPage() {
+  return (
     <>,
       <Head>,
         <title>Microservices Architecture Benefits And Challenges Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function MicroservicesArchitectureBenefitsAndChallengesChatPage()
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

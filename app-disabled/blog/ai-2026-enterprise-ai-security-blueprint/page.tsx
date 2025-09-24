@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const EnterpriseAISecurityBlueprint20o26 = () => {,
-  return (,
+const EnterpriseAISecurityBlueprint20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Enterprise AI Security Blueprint',
         description='A pragmatic blueprint to secure AI agents, data, and workflows across the modern enterprise in 20o26.',
         keywords='AI security, enterprise AI, agent security, data governance, 20o26',
@@ -34,7 +33,7 @@ const EnterpriseAISecurityBlueprint20o26 = () => {,
           <h2>Core Principles</h2>,
           <ul>,
             <li>,
-              Zero-trust for agents: explicit identities, least privilege,;
+              Zero-trust for agents: explicit identities, least privilege;
               short-lived credentials,
             </li>,
             <li>,
@@ -80,23 +79,18 @@ const EnterpriseAISecurityBlueprint20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Assess Your AI Security Posture,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EnterpriseAISecurityBlueprint20o26,
-,
+    </div>),
+};
+export default EnterpriseAISecurityBlueprint20o26;

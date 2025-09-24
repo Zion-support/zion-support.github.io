@@ -1,15 +1,13 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata ={,
-  title: 'Advanced Automation 20o25 - AI-Powered Business Automation | Zion Tech Group',;
-  description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 30o0% with our AI-powered automation.',;
+export const metadata ={
+  title: 'Advanced Automation 20o25 - AI-Powered Business Automation | Zion Tech Group';
+  description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 30o0% with our AI-powered automation.';
   keywords: ['automation', 'business automation', 'AI automation', 'process automation', 'intelligent automation']};
-,
-export default function AutomationPage() {,
-  return (,
+export default function AutomationPage() {
+  return (
     <div className="min-h-screen bg-white">,
-      <SEO,
+      <SEO
         title="Advanced Automation 20o25 - AI-Powered Business Automation",
         description="Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 30o0% with our AI-powered automation.",
         keywords="automation, business automation, AI automation, process automation, intelligent automation",
@@ -22,26 +20,24 @@ export default function AutomationPage() {,
             Advanced Automation 20o25,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-8">,
-            Transform your business operations with intelligent automation that learns, adapts,;
+            Transform your business operations with intelligent automation that learns, adapts;
             and scales. Reduce costs by 60% while increasing productivity by 30o0%.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/automation/demo",
-              className="bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-            >,
+              className="bg-white text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
               Watch Automation Demo,
             </Link>,
-            <Link,
+            <Link
               href="/automation/roi-calculator",
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-60o0 transition-colors">,
               Calculate Your ROI,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">Automation Solutions</h2>,
@@ -89,7 +85,7 @@ export default function AutomationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gradient-to-r from-emerald-50 to-teal-50 py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-90o0 mb-4">,
@@ -98,14 +94,12 @@ export default function AutomationPage() {,
           <p className="text-xl text-gray-60o0 mb-8">,
             Join 50o0+ companies that have already transformed their operations with our automation solutions.,
           </p>,
-          <Link,
+          <Link
             href="/contact",
-            className="bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors",
-          >,
+            className="bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors">,
             Get Free Automation Assessment,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}

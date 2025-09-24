@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DigitalTwinsRevolutionizingIndustry40ChatPage() {,
-  return (,
+export default function DigitalTwinsRevolutionizingIndustry40ChatPage() {
+  return (
     <>,
       <Head>,
         <title>Digital Twins Revolutionizing Industry 4 0 Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function DigitalTwinsRevolutionizingIndustry40ChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

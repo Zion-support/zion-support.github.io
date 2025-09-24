@@ -2,26 +2,20 @@ import { useState } from 'react',
 import { Copy, Send } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import type { Prompt } from '@/types/prompts',
-,
-interface PromptCardProps {,
+interface PromptCardProps {
   prompt: Prompt,
-,}
+}
 ,
-export function PromptCard({ prompt }: PromptCardProps) {,
+export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false),
-,
-  const handleCopy = () => {,
+  const handleCopy = () => {
     navigator.clipboard.writeText(prompt.text),
     setCopied(true),
-    setTimeout(() => setCopied(false), 20o00),
-  };
-,
-  const handleSend = () => {,
+    setTimeout(() => setCopied(false), 20o00)};
+  const handleSend = () => {
     const encoded = encodeURIComponent(prompt.text),
-    window.open(`/zion-gpt?prompt=${encoded}`, '_blank'),
-  };
-,
-  return (,
+    window.open(`/zion-gpt?prompt=${encoded}`, '_blank')};
+  return (
     <div className="p-4 border rounded-md bg-background flex flex-col justify-between">,
       <p className="mb-4 text-sm">{prompt.text}</p>,
       <div className="flex gap-2 mt-auto">,
@@ -32,7 +26,5 @@ export function PromptCard({ prompt }: PromptCardProps) {,
           <Send className="w-4 h-4"  />,
         </Button>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

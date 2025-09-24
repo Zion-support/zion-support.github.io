@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PointsPage() {,
-  return (,
+export default function PointsPage() {
+  return (
     <>,
       <Head>,
         <title>Points - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function PointsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

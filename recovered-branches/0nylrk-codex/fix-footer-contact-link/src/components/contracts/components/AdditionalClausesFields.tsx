@@ -1,25 +1,23 @@
 
 import { UseFormReturn } from "react-hook-form",
-import {,
+import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormDescription,
-} from "@/components/ui/form",
+  FormDescription} from "@/components/ui/form",
 import { Checkbox } from "@/components/ui/checkbox",
 import { ContractFormValues } from "./ContractForm",
-,
-interface AdditionalClausesFieldsProps {,
+interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>,
-,}
+}
 ,
-export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {,
-  return (,
-    <FormField,
+export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {
+  return (
+    <FormField
       control={form.control}
       name="additionalClauses",
-      render={() => (,
+      render={() => (
         <FormItem>,
           <div className="mb-4">,
             <FormLabel>Additional Clauses</FormLabel>,
@@ -28,22 +26,20 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             </FormDescription>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
-            <FormField,
-              control={form.control,}
+            <FormField
+              control={form.control}
               name="additionalClauses",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">,
                   <FormControl>,
-                    <Checkbox,
+                    <Checkbox
                       checked={field.value?.includes('nda')}
-                      onCheckedChange={(checked) => {,
+                      onCheckedChange={(checked) => {
                         const currentValues = field.value || [],
                         return checked,
                           ? field.onChange([...currentValues'nda']),
-                          : field.onChange(,
-                              currentValues.filter((value) => value !== 'nda'),
-                            ),
-                      }}
+                          : field.onChange(
+                              currentValues.filter((value) => value !== 'nda'))}}
                     />,
                   </FormControl>,
                   <div className="space-y-1 leading-none">,
@@ -54,25 +50,22 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       Protect sensitive information,
                     </FormDescription>,
                   </div>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={form.control}
               name="additionalClauses",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">,
                   <FormControl>,
-                    <Checkbox,
+                    <Checkbox
                       checked={field.value?.includes('ip')}
-                      onCheckedChange={(checked) => {,
+                      onCheckedChange={(checked) => {
                         const currentValues = field.value || [],
                         return checked,
                           ? field.onChange([...currentValues'ip']),
-                          : field.onChange(,
-                              currentValues.filter((value) => value !== 'ip'),
-                            ),
-                      }}
+                          : field.onChange(
+                              currentValues.filter((value) => value !== 'ip'))}}
                     />,
                   </FormControl>,
                   <div className="space-y-1 leading-none">,
@@ -83,25 +76,22 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       Transfer ownership of work products,
                     </FormDescription>,
                   </div>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={form.control}
               name="additionalClauses",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">,
                   <FormControl>,
-                    <Checkbox,
+                    <Checkbox
                       checked={field.value?.includes('termination')}
-                      onCheckedChange={(checked) => {,
+                      onCheckedChange={(checked) => {
                         const currentValues = field.value || [],
                         return checked,
                           ? field.onChange([...currentValues'termination']),
-                          : field.onChange(,
-                              currentValues.filter((value) => value !== 'termination'),
-                            ),
-                      }}
+                          : field.onChange(
+                              currentValues.filter((value) => value !== 'termination'))}}
                     />,
                   </FormControl>,
                   <div className="space-y-1 leading-none">,
@@ -112,25 +102,22 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       Define conditions for ending the contract,
                     </FormDescription>,
                   </div>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={form.control}
               name="additionalClauses",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">,
                   <FormControl>,
-                    <Checkbox,
+                    <Checkbox
                       checked={field.value?.includes('revisions')}
-                      onCheckedChange={(checked) => {,
+                      onCheckedChange={(checked) => {
                         const currentValues = field.value || [],
                         return checked,
                           ? field.onChange([...currentValues'revisions']),
-                          : field.onChange(,
-                              currentValues.filter((value) => value !== 'revisions'),
-                            ),
-                      }}
+                          : field.onChange(
+                              currentValues.filter((value) => value !== 'revisions'))}}
                     />,
                   </FormControl>,
                   <div className="space-y-1 leading-none">,
@@ -141,13 +128,9 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                       Define how changes to the contract are handled,
                     </FormDescription>,
                   </div>,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
           </div>,
-        </FormItem>,
-      )}
-    />,
-  ),
-}
+        </FormItem>)}
+    />)}
 ,

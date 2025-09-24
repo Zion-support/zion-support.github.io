@@ -1,9 +1,7 @@
-export function WebhooksManager() {,
-  return (,
+export function WebhooksManager() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

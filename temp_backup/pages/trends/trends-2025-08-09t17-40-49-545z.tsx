@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function Trends20o250809t1740o49545zPage() {,
-  return (,
+export default function Trends20o250809t1740o49545zPage() {
+  return (
     <>,
       <Head>,
         <title>Trends 20o25 08 09t17 40 49 545z - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='trends 20o25 08 09t17 40 49 545z page',
         />,
@@ -21,7 +20,6 @@ export default function Trends20o250809t1740o49545zPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

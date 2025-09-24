@@ -1,282 +1,228 @@
 import React, { useState, useEffect, useCallback } from 'react',
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react',
-const SEOOptimizer = () => {,
+const SEOOptimizer = () => {
     const [isOpen, setIsOpen] = useState(false),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     const [report, setReport] = useState(null),
     const [selectedPage, setSelectedPage] = useState(null),
-    const analyzeSEO = useCallback(async () => {,
+    const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true),
-        try {,
+        try {
             // Simulate analyzing all pages for SEO,
-            const samplePages = [,
-                {,
-                    url: '/',;
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',;
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',;
-                    headings: ['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'],;
-                    images: ['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],;
-                    links: ['/services', '/ai-solutions', '/about', '/contact'],;
-                    keywords: ['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation'],
-                },;
-                {,
-                    url: '/services',;
-                    title: 'Our Services - Comprehensive Technology Solutions',;
-                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',;
-                    headings: ['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'],;
-                    images: ['/images/services-overview.jpg'],;
-                    links: ['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'],;
-                    keywords: ['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity'],
-                },;
-                {,
-                    url: '/ai-solutions',;
-                    title: 'AI Solutions - Artificial Intelligence Services',;
-                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',;
-                    headings: ['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],;
-                    images: ['/images/ai-solutions.jpg'],;
-                    links: ['/services', '/about', '/contact'],;
-                    keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation'],
-                }
+            const samplePages = [
+                {
+                    url: '/';
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services';
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.';
+                    headings: ['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'];
+                    images: ['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'];
+                    links: ['/services', '/ai-solutions', '/about', '/contact'];
+                    keywords: ['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation']};
+                {
+                    url: '/services';
+                    title: 'Our Services - Comprehensive Technology Solutions';
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.';
+                    headings: ['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'];
+                    images: ['/images/services-overview.jpg'];
+                    links: ['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'];
+                    keywords: ['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity']};
+                {
+                    url: '/ai-solutions';
+                    title: 'AI Solutions - Artificial Intelligence Services';
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.';
+                    headings: ['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'];
+                    images: ['/images/ai-solutions.jpg'];
+                    links: ['/services', '/about', '/contact'];
+                    keywords: ['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']}
             ],
-            const pageAnalyses = samplePages.map(page => {,
+            const pageAnalyses = samplePages.map(page => {
                 const score = calculateSEOScore(page),
                 const issues = identifySEOIssues(page),
                 const recommendations = generateSEORecommendations(issues),
-                return {,
-                    pageUrl: page.url,;
-                    title: page.title,;
-                    metaDescription: page.metaDescription,;
-                    headings: page.headings,;
-                    images: page.images,;
-                    links: page.links,;
-                    keywords: page.keywords,;
-                    score,;
-                    issues,;
-                    recommendations,
-                };
+                return {
+                    pageUrl: page.url;
+                    title: page.title;
+                    metaDescription: page.metaDescription;
+                    headings: page.headings;
+                    images: page.images;
+                    links: page.links;
+                    keywords: page.keywords;
+                    score;
+                    issues;
+                    recommendations};
             }),
             const totalPages = pageAnalyses.length,
             const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages),
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length,
             // Collect all issues and count frequency,
             const issueCounts ={};
-            pageAnalyses.forEach(page => {,
-                page.issues.forEach(issue => {,
-                    issueCounts[issue] = (issueCounts[issue] || 0) + 1,
-                }),
-            }),
+            pageAnalyses.forEach(page => {
+                page.issues.forEach(issue => {
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})}),
             const topIssues = Object.entries(issueCounts),
-                .sort(([, a], [, b]) => b - a),
+                .sort(([ a], [ b]) => b - a),
                 .slice(0, 5),
                 .map(([issue]) => issue),
             const summary = generateSummary(pageAnalyses, topIssues),
-            setReport({,
-                totalPages,;
-                averageScore,;
-                pagesWithIssues,;
-                topIssues,;
-                pageAnalyses,;
-                summary,
-            }),
-        }
-        catch (error) {,
-            console.error('Error analyzing SEO:', error),
-        }
-        finally {,
-            setIsAnalyzing(false),
-        }
+            setReport({
+                totalPages;
+                averageScore;
+                pagesWithIssues;
+                topIssues;
+                pageAnalyses;
+                summary})}
+        catch (error) {
+            console.error('Error analyzing SEO:', error)}
+        finally {
+            setIsAnalyzing(false)}
     }, []),
-    useEffect(() => {,
+    useEffect(() => {
         // Auto-analyze SEO when component mounts,
-        analyzeSEO(),
-    }, [analyzeSEO]),
-    const calculateSEOScore = (page) => {,
+        analyzeSEO()}, [analyzeSEO]),
+    const calculateSEOScore = (page) => {
         let score = 0,
         let maxScore = 0,
         // Title optimization (0-20 points),
         maxScore += 20,
-        if (page.title.length >= 30 && page.title.length <= 60) {,
-            score += 20,
-        }
-        else if (page.title.length > 0) {,
-            score += 10,
-        }
+        if (page.title.length >= 30 && page.title.length <= 60) {
+            score += 20}
+        else if (page.title.length > 0) {
+            score += 10}
         // Meta description (0-15 points),
         maxScore += 15,
-        if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {,
-            score += 15,
-        }
-        else if (page.metaDescription.length > 0) {,
-            score += 8,
-        }
+        if (page.metaDescription.length >= 120 && page.metaDescription.length <= 160) {
+            score += 15}
+        else if (page.metaDescription.length > 0) {
+            score += 8}
         // Headings (0-15 points),
         maxScore += 15,
-        if (page.headings.length >= 3) {,
-            score += 15,
-        }
-        else if (page.headings.length >= 1) {,
-            score += 10,
-        }
+        if (page.headings.length >= 3) {
+            score += 15}
+        else if (page.headings.length >= 1) {
+            score += 10}
         // Images (0-10 points),
         maxScore += 10,
-        if (page.images.length >= 2) {,
-            score += 10,
-        }
-        else if (page.images.length >= 1) {,
-            score += 5,
-        }
+        if (page.images.length >= 2) {
+            score += 10}
+        else if (page.images.length >= 1) {
+            score += 5}
         // Internal links (0-15 points),
         maxScore += 15,
-        if (page.links.length >= 3) {,
-            score += 15,
-        }
-        else if (page.links.length >= 1) {,
-            score += 10,
-        }
+        if (page.links.length >= 3) {
+            score += 15}
+        else if (page.links.length >= 1) {
+            score += 10}
         // Keywords (0-10 points),
         maxScore += 10,
-        if (page.keywords.length >= 3) {,
-            score += 10,
-        }
-        else if (page.keywords.length >= 1) {,
-            score += 5,
-        }
+        if (page.keywords.length >= 3) {
+            score += 10}
+        else if (page.keywords.length >= 1) {
+            score += 5}
         // URL structure (0-15 points),
         maxScore += 15,
-        if (page.url === '/' || page.url.includes('-')) {,
-            score += 15,
-        }
-        else if (page.url.length > 0) {,
-            score += 8,
-        }
-        return Math.round((score / maxScore) * 10o0),
-    };
-    const identifySEOIssues = (page) => {,
+        if (page.url === '/' || page.url.includes('-')) {
+            score += 15}
+        else if (page.url.length > 0) {
+            score += 8}
+        return Math.round((score / maxScore) * 10o0)};
+    const identifySEOIssues = (page) => {
         const issues = [],
-        if (!page.title || page.title.length < 30) {,
-            issues.push('Title is too short (should be 30-60 characters)'),
-        }
-        else if (page.title.length > 60) {,
-            issues.push('Title is too long (should be 30-60 characters)'),
-        }
-        if (!page.metaDescription || page.metaDescription.length < 120) {,
-            issues.push('Meta description is too short (should be 120-160 characters)'),
-        }
-        else if (page.metaDescription.length > 160) {,
-            issues.push('Meta description is too long (should be 120-160 characters)'),
-        }
-        if (page.headings.length < 2) {,
-            issues.push('Insufficient heading structure (should have at least 2 headings)'),
-        }
-        if (page.images.length === 0) {,
-            issues.push('No images found (consider adding relevant images with alt text)'),
-        }
-        if (page.links.length < 2) {,
-            issues.push('Insufficient internal linking (should have at least 2 internal links)'),
-        }
-        if (page.keywords.length < 2) {,
-            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)'),
-        }
-        if (page.url !== '/' && !page.url.includes('-')) {,
-            issues.push('URL could be more SEO-friendly (consider using hyphens)'),
-        }
-        return issues,
-    };
-    const generateSEORecommendations = (issues) => {,
+        if (!page.title || page.title.length < 30) {
+            issues.push('Title is too short (should be 30-60 characters)')}
+        else if (page.title.length > 60) {
+            issues.push('Title is too long (should be 30-60 characters)')}
+        if (!page.metaDescription || page.metaDescription.length < 120) {
+            issues.push('Meta description is too short (should be 120-160 characters)')}
+        else if (page.metaDescription.length > 160) {
+            issues.push('Meta description is too long (should be 120-160 characters)')}
+        if (page.headings.length < 2) {
+            issues.push('Insufficient heading structure (should have at least 2 headings)')}
+        if (page.images.length === 0) {
+            issues.push('No images found (consider adding relevant images with alt text)')}
+        if (page.links.length < 2) {
+            issues.push('Insufficient internal linking (should have at least 2 internal links)')}
+        if (page.keywords.length < 2) {
+            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)')}
+        if (page.url !== '/' && !page.url.includes('-')) {
+            issues.push('URL could be more SEO-friendly (consider using hyphens)')}
+        return issues};
+    const generateSEORecommendations = (issues) => {
         const recommendations = [],
-        if (issues.some(issue => issue.includes('Title'))) {,
-            recommendations.push('Optimize page titles with relevant keywords and compelling copy'),
-        }
-        if (issues.some(issue => issue.includes('Meta description'))) {,
-            recommendations.push('Write compelling meta descriptions that accurately describe the page content'),
-        }
-        if (issues.some(issue => issue.includes('heading structure'))) {,
-            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO'),
-        }
-        if (issues.some(issue => issue.includes('No images'))) {,
-            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO'),
-        }
-        if (issues.some(issue => issue.includes('internal linking'))) {,
-            recommendations.push('Add internal links to related pages to improve navigation and SEO'),
-        }
-        if (issues.some(issue => issue.includes('keyword targeting'))) {,
-            recommendations.push('Research and include relevant keywords naturally throughout the content'),
-        }
-        if (issues.some(issue => issue.includes('URL'))) {,
-            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms'),
-        }
+        if (issues.some(issue => issue.includes('Title'))) {
+            recommendations.push('Optimize page titles with relevant keywords and compelling copy')}
+        if (issues.some(issue => issue.includes('Meta description'))) {
+            recommendations.push('Write compelling meta descriptions that accurately describe the page content')}
+        if (issues.some(issue => issue.includes('heading structure'))) {
+            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO')}
+        if (issues.some(issue => issue.includes('No images'))) {
+            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO')}
+        if (issues.some(issue => issue.includes('internal linking'))) {
+            recommendations.push('Add internal links to related pages to improve navigation and SEO')}
+        if (issues.some(issue => issue.includes('keyword targeting'))) {
+            recommendations.push('Research and include relevant keywords naturally throughout the content')}
+        if (issues.some(issue => issue.includes('URL'))) {
+            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}
         recommendations.push('Ensure content is unique, valuable, and addresses user intent'),
         recommendations.push('Implement structured data markup for better search engine understanding'),
         recommendations.push('Optimize page loading speed for better user experience and SEO'),
-        return recommendations,
-    };
-    const generateSummary = (pageAnalyses, topIssues) => {,
+        return recommendations};
+    const generateSummary = (pageAnalyses, topIssues) => {
         const totalPages = pageAnalyses.length,
         const excellentPages = pageAnalyses.filter(page => page.score >= 80).length,
         const goodPages = pageAnalyses.filter(page => page.score >= 60).length,
         const poorPages = pageAnalyses.filter(page => page.score < 40).length,
         let summary = `Analyzed ${totalPages} pages for SEO. `,
-        if (excellentPages > 0) {,
-            summary += `${excellentPages} pages have excellent SEO. `,
-        }
-        if (goodPages > 0) {,
-            summary += `${goodPages} pages have good SEO. `,
-        }
-        if (poorPages > 0) {,
-            summary += `${poorPages} pages need significant SEO improvement. `,
-        }
-        if (topIssues.length > 0) {,
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`,
-        }
-        return summary,
-    };
-    const exportSEOReport = () => {,
+        if (excellentPages > 0) {
+            summary += `${excellentPages} pages have excellent SEO. `}
+        if (goodPages > 0) {
+            summary += `${goodPages} pages have good SEO. `}
+        if (poorPages > 0) {
+            summary += `${poorPages} pages need significant SEO improvement. `}
+        if (topIssues.length > 0) {
+            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`}
+        return summary};
+    const exportSEOReport = () => {
         if (!report),
             return,
-        const csvContent = [,
-            ['Page URL', 'Title', 'SEO Score', 'Issues', 'Recommendations'],;
-            ...report.pageAnalyses.map(page => [,
-                page.pageUrl,;
-                page.title,;
-                page.score.toString(),;
-                page.issues.join(', '),;
-                page.recommendations.join(', '),
-            ]),
-        ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n'),
-        const blob = new Blob([csvContent], { type: 'text/csv' ,}),
+        const csvContent = [
+            ['Page URL', 'Title', 'SEO Score', 'Issues', 'Recommendations'];
+            ...report.pageAnalyses.map(page => [
+                page.pageUrl;
+                page.title;
+                page.score.toString();
+                page.issues.join(', ');
+                page.recommendations.join(', ')])].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n'),
+        const blob = new Blob([csvContent], { type: 'text/csv' }),
         const url = window.URL.createObjectURL(blob),
         const a = document.createElement('a'),
         a.href = url,
         a.download = 'seo-optimization-report.csv',
         a.click(),
-        window.URL.revokeObjectURL(url),
-    };
-    const getScoreColor = (score) => {,
+        window.URL.revokeObjectURL(url)};
+    const getScoreColor = (score) => {
         if (score >= 80),
             return 'text-green-60o0 bg-green-50 border-green-20o0',
         if (score >= 60),
             return 'text-yellow-60o0 bg-yellow-50 border-yellow-20o0',
         if (score >= 40),
             return 'text-orange-60o0 bg-orange-50 border-orange-20o0',
-        return 'text-red-60o0 bg-red-50 border-red-20o0',
-    };
-    const getScoreText = (score) => {,
+        return 'text-red-60o0 bg-red-50 border-red-20o0'};
+    const getScoreText = (score) => {
         if (score >= 80),
             return 'Excellent',
         if (score >= 60),
             return 'Good',
         if (score >= 40),
             return 'Fair',
-        return 'Poor',
-    };
+        return 'Poor'};
     return (<div className="fixed bottom-6 right-24 z-50">,
       {/* Floating Action Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-10o5" aria-label="Toggle SEO Optimizer">,
         <Search className="w-6 h-6" />,
       </button>,
-      {/* SEO Optimizer Panel */,}
+      {/* SEO Optimizer Panel */}
       {isOpen && (<div className="absolute bottom-16 right-0 w-[70o0px] bg-white dark: bg-gray-90o0 rounded-lg shadow-2xl border border-gray-20o0 dark:border-gray-70o0 overflow-hidden">,
-          {/* Header */,}
+          {/* Header */}
           <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white p-4">,
             <div className="flex items-center justify-between">,
               <h3 className="text-lg font-semibold flex items-center gap-2">,
@@ -287,7 +233,7 @@ const SEOOptimizer = () => {,
                 ×,
               </button>,
             </div>,
-            {/* Summary Stats */,}
+            {/* Summary Stats */}
             {report && (<div className="grid grid-cols-3 gap-4 mt-3">,
                 <div className="text-center">,
                   <div className="text-2xl font-bold">{report.totalPages}</div>,
@@ -317,7 +263,7 @@ const SEOOptimizer = () => {,
                     </h4>,
                     <div className="space-y-1">,
                       {report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-70o0 dark: text-yellow-30o0">,
-                          • {issue,}
+                          • {issue}
                         </div>))}
                     </div>,
                   </div>)}
@@ -343,17 +289,17 @@ const SEOOptimizer = () => {,
                         </tr>,
                       </thead>,
                       <tbody className="bg-white dark:bg-gray-80o0 divide-y divide-gray-20o0 dark:divide-gray-70o0">,
-                        {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover: bg-gray-50 dark:hover:bg-gray-70o0 cursor-pointer" onClick={() => setSelectedPage(page),}>,
+                        {report.pageAnalyses.map((page, index) => (<tr key={index} className="hover: bg-gray-50 dark:hover:bg-gray-70o0 cursor-pointer" onClick={() => setSelectedPage(page)}>,
                             <td className="px-4 py-3">,
                               <div className="text-sm font-medium text-gray-90o0 dark: text-white">,
-                                {page.title,}
+                                {page.title}
                               </div>,
                               <div className="text-xs text-gray-50o0 dark: text-gray-40o0">,
-                                {page.pageUrl,}
+                                {page.pageUrl}
                               </div>,
                             </td>,
                             <td className="px-4 py-3 text-sm text-gray-90o0 dark: text-white">,
-                              {page.score,}%,
+                              {page.score}%,
                             </td>,
                             <td className="px-4 py-3">,
                               <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>,
@@ -361,7 +307,7 @@ const SEOOptimizer = () => {,
                               </span>,
                             </td>,
                             <td className="px-4 py-3 text-sm text-gray-90o0 dark: text-white">,
-                              {page.issues.length,} issues,
+                              {page.issues.length} issues,
                             </td>,
                           </tr>))}
                       </tbody>,
@@ -373,7 +319,7 @@ const SEOOptimizer = () => {,
                     <div className="bg-white dark: bg-gray-90o0 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">,
                       <div className="flex items-center justify-between mb-4">,
                         <h3 className="text-lg font-semibold text-gray-90o0 dark:text-white">,
-                          SEO Analysis: {selectedPage.title,}
+                          SEO Analysis: {selectedPage.title}
                         </h3>,
                         <button onClick={() => setSelectedPage(null)} className="text-gray-40o0 hover: text-gray-60o0 dark:hover:text-gray-30o0">,
                           ×,
@@ -383,19 +329,19 @@ const SEOOptimizer = () => {,
                         <div className="grid grid-cols-2 gap-4">,
                           <div className="bg-gray-50 dark:bg-gray-80o0 p-3 rounded-lg">,
                             <div className="text-sm text-gray-50o0 dark:text-gray-40o0">SEO Score</div>,
-                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.score,}%</div>,
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.score}%</div>,
                           </div>,
                           <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">,
                             <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Headings</div>,
-                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.headings.length,}</div>,
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.headings.length}</div>,
                           </div>,
                           <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">,
                             <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Images</div>,
-                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.images.length,}</div>,
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.images.length}</div>,
                           </div>,
                           <div className="bg-gray-50 dark: bg-gray-80o0 p-3 rounded-lg">,
                             <div className="text-sm text-gray-50o0 dark:text-gray-40o0">Links</div>,
-                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.links.length,}</div>,
+                            <div className="text-lg font-semibold text-gray-90o0 dark:text-white">{selectedPage.links.length}</div>,
                           </div>,
                         </div>,
                         {selectedPage.issues.length > 0 && (<div>,
@@ -403,7 +349,7 @@ const SEOOptimizer = () => {,
                             <div className="space-y-2">,
                               {selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-60o0 dark: text-red-40o0">,
                                   <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" />,
-                                  <span>{issue,}</span>,
+                                  <span>{issue}</span>,
                                 </div>))}
                             </div>,
                           </div>)}
@@ -413,7 +359,7 @@ const SEOOptimizer = () => {,
                             <div className="space-y-2">,
                               {selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-60o0 dark: text-green-40o0">,
                                   <Zap className="w-4 h-4 mt-0.5 flex-shrink-0" />,
-                                  <span>{rec,}</span>,
+                                  <span>{rec}</span>,
                                 </div>))}
                             </div>,
                           </div>)}
@@ -426,8 +372,8 @@ const SEOOptimizer = () => {,
           </div>,
           {/* Footer Actions */}
           <div className="bg-gray-50 dark: bg-gray-80o0 p-3 flex gap-2">,
-            <button onClick={analyzeSEO,} disabled={isAnalyzing} className="flex-1 bg-purple-60o0 hover: bg-purple-70o0 disabled:bg-purple-40o0 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">,
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : '',}`} />,
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-60o0 hover: bg-purple-70o0 disabled:bg-purple-40o0 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">,
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />,
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}
             </button>,
             <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-60o0 hover: bg-pink-70o0 text-white rounded-md transition-colors flex items-center gap-2">,
@@ -435,8 +381,6 @@ const SEOOptimizer = () => {,
               Export,
             </button>,
           </div>,
-        </div>),}
-    </div>),
-};
-export default SEOOptimizer,
-,
+        </div>)}
+    </div>)};
+export default SEOOptimizer;

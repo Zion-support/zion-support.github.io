@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'digital-transformation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'digital-transformation - Zion Tech Group';
   description:,
-    'Professional digital-transformation solutions for your business needs.',;
-  keywords: 'digital-transformation, services, business, technology',;
+    'Professional digital-transformation solutions for your business needs.';
+  keywords: 'digital-transformation, services, business, technology';
 };
-export default function DigitalTransformationPage() {,
-  return (,
+export default function DigitalTransformationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function DigitalTransformationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

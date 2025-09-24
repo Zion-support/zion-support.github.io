@@ -1,155 +1,138 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Search,;
-  Grid,;
-  List,;
-  ArrowRight,;
-  Check,;
-  Star,;
-  Users,;
-  Award,;
-  Clock,;
-  DollarSign,;
+import {
+  Search;
+  Grid;
+  List;
+  ArrowRight;
+  Check;
+  Star;
+  Users;
+  Award;
+  Clock;
+  DollarSign;
 } from 'lucide-react',
-,
 // Import all our new 20o25 advanced services,
 import { advancedEdgeComputingServices } from '../data/20o25-advanced-edge-computing-services',
 import { advancedIoTSmartCityServices } from '../data/20o25-advanced-iot-smart-city-services',
 import { advancedFintechBlockchainServicesExpanded } from '../data/20o25-advanced-fintech-blockchain-services-expanded',
 import { advancedHealthcareBiotechServices } from '../data/20o25-advanced-healthcare-biotech-services',
 import { advancedSpaceAerospaceServices } from '../data/20o25-advanced-space-aerospace-services',
-,
 // Import existing services,
 import { advancedAIMLServices } from '../data/20o25-advanced-ai-ml-services',
 import { advancedCybersecurityServices } from '../data/20o25-advanced-cybersecurity-services',
 import { advancedCloudDevOpsServices } from '../data/20o25-advanced-cloud-devops-services',
-,
-const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
+const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<,
-    'popular' | 'price' | 'rating' | 'newest',
-  >('popular'),
-,
+    'popular' | 'price' | 'rating' | 'newest'>('popular'),
   // Combine all services,
-  const allServices = [,
-    ...advancedEdgeComputingServices,;
-    ...advancedIoTSmartCityServices,;
-    ...advancedFintechBlockchainServicesExpanded,;
-    ...advancedHealthcareBiotechServices,;
-    ...advancedSpaceAerospaceServices,;
-    ...advancedAIMLServices,;
-    ...advancedCybersecurityServices,;
-    ...advancedCloudDevOpsServices,;
+  const allServices = [
+    ...advancedEdgeComputingServices;
+    ...advancedIoTSmartCityServices;
+    ...advancedFintechBlockchainServicesExpanded;
+    ...advancedHealthcareBiotechServices;
+    ...advancedSpaceAerospaceServices;
+    ...advancedAIMLServices;
+    ...advancedCybersecurityServices;
+    ...advancedCloudDevOpsServices;
   ],
-,
   // Get unique categories,
-  const categories = [,
-    'All',;
-    ...Array.from(new Set(allServices.map(service => service.category))),;
+  const categories = [
+    'All';
+    ...Array.from(new Set(allServices.map(service => service.category)));
   ],
-,
   // Helper function to get service benefits/features,
-  const getServiceBenefits = (service: any) => {,
+  const getServiceBenefits = (service: any) => {
     if (service.benefits) return service.benefits,
     if (service.features) return service.features,
     if (service.keyFeatures) return service.keyFeatures,
     return [],
-  ,};
-,
+  };
   // Helper function to get service pricing,
-  const getServicePricing = (service: any) => {,
+  const getServicePricing = (service: any) => {
     if (typeof service.price === 'string') return service.price,
     if (service.price?.monthly),
-      return `$${service.price.monthly.toLocaleString(),}/month`,
-    return 'Contact for pricing',
-  };
-,
+      return `$${service.price.monthly.toLocaleString()}/month`,
+    return 'Contact for pricing'};
   // Helper function to get service setup time,
-  const getServiceSetupTime = (service: any) => {,
+  const getServiceSetupTime = (service: any) => {
     if (service.setupTime) return service.setupTime,
     if (service.period) return service.period,
     return 'Contact for details',
-  ,};
-,
+  };
   // Filter and sort services,
   const filteredServices = allServices,
-    .filter(service => {,
+    .filter(service => {
       const matchesSearch =,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory =,
         selectedCategory === 'All' || service.category === selectedCategory,
-      return matchesSearch && matchesCategory,
-    }),
-    .sort((a, b) => {,
-      switch (sortBy) {,
+      return matchesSearch && matchesCategory}),
+    .sort((a, b) => {
+      switch (sortBy) {
         case 'popular':,
           return b.customers - a.customers,
-        case 'price': {,
+        case 'price': {
           const aPrice = typeof a.price === 'string' ? 0 : a.price.monthly || 0,
           const bPrice = typeof b.price === 'string' ? 0 : b.price.monthly || 0,
-          return aPrice - bPrice,
-        }
+          return aPrice - bPrice}
         case 'rating':,
           return b.rating - a.rating,
         case 'newest':,
-          return (,
-            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
-          ),
+          return (
+            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
         default: ,
           return 0,
-      ,}
+      }
     }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
-        duration: 0.5,;
-      },;
-    },;
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
+        duration: 0.5;
+      };
+    };
   };
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
-      <SEO,
+      <SEO
         title='20o25 Ultimate Innovative Micro SAAS Services Showcase | Zion Tech Group',
         description='Discover cutting-edge micro SAAS services including Edge Computing, IoT Smart Cities, Fintech Blockchain, Healthcare Biotech, and Space Technology solutions. Transform your business with AI-powered innovation.',
-        keywords={[,
-          'micro SAAS',;
-          'edge computing',;
-          'IoT smart cities',;
-          'fintech blockchain',;
-          'healthcare biotech',;
-          'space technology',;
-          'AI services',;
-          'innovative solutions',;
+        keywords={[
+          'micro SAAS';
+          'edge computing';
+          'IoT smart cities';
+          'fintech blockchain';
+          'healthcare biotech';
+          'space technology';
+          'AI services';
+          'innovative solutions';
         ]}
       />,
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className='text-5xl md: text-7xl font-bold text-white mb-6'>,
               <span className='bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
@@ -160,7 +143,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
               Transform your business with cutting-edge micro SAAS solutions,
-              spanning Edge Computing, IoT Smart Cities, Fintech Blockchain,;
+              spanning Edge Computing, IoT Smart Cities, Fintech Blockchain;
               Healthcare Biotech, and Space Technology.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
@@ -185,10 +168,10 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
         <div className='max-w-7xl mx-auto'>,
           <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20'>,
             <div className='flex flex-col lg:flex-row gap-6 items-center'>,
-              {/* Search */,}
+              {/* Search */}
               <div className='flex-1 relative'>,
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-                <input,
+                <input
                   type='text',
                   placeholder='Search innovative services...',
                   value={searchTerm}
@@ -196,52 +179,50 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
                   className='w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-30o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0',
                 />,
               </div>,
-              {/* Category Filter */,}
+              {/* Category Filter */}
               <div className='flex gap-2'>,
-                {categories.map(category => (,
-                  <button,
+                {categories.map(category => (
+                  <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${,
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                       selectedCategory === category,
                         ? 'bg-purple-60o0 text-white',
                         : 'bg-white/20 text-gray-30o0 hover: bg-white/30',
-                    ,}`}
+                    }`}
                   >,
                     {category}
-                  </button>,
-                ))}
+                  </button>))}
               </div>,
               {/* Sort Options */}
-              <select,
+              <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value as any)}
-                className='px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0',
-              >,
+                className='px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-50o0'>,
                 <option value='popular'>Most Popular</option>,
                 <option value='price'>Price: Low to High</option>,
                 <option value='rating'>Highest Rated</option>,
                 <option value='newest'>Newest First</option>,
               </select>,
-              {/* View Mode Toggle */,}
+              {/* View Mode Toggle */}
               <div className='flex bg-white/20 rounded-lg p-1'>,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all ${,
+                  className={`p-2 rounded-md transition-all ${
                     viewMode === 'grid',
                       ? 'bg-purple-60o0 text-white',
                       : 'text-gray-30o0 hover: text-white',
-                  ,}`}
+                  }`}
                 >,
                   <Grid className='w-5 h-5' />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all ${,
+                  className={`p-2 rounded-md transition-all ${
                     viewMode === 'list',
                       ? 'bg-purple-60o0 text-white',
                       : 'text-gray-30o0 hover: text-white',
-                  ,}`}
+                  }`}
                 >,
                   <List className='w-5 h-5' />,
                 </button>,
@@ -254,22 +235,22 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
       <section className='px-4 sm: px-6 lg:px-8 pb-20'>,
         <div className='max-w-7xl mx-auto'>,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial='hidden',
             animate='visible',
-            className={,
+            className={
               viewMode === 'grid',
                 ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8',
                 : 'space-y-6',
-            ,}
+            }
           >,
-            {filteredServices.map(service => (,
+            {filteredServices.map(service => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
-                className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all hover: scale-10o5 hover:bg-white/20 ${,
+                className={`bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden transition-all hover: scale-10o5 hover:bg-white/20 ${
                   viewMode === 'list' ? 'flex' : '',
-                ,}`}
+                }`}
               >,
                 {/* Service Header */}
                 <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>,
@@ -285,11 +266,10 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
                         </p>,
                       </div>,
                     </div>,
-                    {service.popular && (,
+                    {service.popular && (
                       <span className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-2 py-1 rounded-full'>,
                         POPULAR,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <p className='text-gray-30o0 mb-4'>{service.tagline}</p>,
                   <p className='text-gray-40o0 text-sm mb-6'>,
@@ -307,17 +287,15 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
                   <div className='space-y-2 mb-6'>,
                     {getServiceBenefits(service),
                       .slice(0, 3),
-                      .map((benefit: string, index: number) => (,
-                        <div,
-                          key={index,}
-                          className='flex items-center space-x-2',
-                        >,
+                      .map((benefit: string, index: number) => (
+                        <div
+                          key={index}
+                          className='flex items-center space-x-2'>,
                           <Check className='w-4 h-4 text-green-40o0 flex-shrink-0' />,
                           <span className='text-sm text-gray-30o0'>,
                             {benefit}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                   </div>,
                   {/* Stats */}
                   <div className='flex items-center justify-between text-sm text-gray-40o0 mb-6'>,
@@ -338,26 +316,23 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
                   </div>,
                   {/* CTA Button */}
                   <div className='flex space-x-3'>,
-                    <a,
+                    <a
                       href={service.link}
-                      className='flex-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 px-4 rounded-xl font-medium hover: from-purple-70o0 hover:to-blue-70o0 transition-all flex items-center justify-center space-x-2',
-                    >,
+                      className='flex-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 px-4 rounded-xl font-medium hover: from-purple-70o0 hover:to-blue-70o0 transition-all flex items-center justify-center space-x-2'>,
                       <span>Learn More</span>,
                       <ArrowRight className='w-4 h-4' />,
                     </a>,
-                    <a,
-                      href={`mailto:${service.contactInfo.email,}?subject=Inquiry about ${service.name}`}
-                      className='bg-white/20 text-white py-3 px-4 rounded-xl font-medium hover: bg-white/30 transition-all flex items-center justify-center',
-                    >,
+                    <a
+                      href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                      className='bg-white/20 text-white py-3 px-4 rounded-xl font-medium hover: bg-white/30 transition-all flex items-center justify-center'>,
                       <DollarSign className='w-4 h-4' />,
                     </a>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </motion.div>,
           {/* No Results */}
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <div className='text-center py-20'>,
               <div className='text-6xl mb-4'>🔍</div>,
               <h3 className='text-2xl font-bold text-white mb-2'>,
@@ -366,18 +341,17 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
               <p className='text-gray-40o0'>,
                 Try adjusting your search terms or filters,
               </p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* Contact Section */}
       <section className='px-4 sm: px-6 lg:px-8 py-20'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
               Ready to Transform Your Business?,
@@ -410,23 +384,21 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
               </div>,
             </div>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='mailto:kleber@ziontechgroup.com?subject=Innovative Services Inquiry',
-                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-xl font-medium hover:from-purple-70o0 hover:to-blue-70o0 transition-all text-lg',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-xl font-medium hover:from-purple-70o0 hover:to-blue-70o0 transition-all text-lg'>,
                 Get Started Today,
               </a>,
-              <a,
+              <a
                 href='https://ziontechgroup.com',
-                className='bg-white/20 text-white px-8 py-4 rounded-xl font-medium hover:bg-white/30 transition-all text-lg',
-              >,
+                className='bg-white/20 text-white px-8 py-4 rounded-xl font-medium hover:bg-white/30 transition-all text-lg'>,
                 Visit Our Website,
               </a>,
             </div>,
           </motion.div>,
         </div>,
       </section>,
-      {/* Footer */,}
+      {/* Footer */}
       <footer className='bg-black/50 border-t border-white/20 py-12 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto text-center'>,
           <div className='text-4xl mb-4'>🚀</div>,
@@ -449,9 +421,5 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {,
           </div>,
         </div>,
       </footer>,
-    </div>,
-  ),
-};
-,
-export default UltimateInnovativeServicesShowcaseExpanded,
-,
+    </div>)};
+export default UltimateInnovativeServicesShowcaseExpanded;

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function Revolutionary20o36PricingPage() {,
-  return (,
+export default function Revolutionary20o36PricingPage() {
+  return (
     <>,
       <Head>,
         <title>Revolutionary 20o36 Pricing - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function Revolutionary20o36PricingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

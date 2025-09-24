@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Cpu,
@@ -11,107 +10,97 @@ import {,
   Shield,
   Target,
   TrendingUp,
-  Users,;
-  ArrowRight,;
-  Play,;
-  Star,;
-  CheckCircle,;
-  Lightbulb,;
-  Rocket,;
-  Globe,;
-  Lock,
-} from 'lucide-react',
-,
-const NextGenAIInnovationShowcase20o25 = () => {,
+  Users;
+  ArrowRight;
+  Play;
+  Star;
+  CheckCircle;
+  Lightbulb;
+  Rocket;
+  Globe;
+  Lock} from 'lucide-react',
+const NextGenAIInnovationShowcase20o25 = () => {
   const [activeFeaturesetActiveFeature] = useState(0),
   const [isPlayingsetIsPlaying] = useState(false),
-,
-  const innovations = [,
-    {,
-      id: 'quantum-ai',;
-      title: 'Quantum-AI Fusion Technology',;
-      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',;
-      icon: Brain,;
-      features: ['10o00x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],;
-      impact: 'Transform entire industries',;
+  const innovations = [
+    {
+      id: 'quantum-ai';
+      title: 'Quantum-AI Fusion Technology';
+      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power';
+      icon: Brain;
+      features: ['10o00x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'];
+      impact: 'Transform entire industries';
       color: 'from-purple-60o0 to-blue-60o0',
-    ,},;
-    {,
-      id: 'neural-interfaces',;
-      title: 'Neural Interface Revolution',;
-      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',;
-      icon: Network,;
-      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'],;
-      impact: 'Redefine human potential',;
+    };
+    {
+      id: 'neural-interfaces';
+      title: 'Neural Interface Revolution';
+      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration';
+      icon: Network;
+      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'];
+      impact: 'Redefine human potential';
       color: 'from-blue-60o0 to-cyan-60o0',
-    ,},;
-    {,
-      id: 'autonomous-systems',;
-      title: 'Autonomous Business Systems',;
-      description: 'Self-managing AI systems that operate independently while maintaining peak performance',;
-      icon: Cpu,;
-      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'],;
-      impact: 'Revolutionize business operations',;
+    };
+    {
+      id: 'autonomous-systems';
+      title: 'Autonomous Business Systems';
+      description: 'Self-managing AI systems that operate independently while maintaining peak performance';
+      icon: Cpu;
+      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'];
+      impact: 'Revolutionize business operations';
       color: 'from-green-60o0 to-emerald-60o0',
-    ,},;
-    {,
-      id: 'consciousness-ai',;
-      title: 'Conscious AI Framework',;
-      description: 'Advanced AI systems with genuine understanding and emotional intelligence',;
-      icon: Lightbulb,;
-      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'],;
-      impact: 'Create truly intelligent systems',;
+    };
+    {
+      id: 'consciousness-ai';
+      title: 'Conscious AI Framework';
+      description: 'Advanced AI systems with genuine understanding and emotional intelligence';
+      icon: Lightbulb;
+      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'];
+      impact: 'Create truly intelligent systems';
       color: 'from-orange-60o0 to-red-60o0',
-    ,}
+    }
   ],
-,
-  const stats = [,
-    { number: '50o0%'label: 'Performance 'Increase', 'icon: TrendingUp ,},;
-    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target ,},;
-    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket ,},;
-    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe ,}
+  const stats = [
+    { number: '50o0%'label: 'Performance 'Increase', 'icon: TrendingUp };
+    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target };
+    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket };
+    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
   ],
-,
-  const testimonials = [,
-    {,
-      name: 'Dr. Sarah Chen',;
-      role: 'CTOTechCorp',;
-      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.',;
+  const testimonials = [
+    {
+      name: 'Dr. Sarah Chen';
+      role: 'CTOTechCorp';
+      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.';
       rating: 5,
-    ,},;
-    {,
-      name: 'Marcus Rodriguez',;
-      role: 'CEOInnovateLabs',;
-      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.',;
+    };
+    {
+      name: 'Marcus Rodriguez';
+      role: 'CEOInnovateLabs';
+      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.';
       rating: 5,
-    ,},;
-    {,
-      name: 'Dr. Emily Watson',;
-      role: 'AI Research Director',;
-      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.',;
+    };
+    {
+      name: 'Dr. Emily Watson';
+      role: 'AI Research Director';
+      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.';
       rating: 5,
-    ,}
+    }
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setActiveFeature((prev) => (prev + 1) % innovations.length),
-    }40o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  return (,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeature((prev) => (prev + 1) % innovations.length)}40o00),
+    return () => clearInterval(interval)}[]),
+  return (
     <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-br from-blue-90o0/20 to-purple-90o0/20 opacity-20"></div>,
         <div className="relative z-10 container mx-auto px-6 py-20">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center max-w-4xl mx-auto",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto">,
             <div className="inline-flex items-center bg-gradient-to-r from-blue-50o0 to-purple-60o0 px-6 py-2 rounded-full text-sm font-medium mb-6">,
               <Star className="w-4 h-4 mr-2"  />,
               Next-Generation AI Innovation,
@@ -129,19 +118,17 @@ const NextGenAIInnovationShowcase20o25 = () => {,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0",
-              >,
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0">,
                 <Play className="w-5 h-5"  />,
-                {isPlaying ? 'Pause Demo' : 'Watch Demo',}
+                {isPlaying ? 'Pause Demo' : 'Watch Demo'}
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="border-2 border-white/30 hover: border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white/30 hover: border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0">,
                 Explore Innovations,
                 <ArrowRight className="w-5 h-5"  />,
               </motion.button>,
@@ -149,25 +136,23 @@ const NextGenAIInnovationShowcase20o25 = () => {,
           </motion.div>,
         </div>,
       </div>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <div className="py-16 bg-black/20 backdrop-blur-sm">,
         <div className="container mx-auto px-6">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
-            {stats.map((statindex) => (,
+            {stats.map((statindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="text-center",
-              >,
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="text-center">,
                 <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                   <stat.icon className="w-8 h-8 text-white"  />,
                 </div>,
-                <div className="text-3xl md: text-4xl font-bold mb-2">{stat.number,}</div>,
+                <div className="text-3xl md: text-4xl font-bold mb-2">{stat.number}</div>,
                 <div className="text-gray-30o0">{stat.label}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </div>,
@@ -175,10 +160,9 @@ const NextGenAIInnovationShowcase20o25 = () => {,
       <div className="py-20">,
         <div className="container mx-auto px-6">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16">,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
               Revolutionary AI Innovations,
             </h2>,
@@ -187,19 +171,19 @@ const NextGenAIInnovationShowcase20o25 = () => {,
             </p>,
           </motion.div>,
           <div className="grid lg:grid-cols-2 gap-12 items-center">,
-            {/* Innovation Cards */,}
+            {/* Innovation Cards */}
             <div className="space-y-6">,
-              {innovations.map((innovationindex) => (,
+              {innovations.map((innovationindex) => (
                 <motion.div,
                   key={innovation.id}
-                  initial={{ opacity: 0x: -30 ,}}
-                  whileInView={{ opacity: 1x: 0 ,}}
-                  transition={{ duration: 0.6delay: index * 0.1 ,}}
-                  className={`p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer ${,
+                  initial={{ opacity: 0x: -30 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
+                  className={`p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer ${
                     activeFeature === index,
                       ? 'bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 border-blue-50o0/50 shadow-2xl',
                       : 'bg-white/5 border-white/10 hover: bg-white/10',
-                  ,}`}
+                  }`}
                   onClick={() => setActiveFeature(index)}
                 >,
                   <div className="flex items-start gap-4">,
@@ -210,56 +194,50 @@ const NextGenAIInnovationShowcase20o25 = () => {,
                       <h3 className="text-xl font-bold mb-2">{innovation.title}</h3>,
                       <p className="text-gray-30o0 mb-4">{innovation.description}</p>,
                       <div className="flex flex-wrap gap-2">,
-                        {innovation.features.map((featureidx) => (,
+                        {innovation.features.map((featureidx) => (
                           <span key={idx} className="bg-white/10 px-3 py-1 rounded-full text-sm">,
                             {feature}
-                          </span>,
-                        ))}
+                          </span>))}
                       </div>,
                       <div className="mt-4 text-sm font-semibold text-blue-40o0">,
-                        Impact: {innovation.impact,}
+                        Impact: {innovation.impact}
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
             {/* Interactive Demo Area */}
             <div className="relative">,
               <AnimatePresence mode="wait">,
                 <motion.div,
                   key={activeFeature}
-                  initial={{ opacity: 0scale: 0.8 ,}}
-                  animate={{ opacity: 1scale: 1 ,}}
-                  exit={{ opacity: 0scale: 0.8 ,}}
-                  transition={{ duration: 0.5 ,}}
+                  initial={{ opacity: 0scale: 0.8 }}
+                  animate={{ opacity: 1scale: 1 }}
+                  exit={{ opacity: 0scale: 0.8 }}
+                  transition={{ duration: 0.5 }}
                   className={`bg-gradient-to-br ${innovations[activeFeature].color} p-8 rounded-3xl h-96 flex flex-col justify-center items-center text-center relative overflow-hidden`}
                 >,
                   <div className="absolute inset-0 bg-black/20"></div>,
                   <div className="relative z-10">,
-                    {React.createElement(innovations[activeFeature].icon{ className: "w-20 h-20 mx-auto mb-6 text-white" ,})}
+                    {React.createElement(innovations[activeFeature].icon{ className: "w-20 h-20 mx-auto mb-6 text-white" })}
                     <h3 className="text-2xl font-bold mb-4">{innovations[activeFeature].title}</h3>,
                     <p className="text-lg opacity-90 mb-6">{innovations[activeFeature].description}</p>,
-                    {isPlaying && (,
+                    {isPlaying && (
                       <motion.div,
-                        initial={{ opacity: 0, y: 20 ,}}
-                        animate={{ opacity: 1, y: 0 ,}}
-                        className="space-y-3",
-                      >,
-                        {innovations[activeFeature].features.map((featureidx) => (,
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="space-y-3">,
+                        {innovations[activeFeature].features.map((featureidx) => (
                           <motion.div,
                             key={idx}
-                            initial={{ opacity: 0x: -20 ,}}
-                            animate={{ opacity: 1x: 0 ,}}
-                            transition={{ delay: idx * 0.2 ,}}
-                            className="flex items-center gap-3 text-left",
-                          >,
+                            initial={{ opacity: 0x: -20 }}
+                            animate={{ opacity: 1x: 0 }}
+                            transition={{ delay: idx * 0.2 }}
+                            className="flex items-center gap-3 text-left">,
                             <CheckCircle className="w-5 h-5 text-green-40o0"  />,
                             <span>{feature}</span>,
-                          </motion.div>,
-                        ))}
-                      </motion.div>,
-                    )}
+                          </motion.div>))}
+                      </motion.div>)}
                   </div>,
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>,
@@ -274,34 +252,30 @@ const NextGenAIInnovationShowcase20o25 = () => {,
       <div className="py-20 bg-black/30">,
         <div className="container mx-auto px-6">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-center mb-16">,
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>,
             <p className="text-xl text-gray-30o0">Hear from the visionaries already using our technology</p>,
           </motion.div>,
           <div className="grid md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonialindex) => (,
+            {testimonials.map((testimonialindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10",
-              >,
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10">,
                 <div className="flex mb-4">,
-                  {[...Array(testimonial.rating)].map((_i) => (,
-                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />,
-                  ))}
+                  {[...Array(testimonial.rating)].map((_i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />))}
                 </div>,
                 <p className="text-gray-30o0 mb-6 italic">"{testimonial.quote}"</p>,
                 <div>,
                   <div className="font-semibold">{testimonial.name}</div>,
                   <div className="text-sm text-gray-40o0">{testimonial.role}</div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </div>,
@@ -309,10 +283,9 @@ const NextGenAIInnovationShowcase20o25 = () => {,
       <div className="py-20">,
         <div className="container mx-auto px-6 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            className="max-w-4xl mx-auto",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="max-w-4xl mx-auto">,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
               Ready to Transform Your Future?,
             </h2>,
@@ -321,18 +294,16 @@ const NextGenAIInnovationShowcase20o25 = () => {,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0">,
                 <Rocket className="w-5 h-5"  />,
                 Start Your Transformation,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="border-2 border-white/30 hover: border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-white/30 hover: border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0">,
                 <Users className="w-5 h-5"  />,
                 Schedule Consultation,
               </motion.button>,
@@ -354,8 +325,6 @@ const NextGenAIInnovationShowcase20o25 = () => {,
           </motion.div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NextGenAIInnovationShowcase20o25,
+    </div>),
+};
+export default NextGenAIInnovationShowcase20o25;

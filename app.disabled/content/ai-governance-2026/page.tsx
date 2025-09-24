@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework',;
+export const metadata = {
+  title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework';
   description:,
-    'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.',;
+    'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.';
 };
-,
-export default function AIGovernance20o26Page() {,
-  return (,
+export default function AIGovernance20o26Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -24,7 +23,7 @@ export default function AIGovernance20o26Page() {,
           <article className='prose prose-lg max-w-none'>,
             <h2>Why AI Governance Now</h2>,
             <p>,
-              With rapid adoption of foundation models and autonomous agents,;
+              With rapid adoption of foundation models and autonomous agents;
               organizations must institute policy, control, and assurance,
               mechanisms that keep pace with innovation. This guide outlines a,
               pragmatic approach to governance that accelerates delivery while,
@@ -45,22 +44,19 @@ export default function AIGovernance20o26Page() {,
             </p>,
           </article>,
           <div className='flex gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
               Talk to an Expert,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-llm-evals-maturity-model',
-              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Explore Evals Maturity Model,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

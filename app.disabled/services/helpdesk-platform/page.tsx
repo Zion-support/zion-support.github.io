@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'helpdesk-platform - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'helpdesk-platform - Zion Tech Group';
   description:,
-    'Professional helpdesk-platform solutions for your business needs.',;
-  keywords: 'helpdesk-platform, services, business, technology',;
+    'Professional helpdesk-platform solutions for your business needs.';
+  keywords: 'helpdesk-platform, services, business, technology';
 };
-export default function HelpdeskPlatformPage() {,
-  return (,
+export default function HelpdeskPlatformPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function HelpdeskPlatformPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

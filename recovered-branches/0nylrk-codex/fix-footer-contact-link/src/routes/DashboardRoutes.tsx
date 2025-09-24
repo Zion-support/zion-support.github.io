@@ -22,206 +22,177 @@ import OrdersPage from '@/pages/Orders',
 import OrderDetailPage from '@/pages/OrderDetail',
 import ContractBuilder from '@/pages/ContractBuilder',
 import Projects from '@/pages/Projects',
-,
-const DashboardRoutes = () => {,
-  return (,
+const DashboardRoutes = () => {
+  return (
     <Routes>,
       {/* Dashboard Routes */}
-      <Route,
+      <Route
         path='/dashboard',
-        element={,
+        element={
           <ProtectedRoute>,
             <Dashboard />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/client-dashboard',
-        element={,
+        element={
           <ProtectedRoute>,
             <ClientDashboard />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/talent-dashboard',
-        element={,
+        element={
           <ProtectedRoute>,
             <TalentDashboard />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/creator-dashboard',
-        element={,
+        element={
           <ProtectedRoute>,
             <CreatorDashboard />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/analytics',
-        element={,
+        element={
           <ProtectedRoute>,
             <Analytics />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/project/:id/milestones',
-        element={,
+        element={
           <ProtectedRoute>,
             <ProjectMilestones />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/project/:id',
-        element={,
+        element={
           <ProtectedRoute>,
             <ProjectDetails />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/project/:id/room',
-        element={,
+        element={
           <ProtectedRoute>,
             <ProjectRoom />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/messages',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Messages Page</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/inbox',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Inbox Page</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/payments',
-        element={,
+        element={
           <ProtectedRoute>,
             <Payments />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/interviews',
-        element={,
+        element={
           <ProtectedRoute>,
             <Interviews />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/notifications',
-        element={,
+        element={
           <ProtectedRoute>,
             <Notifications />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/applications/track',
-        element={,
+        element={
           <ProtectedRoute>,
             <ApplicationStatusTracker />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/hiring-tracker',
-        element={,
+        element={
           <ProtectedRoute>,
             <HiringTracker />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/projects',
-        element={,
+        element={
           <ProtectedRoute>,
             <Projects />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/portfolio-builder',
-        element={,
+        element={
           <ProtectedRoute>,
             <PortfolioBuilder />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/referrals',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Referrals Page</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/developers',
-        element={,
+        element={
           <ProtectedRoute>,
             <DeveloperPortal />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/wallet',
-        element={,
+        element={
           <ProtectedRoute>,
             <div>Wallet Page</div>,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/orders',
-        element={,
+        element={
           <ProtectedRoute>,
             <OrdersPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/orders/:orderId',
-        element={,
+        element={
           <ProtectedRoute>,
             <OrderDetailPage />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/dashboard/api-access',
-        element={,
+        element={
           <ProtectedRoute>,
             <DeveloperPortal />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-      <Route,
+      <Route
         path='/contract-builder',
-        element={,
+        element={
           <ProtectedRoute>,
             <ContractBuilder />,
-          </ProtectedRoute>,
-        }
+          </ProtectedRoute>}
       />,
-    </Routes>,
-  ),
-};
-,
-export default DashboardRoutes,
-,
+    </Routes>)};
+export default DashboardRoutes;

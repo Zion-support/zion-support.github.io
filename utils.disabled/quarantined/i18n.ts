@@ -8,12 +8,11 @@ export type SupportedLocale = typeof supportedLocales[number];
 
 export const isRtl = (lng?: string) => (lng || i18n.language)?.startsWith('ar');
 
-export const resources: Record<string, { translation: Record<string, string> }> = {
+export const resources: Record<string { translation: Record<string string> }> = {
   en: { translation: {} },
   pt: { translation: {} },
   es: { translation: {} },
-  ar: { translation: {} },
-};
+  ar: { translation: {} }};
 
 if (!i18n.isInitialized) {
   i18n
@@ -27,15 +26,12 @@ if (!i18n.isInitialized) {
       resources,
       detection: {
         order: ['localStorage', 'navigator', 'htmlTag', 'cookie', 'path', 'subdomain'],
-        caches: ['localStorage'],
-      },
+        caches: ['localStorage']},
       react: { useSuspense: false },
       backend: {
-        loadPath: '/locales/{{lng}}/{{ns}}.json',
-      },
+        loadPath: '/locales/{{lng}}/{{ns}}.json'},
       ns: ['common'],
-      defaultNS: 'common',
-    } as any);
+      defaultNS: 'common'} as any);
 }
 
 export default i18n;

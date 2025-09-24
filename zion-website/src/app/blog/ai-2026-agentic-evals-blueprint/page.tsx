@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AgenticEvalsPost() {,
-  return (,
+export default function AgenticEvalsPost() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='py-16'>,
         <div className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -21,7 +20,7 @@ export default function AgenticEvalsPost() {,
           <section className='prose prose-lg prose-slate max-w-none'>,
             <h2>Why Agentic Evals Now</h2>,
             <p>,
-              As organizations adopt autonomous agents across workflows,;
+              As organizations adopt autonomous agents across workflows;
               evaluation must move beyond static prompts to measure goal,
               completion, safety, and cost under real operating conditions. This,
               blueprint defines practical components you can implement today.,
@@ -65,11 +64,10 @@ export default function AgenticEvalsPost() {,
               <li>Publish reports to security, risk, and compliance.</li>,
             </ol>,
             <p>,
-              For a hands-on framework and templates, see the update: {' ',}
-              <Link,
+              For a hands-on framework and templates, see the update: {' '}
+              <Link
                 href='/updates/agentic-evals-blueprint',
-                className='text-purple-60o0',
-              >,
+                className='text-purple-60o0'>,
                 Agentic Evals Blueprint (v1),
               </Link>,
               .,
@@ -82,7 +80,5 @@ export default function AgenticEvalsPost() {,
           </footer>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

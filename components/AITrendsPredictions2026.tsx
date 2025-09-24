@@ -1,169 +1,153 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   TrendingUp,
   Brain,
   Zap,
   Globe,
   Shield,
-  Rocket,;
-  ArrowRight,;
-  CheckCircle,;
-  Calendar,;
-  Target,;
-  Users,;
-  BarChart3,;
-  Lightbulb,;
-  Star,
-} from 'lucide-react',
-,
-const AITrendsPredictions20o26 = () => {,
+  Rocket;
+  ArrowRight;
+  CheckCircle;
+  Calendar;
+  Target;
+  Users;
+  BarChart3;
+  Lightbulb;
+  Star} from 'lucide-react',
+const AITrendsPredictions20o26 = () => {
   const [activePredictionsetActivePrediction] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const predictions = [,
-    {,
-      id: 'quantum-ai',;
-      title: 'Quantum-Enhanced AI',;
-      timeframe: 'Q2 20o26',;
-      confidence: 95,;
-      icon: Brain,;
-      color: 'from-purple-60o0 to-blue-60o0',;
-      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.',;
-      impact: 'Revolutionary',;
-      keyPoints: [,
-        '10o00x faster machine learning training',;
-        'Breakthrough in drug discovery',;
-        'Advanced cryptography solutions',;
-        'Real-time complex simulations',
-      ],;
-      marketValue: '$50B',;
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const predictions = [
+    {
+      id: 'quantum-ai';
+      title: 'Quantum-Enhanced AI';
+      timeframe: 'Q2 20o26';
+      confidence: 95;
+      icon: Brain;
+      color: 'from-purple-60o0 to-blue-60o0';
+      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.';
+      impact: 'Revolutionary';
+      keyPoints: [
+        '10o00x faster machine learning training';
+        'Breakthrough in drug discovery';
+        'Advanced cryptography solutions';
+        'Real-time complex simulations'];
+      marketValue: '$50B';
       adoptionRate: '85%',
-    ,},;
-    {,
-      id: 'neural-interfaces',;
-      title: 'Neural Interface Integration',;
-      timeframe: 'Q3 20o26',;
-      confidence: 88,;
-      icon: Zap,;
-      color: 'from-cyan-60o0 to-teal-60o0',;
-      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.',;
-      impact: 'Transformative',;
-      keyPoints: [,
-        'Thought-controlled computing',;
-        'Enhanced memory augmentation',;
-        'Real-time language translation',;
-        'Telepathic communication',
-      ],;
-      marketValue: '$30B',;
+    };
+    {
+      id: 'neural-interfaces';
+      title: 'Neural Interface Integration';
+      timeframe: 'Q3 20o26';
+      confidence: 88;
+      icon: Zap;
+      color: 'from-cyan-60o0 to-teal-60o0';
+      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.';
+      impact: 'Transformative';
+      keyPoints: [
+        'Thought-controlled computing';
+        'Enhanced memory augmentation';
+        'Real-time language translation';
+        'Telepathic communication'];
+      marketValue: '$30B';
       adoptionRate: '70%',
-    ,},;
-    {,
-      id: 'autonomous-systems',;
-      title: 'Fully Autonomous Ecosystems',;
-      timeframe: 'Q4 20o26',;
-      confidence: 92,;
-      icon: Shield,;
-      color: 'from-green-60o0 to-emerald-60o0',;
-      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.',;
-      impact: 'Disruptive',;
-      keyPoints: [,
-        'Self-managing smart cities',;
-        'Autonomous transportation networks',;
-        'Predictive maintenance systems',;
-        'Intelligent resource allocation',
-      ],;
-      marketValue: '$75B',;
+    };
+    {
+      id: 'autonomous-systems';
+      title: 'Fully Autonomous Ecosystems';
+      timeframe: 'Q4 20o26';
+      confidence: 92;
+      icon: Shield;
+      color: 'from-green-60o0 to-emerald-60o0';
+      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.';
+      impact: 'Disruptive';
+      keyPoints: [
+        'Self-managing smart cities';
+        'Autonomous transportation networks';
+        'Predictive maintenance systems';
+        'Intelligent resource allocation'];
+      marketValue: '$75B';
       adoptionRate: '90%',
-    ,},;
-    {,
-      id: 'ai-consciousness',;
-      title: 'Artificial Consciousness',;
-      timeframe: 'Q1 20o27',;
-      confidence: 75,;
-      icon: Globe,;
-      color: 'from-red-60o0 to-pink-60o0',;
-      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.',;
-      impact: 'Paradigm-Shifting',;
-      keyPoints: [,
-        'Self-aware AI systems',;
-        'Emotional intelligence in machines',;
-        'AI rights and ethics frameworks',;
-        'Human-AI collaborative decision making',
-      ],;
-      marketValue: '$10o0B',;
+    };
+    {
+      id: 'ai-consciousness';
+      title: 'Artificial Consciousness';
+      timeframe: 'Q1 20o27';
+      confidence: 75;
+      icon: Globe;
+      color: 'from-red-60o0 to-pink-60o0';
+      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.';
+      impact: 'Paradigm-Shifting';
+      keyPoints: [
+        'Self-aware AI systems';
+        'Emotional intelligence in machines';
+        'AI rights and ethics frameworks';
+        'Human-AI collaborative decision making'];
+      marketValue: '$10o0B';
       adoptionRate: '60%',
-    ,}
+    }
   ],
-,
-  const marketInsights = [,
-    { category: 'AI 'Hardware', 'growth: '+340%'value: '$20o0B' ,},;
-    { category: 'AI 'Software', 'growth: '+280%'value: '$150B' ,},;
-    { category: 'AI 'Services', 'growth: '+420%'value: '$10o0B' ,},;
-    { category: 'AI 'Research', 'growth: '+50o0%'value: '$50B' ,}
+  const marketInsights = [
+    { category: 'AI 'Hardware', 'growth: '+340%'value: '$20o0B' };
+    { category: 'AI 'Software', 'growth: '+280%'value: '$150B' };
+    { category: 'AI 'Services', 'growth: '+420%'value: '$10o0B' };
+    { category: 'AI 'Research', 'growth: '+50o0%'value: '$50B' }
   ],
-,
-  const timeline = [,
-    { month: 'Jan 20o26'event: 'Quantum AI 'Prototypes', 'status: 'completed' ,},;
-    { month: 'Mar 20o26'event: 'Neural Interface 'Trials', 'status: 'in-progress' ,},;
-    { month: 'Jun 20o26'event: 'Autonomous City 'Launch', 'status: 'upcoming' ,},;
-    { month: 'Sep 20o26'event: 'AI Consciousness 'Research', 'status: 'upcoming' ,},;
-    { month: 'Dec 20o26'event: 'Full Ecosystem 'Integration', 'status: 'upcoming' ,}
+  const timeline = [
+    { month: 'Jan 20o26'event: 'Quantum AI 'Prototypes', 'status: 'completed' };
+    { month: 'Mar 20o26'event: 'Neural Interface 'Trials', 'status: 'in-progress' };
+    { month: 'Jun 20o26'event: 'Autonomous City 'Launch', 'status: 'upcoming' };
+    { month: 'Sep 20o26'event: 'AI Consciousness 'Research', 'status: 'upcoming' };
+    { month: 'Dec 20o26'event: 'Full Ecosystem 'Integration', 'status: 'upcoming' }
   ],
-,
-  return (,
+  return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-5"  />,
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-90o0/30 via-purple-90o0/30 to-cyan-90o0/30"  />,
         <div className="absolute inset-0">,
-          {[...Array(30)].map((_i) => (,
+          {[...Array(30)].map((_i) => (
             <motion.div,
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-40",
-              style={{,
-                left: `${Math.random() * 10o0,}%`,;
-                top: `${Math.random() * 10o0,}%`}}
-              animate={{,
-                y: [0-50],;
-                opacity: [0.40.80.4],}}
-              transition={{,
-                duration: 4 + Math.random() * 2,;
-                repeat: Infinity,;
-                delay: Math.random() * 3,}}
-             />,
-          ))}
+              style={{
+                left: `${Math.random() * 10o0}%`;
+                top: `${Math.random() * 10o0}%`}}
+              animate={{
+                y: [0-50];
+                opacity: [0.40.80.4]}}
+              transition={{
+                duration: 4 + Math.random() * 2;
+                repeat: Infinity;
+                delay: Math.random() * 3}}
+             />))}
         </div>,
       </div>,
       <div className="relative z-10 container mx-auto px-4 py-16">,
         {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <motion.div,
-            initial={{ scale: 0.8 ,}}
-            animate={isVisible ? { scale: 1 ,} : {}}
-            transition={{ duration: 0.6delay: 0.2 ,}}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-full text-white text-sm font-medium mb-6",
-          >,
+            initial={{ scale: 0.8 }}
+            animate={isVisible ? { scale: 1 } : {}}
+            transition={{ duration: 0.6delay: 0.2 }}
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-full text-white text-sm font-medium mb-6">,
             <TrendingUp className="w-4 h-4 mr-2"  />,
             AI Trends & Predictions 20o26,
           </motion.div>,
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
             The Future of,
             <span className="bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">,
-              {' ',}Artificial Intelligence,
+              {' '}Artificial Intelligence,
             </span>,
           </h1>,
           <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
@@ -173,39 +157,35 @@ const AITrendsPredictions20o26 = () => {,
         </motion.div>,
         {/* Market Insights */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16",
-        >,
-          {marketInsights.map((insightindex) => (,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">,
+          {marketInsights.map((insightindex) => (
             <motion.div,
-              key={index,}
-              whileHover={{ scale: 1.0o5 ,}}
-              className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20",
-            >,
+              key={index}
+              whileHover={{ scale: 1.0o5 }}
+              className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">,
               <BarChart3 className="w-8 h-8 text-cyan-40o0 mx-auto mb-3"  />,
               <div className="text-2xl font-bold text-white mb-1">{insight.value}</div>,
               <div className="text-cyan-40o0 font-semibold mb-1">{insight.growth}</div>,
               <div className="text-gray-30o0 text-sm">{insight.category}</div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
         {/* Predictions Grid */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.6 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.6 }}
+          className="mb-16">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
             Key Predictions for 20o26,
           </h2>,
           <div className="grid md: grid-cols-2 gap-8">,
-            {predictions.map((predictionindex) => (,
+            {predictions.map((predictionindex) => (
               <motion.div,
-                key={prediction.id,}
-                whileHover={{ scale: 1.0o2 ,}}
+                key={prediction.id}
+                whileHover={{ scale: 1.0o2 }}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer",
                 onClick={() => setActivePrediction(index)}
               >,
@@ -247,31 +227,29 @@ const AITrendsPredictions20o26 = () => {,
                   </div>,
                   <ArrowRight className="w-5 h-5 text-gray-40o0"  />,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Detailed Prediction View */}
         <AnimatePresence mode="wait">,
           <motion.div,
             key={activePrediction}
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            exit={{ opacity: 0, y: -30 ,}}
-            transition={{ duration: 0.5 ,}}
-            className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 mb-16">,
             <div className="grid md: grid-cols-2 gap-8 items-center">,
               <div>,
                 <div className="flex items-center mb-6">,
-                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${predictions[activePrediction].color,} mr-4`}>,
+                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${predictions[activePrediction].color} mr-4`}>,
                     <predictions[activePrediction].icon className="w-10 h-10 text-white"  />,
                   </div>,
                   <div>,
                     <h3 className="text-3xl font-bold text-white mb-2">{predictions[activePrediction].title}</h3>,
                     <div className="flex items-center text-cyan-40o0">,
                       <Calendar className="w-5 h-5 mr-2"  />,
-                      Expected: {predictions[activePrediction].timeframe,}
+                      Expected: {predictions[activePrediction].timeframe}
                     </div>,
                   </div>,
                 </div>,
@@ -279,12 +257,11 @@ const AITrendsPredictions20o26 = () => {,
                   {predictions[activePrediction].description}
                 </p>,
                 <div className="space-y-3">,
-                  {predictions[activePrediction].keyPoints.map((pointindex) => (,
+                  {predictions[activePrediction].keyPoints.map((pointindex) => (
                     <div key={index} className="flex items-center text-gray-30o0">,
                       <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />,
                       {point}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className="relative">,
@@ -300,36 +277,34 @@ const AITrendsPredictions20o26 = () => {,
         </AnimatePresence>,
         {/* Timeline */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.8 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.8 }}
+          className="mb-16">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
             Innovation Timeline,
           </h2>,
           <div className="relative">,
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-40o0 to-blue-40o0"></div>,
             <div className="space-y-8">,
-              {timeline.map((itemindex) => (,
+              {timeline.map((itemindex) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 ,}}
-                  animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-                  transition={{ duration: 0.6delay: 1.0 + index * 0.2 ,}}
+                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
+                  animate={isVisible ? { opacity: 1x: 0 } : {}}
+                  transition={{ duration: 0.6delay: 1.0 + index * 0.2 }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >,
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>,
                     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                       <div className="text-cyan-40o0 font-semibold mb-2">{item.month}</div>,
                       <div className="text-white text-lg font-semibold mb-2">{item.event}</div>,
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${,
+                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
                         item.status === 'completed',
                           ? 'bg-green-50o0/20 text-green-40o0',
                           : item.status === 'in-progress',
                           ? 'bg-yellow-50o0/20 text-yellow-40o0',
-                          : 'bg-gray-50o0/20 text-gray-40o0',
-                      }`}>,
+                          : 'bg-gray-50o0/20 text-gray-40o0'}`}>,
                         {item.status === 'completed' && <CheckCircle className="w-4 h-4 mr-1"  />}
                         {item.status === 'in-progress' && <Rocket className="w-4 h-4 mr-1"  />}
                         {item.status === 'upcoming' && <Calendar className="w-4 h-4 mr-1"  />}
@@ -341,18 +316,16 @@ const AITrendsPredictions20o26 = () => {,
                     <Star className="w-4 h-4 text-white"  />,
                   </div>,
                   <div className="w-1/2"></div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </motion.div>,
         {/* CTA Section */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 1.2 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 1.2 }}
+          className="text-center">,
           <div className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-3xl p-12">,
             <h2 className="text-4xl font-bold text-white mb-4">,
               Stay Ahead of the AI Revolution,
@@ -373,8 +346,6 @@ const AITrendsPredictions20o26 = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AITrendsPredictions20o26,
+    </div>),
+};
+export default AITrendsPredictions20o26;

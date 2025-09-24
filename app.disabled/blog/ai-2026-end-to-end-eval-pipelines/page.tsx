@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: End-to-End Eval Pipelines',;
+export const metadata = {
+  title: 'AI 20o26: End-to-End Eval Pipelines';
   description:,
-    'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.',;
+    'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       <article className='prose prose-purple max-w-none'>,
         <p className='text-sm text-purple-70o0 font-semibold'>,
@@ -38,30 +36,27 @@ export default function Page() {,
           <ul className='list-disc pl-5 text-purple-90o0'>,
             <li>,
               Adopt a{' '}
-              <Link,
+              <Link
                 href='/content/ai-20o26-evaluation-hub',
-                className='text-purple-70o0 underline',
-              >,
+                className='text-purple-70o0 underline'>,
                 central evaluation hub,
               </Link>,
               .,
             </li>,
             <li>,
               Define{' '}
-              <Link,
+              <Link
                 href='/content/ai-20o26-evals-maturity-model',
-                className='text-purple-70o0 underline',
-              >,
+                className='text-purple-70o0 underline'>,
                 maturity levels,
               </Link>{' '}
               and SLOs.,
             </li>,
             <li>,
               Enforce{' '}
-              <Link,
+              <Link
                 href='/content/ai-20o26-policy-as-code-starter-kit',
-                className='text-purple-70o0 underline',
-              >,
+                className='text-purple-70o0 underline'>,
                 policy-as-code,
               </Link>{' '}
               gates.,
@@ -69,7 +64,5 @@ export default function Page() {,
           </ul>,
         </div>,
       </article>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

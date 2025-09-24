@@ -1,12 +1,10 @@
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
-import {,
+import {
   CodeDatabaseShieldZapGlobeCpu,
-  BookOpenCheckCircleArrowRightBarChart3LockBrain,
-} from 'lucide-react',
-,
-export default function APIDocumentation() {,
-	return (,
+  BookOpenCheckCircleArrowRightBarChart3LockBrain} from 'lucide-react',
+export default function APIDocumentation() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>API Documentation | Zion Tech Group</title>,
@@ -21,7 +19,6 @@ export default function APIDocumentation() {,
 					<li><a className="text-cyan-400" href="/docs">Developer Docs</a></li>,
 				</ul>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>),
+}
 ,

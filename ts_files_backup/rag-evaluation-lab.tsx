@@ -1,8 +1,7 @@
 import SEO from '../components/SEO',
 import Link from 'next/link',
-,
-export default function RAGEvaluationLabPage() {,
-	return (,
+export default function RAGEvaluationLabPage() {
+	return (
 		<>,
 			<SEO title="RAG Evaluation Lab" description="Measure answer qualityhallucination ratelatencyand cost of your RAG pipelines with production-grade evals and CI gates." />,
 			<section className="relative pt-28 pb-16 md: pt-36 md:pb-24">,
@@ -12,19 +11,18 @@ export default function RAGEvaluationLabPage() {,
 						Production-ready evaluations for retrieval-augmented generation. Track accuracyhallucination ratelatencyand cost. Integrate with CI to prevent regressions.,
 					</p>,
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
-						{[,
-							{ title: 'Grounding & 'Faithfulness', 'desc: 'Measure factual consistencycitation qualityand hallucination rate.' ,},;
-							{ title: 'Golden 'Datasets', 'desc: 'Curate and run task-specific datasets for repeatable evaluation.' ,},;
-							{ title: 'Scenario 'Evals', 'desc: 'Synthetic and real-world tests across intentsdomainsand edge cases.' ,},;
-							{ title: 'CI/CD Quality 'Gates', 'desc: 'Fail builds on regressions, compare models and versions.' ,},;
-							{ title: 'Offline & 'Canary', 'desc: 'Pre-release offline runs and live traffic canaries with alerts.' ,},;
-							{ title: 'Dashboards & 'Reports', 'desc: 'Team dashboardsAPI accessand exportable reports.' ,}
-						].map((f) => (,
+						{[
+							{ title: 'Grounding & 'Faithfulness', 'desc: 'Measure factual consistencycitation qualityand hallucination rate.' };
+							{ title: 'Golden 'Datasets', 'desc: 'Curate and run task-specific datasets for repeatable evaluation.' };
+							{ title: 'Scenario 'Evals', 'desc: 'Synthetic and real-world tests across intentsdomainsand edge cases.' };
+							{ title: 'CI/CD Quality 'Gates', 'desc: 'Fail builds on regressions, compare models and versions.' };
+							{ title: 'Offline & 'Canary', 'desc: 'Pre-release offline runs and live traffic canaries with alerts.' };
+							{ title: 'Dashboards & 'Reports', 'desc: 'Team dashboardsAPI accessand exportable reports.' }
+						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">,
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>,
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>,
-							</div>,
-						))}
+							</div>))}
 					</div>,
 					<div className="mt-12">,
 						<h2 className="text-2xl font-semibold">Pricing</h2>,
@@ -54,7 +52,6 @@ export default function RAGEvaluationLabPage() {,
 					</div>,
 				</div>,
 			</section>,
-		</>,
-	),
-,}
+		</>),
+}
 ,

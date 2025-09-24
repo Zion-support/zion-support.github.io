@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NeuralInterfaces20o25RevolutionBanner: React.FC = () => {,
-  return (,
+const NeuralInterfaces20o25RevolutionBanner: React.FC = () => {
+  return (
     <section className="bg-gradient-to-r from-purple-90o0 via-indigo-90o0 to-blue-90o0 text-white py-16">,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="space-y-8">,
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">,
               <span className="text-sm font-medium">🧠 NEURAL INTERFACES 20o25</span>,
@@ -33,21 +32,19 @@ const NeuralInterfaces20o25RevolutionBanner: React.FC = () => {,
               </div>,
             </div>,
             <div className="flex flex-col sm:flex-row gap-4">,
-              <Link,
+              <Link
                 href="/blog/ai-20o25-neural-interfaces-revolution-ultimate-guide",
-                className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Explore Neural Interfaces →,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0",
-              >,
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0">,
                 Schedule Demo,
               </Link>,
             </div>,
           </div>,
-          {/* Right Content - Interactive Demo */,}
+          {/* Right Content - Interactive Demo */}
           <div className="relative">,
             <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">,
               <div className="text-center space-y-6">,
@@ -75,15 +72,12 @@ const NeuralInterfaces20o25RevolutionBanner: React.FC = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Floating Elements */,}
+            {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full animate-pulse"></div>,
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-40o0 rounded-full animate-pulse delay-10o00"></div>,
             <div className="absolute top-1/2 -left-8 w-4 h-4 bg-blue-40o0 rounded-full animate-pulse delay-20o00"></div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default NeuralInterfaces20o25RevolutionBanner,
+    </section>)};
+export default NeuralInterfaces20o25RevolutionBanner;

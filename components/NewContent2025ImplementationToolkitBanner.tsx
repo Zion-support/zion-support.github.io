@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function NewContent20o25ImplementationToolkitBanner() {,
-  return (,
+export default function NewContent20o25ImplementationToolkitBanner() {
+  return (
     <div className='bg-gradient-to-r from-purple-50o0 via-pink-60o0 to-rose-70o0 text-white py-8 px-4'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='flex flex-col lg: flex-row items-center justify-between'>,
@@ -38,35 +37,31 @@ export default function NewContent20o25ImplementationToolkitBanner() {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4'>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-ultimate-implementation-toolkit',
-              className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
               Access Complete Toolkit,
-              <svg,
+              <svg
                 className='w-5 h-5 ml-2',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 0o1-2-2V5a2 2 0 0o12-2h5.586a1 1 0 0o1.70o7.293l5.414 5.414a1 1 0 0o1.293.70o7V19a2 2 0 0o1-2 2z',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover: bg-white hover:text-purple-60o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover: bg-white hover:text-purple-60o0 transition-all duration-30o0'>,
               Get Expert Help,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

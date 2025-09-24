@@ -1,25 +1,22 @@
-import React from 'react',
+import React from 'react';
 import { Button  } from '@/components/ui/button',
 import { useNavigate  } from 'react-router-dom',
 import { XCircle } from 'lucide-react',
 import {Button} from '@/components/ui/button',
 import {useNavigate} from 'react-router-dom',
 import {XCircle} from 'lucide-react',
-import React from 'react',;
-import { Button } from '@/components/ui/button',;
-import { useNavigate } from 'react-router-dom',;
-import { XCircle } from 'lucide-react',;
-import {Button,} from '@/components / ui / button',
+import React from 'react';;
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+import {Button} from '@/components / ui / button',
 import {use_navigate} from 'react-router-dom',
-
-,
-export default function PaymentCanceled() {,
-export default function PaymentCanceled() {,
+export default function PaymentCanceled() {
+export default function PaymentCanceled() {
   const navigate = useNavigate(),
-,
-export default function PaymentCanceled() {,
-  const navigate = useNavigate(),;
-  return (,
+export default function PaymentCanceled() {
+  const navigate = useNavigate();
+  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">,
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">,
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">,
@@ -30,27 +27,24 @@ export default function PaymentCanceled() {,
           Your payment process was canceled. No charges have been made to your account.,
         </p>,
         <div className="flex flex-col space-y-3">,
-          <Button,
+          <Button
             onClick={() => navigate('/payments')}
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white",
-          >,
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white">,
             Try Again,
           </Button>,
-          <Button,
-          <Button,
+          <Button
+          <Button
             variant="outline",
-            onClick={() => navigate('/dashboard'),}
-            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white",
-          >,
+            onClick={() => navigate('/dashboard')}
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white">,
             Return to Dashboard,
           </Button>,
         </div>,
       </div>,
-    </div>,
-  ),
-export default function PaymentCanceled() {,
+    </div>),
+export default function PaymentCanceled() {
   const navigate = useNavigate(),
-  return (,
+  return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">,
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">,
         <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">,
@@ -61,24 +55,21 @@ export default function PaymentCanceled() {,
           Your payment process was canceled. No charges have been made to your account.,
         </p>,
         <div className="flex flex-col space-y-3">,
-          <Button,
+          <Button
             onClick={() => navigate('/payments')}
-            className="bg-zion-purple hover: bg-zion-purple-dark text-white",
-          >,
+            className="bg-zion-purple hover: bg-zion-purple-dark text-white">,
             Try Again,
           </Button>,
-,
-          <Button,
+          <Button
             variant="outline",
-            onClick={() => navigate('/dashboard'),}
+            onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white",
 export default /**,
  * PaymentCanceled - Function description,
  */,
-function PaymentCanceled() {,
+function PaymentCanceled() {
   const navigate = use_navigate (),
-,
-  return (,
+  return (
     <div className="min - h-screen bg - zion - blue flex flex - col items - center justify - center p - 4">,
       <div className="max - w-md w - full bg - zion - blue - dark rounded - xl p - 8 border border - zion - blue - light shadow - lg text - center">,
         <div className="inline - flex h - 12 w - 12 rounded - full bg - red - 100 mb - 4 items - center justify - center">,
@@ -89,26 +80,20 @@ function PaymentCanceled() {,
           Your payment process was canceled. No charges have been made to your account.,
         </p>,
         <div className="flex flex - col space - y-3">,
-          <Button,
+          <Button
             on_click={() => navigate ('/payments')}
-            className="bg - zion - purple hover: bg - zion - purple - dark text - white",
-          >,
+            className="bg - zion - purple hover: bg - zion - purple - dark text - white">,
             Try Again,
           </Button>,
-          <Button,
+          <Button
             variant="outline",
-            on_click={() => navigate ('/dashboard'),}
-            className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white",
-,
-          >,
+            on_click={() => navigate ('/dashboard')}
+            className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white">,
             Return to Dashboard,
           </Button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,
-,}
-,
+    </div>),
+}
 ,
 }}}})

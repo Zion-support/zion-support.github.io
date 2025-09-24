@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function RevolutionaryHeroSection() {,
-  return (,
+export default function RevolutionaryHeroSection() {
+  return (
     <section className='relative min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 overflow-hidden'>,
       {/* Animated Background Elements */}
       <div className='absolute inset-0'>,
@@ -13,7 +12,7 @@ export default function RevolutionaryHeroSection() {,
       <div className='absolute inset-0 bg-grid-pattern opacity-10'></div>,
       <div className='relative z-10 flex items-center min-h-screen px-4'>,
         <div className='max-w-7xl mx-auto grid grid-cols-1 lg: grid-cols-2 gap-12 items-center'>,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className='text-center lg: text-left'>,
             <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 animate-bounce'>,
               🚀 BREAKTHROUGH ANNOUNCEMENT - AI 20o25,
@@ -63,25 +62,23 @@ export default function RevolutionaryHeroSection() {,
                 <div className='text-blue-20o0 text-sm'>Enterprise Clients</div>,
               </div>,
             </div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4 justify-center lg:justify-start'>,
-              <Link,
+              <Link
                 href='/ai-20o25-breakthrough-content-showcase',
-                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl'>,
                 Explore Breakthroughs,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Get Started Today,
               </Link>,
             </div>,
           </div>,
-          {/* Right Content - Feature Cards */,}
+          {/* Right Content - Feature Cards */}
           <div className='grid grid-cols-1 sm: grid-cols-2 gap-6'>,
-            {/* AI Breakthrough Card */,}
+            {/* AI Breakthrough Card */}
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <div className='flex items-center mb-4'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-xl flex items-center justify-center text-white text-xl font-bold mr-4'>,
@@ -102,15 +99,14 @@ export default function RevolutionaryHeroSection() {,
                 <div className='text-yellow-30o0 font-bold text-lg'>,
                   10,0o00% ROI,
                 </div>,
-                <Link,
+                <Link
                   href='/ai-20o25-breakthrough-content-showcase',
-                  className='text-yellow-30o0 text-sm font-semibold hover: text-yellow-20o0 transition-colors',
-                >,
+                  className='text-yellow-30o0 text-sm font-semibold hover: text-yellow-20o0 transition-colors'>,
                   Explore →,
                 </Link>,
               </div>,
             </div>,
-            {/* Quantum Computing Card */,}
+            {/* Quantum Computing Card */}
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <div className='flex items-center mb-4'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center text-white text-xl font-bold mr-4'>,
@@ -131,15 +127,14 @@ export default function RevolutionaryHeroSection() {,
                 <div className='text-cyan-30o0 font-bold text-lg'>,
                   15,0o00% ROI,
                 </div>,
-                <Link,
+                <Link
                   href='/quantum-computing-solutions-20o25',
-                  className='text-cyan-30o0 text-sm font-semibold hover: text-cyan-20o0 transition-colors',
-                >,
+                  className='text-cyan-30o0 text-sm font-semibold hover: text-cyan-20o0 transition-colors'>,
                   Discover →,
                 </Link>,
               </div>,
             </div>,
-            {/* Automation Solutions Card */,}
+            {/* Automation Solutions Card */}
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <div className='flex items-center mb-4'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-xl flex items-center justify-center text-white text-xl font-bold mr-4'>,
@@ -160,15 +155,14 @@ export default function RevolutionaryHeroSection() {,
                 <div className='text-green-30o0 font-bold text-lg'>,
                   8,50o0% ROI,
                 </div>,
-                <Link,
+                <Link
                   href='/automation-solutions-20o25',
-                  className='text-green-30o0 text-sm font-semibold hover: text-green-20o0 transition-colors',
-                >,
+                  className='text-green-30o0 text-sm font-semibold hover: text-green-20o0 transition-colors'>,
                   Learn More →,
                 </Link>,
               </div>,
             </div>,
-            {/* Success Stories Card */,}
+            {/* Success Stories Card */}
             <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <div className='flex items-center mb-4'>,
                 <div className='w-12 h-12 bg-gradient-to-r from-orange-50o0 to-red-50o0 rounded-xl flex items-center justify-center text-white text-xl font-bold mr-4'>,
@@ -189,10 +183,9 @@ export default function RevolutionaryHeroSection() {,
                 <div className='text-orange-30o0 font-bold text-lg'>,
                   Fortune 50o0,
                 </div>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='text-orange-30o0 text-sm font-semibold hover:text-orange-20o0 transition-colors',
-                >,
+                  className='text-orange-30o0 text-sm font-semibold hover:text-orange-20o0 transition-colors'>,
                   View Cases →,
                 </Link>,
               </div>,
@@ -200,12 +193,10 @@ export default function RevolutionaryHeroSection() {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className='absolute top-1/4 left-10 w-4 h-4 bg-purple-40o0 rounded-full animate-pulse'></div>,
       <div className='absolute top-1/3 right-20 w-6 h-6 bg-blue-40o0 rounded-full animate-pulse delay-50o0'></div>,
       <div className='absolute bottom-1/3 left-20 w-3 h-3 bg-cyan-40o0 rounded-full animate-pulse delay-10o00'></div>,
       <div className='absolute bottom-1/4 right-10 w-5 h-5 bg-indigo-40o0 rounded-full animate-pulse delay-150o0'></div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

@@ -1,29 +1,28 @@
-import React from 'react',
+import React from 'react';
 import Layout from './layout/Layout',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  ArrowRight,;
-  Star,;
-  Brain,;
-  Atom,;
-  Shield,;
-  Zap,;
-  TrendingUp,;
-  Globe,;
-  MapPin,;
-  Users,;
-  Building,;
-  Rocket,;
-  CheckCircle,;
-  Phone,;
-  Mail,;
+import {
+  ArrowRight;
+  Star;
+  Brain;
+  Atom;
+  Shield;
+  Zap;
+  TrendingUp;
+  Globe;
+  MapPin;
+  Users;
+  Building;
+  Rocket;
+  CheckCircle;
+  Phone;
+  Mail;
 } from 'lucide-react',
-,
-const Homepage20o26: React.FC = () => {,
-  return (,
+const Homepage20o26: React.FC = () => {
+  return (
     <Layout>,
-      {/* Main Content */,}
+      {/* Main Content */}
       <main className='relative z-10'>,
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>,
@@ -35,18 +34,16 @@ const Homepage20o26: React.FC = () => {,
           </div>,
           <div className='text-center max-w-4xl mx-auto relative z-10'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='space-y-6',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'>,
               {/* Company Badge */}
               <motion.div,
-                initial={{ opacity: 0, scale: 0.8 ,}}
-                animate={{ opacity: 1, scale: 1 ,}}
-                transition={{ duration: 0.6, delay: 0.2 ,}}
-                className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-full text-cyan-40o0 text-sm font-medium',
-              >,
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-40o0/30 rounded-full text-cyan-40o0 text-sm font-medium'>,
                 <Star className='w-4 h-4' />,
                 <span>Innovation Leader 20o26</span>,
               </motion.div>,
@@ -79,13 +76,12 @@ const Homepage20o26: React.FC = () => {,
                   </button>,
                 </a>,
               </div>,
-              {/* Trust Indicators */,}
+              {/* Trust Indicators */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
-                className='flex items-center justify-center space-x-6 text-sm text-gray-40o0',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className='flex items-center justify-center space-x-6 text-sm text-gray-40o0'>,
                 <div className='flex items-center space-x-2'>,
                   <Shield className='w-4 h-4 text-green-40o0' />,
                   <span>Enterprise Security</span>,
@@ -107,11 +103,10 @@ const Homepage20o26: React.FC = () => {,
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-purple-50o0/5'></div>,
           <div className='max-w-6xl mx-auto relative z-10'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl font-bold text-white mb-4'>,
                 Why Choose Zion Tech Group?,
               </h2>,
@@ -122,11 +117,10 @@ const Homepage20o26: React.FC = () => {,
             </motion.div>,
             <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className='text-center'>,
                 <div className='text-4xl mb-4'>🚀</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>,
                   Micro SAAS Solutions,
@@ -136,11 +130,10 @@ const Homepage20o26: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.2 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='text-center'>,
                 <div className='text-4xl mb-4'>🏗️</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>,
                   IT Infrastructure,
@@ -150,11 +143,10 @@ const Homepage20o26: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.3 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='text-center'>,
                 <div className='text-4xl mb-4'>🤖</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>,
                   AI Automation,
@@ -164,11 +156,10 @@ const Homepage20o26: React.FC = () => {,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.4 ,}}
-                className='text-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='text-center'>,
                 <div className='text-4xl mb-4'>🧠</div>,
                 <h3 className='text-xl font-semibold text-white mb-2'>,
                   Cutting-Edge AI,
@@ -184,11 +175,10 @@ const Homepage20o26: React.FC = () => {,
         <section className='py-20 px-4'>,
           <div className='max-w-6xl mx-auto'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='text-center mb-16',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Our Service Portfolio,
               </h2>,
@@ -198,13 +188,12 @@ const Homepage20o26: React.FC = () => {,
               </p>,
             </motion.div>,
             <div className='grid md: grid-cols-2 lg:grid-cols-2 gap-8'>,
-              {/* AI Automation Services */,}
+              {/* AI Automation Services */}
               <motion.div,
-                initial={{ opacity: 0, x: -20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.1 ,}}
-                className='bg-gradient-to-br from-blue-60o0/20 to-indigo-60o0/20 border border-blue-50o0/30 rounded-lg p-8 hover: border-blue-40o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className='bg-gradient-to-br from-blue-60o0/20 to-indigo-60o0/20 border border-blue-50o0/30 rounded-lg p-8 hover: border-blue-40o0/50 transition-all duration-30o0'>,
                 <div className='text-5xl mb-6'>🤖</div>,
                 <h3 className='text-2xl font-semibold text-white mb-4'>,
                   AI Automation Services,
@@ -234,13 +223,12 @@ const Homepage20o26: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* IT Infrastructure Services */,}
+              {/* IT Infrastructure Services */}
               <motion.div,
-                initial={{ opacity: 0, x: 20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.2 ,}}
-                className='bg-gradient-to-br from-green-60o0/20 to-emerald-60o0/20 border border-green-50o0/30 rounded-lg p-8 hover: border-green-40o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='bg-gradient-to-br from-green-60o0/20 to-emerald-60o0/20 border border-green-50o0/30 rounded-lg p-8 hover: border-green-40o0/50 transition-all duration-30o0'>,
                 <div className='text-5xl mb-6'>🏗️</div>,
                 <h3 className='text-2xl font-semibold text-white mb-4'>,
                   IT Infrastructure Services,
@@ -248,7 +236,7 @@ const Homepage20o26: React.FC = () => {,
                 <p className='text-gray-30o0 mb-6'>,
                   Robust infrastructure solutions for modern digital businesses.,
                   Edge computing, zero trust security, and hybrid cloud,
-                  management for enterprise-grade performance.,
+                  management for enterprise-grade window.performance.,
                 </p>,
                 <div className='space-y-3 mb-6'>,
                   <div className='flex items-center space-x-2 text-sm text-gray-30o0'>,
@@ -270,13 +258,12 @@ const Homepage20o26: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* Micro SAAS Solutions */,}
+              {/* Micro SAAS Solutions */}
               <motion.div,
-                initial={{ opacity: 0, x: -20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.3 ,}}
-                className='bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 border border-purple-50o0/30 rounded-lg p-8 hover: border-purple-40o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 border border-purple-50o0/30 rounded-lg p-8 hover: border-purple-40o0/50 transition-all duration-30o0'>,
                 <div className='text-5xl mb-6'>🚀</div>,
                 <h3 className='text-2xl font-semibold text-white mb-4'>,
                   Micro SAAS Solutions,
@@ -306,13 +293,12 @@ const Homepage20o26: React.FC = () => {,
                   </button>,
                 </Link>,
               </motion.div>,
-              {/* Cutting-Edge AI Services */,}
+              {/* Cutting-Edge AI Services */}
               <motion.div,
-                initial={{ opacity: 0, x: 20 ,}}
-                whileInView={{ opacity: 1, x: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.4 ,}}
-                className='bg-gradient-to-br from-orange-60o0/20 to-red-60o0/20 border border-orange-50o0/30 rounded-lg p-8 hover: border-orange-40o0/50 transition-all duration-30o0',
-              >,
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='bg-gradient-to-br from-orange-60o0/20 to-red-60o0/20 border border-orange-50o0/30 rounded-lg p-8 hover: border-orange-40o0/50 transition-all duration-30o0'>,
                 <div className='text-5xl mb-6'>🧠</div>,
                 <h3 className='text-2xl font-semibold text-white mb-4'>,
                   Cutting-Edge AI Services,
@@ -345,15 +331,14 @@ const Homepage20o26: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Contact Section */,}
+        {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-50o0/10 via-blue-50o0/10 to-purple-50o0/10'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className='space-y-6',
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'>,
               <h2 className='text-4xl font-bold text-white mb-6'>,
                 Ready to Transform Your Business?,
               </h2>,
@@ -371,10 +356,9 @@ const Homepage20o26: React.FC = () => {,
                     <Globe className='w-5 h-5 text-blue-40o0' />,
                     <div>,
                       <div className='text-sm text-gray-40o0'>Website</div>,
-                      <a,
+                      <a
                         href='https://ziontechgroup.com',
-                        className='text-cyan-40o0 hover:underline font-medium',
-                      >,
+                        className='text-cyan-40o0 hover:underline font-medium'>,
                         ziontechgroup.com,
                       </a>,
                     </div>,
@@ -383,10 +367,9 @@ const Homepage20o26: React.FC = () => {,
                     <Phone className='w-5 h-5 text-green-40o0' />,
                     <div>,
                       <div className='text-sm text-gray-40o0'>Phone</div>,
-                      <a,
+                      <a
                         href='tel:+130o24640950',
-                        className='text-cyan-40o0 hover:underline font-medium',
-                      >,
+                        className='text-cyan-40o0 hover:underline font-medium'>,
                         +1 30o2 464 0950,
                       </a>,
                     </div>,
@@ -395,10 +378,9 @@ const Homepage20o26: React.FC = () => {,
                     <Mail className='w-5 h-5 text-yellow-40o0' />,
                     <div>,
                       <div className='text-sm text-gray-40o0'>Email</div>,
-                      <a,
+                      <a
                         href='mailto:kleber@ziontechgroup.com',
-                        className='text-cyan-40o0 hover:underline font-medium',
-                      >,
+                        className='text-cyan-40o0 hover:underline font-medium'>,
                         kleber@ziontechgroup.com,
                       </a>,
                     </div>,
@@ -417,17 +399,15 @@ const Homepage20o26: React.FC = () => {,
                 </div>,
               </div>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <a,
+                <a
                   href='mailto:kleber@ziontechgroup.com',
-                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
+                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                   <span>Get Started Today</span>,
                   <ArrowRight className='w-5 h-5' />,
                 </a>,
-                <a,
+                <a
                   href='tel:+130o24640950',
-                  className='px-8 py-4 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0',
-                >,
+                  className='px-8 py-4 border-2 border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0'>,
                   Call Now,
                 </a>,
               </div>,
@@ -435,9 +415,6 @@ const Homepage20o26: React.FC = () => {,
           </div>,
         </section>,
       </main>,
-    </Layout>,
-  ),
-,};
-,
-export default Homepage20o26,
-,
+    </Layout>),
+};
+export default Homepage20o26;

@@ -1,51 +1,50 @@
 EyeVolume2MousePointerKeyboardShieldCheckCircle,
-const AdvancedAccessibilityEnhancer = () => {,
-  const accessibilityFeatures = [,
-    {,
-      icon: Eye,;
-      title: "Visual Accessibility",;
-      description: "High contrast ratioscreen reader supportand visual indicators",;
-      compliance: "WCAG 2.1 AA",;
+const AdvancedAccessibilityEnhancer = () => {
+  const accessibilityFeatures = [
+    {
+      icon: Eye;
+      title: "Visual Accessibility";
+      description: "High contrast ratioscreen reader supportand visual indicators";
+      compliance: "WCAG 2.1 AA";
       features: ["4.5:1 contrast ratio"Screen reader compatibility"Focus indicators"Alt text optimization"],
-    ,},;
-    {,
-      icon: Volume2,;
-      title: "Audio Accessibility",;
-      description: "Audio descriptionscaptionsand sound alternatives",;
-      compliance: "WCAG 2.1 AA",;
+    };
+    {
+      icon: Volume2;
+      title: "Audio Accessibility";
+      description: "Audio descriptionscaptionsand sound alternatives";
+      compliance: "WCAG 2.1 AA";
       features: ["Audio descriptions"Closed captions"Transcripts"Sound alternatives"],
-    ,},;
-    {,
-      icon: MousePointer,;
-      title: "Motor Accessibility",;
-      description: "Large click targetskeyboard navigationand gesture alternatives",;
-      compliance: "WCAG 2.1 AA",;
+    };
+    {
+      icon: MousePointer;
+      title: "Motor Accessibility";
+      description: "Large click targetskeyboard navigationand gesture alternatives";
+      compliance: "WCAG 2.1 AA";
       features: ["44px minimum touch targets"Keyboard navigation"Gesture alternatives"Voice control"],
-    ,},;
-    {,
-      icon: Keyboard,;
-      title: "Keyboard Navigation",;
-      description: "Full keyboard accessibility and focus management",;
-      compliance: "WCAG 2.1 AA",;
+    };
+    {
+      icon: Keyboard;
+      title: "Keyboard Navigation";
+      description: "Full keyboard accessibility and focus management";
+      compliance: "WCAG 2.1 AA";
       features: ["Tab navigation"Focus management"Skip links"Keyboard shortcuts"],
-    ,},;
-    {,
-      icon: Shield,;
-      title: "Cognitive Accessibility",;
-      description: "Clear navigationconsistent designand error prevention",;
-      compliance: "WCAG 2.1 AA",;
+    };
+    {
+      icon: Shield;
+      title: "Cognitive Accessibility";
+      description: "Clear navigationconsistent designand error prevention";
+      compliance: "WCAG 2.1 AA";
       features: ["Clear navigation"Consistent design"Error prevention"Help text"],
-    ,},;
-    {,
-      icon: CheckCircle,;
-      title: "Compliance Testing",;
-      description: "Automated and manual accessibility testing",;
-      compliance: "WCAG 2.1 AA",;
+    };
+    {
+      icon: CheckCircle;
+      title: "Compliance Testing";
+      description: "Automated and manual accessibility testing";
+      compliance: "WCAG 2.1 AA";
       features: ["Automated testing"Manual testing"User testing"Continuous monitoring"],
-    ,}
+    }
   ],
-,
-  return (,
+  return (
     <div className="bg-gradient-to-br from-slate-90o0 via-green-90o0 to-blue-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
@@ -63,32 +62,30 @@ const AdvancedAccessibilityEnhancer = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">,
-          {accessibilityFeatures.map((featureindex) => (,
-            <div key={index,} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-green-40o0/50 transition-all duration-30o0">,
+          {accessibilityFeatures.map((featureindex) => (
+            <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-green-40o0/50 transition-all duration-30o0">,
               <div className="flex items-center justify-between mb-4">,
                 <div className="p-3 bg-gradient-to-r from-green-50o0 to-blue-50o0 rounded-xl">,
                   <feature.icon className="w-6 h-6 text-white"  />,
                 </div>,
                 <span className="px-3 py-1 bg-green-50o0 rounded-full text-xs font-bold text-white">,
-                  {feature.compliance,}
+                  {feature.compliance}
                 </span>,
               </div>,
               <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-green-30o0 transition-colors">,
-                {feature.title,}
+                {feature.title}
               </h3>,
               <p className="text-gray-30o0 text-sm mb-4">,
                 {feature.description}
               </p>,
               <div className="space-y-2">,
-                {feature.features.map((itemidx) => (,
+                {feature.features.map((itemidx) => (
                   <div key={idx} className="flex items-center text-green-40o0 text-xs">,
                     <CheckCircle className="w-3 h-3 mr-2"  />,
                     {item}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Accessibility Stats */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20">,
@@ -116,7 +113,7 @@ const AdvancedAccessibilityEnhancer = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Accessibility Benefits */,}
+        {/* Accessibility Benefits */}
         <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-8">,
           <div className="text-center">,
             <div className="text-4xl font-bold text-green-40o0 mb-2">15%</div>,
@@ -135,8 +132,6 @@ const AdvancedAccessibilityEnhancer = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AdvancedAccessibilityEnhancer,
+    </div>),
+};
+export default AdvancedAccessibilityEnhancer;

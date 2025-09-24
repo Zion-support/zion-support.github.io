@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-,
-export default function BillingAnalytics() {,
-  return (,
+export default function BillingAnalytics() {
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Billing Analytics | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Revenue dashboards, cohort analysis, churn, expansion, and unit economics with anomaly detection.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/billing-analytics',
         />,
@@ -21,7 +20,7 @@ export default function BillingAnalytics() {,
             Billing Analytics,
           </h1>,
           <p className='mt-4 text-lg text-slate-30o0'>,
-            Plug-and-play revenue analytics across Stripe, Recurly, Chargebee,;
+            Plug-and-play revenue analytics across Stripe, Recurly, Chargebee;
             and Braintree.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-3 gap-6'>,
@@ -41,31 +40,26 @@ export default function BillingAnalytics() {,
               <ul className='list-disc list-inside text-slate-30o0 space-y-1'>,
                 <li>$50–$50o0/mo</li>,
                 <li>,
-                  References: {' ',}
-                  <a,
+                  References: {' '}
+                  <a
                     className='text-cyan-40o0 underline',
                     href='https: //stripe.com/pricing',
                     target='_blank',
-                    rel='noreferrer',
-                  >,
+                    rel='noreferrer'>,
                     Stripe,
-                  </a>,
-                  ,{' '}
-                  <a,
+                  </a>,{' '}
+                  <a
                     className='text-cyan-40o0 underline',
                     href='https: //recurly.com/pricing/',
                     target='_blank',
-                    rel='noreferrer',
-                  >,
+                    rel='noreferrer'>,
                     Recurly,
-                  </a>,
-                  ,{' '}
-                  <a,
+                  </a>,{' '}
+                  <a
                     className='text-cyan-40o0 underline',
                     href='https: //www.chargebee.com/pricing/',
                     target='_blank',
-                    rel='noreferrer',
-                  >,
+                    rel='noreferrer'>,
                     Chargebee,
                   </a>,
                 </li>,
@@ -82,28 +76,23 @@ export default function BillingAnalytics() {,
             </div>,
           </div>,
           <div className='mt-10 flex flex-wrap gap-3'>,
-            <a,
+            <a
               href='/pricing',
-              className='px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium',
-            >,
+              className='px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium'>,
               View Pricing,
             </a>,
-            <a,
+            <a
               href='/market-pricing',
-              className='px-4 py-2 rounded-lg border border-cyan-50o0/40 text-cyan-30o0',
-            >,
+              className='px-4 py-2 rounded-lg border border-cyan-50o0/40 text-cyan-30o0'>,
               Market Pricing,
             </a>,
-            <a,
+            <a
               href='/contact',
-              className='px-4 py-2 rounded-lg border border-gray-70o0 text-gray-20o0',
-            >,
+              className='px-4 py-2 rounded-lg border border-gray-70o0 text-gray-20o0'>,
               Contact Sales,
             </a>,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

@@ -1,92 +1,79 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Check, Star, Users, TrendingUp, Zap, Globe, Shield,;
-  Brain, Target, Heart, Building, Rocket, Atom, Palette,;
-  GraduationCap, Truck, Phone, Mail, MapPin, ArrowRight,
-} from 'lucide-react',
-,
+import {
+  Check, Star, Users, TrendingUp, Zap, Globe, Shield;
+  Brain, Target, Heart, Building, Rocket, Atom, Palette;
+  GraduationCap, Truck, Phone, Mail, MapPin, ArrowRight} from 'lucide-react',
 // Import our new advanced service data,
 import { advancedCybersecurityMicroSaasServices } from '../data/20o25-advanced-cybersecurity-micro-saas',
 import { advancedAIMLMicroSaasServices } from '../data/20o25-advanced-ai-ml-micro-saas',
 import { fintechBlockchainMicroSaasServices } from '../data/20o25-fintech-blockchain-micro-saas',
 import { healthcareBiotechMicroSaasServices } from '../data/20o25-healthcare-biotech-micro-saas',
-,
 // Contact information,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
+};
 // Service categories with icons and colors,
-const serviceCategories = [,
-  {,
-    id: 'cybersecurity',;
-    name: 'Cybersecurity & Threat Intelligence',;
-    icon: <Shield className="w-8 h-8"  />,;
-    color: 'from-red-50o0 to-orange-60o0',;
+const serviceCategories = [
+  {
+    id: 'cybersecurity';
+    name: 'Cybersecurity & Threat Intelligence';
+    icon: <Shield className="w-8 h-8"  />;
+    color: 'from-red-50o0 to-orange-60o0';
     services: advancedCybersecurityMicroSaasServices,
-  ,},;
-  {,
-    id: 'ai-ml',;
-    name: 'AI & Machine Learning',;
-    icon: <Brain className="w-8 h-8"  />,;
-    color: 'from-purple-50o0 to-pink-60o0',;
+  };
+  {
+    id: 'ai-ml';
+    name: 'AI & Machine Learning';
+    icon: <Brain className="w-8 h-8"  />;
+    color: 'from-purple-50o0 to-pink-60o0';
     services: advancedAIMLMicroSaasServices,
-  ,},;
-  {,
-    id: 'fintech-blockchain',;
-    name: 'Fintech & Blockchain',;
-    icon: <Target className="w-8 h-8"  />,;
-    color: 'from-green-50o0 to-emerald-60o0',;
+  };
+  {
+    id: 'fintech-blockchain';
+    name: 'Fintech & Blockchain';
+    icon: <Target className="w-8 h-8"  />;
+    color: 'from-green-50o0 to-emerald-60o0';
     services: fintechBlockchainMicroSaasServices,
-  ,},;
-  {,
-    id: 'healthcare-biotech',;
-    name: 'Healthcare & Biotech',;
-    icon: <Heart className="w-8 h-8"  />,;
-    color: 'from-blue-50o0 to-cyan-60o0',;
+  };
+  {
+    id: 'healthcare-biotech';
+    name: 'Healthcare & Biotech';
+    icon: <Heart className="w-8 h-8"  />;
+    color: 'from-blue-50o0 to-cyan-60o0';
     services: healthcareBiotechMicroSaasServices,
-  ,}
+  }
 ],
-,
-export default function AdvancedPricingShowcase20o25() {,
+export default function AdvancedPricingShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-,
-  const allServices = [,
-    ...advancedCybersecurityMicroSaasServices,;
-    ...advancedAIMLMicroSaasServices,;
-    ...fintechBlockchainMicroSaasServices,;
-    ...healthcareBiotechMicroSaasServices,
-  ],
-,
+  const allServices = [
+    ...advancedCybersecurityMicroSaasServices;
+    ...advancedAIMLMicroSaasServices;
+    ...fintechBlockchainMicroSaasServices;
+    ...healthcareBiotechMicroSaasServices],
   const filteredServices = selectedCategory === 'all',
     ? allServices,
     : serviceCategories.find(cat => cat.id === selectedCategory)?.services || [],
-,
-  const getPrice = (service: any) => {,
-    if (billingCycle === 'yearly') {,
+  const getPrice = (service: any) => {
+    if (billingCycle === 'yearly') {
       return service.price?.yearly || service.price?.monthly * 12,
-    ,}
-    return service.price?.monthly || 0,
-  };
-,
-  const getSavings = (service: any) => {,
-    if (billingCycle === 'yearly' && service.price?.yearly && service.price?.monthly) {,
+    }
+    return service.price?.monthly || 0};
+  const getSavings = (service: any) => {
+    if (billingCycle === 'yearly' && service.price?.yearly && service.price?.monthly) {
       const monthlyTotal = service.price.monthly * 12,
       const yearlyPrice = service.price.yearly,
       return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 10o0),
-    ,}
-    return 0,
-  };
-,
-  return (,
+    }
+    return 0};
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">,
-      <SEO,
+      <SEO
         title="20o25 Advanced Micro SAAS Pricing | Zion Tech Group",
         description="Comprehensive pricing for our advanced micro SAAS services including cybersecurity, AI/ML, fintech, blockchain, healthcare, and biotech solutions. Transparent pricing with proven ROI.",
         keywords={["micro SAAS pricing", "cybersecurity pricing", "AI services pricing", "blockchain pricing", "fintech pricing", "healthcare pricing", "Zion Tech Group"]}
@@ -96,9 +83,9 @@ export default function AdvancedPricingShowcase20o25() {,
         <div className="absolute inset-0 bg-black opacity-20"></div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
               20o25 Advanced Micro SAAS Pricing,
@@ -109,7 +96,7 @@ export default function AdvancedPricingShowcase20o25() {,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-white">,
-                <div className="text-2xl font-bold">{allServices.length,}+</div>,
+                <div className="text-2xl font-bold">{allServices.length}+</div>,
                 <div className="text-sm">Advanced Services</div>,
               </div>,
               <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 text-white">,
@@ -132,7 +119,7 @@ export default function AdvancedPricingShowcase20o25() {,
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">,
               <div className="flex items-center gap-2">,
                 <Phone className="w-5 h-5"  />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className="flex items-center gap-2">,
                 <Mail className="w-5 h-5"  />,
@@ -142,48 +129,46 @@ export default function AdvancedPricingShowcase20o25() {,
                 <MapPin className="w-5 h-5"  />,
                 <span>{contactInfo.address}</span>,
               </div>,
-              <a,
+              <a
                 href={contactInfo.website} ,
                 target="_blank",
                 rel="noopener noreferrer",
-                className="bg-white text-green-70o0 px-6 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-              >,
+                className="bg-white text-green-70o0 px-6 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
                 Visit Website,
               </a>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Billing Cycle Toggle */,}
+      {/* Billing Cycle Toggle */}
       <section className="py-8 bg-white border-b">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-col items-center">,
             <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Choose Your Billing Cycle</h3>,
             <div className="flex bg-gray-10o0 rounded-lg p-1">,
-              <button,
-                onClick={() => setBillingCycle('monthly'),}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${,
+              <button
+                onClick={() => setBillingCycle('monthly')}
+                className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   billingCycle === 'monthly',
                     ? 'bg-white text-gray-90o0 shadow-sm',
                     : 'text-gray-60o0 hover: text-gray-90o0',
-                ,}`}
+                }`}
               >,
                 Monthly,
               </button>,
-              <button,
+              <button
                 onClick={() => setBillingCycle('yearly')}
-                className={`px-6 py-2 rounded-md font-medium transition-colors ${,
+                className={`px-6 py-2 rounded-md font-medium transition-colors ${
                   billingCycle === 'yearly',
                     ? 'bg-white text-gray-90o0 shadow-sm',
                     : 'text-gray-60o0 hover: text-gray-90o0',
-                ,}`}
+                }`}
               >,
                 Yearly,
-                {billingCycle === 'yearly' && (,
+                {billingCycle === 'yearly' && (
                   <span className="ml-2 bg-green-10o0 text-green-80o0 text-xs px-2 py-1 rounded-full">,
                     Save up to 20%,
-                  </span>,
-                )}
+                  </span>)}
               </button>,
             </div>,
           </div>,
@@ -193,61 +178,57 @@ export default function AdvancedPricingShowcase20o25() {,
       <section className="py-8 bg-white">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-wrap gap-4 justify-center">,
-            <button,
-              onClick={() => setSelectedCategory('all'),}
-              className={`px-6 py-3 rounded-lg font-medium transition-colors ${,
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                 selectedCategory === 'all',
                   ? 'bg-blue-60o0 text-white',
                   : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-              ,}`}
+              }`}
             >,
               All Services ({allServices.length}),
             </button>,
-            {serviceCategories.map((category) => (,
-              <button,
+            {serviceCategories.map((category) => (
+              <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${,
+                className={`px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2 ${
                   selectedCategory === category.id,
                     ? 'bg-blue-60o0 text-white',
                     : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                ,}`}
+                }`}
               >,
                 {category.icon}
                 {category.name} ({category.services.length}),
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
       </section>,
       {/* Services Pricing Grid */}
       <section className="py-12">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-          {filteredServices.length === 0 ? (,
+          {filteredServices.length === 0 ? (
             <div className="text-center py-12">,
               <h3 className="text-xl font-semibold text-gray-60o0 mb-2">No services found</h3>,
               <p className="text-gray-50o0">Please select a different category</p>,
-            </div>,
-          ) : (,
+            </div>) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">,
               <AnimatePresence>,
-                {filteredServices.map((service, index) => (,
+                {filteredServices.map((service, index) => (
                   <motion.div,
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.5, delay: index * 0.1 ,}}
-                    className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden",
-                  >,
-                    {/* Service Header */,}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden">,
+                    {/* Service Header */}
                     <div className={`bg-gradient-to-br ${service.color} p-6 text-white`}>,
                       <div className="flex items-center justify-between mb-4">,
                         <div className="text-3xl">{service.icon}</div>,
-                        {service.popular && (,
+                        {service.popular && (
                           <span className="bg-yellow-40o0 text-yellow-90o0 px-3 py-1 rounded-full text-sm font-semibold">,
                             Popular,
-                          </span>,
-                        )}
+                          </span>)}
                       </div>,
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>,
                       <p className="text-blue-10o0 text-sm">{service.tagline}</p>,
@@ -263,11 +244,10 @@ export default function AdvancedPricingShowcase20o25() {,
                             /{billingCycle === 'monthly' ? 'month' : 'year'}
                           </span>,
                         </div>,
-                        {billingCycle === 'yearly' && getSavings(service) > 0 && (,
+                        {billingCycle === 'yearly' && getSavings(service) > 0 && (
                           <div className="text-green-60o0 font-medium">,
                             Save {getSavings(service)}% with yearly billing,
-                          </div>,
-                        )}
+                          </div>)}
                         <div className="text-sm text-gray-50o0 mt-2">,
                           {service.price?.trialDays} day free trial • {service.price?.setupTime} setup,
                         </div>,
@@ -276,29 +256,26 @@ export default function AdvancedPricingShowcase20o25() {,
                       <div className="mb-6">,
                         <h4 className="font-semibold text-gray-90o0 mb-3">Key Features</h4>,
                         <div className="space-y-2">,
-                          {service.features.slice(0, 5).map((feature, idx) => (,
+                          {service.features.slice(0, 5).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2">,
                               <Check className="w-4 h-4 text-green-50o0 flex-shrink-0"  />,
                               <span className="text-sm text-gray-60o0">{feature}</span>,
-                            </div>,
-                          ))}
-                          {service.features.length > 5 && (,
+                            </div>))}
+                          {service.features.length > 5 && (
                             <div className="text-sm text-gray-50o0 text-center">,
                               +{service.features.length - 5} more features,
-                            </div>,
-                          )}
+                            </div>)}
                         </div>,
                       </div>,
                       {/* Benefits */}
                       <div className="mb-6">,
                         <h4 className="font-semibold text-gray-90o0 mb-3">Key Benefits</h4>,
                         <div className="space-y-2">,
-                          {service.benefits.slice(0, 3).map((benefit, idx) => (,
+                          {service.benefits.slice(0, 3).map((benefit, idx) => (
                             <div key={idx} className="flex items-start gap-2">,
                               <TrendingUp className="w-4 h-4 text-blue-50o0 flex-shrink-0 mt-0.5"  />,
                               <span className="text-sm text-gray-60o0">{benefit}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                       </div>,
                       {/* Stats */}
@@ -327,29 +304,25 @@ export default function AdvancedPricingShowcase20o25() {,
                       </div>,
                       {/* CTA Buttons */}
                       <div className="space-y-3">,
-                        <a,
+                        <a
                           href={service.link}
                           target="_blank",
                           rel="noopener noreferrer",
-                          className="w-full bg-blue-60o0 text-white text-center py-3 px-4 rounded-lg hover: bg-blue-70o0 transition-colors font-medium flex items-center justify-center gap-2",
-                        >,
+                          className="w-full bg-blue-60o0 text-white text-center py-3 px-4 rounded-lg hover: bg-blue-70o0 transition-colors font-medium flex items-center justify-center gap-2">,
                           Learn More,
                           <ArrowRight className="w-4 h-4"  />,
                         </a>,
-                        <a,
-                          href={`mailto:${contactInfo.email,}?subject=Pricing Inquiry for ${service.name}`}
-                          className="w-full bg-gray-10o0 text-gray-70o0 text-center py-3 px-4 rounded-lg hover: bg-gray-20o0 transition-colors font-medium flex items-center justify-center gap-2",
-                        >,
+                        <a
+                          href={`mailto:${contactInfo.email}?subject=Pricing Inquiry for ${service.name}`}
+                          className="w-full bg-gray-10o0 text-gray-70o0 text-center py-3 px-4 rounded-lg hover: bg-gray-20o0 transition-colors font-medium flex items-center justify-center gap-2">,
                           <Mail className="w-4 h-4"  />,
                           Get Custom Quote,
                         </a>,
                       </div>,
                     </div>,
-                  </motion.div>,
-                )),}
+                  </motion.div>))}
               </AnimatePresence>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* Why Choose Zion Tech Group */}
@@ -403,35 +376,30 @@ export default function AdvancedPricingShowcase20o25() {,
             Let our experts help you choose the perfect micro SAAS solution for your needs,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors flex items-center justify-center gap-2",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors flex items-center justify-center gap-2">,
               <Phone className="w-5 h-5"  />,
-              Call {contactInfo.mobile,}
+              Call {contactInfo.mobile}
             </a>,
-            <a,
-              href={`mailto: ${contactInfo.email,}?subject=Micro SAAS Pricing Inquiry`}
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-60o0 transition-colors flex items-center justify-center gap-2",
-            >,
+            <a
+              href={`mailto: ${contactInfo.email}?subject=Micro SAAS Pricing Inquiry`}
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-60o0 transition-colors flex items-center justify-center gap-2">,
               <Mail className="w-5 h-5"  />,
               Email Us,
             </a>,
           </div>,
           <div className="mt-8 text-blue-10o0">,
             <p className="text-lg font-medium mb-2">Visit our headquarters:</p>,
-            <p className="text-sm">{contactInfo.address,}</p>,
-            <a,
+            <p className="text-sm">{contactInfo.address}</p>,
+            <a
               href={contactInfo.website} ,
               target="_blank",
               rel="noopener noreferrer",
-              className="text-blue-20o0 hover: text-white underline mt-2 inline-block",
-            >,
-              {contactInfo.website,}
+              className="text-blue-20o0 hover: text-white underline mt-2 inline-block">,
+              {contactInfo.website}
             </a>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}

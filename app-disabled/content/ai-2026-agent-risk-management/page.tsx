@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI 20o26: Agent Risk Management Blueprint',;
+export const metadata = {
+  title: 'AI 20o26: Agent Risk Management Blueprint';
   description:,
-    'Practical playbook for assessing, mitigating, and monitoring risks in autonomous AI agent systems with policy-as-code and continuous evaluations.',;
+    'Practical playbook for assessing, mitigating, and monitoring risks in autonomous AI agent systems with policy-as-code and continuous evaluations.';
 };
-,
-export default function AgentRiskManagement20o26() {,
-  return (,
+export default function AgentRiskManagement20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agent Risk Management Blueprint,
@@ -44,7 +43,5 @@ export default function AgentRiskManagement20o26() {,
           feed learnings into updated playbooks and eval suites.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

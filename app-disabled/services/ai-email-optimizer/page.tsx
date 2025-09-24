@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-email-optimizer - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-email-optimizer - Zion Tech Group';
   description:,
-    'Professional ai-email-optimizer solutions for your business needs.',;
-  keywords: 'ai-email-optimizer, services, business, technology',;
+    'Professional ai-email-optimizer solutions for your business needs.';
+  keywords: 'ai-email-optimizer, services, business, technology';
 };
-export default function AiEmailOptimizerPage() {,
-  return (,
+export default function AiEmailOptimizerPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiEmailOptimizerPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

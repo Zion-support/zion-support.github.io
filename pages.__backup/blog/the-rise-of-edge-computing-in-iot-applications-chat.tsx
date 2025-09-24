@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {,
-  return (,
+const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='TheRiseOfEdgeComputingInIotApplicationsChat blog post',
         />,
@@ -19,9 +18,6 @@ const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default TheRiseOfEdgeComputingInIotApplicationsChat,
-,
+    </div>),
+};
+export default TheRiseOfEdgeComputingInIotApplicationsChat;

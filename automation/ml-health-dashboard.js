@@ -9,895 +9,737 @@ const path = require('path'),
 const { execSync, spawn } = require('child_process'),
 const http = require('http'),
 const url = require('url'),
-,
-class MLHealthDashboard {,
-  constructor() {,
+class MLHealthDashboard {
+  constructor() {
     this.projectRoot = process.cwd(),
     this.logFile = path.join(this.projectRoot, 'logs', 'ml-health-dashboard.log'),
     this.mlModelFile = path.join(this.projectRoot, 'logs', 'ml-health-model.json'),
     this.healthDataFile = path.join(this.projectRoot, 'logs', 'health-data.json'),
     this.predictionsFile = path.join(this.projectRoot, 'logs', 'health-predictions.json'),
-,
     this.ensureLogsDirectory(),
     this.loadMLModel(),
     this.loadHealthData(),
-,
     // ML Configuration,
     this.mlInsightsEnabled = process.env.ML_INSIGHTS === 'enabled',
     this.predictiveAnalyticsEnabled = process.env.PREDICTIVE_ANALYTICS === 'true',
     this.healthScoringEnabled = process.env.HEALTH_SCORING === 'enabled',
-,
     // Dashboard configuration,
     this.port = process.env.DASHBOARD_PORT || 30o01,
     this.updateInterval = 5 * 60 * 10o00, // 5 minutes,
-    // // // // // // console.log('🤖 ML Health Dashboard Starting...'),
-    this.startDashboard(),
-  }
+    // // // // // // // console.log('🤖 ML Health Dashboard Starting...'),
+    this.startDashboard()}
 ,
-  ensureLogsDirectory() {,
+  ensureLogsDirectory() {
     const logsDir = path.dirname(this.logFile),
-    if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true ,}),
-    }
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true })}
   }
 ,
-  log(message, level = 'INFO') {,
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
+    // // // // // // // console.log(`[${level}] ${message}`),
+    fs.appendFileSync(this.logFile, logEntry)}
 ,
-    // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry),
-  }
-,
-  loadMLModel() {,
-    try {,
-      if (fs.existsSync(this.mlModelFile)) {,
-        this.mlModel = JSON.parse(fs.readFileSync(this.mlModelFile, 'utf8')),
-      } else {,
-        this.mlModel ={,
-          version: '1.0.0',;
-          lastTrained: new Date().toISOString(),;
-          accuracy: 0.85,;
-          features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'],;
-          predictions: {,},;
+  loadMLModel() {
+    try {
+      if (fs.existsSync(this.mlModelFile)) {
+        this.mlModel = JSON.parse(fs.readFileSync(this.mlModelFile, 'utf8'))} else {
+        this.mlModel ={
+          version: '1.0.0';
+          lastTrained: new Date().toISOString();
+          accuracy: 0.85;
+          features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'];
+          predictions: {};
           recommendations: [],
-        ,};
+        };
       }
-    } catch (error) {,
-      this.log(`Failed to load ML model: ${error.message,}`, 'ERROR'),
-      this.mlModel ={,
-        version: '1.0.0',;
-        lastTrained: new Date().toISOString(),;
-        accuracy: 0.85,;
-        features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'],;
-        predictions: {,},;
+    } catch (error) {
+      this.log(`Failed to load ML model: ${error.message}`, 'ERROR'),
+      this.mlModel ={
+        version: '1.0.0';
+        lastTrained: new Date().toISOString();
+        accuracy: 0.85;
+        features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'];
+        predictions: {};
         recommendations: [],
-      ,};
+      };
     }
   }
 ,
-  loadHealthData() {,
-    try {,
-      if (fs.existsSync(this.healthDataFile)) {,
-        this.healthData = JSON.parse(fs.readFileSync(this.healthDataFile, 'utf8')),
-      } else {,
-        this.healthData ={,
-          metrics: [],;
-          trends: {,},;
-          alerts: [],;
+  loadHealthData() {
+    try {
+      if (fs.existsSync(this.healthDataFile)) {
+        this.healthData = JSON.parse(fs.readFileSync(this.healthDataFile, 'utf8'))} else {
+        this.healthData ={
+          metrics: [];
+          trends: {};
+          alerts: [];
           lastUpdated: new Date().toISOString(),
-        ,};
+        };
       }
-    } catch (error) {,
-      this.log(`Failed to load health data: ${error.message,}`, 'ERROR'),
-      this.healthData ={,
-        metrics: [],;
-        trends: {,},;
-        alerts: [],;
+    } catch (error) {
+      this.log(`Failed to load health data: ${error.message}`, 'ERROR'),
+      this.healthData ={
+        metrics: [];
+        trends: {};
+        alerts: [];
         lastUpdated: new Date().toISOString(),
-      ,};
+      };
     }
   }
 ,
-  async startDashboard() {,
+  async startDashboard() {
     this.log('Starting ML Health Dashboard...'),
-,
     // Start health monitoring,
     await this.startHealthMonitoring(),
-,
     // Start web dashboard,
     this.startWebDashboard(),
-,
     // Schedule regular updates,
-    setInterval(() => {,
-      this.updateHealthMetrics(),
-    }, this.updateInterval),
+    setInterval(() => {
+      this.updateHealthMetrics()}, this.updateInterval),
+    this.log('ML Health Dashboard started successfully')}
 ,
-    this.log('ML Health Dashboard started successfully'),
-  }
-,
-  async startHealthMonitoring() {,
+  async startHealthMonitoring() {
     this.log('Starting health monitoring...'),
-,
     // Initial health assessment,
     await this.performHealthAssessment(),
-,
     // Schedule predictive analysis,
-    if (this.predictiveAnalyticsEnabled) {,
-      setInterval(() => {,
-        this.performPredictiveAnalysis(),
-      }, 15 * 60 * 10o00), // Every 15 minutes,
-    }
+    if (this.predictiveAnalyticsEnabled) {
+      setInterval(() => {
+        this.performPredictiveAnalysis()}, 15 * 60 * 10o00), // Every 15 minutes}
 ,
     // Schedule ML model updates,
-    if (this.mlInsightsEnabled) {,
-      setInterval(() => {,
-        this.updateMLModel(),
-      }, 60 * 60 * 10o00), // Every hour,
-    }
+    if (this.mlInsightsEnabled) {
+      setInterval(() => {
+        this.updateMLModel()}, 60 * 60 * 10o00), // Every hour}
   }
 ,
-  async performHealthAssessment() {,
+  async performHealthAssessment() {
     this.log('Performing comprehensive health assessment...'),
-,
-    try {,
-      const assessment ={,
-        timestamp: new Date().toISOString(),;
-        buildHealth: await this.assessBuildHealth(),;
-        codeQuality: await this.assessCodeQuality(),;
-        dependencyHealth: await this.assessDependencyHealth(),;
-        testHealth: await this.assessTestHealth(),;
-        performanceHealth: await this.assessPerformanceHealth(),;
+    try {
+      const assessment ={
+        timestamp: new Date().toISOString();
+        buildHealth: await this.assessBuildHealth();
+        codeQuality: await this.assessCodeQuality();
+        dependencyHealth: await this.assessDependencyHealth();
+        testHealth: await this.assessTestHealth();
+        performanceHealth: await this.assessPerformanceHealth();
         securityHealth: await this.assessSecurityHealth(),
-      ,};
-,
+      };
       // Calculate overall health score,
       const overallScore = this.calculateOverallHealthScore(assessment),
       assessment.overallScore = overallScore,
       assessment.healthLevel = this.getHealthLevel(overallScore),
-,
       // Store assessment,
       this.healthData.metrics.push(assessment),
-,
       // Keep only last 10o0 assessments,
-      if (this.healthData.metrics.length > 10o0) {,
-        this.healthData.metrics = this.healthData.metrics.slice(-10o0),
-      }
+      if (this.healthData.metrics.length > 10o0) {
+        this.healthData.metrics = this.healthData.metrics.slice(-10o0)}
 ,
       // Update trends,
       this.updateHealthTrends(),
-,
       // Generate alerts if needed,
       this.generateHealthAlerts(assessment),
-,
-      this.log(`Health assessment completed. Overall score: ${overallScore.toFixed(2),}/10o0`),
-,
+      this.log(`Health assessment completed. Overall score: ${overallScore.toFixed(2)}/10o0`),
       // Save health data,
       this.saveHealthData(),
-,
-    } catch (error) {,
-      this.log(`Health assessment failed: ${error.message,}`, 'ERROR'),
-    }
+} catch (error) {
+      this.log(`Health assessment failed: ${error.message}`, 'ERROR')}
   }
 ,
-  async assessBuildHealth() {,
-    try {,
+  async assessBuildHealth() {
+    try {
       // Check build success rate,
       const buildHistory = await this.getBuildHistory(),
       const successRate = this.calculateBuildSuccessRate(buildHistory),
-,
       // Check build time trends,
       const buildTimeTrend = this.analyzeBuildTimeTrend(buildHistory),
-,
       // Check for build warnings/errors,
       const buildIssues = await this.detectBuildIssues(),
-,
-      return {,
-        score: successRate * 10o0,;
-        successRate: successRate,;
-        buildTimeTrend: buildTimeTrend,;
-        issues: buildIssues,;
+      return {
+        score: successRate * 10o0;
+        successRate: successRate;
+        buildTimeTrend: buildTimeTrend;
+        issues: buildIssues;
         level: successRate > 0.9 ? 'EXCELLENT' : successRate > 0.8 ? 'GOOD' : successRate > 0.6 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Build health assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN', issues: [] ,};
+      };
+    } catch (error) {
+      this.log(`Build health assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN', issues: [] };
     }
   }
 ,
-  async assessCodeQuality() {,
-    try {,
+  async assessCodeQuality() {
+    try {
       // Run code quality checks,
       const lintResults = await this.runCodeQualityChecks(),
       const complexityScore = await this.calculateComplexityScore(),
       const documentationScore = await this.calculateDocumentationScore(),
-,
       const overallScore = (lintResults.score + complexityScore + documentationScore) / 3,
-,
-      return {,
-        score: overallScore,;
-        lint: lintResults,;
-        complexity: complexityScore,;
-        documentation: documentationScore,;
+      return {
+        score: overallScore;
+        lint: lintResults;
+        complexity: complexityScore;
+        documentation: documentationScore;
         level: overallScore > 80 ? 'EXCELLENT' : overallScore > 60 ? 'GOOD' : overallScore > 40 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Code quality assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' ,};
+      };
+    } catch (error) {
+      this.log(`Code quality assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN' };
     }
   }
 ,
-  async assessDependencyHealth() {,
-    try {,
+  async assessDependencyHealth() {
+    try {
       // Check for outdated dependencies,
       const outdatedDeps = await this.checkOutdatedDependencies(),
-,
       // Check for security vulnerabilities,
       const securityAudit = await this.runSecurityAudit(),
-,
       // Check for circular dependencies,
       const circularDeps = await this.checkCircularDependencies(),
-,
       // Calculate dependency health score,
       let score = 10o0,
       score -= outdatedDeps.length * 5, // -5 points per outdated dependency,
       score -= securityAudit.vulnerabilities * 10, // -10 points per vulnerability,
       score -= circularDeps.length * 15, // -15 points per circular dependency,
       score = Math.max(0, score),
-,
-      return {,
-        score: score,;
-        outdatedCount: outdatedDeps.length,;
-        vulnerabilities: securityAudit.vulnerabilities,;
-        circularDependencies: circularDeps.length,;
+      return {
+        score: score;
+        outdatedCount: outdatedDeps.length;
+        vulnerabilities: securityAudit.vulnerabilities;
+        circularDependencies: circularDeps.length;
         level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Dependency health assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' ,};
+      };
+    } catch (error) {
+      this.log(`Dependency health assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN' };
     }
   }
 ,
-  async assessTestHealth() {,
-    try {,
+  async assessTestHealth() {
+    try {
       // Check test coverage,
       const coverage = await this.getTestCoverage(),
-,
       // Check test execution,
       const testExecution = await this.runTests(),
-,
       // Check for test failures,
       const testFailures = await this.getTestFailures(),
-,
       const score = coverage.percentage * 0.7 + (testExecution.success ? 30 : 0),
-,
-      return {,
-        score: score,;
-        coverage: coverage.percentage,;
-        executionSuccess: testExecution.success,;
-        failures: testFailures.length,;
+      return {
+        score: score;
+        coverage: coverage.percentage;
+        executionSuccess: testExecution.success;
+        failures: testFailures.length;
         level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Test health assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' ,};
+      };
+    } catch (error) {
+      this.log(`Test health assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN' };
     }
   }
 ,
-  async assessPerformanceHealth() {,
-    try {,
+  async assessPerformanceHealth() {
+    try {
       // Check bundle size,
       const bundleSize = await this.analyzeBundleSize(),
-,
       // Check build performance,
       const buildPerformance = await this.analyzeBuildPerformance(),
-,
       // Check runtime performance indicators,
       const runtimePerformance = await this.analyzeRuntimePerformance(),
-,
       const score = this.calculatePerformanceScore(bundleSize, buildPerformance, runtimePerformance),
-,
-      return {,
-        score: score,;
-        bundleSize: bundleSize,;
-        buildTime: buildPerformance.averageTime,;
-        runtimeMetrics: runtimePerformance,;
+      return {
+        score: score;
+        bundleSize: bundleSize;
+        buildTime: buildPerformance.averageTime;
+        runtimeMetrics: runtimePerformance;
         level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Performance health assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' ,};
+      };
+    } catch (error) {
+      this.log(`Performance health assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN' };
     }
   }
 ,
-  async assessSecurityHealth() {,
-    try {,
+  async assessSecurityHealth() {
+    try {
       // Run security audit,
       const securityAudit = await this.runSecurityAudit(),
-,
       // Check for known vulnerabilities,
       const knownVulnerabilities = await this.checkKnownVulnerabilities(),
-,
       // Check for security best practices,
       const securityBestPractices = await this.checkSecurityBestPractices(),
-,
       let score = 10o0,
       score -= securityAudit.critical * 25, // -25 points per critical vulnerability,
       score -= securityAudit.high * 15, // -15 points per high vulnerability,
       score -= securityAudit.medium * 10, // -10 points per medium vulnerability,
       score -= securityAudit.low * 5, // -5 points per low vulnerability,
       score = Math.max(0, score),
-,
-      return {,
-        score: score,;
-        vulnerabilities: securityAudit,;
-        knownIssues: knownVulnerabilities,;
-        bestPractices: securityBestPractices,;
+      return {
+        score: score;
+        vulnerabilities: securityAudit;
+        knownIssues: knownVulnerabilities;
+        bestPractices: securityBestPractices;
         level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR',
-      ,};
-    } catch (error) {,
-      this.log(`Security health assessment failed: ${error.message,}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' ,};
+      };
+    } catch (error) {
+      this.log(`Security health assessment failed: ${error.message}`, 'ERROR'),
+      return { score: 0, level: 'UNKNOWN' };
     }
   }
 ,
-  calculateOverallHealthScore(assessment) {,
-    const weights ={,
-      buildHealth: 0.25,;
-      codeQuality: 0.25,;
-      dependencyHealth: 0.2,;
-      testHealth: 0.15,;
-      performanceHealth: 0.1,;
+  calculateOverallHealthScore(assessment) {
+    const weights ={
+      buildHealth: 0.25;
+      codeQuality: 0.25;
+      dependencyHealth: 0.2;
+      testHealth: 0.15;
+      performanceHealth: 0.1;
       securityHealth: 0.0o5,
-    ,};
-,
+    };
     let totalScore = 0,
     let totalWeight = 0,
-,
-    for (const [category, weight] of Object.entries(weights)) {,
-      if (assessment[category] && assessment[category].score !== undefined) {,
+    for (const [category, weight] of Object.entries(weights)) {
+      if (assessment[category] && assessment[category].score !== undefined) {
         totalScore += assessment[category].score * weight,
-        totalWeight += weight,
-      }
+        totalWeight += weight}
     }
 ,
-    return totalWeight > 0 ? totalScore / totalWeight : 0,
-  }
+    return totalWeight > 0 ? totalScore / totalWeight : 0}
 ,
-  getHealthLevel(score) {,
+  getHealthLevel(score) {
     if (score >= 90) return 'EXCELLENT',
     if (score >= 80) return 'GOOD',
     if (score >= 60) return 'FAIR',
     if (score >= 40) return 'POOR',
-    return 'CRITICAL',
-  }
+    return 'CRITICAL'}
 ,
-  updateHealthTrends() {,
+  updateHealthTrends() {
     if (this.healthData.metrics.length < 2) return,
-,
     const recentMetrics = this.healthData.metrics.slice(-10),
     const trends ={};
-,
     // Calculate trends for each health category,
     const categories = ['buildHealth', 'codeQuality', 'dependencyHealth', 'testHealth', 'performanceHealth', 'securityHealth'],
-,
-    for (const category of categories) {,
+    for (const category of categories) {
       const scores = recentMetrics.map(m => m[category]?.score || 0),
-      trends[category] = this.calculateTrend(scores),
-    }
+      trends[category] = this.calculateTrend(scores)}
 ,
-    this.healthData.trends = trends,
-  }
+    this.healthData.trends = trends}
 ,
-  calculateTrend(scores) {,
+  calculateTrend(scores) {
     if (scores.length < 2) return 'STABLE',
-,
     const firstHalf = scores.slice(0, Math.floor(scores.length / 2)),
     const secondHalf = scores.slice(Math.floor(scores.length / 2)),
-,
     const firstAvg = firstHalf.reduce((a, b) => a + b, 0) / firstHalf.length,
     const secondAvg = secondHalf.reduce((a, b) => a + b, 0) / secondHalf.length,
-,
     const difference = secondAvg - firstAvg,
     const threshold = 5, // 5 point threshold for trend detection,
     if (difference > threshold) return 'IMPROVING',
     if (difference < -threshold) return 'DECLINING',
-    return 'STABLE',
-  }
+    return 'STABLE'}
 ,
-  generateHealthAlerts(assessment) {,
+  generateHealthAlerts(assessment) {
     const alerts = [],
-,
     // Check for critical issues,
-    if (assessment.overallScore < 40) {,
-      alerts.push({,
-        level: 'CRITICAL',;
-        message: 'Project health is critically low. Immediate attention required.',;
-        category: 'overall',;
+    if (assessment.overallScore < 40) {
+      alerts.push({
+        level: 'CRITICAL';
+        message: 'Project health is critically low. Immediate attention required.';
+        category: 'overall';
         timestamp: new Date().toISOString(),
-      ,}),
-    }
+      })}
 ,
     // Check individual categories,
     const categories = ['buildHealth', 'codeQuality', 'dependencyHealth', 'testHealth', 'performanceHealth', 'securityHealth'],
-,
-    for (const category of categories) {,
+    for (const category of categories) {
       const health = assessment[category],
-      if (health && health.level === 'POOR' || health.level === 'CRITICAL') {,
-        alerts.push({,
-          level: health.level === 'POOR' ? 'WARNING' : 'CRITICAL',;
-          message: `${category.replace(/([A-Z])/g, ' $1').trim()} health is ${health.level.toLowerCase()}`,;
-          category: category,;
-          score: health.score,;
+      if (health && health.level === 'POOR' || health.level === 'CRITICAL') {
+        alerts.push({
+          level: health.level === 'POOR' ? 'WARNING' : 'CRITICAL';
+          message: `${category.replace(/([A-Z])/g, ' $1').trim()} health is ${health.level.toLowerCase()}`;
+          category: category;
+          score: health.score;
           timestamp: new Date().toISOString(),
-        ,}),
-      }
+        })}
     }
 ,
     // Add new alerts,
     this.healthData.alerts.push(...alerts),
-,
     // Keep only recent alerts (last 50),
-    if (this.healthData.alerts.length > 50) {,
-      this.healthData.alerts = this.healthData.alerts.slice(-50),
-    }
+    if (this.healthData.alerts.length > 50) {
+      this.healthData.alerts = this.healthData.alerts.slice(-50)}
   }
 ,
-  async performPredictiveAnalysis() {,
+  async performPredictiveAnalysis() {
     if (!this.predictiveAnalyticsEnabled) return,
-,
     this.log('Performing predictive analysis...'),
-,
-    try {,
+    try {
       const predictions = await this.generatePredictions(),
-,
       // Save predictions,
       fs.writeFileSync(this.predictionsFile, JSON.stringify(predictions, null, 2)),
-,
       this.log('Predictive analysis completed'),
-,
-    } catch (error) {,
-      this.log(`Predictive analysis failed: ${error.message,}`, 'ERROR'),
-    }
+} catch (error) {
+      this.log(`Predictive analysis failed: ${error.message}`, 'ERROR')}
   }
 ,
-  async generatePredictions() {,
-    const predictions ={,
-      timestamp: new Date().toISOString(),;
-      nextWeek: {,},;
-      nextMonth: {,},;
-      riskFactors: [],;
+  async generatePredictions() {
+    const predictions ={
+      timestamp: new Date().toISOString();
+      nextWeek: {};
+      nextMonth: {};
+      riskFactors: [];
       recommendations: [],
-    ,};
-,
+    };
     // Analyze trends and predict future health,
-    if (this.healthData.metrics.length >= 5) {,
+    if (this.healthData.metrics.length >= 5) {
       const recentTrends = this.healthData.trends,
-,
-      for (const [category, trend] of Object.entries(recentTrends)) {,
+      for (const [category, trend] of Object.entries(recentTrends)) {
         const currentScore = this.healthData.metrics[this.healthData.metrics.length - 1][category]?.score || 0,
-,
         // Simple linear prediction,
         let predictedScore = currentScore,
-        if (trend === 'IMPROVING') {,
-          predictedScore = Math.min(10o0, currentScore + 5),
-        } else if (trend === 'DECLINING') {,
-          predictedScore = Math.max(0, currentScore - 5),
-        }
+        if (trend === 'IMPROVING') {
+          predictedScore = Math.min(10o0, currentScore + 5)} else if (trend === 'DECLINING') {
+          predictedScore = Math.max(0, currentScore - 5)}
 ,
         predictions.nextWeek[category] = Math.round(predictedScore),
-        predictions.nextMonth[category] = Math.round(predictedScore + (trend === 'IMPROVING' ? 10 : trend === 'DECLINING' ? -10 : 0)),
-      }
+        predictions.nextMonth[category] = Math.round(predictedScore + (trend === 'IMPROVING' ? 10 : trend === 'DECLINING' ? -10 : 0))}
     }
 ,
     // Identify risk factors,
     predictions.riskFactors = this.identifyRiskFactors(),
-,
     // Generate recommendations,
     predictions.recommendations = this.generateRecommendations(),
+    return predictions}
 ,
-    return predictions,
-  }
-,
-  identifyRiskFactors() {,
+  identifyRiskFactors() {
     const riskFactors = [],
-,
     // Analyze recent metrics for risk patterns,
     const recentMetrics = this.healthData.metrics.slice(-5),
-,
-    for (const metric of recentMetrics) {,
-      if (metric.overallScore < 60) {,
-        riskFactors.push({,
-          type: 'LOW_HEALTH_SCORE',;
-          severity: 'HIGH',;
-          description: 'Overall health score is consistently low',;
+    for (const metric of recentMetrics) {
+      if (metric.overallScore < 60) {
+        riskFactors.push({
+          type: 'LOW_HEALTH_SCORE';
+          severity: 'HIGH';
+          description: 'Overall health score is consistently low';
           timestamp: metric.timestamp,
-        ,}),
-      }
+        })}
 ,
       // Check for declining trends,
-      if (this.healthData.trends.overallScore === 'DECLINING') {,
-        riskFactors.push({,
-          type: 'DECLINING_HEALTH',;
-          severity: 'MEDIUM',;
-          description: 'Project health is declining',;
+      if (this.healthData.trends.overallScore === 'DECLINING') {
+        riskFactors.push({
+          type: 'DECLINING_HEALTH';
+          severity: 'MEDIUM';
+          description: 'Project health is declining';
           timestamp: new Date().toISOString(),
-        ,}),
-      }
+        })}
     }
 ,
-    return riskFactors,
-  }
+    return riskFactors}
 ,
-  generateRecommendations() {,
+  generateRecommendations() {
     const recommendations = [],
-,
     // Generate recommendations based on current health status,
     const latestMetric = this.healthData.metrics[this.healthData.metrics.length - 1],
-,
-    if (latestMetric) {,
-      if (latestMetric.buildHealth.level === 'POOR') {,
-        recommendations.push({,
-          priority: 'HIGH',;
-          category: 'build',;
-          action: 'Review and fix build configuration issues',;
+    if (latestMetric) {
+      if (latestMetric.buildHealth.level === 'POOR') {
+        recommendations.push({
+          priority: 'HIGH';
+          category: 'build';
+          action: 'Review and fix build configuration issues';
           impact: 'Improves build reliability and development velocity',
-        ,}),
-      }
+        })}
 ,
-      if (latestMetric.codeQuality.level === 'POOR') {,
-        recommendations.push({,
-          priority: 'HIGH',;
-          category: 'code',;
-          action: 'Implement code quality improvements and refactoring',;
+      if (latestMetric.codeQuality.level === 'POOR') {
+        recommendations.push({
+          priority: 'HIGH';
+          category: 'code';
+          action: 'Implement code quality improvements and refactoring';
           impact: 'Reduces technical debt and improves maintainability',
-        ,}),
-      }
+        })}
 ,
-      if (latestMetric.dependencyHealth.level === 'POOR') {,
-        recommendations.push({,
-          priority: 'MEDIUM',;
-          category: 'dependencies',;
-          action: 'Update outdated dependencies and fix security vulnerabilities',;
+      if (latestMetric.dependencyHealth.level === 'POOR') {
+        recommendations.push({
+          priority: 'MEDIUM';
+          category: 'dependencies';
+          action: 'Update outdated dependencies and fix security vulnerabilities';
           impact: 'Improves security and reduces compatibility issues',
-        ,}),
-      }
+        })}
 ,
-      if (latestMetric.testHealth.level === 'POOR') {,
-        recommendations.push({,
-          priority: 'MEDIUM',;
-          category: 'testing',;
-          action: 'Improve test coverage and fix failing tests',;
+      if (latestMetric.testHealth.level === 'POOR') {
+        recommendations.push({
+          priority: 'MEDIUM';
+          category: 'testing';
+          action: 'Improve test coverage and fix failing tests';
           impact: 'Increases code reliability and reduces regression risk',
-        ,}),
-      }
+        })}
     }
 ,
-    return recommendations,
-  }
+    return recommendations}
 ,
-  async updateMLModel() {,
+  async updateMLModel() {
     if (!this.mlInsightsEnabled) return,
-,
     this.log('Updating ML model...'),
-,
-    try {,
+    try {
       // Retrain model with new data,
       await this.retrainModel(),
-,
       // Update model accuracy,
       this.updateModelAccuracy(),
-,
       // Save updated model,
       fs.writeFileSync(this.mlModelFile, JSON.stringify(this.mlModel, null, 2)),
-,
       this.log('ML model updated successfully'),
-,
-    } catch (error) {,
-      this.log(`ML model update failed: ${error.message,}`, 'ERROR'),
-    }
+} catch (error) {
+      this.log(`ML model update failed: ${error.message}`, 'ERROR')}
   }
 ,
-  async retrainModel() {,
+  async retrainModel() {
     // Simple retraining logic (can be enhanced with actual ML algorithms),
-    if (this.healthData.metrics.length >= 10) {,
+    if (this.healthData.metrics.length >= 10) {
       const recentMetrics = this.healthData.metrics.slice(-10),
-,
       // Update model based on recent performance,
       const accuracy = this.calculateModelAccuracy(recentMetrics),
       this.mlModel.accuracy = accuracy,
-      this.mlModel.lastTrained = new Date().toISOString(),
-    }
+      this.mlModel.lastTrained = new Date().toISOString()}
   }
 ,
-  calculateModelAccuracy(metrics) {,
+  calculateModelAccuracy(metrics) {
     // Simple accuracy calculation (can be enhanced),
     let correctPredictions = 0,
     let totalPredictions = 0,
-,
-    for (let i = 1, i < metrics.length, i++) {,
+    for (let i = 1, i < metrics.length, i++) {
       const actual = metrics[i].overallScore,
       const predicted = metrics[i - 1].overallScore, // Simple prediction,
       if (Math.abs(actual - predicted) < 10) { // Within 10 points,
-        correctPredictions++,
-      }
-      totalPredictions++,
-    }
+        correctPredictions++}
+      totalPredictions++}
 ,
-    return totalPredictions > 0 ? correctPredictions / totalPredictions : 0.85,
-  }
+    return totalPredictions > 0 ? correctPredictions / totalPredictions : 0.85}
 ,
-  updateModelAccuracy() {,
+  updateModelAccuracy() {
     // Update model accuracy based on recent performance,
     const recentAccuracy = this.mlModel.accuracy,
-    this.mlModel.accuracy = Math.min(1.0, recentAccuracy + 0.0o1), // Slight improvement,
-  }
+    this.mlModel.accuracy = Math.min(1.0, recentAccuracy + 0.0o1), // Slight improvement}
 ,
-  startWebDashboard() {,
-    const server = http.createServer((req, res) => {,
+  startWebDashboard() {
+    const server = http.createServer((req, res) => {
       const parsedUrl = url.parse(req.url, true),
-,
       res.setHeader('Content-Type', 'application/json'),
       res.setHeader('Access-Control-Allow-Origin', '*'),
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'),
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type'),
-,
-      if (req.method === 'OPTIONS') {,
+      if (req.method === 'OPTIONS') {
         res.writeHead(20o0),
         res.end(),
-        return,
-      }
+        return}
 ,
-      if (parsedUrl.pathname === '/health') {,
+      if (parsedUrl.pathname === '/health') {
         // Return current health status,
         const currentHealth = this.healthData.metrics[this.healthData.metrics.length - 1] || {};
         res.writeHead(20o0),
-        res.end(JSON.stringify({,
-          status: 'healthy',;
-          currentHealth: currentHealth,;
+        res.end(JSON.stringify({
+          status: 'healthy';
+          currentHealth: currentHealth;
           timestamp: new Date().toISOString(),
-        ,})),
-      } else if (parsedUrl.pathname === '/metrics') {,
+        }))} else if (parsedUrl.pathname === '/metrics') {
         // Return health metrics,
         res.writeHead(20o0),
-        res.end(JSON.stringify({,
+        res.end(JSON.stringify({
           metrics: this.healthData.metrics.slice(-20), // Last 20 metrics,
-          trends: this.healthData.trends,;
+          trends: this.healthData.trends;
           alerts: this.healthData.alerts.slice(-10) // Last 10 alerts,
-        ,})),
-      } else if (parsedUrl.pathname === '/predictions') {,
+        }))} else if (parsedUrl.pathname === '/predictions') {
         // Return predictions,
-        try {,
+        try {
           const predictions = JSON.parse(fs.readFileSync(this.predictionsFile, 'utf8')),
           res.writeHead(20o0),
-          res.end(JSON.stringify(predictions)),
-        } catch (error) {,
+          res.end(JSON.stringify(predictions))} catch (error) {
           res.writeHead(40o4),
-          res.end(JSON.stringify({ error: 'Predictions not available' ,})),
-        }
-      } else if (parsedUrl.pathname === '/ml-model') {,
+          res.end(JSON.stringify({ error: 'Predictions not available' }))}
+      } else if (parsedUrl.pathname === '/ml-model') {
         // Return ML model info,
         res.writeHead(20o0),
-        res.end(JSON.stringify({,
-          model: this.mlModel,;
-          features: this.mlModel.features,;
-          accuracy: this.mlModel.accuracy,;
+        res.end(JSON.stringify({
+          model: this.mlModel;
+          features: this.mlModel.features;
+          accuracy: this.mlModel.accuracy;
           lastTrained: this.mlModel.lastTrained,
-        ,})),
-      } else {,
+        }))} else {
         // Return dashboard overview,
         res.writeHead(20o0),
-        res.end(JSON.stringify({,
-          name: 'ML Health Dashboard',;
-          version: '1.0.0',;
-          endpoints: {,
-            '/health': 'Current health status',;
-            '/metrics': 'Health metrics and trends',;
-            '/predictions': 'Predictive analytics',;
-            '/ml-model': 'ML model information',
-          },;
+        res.end(JSON.stringify({
+          name: 'ML Health Dashboard';
+          version: '1.0.0';
+          endpoints: {
+            '/health': 'Current health status';
+            '/metrics': 'Health metrics and trends';
+            '/predictions': 'Predictive analytics';
+            '/ml-model': 'ML model information'};
           timestamp: new Date().toISOString(),
-        ,})),
-      }
+        }))}
     }),
+    server.listen(this.port, () => {
+      this.log(`ML Health Dashboard running on port ${this.port}`)}),
+    server.on('error', (error) => {
+      this.log(`Dashboard server error: ${error.message}`, 'ERROR')})}
 ,
-    server.listen(this.port, () => {,
-      this.log(`ML Health Dashboard running on port ${this.port}`),
-    }),
-,
-    server.on('error', (error) => {,
-      this.log(`Dashboard server error: ${error.message,}`, 'ERROR'),
-    }),
-  }
-,
-  async updateHealthMetrics() {,
+  async updateHealthMetrics() {
     this.log('Updating health metrics...'),
-,
-    try {,
+    try {
       // Perform new health assessment,
       await this.performHealthAssessment(),
-,
       // Update ML model if needed,
-      if (this.mlInsightsEnabled) {,
-        await this.updateMLModel(),
-      }
+      if (this.mlInsightsEnabled) {
+        await this.updateMLModel()}
 ,
       this.log('Health metrics updated successfully'),
-,
-    } catch (error) {,
-      this.log(`Health metrics update failed: ${error.message,}`, 'ERROR'),
-    }
+} catch (error) {
+      this.log(`Health metrics update failed: ${error.message}`, 'ERROR')}
   }
 ,
-  saveHealthData() {,
-    try {,
-      fs.writeFileSync(this.healthDataFile, JSON.stringify(this.healthData, null, 2)),
-    } catch (error) {,
-      this.log(`Failed to save health data: ${error.message,}`, 'ERROR'),
-    }
+  saveHealthData() {
+    try {
+      fs.writeFileSync(this.healthDataFile, JSON.stringify(this.healthData, null, 2))} catch (error) {
+      this.log(`Failed to save health data: ${error.message}`, 'ERROR')}
   }
 ,
   // Helper methods for health assessments,
-  async getBuildHistory() {,
+  async getBuildHistory() {
     // Get build history from logs or PM2,
-    return [],
-  }
+    return []}
 ,
-  calculateBuildSuccessRate(buildHistory) {,
+  calculateBuildSuccessRate(buildHistory) {
     if (buildHistory.length === 0) return 0.9, // Default assumption,
     const successful = buildHistory.filter(b => b.success).length,
-    return successful / buildHistory.length,
-  }
+    return successful / buildHistory.length}
 ,
-  analyzeBuildTimeTrend(buildHistory) {,
+  analyzeBuildTimeTrend(buildHistory) {
     if (buildHistory.length < 2) return 'STABLE',
     // Simple trend analysis,
-    return 'STABLE',
-  }
+    return 'STABLE'}
 ,
-  async detectBuildIssues() {,
+  async detectBuildIssues() {
     // Detect build issues from logs,
-    return [],
+    return []}
+,
+  async runCodeQualityChecks() {
+    try {
+      execSync('npm run lint --silent', { stdio: 'pipe' }),
+      return { score: 10o0, issues: 0 };
+    } catch (error) {
+      return { score: 80, issues: 5 }; // Simplified scoring}
   }
 ,
-  async runCodeQualityChecks() {,
-    try {,
-      execSync('npm run lint --silent', { stdio: 'pipe' ,}),
-      return { score: 10o0, issues: 0 ,};
-    } catch (error) {,
-      return { score: 80, issues: 5 ,}; // Simplified scoring,
-    }
-  }
-,
-  async calculateComplexityScore() {,
+  async calculateComplexityScore() {
     // Calculate code complexity score,
-    return 75, // Simplified,
-  }
+    return 75, // Simplified}
 ,
-  async calculateDocumentationScore() {,
+  async calculateDocumentationScore() {
     // Calculate documentation score,
-    return 70, // Simplified,
+    return 70, // Simplified}
+,
+  async checkOutdatedDependencies() {
+    try {
+      const result = execSync('npm outdated --json', { encoding: 'utf8', stdio: 'pipe' }),
+      return Object.keys(JSON.parse(result))} catch (error) {
+      return []}
   }
 ,
-  async checkOutdatedDependencies() {,
-    try {,
-      const result = execSync('npm outdated --json', { encoding: 'utf8', stdio: 'pipe' ,}),
-      return Object.keys(JSON.parse(result)),
-    } catch (error) {,
-      return [],
-    }
-  }
-,
-  async runSecurityAudit() {,
-    try {,
-      const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' ,}),
+  async runSecurityAudit() {
+    try {
+      const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' }),
       const audit = JSON.parse(result),
-      return {,
-        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0,;
-        critical: audit.metadata?.vulnerabilities?.critical || 0,;
-        high: audit.metadata?.vulnerabilities?.high || 0,;
-        medium: audit.metadata?.vulnerabilities?.medium || 0,;
+      return {
+        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0;
+        critical: audit.metadata?.vulnerabilities?.critical || 0;
+        high: audit.metadata?.vulnerabilities?.high || 0;
+        medium: audit.metadata?.vulnerabilities?.medium || 0;
         low: audit.metadata?.vulnerabilities?.low || 0,
-      ,};
-    } catch (error) {,
-      return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0 ,};
+      };
+    } catch (error) {
+      return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0 };
     }
   }
 ,
-  async checkCircularDependencies() {,
-    try {,
-      const result = execSync('npx madge --circular --extensions js,ts,jsx,tsx .', {,
-        encoding: 'utf8',;
+  async checkCircularDependencies() {
+    try {
+      const result = execSync('npx madge --circular --extensions js,ts,jsx,tsx .', {
+        encoding: 'utf8';
         stdio: 'pipe',
-      ,}),
-      return result.split('\n').filter(line => line.trim()),
-    } catch (error) {,
-      return [],
-    }
+      }),
+      return result.split('\n').filter(line => line.trim())} catch (error) {
+      return []}
   }
 ,
-  async getTestCoverage() {,
-    try {,
-      const result = execSync('npm run test:coverage --silent', { encoding: 'utf8', stdio: 'pipe' ,}),
+  async getTestCoverage() {
+    try {
+      const result = execSync('npm run test:coverage --silent', { encoding: 'utf8', stdio: 'pipe' }),
       const coverage = this.parseCoverageOutput(result),
-      return coverage,
-    } catch (error) {,
-      return { percentage: 0 ,};
+      return coverage} catch (error) {
+      return { percentage: 0 };
     }
   }
 ,
-  parseCoverageOutput(output) {,
+  parseCoverageOutput(output) {
     const lines = output.split('\n'),
     let percentage = 0,
-,
-    for (const line of lines) {,
-      if (line.includes('All files')) {,
+    for (const line of lines) {
+      if (line.includes('All files')) {
         const match = line.match(/(\d+(?:\.\d+)?)%/),
-        if (match) {,
-          percentage = parseFloat(match[1]),
-        }
-        break,
-      }
+        if (match) {
+          percentage = parseFloat(match[1])}
+        break}
     }
 ,
     return { percentage };
   }
 ,
-  async runTests() {,
-    try {,
-      execSync('npm test --silent', { stdio: 'pipe' ,}),
-      return { success: true ,};
-    } catch (error) {,
-      return { success: false, error: error.message ,};
+  async runTests() {
+    try {
+      execSync('npm test --silent', { stdio: 'pipe' }),
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error.message };
     }
   }
 ,
-  async getTestFailures() {,
+  async getTestFailures() {
     // Get test failures from logs,
-    return [],
-  }
+    return []}
 ,
-  async analyzeBundleSize() {,
+  async analyzeBundleSize() {
     // Analyze bundle size,
-    return { size: '2.5MB', optimized: true ,};
+    return { size: '2.5MB', optimized: true };
   }
 ,
-  async analyzeBuildPerformance() {,
+  async analyzeBuildPerformance() {
     // Analyze build performance,
-    return { averageTime: 450o00, trend: 'stable' ,};
+    return { averageTime: 450o00, trend: 'stable' };
   }
 ,
-  async analyzeRuntimePerformance() {,
+  async analyzeRuntimePerformance() {
     // Analyze runtime performance,
-    return { loadTime: 120o0, renderTime: 80o0 ,};
+    return { loadTime: 120o0, renderTime: 80o0 };
   }
 ,
-  calculatePerformanceScore(bundleSize, buildPerformance, runtimePerformance) {,
+  calculatePerformanceScore(bundleSize, buildPerformance, runtimePerformance) {
     // Calculate performance score,
-    return 85, // Simplified,
-  }
+    return 85, // Simplified}
 ,
-  async checkKnownVulnerabilities() {,
+  async checkKnownVulnerabilities() {
     // Check for known vulnerabilities,
-    return [],
-  }
+    return []}
 ,
-  async checkSecurityBestPractices() {,
+  async checkSecurityBestPractices() {
     // Check security best practices,
-    return { score: 80, issues: [] ,};
+    return { score: 80, issues: [] };
   }
 }
 ,
 // Start the ML Health Dashboard,
 const dashboard = new MLHealthDashboard(),
-,
 // Handle graceful shutdown,
-process.on('SIGINT', () => {,
+process.on('SIGINT', () => {
   dashboard.log('Shutting down ML Health Dashboard...', 'INFO'),
-  process.exit(0),
-}),
-,
-process.on('SIGTERM', () => {,
+  process.exit(0)}),
+process.on('SIGTERM', () => {
   dashboard.log('Shutting down ML Health Dashboard...', 'INFO'),
-  process.exit(0),
-}),
+  process.exit(0)}),

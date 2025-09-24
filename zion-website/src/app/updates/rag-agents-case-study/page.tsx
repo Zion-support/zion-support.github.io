@@ -1,9 +1,7 @@
 'use client',
-,
-import React from 'react',
-,
-export default function RagAgentsCaseStudyPage() {,
-  return (,
+import React from 'react';
+export default function RagAgentsCaseStudyPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-16 lg: px-8'>,
         <h1 className='text-3xl sm:text-4xl font-bold tracking-tight text-white'>,
@@ -33,16 +31,14 @@ export default function RagAgentsCaseStudyPage() {,
           </section>,
           <section>,
             <h2 className='text-xl font-semibold text-white'>Learn more</h2>,
-            <a,
+            <a
               href='/contact',
-              className='inline-block mt-4 text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0',
-            >,
+              className='inline-block mt-4 text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0'>,
               Request the full case study <span aria-hidden>→</span>,
             </a>,
           </section>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

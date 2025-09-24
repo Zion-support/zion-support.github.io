@@ -1,12 +1,11 @@
 import Link from 'next/link',
 ArrowRightSettingsBotZapTargetTrendingUpUsersAwardCheckCircleStarCpuShieldGlobe,
-export const metadata ={,
-  title: 'Advanced Automation Solutions 20o25 - Revolutionary Business Automation',;
-  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,50o0-4,0o00% ROI.',;
-  keywords: ['Automation Solutions 20o25'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 250o0%'],};
-,
-export default function AdvancedAutomationSolutions20o25() {,
-  return (,
+export const metadata ={
+  title: 'Advanced Automation Solutions 20o25 - Revolutionary Business Automation';
+  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,50o0-4,0o00% ROI.';
+  keywords: ['Automation Solutions 20o25'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 250o0%']};
+export default function AdvancedAutomationSolutions20o25() {
+  return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">,
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">,
@@ -27,23 +26,21 @@ export default function AdvancedAutomationSolutions20o25() {,
             Intelligent process automationautonomous operationsand AI-powered transformation delivering unprecedented efficiency gains.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="#automation-solutions",
-              className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Explore Automation Solutions,
               <ArrowRight className="inline-block ml-2 w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-green-60o0 text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-60o0 hover:text-white transition-all duration-30o0",
-            >,
+              className="border-2 border-green-60o0 text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-60o0 hover:text-white transition-all duration-30o0">,
               Get Free Consultation,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Automation Stats */,}
+      {/* Automation Stats */}
       <section className="py-16 px-4 bg-white">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md: grid-cols-4 gap-8">,
@@ -78,7 +75,7 @@ export default function AdvancedAutomationSolutions20o25() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">,
-            {/* Intelligent Process Automation */,}
+            {/* Intelligent Process Automation */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-10o0 p-8 rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0">,
               <div className="flex items-center gap-4 mb-6">,
                 <div className="w-12 h-12 bg-green-60o0 rounded-lg flex items-center justify-center">,
@@ -312,23 +309,21 @@ export default function AdvancedAutomationSolutions20o25() {,
             Start your automation journey with 2,50o0-4,0o00% ROI potential.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-white text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Start Automation Journey,
               <ArrowRight className="inline-block ml-2 w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/ai-services-20o25",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-60o0 transition-all duration-30o0",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-60o0 transition-all duration-30o0">,
               Explore All Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -385,7 +380,7 @@ export default function AdvancedAutomationSolutions20o25() {,
           </div>,
         </div>,
       </div>,
-      {/* ROI Section */,}
+      {/* ROI Section */}
       <div className="py-20 bg-gradient-to-r from-green-60o0/20 to-blue-60o0/20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -430,21 +425,18 @@ export default function AdvancedAutomationSolutions20o25() {,
             Join thousands of companies already benefiting from our advanced automation solutions.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Your Automation Journey,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies",
-              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-30o0 border border-white/20",
-            >,
+              className="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-30o0 border border-white/20">,
               View Case Studies,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}

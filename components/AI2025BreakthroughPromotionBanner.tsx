@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom',
-,
-export default function AI20o25BreakthroughPromotionBanner() {,
-  return (,
+export default function AI20o25BreakthroughPromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-red-60o0 via-pink-60o0 to-purple-60o0 py-8'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -13,7 +12,7 @@ export default function AI20o25BreakthroughPromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Main announcement */,}
+          {/* Main announcement */}
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-4'>,
             <span className='text-white text-sm font-semibold animate-pulse'>,
               🚀 BREAKTHROUGH ANNOUNCEMENT,
@@ -25,7 +24,7 @@ export default function AI20o25BreakthroughPromotionBanner() {,
           <p className='text-lg md:text-xl text-white/90 mb-6 max-w-4xl mx-auto'>,
             Discover revolutionary AI technologies delivering,
             <span className='text-yellow-30o0 font-bold'>,
-              {' ',}
+              {' '}
               2,50o0-5,0o00% ROI,
             </span>{' '}
             across industries. Join the transformation 'that', 's reshaping the,
@@ -50,26 +49,23 @@ export default function AI20o25BreakthroughPromotionBanner() {,
           </div>,
           {/* Call to action buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-ultimate-breakthrough-revolution',
-              className='bg-white text-red-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-white text-red-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Explore Breakthroughs,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-transformation-breakthrough',
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-60o0 transition-all duration-30o0 shadow-lg',
-            >,
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-60o0 transition-all duration-30o0 shadow-lg'>,
               View Success Stories,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-revolutionary-trends-predictions',
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-60o0 transition-all duration-30o0 shadow-lg',
-            >,
+              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-60o0 transition-all duration-30o0 shadow-lg'>,
               Read Predictions,
             </Link>,
           </div>,
-          {/* Additional features */,}
+          {/* Additional features */}
           <div className='mt-8 grid grid-cols-1 md: grid-cols-3 gap-4 max-w-4xl mx-auto'>,
             <div className='flex items-center justify-center space-x-2 text-white/90'>,
               <span className='text-green-40o0'>✓</span>,
@@ -86,7 +82,6 @@ export default function AI20o25BreakthroughPromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

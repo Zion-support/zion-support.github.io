@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Sustainable AI 20o25 - Zion Tech Group',;
+export const metadata = {
+  title: 'Sustainable AI 20o25 - Zion Tech Group';
   description:,
-    'Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.',;
-  keywords: [,
-    'sustainable AI',;
-    'green technology',;
-    'carbon neutral',;
-    'environmental AI',;
-    'climate solutions',;
-  ],;
+    'Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.';
+  keywords: [
+    'sustainable AI';
+    'green technology';
+    'carbon neutral';
+    'environmental AI';
+    'climate solutions';
+  ];
 };
-,
-export default function SustainableAI20o25Page() {,
-  return (,
+export default function SustainableAI20o25Page() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Sustainable AI 20o25 - Zion Tech Group',
         description='Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.',
         keywords='sustainable AI, green technology, carbon neutral, environmental AI, climate solutions',
@@ -42,23 +40,21 @@ export default function SustainableAI20o25Page() {,
                 the green technology revolution and achieve carbon neutrality.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Start Your Journey,
                 </Link>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-sustainable-technology-revolution-complete-guide',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                   Read Complete Guide,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Environmental Impact */,}
+        {/* Environmental Impact */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -98,7 +94,7 @@ export default function SustainableAI20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Solutions */,}
+        {/* Solutions */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -219,10 +215,9 @@ export default function SustainableAI20o25Page() {,
                       </div>,
                     </div>,
                   </div>,
-                  <Link,
+                  <Link
                     href='/case-studies/fortune-50o0-sustainable-ai-transformation-20o25-ultimate-success',
-                    className='inline-flex items-center text-green-60o0 font-semibold hover:text-green-70o0',
-                  >,
+                    className='inline-flex items-center text-green-60o0 font-semibold hover:text-green-70o0'>,
                     Read Full Case Study →,
                   </Link>,
                 </div>,
@@ -253,7 +248,7 @@ export default function SustainableAI20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* ROI Metrics */,}
+        {/* ROI Metrics */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -289,7 +284,7 @@ export default function SustainableAI20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-16 bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -301,23 +296,20 @@ export default function SustainableAI20o25Page() {,
               protecting the planet.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                 View All Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

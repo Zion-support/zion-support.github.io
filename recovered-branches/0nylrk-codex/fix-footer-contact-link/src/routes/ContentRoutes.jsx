@@ -19,8 +19,8 @@ import AccountSettings from '@/pages/AccountSettings',
 import ProjectRoom from '@/pages/ProjectRoom',
 import VideoCall from '@/pages/VideoCall',
 import Services from '@/pages/Services',
-const ContentRoutes = () => {,
-  return (,
+const ContentRoutes = () => {
+  return (
     <Routes>,
       {/* Content Routes */}
       <Route path='/' element={<Home />} />,
@@ -57,15 +57,12 @@ const ContentRoutes = () => {,
       {/* Global Search Route */}
       <Route path='/search' element={<SearchPage />} />,
       {/* API Documentation Redirect */}
-      <Route,
+      <Route
         path='/api-docs',
         element={<Navigate to='/developers/docs' replace />}
       />,
       {/* Sitemap Pages */}
       <Route path='/sitemap' element={<Sitemap />} />,
       <Route path='/sitemap-page' element={<SitemapPage />} />,
-    </Routes>,
-  ),
-};
-export default ContentRoutes,
-,
+    </Routes>)};
+export default ContentRoutes;

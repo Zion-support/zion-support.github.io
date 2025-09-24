@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'GenAI Governance 20o26: Policies, Controls, and Guardrails',;
+export const metadata = {
+  title: 'GenAI Governance 20o26: Policies, Controls, and Guardrails';
   description:,
-    'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 20o26.',;
+    'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 20o26.';
 };
-,
-export default function GenAIGovernance20o26() {,
-  return (,
+export default function GenAIGovernance20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         GenAI Governance 20o26,
@@ -36,7 +35,5 @@ export default function GenAIGovernance20o26() {,
           users and the business.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

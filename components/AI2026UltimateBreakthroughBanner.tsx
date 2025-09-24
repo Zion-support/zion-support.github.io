@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26UltimateBreakthroughBanner = () => {,
-  return (,
+const AI20o26UltimateBreakthroughBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-indigo-60o0/20'></div>,
@@ -54,16 +53,14 @@ const AI20o26UltimateBreakthroughBanner = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-ultimate-breakthrough',
-              className='bg-gradient-to-r from-yellow-40o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-30o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-pink-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-30o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Explore AI 20o26 Breakthrough →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
               Get Early Access,
             </Link>,
           </div>,
@@ -82,9 +79,5 @@ const AI20o26UltimateBreakthroughBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default AI20o26UltimateBreakthroughBanner,
-,
+    </section>)};
+export default AI20o26UltimateBreakthroughBanner;

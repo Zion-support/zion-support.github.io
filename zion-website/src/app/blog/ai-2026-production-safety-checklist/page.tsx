@@ -1,5 +1,5 @@
-export default function ProductionSafetyChecklistPage() {,
-  return (,
+export default function ProductionSafetyChecklistPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
         <p className='text-sm text-blue-30o0'>Guide • 20o25-09-15</p>,
@@ -7,7 +7,7 @@ export default function ProductionSafetyChecklistPage() {,
           AI 20o26: Production Safety Checklist,
         </h1>,
         <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
-          A practical checklist to ship safer AI: risk tiers, guardrails, evals,;
+          A practical checklist to ship safer AI: risk tiers, guardrails, evals;
           canaries, and evidence.,
         </p>,
         <div className='mt-8 prose prose-invert prose-lg max-w-none'>,
@@ -44,7 +44,5 @@ export default function ProductionSafetyChecklistPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

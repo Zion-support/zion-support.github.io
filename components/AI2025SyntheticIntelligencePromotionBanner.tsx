@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25SyntheticIntelligencePromotionBanner() {,
-  return (,
+export default function AI20o25SyntheticIntelligencePromotionBanner() {
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -9,7 +8,7 @@ export default function AI20o25SyntheticIntelligencePromotionBanner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-pulse">,
             🚀 BREAKTHROUGH TECHNOLOGY,
           </div>,
@@ -17,7 +16,7 @@ export default function AI20o25SyntheticIntelligencePromotionBanner() {,
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">,
             AI 20o25 Synthetic Intelligence Revolution,
           </h2>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className="text-xl md: text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto">,
             The emergence of true digital consciousness that thinkslearnsand creates autonomously.,
             Discover the breakthrough 'that', 's achieving <span className="text-yellow-40o0 font-bold">50,0o00% ROI</span> for forward-thinking organizations.,
@@ -39,16 +38,14 @@ export default function AI20o25SyntheticIntelligencePromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
-            <Link,
+            <Link
               href="/blog/ai-20o25-synthetic-intelligence-revolution",
-              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               🧠 Explore the Technology,
             </Link>,
-            <Link,
+            <Link
               href="/case-studies/ai-20o25-synthetic-intelligence-transformation-breakthrough",
-              className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5">,
               🏆 View 50,0o00% ROI Success,
             </Link>,
           </div>,
@@ -60,13 +57,12 @@ export default function AI20o25SyntheticIntelligencePromotionBanner() {,
             <p className="text-gray-20o0 mb-4">,
               Get your comprehensive blueprint for implementing synthetic intelligence and achieving unprecedented ROI.,
             </p>,
-            <Link,
+            <Link
               href="/resources/ai-20o25-synthetic-intelligence-implementation-guide",
-              className="inline-flex items-center bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0",
-            >,
+              className="inline-flex items-center bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0">,
               📖 Download Master Guide,
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />,
               </svg>,
             </Link>,
           </div>,
@@ -97,6 +93,4 @@ export default function AI20o25SyntheticIntelligencePromotionBanner() {,
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-50o0/20 rounded-full blur-xl animate-pulse"></div>,
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-50o0/20 rounded-full blur-xl animate-pulse delay-10o00"></div>,
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-50o0"></div>,
-    </div>,
-  ),
-}
+    </div>)}

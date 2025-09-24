@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'lead-generation-tool - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'lead-generation-tool - Zion Tech Group';
   description:,
-    'Professional lead-generation-tool solutions for your business needs.',;
-  keywords: 'lead-generation-tool, services, business, technology',;
+    'Professional lead-generation-tool solutions for your business needs.';
+  keywords: 'lead-generation-tool, services, business, technology';
 };
-export default function LeadGenerationToolPage() {,
-  return (,
+export default function LeadGenerationToolPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function LeadGenerationToolPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

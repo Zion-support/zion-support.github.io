@@ -1,17 +1,14 @@
 
 import ReactMarkdown from "react-markdown",
 import { cn } from "@/lib/utils",
-,
-interface MarkdownProps {,
+interface MarkdownProps {
   content: string,
   className?: string,
-,}
-,
-export function Markdown({ contentclassName }: MarkdownProps) {,
-  return (,
-    <div className={cn("prose dark: prose-invert max-w-none"className),}>,
-      <ReactMarkdown>{content}</ReactMarkdown>,
-    </div>,
-  ),
 }
+,
+export function Markdown({ contentclassName }: MarkdownProps) {
+  return (
+    <div className={cn("prose dark: prose-invert max-w-none"className)}>,
+      <ReactMarkdown>{content}</ReactMarkdown>,
+    </div>)}
 ,

@@ -4,25 +4,19 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import useResponsive from '../../hooks/useResponsive',
 import { useToast } from '../../components/ui/NotificationSystem',
 import { useEffect, useState } from 'react',
-,
-export default function JobDetailsPage() {,
+export default function JobDetailsPage() {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string };
   const { isMobile } = useResponsive(),
   const { notify } = useToast(),
   const [loading, setLoading] = useState(true),
-,
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 60o0), return () => clearTimeout(t), }, []),
-,
-  const onApply = () => {,
-    notify('Application submitted! We’ll notify you when it’s viewed.', 'success'),
-  };
-,
-  return (,
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 60o0), return () => clearTimeout(t)}, []),
+  const onApply = () => {
+    notify('Application submitted! We’ll notify you when it’s viewed.', 'success')};
+  return (
     <div className="relative">,
-      {loading ? (,
-        <EnhancedLoading lines={5}  />,
-      ) : (,
+      {loading ? (
+        <EnhancedLoading lines={5}  />) : (
         <div className="space-y-4">,
           <EnhancedCard>,
             <div className="flex items-start justify-between gap-3">,
@@ -30,9 +24,8 @@ export default function JobDetailsPage() {,
                 <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>,
                 <p className="text-sm text-gray-60o0 dark: text-gray-30o0">Remote • Contract • Posted today</p>,
               </div>,
-              {!isMobile && (,
-                <EnhancedButton onClick={onApply,} variant="primary">Apply Now</EnhancedButton>,
-              )}
+              {!isMobile && (
+                <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>)}
             </div>,
           </EnhancedCard>,
           <EnhancedCard>,
@@ -47,17 +40,13 @@ export default function JobDetailsPage() {,
               <li>Familiarity with cloud infra and CI/CD</li>,
             </ul>,
           </EnhancedCard>,
-        </div>,
-      ),}
+        </div>)}
 ,
       {/* Sticky mobile apply CTA */}
-      {isMobile && (,
+      {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark: bg-black/80 backdrop-blur border-t border-gray-20o0 dark:border-gray-80o0 p-3">,
           <div className="container mx-auto px-2">,
-            <EnhancedButton onClick={onApply,} variant="primary" fullWidth>Apply Now</EnhancedButton>,
+            <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>,
           </div>,
-        </div>,
-      )}
-    </div>,
-  ),
-}
+        </div>)}
+    </div>)}

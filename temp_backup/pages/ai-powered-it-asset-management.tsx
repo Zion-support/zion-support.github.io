@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AiPoweredItAssetManagementPage() {,
-  return (,
+export default function AiPoweredItAssetManagementPage() {
+  return (
     <>,
       <Head>,
         <title>Ai Powered It Asset Management - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='ai powered it asset management page',
         />,
@@ -21,7 +20,6 @@ export default function AiPoweredItAssetManagementPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

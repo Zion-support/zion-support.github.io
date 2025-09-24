@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function PricingGuide() {,
-  return (,
+export default function PricingGuide() {
+  return (
     <>,
       <Head>,
         <title>Pricing Guide | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Transparent pricing guidance for Zion Tech Group services.',
         />,
@@ -18,21 +17,18 @@ export default function PricingGuide() {,
           Get in touch for a custom quote tailored to your needs.,
         </p>,
         <div className='space-x-4'>,
-          <Link,
+          <Link
             href='/contact',
-            className='inline-block bg-blue-60o0 text-white px-6 py-3 rounded-lg',
-          >,
+            className='inline-block bg-blue-60o0 text-white px-6 py-3 rounded-lg'>,
             Contact Sales,
           </Link>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='inline-block border border-gray-30o0 px-6 py-3 rounded-lg',
-          >,
+            className='inline-block border border-gray-30o0 px-6 py-3 rounded-lg'>,
             +1 30o2 464 0950,
           </a>,
         </div>,
       </main>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

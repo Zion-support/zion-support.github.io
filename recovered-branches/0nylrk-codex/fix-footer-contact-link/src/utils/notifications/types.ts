@@ -5,8 +5,7 @@ export type NotificationType =,
   | 'hire_request',
   | 'onboarding',
   | 'system',
-,
-export interface CreateNotificationParams {,
+export interface CreateNotificationParams {
   userId: string,
   title: string,
   message: string,
@@ -15,15 +14,15 @@ export interface CreateNotificationParams {,
   sendEmail?: boolean,
   actionUrl?: string | null,
   actionText?: string | null,
-,}
+}
 ,
-export interface CreateNotificationResult {,
+export interface CreateNotificationResult {
   success: boolean,
   notificationId?: string,
   error?: any,
-,}
+}
 ,
-export interface HireRequestNotificationParams {,
+export interface HireRequestNotificationParams {
   talentId: string,
   adminId?: string,
   requesterName: string,
@@ -31,20 +30,20 @@ export interface HireRequestNotificationParams {,
   projectType?: string,
   projectSummary?: string,
   hireRequestId: string,
-,}
+}
 ,
-export interface OnboardingNotificationParams {,
+export interface OnboardingNotificationParams {
   userId: string,
   missingMilestone: string,
   userRole: 'talent' | 'client',
-,}
+}
 ,
-export interface SystemNotificationParams {,
+export interface SystemNotificationParams {
   userId: string,
   title: string,
   message: string,
   actionUrl?: string | null,
   actionText?: string | null,
   sendEmail?: boolean,
-,}
+}
 ,

@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Agent Safety Runbooks',;
+export const metadata = {
+  title: 'AI 20o26: Agent Safety Runbooks';
   description:,
-    'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.',;
+    'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.';
 };
-,
-export default function AgentSafetyRunbooksPage() {,
-  return (,
+export default function AgentSafetyRunbooksPage() {
+  return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <header className='mb-10'>,
         <div className='text-sm font-semibold text-purple-70o0 mb-2'>Guide</div>,
@@ -66,20 +65,17 @@ export default function AgentSafetyRunbooksPage() {,
         </article>,
       </section>,
       <nav className='mt-12 flex flex-wrap gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-secure-tooling-permissions-blueprint',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Secure Tooling Blueprint,
         </Link>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-agent-observability-blueprint',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Observability Blueprint,
         </Link>,
       </nav>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

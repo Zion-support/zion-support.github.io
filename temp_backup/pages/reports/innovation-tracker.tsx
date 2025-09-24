@@ -1,16 +1,15 @@
 import Head from 'next/head',
-,
-export default function InnovationTracker() {,
-  return (,
+export default function InnovationTracker() {
+  return (
     <>,
       <Head>,
         <title>Innovation Tracker | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Track emerging technologies, R&D progress, and breakthrough innovations from Zion Tech Group's autonomous research systems.",
         />,
         <meta property='og: title' content='Innovation Tracker' />,
-        <meta,
+        <meta
           property='og:description',
           content='Track emerging technologies and breakthrough innovations.',
         />,
@@ -80,7 +79,7 @@ export default function InnovationTracker() {,
               </div>,
             </div>,
           </section>,
-          {/* Emerging Technologies */,}
+          {/* Emerging Technologies */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-fuchsia-40o0'>,
@@ -100,9 +99,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-cyan-40o0'>78%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-cyan-40o0 h-2 rounded-full',
-                      style={{ width: '78%' ,}}
+                      style={{ width: '78%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -118,9 +117,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-fuchsia-40o0'>92%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-fuchsia-40o0 h-2 rounded-full',
-                      style={{ width: '92%' ,}}
+                      style={{ width: '92%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -136,9 +135,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-green-40o0'>65%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-green-40o0 h-2 rounded-full',
-                      style={{ width: '65%' ,}}
+                      style={{ width: '65%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -154,9 +153,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-blue-40o0'>85%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-blue-40o0 h-2 rounded-full',
-                      style={{ width: '85%' ,}}
+                      style={{ width: '85%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -172,9 +171,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-yellow-40o0'>45%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-yellow-40o0 h-2 rounded-full',
-                      style={{ width: '45%' ,}}
+                      style={{ width: '45%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -190,9 +189,9 @@ export default function InnovationTracker() {,
                     <span className='text-sm text-purple-40o0'>71%</span>,
                   </div>,
                   <div className='w-full bg-white/10 rounded-full h-2 mt-2'>,
-                    <div,
+                    <div
                       className='bg-purple-40o0 h-2 rounded-full',
-                      style={{ width: '71%' ,}}
+                      style={{ width: '71%' }}
                     ></div>,
                   </div>,
                 </div>,
@@ -317,7 +316,7 @@ export default function InnovationTracker() {,
               </div>,
             </div>,
           </section>,
-          {/* Innovation Pipeline */,}
+          {/* Innovation Pipeline */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-yellow-40o0'>,
@@ -359,32 +358,28 @@ export default function InnovationTracker() {,
               </div>,
             </div>,
           </section>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <section className='mx-auto max-w-4xl text-center'>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              <a,
+              <a
                 href='/reports',
-                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50'>,
                 ← Back to Reports,
               </a>,
-              <a,
+              <a
                 href='/reports/automation-overview-20o25',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50'>,
                 Automation Overview,
               </a>,
-              <a,
+              <a
                 href='/reports/performance-metrics',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50'>,
                 Performance Metrics,
               </a>,
             </div>,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

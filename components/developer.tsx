@@ -1,13 +1,12 @@
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Link from 'next/link',
-,
-export default function DeveloperPage() {,
-  return (,
+export default function DeveloperPage() {
+  return (
     <>,
       <Head>,
         <title>Developer Portal | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Developer resourcesAPI keysexamplesand SDKs.',
         />,
@@ -33,7 +32,6 @@ export default function DeveloperPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

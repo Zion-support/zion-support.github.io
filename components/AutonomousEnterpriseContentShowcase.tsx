@@ -1,8 +1,7 @@
 'use client',
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-interface ContentItem {,
+interface ContentItem {
   id: string,
   title: string,
   type: 'blog' | 'case-study' | 'resource',
@@ -12,103 +11,99 @@ interface ContentItem {,
   readingTime: string,
   featured: boolean,
   description: string,
-  metrics: {,
+  metrics: {
     roi: string,
     savings: string,
     accuracy: string,
     efficiency: string,
-  ,};
+  };
 }
 ,
-const AutonomousEnterpriseContentShowcase: React.FC = () => {,
+const AutonomousEnterpriseContentShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-,
-  const contentItems: ContentItem[] = [,
-    {,
-      id: 'autonomous-enterprise-future',;
+  const contentItems: ContentItem[] = [
+    {
+      id: 'autonomous-enterprise-future';
       title:,
-        'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems',;
-      roi: '40,0o00%',;
-      savings: '$750B+',;
-      readingTime: '35 min read',;
-      featured: true,;
+        'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution';
+      type: 'blog';
+      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems';
+      roi: '40,0o00%';
+      savings: '$750B+';
+      readingTime: '35 min read';
+      featured: true;
       description:,
-        'Comprehensive guide to the autonomous enterprise revolution, featuring breakthrough technologies and unprecedented ROI opportunities.',;
-      metrics: {,
-        roi: '40,0o00%',;
-        savings: '$750B+',;
-        accuracy: '99.97%',;
-        efficiency: '2,50o0%',;
-      },;
-    },;
-    {,
-      id: 'fortune-50o0-autonomous-success',;
+        'Comprehensive guide to the autonomous enterprise revolution, featuring breakthrough technologies and unprecedented ROI opportunities.';
+      metrics: {
+        roi: '40,0o00%';
+        savings: '$750B+';
+        accuracy: '99.97%';
+        efficiency: '2,50o0%';
+      };
+    };
+    {
+      id: 'fortune-50o0-autonomous-success';
       title:,
-        'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story',;
-      type: 'case-study',;
-      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success',;
-      roi: '40,0o00%',;
-      savings: '$750B',;
-      readingTime: '25 min read',;
-      featured: true,;
+        'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story';
+      type: 'case-study';
+      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success';
+      roi: '40,0o00%';
+      savings: '$750B';
+      readingTime: '25 min read';
+      featured: true;
       description:,
-        "Detailed case study of TechGlobal Industries' remarkable transformation to fully autonomous operations and market domination.",;
-      metrics: {,
-        roi: '40,0o00%',;
-        savings: '$750B',;
-        accuracy: '99.97%',;
-        efficiency: '2,50o0%',;
-      },;
-    },;
-    {,
-      id: 'autonomous-enterprise-implementation-guide',;
+        "Detailed case study of TechGlobal Industries' remarkable transformation to fully autonomous operations and market domination.";
+      metrics: {
+        roi: '40,0o00%';
+        savings: '$750B';
+        accuracy: '99.97%';
+        efficiency: '2,50o0%';
+      };
+    };
+    {
+      id: 'autonomous-enterprise-implementation-guide';
       title:,
-        'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI',;
-      type: 'resource',;
-      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi',;
-      roi: '40,0o00%',;
-      savings: '$750B+',;
-      readingTime: '60 min read',;
-      featured: true,;
+        'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI';
+      type: 'resource';
+      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi';
+      roi: '40,0o00%';
+      savings: '$750B+';
+      readingTime: '60 min read';
+      featured: true;
       description:,
-        'Complete implementation roadmap with detailed steps, methodologies, and proven strategies for achieving unprecedented ROI.',;
-      metrics: {,
-        roi: '40,0o00%',;
-        savings: '$750B+',;
-        accuracy: '99.97%',;
-        efficiency: '2,50o0%',;
-      },;
-    },;
+        'Complete implementation roadmap with detailed steps, methodologies, and proven strategies for achieving unprecedented ROI.';
+      metrics: {
+        roi: '40,0o00%';
+        savings: '$750B+';
+        accuracy: '99.97%';
+        efficiency: '2,50o0%';
+      };
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Blog Posts',;
-      count: contentItems.filter(item => item.type === 'blog').length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
-      count: contentItems.filter(item => item.type === 'case-study').length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Implementation Guides',;
-      count: contentItems.filter(item => item.type === 'resource').length,;
-    },;
+  const categories = [
+    { id: 'all', label: 'All Content', count: contentItems.length };
+    {
+      id: 'blog';
+      label: 'Blog Posts';
+      count: contentItems.filter(item => item.type === 'blog').length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
+      count: contentItems.filter(item => item.type === 'case-study').length;
+    };
+    {
+      id: 'resource';
+      label: 'Implementation Guides';
+      count: contentItems.filter(item => item.type === 'resource').length;
+    };
   ],
-,
   const filteredContent =,
     selectedCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.type === selectedCategory),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -117,11 +112,10 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
         return '📚',
       default:,
         return '📄',
-    ,}
+    }
   };
-,
-  const getTypeLabel = (type: string) => {,
-    switch (type) {,
+  const getTypeLabel = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'Blog Post',
       case 'case-study':,
@@ -130,11 +124,10 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
         return 'Implementation Guide',
       default:,
         return 'Content',
-    ,}
+    }
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-10o0 text-blue-80o0 border-blue-20o0',
       case 'case-study':,
@@ -143,13 +136,12 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-purple-10o0 text-purple-80o0 rounded-full px-6 py-2 mb-4'>,
             <span className='text-lg mr-2'>🚀</span>,
@@ -193,33 +185,31 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
         </div>,
         {/* Category filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? 'bg-purple-60o0 text-white shadow-lg transform scale-10o5',
                   : 'bg-white text-gray-70o0 border border-gray-20o0 hover: bg-gray-50',
-              ,}`}
+              }`}
             >,
               {category.label}
               <span className='ml-2 bg-current bg-opacity-20 rounded-full px-2 py-1 text-xs'>,
                 {category.count}
               </span>,
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content grid */}
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-30o0 group',
-            >,
-              {/* Content type badge */,}
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className='bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-shadow duration-30o0 group'>,
+              {/* Content type badge */}
               <div className='p-6 pb-4'>,
-                <div,
+                <div
                   className={`inline-flex items-center space-x-2 border rounded-full px-4 py-2 ${getTypeColor(item.type)}`}
                 >,
                   <span className='text-lg'>{getTypeIcon(item.type)}</span>,
@@ -231,7 +221,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
               {/* Content details */}
               <div className='px-6 pb-6'>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors'>,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4 line-clamp-3'>,
                   {item.description}
@@ -268,18 +258,16 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
                   <span className='text-sm text-gray-50o0'>,
                     {item.readingTime}
                   </span>,
-                  {item.featured && (,
+                  {item.featured && (
                     <span className='bg-yellow-10o0 text-yellow-80o0 text-xs font-medium px-2 py-1 rounded-full'>,
                       Featured,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 {/* Action buttons */}
                 <div className='flex space-x-3'>,
-                  <Link,
+                  <Link
                     href={item.url}
-                    className='flex-1 bg-purple-60o0 text-white text-center py-3 px-4 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors',
-                  >,
+                    className='flex-1 bg-purple-60o0 text-white text-center py-3 px-4 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors'>,
                     Read Now,
                   </Link>,
                   <button className='bg-gray-10o0 text-gray-70o0 py-3 px-4 rounded-lg font-semibold hover:bg-gray-20o0 transition-colors'>,
@@ -287,8 +275,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to action */}
         <div className='text-center mt-12'>,
@@ -301,22 +288,20 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
               business with proven strategies and breakthrough technologies.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Implementation Guide,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Schedule Consultation,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Additional resources */,}
+        {/* Additional resources */}
         <div className='mt-12'>,
           <h3 className='text-2xl font-bold text-gray-90o0 text-center mb-8'>,
             Related Resources,
@@ -331,10 +316,9 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
                 Calculate your potential ROI with our advanced autonomous,
                 enterprise ROI calculator.,
               </p>,
-              <Link,
+              <Link
                 href='/tools/roi-calculator',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Calculate ROI →,
               </Link>,
             </div>,
@@ -347,10 +331,9 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
                 Explore detailed case studies from companies that achieved,
                 40,0o00% ROI.,
               </p>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                 View Stories →,
               </Link>,
             </div>,
@@ -363,19 +346,15 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {,
                 Get expert guidance and support for your autonomous enterprise,
                 transformation.,
               </p>,
-              <Link,
+              <Link
                 href='/services',
-                className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                 Learn More →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousEnterpriseContentShowcase,
-,
+    </section>),
+};
+export default AutonomousEnterpriseContentShowcase;

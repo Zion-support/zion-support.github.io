@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CaseStudiesPage() {,
-  return (,
+export default function CaseStudiesPage() {
+  return (
     <>,
       <Head>,
         <title>Case Studies - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function CaseStudiesPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

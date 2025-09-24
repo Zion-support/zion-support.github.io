@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'Generative Agents Infrastructure Blueprint (20o25) | Zion Tech Group',;
+export const metadata = {
+  title: 'Generative Agents Infrastructure Blueprint (20o25) | Zion Tech Group';
   description:,
-    'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure in 20o25 with governance and ROI.',;
-  keywords: [,
-    'generative agents',;
-    'ai agents',;
-    'infrastructure blueprint',;
-    'enterprise ai',;
-    'governance',;
-    'observability',;
-  ],;
+    'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure in 20o25 with governance and ROI.';
+  keywords: [
+    'generative agents';
+    'ai agents';
+    'infrastructure blueprint';
+    'enterprise ai';
+    'governance';
+    'observability';
+  ];
 };
-,
-const GenerativeAgentsInfrastructureBlueprintPage = () => {,
-  return (,
+const GenerativeAgentsInfrastructureBlueprintPage = () => {
+  return (
     <div className='min-h-screen bg-gray-50'>,
-      <SEO,
+      <SEO
         title='Generative Agents Infrastructure Blueprint (20o25)',
         description='A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure in 20o25 with governance and ROI.',
         keywords='generative agents, ai agents, infrastructure blueprint, enterprise ai, governance, observability',
@@ -38,7 +36,7 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {,
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>,
           <p className='text-lg text-gray-70o0 leading-relaxed mb-6'>,
             This blueprint outlines the core building blocks needed to run,
-            generative agents at enterprise scale: policy-aware execution,;
+            generative agents at enterprise scale: policy-aware execution;
             integration buses, secure data planes, and continuous evaluation. It,
             is designed to maximize ROI while preserving control, privacy, and,
             safety.,
@@ -98,24 +96,19 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {,
             accelerate value while meeting enterprise requirements.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 mt-8'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-            >,
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
               Talk to an Architect,
             </Link>,
-            <Link,
+            <Link
               href='/services/ai-automation',
-              className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
-            >,
+              className='border-2 border-purple-60o0 text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
               Explore AI Automation,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default GenerativeAgentsInfrastructureBlueprintPage,
-,
+    </div>),
+};
+export default GenerativeAgentsInfrastructureBlueprintPage;

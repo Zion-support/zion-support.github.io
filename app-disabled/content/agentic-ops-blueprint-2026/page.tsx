@@ -1,18 +1,17 @@
-export const metadata = {,
-  title: 'Agentic Ops Blueprint 20o26',;
+export const metadata = {
+  title: 'Agentic Ops Blueprint 20o26';
   description:,
-    'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.',;
+    'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.';
 };
-,
-export default function AgenticOpsBlueprint20o26() {,
-  return (,
+export default function AgenticOpsBlueprint20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         Agentic Ops Blueprint 20o26,
       </h1>,
       <p className='text-gray-60o0 mb-8'>,
         This blueprint details how to design, deploy, and scale agentic,
-        operations for real business outcomes. It covers safety-by-design,;
+        operations for real business outcomes. It covers safety-by-design;
         observability, governance, and value realization so teams can ship,
         reliable agents in production.,
       </p>,
@@ -24,7 +23,7 @@ export default function AgenticOpsBlueprint20o26() {,
             controls,
           </li>,
           <li>,
-            Guardrails: policy-as-code, risk tiers, evaluation harnesses,;
+            Guardrails: policy-as-code, risk tiers, evaluation harnesses;
             red-teaming,
           </li>,
           <li>,
@@ -44,7 +43,5 @@ export default function AgenticOpsBlueprint20o26() {,
           observability and governance are in place.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

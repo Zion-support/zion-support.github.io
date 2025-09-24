@@ -1,7 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document',
-,
-export default function Document() {,
-  return (,
+export default function Document() {
+  return (
     <Html lang='en'>,
       <Head>,
         <link rel='icon' href='/favicon.ico' />,
@@ -12,7 +11,5 @@ export default function Document() {,
         <Main />,
         <NextScript />,
       </body>,
-    </Html>,
-  ),
-}
+    </Html>)}
 ,

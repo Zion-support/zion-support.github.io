@@ -1,16 +1,15 @@
 import { Button } from '@/components/ui/button',
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/components/ui/card',
 import { FileTextShieldCheck } from 'lucide-react',
-,
-interface ContractTypeCardsProps {,
+interface ContractTypeCardsProps {
   onStandardClick: () => void,
   onSmartClick: () => void,
-,}
+}
 ,
-export function ContractTypeCards({,
-  onStandardClickonSmartClick,;
-}: ContractTypeCardsProps) {,
-  return (,
+export function ContractTypeCards({
+  onStandardClickonSmartClick;
+}: ContractTypeCardsProps) {
+  return (
     <div className='grid md: grid-cols-2 gap-6 mb-10'>,
       <Card>,
         <CardHeader>,
@@ -31,7 +30,7 @@ export function ContractTypeCards({,
           </ul>,
         </CardContent>,
         <CardFooter>,
-          <Button variant='outline' onClick={onStandardClick,}>,
+          <Button variant='outline' onClick={onStandardClick}>,
             Create Standard Contract,
           </Button>,
         </CardFooter>,
@@ -61,7 +60,7 @@ export function ContractTypeCards({,
           </ul>,
         </CardContent>,
         <CardFooter>,
-          <Button,
+          <Button
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600',
             onClick={onSmartClick}
           >,
@@ -69,7 +68,5 @@ export function ContractTypeCards({,
           </Button>,
         </CardFooter>,
       </Card>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

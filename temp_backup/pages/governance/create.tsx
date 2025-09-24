@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CreatePage() {,
-  return (,
+export default function CreatePage() {
+  return (
     <>,
       <Head>,
         <title>Create - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function CreatePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function Page() {,
-  return (,
+import React from 'react';
+export default function Page() {
+  return (
     <div className='min-h-screen bg-black'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -16,7 +15,7 @@ export default function Page() {,
         <section className='prose prose-lg prose-invert mt-8'>,
           <p>,
             This guide outlines a practical methodology for continuous red,
-            teaming of agentic systems in production. It covers threat models,;
+            teaming of agentic systems in production. It covers threat models;
             attack surfaces, and how to operationalize defenses with,
             policy-as-code.,
           </p>,
@@ -35,7 +34,5 @@ export default function Page() {,
           </p>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

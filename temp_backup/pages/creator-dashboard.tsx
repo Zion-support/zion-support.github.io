@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CreatorDashboardPage() {,
-  return (,
+export default function CreatorDashboardPage() {
+  return (
     <>,
       <Head>,
         <title>Creator Dashboard - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function CreatorDashboardPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

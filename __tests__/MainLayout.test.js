@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import MainLayout from '../components/MainLayout',
-,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import MainLayout from "./components/MainLayout" describe("MainLayout",() => {" test("renders without crashing",() => {" render(<MainLayout / /  />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<MainLayout / /  />) }) test("handles user interactions",() => {" render(<MainLayout / /  />) }) test("applies correct styling",() => {" render(<MainLayout / /  />) }) })'"'",
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import MainLayout from "./components/MainLayout" describe("MainLayout",() => {" test("renders without crashing",() => {" render(<MainLayout / /  />) expect(screen.getByTestId("mainlayout")).toBeInTheDocument()," }) test("displays correct content",() => {" render(<MainLayout / /  />) }) test("handles user interactions",() => {" render(<MainLayout / /  />) }) test("applies correct styling",() => {" render(<MainLayout / /  />) }) })'"'",

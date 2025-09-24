@@ -11,20 +11,18 @@ export const withSentryWebpackConfig = (config: any) => config,
 export const withSentryServerConfig = (config: any) => config,
 export const withSentryClientConfig = (config: any) => config,
 export const withSentryEdgeConfig = (config: any) => config,
-,
 // Default export,
-export default {,
-  init,;
-  captureException,;
-  captureMessage,;
-  setUser,;
-  setTag,;
-  setContext,;
-  addBreadcrumb,;
-  withSentryConfig,;
-  withSentryWebpackConfig,;
-  withSentryServerConfig,;
-  withSentryClientConfig,;
-  withSentryEdgeConfig,;
+export default {
+  init;
+  captureException;
+  captureMessage;
+  setUser;
+  setTag;
+  setContext;
+  addBreadcrumb;
+  withSentryConfig;
+  withSentryWebpackConfig;
+  withSentryServerConfig;
+  withSentryClientConfig;
+  withSentryEdgeConfig;
 };
-,

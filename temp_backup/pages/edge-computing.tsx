@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function EdgeComputingPage() {,
-  return (,
+export default function EdgeComputingPage() {
+  return (
     <>,
       <Head>,
         <title>Edge Computing - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function EdgeComputingPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

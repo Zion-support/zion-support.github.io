@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI 20o26: LLM Evals Maturity Model',;
+export const metadata = {
+  title: 'AI 20o26: LLM Evals Maturity Model';
   description:,
-    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',;
+    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
 };
-,
-export default function LlmEvalsMaturityModel20o26() {,
-  return (,
+export default function LlmEvalsMaturityModel20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: LLM Evals Maturity Model,
@@ -28,7 +27,5 @@ export default function LlmEvalsMaturityModel20o26() {,
           trust.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

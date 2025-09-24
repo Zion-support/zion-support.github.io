@@ -1,57 +1,49 @@
 'use client',
-,
-import React from 'react',
-,
-interface ErrorBoundaryState {,
+import React from 'react';
+interface ErrorBoundaryState {
   hasError: boolean,
   error?: Error,
-,}
-,
-interface ErrorBoundaryProps {,
-  children: React.ReactNode,
-  fallback?: React.ComponentType<{ error?: Error, reset: () => void ,}>,
 }
 ,
+interface ErrorBoundaryProps {
+  children: React.ReactNode,
+  fallback?: React.ComponentType<{ error?: Error, reset: () => void }>}
+,
 class ErrorBoundary extends React.Component<,
-  ErrorBoundaryProps,;
-  ErrorBoundaryState,
-> {,
-  constructor(props: ErrorBoundaryProps) {,
+  ErrorBoundaryProps;
+  ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state = { hasError: false ,};
+    this.state = { hasError: false };
   }
 ,
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {,
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 ,
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    console.error('ErrorBoundary caught an error:', error, errorInfo),
-  }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo)}
 ,
-  render() {,
-    if (this.state.hasError) {,
+  render() {
+    if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback,
-      return (,
-        <FallbackComponent,
+      return (
+        <FallbackComponent
           error={this.state.error}
-          reset={() => this.setState({ hasError: false, error: undefined ,})}
-        />,
-      ),
-    }
+          reset={() => this.setState({ hasError: false, error: undefined })}
+        />)}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
 ,
-function DefaultErrorFallback({,
-  error,;
-  reset,;
-}: {,
+function DefaultErrorFallback({
+  error;
+  reset;
+}: {
   error?: Error,
   reset: () => void,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='min-h-screen flex items-center justify-center bg-gray-90o0'>,
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6'>,
         <div className='flex items-center mb-4'>,
@@ -63,7 +55,7 @@ function DefaultErrorFallback({,
         <p className='text-gray-60o0 mb-4'>,
           We're sorry, but something unexpected happened. Please try again.,
         </p>,
-        {error && (,
+        {error && (
           <details className='mb-4'>,
             <summary className='cursor-pointer text-sm text-gray-50o0'>,
               Error details,
@@ -71,18 +63,14 @@ function DefaultErrorFallback({,
             <pre className='mt-2 text-xs text-red-60o0 bg-red-50 p-2 rounded overflow-auto'>,
               {error.message}
             </pre>,
-          </details>,
-        )}
-        <button,
+          </details>)}
+        <button
           onClick={reset}
-          className='w-full bg-blue-50o0 text-white py-2 px-4 rounded hover: bg-blue-60o0 transition-colors',
-        >,
+          className='w-full bg-blue-50o0 text-white py-2 px-4 rounded hover: bg-blue-60o0 transition-colors'>,
           Try again,
         </button>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-export default ErrorBoundary,
-,
+export default ErrorBoundary;

@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>,
         <p className='text-sm font-semibold leading-6 text-blue-40o0'>Launch</p>,
@@ -9,7 +9,7 @@ export default function Page() {,
         <p className='mt-2 text-gray-40o0'>20o25-09-15</p>,
         <div className='prose prose-invert mt-8'>,
           <p>,
-            The Real-Time Agent Debugger adds live traces, prompt diffs,;
+            The Real-Time Agent Debugger adds live traces, prompt diffs;
             tool-call timelines, and redaction-aware logs so you can diagnose,
             production behavior safely without exposing sensitive data.,
           </p>,
@@ -35,16 +35,14 @@ export default function Page() {,
             runs locally.,
           </p>,
           <p className='mt-8'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0'>,
               Talk to us,
             </a>,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

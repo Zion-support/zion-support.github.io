@@ -5,9 +5,8 @@ import {Button} from "@/components/ui/button",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {ShieldAlert} from "lucide-react",
-,
-export default function Unauthorized() {,
-  return (,
+export default function Unauthorized() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">,
@@ -22,31 +21,28 @@ export default function Unauthorized() {,
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.,
           </p>,
           <div className="flex flex-col gap-3">,
-            <Link,
+            <Link
               to="/",
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center",
-            >,
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">,
               Return to Home,
             </Link>,
-            <Link,
+            <Link
               to="/login",
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center",
-            >,
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">,
               Login with Different Account,
             </Link>,
           </div>,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-import { Link ,} from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
+    </>),
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react",
-export default function Unauthorized() {,
-  return (,
+export default function Unauthorized() {
+  return (
     <>,
       <Header />,
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">,
@@ -61,14 +57,13 @@ export default function Unauthorized() {,
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.,
           </p>,
           <div className="flex flex-col gap-3">,
-            <Link,
+            <Link
               to="/",
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">,
               Return to Home,
             </Link>,
-,
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">,
-import { Link ,} from './react-router-dom',
+import { Link } from './react-router-dom',
 import { Button } from '@/components / ui / button',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -76,8 +71,8 @@ import { ShieldAlert } from './lucide-react',
 export default /**,
  * Unauthorized - Function description,
  */,
-function Unauthorized() {,
-  return (,
+function Unauthorized() {
+  return (
     <>,
       <Header />,
       <div className="min - h-screen bg - zion - blue flex flex - col items - center justify - center px - 4 py - 12">,
@@ -92,28 +87,20 @@ function Unauthorized() {,
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.,
           </p>,
           <div className="flex flex - col gap - 3">,
-            <Link,
+            <Link
               to="/",
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center",
-            >,
+              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center">,
               Return to Home,
             </Link>,
-,
-            <Link,
+            <Link
               to="/login",
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center",
-            >,
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">,
               Login with Different Account,
             </Link>,
           </div>,
         </div>,
       </div>,
       <Footer />,
-    </>,
-  ),
-,
-,}
-,
-,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}})
+    </>),
+}
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}})

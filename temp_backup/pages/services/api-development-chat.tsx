@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ApiDevelopmentChatPage() {,
-  return (,
+export default function ApiDevelopmentChatPage() {
+  return (
     <>,
       <Head>,
         <title>Api Development Chat - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ApiDevelopmentChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

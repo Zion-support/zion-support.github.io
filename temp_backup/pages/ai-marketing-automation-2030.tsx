@@ -1,121 +1,118 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Target,;
-  TrendingUp,;
-  Users,;
-  Mail,;
-  BarChart3,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Phone,;
-  Mail as MailIcon,;
-  MapPin,;
+import {
+  Target;
+  TrendingUp;
+  Users;
+  Mail;
+  BarChart3;
+  Zap;
+  Shield;
+  Globe;
+  Phone;
+  Mail as MailIcon;
+  MapPin;
 } from 'lucide-react',
 import UltraFuturisticBackground20o30 from '../components/ui/UltraFuturisticBackground20o30',
 import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturisticNavigation20o30',
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
-,
 // Service data,
-const serviceData = {,
-  name: 'AI Marketing Automation Suite 20o30',;
-  description: 'Intelligent marketing automation powered by AI',;
-  price: '$179/month',;
-  features: [,
-    {,
-      title: 'AI-Powered Audience Segmentation',;
+const serviceData = {
+  name: 'AI Marketing Automation Suite 20o30';
+  description: 'Intelligent marketing automation powered by AI';
+  price: '$179/month';
+  features: [
+    {
+      title: 'AI-Powered Audience Segmentation';
       description:,
-        'Intelligent customer segmentation using machine learning to identify high-value prospects and personalize marketing campaigns.',;
-      icon: Users,;
-    },;
-    {,
-      title: 'Predictive Campaign Optimization',;
+        'Intelligent customer segmentation using machine learning to identify high-value prospects and personalize marketing campaigns.';
+      icon: Users;
+    };
+    {
+      title: 'Predictive Campaign Optimization';
       description:,
-        'AI-driven campaign performance prediction and real-time optimization for maximum ROI and engagement.',;
-      icon: TrendingUp,;
-    },;
-    {,
-      title: 'Intelligent Content Generation',;
+        'AI-driven campaign performance prediction and real-time optimization for maximum ROI and engagement.';
+      icon: TrendingUp;
+    };
+    {
+      title: 'Intelligent Content Generation';
       description:,
-        'AI-powered content creation that adapts to audience preferences and generates personalized marketing materials.',;
-      icon: Target,;
-    },;
-    {,
-      title: 'Multi-Channel Marketing Orchestration',;
+        'AI-powered content creation that adapts to audience preferences and generates personalized marketing materials.';
+      icon: Target;
+    };
+    {
+      title: 'Multi-Channel Marketing Orchestration';
       description:,
-        'Seamless coordination across email, social media, web, and mobile channels with AI-powered timing optimization.',;
-      icon: Globe,;
-    },;
-    {,
-      title: 'Real-Time Performance Analytics',;
+        'Seamless coordination across email, social media, web, and mobile channels with AI-powered timing optimization.';
+      icon: Globe;
+    };
+    {
+      title: 'Real-Time Performance Analytics';
       description:,
-        'Advanced analytics dashboard with AI insights, predictive modeling, and automated reporting.',;
-      icon: BarChart3,;
-    },;
-    {,
-      title: 'Smart Lead Scoring & Nurturing',;
+        'Advanced analytics dashboard with AI insights, predictive modeling, and automated reporting.';
+      icon: BarChart3;
+    };
+    {
+      title: 'Smart Lead Scoring & Nurturing';
       description:,
-        'AI-powered lead qualification and automated nurturing sequences that adapt to prospect behavior.',;
-      icon: Zap,;
-    },;
-  ],;
+        'AI-powered lead qualification and automated nurturing sequences that adapt to prospect behavior.';
+      icon: Zap;
+    };
+  ];
   marketPosition:,
-    'Leading AI-powered marketing automation platform for businesses seeking to revolutionize customer acquisition and engagement through intelligent automation and predictive analytics.',;
-  useCases: [,
-    'E-commerce marketing automation',;
-    'B2B lead generation and nurturing',;
-    'SaaS customer acquisition',;
-    'Real estate marketing campaigns',;
-    'Healthcare patient engagement',;
-    'Financial services marketing',;
-  ],;
-  roi: 'Average customer sees 320% ROI within 7 months through improved lead quality, conversion rates, and marketing efficiency.',;
-  contactInfo: {,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  },;
+    'Leading AI-powered marketing automation platform for businesses seeking to revolutionize customer acquisition and engagement through intelligent automation and predictive analytics.';
+  useCases: [
+    'E-commerce marketing automation';
+    'B2B lead generation and nurturing';
+    'SaaS customer acquisition';
+    'Real estate marketing campaigns';
+    'Healthcare patient engagement';
+    'Financial services marketing';
+  ];
+  roi: 'Average customer sees 320% ROI within 7 months through improved lead quality, conversion rates, and marketing efficiency.';
+  contactInfo: {
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+  };
 };
-,
-export default function AIMarketingAutomation20o30() {,
+export default function AIMarketingAutomation20o30() {
   const { features, marketPosition, useCases, roi, contactInfo } = serviceData,
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>{serviceData.name} - Zion Tech Group</title>,
         <meta name='description' content={serviceData.description} />,
-        <meta,
+        <meta
           name='keywords',
           content='AI marketing automation, marketing automation, AI marketing, lead generation, Zion Tech Group',
         />,
         <meta name='author' content='Zion Tech Group' />,
         <meta name='robots' content='index, follow' />,
         {/* Open Graph */}
-        <meta,
+        <meta
           property='og: title',
-          content={`${serviceData.name,} - Zion Tech Group`}
+          content={`${serviceData.name} - Zion Tech Group`}
         />,
-        <meta property='og: description' content={serviceData.description,} />,
+        <meta property='og: description' content={serviceData.description} />,
         <meta property='og: type' content='website' />,
-        <meta,
+        <meta
           property='og:url',
           content='https://ziontechgroup.com/ai-marketing-automation-20o30',
         />,
-        <meta,
+        <meta
           property='og:image',
           content='https://ziontechgroup.com/og-image.jpg',
         />,
         <meta property='og:site_name' content='Zion Tech Group' />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta name='twitter: card' content='summary_large_image' />,
-        <meta,
+        <meta
           name='twitter:title',
-          content={`${serviceData.name,} - Zion Tech Group`}
+          content={`${serviceData.name} - Zion Tech Group`}
         />,
-        <meta name='twitter: description' content={serviceData.description,} />,
-        <meta,
+        <meta name='twitter: description' content={serviceData.description} />,
+        <meta
           name='twitter: image',
           content='https://ziontechgroup.com/og-image.jpg',
         />,
@@ -123,15 +120,14 @@ export default function AIMarketingAutomation20o30() {,
       <UltraFuturisticBackground20o30>,
         <UltraFuturisticNavigation20o30 />,
         <main className='relative z-10'>,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
             <div className='max-w-7xl mx-auto text-center'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                className='mb-8',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className='mb-8'>,
                 <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-60o0 rounded-2xl mb-6'>,
                   <Target className='w-10 h-10 text-white' />,
                 </div>,
@@ -141,17 +137,16 @@ export default function AIMarketingAutomation20o30() {,
                   </span>,
                 </h1>,
                 <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-                  Transform your marketing with AI-powered automation,;
+                  Transform your marketing with AI-powered automation;
                   predictive analytics, and intelligent campaign optimization.,
                   Generate more leads, increase conversions, and maximize ROI.,
                 </p>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.2 ,}}
-                className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-12',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-12'>,
                 <div className='text-center'>,
                   <div className='text-4xl font-bold text-white mb-2'>$179</div>,
                   <div className='text-gray-40o0'>/month</div>,
@@ -170,11 +165,10 @@ export default function AIMarketingAutomation20o30() {,
                 </div>,
               </motion.div>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
-                className='flex flex-col sm: flex-row gap-4 justify-center items-center',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
                 <button className='px-8 py-4 bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white rounded-xl font-semibold text-lg hover:from-green-60o0 hover:to-emerald-70o0 transition-all duration-20o0 shadow-lg hover:shadow-xl'>,
                   Start Free Trial,
                 </button>,
@@ -184,17 +178,16 @@ export default function AIMarketingAutomation20o30() {,
               </motion.div>,
             </div>,
           </section>,
-          {/* Features Section */,}
+          {/* Features Section */}
           <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-green-90o0/10 to-transparent'></div>,
             <div className='max-w-7xl mx-auto relative z-10'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
-                className='text-center mb-16',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className='text-center mb-16'>,
                 <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                   <span className='bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent'>,
                     Revolutionary Features,
@@ -207,28 +200,26 @@ export default function AIMarketingAutomation20o30() {,
                 </p>,
               </motion.div>,
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-                {features.map((feature, index) => (,
+                {features.map((feature, index) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    whileInView={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                    viewport={{ once: true ,}}
-                    className='group cursor-pointer',
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className='group cursor-pointer'>,
                     <div className='bg-gradient-to-br from-green-90o0/50 to-emerald-90o0/50 backdrop-blur-xl border border-green-50o0/30 rounded-2xl p-8 h-full hover: from-green-80o0/60 hover:to-emerald-80o0/60 transition-all duration-30o0 hover:scale-10o5'>,
                       <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-60o0 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-30o0'>,
                         <feature.icon className='w-8 h-8 text-white' />,
                       </div>,
                       <h3 className='text-xl font-bold text-white mb-4'>,
-                        {feature.title,}
+                        {feature.title}
                       </h3>,
                       <p className='text-gray-30o0 leading-relaxed'>,
                         {feature.description}
                       </p>,
                     </div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </section>,
@@ -236,10 +227,10 @@ export default function AIMarketingAutomation20o30() {,
           <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
             <div className='max-w-4xl mx-auto text-center'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >,
                 <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                   <span className='bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent'>,
@@ -247,7 +238,7 @@ export default function AIMarketingAutomation20o30() {,
                   </span>,
                 </h2>,
                 <p className='text-xl text-gray-30o0 leading-relaxed'>,
-                  {marketPosition,}
+                  {marketPosition}
                 </p>,
               </motion.div>,
             </div>,
@@ -257,12 +248,11 @@ export default function AIMarketingAutomation20o30() {,
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-green-90o0/10 to-transparent'></div>,
             <div className='max-w-6xl mx-auto relative z-10'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
-                className='text-center mb-16',
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className='text-center mb-16'>,
                 <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                   <span className='bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent'>,
                     Use Cases & Applications,
@@ -274,20 +264,18 @@ export default function AIMarketingAutomation20o30() {,
                 </p>,
               </motion.div>,
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>,
-                {useCases.map((useCase, index) => (,
+                {useCases.map((useCase, index) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    whileInView={{ opacity: 1, y: 0 ,}}
-                    transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                    viewport={{ once: true ,}}
-                    className='bg-gradient-to-br from-green-90o0/30 to-emerald-90o0/30 backdrop-blur-xl border border-green-50o0/20 rounded-xl p-6 hover: from-green-80o0/40 hover:to-emerald-80o0/40 transition-all duration-30o0',
-                  >,
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className='bg-gradient-to-br from-green-90o0/30 to-emerald-90o0/30 backdrop-blur-xl border border-green-50o0/20 rounded-xl p-6 hover: from-green-80o0/40 hover:to-emerald-80o0/40 transition-all duration-30o0'>,
                     <h3 className='text-lg font-semibold text-white mb-3'>,
-                      {useCase,}
+                      {useCase}
                     </h3>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
           </section>,
@@ -295,17 +283,17 @@ export default function AIMarketingAutomation20o30() {,
           <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
             <div className='max-w-4xl mx-auto text-center'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >,
                 <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>,
                   <span className='bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent'>,
                     Proven ROI & Results,
                   </span>,
                 </h2>,
-                <p className='text-xl text-gray-30o0 mb-8'>{roi,}</p>,
+                <p className='text-xl text-gray-30o0 mb-8'>{roi}</p>,
                 <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
                   <div className='text-center'>,
                     <div className='text-4xl font-bold text-green-40o0 mb-2'>,
@@ -337,20 +325,20 @@ export default function AIMarketingAutomation20o30() {,
               </motion.div>,
             </div>,
           </section>,
-          {/* Contact Section */,}
+          {/* Contact Section */}
           <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-green-90o0/10 to-transparent'></div>,
             <div className='max-w-4xl mx-auto text-center relative z-10'>,
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >,
                 <h2 className='text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6'>,
                   Ready to Transform Your Marketing with,
                   <span className='bg-gradient-to-r from-green-40o0 via-emerald-40o0 to-green-60o0 bg-clip-text text-transparent'>,
-                    {' ',}
+                    {' '}
                     AI-Powered Automation?,
                   </span>,
                 </h2>,
@@ -370,7 +358,7 @@ export default function AIMarketingAutomation20o30() {,
                 <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-30o0'>,
                   <div className='flex items-center justify-center space-x-2'>,
                     <Phone className='w-5 h-5 text-green-40o0' />,
-                    <span>{contactInfo.mobile,}</span>,
+                    <span>{contactInfo.mobile}</span>,
                   </div>,
                   <div className='flex items-center justify-center space-x-2'>,
                     <MailIcon className='w-5 h-5 text-emerald-40o0' />,
@@ -387,7 +375,5 @@ export default function AIMarketingAutomation20o30() {,
         </main>,
         <UltraFuturisticFooter20o30 />,
       </UltraFuturisticBackground20o30>,
-    </>,
-  ),
-}
+    </>)}
 ,

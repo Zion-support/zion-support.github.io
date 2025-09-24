@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI Expense Tracker | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Expense Tracker | Zion Tech Group';
   description:,
-    'Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.',;
+    'Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.';
 };
-,
-export default function ExpenseTrackerPage() {,
-  return (,
+export default function ExpenseTrackerPage() {
+  return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
@@ -25,32 +23,32 @@ export default function ExpenseTrackerPage() {,
             Key Features,
           </h2>,
           <div className='space-y-6'>,
-            <FeatureItem,
+            <FeatureItem
               icon='📱',
               title='Receipt Scanning',
               description='Scan receipts with your phone camera and AI automatically extracts merchant, amount, and date',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='🤖',
               title='Smart Categorization',
               description='AI automatically categorizes expenses based on merchant, location, and spending patterns',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📊',
               title='Real-time Analytics',
               description='Comprehensive dashboards showing spending trends, budgets, and expense insights',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='💳',
               title='Multi-Card Support',
               description='Connect multiple credit cards and bank accounts for complete expense visibility',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='👥',
               title='Team Management',
               description='Manage team expenses with approval workflows, spending limits, and policy enforcement',
             />,
-            <FeatureItem,
+            <FeatureItem
               icon='📋',
               title='Automated Reports',
               description='Generate expense reports for accounting, tax preparation, and reimbursement',
@@ -60,47 +58,47 @@ export default function ExpenseTrackerPage() {,
         <div>,
           <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>Pricing</h2>,
           <div className='space-y-6'>,
-            <PricingCard,
+            <PricingCard
               title='Personal',
               price='$9',
               period='per month',
               description='Perfect for individuals and freelancers',
-              features={[,
-                'Unlimited receipts',;
-                'Basic categorization',;
-                'Mobile app',;
-                'Basic reporting',;
-                'Email support',;
+              features={[
+                'Unlimited receipts';
+                'Basic categorization';
+                'Mobile app';
+                'Basic reporting';
+                'Email support';
               ]}
               popular={false}
             />,
-            <PricingCard,
+            <PricingCard
               title='Business',
               price='$29',
               period='per month',
               description='Ideal for small businesses and teams',
-              features={[,
-                'Up to 10 users',;
-                'Advanced categorization',;
-                'Team management',;
-                'Advanced reporting',;
-                'Priority support',;
-                'API access',;
+              features={[
+                'Up to 10 users';
+                'Advanced categorization';
+                'Team management';
+                'Advanced reporting';
+                'Priority support';
+                'API access';
               ]}
               popular={true}
             />,
-            <PricingCard,
+            <PricingCard
               title='Enterprise',
               price='$99',
               period='per month',
               description='For large organizations',
-              features={[,
-                'Unlimited users',;
-                'Custom categorization',;
-                'Advanced workflows',;
-                '24/7 support',;
-                'Custom integrations',;
-                'Advanced security',;
+              features={[
+                'Unlimited users';
+                'Custom categorization';
+                'Advanced workflows';
+                '24/7 support';
+                'Custom integrations';
+                'Advanced security';
               ]}
               popular={false}
             />,
@@ -112,19 +110,19 @@ export default function ExpenseTrackerPage() {,
           How It Works,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-          <WorkflowStep,
+          <WorkflowStep
             step='1',
             title='Capture',
             description='Take a photo of your receipt or import from email/bank',
             icon='📸',
           />,
-          <WorkflowStep,
+          <WorkflowStep
             step='2',
             title='Process',
             description='AI extracts data and categorizes expenses automatically',
             icon='🤖',
           />,
-          <WorkflowStep,
+          <WorkflowStep
             step='3',
             title='Analyze',
             description='Get insights, reports, and budget recommendations',
@@ -137,32 +135,32 @@ export default function ExpenseTrackerPage() {,
           Key Benefits,
         </h2>,
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          <BenefitCard,
+          <BenefitCard
             icon='⏰',
             title='Save 5+ Hours Weekly',
             description='Eliminate manual data entry and receipt organization',
           />,
-          <BenefitCard,
+          <BenefitCard
             icon='🎯',
             title='95% Accuracy',
             description='AI-powered data extraction reduces human errors',
           />,
-          <BenefitCard,
+          <BenefitCard
             icon='💰',
             title='Save 15% on Expenses',
             description='Identify spending patterns and optimize budgets',
           />,
-          <BenefitCard,
+          <BenefitCard
             icon='📱',
             title='Mobile-First',
             description='Track expenses on-the-go with our intuitive mobile app',
           />,
-          <BenefitCard,
+          <BenefitCard
             icon='🔒',
             title='Bank-Level Security',
             description='256-bit encryption and secure cloud storage',
           />,
-          <BenefitCard,
+          <BenefitCard
             icon='📈',
             title='Smart Insights',
             description='AI-powered recommendations for better spending habits',
@@ -204,22 +202,22 @@ export default function ExpenseTrackerPage() {,
           Perfect For,
         </h2>,
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-          <UseCaseCard,
+          <UseCaseCard
             icon='👤',
             title='Individual Users',
             description='Freelancers, consultants, and professionals tracking personal expenses',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🏢',
             title='Small Businesses',
             description='Startups and small businesses managing team expenses and reimbursements',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='✈️',
             title='Frequent Travelers',
             description='Business travelers tracking travel expenses and per diems',
           />,
-          <UseCaseCard,
+          <UseCaseCard
             icon='🏥',
             title='Healthcare Workers',
             description='Medical professionals tracking equipment, supplies, and continuing education',
@@ -227,54 +225,49 @@ export default function ExpenseTrackerPage() {,
         </div>,
       </div>,
       <CTA />,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function FeatureItem({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function FeatureItem({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='flex items-start space-x-4'>,
       <div className='text-2xl'>{icon}</div>,
       <div>,
         <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
         <p className='text-gray-60o0'>{description}</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function PricingCard({,
-  title,;
-  price,;
-  period,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function PricingCard({
+  title;
+  price;
+  period;
+  description;
+  features;
+  popular;
+}: {
   title: string,
   price: string,
   period: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`border rounded-xl p-6 ${popular ? 'border-orange-50o0 bg-orange-50' : 'border-gray-20o0 bg-white'}`}
     >,
-      {popular && (,
+      {popular && (
         <div className='bg-orange-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>,
           Most Popular,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{title}</h3>,
       <div className='mb-4'>,
         <span className='text-3xl font-bold text-gray-90o0'>{price}</span>,
@@ -282,38 +275,35 @@ function PricingCard({,
       </div>,
       <p className='text-gray-60o0 mb-6'>{description}</p>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center'>,
             <span className='text-orange-50o0 mr-3'>✓</span>,
             <span className='text-gray-70o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <button,
-        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${,
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular,
             ? 'bg-orange-60o0 text-white hover: bg-orange-70o0',
             : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Start Free Trial,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function WorkflowStep({,
-  step,;
-  title,;
-  description,;
-  icon,;
-}: {,
+function WorkflowStep({
+  step;
+  title;
+  description;
+  icon;
+}: {
   step: string,
   title: string,
   description: string,
   icon: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center'>,
       <div className='bg-orange-10o0 text-orange-80o0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mx-auto mb-3'>,
         {step}
@@ -321,66 +311,56 @@ function WorkflowStep({,
       <div className='text-3xl mb-3'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0 text-sm'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function BenefitCard({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function BenefitCard({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='text-center p-6 border border-gray-20o0 rounded-lg hover: border-orange-30o0 transition-colors'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function CategoryCard({ icon, name }: { icon: string, name: string ,}) {,
-  return (,
+function CategoryCard({ icon, name }: { icon: string, name: string }) {
+  return (
     <div className='text-center p-4 border border-gray-20o0 rounded-lg hover: border-orange-30o0 transition-colors'>,
-      <div className='text-3xl mb-2'>{icon,}</div>,
+      <div className='text-3xl mb-2'>{icon}</div>,
       <div className='text-sm font-medium text-gray-70o0'>{name}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function IntegrationCard({ name, icon }: { name: string, icon: string ,}) {,
-  return (,
+function IntegrationCard({ name, icon }: { name: string, icon: string }) {
+  return (
     <div className='text-center p-4 border border-gray-20o0 rounded-lg hover: border-orange-30o0 transition-colors'>,
-      <div className='text-3xl mb-2'>{icon,}</div>,
+      <div className='text-3xl mb-2'>{icon}</div>,
       <div className='text-sm font-medium text-gray-70o0'>{name}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function UseCaseCard({,
-  icon,;
-  title,;
-  description,;
-}: {,
+function UseCaseCard({
+  icon;
+  title;
+  description;
+}: {
   icon: string,
   title: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='p-6 border border-gray-20o0 rounded-lg hover: border-orange-30o0 transition-colors'>,
-      <div className='text-4xl mb-4'>{icon,}</div>,
+      <div className='text-4xl mb-4'>{icon}</div>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>,
       <p className='text-gray-60o0'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function CTA() {,
-  return (,
+function CTA() {
+  return (
     <div className='bg-gradient-to-r from-orange-50 to-red-50 border border-orange-20o0 rounded-xl p-8 text-center'>,
       <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
         Ready to Simplify Your Expense Tracking?,
@@ -390,16 +370,14 @@ function CTA() {,
         expense management. Track your first 10o0 expenses for free.,
       </p>,
       <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-        <a,
+        <a
           href='tel:+130o24640950',
-          className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors',
-        >,
+          className='bg-orange-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-70o0 transition-colors'>,
           Call +1 30o2 464 0950,
         </a>,
-        <a,
+        <a
           href='mailto:kleber@ziontechgroup.com',
-          className='border-2 border-orange-60o0 text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-orange-60o0 hover:text-white transition-colors',
-        >,
+          className='border-2 border-orange-60o0 text-orange-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-orange-60o0 hover:text-white transition-colors'>,
           Email Us,
         </a>,
       </div>,
@@ -407,7 +385,5 @@ function CTA() {,
         <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>,
         <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import Button from '../components/ui/Button',
-,
-export default function QuantumCloudInfrastructurePlatform() {,
-  return (,
+export default function QuantumCloudInfrastructurePlatform() {
+  return (
     <>,
       <Head>,
         <title>Quantum Cloud Infrastructure Platform | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Quantum-enhanced cloud infrastructure with PQC-ready encryption and zero-trust.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform',
         />,
@@ -27,33 +26,28 @@ export default function QuantumCloudInfrastructurePlatform() {,
             </p>,
           </header>,
           <section className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-            {[,
-              'PQC-ready encryption and key management',;
-              'Zero-trust network segmentation',;
-              'Confidential compute and runtime attestation',;
-              'Observability and compliance built-in',;
-              'Managed deployments and migration playbooks',;
-              'From $3,500/mo',;
-            ].map(f => (,
-              <div,
+            {[
+              'PQC-ready encryption and key management';
+              'Zero-trust network segmentation';
+              'Confidential compute and runtime attestation';
+              'Observability and compliance built-in';
+              'Managed deployments and migration playbooks';
+              'From $3,500/mo';
+            ].map(f => (
+              <div
                 key={f}
-                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200',
-              >,
+                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200'>,
                 {f}
-              </div>,
-            ))}
+              </div>))}
           </section>,
           <div className='text-center'>,
-            <Button,
+            <Button
               href='/contact',
-              className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white',
-            >,
+              className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>,
               Request a Quote,
             </Button>,
           </div>,
         </div>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

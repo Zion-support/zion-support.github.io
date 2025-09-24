@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function AutonomousCustomerSuccess20o44Page() {,
-  return (,
+export default function AutonomousCustomerSuccess20o44Page() {
+  return (
     <>,
       <Head>,
         <title>Autonomous Customer Success 20o44 - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='autonomous customer success 20o44 page',
         />,
@@ -21,7 +20,6 @@ export default function AutonomousCustomerSuccess20o44Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

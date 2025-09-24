@@ -1,39 +1,37 @@
 import Link from 'next/link',
-,
-const QuantumAIContentShowcase20o26 = () => {,
-  const contentItems = [,
-    {,
+const QuantumAIContentShowcase20o26 = () => {
+  const contentItems = [
+    {
       title:,
-        'Quantum AI 20o26: Revolutionary Breakthrough in Business Intelligence',;
+        'Quantum AI 20o26: Revolutionary Breakthrough in Business Intelligence';
       description:,
-        'Discover how quantum computing integration with AI is creating unprecedented business intelligence capabilities and instant decision-making systems.',;
-      type: 'Technology Deep Dive',;
-      readingTime: '20 min read',;
-      impact: '10o00x Faster Processing',;
-      url: '/quantum-ai-20o26-breakthrough',;
-    },;
-    {,
-      title: 'Quantum Machine Learning: The Future of Predictive Analytics',;
+        'Discover how quantum computing integration with AI is creating unprecedented business intelligence capabilities and instant decision-making systems.';
+      type: 'Technology Deep Dive';
+      readingTime: '20 min read';
+      impact: '10o00x Faster Processing';
+      url: '/quantum-ai-20o26-breakthrough';
+    };
+    {
+      title: 'Quantum Machine Learning: The Future of Predictive Analytics';
       description:,
-        'Explore how quantum machine learning algorithms are revolutionizing predictive analytics and enabling real-time optimization across all business processes.',;
-      type: 'Technical Guide',;
-      readingTime: '18 min read',;
-      impact: '99.9% Accuracy',;
-      url: '/quantum-ai-20o26-breakthrough',;
-    },;
-    {,
+        'Explore how quantum machine learning algorithms are revolutionizing predictive analytics and enabling real-time optimization across all business processes.';
+      type: 'Technical Guide';
+      readingTime: '18 min read';
+      impact: '99.9% Accuracy';
+      url: '/quantum-ai-20o26-breakthrough';
+    };
+    {
       title:,
-        'Quantum AI Implementation: Complete Framework for Enterprise Integration',;
+        'Quantum AI Implementation: Complete Framework for Enterprise Integration';
       description:,
-        'Master the implementation of quantum AI technologies with our comprehensive framework designed for enterprise-scale deployment and optimization.',;
-      type: 'Implementation Guide',;
-      readingTime: '25 min read',;
-      impact: 'Complete Framework',;
-      url: '/quantum-ai-20o26-breakthrough',;
-    },;
+        'Master the implementation of quantum AI technologies with our comprehensive framework designed for enterprise-scale deployment and optimization.';
+      type: 'Implementation Guide';
+      readingTime: '25 min read';
+      impact: 'Complete Framework';
+      url: '/quantum-ai-20o26-breakthrough';
+    };
   ],
-,
-  return (,
+  return (
     <div className='bg-gradient-to-br from-blue-90o0 via-indigo-90o0 to-purple-90o0 text-white py-20 px-4'>,
       <div className='max-w-7xl mx-auto'>,
         <div className='text-center mb-16'>,
@@ -41,20 +39,19 @@ const QuantumAIContentShowcase20o26 = () => {,
             Quantum AI 20o26 Content,
           </h2>,
           <p className='text-xl md:text-2xl mb-8 text-blue-10o0 max-w-4xl mx-auto'>,
-            Explore the revolutionary world of quantum AI and discover how 'it',;
+            Explore the revolutionary world of quantum AI and discover how 'it';
             's transforming business intelligencedecision-makingand,
             optimization.,
           </p>,
         </div>,
         <div className='grid md: grid-cols-3 gap-8 mb-16'>,
-          {contentItems.map(itemindex => (,
-            <div,
-              key={index,}
-              className='bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+          {contentItems.map(itemindex => (
+            <div
+              key={index}
+              className='bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <div className='flex items-center justify-between mb-6'>,
                 <span className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-4 py-2 rounded-full text-sm font-bold'>,
-                  {item.type,}
+                  {item.type}
                 </span>,
                 <span className='text-blue-20o0 text-sm'>,
                   {item.readingTime}
@@ -72,27 +69,24 @@ const QuantumAIContentShowcase20o26 = () => {,
                   {item.impact}
                 </div>,
               </div>,
-              <Link,
+              <Link
                 href={item.url}
-                className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-6 py-3 rounded-lg font-bold hover: from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0',
-              >,
+                className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-6 py-3 rounded-lg font-bold hover: from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0'>,
                 Explore Now,
-                <svg,
+                <svg
                   className='ml-2 w-4 h-4',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 5l7 7-7 7',
                   />,
                 </svg>,
               </Link>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className='text-center'>,
           <div className='grid md: grid-cols-3 gap-8 mb-12'>,
@@ -111,17 +105,13 @@ const QuantumAIContentShowcase20o26 = () => {,
               <p className='text-blue-10o0'>Decision Making</p>,
             </div>,
           </div>,
-          <Link,
+          <Link
             href='/quantum-ai-20o26-breakthrough',
-            className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-12 py-4 rounded-lg font-bold text-xl hover:from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-black px-12 py-4 rounded-lg font-bold text-xl hover:from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
             Explore Quantum AI 20o26,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default QuantumAIContentShowcase20o26,
-,
+    </div>),
+};
+export default QuantumAIContentShowcase20o26;

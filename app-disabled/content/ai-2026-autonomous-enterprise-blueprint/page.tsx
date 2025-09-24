@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Enterprise Blueprint | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Enterprise Blueprint | Zion Tech Group';
   description:,
-    'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.',;
+    'A practical blueprint to evolve from automation to truly autonomous, outcome-driven operations across the enterprise.';
 };
-,
-export default function AutonomousEnterpriseBlueprint20o26Page() {,
-  return (,
+export default function AutonomousEnterpriseBlueprint20o26Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-emerald-60o0 to-green-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -14,7 +13,7 @@ export default function AutonomousEnterpriseBlueprint20o26Page() {,
             AI 20o26: Autonomous Enterprise Blueprint,
           </h1>,
           <p className='text-lg opacity-90 max-w-3xl'>,
-            A practical blueprint to evolve from automation to truly autonomous,;
+            A practical blueprint to evolve from automation to truly autonomous;
             outcome-driven operations across the enterprise.,
           </p>,
         </div>,
@@ -50,7 +49,5 @@ export default function AutonomousEnterpriseBlueprint20o26Page() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

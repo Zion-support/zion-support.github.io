@@ -1,5 +1,4 @@
 // Type definitions for talent,
-interface talent {,
+interface talent {
   // TODO: Add proper type definitions,
-,};
-,
+};

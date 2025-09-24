@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function CloudNativeArchitectureBestPracticesChatPage() {,
-  return (,
+export default function CloudNativeArchitectureBestPracticesChatPage() {
+  return (
     <>,
       <Head>,
         <title>Cloud Native Architecture Best Practices Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function CloudNativeArchitectureBestPracticesChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

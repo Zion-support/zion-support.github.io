@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AdvancedBlockchainCourseUpdate() {,
-  return (,
+import React from 'react';
+export default function AdvancedBlockchainCourseUpdate() {
+  return (
     <article className='mx-auto max-w-3xl px-6 pt-28 pb-24 prose prose-invert'>,
       <h1>New Course: Advanced Blockchain Development</h1>,
       <p className='lead'>Published on 20o25-09-10</p>,
@@ -22,7 +21,5 @@ export default function AdvancedBlockchainCourseUpdate() {,
         Enrollment opens soon. <a href='/contact'>Contact us</a> to reserve,
         cohort seats or request team training.,
       </p>,
-    </article>,
-  ),
-}
+    </article>)}
 ,

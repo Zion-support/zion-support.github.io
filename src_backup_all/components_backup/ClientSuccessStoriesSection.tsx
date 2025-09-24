@@ -1,82 +1,80 @@
 import { motion } from 'framer-motion',
-import {,
-  Star,;
-  Quote,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  CheckCircle,;
-  ArrowRight,;
-  Heart,;
+import {
+  Star;
+  Quote;
+  TrendingUp;
+  Users;
+  Award;
+  CheckCircle;
+  ArrowRight;
+  Heart;
 } from 'lucide-react',
-,
-const successStories = [,
-  {,
-    id: 1,;
-    client: 'TechCorp Solutions',;
-    industry: 'Technology',;
-    challenge: 'Legacy systems causing 40% productivity loss',;
-    solution: 'Modernized infrastructure with AI-powered automation',;
-    results: [,
-      'Increased productivity by 60%',;
-      'Reduced operational costs by 35%',;
-      'Improved customer satisfaction by 45%',;
-    ],;
+const successStories = [
+  {
+    id: 1;
+    client: 'TechCorp Solutions';
+    industry: 'Technology';
+    challenge: 'Legacy systems causing 40% productivity loss';
+    solution: 'Modernized infrastructure with AI-powered automation';
+    results: [
+      'Increased productivity by 60%';
+      'Reduced operational costs by 35%';
+      'Improved customer satisfaction by 45%';
+    ];
     testimonial:,
-      'Zion Tech Group transformed our entire operation. The results exceeded our expectations.',;
-    author: 'Sarah Johnson',;
-    position: 'CTO',;
-    rating: 5,;
-    image: 'https://images.unsplash.com/photo-1560o250097-0b93528c311a?w=40o0',;
-  },;
-  {,
-    id: 2,;
-    client: 'Global Finance Ltd',;
-    industry: 'Financial Services',;
-    challenge: 'Security vulnerabilities and compliance issues',;
-    solution: 'Comprehensive cybersecurity and compliance platform',;
-    results: [,
-      '10o0% compliance achievement',;
-      'Zero security breaches',;
-      'Reduced audit time by 70%',;
-    ],;
+      'Zion Tech Group transformed our entire operation. The results exceeded our expectations.';
+    author: 'Sarah Johnson';
+    position: 'CTO';
+    rating: 5;
+    image: 'https://images.unsplash.com/photo-1560o250097-0b93528c311a?w=40o0';
+  };
+  {
+    id: 2;
+    client: 'Global Finance Ltd';
+    industry: 'Financial Services';
+    challenge: 'Security vulnerabilities and compliance issues';
+    solution: 'Comprehensive cybersecurity and compliance platform';
+    results: [
+      '10o0% compliance achievement';
+      'Zero security breaches';
+      'Reduced audit time by 70%';
+    ];
     testimonial:,
-      'Their security solutions are world-class. We feel completely protected now.',;
-    author: 'Michael Chen',;
-    position: 'CISO',;
-    rating: 5,;
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=40o0',;
-  },;
-  {,
-    id: 3,;
-    client: 'HealthTech Innovations',;
-    industry: 'Healthcare',;
-    challenge: 'Patient data management inefficiencies',;
-    solution: 'AI-powered healthcare analytics platform',;
-    results: [,
-      'Improved patient outcomes by 30%',;
-      'Reduced administrative overhead by 50%',;
-      'Enhanced data accuracy by 95%',;
-    ],;
+      'Their security solutions are world-class. We feel completely protected now.';
+    author: 'Michael Chen';
+    position: 'CISO';
+    rating: 5;
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=40o0';
+  };
+  {
+    id: 3;
+    client: 'HealthTech Innovations';
+    industry: 'Healthcare';
+    challenge: 'Patient data management inefficiencies';
+    solution: 'AI-powered healthcare analytics platform';
+    results: [
+      'Improved patient outcomes by 30%';
+      'Reduced administrative overhead by 50%';
+      'Enhanced data accuracy by 95%';
+    ];
     testimonial:,
-      'The AI platform revolutionized how we handle patient data and make decisions.',;
-    author: 'Dr. Emily Rodriguez',;
-    position: 'Chief Medical Officer',;
-    rating: 5,;
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=40o0',;
-  },;
+      'The AI platform revolutionized how we handle patient data and make decisions.';
+    author: 'Dr. Emily Rodriguez';
+    position: 'Chief Medical Officer';
+    rating: 5;
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=40o0';
+  };
 ],
-,
-export function ClientSuccessStoriesSection() {,
-  return (,
+export function ClientSuccessStoriesSection() {
+  return (
     <section className='py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0'>,
       <div className='max-w-7xl mx-auto px-6'>,
         <motion.div,
           className='text-center mb-16',
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >,
           <h2 className='text-4xl md: text-5xl font-bold text-white mb-4'>,
             Client Success Stories,
@@ -88,17 +86,17 @@ export function ClientSuccessStoriesSection() {,
           </p>,
         </motion.div>,
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>,
-          {successStories.map((story, index) => (,
+          {successStories.map((story, index) => (
             <motion.div,
               key={story.id}
               className='bg-slate-80o0 border border-slate-70o0 rounded-xl overflow-hidden hover: border-blue-50o0/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-blue-50o0/25',
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
-              transition={{ duration: 0.6, delay: index * 0.1 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >,
               <div className='relative'>,
-                <img,
+                <img
                   src={story.image}
                   alt={story.client}
                   className='w-full h-48 object-cover',
@@ -110,11 +108,10 @@ export function ClientSuccessStoriesSection() {,
                 </div>,
                 <div className='absolute top-3 right-3'>,
                   <div className='flex items-center gap-1'>,
-                    {[...Array(story.rating)].map((_, i) => (,
+                    {[...Array(story.rating)].map((_, i) => (
                       <span key={i} className='text-yellow-40o0 text-sm'>,
                         ★,
-                      </span>,
-                    ))}
+                      </span>))}
                   </div>,
                 </div>,
               </div>,
@@ -126,28 +123,26 @@ export function ClientSuccessStoriesSection() {,
                   <h4 className='text-sm font-semibold text-gray-30o0 mb-2'>,
                     Challenge: ,
                   </h4>,
-                  <p className='text-gray-40o0 text-sm'>{story.challenge,}</p>,
+                  <p className='text-gray-40o0 text-sm'>{story.challenge}</p>,
                 </div>,
                 <div className='mb-4'>,
                   <h4 className='text-sm font-semibold text-gray-30o0 mb-2'>,
                     Solution: ,
                   </h4>,
-                  <p className='text-gray-40o0 text-sm'>{story.solution,}</p>,
+                  <p className='text-gray-40o0 text-sm'>{story.solution}</p>,
                 </div>,
                 <div className='mb-4'>,
                   <h4 className='text-sm font-semibold text-gray-30o0 mb-2'>,
                     Results: ,
                   </h4>,
                   <ul className='space-y-1'>,
-                    {story.results.map((result, resultIndex) => (,
-                      <li,
+                    {story.results.map((result, resultIndex) => (
+                      <li
                         key={resultIndex}
-                        className='flex items-center gap-2 text-sm',
-                      >,
+                        className='flex items-center gap-2 text-sm'>,
                         <div className='w-2 h-2 bg-green-40o0 rounded-full'></div>,
                         <span className='text-gray-30o0'>{result}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 <div className='border-t border-slate-70o0 pt-4'>,
@@ -174,16 +169,15 @@ export function ClientSuccessStoriesSection() {,
                   </div>,
                 </div>,
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </div>,
         {/* Success Metrics */}
         <motion.div,
           className='mb-16',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.4 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >,
           <div className='bg-slate-80o0 border border-slate-70o0 rounded-2xl p-8'>,
             <h3 className='text-2xl font-bold text-white text-center mb-8'>,
@@ -221,10 +215,10 @@ export function ClientSuccessStoriesSection() {,
         </motion.div>,
         <motion.div,
           className='text-center',
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.6 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
         >,
           <div className='bg-gradient-to-r from-green-60o0 to-emerald-60o0 rounded-2xl p-8 text-white'>,
             <h3 className='text-2xl font-bold mb-4'>,
@@ -247,7 +241,6 @@ export function ClientSuccessStoriesSection() {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

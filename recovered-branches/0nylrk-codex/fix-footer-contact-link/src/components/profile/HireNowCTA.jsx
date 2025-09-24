@@ -4,35 +4,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card',
 import { Input } from '../ui/Input',
 import { Textarea } from '../ui/Textarea',
 import { DollarSign, MessageSquare } from 'lucide-react',
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {,
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {
   const [isFormOpen, setIsFormOpen] = useState(false),
-  const [formData, setFormData] = useState({,
-    projectDescription: '',;
-    budget: '',;
-    startDate: '',;
-    message: '',;
+  const [formData, setFormData] = useState({
+    projectDescription: '';
+    budget: '';
+    startDate: '';
+    message: '';
   }),
-  const handleSubmit = e => {,
+  const handleSubmit = e => {
     e.preventDefault(),
-    if (onHire) {,
-      onHire(formData),
-    }
+    if (onHire) {
+      onHire(formData)}
     // Reset form and close,
-    setFormData({,
-      projectDescription: '',;
-      budget: '',;
-      startDate: '',;
-      message: '',;
+    setFormData({
+      projectDescription: '';
+      budget: '';
+      startDate: '';
+      message: '';
     }),
-    setIsFormOpen(false),
-  };
-  const handleChange = e => {,
-    setFormData(prev => ({,
-      ...prev,;
-      [e.target.name]: e.target.value,;
-    })),
-  };
-  return (,
+    setIsFormOpen(false)};
+  const handleChange = e => {
+    setFormData(prev => ({
+      ...prev;
+      [e.target.name]: e.target.value;
+    }))};
+  return (
     <Card className='bg-zion-blue-light border-zion-blue-lighter'>,
       <CardHeader>,
         <CardTitle className='text-white flex items-center gap-2'>,
@@ -41,35 +38,31 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {,
         </CardTitle>,
       </CardHeader>,
       <CardContent>,
-        {!isFormOpen ? (,
+        {!isFormOpen ? (
           <div className='space-y-4'>,
-            {hourlyRate && (,
+            {hourlyRate && (
               <div className='flex items-center gap-2 text-zion-slate-light'>,
                 <DollarSign className='h-4 w-4' />,
                 <span>Starting at ${hourlyRate}/hour</span>,
-              </div>,
-            )}
+              </div>)}
             <p className='text-zion-slate-light text-sm'>,
               Ready to start your project? Send a message to discuss details and,
               get started.,
             </p>,
-            <Button,
+            <Button
               onClick={() => setIsFormOpen(true)}
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple',
-            >,
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple'>,
               Start Project Discussion,
             </Button>,
-          </div>,
-        ) : (,
-          <form onSubmit={handleSubmit,} className='space-y-4'>,
+          </div>) : (
+          <form onSubmit={handleSubmit} className='space-y-4'>,
             <div>,
-              <label,
+              <label
                 htmlFor='projectDescription',
-                className='block text-sm font-medium text-white mb-2',
-              >,
+                className='block text-sm font-medium text-white mb-2'>,
                 Project Description,
               </label>,
-              <Textarea,
+              <Textarea
                 id='projectDescription',
                 name='projectDescription',
                 value={formData.projectDescription}
@@ -81,16 +74,15 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {,
             </div>,
             <div className='grid grid-cols-2 gap-4'>,
               <div>,
-                <label,
+                <label
                   htmlFor='budget',
-                  className='block text-sm font-medium text-white mb-2',
-                >,
+                  className='block text-sm font-medium text-white mb-2'>,
                   Budget Range,
                 </label>,
-                <Input,
+                <Input
                   id='budget',
                   name='budget',
-                  value={formData.budget,}
+                  value={formData.budget}
                   onChange={handleChange}
                   placeholder='e.g., $10o00-50o00',
                   className='bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan',
@@ -98,17 +90,16 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {,
                 />,
               </div>,
               <div>,
-                <label,
+                <label
                   htmlFor='startDate',
-                  className='block text-sm font-medium text-white mb-2',
-                >,
+                  className='block text-sm font-medium text-white mb-2'>,
                   Start Date,
                 </label>,
-                <Input,
+                <Input
                   id='startDate',
                   name='startDate',
                   type='date',
-                  value={formData.startDate,}
+                  value={formData.startDate}
                   onChange={handleChange}
                   className='bg-zion-blue border-zion-blue-light text-white focus: border-zion-cyan',
                   required,
@@ -116,42 +107,36 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {,
               </div>,
             </div>,
             <div>,
-              <label,
+              <label
                 htmlFor='message',
-                className='block text-sm font-medium text-white mb-2',
-              >,
+                className='block text-sm font-medium text-white mb-2'>,
                 Additional Message,
               </label>,
-              <Textarea,
+              <Textarea
                 id='message',
                 name='message',
-                value={formData.message,}
+                value={formData.message}
                 onChange={handleChange}
                 placeholder='Any additional details or questions...',
                 className='bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan',
-                rows={3,}
+                rows={3}
               />,
             </div>,
             <div className='flex gap-3'>,
-              <Button,
+              <Button
                 type='submit',
-                className='flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple',
-              >,
+                className='flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple'>,
                 Send Message,
               </Button>,
-              <Button,
+              <Button
                 type='button',
                 variant='outline',
-                onClick={() => setIsFormOpen(false),}
-                className='border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white',
-              >,
+                onClick={() => setIsFormOpen(false)}
+                className='border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white'>,
                 Cancel,
               </Button>,
             </div>,
-          </form>,
-        ),}
+          </form>)}
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

@@ -1,8 +1,7 @@
 'use client',
-,
 import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
-import {,
+import {
   Atom,
   Zap,
   Cpu,
@@ -10,152 +9,137 @@ import {,
   Shield,
   Globe,
   Rocket,
-  Target,;
-  TrendingUp,;
-  Users,;
-  BarChart3,;
-  Lightbulb,;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Sparkles,;
-  Activity,;
-  Lock,;
-  Infinity,
-} from 'lucide-react',
-,
-const QuantumComputingBreakthroughs20o30Showcase = () => {,
+  Target;
+  TrendingUp;
+  Users;
+  BarChart3;
+  Lightbulb;
+  CheckCircle;
+  ArrowRight;
+  Star;
+  Award;
+  Sparkles;
+  Activity;
+  Lock;
+  Infinity} from 'lucide-react',
+const QuantumComputingBreakthroughs20o30Showcase = () => {
   const [activeTabsetActiveTab] = useState('overview'),
   const [currentBreakthroughsetCurrentBreakthrough] = useState(0),
-,
-  const breakthroughs = [,
-    {,
-      id: 'quantum-supremacy-20o30',;
-      title: 'Quantum Supremacy 20o30',;
-      description: 'Achieving true quantum supremacy with 10o00+ qubit systems that can solve problems impossible for classical computers.',;
-      features: [,
-        '10o00+ logical qubits',;
-        '99.9% error correction',;
-        'Real-time quantum algorithms',;
-        'Exponential speedup',
-      ],;
-      impact: 'Solve optimization problems in seconds that would take classical computers millennia',;
-      icon: Atom,;
-      color: 'from-cyan-50o0 to-blue-50o0',;
+  const breakthroughs = [
+    {
+      id: 'quantum-supremacy-20o30';
+      title: 'Quantum Supremacy 20o30';
+      description: 'Achieving true quantum supremacy with 10o00+ qubit systems that can solve problems impossible for classical computers.';
+      features: [
+        '10o00+ logical qubits';
+        '99.9% error correction';
+        'Real-time quantum algorithms';
+        'Exponential speedup'];
+      impact: 'Solve optimization problems in seconds that would take classical computers millennia';
+      icon: Atom;
+      color: 'from-cyan-50o0 to-blue-50o0';
       timeline: 'Q2 20o30',
-    ,},;
-    {,
-      id: 'quantum-internet',;
-      title: 'Quantum Internet Infrastructure',;
-      description: 'Global quantum communication network enabling ultra-secureinstant data transmission across the planet.',;
-      features: [,
-        'Quantum entanglement networks',;
-        'Unbreakable encryption',;
-        'Instant global communication',;
-        'Quantum teleportation protocols',
-      ],;
-      impact: 'Revolutionize global communication with quantum-secure networks',;
-      icon: Globe,;
-      color: 'from-green-50o0 to-emerald-50o0',;
+    };
+    {
+      id: 'quantum-internet';
+      title: 'Quantum Internet Infrastructure';
+      description: 'Global quantum communication network enabling ultra-secureinstant data transmission across the planet.';
+      features: [
+        'Quantum entanglement networks';
+        'Unbreakable encryption';
+        'Instant global communication';
+        'Quantum teleportation protocols'];
+      impact: 'Revolutionize global communication with quantum-secure networks';
+      icon: Globe;
+      color: 'from-green-50o0 to-emerald-50o0';
       timeline: 'Q4 20o30',
-    ,},;
-    {,
-      id: 'quantum-ai-fusion',;
-      title: 'Quantum-AI Fusion Platform',;
-      description: 'Revolutionary integration of quantum computing with artificial intelligence for unprecedented problem-solving capabilities.',;
-      features: [,
-        'Quantum neural networks',;
-        'Quantum machine learning',;
-        'Hybrid classical-quantum algorithms',;
-        'Quantum optimization engines',
-      ],;
-      impact: 'Enable AI systems with quantum-enhanced intelligence and processing power',;
-      icon: Brain,;
-      color: 'from-purple-50o0 to-pink-50o0',;
+    };
+    {
+      id: 'quantum-ai-fusion';
+      title: 'Quantum-AI Fusion Platform';
+      description: 'Revolutionary integration of quantum computing with artificial intelligence for unprecedented problem-solving capabilities.';
+      features: [
+        'Quantum neural networks';
+        'Quantum machine learning';
+        'Hybrid classical-quantum algorithms';
+        'Quantum optimization engines'];
+      impact: 'Enable AI systems with quantum-enhanced intelligence and processing power';
+      icon: Brain;
+      color: 'from-purple-50o0 to-pink-50o0';
       timeline: 'Q3 20o30',
-    ,},;
-    {,
-      id: 'quantum-simulation',;
-      title: 'Universal Quantum Simulator',;
-      description: 'Quantum computers that can simulate any physical system with perfect accuracyrevolutionizing scientific discovery.',;
-      features: [,
-        'Molecular simulation',;
-        'Material design',;
-        'Drug discovery',;
-        'Climate modeling',
-      ],;
-      impact: 'Accelerate scientific breakthroughs across all fields',;
-      icon: Activity,;
-      color: 'from-orange-50o0 to-red-50o0',;
+    };
+    {
+      id: 'quantum-simulation';
+      title: 'Universal Quantum Simulator';
+      description: 'Quantum computers that can simulate any physical system with perfect accuracyrevolutionizing scientific discovery.';
+      features: [
+        'Molecular simulation';
+        'Material design';
+        'Drug discovery';
+        'Climate modeling'];
+      impact: 'Accelerate scientific breakthroughs across all fields';
+      icon: Activity;
+      color: 'from-orange-50o0 to-red-50o0';
       timeline: 'Q1 20o30',
-    ,}
+    }
   ],
-,
-  const quantumStats = [,
-    { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' ,},;
-    { label: 'Error Rate'value: '0.0o1%'icon: Shieldescription: 'Quantum error correction' ,},;
-    { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' ,},;
-    { label: 'Global Coverage'value: '10o0%'icon: Globedescription: 'Quantum internet reach' ,}
+  const quantumStats = [
+    { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' };
+    { label: 'Error Rate'value: '0.0o1%'icon: Shieldescription: 'Quantum error correction' };
+    { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' };
+    { label: 'Global Coverage'value: '10o0%'icon: Globedescription: 'Quantum internet reach' }
   ],
-,
-  const applications = [,
-    {,
-      category: 'Cryptography',;
-      title: 'Quantum-Safe Security',;
-      description: 'Unbreakable encryption methods that will protect data against quantum attacks.',;
-      benefits: ['Post-quantum cryptography'Quantum key distribution'Unbreakable encryption'Future-proof security'],;
+  const applications = [
+    {
+      category: 'Cryptography';
+      title: 'Quantum-Safe Security';
+      description: 'Unbreakable encryption methods that will protect data against quantum attacks.';
+      benefits: ['Post-quantum cryptography'Quantum key distribution'Unbreakable encryption'Future-proof security'];
       icon: Lock,
-    ,},;
-    {,
-      category: 'Drug Discovery',;
-      title: 'Molecular Simulation',;
-      description: 'Simulate complex molecular interactions to accelerate drug discovery and development.',;
-      benefits: ['Faster drug development'Precise molecular modeling'Reduced R&D costs'Personalized medicine'],;
+    };
+    {
+      category: 'Drug Discovery';
+      title: 'Molecular Simulation';
+      description: 'Simulate complex molecular interactions to accelerate drug discovery and development.';
+      benefits: ['Faster drug development'Precise molecular modeling'Reduced R&D costs'Personalized medicine'];
       icon: Atom,
-    ,},;
-    {,
-      category: 'Climate Science',;
-      title: 'Climate Modeling',;
-      description: 'Ultra-accurate climate models that can predict weather patterns and climate change effects.',;
-      benefits: ['Accurate weather prediction'Climate change modeling'Disaster prevention'Resource optimization'],;
+    };
+    {
+      category: 'Climate Science';
+      title: 'Climate Modeling';
+      description: 'Ultra-accurate climate models that can predict weather patterns and climate change effects.';
+      benefits: ['Accurate weather prediction'Climate change modeling'Disaster prevention'Resource optimization'];
       icon: Globe,
-    ,},;
-    {,
-      category: 'Finance',;
-      title: 'Quantum Finance',;
-      description: 'Revolutionary financial modeling and risk assessment using quantum algorithms.',;
-      benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'],;
+    };
+    {
+      category: 'Finance';
+      title: 'Quantum Finance';
+      description: 'Revolutionary financial modeling and risk assessment using quantum algorithms.';
+      benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'];
       icon: TrendingUp,
-    ,}
+    }
   ],
-,
-  const timeline = [,
-    { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' ,},;
-    { quarter: 'Q2 20o30'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' ,},;
-    { quarter: 'Q3 20o30'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' ,},;
-    { quarter: 'Q4 20o30'milestone: 'Global Quantum Internet'status: 'upcoming' ,}
+  const timeline = [
+    { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' };
+    { quarter: 'Q2 20o30'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' };
+    { quarter: 'Q3 20o30'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' };
+    { quarter: 'Q4 20o30'milestone: 'Global Quantum Internet'status: 'upcoming' }
   ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length),
-    }60o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  return (,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length)}60o00),
+    return () => clearInterval(interval)}[]),
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-cyan-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-60o0/20 to-blue-60o0/20"  />,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">,
           <motion.div,
-            initial={{ opacity: 0y: 20 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="text-center",
-          >,
+            initial={{ opacity: 0y: 20 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center">,
             <div className="flex items-center justify-center mb-6">,
               <Infinity className="w-8 h-8 text-cyan-40o0 mr-3"  />,
               <span className="text-lg font-semibold text-cyan-40o0">Quantum Computing 20o30</span>,
@@ -169,32 +153,29 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {,
             </p>,
             <div className="flex flex-wrap justify-center gap-4">,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover: shadow-lg transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover: shadow-lg transition-all duration-30o0">,
                 Explore Quantum Future,
                 <ArrowRight className="w-5 h-5 ml-2 inline"  />,
               </motion.button>,
               <motion.button,
-                whileHover={{ scale: 1.0o5 ,}}
-                whileTap={{ scale: 0.95 ,}}
-                className="border-2 border-cyan-40o0 text-cyan-30o0 px-8 py-4 rounded-full font-semibold text-lg hover: bg-cyan-40o0/10 transition-all duration-30o0",
-              >,
+                whileHover={{ scale: 1.0o5 }}
+                whileTap={{ scale: 0.95 }}
+                className="border-2 border-cyan-40o0 text-cyan-30o0 px-8 py-4 rounded-full font-semibold text-lg hover: bg-cyan-40o0/10 transition-all duration-30o0">,
                 Watch Quantum Demo,
               </motion.button>,
             </div>,
           </motion.div>,
         </div>,
       </div>,
-      {/* Breakthrough Showcase */,}
+      {/* Breakthrough Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
             Revolutionary Quantum Breakthroughs,
           </h2>,
@@ -202,15 +183,15 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {,
             Discover the quantum technologies that will define the next decade of computing,
           </p>,
         </motion.div>,
-        {/* Breakthrough Cards */,}
+        {/* Breakthrough Cards */}
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-16">,
-          {breakthroughs.map((breakthroughindex) => (,
+          {breakthroughs.map((breakthroughindex) => (
             <motion.div,
-              key={breakthrough.id,}
-              initial={{ opacity: 0y: 20 ,}}
-              whileInView={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.6delay: index * 0.1 ,}}
-              className={`relative bg-gradient-to-br ${breakthrough.color} p-8 rounded-2xl shadow-2xl hover: shadow-3xl transition-all duration-30o0 group`,}
+              key={breakthrough.id}
+              initial={{ opacity: 0y: 20 }}
+              whileInView={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.6delay: index * 0.1 }}
+              className={`relative bg-gradient-to-br ${breakthrough.color} p-8 rounded-2xl shadow-2xl hover: shadow-3xl transition-all duration-30o0 group`}
             >,
               <div className="absolute inset-0 bg-black/20 rounded-2xl"  />,
               <div className="relative z-10">,
@@ -225,108 +206,97 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {,
                 </div>,
                 <p className="text-white/90 mb-6 text-lg">{breakthrough.description}</p>,
                 <div className="space-y-2 mb-6">,
-                  {breakthrough.features.map((featureidx) => (,
+                  {breakthrough.features.map((featureidx) => (
                     <div key={idx} className="flex items-center text-white/80">,
                       <CheckCircle className="w-4 h-4 text-green-30o0 mr-2"  />,
                       <span>{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">,
-                  <p className="text-white font-semibold">Impact: {breakthrough.impact,}</p>,
+                  <p className="text-white font-semibold">Impact: {breakthrough.impact}</p>,
                 </div>,
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </div>,
         {/* Quantum Stats */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="bg-gradient-to-r from-cyan-90o0/50 to-blue-90o0/50 rounded-2xl p-8 mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gradient-to-r from-cyan-90o0/50 to-blue-90o0/50 rounded-2xl p-8 mb-16">,
           <h3 className="text-3xl font-bold text-center mb-8">Quantum Performance Metrics</h3>,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
-            {quantumStats.map((statindex) => (,
+            {quantumStats.map((statindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0scale: 0.8 ,}}
-                whileInView={{ opacity: 1scale: 1 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="text-center",
-              >,
+                key={index}
+                initial={{ opacity: 0scale: 0.8 }}
+                whileInView={{ opacity: 1scale: 1 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="text-center">,
                 <stat.icon className="w-12 h-12 text-cyan-40o0 mx-auto mb-4"  />,
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
                 <div className="text-gray-30o0 mb-1">{stat.label}</div>,
                 <div className="text-sm text-gray-40o0">{stat.description}</div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Applications Section */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16">,
           <h3 className="text-4xl font-bold text-center mb-12">Quantum Applications</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
-            {applications.map((appindex) => (,
+            {applications.map((appindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 ,}}
-                whileInView={{ opacity: 1x: 0 ,}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0",
-              >,
+                key={index}
+                initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1x: 0 }}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0">,
                 <div className="flex items-center mb-4">,
                   <app.icon className="w-6 h-6 text-cyan-40o0 mr-3"  />,
                   <span className="text-cyan-40o0 font-semibold text-sm uppercase tracking-wide">,
-                    {app.category,}
+                    {app.category}
                   </span>,
                 </div>,
                 <h4 className="text-xl font-bold text-white mb-3">{app.title}</h4>,
                 <p className="text-gray-30o0 mb-4">{app.description}</p>,
                 <div className="space-y-2">,
-                  {app.benefits.map((benefitidx) => (,
+                  {app.benefits.map((benefitidx) => (
                     <div key={idx} className="flex items-center text-gray-30o0">,
                       <Star className="w-4 h-4 text-cyan-40o0 mr-2"  />,
                       <span className="text-sm">{benefit}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
         {/* Timeline Section */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="mb-16",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mb-16">,
           <h3 className="text-4xl font-bold text-center mb-12">Quantum Roadmap 20o30</h3>,
           <div className="relative">,
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-50o0 to-blue-50o0"></div>,
             <div className="space-y-8">,
-              {timeline.map((itemindex) => (,
+              {timeline.map((itemindex) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 ,}}
-                  whileInView={{ opacity: 1x: 0 ,}}
-                  transition={{ duration: 0.6delay: index * 0.1 ,}}
+                  initial={{ opacity: 0x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1x: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >,
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>,
                     <div className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg">,
                       <div className="flex items-center mb-2">,
-                        <div className={`w-3 h-3 rounded-full mr-3 ${,
+                        <div className={`w-3 h-3 rounded-full mr-3 ${
                           item.status === 'completed' ? 'bg-green-40o0' :,
-                          item.status === 'in-progress' ? 'bg-yellow-40o0' : 'bg-gray-40o0',
-                        }`}  />,
+                          item.status === 'in-progress' ? 'bg-yellow-40o0' : 'bg-gray-40o0'}`}  />,
                         <span className="text-cyan-40o0 font-semibold text-sm">{item.quarter}</span>,
                       </div>,
                       <h4 className="text-lg font-bold text-white">{item.milestone}</h4>,
@@ -336,18 +306,16 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {,
                     <Atom className="w-4 h-4 text-white"  />,
                   </div>,
                   <div className="w-1/2"></div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </motion.div>,
         {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0y: 20 ,}}
-          whileInView={{ opacity: 1y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-2xl p-12",
-        >,
+          initial={{ opacity: 0y: 20 }}
+          whileInView={{ opacity: 1y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-2xl p-12">,
           <h3 className="text-4xl font-bold text-white mb-6">,
             Ready for the Quantum Revolution?,
           </h3>,
@@ -356,25 +324,21 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {,
           </p>,
           <div className="flex flex-wrap justify-center gap-4">,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="bg-white text-cyan-60o0 px-8 py-4 rounded-full font-semibold text-lg hover: shadow-lg transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-cyan-60o0 px-8 py-4 rounded-full font-semibold text-lg hover: shadow-lg transition-all duration-30o0">,
               Explore Quantum Solutions,
               <Rocket className="w-5 h-5 ml-2 inline"  />,
             </motion.button>,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover: bg-white/10 transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover: bg-white/10 transition-all duration-30o0">,
               Join Quantum Program,
             </motion.button>,
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default QuantumComputingBreakthroughs20o30Showcase,
+    </div>),
+};
+export default QuantumComputingBreakthroughs20o30Showcase;

@@ -1,54 +1,48 @@
-import React from "react",
+import React from "react";
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {ProductSubmissionForm} from "@/components/ProductSubmissionForm",
 import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
 import {SEO} from "@/components/SEO",
-import React from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;
-import { useAuth } from "@/hooks/useAuth",;
+import React from "react";;
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
+import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom",;
-import { SEO } from "@/components/SEO",;
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 import React from './react',
-import { Header ,} from '@/components / Header',
+import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
 import { ProductSubmissionForm } from '@/components / ProductSubmissionForm',
 import { use_auth } from '@/hooks / use_auth',
 import { Navigate } from './react-router-dom',
 import { SEO } from '@/components / SEO',
-
-,
-export default function PublishProduct() {,
+export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
-,
-export default function PublishProduct() {,
+export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
-export default function PublishProduct() {,
-  const { isAuthenticated, isLoading } = useAuth(),;
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
   // Show loading while checking authentication,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">,
         <div className="animate-pulse text-zion-purple text-lg">,
           Loading...,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
   // Redirect to login if not authenticated,
-  if (!isAuthenticated) {,
-    return <Navigate to="/login" state={{ from: '/publish' ,}} replace />,
-,
-  }
-  return (,
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />,
+}
+  return (
     <div className="min-h-screen flex flex-col bg-zion-blue">,
-      <SEO,
+      <SEO
         title="Publish Your Product",
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.",
         keywords="publish product, sell online, digital marketplace, AI tools, tech services",
@@ -66,30 +60,25 @@ export default function PublishProduct() {,
         </div>,
       </main>,
       <Footer />,
-    </div>,
-  ),
-export default function PublishProduct() {,
+    </div>),
+export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   // Show loading while checking authentication,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">,
         <div className="animate-pulse text-zion-purple text-lg">,
           Loading...,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
   // Redirect to login if not authenticated,
-  if (!isAuthenticated) {,
-    return <Navigate to="/login" state={{ from: '/publish' ,}} replace />,
-  }
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />}
 ,
-  return (,
-,
+  return (
     <div className="min-h-screen flex flex-col bg-zion-blue">,
-      <SEO,
+      <SEO
         title="Publish Your Product",
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.",
         keywords="publish product, sell online, digital marketplace, AI tools, tech services",
@@ -101,37 +90,30 @@ export default function PublishProduct() {,
           <p className="text-zion-slate mb-8">,
             Share your products, services, or digital assets with the Zion community.,
           </p>,
-,
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">,
-,
 export default /**,
  * PublishProduct - Function description,
  */,
-function PublishProduct() {,
+function PublishProduct() {
   const { is_authenticated, is_loading } = use_auth (),
-,
   // Show loading while checking authentication,
   // Check condition,
-if ( {) {,
-  $2,
-}
-    return (,
+if ( {) {
+  $2}
+    return (
       <div className="flex justify - center items - center min - h-screen bg - zion - blue">,
         <div className="animate - pulse text - zion - purple text - lg">,
           Loading...,
         </div>,
-      </div>),
-  }
+      </div>)}
   // Redirect to login if not authenticated,
   // Check condition,
-if ( {) {,
-  $2,
-}
-    return <Navigate to="/login" state={{ from: '/publish' ,}} replace />,
-  }
-  return (,
+if ( {) {
+  $2}
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />}
+  return (
     <div className="min - h-screen flex flex - col bg - zion - blue">,
-      <SEO,
+      <SEO
         title="Publish Your Product",
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals.",
         keywords="publish product, sell online, digital marketplace, AI tools, tech services",
@@ -144,16 +126,10 @@ if ( {) {,
             Share your products, services, or digital assets with the Zion community.,
           </p>,
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md: p - 8">,
-,
             <ProductSubmissionForm />,
           </div>,
         </div>,
       </main>,
       <Footer />,
-,
-,}
-,
-,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}}}))
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}))

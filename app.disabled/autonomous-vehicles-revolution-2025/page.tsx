@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'Autonomous Vehicles Revolution 20o25 - Zion Tech Group',;
+export const metadata = {
+  title: 'Autonomous Vehicles Revolution 20o25 - Zion Tech Group';
   description:,
-    'Explore the revolutionary advances in autonomous vehicle technology in 20o25. Discover how AI is transforming transportation, safety, and mobility across industries.',;
-  keywords: [,
-    'autonomous vehicles',;
-    'self-driving',;
-    'AI 20o25',;
-    'transportation',;
-    'automotive AI',;
-  ],;
+    'Explore the revolutionary advances in autonomous vehicle technology in 20o25. Discover how AI is transforming transportation, safety, and mobility across industries.';
+  keywords: [
+    'autonomous vehicles';
+    'self-driving';
+    'AI 20o25';
+    'transportation';
+    'automotive AI';
+  ];
 };
-,
-export default function AutonomousVehiclesRevolution20o25Page() {,
-  return (,
+export default function AutonomousVehiclesRevolution20o25Page() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Autonomous Vehicles Revolution 20o25 - Zion Tech Group',
         description='Explore the revolutionary advances in autonomous vehicle technology in 20o25. Discover how AI is transforming transportation, safety, and mobility across industries.',
         keywords='autonomous vehicles, self-driving, AI 20o25, transportation, automotive AI',
@@ -42,23 +40,21 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
                 industries with 99.97% safety record.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-autonomous-vehicles-revolution-ultimate-guide',
-                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Read the Ultimate Guide,
                 </Link>,
-                <Link,
+                <Link
                   href='/case-studies/ai-20o25-autonomous-vehicles-logistics-transformation-ultimate-success',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                   View Success Story,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-12 text-center'>,
@@ -92,7 +88,7 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Technology Overview */,}
+        {/* Technology Overview */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -125,7 +121,7 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
                   Safety Systems,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Multi-layer safety systems with fail-safe mechanisms,;
+                  Multi-layer safety systems with fail-safe mechanisms;
                   emergency protocols, and human override capabilities.,
                 </p>,
               </div>,
@@ -188,7 +184,7 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Economic Impact */,}
+        {/* Economic Impact */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -252,7 +248,7 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-16 bg-gradient-to-r from-green-60o0 to-teal-60o0 text-white'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold mb-6'>,
@@ -263,23 +259,20 @@ export default function AutonomousVehiclesRevolution20o25Page() {,
               logistics operations and drive unprecedented efficiency gains.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Schedule Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

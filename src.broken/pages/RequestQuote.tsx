@@ -1,9 +1,7 @@
-export function RequestQuote() {,
-  return (,
+export function RequestQuote() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

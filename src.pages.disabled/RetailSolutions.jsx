@@ -1,13 +1,10 @@
-interface RetailSolutionsProps {,
-  // Add props here as needed,
-}
+interface RetailSolutionsProps {
+  // Add props here as needed}
 ,
-export default function RetailSolutions({ }: RetailSolutionsProps) {,
-  return (,
+export default function RetailSolutions({ }: RetailSolutionsProps) {
+  return (
     <div>,
       <h1>RetailSolutions</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

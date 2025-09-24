@@ -1,22 +1,18 @@
 import EnhancedButton from './EnhancedButton',
-,
-export type PaginationProps ={,
+export type PaginationProps ={
   page: number,
   pageSize: number,
   total: number,
   onChange: (nextPage: number) => void,
-,};
-,
-export default function Pagination({ pageSizetotalonChange }: PaginationProps) {,
+};
+export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
   const totalPages = Math.max(1Math.ceil(total / pageSize)),
   const canPrev = page > 1,
   const canNext = page < totalPages,
-,
-  const goTo = (p: number) => {,
+  const goTo = (p: number) => {
     if (p >= 1 && p <= totalPages) onChange(p),
-  ,};
-,
-  return (,
+  };
+  return (
     <div className="flex items-center justify-between gap-2 mt-4">,
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>,
         Prev,
@@ -27,7 +23,5 @@ export default function Pagination({ pageSizetotalonChange }: PaginationProps) {
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>,
         Next,
       </EnhancedButton>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

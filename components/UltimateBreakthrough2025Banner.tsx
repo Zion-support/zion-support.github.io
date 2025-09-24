@@ -1,89 +1,74 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const UltimateBreakthrough20o25Banner = () => {,
+const UltimateBreakthrough20o25Banner = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const [isVisiblesetIsVisible] = useState(true),
-,
-  const breakthroughContent = [,
-    {,
-      id: 'ultimate-breakthrough-revolution',;
-      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution',;
-      description: 'Complete Guide to 15,0o00% ROI Through Next-Generation AI',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$45.8B+',;
-        efficiency: '3,20o0%',;
+  const breakthroughContent = [
+    {
+      id: 'ultimate-breakthrough-revolution';
+      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution';
+      description: 'Complete Guide to 15,0o00% ROI Through Next-Generation AI';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$45.8B+';
+        efficiency: '3,20o0%';
         accuracy: '99.97%',
-      ,},;
-      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution-ultimate-guide',;
-      type: 'blog',;
-      readingTime: '45 min read',;
-      isNew: true,;
+      };
+      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution-ultimate-guide';
+      type: 'blog';
+      readingTime: '45 min read';
+      isNew: true;
       featured: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-ultimate-success',;
-      title: 'Fortune 50o0 Ultimate Breakthrough Success',;
-      description: '$45.8B Annual Savings - 15,0o00% ROI Success Story',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$45.8B',;
-        timeline: '18 months',;
+    };
+    {
+      id: 'fortune-50o0-ultimate-success';
+      title: 'Fortune 50o0 Ultimate Breakthrough Success';
+      description: '$45.8B Annual Savings - 15,0o00% ROI Success Story';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$45.8B';
+        timeline: '18 months';
         satisfaction: '99.8%',
-      ,},;
-      url: '/case-studies/fortune-50o0-ultimate-breakthrough-150o00-roi-success-story',;
-      type: 'case-study',;
-      readingTime: '25 min read',;
-      isNew: true,;
+      };
+      url: '/case-studies/fortune-50o0-ultimate-breakthrough-150o00-roi-success-story';
+      type: 'case-study';
+      readingTime: '25 min read';
+      isNew: true;
       featured: true,
-    ,},;
-    {,
-      id: 'ultimate-implementation-guide',;
-      title: 'AI 20o25-20o26 Ultimate Implementation Guide',;
-      description: 'Complete Roadmap to 15,0o00% ROI',;
-      metrics: {,
-        roi: '15,0o00%',;
-        success: '99.7%',;
-        timeline: '18 months',;
-        projects: '1,0o00+',
-      },;
-      url: '/resources/ai-20o25-20o26-ultimate-breakthrough-implementation-guide',;
-      type: 'resource',;
-      readingTime: '50 min read',;
-      isNew: true,;
+    };
+    {
+      id: 'ultimate-implementation-guide';
+      title: 'AI 20o25-20o26 Ultimate Implementation Guide';
+      description: 'Complete Roadmap to 15,0o00% ROI';
+      metrics: {
+        roi: '15,0o00%';
+        success: '99.7%';
+        timeline: '18 months';
+        projects: '1,0o00+'};
+      url: '/resources/ai-20o25-20o26-ultimate-breakthrough-implementation-guide';
+      type: 'resource';
+      readingTime: '50 min read';
+      isNew: true;
       featured: true,
-    ,}
-  ],
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % breakthroughContent.length),
-    }50o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const handleDismiss = () => {,
-    setIsVisible(false),
-    localStorage.setItem(', 'ultimateBreakthrough20o25BannerDismissed', 'true'),
-  };
-,
-  useEffect(() => {,
-    const dismissed = localStorage.getItem('ultimateBreakthrough20o25BannerDismissed'),
-    if (dismissed === 'true') {,
-      setIsVisible(false),
     }
+  ],
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % breakthroughContent.length)}50o00),
+    return () => clearInterval(interval)}[]),
+  const handleDismiss = () => {
+    setIsVisible(false),
+    localStorage.setItem(', 'ultimateBreakthrough20o25BannerDismissed', 'true')};
+  useEffect(() => {
+    const dismissed = localStorage.getItem('ultimateBreakthrough20o25BannerDismissed'),
+    if (dismissed === 'true') {
+      setIsVisible(false)}
   }[]),
-,
   if (!isVisible) return null,
-,
   const currentContent = breakthroughContent[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -107,7 +92,7 @@ const UltimateBreakthrough20o25Banner = () => {,
         {/* Content Showcase */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 items-center">,
-            {/* Content Details */,}
+            {/* Content Details */}
             <div className="space-y-6">,
               <div className="flex items-center space-x-2">,
                 <span className="bg-red-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold">,
@@ -121,7 +106,7 @@ const UltimateBreakthrough20o25Banner = () => {,
                 </span>,
               </div>,
               <h3 className="text-2xl md: text-3xl font-bold">,
-                {currentContent.title,}
+                {currentContent.title}
               </h3>,
               <p className="text-lg opacity-90">,
                 {currentContent.description}
@@ -146,13 +131,12 @@ const UltimateBreakthrough20o25Banner = () => {,
                 </div>,
               </div>,
               <div className="flex items-center space-x-4">,
-                <Link,
+                <Link
                   href={currentContent.url}
-                  className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   Read Now →,
                 </Link>,
-                <span className="text-sm opacity-80">{currentContent.readingTime,}</span>,
+                <span className="text-sm opacity-80">{currentContent.readingTime}</span>,
               </div>,
             </div>,
             {/* Visual Elements */}
@@ -163,15 +147,13 @@ const UltimateBreakthrough20o25Banner = () => {,
                 <div className="text-lg opacity-80 mb-4">Next-Generation AI</div>,
                 {/* Progress Indicators */}
                 <div className="flex justify-center space-x-2 mb-6">,
-                  {breakthroughContent.map((_index) => (,
-                    <button,
+                  {breakthroughContent.map((_index) => (
+                    <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
-                        index === currentSlide ? 'bg-white' : 'bg-white/40',
-                      }`}
-                    />,
-                  ))}
+                      className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/40'}`}
+                    />))}
                 </div>,
                 <div className="text-sm opacity-80">,
                   Slide {currentSlide + 1} of {breakthroughContent.length}
@@ -183,33 +165,27 @@ const UltimateBreakthrough20o25Banner = () => {,
         {/* Call to Action */}
         <div className="text-center">,
           <div className="inline-flex items-center space-x-4">,
-            <Link,
+            <Link
               href="/resources/ai-20o25-20o26-ultimate-breakthrough-implementation-guide",
-              className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-            >,
+              className="bg-white text-purple-90o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
               Get Implementation Guide,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors">,
               Schedule Consultation,
             </Link>,
           </div>,
         </div>,
-        {/* Dismiss Button */,}
-        <button,
+        {/* Dismiss Button */}
+        <button
           onClick={handleDismiss}
           className="absolute top-4 right-4 text-white/60 hover: text-white transition-colors",
-          aria-label="Dismiss banner",
-        >,
+          aria-label="Dismiss banner">,
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
           </svg>,
         </button>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default UltimateBreakthrough20o25Banner,
+    </div>)};
+export default UltimateBreakthrough20o25Banner;

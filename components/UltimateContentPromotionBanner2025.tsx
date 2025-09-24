@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const UltimateContentPromotionBanner20o25: React.FC = () => {,
-  return (,
+const UltimateContentPromotionBanner20o25: React.FC = () => {
+  return (
     <section className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 relative overflow-hidden'>,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className='absolute inset-0'>,
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20'></div>,
         <div className='absolute top-20 left-10 w-32 h-32 bg-blue-50o0/20 rounded-full animate-pulse'></div>,
@@ -14,13 +13,13 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {,
       </div>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10'>,
         <div className='text-center'>,
-          {/* Main Badge */,}
+          {/* Main Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 via-orange-50o0 to-red-50o0 text-black px-8 py-3 rounded-full text-lg font-bold mb-8 animate-pulse shadow-lg'>,
             ⚡ ULTIMATE CONTENT 20o25 - LIMITED TIME ⚡,
           </div>,
           {/* Headline */}
           <h1 className='text-5xl md: text-7xl font-bold mb-8 leading-tight'>,
-            The{' ',}
+            The{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-40o0 via-orange-50o0 to-red-50o0'>,
               Ultimate AI Content,
             </span>,
@@ -96,22 +95,20 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/content',
-              className='bg-gradient-to-r from-yellow-40o0 via-orange-50o0 to-red-50o0 text-black px-12 py-4 rounded-xl font-bold text-xl hover:from-yellow-50o0 hover:to-red-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 via-orange-50o0 to-red-50o0 text-black px-12 py-4 rounded-xl font-bold text-xl hover:from-yellow-50o0 hover:to-red-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-2xl'>,
               Explore All Content,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-12 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-12 py-4 rounded-xl font-bold text-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Expert Consultation,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-16 flex flex-wrap items-center justify-center gap-8 text-sm opacity-80'>,
             <div className='flex items-center gap-2'>,
               <span className='text-green-40o0 text-xl'>✓</span>,
@@ -132,9 +129,5 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default UltimateContentPromotionBanner20o25,
-,
+    </section>)};
+export default UltimateContentPromotionBanner20o25;

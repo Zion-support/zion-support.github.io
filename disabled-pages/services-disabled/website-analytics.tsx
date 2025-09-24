@@ -1,165 +1,150 @@
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
-  BarChart3,;
-  Eye,;
-  Users,;
-  MousePointer,;
-  TrendingUp,;
-  Target,;
-  CheckCircle,;
-  ArrowRight,;
-  Clock,;
-  Award,;
-  Star,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Monitor,;
-  Smartphone,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  DollarSign,;
-  Zap,;
-  Settings,;
-  FileText,;
-  MessageSquare,;
-  PieChart,;
-  Activity,
-} from 'lucide-react',
-,
-export default function WebsiteAnalytics() {,
+import {
+  BarChart3;
+  Eye;
+  Users;
+  MousePointer;
+  TrendingUp;
+  Target;
+  CheckCircle;
+  ArrowRight;
+  Clock;
+  Award;
+  Star;
+  Globe;
+  Lock;
+  Cpu;
+  Database;
+  Monitor;
+  Smartphone;
+  Mail;
+  Phone;
+  MapPin;
+  DollarSign;
+  Zap;
+  Settings;
+  FileText;
+  MessageSquare;
+  PieChart;
+  Activity} from 'lucide-react',
+export default function WebsiteAnalytics() {
   const title = 'Website Analytics for Small Businesses — Zion Tech Group',
   const description = 'Intuitive website analytics platform designed for small business owners. Get actionable insights without technical expertise.',
-,
-  const features = [,
-    {,
-      title: 'User-Friendly Dashboard',;
-      description: 'Simple, intuitive interface designed for non-technical users',;
-      icon: Monitor,;
-      details: [,
-        'Visual charts and graphs',;
-        'Plain English explanations',;
-        'One-click report generation',;
-        'Mobile-responsive design',;
-        'Customizable widgets',;
-        'Drag-and-drop interface',
-      ],
-},;
-    {,
-      title: 'Traffic Analysis',;
-      description: 'Comprehensive visitor behavior and traffic source insights',;
-      icon: Users,;
-      details: [,
-        'Real-time visitor tracking',;
-        'Traffic source breakdown',;
-        'Geographic visitor mapping',;
-        'Device and browser analytics',;
-        'Referral source tracking',;
-        'Search engine performance',
-      ],
-},;
-    {,
-      title: 'Conversion Tracking',;
-      description: 'Track and optimize your business goals and conversions',;
-      icon: Target,;
-      details: [,
-        'Goal setting and tracking',;
-        'E-commerce conversion analysis',;
-        'Form submission tracking',;
-        'Email signup monitoring',;
-        'Phone call tracking',;
-        'ROI measurement tools',
-      ],
-},;
-    {,
-      title: 'Marketing Performance',;
-      description: 'Measure the effectiveness of your marketing campaigns',;
-      icon: TrendingUp,;
-      details: [,
-        'Campaign performance tracking',;
-        'Social media analytics',;
-        'Email marketing insights',;
-        'Paid advertising ROI',;
-        'Content performance analysis',;
-        'A/B testing results',
-      ],
+  const features = [
+    {
+      title: 'User-Friendly Dashboard';
+      description: 'Simple, intuitive interface designed for non-technical users';
+      icon: Monitor;
+      details: [
+        'Visual charts and graphs';
+        'Plain English explanations';
+        'One-click report generation';
+        'Mobile-responsive design';
+        'Customizable widgets';
+        'Drag-and-drop interface']};
+    {
+      title: 'Traffic Analysis';
+      description: 'Comprehensive visitor behavior and traffic source insights';
+      icon: Users;
+      details: [
+        'Real-time visitor tracking';
+        'Traffic source breakdown';
+        'Geographic visitor mapping';
+        'Device and browser analytics';
+        'Referral source tracking';
+        'Search engine performance']};
+    {
+      title: 'Conversion Tracking';
+      description: 'Track and optimize your business goals and conversions';
+      icon: Target;
+      details: [
+        'Goal setting and tracking';
+        'E-commerce conversion analysis';
+        'Form submission tracking';
+        'Email signup monitoring';
+        'Phone call tracking';
+        'ROI measurement tools']};
+    {
+      title: 'Marketing Performance';
+      description: 'Measure the effectiveness of your marketing campaigns';
+      icon: TrendingUp;
+      details: [
+        'Campaign performance tracking';
+        'Social media analytics';
+        'Email marketing insights';
+        'Paid advertising ROI';
+        'Content performance analysis';
+        'A/B testing results']}
+  ],
+  const pricing = [
+    {
+      name: 'Basic';
+      price: '$29';
+      period: '/month';
+      description: 'Perfect for small websites';
+      features: [
+        'Up to 10,0o00 page views/month';
+        'Basic traffic analytics';
+        '5 goals tracking';
+        'Email support';
+        'Standard reports';
+        'Mobile app access'];
+      popular: false,
+};
+    {
+      name: 'Professional';
+      price: '$79';
+      period: '/month';
+      description: 'Ideal for growing businesses';
+      features: [
+        'Up to 10o0,0o00 page views/month';
+        'Advanced analytics';
+        'Unlimited goals tracking';
+        'Priority support';
+        'Custom reports';
+        'E-commerce tracking';
+        'API access'];
+      popular: true,
+};
+    {
+      name: 'Business';
+      price: '$199';
+      period: '/month';
+      description: 'For established businesses';
+      features: [
+        'Unlimited page views';
+        'Advanced segmentation';
+        'Custom dashboards';
+        'Dedicated support';
+        'White-label reports';
+        'Advanced integrations';
+        'SLA guarantee'];
+      popular: false,
 }
   ],
-  const pricing = [,
-    {,
-      name: 'Basic',;
-      price: '$29',;
-      period: '/month',;
-      description: 'Perfect for small websites',;
-      features: [,
-        'Up to 10,0o00 page views/month',;
-        'Basic traffic analytics',;
-        '5 goals tracking',;
-        'Email support',;
-        'Standard reports',;
-        'Mobile app access',
-      ],;
-      popular: false,
-,},;
-    {,
-      name: 'Professional',;
-      price: '$79',;
-      period: '/month',;
-      description: 'Ideal for growing businesses',;
-      features: [,
-        'Up to 10o0,0o00 page views/month',;
-        'Advanced analytics',;
-        'Unlimited goals tracking',;
-        'Priority support',;
-        'Custom reports',;
-        'E-commerce tracking',;
-        'API access',
-      ],;
-      popular: true,
-,},;
-    {,
-      name: 'Business',;
-      price: '$199',;
-      period: '/month',;
-      description: 'For established businesses',;
-      features: [,
-        'Unlimited page views',;
-        'Advanced segmentation',;
-        'Custom dashboards',;
-        'Dedicated support',;
-        'White-label reports',;
-        'Advanced integrations',;
-        'SLA guarantee',
-      ],;
-      popular: false,
-,}
-  ],
-  const benefits = [,
-    {,
-      icon: Eye,;
-      title: 'Easy to Understand',;
-      description: 'No technical jargon - just clear, actionable insights in plain English',
-},;
-    {,
-      icon: Zap,;
-      title: 'Real-time Data',;
+  const benefits = [
+    {
+      icon: Eye;
+      title: 'Easy to Understand';
+      description: 'No technical jargon - just clear, actionable insights in plain English'};
+    {
+      icon: Zap;
+      title: 'Real-time Data';
       description: 'Get instant updates on your website performance and visitor behavior',
-,},;
-    {,
-      icon: Target,;
-      title: 'Goal-Focused',;
+};
+    {
+      icon: Target;
+      title: 'Goal-Focused';
       description: 'Track what matters most to your business with custom goal setting',
-,},;
-    {,
-      icon: Smartphone,;
-      title: 'Mobile Access',;
+};
+    {
+      icon: Smartphone;
+      title: 'Mobile Access';
       description: 'Monitor your analytics on-the-go with our mobile-optimized interface',
-,}
+}
   ],
-  return (,
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -167,7 +152,7 @@ export default function WebsiteAnalytics() {,
         <meta name="viewport" content="width=device-width, initial-scale=1"  />,
         <link rel="canonical" href="https: //ziontechgroup.com/services/website-analytics"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center">,
@@ -193,7 +178,7 @@ export default function WebsiteAnalytics() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-24 sm: py-32">,
         <div className="mx-auto max-w-7xl px-6 lg:px-8">,
           <div className="mx-auto max-w-2xl text-center mb-16">,
@@ -205,27 +190,25 @@ export default function WebsiteAnalytics() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg:grid-cols-2">,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <div key={index} className="group relative rounded-2xl border border-gray-20o0 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-30o0 hover:border-blue-30o0">,
                 <div className="flex items-center gap-x-3 mb-6">,
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-60o0 group-hover:bg-blue-70o0 transition-colors">,
                     <feature.icon className="h-7 w-7 text-white"  />,
                   </div>,
                   <div>,
-                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title,}</h3>,
+                    <h3 className="text-xl font-semibold text-gray-90o0">{feature.title}</h3>,
                     <p className="text-sm text-blue-60o0 font-medium">{feature.description}</p>,
                   </div>,
                 </div>,
                 <ul className="space-y-3">,
-                  {feature.details.map((detail, detailIndex) => (,
+                  {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{detail}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -241,7 +224,7 @@ export default function WebsiteAnalytics() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg: grid-cols-2">,
-            {benefits.map((benefit, index) => (,
+            {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-x-4">,
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-60o0">,
                   <benefit.icon className="h-6 w-6 text-white"  />,
@@ -250,8 +233,7 @@ export default function WebsiteAnalytics() {,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit.title}</h3>,
                   <p className="text-gray-60o0">{benefit.description}</p>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -267,15 +249,14 @@ export default function WebsiteAnalytics() {,
             </p>,
           </div>,
           <div className="grid gap-8 lg: grid-cols-3">,
-            {pricing.map((plan, index) => (,
+            {pricing.map((plan, index) => (
               <div key={index} className={`relative rounded-2xl border p-8 shadow-sm ${plan.popular ? 'border-blue-60o0 bg-blue-50' : 'border-gray-20o0 bg-white'}`}>,
-                {plan.popular && (,
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">,
                     <span className="inline-flex items-center rounded-full bg-blue-60o0 px-4 py-1 text-sm font-semibold text-white">,
                       Most Popular,
                     </span>,
-                  </div>,
-                )}
+                  </div>)}
                 <div className="text-center">,
                   <h3 className="text-xl font-semibold text-gray-90o0">{plan.name}</h3>,
                   <p className="mt-2 text-sm text-gray-60o0">{plan.description}</p>,
@@ -285,20 +266,18 @@ export default function WebsiteAnalytics() {,
                   </div>,
                 </div>,
                 <ul className="mt-8 space-y-4">,
-                  {plan.features.map((feature, featureIndex) => (,
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-x-3">,
                       <CheckCircle className="h-4 w-4 text-blue-60o0"  />,
                       <span className="text-sm text-gray-70o0">{feature}</span>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <div className="mt-8">,
-                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0',}`}>,
+                  <Link href="/contact" className={`block w-full rounded-md px-6 py-3 text-center text-sm font-semibold ${plan.popular ? 'bg-blue-60o0 text-white hover: bg-blue-50o0' : 'bg-gray-90o0 text-white hover:bg-gray-80o0'}`}>,
                     Get Started,
                   </Link>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -354,7 +333,7 @@ export default function WebsiteAnalytics() {,
           </div>,
         </div>,
       </section>,
-      {/* Contact Info */,}
+      {/* Contact Info */}
       <section className="py-16 bg-gray-50">,
         <div className="mx-auto max-w-7xl px-6 lg: px-8">,
           <div className="text-center">,
@@ -376,6 +355,4 @@ export default function WebsiteAnalytics() {,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}

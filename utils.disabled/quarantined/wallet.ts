@@ -14,8 +14,7 @@ export async function connectMetaMask(): Promise<string[]> {
   }
   try {
     const accounts = (await window.ethereum.request({
-      method: 'eth_requestAccounts',
-    })) as string[];
+      method: 'eth_requestAccounts'})) as string[];
     return accounts;
   } catch (_error) {
     throw new Error('Failed to connect to MetaMask');
@@ -28,8 +27,7 @@ export async function getAccounts(): Promise<string[]> {
   }
   try {
     const accounts = (await window.ethereum.request({
-      method: 'eth_accounts',
-    })) as string[];
+      method: 'eth_accounts'})) as string[];
     return accounts;
   } catch (_error) {
     return [];
@@ -43,8 +41,7 @@ export async function getBalance(address: string): Promise<string> {
   try {
     const balance = (await window.ethereum.request({
       method: 'eth_getBalance',
-      params: [address, 'latest'],
-    })) as string;
+      params: [address, 'latest']})) as string;
     return balance;
   } catch (_error) {
     throw new Error('Failed to get balance');
@@ -58,8 +55,7 @@ export async function signMessage(message: string, address: string): Promise<str
   try {
     const signature = (await window.ethereum.request({
       method: 'personal_sign',
-      params: [message, address],
-    })) as string;
+      params: [message, address]})) as string;
     return signature;
   } catch (_error) {
     throw new Error('Failed to sign message');

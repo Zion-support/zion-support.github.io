@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o26UltimateContentRevolutionBanner: React.FC = () => {,
-  return (,
+const AI20o26UltimateContentRevolutionBanner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-cyan-60o0 text-white py-16'>,
       <div className='absolute inset-0 bg-black/20'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-purple-50o0/30 to-cyan-50o0/30'></div>,
-      {/* Animated background elements */,}
+      {/* Animated background elements */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>,
         <div className='absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse'></div>,
         <div className='absolute top-20 right-20 w-16 h-16 bg-cyan-30o0/20 rounded-full animate-bounce'></div>,
@@ -41,29 +40,26 @@ const AI20o26UltimateContentRevolutionBanner: React.FC = () => {,
             </span>,
           </div>,
           <div className='flex flex-wrap justify-center gap-6'>,
-            <Link,
+            <Link
               href='/ai-20o26-ultimate-content-revolution',
-              className='group inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold text-lg rounded-full hover:bg-cyan-50 transition-all duration-30o0 hover:scale-10o5 shadow-xl',
-            >,
+              className='group inline-flex items-center px-8 py-4 bg-white text-purple-60o0 font-bold text-lg rounded-full hover:bg-cyan-50 transition-all duration-30o0 hover:scale-10o5 shadow-xl'>,
               Explore Revolutionary Content,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 shadow-xl',
-            >,
+              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 shadow-xl'>,
               Get Started Today,
             </Link>,
           </div>,
@@ -75,9 +71,5 @@ const AI20o26UltimateContentRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o26UltimateContentRevolutionBanner,
-,
+    </div>)};
+export default AI20o26UltimateContentRevolutionBanner;

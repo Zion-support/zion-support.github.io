@@ -1,29 +1,26 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   BarChart3,
   TrendingUp,
   Users,
   DollarSign,
   Eye,
   MousePointer,
-  Clock,;
-  Target,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Globe,;
-  Shield,;
-  Star,;
-  ArrowUpRight,;
-  ArrowDownRight,;
-  Activity,
-} from 'lucide-react',
-,
-interface AnalyticsData {,
+  Clock;
+  Target;
+  Zap;
+  Brain;
+  Rocket;
+  Globe;
+  Shield;
+  Star;
+  ArrowUpRight;
+  ArrowDownRight;
+  Activity} from 'lucide-react',
+interface AnalyticsData {
   id: string,
   title: string,
   value: string | number,
@@ -32,140 +29,128 @@ interface AnalyticsData {,
   icon: React.ComponentType<any>,
   color: string,
   description: string,
-,}
+}
 ,
-const AdvancedAnalyticsDashboard20o26 = () => {,
+const AdvancedAnalyticsDashboard20o26 = () => {
   const [analyticsDatasetAnalyticsData] = useState<AnalyticsData[]>([]),
   const [selectedTimeframesetSelectedTimeframe] = useState('7d'),
   const [isLoadingsetIsLoading] = useState(true),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Simulate data loading,
-    const loadData = async () => {,
+    const loadData = async () => {
       setIsLoading(true),
       await new Promise(resolve => setTimeout(resolve10o00)),
-,
-      const data: AnalyticsData[] = [,
-        {,
-          id: 'revenue',;
-          title: 'Total Revenue',;
-          value: '$2.4M',;
-          change: 23.5,;
-          trend: 'up',;
-          icon: DollarSign,;
-          color: 'from-green-50o0 to-emerald-50o0',;
+      const data: AnalyticsData[] = [
+        {
+          id: 'revenue';
+          title: 'Total Revenue';
+          value: '$2.4M';
+          change: 23.5;
+          trend: 'up';
+          icon: DollarSign;
+          color: 'from-green-50o0 to-emerald-50o0';
           description: 'Monthly recurring revenue',
-        ,},;
-        {,
-          id: 'users',;
-          title: 'Active Users',;
-          value: '45.2K',;
-          change: 12.3,;
-          trend: 'up',;
-          icon: Users,;
-          color: 'from-blue-50o0 to-cyan-50o0',;
+        };
+        {
+          id: 'users';
+          title: 'Active Users';
+          value: '45.2K';
+          change: 12.3;
+          trend: 'up';
+          icon: Users;
+          color: 'from-blue-50o0 to-cyan-50o0';
           description: 'Daily active users',
-        ,},;
-        {,
-          id: 'conversion',;
-          title: 'Conversion Rate',;
-          value: '8.7%',;
-          change: -2.1,;
-          trend: 'down',;
-          icon: Target,;
-          color: 'from-purple-50o0 to-pink-50o0',;
+        };
+        {
+          id: 'conversion';
+          title: 'Conversion Rate';
+          value: '8.7%';
+          change: -2.1;
+          trend: 'down';
+          icon: Target;
+          color: 'from-purple-50o0 to-pink-50o0';
           description: 'Visitor to customer conversion',
-        ,},;
-        {,
-          id: 'pageviews',;
-          title: 'Page Views',;
-          value: '1.2M',;
-          change: 34.7,;
-          trend: 'up',;
-          icon: Eye,;
-          color: 'from-orange-50o0 to-red-50o0',;
+        };
+        {
+          id: 'pageviews';
+          title: 'Page Views';
+          value: '1.2M';
+          change: 34.7;
+          trend: 'up';
+          icon: Eye;
+          color: 'from-orange-50o0 to-red-50o0';
           description: 'Total page views this month',
-        ,},;
-        {,
-          id: 'sessions',;
-          title: 'Sessions',;
-          value: '89.4K',;
-          change: 18.9,;
-          trend: 'up',;
-          icon: Activity,;
-          color: 'from-teal-50o0 to-cyan-50o0',;
+        };
+        {
+          id: 'sessions';
+          title: 'Sessions';
+          value: '89.4K';
+          change: 18.9;
+          trend: 'up';
+          icon: Activity;
+          color: 'from-teal-50o0 to-cyan-50o0';
           description: 'User sessions this month',
-        ,},;
-        {,
-          id: 'bounce',;
-          title: 'Bounce Rate',;
-          value: '32.1%',;
-          change: -5.2,;
-          trend: 'down',;
-          icon: MousePointer,;
-          color: 'from-indigo-50o0 to-purple-50o0',;
+        };
+        {
+          id: 'bounce';
+          title: 'Bounce Rate';
+          value: '32.1%';
+          change: -5.2;
+          trend: 'down';
+          icon: MousePointer;
+          color: 'from-indigo-50o0 to-purple-50o0';
           description: 'Single-page sessions',
-        ,},;
-        {,
-          id: 'avg-session',;
-          title: 'Avg. Session',;
-          value: '4m 32s',;
-          change: 8.3,;
-          trend: 'up',;
-          icon: Clock,;
-          color: 'from-yellow-50o0 to-orange-50o0',;
+        };
+        {
+          id: 'avg-session';
+          title: 'Avg. Session';
+          value: '4m 32s';
+          change: 8.3;
+          trend: 'up';
+          icon: Clock;
+          color: 'from-yellow-50o0 to-orange-50o0';
           description: 'Average session duration',
-        ,},;
-        {,
-          id: 'ai-usage',;
-          title: 'AI Features Used',;
-          value: '156K',;
-          change: 67.2,;
-          trend: 'up',;
-          icon: Brain,;
-          color: 'from-pink-50o0 to-rose-50o0',;
+        };
+        {
+          id: 'ai-usage';
+          title: 'AI Features Used';
+          value: '156K';
+          change: 67.2;
+          trend: 'up';
+          icon: Brain;
+          color: 'from-pink-50o0 to-rose-50o0';
           description: 'AI-powered interactions',
-        ,}
+        }
       ],
-,
       setAnalyticsData(data),
-      setIsLoading(false),
-    };
-,
-    loadData(),
-  }[selectedTimeframe]),
-,
-  const getTrendIcon = (trend: string) => {,
-    switch (trend) {,
+      setIsLoading(false)};
+    loadData()}[selectedTimeframe]),
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
       case 'up': return <ArrowUpRight className="w-4 h-4 text-green-40o0"  />,
       case 'down': return <ArrowDownRight className="w-4 h-4 text-red-40o0"  />,
       case 'stable': return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
       default: return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
-    ,}
+    }
   };
-,
-  const getChangeColor = (change: number) => {,
+  const getChangeColor = (change: number) => {
     return change >= 0 ? 'text-green-40o0' : 'text-red-40o0',
-  ,};
-,
-  const timeframes = [,
-    { value: '24'h', 'label: '24 Hours' ,},;
-    { value: '7'd', 'label: '7 Days' ,},;
-    { value: '30'd', 'label: '30 Days' ,},;
-    { value: '90'd', 'label: '90 Days' ,}
+  };
+  const timeframes = [
+    { value: '24'h', 'label: '24 Hours' };
+    { value: '7'd', 'label: '7 Days' };
+    { value: '30'd', 'label: '30 Days' };
+    { value: '90'd', 'label: '90 Days' }
   ],
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
         <div className="flex items-center justify-center h-64">,
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-50o0"></div>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
       {/* Header */}
       <div className="flex items-center justify-between mb-8">,
@@ -179,35 +164,33 @@ const AdvancedAnalyticsDashboard20o26 = () => {,
           </div>,
         </div>,
         <div className="flex items-center gap-2">,
-          {timeframes.map((timeframe) => (,
-            <button,
+          {timeframes.map((timeframe) => (
+            <button
               key={timeframe.value}
               onClick={() => setSelectedTimeframe(timeframe.value)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${,
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 selectedTimeframe === timeframe.value,
                   ? 'bg-purple-50o0 text-white',
                   : 'bg-white/10 text-gray-40o0 hover: bg-white/20 hover:text-white',
-              ,}`}
+              }`}
             >,
               {timeframe.label}
-            </button>,
-          ))}
+            </button>))}
         </div>,
       </div>,
       {/* Analytics Grid */}
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">,
         <AnimatePresence>,
-          {analyticsData.map((itemindex) => (,
+          {analyticsData.map((itemindex) => (
             <motion.div,
-              key={item.id,}
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              exit={{ opacity: 0, y: -20 ,}}
-              transition={{ duration: 0.5delay: index * 0.1 ,}}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-30o0 group",
-            >,
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5delay: index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-30o0 group">,
               <div className="flex items-center justify-between mb-4">,
-                <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color,}`}>,
+                <div className={`p-2 rounded-lg bg-gradient-to-r ${item.color}`}>,
                   <item.icon className="w-5 h-5 text-white"  />,
                 </div>,
                 <div className="flex items-center gap-1">,
@@ -228,8 +211,7 @@ const AdvancedAnalyticsDashboard20o26 = () => {,
               <div className="text-xs text-gray-50o0">,
                 {item.description}
               </div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </AnimatePresence>,
       </div>,
       {/* Performance Insights */}
@@ -299,8 +281,6 @@ const AdvancedAnalyticsDashboard20o26 = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AdvancedAnalyticsDashboard20o26,
+    </div>),
+};
+export default AdvancedAnalyticsDashboard20o26;

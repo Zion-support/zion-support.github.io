@@ -1,26 +1,24 @@
 import Link from 'next/link',
 import ErrorBoundary from '../components/ErrorBoundary',
 import SEO from '../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o25-20o26: Ultimate Business Transformation Guide',;
+export const metadata = {
+  title: 'AI 20o25-20o26: Ultimate Business Transformation Guide';
   description:,
-    'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 20o25-20o26. Expert insights on quantum AI, autonomous systems, and enterprise automation.',;
-  keywords: [,
-    'AI trends 20o25',;
-    'AI trends 20o26',;
-    'business transformation',;
-    'quantum AI',;
-    'autonomous systems',;
-    'enterprise automation',;
-    'AI revolution',;
-  ],;
+    'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 20o25-20o26. Expert insights on quantum AI, autonomous systems, and enterprise automation.';
+  keywords: [
+    'AI trends 20o25';
+    'AI trends 20o26';
+    'business transformation';
+    'quantum AI';
+    'autonomous systems';
+    'enterprise automation';
+    'AI revolution';
+  ];
 };
-,
-export default function AI20o252026UltimateTransformation() {,
-  return (,
+export default function AI20o252026UltimateTransformation() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI 20o25-20o26: Ultimate Business Transformation Guide',
         description='Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 20o25-20o26.',
         keywords='AI trends 20o25, AI trends 20o26, business transformation, quantum AI, autonomous systems, enterprise automation',
@@ -44,29 +42,27 @@ export default function AI20o252026UltimateTransformation() {,
               20o25-20o26.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors',
-              >,
+                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors'>,
                 Start Your Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='#trends',
-                className='border-2 border-purple-40o0 text-purple-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-40o0 hover:text-white transition-colors',
-              >,
+                className='border-2 border-purple-40o0 text-purple-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-40o0 hover:text-white transition-colors'>,
                 Explore Trends,
               </Link>,
             </div>,
           </div>,
         </section>,
-        {/* Key Trends Section */,}
+        {/* Key Trends Section */}
         <section id='trends' className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-6xl mx-auto'>,
             <h2 className='text-3xl font-bold text-white mb-12 text-center'>,
               Revolutionary AI Trends 20o25-20o26,
             </h2>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {/* Quantum AI */,}
+              {/* Quantum AI */}
               <div className='bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-xl shadow-2xl'>,
                 <div className='text-4xl mb-4'>⚛️</div>,
                 <h3 className='text-xl font-bold text-white mb-4'>,
@@ -202,7 +198,7 @@ export default function AI20o252026UltimateTransformation() {,
                       Manufacturing,
                     </h4>,
                     <p className='text-gray-30o0'>,
-                      Self-optimizing production lines, predictive maintenance,;
+                      Self-optimizing production lines, predictive maintenance;
                       and quality assurance.,
                     </p>,
                   </div>,
@@ -307,23 +303,20 @@ export default function AI20o252026UltimateTransformation() {,
               business results.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>),
+}
 ,

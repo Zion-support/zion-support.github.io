@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const RevolutionaryQuantumSecurityBanner20o26: React.FC = () => {,
-  return (,
+const RevolutionaryQuantumSecurityBanner20o26: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className='absolute inset-0 opacity-10'>,
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 transform rotate-12 scale-150'></div>,
         <div className='absolute inset-0 bg-gradient-to-l from-purple-40o0 to-pink-50o0 transform -rotate-12 scale-150'></div>,
@@ -59,16 +58,14 @@ const RevolutionaryQuantumSecurityBanner20o26: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-cybersecurity-breakthrough-ultimate-guide',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/services/quantum-cybersecurity',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 backdrop-blur-sm'>,
               Explore Solutions,
             </Link>,
           </div>,
@@ -79,9 +76,6 @@ const RevolutionaryQuantumSecurityBanner20o26: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryQuantumSecurityBanner20o26,
-,
+    </section>),
+};
+export default RevolutionaryQuantumSecurityBanner20o26;

@@ -1,6 +1,4 @@
 'use client',
-,
-export default function ComprehensiveSolutionsBanner20o25() {,
-  return null,
-}
+export default function ComprehensiveSolutionsBanner20o25() {
+  return null}
 ,

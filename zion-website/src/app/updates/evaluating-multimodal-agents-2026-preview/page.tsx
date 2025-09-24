@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function EvaluatingMultimodalAgents20o26PreviewPage() {,
-  return (,
+import React from 'react';
+export default function EvaluatingMultimodalAgents20o26PreviewPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <p className='text-sm text-blue-40o0'>Guide</p>,
@@ -10,7 +9,7 @@ export default function EvaluatingMultimodalAgents20o26PreviewPage() {,
           Evaluating Multimodal Agents (20o26 Preview),
         </h1>,
         <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
-          A practical rubric and harnesses to evaluate multimodal grounding,;
+          A practical rubric and harnesses to evaluate multimodal grounding;
           tool use, and safety across image, text, and structured inputs.,
         </p>,
         <div className='mt-8 space-y-4 text-gray-30o0'>,
@@ -27,7 +26,5 @@ export default function EvaluatingMultimodalAgents20o26PreviewPage() {,
           </ul>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

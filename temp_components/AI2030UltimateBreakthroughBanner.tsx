@@ -1,15 +1,12 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
-  const breakthroughFeatures = [,
-    "🧠 Conscious AI Systems",;
+const AI20o30UltimateBreakthroughBanner: React.FC = () => {
+  const breakthroughFeatures = [
+    "🧠 Conscious AI Systems";
     "⚛️ Quantum Neural Networks",
-    "🌌 Multi-Dimensional Processing",;
-    "🚀 Infinite Learning Capacity",
-  ],
-,
-  return (,
+    "🌌 Multi-Dimensional Processing";
+    "🚀 Infinite Learning Capacity"],
+  return (
     <div className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-12 relative overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">,
@@ -20,7 +17,7 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
       </div>,
       <div className="container mx-auto px-6 relative z-10">,
         <div className="flex flex-col lg: flex-row items-center justify-between">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="lg: w-2/3 mb-8 lg:mb-0">,
             <div className="flex items-center space-x-3 mb-4">,
               <span className="px-4 py-2 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 text-black text-sm font-bold rounded-full">,
@@ -37,13 +34,12 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
               Experience the most advanced AI systems ever created. Consciousnessquantum processing,
               and infinite learning capabilities - all available now.,
             </p>,
-            {/* Feature Pills */,}
+            {/* Feature Pills */}
             <div className="flex flex-wrap gap-3 mb-6">,
-              {breakthroughFeatures.map((featureindex) => (,
+              {breakthroughFeatures.map((featureindex) => (
                 <span key={index} className="px-4 py-2 bg-gradient-to-r from-purple-80o0/50 to-blue-80o0/50 border border-purple-40o0/30 rounded-full text-sm font-medium backdrop-blur-sm">,
                   {feature}
-                </span>,
-              ))}
+                </span>))}
             </div>,
             {/* Stats */}
             <div className="flex flex-wrap gap-6 text-center">,
@@ -69,16 +65,14 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
                 Be among the first to experience transcendent AI technology,
               </p>,
               <div className="space-y-3">,
-                <Link,
+                <Link
                   href="/ai-20o30-breakthrough",
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-xl hover:from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5",
-                >,
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-xl hover:from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5">,
                   Get Early Access,
                 </Link>,
-                <Link,
+                <Link
                   href="/ai-20o30-demo",
-                  className="block w-full px-6 py-3 bg-transparent border-2 border-purple-40o0 text-purple-40o0 font-bold rounded-xl hover:bg-purple-40o0 hover:text-black transition-all duration-30o0",
-                >,
+                  className="block w-full px-6 py-3 bg-transparent border-2 border-purple-40o0 text-purple-40o0 font-bold rounded-xl hover:bg-purple-40o0 hover:text-black transition-all duration-30o0">,
                   Watch Demo,
                 </Link>,
               </div>,
@@ -91,7 +85,7 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Bottom Banner */,}
+        {/* Bottom Banner */}
         <div className="mt-8 pt-6 border-t border-purple-40o0/20">,
           <div className="flex flex-col sm: flex-row items-center justify-between text-sm">,
             <div className="flex items-center space-x-6 mb-4 sm:mb-0">,
@@ -110,8 +104,5 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default AI20o30UltimateBreakthroughBanner,
+    </div>)};
+export default AI20o30UltimateBreakthroughBanner;

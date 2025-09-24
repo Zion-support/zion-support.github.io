@@ -8,16 +8,16 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
 import {Briefcase} from "lucide-react",
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { Briefcase } from "lucide-react",;
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from "lucide-react";
 import { useState } from './react',
 import { use_params } from './react-router-dom',
 import { AppHeader } from '@/layout / AppHeader',
@@ -28,23 +28,20 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 import { SEO } from '@/components / SEO',
 import { ProtectedRoute } from '@/components / ProtectedRoute',
 import { Briefcase } from './lucide-react',
-
-,
-function HiringTrackerContent() {,
+function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-function HiringTrackerContent() {,
-  const { jobId } = useParams() as { jobId?: string },;
-  const [activeTab, setActiveTab] = useState<string>("kanban"),;
-  return (,
-  return (,
-function HiringTrackerContent() {,
-  const { jobId } = useParams() as { jobId?: string },;
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string };
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+  return (
+  return (
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-  return (,
-,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Hiring Tracker | Zion AI Marketplace",
         description="Manage your candidate pipeline in the Zion AI Marketplace.",
       />,
@@ -61,47 +58,33 @@ function HiringTrackerContent() {,
             </p>,
           </div>,
         </div>,
-,
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">,
           <TabsList>,
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>,
             <TabsTrigger value="analytics">Analytics</TabsTrigger>,
           </TabsList>,
-,
           <TabsContent value="kanban" className="mt-6">,
             <KanbanBoard jobId={jobId} />,
           </TabsContent>,
-,
           <TabsContent value="analytics" className="mt-6">,
             <HiringAnalytics jobId={jobId} />,
           </TabsContent>,
         </Tabs>,
       </main>,
       <Footer />,
-    </>,
-  ),
-,
+    </>),
 }
 ,
-export default function HiringTracker() {,
-  return (,
+export default function HiringTracker() {
+  return (
     <ProtectedRoute>,
       <HiringTrackerContent />,
-    </ProtectedRoute>,
-  ),
-}
-,
+    </ProtectedRoute>)}
 }
 ,
 /**,
  * HiringTrackerContent - Function description,
  */,
-function HiringTrackerContent() {,
+function HiringTrackerContent() {
   const { job_id } = use_params () as { job_id?: string }
-  const [active_tab, setActiveTab] = useState < string>("kanban"),
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-}}))
+  const [active_tab, setActiveTab] = useState < string>("kanban")>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}))

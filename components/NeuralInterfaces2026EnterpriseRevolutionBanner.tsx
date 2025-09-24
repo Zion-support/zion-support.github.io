@@ -1,10 +1,9 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
-  return (,
+const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-20 overflow-hidden'>,
-      {/* Neural network-inspired background */,}
+      {/* Neural network-inspired background */}
       <div className='absolute inset-0'>,
         {/* Neural nodes */}
         <div className='absolute top-16 left-16 w-16 h-16 bg-emerald-40o0 rounded-full opacity-20 animate-pulse'></div>,
@@ -19,7 +18,7 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Neural interface badge */,}
+          {/* Neural interface badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm'>,
             <span className='text-sm font-medium'>,
               🧠 NEURAL INTERFACE REVOLUTION 20o26,
@@ -32,7 +31,7 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
               Enterprise Revolution Guide,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Transform your business with brain-computer integration. Enable,
             thought-controlled operations, cognitive enhancement, and direct,
@@ -66,7 +65,7 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* Industry applications */,}
+          {/* Industry applications */}
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-10 max-w-6xl mx-auto'>,
             <div className='bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm text-center'>,
               <div className='text-3xl mb-3'>💼</div>,
@@ -97,7 +96,7 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
               </p>,
             </div>,
           </div>,
-          {/* Revolutionary results */,}
+          {/* Revolutionary results */}
           <div className='bg-white bg-opacity-10 rounded-2xl p-8 mb-10 backdrop-blur-sm max-w-4xl mx-auto'>,
             <h3 className='text-2xl font-bold mb-6'>,
               Revolutionary Neural Interface Results,
@@ -129,22 +128,20 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/neural-interfaces-20o26-enterprise-revolution-complete-guide',
-              className='bg-gradient-to-r from-emerald-40o0 to-cyan-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-emerald-50o0 hover:to-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-emerald-40o0 to-cyan-50o0 text-black px-8 py-4 rounded-lg font-semibold hover:from-emerald-50o0 hover:to-cyan-60o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Read Complete Guide →,
             </Link>,
-            <Link,
+            <Link
               href='/services/neural-interfaces',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-colors'>,
               Start Neural Transformation,
             </Link>,
           </div>,
-          {/* Trust indicators */,}
+          {/* Trust indicators */}
           <div className='mt-12 flex flex-col sm: flex-row items-center justify-center gap-8 text-sm opacity-70'>,
             <div className='flex items-center gap-2'>,
               <span className='w-2 h-2 bg-emerald-40o0 rounded-full'></span>,
@@ -161,9 +158,6 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NeuralInterfaces20o26EnterpriseRevolutionBanner,
-,
+    </section>),
+};
+export default NeuralInterfaces20o26EnterpriseRevolutionBanner;

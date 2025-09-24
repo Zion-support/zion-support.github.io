@@ -2,7 +2,7 @@
 import React{ useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 CalendarClockUsersZapCheckCircleArrowRightX,
-interface DemoFormData {,
+interface DemoFormData {
   name: string,
   email: string,
   company: string,
@@ -14,98 +14,78 @@ interface DemoFormData {,
   preferredDate: string,
   preferredTime: string,
   message: string,
-,}
+}
 ,
-const industries = [,
-  ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other',
-],
-,
-const companySizes = [,
-  '1-10 employees'11-50 employees'51-20o0 employees'20o1-10o00 employees'10o00+ employees',
-],
-,
-const interests = [,
-  'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization',
-],
-,
-const timeSlots = [,
-  '9: 0o0 AM'10:0o0 AM'11:0o0 AM'1:0o0 PM'2:0o0 PM'3:0o0 PM'4:0o0 PM',
-],
-,
-export default function InteractiveDemoRequest() {,
+const industries = [
+  ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other'],
+const companySizes = [
+  '1-10 employees'11-50 employees'51-20o0 employees'20o1-10o00 employees'10o00+ employees'],
+const interests = [
+  'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization'],
+const timeSlots = [
+  '9: 0o0 AM'10:0o0 AM'11:0o0 AM'1:0o0 PM'2:0o0 PM'3:0o0 PM'4:0o0 PM'],
+export default function InteractiveDemoRequest() {
   const [isOpen, setIsOpen] = useState(false),
   const [currentStep, setCurrentStep] = useState(1),
-  const [formData, setFormData] = useState<DemoFormData>({,
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    role: '',;
-    companySize: '',;
-    industry: '',;
-    interests: [],;
-    preferredDate: '',;
-    preferredTime: '',;
+  const [formData, setFormData] = useState<DemoFormData>({
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    role: '';
+    companySize: '';
+    industry: '';
+    interests: [];
+    preferredDate: '';
+    preferredTime: '';
     message: '',
-  ,}),
-,
+  }),
   const [isSubmittedsetIsSubmitted] = useState(false),
-,
-  const handleInputChange = (field: keyof DemoFormDatavalue: string | string[]) => {,
-    setFormData(prev => ({ ...prev[field]: value ,})),
-  };
-,
-  const handleInterestToggle = (interest: string) => {,
-    setFormData(prev => ({,
-      ...prev,;
+  const handleInputChange = (field: keyof DemoFormDatavalue: string | string[]) => {
+    setFormData(prev => ({ ...prev[field]: value }))};
+  const handleInterestToggle = (interest: string) => {
+    setFormData(prev => ({
+      ...prev;
       interests: prev.interests.includes(interest),
         ? prev.interests.filter(i => i !== interest),
         : [...prev.interestsinterest],
-    ,})),
-  };
-,
-  const handleSubmit = (e: React.FormEvent) => {,
+    }))};
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Here you would typically send the data to your backend,
-    console.log('Demo request submitted:'formData),
+    // console.log('Demo request submitted:'formData),
     setIsSubmitted(true),
-  ,};
-,
-  const nextStep = () => {,
-    if (currentStep < 3) setCurrentStep(currentStep + 1),
   };
-,
-  const prevStep = () => {,
-    if (currentStep > 1) setCurrentStep(currentStep - 1),
-  };
-,
-  return (,
+  const nextStep = () => {
+    if (currentStep < 3) setCurrentStep(currentStep + 1)};
+  const prevStep = () => {
+    if (currentStep > 1) setCurrentStep(currentStep - 1)};
+  return (
     <>,
       {/* Floating Demo Button */}
       <motion.button,
-        initial={{ scale: 0 ,}}
-        animate={{ scale: 1 ,}}
-        transition={{ delay: 2type: "spring"stiffness: 20o0 ,}}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 2type: "spring"stiffness: 20o0 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 flex items-center z-50",
-      >,
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 flex items-center z-50">,
         <Calendar className="w-5 h-5 mr-2"  />,
         Request Demo,
       </motion.button>,
-      {/* Modal */,}
+      {/* Modal */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            exit={{ opacity: 0 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4",
             onClick={() => setIsOpen(false)}
           >,
             <motion.div,
-              initial={{ scale: 0.8opacity: 0 ,}}
-              animate={{ scale: 1, opacity: 1 ,}}
-              exit={{ scale: 0.8opacity: 0 ,}}
+              initial={{ scale: 0.8opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8opacity: 0 }}
               className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden",
               onClick={(e) => e.stopPropagation()}
             >,
@@ -116,24 +96,21 @@ export default function InteractiveDemoRequest() {,
                     <h2 className="text-2xl font-bold">Schedule Your Free Demo</h2>,
                     <p className="text-blue-10o0 mt-1">See how our AI solutions can transform your business</p>,
                   </div>,
-                  <button,
+                  <button
                     onClick={() => setIsOpen(false)}
-                    className="text-white/80 hover: text-white transition-colors",
-                  >,
+                    className="text-white/80 hover: text-white transition-colors">,
                     <X className="w-6 h-6"  />,
                   </button>,
                 </div>,
-                {/* Progress Bar */,}
+                {/* Progress Bar */}
                 <div className="mt-4">,
                   <div className="flex space-x-2">,
-                    {[123].map((step) => (,
-                      <div,
+                    {[123].map((step) => (
+                      <div
                         key={step}
-                        className={`flex-1 h-2 rounded-full ${,
-                          step <= currentStep ? 'bg-white' : 'bg-white/30',
-                        }`}
-                       />,
-                    ))}
+                        className={`flex-1 h-2 rounded-full ${
+                          step <= currentStep ? 'bg-white' : 'bg-white/30'}`}
+                       />))}
                   </div>,
                   <div className="flex justify-between mt-2 text-sm">,
                     <span>Personal Info</span>,
@@ -144,12 +121,11 @@ export default function InteractiveDemoRequest() {,
               </div>,
               {/* Content */}
               <div className="p-6 overflow-y-auto max-h-[60vh]">,
-                {isSubmitted ? (,
+                {isSubmitted ? (
                   <motion.div,
-                    initial={{ opacity: 0scale: 0.8 ,}}
-                    animate={{ opacity: 1scale: 1 ,}}
-                    className="text-center py-12",
-                  >,
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: 1scale: 1 }}
+                    className="text-center py-12">,
                     <div className="w-16 h-16 bg-green-10o0 rounded-full flex items-center justify-center mx-auto mb-4">,
                       <CheckCircle className="w-8 h-8 text-green-60o0"  />,
                     </div>,
@@ -157,30 +133,27 @@ export default function InteractiveDemoRequest() {,
                     <p className="text-gray-60o0 mb-6">,
                       Thank you for your interest. Our team will contact you within 24 hours to schedule your demo.,
                     </p>,
-                    <button,
+                    <button
                       onClick={() => setIsOpen(false)}
-                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0",
-                    >,
+                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0">,
                       Close,
                     </button>,
-                  </motion.div>,
-                ) : (,
-                  <form onSubmit={handleSubmit,}>,
+                  </motion.div>) : (
+                  <form onSubmit={handleSubmit}>,
                     <AnimatePresence mode="wait">,
-                      {/* Step 1: Personal Information */,}
-                      {currentStep === 1 && (,
+                      {/* Step 1: Personal Information */}
+                      {currentStep === 1 && (
                         <motion.div,
                           key="step1",
-                          initial={{ opacity: 0x: 50 ,}}
-                          animate={{ opacity: 1x: 0 ,}}
-                          exit={{ opacity: 0x: -50 ,}}
-                          className="space-y-6",
-                        >,
+                          initial={{ opacity: 0x: 50 }}
+                          animate={{ opacity: 1x: 0 }}
+                          exit={{ opacity: 0x: -50 }}
+                          className="space-y-6">,
                           <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Personal Information</h3>,
                           <div className="grid grid-cols-2 gap-4">,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Full Name *</label>,
-                              <input,
+                              <input
                                 type="text",
                                 required,
                                 value={formData.name}
@@ -191,10 +164,10 @@ export default function InteractiveDemoRequest() {,
                             </div>,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Email *</label>,
-                              <input,
+                              <input
                                 type="email",
                                 required,
-                                value={formData.email,}
+                                value={formData.email}
                                 onChange={(e) => handleInputChange(', 'email', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="john@company.com",
@@ -204,9 +177,9 @@ export default function InteractiveDemoRequest() {,
                           <div className="grid grid-cols-2 gap-4">,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Phone</label>,
-                              <input,
+                              <input
                                 type="tel",
-                                value={formData.phone,}
+                                value={formData.phone}
                                 onChange={(e) => handleInputChange(', 'phone', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="+1 (555) 123-4567",
@@ -214,32 +187,30 @@ export default function InteractiveDemoRequest() {,
                             </div>,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Role *</label>,
-                              <input,
+                              <input
                                 type="text",
                                 required,
-                                value={formData.role,}
+                                value={formData.role}
                                 onChange={(e) => handleInputChange(', 'role', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="CTOCEOetc.",
                               />,
                             </div>,
                           </div>,
-                        </motion.div>,
-                      ),}
+                        </motion.div>)}
 ,
-                      {/* Step 2: Business Details */,}
-                      {currentStep === 2 && (,
+                      {/* Step 2: Business Details */}
+                      {currentStep === 2 && (
                         <motion.div,
                           key="step2",
-                          initial={{ opacity: 0x: 50 ,}}
-                          animate={{ opacity: 1x: 0 ,}}
-                          exit={{ opacity: 0x: -50 ,}}
-                          className="space-y-6",
-                        >,
+                          initial={{ opacity: 0x: 50 }}
+                          animate={{ opacity: 1x: 0 }}
+                          exit={{ opacity: 0x: -50 }}
+                          className="space-y-6">,
                           <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Business Details</h3>,
                           <div>,
                             <label className="block text-sm font-medium text-gray-70o0 mb-2">Company Name *</label>,
-                            <input,
+                            <input
                               type="text",
                               required,
                               value={formData.company}
@@ -251,69 +222,62 @@ export default function InteractiveDemoRequest() {,
                           <div className="grid grid-cols-2 gap-4">,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Company Size *</label>,
-                              <select,
+                              <select
                                 required,
-                                value={formData.companySize,}
+                                value={formData.companySize}
                                 onChange={(e) => handleInputChange(', 'companySize', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
-                              >,
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select size</option>,
-                                {companySizes.map(size => (,
-                                  <option key={size,} value={size}>{size}</option>,
-                                ))}
+                                {companySizes.map(size => (
+                                  <option key={size} value={size}>{size}</option>))}
                               </select>,
                             </div>,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Industry *</label>,
-                              <select,
+                              <select
                                 required,
                                 value={formData.industry}
                                 onChange={(e) => handleInputChange(', 'industry', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
-                              >,
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select industry</option>,
-                                {industries.map(industry => (,
-                                  <option key={industry,} value={industry}>{industry}</option>,
-                                ))}
+                                {industries.map(industry => (
+                                  <option key={industry} value={industry}>{industry}</option>))}
                               </select>,
                             </div>,
                           </div>,
                           <div>,
                             <label className="block text-sm font-medium text-gray-70o0 mb-2">Areas of Interest</label>,
                             <div className="grid grid-cols-2 gap-2">,
-                              {interests.map(interest => (,
-                                <button,
+                              {interests.map(interest => (
+                                <button
                                   key={interest}
                                   type="button",
                                   onClick={() => handleInterestToggle(interest)}
-                                  className={`p-3 rounded-lg text-sm font-medium transition-all duration-20o0 ${,
+                                  className={`p-3 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                                     formData.interests.includes(interest),
                                       ? 'bg-blue-10o0 text-blue-70o0 border-2 border-blue-30o0',
                                       : 'bg-gray-50 text-gray-70o0 border-2 border-gray-20o0 hover: border-gray-30o0',
-                                  ,}`}
+                                  }`}
                                 >,
                                   {interest}
-                                </button>,
-                              ))}
+                                </button>))}
                             </div>,
                           </div>,
-                        </motion.div>,
-                      )}
+                        </motion.div>)}
 ,
-                      {/* Step 3: Schedule */,}
-                      {currentStep === 3 && (,
+                      {/* Step 3: Schedule */}
+                      {currentStep === 3 && (
                         <motion.div,
                           key="step3",
-                          initial={{ opacity: 0x: 50 ,}}
-                          animate={{ opacity: 1x: 0 ,}}
-                          exit={{ opacity: 0x: -50 ,}}
-                          className="space-y-6",
-                        >,
+                          initial={{ opacity: 0x: 50 }}
+                          animate={{ opacity: 1x: 0 }}
+                          exit={{ opacity: 0x: -50 }}
+                          className="space-y-6">,
                           <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Schedule Your Demo</h3>,
                           <div className="grid grid-cols-2 gap-4">,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Preferred Date *</label>,
-                              <input,
+                              <input
                                 type="date",
                                 required,
                                 value={formData.preferredDate}
@@ -324,22 +288,20 @@ export default function InteractiveDemoRequest() {,
                             </div>,
                             <div>,
                               <label className="block text-sm font-medium text-gray-70o0 mb-2">Preferred Time *</label>,
-                              <select,
+                              <select
                                 required,
-                                value={formData.preferredTime,}
+                                value={formData.preferredTime}
                                 onChange={(e) => handleInputChange(', 'preferredTime', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
-                              >,
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select time</option>,
-                                {timeSlots.map(time => (,
-                                  <option key={time,} value={time}>{time}</option>,
-                                ))}
+                                {timeSlots.map(time => (
+                                  <option key={time} value={time}>{time}</option>))}
                               </select>,
                             </div>,
                           </div>,
                           <div>,
                             <label className="block text-sm font-medium text-gray-70o0 mb-2">Additional Message</label>,
-                            <textarea,
+                            <textarea
                               value={formData.message}
                               onChange={(e) => handleInputChange(', 'message', 'e.target.value)}
                               rows={4}
@@ -347,48 +309,36 @@ export default function InteractiveDemoRequest() {,
                               placeholder="Tell us about your specific needs or questions...",
                             />,
                           </div>,
-                        </motion.div>,
-                      ),}
+                        </motion.div>)}
                     </AnimatePresence>,
-                  </form>,
-                )}
+                  </form>)}
               </div>,
               {/* Footer */}
-              {!isSubmitted && (,
+              {!isSubmitted && (
                 <div className="bg-gray-50 px-6 py-4 flex justify-between items-center">,
-                  {currentStep > 1 && (,
-                    <button,
+                  {currentStep > 1 && (
+                    <button
                       onClick={prevStep}
-                      className="px-6 py-2 text-gray-60o0 hover: text-gray-80o0 transition-colors",
-                    >,
+                      className="px-6 py-2 text-gray-60o0 hover: text-gray-80o0 transition-colors">,
                       Back,
-                    </button>,
-                  ),}
+                    </button>)}
 ,
                   <div className="flex-1"  />,
-                  {currentStep < 3 ? (,
-                    <button,
+                  {currentStep < 3 ? (
+                    <button
                       onClick={nextStep}
-                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center",
-                    >,
+                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center">,
                       Next,
                       <ArrowRight className="w-4 h-4 ml-2"  />,
-                    </button>,
-                  ) : (,
-                    <button,
-                      onClick={handleSubmit,}
-                      className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center",
-                    >,
+                    </button>) : (
+                    <button
+                      onClick={handleSubmit}
+                      className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center">,
                       <Calendar className="w-4 h-4 mr-2"  />,
                       Schedule Demo,
-                    </button>,
-                  ),}
-                </div>,
-              )}
+                    </button>)}
+                </div>)}
             </motion.div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
-    </>,
-  ),
-}
+    </>)}

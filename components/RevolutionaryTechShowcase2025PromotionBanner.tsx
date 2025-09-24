@@ -1,49 +1,37 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   ArrowRight,
   Star,
-  Sparkles,;
-  TrendingUp,;
-  Award,;
-  Rocket,
-} from 'lucide-react',
-,
-const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
+  Sparkles;
+  TrendingUp;
+  Award;
+  Rocket} from 'lucide-react',
+const RevolutionaryTechShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentFeaturesetCurrentFeature] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
     // Rotate features every 3 seconds,
-    const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length),
-    }30o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const features = [,
-    'AI Revolution 20o25',;
-    'Quantum Computing',;
-    'Blockchain Innovation',;
-    'IoT & Edge Computing',
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length)}30o00),
+    return () => clearInterval(interval)}[]),
+  const features = [
+    'AI Revolution 20o25';
+    'Quantum Computing';
+    'Blockchain Innovation';
+    'IoT & Edge Computing'],
+  const stats = [
+    { label: ''Technologies', 'value: '50+' };
+    { label: 'Success 'Rate', 'value: '99%' };
+    { label: 'Client 'Satisfaction', 'value: '5.0' };
+    { label: 'ROI 'Improvement', 'value: '30o0%' }
   ],
-,
-  const stats = [,
-    { label: ''Technologies', 'value: '50+' ,},;
-    { label: 'Success 'Rate', 'value: '99%' ,},;
-    { label: 'Client 'Satisfaction', 'value: '5.0' ,},;
-    { label: 'ROI 'Improvement', 'value: '30o0%' ,}
-  ],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 py-16 overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>,
@@ -54,61 +42,56 @@ const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
       <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-50o0"></div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <motion.div,
-            initial={{ opacity: 0x: -50 ,}}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0x: -50 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : -50 }}
+            transition={{ duration: 0.8 }}
           >,
             {/* Badge */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-              transition={{ duration: 0.6delay: 0.2 ,}}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30 mb-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 border border-purple-50o0/30 mb-6">,
               <Sparkles className="w-5 h-5 text-purple-40o0 mr-2"  />,
               <span className="text-purple-30o0 font-medium">Revolutionary Technology 20o25</span>,
             </motion.div>,
             {/* Main Heading */}
             <motion.h1,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8delay: 0.3 ,}}
-              className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.3 }}
+              className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">,
               Experience the,
               <span className="block bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
                 Future of Technology,
               </span>,
             </motion.h1>,
-            {/* Subheading */,}
+            {/* Subheading */}
             <motion.p,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8delay: 0.4 ,}}
-              className="text-xl text-gray-30o0 mb-8 leading-relaxed",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.4 }}
+              className="text-xl text-gray-30o0 mb-8 leading-relaxed">,
               Discover cutting-edge AIquantum computingblockchainand IoT solutions that are transforming industries and creating unprecedented opportunities for growth.,
             </motion.p>,
             {/* Rotating Features */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-              transition={{ duration: 0.8delay: 0.5 ,}}
-              className="mb-8",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.8delay: 0.5 }}
+              className="mb-8">,
               <div className="flex items-center text-lg text-gray-30o0">,
                 <span className="mr-3">Featured: </span>,
                 <AnimatePresence mode="wait">,
                   <motion.span,
-                    key={currentFeature,}
-                    initial={{ opacity: 0, y: 20 ,}}
-                    animate={{ opacity: 1, y: 0 ,}}
-                    exit={{ opacity: 0, y: -20 ,}}
-                    transition={{ duration: 0.5 ,}}
-                    className="text-purple-40o0 font-semibold",
-                  >,
+                    key={currentFeature}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-purple-40o0 font-semibold">,
                     {features[currentFeature]}
                   </motion.span>,
                 </AnimatePresence>,
@@ -116,11 +99,10 @@ const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
             </motion.div>,
             {/* CTA Buttons */}
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8delay: 0.6 ,}}
-              className="flex flex-col sm: flex-row gap-4",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8delay: 0.6 }}
+              className="flex flex-col sm: flex-row gap-4">,
               <button className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-purple-50o0/25 transition-all duration-30o0 flex items-center justify-center group">,
                 Explore Technology,
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />,
@@ -131,13 +113,12 @@ const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
               </button>,
             </motion.div>,
           </motion.div>,
-          {/* Right Content - Stats & Visual */,}
+          {/* Right Content - Stats & Visual */}
           <motion.div,
-            initial={{ opacity: 0x: 50 ,}}
-            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 ,}}
-            transition={{ duration: 0.8delay: 0.4 ,}}
-            className="relative",
-          >,
+            initial={{ opacity: 0x: 50 }}
+            animate={{ opacity: isVisible ? 1 : 0x: isVisible ? 0 : 50 }}
+            transition={{ duration: 0.8delay: 0.4 }}
+            className="relative">,
             {/* Main Visual */}
             <div className="relative bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-3xl p-8 border border-purple-50o0/30 backdrop-blur-lg">,
               {/* Central Icon */}
@@ -153,18 +134,16 @@ const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
               </div>,
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">,
-                {stats.map((statindex) => (,
+                {stats.map((statindex) => (
                   <motion.div,
                     key={stat.label}
-                    initial={{ opacity: 0scale: 0.8 ,}}
-                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 ,}}
-                    transition={{ duration: 0.6delay: 0.8 + index * 0.1 ,}}
-                    className="text-center",
-                  >,
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={{ opacity: isVisible ? 1 : 0scale: isVisible ? 1 : 0.8 }}
+                    transition={{ duration: 0.6delay: 0.8 + index * 0.1 }}
+                    className="text-center">,
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                     <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
               {/* Floating Elements */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-purple-40o0/30 rounded-full animate-pulse"></div>,
@@ -177,35 +156,29 @@ const RevolutionaryTechShowcase20o25PromotionBanner = () => {,
         </div>,
         {/* Bottom Stats Bar */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 ,}}
-          transition={{ duration: 0.8delay: 1.0 ,}}
-          className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8",
-        >,
-          {[,
-            { icon: TrendingUplabel: ''Performance', 'value: '10x Faster' ,},;
-            { icon: Awardlabel: ''Awards', 'value: '25+ Won' ,},;
-            { icon: Rocketlabel: ''Deployments', 'value: '10o00+' ,},;
-            { icon: Starlabel: ''Rating', 'value: '5.0/5.0' ,}
-          ].map((itemindex) => (,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
+          transition={{ duration: 0.8delay: 1.0 }}
+          className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8">,
+          {[
+            { icon: TrendingUplabel: ''Performance', 'value: '10x Faster' };
+            { icon: Awardlabel: ''Awards', 'value: '25+ Won' };
+            { icon: Rocketlabel: ''Deployments', 'value: '10o00+' };
+            { icon: Starlabel: ''Rating', 'value: '5.0/5.0' }
+          ].map((itemindex) => (
             <motion.div,
               key={item.label}
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 ,}}
-              transition={{ duration: 0.6delay: 1.2 + index * 0.1 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
+              transition={{ duration: 0.6delay: 1.2 + index * 0.1 }}
+              className="text-center">,
               <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-3">,
                 <item.icon className="w-6 h-6 text-purple-40o0"  />,
               </div>,
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>,
               <div className="text-sm text-gray-40o0">{item.label}</div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default RevolutionaryTechShowcase20o25PromotionBanner,
+    </div>)};
+export default RevolutionaryTechShowcase20o25PromotionBanner;

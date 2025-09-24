@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import { ArrowRightIconSparklesIconChartBarIconCpuChipIcon } from '@heroicons/react/24/outline',
-,
-export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {,
-  return (,
+export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {
+  return (
     <section className='relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 overflow-hidden'>,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/neural-network-pattern.svg')] bg-cover opacity-10"></div>,
@@ -14,25 +13,25 @@ export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg'>,
             <SparklesIcon className='w-5 h-5 mr-2' />,
             NEW: AI 20o25-20o26 ULTIMATE ENTERPRISE TRANSFORMATION,
           </div>,
-          {/* Main Headline */,}
+          {/* Main Headline */}
           <h1 className='text-4xl md: text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>,
             Revolutionary AI Enterprise,
             <span className='block bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent'>,
               Transformation 20o25-20o26,
             </span>,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover how AI is revolutionizing enterprise operations with{' ',}
+            Discover how AI is revolutionizing enterprise operations with{' '}
             <strong className='text-yellow-40o0'>,
               50o0%+ ROI improvements,
             </strong>,
-            autonomous systemsand next-generation business intelligence 'that',;
+            autonomous systemsand next-generation business intelligence 'that';
             's transforming industries worldwide.,
           </p>,
           {/* Key Benefits Grid */}
@@ -65,23 +64,21 @@ export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {,
               </p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-20o26-ultimate-enterprise-transformation-revolution',
-              className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl',
-            >,
+              className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl'>,
               Read the Ultimate Guide,
               <ArrowRightIcon className='w-5 h-5 ml-2' />,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-enterprise-transformation-150o0-roi-success-story',
-              className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 backdrop-blur-sm',
-            >,
+              className='inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 backdrop-blur-sm'>,
               View Success Stories,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='mt-12 flex flex-col sm: flex-row items-center justify-center gap-8 text-gray-30o0'>,
             <div className='flex items-center gap-2'>,
               <div className='w-2 h-2 bg-green-40o0 rounded-full animate-pulse'></div>,
@@ -98,9 +95,7 @@ export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {,
           </div>,
         </div>,
       </div>,
-      {/* Bottom Gradient */,}
+      {/* Bottom Gradient */}
       <div className='absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent'></div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

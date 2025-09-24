@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function MetaverseDevelopmentPage() {,
-  return (,
+export default function MetaverseDevelopmentPage() {
+  return (
     <>,
       <Head>,
         <title>Metaverse Development - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function MetaverseDevelopmentPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

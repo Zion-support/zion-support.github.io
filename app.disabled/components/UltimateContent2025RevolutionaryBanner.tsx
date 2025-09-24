@@ -1,108 +1,90 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { X, ChevronLeft, ChevronRight, Star, TrendingUp, Users, Zap } from 'lucide-react',
-,
-const UltimateContent20o25RevolutionaryBanner = () => {,
+const UltimateContent20o25RevolutionaryBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isDismissed, setIsDismissed] = useState(false),
-,
-  const featuredContent = [,
-    {,
-      id: 'enterprise-ai-revolution',;
-      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',;
-      type: 'Blog Post',;
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',;
-      metrics: {,
-        roi: '50o0%',;
-        savings: '$2.8B',;
-        satisfaction: '98%',;
+  const featuredContent = [
+    {
+      id: 'enterprise-ai-revolution';
+      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
+      type: 'Blog Post';
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+      metrics: {
+        roi: '50o0%';
+        savings: '$2.8B';
+        satisfaction: '98%';
         projects: '50o0+',
-      ,},;
-      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with revolutionary AI implementations.',;
-      readingTime: '18 min read',;
+      };
+      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with revolutionary AI implementations.';
+      readingTime: '18 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-transformation',;
-      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months',;
-      type: 'Case Study',;
-      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25',;
-      metrics: {,
-        roi: '567%',;
-        savings: '$2.8B',;
-        satisfaction: '99.2%',;
+    };
+    {
+      id: 'fortune-50o0-transformation';
+      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months';
+      type: 'Case Study';
+      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25';
+      metrics: {
+        roi: '567%';
+        savings: '$2.8B';
+        satisfaction: '99.2%';
         timeline: '18 months',
-      ,},;
-      description: 'How a $50B manufacturing giant achieved 567% ROI with revolutionary AI implementation.',;
-      readingTime: '22 min read',;
+      };
+      description: 'How a $50B manufacturing giant achieved 567% ROI with revolutionary AI implementation.';
+      readingTime: '22 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'quantum-computing-revolution',;
-      title: 'AI 20o25: The Quantum Computing Business Revolution - $10o0B Market Transformation',;
-      type: 'Blog Post',;
-      url: '/blog/ai-20o25-quantum-computing-business-revolution',;
-      metrics: {,
-        roi: '1,20o0%',;
-        market: '$10o0B',;
-        accuracy: '99.97%',;
-        speed: '1,20o0%',
-      },;
-      description: 'Discover how quantum computing is revolutionizing business operations with 1,20o0% processing speed improvements.',;
-      readingTime: '20 min read',;
+    };
+    {
+      id: 'quantum-computing-revolution';
+      title: 'AI 20o25: The Quantum Computing Business Revolution - $10o0B Market Transformation';
+      type: 'Blog Post';
+      url: '/blog/ai-20o25-quantum-computing-business-revolution';
+      metrics: {
+        roi: '1,20o0%';
+        market: '$10o0B';
+        accuracy: '99.97%';
+        speed: '1,20o0%'};
+      description: 'Discover how quantum computing is revolutionizing business operations with 1,20o0% processing speed improvements.';
+      readingTime: '20 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'implementation-ultimate-guide',;
-      title: 'AI Implementation Ultimate Guide 20o25: From Strategy to 50o0% ROI - Complete Edition',;
-      type: 'Resource',;
-      url: '/resources/ai-implementation-ultimate-guide-20o25-complete',;
-      metrics: {,
-        roi: '50o0%+',;
-        success: '94%',;
-        timeline: '18 months',;
+    };
+    {
+      id: 'implementation-ultimate-guide';
+      title: 'AI Implementation Ultimate Guide 20o25: From Strategy to 50o0% ROI - Complete Edition';
+      type: 'Resource';
+      url: '/resources/ai-implementation-ultimate-guide-20o25-complete';
+      metrics: {
+        roi: '50o0%+';
+        success: '94%';
+        timeline: '18 months';
         projects: '50o0+',
-      ,},;
-      description: 'Complete step-by-step guide to AI implementation with proven frameworks and actionable strategies.',;
-      readingTime: '35 min read',;
+      };
+      description: 'Complete step-by-step guide to AI implementation with proven frameworks and actionable strategies.';
+      readingTime: '35 min read';
       featured: true,
-    ,}
-  ],
-,
-  useEffect(() => {,
-    const savedDismissed = localStorage.getItem('ultimateContent20o25RevolutionaryBanner_dismissed'),
-    if (savedDismissed === 'true') {,
-      setIsDismissed(true),
     }
+  ],
+  useEffect(() => {
+    const savedDismissed = localStorage.getItem('ultimateContent20o25RevolutionaryBanner_dismissed'),
+    if (savedDismissed === 'true') {
+      setIsDismissed(true)}
   }, []),
-,
-  useEffect(() => {,
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % featuredContent.length),
-    }, 50o00),
-    return () => clearInterval(interval),
-  }, [featuredContent.length]),
-,
-  const handleDismiss = () => {,
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % featuredContent.length)}, 50o00),
+    return () => clearInterval(interval)}, [featuredContent.length]),
+  const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ultimateContent20o25RevolutionaryBanner_dismissed', 'true'),
-  };
-,
-  const nextSlide = () => {,
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length),
-  };
-,
-  const prevSlide = () => {,
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length),
-  };
-,
+    localStorage.setItem('ultimateContent20o25RevolutionaryBanner_dismissed', 'true')};
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % featuredContent.length)};
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)};
   if (isDismissed) return null,
-,
   const currentContent = featuredContent[currentSlide],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -113,7 +95,7 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
         <div className="absolute bottom-10 right-1/3 w-8 h-8 bg-indigo-40o0/20 rounded-full animate-pulse"></div>,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="flex items-center justify-between mb-8">,
           <div className="flex items-center space-x-3">,
             <div className="flex items-center space-x-2 bg-white/20 rounded-full px-4 py-2">,
@@ -125,16 +107,15 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
               <span className="text-sm font-semibold">50o0%+ ROI GUARANTEED</span>,
             </div>,
           </div>,
-          <button,
-            onClick={handleDismiss,}
-            className="text-white/70 hover: text-white transition-colors p-2 hover:bg-white/10 rounded-full",
-          >,
+          <button
+            onClick={handleDismiss}
+            className="text-white/70 hover: text-white transition-colors p-2 hover:bg-white/10 rounded-full">,
             <X className="w-5 h-5"  />,
           </button>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 items-center">,
-          {/* Left Side - Content Showcase */,}
+          {/* Left Side - Content Showcase */}
           <div className="space-y-6">,
             <div className="space-y-4">,
               <h2 className="text-3xl lg: text-4xl font-bold leading-tight">,
@@ -152,16 +133,14 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
                   <span className="text-sm font-semibold text-green-30o0">FEATURED CONTENT</span>,
                 </div>,
                 <div className="flex items-center space-x-2">,
-                  <button,
+                  <button
                     onClick={prevSlide}
-                    className="p-2 hover: bg-white/20 rounded-full transition-colors",
-                  >,
+                    className="p-2 hover: bg-white/20 rounded-full transition-colors">,
                     <ChevronLeft className="w-4 h-4"  />,
                   </button>,
-                  <button,
-                    onClick={nextSlide,}
-                    className="p-2 hover: bg-white/20 rounded-full transition-colors",
-                  >,
+                  <button
+                    onClick={nextSlide}
+                    className="p-2 hover: bg-white/20 rounded-full transition-colors">,
                     <ChevronRight className="w-4 h-4"  />,
                   </button>,
                 </div>,
@@ -169,14 +148,13 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-2">,
                   <span className="bg-blue-50o0 text-white text-xs font-semibold px-2 py-1 rounded">,
-                    {currentContent.type,}
+                    {currentContent.type}
                   </span>,
                   <span className="text-sm text-blue-20o0">{currentContent.readingTime}</span>,
-                  {currentContent.featured && (,
+                  {currentContent.featured && (
                     <span className="bg-yellow-50o0 text-black text-xs font-semibold px-2 py-1 rounded">,
                       FEATURED,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className="text-lg font-bold text-white leading-tight">,
                   {currentContent.title}
@@ -195,25 +173,22 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
                     <div className="text-xs text-blue-20o0">SAVINGS</div>,
                   </div>,
                 </div>,
-                <Link,
+                <Link
                   href={currentContent.url}
-                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover: from-blue-60o0 hover:to-purple-70o0 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-20o0 transform hover:scale-10o5",
-                >,
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover: from-blue-60o0 hover:to-purple-70o0 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-20o0 transform hover:scale-10o5">,
                   <span>Explore Content</span>,
                   <ChevronRight className="w-4 h-4"  />,
                 </Link>,
               </div>,
-              {/* Slide Indicators */,}
+              {/* Slide Indicators */}
               <div className="flex justify-center space-x-2 mt-4">,
-                {featuredContent.map((_, index) => (,
-                  <button,
+                {featuredContent.map((_, index) => (
+                  <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${,
-                      index === currentSlide ? 'bg-white' : 'bg-white/30',
-                    }`}
-                  />,
-                ))}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      index === currentSlide ? 'bg-white' : 'bg-white/30'}`}
+                  />))}
               </div>,
             </div>,
           </div>,
@@ -263,23 +238,21 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
                 Join 50o0+ Fortune 50o0 companies achieving 50o0%+ ROI with our proven AI implementation strategies.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-3">,
-                <Link,
+                <Link
                   href="/contact",
-                  className="flex-1 bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover:from-blue-60o0 hover:to-purple-70o0 text-white font-semibold px-6 py-3 rounded-lg text-center transition-all duration-20o0 transform hover:scale-10o5",
-                >,
+                  className="flex-1 bg-gradient-to-r from-blue-50o0 to-purple-60o0 hover:from-blue-60o0 hover:to-purple-70o0 text-white font-semibold px-6 py-3 rounded-lg text-center transition-all duration-20o0 transform hover:scale-10o5">,
                   Get Started Today,
                 </Link>,
-                <Link,
+                <Link
                   href="/resources",
-                  className="flex-1 border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-lg text-center transition-all duration-20o0",
-                >,
+                  className="flex-1 border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-lg text-center transition-all duration-20o0">,
                   View All Resources,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </div>,
-        {/* Bottom Stats Bar */,}
+        {/* Bottom Stats Bar */}
         <div className="mt-8 pt-6 border-t border-white/20">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-center">,
             <div>,
@@ -301,8 +274,6 @@ const UltimateContent20o25RevolutionaryBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContent20o25RevolutionaryBanner,
+    </div>),
+};
+export default UltimateContent20o25RevolutionaryBanner;

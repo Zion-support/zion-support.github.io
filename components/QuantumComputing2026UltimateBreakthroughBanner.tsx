@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumComputing20o26UltimateBreakthroughBanner() {,
-  return (,
+export default function QuantumComputing20o26UltimateBreakthroughBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
       {/* Animated background */}
       <div className='absolute inset-0'>,
@@ -10,21 +9,21 @@ export default function QuantumComputing20o26UltimateBreakthroughBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Quantum breakthrough badge */,}
+          {/* Quantum breakthrough badge */}
           <div className='inline-flex items-center px-6 py-3 rounded-full bg-indigo-50o0/20 border border-indigo-50o0/30 mb-8 animate-bounce'>,
             <span className='text-indigo-40o0 font-bold text-sm uppercase tracking-wide'>,
               ⚛️ BREAKTHROUGH: QUANTUM COMPUTING 20o26 ULTIMATE,
             </span>,
           </div>,
-          {/* Main headline */,}
+          {/* Main headline */}
           <h1 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
             Quantum Computing 20o26,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className='text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             The ultimate quantum computing breakthrough is here. Experience,
             <span className='text-indigo-40o0 font-bold'>,
-              {' ',}
+              {' '}
               error-corrected quantum computers,
             </span>,
             <span className='text-purple-40o0 font-bold'>,
@@ -64,22 +63,20 @@ export default function QuantumComputing20o26UltimateBreakthroughBanner() {,
               </p>,
             </div>,
           </div>,
-          {/* Call to action buttons */,}
+          {/* Call to action buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/quantum-computing-20o26-ultimate-breakthrough',
-              className='bg-gradient-to-r from-indigo-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-indigo-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-indigo-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-indigo-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               ⚛️ Discover Quantum Breakthrough,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 shadow-lg',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all duration-30o0 shadow-lg'>,
               🚀 Get Quantum Access,
             </Link>,
           </div>,
-          {/* Urgency indicator */,}
+          {/* Urgency indicator */}
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-pink-50o0/20 border border-pink-50o0/30'>,
             <span className='text-pink-40o0 font-semibold text-sm'>,
               ⏰ Limited Access: Revolutionary quantum technology available for,
@@ -88,12 +85,10 @@ export default function QuantumComputing20o26UltimateBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-      {/* Floating elements for visual appeal */,}
+      {/* Floating elements for visual appeal */}
       <div className='absolute top-10 left-10 w-20 h-20 bg-indigo-50o0/20 rounded-full animate-pulse'></div>,
       <div className='absolute top-20 right-20 w-16 h-16 bg-purple-50o0/20 rounded-full animate-pulse delay-10o00'></div>,
       <div className='absolute bottom-20 left-20 w-12 h-12 bg-pink-50o0/20 rounded-full animate-pulse delay-20o00'></div>,
       <div className='absolute bottom-10 right-10 w-24 h-24 bg-rose-50o0/20 rounded-full animate-pulse delay-50o0'></div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

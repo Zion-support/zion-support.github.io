@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'healthcare-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'healthcare-solutions - Zion Tech Group';
   description:,
-    'Professional healthcare-solutions solutions for your business needs.',;
-  keywords: 'healthcare-solutions, services, business, technology',;
+    'Professional healthcare-solutions solutions for your business needs.';
+  keywords: 'healthcare-solutions, services, business, technology';
 };
-export default function HealthcareSolutionsPage() {,
-  return (,
+export default function HealthcareSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function HealthcareSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

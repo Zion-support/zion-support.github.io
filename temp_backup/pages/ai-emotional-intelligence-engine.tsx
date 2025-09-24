@@ -1,70 +1,68 @@
 import Head from 'next/head',
-import {,
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Shield,;
-  Star,;
-  Heart,;
-  Brain,;
-  Eye,;
-  Zap,;
-  Lock,;
-  Globe,;
-  BarChart3,;
-  Users,;
-  TrendingUp,;
+import {
+  Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Shield;
+  Star;
+  Heart;
+  Brain;
+  Eye;
+  Zap;
+  Lock;
+  Globe;
+  BarChart3;
+  Users;
+  TrendingUp;
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
-,
-export default function AIEmotionalIntelligenceEnginePage() {,
-  const service = {,
-    name: 'AI Emotional Intelligence Engine',;
-    tagline: 'Understand and respond to human emotions with AI-powered EQ',;
-    price: '$2,499',;
-    period: '/month',;
+export default function AIEmotionalIntelligenceEnginePage() {
+  const service = {
+    name: 'AI Emotional Intelligence Engine';
+    tagline: 'Understand and respond to human emotions with AI-powered EQ';
+    price: '$2,499';
+    period: '/month';
     description:,
-      'Advanced AI system that analyzes voice, text, and facial expressions to understand emotional context and provide emotionally intelligent responses for customer service, healthcare, and human resources.',;
-    features: [,
-      'Multi-modal emotion recognition (voice, text, video)',;
-      'Real-time emotional state analysis',;
-      'Emotion-aware response generation',;
-      'Sentiment trend analysis and reporting',;
-      'Custom emotion detection models',;
-      'API for integration with existing systems',;
-      'Compliance with privacy regulations',;
-      'Multi-language emotional intelligence',;
-      'Emotional health monitoring dashboards',;
-    ],;
-    rating: 4.9,;
-    trialDays: 21,;
-    setupTime: '2-3 weeks',;
-    contactInfo: {,
-      mobile: '+1 30o2 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 10o08 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com',;
-    },;
+      'Advanced AI system that analyzes voice, text, and facial expressions to understand emotional context and provide emotionally intelligent responses for customer service, healthcare, and human resources.';
+    features: [
+      'Multi-modal emotion recognition (voice, text, video)';
+      'Real-time emotional state analysis';
+      'Emotion-aware response generation';
+      'Sentiment trend analysis and reporting';
+      'Custom emotion detection models';
+      'API for integration with existing systems';
+      'Compliance with privacy regulations';
+      'Multi-language emotional intelligence';
+      'Emotional health monitoring dashboards';
+    ];
+    rating: 4.9;
+    trialDays: 21;
+    setupTime: '2-3 weeks';
+    contactInfo: {
+      mobile: '+1 30o2 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 10o08 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
+    };
   };
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-emotional-intelligence-engine',
         />,
-        <meta,
+        <meta
           property='og:title',
-          content={`${service.name,} - Zion Tech Group`}
+          content={`${service.name} - Zion Tech Group`}
         />,
-        <meta property='og: description' content={service.description,} />,
-        <meta,
+        <meta property='og: description' content={service.description} />,
+        <meta
           property='og: url',
           content='https://ziontechgroup.com/ai-emotional-intelligence-engine',
         />,
@@ -72,11 +70,11 @@ export default function AIEmotionalIntelligenceEnginePage() {,
       </Head>,
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>,
         <div className='max-w-6xl mx-auto'>,
-          {/* Hero Section */,}
+          {/* Hero Section */}
           <div className='text-center mb-12'>,
             <h1 className='text-5xl md: text-7xl font-bold bg-gradient-to-r from-pink-40o0 via-red-40o0 to-pink-60o0 bg-clip-text text-transparent flex items-center justify-center gap-3'>,
               <Heart className='w-12 h-12' />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-6 text-xl text-slate-30o0 max-w-4xl mx-auto leading-relaxed'>,
               {service.tagline}
@@ -87,24 +85,22 @@ export default function AIEmotionalIntelligenceEnginePage() {,
           </div>,
           {/* Main Content Grid */}
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-12'>,
-            {/* Features Section */,}
+            {/* Features Section */}
             <div className='lg: col-span-2 space-y-8'>,
-              {/* Core Capabilities */,}
+              {/* Core Capabilities */}
               <div className='bg-black/30 rounded-2xl border border-pink-50o0/30 p-8'>,
                 <h2 className='text-3xl font-semibold mb-6 flex items-center gap-3'>,
                   <Brain className='w-8 h-8 text-pink-40o0' />,
                   Core Capabilities,
                 </h2>,
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-                  {service.features.map((feat, i) => (,
-                    <div,
+                  {service.features.map((feat, i) => (
+                    <div
                       key={i}
-                      className='flex items-start space-x-3 text-slate-20o0',
-                    >,
+                      className='flex items-start space-x-3 text-slate-20o0'>,
                       <Check className='w-5 h-5 text-pink-40o0 mt-1 flex-shrink-0' />,
                       <span className='text-sm leading-relaxed'>{feat}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Use Cases */}
@@ -165,20 +161,19 @@ export default function AIEmotionalIntelligenceEnginePage() {,
                       Core Technologies,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'Python & TensorFlow',;
-                        'PyTorch & OpenCV',;
-                        'NLP & Computer Vision',;
-                        'Real-time Processing',;
-                        'Cloud-native Architecture',;
-                      ].map((tech, i) => (,
+                      {[
+                        'Python & TensorFlow';
+                        'PyTorch & OpenCV';
+                        'NLP & Computer Vision';
+                        'Real-time Processing';
+                        'Cloud-native Architecture';
+                      ].map((tech, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-pink-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {tech}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   <div>,
@@ -186,20 +181,19 @@ export default function AIEmotionalIntelligenceEnginePage() {,
                       Integrations,
                     </h3>,
                     <div className='space-y-2'>,
-                      {[,
-                        'Salesforce & Zendesk',;
-                        'Microsoft Teams & Slack',;
-                        'Zoom & WebRTC',;
-                        'CRM Platforms',;
-                        'Custom APIs',;
-                      ].map((integration, i) => (,
+                      {[
+                        'Salesforce & Zendesk';
+                        'Microsoft Teams & Slack';
+                        'Zoom & WebRTC';
+                        'CRM Platforms';
+                        'Custom APIs';
+                      ].map((integration, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-pink-40o0 rounded-full'></div>,
                           <span className='text-slate-30o0 text-sm'>,
                             {integration}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                 </div>,
@@ -227,15 +221,14 @@ export default function AIEmotionalIntelligenceEnginePage() {,
                   </div>,
                   <div className='text-slate-40o0 text-sm space-y-1'>,
                     <div>{service.trialDays}-day free trial</div>,
-                    <div>Setup: {service.setupTime,}</div>,
+                    <div>Setup: {service.setupTime}</div>,
                   </div>,
                 </div>,
-                <Button,
+                <Button
                   href='/contact',
                   variant='quantum',
                   size='lg',
-                  className='w-full mb-4',
-                >,
+                  className='w-full mb-4'>,
                   Start Free Trial,
                   <ArrowRight className='w-5 h-5 ml-2' />,
                 </Button>,
@@ -265,12 +258,11 @@ export default function AIEmotionalIntelligenceEnginePage() {,
                   </div>,
                 </div>,
                 <div className='mt-6 pt-4 border-t border-pink-50o0/30'>,
-                  <Button,
+                  <Button
                     href={service.contactInfo.website}
                     variant='outline',
                     size='sm',
-                    className='w-full',
-                  >,
+                    className='w-full'>,
                     Visit Website,
                   </Button>,
                 </div>,
@@ -390,11 +382,10 @@ export default function AIEmotionalIntelligenceEnginePage() {,
                 Start Free Trial,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </Button>,
-              <Button,
-                href={`tel:${service.contactInfo.mobile,}`}
+              <Button
+                href={`tel:${service.contactInfo.mobile}`}
                 variant='outline',
-                size='lg',
-              >,
+                size='lg'>,
                 <Phone className='w-5 h-5 mr-2' />,
                 Call Now,
               </Button>,
@@ -402,7 +393,5 @@ export default function AIEmotionalIntelligenceEnginePage() {,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

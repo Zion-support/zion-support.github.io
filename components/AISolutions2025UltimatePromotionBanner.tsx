@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AISolutions20o25UltimatePromotionBanner = () => {,
-  return (,
+const AISolutions20o25UltimatePromotionBanner = () => {
+  return (
     <div className='relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -12,24 +11,24 @@ const AISolutions20o25UltimatePromotionBanner = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-black px-6 py-3 rounded-full text-sm font-bold mb-6 shadow-lg animate-bounce'>,
             🚀 NEW: AI SOLUTIONS 20o25 ULTIMATE,
           </div>,
-          {/* Main Heading */,}
+          {/* Main Heading */}
           <h2 className='text-3xl md: text-5xl font-bold mb-6 leading-tight'>,
             Revolutionary AI Technology Suite,
             <span className='block text-transparent bg-clip-text bg-gradient-to-r from-cyan-40o0 to-pink-40o0'>,
               Now Available,
             </span>,
           </h2>,
-          {/* Description */,}
+          {/* Description */}
           <p className='text-lg md: text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Transform your business with our comprehensive AI solutions suite.,
             From intelligent automation to predictive analyticsunlock,
             unprecedented growth and efficiency.,
           </p>,
-          {/* Features Grid */,}
+          {/* Features Grid */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto'>,
             <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20'>,
               <div className='text-2xl mb-2'>🤖</div>,
@@ -48,7 +47,7 @@ const AISolutions20o25UltimatePromotionBanner = () => {,
               <div className='text-sm font-semibold'>AI Security</div>,
             </div>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='grid grid-cols-3 gap-6 mb-8 max-w-2xl mx-auto'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-cyan-40o0'>30o0%</div>,
@@ -65,40 +64,36 @@ const AISolutions20o25UltimatePromotionBanner = () => {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-solutions-20o25-ultimate',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-xl font-bold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 text-lg shadow-2xl transform hover:scale-10o5 inline-flex items-center justify-center',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-xl font-bold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 text-lg shadow-2xl transform hover:scale-10o5 inline-flex items-center justify-center'>,
               🎯 Explore AI Solutions,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-cyan-40o0 text-cyan-30o0 px-8 py-4 rounded-xl font-bold hover: bg-cyan-40o0 hover:text-black transition-all duration-30o0 text-lg inline-flex items-center justify-center',
-            >,
+              className='border-2 border-cyan-40o0 text-cyan-30o0 px-8 py-4 rounded-xl font-bold hover: bg-cyan-40o0 hover:text-black transition-all duration-30o0 text-lg inline-flex items-center justify-center'>,
               📞 Free Consultation,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M8 12h.0o1M12 12h.0o1M16 12h.0o1M21 12c0 4.418-4.0o3 8-9 8a9.863 9.863 0 0o1-4.255-.949L3 20l1.395-3.72C3.512 15.0o42 3 13.574 3 12c0-4.418 4.0o3-8 9-8s9 3.582 9 8z',
                 />,
               </svg>,
@@ -118,9 +113,5 @@ const AISolutions20o25UltimatePromotionBanner = () => {,
       <div className='absolute top-8 right-8 w-3 h-3 bg-purple-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-4 left-8 w-2 h-2 bg-pink-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-8 right-4 w-3 h-3 bg-blue-40o0 rounded-full animate-ping'></div>,
-    </div>,
-  ),
-};
-,
-export default AISolutions20o25UltimatePromotionBanner,
-,
+    </div>)};
+export default AISolutions20o25UltimatePromotionBanner;

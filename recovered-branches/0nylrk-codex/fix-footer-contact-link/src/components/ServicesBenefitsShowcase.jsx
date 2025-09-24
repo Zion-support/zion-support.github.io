@@ -1,129 +1,129 @@
-import {,
+import {
 import { Button } from './ui/button',
 import { CONTACT_INFO } from '@/data/comprehensiveServices',
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from './ui/card',
-  Brain,;
-  Cloud,;
-  Zap,;
-  Shield,;
-  TrendingUp,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  ExternalLink,;
+  Brain;
+  Cloud;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  Globe;
+  CheckCircle;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  ExternalLink;
 } from 'lucide-react',
-export function ServicesBenefitsShowcase() {,
-  const serviceBenefits = [,
-    {,
-      category: 'AI Services',;
-      icon: <Brain className='w-12 h-12' />,;
-      color: 'from-purple-50o0 to-indigo-60o0',;
+export function ServicesBenefitsShowcase() {
+  const serviceBenefits = [
+    {
+      category: 'AI Services';
+      icon: <Brain className='w-12 h-12' />;
+      color: 'from-purple-50o0 to-indigo-60o0';
       description:,
-        'Transform your business with cutting-edge artificial intelligence and machine learning solutions',;
-      benefits: [,
-        'Advanced AI algorithms and models',;
-        'Real-time data processing and insights',;
-        'Scalable machine learning infrastructure',;
-        'Custom AI model development',;
-        'Natural language processing capabilities',;
-        'Computer vision and image recognition',;
-        'Predictive analytics and forecasting',;
-        'AI-powered automation workflows',;
-      ],;
-      useCases: [,
-        'Customer service chatbots',;
-        'Predictive maintenance systems',;
-        'Fraud detection and prevention',;
-        'Content generation and optimization',;
-        'Recommendation engines',;
-        'Process automation',;
-        'Data analysis and insights',;
-        'Intelligent document processing',;
-      ],;
-      marketPosition: 'Industry-leading AI solutions with proven ROI',;
-      startingPrice: '$299',;
-      implementationTime: '1-6 weeks',;
-      support: '24/7 expert support included',;
-    },;
-    {,
-      category: 'IT Services',;
-      icon: <Cloud className='w-12 h-12' />,;
-      color: 'from-cyan-50o0 to-blue-60o0',;
+        'Transform your business with cutting-edge artificial intelligence and machine learning solutions';
+      benefits: [
+        'Advanced AI algorithms and models';
+        'Real-time data processing and insights';
+        'Scalable machine learning infrastructure';
+        'Custom AI model development';
+        'Natural language processing capabilities';
+        'Computer vision and image recognition';
+        'Predictive analytics and forecasting';
+        'AI-powered automation workflows';
+      ];
+      useCases: [
+        'Customer service chatbots';
+        'Predictive maintenance systems';
+        'Fraud detection and prevention';
+        'Content generation and optimization';
+        'Recommendation engines';
+        'Process automation';
+        'Data analysis and insights';
+        'Intelligent document processing';
+      ];
+      marketPosition: 'Industry-leading AI solutions with proven ROI';
+      startingPrice: '$299';
+      implementationTime: '1-6 weeks';
+      support: '24/7 expert support included';
+    };
+    {
+      category: 'IT Services';
+      icon: <Cloud className='w-12 h-12' />;
+      color: 'from-cyan-50o0 to-blue-60o0';
       description:,
-        'Enterprise-grade IT infrastructure and consulting services for modern businesses',;
-      benefits: [,
-        'Cloud migration and optimization',;
-        'Cybersecurity and compliance',;
-        'DevOps automation and CI/CD',;
-        'Infrastructure as code',;
-        '24/7 monitoring and support',;
-        'Disaster recovery planning',;
-        'Performance optimization',;
-        'Scalable architecture design',;
-      ],;
-      useCases: [,
-        'Digital transformation initiatives',;
-        'Cloud infrastructure setup',;
-        'Security audits and compliance',;
-        'Application modernization',;
-        'Data center consolidation',;
-        'Business continuity planning',;
-        'Performance monitoring',;
-        'Cost optimization strategies',;
-      ],;
-      marketPosition: 'Trusted IT partner for enterprise transformation',;
-      startingPrice: '$4,499',;
-      implementationTime: '2-6 weeks',;
-      support: '24/7 dedicated support team',;
-    },;
-    {,
-      category: 'Micro SAAS',;
-      icon: <Zap className='w-12 h-12' />,;
-      color: 'from-emerald-50o0 to-green-60o0',;
+        'Enterprise-grade IT infrastructure and consulting services for modern businesses';
+      benefits: [
+        'Cloud migration and optimization';
+        'Cybersecurity and compliance';
+        'DevOps automation and CI/CD';
+        'Infrastructure as code';
+        '24/7 monitoring and support';
+        'Disaster recovery planning';
+        'Performance optimization';
+        'Scalable architecture design';
+      ];
+      useCases: [
+        'Digital transformation initiatives';
+        'Cloud infrastructure setup';
+        'Security audits and compliance';
+        'Application modernization';
+        'Data center consolidation';
+        'Business continuity planning';
+        'Performance monitoring';
+        'Cost optimization strategies';
+      ];
+      marketPosition: 'Trusted IT partner for enterprise transformation';
+      startingPrice: '$4,499';
+      implementationTime: '2-6 weeks';
+      support: '24/7 dedicated support team';
+    };
+    {
+      category: 'Micro SAAS';
+      icon: <Zap className='w-12 h-12' />;
+      color: 'from-emerald-50o0 to-green-60o0';
       description:,
-        'Specialized software-as-a-service solutions designed for specific business needs',;
-      benefits: [,
-        'Ready-to-use business applications',;
-        'Cloud-based accessibility',;
-        'Automatic updates and maintenance',;
-        'Scalable user management',;
-        'API integrations',;
-        'Customizable workflows',;
-        'Real-time collaboration',;
-        'Mobile-first design',;
-      ],;
-      useCases: [,
-        'Inventory management',;
-        'Project management',;
-        'Customer support automation',;
-        'HR and employee management',;
-        'Financial analytics',;
-        'Supply chain optimization',;
-        'Marketing automation',;
-        'Sales pipeline management',;
-      ],;
-      marketPosition: 'Affordable, scalable solutions for growing businesses',;
-      startingPrice: '$199',;
-      implementationTime: 'Immediate - 3 weeks',;
-      support: 'Business hours support with priority options',;
-    },;
+        'Specialized software-as-a-service solutions designed for specific business needs';
+      benefits: [
+        'Ready-to-use business applications';
+        'Cloud-based accessibility';
+        'Automatic updates and maintenance';
+        'Scalable user management';
+        'API integrations';
+        'Customizable workflows';
+        'Real-time collaboration';
+        'Mobile-first design';
+      ];
+      useCases: [
+        'Inventory management';
+        'Project management';
+        'Customer support automation';
+        'HR and employee management';
+        'Financial analytics';
+        'Supply chain optimization';
+        'Marketing automation';
+        'Sales pipeline management';
+      ];
+      marketPosition: 'Affordable, scalable solutions for growing businesses';
+      startingPrice: '$199';
+      implementationTime: 'Immediate - 3 weeks';
+      support: 'Business hours support with priority options';
+    };
   ],
-  const industryStats = [,
-    { metric: '95%', label: 'Client Satisfaction Rate' ,},;
-    { metric: '24/7', label: 'Support Availability' ,},;
-    { metric: '50+', label: 'Countries Served' ,},;
-    { metric: '10+', label: 'Years Experience' ,},;
+  const industryStats = [
+    { metric: '95%', label: 'Client Satisfaction Rate' };
+    { metric: '24/7', label: 'Support Availability' };
+    { metric: '50+', label: 'Countries Served' };
+    { metric: '10+', label: 'Years Experience' };
   ],
-  return (,
+  return (
     <div className='py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0'>,
       <div className='container mx-auto px-4'>,
         {/* Header Section */}
@@ -139,28 +139,25 @@ export function ServicesBenefitsShowcase() {,
         </div>,
         {/* Industry Statistics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-16'>,
-          {industryStats.map((stat, index) => (,
-            <div,
+          {industryStats.map((stat, index) => (
+            <div
               key={index}
-              className='text-center p-6 bg-slate-80o0/50 rounded-xl border border-slate-70o0',
-            >,
+              className='text-center p-6 bg-slate-80o0/50 rounded-xl border border-slate-70o0'>,
               <div className='text-3xl md: text-4xl font-bold text-cyan-40o0 mb-2'>,
-                {stat.metric,}
+                {stat.metric}
               </div>,
               <div className='text-slate-30o0 text-sm'>{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Service Benefits Grid */}
         <div className='grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16'>,
-          {serviceBenefits.map((service, index) => (,
-            <Card,
+          {serviceBenefits.map((service, index) => (
+            <Card
               key={service.category}
-              className='bg-slate-80o0/50 border border-slate-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0 hover:scale-10o5',
-            >,
+              className='bg-slate-80o0/50 border border-slate-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0 hover:scale-10o5'>,
               <CardHeader className='text-center pb-4'>,
-                <div,
-                  className={`w-20 h-20 bg-gradient-to-br ${service.color,} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}
+                <div
+                  className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}
                 >,
                   {service.icon}
                 </div>,
@@ -179,15 +176,13 @@ export function ServicesBenefitsShowcase() {,
                     Key Benefits,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {service.benefits.map((benefit, benefitIndex) => (,
-                      <li,
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li
                         key={benefitIndex}
-                        className='text-slate-30o0 text-sm flex items-start gap-2',
-                      >,
+                        className='text-slate-30o0 text-sm flex items-start gap-2'>,
                         <div className='w-1.5 h-1.5 bg-cyan-40o0 rounded-full mt-2 flex-shrink-0' />,
                         {benefit}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 {/* Use Cases */}
@@ -197,15 +192,13 @@ export function ServicesBenefitsShowcase() {,
                     Common Use Cases,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {service.useCases.map((useCase, useCaseIndex) => (,
-                      <li,
+                    {service.useCases.map((useCase, useCaseIndex) => (
+                      <li
                         key={useCaseIndex}
-                        className='text-slate-30o0 text-sm flex items-start gap-2',
-                      >,
+                        className='text-slate-30o0 text-sm flex items-start gap-2'>,
                         <div className='w-1.5 h-1.5 bg-cyan-40o0 rounded-full mt-2 flex-shrink-0' />,
                         {useCase}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 {/* Market Position */}
@@ -220,31 +213,30 @@ export function ServicesBenefitsShowcase() {,
                     <div>,
                       <span className='text-slate-40o0'>Starting Price: </span>,
                       <div className='text-cyan-40o0 font-semibold'>,
-                        {service.startingPrice,}
+                        {service.startingPrice}
                       </div>,
                     </div>,
                     <div>,
                       <span className='text-slate-40o0'>Implementation: </span>,
                       <div className='text-cyan-40o0 font-semibold'>,
-                        {service.implementationTime,}
+                        {service.implementationTime}
                       </div>,
                     </div>,
                   </div>,
                   <div className='mt-3 text-xs'>,
                     <span className='text-slate-40o0'>Support: </span>,
                     <div className='text-cyan-40o0 font-semibold'>,
-                      {service.support,}
+                      {service.support}
                     </div>,
                   </div>,
                 </div>,
                 {/* CTA Button */}
                 <Button className='w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0'>,
-                  Explore {service.category,}
+                  Explore {service.category}
                   <ArrowRight className='w-4 h-4 ml-2' />,
                 </Button>,
               </CardContent>,
-            </Card>,
-          ))}
+            </Card>))}
         </div>,
         {/* Competitive Advantages */}
         <div className='mb-16'>,
@@ -323,7 +315,7 @@ export function ServicesBenefitsShowcase() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center bg-gradient-to-r from-slate-80o0/50 to-slate-70o0/50 border border-slate-60o0 rounded-2xl p-12'>,
           <h3 className='text-3xl font-bold text-white mb-4'>,
             Ready to Experience the Benefits?,
@@ -333,33 +325,29 @@ export function ServicesBenefitsShowcase() {,
             businesses with our innovative solutions.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
-            <Button,
+            <Button
               size='lg',
-              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0',
-            >,
+              className='bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover: from-cyan-60o0 hover:to-blue-70o0'>,
               <Phone className='w-4 h-4 mr-2' />,
-              {CONTACT_INFO.mobile,}
+              {CONTACT_INFO.mobile}
             </Button>,
-            <Button,
+            <Button
               size='lg',
               variant='outline',
-              className='border-cyan-40o0 text-cyan-40o0 hover: bg-cyan-40o0 hover:text-white',
-            >,
+              className='border-cyan-40o0 text-cyan-40o0 hover: bg-cyan-40o0 hover:text-white'>,
               <Mail className='w-4 h-4 mr-2' />,
-              {CONTACT_INFO.email,}
+              {CONTACT_INFO.email}
             </Button>,
-            <Button,
+            <Button
               size='lg',
               variant='ghost',
-              className='text-cyan-40o0 hover: text-white',
-            >,
+              className='text-cyan-40o0 hover: text-white'>,
               <ExternalLink className='w-4 h-4 mr-2' />,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

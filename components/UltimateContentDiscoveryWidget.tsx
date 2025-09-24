@@ -1,112 +1,102 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const UltimateContentDiscoveryWidget = () => {,
+const UltimateContentDiscoveryWidget = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedROI, setSelectedROI] = useState('all'),
   const [isExpanded, setIsExpanded] = useState(false),
-,
-  const contentItems = [,
-    {,
-      id: 'ai-20o25-ultimate-automation-revolution',;
-      title: 'AI 20o25: The Ultimate Automation Revolution',;
-      description: 'Transform your business with 50,0o00% ROI through revolutionary AI automation',;
-      category: 'AI Automation',;
-      roi: '50,0o00%',;
-      savings: '$2.8B+',;
-      readingTime: '25 min read',;
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',;
-      tags: ['AI', 'Automation', 'ROI', 'Business Transformation'],;
+  const contentItems = [
+    {
+      id: 'ai-20o25-ultimate-automation-revolution';
+      title: 'AI 20o25: The Ultimate Automation Revolution';
+      description: 'Transform your business with 50,0o00% ROI through revolutionary AI automation';
+      category: 'AI Automation';
+      roi: '50,0o00%';
+      savings: '$2.8B+';
+      readingTime: '25 min read';
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
+      tags: ['AI', 'Automation', 'ROI', 'Business Transformation'];
       featured: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-ai-automation-success',;
-      title: 'Fortune 50o0 AI Automation Success Story',;
-      description: 'How TechGlobal Industries achieved $2.8B annual savings with 50,0o00% ROI',;
-      category: 'Case Study',;
-      roi: '50,0o00%',;
-      savings: '$2.8B',;
-      readingTime: '22 min read',;
-      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',;
-      tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Manufacturing'],;
+    };
+    {
+      id: 'fortune-50o0-ai-automation-success';
+      title: 'Fortune 50o0 AI Automation Success Story';
+      description: 'How TechGlobal Industries achieved $2.8B annual savings with 50,0o00% ROI';
+      category: 'Case Study';
+      roi: '50,0o00%';
+      savings: '$2.8B';
+      readingTime: '22 min read';
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
+      tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Manufacturing'];
       featured: true,
-    ,},;
-    {,
-      id: 'ai-20o25-consciousness-revolution',;
-      title: 'AI 20o25: The Consciousness Revolution',;
-      description: 'Ultimate business breakthrough guide to 50,0o00% ROI through consciousness AI',;
-      category: 'AI Revolution',;
-      roi: '50,0o00%',;
-      savings: '$1.2T',;
-      readingTime: '45 min read',;
-      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough',;
-      tags: ['Consciousness AI', 'Breakthrough', 'ROI', 'Revolution'],;
+    };
+    {
+      id: 'ai-20o25-consciousness-revolution';
+      title: 'AI 20o25: The Consciousness Revolution';
+      description: 'Ultimate business breakthrough guide to 50,0o00% ROI through consciousness AI';
+      category: 'AI Revolution';
+      roi: '50,0o00%';
+      savings: '$1.2T';
+      readingTime: '45 min read';
+      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough';
+      tags: ['Consciousness AI', 'Breakthrough', 'ROI', 'Revolution'];
       featured: true,
-    ,},;
-    {,
-      id: 'ai-20o25-singularity-breakthrough',;
-      title: 'AI 20o25: The Singularity Breakthrough',;
-      description: 'Ultimate guide to 10o0,0o00% ROI through AI singularity achievement',;
-      category: 'AI Revolution',;
-      roi: '10o0,0o00%',;
-      savings: '$2.5T',;
-      readingTime: '50 min read',;
-      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide',;
-      tags: ['AI Singularity', 'Breakthrough', 'ROI', 'Revolution'],;
+    };
+    {
+      id: 'ai-20o25-singularity-breakthrough';
+      title: 'AI 20o25: The Singularity Breakthrough';
+      description: 'Ultimate guide to 10o0,0o00% ROI through AI singularity achievement';
+      category: 'AI Revolution';
+      roi: '10o0,0o00%';
+      savings: '$2.5T';
+      readingTime: '50 min read';
+      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide';
+      tags: ['AI Singularity', 'Breakthrough', 'ROI', 'Revolution'];
       featured: true,
-    ,},;
-    {,
-      id: 'quantum-neural-fusion-revolution',;
-      title: 'AI 20o25: The Quantum-Neural Fusion Revolution',;
-      description: 'Ultimate breakthrough guide to 25,0o00% ROI through quantum-neural fusion',;
-      category: 'Quantum AI',;
-      roi: '25,0o00%',;
-      savings: '$50o0B+',;
-      readingTime: '35 min read',;
-      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough',;
-      tags: ['Quantum Computing', 'Neural Networks', 'ROI', 'Fusion'],;
+    };
+    {
+      id: 'quantum-neural-fusion-revolution';
+      title: 'AI 20o25: The Quantum-Neural Fusion Revolution';
+      description: 'Ultimate breakthrough guide to 25,0o00% ROI through quantum-neural fusion';
+      category: 'Quantum AI';
+      roi: '25,0o00%';
+      savings: '$50o0B+';
+      readingTime: '35 min read';
+      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
+      tags: ['Quantum Computing', 'Neural Networks', 'ROI', 'Fusion'];
       featured: true,
-    ,},;
-    {,
-      id: 'ai-business-intelligence-revolution',;
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',;
-      description: 'Ultimate guide to 18,0o00% ROI through advanced business intelligence',;
-      category: 'Business Intelligence',;
-      roi: '18,0o00%',;
-      savings: '$89.2B+',;
-      readingTime: '35 min read',;
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
-      tags: ['Business Intelligence', 'Analytics', 'ROI', 'Data'],;
+    };
+    {
+      id: 'ai-business-intelligence-revolution';
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
+      description: 'Ultimate guide to 18,0o00% ROI through advanced business intelligence';
+      category: 'Business Intelligence';
+      roi: '18,0o00%';
+      savings: '$89.2B+';
+      readingTime: '35 min read';
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+      tags: ['Business Intelligence', 'Analytics', 'ROI', 'Data'];
       featured: true,
-    ,}
+    }
   ],
-,
   const categories = ['all', 'AI Automation', 'Case Study', 'AI Revolution', 'Quantum AI', 'Business Intelligence'],
-  const roiRanges = [,
-    { id: 'all', label: 'All ROI' ,},;
-    { id: 'high', label: '50,0o00%+' },;
+  const roiRanges = [
+    { id: 'all', label: 'All ROI' };
+    { id: 'high', label: '50,0o00%+' };
     { id: 'ultra', label: '10o0,0o00%+' }
   ],
-,
-  const filteredContent = contentItems.filter(item => {,
+  const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-,
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-,
     const matchesROI = selectedROI === 'all' ||,
                       (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, ', ')) >= 50o000) ||,
                       (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, ', ')) >= 10o0000),
-,
-    return matchesSearch && matchesCategory && matchesROI,
-  }),
-,
-  return (,
+    return matchesSearch && matchesCategory && matchesROI}),
+  return (
     <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
@@ -120,14 +110,14 @@ const UltimateContentDiscoveryWidget = () => {,
             Find the perfect content for your business transformation journey with our intelligent discovery widget.,
           </p>,
         </div>,
-        {/* Search and Filter Interface */,}
+        {/* Search and Filter Interface */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">,
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-6">,
-            {/* Search Input */,}
+            {/* Search Input */}
             <div className="space-y-2">,
               <label className="text-sm font-semibold text-gray-70o0">Search Content</label>,
               <div className="relative">,
-                <input,
+                <input
                   type="text",
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -135,55 +125,50 @@ const UltimateContentDiscoveryWidget = () => {,
                   className="w-full px-4 py-3 pl-10 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
                 />,
                 <svg className="absolute left-3 top-3.5 w-5 h-5 text-gray-40o0" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0o114 0z"  />,
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0o114 0z"  />,
                 </svg>,
               </div>,
             </div>,
             {/* Category Filter */}
             <div className="space-y-2">,
               <label className="text-sm font-semibold text-gray-70o0">Category</label>,
-              <select,
+              <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
-              >,
-                {categories.map(category => (,
-                  <option key={category,} value={category}>,
+                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent">,
+                {categories.map(category => (
+                  <option key={category} value={category}>,
                     {category === 'all' ? 'All Categories' : category}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
             </div>,
             {/* ROI Filter */}
             <div className="space-y-2">,
               <label className="text-sm font-semibold text-gray-70o0">ROI Range</label>,
-              <select,
+              <select
                 value={selectedROI}
                 onChange={(e) => setSelectedROI(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent",
-              >,
-                {roiRanges.map(range => (,
-                  <option key={range.id,} value={range.id}>,
+                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-purple-50o0 focus:border-transparent">,
+                {roiRanges.map(range => (
+                  <option key={range.id} value={range.id}>,
                     {range.label}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
             </div>,
           </div>,
           {/* Advanced Filters Toggle */}
           <div className="text-center">,
-            <button,
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="text-purple-60o0 hover: text-purple-70o0 font-semibold flex items-center justify-center mx-auto",
-            >,
-              {isExpanded ? 'Hide' : 'Show',} Advanced Filters,
+              className="text-purple-60o0 hover: text-purple-70o0 font-semibold flex items-center justify-center mx-auto">,
+              {isExpanded ? 'Hide' : 'Show'} Advanced Filters,
               <svg className={`ml-2 w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">,
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"  />,
               </svg>,
             </button>,
           </div>,
           {/* Advanced Filters */}
-          {isExpanded && (,
+          {isExpanded && (
             <div className="mt-6 pt-6 border-t border-gray-20o0">,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,
                 <div className="space-y-2">,
@@ -224,8 +209,7 @@ const UltimateContentDiscoveryWidget = () => {,
                   </select>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
         {/* Results */}
         <div className="mb-6">,
@@ -240,27 +224,25 @@ const UltimateContentDiscoveryWidget = () => {,
         </div>,
         {/* Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-          {filteredContent.map((item) => (,
-            <div,
-              key={item.id,}
-              className="bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-1 overflow-hidden group",
-            >,
+          {filteredContent.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-xl shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-1 overflow-hidden group">,
               <div className="p-6">,
                 <div className="flex items-start justify-between mb-4">,
                   <div className="flex items-center space-x-2">,
                     <span className="bg-purple-10o0 text-purple-80o0 px-2 py-1 rounded text-xs font-bold">,
-                      {item.category,}
+                      {item.category}
                     </span>,
-                    {item.featured && (,
+                    {item.featured && (
                       <span className="bg-green-10o0 text-green-80o0 px-2 py-1 rounded text-xs font-bold">,
                         FEATURED,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <span className="text-sm text-gray-50o0">{item.readingTime}</span>,
                 </div>,
                 <h3 className="text-lg font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className="text-gray-60o0 mb-4 text-sm leading-relaxed">,
                   {item.description}
@@ -276,47 +258,40 @@ const UltimateContentDiscoveryWidget = () => {,
                   </div>,
                 </div>,
                 <div className="flex flex-wrap gap-1 mb-4">,
-                  {item.tags.slice(0, 3).map((tag, index) => (,
+                  {item.tags.slice(0, 3).map((tag, index) => (
                     <span key={index} className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded text-xs">,
                       {tag}
-                    </span>,
-                  ))}
-                  {item.tags.length > 3 && (,
+                    </span>))}
+                  {item.tags.length > 3 && (
                     <span className="bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded text-xs">,
                       +{item.tags.length - 3} more,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
-                <Link,
+                <Link
                   href={item.url}
-                  className="block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-2 rounded-lg font-semibold text-center hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0",
-                >,
+                  className="block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white py-2 rounded-lg font-semibold text-center hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0">,
                   Read Content →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* No Results */}
-        {filteredContent.length === 0 && (,
+        {filteredContent.length === 0 && (
           <div className="text-center py-12">,
             <div className="text-6xl mb-4">🔍</div>,
             <h3 className="text-2xl font-bold text-gray-90o0 mb-2">No Content Found</h3>,
             <p className="text-gray-60o0 mb-6">,
               Try adjusting your search criteria or browse all content,
             </p>,
-            <button,
-              onClick={() => {,
+            <button
+              onClick={() => {
                 setSearchTerm(', '),
                 setSelectedCategory('all'),
-                setSelectedROI('all'),
-              }}
-              className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors",
-            >,
+                setSelectedROI('all')}}
+              className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors">,
               Clear Filters,
             </button>,
-          </div>,
-        ),}
+          </div>)}
 ,
         {/* Call to Action */}
         <div className="text-center mt-12">,
@@ -325,17 +300,14 @@ const UltimateContentDiscoveryWidget = () => {,
             <p className="text-xl mb-6 opacity-90">,
               Our AI experts can help you discover the perfect content for your specific needs,
             </p>,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
               Get Personalized Recommendations,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateContentDiscoveryWidget,
+    </div>),
+};
+export default UltimateContentDiscoveryWidget;

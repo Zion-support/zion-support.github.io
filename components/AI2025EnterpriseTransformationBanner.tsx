@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25EnterpriseTransformationBanner() {,
-  return (,
+export default function AI20o25EnterpriseTransformationBanner() {
+  return (
     <section className='bg-gradient-to-r from-slate-60o0 via-blue-60o0 to-indigo-60o0 py-16 px-4'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='text-center'>,
@@ -19,22 +18,19 @@ export default function AI20o25EnterpriseTransformationBanner() {,
             decision making that delivers unprecedented results.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-enterprise-transformation',
-              className='bg-white text-slate-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-white text-slate-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5'>,
               Start Enterprise Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-60o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-60o0 transition-all'>,
               Get Enterprise Consultation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

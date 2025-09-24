@@ -2,91 +2,87 @@ import Link from 'next/link',
 import Navigation from '../../src/components/Navigation',
 import Footer from '../../src/components/Footer',
 import SEOHead from '../../src/components/SEOHead',
-import {,
-  Cloud,;
-  Server,;
-  Database,;
-  Zap,;
-  Shield,;
-  Users,;
-  Globe,;
-  CheckCircle,;
-  Award,;
-  Phone,;
-  Mail,;
+import {
+  Cloud;
+  Server;
+  Database;
+  Zap;
+  Shield;
+  Users;
+  Globe;
+  CheckCircle;
+  Award;
+  Phone;
+  Mail;
 } from 'lucide-react',
-,
-const CloudServices = () => {,
-  const structuredData = {,
-    '@context': 'https://schema.org',;
-    '@type': 'Service',;
-    name: 'Cloud Services',;
+const CloudServices = () => {
+  const structuredData = {
+    '@context': 'https://schema.org';
+    '@type': 'Service';
+    name: 'Cloud Services';
     description:,
-      'Comprehensive cloud infrastructure and migration services for modern businesses',;
-    provider: {,
-      '@type': 'Organization',;
-      name: 'Zion Tech Group',;
-      url: 'https://ziontechgroup.com',;
-    },;
+      'Comprehensive cloud infrastructure and migration services for modern businesses';
+    provider: {
+      '@type': 'Organization';
+      name: 'Zion Tech Group';
+      url: 'https://ziontechgroup.com';
+    };
   };
-,
-  const services = [,
-    {,
-      title: 'Cloud Migration',;
+  const services = [
+    {
+      title: 'Cloud Migration';
       description:,
-        'Seamless migration to cloud platforms with minimal downtime',;
-      icon: Cloud,;
-      features: [,
-        'AWS Migration',;
-        'Azure Migration',;
-        'Google Cloud Migration',;
-        'Hybrid Cloud Setup',;
-      ],;
-    },;
-    {,
-      title: 'Infrastructure as Code',;
-      description: 'Automated infrastructure deployment and management',;
-      icon: Server,;
-      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes'],;
-    },;
-    {,
-      title: 'Cloud Security',;
-      description: 'Comprehensive security solutions for cloud environments',;
-      icon: Shield,;
-      features: [,
-        'Identity Management',;
-        'Data Encryption',;
-        'Network Security',;
-        'Compliance',;
-      ],;
-    },;
-    {,
-      title: 'DevOps & CI/CD',;
-      description: 'Automated development and deployment pipelines',;
-      icon: Zap,;
-      features: ['Jenkins', 'GitLab CI', 'Docker', 'Monitoring'],;
-    },;
+        'Seamless migration to cloud platforms with minimal downtime';
+      icon: Cloud;
+      features: [
+        'AWS Migration';
+        'Azure Migration';
+        'Google Cloud Migration';
+        'Hybrid Cloud Setup';
+      ];
+    };
+    {
+      title: 'Infrastructure as Code';
+      description: 'Automated infrastructure deployment and management';
+      icon: Server;
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes'];
+    };
+    {
+      title: 'Cloud Security';
+      description: 'Comprehensive security solutions for cloud environments';
+      icon: Shield;
+      features: [
+        'Identity Management';
+        'Data Encryption';
+        'Network Security';
+        'Compliance';
+      ];
+    };
+    {
+      title: 'DevOps & CI/CD';
+      description: 'Automated development and deployment pipelines';
+      icon: Zap;
+      features: ['Jenkins', 'GitLab CI', 'Docker', 'Monitoring'];
+    };
   ],
-,
-  const cloudProviders = [,
-    {,
-      name: 'Amazon Web Services',;
-      description: 'Leading cloud platform with comprehensive services',;
-    },;
-    {,
-      name: 'Microsoft Azure',;
-      description: 'Enterprise-grade cloud solutions',;
-    },;
-    {,
-      name: 'Google Cloud Platform',;
-      description: 'Advanced analytics and AI capabilities',;
-    },;
-    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' ,},;
+  const cloudProviders = [
+    {
+      name: 'Amazon Web Services';
+      description: 'Leading cloud platform with comprehensive services';
+    };
+    {
+      name: 'Microsoft Azure';
+      description: 'Enterprise-grade cloud solutions';
+    };
+    {
+      name: 'Google Cloud Platform';
+      description: 'Advanced analytics and AI capabilities';
+    };
+    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' };
   ],
-,
-  return (,
+  return (
     <>,
-      <SEOHead,
+      <SEOHead
         title='Cloud Services - Zion Tech Group',
         description='Transform your infrastructure with our cloud services. Expert cloud migration, DevOps, and infrastructure management solutions.',
         keywords='cloud services, cloud migration, AWS, Azure, Google Cloud, DevOps, infrastructure as code',
@@ -112,23 +108,21 @@ const CloudServices = () => {,
                 power of cloud computing.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-                >,
+                  className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
                   Start Cloud Migration,
                 </Link>,
-                <Link,
+                <Link
                   href='/solutions',
-                  className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-                >,
+                  className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
                   View Solutions,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section className='py-20 bg-white'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -140,33 +134,29 @@ const CloudServices = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {services.map((service, index) => (,
-                <div,
+              {services.map((service, index) => (
+                <div
                   key={index}
-                  className='bg-gray-50 rounded-lg p-8 hover: shadow-lg transition-shadow',
-                >,
+                  className='bg-gray-50 rounded-lg p-8 hover: shadow-lg transition-shadow'>,
                   <div className='flex items-center mb-6'>,
                     <div className='p-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-cyan-60o0 mr-4'>,
                       <service.icon className='w-8 h-8 text-white' />,
                     </div>,
                     <h3 className='text-2xl font-bold text-gray-90o0'>,
-                      {service.title,}
+                      {service.title}
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0 mb-6'>{service.description}</p>,
                   <ul className='space-y-2'>,
-                    {service.features.map((feature, featureIndex) => (,
-                      <li,
+                    {service.features.map((feature, featureIndex) => (
+                      <li
                         key={featureIndex}
-                        className='flex items-center text-gray-70o0',
-                      >,
+                        className='flex items-center text-gray-70o0'>,
                         <CheckCircle className='w-5 h-5 text-green-50o0 mr-3 flex-shrink-0' />,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -182,22 +172,20 @@ const CloudServices = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {cloudProviders.map((provider, index) => (,
-                <div,
+              {cloudProviders.map((provider, index) => (
+                <div
                   key={index}
-                  className='bg-white rounded-lg p-6 text-center hover: shadow-md transition-shadow',
-                >,
+                  className='bg-white rounded-lg p-6 text-center hover: shadow-md transition-shadow'>,
                   <div className='p-3 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 w-fit mx-auto mb-4'>,
                     <Award className='w-6 h-6 text-white' />,
                   </div>,
                   <h3 className='font-semibold text-gray-90o0 mb-2'>,
-                    {provider.name,}
+                    {provider.name}
                   </h3>,
                   <p className='text-sm text-gray-60o0'>,
                     {provider.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -249,7 +237,7 @@ const CloudServices = () => {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-60o0 to-cyan-60o0'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
             <h2 className='text-3xl font-bold text-white mb-6'>,
@@ -260,16 +248,14 @@ const CloudServices = () => {,
               modernization.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Cloud Migration,
               </Link>,
-              <Link,
+              <Link
                 href='/about',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
                 Learn More About Us,
               </Link>,
             </div>,
@@ -277,9 +263,6 @@ const CloudServices = () => {,
         </section>,
       </main>,
       <Footer />,
-    </>,
-  ),
-,};
-,
-export default CloudServices,
-,
+    </>),
+};
+export default CloudServices;

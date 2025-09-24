@@ -1,4 +1,3 @@
-export default function Sitemap() {,
-  return new Response('OK'),
-}
+export default function Sitemap() {
+  return new Response('OK')}
 ,

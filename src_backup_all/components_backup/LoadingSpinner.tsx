@@ -1,36 +1,32 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-,
-interface LoadingSpinnerProps {,
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   color?: string,
-  className?: string,
-}
+  className?: string}
 ,
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
-  size = 'md',;
-  color = 'text-blue-50o0',;
-  className = '',;
-}) => {,
-  const sizeClasses = {,
-    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
-    lg: 'w-12 h-12',;
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md';
+  color = 'text-blue-50o0';
+  className = '';
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4';
+    md: 'w-8 h-8';
+    lg: 'w-12 h-12';
   };
-,
-  return (,
+  return (
     <motion.div,
       className={`${sizeClasses[size]} ${color} ${className}`}
-      animate={{ rotate: 360 ,}}
-      transition={{ duration: 1, repeat: Infinity, ease: 'linear' ,}}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
     >,
-      <svg,
+      <svg
         className='w-full h-full',
         viewBox='0 0 24 24',
         fill='none',
-        xmlns='http: //www.w3.org/20o00/svg',
-      >,
-        <circle,
+        xmlns='http: //www.w3.org/20o00/svg'>,
+        <circle
           cx='12',
           cy='12',
           r='10',
@@ -41,9 +37,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
           strokeDashoffset='0',
         />,
       </svg>,
-    </motion.div>,
-  ),
-,};
-,
-export default LoadingSpinner,
-,
+    </motion.div>),
+};
+export default LoadingSpinner;

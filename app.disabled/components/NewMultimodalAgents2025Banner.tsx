@@ -1,13 +1,10 @@
 "use client",
-,
-import React from "react",
-,
-export default function NewMultimodalAgents2025Banner() {,
+import React from "react";
+export default function NewMultimodalAgents2025Banner() {
   return null,
 import Link from 'next/link',
-,
-export default function NewMultimodalAgents20o25Banner(): JSX.Element {,
-	return (,
+export default function NewMultimodalAgents20o25Banner(): JSX.Element {
+	return (
 		<section className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-fuchsia-60o0 text-white py-10">,
 			<div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
 				<div className="flex flex-col md:flex-row items-center justify-between gap-6">,
@@ -21,23 +18,19 @@ export default function NewMultimodalAgents20o25Banner(): JSX.Element {,
 						</p>,
 					</div>,
 					<div className="flex items-center gap-3">,
-						<Link,
+						<Link
 							href="/blog/ai-20o25-multimodal-agents-enterprise-guide",
-							className="bg-white text-indigo-70o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors",
-						>,
+							className="bg-white text-indigo-70o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors">,
 							Read the guide →,
 						</Link>,
-						<Link,
+						<Link
 							href="/blog",
-							className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-70o0 transition-colors",
-						>,
+							className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-70o0 transition-colors">,
 							More articles,
 						</Link>,
 					</div>,
 				</div>,
 			</div>,
-		</section>,
-	),
-,}
-,
+		</section>),
+}
 }

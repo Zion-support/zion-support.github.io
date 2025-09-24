@@ -1,176 +1,149 @@
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
-import {,
-  Search, Globe, Share2, TrendingUp,;
-  Eye, Users, BarChart3, Target,;
-  CheckCircle, AlertTriangle, Info, X,
-} from 'lucide-react',
-,
-interface SEOData {,
+import {
+  Search, Globe, Share2, TrendingUp;
+  Eye, Users, BarChart3, Target;
+  CheckCircle, AlertTriangle, Info, X} from 'lucide-react',
+interface SEOData {
   title: string,
   description: string,
   keywords: string[],
   ogImage: string,
   canonicalUrl: string,
   structuredData: any,
-  socialMedia: {,
-    twitter: {,
+  socialMedia: {
+    twitter: {
       card: string,
       site: string,
       creator: string,
-    ,};
-    facebook: {,
+    };
+    facebook: {
       appId: string,
       type: string,
-    ,};
+    };
   };
 }
 ,
-interface SEOAnalysis {,
+interface SEOAnalysis {
   score: number,
   issues: string[],
   recommendations: string[],
-  metaTags: {,
+  metaTags: {
     title: boolean,
     description: boolean,
     keywords: boolean,
     ogImage: boolean,
     canonical: boolean,
     structuredData: boolean,
-  ,};
+  };
 }
 ,
-const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {,
-  const [analysis, setAnalysis] = useState<SEOAnalysis>({,
-    score: 0,;
-    issues: [],;
-    recommendations: [],;
-    metaTags: {,
-      title: false,;
-      description: false,;
-      keywords: false,;
-      ogImage: false,;
-      canonical: false,;
+const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
+  const [analysis, setAnalysis] = useState<SEOAnalysis>({
+    score: 0;
+    issues: [];
+    recommendations: [];
+    metaTags: {
+      title: false;
+      description: false;
+      keywords: false;
+      ogImage: false;
+      canonical: false;
       structuredData: false,
-    ,}
+    }
   }),
-,
   const [showAnalysis, setShowAnalysis] = useState(false),
-,
-  useEffect(() => {,
-    analyzeSEO(),
-  }, [seoData]),
-,
-  const analyzeSEO = () => {,
+  useEffect(() => {
+    analyzeSEO()}, [seoData]),
+  const analyzeSEO = () => {
     const issues: string[] = [],
     const recommendations: string[] = [],
     let score = 10o0,
-,
     // Check title,
-    if (seoData.title.length < 30 || seoData.title.length > 60) {,
+    if (seoData.title.length < 30 || seoData.title.length > 60) {
       issues.push('Title length should be between 30-60 characters'),
       score -= 15,
-    ,} else {,
-      recommendations.push('Title length is optimal'),
-    }
+    } else {
+      recommendations.push('Title length is optimal')}
 ,
     // Check description,
-    if (seoData.description.length < 120 || seoData.description.length > 160) {,
+    if (seoData.description.length < 120 || seoData.description.length > 160) {
       issues.push('Description length should be between 120-160 characters'),
-      score -= 15,
-    } else {,
-      recommendations.push('Description length is optimal'),
-    }
+      score -= 15} else {
+      recommendations.push('Description length is optimal')}
 ,
     // Check keywords,
-    if (seoData.keywords.length < 3) {,
+    if (seoData.keywords.length < 3) {
       issues.push('Include at least 3-5 relevant keywords'),
-      score -= 10,
-    } else {,
-      recommendations.push('Keywords are well defined'),
-    }
+      score -= 10} else {
+      recommendations.push('Keywords are well defined')}
 ,
     // Check OG image,
-    if (!seoData.ogImage) {,
+    if (!seoData.ogImage) {
       issues.push('Open Graph image is missing'),
-      score -= 10,
-    } else {,
-      recommendations.push('Open Graph image is present'),
-    }
+      score -= 10} else {
+      recommendations.push('Open Graph image is present')}
 ,
     // Check canonical URL,
-    if (!seoData.canonicalUrl) {,
+    if (!seoData.canonicalUrl) {
       issues.push('Canonical URL is missing'),
-      score -= 10,
-    } else {,
-      recommendations.push('Canonical URL is present'),
-    }
+      score -= 10} else {
+      recommendations.push('Canonical URL is present')}
 ,
     // Check structured data,
-    if (!seoData.structuredData) {,
+    if (!seoData.structuredData) {
       issues.push('Structured data is missing'),
-      score -= 20,
-    } else {,
-      recommendations.push('Structured data is present'),
-    }
+      score -= 20} else {
+      recommendations.push('Structured data is present')}
 ,
     // Additional recommendations,
-    if (seoData.title.includes(seoData.keywords[0])) {,
-      recommendations.push('Primary keyword is in title'),
-    } else {,
+    if (seoData.title.includes(seoData.keywords[0])) {
+      recommendations.push('Primary keyword is in title')} else {
       issues.push('Primary keyword should be in title'),
-      score -= 5,
-    }
+      score -= 5}
 ,
-    if (seoData.description.includes(seoData.keywords[0])) {,
-      recommendations.push('Primary keyword is in description'),
-    } else {,
+    if (seoData.description.includes(seoData.keywords[0])) {
+      recommendations.push('Primary keyword is in description')} else {
       issues.push('Primary keyword should be in description'),
-      score -= 5,
-    }
+      score -= 5}
 ,
-    setAnalysis({,
-      score: Math.max(0, score),;
-      issues,;
-      recommendations,;
-      metaTags: {,
-        title: seoData.title.length >= 30 && seoData.title.length <= 60,;
-        description: seoData.description.length >= 120 && seoData.description.length <= 160,;
-        keywords: seoData.keywords.length >= 3,;
-        ogImage: !!seoData.ogImage,;
-        canonical: !!seoData.canonicalUrl,;
+    setAnalysis({
+      score: Math.max(0, score);
+      issues;
+      recommendations;
+      metaTags: {
+        title: seoData.title.length >= 30 && seoData.title.length <= 60;
+        description: seoData.description.length >= 120 && seoData.description.length <= 160;
+        keywords: seoData.keywords.length >= 3;
+        ogImage: !!seoData.ogImage;
+        canonical: !!seoData.canonicalUrl;
         structuredData: !!seoData.structuredData,
-      ,}
-    }),
-  };
-,
-  const getScoreColor = (score: number) => {,
+      }
+    })};
+  const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
     if (score >= 70) return 'text-orange-40o0',
     return 'text-red-40o0',
-  ,};
-,
-  const getScoreGrade = (score: number) => {,
+  };
+  const getScoreGrade = (score: number) => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
     if (score >= 60) return 'D',
     return 'F',
-  ,};
-,
-  return (,
+  };
+  return (
     <>,
       {/* SEO Analysis Button */}
-      <button,
+      <button
         onClick={() => setShowAnalysis(true)}
         className="fixed bottom-36 right-6 z-50 w-14 h-14 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-purple-50o0/50",
-        aria-label="Open SEO analysis",
-      >,
+        aria-label="Open SEO analysis">,
         <Search className="w-7 h-7 mx-auto"  />,
       </button>,
-      {/* SEO Analysis Panel */,}
-      {showAnalysis && (,
+      {/* SEO Analysis Panel */}
+      {showAnalysis && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">,
           <div className="bg-gray-90o0 border border-purple-50o0/30 rounded-2xl p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto">,
             {/* Header */}
@@ -179,15 +152,14 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                 <TrendingUp className="w-6 h-6 text-purple-40o0"  />,
                 SEO Analysis,
               </h2>,
-              <button,
+              <button
                 onClick={() => setShowAnalysis(false)}
                 className="p-2 text-gray-40o0 hover: text-white transition-colors duration-20o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0/50 rounded-lg",
-                aria-label="Close SEO analysis",
-              >,
+                aria-label="Close SEO analysis">,
                 <X className="w-5 h-5"  />,
               </button>,
             </div>,
-            {/* SEO Score */,}
+            {/* SEO Score */}
             <div className="mb-6 p-4 bg-gray-80o0 rounded-xl border border-purple-50o0/20">,
               <div className="flex items-center justify-between">,
                 <div>,
@@ -215,51 +187,39 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                 <div className="space-y-3">,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">Title</span>,
-                    {analysis.metaTags.title ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    ),}
+                    {analysis.metaTags.title ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">Description</span>,
-                    {analysis.metaTags.description ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    )}
+                    {analysis.metaTags.description ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">Keywords</span>,
-                    {analysis.metaTags.keywords ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    )}
+                    {analysis.metaTags.keywords ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">OG Image</span>,
-                    {analysis.metaTags.ogImage ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    )}
+                    {analysis.metaTags.ogImage ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">Canonical</span>,
-                    {analysis.metaTags.canonical ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    )}
+                    {analysis.metaTags.canonical ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-30o0">Structured Data</span>,
-                    {analysis.metaTags.structuredData ? (,
-                      <CheckCircle className="w-5 h-5 text-green-40o0"  />,
-                    ) : (,
-                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />,
-                    )}
+                    {analysis.metaTags.structuredData ? (
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />) : (
+                      <AlertTriangle className="w-5 h-5 text-red-40o0"  />)}
                   </div>,
                 </div>,
               </div>,
@@ -272,13 +232,13 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                   <div>,
                     <span className="text-gray-30o0">Title: </span>,
                     <p className="text-white font-mono text-xs break-words">,
-                      {seoData.title,}
+                      {seoData.title}
                     </p>,
                   </div>,
                   <div>,
                     <span className="text-gray-30o0">Description: </span>,
                     <p className="text-white font-mono text-xs break-words">,
-                      {seoData.description,}
+                      {seoData.description}
                     </p>,
                   </div>,
                   <div>,
@@ -298,16 +258,13 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                   Issues Found,
                 </h3>,
                 <div className="space-y-2">,
-                  {analysis.issues.length > 0 ? (,
-                    analysis.issues.map((issue, index) => (,
+                  {analysis.issues.length > 0 ? (
+                    analysis.issues.map((issue, index) => (
                       <div key={index} className="flex items-start gap-2">,
                         <div className="w-2 h-2 bg-red-40o0 rounded-full mt-2 flex-shrink-0"></div>,
                         <span className="text-red-30o0 text-sm">{issue}</span>,
-                      </div>,
-                    )),
-                  ) : (,
-                    <p className="text-green-40o0 text-sm">No issues found! Your SEO is optimized.</p>,
-                  )}
+                      </div>))) : (
+                    <p className="text-green-40o0 text-sm">No issues found! Your SEO is optimized.</p>)}
                 </div>,
               </div>,
               <div className="bg-gray-80o0 p-4 rounded-xl border border-gray-70o0">,
@@ -316,12 +273,11 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                   Recommendations,
                 </h3>,
                 <div className="space-y-2">,
-                  {analysis.recommendations.map((rec, index) => (,
+                  {analysis.recommendations.map((rec, index) => (
                     <div key={index} className="flex items-start gap-2">,
                       <div className="w-2 h-2 bg-green-40o0 rounded-full mt-2 flex-shrink-0"></div>,
                       <span className="text-green-30o0 text-sm">{rec}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -333,15 +289,13 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
               </h3>,
               <div className="bg-white rounded-lg p-4 max-w-md">,
                 <div className="w-full h-32 bg-gray-20o0 rounded mb-3 flex items-center justify-center">,
-                  {seoData.ogImage ? (,
-                    <img,
+                  {seoData.ogImage ? (
+                    <img
                       src={seoData.ogImage} ,
                       alt="Social media preview",
                       className="w-full h-full object-cover rounded",
-                     />,
-                  ) : (,
-                    <span className="text-gray-50o0">No image</span>,
-                  )}
+                     />) : (
+                    <span className="text-gray-50o0">No image</span>)}
                 </div>,
                 <h4 className="font-bold text-gray-90o0 text-sm mb-1 line-clamp-2">,
                   {seoData.title}
@@ -361,22 +315,19 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
                 Action Items,
               </h3>,
               <div className="space-y-2 text-sm text-gray-30o0">,
-                {analysis.score < 90 && (,
+                {analysis.score < 90 && (
                   <>,
                     <p>• Fix identified issues to improve SEO score</p>,
                     <p>• Optimize meta tags for better search visibility</p>,
                     <p>• Ensure structured data is properly implemented</p>,
                     <p>• Monitor Core Web Vitals for performance</p>,
-                  </>,
-                )}
-                {analysis.score >= 90 && (,
-                  <p className="text-green-40o0">Excellent SEO optimization! Continue monitoring and stay updated with best practices.</p>,
-                )}
+                  </>)}
+                {analysis.score >= 90 && (
+                  <p className="text-green-40o0">Excellent SEO optimization! Continue monitoring and stay updated with best practices.</p>)}
               </div>,
             </div>,
           </div>,
-        </div>,
-      )}
+        </div>)}
 ,
       {/* SEO Meta Tags */}
       <Head>,
@@ -384,36 +335,34 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
         <meta name="description" content={seoData.description}  />,
         <meta name="keywords" content={seoData.keywords.join(', ')}  />,
         {/* Open Graph */}
-        <meta property="og: title" content={seoData.title,}  />,
-        <meta property="og: description" content={seoData.description,}  />,
-        <meta property="og: image" content={seoData.ogImage,}  />,
-        <meta property="og: url" content={seoData.canonicalUrl,}  />,
+        <meta property="og: title" content={seoData.title}  />,
+        <meta property="og: description" content={seoData.description}  />,
+        <meta property="og: image" content={seoData.ogImage}  />,
+        <meta property="og: url" content={seoData.canonicalUrl}  />,
         <meta property="og: type" content="website"  />,
         <meta property="og:site_name" content="Zion Tech Group"  />,
-        {/* Twitter */,}
-        <meta name="twitter: card" content={seoData.socialMedia.twitter.card,}  />,
-        <meta name="twitter: site" content={seoData.socialMedia.twitter.site,}  />,
-        <meta name="twitter: creator" content={seoData.socialMedia.twitter.creator,}  />,
-        <meta name="twitter: title" content={seoData.title,}  />,
-        <meta name="twitter: description" content={seoData.description,}  />,
-        <meta name="twitter: image" content={seoData.ogImage,}  />,
+        {/* Twitter */}
+        <meta name="twitter: card" content={seoData.socialMedia.twitter.card}  />,
+        <meta name="twitter: site" content={seoData.socialMedia.twitter.site}  />,
+        <meta name="twitter: creator" content={seoData.socialMedia.twitter.creator}  />,
+        <meta name="twitter: title" content={seoData.title}  />,
+        <meta name="twitter: description" content={seoData.description}  />,
+        <meta name="twitter: image" content={seoData.ogImage}  />,
         {/* Facebook */}
-        <meta property="fb: app_id" content={seoData.socialMedia.facebook.appId,}  />,
-        <meta property="og: type" content={seoData.socialMedia.facebook.type,}  />,
+        <meta property="fb: app_id" content={seoData.socialMedia.facebook.appId}  />,
+        <meta property="og: type" content={seoData.socialMedia.facebook.type}  />,
         {/* Canonical */}
-        {seoData.canonicalUrl && (,
-          <link rel="canonical" href={seoData.canonicalUrl}  />,
-        )}
+        {seoData.canonicalUrl && (
+          <link rel="canonical" href={seoData.canonicalUrl}  />)}
 ,
         {/* Structured Data */}
-        {seoData.structuredData && (,
-          <script,
+        {seoData.structuredData && (
+          <script
             type="application/ld+json",
-            dangerouslySetInnerHTML={{,
+            dangerouslySetInnerHTML={{
               __html: JSON.stringify(seoData.structuredData),
-            ,}}
-           />,
-        )}
+            }}
+           />)}
 ,
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1"  />,
@@ -422,7 +371,7 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
         <meta name="revisit-after" content="7 days"  />,
         <meta name="distribution" content="global"  />,
         <meta name="rating" content="general"  />,
-        {/* Mobile Optimization */,}
+        {/* Mobile Optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"  />,
         <meta name="format-detection" content="telephone=no"  />,
         {/* Security */}
@@ -435,8 +384,6 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData ,}> = ({ seoData }) => {
         <link rel="dns-prefetch" href="//cdn.ziontechgroup.com"  />,
         <link rel="dns-prefetch" href="//api.ziontechgroup.com"  />,
       </Head>,
-    </>,
-  ),
-,};
-,
-export default EnhancedSEOOptimizer,
+    </>),
+};
+export default EnhancedSEOOptimizer;

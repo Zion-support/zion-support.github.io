@@ -5,19 +5,18 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
-import {,
-  AuthRoutes,;
-  DashboardRoutes,;
-  MarketplaceRoutes,;
-  TalentRoutes,;
-  AdminRoutes,;
-  MobileAppRoutes,;
-  ContentRoutes,;
-  ErrorRoutes,;
-  EnterpriseRoutes,;
-  CommunityRoutes,;
-  DeveloperRoutes,
-} from './routes',
+import {
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+  DeveloperRoutes} from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory')),
@@ -33,33 +32,30 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
-,
-const baseRoutes = [,
-  { path: '/'element: <Home /> ,},;
-  { path: '/match'element: <AIMatcherPage /> ,},;
-  { path: '/login'element: <Login /> ,},;
-  { path: '/signup'element: <Signup /> ,},;
-  { path: '/talent'element: <TalentDirectory /> ,},;
-  { path: '/talents'element: <TalentsPage /> ,},;
-  { path: '/services'element: <ServicesPage /> ,},;
-  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> ,},;
-  { path: '/categories'element: <Categories /> ,},;
-  { path: '/equipment'element: <EquipmentPage /> ,},;
-  { path: '/analytics'element: <Analytics /> ,},;
-  { path: '/mobile-launch'element: <MobileLaunchPage /> ,},;
-  { path: '/open-app'element: <OpenAppRedirect /> ,},;
-  { path: '/community'element: <CommunityPage /> ,},;
-  { path: '/contact'element: <ContactPage /> ,}],
-,
-const App = () => {,
-  return (,
+const baseRoutes = [
+  { path: '/'element: <Home /> };
+  { path: '/match'element: <AIMatcherPage /> };
+  { path: '/login'element: <Login /> };
+  { path: '/signup'element: <Signup /> };
+  { path: '/talent'element: <TalentDirectory /> };
+  { path: '/talents'element: <TalentsPage /> };
+  { path: '/services'element: <ServicesPage /> };
+  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> };
+  { path: '/categories'element: <Categories /> };
+  { path: '/equipment'element: <EquipmentPage /> };
+  { path: '/analytics'element: <Analytics /> };
+  { path: '/mobile-launch'element: <MobileLaunchPage /> };
+  { path: '/open-app'element: <OpenAppRedirect /> };
+  { path: '/community'element: <CommunityPage /> };
+  { path: '/contact'element: <ContactPage /> }],
+const App = () => {
+  return (
     <WhitelabelProvider>,
       <ThemeProvider defaultTheme="dark">,
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>,
           <Routes>,
-            {baseRoutes.map(({ pathelement }) => (,
-              <Route key={path} path={path} element={element} />,
-            ))}
+            {baseRoutes.map(({ pathelement }) => (
+              <Route key={path} path={path} element={element} />))}
             <Route path="/auth/*" element={<AuthRoutes />} />,
             <Route path="/dashboard/*" element={<DashboardRoutes />} />,
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />,
@@ -76,9 +72,5 @@ const App = () => {,
         <Toaster />,
         <SonnerToaster position="top-right" />,
       </ThemeProvider>,
-    </WhitelabelProvider>,
-  ),
-};
-,
-export default App,
-,
+    </WhitelabelProvider>)};
+export default App;

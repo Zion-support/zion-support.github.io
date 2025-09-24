@@ -1,100 +1,86 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
-,
-interface DemoStep {,
+interface DemoStep {
   id: string,
   title: string,
   description: string,
   action: string,
   result: string,
   icon: string,
-,}
+}
 ,
-const InteractiveDemoWidget: React.FC = () => {,
+const InteractiveDemoWidget: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0),
   const [isPlaying, setIsPlaying] = useState(false),
   const [completedSteps, setCompletedSteps] = useState<number[]>([]),
-,
-  const demoSteps: DemoStep[] = [,
-    {,
-      id: '1',;
-      title: 'Data Input',;
-      description: 'Upload your business data and requirements',;
-      action: 'Uploading data...',;
-      result: 'Data processed successfully!',;
+  const demoSteps: DemoStep[] = [
+    {
+      id: '1';
+      title: 'Data Input';
+      description: 'Upload your business data and requirements';
+      action: 'Uploading data...';
+      result: 'Data processed successfully!';
       icon: '📊',
-    ,},;
-    {,
-      id: '2',;
-      title: 'AI Analysis',;
-      description: 'AI analyzes patterns and identifies opportunities',;
-      action: 'Analyzing data patterns...',;
-      result: 'Found 15 optimization opportunities!',;
+    };
+    {
+      id: '2';
+      title: 'AI Analysis';
+      description: 'AI analyzes patterns and identifies opportunities';
+      action: 'Analyzing data patterns...';
+      result: 'Found 15 optimization opportunities!';
       icon: '🤖',
-    ,},;
-    {,
-      id: '3',;
-      title: 'Strategy Generation',;
-      description: 'AI generates personalized implementation strategy',;
-      action: 'Generating strategy...',;
-      result: 'Strategy created with 340% ROI projection!',;
+    };
+    {
+      id: '3';
+      title: 'Strategy Generation';
+      description: 'AI generates personalized implementation strategy';
+      action: 'Generating strategy...';
+      result: 'Strategy created with 340% ROI projection!';
       icon: '💡',
-    ,},;
-    {,
-      id: '4',;
-      title: 'Implementation',;
-      description: 'Deploy AI solutions with guided setup',;
-      action: 'Deploying solutions...',;
-      result: 'AI solutions deployed successfully!',;
+    };
+    {
+      id: '4';
+      title: 'Implementation';
+      description: 'Deploy AI solutions with guided setup';
+      action: 'Deploying solutions...';
+      result: 'AI solutions deployed successfully!';
       icon: '🚀',
-    ,},;
-    {,
-      id: '5',;
-      title: 'Monitoring',;
-      description: 'Real-time monitoring and optimization',;
-      action: 'Monitoring performance...',;
-      result: 'Achieved 45% efficiency gain!',;
+    };
+    {
+      id: '5';
+      title: 'Monitoring';
+      description: 'Real-time monitoring and optimization';
+      action: 'Monitoring window.performance...';
+      result: 'Achieved 45% efficiency gain!';
       icon: '📈',
-    ,}
+    }
   ],
-,
-  const handleStartDemo = () => {,
+  const handleStartDemo = () => {
     setIsPlaying(true),
     setCurrentStep(0),
-    setCompletedSteps([]),
-  };
-,
-  const handleNextStep = () => {,
-    if (currentStep < demoSteps.length - 1) {,
+    setCompletedSteps([])};
+  const handleNextStep = () => {
+    if (currentStep < demoSteps.length - 1) {
       setCompletedSteps(prev => [...prev, currentStep]),
-      setCurrentStep(prev => prev + 1),
-    } else {,
+      setCurrentStep(prev => prev + 1)} else {
       setCompletedSteps(prev => [...prev, currentStep]),
-      setIsPlaying(false),
-    }
+      setIsPlaying(false)}
   };
-,
-  const handleResetDemo = () => {,
+  const handleResetDemo = () => {
     setIsPlaying(false),
     setCurrentStep(0),
-    setCompletedSteps([]),
-  };
-,
-  useEffect(() => {,
-    if (isPlaying && currentStep < demoSteps.length) {,
-      const timer = setTimeout(() => {,
-        handleNextStep(),
-      }, 30o00),
-      return () => clearTimeout(timer),
-    }
+    setCompletedSteps([])};
+  useEffect(() => {
+    if (isPlaying && currentStep < demoSteps.length) {
+      const timer = setTimeout(() => {
+        handleNextStep()}, 30o00),
+      return () => clearTimeout(timer)}
   }, [isPlaying, currentStep]),
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-indigo-10o0 text-indigo-80o0 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-semibold">🎮 INTERACTIVE DEMO</span>,
@@ -108,39 +94,36 @@ const InteractiveDemoWidget: React.FC = () => {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-          {/* Demo Steps */,}
+          {/* Demo Steps */}
           <div className="space-y-6">,
-            {demoSteps.map((step, index) => (,
-              <div,
+            {demoSteps.map((step, index) => (
+              <div
                 key={step.id}
-                className={`relative p-6 rounded-xl border-2 transition-all duration-50o0 ${,
+                className={`relative p-6 rounded-xl border-2 transition-all duration-50o0 ${
                   index === currentStep && isPlaying,
                     ? 'border-indigo-50o0 bg-indigo-50 shadow-lg',
                     : completedSteps.includes(index),
                     ? 'border-green-50o0 bg-green-50',
-                    : 'border-gray-20o0 bg-white',
-                }`}
+                    : 'border-gray-20o0 bg-white'}`}
               >,
                 <div className="flex items-start">,
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl mr-4 ${,
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl mr-4 ${
                     index === currentStep && isPlaying,
                       ? 'bg-indigo-50o0 text-white animate-pulse',
                       : completedSteps.includes(index),
                       ? 'bg-green-50o0 text-white',
-                      : 'bg-gray-20o0 text-gray-60o0',
-                  }`}>,
+                      : 'bg-gray-20o0 text-gray-60o0'}`}>,
                     {completedSteps.includes(index) ? '✓' : step.icon}
                   </div>,
                   <div className="flex-1">,
-                    <h3 className={`text-lg font-bold mb-2 ${,
-                      index === currentStep && isPlaying ? 'text-indigo-70o0' : 'text-gray-90o0',
-                    }`}>,
+                    <h3 className={`text-lg font-bold mb-2 ${
+                      index === currentStep && isPlaying ? 'text-indigo-70o0' : 'text-gray-90o0'}`}>,
                       {step.title}
                     </h3>,
                     <p className="text-gray-60o0 mb-3">,
                       {step.description}
                     </p>,
-                    {index === currentStep && isPlaying && (,
+                    {index === currentStep && isPlaying && (
                       <div className="bg-indigo-10o0 p-3 rounded-lg">,
                         <div className="flex items-center mb-2">,
                           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-indigo-60o0 mr-2"></div>,
@@ -151,10 +134,9 @@ const InteractiveDemoWidget: React.FC = () => {,
                         <div className="text-sm text-indigo-60o0">,
                           {step.result}
                         </div>,
-                      </div>,
-                    )}
+                      </div>)}
 ,
-                    {completedSteps.includes(index) && (,
+                    {completedSteps.includes(index) && (
                       <div className="bg-green-10o0 p-3 rounded-lg">,
                         <div className="text-sm font-semibold text-green-70o0 mb-1">,
                           ✓ Completed,
@@ -162,18 +144,14 @@ const InteractiveDemoWidget: React.FC = () => {,
                         <div className="text-sm text-green-60o0">,
                           {step.result}
                         </div>,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                 </div>,
                 {/* Progress Line */}
-                {index < demoSteps.length - 1 && (,
-                  <div className={`absolute left-6 top-16 w-0.5 h-8 ${,
-                    completedSteps.includes(index) ? 'bg-green-50o0' : 'bg-gray-20o0',
-                  }`}></div>,
-                )}
-              </div>,
-            ))}
+                {index < demoSteps.length - 1 && (
+                  <div className={`absolute left-6 top-16 w-0.5 h-8 ${
+                    completedSteps.includes(index) ? 'bg-green-50o0' : 'bg-gray-20o0'}`}></div>)}
+              </div>))}
           </div>,
           {/* Demo Controls & Info */}
           <div className="space-y-8">,
@@ -181,39 +159,35 @@ const InteractiveDemoWidget: React.FC = () => {,
             <div className="bg-white rounded-2xl shadow-xl p-8">,
               <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Demo Controls</h3>,
               <div className="space-y-4">,
-                {!isPlaying ? (,
-                  <button,
+                {!isPlaying ? (
+                  <button
                     onClick={handleStartDemo}
-                    className="w-full bg-indigo-60o0 text-white py-4 rounded-lg font-bold text-lg hover: bg-indigo-70o0 transition-colors",
-                  >,
+                    className="w-full bg-indigo-60o0 text-white py-4 rounded-lg font-bold text-lg hover: bg-indigo-70o0 transition-colors">,
                     🚀 Start Interactive Demo,
-                  </button>,
-                ) : (,
+                  </button>) : (
                   <div className="text-center">,
                     <div className="text-lg font-semibold text-indigo-70o0 mb-4">,
                       Demo in Progress...,
                     </div>,
                     <div className="w-full bg-gray-20o0 rounded-full h-2 mb-4">,
-                      <div,
+                      <div
                         className="bg-indigo-60o0 h-2 rounded-full transition-all duration-30o0",
-                        style={{ width: `${((currentStep + 1) / demoSteps.length) * 10o0,}%` }}
+                        style={{ width: `${((currentStep + 1) / demoSteps.length) * 10o0}%` }}
                       ></div>,
                     </div>,
                     <div className="text-sm text-gray-60o0">,
                       Step {currentStep + 1} of {demoSteps.length}
                     </div>,
-                  </div>,
-                )}
+                  </div>)}
 ,
-                <button,
+                <button
                   onClick={handleResetDemo}
-                  className="w-full border-2 border-gray-30o0 text-gray-70o0 py-3 rounded-lg font-semibold hover: bg-gray-50 transition-colors",
-                >,
+                  className="w-full border-2 border-gray-30o0 text-gray-70o0 py-3 rounded-lg font-semibold hover: bg-gray-50 transition-colors">,
                   🔄 Reset Demo,
                 </button>,
               </div>,
             </div>,
-            {/* Demo Features */,}
+            {/* Demo Features */}
             <div className="bg-white rounded-2xl shadow-xl p-8">,
               <h3 className="text-2xl font-bold text-gray-90o0 mb-6">What 'You', 'll See</h3>,
               <div className="space-y-4">,
@@ -256,7 +230,7 @@ const InteractiveDemoWidget: React.FC = () => {,
               </div>,
             </div>,
             {/* Results Summary */}
-            {completedSteps.length > 0 && (,
+            {completedSteps.length > 0 && (
               <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl shadow-xl p-8">,
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Demo Results</h3>,
                 <div className="grid grid-cols-2 gap-4 mb-6">,
@@ -282,8 +256,7 @@ const InteractiveDemoWidget: React.FC = () => {,
                     <li>• 60% reduction in manual tasks</li>,
                   </ul>,
                 </div>,
-              </div>,
-            ),}
+              </div>)}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -302,8 +275,6 @@ const InteractiveDemoWidget: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InteractiveDemoWidget,
+    </section>),
+};
+export default InteractiveDemoWidget;

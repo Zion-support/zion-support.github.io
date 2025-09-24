@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AIConsciousnessEvolution20o26Banner: React.FC = () => {,
-  return (,
+const AIConsciousnessEvolution20o26Banner: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-red-60o0 via-pink-60o0 to-purple-60o0 text-white py-16'>,
       <div className='absolute inset-0 bg-black/20'></div>,
       <div className='absolute inset-0 bg-gradient-to-r from-red-50o0/30 to-purple-50o0/30'></div>,
-      {/* Animated consciousness particles */,}
+      {/* Animated consciousness particles */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>,
         <div className='absolute top-12 left-12 w-32 h-32 bg-white/10 rounded-full animate-pulse'></div>,
         <div className='absolute top-20 right-20 w-20 h-20 bg-pink-30o0/20 rounded-full animate-bounce'></div>,
@@ -43,29 +42,26 @@ const AIConsciousnessEvolution20o26Banner: React.FC = () => {,
             </span>,
           </div>,
           <div className='flex flex-wrap justify-center gap-6'>,
-            <Link,
+            <Link
               href='/ai-consciousness-evolution-20o26',
-              className='group inline-flex items-center px-8 py-4 bg-white text-red-60o0 font-bold text-lg rounded-full hover:bg-pink-50 transition-all duration-30o0 hover:scale-10o5 shadow-xl',
-            >,
+              className='group inline-flex items-center px-8 py-4 bg-white text-red-60o0 font-bold text-lg rounded-full hover:bg-pink-50 transition-all duration-30o0 hover:scale-10o5 shadow-xl'>,
               Explore AI Consciousness,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 shadow-xl',
-            >,
+              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-full hover: bg-white/10 transition-all duration-30o0 hover:scale-10o5 shadow-xl'>,
               Join the Revolution,
             </Link>,
           </div>,
@@ -77,9 +73,6 @@ const AIConsciousnessEvolution20o26Banner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AIConsciousnessEvolution20o26Banner,
-,
+    </div>),
+};
+export default AIConsciousnessEvolution20o26Banner;

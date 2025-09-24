@@ -1,14 +1,13 @@
 import { Button } from '@/components/ui/button',
 import { GradientHeading } from '@/components/GradientHeading',
-,
-export function EnterpriseHero() {,
-  return (,
+export function EnterpriseHero() {
+  return (
     <section className='py-20 px-4 md: px-6 bg-gradient-to-b from-background to-background/80'>,
       <div className='container mx-auto max-w-6xl'>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
           <div>,
             <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6'>,
-              Enterprise{' ',}
+              Enterprise{' '}
               <GradientHeading className='inline'>,
                 Talent Solutions,
               </GradientHeading>,
@@ -30,17 +29,17 @@ export function EnterpriseHero() {,
                 Trusted by leading enterprises:,
               </p>,
               <div className='flex gap-6 opacity-70'>,
-                <img,
+                <img
                   src='/logos/placeholder-logo.svg',
                   alt='Enterprise 1',
                   className='h-8',
                 />,
-                <img,
+                <img
                   src='/logos/placeholder-logo.svg',
                   alt='Enterprise 2',
                   className='h-8',
                 />,
-                <img,
+                <img
                   src='/logos/placeholder-logo.svg',
                   alt='Enterprise 3',
                   className='h-8',
@@ -51,7 +50,7 @@ export function EnterpriseHero() {,
           <div className='relative'>,
             <div className='aspect-video rounded-lg bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 p-1'>,
               <div className='w-full h-full bg-card rounded-md flex items-center justify-center'>,
-                <img,
+                <img
                   src='/placeholder.svg',
                   alt='Enterprise Dashboard',
                   className='rounded max-w-full max-h-full object-cover',
@@ -66,7 +65,6 @@ export function EnterpriseHero() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

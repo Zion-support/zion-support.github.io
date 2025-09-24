@@ -1,9 +1,7 @@
-export function ApplicationCard() {,
-  return (,
+export function ApplicationCard() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

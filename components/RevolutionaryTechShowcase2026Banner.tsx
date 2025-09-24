@@ -1,72 +1,62 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Sparkles,
   Zap,
   Brain,
   Rocket,
   Star,
   ArrowRight,
-  Play,;
-  Globe,;
-  Shield,;
-  Target,;
-  Lightbulb,;
-  TrendingUp,;
-  Users,;
-  Code,
-} from 'lucide-react',
-,
-const RevolutionaryTechShowcase20o26Banner = () => {,
+  Play;
+  Globe;
+  Shield;
+  Target;
+  Lightbulb;
+  TrendingUp;
+  Users;
+  Code} from 'lucide-react',
+const RevolutionaryTechShowcase20o26Banner = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % 3),
-    }50o00),
-    return () => clearInterval(interval),
-  }[]),
-,
-  const slides = [,
-    {,
-      title: "Neural Interface Revolution",;
-      subtitle: "Direct Brain-Computer Integration",;
-      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.",;
-      icon: Brain,;
-      color: "from-purple-60o0 to-blue-60o0",;
-      stats: "2.3M+ Users",;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % 3)}50o00),
+    return () => clearInterval(interval)}[]),
+  const slides = [
+    {
+      title: "Neural Interface Revolution";
+      subtitle: "Direct Brain-Computer Integration";
+      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.";
+      icon: Brain;
+      color: "from-purple-60o0 to-blue-60o0";
+      stats: "2.3M+ Users";
       features: ["Thought Control"Real-time Processing"Zero Latency"],
-    ,},;
-    {,
-      title: "Quantum AI Fusion",;
-      subtitle: "Exponential Processing Power",;
-      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",;
-      icon: Zap,;
-      color: "from-green-60o0 to-teal-60o0",;
-      stats: "10,0o00x Faster",;
+    };
+    {
+      title: "Quantum AI Fusion";
+      subtitle: "Exponential Processing Power";
+      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.";
+      icon: Zap;
+      color: "from-green-60o0 to-teal-60o0";
+      stats: "10,0o00x Faster";
       features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"],
-    ,},;
-    {,
-      title: "Synthetic Intelligence",;
-      subtitle: "Consciousness-Level AI",;
-      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",;
-      icon: Rocket,;
-      color: "from-orange-60o0 to-red-60o0",;
-      stats: "99.9% Accuracy",;
+    };
+    {
+      title: "Synthetic Intelligence";
+      subtitle: "Consciousness-Level AI";
+      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.";
+      icon: Rocket;
+      color: "from-orange-60o0 to-red-60o0";
+      stats: "99.9% Accuracy";
       features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"],
-    ,}
+    }
   ],
-,
   const currentSlideData = slides[currentSlide],
-,
   if (!isVisible) return null,
-,
-  return (,
+  return (
     <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-purple-90o0 overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -74,13 +64,12 @@ const RevolutionaryTechShowcase20o26Banner = () => {,
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-60o0/10 to-blue-60o0/10"></div>,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">,
             <Sparkles className="w-4 h-4"  />,
             REVOLUTIONARY TECH SHOWCASE 20o26,
@@ -96,19 +85,18 @@ const RevolutionaryTechShowcase20o26Banner = () => {,
             defining the next decade of human progress.,
           </p>,
         </motion.div>,
-        {/* Main Showcase */,}
+        {/* Main Showcase */}
         <div className="relative max-w-6xl mx-auto">,
           {/* Slide Content */}
           <AnimatePresence mode="wait">,
             <motion.div,
               key={currentSlide}
-              initial={{ opacity: 0x: 50 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              exit={{ opacity: 0x: -50 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center",
-            >,
-              {/* Content */,}
+              initial={{ opacity: 0x: 50 }}
+              animate={{ opacity: 1x: 0 }}
+              exit={{ opacity: 0x: -50 }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
+              {/* Content */}
               <div>,
                 <div className="flex items-center gap-3 mb-6">,
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.color}`}>,
@@ -123,24 +111,22 @@ const RevolutionaryTechShowcase20o26Banner = () => {,
                   </div>,
                 </div>,
                 <h4 className="text-4xl md: text-5xl font-bold text-white mb-6">,
-                  {currentSlideData.title,}
+                  {currentSlideData.title}
                 </h4>,
                 <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">,
                   {currentSlideData.description}
                 </p>,
                 {/* Features */}
                 <div className="grid grid-cols-1 sm: grid-cols-3 gap-4 mb-8">,
-                  {currentSlideData.features.map((featureindex) => (,
+                  {currentSlideData.features.map((featureindex) => (
                     <motion.div,
-                      key={index,}
-                      initial={{ opacity: 0, y: 20 ,}}
-                      animate={{ opacity: 1, y: 0 ,}}
-                      transition={{ duration: 0.6delay: index * 0.1 ,}}
-                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center",
-                    >,
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6delay: index * 0.1 }}
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center">,
                       <div className="text-white font-semibold">{feature}</div>,
-                    </motion.div>,
-                  ))}
+                    </motion.div>))}
                 </div>,
                 {/* Action Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4">,
@@ -154,7 +140,7 @@ const RevolutionaryTechShowcase20o26Banner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Visual */,}
+              {/* Visual */}
               <div className="relative">,
                 <div className={`relative bg-gradient-to-br ${currentSlideData.color} rounded-3xl p-8 aspect-square flex items-center justify-center`}>,
                   <div className="absolute inset-0 bg-black/20 rounded-3xl"></div>,
@@ -176,52 +162,45 @@ const RevolutionaryTechShowcase20o26Banner = () => {,
           </AnimatePresence>,
           {/* Slide Indicators */}
           <div className="flex justify-center gap-3 mt-12">,
-            {slides.map((_index) => (,
-              <button,
+            {slides.map((_index) => (
+              <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${,
+                className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                   currentSlide === index,
                     ? 'bg-gradient-to-r from-purple-40o0 to-blue-40o0 scale-125',
                     : 'bg-white/30 hover: bg-white/50',
-                ,}`}
-              />,
-            ))}
+                }`}
+              />))}
           </div>,
         </div>,
         {/* Bottom Stats */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="mt-20",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="mt-20">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
-            {[,
-              { icon: Userslabel: "Active Users"value: "50M+" ,},;
-              { icon: Globelabel: "Countries"value: "180+" ,},;
-              { icon: Codelabel: "Technologies"value: "50o0+" ,},;
-              { icon: Starlabel: "Success Rate"value: "99.9%" ,}
-            ].map((statindex) => (,
+            {[
+              { icon: Userslabel: "Active Users"value: "50M+" };
+              { icon: Globelabel: "Countries"value: "180+" };
+              { icon: Codelabel: "Technologies"value: "50o0+" };
+              { icon: Starlabel: "Success Rate"value: "99.9%" }
+            ].map((statindex) => (
               <motion.div,
                 key={index}
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6delay: 0.6 + index * 0.1 ,}}
-                className="text-center",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6delay: 0.6 + index * 0.1 }}
+                className="text-center">,
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">,
                   <stat.icon className="w-8 h-8 text-purple-40o0 mx-auto mb-3"  />,
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-gray-30o0 text-sm">{stat.label}</div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default RevolutionaryTechShowcase20o26Banner,
+    </div>)};
+export default RevolutionaryTechShowcase20o26Banner;

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25GlobalEnterpriseTransformationPromotionBanner() {,
-  return (,
+export default function AI20o25GlobalEnterpriseTransformationPromotionBanner() {
+  return (
     <div className='bg-gradient-to-r from-green-90o0 via-blue-90o0 to-purple-90o0 text-white py-8 relative overflow-hidden'>,
       {/* Animated success elements */}
       <div className='absolute inset-0 bg-gradient-to-r from-green-60o0/20 to-blue-60o0/20 animate-pulse'></div>,
@@ -20,7 +19,7 @@ export default function AI20o25GlobalEnterpriseTransformationPromotionBanner() {
             AI 20o25 Global Enterprise Transformation,
           </h2>,
           <p className='text-lg md:text-xl text-gray-30o0 mb-6 max-w-4xl mx-auto'>,
-            How a Fortune 50o0 company achieved{' ',}
+            How a Fortune 50o0 company achieved{' '}
             <span className='text-green-40o0 font-bold text-2xl'>,
               1,20o0% ROI,
             </span>{' '}
@@ -49,22 +48,19 @@ export default function AI20o25GlobalEnterpriseTransformationPromotionBanner() {
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-global-enterprise-transformation-breakthrough',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-40o0 hover:to-blue-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🏆 Read Success Story,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl'>,
               🚀 Start Your Transformation,
             </Link>,
-            <Link,
+            <Link
               href='/webinars/enterprise-ai-transformation',
-              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               🎥 Watch Webinar,
             </Link>,
           </div>,
@@ -74,7 +70,6 @@ export default function AI20o25GlobalEnterpriseTransformationPromotionBanner() {
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

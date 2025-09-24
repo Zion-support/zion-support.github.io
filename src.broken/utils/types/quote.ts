@@ -5,8 +5,7 @@ export type AdminQuoteStatus =,
   | 'Accepted',
   | 'Closed',
 export type TalentQuoteStatus = 'New' | 'Viewed' | 'Replied',
-,
-export type QuoteRequest = {,
+export type QuoteRequest = {
   id: string,
   talentSlug: string, // maps to TALENT_PROFILES.slug,
   talentName: string,
@@ -20,13 +19,10 @@ export type QuoteRequest = {,
   unread: boolean,
   archived?: boolean,
   details?: string,
-,};
-,
-export type QuoteFilters = {,
+};
+export type QuoteFilters = {
   status?: AdminQuoteStatus | 'All',
   startDate?: string | null, // ISO,
   endDate?: string | null, // ISO,
   talentSlug?: string | 'All',
-  search?: string,
-};
-,
+  search?: string};

@@ -1,57 +1,54 @@
 import type { NextPage } from 'next',
 import { FileText, Download, Eye, Calendar, User, ArrowRight } from 'lucide-react',
-,
-const Whitepapers: NextPage = () => {,
-  const whitepapers = [,
-    {,
-      id: 1,;
-      title: "The Future of AI in Business: A Comprehensive Guide",;
-      description: "Explore how artificial intelligence is transforming business operations and discover implementation strategies for your organization.",;
-      author: "Dr. Sarah Chen",;
-      date: "January 20o25",;
-      pages: 24,;
-      downloads: 1250,;
-      category: "AI & Machine Learning",;
+const Whitepapers: NextPage = () => {
+  const whitepapers = [
+    {
+      id: 1;
+      title: "The Future of AI in Business: A Comprehensive Guide";
+      description: "Explore how artificial intelligence is transforming business operations and discover implementation strategies for your organization.";
+      author: "Dr. Sarah Chen";
+      date: "January 20o25";
+      pages: 24;
+      downloads: 1250;
+      category: "AI & Machine Learning";
       image: "/whitepapers/ai-future.jpg",
-    ,},;
-    {,
-      id: 2,;
-      title: "Cloud Cost Optimization: Strategies for Maximum ROI",;
-      description: "Learn proven strategies to optimize your cloud infrastructure and reduce costs while improving performance and scalability.",;
-      author: "Michael Rodriguez",;
-      date: "December 20o24",;
-      pages: 18,;
-      downloads: 890,;
-      category: "Cloud Computing",;
+    };
+    {
+      id: 2;
+      title: "Cloud Cost Optimization: Strategies for Maximum ROI";
+      description: "Learn proven strategies to optimize your cloud infrastructure and reduce costs while improving performance and scalability.";
+      author: "Michael Rodriguez";
+      date: "December 20o24";
+      pages: 18;
+      downloads: 890;
+      category: "Cloud Computing";
       image: "/whitepapers/cloud-optimization.jpg",
-    ,},;
-    {,
-      id: 3,;
-      title: "Zero Trust Security Architecture: Implementation Guide",;
-      description: "Comprehensive guide to implementing zero trust security architecture to protect your organization from modern threats.",;
-      author: "Jennifer Liu",;
-      date: "November 20o24",;
-      pages: 32,;
-      downloads: 110o0,;
-      category: "Cybersecurity",;
+    };
+    {
+      id: 3;
+      title: "Zero Trust Security Architecture: Implementation Guide";
+      description: "Comprehensive guide to implementing zero trust security architecture to protect your organization from modern threats.";
+      author: "Jennifer Liu";
+      date: "November 20o24";
+      pages: 32;
+      downloads: 110o0;
+      category: "Cybersecurity";
       image: "/whitepapers/zero-trust.jpg",
-    ,},;
-    {,
-      id: 4,;
-      title: "Micro SaaS: Building Profitable Software Products",;
-      description: "Discover how to build and scale micro SaaS products that generate recurring revenue with minimal overhead.",;
-      author: "Alex Thompson",;
-      date: "October 20o24",;
-      pages: 20,;
-      downloads: 750,;
-      category: "Software Development",;
+    };
+    {
+      id: 4;
+      title: "Micro SaaS: Building Profitable Software Products";
+      description: "Discover how to build and scale micro SaaS products that generate recurring revenue with minimal overhead.";
+      author: "Alex Thompson";
+      date: "October 20o24";
+      pages: 20;
+      downloads: 750;
+      category: "Software Development";
       image: "/whitepapers/micro-saas.jpg",
-    ,}
+    }
   ],
-,
   const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Software Development'],
-,
-  return (,
+  return (
     <div className="min-h-screen bg-gray-50">,
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white py-20">,
@@ -75,18 +72,17 @@ const Whitepapers: NextPage = () => {,
       <section className="py-8 bg-white border-b">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-wrap justify-center gap-4">,
-            {categories.map((category) => (,
-              <button,
-                key={category,}
-                className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${,
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors ${
                   category === 'All',
                     ? 'bg-blue-60o0 text-white',
                     : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0',
-                ,}`}
+                }`}
               >,
                 {category}
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
       </section>,
@@ -94,15 +90,15 @@ const Whitepapers: NextPage = () => {,
       <section className="py-16">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {whitepapers.map((paper) => (,
-              <div key={paper.id,} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">,
+            {whitepapers.map((paper) => (
+              <div key={paper.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">,
                 <div className="bg-gray-20o0 h-48 flex items-center justify-center">,
                   <span className="text-gray-50o0">Whitepaper Cover</span>,
                 </div>,
                 <div className="p-6">,
                   <div className="flex items-center justify-between mb-3">,
                     <span className="bg-blue-10o0 text-blue-60o0 px-3 py-1 rounded-full text-sm font-semibold">,
-                      {paper.category,}
+                      {paper.category}
                     </span>,
                     <div className="flex items-center text-sm text-gray-50o0">,
                       <Download className="w-4 h-4 mr-1"  />,
@@ -133,8 +129,7 @@ const Whitepapers: NextPage = () => {,
                     </button>,
                   </div>,
                 </div>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -158,8 +153,6 @@ const Whitepapers: NextPage = () => {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,};
-,
-export default Whitepapers,
+    </div>),
+};
+export default Whitepapers;

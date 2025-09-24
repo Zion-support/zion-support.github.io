@@ -1,9 +1,7 @@
-export function StatusBadge() {,
-  return (,
+export function StatusBadge() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

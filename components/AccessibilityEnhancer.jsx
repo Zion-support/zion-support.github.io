@@ -1,100 +1,74 @@
 'use client',
-,
 import { useEffect, useState } from 'react',
-,
-export default function AccessibilityEnhancer() {,
+export default function AccessibilityEnhancer() {
   const [highContrast, setHighContrast] = useState(false),
   const [reducedMotion, setReducedMotion] = useState(false),
   const [fontSize, setFontSize] = useState(16),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Check user preferences,
-    if (typeof window !== 'undefined') {,
-      const prefersReducedMotion = window.matchMedia(,
-        '(prefers-reduced-motion: reduce)',
-      ).matches,
-      const prefersHighContrast = window.matchMedia(,
-        '(prefers-contrast: high)',
-      ).matches,
-,
+    if (typeof window !== 'undefined') {
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)').matches,
+      const prefersHighContrast = window.matchMedia(
+        '(prefers-contrast: high)').matches,
       setReducedMotion(prefersReducedMotion),
       setHighContrast(prefersHighContrast),
-,
       // Load saved preferences,
       const savedFontSize = localStorage.getItem('fontSize'),
       const savedHighContrast = localStorage.getItem('highContrast'),
-,
       if (savedFontSize) setFontSize(parseInt(savedFontSize)),
       if (savedHighContrast) setHighContrast(savedHighContrast === 'true'),
-    ,}
+    }
   }, []),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Apply accessibility settings,
     const root = document.documentElement,
-,
     // Font size adjustment,
     root.style.fontSize = `${fontSize}px`,
-,
     // High contrast mode,
-    if (highContrast) {,
-      root.classList.add('high-contrast'),
-    } else {,
-      root.classList.remove('high-contrast'),
-    }
+    if (highContrast) {
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 ,
     // Reduced motion,
-    if (reducedMotion) {,
-      root.classList.add('reduced-motion'),
-    } else {,
-      root.classList.remove('reduced-motion'),
-    }
+    if (reducedMotion) {
+      root.classList.add('reduced-motion')} else {
+      root.classList.remove('reduced-motion')}
 ,
     // Save preferences,
     localStorage.setItem('fontSize', fontSize.toString()),
-    localStorage.setItem('highContrast', highContrast.toString()),
-  }, [fontSize, highContrast, reducedMotion]),
-,
-  useEffect(() => {,
+    localStorage.setItem('highContrast', highContrast.toString())}, [fontSize, highContrast, reducedMotion]),
+  useEffect(() => {
     // Keyboard navigation enhancements,
-    const handleKeyDown = e => {,
+    const handleKeyDown = e => {
       // Skip to main content,
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {,
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main'),
-        if (mainContent) {,
+        if (mainContent) {
           mainContent.focus(),
-          mainContent.scrollIntoView(),
-        }
+          mainContent.scrollIntoView()}
       }
 ,
       // Escape key to close modals,
-      if (e.key === 'Escape') {,
+      if (e.key === 'Escape') {
         const modals = document.querySelectorAll('[role="dialog"]'),
-        modals.forEach(modal => {,
-          if (modal.style.display !== 'none') {,
+        modals.forEach(modal => {
+          if (modal.style.display !== 'none') {
             modal.style.display = 'none',
-            modal.setAttribute('aria-hidden', 'true'),
-          }
-        }),
-      }
+            modal.setAttribute('aria-hidden', 'true')}
+        })}
     };
-,
     // Focus management,
-    const handleFocusIn = e => {,
+    const handleFocusIn = e => {
       const target = e.target,
-      if (target.matches('a, button, input, textarea, select, [tabindex]')) {,
-        target.classList.add('focus-visible'),
-      }
+      if (target.matches('a, button, input, textarea, select, [tabindex]')) {
+        target.classList.add('focus-visible')}
     };
-,
-    const handleFocusOut = e => {,
-      e.target.classList.remove('focus-visible'),
-    };
-,
+    const handleFocusOut = e => {
+      e.target.classList.remove('focus-visible')};
     document.addEventListener('keydown', handleKeyDown),
     document.addEventListener('focusin', handleFocusIn),
     document.addEventListener('focusout', handleFocusOut),
-,
     // Add skip link,
     const skipLink = document.createElement('a'),
     skipLink.href = '#main-content',
@@ -111,37 +85,29 @@ export default function AccessibilityEnhancer() {,
       z-index: 10o00,
       transition: top 0.3s,
     `,
-,
-    skipLink.addEventListener('focus', () => {,
-      skipLink.style.top = '6px',
-    }),
-,
-    skipLink.addEventListener('blur', () => {,
-      skipLink.style.top = '-40px',
-    }),
-,
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px'}),
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px'}),
     document.body.insertBefore(skipLink, document.body.firstChild),
-,
-    return () => {,
+    return () => {
       document.removeEventListener('keydown', handleKeyDown),
       document.removeEventListener('focusin', handleFocusIn),
       document.removeEventListener('focusout', handleFocusOut),
-      if (skipLink.parentNode) {,
-        skipLink.parentNode.removeChild(skipLink),
-      }
+      if (skipLink.parentNode) {
+        skipLink.parentNode.removeChild(skipLink)}
     };
   }, []),
-,
-  const accessibilityControls = (,
+  const accessibilityControls = (
     <div className='accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 space-y-2'>,
       <h3 className='text-sm font-semibold'>Accessibility</h3>,
       <div className='flex items-center space-x-2'>,
         <label className='text-xs'>Font Size: </label>,
-        <input,
+        <input
           type='range',
           min='12',
           max='20',
-          value={fontSize,}
+          value={fontSize}
           onChange={e => setFontSize(parseInt(e.target.value))}
           className='w-20',
           aria-label='Font size adjustment',
@@ -149,7 +115,7 @@ export default function AccessibilityEnhancer() {,
         <span className='text-xs'>{fontSize}px</span>,
       </div>,
       <label className='flex items-center space-x-2 text-xs'>,
-        <input,
+        <input
           type='checkbox',
           checked={highContrast}
           onChange={e => setHighContrast(e.target.checked)}
@@ -157,38 +123,36 @@ export default function AccessibilityEnhancer() {,
         />,
         <span>High Contrast</span>,
       </label>,
-    </div>,
-  ),
-,
-  return (,
+    </div>),
+  return (
     <>,
       {accessibilityControls}
       <style jsx global>{`,
-        .high-contrast {,
+        .high-contrast {
           --text-color: #0o00,
           --bg-color: #fff,
           --border-color: #0o00,
           --primary-color: #0o000ff,
-        ,}
+        }
 ,
-        .high-contrast * {,
+        .high-contrast * {
           color: var(--text-color) !important,
           background-color: var(--bg-color) !important,
           border-color: var(--border-color) !important,
-        ,}
+        }
 ,
-        .reduced-motion * {,
+        .reduced-motion * {
           animation-duration: 0o1ms !important,
           animation-iteration-count: 1 !important,
           transition-duration: 0o1ms !important,
-        ,}
+        }
 ,
-        .focus-visible {,
+        .focus-visible {
           outline: 2px solid #0o066cc,
           outline-offset: 2px,
-        ,}
+        }
 ,
-        .sr-only {,
+        .sr-only {
           position: absolute,
           width: 1px,
           height: 1px,
@@ -198,9 +162,9 @@ export default function AccessibilityEnhancer() {,
           clip: rect(0, 0, 0, 0),
           white-space: nowrap,
           border: 0,
-        ,}
+        }
 ,
-        .focus: not-sr-only:focus {,
+        .focus: not-sr-only:focus {
           position: static,
           width: auto,
           height: auto,
@@ -209,9 +173,7 @@ export default function AccessibilityEnhancer() {,
           overflow: visible,
           clip: auto,
           white-space: normal,
-        ,}
+        }
       `}</style>,
-    </>,
-  ),
-}
+    </>)}
 ,

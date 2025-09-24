@@ -1,18 +1,15 @@
 import Head from 'next/head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react',
-,
-export default function AutonomousManufacturingPage() {,
+export default function AutonomousManufacturingPage() {
   const service = enhancedRealMicroSaasServices.find(s =>,
-    s.link.endsWith('/autonomous-manufacturing'),
-  ),
+    s.link.endsWith('/autonomous-manufacturing')),
   if (!service) return null,
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 text-white'>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/autonomous-manufacturing',
         />,
@@ -21,7 +18,7 @@ export default function AutonomousManufacturingPage() {,
         <div className='max-w-6xl mx-auto'>,
           <div className='text-center mb-10'>,
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-40o0 via-red-40o0 to-pink-40o0 bg-clip-text text-transparent'>,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto'>,
               {service.tagline}
@@ -30,17 +27,15 @@ export default function AutonomousManufacturingPage() {,
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12'>,
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-orange-50o0/30 p-6'>,
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>,
-              <p className='text-slate-30o0 mb-6'>{service.description,}</p>,
+              <p className='text-slate-30o0 mb-6'>{service.description}</p>,
               <ul className='grid grid-cols-1 md: grid-cols-2 gap-3'>,
-                {service.features.map((feat, i) => (,
-                  <li,
+                {service.features.map((feat, i) => (
+                  <li
                     key={i}
-                    className='flex items-start space-x-3 text-slate-20o0',
-                  >,
+                    className='flex items-start space-x-3 text-slate-20o0'>,
                     <Check className='w-5 h-5 text-orange-40o0 mt-0.5 flex-shrink-0' />,
                     <span>{feat}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div className='bg-black/30 rounded-2xl border border-orange-50o0/30 p-6 h-fit'>,
@@ -53,7 +48,7 @@ export default function AutonomousManufacturingPage() {,
                     </span>,
                   </div>,
                   <div className='text-slate-40o0'>,
-                    {service.trialDays}-day free trial • Setup: {' ',}
+                    {service.trialDays}-day free trial • Setup: {' '}
                     {service.setupTime}
                   </div>,
                 </div>,
@@ -63,12 +58,11 @@ export default function AutonomousManufacturingPage() {,
                 </div>,
               </div>,
               <div className='text-slate-30o0 text-sm mb-4'>,
-                Market: {service.marketSize,}, Growth: {service.growthRate,}
+                Market: {service.marketSize}, Growth: {service.growthRate}
               </div>,
-              <a,
+              <a
                 href='/contact',
-                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-70o0 hover: from-cyan-70o0 hover:to-blue-80o0 text-white font-semibold rounded-lg transition-all duration-20o0 flex items-center justify-center',
-              >,
+                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-70o0 hover: from-cyan-70o0 hover:to-blue-80o0 text-white font-semibold rounded-lg transition-all duration-20o0 flex items-center justify-center'>,
                 Get a Demo,
                 <ArrowRight className='w-5 h-5 ml-2' />,
               </a>,
@@ -90,13 +84,11 @@ export default function AutonomousManufacturingPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-export async function getServerSideProps() {,
-  return {,
-    props: {,},;
+export async function getServerSideProps() {
+  return {
+    props: {};
   };
 }
 ,

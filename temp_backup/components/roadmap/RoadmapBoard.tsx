@@ -1,24 +1,21 @@
-import React from 'react',
+import React from 'react';
 import { Feature } from '../../types/roadmap',
 import RoadmapCard from './RoadmapCard',
-,
-type Props ={,
+type Props ={
   features: Feature[],
   onUpvote: (feature: Feature) => void,
   onFollow: (feature: Feature) => void,
-,};
-,
-export default function RoadmapBoard({ features, onUpvote, onFollow }: Props) {,
-  const groups: Record<string, Feature[]> ={,
-    Planned: [],;
-    'In Progress': [],;
-    Completed: [],};
-  for (const f of features) {,
+};
+export default function RoadmapBoard({ features, onUpvote, onFollow }: Props) {
+  const groups: Record<string Feature[]> ={
+    Planned: [];
+    'In Progress': [];
+    Completed: []};
+  for (const f of features) {
     if (f.status === 'Planned') groups.Planned.push(f),
     else if (f.status === 'In Progress') groups['In Progress'].push(f),
-    else if (f.status === 'Completed') groups.Completed.push(f),
-  }
-  const Column: React.FC<{ title: string, items: Feature[] ,}> = ({ title, items }) => (,
+    else if (f.status === 'Completed') groups.Completed.push(f)}
+  const Column: React.FC<{ title: string, items: Feature[] }> = ({ title, items }) => (
     <div className="flex-1 min-w-[280px]">,
       <div className="sticky top-0 z-10 backdrop-blur bg-transparent/30 py-2">,
         <h2 className="text-sm font-semibold tracking-wide text-zinc-30o0 uppercase">{title}</h2>,
@@ -27,18 +24,13 @@ export default function RoadmapBoard({ features, onUpvote, onFollow }: Props) {,
         </div>,
       </div>,
       <div className="mt-3 space-y-3">,
-        {items.map((f) => (,
-          <RoadmapCard key={f.id} feature={f} onUpvote={onUpvote} onFollow={onFollow}  />),
-        )}
+        {items.map((f) => (
+          <RoadmapCard key={f.id} feature={f} onUpvote={onUpvote} onFollow={onFollow}  />))}
       </div>,
-    </div>,
-  ),
-,
-  return (,
+    </div>),
+  return (
     <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-      <Column title="Planned" items={groups.Planned,}  />,
+      <Column title="Planned" items={groups.Planned}  />,
       <Column title="In Progress" items={groups['In Progress']}  />,
       <Column title="Completed" items={groups.Completed}  />,
-    </div>,
-  ),
-}
+    </div>)}

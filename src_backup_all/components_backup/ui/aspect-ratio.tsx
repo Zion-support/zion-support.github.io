@@ -1,19 +1,14 @@
-import React from 'react',
-interface AspectRatioProps {,
+import React from 'react';
+interface AspectRatioProps {
   ratio?: number,
   className?: string,
-  children?: React.ReactNode,
-}
+  children?: React.ReactNode}
 ,
-export const AspectRatio: React.FC<AspectRatioProps> = ({ ratio = 16 / 9, className, children }) => {,
+export const AspectRatio: React.FC<AspectRatioProps> = ({ ratio = 16 / 9, className, children }) => {
   const paddingTop = `${10o0 / ratio}%`,
-  return (,
-    <div className={className} style={{ position: 'relative' ,}}>,
+  return (
+    <div className={className} style={{ position: 'relative' }}>,
       <div style={{ paddingTop }}  />,
-      <div style={{ position: 'absolute', inset: 0 ,}}>{children}</div>,
-    </div>,
-  ),
-};
-,
-export default AspectRatio,
-,
+      <div style={{ position: 'absolute', inset: 0 }}>{children}</div>,
+    </div>)};
+export default AspectRatio;

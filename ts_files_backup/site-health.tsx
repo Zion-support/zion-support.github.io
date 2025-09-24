@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SiteHealth() {,
-  return (,
+export default function SiteHealth() {
+  return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
       <Head>,
         <title>Site Health — A11yPerformanceLinks</title>,
@@ -50,19 +49,18 @@ export default function SiteHealth() {,
         <section className="mx-auto max-w-7xl px-6 pb-14">,
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Dashboards</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
-            {[,
-              { title: ''Accessibility', 'desc: 'WCAG checks with actionable fixes and reports.'href: '/reports/seo' ,},;
-              { title: ''Performance', 'desc: 'Core Web Vitals and performance budgets.'href: '/reports/seo' ,},;
-              { title: 'Link 'Integrity', 'desc: 'Broken links identified and prevented.'href: '/reports/links' ,}].map((card) => (,
+            {[
+              { title: ''Accessibility', 'desc: 'WCAG checks with actionable fixes and reports.'href: '/reports/seo' };
+              { title: ''Performance', 'desc: 'Core Web Vitals and performance budgets.'href: '/reports/seo' };
+              { title: 'Link 'Integrity', 'desc: 'Broken links identified and prevented.'href: '/reports/links' }].map((card) => (
               <Link key={card.title} href={card.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30">,
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />,
-                  <h3 className="text-lg font-semibold">{card.title,}</h3>,
+                  <h3 className="text-lg font-semibold">{card.title}</h3>,
                   <p className="mt-1 text-sm text-white/75">{card.desc}</p>,
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open →</div>,
                 </a>,
-              </Link>,
-            ))}
+              </Link>))}
           </div>,
         </section>,
         <section className="mx-auto max-w-7xl px-6 pb-16">,
@@ -83,7 +81,6 @@ export default function SiteHealth() {,
           </div>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

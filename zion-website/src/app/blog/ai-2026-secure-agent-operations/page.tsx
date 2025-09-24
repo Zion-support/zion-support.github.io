@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function SecureAgentOperationsPage() {,
-  return (,
+import React from 'react';
+export default function SecureAgentOperationsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-16'>,
         <header>,
@@ -35,7 +34,5 @@ export default function SecureAgentOperationsPage() {,
           </p>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

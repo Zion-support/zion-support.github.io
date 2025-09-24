@@ -3,69 +3,54 @@ import RoadmapBoard from '../../components/roadmap/RoadmapBoard',
 import { Feature, UserRole } from '../../types/roadmap',
 import { v4 as uuidv4 } from 'uuid',
 import Link from 'next/link',
-,
-export default function RoadmapPage() {,
+export default function RoadmapPage() {
   const [data, setData] = useState<Feature[] | null>(null),
   const [loading, setLoading] = useState<boolean>(true),
   const [role, setRole] = useState<UserRole>('Talent'),
-  const userId = useMemo(() => {,
+  const userId = useMemo(() => {
     if (typeof window === 'undefined') return '',
     const key = 'zion_user_id',
     let id = window.localStorage.getItem(key) || '',
-    if (!id) {,
+    if (!id) {
       id = `anon-${uuidv4()}`,
-      window.localStorage.setItem(key, id),
-    }
-    return id,
-  }, []),
-,
-  async function load() {,
+      window.localStorage.setItem(key, id)}
+    return id}, []),
+  async function load() {
     setLoading(true),
-    try {,
+    try {
       const res = await fetch('/api/roadmap'),
       const json = await res.json(),
-      setData(json),
-    } finally {,
-      setLoading(false),
-    }
+      setData(json)} finally {
+      setLoading(false)}
   }
 ,
-  useEffect(() => {,
-    load(),
-  }, []),
-,
-  useEffect(() => {,
+  useEffect(() => {
+    load()}, []),
+  useEffect(() => {
     if (typeof window === 'undefined') return,
-    const savedRole = window.localStorage.getItem(,
-      'zion_user_role',
-    ) as UserRole | null,
-    if (savedRole) setRole(savedRole),
-  }, []),
-,
-  useEffect(() => {,
+    const savedRole = window.localStorage.getItem(
+      'zion_user_role') as UserRole | null,
+    if (savedRole) setRole(savedRole)}, []),
+  useEffect(() => {
     if (typeof window === 'undefined') return,
-    window.localStorage.setItem('zion_user_role', role),
-  }, [role]),
-,
-  async function handleUpvote(feature: Feature) {,
-    await fetch('/api/roadmap/upvote', {,
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' ,},;
-      body: JSON.stringify({ featureId: feature.id, voterId: userId, role }),;
+    window.localStorage.setItem('zion_user_role', role)}, [role]),
+  async function handleUpvote(feature: Feature) {
+    await fetch('/api/roadmap/upvote', {
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ featureId: feature.id, voterId: userId, role });
     }),
-    load(),
-  }
+    load()}
 ,
-  async function handleFollow(feature: Feature) {,
-    await fetch('/api/roadmap/follow', {,
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' ,},;
-      body: JSON.stringify({ featureId: feature.id, followerId: userId ,}),;
+  async function handleFollow(feature: Feature) {
+    await fetch('/api/roadmap/follow', {
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ featureId: feature.id, followerId: userId });
     }),
-    load(),
-  }
+    load()}
 ,
-  return (,
+  return (
     <main className='min-h-screen bg-gradient-to-b from-zinc-950 to-zinc-90o0 text-white'>,
       <div className='max-w-7xl mx-auto px-4 py-10'>,
         <div className='flex flex-col md: flex-row md:items-center md:justify-between gap-4'>,
@@ -78,7 +63,7 @@ export default function RoadmapPage() {,
           </div>,
           <div className='flex items-center gap-3'>,
             <label className='text-sm text-zinc-30o0'>Your role</label>,
-            <select,
+            <select
               className='bg-zinc-90o0 border border-zinc-80o0 rounded px-2 py-1 text-sm',
               value={role}
               onChange={e => setRole(e.target.value as UserRole)}
@@ -95,15 +80,13 @@ export default function RoadmapPage() {,
           </div>,
         </div>,
         <div className='mt-8'>,
-          {loading || !data ? (,
-            <div className='text-zinc-40o0'>Loading roadmap…</div>,
-          ) : (,
-            <RoadmapBoard,
-              features={data,}
+          {loading || !data ? (
+            <div className='text-zinc-40o0'>Loading roadmap…</div>) : (
+            <RoadmapBoard
+              features={data}
               onUpvote={handleUpvote}
               onFollow={handleFollow}
-            />,
-          )}
+            />)}
         </div>,
         <div className='mt-10 grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-zinc-30o0'>,
           <div className='p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40'>,
@@ -124,7 +107,6 @@ export default function RoadmapPage() {,
           </div>,
         </div>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

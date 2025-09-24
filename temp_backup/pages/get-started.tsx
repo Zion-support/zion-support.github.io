@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function GetStartedPage() {,
-  return (,
+export default function GetStartedPage() {
+  return (
     <>,
       <Head>,
         <title>Get Started - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function GetStartedPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

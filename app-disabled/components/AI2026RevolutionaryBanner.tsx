@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import { ArrowRight, Star, Zap, TrendingUp, Users, Award } from 'lucide-react',
-,
-const AI20o26RevolutionaryBanner = () => {,
-  return (,
+const AI20o26RevolutionaryBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden'>,
       {/* Background Pattern */}
       <div className='absolute inset-0 bg-black/20'></div>,
@@ -28,9 +27,9 @@ const AI20o26RevolutionaryBanner = () => {,
             enterprise automation success stories.,
           </p>,
         </div>,
-        {/* Featured Content Grid */,}
+        {/* Featured Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {/* Enterprise Automation */,}
+          {/* Enterprise Automation */}
           <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-purple-50o0/20 rounded-lg flex items-center justify-center mr-4'>,
@@ -46,15 +45,14 @@ const AI20o26RevolutionaryBanner = () => {,
               <span className='text-sm text-green-40o0 font-semibold'>,
                 50o0%+ ROI,
               </span>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-enterprise-automation-revolution',
-                className='text-purple-30o0 hover:text-purple-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-              >,
+                className='text-purple-30o0 hover:text-purple-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
                 Read More <ArrowRight className='w-4 h-4 inline ml-1' />,
               </Link>,
             </div>,
           </div>,
-          {/* Quantum Computing */,}
+          {/* Quantum Computing */}
           <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-blue-50o0/20 rounded-lg flex items-center justify-center mr-4'>,
@@ -70,15 +68,14 @@ const AI20o26RevolutionaryBanner = () => {,
               <span className='text-sm text-green-40o0 font-semibold'>,
                 10,0o00x Faster,
               </span>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-quantum-computing-breakthrough',
-                className='text-blue-30o0 hover: text-blue-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-              >,
+                className='text-blue-30o0 hover: text-blue-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
                 Read More <ArrowRight className='w-4 h-4 inline ml-1' />,
               </Link>,
             </div>,
           </div>,
-          {/* Global Success */,}
+          {/* Global Success */}
           <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover: bg-white/15 transition-all duration-30o0 group'>,
             <div className='flex items-center mb-4'>,
               <div className='w-12 h-12 bg-indigo-50o0/20 rounded-lg flex items-center justify-center mr-4'>,
@@ -94,16 +91,15 @@ const AI20o26RevolutionaryBanner = () => {,
               <span className='text-sm text-green-40o0 font-semibold'>,
                 $50B+ Savings,
               </span>,
-              <Link,
+              <Link
                 href='/case-studies/ai-20o26-global-transformation-success',
-                className='text-indigo-30o0 hover:text-indigo-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0',
-              >,
+                className='text-indigo-30o0 hover:text-indigo-20o0 transition-colors group-hover:translate-x-1 transform duration-20o0'>,
                 Read More <ArrowRight className='w-4 h-4 inline ml-1' />,
               </Link>,
             </div>,
           </div>,
         </div>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-12'>,
           <div className='text-center'>,
             <div className='text-3xl md:text-4xl font-bold text-yellow-40o0 mb-2'>,
@@ -130,19 +126,17 @@ const AI20o26RevolutionaryBanner = () => {,
             <div className='text-gray-30o0'>Error Reduction</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/services',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Explore AI Solutions,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Started Today,
             </Link>,
           </div>,
@@ -151,9 +145,6 @@ const AI20o26RevolutionaryBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26RevolutionaryBanner,
-,
+    </section>),
+};
+export default AI20o26RevolutionaryBanner;

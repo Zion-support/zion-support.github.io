@@ -1,8 +1,7 @@
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
-,
-export default function CloudflareWorkersEdgeConfigPage() {,
-  return (,
+export default function CloudflareWorkersEdgeConfigPage() {
+  return (
     <Layout>,
       <Head>,
         <title>Cloudflare Workers Edge Config Manager | Zion Tech Group</title>,
@@ -14,9 +13,8 @@ export default function CloudflareWorkersEdgeConfigPage() {,
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-indigo-40o0 to-purple-50o0 bg-clip-text text-transparent">Cloudflare Workers Edge Config</h1>,
           <p className="text-slate-30o0">Managed configuration for Workers/KV: environmentsapprovalspreviewsrollbacksand audit logs for edge apps.</p>,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">,
-            {[ 'Versioned config with approvals'Preview links & automatic rollbacks'Audit logs & drift detection'Multi-env & secret management' ].map((f) => (,
-              <div key={f,} className="p-4 rounded-xl bg-black/40 border border-indigo-50o0/30 text-slate-20o0">{f}</div>,
-            ))}
+            {[ 'Versioned config with approvals'Preview links & automatic rollbacks'Audit logs & drift detection'Multi-env & secret management' ].map((f) => (
+              <div key={f} className="p-4 rounded-xl bg-black/40 border border-indigo-50o0/30 text-slate-20o0">{f}</div>))}
           </div>,
           <div className="flex gap-3">,
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-60o0 to-purple-70o0 text-white">Start from $99/mo</a>,
@@ -24,7 +22,5 @@ export default function CloudflareWorkersEdgeConfigPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

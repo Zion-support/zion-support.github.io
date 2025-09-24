@@ -1,18 +1,16 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Eval‑Gated Autonomy | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Eval‑Gated Autonomy | Zion Tech Group';
   description:,
-    'Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.',;
-  keywords: ['evals', 'governance', 'autonomy', 'ai agents', 'risk management'],;
+    'Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.';
+  keywords: ['evals', 'governance', 'autonomy', 'ai agents', 'risk management'];
 };
-,
-const EvalGatedAutonomy20o26: React.FC = () => {,
-  return (,
+const EvalGatedAutonomy20o26: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Eval‑Gated Autonomy',
         description='Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.',
         keywords='evals, governance, autonomy, ai agents, risk management',
@@ -52,29 +50,23 @@ const EvalGatedAutonomy20o26: React.FC = () => {,
           </p>,
         </div>,
         <div className='mt-8 flex flex-wrap gap-4'>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-llm-evals-maturity-model',
-            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-          >,
+            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
             Evals Maturity,
           </Link>,
-          <Link,
+          <Link
             href='/content/ai-20o26-evaluation-harness-blueprint',
-            className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-          >,
+            className='border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
             Evaluation Harness,
           </Link>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EvalGatedAutonomy20o26,
-,
+    </div>),
+};
+export default EvalGatedAutonomy20o26;

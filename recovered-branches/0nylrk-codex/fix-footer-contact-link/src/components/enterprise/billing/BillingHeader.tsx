@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button',
 import { DownloadFileTextMailBarChart3 } from 'lucide-react',
 import { Link } from 'react-router-dom',
-,
-export function BillingHeader() {,
-  return (,
+export function BillingHeader() {
+  return (
     <div className='space-y-2'>,
       <div className='flex items-center justify-between'>,
         <h1 className='text-3xl font-bold tracking-tight'>,
@@ -29,7 +28,5 @@ export function BillingHeader() {,
       <p className='text-muted-foreground'>,
         Manage your subscriptionview invoice historyand update payment methods.,
       </p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

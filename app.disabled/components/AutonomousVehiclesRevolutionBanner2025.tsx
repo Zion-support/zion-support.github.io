@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AutonomousVehiclesRevolutionBanner20o25: React.FC = () => {,
-  return (,
+const AutonomousVehiclesRevolutionBanner20o25: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-green-90o0 via-teal-90o0 to-blue-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -118,16 +117,14 @@ const AutonomousVehiclesRevolutionBanner20o25: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-autonomous-vehicles-revolution-ultimate-guide',
-              className='bg-gradient-to-r from-green-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-green-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Read the Ultimate Guide,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-autonomous-vehicles-logistics-transformation-ultimate-success',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-90o0 transition-all duration-30o0'>,
               View Success Story,
             </Link>,
           </div>,
@@ -137,9 +134,6 @@ const AutonomousVehiclesRevolutionBanner20o25: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousVehiclesRevolutionBanner20o25,
-,
+    </section>),
+};
+export default AutonomousVehiclesRevolutionBanner20o25;

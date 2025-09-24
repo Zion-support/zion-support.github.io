@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function VerifyEmailPage() {,
-  return (,
+export default function VerifyEmailPage() {
+  return (
     <>,
       <Head>,
         <title>Verify Email - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function VerifyEmailPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

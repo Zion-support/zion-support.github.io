@@ -1,94 +1,90 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function BlogPage() {,
-  const blogPosts = [,
-    {,
-      title: 'The Future of AI in Business: 20o25 and Beyond',;
+export default function BlogPage() {
+  const blogPosts = [
+    {
+      title: 'The Future of AI in Business: 20o25 and Beyond';
       excerpt:,
-        'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.',;
-      category: 'AI & Machine Learning',;
-      date: 'August 2620o25',;
-      readTime: '5 min read',;
-      author: 'Zion Tech Group Team',;
-      slug: 'future-of-ai-business-20o25',;
-      featured: true,;
-    },;
-    {,
-      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',;
+        'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.';
+      category: 'AI & Machine Learning';
+      date: 'August 2620o25';
+      readTime: '5 min read';
+      author: 'Zion Tech Group Team';
+      slug: 'future-of-ai-business-20o25';
+      featured: true;
+    };
+    {
+      title: 'Quantum Computing: Breaking Down the Hype vs. Reality';
       excerpt:,
-        "Understanding what quantum computing can actually deliver today and what's still in the realm of science fiction.",;
-      category: 'Quantum Computing',;
-      date: 'August 2420o25',;
-      readTime: '7 min read',;
-      author: 'Quantum Team',;
-      slug: 'quantum-computing-hype-reality',;
-      featured: false,;
-    },;
-    {,
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',;
+        "Understanding what quantum computing can actually deliver today and what's still in the realm of science fiction.";
+      category: 'Quantum Computing';
+      date: 'August 2420o25';
+      readTime: '7 min read';
+      author: 'Quantum Team';
+      slug: 'quantum-computing-hype-reality';
+      featured: false;
+    };
+    {
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
       excerpt:,
-        'How AI is both creating new security challenges and providing innovative solutions to protect businesses.',;
-      category: 'Cybersecurity',;
-      date: 'August 220o25',;
-      readTime: '6 min read',;
-      author: 'Security Team',;
-      slug: 'cybersecurity-ai-threats-solutions',;
-      featured: false,;
-    },;
-    {,
-      title: 'Cloud-Native Architecture: Best Practices for 20o25',;
+        'How AI is both creating new security challenges and providing innovative solutions to protect businesses.';
+      category: 'Cybersecurity';
+      date: 'August 220o25';
+      readTime: '6 min read';
+      author: 'Security Team';
+      slug: 'cybersecurity-ai-threats-solutions';
+      featured: false;
+    };
+    {
+      title: 'Cloud-Native Architecture: Best Practices for 20o25';
       excerpt:,
-        'Essential strategies for building scalablesecureand efficient cloud-native applications.',;
-      category: 'Cloud & Infrastructure',;
-      date: 'August 20o25',;
-      readTime: '8 min read',;
-      author: 'Cloud Team',;
-      slug: 'cloud-native-architecture-best-practices-20o25',;
-      featured: false,;
-    },;
-    {,
-      title: 'The Rise of Edge Computing: Bringing AI Closer to Users',;
+        'Essential strategies for building scalablesecureand efficient cloud-native applications.';
+      category: 'Cloud & Infrastructure';
+      date: 'August 20o25';
+      readTime: '8 min read';
+      author: 'Cloud Team';
+      slug: 'cloud-native-architecture-best-practices-20o25';
+      featured: false;
+    };
+    {
+      title: 'The Rise of Edge Computing: Bringing AI Closer to Users';
       excerpt:,
-        'How edge computing is revolutionizing AI deployment and improving user experiences.',;
-      category: 'Edge Computing',;
-      date: 'August 1820o25',;
-      readTime: '4 min read',;
-      author: 'Infrastructure Team',;
-      slug: 'rise-edge-computing-ai-users',;
-      featured: false,;
-    },;
-    {,
-      title: 'Sustainable Technology: Building Green AI Solutions',;
+        'How edge computing is revolutionizing AI deployment and improving user experiences.';
+      category: 'Edge Computing';
+      date: 'August 1820o25';
+      readTime: '4 min read';
+      author: 'Infrastructure Team';
+      slug: 'rise-edge-computing-ai-users';
+      featured: false;
+    };
+    {
+      title: 'Sustainable Technology: Building Green AI Solutions';
       excerpt:,
-        'Strategies for developing environmentally conscious AI and technology solutions.',;
-      category: 'Sustainability',;
-      date: 'August 1620o25',;
-      readTime: '6 min read',;
-      author: 'Innovation Team',;
-      slug: 'sustainable-technology-green-ai-solutions',;
-      featured: false,;
-    },;
+        'Strategies for developing environmentally conscious AI and technology solutions.';
+      category: 'Sustainability';
+      date: 'August 1620o25';
+      readTime: '6 min read';
+      author: 'Innovation Team';
+      slug: 'sustainable-technology-green-ai-solutions';
+      featured: false;
+    };
   ],
-,
-  const categories = [,
-    'All',;
-    'AI & Machine Learning',;
-    'Quantum Computing',;
-    'Cybersecurity',;
-    'Cloud & Infrastructure',;
-    'Edge Computing',;
-    'Sustainability',;
-    'Industry Insights',;
+  const categories = [
+    'All';
+    'AI & Machine Learning';
+    'Quantum Computing';
+    'Cybersecurity';
+    'Cloud & Infrastructure';
+    'Edge Computing';
+    'Sustainability';
+    'Industry Insights';
   ],
-,
   const featuredPost = blogPosts.find(post => post.featured),
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Blog - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Stay updated with the latest insights on AIquantum computingcybersecurityand emerging technologies from Zion Tech Group.',
         />,
@@ -108,8 +104,8 @@ export default function BlogPage() {,
             </p>,
           </div>,
         </section>,
-        {/* Featured Post */,}
-        {featuredPost && (,
+        {/* Featured Post */}
+        {featuredPost && (
           <section className='py-16 px-4 sm: px-6 lg:px-8'>,
             <div className='max-w-4xl mx-auto'>,
               <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-10'>,
@@ -119,7 +115,7 @@ export default function BlogPage() {,
                   </span>,
                 </div>,
                 <h2 className='text-3xl font-bold mb-4'>,
-                  {featuredPost.title,}
+                  {featuredPost.title}
                 </h2>,
                 <p className='text-lg text-gray-30o0 mb-6'>,
                   {featuredPost.excerpt}
@@ -136,46 +132,42 @@ export default function BlogPage() {,
                     {featuredPost.category}
                   </span>,
                 </div>,
-                <Link,
+                <Link
                   href={`/blog/${featuredPost.slug}`}
-                  className='inline-flex items-center text-blue-40o0 hover: text-blue-30o0 font-medium',
-                >,
+                  className='inline-flex items-center text-blue-40o0 hover: text-blue-30o0 font-medium'>,
                   Read Full Article,
-                  <svg,
+                  <svg
                     className='ml-2 w-4 h-4',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 5l7 7-7 7',
                     />,
                   </svg>,
                 </Link>,
               </div>,
             </div>,
-          </section>,
-        )}
+          </section>)}
 ,
         {/* Categories */}
         <section className='py-8 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-20'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              {categories.map(categoryindex => (,
-                <button,
-                  key={index,}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${,
+              {categories.map(categoryindex => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     category === 'All',
                       ? 'bg-blue-60o0 text-white',
                       : 'bg-white bg-opacity-10 text-gray-30o0 hover: bg-opacity-20',
-                  ,}`}
+                  }`}
                 >,
                   {category}
-                </button>,
-              ))}
+                </button>))}
             </div>,
           </div>,
         </section>,
@@ -185,22 +177,20 @@ export default function BlogPage() {,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {blogPosts,
                 .filter(post => !post.featured),
-                .map(postindex => (,
-                  <article,
-                    key={index,}
-                    className='bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover: bg-opacity-20 transition-all',
-                  >,
+                .map(postindex => (
+                  <article
+                    key={index}
+                    className='bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover: bg-opacity-20 transition-all'>,
                     <div className='mb-4'>,
                       <span className='bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-30o0'>,
-                        {post.category,}
+                        {post.category}
                       </span>,
                     </div>,
                     <h3 className='text-xl font-semibold mb-3 line-clamp-2'>,
-                      <Link,
+                      <Link
                         href={`/blog/${post.slug}`}
-                        className='hover: text-blue-40o0 transition-colors',
-                      >,
-                        {post.title,}
+                        className='hover: text-blue-40o0 transition-colors'>,
+                        {post.title}
                       </Link>,
                     </h3>,
                     <p className='text-gray-30o0 mb-4 line-clamp-3'>,
@@ -214,15 +204,13 @@ export default function BlogPage() {,
                       <span className='text-sm text-gray-40o0'>,
                         {post.date}
                       </span>,
-                      <Link,
+                      <Link
                         href={`/blog/${post.slug}`}
-                        className='text-blue-40o0 hover: text-blue-30o0 font-medium text-sm',
-                      >,
+                        className='text-blue-40o0 hover: text-blue-30o0 font-medium text-sm'>,
                         Read More →,
                       </Link>,
                     </div>,
-                  </article>,
-                )),}
+                  </article>))}
             </div>,
           </div>,
         </section>,
@@ -238,7 +226,7 @@ export default function BlogPage() {,
             </p>,
             <div className='max-w-md mx-auto'>,
               <div className='flex flex-col sm:flex-row gap-4'>,
-                <input,
+                <input
                   type='email',
                   placeholder='Enter your email',
                   className='flex-1 px-4 py-3 rounded-lg text-gray-90o0 focus:outline-none focus:ring-2 focus:ring-white',
@@ -250,7 +238,7 @@ export default function BlogPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl sm:text-4xl font-bold mb-6'>,
@@ -261,23 +249,20 @@ export default function BlogPage() {,
               success.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-colors',
-              >,
+                className='bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-colors'>,
                 Get Started,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors',
-              >,
+                className='border border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors'>,
                 Explore Services,
               </Link>,
             </div>,
           </div>,
         </section>,
       </main>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

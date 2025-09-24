@@ -1,15 +1,13 @@
 import SmartSidebar from '../../../components/SmartSidebar',
 import { useServiceNavigation } from '../../../hooks/useNavigation',
-,
-export default function AnalyticsDemoPage() {,
+export default function AnalyticsDemoPage() {
   const { serviceNavigation, isLoading, error } =,
     useServiceNavigation('ai-analytics'),
-,
-  if (isLoading) {,
-    return (,
+  if (isLoading) {
+    return (
       <div className='min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0'>,
         <div className='flex'>,
-          <SmartSidebar,
+          <SmartSidebar
             pageType='service',
             currentService='ai-analytics',
             className='w-64',
@@ -21,27 +19,22 @@ export default function AnalyticsDemoPage() {,
             </div>,
           </div>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (error || !serviceNavigation) {,
-    return (,
+  if (error || !serviceNavigation) {
+    return (
       <div className='min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 flex items-center justify-center'>,
         <div className='text-center text-white'>,
           <h1 className='text-2xl font-bold mb-4'>Error Loading Service</h1>,
           <p className='text-white/70'>{error || 'Service not found'}</p>,
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
   const { service } = serviceNavigation,
-,
-  return (,
+  return (
     <div className='min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0'>,
       <div className='flex'>,
-        <SmartSidebar,
+        <SmartSidebar
           pageType='service',
           currentService='ai-analytics',
           className='w-64',
@@ -61,20 +54,19 @@ export default function AnalyticsDemoPage() {,
               </div>,
             </div>,
             <div className='flex items-center gap-4 mb-6'>,
-              <span,
-                className={`px-3 py-1 rounded-full text-sm font-medium ${,
+              <span
+                className={`px-3 py-1 rounded-full text-sm font-medium ${
                   service.status === 'active',
                     ? 'bg-green-50o0/20 text-green-30o0',
                     : service.status === 'beta',
                       ? 'bg-yellow-50o0/20 text-yellow-30o0',
-                      : 'bg-blue-50o0/20 text-blue-30o0',
-                }`}
+                      : 'bg-blue-50o0/20 text-blue-30o0'}`}
               >,
                 {service.status}
               </span>,
               <span className='text-white/60'>•</span>,
               <span className='text-white/60'>,
-                Last updated: {service.lastUpdated,}
+                Last updated: {service.lastUpdated}
               </span>,
               <span className='text-white/60'>•</span>,
               <span className='text-white/60'>{service.pricing}</span>,
@@ -89,14 +81,12 @@ export default function AnalyticsDemoPage() {,
               Technology Stack,
             </h2>,
             <div className='flex flex-wrap gap-3'>,
-              {service.technologyStack?.map(tech => (,
-                <span,
+              {service.technologyStack?.map(tech => (
+                <span
                   key={tech}
-                  className='px-4 py-2 bg-white/10 rounded-lg text-white/80 border border-white/20',
-                >,
+                  className='px-4 py-2 bg-white/10 rounded-lg text-white/80 border border-white/20'>,
                   {tech}
-                </span>,
-              ))}
+                </span>))}
             </div>,
           </div>,
           {/* Performance Metrics */}
@@ -107,7 +97,7 @@ export default function AnalyticsDemoPage() {,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
               <div className='bg-white/10 backdrop-blur-md rounded-lg p-6 text-center'>,
                 <div className='text-3xl font-bold text-white mb-2'>,
-                  {service.performance?.uptime,}
+                  {service.performance?.uptime}
                 </div>,
                 <div className='text-white/60'>Uptime</div>,
               </div>,
@@ -149,7 +139,7 @@ export default function AnalyticsDemoPage() {,
               </div>,
             </div>,
           </div>,
-          {/* Key Features */,}
+          {/* Key Features */}
           <div className='mb-8'>,
             <h2 className='text-2xl font-bold text-white mb-4'>Key Features</h2>,
             <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
@@ -214,7 +204,6 @@ export default function AnalyticsDemoPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

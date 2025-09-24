@@ -1,6 +1,4 @@
 'use client',
-,
-export default function AdvancedSecurityMonitor() {,
-  return null,
-}
+export default function AdvancedSecurityMonitor() {
+  return null}
 ,

@@ -1,8 +1,7 @@
 import Link from 'next/link',
 SettingsChevronRightStarClockDollarSignTargetZap,
-,
-const BusinessAutomationMastery20o26PromotionBanner = () => {,
-  return (,
+const BusinessAutomationMastery20o26PromotionBanner = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-slate-80o0 via-blue-90o0 to-slate-80o0 border border-blue-50o0/20 rounded-2xl p-8 mb-8'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/10 via-cyan-60o0/10 to-blue-60o0/10'></div>,
@@ -10,7 +9,7 @@ const BusinessAutomationMastery20o26PromotionBanner = () => {,
       <div className='absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-50o0/20 to-transparent rounded-full blur-3xl'></div>,
       <div className='relative z-10'>,
         <div className='flex flex-col lg: flex-row items-center justify-between gap-8'>,
-          {/* Content */,}
+          {/* Content */}
           <div className='flex-1'>,
             <div className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-50o0 to-cyan-60o0 text-white px-4 py-2 rounded-full text-sm font-medium mb-4'>,
               <Settings className='w-4 h-4' />,
@@ -19,7 +18,7 @@ const BusinessAutomationMastery20o26PromotionBanner = () => {,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4 leading-tight'>,
               Master Business Automation for,
               <span className='bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
-                {' ',}
+                {' '}
                 Maximum Efficiency,
               </span>,
             </h2>,
@@ -43,24 +42,22 @@ const BusinessAutomationMastery20o26PromotionBanner = () => {,
                 <span className='text-sm font-medium'>Zero Errors</span>,
               </div>,
             </div>,
-            {/* CTA Buttons */,}
+            {/* CTA Buttons */}
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/business-automation-mastery-20o26',
-                className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2 group',
-              >,
+                className='bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 flex items-center justify-center gap-2 group'>,
                 Master Automation,
                 <ChevronRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center',
-              >,
+                className='border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center'>,
                 Get Expert Consultation,
               </Link>,
             </div>,
           </div>,
-          {/* Visual Element */,}
+          {/* Visual Element */}
           <div className='flex-shrink-0'>,
             <div className='relative'>,
               <div className='w-64 h-64 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 rounded-2xl border border-white/10 backdrop-blur-sm flex items-center justify-center'>,
@@ -84,9 +81,5 @@ const BusinessAutomationMastery20o26PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default BusinessAutomationMastery20o26PromotionBanner,
-,
+    </div>)};
+export default BusinessAutomationMastery20o26PromotionBanner;

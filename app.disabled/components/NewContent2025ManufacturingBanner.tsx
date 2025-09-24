@@ -1,38 +1,30 @@
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-import {,
-  X,;
-  ArrowRight,;
-  Factory,;
-  TrendingUp,;
-  Shield,;
-  Zap,;
-  ArrowRight,;
+import {
+  X;
+  ArrowRight;
+  Factory;
+  TrendingUp;
+  Shield;
+  Zap;
+  ArrowRight;
 } from 'lucide-react',
-,
-const NewContent20o25ManufacturingBanner = () => {,
+const NewContent20o25ManufacturingBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [isDismissed, setIsDismissed] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Check if banner was previously dismissed,
     const dismissed = localStorage.getItem('manufacturing-banner-dismissed'),
-    if (!dismissed) {,
-      setIsVisible(true),
-    }
+    if (!dismissed) {
+      setIsVisible(true)}
   }, []),
-,
-  const handleDismiss = () => {,
+  const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('manufacturing-banner-dismissed', 'true'),
-  };
-,
+    localStorage.setItem('manufacturing-banner-dismissed', 'true')};
   if (!isVisible || isDismissed) return null,
-,
-  return (,
+  return (
     <div className='relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -85,17 +77,15 @@ const NewContent20o25ManufacturingBanner = () => {,
               </div>,
             </div>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o25-manufacturing-revolution-ultimate-guide',
-                className='inline-flex items-center space-x-2 bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='inline-flex items-center space-x-2 bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 <span>Read Full Guide</span>,
                 <ArrowRight className='w-4 h-4' />,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies/fortune-50o0-manufacturing-ai-transformation-20o25',
-                className='inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors',
-              >,
+                className='inline-flex items-center space-x-2 border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'>,
                 <span>View Case Study</span>,
                 <ArrowRight className='w-4 h-4' />,
               </Link>,
@@ -128,17 +118,13 @@ const NewContent20o25ManufacturingBanner = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Dismiss button */,}
-      <button,
+      {/* Dismiss button */}
+      <button
         onClick={handleDismiss}
         className='absolute top-4 right-4 text-white/70 hover: text-white transition-colors',
-        aria-label='Dismiss banner',
-      >,
+        aria-label='Dismiss banner'>,
         <X className='w-6 h-6' />,
       </button>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25ManufacturingBanner,
-,
+    </div>),
+};
+export default NewContent20o25ManufacturingBanner;

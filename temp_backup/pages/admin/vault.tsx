@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function VaultPage() {,
-  return (,
+export default function VaultPage() {
+  return (
     <>,
       <Head>,
         <title>Vault - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function VaultPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

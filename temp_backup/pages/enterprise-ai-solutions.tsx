@@ -1,64 +1,57 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Building2, Zap, Target, Shield, TrendingUp, Globe,;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,;
-  Award, MessageCircle, Cpu,
-} from 'lucide-react',
-,
-export default function EnterpriseAISolutions() {,
-  const features = [,
-    {,
-      icon: <Building2 className="w-6 h-6"  />,;
-      title: 'Enterprise AI Integration',;
+import {
+  Building2, Zap, Target, Shield, TrendingUp, Globe;
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Cpu} from 'lucide-react',
+export default function EnterpriseAISolutions() {
+  const features = [
+    {
+      icon: <Building2 className="w-6 h-6"  />;
+      title: 'Enterprise AI Integration';
       description: 'Advanced AI integration with existing enterprise systems and workflows for seamless operations.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Scalable AI Infrastructure',;
+    };
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Scalable AI Infrastructure';
       description: 'Revolutionary scalable AI infrastructure that grows with your business needs and requirements.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Custom AI Solutions',;
+    };
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Custom AI Solutions';
       description: 'Intelligent custom AI solutions tailored to your specific enterprise challenges and objectives.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Enterprise Security',;
+    };
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Enterprise Security';
       description: 'Advanced enterprise security with AI-powered threat detection and compliance monitoring.',
-    ,},;
-    {,
-      icon: <TrendingUp className="w-6 h-6"  />,;
-      title: 'Performance Analytics',;
+    };
+    {
+      icon: <TrendingUp className="w-6 h-6"  />;
+      title: 'Performance Analytics';
       description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.',
-    ,},;
-    {,
-      icon: <Globe className="w-6 h-6"  />,;
-      title: 'Global Enterprise Support',;
+    };
+    {
+      icon: <Globe className="w-6 h-6"  />;
+      title: 'Global Enterprise Support';
       description: '24/7 global enterprise support with AI-powered automation and dedicated account management.',
-    ,}
+    }
   ],
-,
-  const benefits = [,
-    'Improve operational efficiency by 30o0%',;
-    'Reduce operational costs by 60%',;
-    'Increase productivity by 20o0%',;
-    'Enable data-driven decisions',;
-    'Scale operations globally',;
-    'Optimize business processes',;
-    'Scale AI solutions enterprise-wide',;
-    'Future-proof business operations',
-  ],
-,
-  const useCases = [,
-    'Process Automation', 'Data Analytics', 'Customer Intelligence',;
-    'Supply Chain Optimization', 'Risk Management', 'Performance Monitoring',;
-    'Business Intelligence', 'Predictive Analytics', 'Workflow Optimization',;
-    'Enterprise Analytics', 'AI Strategy', 'Digital Transformation',
-  ],
-,
-  return (,
+  const benefits = [
+    'Improve operational efficiency by 30o0%';
+    'Reduce operational costs by 60%';
+    'Increase productivity by 20o0%';
+    'Enable data-driven decisions';
+    'Scale operations globally';
+    'Optimize business processes';
+    'Scale AI solutions enterprise-wide';
+    'Future-proof business operations'],
+  const useCases = [
+    'Process Automation', 'Data Analytics', 'Customer Intelligence';
+    'Supply Chain Optimization', 'Risk Management', 'Performance Monitoring';
+    'Business Intelligence', 'Predictive Analytics', 'Workflow Optimization';
+    'Enterprise Analytics', 'AI Strategy', 'Digital Transformation'],
+  return (
     <>,
       <Head>,
         <title>Enterprise AI Solutions | Zion Tech Group</title>,
@@ -71,16 +64,15 @@ export default function EnterpriseAISolutions() {,
         <link rel="canonical" href="https://ziontechgroup.com/enterprise-ai-solutions"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-90o0/20 via-teal-90o0/20 to-cyan-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-50o0 to-teal-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Building2 className="w-8 h-8 text-white"  />,
@@ -90,37 +82,34 @@ export default function EnterpriseAISolutions() {,
                 Enterprise AI Solutions,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform enterprise operations with AI-powered integration,;
+                Transform enterprise operations with AI-powered integration;
                 scalable infrastructure, and custom solutions for maximum business impact.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white rounded-xl font-semibold text-lg hover: from-emerald-60o0 hover:to-teal-70o0 transition-all duration-20o0 shadow-lg shadow-emerald-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white rounded-xl font-semibold text-lg hover: from-emerald-60o0 hover:to-teal-70o0 transition-all duration-20o0 shadow-lg shadow-emerald-50o0/25">,
                   Transform Enterprise,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-emerald-50o0/30 text-emerald-40o0 rounded-xl font-semibold text-lg hover: bg-emerald-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-emerald-50o0/30 text-emerald-40o0 rounded-xl font-semibold text-lg hover: bg-emerald-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Revolutionary Enterprise Features,
               </h2>,
@@ -130,23 +119,21 @@ export default function EnterpriseAISolutions() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-emerald-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-emerald-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-emerald-50o0/20 to-teal-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-emerald-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +141,10 @@ export default function EnterpriseAISolutions() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Enterprise Operations,
               </h2>,
@@ -168,20 +154,18 @@ export default function EnterpriseAISolutions() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-emerald-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-emerald-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-emerald-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +173,10 @@ export default function EnterpriseAISolutions() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Enterprise Solutions for Every Need,
               </h2>,
@@ -203,20 +186,18 @@ export default function EnterpriseAISolutions() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-emerald-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-emerald-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-emerald-50o0/20 to-teal-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Cpu className="w-6 h-6 text-emerald-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{useCase,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{useCase}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +205,9 @@ export default function EnterpriseAISolutions() {,
         <section className="py-20 bg-gradient-to-r from-emerald-90o0/20 via-teal-90o0/20 to-cyan-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Enterprise?,
@@ -237,17 +218,15 @@ export default function EnterpriseAISolutions() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white rounded-xl font-semibold text-lg hover: from-emerald-60o0 hover:to-teal-70o0 transition-all duration-20o0 shadow-lg shadow-emerald-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white rounded-xl font-semibold text-lg hover: from-emerald-60o0 hover:to-teal-70o0 transition-all duration-20o0 shadow-lg shadow-emerald-50o0/25">,
                   Transform Enterprise Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-emerald-50o0/30 text-emerald-40o0 rounded-xl font-semibold text-lg hover: bg-emerald-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-emerald-50o0/30 text-emerald-40o0 rounded-xl font-semibold text-lg hover: bg-emerald-50o0/10 transition-all duration-20o0">,
                   Contact Enterprise Team,
                 </motion.button>,
               </div>,
@@ -255,6 +234,5 @@ export default function EnterpriseAISolutions() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

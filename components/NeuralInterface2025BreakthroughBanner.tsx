@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function NeuralInterface20o25BreakthroughBanner() {,
-  return (,
+export default function NeuralInterface20o25BreakthroughBanner() {
+  return (
     <section className='bg-gradient-to-r from-violet-60o0 via-purple-60o0 to-fuchsia-60o0 py-16 px-4'>,
       <div className='max-w-6xl mx-auto'>,
         <div className='text-center'>,
@@ -19,22 +18,19 @@ export default function NeuralInterface20o25BreakthroughBanner() {,
             cognition, and seamlessly integrate with AI systems.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/neural-interface-20o25-breakthrough',
-              className='bg-white text-violet-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-white text-violet-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5'>,
               Experience Neural Interface,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-60o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-60o0 transition-all'>,
               Join Beta Program,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

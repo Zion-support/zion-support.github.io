@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function 20o25ServicesLaunchPage() {,
-  return (,
+export default function 20o25ServicesLaunchPage() {
+  return (
     <>,
       <Head>,
         <title>20o25 Services Launch - Zion Tech Group</title>,
@@ -16,6 +15,5 @@ export default function 20o25ServicesLaunchPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

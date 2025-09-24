@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SystemAdministrationChatPage() {,
-  return (,
+export default function SystemAdministrationChatPage() {
+  return (
     <>,
       <Head>,
         <title>System Administration Chat - Zion Tech Group</title>,
@@ -12,6 +11,4 @@ export default function SystemAdministrationChatPage() {,
         <p>Blog content coming soon...</p>,
         <Link href="/blog">Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-}
+    </div>)}

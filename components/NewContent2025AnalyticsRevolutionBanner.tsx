@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o25AnalyticsRevolutionBanner = () => {,
-  return (,
+const NewContent20o25AnalyticsRevolutionBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16 relative overflow-hidden'>,
       <div className='absolute inset-0 bg-black opacity-20'></div>,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -18,16 +17,14 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
             transforms raw data into actionable business strategies.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o25-analytics-revolution',
-              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Explore Analytics Revolution,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/analytics-success',
-              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'>,
               View Success Stories,
             </Link>,
           </div>,
@@ -59,9 +56,6 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContent20o25AnalyticsRevolutionBanner,
-,
+    </section>),
+};
+export default NewContent20o25AnalyticsRevolutionBanner;

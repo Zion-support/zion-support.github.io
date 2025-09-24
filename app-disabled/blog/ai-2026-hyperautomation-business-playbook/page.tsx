@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Hyperautomation Business Playbook - Complete Implementation Guide',;
+    'AI 20o26: Hyperautomation Business Playbook - Complete Implementation Guide';
   description:,
-    'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',;
-  keywords: [,
-    'hyperautomation',;
-    'AI automation',;
-    'business transformation',;
-    'enterprise AI',;
-  ],;
+    'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.';
+  keywords: [
+    'hyperautomation';
+    'AI automation';
+    'business transformation';
+    'enterprise AI';
+  ];
 };
-,
-export default function AI20o26HyperautomationPlaybook() {,
-  return (,
+export default function AI20o26HyperautomationPlaybook() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI 20o26: Hyperautomation Business Playbook - Complete Implementation Guide',
         description='A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',
         keywords='hyperautomation, AI automation, business transformation, enterprise AI',
@@ -41,16 +39,14 @@ export default function AI20o26HyperautomationPlaybook() {,
                 AI-driven hyperautomation across the enterprise.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Start Implementation,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Get Expert Help,
                 </Link>,
               </div>,
@@ -132,16 +128,14 @@ export default function AI20o26HyperautomationPlaybook() {,
                 and proven methodologies.,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore Our Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Schedule Consultation,
                 </Link>,
               </div>,
@@ -149,7 +143,6 @@ export default function AI20o26HyperautomationPlaybook() {,
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>),
+}
 ,

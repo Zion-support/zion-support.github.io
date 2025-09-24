@@ -1,15 +1,14 @@
 import Head from 'next/head',
-,
-export default function DiversityInclusionPage() {,
-  return (,
+export default function DiversityInclusionPage() {
+  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8'>,
       <Head>,
         <title>Diversity & Inclusion | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Our commitment to diversityequityand inclusion.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https://ziontechgroup.com/diversity-inclusion',
         />,
@@ -28,7 +27,6 @@ export default function DiversityInclusionPage() {,
           <li>Respectfulsafeand collaborative culture</li>,
         </ul>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

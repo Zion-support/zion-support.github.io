@@ -1,35 +1,26 @@
 "use client",
-,
-import React from 'react',
-,
-const LoadingSpinner: React.FC = () => {,
-  return (,
+import React from 'react';
+const LoadingSpinner: React.FC = () => {
+  return (
     <div className="flex items-center justify-center">,
       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400"></div>,
-interface LoadingSpinnerProps {,
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
-,}
+}
 ,
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
-  size = 'md',;
-  text = 'Loading...',
-}) => {,
-  const sizeClasses ={,
-    sm: 'w-4 h-4',;
-    md: 'w-8 h-8',;
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md';
+  text = 'Loading...'}) => {
+  const sizeClasses ={
+    sm: 'w-4 h-4';
+    md: 'w-8 h-8';
     lg: 'w-12 h-12',
-  ,};
-,
-  return (,
+  };
+  return (
     <div className="flex flex-col items-center justify-center p-8">,
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-4 border-gray-30o0 border-t-blue-60o0`}></div>,
-      {text && (,
-        <p className="mt-4 text-gray-60o0 text-sm">{text}</p>,
-      )}
-    </div>,
-  ),
-};
-,
-export default LoadingSpinner,
-})
+      {text && (
+        <p className="mt-4 text-gray-60o0 text-sm">{text}</p>)}
+    </div>)};
+export default LoadingSpinner})

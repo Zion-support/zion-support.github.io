@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ConvenePage() {,
-  return (,
+export default function ConvenePage() {
+  return (
     <>,
       <Head>,
         <title>Convene - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ConvenePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

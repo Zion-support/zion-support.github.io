@@ -1,72 +1,61 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
+import {
   ArrowRight,
   Star,
   TrendingUp,
   Users,
   Zap,
   Shield,
-  Brain,;
-  Globe,;
-  Target,;
-  Award,;
-  CheckCircle,;
-  PlayCircle,;
-  BookOpen,;
-  Lightbulb,;
-  Sparkles,;
-  Rocket,
-} from 'lucide-react',
-,
-const NewContentShowcase20o25PromotionBanner = () => {,
+  Brain;
+  Globe;
+  Target;
+  Award;
+  CheckCircle;
+  PlayCircle;
+  BookOpen;
+  Lightbulb;
+  Sparkles;
+  Rocket} from 'lucide-react',
+const NewContentShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentFeaturesetCurrentFeature] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
     // Rotate features every 3 seconds,
-    const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % 3),
-    }30o00),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const features = [,
-    {,
-      icon: Brain,;
-      title: 'AI Solutions',;
-      description: 'Revolutionary AI technology',;
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 3)}30o00),
+    return () => clearInterval(interval)}[]),
+  const features = [
+    {
+      icon: Brain;
+      title: 'AI Solutions';
+      description: 'Revolutionary AI technology';
       color: 'from-purple-50o0 to-blue-50o0',
-    ,},;
-    {,
-      icon: Zap,;
-      title: 'Automation',;
-      description: 'Intelligent workflow automation',;
+    };
+    {
+      icon: Zap;
+      title: 'Automation';
+      description: 'Intelligent workflow automation';
       color: 'from-green-50o0 to-teal-50o0',
-    ,},;
-    {,
-      icon: Shield,;
-      title: 'Security',;
-      description: 'Advanced cybersecurity protection',;
+    };
+    {
+      icon: Shield;
+      title: 'Security';
+      description: 'Advanced cybersecurity protection';
       color: 'from-red-50o0 to-orange-50o0',
-    ,}
+    }
   ],
-,
-  const stats = [,
-    { label: 'New 'Features', 'value: '50+'icon: Sparkles ,},;
-    { label: 'Success 'Rate', 'value: '99.8%'icon: Award ,},;
-    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star ,},;
-    { label: 'ROI 'Increase', 'value: '30o0%'icon: TrendingUp ,}
+  const stats = [
+    { label: 'New 'Features', 'value: '50+'icon: Sparkles };
+    { label: 'Success 'Rate', 'value: '99.8%'icon: Award };
+    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star };
+    { label: 'ROI 'Increase', 'value: '30o0%'icon: TrendingUp }
   ],
-,
-  return (,
+  return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -76,53 +65,48 @@ const NewContentShowcase20o25PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <motion.div,
-            initial={{ opacity: 0x: -50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8 ,}}
-            className="text-white",
-          >,
+            initial={{ opacity: 0x: -50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="text-white">,
             {/* Badge */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-              transition={{ duration: 0.6delay: 0.2 ,}}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full text-sm font-medium mb-6",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-full text-sm font-medium mb-6">,
               <Sparkles className="w-4 h-4 mr-2"  />,
               NEW CONTENT AVAILABLE,
             </motion.div>,
             {/* Main Heading */}
             <motion.h2,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-              transition={{ duration: 0.6delay: 0.3 ,}}
-              className="text-4xl md: text-5xl font-bold mb-6",
-            >,
-              Discover Our Latest{' ',}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.3 }}
+              className="text-4xl md: text-5xl font-bold mb-6">,
+              Discover Our Latest{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-40o0 to-orange-40o0">,
                 Innovations,
               </span>,
             </motion.h2>,
             {/* Subheading */}
             <motion.p,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-              transition={{ duration: 0.6delay: 0.4 ,}}
-              className="text-xl text-gray-30o0 mb-8",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="text-xl text-gray-30o0 mb-8">,
               Explore cutting-edge AI solutionsintelligent automationand advanced cybersecurity,
               designed to revolutionize your business operations and drive unprecedented growth.,
             </motion.p>,
             {/* Rotating Feature */}
             <motion.div,
               key={currentFeature}
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.5 ,}}
-              className="mb-8",
-            >,
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8">,
               <div className="flex items-center space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">,
                 <div className={`p-3 bg-gradient-to-r ${features[currentFeature].color} rounded-lg`}>,
                   <features[currentFeature].icon className="w-6 h-6 text-white"  />,
@@ -139,49 +123,43 @@ const NewContentShowcase20o25PromotionBanner = () => {,
             </motion.div>,
             {/* Stats */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-              transition={{ duration: 0.6delay: 0.5 ,}}
-              className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
-            >,
-              {stats.map((statindex) => (,
-                <div key={index,} className="text-center">,
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.5 }}
+              className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">,
+              {stats.map((statindex) => (
+                <div key={index} className="text-center">,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-30o0">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </motion.div>,
             {/* CTA Buttons */}
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-              transition={{ duration: 0.6delay: 0.6 ,}}
-              className="flex flex-col sm: flex-row gap-4",
-            >,
-              <Link,
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6delay: 0.6 }}
+              className="flex flex-col sm: flex-row gap-4">,
+              <Link
                 href="/new-content-showcase-20o25",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1">,
                 <Rocket className="w-5 h-5 mr-2"  />,
                 Explore New Content,
                 <ArrowRight className="w-5 h-5 ml-2"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/demo",
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-60o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-60o0 transition-all duration-30o0">,
                 <PlayCircle className="w-5 h-5 mr-2"  />,
                 Watch Demo,
               </Link>,
             </motion.div>,
           </motion.div>,
-          {/* Right Content - Visual */,}
+          {/* Right Content - Visual */}
           <motion.div,
-            initial={{ opacity: 0x: 50 ,}}
-            animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-            transition={{ duration: 0.8delay: 0.2 ,}}
-            className="relative",
-          >,
+            initial={{ opacity: 0x: 50 }}
+            animate={isVisible ? { opacity: 1x: 0 } : {}}
+            transition={{ duration: 0.8delay: 0.2 }}
+            className="relative">,
             {/* Main Visual Card */}
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
               {/* Header */}
@@ -195,17 +173,16 @@ const NewContentShowcase20o25PromotionBanner = () => {,
               </div>,
               {/* Feature Cards */}
               <div className="space-y-4">,
-                {features.map((featureindex) => (,
+                {features.map((featureindex) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0x: 20 ,}}
-                    animate={{ opacity: 1x: 0 ,}}
-                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 ,}}
-                    className={`p-4 rounded-xl border transition-all duration-30o0 ${,
+                    initial={{ opacity: 0x: 20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
+                    className={`p-4 rounded-xl border transition-all duration-30o0 ${
                       index === currentFeature,
                         ? 'bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 border-purple-40o0/50',
-                        : 'bg-white/5 border-white/20',
-                    }`}
+                        : 'bg-white/5 border-white/20'}`}
                   >,
                     <div className="flex items-center space-x-3">,
                       <div className={`p-2 bg-gradient-to-r ${feature.color} rounded-lg`}>,
@@ -215,18 +192,15 @@ const NewContentShowcase20o25PromotionBanner = () => {,
                         <h4 className="text-white font-semibold">{feature.title}</h4>,
                         <p className="text-gray-30o0 text-sm">{feature.description}</p>,
                       </div>,
-                      {index === currentFeature && (,
+                      {index === currentFeature && (
                         <motion.div,
-                          initial={{ scale: 0 ,}}
-                          animate={{ scale: 1 ,}}
-                          className="ml-auto",
-                        >,
+                          initial={{ scale: 0 }}
+                          animate={{ scale: 1 }}
+                          className="ml-auto">,
                           <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>,
-                        </motion.div>,
-                      )}
+                        </motion.div>)}
                     </div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
               {/* Progress Bar */}
               <div className="mt-6">,
@@ -237,33 +211,28 @@ const NewContentShowcase20o25PromotionBanner = () => {,
                 <div className="w-full bg-white/20 rounded-full h-2">,
                   <motion.div,
                     className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 h-2 rounded-full",
-                    initial={{ width: 0 ,}}
-                    animate={{ width: '10o0%' ,}}
-                    transition={{ duration: 2delay: 1 ,}}
+                    initial={{ width: 0 }}
+                    animate={{ width: '10o0%' }}
+                    transition={{ duration: 2delay: 1 }}
                    />,
                 </div>,
               </div>,
             </div>,
             {/* Floating Elements */}
             <motion.div,
-              animate={{ y: [0-10] ,}}
-              transition={{ duration: 2repeat: Infinity ,}}
-              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center",
-            >,
+              animate={{ y: [0-10] }}
+              transition={{ duration: 2repeat: Infinity }}
+              className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center">,
               <Star className="w-4 h-4 text-white"  />,
             </motion.div>,
             <motion.div,
-              animate={{ y: [0o10] ,}}
-              transition={{ duration: 2repeat: Infinitydelay: 1 ,}}
-              className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-40o0 rounded-full flex items-center justify-center",
-            >,
+              animate={{ y: [0o10] }}
+              transition={{ duration: 2repeat: Infinitydelay: 1 }}
+              className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-40o0 rounded-full flex items-center justify-center">,
               <CheckCircle className="w-3 h-3 text-white"  />,
             </motion.div>,
           </motion.div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default NewContentShowcase20o25PromotionBanner,
+    </div>)};
+export default NewContentShowcase20o25PromotionBanner;

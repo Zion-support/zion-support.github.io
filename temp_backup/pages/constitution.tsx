@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ConstitutionPage() {,
-  return (,
+export default function ConstitutionPage() {
+  return (
     <>,
       <Head>,
         <title>Constitution - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ConstitutionPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

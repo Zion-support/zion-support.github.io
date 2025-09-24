@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -10,39 +10,33 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
-,
-export interface HeaderProps {,
+export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
-  customTheme?: {,
+  customTheme?: {
     primaryColor: string,
     backgroundColor: string,
     textColor: string,
-  ,};
+  };
 }
 ,
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {,
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
   const { user } = useAuth(),
   const { isWhitelabel, primaryColor } = useWhitelabel(),
   const navigate = useNavigate(),
   const [query, setQuery] = useState(""),
-,
-  const headerStyle = effectiveTheme ? {,
-    backgroundColor: effectiveTheme.backgroundColor,;
-    color: effectiveTheme.textColor,;
-    borderColor: `${effectiveTheme.primaryColor,}20`,
-  } : {};
-,
-  const handleSubmit = (e: React.FormEvent) => {,
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor;
+    color: effectiveTheme.textColor;
+    borderColor: `${effectiveTheme.primaryColor}20`} : {};
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    if (query.trim()) {,
-      navigate(`/search?q=${encodeURIComponent(query),}`),
-      setQuery(""),
-    }
+    if (query.trim()) {
+      navigate(`/search?q=${encodeURIComponent(query)}`),
+      setQuery("")}
   };
-,
-  return (,
-    <header,
+  return (
+    <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md shadow-2xl",
       style={headerStyle}
     >,
@@ -53,18 +47,17 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="absolute top-4 left-1/2 w-1 h-1 bg-zion-blue rounded-full animate-pulse delay-20o00"></div>,
       </div>,
       <div className="container flex h-16 items-center px-4 sm: px-6 relative z-10">,
-        <Logo customLogo={customLogo,} customColor={effectiveTheme?.primaryColor}  />,
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor}  />,
         <div className="ml-6 flex-1">,
           {/* Navigation removed - using sidebar instead */}
         </div>,
         <form onSubmit={handleSubmit} className="hidden md: block w-64 mx-4">,
-          <EnhancedSearchInput,
-            value={query,}
+          <EnhancedSearchInput
+            value={query}
             onChange={setQuery}
-            onSelectSuggestion={(text) => {,
+            onSelectSuggestion={(text) => {
               navigate(`/search?q=${encodeURIComponent(text)}`),
-              setQuery(""),
-            }}
+              setQuery("")}}
             searchSuggestions={searchSuggestions}
           />,
         </form>,
@@ -73,7 +66,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
           {!hideLogin && <UserMenu  />}
         </div>,
       </div>,
-    </header>,
-  ),
-}
+    </header>)}
 ,

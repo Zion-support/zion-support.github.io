@@ -1,32 +1,29 @@
 
 import { useState } from "react",
 import { Link } from "react-router-dom",
-import {,
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu",
+import {
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
 import { EyeChevronDownLoader2 } from "lucide-react",
 import { JobApplicationStatus } from "@/types/jobs",
-,
-interface ApplicationActionsProps {,
+interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
   onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: stringnewStatus: ApplicationStatus) => Promise<void>,
-,}
+}
 ,
-export function ApplicationActions({,
-  application,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,
-}: ApplicationActionsProps) {,
-  return (,
+export function ApplicationActions({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange}: ApplicationActionsProps) {
+  return (
     <div className="flex items-center justify-end gap-2">,
-      <Button,
+      <Button
         variant="outline",
         size="sm",
         onClick={() => onViewApplication(application.id)}
@@ -36,52 +33,46 @@ export function ApplicationActions({,
       </Button>,
       <DropdownMenu>,
         <DropdownMenuTrigger asChild>,
-          <Button,
+          <Button
             variant="outline",
             size="sm",
             disabled={processingId === application.id}
           >,
-            {processingId === application.id ? (,
-              <Loader2 className="h-4 w-4 animate-spin" />,
-            ) : (,
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>,
-            )}
+            {processingId === application.id ? (
+              <Loader2 className="h-4 w-4 animate-spin" />) : (
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>)}
           </Button>,
         </DropdownMenuTrigger>,
         <DropdownMenuContent align="end">,
-          <DropdownMenuItem,
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id"shortlisted")}
           >,
             Shortlist,
           </DropdownMenuItem>,
-          <DropdownMenuItem,
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id"interview")}
           >,
             Schedule Interview,
           </DropdownMenuItem>,
-          <DropdownMenuItem,
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id"hired")}
           >,
             Hire,
           </DropdownMenuItem>,
-          <DropdownMenuItem,
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id"rejected")}
-            className="text-red-600",
-          >,
+            className="text-red-600">,
             Reject,
           </DropdownMenuItem>,
         </DropdownMenuContent>,
       </DropdownMenu>,
-      <Button,
+      <Button
         variant="default",
         size="sm",
-        asChild,
-      >,
+        asChild>,
         <Link to={`/messages?talentId=${application.talent_id}`}>,
           Contact,
         </Link>,
       </Button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

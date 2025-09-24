@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {,
-  return (,
+const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='AugmentedRealityInEnterpriseApplicationsChat blog post',
         />,
@@ -19,9 +18,6 @@ const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default AugmentedRealityInEnterpriseApplicationsChat,
-,
+    </div>),
+};
+export default AugmentedRealityInEnterpriseApplicationsChat;

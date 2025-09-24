@@ -1,9 +1,8 @@
 import Link from 'next/link',
-,
-const QuantumAIRevolution20o35PromotionBanner = () => {,
-  return (,
+const QuantumAIRevolution20o35PromotionBanner = () => {
+  return (
     <section className='relative py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-purple-90o0 overflow-hidden'>,
-      {/* Animated Background Elements */,}
+      {/* Animated Background Elements */}
       <div className='absolute inset-0'>,
         <div className='absolute top-16 left-16 w-40 h-40 bg-purple-50o0/20 rounded-full blur-3xl animate-pulse'></div>,
         <div className='absolute top-32 right-24 w-48 h-48 bg-indigo-50o0/20 rounded-full blur-3xl animate-pulse delay-10o00'></div>,
@@ -30,20 +29,18 @@ const QuantumAIRevolution20o35PromotionBanner = () => {,
             manipulation.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>,
-            <Link,
+            <Link
               href='/quantum-ai-revolution-20o35',
-              className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 hover:from-purple-70o0 hover:to-indigo-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 hover:from-purple-70o0 hover:to-indigo-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Experience the Revolution →,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-ai-revolution-20o35#matter-creation',
-              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white hover:bg-white hover:text-purple-60o0 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0'>,
               Matter Creation,
             </Link>,
           </div>,
-          {/* Key Features Grid */,}
+          {/* Key Features Grid */}
           <div className='grid md: grid-cols-3 gap-8 mb-12'>,
             <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>,
               <div className='text-purple-40o0 text-4xl mb-4'>⚛️</div>,
@@ -94,7 +91,7 @@ const QuantumAIRevolution20o35PromotionBanner = () => {,
               </ul>,
             </div>,
           </div>,
-          {/* Capabilities Showcase */,}
+          {/* Capabilities Showcase */}
           <div className='bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-5xl mx-auto mb-12'>,
             <h3 className='text-2xl font-bold text-white mb-6'>,
               Revolutionary Capabilities,
@@ -146,7 +143,7 @@ const QuantumAIRevolution20o35PromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Stats */,}
+          {/* Stats */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mb-12'>,
             <div className='text-center'>,
               <div className='text-3xl md:text-4xl font-bold text-purple-40o0 mb-2'>,
@@ -173,25 +170,21 @@ const QuantumAIRevolution20o35PromotionBanner = () => {,
               <div className='text-white font-semibold'>Consciousness</div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className='pt-8 border-t border-white/20'>,
             <p className='text-gray-30o0 mb-6 text-lg'>,
               The quantum AI revolution is already beginning. Are you ready to,
               be part of the most profound transformation in the history of,
               consciousness?,
             </p>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 hover: from-cyan-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-cyan-60o0 to-blue-60o0 hover: from-cyan-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Join the Revolution,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default QuantumAIRevolution20o35PromotionBanner,
-,
+    </section>),
+};
+export default QuantumAIRevolution20o35PromotionBanner;

@@ -1,89 +1,83 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const AI20o25TrendsShowcase = () => {,
+const AI20o25TrendsShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
-,
-  const content = [,
-    {,
-      id: 'ai-20o25-future-trends',;
-      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough',;
+  const content = [
+    {
+      id: 'ai-20o25-future-trends';
+      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough';
       description:,
-        'Ultimate Guide to 15,0o00% ROI Through Revolutionary AI Trends',;
-      type: 'blog',;
-      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough-ultimate-guide',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$20o0B+',;
-        efficiency: '2,40o0%',;
-        accuracy: '99.97%',;
-      },;
-      readingTime: '35 min read',;
-      featured: true,;
-      tags: ['AI Trends', 'Revolutionary Breakthrough', 'ROI', 'Fortune 50o0'],;
-    },;
-    {,
-      id: 'fortune-50o0-ai-trends-success',;
-      title: 'Fortune 50o0 AI Trends Success Story',;
-      description: '$20o0B Annual Savings - 15,0o00% ROI Achievement',;
-      type: 'case-study',;
-      url: '/case-studies/fortune-50o0-ai-trends-150o00-roi-success-story',;
-      metrics: {,
-        roi: '15,0o00%',;
-        savings: '$20o0B',;
-        timeline: '18 months',;
-        satisfaction: '99.8%',;
-      },;
-      readingTime: '25 min read',;
-      featured: true,;
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'],;
-    },;
-    {,
-      id: 'ai-trends-implementation-guide',;
-      title: 'AI 20o25 Trends Implementation Ultimate Guide',;
-      description: 'Complete Roadmap to 15,0o00% ROI',;
-      type: 'resource',;
-      url: '/resources/ai-20o25-trends-implementation-ultimate-guide',;
-      metrics: {,
-        roi: '15,0o00%',;
-        success: '99.7%',;
-        timeline: '18 months',;
-        guide: '45 min read',;
-      },;
-      readingTime: '45 min read',;
-      featured: true,;
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework'],;
-    },;
+        'Ultimate Guide to 15,0o00% ROI Through Revolutionary AI Trends';
+      type: 'blog';
+      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough-ultimate-guide';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$20o0B+';
+        efficiency: '2,40o0%';
+        accuracy: '99.97%';
+      };
+      readingTime: '35 min read';
+      featured: true;
+      tags: ['AI Trends', 'Revolutionary Breakthrough', 'ROI', 'Fortune 50o0'];
+    };
+    {
+      id: 'fortune-50o0-ai-trends-success';
+      title: 'Fortune 50o0 AI Trends Success Story';
+      description: '$20o0B Annual Savings - 15,0o00% ROI Achievement';
+      type: 'case-study';
+      url: '/case-studies/fortune-50o0-ai-trends-150o00-roi-success-story';
+      metrics: {
+        roi: '15,0o00%';
+        savings: '$20o0B';
+        timeline: '18 months';
+        satisfaction: '99.8%';
+      };
+      readingTime: '25 min read';
+      featured: true;
+      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'];
+    };
+    {
+      id: 'ai-trends-implementation-guide';
+      title: 'AI 20o25 Trends Implementation Ultimate Guide';
+      description: 'Complete Roadmap to 15,0o00% ROI';
+      type: 'resource';
+      url: '/resources/ai-20o25-trends-implementation-ultimate-guide';
+      metrics: {
+        roi: '15,0o00%';
+        success: '99.7%';
+        timeline: '18 months';
+        guide: '45 min read';
+      };
+      readingTime: '45 min read';
+      featured: true;
+      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework'];
+    };
   ],
-,
-  const filters = [,
-    { id: 'all', label: 'All Content', count: content.length ,},;
-    {,
-      id: 'blog',;
-      label: 'Blog Posts',;
-      count: content.filter(item => item.type === 'blog').length,;
-    },;
-    {,
-      id: 'case-study',;
-      label: 'Case Studies',;
-      count: content.filter(item => item.type === 'case-study').length,;
-    },;
-    {,
-      id: 'resource',;
-      label: 'Resources',;
-      count: content.filter(item => item.type === 'resource').length,;
-    },;
+  const filters = [
+    { id: 'all', label: 'All Content', count: content.length };
+    {
+      id: 'blog';
+      label: 'Blog Posts';
+      count: content.filter(item => item.type === 'blog').length;
+    };
+    {
+      id: 'case-study';
+      label: 'Case Studies';
+      count: content.filter(item => item.type === 'case-study').length;
+    };
+    {
+      id: 'resource';
+      label: 'Resources';
+      count: content.filter(item => item.type === 'resource').length;
+    };
   ],
-,
   const filteredContent =,
     activeFilter === 'all',
       ? content,
       : content.filter(item => item.type === activeFilter),
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -92,11 +86,10 @@ const AI20o25TrendsShowcase = () => {,
         return '📚',
       default:,
         return '📄',
-    ,}
+    }
   };
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'from-blue-50o0 to-cyan-50o0',
       case 'case-study':,
@@ -105,13 +98,12 @@ const AI20o25TrendsShowcase = () => {,
         return 'from-purple-50o0 to-violet-50o0',
       default:,
         return 'from-gray-50o0 to-slate-50o0',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <div className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4'>,
             <span className='text-sm font-medium'>,
@@ -156,29 +148,27 @@ const AI20o25TrendsShowcase = () => {,
         </div>,
         {/* Filter Tabs */}
         <div className='flex flex-wrap justify-center gap-2 mb-8'>,
-          {filters.map(filter => (,
-            <button,
+          {filters.map(filter => (
+            <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-30o0 ${
                 activeFilter === filter.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
                   : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              ,}`}
+              }`}
             >,
               {filter.label} ({filter.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className='bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1 overflow-hidden',
-            >,
-              {/* Header */,}
-              <div,
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className='bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-1 overflow-hidden'>,
+              {/* Header */}
+              <div
                 className={`bg-gradient-to-r ${getTypeColor(item.type)} p-6 text-white`}
               >,
                 <div className='flex items-center justify-between mb-4'>,
@@ -188,11 +178,10 @@ const AI20o25TrendsShowcase = () => {,
                       {item.type.replace('-', ' ')}
                     </span>,
                   </div>,
-                  {item.featured && (,
+                  {item.featured && (
                     <span className='bg-yellow-40o0 text-yellow-90o0 px-3 py-1 rounded-full text-xs font-bold'>,
                       FEATURED,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold mb-2 line-clamp-2'>,
                   {item.title}
@@ -248,14 +237,12 @@ const AI20o25TrendsShowcase = () => {,
                 </div>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-6'>,
-                  {item.tags.map((tag, index) => (,
-                    <span,
+                  {item.tags.map((tag, index) => (
+                    <span
                       key={index}
-                      className='bg-gray-10o0 text-gray-70o0 px-3 py-1 rounded-full text-xs font-medium',
-                    >,
+                      className='bg-gray-10o0 text-gray-70o0 px-3 py-1 rounded-full text-xs font-medium'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Reading Time */}
                 <div className='flex items-center justify-between mb-6'>,
@@ -268,9 +255,9 @@ const AI20o25TrendsShowcase = () => {,
                 </div>,
                 {/* Actions */}
                 <div className='space-y-3'>,
-                  <Link,
+                  <Link
                     href={item.url}
-                    className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} hover: opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 text-center block`,}
+                    className={`w-full bg-gradient-to-r ${getTypeColor(item.type)} hover: opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 text-center block`}
                   >,
                     Read Full{' '}
                     {item.type === 'blog',
@@ -279,16 +266,14 @@ const AI20o25TrendsShowcase = () => {,
                         ? 'Case Study',
                         : 'Guide'}
                   </Link>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='w-full border-2 border-gray-30o0 text-gray-70o0 hover: border-purple-60o0 hover:text-purple-60o0 px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 text-center block',
-                  >,
+                    className='w-full border-2 border-gray-30o0 text-gray-70o0 hover: border-purple-60o0 hover:text-purple-60o0 px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 text-center block'>,
                     Get Implementation Support,
                   </Link>,
                 </div>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='mt-16 text-center'>,
@@ -301,25 +286,20 @@ const AI20o25TrendsShowcase = () => {,
               revolutionary AI trends implementation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Start Your AI Transformation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Our Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default AI20o25TrendsShowcase,
-,
+    </div>),
+};
+export default AI20o25TrendsShowcase;

@@ -1,200 +1,178 @@
-import React from 'react',
+import React from 'react';
 import { motion } from 'framer-motion',
-import {,
-  Mail, Phone, MapPin, Globe,;
-  Twitter, Linkedin, Github,;
-  ArrowUp, Crown, Zap, Brain, Rocket,;
-  Shield, Users, BookOpen, Briefcase, Atom,
-} from 'lucide-react',
+import {
+  Mail, Phone, MapPin, Globe;
+  Twitter, Linkedin, Github;
+  ArrowUp, Crown, Zap, Brain, Rocket;
+  Shield, Users, BookOpen, Briefcase, Atom} from 'lucide-react',
 import Link from 'next/link',
 import { AnimatePresence } from 'framer-motion',
-,
-interface FooterLink {,
+interface FooterLink {
   label: string,
   href: string,
   description?: string,
   external?: boolean,
-,}
+}
 ,
-interface FooterSection {,
+interface FooterSection {
   title: string,
   links: FooterLink[],
-,}
+}
 ,
-const footerSections: FooterSection[] = [,
-  {,
-    title: 'Services',;
-    links: [,
-      { label: 'AI & Machine Learning', href: '/ai-services', description: 'Advanced AI solutions' ,},;
-      { label: 'Quantum Computing', href: '/quantum-computing', description: 'Next-gen quantum tech' ,},;
-      { label: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' ,},;
-      { label: 'Q4 20o25 Innovation', href: '/innovative-20o25-q4-showcase', description: 'Latest revolutionary services' ,},;
-      { label: 'Pricing Guide', href: '/comprehensive-pricing-20o25-q4', description: 'Comprehensive pricing' ,},;
-      { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' ,},;
-      { label: 'Cloud Solutions', href: '/cloud-platform', description: 'Scalable cloud infrastructure' ,},;
-      { label: 'View All Services', href: '/services', description: 'Complete service portfolio' ,}
-    ],
-  },;
-  {,
-    title: 'Solutions',;
-    links: [,
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' ,},;
-      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' ,},;
-      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' ,},;
-      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' ,},;
-      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' ,},;
-      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' ,}
-    ],
-  },;
-  {,
-    title: 'Company',;
-    links: [,
-      { label: 'About Us', href: '/about', description: 'Our mission and values' ,},;
-      { label: 'Careers', href: '/careers', description: 'Join our team' ,},;
-      { label: 'Contact', href: '/contact', description: 'Get in touch' ,}
-    ],
-  },;
-  {,
-    title: 'Resources',;
-    links: [,
-      { label: 'Blog', href: '/blog', description: 'Industry insights' ,},;
-      { label: 'White Papers', href: '/white-papers', description: 'In-depth research' ,},;
-      { label: 'Webinars', href: '/webinars', description: 'Educational content' ,},;
-      { label: 'Documentation', href: '/docs', description: 'Technical guides' ,},;
-      { label: 'Blog', href: '/blog', description: 'Industry insights' ,},;
-      { label: 'Case Studies', href: '/case-studies', description: 'Success stories' ,},;
-      { label: 'Support', href: '/support', description: 'Help & assistance' ,}
-    ],
-  },;
-  {,
-    title: 'Industries',;
-    links: [,
-      { label: 'Healthcare', href: '/healthcare-solutions', description: 'Medical technology' ,},;
-      { label: 'Finance', href: '/financial-solutions', description: 'Fintech solutions' ,},;
-      { label: 'Manufacturing', href: '/manufacturing-ai-solutions', description: 'Industry 4.0' ,},;
-      { label: 'Government', href: '/government-technology-solutions', description: 'Public sector' ,},;
-      { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' ,}
-    ],
-  }
+const footerSections: FooterSection[] = [
+  {
+    title: 'Services';
+    links: [
+      { label: 'AI & Machine Learning', href: '/ai-services', description: 'Advanced AI solutions' };
+      { label: 'Quantum Computing', href: '/quantum-computing', description: 'Next-gen quantum tech' };
+      { label: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' };
+      { label: 'Q4 20o25 Innovation', href: '/innovative-20o25-q4-showcase', description: 'Latest revolutionary services' };
+      { label: 'Pricing Guide', href: '/comprehensive-pricing-20o25-q4', description: 'Comprehensive pricing' };
+      { label: 'Cybersecurity', href: '/cybersecurity', description: 'Enterprise security' };
+      { label: 'Cloud Solutions', href: '/cloud-platform', description: 'Scalable cloud infrastructure' };
+      { label: 'View All Services', href: '/services', description: 'Complete service portfolio' }
+    ]};
+  {
+    title: 'Solutions';
+    links: [
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' };
+      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' };
+      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' };
+      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' };
+      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' };
+      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+    ]};
+  {
+    title: 'Company';
+    links: [
+      { label: 'About Us', href: '/about', description: 'Our mission and values' };
+      { label: 'Careers', href: '/careers', description: 'Join our team' };
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]};
+  {
+    title: 'Resources';
+    links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' };
+      { label: 'White Papers', href: '/white-papers', description: 'In-depth research' };
+      { label: 'Webinars', href: '/webinars', description: 'Educational content' };
+      { label: 'Documentation', href: '/docs', description: 'Technical guides' };
+      { label: 'Blog', href: '/blog', description: 'Industry insights' };
+      { label: 'Case Studies', href: '/case-studies', description: 'Success stories' };
+      { label: 'Support', href: '/support', description: 'Help & assistance' }
+    ]};
+  {
+    title: 'Industries';
+    links: [
+      { label: 'Healthcare', href: '/healthcare-solutions', description: 'Medical technology' };
+      { label: 'Finance', href: '/financial-solutions', description: 'Fintech solutions' };
+      { label: 'Manufacturing', href: '/manufacturing-ai-solutions', description: 'Industry 4.0' };
+      { label: 'Government', href: '/government-technology-solutions', description: 'Public sector' };
+      { label: 'Education', href: '/education-technology-solutions', description: 'EdTech solutions' }
+    ]}
 ],
-,
-const socialLinks = [,
-  { icon: <Linkedin className="w-5 h-5"  />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true ,},;
-  { icon: <Twitter className="w-5 h-5"  />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true ,},;
-  { icon: <Github className="w-5 h-5"  />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true ,}
+const socialLinks = [
+  { icon: <Linkedin className="w-5 h-5"  />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true };
+  { icon: <Twitter className="w-5 h-5"  />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true };
+  { icon: <Github className="w-5 h-5"  />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
 ],
-,
-const quickLinks = [,
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> ,},;
-  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4"  /> ,},;
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> ,},;
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> ,},;
-  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4"  /> ,},;
-  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4"  /> ,}
+const quickLinks = [
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> };
+  { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4"  /> };
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> };
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> };
+  { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4"  /> };
+  { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4"  /> }
 ],
-,
-const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
-  const scrollToTop = () => {,
-    window.scrollTo({ top: 0, behavior: 'smooth' ,}),
-  };
-,
-  const footerSections = [,
-    {,
-      title: 'Services',;
-      items: [,
-        { label: 'AI & Machine Learning', href: '/ai-services' ,},;
-        { label: 'Quantum Computing', href: '/quantum-computing' ,},;
-        { label: 'Space Technology', href: '/space-tech' ,},;
-        { label: 'Cybersecurity', href: '/cybersecurity' ,},;
-        { label: '20o40 Services', href: '/innovative-20o40-services-showcase' ,}
-      ],
-    },;
-    {,
-      title: 'Solutions',;
-      items: [,
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' ,},;
-        { label: 'Micro SAAS', href: '/micro-saas' ,},;
-        { label: 'IT Services', href: '/it-services' ,},;
-        { label: 'Innovation Lab', href: '/innovation-lab' ,},;
-        { label: 'Research & Development', href: '/research-development' ,}
-      ],
-    },;
-    {,
-      title: 'Company',;
-      items: [,
-        { label: 'About Us', href: '/about' ,},;
-        { label: 'Our Team', href: '/team' ,},;
-        { label: 'Careers', href: '/careers' ,},;
-        { label: 'Investors', href: '/investors' ,},;
-        { label: 'Press & Media', href: '/press' ,}
-      ],
-    },;
-    {,
-      title: 'Resources',;
-      items: [,
-        { label: 'Blog', href: '/blog' ,},;
-        { label: 'Case Studies', href: '/case-studies' ,},;
-        { label: 'White Papers', href: '/white-papers' ,},;
-        { label: 'Documentation', href: '/docs' ,},;
-        { label: 'Support', href: '/support' ,}
-      ],
-    }
+const UltraAdvancedFuturisticFooter20o25: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+  const footerSections = [
+    {
+      title: 'Services';
+      items: [
+        { label: 'AI & Machine Learning', href: '/ai-services' };
+        { label: 'Quantum Computing', href: '/quantum-computing' };
+        { label: 'Space Technology', href: '/space-tech' };
+        { label: 'Cybersecurity', href: '/cybersecurity' };
+        { label: '20o40 Services', href: '/innovative-20o40-services-showcase' }
+      ]};
+    {
+      title: 'Solutions';
+      items: [
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' };
+        { label: 'Micro SAAS', href: '/micro-saas' };
+        { label: 'IT Services', href: '/it-services' };
+        { label: 'Innovation Lab', href: '/innovation-lab' };
+        { label: 'Research & Development', href: '/research-development' }
+      ]};
+    {
+      title: 'Company';
+      items: [
+        { label: 'About Us', href: '/about' };
+        { label: 'Our Team', href: '/team' };
+        { label: 'Careers', href: '/careers' };
+        { label: 'Investors', href: '/investors' };
+        { label: 'Press & Media', href: '/press' }
+      ]};
+    {
+      title: 'Resources';
+      items: [
+        { label: 'Blog', href: '/blog' };
+        { label: 'Case Studies', href: '/case-studies' };
+        { label: 'White Papers', href: '/white-papers' };
+        { label: 'Documentation', href: '/docs' };
+        { label: 'Support', href: '/support' }
+      ]}
   ],
-,
-  const socialLinks = [,
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' ,},;
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' ,},;
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' ,},;
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' ,}
+  const socialLinks = [
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' };
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' };
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' };
+    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
   ],
-,
-  const containerVariants ={,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
+  const containerVariants ={
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
         staggerChildren: 0.1,
-      ,}
+      }
     }
   };
-,
-  const itemVariants ={,
-    hidden: { y: 20, opacity: 0 ,},;
-    visible: {,
-      y: 0,;
-      opacity: 1,;
-      transition: {,
+  const itemVariants ={
+    hidden: { y: 20, opacity: 0 };
+    visible: {
+      y: 0;
+      opacity: 1;
+      transition: {
         duration: 0.5,
-      ,}
+      }
     }
   };
-,
-  return (,
+  return (
     <footer className="relative bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-gray-90o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">,
         {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (,
+        {[...Array(30)].map((_, i) => (
           <motion.div,
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full",
-            animate={{,
-              x: [0, Math.random() * 10o00, 0],;
-              y: [0, Math.random() * 10o00, 0],;
-              opacity: [0, 0.6, 0],;
+            animate={{
+              x: [0, Math.random() * 10o00, 0];
+              y: [0, Math.random() * 10o00, 0];
+              opacity: [0, 0.6, 0];
               scale: [0, 1, 0]}}
-            transition={{,
-              duration: 15 + Math.random() * 10,;
-              repeat: -1,;
-              delay: Math.random() * 8,;
+            transition={{
+              duration: 15 + Math.random() * 10;
+              repeat: -1;
+              delay: Math.random() * 8;
               ease: "easeInOut",
-            ,}}
-            style={{,
-              left: `${Math.random() * 10o0,}%`,;
-              top: `${Math.random() * 10o0,}%`,
             }}
-           />,
-        ))}
+            style={{
+              left: `${Math.random() * 10o0}%`;
+              top: `${Math.random() * 10o0}%`}}
+           />))}
 ,
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-90o0 via-purple-90o0/20 to-transparent"></div>,
@@ -204,13 +182,12 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20">,
           <motion.div,
-            variants={containerVariants,}
+            variants={containerVariants}
             initial="hidden",
             whileInView="visible",
-            viewport={{ once: true ,}}
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-12",
-          >,
-            {/* Company Info */,}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-12">,
+            {/* Company Info */}
             <motion.div variants={itemVariants} className="lg: col-span-2">,
               <div className="flex items-center space-x-3 mb-6">,
                 <div className="relative">,
@@ -227,7 +204,7 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
                 </div>,
               </div>,
               <p className="text-gray-30o0 mb-6 leading-relaxed">,
-                Pioneering the future with revolutionary AI consciousness, quantum computing,;
+                Pioneering the future with revolutionary AI consciousness, quantum computing;
                 and autonomous systems. Transforming businesses through next-generation technology.,
               </p>,
               <p className="text-gray-30o0 leading-relaxed mb-6 max-w-md">,
@@ -256,8 +233,8 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
                 </div>,
               </div>,
             </motion.div>,
-            {/* Footer Sections */,}
-            {footerSections.map((section, index) => (,
+            {/* Footer Sections */}
+            {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>,
                 <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">,
                   {section.title === 'Services' && <Briefcase className="w-5 h-5 text-cyan-40o0"  />}
@@ -267,45 +244,40 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
                   <span>{section.title}</span>,
                 </h4>,
                 <ul className="space-y-3">,
-                  {section.items.map((item) => (,
+                  {section.items.map((item) => (
                     <li key={item.label}>,
-                      <Link,
+                      <Link
                         href={item.href}
-                        className="text-gray-30o0 hover: text-white transition-colors duration-20o0 hover:translate-x-1 inline-block",
-                      >,
-                        {item.label,}
+                        className="text-gray-30o0 hover: text-white transition-colors duration-20o0 hover:translate-x-1 inline-block">,
+                        {item.label}
                       </Link>,
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
           {/* Social Links & Newsletter */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
-            viewport={{ once: true ,}}
-            className="mt-16 pt-12 border-t border-gray-80o0/50",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 pt-12 border-t border-gray-80o0/50">,
             <div className="flex flex-col lg: flex-row items-center justify-between gap-8">,
-              {/* Social Links */,}
+              {/* Social Links */}
               <div className="flex items-center space-x-6">,
                 <span className="text-gray-40o0 font-medium">Follow Us: </span>,
-                {socialLinks.map((social) => (,
+                {socialLinks.map((social) => (
                   <motion.a,
-                    key={social.label,}
+                    key={social.label}
                     href={social.href}
                     target="_blank",
                     rel="noopener noreferrer",
                     className="w-10 h-10 bg-gray-80o0/50 hover: bg-gradient-to-r hover:from-cyan-50o0 hover:to-purple-50o0 rounded-xl flex items-center justify-center text-gray-30o0 hover:text-white transition-all duration-20o0 hover:scale-110",
-                    whileHover={{ y: -2 ,}}
-                    whileTap={{ scale: 0.95 ,}}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.95 }}
                   >,
                     <social.icon className="w-5 h-5"  />,
-                  </motion.a>,
-                ))}
+                  </motion.a>))}
               </div>,
               {/* Newsletter Signup */}
               <div className="flex-1 max-w-md">,
@@ -314,15 +286,15 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
                   Get the latest insights on AI consciousness, quantum computing, and future technology.,
                 </p>,
                 <div className="flex space-x-2">,
-                  <input,
+                  <input
                     type="email",
                     placeholder="Enter your email",
                     className="flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent",
                    />,
                   <motion.button,
                     className="px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-xl font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-20o0",
-                    whileHover={{ scale: 1.0o5 ,}}
-                    whileTap={{ scale: 0.95 ,}}
+                    whileHover={{ scale: 1.0o5 }}
+                    whileTap={{ scale: 0.95 }}
                   >,
                     Subscribe,
                   </motion.button>,
@@ -333,12 +305,11 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
         </div>,
         {/* Bottom Bar */}
         <motion.div,
-          initial={{ opacity: 0 ,}}
-          whileInView={{ opacity: 1 ,}}
-          transition={{ duration: 0.6 ,}}
-          viewport={{ once: true ,}}
-          className="border-t border-gray-80o0/50 bg-gray-90o0/50 backdrop-blur-xl",
-        >,
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="border-t border-gray-80o0/50 bg-gray-90o0/50 backdrop-blur-xl">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">,
               <div className="text-gray-40o0 text-sm">,
@@ -371,16 +342,15 @@ const UltraAdvancedFuturisticFooter20o25: React.FC = () => {,
           </div>,
         </motion.div>,
       </div>,
-      {/* Scroll to Top Button */,}
+      {/* Scroll to Top Button */}
       <motion.button,
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full shadow-2xl hover: shadow-purple-50o0/25 transition-all duration-20o0 z-50",
-        whileHover={{ scale: 1.1, y: -2 ,}}
-        whileTap={{ scale: 0.9 ,}}
-        initial={{ opacity: 0, scale: 0 ,}}
-        animate={{ opacity: 1, scale: 1 ,}}
-        transition={{ duration: 0.3, delay: 1 ,}}
+        whileHover={{ scale: 1.1, y: -2 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3, delay: 1 }}
       >,
         <ArrowUp className="w-6 h-6 mx-auto"  />,
-      </motion.button>,
-})
+      </motion.button>})

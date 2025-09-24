@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DaoPage() {,
-  return (,
+export default function DaoPage() {
+  return (
     <>,
       <Head>,
         <title>Dao - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function DaoPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

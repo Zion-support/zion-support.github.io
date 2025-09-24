@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26TransformationGuideBanner = () => {,
-  return (,
+const AI20o26TransformationGuideBanner = () => {
+  return (
     <section className='py-8 bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-blue-60o0 text-white'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex flex-col md:flex-row items-center justify-between gap-6'>,
@@ -14,7 +13,7 @@ const AI20o26TransformationGuideBanner = () => {,
             </h2>,
             <p className='text-lg opacity-90 max-w-2xl'>,
               Complete roadmap to AI transformation in 20o26. Learn how leading,
-              companies are achieving $2.8T market value, 450% ROI increases,;
+              companies are achieving $2.8T market value, 450% ROI increases;
               and 85% process automation.,
             </p>,
             <div className='flex flex-wrap gap-4 mt-4'>,
@@ -30,24 +29,19 @@ const AI20o26TransformationGuideBanner = () => {,
             </div>,
           </div>,
           <div className='shrink-0 flex flex-col gap-3'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-ultimate-business-transformation',
-              className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center',
-            >,
+              className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center'>,
               Read Ultimate Guide →,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center',
-            >,
+              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center'>,
               Start AI Transformation,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26TransformationGuideBanner,
-,
+    </section>),
+};
+export default AI20o26TransformationGuideBanner;

@@ -1,9 +1,8 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Wrench,
   Zap,
   Brain,
@@ -11,159 +10,148 @@ import {,
   BarChart3,
   Shield,
   Globe,
-  Smartphone,;
-  ArrowRight,;
-  Star,;
-  CheckCircle,;
-  Play,;
-  Download,;
-  ExternalLink,;
-  Settings,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  Target,;
-  Lightbulb,
-} from 'lucide-react',
-,
-const AI20o25ToolsUtilitiesShowcase = () => {,
+  Smartphone;
+  ArrowRight;
+  Star;
+  CheckCircle;
+  Play;
+  Download;
+  ExternalLink;
+  Settings;
+  Cpu;
+  Database;
+  Cloud;
+  Lock;
+  Target;
+  Lightbulb} from 'lucide-react',
+const AI20o25ToolsUtilitiesShowcase = () => {
   const [activeCategorysetActiveCategory] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const categories = [,
-    {,
-      id: 1,;
-      name: "Development Tools",;
-      icon: Code,;
-      color: "from-blue-50o0 to-cyan-50o0",;
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const categories = [
+    {
+      id: 1;
+      name: "Development Tools";
+      icon: Code;
+      color: "from-blue-50o0 to-cyan-50o0";
       description: "AI-powered development tools for fastersmarter coding",
-    ,},;
-    {,
-      id: 2,;
-      name: "Analytics & Insights",;
-      icon: BarChart3,;
-      color: "from-green-50o0 to-emerald-50o0",;
+    };
+    {
+      id: 2;
+      name: "Analytics & Insights";
+      icon: BarChart3;
+      color: "from-green-50o0 to-emerald-50o0";
       description: "Advanced analytics tools for data-driven decisions",
-    ,},;
-    {,
-      id: 3,;
-      name: "Security & Compliance",;
-      icon: Shield,;
-      color: "from-red-50o0 to-pink-50o0",;
+    };
+    {
+      id: 3;
+      name: "Security & Compliance";
+      icon: Shield;
+      color: "from-red-50o0 to-pink-50o0";
       description: "AI-enhanced security tools for robust protection",
-    ,},;
-    {,
-      id: 4,;
-      name: "Automation Tools",;
-      icon: Settings,;
-      color: "from-purple-50o0 to-violet-50o0",;
+    };
+    {
+      id: 4;
+      name: "Automation Tools";
+      icon: Settings;
+      color: "from-purple-50o0 to-violet-50o0";
       description: "Intelligent automation tools for streamlined workflows",
-    ,}
+    }
   ],
-,
-  const tools = [,
-    {,
-      id: 1,;
-      name: "AI Code Assistant",;
-      category: "Development Tools",;
-      description: "Intelligent code completiondebuggingand optimization suggestions",;
-      features: ["Code Completion"Bug Detection"Performance Optimization"Documentation Generation"],;
-      icon: Code,;
-      rating: 4.9,;
-      users: "50K+",;
-      price: "Free",;
+  const tools = [
+    {
+      id: 1;
+      name: "AI Code Assistant";
+      category: "Development Tools";
+      description: "Intelligent code completiondebuggingand optimization suggestions";
+      features: ["Code Completion"Bug Detection"Performance Optimization"Documentation Generation"];
+      icon: Code;
+      rating: 4.9;
+      users: "50K+";
+      price: "Free";
       color: "from-blue-50o0 to-cyan-50o0",
-    ,},;
-    {,
-      id: 2,;
-      name: "Smart Analytics Dashboard",;
-      category: "Analytics & Insights",;
-      description: "Real-time data visualization and predictive analytics platform",;
-      features: ["Real-time Dashboards"Predictive Analytics"Custom Reports"API Integration"],;
-      icon: BarChart3,;
-      rating: 4.8,;
-      users: "25K+",;
-      price: "$99/mo",;
+    };
+    {
+      id: 2;
+      name: "Smart Analytics Dashboard";
+      category: "Analytics & Insights";
+      description: "Real-time data visualization and predictive analytics platform";
+      features: ["Real-time Dashboards"Predictive Analytics"Custom Reports"API Integration"];
+      icon: BarChart3;
+      rating: 4.8;
+      users: "25K+";
+      price: "$99/mo";
       color: "from-green-50o0 to-emerald-50o0",
-    ,},;
-    {,
-      id: 3,;
-      name: "AI Security Scanner",;
-      category: "Security & Compliance",;
-      description: "Automated vulnerability detection and security compliance monitoring",;
-      features: ["Vulnerability Scanning"Compliance Checks"Threat Detection"Security Reports"],;
-      icon: Shield,;
-      rating: 4.9,;
-      users: "15K+",;
-      price: "$199/mo",;
+    };
+    {
+      id: 3;
+      name: "AI Security Scanner";
+      category: "Security & Compliance";
+      description: "Automated vulnerability detection and security compliance monitoring";
+      features: ["Vulnerability Scanning"Compliance Checks"Threat Detection"Security Reports"];
+      icon: Shield;
+      rating: 4.9;
+      users: "15K+";
+      price: "$199/mo";
       color: "from-red-50o0 to-pink-50o0",
-    ,},;
-    {,
-      id: 4,;
-      name: "Workflow Automator",;
-      category: "Automation Tools",;
-      description: "Intelligent workflow automation with AI-powered decision making",;
-      features: ["Process Automation"AI Decision Making"Integration Hub"Custom Workflows"],;
-      icon: Settings,;
-      rating: 4.7,;
-      users: "30K+",;
-      price: "$149/mo",;
+    };
+    {
+      id: 4;
+      name: "Workflow Automator";
+      category: "Automation Tools";
+      description: "Intelligent workflow automation with AI-powered decision making";
+      features: ["Process Automation"AI Decision Making"Integration Hub"Custom Workflows"];
+      icon: Settings;
+      rating: 4.7;
+      users: "30K+";
+      price: "$149/mo";
       color: "from-purple-50o0 to-violet-50o0",
-    ,},;
-    {,
-      id: 5,;
-      name: "Content Generator Pro",;
-      category: "Content Tools",;
-      description: "AI-powered content creation for blogsocial mediand marketing",;
-      features: ["Content Generation"SEO Optimization"Multi-language"Brand Voice"],;
-      icon: Lightbulb,;
-      rating: 4.8,;
-      users: "40K+",;
-      price: "$79/mo",;
+    };
+    {
+      id: 5;
+      name: "Content Generator Pro";
+      category: "Content Tools";
+      description: "AI-powered content creation for blogsocial mediand marketing";
+      features: ["Content Generation"SEO Optimization"Multi-language"Brand Voice"];
+      icon: Lightbulb;
+      rating: 4.8;
+      users: "40K+";
+      price: "$79/mo";
       color: "from-yellow-50o0 to-orange-50o0",
-    ,},;
-    {,
-      id: 6,;
-      name: "Data Processor AI",;
-      category: "Data Tools",;
-      description: "Intelligent data processingcleaningand transformation tools",;
-      features: ["Data Cleaning"ETL Processing"Data Validation"Schema Detection"],;
-      icon: Database,;
-      rating: 4.6,;
-      users: "20K+",;
-      price: "$129/mo",;
+    };
+    {
+      id: 6;
+      name: "Data Processor AI";
+      category: "Data Tools";
+      description: "Intelligent data processingcleaningand transformation tools";
+      features: ["Data Cleaning"ETL Processing"Data Validation"Schema Detection"];
+      icon: Database;
+      rating: 4.6;
+      users: "20K+";
+      price: "$129/mo";
       color: "from-indigo-50o0 to-blue-50o0",
-    ,}
+    }
   ],
-,
-  const features = [,
-    { icon: Zaptext: "Lightning Fast"description: "Optimized for speed and performance" ,},;
-    { icon: Shieldtext: "Secure & Reliable"description: "Enterprise-grade security" ,},;
-    { icon: Globetext: "Cloud Native"description: "Scalable cloud infrastructure" ,},;
-    { icon: Smartphonetext: "Mobile Ready"description: "Works on all devices" ,}
+  const features = [
+    { icon: Zaptext: "Lightning Fast"description: "Optimized for speed and performance" };
+    { icon: Shieldtext: "Secure & Reliable"description: "Enterprise-grade security" };
+    { icon: Globetext: "Cloud Native"description: "Scalable cloud infrastructure" };
+    { icon: Smartphonetext: "Mobile Ready"description: "Works on all devices" }
   ],
-,
   const filteredTools = tools.filter(tool =>,
-    activeCategory === 0 || tool.category === categories[activeCategory - 1]?.name,
-  ),
-,
-  return (,
+    activeCategory === 0 || tool.category === categories[activeCategory - 1]?.name),
+  return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 relative overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.0o4"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">,
-        {/* Header */,}
+        {/* Header */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center mb-16",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-blue-50o0/20 border border-indigo-50o0/30 mb-6">,
             <Wrench className="w-5 h-5 text-yellow-40o0 mr-2"  />,
             <span className="text-indigo-30o0 font-medium">AI Tools & Utilities</span>,
@@ -177,48 +165,46 @@ const AI20o25ToolsUtilitiesShowcase = () => {,
             boost productivityand drive innovation across all aspects of your business.,
           </p>,
         </motion.div>,
-        {/* Category Navigation */,}
+        {/* Category Navigation */}
         <div className="mb-12">,
           <div className="flex flex-wrap justify-center gap-4">,
-            <button,
+            <button
               onClick={() => setActiveCategory(0)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 ${
                 activeCategory === 0,
                   ? 'bg-gradient-to-r from-indigo-50o0 to-blue-50o0 text-white',
                   : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-              ,}`}
+              }`}
             >,
               All Tools,
             </button>,
-            {categories.map((categoryindex) => (,
-              <button,
+            {categories.map((categoryindex) => (
+              <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 flex items-center space-x-2 ${,
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-30o0 flex items-center space-x-2 ${
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-indigo-50o0 to-blue-50o0 text-white',
                     : 'bg-white/10 text-gray-30o0 hover: bg-white/20',
-                ,}`}
+                }`}
               >,
                 <category.icon className="w-5 h-5"  />,
                 <span>{category.name}</span>,
-              </button>,
-            ))}
+              </button>))}
           </div>,
         </div>,
         {/* Tools Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
           <AnimatePresence mode="wait">,
-            {filteredTools.map((toolindex) => (,
+            {filteredTools.map((toolindex) => (
               <motion.div,
-                key={tool.id,}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                exit={{ opacity: 0, y: -30 ,}}
-                transition={{ duration: 0.5delay: index * 0.1 ,}}
-                className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover: border-indigo-50o0/50 transition-all duration-30o0 group",
-              >,
-                {/* Tool Header */,}
+                key={tool.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover: border-indigo-50o0/50 transition-all duration-30o0 group">,
+                {/* Tool Header */}
                 <div className="flex items-start justify-between mb-4">,
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${tool.color}`}>,
                     <tool.icon className="w-8 h-8 text-white"  />,
@@ -233,19 +219,18 @@ const AI20o25ToolsUtilitiesShowcase = () => {,
                 </div>,
                 {/* Tool Info */}
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: text-indigo-30o0 transition-colors">,
-                  {tool.name,}
+                  {tool.name}
                 </h3>,
                 <p className="text-gray-30o0 mb-4 leading-relaxed">,
                   {tool.description}
                 </p>,
                 {/* Features */}
                 <div className="space-y-2 mb-6">,
-                  {tool.features.map((featureIndex) => (,
+                  {tool.features.map((featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">,
                       <CheckCircle className="w-4 h-4 text-green-40o0"  />,
                       <span className="text-sm text-gray-30o0">{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Price and Actions */}
                 <div className="flex items-center justify-between">,
@@ -262,38 +247,34 @@ const AI20o25ToolsUtilitiesShowcase = () => {,
                     </button>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </AnimatePresence>,
         </div>,
         {/* Key Features */}
         <div className="mb-16">,
           <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Tools?</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {features.map((featureindex) => (,
+            {features.map((featureindex) => (
               <motion.div,
-                key={index,}
-                initial={{ opacity: 0, y: 30 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: index * 0.1 ,}}
-                className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20",
-              >,
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: index * 0.1 }}
+                className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20">,
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-50o0 to-blue-50o0 mb-4">,
                   <feature.icon className="w-8 h-8 text-white"  />,
                 </div>,
                 <h4 className="text-lg font-semibold text-white mb-2">{feature.text}</h4>,
                 <p className="text-gray-30o0 text-sm">{feature.description}</p>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
         {/* Call to Action */}
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-          transition={{ duration: 0.8delay: 0.4 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8delay: 0.4 }}
+          className="text-center">,
           <div className="bg-gradient-to-r from-indigo-50o0/10 to-blue-50o0/10 rounded-2xl p-8 border border-indigo-50o0/20">,
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Workflow?</h3>,
             <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">,
@@ -311,8 +292,6 @@ const AI20o25ToolsUtilitiesShowcase = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25ToolsUtilitiesShowcase,
+    </section>),
+};
+export default AI20o25ToolsUtilitiesShowcase;

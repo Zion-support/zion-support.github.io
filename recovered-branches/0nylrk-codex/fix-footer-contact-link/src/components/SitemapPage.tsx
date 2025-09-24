@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { completeSitemapdynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 ChevronRight,
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
-,
-export const SitemapPage: React.FC = () => {,
-  return (,
+export const SitemapPage: React.FC = () => {
+  return (
     <AppLayout>,
-      <SEO,
+      <SEO
         title='Sitemap | Zion AI Marketplace',
         description='Complete sitemap of the Zion AI Marketplace',
         keywords='sitemapzionai marketplacenavigation',
@@ -17,7 +16,7 @@ export const SitemapPage: React.FC = () => {,
       <div className='container mx-auto px-4 py-12'>,
         <h1 className='text-3xl font-bold mb-8'>Sitemap</h1>,
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {/* Public Pages */,}
+          {/* Public Pages */}
           <div className='bg-zion-blue-dark p-6 rounded-lg'>,
             <h2 className='text-xl font-bold mb-4 text-zion-cyan'>,
               Public Pages,
@@ -25,17 +24,15 @@ export const SitemapPage: React.FC = () => {,
             <ul className='space-y-2'>,
               {completeSitemap,
                 .filter(route => !route.requiredAuth),
-                .map(route => (,
+                .map(route => (
                   <li key={route.path}>,
-                    <Link,
+                    <Link
                       to={route.path}
-                      className='flex items-center hover: text-zion-purple',
-                    >,
+                      className='flex items-center hover: text-zion-purple'>,
                       <ChevronRight className='h-4 w-4 mr-2' />,
-                      {route.label,}
+                      {route.label}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
             </ul>,
           </div>,
           {/* Talent Routes */}
@@ -48,22 +45,19 @@ export const SitemapPage: React.FC = () => {,
             </p>,
             <ul className='space-y-2'>,
               {completeSitemap,
-                .filter(,
+                .filter(
                   route =>,
                     route.requiredRoles?.includes('jobSeeker') ||,
-                    route.requiredRoles?.includes('creator'),
-                ),
-                .map(route => (,
+                    route.requiredRoles?.includes('creator')),
+                .map(route => (
                   <li key={route.path}>,
-                    <Link,
+                    <Link
                       to={route.path}
-                      className='flex items-center hover: text-zion-purple',
-                    >,
+                      className='flex items-center hover: text-zion-purple'>,
                       <ChevronRight className='h-4 w-4 mr-2' />,
-                      {route.label,}
+                      {route.label}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
             </ul>,
           </div>,
           {/* Client Routes */}
@@ -76,22 +70,19 @@ export const SitemapPage: React.FC = () => {,
             </p>,
             <ul className='space-y-2'>,
               {completeSitemap,
-                .filter(,
+                .filter(
                   route =>,
                     route.requiredRoles?.includes('employer') ||,
-                    route.requiredRoles?.includes('buyer'),
-                ),
-                .map(route => (,
+                    route.requiredRoles?.includes('buyer')),
+                .map(route => (
                   <li key={route.path}>,
-                    <Link,
+                    <Link
                       to={route.path}
-                      className='flex items-center hover: text-zion-purple',
-                    >,
+                      className='flex items-center hover: text-zion-purple'>,
                       <ChevronRight className='h-4 w-4 mr-2' />,
-                      {route.label,}
+                      {route.label}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
             </ul>,
           </div>,
           {/* Shared Routes */}
@@ -104,22 +95,19 @@ export const SitemapPage: React.FC = () => {,
             </p>,
             <ul className='space-y-2'>,
               {completeSitemap,
-                .filter(,
+                .filter(
                   route =>,
                     route.requiredAuth &&,
-                    (!route.requiredRoles || route.requiredRoles.length === 0),
-                ),
-                .map(route => (,
+                    (!route.requiredRoles || route.requiredRoles.length === 0)),
+                .map(route => (
                   <li key={route.path}>,
-                    <Link,
+                    <Link
                       to={route.path}
-                      className='flex items-center hover: text-zion-purple',
-                    >,
+                      className='flex items-center hover: text-zion-purple'>,
                       <ChevronRight className='h-4 w-4 mr-2' />,
-                      {route.label,}
+                      {route.label}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
             </ul>,
           </div>,
           {/* Admin Routes */}
@@ -133,17 +121,15 @@ export const SitemapPage: React.FC = () => {,
             <ul className='space-y-2'>,
               {completeSitemap,
                 .filter(route => route.requiredRoles?.includes('admin')),
-                .map(route => (,
+                .map(route => (
                   <li key={route.path}>,
-                    <Link,
+                    <Link
                       to={route.path}
-                      className='flex items-center hover: text-zion-purple',
-                    >,
+                      className='flex items-center hover: text-zion-purple'>,
                       <ChevronRight className='h-4 w-4 mr-2' />,
-                      {route.label,}
+                      {route.label}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
             </ul>,
           </div>,
           {/* Dynamic Routes */}
@@ -155,19 +141,15 @@ export const SitemapPage: React.FC = () => {,
               Pages with dynamic parameters,
             </p>,
             <ul className='space-y-2'>,
-              {Object.entries(dynamicPaths).map(([keypath]) => (,
+              {Object.entries(dynamicPaths).map(([keypath]) => (
                 <li key={key}>,
                   <div className='flex items-center text-zion-slate'>,
                     <ChevronRight className='h-4 w-4 mr-2' />,
                     {path} <span className='ml-2 text-xs italic'>({key})</span>,
                   </div>,
-                </li>,
-              ))}
+                </li>))}
             </ul>,
           </div>,
         </div>,
       </div>,
-    </AppLayout>,
-  ),
-};
-,
+    </AppLayout>)};

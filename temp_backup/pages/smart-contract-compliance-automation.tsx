@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function SmartContractComplianceAutomationPage() {,
-  return (,
+export default function SmartContractComplianceAutomationPage() {
+  return (
     <>,
       <Head>,
         <title>Smart Contract Compliance Automation - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='smart contract compliance automation page',
         />,
@@ -21,7 +20,6 @@ export default function SmartContractComplianceAutomationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

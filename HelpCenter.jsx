@@ -1,30 +1,25 @@
-import React from 'react',
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+import React from 'react';
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props),
-    this.state ={ hasError: false ,};
+    this.state ={ hasError: false };
   }
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
-  render() {,
-    if (this.state.hasError) {,
-      return <div>Something went wrong.</div>,
-    }
-    return this.props.children,
-  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
+    return this.props.children}
 }
-const HelpCenter = ({ className }) => {,
-  return (,
+const HelpCenter = ({ className }) => {
+  return (
     <div className={className || ''}>,
       <h1>HelpCenter</h1>,
       <p>This component is under development.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 }
 }
 }

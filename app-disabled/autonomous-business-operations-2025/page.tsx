@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Autonomous Business Operations 20o25: The Future of Self-Managing Enterprises',;
+    'Autonomous Business Operations 20o25: The Future of Self-Managing Enterprises';
   description:,
-    'Discover how autonomous business operations are revolutionizing enterprises with self-managing systems, intelligent decision-making, and 24/7 optimization.',;
-  keywords: [,
-    'autonomous operations',;
-    'business automation',;
-    'self-managing systems',;
-    'AI operations',;
-    'enterprise automation',;
-    'autonomous business',;
-  ],;
+    'Discover how autonomous business operations are revolutionizing enterprises with self-managing systems, intelligent decision-making, and 24/7 optimization.';
+  keywords: [
+    'autonomous operations';
+    'business automation';
+    'self-managing systems';
+    'AI operations';
+    'enterprise automation';
+    'autonomous business';
+  ];
 };
-,
-export default function AutonomousBusinessOperations20o25() {,
-  return (,
+export default function AutonomousBusinessOperations20o25() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0'>,
       {/* Hero Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
@@ -36,22 +34,20 @@ export default function AutonomousBusinessOperations20o25() {,
             without human intervention.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5'>,
               Go Autonomous Now,
             </Link>,
-            <Link,
+            <Link
               href='/services/autonomous-operations',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'>,
               Learn More,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Autonomous Capabilities */,}
+      {/* Autonomous Capabilities */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white bg-opacity-10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -64,7 +60,7 @@ export default function AutonomousBusinessOperations20o25() {,
                 Intelligent Decision Making,
               </h3>,
               <p className='text-lg opacity-90 mb-4'>,
-                AI systems that make complex business decisions autonomously,;
+                AI systems that make complex business decisions autonomously;
                 analyzing data and optimizing outcomes in real-time.,
               </p>,
               <div className='bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold'>,
@@ -288,7 +284,7 @@ export default function AutonomousBusinessOperations20o25() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold text-white mb-6'>,
@@ -300,22 +296,19 @@ export default function AutonomousBusinessOperations20o25() {,
             autonomous.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-emerald-50o0 to-teal-50o0 text-white px-10 py-4 rounded-lg font-semibold hover:from-emerald-60o0 hover:to-teal-60o0 transition-all transform hover:scale-10o5'>,
               Start Autonomous Journey,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'>,
               View Success Stories,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

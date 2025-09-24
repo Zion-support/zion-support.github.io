@@ -1,6 +1,6 @@
-import React from "react",
+import React from "react";
 import { SEO } from "@/components/SEO",
-export default function FuturisticFooter.test() {return (,
+export default function FuturisticFooter.test() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950">",
       <SEO title="FuturisticFooter.test - Zion Tech Group" description="Professional FuturisticFooter.test services by Zion Tech Group"   />",
       <div className="container mx-auto px-4 py-20">",
@@ -8,5 +8,4 @@ export default function FuturisticFooter.test() {return (,
         <p className="text-gray-30o0 text-lg">,
           Professional FuturisticFooter.test services to help your business grow.,
         </p>,
-      </div>,
-  ),"}",
+      </div>),"}",

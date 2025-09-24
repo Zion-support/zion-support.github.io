@@ -2,114 +2,111 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
-import {,
-  Cloud,;
-  Server,;
-  Database,;
-  Shield,;
-  Zap,;
-  Globe,;
-  CheckCircle,;
-  ArrowRight,;
-  Users,;
-  BarChart3,;
-  Lock,;
-  Settings,;
+import {
+  Cloud;
+  Server;
+  Database;
+  Shield;
+  Zap;
+  Globe;
+  CheckCircle;
+  ArrowRight;
+  Users;
+  BarChart3;
+  Lock;
+  Settings;
 } from 'lucide-react',
-,
-export default function CloudPlatforms() {,
-  const features = [,
-    {,
-      icon: Cloud,;
-      title: 'Multi-Cloud Strategy',;
+export default function CloudPlatforms() {
+  const features = [
+    {
+      icon: Cloud;
+      title: 'Multi-Cloud Strategy';
       description:,
-        'Seamlessly integrate and manage workloads across AWS, Azure, and Google Cloud platforms.',;
-      benefits: [,
-        'Cost optimization',;
-        'Vendor independence',;
-        'Enhanced reliability',;
-      ],;
-    },;
-    {,
-      icon: Server,;
-      title: 'Infrastructure as Code',;
+        'Seamlessly integrate and manage workloads across AWS, Azure, and Google Cloud platforms.';
+      benefits: [
+        'Cost optimization';
+        'Vendor independence';
+        'Enhanced reliability';
+      ];
+    };
+    {
+      icon: Server;
+      title: 'Infrastructure as Code';
       description:,
-        'Automate infrastructure provisioning and management with Terraform, Ansible, and CloudFormation.',;
-      benefits: ['Consistent deployments', 'Version control', 'Rapid scaling'],;
-    },;
-    {,
-      icon: Database,;
-      title: 'Managed Database Services',;
+        'Automate infrastructure provisioning and management with Terraform, Ansible, and CloudFormation.';
+      benefits: ['Consistent deployments', 'Version control', 'Rapid scaling'];
+    };
+    {
+      icon: Database;
+      title: 'Managed Database Services';
       description:,
-        'Fully managed database solutions with automated backups, scaling, and monitoring.',;
-      benefits: ['High availability', 'Auto-scaling', '24/7 monitoring'],;
-    },;
-    {,
-      icon: Shield,;
-      title: 'Security & Compliance',;
+        'Fully managed database solutions with automated backups, scaling, and monitoring.';
+      benefits: ['High availability', 'Auto-scaling', '24/7 monitoring'];
+    };
+    {
+      icon: Shield;
+      title: 'Security & Compliance';
       description:,
-        'Enterprise-grade security with compliance frameworks including SOC 2, HIPAA, and GDPR.',;
-      benefits: ['Data encryption', 'Access controls', 'Audit trails'],;
-    },;
-    {,
-      icon: Zap,;
-      title: 'Auto-Scaling',;
+        'Enterprise-grade security with compliance frameworks including SOC 2, HIPAA, and GDPR.';
+      benefits: ['Data encryption', 'Access controls', 'Audit trails'];
+    };
+    {
+      icon: Zap;
+      title: 'Auto-Scaling';
       description:,
-        'Dynamic resource allocation based on demand to optimize performance and costs.',;
-      benefits: [,
-        'Cost efficiency',;
-        'Performance optimization',;
-        'Zero downtime',;
-      ],;
-    },;
-    {,
-      icon: Globe,;
-      title: 'Global CDN',;
+        'Dynamic resource allocation based on demand to optimize performance and costs.';
+      benefits: [
+        'Cost efficiency';
+        'Performance optimization';
+        'Zero downtime';
+      ];
+    };
+    {
+      icon: Globe;
+      title: 'Global CDN';
       description:,
-        'Content delivery network for fast, reliable access to your applications worldwide.',;
-      benefits: ['Low latency', 'High availability', 'Global reach'],;
-    },;
+        'Content delivery network for fast, reliable access to your applications worldwide.';
+      benefits: ['Low latency', 'High availability', 'Global reach'];
+    };
   ],
-,
-  const platforms = [,
-    {,
-      name: 'Amazon Web Services (AWS)',;
-      description: 'Comprehensive cloud services with global infrastructure',;
-      services: ['EC2', 'S3', 'RDS', 'Lambda', 'CloudFront'],;
-    },;
-    {,
-      name: 'Microsoft Azure',;
-      description: 'Enterprise-focused cloud platform with hybrid capabilities',;
-      services: [,
-        'Virtual Machines',;
-        'Blob Storage',;
-        'SQL Database',;
-        'Functions',;
-        'CDN',;
-      ],;
-    },;
-    {,
-      name: 'Google Cloud Platform',;
-      description: 'AI and machine learning focused cloud services',;
-      services: [,
-        'Compute Engine',;
-        'Cloud Storage',;
-        'Cloud SQL',;
-        'Cloud Functions',;
-        'Cloud CDN',;
-      ],;
-    },;
+  const platforms = [
+    {
+      name: 'Amazon Web Services (AWS)';
+      description: 'Comprehensive cloud services with global infrastructure';
+      services: ['EC2', 'S3', 'RDS', 'Lambda', 'CloudFront'];
+    };
+    {
+      name: 'Microsoft Azure';
+      description: 'Enterprise-focused cloud platform with hybrid capabilities';
+      services: [
+        'Virtual Machines';
+        'Blob Storage';
+        'SQL Database';
+        'Functions';
+        'CDN';
+      ];
+    };
+    {
+      name: 'Google Cloud Platform';
+      description: 'AI and machine learning focused cloud services';
+      services: [
+        'Compute Engine';
+        'Cloud Storage';
+        'Cloud SQL';
+        'Cloud Functions';
+        'Cloud CDN';
+      ];
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Cloud Platforms - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Expert cloud platform services including AWS, Azure, and Google Cloud. Infrastructure as Code, managed databases, and enterprise security.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='cloud platforms, AWS, Azure, Google Cloud, infrastructure as code, managed services',
         />,
@@ -128,24 +125,22 @@ export default function CloudPlatforms() {,
                 implementation and management services,
               </p>,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center',
-                >,
+                  className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'>,
                   Get Started,
                   <ArrowRight className='ml-2 h-5 w-5' />,
                 </Link>,
-                <Link,
+                <Link
                   href='/pricing',
-                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center',
-                >,
+                  className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'>,
                   View Pricing,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -158,33 +153,29 @@ export default function CloudPlatforms() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {features.map((feature, index) => (,
-                <div,
+              {features.map((feature, index) => (
+                <div
                   key={index}
-                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow',
-                >,
+                  className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow'>,
                   <div className='flex items-center mb-4'>,
                     <div className='p-3 bg-blue-10o0 rounded-lg mr-4'>,
                       <feature.icon className='h-8 w-8 text-blue-60o0' />,
                     </div>,
                     <h3 className='text-xl font-semibold text-gray-90o0'>,
-                      {feature.title,}
+                      {feature.title}
                     </h3>,
                   </div>,
                   <p className='text-gray-60o0 mb-4'>{feature.description}</p>,
                   <ul className='space-y-2'>,
-                    {feature.benefits.map((benefit, idx) => (,
-                      <li,
+                    {feature.benefits.map((benefit, idx) => (
+                      <li
                         key={idx}
-                        className='flex items-center text-sm text-gray-70o0',
-                      >,
+                        className='flex items-center text-sm text-gray-70o0'>,
                         <CheckCircle className='h-4 w-4 text-green-50o0 mr-2 flex-shrink-0' />,
                         {benefit}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -201,13 +192,12 @@ export default function CloudPlatforms() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-              {platforms.map((platform, index) => (,
-                <div,
+              {platforms.map((platform, index) => (
+                <div
                   key={index}
-                  className='bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow',
-                >,
+                  className='bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow'>,
                   <h3 className='text-2xl font-semibold text-gray-90o0 mb-4'>,
-                    {platform.name,}
+                    {platform.name}
                   </h3>,
                   <p className='text-gray-60o0 mb-6'>{platform.description}</p>,
                   <div>,
@@ -215,18 +205,15 @@ export default function CloudPlatforms() {,
                       Key Services: ,
                     </h4>,
                     <div className='flex flex-wrap gap-2'>,
-                      {platform.services.map((service, idx) => (,
-                        <span,
+                      {platform.services.map((service, idx) => (
+                        <span
                           key={idx}
-                          className='bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm',
-                        >,
+                          className='bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-sm'>,
                           {service}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -241,17 +228,15 @@ export default function CloudPlatforms() {,
               cloud platform strategy,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center',
-              >,
+                className='bg-white text-blue-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center'>,
                 Start Your Cloud Journey,
                 <ArrowRight className='ml-2 h-5 w-5' />,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-90o0 transition-colors inline-flex items-center justify-center'>,
                 View Case Studies,
               </Link>,
             </div>,
@@ -259,7 +244,6 @@ export default function CloudPlatforms() {,
         </section>,
       </main>,
       <SimpleFooter />,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

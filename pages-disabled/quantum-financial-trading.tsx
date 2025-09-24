@@ -1,9 +1,8 @@
 import SEO from '../components/SEO',
-,
-export default function AISustainabilityPlatformPage() {,
-  return (,
+export default function AISustainabilityPlatformPage() {
+  return (
     <div className='min-h-[60vh] px-6 py-24'>,
-      <SEO,
+      <SEO
         title='AI Sustainability Platform | Zion Tech Group',
         description='Sustainability analytics and optimization',
       />,
@@ -16,7 +15,5 @@ export default function AISustainabilityPlatformPage() {,
           soon.,
         </p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

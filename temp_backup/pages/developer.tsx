@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DeveloperPage() {,
-  return (,
+export default function DeveloperPage() {
+  return (
     <>,
       <Head>,
         <title>Developer | Zion Tech Group</title>,
@@ -17,7 +16,7 @@ export default function DeveloperPage() {,
           </p>,
           <ol className='list-decimal list-inside space-y-3 text-gray-300'>,
             <li>,
-              Explore the{' ',}
+              Explore the{' '}
               <a className='text-cyan-400' href='/api-documentation'>,
                 API Reference,
               </a>,
@@ -25,16 +24,15 @@ export default function DeveloperPage() {,
             </li>,
             <li>,
               Request a sandbox from{' '}
-              <a,
+              <a
                 className='text-cyan-400',
-                href='mailto: kleber@ziontechgroup.com',
-              >,
+                href='mailto: kleber@ziontechgroup.com'>,
                 kleber@ziontechgroup.com,
               </a>,
               .,
             </li>,
             <li>,
-              Review SDKs and examples in{' ',}
+              Review SDKs and examples in{' '}
               <a className='text-cyan-400' href='/resources'>,
                 Resources,
               </a>,
@@ -43,7 +41,5 @@ export default function DeveloperPage() {,
           </ol>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}
 ,

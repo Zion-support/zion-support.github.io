@@ -3,31 +3,29 @@ import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/u
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
-,
-interface TimelineFieldProps {,
+interface TimelineFieldProps {
   form: UseFormReturn<FormValues>,
-,}
+}
 ,
-export function TimelineField({ form }: TimelineFieldProps) {,
-  const timelineOptions = [,
-    { value: "Less than 1 week"label: "Less than 1 week" ,},;
-    { value: "1-2 weeks"label: "1-2 weeks" ,},;
-    { value: "2-4 weeks"label: "2-4 weeks" ,},;
-    { value: "1-2 months"label: "1-2 months" ,},;
-    { value: "3-6 months"label: "3-6 months" ,},;
-    { value: "6+ months"label: "6+ months" ,},;
-    { value: "Ongoing"label: "Ongoing" ,}
+export function TimelineField({ form }: TimelineFieldProps) {
+  const timelineOptions = [
+    { value: "Less than 1 week"label: "Less than 1 week" };
+    { value: "1-2 weeks"label: "1-2 weeks" };
+    { value: "2-4 weeks"label: "2-4 weeks" };
+    { value: "1-2 months"label: "1-2 months" };
+    { value: "3-6 months"label: "3-6 months" };
+    { value: "6+ months"label: "6+ months" };
+    { value: "Ongoing"label: "Ongoing" }
   ],
-,
-  return (,
-    <FormField,
+  return (
+    <FormField
       control={form.control}
       name="timeline",
-      render={({ field }) => (,
+      render={({ field }) => (
         <FormItem>,
           <FormLabel className="text-white">Project Timeline</FormLabel>,
           <FormControl>,
-            <Select,
+            <Select
               onValueChange={field.onChange} ,
               value={field.value}
               defaultValue={field.value}
@@ -36,18 +34,14 @@ export function TimelineField({ form }: TimelineFieldProps) {,
                 <SelectValue placeholder="Select estimated timeline" />,
               </SelectTrigger>,
               <SelectContent>,
-                {timelineOptions.map((option) => (,
+                {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>,
                     {option.label}
-                  </SelectItem>,
-                ))}
+                  </SelectItem>))}
               </SelectContent>,
             </Select>,
           </FormControl>,
           <FormMessage />,
-        </FormItem>,
-      )}
-    />,
-  ),
-}
+        </FormItem>)}
+    />)}
 ,

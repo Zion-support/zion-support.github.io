@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-,
-export default function AIPoweredSpaceTechnology() {,
-  return (,
+export default function AIPoweredSpaceTechnology() {
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>AI-Powered Space Technology | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Autonomous operations, mission planning, and space data analytics powered by AI.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-powered-space-technology',
         />,
@@ -26,7 +25,5 @@ export default function AIPoweredSpaceTechnology() {,
           </p>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

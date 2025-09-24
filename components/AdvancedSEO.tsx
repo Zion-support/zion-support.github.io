@@ -1,8 +1,6 @@
 'use client',
-,
 import Head from 'next/head',
-,
-interface AdvancedSEOProps {,
+interface AdvancedSEOProps {
   title: string,
   description: string,
   keywords?: string,
@@ -14,56 +12,49 @@ interface AdvancedSEOProps {,
   author?: string,
   section?: string,
   tags?: string[],
-,}
+}
 ,
-export default function AdvancedSEO({,
-  title,;
-  description,;
-  keywords = 'AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation',;
-  url,;
-  image = '/images/og-default.jpg',;
-  type = 'website',;
-  publishedTime,;
-  modifiedTime,;
-  author = 'Zion Tech Group',;
-  section = 'Technology',;
-  tags = [],
-}: AdvancedSEOProps) {,
-  const structuredData ={,
-    "@context": "https://schema.org",;
-    "@type": type === 'article' ? 'Article' : 'WebSite',;
-    "name": title,;
-    "description": description,;
-    "url": url,;
-    "image": image,;
-    "author": {,
-      "@type": "Organization",;
-      "name": author,
-    },;
-    "publisher": {,
-      "@type": "Organization",;
-      "name": "Zion Tech Group",;
-      "logo": {,
-        "@type": "ImageObject",;
-        "url": "/images/logo.png",
-      }
-    },;
-    ...(type === 'article' && {,
-      "datePublished": publishedTime,;
-      "dateModified": modifiedTime,;
-      "articleSection": section,;
-      "keywords": tags.join('),
-    }),;
-    ...(type === 'website' && {,
-      "potentialAction": {,
-        "@type": "SearchAction",;
-        "target": `${url}/search?q={search_term_string}`,;
-        "query-input": "required name=search_term_string",
-      }
-    }),
-  };
-,
-  return (,
+export default function AdvancedSEO({
+  title;
+  description;
+  keywords = 'AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation';
+  url;
+  image = '/images/og-default.jpg';
+  type = 'website';
+  publishedTime;
+  modifiedTime;
+  author = 'Zion Tech Group';
+  section = 'Technology';
+  tags = []}: AdvancedSEOProps) {
+  const structuredData ={
+    "@context": "https://schema.org";
+    "@type": type === 'article' ? 'Article' : 'WebSite';
+    "name": title;
+    "description": description;
+    "url": url;
+    "image": image;
+    "author": {
+      "@type": "Organization";
+      "name": author};
+    "publisher": {
+      "@type": "Organization";
+      "name": "Zion Tech Group";
+      "logo": {
+        "@type": "ImageObject";
+        "url": "/images/logo.png"}
+    };
+    ...(type === 'article' && {
+      "datePublished": publishedTime;
+      "dateModified": modifiedTime;
+      "articleSection": section;
+      "keywords": tags.join(')});
+    ...(type === 'website' && {
+      "potentialAction": {
+        "@type": "SearchAction";
+        "target": `${url}/search?q={search_term_string}`;
+        "query-input": "required name=search_term_string"}
+    })};
+  return (
     <Head>,
       {/* Basic Meta Tags */}
       <title>{title}</title>,
@@ -73,21 +64,21 @@ export default function AdvancedSEO({,
       <meta name="robots" content="indexfollow"  />,
       <meta name="viewport" content="width=device-widthinitial-scale=1.0"  />,
       {/* Open Graph Meta Tags */}
-      <meta property="og: type" content={type,}  />,
-      <meta property="og: title" content={title,}  />,
-      <meta property="og: description" content={description,}  />,
-      <meta property="og: url" content={url,}  />,
-      <meta property="og: image" content={image,}  />,
+      <meta property="og: type" content={type}  />,
+      <meta property="og: title" content={title}  />,
+      <meta property="og: description" content={description}  />,
+      <meta property="og: url" content={url}  />,
+      <meta property="og: image" content={image}  />,
       <meta property="og: site_name" content="Zion Tech Group"  />,
       <meta property="og:locale" content="en_US"  />,
-      {/* Twitter Card Meta Tags */,}
+      {/* Twitter Card Meta Tags */}
       <meta name="twitter: card" content="summary_large_image"  />,
-      <meta name="twitter:title" content={title,}  />,
-      <meta name="twitter: description" content={description,}  />,
-      <meta name="twitter: image" content={image,}  />,
+      <meta name="twitter:title" content={title}  />,
+      <meta name="twitter: description" content={description}  />,
+      <meta name="twitter: image" content={image}  />,
       <meta name="twitter: site" content="@ziontechgroup"  />,
       <meta name="twitter:creator" content="@ziontechgroup"  />,
-      {/* Additional SEO Meta Tags */,}
+      {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#2563eb"  />,
       <meta name="msapplication-TileColor" content="#2563eb"  />,
       <meta name="apple-mobile-web-app-capable" content="yes"  />,
@@ -95,19 +86,17 @@ export default function AdvancedSEO({,
       {/* Canonical URL */}
       <link rel="canonical" href={url}  />,
       {/* Structured Data */}
-      <script,
+      <script
         type="application/ld+json",
-        dangerouslySetInnerHTML={{,
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
-        ,}}
+        }}
        />,
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https: //fonts.googleapis.com"  />,
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />,
       <link rel="preconnect" href="https://www.google-analytics.com"  />,
-      {/* DNS Prefetch for performance */,}
+      {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com"  />,
       <link rel="dns-prefetch" href="//www.google-analytics.com"  />,
-    </Head>,
-  ),
-}
+    </Head>)}

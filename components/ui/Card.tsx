@@ -1,62 +1,49 @@
-import React from "react",
+import React from "react";
 import { cn } from "../../lib/utils",
-interface CardProps {,
+interface CardProps {
   children: React.ReactNode,
   className?: string,
   style?: React.CSSProperties,
-,}
+}
 ,
-interface CardHeaderProps {,
+interface CardHeaderProps {
   children: React.ReactNode,
   className?: string,
-,}
+}
 ,
-interface CardContentProps {,
+interface CardContentProps {
   children: React.ReactNode,
   className?: string,
-,}
+}
 ,
-interface CardFooterProps {,
+interface CardFooterProps {
   children: React.ReactNode,
   className?: string,
-,}
+}
 ,
-const Card: React.FC<CardProps> = ({ children, className, style }) => {,
-  return (,
-    <div,
-      className={cn(,
-        "rounded-xl border bg-white shadow-sm transition-all duration-200 hover:shadow-md",;
-        className,
-      )}
+const Card: React.FC<CardProps> = ({ children, className, style }) => {
+  return (
+    <div
+      className={cn(
+        "rounded-xl border bg-white shadow-sm transition-all duration-200 hover:shadow-md";
+        className)}
       style={style}
     >,
       {children}
-    </div>,
-  ),
-};
-,
-const CardHeader: React.FC<CardHeaderProps> = ({ children, className }) => {,
-  return (,
+    </div>)};
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className }) => {
+  return (
     <div className={cn("flex flex-col space-y-1.5 p-6", className)}>,
       {children}
-    </div>,
-  ),
-};
-,
-const CardContent: React.FC<CardContentProps> = ({ children, className }) => {,
-  return (,
+    </div>)};
+const CardContent: React.FC<CardContentProps> = ({ children, className }) => {
+  return (
     <div className={cn("p-6 pt-0", className)}>,
       {children}
-    </div>,
-  ),
-};
-,
-const CardFooter: React.FC<CardFooterProps> = ({ children, className }) => {,
-  return (,
+    </div>)};
+const CardFooter: React.FC<CardFooterProps> = ({ children, className }) => {
+  return (
     <div className={cn("flex items-center p-6 pt-0", className)}>,
       {children}
-    </div>,
-  ),
-};
-,
+    </div>)};
 export { Card, CardHeader, CardContent, CardFooter };

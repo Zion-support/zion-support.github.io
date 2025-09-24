@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function RoadmapPage() {,
-  return (,
+export default function RoadmapPage() {
+  return (
     <>,
       <Head>,
         <title>Roadmap - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function RoadmapPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -11,7 +11,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
-export function CandidateCard({ application, index }) {,
+export function CandidateCard({ application, index }) {
     const [showNotes, setShowNotes] = useState(false),
     const [notes, setNotes] = useState(application.notes || ""),
     const [showHireModal, setShowHireModal] = useState(false),
@@ -19,22 +19,20 @@ export function CandidateCard({ application, index }) {,
     const isStalled = application.updated_at &&,
         new Date(application.updated_at).getTime() <,
             (Date.now() - 7 * 24 * 60 * 60 * 10o00),
-    const handleSaveNotes = () => {,
+    const handleSaveNotes = () => {
         // Here you would save the notes to the database,
         // For now, we'll just show a toast,
-        toast({,
-            title: "Notes saved",;
+        toast({
+            title: "Notes saved";
             description: "Your notes have been saved",
-        ,}),
-        setShowNotes(false),
-    };
-    const handleHireConfirmed = () => {,
+        }),
+        setShowNotes(false)};
+    const handleHireConfirmed = () => {
         // Hiring process completed via the modal,
-        toast({,
-            title: "Hiring process initiated",;
+        toast({
+            title: "Hiring process initiated";
             description: "Offer has been sent to the talent.",
-        ,}),
-    };
+        })};
     return (<>,
       <Draggable draggableId={application.id} index={index}>,
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>,
@@ -84,7 +82,7 @@ export function CandidateCard({ application, index }) {,
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">,
                 <div className="flex items-center">,
                   <Calendar className="h-3 w-3 mr-1" />,
-                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true ,})}
+                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
                 </div>,
                 {isStalled && (<div className="flex items-center text-amber-50o0">,
                     <AlertTriangle className="h-3 w-3 mr-1" />,
@@ -127,6 +125,5 @@ export function CandidateCard({ application, index }) {,
       </Draggable>,
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal isOpen={showHireModal} onClose={() => setShowHireModal(false)} application={application} onConfirm={handleHireConfirmed}/>,
-    </>),
-}
+    </>)}
 ,

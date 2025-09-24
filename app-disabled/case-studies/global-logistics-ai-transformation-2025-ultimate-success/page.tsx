@@ -1,56 +1,53 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  ArrowLeft,;
-  Calendar,;
-  User,;
-  Clock,;
-  Share2,;
-  TrendingUp,;
-  Zap,;
-  DollarSign,;
-  Users,;
-  Globe,;
+import {
+  ArrowLeft;
+  Calendar;
+  User;
+  Clock;
+  Share2;
+  TrendingUp;
+  Zap;
+  DollarSign;
+  Users;
+  Globe;
 } from 'lucide-react',
-,
-export const metadata: Metadata = {,
-  title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story',;
+export const metadata: Metadata = {
+  title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story';
   description:,
-    'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.',;
-  keywords: [,
-    'Logistics',;
-    'Supply Chain',;
-    'AI Transformation',;
-    'ROI Success',;
-    'Enterprise AI',;
-  ],;
-  openGraph: {,
-    title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story',;
+    'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.';
+  keywords: [
+    'Logistics';
+    'Supply Chain';
+    'AI Transformation';
+    'ROI Success';
+    'Enterprise AI';
+  ];
+  openGraph: {
+    title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story';
     description:,
-      'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'Logistics',;
-      'Supply Chain',;
-      'AI Transformation',;
-      'ROI Success',;
-      'Enterprise AI',;
-    ],;
-  },;
+      'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'Logistics';
+      'Supply Chain';
+      'AI Transformation';
+      'ROI Success';
+      'Enterprise AI';
+    ];
+  };
 };
-,
-export default function LogisticsTransformationPage() {,
-  return (,
+export default function LogisticsTransformationPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-green-50'>,
       {/* Header */}
       <div className='bg-white shadow-sm border-b'>,
         <div className='max-w-4xl mx-auto px-6 py-4'>,
-          <Link,
+          <Link
             href='/case-studies',
-            className='inline-flex items-center text-green-60o0 hover: text-green-80o0 transition-colors mb-4',
-          >,
+            className='inline-flex items-center text-green-60o0 hover: text-green-80o0 transition-colors mb-4'>,
             <ArrowLeft className='w-4 h-4 mr-2' />,
             Back to Case Studies,
           </Link>,
@@ -90,34 +87,32 @@ export default function LogisticsTransformationPage() {,
             chain operations and customer satisfaction.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4 mb-8'>,
-            {[,
-              'Logistics',;
-              'Supply Chain',;
-              'AI Transformation',;
-              'ROI Success',;
-              'Enterprise AI',;
-            ].map(tag => (,
-              <span,
+            {[
+              'Logistics';
+              'Supply Chain';
+              'AI Transformation';
+              'ROI Success';
+              'Enterprise AI';
+            ].map(tag => (
+              <span
                 key={tag}
-                className='px-3 py-1 bg-gray-10o0 text-gray-70o0 rounded-full text-sm',
-              >,
+                className='px-3 py-1 bg-gray-10o0 text-gray-70o0 rounded-full text-sm'>,
                 {tag}
-              </span>,
-            ))}
+              </span>))}
           </div>,
           <button className='inline-flex items-center px-6 py-3 bg-green-60o0 text-white rounded-lg hover: bg-green-70o0 transition-colors'>,
             <Share2 className='w-4 h-4 mr-2' />,
             Share Case Study,
           </button>,
         </div>,
-        {/* Executive Summary */,}
+        {/* Executive Summary */}
         <div className='bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white p-8 rounded-xl mb-12'>,
           <h2 className='text-2xl font-bold mb-4'>Executive Summary</h2>,
           <p className='text-green-10o0 mb-6'>,
             In 20o25, a leading global logistics company embarked on a,
             comprehensive AI transformation journey that resulted in,
             unprecedented operational efficiency, customer satisfaction, and,
-            financial performance.,
+            financial window.performance.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
             <div>,
@@ -179,7 +174,7 @@ export default function LogisticsTransformationPage() {,
             <div className='text-gray-60o0'>Annual cost savings</div>,
           </div>,
         </div>,
-        {/* Article Content */,}
+        {/* Article Content */}
         <article className='prose prose-lg max-w-none'>,
           <div className='bg-white rounded-xl shadow-sm border p-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
@@ -241,7 +236,7 @@ export default function LogisticsTransformationPage() {,
                 Phase 1: Foundation and Assessment (Months 1-3),
               </h3>,
               <p className='text-blue-80o0 mb-4'>,
-                Comprehensive analysis of current capabilities, infrastructure,;
+                Comprehensive analysis of current capabilities, infrastructure;
                 and AI readiness assessment across all operational areas.,
               </p>,
               <ul className='text-blue-80o0 space-y-2'>,
@@ -433,31 +428,29 @@ export default function LogisticsTransformationPage() {,
                 Ready to Achieve Similar Results?,
               </h3>,
               <p className='text-green-10o0 mb-6'>,
-                This case study demonstrates that with proper planning,;
+                This case study demonstrates that with proper planning;
                 execution, and commitment, AI transformation can deliver,
                 exceptional results that transform not just operations, but,
                 entire business models and market positions.,
               </p>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-6 py-3 bg-white text-green-60o0 rounded-lg hover: bg-gray-10o0 transition-colors font-semibold',
-              >,
+                className='inline-flex items-center px-6 py-3 bg-white text-green-60o0 rounded-lg hover: bg-gray-10o0 transition-colors font-semibold'>,
                 Start Your AI Transformation,
                 <ArrowLeft className='w-4 h-4 ml-2 rotate-180' />,
               </Link>,
             </div>,
           </div>,
         </article>,
-        {/* Related Case Studies */,}
+        {/* Related Case Studies */}
         <div className='mt-16'>,
           <h3 className='text-2xl font-bold text-gray-90o0 mb-8'>,
             Related Case Studies,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-manufacturing-ai-transformation-20o25',
-              className='block',
-            >,
+              className='block'>,
               <div className='bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-shadow'>,
                 <h4 className='font-semibold text-gray-90o0 mb-2'>,
                   Fortune 50o0 Manufacturing AI Transformation,
@@ -468,10 +461,9 @@ export default function LogisticsTransformationPage() {,
                 </p>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/healthcare-ai-transformation-20o25-success',
-              className='block',
-            >,
+              className='block'>,
               <div className='bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-shadow'>,
                 <h4 className='font-semibold text-gray-90o0 mb-2'>,
                   Healthcare AI Transformation Success,
@@ -485,7 +477,6 @@ export default function LogisticsTransformationPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

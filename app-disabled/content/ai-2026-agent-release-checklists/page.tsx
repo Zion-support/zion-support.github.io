@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Agent Release Checklists',;
+export const metadata = {
+  title: 'AI 20o26: Agent Release Checklists';
   description:,
-    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.',;
+    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.';
 };
-,
-export default function AgentReleaseChecklistsPage() {,
-  return (,
+export default function AgentReleaseChecklistsPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Agent Release Checklists,
@@ -39,20 +38,17 @@ export default function AgentReleaseChecklistsPage() {,
         </ol>,
       </section>,
       <div className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-agentic-evaluation-checklists',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Related: Evaluation Checklists,
         </Link>,
-        <Link,
+        <Link
           href='/content/ai-20o26-evaluation-harness-blueprint',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Evaluation Harness,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

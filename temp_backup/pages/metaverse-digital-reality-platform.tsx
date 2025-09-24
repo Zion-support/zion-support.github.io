@@ -1,35 +1,34 @@
-import React from 'react',
-import {,
-  Globe,;
-  Users,;
-  Zap,;
-  Shield,;
-  Eye,;
-  Cpu,;
-  Palette,;
-  Rocket,;
+import React from 'react';
+import {
+  Globe;
+  Users;
+  Zap;
+  Shield;
+  Eye;
+  Cpu;
+  Palette;
+  Rocket;
 } from 'lucide-react',
-,
-const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
-  return (,
+const MetaverseDigitalRealityPlatformPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>Metaverse Digital Reality Platform - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Experience the future with Zion Tech Group's metaverse digital reality platform. Immersive 3D environments, virtual collaboration, and next-generation digital experiences.",
         />,
-        <meta,
+        <meta
           name='keywords',
           content='metaverse, virtual reality, digital reality, 3D environments, virtual collaboration, Zion Tech Group',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/metaverse-digital-reality-platform',
         />,
       </Head>,
       <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto text-center'>,
             <div className='mb-8'>,
@@ -45,7 +44,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
             </p>,
           </div>,
         </section>,
-        {/* Platform Overview */,}
+        {/* Platform Overview */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
@@ -115,7 +114,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
                     Avatar System,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Customizable digital identities with realistic animations,;
+                    Customizable digital identities with realistic animations;
                     expressions, and body language for authentic interactions.,
                   </p>,
                 </div>,
@@ -144,7 +143,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
                     Content Creation,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Built-in tools for creating and sharing 3D content,;
+                    Built-in tools for creating and sharing 3D content;
                     animations, and interactive experiences.,
                   </p>,
                 </div>,
@@ -192,7 +191,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
                   Education & Training,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Interactive learning environments for virtual classrooms,;
+                  Interactive learning environments for virtual classrooms;
                   simulations, and hands-on training experiences.,
                 </p>,
               </div>,
@@ -272,7 +271,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Development Tools */,}
+        {/* Development Tools */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-7xl mx-auto'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-16'>,
@@ -344,7 +343,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Future Vision */,}
+        {/* Future Vision */}
         <section className='py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-8 border border-slate-70o0'>,
@@ -380,7 +379,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Get Started */,}
+        {/* Get Started */}
         <section className='py-16 px-4 sm: px-6 lg:px-8'>,
           <div className='max-w-4xl mx-auto text-center'>,
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>,
@@ -423,9 +422,6 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default MetaverseDigitalRealityPlatformPage,
-,
+    </>),
+};
+export default MetaverseDigitalRealityPlatformPage;

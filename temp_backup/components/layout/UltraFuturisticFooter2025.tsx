@@ -1,128 +1,123 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Zap,;
-  Globe,;
-  Lock,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Star,;
-  Users,;
-  Award,;
-  Brain,;
-  Atom,;
-  Rocket,;
-  Shield,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Palette,;
-  Heart,;
-  Target,;
-  Sparkles,;
-  Eye,;
-  TrendingUp,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Youtube,;
-  Github,;
-  ExternalLink,;
+import {
+  Zap;
+  Globe;
+  Lock;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowRight;
+  Star;
+  Users;
+  Award;
+  Brain;
+  Atom;
+  Rocket;
+  Shield;
+  Cpu;
+  Database;
+  Cloud;
+  Palette;
+  Heart;
+  Target;
+  Sparkles;
+  Eye;
+  TrendingUp;
+  Facebook;
+  Twitter;
+  Linkedin;
+  Instagram;
+  Youtube;
+  Github;
+  ExternalLink;
 } from 'lucide-react',
-,
-const UltraFuturisticFooter20o25: React.FC = () => {,
+const UltraFuturisticFooter20o25: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [,
-    {,
-      title: 'Services',;
-      links: [,
-        { label: 'AI & Machine Learning', href: '/ai-services' ,},;
-        { label: 'Quantum Computing', href: '/quantum-computing' ,},;
-        { label: 'Space Technology', href: '/space-tech' ,},;
-        { label: 'Cybersecurity', href: '/cybersecurity' ,},;
-        { label: 'Cloud Solutions', href: '/cloud-platform' ,},;
-        { label: 'DevOps & Infrastructure', href: '/devops-infrastructure' ,},;
-        { label: 'Data & Analytics', href: '/data-analytics' ,},;
-        { label: 'View All Services', href: '/services' ,},;
-      ],;
-    },;
-    {,
-      title: 'Solutions',;
-      links: [,
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' ,},;
-        { label: 'SMB Solutions', href: '/smb-solutions' ,},;
-        { label: 'Industry Solutions', href: '/industry-solutions' ,},;
-        { label: 'Custom Development', href: '/custom-development' ,},;
-        { label: 'Digital Transformation', href: '/digital-transformation' ,},;
-        { label: 'Innovation Consulting', href: '/innovation-consulting' ,},;
-      ],;
-    },;
-    {,
-      title: 'Resources',;
-      links: [,
-        { label: 'Documentation', href: '/docs' ,},;
-        { label: 'Blog & Insights', href: '/blog' ,},;
-        { label: 'Case Studies', href: '/case-studies' ,},;
-        { label: 'White Papers', href: '/white-papers' ,},;
-        { label: 'Webinars', href: '/webinars' ,},;
-        { label: 'Training & Certification', href: '/training' ,},;
-      ],;
-    },;
-    {,
-      title: 'Company',;
-      links: [,
-        { label: 'About Us', href: '/about' ,},;
-        { label: 'Careers', href: '/careers' ,},;
-        { label: 'Partners', href: '/partners' ,},;
-        { label: 'News & Updates', href: '/news' ,},;
-        { label: 'Contact', href: '/contact' ,},;
-        { label: 'Support', href: '/support' ,},;
-      ],;
-    },;
+  const footerSections = [
+    {
+      title: 'Services';
+      links: [
+        { label: 'AI & Machine Learning', href: '/ai-services' };
+        { label: 'Quantum Computing', href: '/quantum-computing' };
+        { label: 'Space Technology', href: '/space-tech' };
+        { label: 'Cybersecurity', href: '/cybersecurity' };
+        { label: 'Cloud Solutions', href: '/cloud-platform' };
+        { label: 'DevOps & Infrastructure', href: '/devops-infrastructure' };
+        { label: 'Data & Analytics', href: '/data-analytics' };
+        { label: 'View All Services', href: '/services' };
+      ];
+    };
+    {
+      title: 'Solutions';
+      links: [
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' };
+        { label: 'SMB Solutions', href: '/smb-solutions' };
+        { label: 'Industry Solutions', href: '/industry-solutions' };
+        { label: 'Custom Development', href: '/custom-development' };
+        { label: 'Digital Transformation', href: '/digital-transformation' };
+        { label: 'Innovation Consulting', href: '/innovation-consulting' };
+      ];
+    };
+    {
+      title: 'Resources';
+      links: [
+        { label: 'Documentation', href: '/docs' };
+        { label: 'Blog & Insights', href: '/blog' };
+        { label: 'Case Studies', href: '/case-studies' };
+        { label: 'White Papers', href: '/white-papers' };
+        { label: 'Webinars', href: '/webinars' };
+        { label: 'Training & Certification', href: '/training' };
+      ];
+    };
+    {
+      title: 'Company';
+      links: [
+        { label: 'About Us', href: '/about' };
+        { label: 'Careers', href: '/careers' };
+        { label: 'Partners', href: '/partners' };
+        { label: 'News & Updates', href: '/news' };
+        { label: 'Contact', href: '/contact' };
+        { label: 'Support', href: '/support' };
+      ];
+    };
   ],
-,
-  const socialLinks = [,
-    {,
-      icon: Facebook,;
-      href: 'https://facebook.com/ziontechgroup',;
-      label: 'Facebook',;
-    },;
-    {,
-      icon: Twitter,;
-      href: 'https://twitter.com/ziontechgroup',;
-      label: 'Twitter',;
-    },;
-    {,
-      icon: Linkedin,;
-      href: 'https://linkedin.com/company/ziontechgroup',;
-      label: 'LinkedIn',;
-    },;
-    {,
-      icon: Instagram,;
-      href: 'https://instagram.com/ziontechgroup',;
-      label: 'Instagram',;
-    },;
-    {,
-      icon: Youtube,;
-      href: 'https://youtube.com/@ziontechgroup',;
-      label: 'YouTube',;
-    },;
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' ,},;
+  const socialLinks = [
+    {
+      icon: Facebook;
+      href: 'https://facebook.com/ziontechgroup';
+      label: 'Facebook';
+    };
+    {
+      icon: Twitter;
+      href: 'https://twitter.com/ziontechgroup';
+      label: 'Twitter';
+    };
+    {
+      icon: Linkedin;
+      href: 'https://linkedin.com/company/ziontechgroup';
+      label: 'LinkedIn';
+    };
+    {
+      icon: Instagram;
+      href: 'https://instagram.com/ziontechgroup';
+      label: 'Instagram';
+    };
+    {
+      icon: Youtube;
+      href: 'https://youtube.com/@ziontechgroup';
+      label: 'YouTube';
+    };
+    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' };
   ],
-,
-  const contactInfo = {,
-    phone: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
+  const contactInfo = {
+    phone: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
   };
-,
-  return (,
+  return (
     <footer className='relative bg-gray-90o0 border-t border-gray-80o0/50 overflow-hidden'>,
       {/* Animated Background Elements */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>,
@@ -130,9 +125,9 @@ const UltraFuturisticFooter20o25: React.FC = () => {,
         <div className='absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-50o0/5 to-pink-50o0/5 rounded-full blur-3xl'></div>,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
-        {/* Main Footer Content */,}
+        {/* Main Footer Content */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8 mb-12'>,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className='lg: col-span-2'>,
             <div className='flex items-center space-x-3 mb-6'>,
               <div className='relative'>,
@@ -172,73 +167,66 @@ const UltraFuturisticFooter20o25: React.FC = () => {,
             </div>,
           </div>,
           {/* Footer Sections */}
-          {footerSections.map(section => (,
+          {footerSections.map(section => (
             <div key={section.title}>,
               <h4 className='text-lg font-semibold text-white mb-4'>,
                 {section.title}
               </h4>,
               <ul className='space-y-3'>,
-                {section.links.map(link => (,
+                {section.links.map(link => (
                   <li key={link.label}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className='text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-30o0 text-sm flex items-center group',
-                    >,
-                      <span>{link.label,}</span>,
+                      className='text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-30o0 text-sm flex items-center group'>,
+                      <span>{link.label}</span>,
                       <ArrowRight className='w-3 h-3 ml-2 opacity-0 group-hover: opacity-10o0 transition-all duration-30o0 transform translate-x-0 group-hover:translate-x-1' />,
                     </Link>,
-                  </li>,
-                )),}
+                  </li>))}
               </ul>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Divider */}
         <div className='border-t border-gray-80o0/50 my-8'></div>,
         {/* Bottom Section */}
         <div className='flex flex-col lg: flex-row justify-between items-center space-y-6 lg:space-y-0'>,
-          {/* Copyright and Links */,}
+          {/* Copyright and Links */}
           <div className='flex flex-col sm: flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-gray-40o0'>,
             <span>,
-              &copy, {currentYear,} Zion Tech Group. All rights reserved.,
+              &copy, {currentYear} Zion Tech Group. All rights reserved.,
             </span>,
             <div className='flex items-center space-x-6'>,
-              <Link,
+              <Link
                 href='/privacy',
-                className='hover: text-cyan-40o0 transition-colors duration-30o0',
-              >,
+                className='hover: text-cyan-40o0 transition-colors duration-30o0'>,
                 Privacy Policy,
               </Link>,
-              <Link,
+              <Link
                 href='/terms',
-                className='hover:text-cyan-40o0 transition-colors duration-30o0',
-              >,
+                className='hover:text-cyan-40o0 transition-colors duration-30o0'>,
                 Terms of Service,
               </Link>,
-              <Link,
+              <Link
                 href='/cookies',
-                className='hover:text-cyan-40o0 transition-colors duration-30o0',
-              >,
+                className='hover:text-cyan-40o0 transition-colors duration-30o0'>,
                 Cookie Policy,
               </Link>,
             </div>,
           </div>,
-          {/* Social Links */,}
+          {/* Social Links */}
           <div className='flex items-center space-x-4'>,
-            {socialLinks.map(social => (,
+            {socialLinks.map(social => (
               <motion.a,
                 key={social.label}
                 href={social.href}
                 target='_blank',
                 rel='noopener noreferrer',
                 className='w-10 h-10 bg-gray-80o0/50 hover: bg-gradient-to-r hover:from-cyan-40o0 hover:to-blue-50o0 rounded-xl flex items-center justify-center text-gray-40o0 hover:text-white transition-all duration-30o0 border border-gray-70o0/50 hover:border-transparent group',
-                whileHover={{ scale: 1.1 ,}}
-                whileTap={{ scale: 0.95 ,}}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >,
                 <social.icon className='w-5 h-5' />,
                 <span className='sr-only'>{social.label}</span>,
-              </motion.a>,
-            ))}
+              </motion.a>))}
           </div>,
         </div>,
         {/* Newsletter Signup */}
@@ -252,7 +240,7 @@ const UltraFuturisticFooter20o25: React.FC = () => {,
               Computing, Space Technology, and industry trends.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>,
-              <input,
+              <input
                 type='email',
                 placeholder='Enter your email',
                 className='flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-70o0 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent',
@@ -263,7 +251,7 @@ const UltraFuturisticFooter20o25: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className='mt-12 text-center'>,
           <div className='flex flex-wrap justify-center items-center space-x-8 text-gray-40o0'>,
             <div className='flex items-center space-x-2'>,
@@ -285,9 +273,5 @@ const UltraFuturisticFooter20o25: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),
-};
-,
-export default UltraFuturisticFooter20o25,
-,
+    </footer>)};
+export default UltraFuturisticFooter20o25;

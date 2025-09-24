@@ -1,130 +1,115 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
+import {
   Brain,
   Zap,
   Code,
   BarChart3,
   Image,
   Shield,
-  Globe,;
+  Globe;
   ArrowRight,
   Star,
-  Users,;
-  CheckCircle,;
-  X,;
-  Play,;
-  Rocket,;
-  TrendingUp,;
-  Award,;
-  Sparkles,
-} from 'lucide-react',
-,
-const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
+  Users;
+  CheckCircle;
+  X;
+  Play;
+  Rocket;
+  TrendingUp;
+  Award;
+  Sparkles} from 'lucide-react',
+const AIToolsUltimateShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentToolsetCurrentTool] = useState(0),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-,
     // Auto-rotate tools,
-    const interval = setInterval(() => {,
-      setCurrentTool(prev => (prev + 1) % tools.length),
-    }250o0),
-,
-    return () => clearInterval(interval),
-  }[]),
-,
-  const tools = [,
-    {,
-      icon: Brain,;
-      name: 'AI Code Generator',;
-      category: 'Development',;
-      rating: 4.9,;
-      users: '20o0K+',;
+    const interval = setInterval(() => {
+      setCurrentTool(prev => (prev + 1) % tools.length)}250o0),
+    return () => clearInterval(interval)}[]),
+  const tools = [
+    {
+      icon: Brain;
+      name: 'AI Code Generator';
+      category: 'Development';
+      rating: 4.9;
+      users: '20o0K+';
       color: 'from-green-50o0 to-emerald-50o0',
-    ,},;
-    {,
-      icon: Zap,;
-      name: 'Smart Task Manager',;
-      category: 'Productivity',;
-      rating: 4.8,;
-      users: '150K+',;
+    };
+    {
+      icon: Zap;
+      name: 'Smart Task Manager';
+      category: 'Productivity';
+      rating: 4.8;
+      users: '150K+';
       color: 'from-blue-50o0 to-cyan-50o0',
-    ,},;
-    {,
-      icon: BarChart3,;
-      name: 'Predictive Analytics',;
-      category: 'Analytics',;
-      rating: 4.9,;
-      users: '90K+',;
+    };
+    {
+      icon: BarChart3;
+      name: 'Predictive Analytics';
+      category: 'Analytics';
+      rating: 4.9;
+      users: '90K+';
       color: 'from-purple-50o0 to-pink-50o0',
-    ,},;
-    {,
-      icon: Image,;
-      name: 'AI Image Creator',;
-      category: 'Multimedia',;
-      rating: 4.9,;
-      users: '50o0K+',;
+    };
+    {
+      icon: Image;
+      name: 'AI Image Creator';
+      category: 'Multimedia';
+      rating: 4.9;
+      users: '50o0K+';
       color: 'from-orange-50o0 to-red-50o0',
-    ,},;
-    {,
-      icon: Shield,;
-      name: 'Threat Detector',;
-      category: 'Security',;
-      rating: 4.8,;
-      users: '10o0K+',;
+    };
+    {
+      icon: Shield;
+      name: 'Threat Detector';
+      category: 'Security';
+      rating: 4.8;
+      users: '10o0K+';
       color: 'from-red-50o0 to-rose-50o0',
-    ,},;
-    {,
-      icon: Globe,;
-      name: 'Translation Hub',;
-      category: 'Communication',;
-      rating: 4.9,;
-      users: '30o0K+',;
+    };
+    {
+      icon: Globe;
+      name: 'Translation Hub';
+      category: 'Communication';
+      rating: 4.9;
+      users: '30o0K+';
       color: 'from-indigo-50o0 to-blue-50o0',
-    ,}
+    }
   ],
-,
-  const categories = [,
-    { name: ''Productivity', 'count: '12 'tools', 'icon: Zap ,},;
-    { name: ''Development', 'count: '15 'tools', 'icon: Code ,},;
-    { name: ''Analytics', 'count: '8 'tools', 'icon: BarChart3 ,},;
-    { name: ''Multimedia', 'count: '10 'tools', 'icon: Image ,},;
-    { name: ''Security', 'count: '6 'tools', 'icon: Shield ,},;
-    { name: ''Communication', 'count: '9 'tools', 'icon: Globe ,}
+  const categories = [
+    { name: ''Productivity', 'count: '12 'tools', 'icon: Zap };
+    { name: ''Development', 'count: '15 'tools', 'icon: Code };
+    { name: ''Analytics', 'count: '8 'tools', 'icon: BarChart3 };
+    { name: ''Multimedia', 'count: '10 'tools', 'icon: Image };
+    { name: ''Security', 'count: '6 'tools', 'icon: Shield };
+    { name: ''Communication', 'count: '9 'tools', 'icon: Globe }
   ],
-,
-  const features = [,
-    '50+ AI Tools Available',;
-    '1M+ Active Users',;
-    '99.9% Uptime Guarantee',;
-    'Free Trial Available',
-  ],
-,
+  const features = [
+    '50+ AI Tools Available';
+    '1M+ Active Users';
+    '99.9% Uptime Guarantee';
+    'Free Trial Available'],
   if (isDismissed) return null,
-,
-  return (,
+  return (
     <AnimatePresence>,
-      {isVisible && (,
+      {isVisible && (
         <motion.div,
-          initial={{ opacity: 0, y: -10o0 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          exit={{ opacity: 0, y: -10o0 ,}}
-          transition={{ duration: 0.6ease: "easeOut" ,}}
-          className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-slate-90o0 border-b border-indigo-50o0/30",
-        >,
+          initial={{ opacity: 0, y: -10o0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10o0 }}
+          transition={{ duration: 0.6ease: "easeOut" }}
+          className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-indigo-90o0 to-slate-90o0 border-b border-indigo-50o0/30">,
           {/* Background Effects */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
-          {/* Animated Background Gradient */,}
+          {/* Animated Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 via-purple-60o0/20 to-indigo-60o0/20 animate-pulse"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">,
                   <div className="flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 border border-indigo-50o0/30">,
@@ -132,9 +117,8 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                     <span className="text-indigo-30o0 font-medium text-sm">AI TOOLS ULTIMATE 20o26</span>,
                   </div>,
                   <div className="flex items-center text-yellow-40o0">,
-                    {[...Array(5)].map((_i) => (,
-                      <Star key={i,} className="w-4 h-4 fill-current"  />,
-                    ))}
+                    {[...Array(5)].map((_i) => (
+                      <Star key={i} className="w-4 h-4 fill-current"  />))}
                     <span className="ml-2 text-sm font-medium">4.8/5 Rating</span>,
                   </div>,
                 </div>,
@@ -149,17 +133,16 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                   developmentanalyticsmultimediasecurityand communication.,
                   <span className="text-yellow-40o0 font-bold"> Start your free trial today!</span>,
                 </p>,
-                {/* Tool Rotation */,}
+                {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg: justify-start gap-4 mb-6">,
                   <AnimatePresence mode="wait">,
                     <motion.div,
-                      key={currentTool,}
-                      initial={{ opacity: 0x: 20 ,}}
-                      animate={{ opacity: 1x: 0 ,}}
-                      exit={{ opacity: 0x: -20 ,}}
-                      transition={{ duration: 0.5 ,}}
-                      className="flex items-center gap-3",
-                    >,
+                      key={currentTool}
+                      initial={{ opacity: 0x: 20 }}
+                      animate={{ opacity: 1x: 0 }}
+                      exit={{ opacity: 0x: -20 }}
+                      transition={{ duration: 0.5 }}
+                      className="flex items-center gap-3">,
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${tools[currentTool].color}`}>,
                         <tools[currentTool].icon className="w-5 h-5 text-white"  />,
                       </div>,
@@ -174,12 +157,11 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                 </div>,
                 {/* Features */}
                 <div className="flex flex-wrap items-center justify-center lg: justify-start gap-4 mb-6">,
-                  {features.map((featureindex) => (,
-                    <div key={index,} className="flex items-center text-sm text-gray-30o0">,
+                  {features.map((featureindex) => (
+                    <div key={index} className="flex items-center text-sm text-gray-30o0">,
                       <CheckCircle className="w-4 h-4 text-green-40o0 mr-2"  />,
                       <span>{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start">,
@@ -194,16 +176,15 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Right Content - Interactive Preview */,}
+              {/* Right Content - Interactive Preview */}
               <div className="flex-shrink-0">,
                 <div className="relative">,
                   {/* Main Card */}
                   <motion.div,
-                    initial={{ scale: 0.8opacity: 0 ,}}
-                    animate={{ scale: 1, opacity: 1 ,}}
-                    transition={{ duration: 0.6delay: 0.3 ,}}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl",
-                  >,
+                    initial={{ scale: 0.8opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.6delay: 0.3 }}
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 w-80 shadow-2xl">,
                     <div className="flex items-center justify-between mb-4">,
                       <h3 className="text-xl font-bold text-white">AI Tools Dashboard</h3>,
                       <div className="flex items-center gap-2">,
@@ -213,16 +194,14 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                     </div>,
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">,
-                      {categories.slice(0o4).map((categoryindex) => {,
+                      {categories.slice(0o4).map((categoryindex) => {
                         const CategoryIcon = category.icon,
-                        return (,
+                        return (
                           <div key={index} className="bg-white/5 rounded-lg p-3 text-center">,
                             <CategoryIcon className="w-6 h-6 text-indigo-40o0 mx-auto mb-2"  />,
                             <div className="text-sm font-bold text-white">{category.name}</div>,
                             <div className="text-xs text-gray-40o0">{category.count}</div>,
-                          </div>,
-                        ),
-                      })}
+                          </div>)})}
                     </div>,
                     {/* Active Tool */}
                     <div className="bg-white/5 rounded-lg p-4 mb-4">,
@@ -245,59 +224,54 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
                     </div>,
                     {/* Progress Indicator */}
                     <div className="flex justify-center gap-2">,
-                      {tools.map((_index) => (,
-                        <div,
+                      {tools.map((_index) => (
+                        <div
                           key={index}
-                          className={`w-2 h-2 rounded-full transition-all duration-30o0 ${,
-                            index === currentTool ? 'bg-indigo-40o0 w-6' : 'bg-gray-60o0',
-                          }`}
-                         />,
-                      ))}
+                          className={`w-2 h-2 rounded-full transition-all duration-30o0 ${
+                            index === currentTool ? 'bg-indigo-40o0 w-6' : 'bg-gray-60o0'}`}
+                         />))}
                     </div>,
                   </motion.div>,
                   {/* Floating Elements */}
                   <motion.div,
-                    animate={{,
-                      y: [0-10],;
+                    animate={{
+                      y: [0-10];
                       rotate: [0o50],
-                    ,}}
-                    transition={{,
-                      duration: 3,;
-                      repeat: Infinity,;
+                    }}
+                    transition={{
+                      duration: 3;
+                      repeat: Infinity;
                       ease: "easeInOut",
-                    ,}}
-                    className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg",
-                  >,
+                    }}
+                    className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">,
                     NEW!,
                   </motion.div>,
                   <motion.div,
-                    animate={{,
-                      y: [0o10],;
+                    animate={{
+                      y: [0o10];
                       x: [0o50],
-                    ,}}
-                    transition={{,
-                      duration: 4,;
-                      repeat: Infinity,;
-                      ease: "easeInOut",;
+                    }}
+                    transition={{
+                      duration: 4;
+                      repeat: Infinity;
+                      ease: "easeInOut";
                       delay: 1,
-                    ,}}
-                    className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-40o0 to-emerald-40o0 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg",
-                  >,
+                    }}
+                    className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-40o0 to-emerald-40o0 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg">,
                     1M+ Users,
                   </motion.div>,
                   <motion.div,
-                    animate={{,
-                      scale: [1.1],;
+                    animate={{
+                      scale: [1.1];
                       opacity: [0.710.7],
-                    ,}}
-                    transition={{,
-                      duration: 2,;
-                      repeat: Infinity,;
-                      ease: "easeInOut",;
+                    }}
+                    transition={{
+                      duration: 2;
+                      repeat: Infinity;
+                      ease: "easeInOut";
                       delay: 0.5,
-                    ,}}
-                    className="absolute top-1/2 -left-4 bg-gradient-to-r from-purple-40o0 to-pink-40o0 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg",
-                  >,
+                    }}
+                    className="absolute top-1/2 -left-4 bg-gradient-to-r from-purple-40o0 to-pink-40o0 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">,
                     Free Trial,
                   </motion.div>,
                 </div>,
@@ -305,18 +279,13 @@ const AIToolsUltimateShowcase20o26PromotionBanner = () => {,
             </div>,
           </div>,
           {/* Dismiss Button */}
-          <button,
+          <button
             onClick={() => setIsDismissed(true)}
-            className="absolute top-4 right-4 text-gray-40o0 hover: text-white transition-colors p-2 hover:bg-white/10 rounded-full",
-          >,
+            className="absolute top-4 right-4 text-gray-40o0 hover: text-white transition-colors p-2 hover:bg-white/10 rounded-full">,
             <X className="w-5 h-5"  />,
           </button>,
-          {/* Bottom Gradient */,}
+          {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-50o0 via-purple-50o0 to-indigo-50o0"></div>,
-        </motion.div>,
-      )}
-    </AnimatePresence>,
-  ),
-};
-,
-export default AIToolsUltimateShowcase20o26PromotionBanner,
+        </motion.div>)}
+    </AnimatePresence>)};
+export default AIToolsUltimateShowcase20o26PromotionBanner;

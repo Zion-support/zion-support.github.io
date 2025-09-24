@@ -4,14 +4,12 @@ import { Button } from './ui/button',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card',
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react',
 import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices',
-export function ServicesComparisonTable() {,
+export function ServicesComparisonTable() {
     const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'],
-    const getCategoryServices = (category) => {,
-        return COMPREHENSIVE_SERVICES.filter(service => service.category === category),
-    };
-    const getFeatureIcon = (hasFeature) => {,
-        return hasFeature ? (<Check className="w-4 h-4 text-green-50o0" />) : (<X className="w-4 h-4 text-red-50o0" />),
-    };
+    const getCategoryServices = (category) => {
+        return COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
+    const getFeatureIcon = (hasFeature) => {
+        return hasFeature ? (<Check className="w-4 h-4 text-green-50o0" />) : (<X className="w-4 h-4 text-red-50o0" />)};
     return (<div className="py-16 bg-slate-50 dark: bg-slate-90o0">,
       <div className="container mx-auto px-4">,
         <div className="text-center mb-12">,
@@ -22,29 +20,28 @@ export function ServicesComparisonTable() {,
             Compare our comprehensive service offerings to find the perfect solution for your business needs,
           </p>,
         </div>,
-        {/* Service Categories Overview */,}
+        {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12">,
-          {serviceCategories.map((category) => {,
+          {serviceCategories.map((category) => {
             const services = getCategoryServices(category),
             const avgPrice = services.reduce((sum, service) => sum + (service.price || 0), 0) / services.length,
             return (<Card key={category} className="border-2 border-slate-20o0 dark: border-slate-70o0">,
                 <CardHeader className="text-center">,
-                  <CardTitle className="text-slate-90o0 dark:text-white">{category,}</CardTitle>,
+                  <CardTitle className="text-slate-90o0 dark:text-white">{category}</CardTitle>,
                   <CardDescription className="text-slate-60o0 dark: text-slate-30o0">,
-                    {services.length,} services available,
+                    {services.length} services available,
                   </CardDescription>,
                 </CardHeader>,
                 <CardContent className="text-center">,
                   <div className="text-3xl font-bold text-blue-60o0 dark: text-blue-40o0 mb-2">,
-                    ${Math.round(avgPrice).toLocaleString(),}
+                    ${Math.round(avgPrice).toLocaleString()}
                   </div>,
                   <p className="text-sm text-slate-50o0 dark: text-slate-40o0 mb-4">Average starting price</p>,
                   <Button variant="outline" className="w-full border-blue-50o0 text-blue-60o0 hover:bg-blue-50o0 hover:text-white">,
-                    View {category,}
+                    View {category}
                   </Button>,
                 </CardContent>,
-              </Card>),
-        })}
+              </Card>)})}
         </div>,
         {/* Detailed Comparison Table */}
         <div className="bg-white dark: bg-slate-80o0 rounded-xl shadow-lg overflow-hidden">,
@@ -125,17 +122,17 @@ export function ServicesComparisonTable() {,
             <div className="text-center">,
               <Phone className="w-8 h-8 text-blue-60o0 dark:text-blue-40o0 mx-auto mb-2" />,
               <h4 className="font-semibold text-slate-90o0 dark:text-white mb-1">Call Us</h4>,
-              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.mobile,}</p>,
+              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.mobile}</p>,
             </div>,
             <div className="text-center">,
               <Mail className="w-8 h-8 text-blue-60o0 dark: text-blue-40o0 mx-auto mb-2" />,
               <h4 className="font-semibold text-slate-90o0 dark:text-white mb-1">Email Us</h4>,
-              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.email,}</p>,
+              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.email}</p>,
             </div>,
             <div className="text-center">,
               <Clock className="w-8 h-8 text-blue-60o0 dark: text-blue-40o0 mx-auto mb-2" />,
               <h4 className="font-semibold text-slate-90o0 dark:text-white mb-1">Response Time</h4>,
-              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.responseTime,}</p>,
+              <p className="text-blue-60o0 dark:text-blue-40o0">{CONTACT_INFO.responseTime}</p>,
             </div>,
           </div>,
           <div className="text-center">,
@@ -145,13 +142,13 @@ export function ServicesComparisonTable() {,
             </Button>,
           </div>,
         </div>,
-        {/* Service Highlights */,}
+        {/* Service Highlights */}
         <div className="mt-16">,
           <h3 className="text-3xl font-bold text-slate-90o0 dark: text-white text-center mb-12">,
             Service Highlights,
           </h3>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">,
-            {COMPREHENSIVE_SERVICES.filter(service => service.featured).map((service) => (<Card key={service.id,} className="border-2 border-blue-20o0 dark: border-blue-80o0 hover:border-blue-40o0 dark:hover:border-blue-60o0 transition-colors">,
+            {COMPREHENSIVE_SERVICES.filter(service => service.featured).map((service) => (<Card key={service.id} className="border-2 border-blue-20o0 dark: border-blue-80o0 hover:border-blue-40o0 dark:hover:border-blue-60o0 transition-colors">,
                 <CardHeader className="pb-3">,
                   <div className="flex items-center justify-between mb-2">,
                     <Badge className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white">,
@@ -159,10 +156,10 @@ export function ServicesComparisonTable() {,
                     </Badge>,
                     <div className="flex items-center gap-1">,
                       <Star className="w-4 h-4 text-yellow-50o0 fill-current" />,
-                      <span className="text-sm font-medium">{service.rating,}</span>,
+                      <span className="text-sm font-medium">{service.rating}</span>,
                     </div>,
                   </div>,
-                  <CardTitle className="text-slate-90o0 dark: text-white text-lg">{service.title,}</CardTitle>,
+                  <CardTitle className="text-slate-90o0 dark: text-white text-lg">{service.title}</CardTitle>,
                   <CardDescription className="text-slate-60o0 dark: text-slate-30o0 text-sm">,
                     {service.description.substring(0, 10o0)}...,
                   </CardDescription>,
@@ -170,7 +167,7 @@ export function ServicesComparisonTable() {,
                 <CardContent className="pt-0">,
                   <div className="flex items-center justify-between mb-4">,
                     <div className="text-2xl font-bold text-blue-60o0 dark: text-blue-40o0">,
-                      {service.currency,}{service.price?.toLocaleString()}
+                      {service.currency}{service.price?.toLocaleString()}
                     </div>,
                     <Badge variant="outline" className="border-blue-50o0 text-blue-60o0">,
                       {service.category}
@@ -180,10 +177,9 @@ export function ServicesComparisonTable() {,
                     Learn More,
                   </Button>,
                 </CardContent>,
-              </Card>)),}
+              </Card>))}
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>)}
 ,

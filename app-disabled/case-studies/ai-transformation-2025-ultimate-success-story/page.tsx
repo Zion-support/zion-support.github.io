@@ -1,26 +1,24 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story',;
+    'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story';
   description:,
-    'Discover how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.',;
-  keywords: [,
-    'Case Study',;
-    'AI Transformation',;
-    'ROI',;
-    'Fortune 50o0',;
-    'Manufacturing',;
-    'Success Story',;
-    '80o0% ROI',;
-  ],;
+    'Discover how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.';
+  keywords: [
+    'Case Study';
+    'AI Transformation';
+    'ROI';
+    'Fortune 50o0';
+    'Manufacturing';
+    'Success Story';
+    '80o0% ROI';
+  ];
 };
-,
-export default function AITransformationSuccessPage() {,
-  return (,
+export default function AITransformationSuccessPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story',
         description='Discover how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.',
         keywords='Case Study, AI Transformation, ROI, Fortune 50o0, Manufacturing, Success Story, 80o0% ROI',
@@ -62,7 +60,7 @@ export default function AITransformationSuccessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className='py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='prose prose-lg max-w-none'>,
@@ -133,7 +131,7 @@ export default function AITransformationSuccessPage() {,
                 <strong>Initial Investment:</strong> $2.5 million,
               </p>,
               <p>,
-                Our team conducted a comprehensive analysis of GMS's operations,;
+                Our team conducted a comprehensive analysis of GMS's operations;
                 identifying 47 high-impact AI implementation opportunities,
                 across: ,
               </p>,
@@ -170,7 +168,7 @@ export default function AITransformationSuccessPage() {,
                     Pilot 1: Autonomous Production Lines,
                   </h4>,
                   <p className='text-green-70o0 mb-3'>,
-                    <strong>Location:</strong> Detroit Manufacturing Plant |{' ',}
+                    <strong>Location:</strong> Detroit Manufacturing Plant |{' '}
                     <strong>Scope:</strong> 4 production lines, 340 employees,
                   </p>,
                   <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>,
@@ -211,7 +209,7 @@ export default function AITransformationSuccessPage() {,
                     Pilot 2: Predictive Maintenance System,
                   </h4>,
                   <p className='text-blue-70o0 mb-3'>,
-                    <strong>Location:</strong> Global Equipment Fleet |{' ',}
+                    <strong>Location:</strong> Global Equipment Fleet |{' '}
                     <strong>Scope:</strong> 12,0o00+ pieces of equipment,
                   </p>,
                   <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>,
@@ -254,7 +252,7 @@ export default function AITransformationSuccessPage() {,
                     Pilot 3: AI-Powered Quality Control,
                   </h4>,
                   <p className='text-purple-70o0 mb-3'>,
-                    <strong>Location:</strong> All Manufacturing Facilities |{' ',}
+                    <strong>Location:</strong> All Manufacturing Facilities |{' '}
                     <strong>Scope: </strong> 340 quality checkpoints,
                   </p>,
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>,
@@ -511,16 +509,14 @@ export default function AITransformationSuccessPage() {,
                   embrace AI transformation.,
                 </p>,
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                  >,
+                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                     Schedule Consultation,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/resources/ai-implementation-ultimate-roadmap-20o25',
-                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                  >,
+                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                     Download Blueprint,
                   </Link>,
                 </div>,
@@ -528,7 +524,7 @@ export default function AITransformationSuccessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className='py-16 bg-gray-50'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -543,10 +539,9 @@ export default function AITransformationSuccessPage() {,
                   Complete guide to achieving 80o0% ROI with revolutionary AI,
                   implementations.,
                 </p>,
-                <Link,
+                <Link
                   href='/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Read Guide →,
                 </Link>,
               </div>,
@@ -557,10 +552,9 @@ export default function AITransformationSuccessPage() {,
                 <p className='text-gray-60o0 mb-4'>,
                   Step-by-step framework for achieving 80o0% ROI in 18 months.,
                 </p>,
-                <Link,
+                <Link
                   href='/resources/ai-implementation-ultimate-roadmap-20o25',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   View Roadmap →,
                 </Link>,
               </div>,
@@ -572,10 +566,9 @@ export default function AITransformationSuccessPage() {,
                   Explore other Fortune 50o0 companies achieving remarkable AI,
                   transformation results.,
                 </p>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   View All Cases →,
                 </Link>,
               </div>,
@@ -583,7 +576,6 @@ export default function AITransformationSuccessPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

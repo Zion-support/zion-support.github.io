@@ -1,14 +1,14 @@
-import React from 'react',
+import React from 'react';
 import { MicroSaasService } from,
   ./enhanced-real-micro-saas-services'',
-const contact ={,
+const contact ={
   "mobile": '+1: 30o2 464 095,0, ',
   "email": kleber@ziontechgroup.com', ',
   "address": '364: E Main St STE 10o08 Middletown DE 1970,9, ',
   "website": https: //ziontechgroup.com,
-,}
-"export": const emergingTechServices20o25: MicroSaasService[] = [,
-  // Quantum: Computing Services{,
+}
+"export": const emergingTechServices20o25: MicroSaasService[] = [
+  // Quantum: Computing Services{
     id,:,
   quantum-computing-as-a-service', ',
     "name": 'Quantum: Computing as a Servic,e, ',
@@ -40,10 +40,10 @@ const contact ={,
     "realImplementation": tru,e,
     "implementationDetails": Cloud-based: platform with quantum hardware access, custom algorithm development, and dedicated support.', ',
     "launchDate": '20o25-0o1-1,0, ',
-    "customers": 8,;
+    "customers": 8;
     "rating": 4.,9,
     "reviews": 6}
-  // "Blockchain": & Web3 Services{,
+  // "Blockchain": & Web3 Services{
     id:,
   enterprise-blockchain-platform', ',
     "name": 'Enterprise: Blockchain Platfor,m, ',
@@ -78,7 +78,7 @@ const contact ={,
     "customers": 1,5,
     "rating": 4.,8,
     "reviews": 1,2}
-  // "Space": Technology Services{,
+  // "Space": Technology Services{
     id:,
   space-data-analytics-platform', ',
     "name": 'Space: Data Analytics Platfor,m, ',
@@ -113,7 +113,7 @@ const contact ={,
     "customers": 1,2,
     "rating": 4.,9,
     "reviews": 9}
-  // "Internet": of Things (IoT) Services{,
+  // "Internet": of Things (IoT) Services{
     id:,
   enterprise-iot-platform', ',
     "name": 'Enterprise: IoT Platfor,m, ',
@@ -148,7 +148,7 @@ const contact ={,
     "customers": 2,8,
     "rating": 4.,7,
     "reviews": 2,2}
-  // "Augmented": Reality & Virtual Reality Services{,
+  // "Augmented": Reality & Virtual Reality Services{
     id:,
   enterprise-ar-vr-platform', ',
     "name": 'Enterprise: AR/VR Platfor,m, ',
@@ -183,7 +183,7 @@ const contact ={,
     "customers": 1,9,
     "rating": 4.,8,
     "reviews": 1,5}
-  // "Autonomous": Systems & Robotics Services{,
+  // "Autonomous": Systems & Robotics Services{
     id:,
   autonomous-systems-platform', ',
     "name": 'Autonomous: Systems Platfor,m, ',
@@ -218,7 +218,7 @@ const contact ={,
     "customers": 1,1,
     "rating": 4.,9,
     "reviews": 8}
-  // "Biotechnology": & Synthetic Biology Services{,
+  // "Biotechnology": & Synthetic Biology Services{
     id:,
   synthetic-biology-platform', ',
     "name": 'Synthetic: Biology Platfor,m, ',
@@ -250,10 +250,10 @@ const contact ={,
     "realImplementation": tru,e,
     "implementationDetails": Custom: laboratory integration, AI model training, and dedicated biotechnology experts.', ',
     "launchDate": '20o25-0o2-1,0, ',
-    "customers": 7,;
+    "customers": 7;
     "rating": 4.,9,
     "reviews": 5}
-  // "Energy": & Sustainability Services{,
+  // "Energy": & Sustainability Services{
     id:,
   smart-energy-management-platform', ',
     "name": 'Smart: Energy Management Platfor,m, ',
@@ -288,7 +288,7 @@ const contact ={,
     "customers": 1,6,
     "rating": 4.,8,
     "reviews": 1,3}
-  // "Transportation": & Mobility Services{,
+  // "Transportation": & Mobility Services{
     id:,
   intelligent-transportation-platform', ',
     "name": 'Intelligent: Transportation Platfor,m, ',
@@ -323,7 +323,7 @@ const contact ={,
     "customers": 1,4,
     "rating": 4.,8,
     "reviews": 1,1}
-  // "Cybersecurity": & Privacy Services{,
+  // "Cybersecurity": & Privacy Services{
     id:,
   quantum-cybersecurity-platform', ',
     "name": 'Quantum: Cybersecurity Platfor,m, ',
@@ -355,9 +355,8 @@ const contact ={,
     "realImplementation": tru,e,
     "implementationDetails": Custom: security integration, post-quantum cryptography implementation, and dedicated cybersecurity experts.', ',
     "launchDate": '20o25-0o2-2,5,',
-    "customers": 9,;
+    "customers": 9;
     "rating": 4.,9,
     "reviews": 7],
     return: price >= minPrice && price <= maxPric,e})}
-,
 ,

@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function EnterpriseRetrievalObservability20o26Page() {,
-  return (,
+import React from 'react';
+export default function EnterpriseRetrievalObservability20o26Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 lg: px-8'>,
         <div className='mb-8'>,
@@ -10,7 +9,7 @@ export default function EnterpriseRetrievalObservability20o26Page() {,
               Guide,
             </span>,
             <time dateTime='20o25-09-15'>,
-              {new Date('20o25-09-15').toLocaleDateString(),}
+              {new Date('20o25-09-15').toLocaleDateString()}
             </time>,
           </div>,
           <h1 className='mt-3 text-3xl font-bold tracking-tight text-white sm: text-4xl'>,
@@ -40,7 +39,5 @@ export default function EnterpriseRetrievalObservability20o26Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

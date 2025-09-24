@@ -1,110 +1,107 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Card from '../components/ui/Card',;
-import Button from '../components/ui/Button',;
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react',;
-export default function JSONFormatterPage() {,
-  const [inputJson, setInputJson] = useState(''),;
-  const [formattedJson, setFormattedJson] = useState(''),;
-  const [isValid, setIsValid] = useState(true),;
-  const [errorMessage, setErrorMessage] = useState(''),;
-  const [indentSize, setIndentSize] = useState(2),;
-  const [compactMode, setCompactMode] = useState(false),;
-  const [showLineNumbers, setShowLineNumbers] = useState(true),;
-  const formatJSON = () => {,
-    if (!inputJson.trim()) {,
-      setFormattedJson(''),;
-      setIsValid(true),;
-      setErrorMessage(''),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+export default function JSONFormatterPage() {
+  const [inputJson, setInputJson] = useState('');
+  const [formattedJson, setFormattedJson] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [indentSize, setIndentSize] = useState(2);
+  const [compactMode, setCompactMode] = useState(false);
+  const [showLineNumbers, setShowLineNumbers] = useState(true);
+  const formatJSON = () => {
+    if (!inputJson.trim()) {
+      setFormattedJson('');
+      setIsValid(true);
+      setErrorMessage('');
       return}
 ,
-    try {,
-      const parsed = JSON.parse(inputJson),;
+    try {
+      const parsed = JSON.parse(inputJson);
       const formatted = compactMode,
         ? JSON.stringify(parsed),
-        : JSON.stringify(parsed, null, indentSize),;
-      setFormattedJson(formatted),;
-      setIsValid(true),;
-      setErrorMessage('')} catch (error) {,
-      setIsValid(false),;
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),;
+        : JSON.stringify(parsed, null, indentSize);
+      setFormattedJson(formatted);
+      setIsValid(true);
+      setErrorMessage('')} catch (error) {
+      setIsValid(false);
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('')}
-  },;
-  const minifyJSON = () => {,
-    if (!inputJson.trim()) return,;
-    try {,
-      const parsed = JSON.parse(inputJson),;
-      const minified = JSON.stringify(parsed),;
-      setFormattedJson(minified),;
-      setIsValid(true),;
-      setErrorMessage('')} catch (error) {,
-      setIsValid(false),;
+  };
+  const minifyJSON = () => {
+    if (!inputJson.trim()) return;
+    try {
+      const parsed = JSON.parse(inputJson);
+      const minified = JSON.stringify(parsed);
+      setFormattedJson(minified);
+      setIsValid(true);
+      setErrorMessage('')} catch (error) {
+      setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
-  },;
-  const validateJSON = () => {,
-    if (!inputJson.trim()) {,
-      setIsValid(true),;
-      setErrorMessage(''),;
+  };
+  const validateJSON = () => {
+    if (!inputJson.trim()) {
+      setIsValid(true);
+      setErrorMessage('');
       return}
 ,
-    try {,
-      JSON.parse(inputJson),;
-      setIsValid(true),;
-      setErrorMessage('')} catch (error) {,
-      setIsValid(false),;
+    try {
+      JSON.parse(inputJson);
+      setIsValid(true);
+      setErrorMessage('')} catch (error) {
+      setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
-  },;
-  const clearAll = () => {,
-    setInputJson(''),;
-    setFormattedJson(''),;
-    setIsValid(true),;
-    setErrorMessage('')},;
-  const copyToClipboard = (text: string) => {,
+  };
+  const clearAll = () => {
+    setInputJson('');
+    setFormattedJson('');
+    setIsValid(true);
+    setErrorMessage('')};
+  const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text),
-  ,},;
-  const downloadJSON = (content: string, filename: string) => {,
-    const blob = new Blob([content], { type: 'application/json' ,}),;
-    const url = URL.createObjectURL(blob),;
-    const a = document.createElement('a'),;
-    a.href = url,;
-    a.download = filename,;
-    document.body.appendChild(a),;
-    a.click(),;
-    document.body.removeChild(a),;
-    URL.revokeObjectURL(url)},;
-  const loadSampleJSON = () => {,
-    const sample ={,
-      "name": "John Doe",;
-      "age": 30,;
-      "email": "john.doe@example.com",;
-      "address": {,
-        "street": "123 Main St",;
-        "city": "Anytown",;
-        "state": "CA",;
-        "zipCode": "12345",
-      },;
-      "phoneNumbers": [,
-        {,
-          "type": "home",;
-          "number": "555-123-4567",
-        },;
-        {,
-          "type": "work",;
-          "number": "555-987-6543",
-        }
-      ],;
-      "interests": ["programming", "reading", "hiking"],;
-      "active": true,;
+  };
+  const downloadJSON = (content: string, filename: string) => {
+    const blob = new Blob([content], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url)};
+  const loadSampleJSON = () => {
+    const sample ={
+      "name": "John Doe";
+      "age": 30;
+      "email": "john.doe@example.com";
+      "address": {
+        "street": "123 Main St";
+        "city": "Anytown";
+        "state": "CA";
+        "zipCode": "12345"};
+      "phoneNumbers": [
+        {
+          "type": "home";
+          "number": "555-123-4567"};
+        {
+          "type": "work";
+          "number": "555-987-6543"}
+      ];
+      "interests": ["programming", "reading", "hiking"];
+      "active": true;
       "lastLogin": "20o24-0o1-15T10: 30:0o0Z",
-    ,},;
-    setInputJson(JSON.stringify(sample, null, 2)),;
-    setFormattedJson(''),;
-    setIsValid(true),;
-    setErrorMessage('')},;
-  const getLineNumbers = (text: string) => {,
-    const lines = text.split('\n'),;
-    return lines.map((_, index) => index + 1).join('\n')},;
-  return (,
+    };
+    setInputJson(JSON.stringify(sample, null, 2));
+    setFormattedJson('');
+    setIsValid(true);
+    setErrorMessage('')};
+  const getLineNumbers = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((_, index) => index + 1).join('\n')};
+  return (
     <>,
       <Head>,
         <title>JSON Formatter - Zion Tech Group</title>,
@@ -112,7 +109,7 @@ export default function JSONFormatterPage() {,
         <meta property="og: title" content="JSON Formatter - Zion Tech Group"  />,
         <meta property="og:description" content="Professional JSON formatting and validation service."  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-90o0 via-cyan-90o0 to-blue-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div className="mb-8">,
@@ -141,24 +138,23 @@ export default function JSONFormatterPage() {,
               Our advanced JSON formatter provides multiple formatting options and real-time validation.,
             </p>,
           </div>,
-          {/* Settings Bar */,}
+          {/* Settings Bar */}
           <Card className="p-6 bg-gray-80o0 border border-gray-70o0 mb-8">,
             <div className="flex flex-wrap items-center justify-between gap-4">,
               <div className="flex items-center space-x-6">,
                 <div className="flex items-center space-x-2">,
                   <label className="text-sm text-gray-30o0">Indent: </label>,
-                  <select,
-                    value={indentSize,}
+                  <select
+                    value={indentSize}
                     onChange={(e) => setIndentSize(Number(e.target.value))}
-                    className="px-3 py-2 bg-gray-70o0 border border-gray-60o0 rounded text-white text-sm focus: outline-none focus:ring-2 focus:ring-teal-50o0",
-                  >,
-                    <option value={2,}>2 spaces</option>,
+                    className="px-3 py-2 bg-gray-70o0 border border-gray-60o0 rounded text-white text-sm focus: outline-none focus:ring-2 focus:ring-teal-50o0">,
+                    <option value={2}>2 spaces</option>,
                     <option value={4}>4 spaces</option>,
                     <option value={8}>8 spaces</option>,
                   </select>,
                 </div>,
                 <div className="flex items-center space-x-2">,
-                  <input,
+                  <input
                     type="checkbox",
                     id="compactMode",
                     checked={compactMode}
@@ -168,10 +164,10 @@ export default function JSONFormatterPage() {,
                   <label htmlFor="compactMode" className="text-sm text-gray-30o0">Compact mode</label>,
                 </div>,
                 <div className="flex items-center space-x-2">,
-                  <input,
+                  <input
                     type="checkbox",
                     id="showLineNumbers",
-                    checked={showLineNumbers,}
+                    checked={showLineNumbers}
                     onChange={(e) => setShowLineNumbers(e.target.checked)}
                     className="w-4 h-4 text-teal-60o0 bg-gray-70o0 border-gray-60o0 rounded focus: ring-teal-50o0",
                   />,
@@ -179,28 +175,26 @@ export default function JSONFormatterPage() {,
                 </div>,
               </div>,
               <div className="flex items-center space-x-3">,
-                <Button,
-                  onClick={loadSampleJSON,}
+                <Button
+                  onClick={loadSampleJSON}
                   variant="outline",
                   size="sm",
-                  className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                >,
+                  className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                   <Upload className="w-4 h-4 mr-2"  />,
                   Load Sample,
                 </Button>,
-                <Button,
-                  onClick={clearAll,}
+                <Button
+                  onClick={clearAll}
                   variant="outline",
                   size="sm",
-                  className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                >,
+                  className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                   Clear All,
                 </Button>,
               </div>,
             </div>,
           </Card>,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-            {/* Input Section */,}
+            {/* Input Section */}
             <Card className="p-8 bg-gray-80o0 border border-gray-70o0">,
               <div className="flex items-center justify-between mb-6">,
                 <h3 className="text-2xl font-bold text-white flex items-center">,
@@ -208,124 +202,110 @@ export default function JSONFormatterPage() {,
                   Input JSON,
                 </h3>,
                 <div className="flex items-center space-x-2">,
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${,
-                    isValid ? 'bg-green-50o0/20 text-green-40o0' : 'bg-red-50o0/20 text-red-40o0',
-                  }`}>,
+                  <span className={`px-2 py-1 rounded text-xs font-medium ${
+                    isValid ? 'bg-green-50o0/20 text-green-40o0' : 'bg-red-50o0/20 text-red-40o0'}`}>,
                     {isValid ? 'Valid' : 'Invalid'}
                   </span>,
                 </div>,
               </div>,
               <div className="space-y-4">,
                 <div className="relative">,
-                  {showLineNumbers && (,
+                  {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-70o0 border-r border-gray-60o0 text-xs text-gray-40o0 p-2 font-mono overflow-hidden">,
                       {getLineNumbers(inputJson)}
-                    </div>,
-                  )}
-                  <textarea,
+                    </div>)}
+                  <textarea
                     value={inputJson}
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here...",
                     rows={15}
-                    className={`w-full p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-teal-50o0 font-mono text-sm resize-none ${,
+                    className={`w-full p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-teal-50o0 font-mono text-sm resize-none ${
                       showLineNumbers ? 'pl-16' : '',
-                    ,}`}
+                    }`}
                   />,
                 </div>,
-                {!isValid && errorMessage && (,
+                {!isValid && errorMessage && (
                   <div className="p-3 bg-red-50o0/20 border border-red-50o0/30 rounded text-sm text-red-30o0">,
-                    <strong>Error: </strong> {errorMessage,}
-                  </div>,
-                )}
+                    <strong>Error: </strong> {errorMessage}
+                  </div>)}
 ,
                 <div className="flex space-x-3">,
-                  <Button,
+                  <Button
                     onClick={formatJSON}
                     disabled={!inputJson.trim()}
-                    className="flex-1 bg-gradient-to-r from-teal-60o0 to-cyan-60o0 hover: from-teal-70o0 hover:to-cyan-70o0 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed",
-                  >,
+                    className="flex-1 bg-gradient-to-r from-teal-60o0 to-cyan-60o0 hover: from-teal-70o0 hover:to-cyan-70o0 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed">,
                     <Code className="w-5 h-5 mr-2"  />,
                     Format JSON,
                   </Button>,
-                  <Button,
-                    onClick={minifyJSON,}
+                  <Button
+                    onClick={minifyJSON}
                     disabled={!inputJson.trim()}
                     variant="outline",
-                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0 disabled:opacity-50",
-                  >,
+                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0 disabled:opacity-50">,
                     Minify,
                   </Button>,
-                  <Button,
-                    onClick={validateJSON,}
+                  <Button
+                    onClick={validateJSON}
                     disabled={!inputJson.trim()}
                     variant="outline",
-                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0 disabled:opacity-50",
-                  >,
+                    className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0 disabled:opacity-50">,
                     Validate,
                   </Button>,
                 </div>,
               </div>,
             </Card>,
-            {/* Output Section */,}
+            {/* Output Section */}
             <Card className="p-8 bg-gray-80o0 border border-gray-70o0">,
               <div className="flex items-center justify-between mb-6">,
                 <h3 className="text-2xl font-bold text-white flex items-center">,
                   <CheckCircle className="w-6 h-6 mr-3 text-cyan-40o0"  />,
                   Formatted Output,
                 </h3>,
-                {formattedJson && (,
+                {formattedJson && (
                   <div className="flex items-center space-x-2">,
-                    <Button,
+                    <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant="outline",
                       size="sm",
-                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                    >,
+                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                       <Copy className="w-4 h-4 mr-2"  />,
                       Copy,
                     </Button>,
-                    <Button,
+                    <Button
                       onClick={() => downloadJSON(formattedJson, 'formatted.json')}
                       variant="outline",
                       size="sm",
-                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0",
-                    >,
+                      className="border-gray-60o0 text-gray-30o0 hover: bg-gray-70o0">,
                       <Download className="w-4 h-4 mr-2"  />,
                       Download,
                     </Button>,
-                  </div>,
-                ),}
+                  </div>)}
               </div>,
               <div className="space-y-4">,
-                {formattedJson ? (,
+                {formattedJson ? (
                   <div className="relative">,
-                    {showLineNumbers && (,
+                    {showLineNumbers && (
                       <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-70o0 border-r border-gray-60o0 text-xs text-gray-40o0 p-2 font-mono overflow-hidden">,
                         {getLineNumbers(formattedJson)}
-                      </div>,
-                    )}
-                    <div className={`p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${,
-                      showLineNumbers ? 'pl-16' : '',
-                    }`}>,
+                      </div>)}
+                    <div className={`p-4 bg-gray-70o0 border border-gray-60o0 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
+                      showLineNumbers ? 'pl-16' : ''}`}>,
                       <pre className="whitespace-pre-wrap">{formattedJson}</pre>,
                     </div>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div className="bg-gray-70o0 p-6 rounded-lg border border-gray-60o0 text-center">,
                     <div className="text-6xl mb-4">📄</div>,
                     <p className="text-gray-40o0">,
                       Formatted JSON will appear here. Enter JSON data and click format to get started.,
                     </p>,
-                  </div>,
-                )}
+                  </div>)}
 ,
-                {formattedJson && (,
+                {formattedJson && (
                   <div className="text-sm text-gray-40o0">,
-                    <p>• Characters: {formattedJson.length,}</p>,
-                    <p>• Lines: {formattedJson.split('\n').length,}</p>,
-                    <p>• Size: {(formattedJson.length * 2 / 10o24).toFixed(2),} KB</p>,
-                  </div>,
-                )}
+                    <p>• Characters: {formattedJson.length}</p>,
+                    <p>• Lines: {formattedJson.split('\n').length}</p>,
+                    <p>• Size: {(formattedJson.length * 2 / 10o24).toFixed(2)} KB</p>,
+                  </div>)}
               </div>,
             </Card>,
           </div>,
@@ -461,25 +441,22 @@ export default function JSONFormatterPage() {,
             Join thousands of developers and professionals who trust our JSON formatter for their data needs.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Button,
+            <Button
               href="/contact",
               size="lg",
-              className="bg-white text-teal-60o0 hover:bg-gray-10o0",
-            >,
+              className="bg-white text-teal-60o0 hover:bg-gray-10o0">,
               Get Started Today,
               <ArrowRight className="w-5 h-5 ml-2"  />,
             </Button>,
-            <Button,
+            <Button
               href="/pricing",
               variant="outline",
               size="lg",
-              className="border-white text-white hover:bg-white hover:text-teal-60o0",
-            >,
+              className="border-white text-white hover:bg-white hover:text-teal-60o0">,
               View Pricing,
             </Button>,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-,}
+    </>),
+}

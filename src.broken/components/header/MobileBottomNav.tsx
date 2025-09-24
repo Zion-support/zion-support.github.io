@@ -1,9 +1,7 @@
-export function MobileBottomNav() {,
-  return (,
+export function MobileBottomNav() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

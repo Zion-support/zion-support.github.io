@@ -1,159 +1,148 @@
 
 ,
-export const metadata ={,
-  title: 'AI Services | Zion Tech Group',;
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',;
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting',
-};
-,
-export default function AIPage() {,
-  return (,
+export const metadata ={
+  title: 'AI Services | Zion Tech Group';
+  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.';
+  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'};
+export default function AIPage() {
+  return (
     <div className="min-h-screen bg-gray-50 py-12">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-16">,
           <h1 className="text-4xl font-bold text-gray-90o0 mb-6">AI Services</h1>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Advanced AI solutions including machine learning, natural language processing,;
+            Advanced AI solutions including machine learning, natural language processing;
             computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.,
           </p>,
         </div>,
         {/* AI Service Categories */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
-          <AIServiceCategory,
+          <AIServiceCategory
             title="Machine Learning",
             icon="🧠",
             description="Custom ML models and predictive analytics",
-            services={[,
-              "Predictive modeling",;
-              "Recommendation systems",;
-              "Anomaly detection",;
-              "Time series forecasting",;
-              "Classification algorithms",;
-              "Regression analysis",
-            ]}
+            services={[
+              "Predictive modeling";
+              "Recommendation systems";
+              "Anomaly detection";
+              "Time series forecasting";
+              "Classification algorithms";
+              "Regression analysis"]}
            />,
-          <AIServiceCategory,
+          <AIServiceCategory
             title="Natural Language Processing",
             icon="💬",
             description="Text analysis and language understanding",
-            services={[,
-              "Sentiment analysis",;
-              "Text classification",;
-              "Named entity recognition",;
-              "Language translation",;
-              "Chatbot development",;
-              "Document processing",
-            ]}
+            services={[
+              "Sentiment analysis";
+              "Text classification";
+              "Named entity recognition";
+              "Language translation";
+              "Chatbot development";
+              "Document processing"]}
            />,
-          <AIServiceCategory,
+          <AIServiceCategory
             title="Computer Vision",
             icon="👁️",
             description="Image and video analysis solutions",
-            services={[,
-              "Object detection",;
-              "Image classification",;
-              "Facial recognition",;
-              "OCR (Optical Character Recognition)",;
-              "Video analytics",;
-              "Medical imaging",
-            ]}
+            services={[
+              "Object detection";
+              "Image classification";
+              "Facial recognition";
+              "OCR (Optical Character Recognition)";
+              "Video analytics";
+              "Medical imaging"]}
            />,
         </div>,
         {/* Real AI Solutions */}
         <div className="mb-16">,
           <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">AI Solutions We Build</h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            <AISolution,
+            <AISolution
               title="Intelligent Document Processing",
               description="Automated document analysis and data extraction",
-              features={[,
-                "OCR with 99%+ accuracy",;
-                "Smart data extraction",;
-                "Document classification",;
-                "Automated workflows",;
-                "Multi-language support",;
-                "API integration",
-              ]}
+              features={[
+                "OCR with 99%+ accuracy";
+                "Smart data extraction";
+                "Document classification";
+                "Automated workflows";
+                "Multi-language support";
+                "API integration"]}
               price="$25k - $60k",
               timeline="8-16 weeks",
               useCase="Legal, finance, healthcare, insurance",
               marketSize="$4.2B",
              />,
-            <AISolution,
+            <AISolution
               title="Predictive Maintenance System",
               description="AI-powered equipment monitoring and failure prediction",
-              features={[,
-                "IoT sensor integration",;
-                "Real-time monitoring",;
-                "Failure prediction algorithms",;
-                "Maintenance scheduling",;
-                "Cost optimization",;
-                "Dashboard analytics",
-              ]}
+              features={[
+                "IoT sensor integration";
+                "Real-time monitoring";
+                "Failure prediction algorithms";
+                "Maintenance scheduling";
+                "Cost optimization";
+                "Dashboard analytics"]}
               price="$35k - $80k",
               timeline="12-20 weeks",
               useCase="Manufacturing, utilities, transportation",
               marketSize="$6.8B",
              />,
-            <AISolution,
+            <AISolution
               title="Customer Service AI Assistant",
               description="Intelligent chatbot with human-like interactions",
-              features={[,
-                "Natural language understanding",;
-                "Multi-channel support",;
-                "Sentiment analysis",;
-                "Escalation to humans",;
-                "Knowledge base integration",;
-                "Performance analytics",
-              ]}
+              features={[
+                "Natural language understanding";
+                "Multi-channel support";
+                "Sentiment analysis";
+                "Escalation to humans";
+                "Knowledge base integration";
+                "Performance analytics"]}
               price="$20k - $50k",
               timeline="6-12 weeks",
               useCase="E-commerce, SaaS, customer support",
               marketSize="$5.3B",
              />,
-            <AISolution,
+            <AISolution
               title="Fraud Detection System",
               description="Real-time fraud prevention and risk assessment",
-              features={[,
-                "Real-time monitoring",;
-                "Pattern recognition",;
-                "Risk scoring",;
-                "Alert system",;
-                "Machine learning models",;
-                "Compliance reporting",
-              ]}
+              features={[
+                "Real-time monitoring";
+                "Pattern recognition";
+                "Risk scoring";
+                "Alert system";
+                "Machine learning models";
+                "Compliance reporting"]}
               price="$30k - $70k",
               timeline="10-18 weeks",
               useCase="Banking, fintech, e-commerce",
               marketSize="$8.1B",
              />,
-            <AISolution,
+            <AISolution
               title="Personalized Recommendation Engine",
               description="AI-driven product and content recommendations",
-              features={[,
-                "Collaborative filtering",;
-                "Content-based filtering",;
-                "Real-time recommendations",;
-                "A/B testing framework",;
-                "Performance metrics",;
-                "Scalable architecture",
-              ]}
+              features={[
+                "Collaborative filtering";
+                "Content-based filtering";
+                "Real-time recommendations";
+                "A/B testing framework";
+                "Performance metrics";
+                "Scalable architecture"]}
               price="$18k - $45k",
               timeline="8-14 weeks",
               useCase="E-commerce, streaming, content platforms",
               marketSize="$3.7B",
              />,
-            <AISolution,
+            <AISolution
               title="Medical Image Analysis",
               description="AI-powered medical imaging and diagnosis support",
-              features={[,
-                "Image preprocessing",;
-                "Disease detection",;
-                "Segmentation algorithms",;
-                "Diagnostic support",;
-                "Radiologist workflow",;
-                "HIPAA compliance",
-              ]}
+              features={[
+                "Image preprocessing";
+                "Disease detection";
+                "Segmentation algorithms";
+                "Diagnostic support";
+                "Radiologist workflow";
+                "HIPAA compliance"]}
               price="$50k - $120k",
               timeline="16-24 weeks",
               useCase="Healthcare, medical imaging, diagnostics",
@@ -168,16 +157,14 @@ export default function AIPage() {,
             Let's discuss how AI can revolutionize your business processes and create competitive advantages.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <a,
+            <a
               href="tel:+130o24640950",
-              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-            >,
+              className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
               Call +1 30o2 464 0950,
             </a>,
-            <a,
+            <a
               href="mailto:kleber@ziontechgroup.com",
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors",
-            >,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">,
               Email Us,
             </a>,
           </div>,
@@ -186,55 +173,50 @@ export default function AIPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function AIServiceCategory({ title, icon, description, services }: {,
+function AIServiceCategory({ title, icon, description, services }: {
   title: string,
   icon: string,
   description: string,
   services: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0">,
       <div className="text-3xl mb-4">{icon}</div>,
       <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <ul className="space-y-2">,
-        {services.map((service, index) => (,
+        {services.map((service, index) => (
           <li key={index} className="flex items-center text-gray-60o0">,
             <span className="text-purple-50o0 mr-2">•</span>,
             {service}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
     <section className="py-12">,
       <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">AI Development Packages</h2>,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-        <Plan,
+        <Plan
           name="AI Discovery",
           price="$5k–$12k",
           features={["2–3 weeks", "Use-case design", "Tech selection", "Roadmap", "Proof of concept"]} ,
           popular={false}
          />,
-        <Plan,
+        <Plan
           name="Pilot",
           price="$15k–$45k",
           features={["4–8 weeks", "RAG/agent MVP", "Evals + safety", "Dashboards", "Basic monitoring"]} ,
           popular={true}
          />,
-        <Plan,
+        <Plan
           name="Production",
           price="$50k+",
           features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization", "24/7 support"]} ,
           popular={false}
          />,
       </div>,
-    </section>,
-  ),
-,
-function AISolution({ title, description, features, price, timeline, useCase, marketSize }: {,
+    </section>),
+function AISolution({ title, description, features, price, timeline, useCase, marketSize }: {
   title: string,
   description: string,
   features: string[],
@@ -242,10 +224,10 @@ function AISolution({ title, description, features, price, timeline, useCase, ma
   timeline: string,
   useCase: string,
   marketSize: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow">,
-      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title,}</h3>,
+      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{title}</h3>,
       <p className="text-gray-60o0 mb-4">{description}</p>,
       <div className="mb-4 flex flex-wrap gap-2">,
         <span className="bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm font-medium">,
@@ -256,28 +238,26 @@ function AISolution({ title, description, features, price, timeline, useCase, ma
         </span>,
       </div>,
       <ul className="space-y-1 mb-4">,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-60o0 flex items-center">,
             <span className="text-green-50o0 mr-2">✓</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
       <div className="flex justify-between items-center pt-4 border-t border-gray-20o0">,
         <div>,
           <div className="font-bold text-purple-60o0">{price}</div>,
           <div className="text-sm text-gray-50o0">{timeline}</div>,
         </div>,
-        <a,
+        <a
           href="tel: +130o24640950",
-          className="bg-purple-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-70o0 transition-colors",
-        >,
+          className="bg-purple-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-70o0 transition-colors">,
           Get Quote,
         </a>,
       </div>,
     </div>,
-function ContactSection() {,
-  return (,
+function ContactSection() {
+  return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">,
       <div className="text-center">,
         <h3 className="text-3xl font-bold text-gray-90o0 mb-4">,
@@ -288,16 +268,14 @@ function ContactSection() {,
           Our AI experts have delivered 10o0+ successful AI implementations.,
         </p>,
         <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-          <a,
+          <a
             href="tel:+130o24640950",
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors",
-          >,
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href="mailto:kleber@ziontechgroup.com",
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors",
-          >,
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors">,
             Email Us,
           </a>,
         </div>,
@@ -305,8 +283,5 @@ function ContactSection() {,
           <p>Address: 364 E Main St STE 10o08, Middletown DE 19709</p>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
-,
+    </section>)}
 }})

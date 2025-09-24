@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import ErrorBoundary from '../../components/ErrorBoundary',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: LLM Evals Maturity Model',;
+export const metadata = {
+  title: 'AI 20o26: LLM Evals Maturity Model';
   description:,
-    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',;
-  keywords: [,
-    'LLM evals',;
-    'AI maturity model',;
-    'AI governance',;
-    'AI reliability',;
-    'evaluations',;
-  ],;
+    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
+  keywords: [
+    'LLM evals';
+    'AI maturity model';
+    'AI governance';
+    'AI reliability';
+    'evaluations';
+  ];
 };
-,
-export default function LLMEvalsMaturityModel20o26() {,
-  return (,
+export default function LLMEvalsMaturityModel20o26() {
+  return (
     <ErrorBoundary>,
-      <SEO,
+      <SEO
         title='AI 20o26: LLM Evals Maturity Model',
         description='An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
         keywords='LLM evals, AI maturity model, AI governance, AI reliability, evaluations',
@@ -90,7 +88,7 @@ export default function LLMEvalsMaturityModel20o26() {,
                   Metrics & Benchmarks,
                 </h4>,
                 <p>,
-                  Task-specific KPIs, hallucination rate, toxicity, latency,;
+                  Task-specific KPIs, hallucination rate, toxicity, latency;
                   cost, and reliability SLOs.,
                 </p>,
               </div>,
@@ -141,16 +139,14 @@ export default function LLMEvalsMaturityModel20o26() {,
                 roadmap.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore AI Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Talk to Experts,
                 </Link>,
               </div>,
@@ -158,7 +154,6 @@ export default function LLMEvalsMaturityModel20o26() {,
           </div>,
         </article>,
       </div>,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>),
+}
 ,

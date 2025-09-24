@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='prose mx-auto px-6 py-16'>,
       <h1>AI 20o26: Agent Reliability Field Guide</h1>,
       <p className='text-gray-60o0'>,
@@ -26,7 +26,5 @@ export default function Page() {,
         Need a field deployment? Our team can help design, implement, and harden,
         your agent stack.,
       </p>,
-    </main>,
-  ),
-}
+    </main>)}
 ,
