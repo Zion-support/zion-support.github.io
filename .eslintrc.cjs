@@ -1,5 +1,7 @@
 module.exports = {
-  extends: ['next/core-web-vitals'],
+  parser: require.resolve('@typescript-eslint/parser'),
+  plugins: ['@typescript-eslint'],
+  extends: ['next/core-web-vitals', 'next/typescript', 'plugin:@typescript-eslint/recommended'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
