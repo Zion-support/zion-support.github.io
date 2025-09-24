@@ -1,44 +1,29 @@
 // Jest setup for safe tests
 import '@testing-library/jest-dom';
 
-// Optional: silence noisy console logs during CI tests
-const originalError = global.console.error;
-const originalWarn = global.console.warn;
+// Make setup idempotent if loaded multiple times
+if (!global.__JEST_SETUP_INITIALIZED__) {
+  // Optional: silence noisy console logs during CI tests
+  const jestSetupOriginalError = global.console.error;
+  const jestSetupOriginalWarn = global.console.warn;
 
-beforeAll(() => {
-  if (process.env.CI) {
-    global.console.error = (...args) => {
-      // allow test-related errors
-      if (typeof args[0] === 'string' && args[0].includes('TestingLibraryElementError')) {
-        return originalError(...args);
-      }
-    };
-    global.console.warn = () => {};
-  }
-});
+  beforeAll(() => {
+    if (process.env.CI) {
+      global.console.error = (...args) => {
+        if (typeof args[0] === 'string' && args[0].includes('TestingLibraryElementError')) {
+          return jestSetupOriginalError(...args);
+        }
+      };
+      global.console.warn = () => {};
+    }
+  });
 
-afterAll(() => {
-  global.console.error = originalError;
-  global.console.warn = originalWarn;
-});
-// Optional: silence noisy console logs during CI tests
-const originalError = global.console.error;
-const originalWarn = global.console.warn;
+  afterAll(() => {
+    global.console.error = jestSetupOriginalError;
+    global.console.warn = jestSetupOriginalWarn;
+  });
 
-beforeAll(() => {
-  if (process.env.CI) {
-    global.console.error = (...args) => {
-      // allow test-related errors
-      if (typeof args[0] === 'string' && args[0].includes('TestingLibraryElementError')) {
-        return originalError(...args);
-      }
-    };
-    global.console.warn = () => {};
-  }
-});
-
-afterAll(() => {
-  global.console.error = originalError;
-  global.console.warn = originalWarn;
-});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-acfe
+  // mark initialized
+  // eslint-disable-next-line no-underscore-dangle
+  global.__JEST_SETUP_INITIALIZED__ = true;
+}
