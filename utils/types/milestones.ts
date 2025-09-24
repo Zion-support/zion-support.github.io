@@ -1,123 +1,50 @@
 
-export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
-export type ProjectParticipantRole = 'client' | 'talent';
-export type ProjectParticipants = {
+export type MilestoneStatus = 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 
-export type ProjectParticipants = {;
-
-  clientUserId: string;
-  talentUserId: string;
-}
-;
-export type Project = {  id: string;
-  title: string;
-  description?: string;
-  due_date: string;
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
-
-  updatedAt: string
-
-}
-export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  return (
-
-    value === 'Pending' |
-    value === 'In Progress' |
-    value === 'Submitted' |
-    value === 'Approved' |
-    value === 'Paid'
-  );export interface MilestoneAttachment {
-
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||;
-    value === 'Paid';
-  );export interface MilestoneAttachment {;
-
-
-
-
-
-
-
-
-
-
+export interface MilestoneAttachment {
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-
-
-
-
-  uploaded_at: string,
-
+  uploadedAt: string;
 }
 
-
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+export interface Milestone {
+  id: string;
   title: string;
   description?: string;
-
-  attachments?: MilestoneAttachment[]
-
+  dueDate: string;
+  amountUsd: number;
+  status: 'pending' | 'completed' | 'cancelled';
+  attachments?: MilestoneAttachment[];
+  createdAt: string;
+  updatedAt: string;
 }
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-export interface UpdateMilestoneRequest {
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-  title?: string;
+export interface Project {
+  id: string;
+  title: string;
   description?: string;
-  dueDate?: string;
-  amountUsd?: number;
-  status?: 'pending' | 'completed' | 'cancelled';
-  attachments?: MilestoneAttachment[];
+  dueDate: string;
+  amountUsd: number;
+  status: 'pending' | 'completed' | 'cancelled';
+  milestones: Milestone[];
+  createdAt: string;
+  updatedAt: string;
+}
 
-
-
-
-
-
-
-
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' ||
+    value === 'In Progress' ||
+    value === 'Submitted' ||
+    value === 'Approved' ||
+    value === 'Paid'
+  );
+}
 
 export function isOverdue(milestone: Milestone): boolean {
-  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
-    return false;
-  }
+  if (!milestone.dueDate) return false;
   return new Date(milestone.dueDate) < new Date();
 }
-
-
-
-
-
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))
