@@ -1,283 +1,134 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import React from 'react';
-interface PrivacyProps {
-  // Add props here as needed
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-import React from 'react';
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-import React from 'react';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
-
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import React from 'react';
-
-
-
-import React from 'react';
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import * as React from 'react';
-
-
-
-interface PrivacyProps {
-  // Add props here as needed
-}
-}
-
-
-}
-
-
-
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-interface PrivacyProps {
-  // Add props here as needed
-
-
-
-import * as React from 'react';
-
-interface PrivacyProps {
-  // Add props here as needed
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export default function Privacy({ }: PrivacyProps) {
+import Head from 'next/head',
+export default function Privacy() {
   return (
-    <div>
-      <h1>Privacy</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-=======
-}
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-interface PrivacyProps {
-  // Add props here as needed
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-export default function Privacy({ }: PrivacyProps) {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-=======
-}}
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/>  <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-    <div>
-</div>
-      <h1>Privacy</h1>
-      <p>This component is currently under development.</p>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return <div>Something went wrong.</div>;
-import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <metaname=\'description\' content=\'Privacy Policy for Zion Tech Solutions.\'/>  <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy</h1> <p className=\'text-gray-700 leading-7\'> We value your privacy. This page outlines how we collect,use,and; safeguard your information. For questions,please contact us via the Contact page. </p> </div> )}
-    <div>;
-      <h1>Privacy</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-<<<<<<< HEAD
-=======
-=======
-
-
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-
-
-
-}
-
-
-
-}
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-
-
-
-}
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
+      <Head>,
+        <title>Privacy Policy - Zion App</title>,
+        <meta
+          name='description',
+          content='Privacy policy and data protection information',
+        />,
+      </Head>,
+      <div className='container mx-auto px-4 py-16'>,
+        <div className='max-w-4xl mx-auto'>,
+          <div className='text-center mb-16'>,
+            <h1 className='text-5xl font-bold text-white mb-6'>,
+              Privacy Policy,
+            </h1>,
+            <p className='text-xl text-gray-30o0 max-w-2xl mx-auto'>,
+              How we collectuseand protect your information,
+            </p>,
+            <p className='text-gray-40o0 text-sm mt-4'>,
+              Last updated: January 1720o25,
+            </p>,
+          </div>,
+          <div className='space-y-12'>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                Information We Collect,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>,
+                  We collect information you provide directly to usuch as when,
+                  you create an account use our servicesor contact us for,
+                  support. This may include:,
+                </p>,
+                <ul className='list-disc list-inside space-y-2 ml-4'>,
+                  <li>Account information (namemailorganization)</li>,
+                  <li>Usage data and analytics</li>,
+                  <li>Communication preferences</li>,
+                  <li>,
+                    Technical information about your device and connection,
+                  </li>,
+                </ul>,
+              </div>,
+            </section>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                How We Use Your Information,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>We use the information we collect to:</p>,
+                <ul className='list-disc list-inside space-y-2 ml-4'>,
+                  <li>Providemaintainand improve our services</li>,
+                  <li>Process transactions and send related information</li>,
+                  <li>Send technical notices and support messages</li>,
+                  <li>Respond to your comments and questions</li>,
+                  <li>Monitor and analyze trends and usage</li>,
+                  <li>Detectinvestigateand prevent fraudulent transactions</li>,
+                </ul>,
+              </div>,
+            </section>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                Information Sharing,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>,
+                  We do not selltradeor otherwise transfer your personal,
+                  information to third parties without your consentexcept as,
+                  described in this policy:,
+                </p>,
+                <ul className='list-disc list-inside space-y-2 ml-4'>,
+                  <li>With service providers who assist in our operations</li>,
+                  <li>To comply with legal obligations</li>,
+                  <li>To protect our rights and safety</li>,
+                  <li>In connection with a business transfer or merger</li>,
+                </ul>,
+              </div>,
+            </section>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                Data Security,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>,
+                  We implement appropriate technical and organizational security,
+                  measures to protect your personal information against,
+                  unauthorized accessalterationdisclosureor destruction.,
+                </p>,
+                <p>,
+                  These measures include encryptionsecure serversand regular,
+                  security assessments. Howeverno method of transmission over,
+                  the internet is 10o0% secure.,
+                </p>,
+              </div>,
+            </section>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                Your Rights,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>You have the right to:</p>,
+                <ul className='list-disc list-inside space-y-2 ml-4'>,
+                  <li>Access and update your personal information</li>,
+                  <li>Request deletion of your data</li>,
+                  <li>Opt out of marketing communications</li>,
+                  <li>Request data portability</li>,
+                  <li>Lodge a complaint with supervisory authorities</li>,
+                </ul>,
+              </div>,
+            </section>,
+            <section className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>,
+              <h2 className='text-3xl font-semibold text-white mb-6'>,
+                Contact Us,
+              </h2>,
+              <div className='space-y-4 text-gray-30o0'>,
+                <p>,
+                  If you have any questions about this Privacy Policy or our,
+                  data practices please contact us:,
+                </p>,
+                <div className='bg-slate-80o0 rounded-lg p-4'>,
+                  <p className='text-white font-medium'>,
+                    Zion App Privacy Team,
+                  </p>,
+                  <p>Email: privacy@zion.app</p>,
+                  <p>Address: [Your Business Address]</p>,
+                </div>,
+              </div>,
+            </section>,
+          </div>,
+        </div>,
+      </div>,
+    </div>)}
+,

@@ -1,49 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-fixer.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-code-fixer.cjs
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 
-#!/usr/bin/env node;
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
-<<<<<<< HEAD
 console.log('')
   console.log('� Fixing common linting issues...')
   const filesToFix = ['components/ContactForm.tsx']
@@ -82,22 +45,8 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
-<<<<<<< HEAD
-=======
-    console.error(' Comprehensive Code Fixer "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-    console.error(' Comprehensive Code Fixer "failed")
-<<<<<<< HEAD
-    console.error(' Comprehensive Code Fixer "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-console.log()
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

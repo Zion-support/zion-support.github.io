@@ -1,311 +1,142 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-=======
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import React from 'react',;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { format } from 'date-fns',;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-import { Check, ArrowDown, X } from "lucide-react",;
-=======
-import { Check, ArrowDown, X } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-import { Check, ArrowDown, X } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
-=======
-import React from 'react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";""
-import { Badge } from "@/components/ui/badge";""
-import { Button } from "@/components/ui/button";""
+import React from 'react';;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
-import { Check, ArrowDown, X } from 'lucide-react';
+import { Check, ArrowDown, X } from 'lucide-react',
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-;
-interface MilestoneCardProps {;
-  id: string;,;
-  projectId: string;,;
-  title: string;,;
-  description?:string,;
-  amount: number;,;
-  status: string;,;
-  dueDate?:string,;
-  onApprove?:(id: string) => Promise<void>;,;
-</void>
-  onReject?:(id:string) => Promise<void>;
-<<<<<<< HEAD
-}
-;
-export function MilestoneCard({ ;
-  id,;
-  projectId,;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  title, ;
-  description, ;
-  amount, ;
-  status, ;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-  dueDate,;
-  onApprove,;
-  onReject;
-} MilestoneCardProps) {;
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
-  ;
-  function getStatusBadgeColor() {;
-    switch (status) {;
-      case 'completed':;
-        return 'bg-green-500',;
-      case 'in_progress':;
-        return 'bg-blue-500',;
-      case 'pending':;
-        return 'bg-yellow-500',;
-      case 'rejected':;
-        return 'bg-red-500',;
-      default:return 'bg-gray-500';
-    }
+ import {
+import {
+interface MilestoneCardProps {
+  id:string;
+  projectId:string;
+  title:string;
+  description?:string;
+  amount:number;
+  status:string;
+  dueDate?:string;
+  onApprove?:(id:string) => Promise<void>;
+  onReject?:(id: string) => Promise<void>}
+,
+export function MilestoneCard({
+  id;
+  projectId;
+  title,
+  description,
+  amount,
+  status,
+  dueDate;
+  onApprove;
+  onReject} MilestoneCardProps) {
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  function getStatusBadgeColor() {
+    switch (status) {
+      case 'completed':,
+        return 'bg-green-50o0';
+      case 'in_progress':,
+        return 'bg-blue-50o0';
+      case 'pending':,
+        return 'bg-yellow-50o0';
+      case 'rejected':,
+        return 'bg-red-50o0';
+      default: return 'bg-gray-50o0'}
   }
-  ;
-  return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <Card>;
-
-      <CardHeader className="pb-2">;"
-"
-        <div className="flex justify-between items-start">;"
-</div>
-          <div>;
-<<<<<<< HEAD
-            <CardTitle className="text-xl">{title}</CardTitle>;
-            {dueDate && (;
-              <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
+  ,
+  return (
+    <Card>,
+      <CardHeader className="pb-2">,
+        <div className="flex justify-between items-start">,
+          <div>,
+            <CardTitle className="text-xl">{title}</CardTitle>,
+            {dueDate && (
+              <p className="text-sm text-muted-foreground">,
                 Due:{format(new Date(dueDate), 'MMM d, yyyy')}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-                Due:{format(new Date(dueDate), 'MMM d, yyyy')}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              </p>;
-            )}
-          </div>;
-          <div className="flex gap-2">;
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
+              </p>)}
+          </div>,
+          <div className="flex gap-2">,
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>,
               {status.replace('_ ')}
-            </Badge>;
-            ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-              {status.replace('_ ')}
-            </Badge>;
-            ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            {isUnderDispute && disputeStatus && (;
-=======
-</div>"
-            <CardTitle className="text-xl">{title};""
-              <p className="text-sm text-muted-foreground">;"
-</p>
-              </p>;
-          </div>;"
-          <div className="flex gap-2">;"
-            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              <DisputeStatusBadge status={disputeStatus} />;
-
-          </div>;
-<<<<<<< HEAD
-        </div>;
-      </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-      ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-      ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      <CardContent className="pb-2">;
-        {description && (;
-          <p className="text-muted-foreground">{description}</p>;
-        )}
-        <div className="mt-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
-        </div>;
-      </CardContent>;
-      ;
-      <CardFooter className="pt-2 flex justify-between">;
-        <div>;
-          {status !== 'completed' && status !== 'rejected' && (;
-=======
-      ;"
-      <CardContent className="pb-2">;"
-          <p className="text-muted-foreground">{description}</p>;""
-        <div className="mt-4">;"
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;"
-      <CardFooter className="pt-2 flex justify-between">;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <RaiseDisputeButton ;
-              projectId={projectId} ;
-              milestoneId={id} ;"
-              variant="ghost";""
-              size="sm";"
-            />;
-<<<<<<< HEAD
-          )}
-        </div>;
-        ;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-        <div className="flex gap-2">;
-          {status === 'pending' && onReject && !isUnderDispute && (;
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
-              <X className="h-4 w-4 mr-1" /> Reject;
-            </Button>;
-          )}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-          ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-          ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          {status === 'pending' && onApprove && !isUnderDispute && (;
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
-              <Check className="h-4 w-4 mr-1" /> Approve;
-            </Button>;
-          )}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-          ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
-          ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          {isUnderDispute && (;
-            <Button variant="outline" size="sm" disabled>;
-              Actions frozen due to dispute;
-            </Button>;
-          )}
-        </div>;
-      </CardFooter>;
-    </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  ),;}
- import { ;
-  {;
-  {;
-  Check,  ArrowDown, X ;
- } from "lucide-react";
-import {;
-  {;
-  {;
-  useDisputeCheck ';
-}from '@/hooks/useDisputeCheck';
-import {;
-  {;
-  {;
-  DisputeStatusBadge ';
-}from '@/components/disputes/DisputeStatusBadge';
-import {;
-  {;
-  {;
-  RaiseDisputeButton ';
-}from '@/components/disputes/RaiseDisputeButton';
-interface MilestoneCardProps {;
-  id: string;
-projectId: string;
-title: string;
-description?: string;
-amount: number;
-status: string;
-dueDate?: string;
-=======
-
-            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;"
-              <X className="h-4 w-4 mr-1" /> Reject;"
-
-            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;"
-              <Check className="h-4 w-4 mr-1" /> Approve;"
-
-            <Button variant="outline" size="sm" disabled>;"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-onApprove?: (id: string) => Promise<void>;
-onReject?: (id: string) => Promise<void> ;
-</void>"
-case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;"
-
-}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;)"
-  disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="pt-2 flex justify-between" > <div> {';
-
-  status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
-  projectId ;)
-}/>) ;
-<<<<<<< HEAD
-}</div> Actions frozen due to dispute </Button>) ;
-:temp_broken_files/projects/milestones/MilestoneCard.tsx
-}</div> </CardFooter> </Card>) ;"}'"
-}</div> </CardFooter> </Card>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-}</div> Actions frozen due to dispute ) ;
-}</div>  ) ;"}'""
-}</div>  ) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </Badge>,
+            {isUnderDispute && disputeStatus && (
+              <DisputeStatusBadge status={disputeStatus}  />)}
+          </div>,
+        </div>,
+      </CardHeader>,
+      <CardContent className="pb-2">,
+        {description && (
+          <p className="text-muted-foreground">{description}</p>)}
+        <div className="mt-4">,
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>,
+        </div>,
+      </CardContent>,
+      <CardFooter className="pt-2 flex justify-between">,
+        <div>,
+          {status !== 'completed' && status !== 'rejected' && (
+            <RaiseDisputeButton
+              projectId={projectId} ,
+              milestoneId={id} ,
+              variant="ghost",
+              size="sm",
+             />)}
+        </div>,
+        <div className="flex gap-2">,
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>,
+              <X className="h-4 w-4 mr-1"  /> Reject,
+            </Button>)}
+          ,
+          {status === 'pending' && onApprove && !isUnderDispute && (
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>,
+              <Check className="h-4 w-4 mr-1"  /> Approve,
+            </Button>)}
+          ,
+          {isUnderDispute && (
+            <Button variant="outline" size="sm" disabled>,
+              Actions frozen due to dispute,
+            </Button>)}
+        </div>,
+      </CardFooter>,
+    </Card>);}
+  {
+  {
+  Check,  ArrowDown, X } from "lucide-react",
+  {
+  {
+  useDisputeCheck '}from '@/hooks/useDisputeCheck',
+  {
+  {
+  DisputeStatusBadge '}from '@/components/disputes/DisputeStatusBadge',
+  {
+  {
+  RaiseDisputeButton '}from '@/components/disputes/RaiseDisputeButton',
+interface MilestoneCardProps {
+  id: string,
+projectId: string,
+title: string,
+description?: string,
+amount: number,
+status: string,
+dueDate?: string,
+onApprove?: (id: string) => Promise<void>,
+onReject?: (id: string) => Promise<void> }export function MilestoneCard ({
+  id,
+projectId,
+title,
+description,
+amount,
+status,
+dueDate,
+onApprove,
+onReject }: MilestoneCardProps) {
+  const {
+  isUnderDispute, disputeStatus } = useDisputeCheck (projectId, id),
+switch (status) {',
+  case 'completed': return 'bg-green-50o0',',
+case 'in progress': return 'bg-blue-50o0',',
+case 'pending': return 'bg-yellow-50o0',',
+case 'rejected': ,"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status={
+  disputeStatus ,"} />) ","}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {',
+  status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId={
+  projectId } />) }</div> Actions frozen due to dispute </Button>) }}}}}}}

@@ -1,72 +1,95 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/auto-resolve-merge-prs.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-<<<<<<< HEAD
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 function sh(cmd, opts = {}) {}
   return execSync(cmd, { "stdio": 'pipe', "encoding": 'utf8', ...opts }).trim()};
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function getRepoFromGit() {}
   const remoteUrl = sh('git remote get-url origin');
   const m = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
   if (!m) throw new Error('Unable to parse owner/repo from origin');
-  return { "owner": m[1], "repo": m[2] }};"
+  return { "owner": m[1], "repo": m[2] }};
 function getToken() {}
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
-
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
+  const remoteUrl = sh('git remote get-url origin');
+  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
+  if (!tokenMatch) throw new Error('No GitHub token available');
+  return tokenMatch[1]};
+async function gh(path, method = 'GET', body) {}
+  const token = getToken();
+  const base = '"https": //api.github.com';
+  const res = await fetch(`${base}${path}`, {`})
+    method,
+    "headers": {}
+      Authorization: `token ${token}`,`
+      "Accept": 'application/vnd.github.v3+json',
+      'User-Agent': 'auto-resolve-merge-prs',
+      'Content-Type': 'application/json'
     },
-    "body": body ? JSON.stringify(body) : undefined;"
+    "body": body ? JSON.stringify(body) : undefined;
   }
 });
-  const text = await res.text();"
-
+  const text = await res.text();
+  let data; try { data = text ? JSON.parse(text) : undefined} catch { data = { "raw": text }};
+  if (!res.ok) throw new Error(data && data.message ? data.message : `HTTP ${res.status}`);
   return data};
-async function listOpenPRs(owner, repo) {}`;
+async function listOpenPRs(owner, repo) {}
   const prs = await gh(`/repos/${owner}/${repo}/pulls?state=open&per_page=100`);
   return prs};
 function resolveConflictsFiles() {}
-  // list conflicted files;"
-
+  // list conflicted files;
+  const output = sh('git diff --name-only --diff-filter=U || true');
+  const files = output.split('\n').filter(Boolean);
+  for (const file of files) {}
+    if (!fs.existsSync(file)) continue;
+    const content = fs.readFileSync(file, 'utf8');
+    // Prefer incoming changes (from PR branch) when resolving;
+    const resolved = content;
+    fs.writeFileSync(file, resolved);
+    sh(`git add -- "${file}"`)};
+  // If there are staged changes, commit;
+  const staged = sh('git diff --cached --name-only || true');
+  if (staged.split('\n').filter(Boolean).length) {}
+    sh('git commit -m ""chore": auto-resolve merge conflicts"')};
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
+
+
   sh('git fetch origin');
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   // Stash local changes to avoid checkout conflicts;
+  const dirty = sh('git status --porcelain || true');
+  let stashed = false;
 
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+  if (dirty && dirty.split('\n').filter(Boolean).length) {}
+    console.log('Local changes detected, stashing...');
+    try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
+  };
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) { console.log('No open PRs'); return};
   let merged = 0, processed = 0;
   for (const pr of prs) {}
     processed++;
     const head = pr.head.ref;
-    const base = pr.base.ref;`;
+    const base = pr.base.ref;
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
-<<<<<<< HEAD
       // Checkout PR branch;
       try { sh(`git checkout ${head}`)} catch { sh(`git checkout -b ${head} --track origin/${head}`)};
       sh('git fetch origin');
@@ -86,6 +109,11 @@ async function main() {}
 });
       if (result && result.merged) {}
         merged++;
+
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         console.log(`Merged PR #${pr.number}`)} else {`}
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
     } catch (e) {}
@@ -102,14 +130,8 @@ async function main() {}
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

@@ -1,445 +1,571 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-#!/usr/bin/env node;
-=======
 #!/usr/bin/env node
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-/**
- * Project Health Monitor Automation;
- * Monitors overall project health and provides insights;
- */
-<<<<<<< HEAD
+
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-=======
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-<<<<<<< HEAD
+console.log('🏥 Starting Project Health Monitor...');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-class ProjectHealthMonitor {}
-    constructor() {}
-        this.projectRoot = process.cwd();
-
-        if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
+class ProjectHealthMonitor {
+  constructor() {
+    this.monitorLogDir = path.join(process.cwd(), 'logs');
+    this.ensureLogDirectory();
+    this.healthMetrics = {
+      overallHealth: 0,
+      buildStatus: 'unknown',
+      testStatus: 'unknown',
+      lintStatus: 'unknown',
+      dependencyStatus: 'unknown',
+      securityStatus: 'unknown',
+      lastCheck: null
     };
-    log(message) {}
-        const timestamp = new Date().toISOString() {}
-    ) {}"
-        const timestamp = new Date().toISOString(})
-});
-        const logMessage = `[${timestamp}] ${message}\;n;`;`
-        fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        console.log(message)};
-    checkProjectStructure() {}
-        this.log('Checking project structure...');
-=======
-        console.log(message)};
-<<<<<<< HEAD
-    checkProjectStructure() {}
-        this.log('Checking project structure...');
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const requiredFiles = ['package.json',]
-            'next.config.js',
-            'tsconfig.json',
-            'tailwind.config.js'
-        ];
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const optionalFiles = ['README.md',]
-            '.gitignore',
-            '.env.example',
-            'Dockerfile',
-            'docker-compose.yml'
-        ];
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const structure = {}
-            "required": {},
-            "optional": {},
-            "score": 0;
-       };
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    checkProjectStructure() {}"
-
-            "score": 0;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        // Check required files;
-        for (const file of requiredFiles) {}
-            const exists = fs.existsSync(path.join(this.projectRoot, file;););
-            structure.required[file] = exists;
-            if (structure.score += 10};)
-        // Check optional files;
-        for (const file of optionalFiles) {}
-            const exists = fs.existsSync(path.join(this.projectRoot, file) {}
-    structure.score += 10};
-        // Check optional files;
-            const exists = fs.existsSync(path.join(this.projectRoot, file})
-}););
-            structure.optional[file] = exists;
-            if (structure.score += 5};)"`;
-        this.log(`Project structure "score": ${structure.score}/100`)) {`}"
-    structure.score += 5};"`;
-        this.log(`Project structure "score": ${structure.score}/100`)};"
-        return structure};
-<<<<<<< HEAD
-    checkCodeQuality() {}
-        this.log('Checking code quality...');
-<<<<<<< HEAD
-        try {}
-            // Run linting;
-            execSync('npm run lint', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-=======
-        
-        try {}
-            // Run linting;
-            execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-    checkCodeQuality() {}"
-
-            }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            return {;}
-
-                "error": error.message;"
-            }};
-<<<<<<< HEAD
+    this.healthHistory = [];
+    this.maxHealthHistory = 50;
+    this.alertThresholds = {
+      critical: 60,
+      warning: 80,
+      good: 90
     };
-    checkTypeScript() {}
-        this.log('Checking TypeScript configuration...');
-<<<<<<< HEAD
-        try {}
-            execSync('npm run type-check', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
+  }
+
+  ensureLogDirectory() {
+    if (!fs.existsSync(this.monitorLogDir)) {
+      fs.mkdirSync(this.monitorLogDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+    
+    const logFile = path.join(this.monitorLogDir, 'project-health-monitor.log');
+    fs.appendFileSync(logFile, logMessage);
+  }
+
+  async monitorProjectHealth() {
+    this.log('🏥 Monitoring project health...');
+    
+    try {
+      // Check build status
+      const buildStatus = await this.checkBuildStatus();
+      
+      // Check test status
+      const testStatus = await this.checkTestStatus();
+      
+      // Check lint status
+      const lintStatus = await this.checkLintStatus();
+      
+      // Check dependency status
+      const dependencyStatus = await this.checkDependencyStatus();
+      
+      // Check security status
+      const securityStatus = await this.checkSecurityStatus();
+      
+      // Calculate overall health score
+      const overallHealth = this.calculateOverallHealth({
+        buildStatus,
+        testStatus,
+        lintStatus,
+        dependencyStatus,
+        securityStatus
+      });
+      
+      // Update health metrics
+      this.updateHealthMetrics({
+        overallHealth,
+        buildStatus: buildStatus.status,
+        testStatus: testStatus.status,
+        lintStatus: lintStatus.status,
+        dependencyStatus: dependencyStatus.status,
+        securityStatus: securityStatus.status,
+        lastCheck: new Date().toISOString()
+      });
+      
+      // Log health status
+      this.log(`🏥 Project Health Score: ${overallHealth}/100`);
+      this.log(`🏗️ Build: ${buildStatus.status} (${buildStatus.score}/100)`);
+      this.log(`🧪 Tests: ${testStatus.status} (${testStatus.score}/100)`);
+      this.log(`📝 Lint: ${lintStatus.status} (${lintStatus.score}/100)`);
+      this.log(`📦 Dependencies: ${dependencyStatus.status} (${dependencyStatus.score}/100)`);
+      this.log(`🛡️ Security: ${securityStatus.status} (${securityStatus.score}/100)`);
+      
+      // Check for alerts
+      this.checkAlerts(overallHealth);
+      
+      return {
+        overall: overallHealth,
+        build: buildStatus.score,
+        test: testStatus.score,
+        lint: lintStatus.score,
+        dependencies: dependencyStatus.score,
+        security: securityStatus.score
+      };
+      
+    } catch (error) {
+      this.log(`❌ Health monitoring failed: ${error.message}`);
+      return { overall: 0, build: 0, test: 0, lint: 0, dependencies: 0, security: 0 };
+    }
+  }
+
+  async checkBuildStatus() {
+    try {
+      this.log('🏗️ Checking build status...');
+      
+      // Check if build directories exist
+      const buildDirs = ['dist', '.next', 'out', 'build'];
+      const existingDirs = buildDirs.filter(dir => fs.existsSync(dir));
+      
+      let score = 0;
+      if (existingDirs.length > 0) {
+        score += 40;
+        
+        // Check if build is recent (within last hour)
+        for (const dir of existingDirs) {
+          try {
+            const stats = fs.statSync(dir);
+            const ageHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60);
+            if (ageHours < 1) {
+              score += 30;
+              break;
             }
-});
-=======
+          } catch (error) {
+            // Ignore errors
+          }
+        }
+      }
+      
+      // Try to run a build
+      try {
+        execSync('npm run build --silent', { 
+          stdio: 'pipe',
+          timeout: 30000
+        });
+        score += 30;
+      } catch (error) {
+        // Build failed, but we already have some points
+      }
+      
+      const status = this.getStatusFromScore(score);
+      return { status, score };
+      
+    } catch (error) {
+      return { status: 'error', score: 0 };
+    }
+  }
+
+  async checkTestStatus() {
+    try {
+      this.log('🧪 Checking test status...');
+      
+      let score = 0;
+      
+      // Check if test files exist
+      const testFiles = this.countFilesByExtension(['.test.js', '.test.ts', '.spec.js', '.spec.ts']);
+      if (testFiles > 0) {
+        score += 30;
+      }
+      
+      // Check if test script exists
+      if (fs.existsSync('package.json')) {
+        try {
+          const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          if (packageJson.scripts && packageJson.scripts.test) {
+            score += 20;
+          }
+        } catch (error) {
+          // Ignore errors
+        }
+      }
+      
+      // Try to run tests
+      try {
+        execSync('npm test --silent', { 
+          stdio: 'pipe',
+          timeout: 30000
+        });
+        score += 50;
+      } catch (error) {
+        // Tests failed, but we already have some points
+      }
+      
+      const status = this.getStatusFromScore(score);
+      return { status, score };
+      
+    } catch (error) {
+      return { status: 'error', score: 0 };
+    }
+  }
+
+  async checkLintStatus() {
+    try {
+      this.log('📝 Checking lint status...');
+      
+      let score = 0;
+      
+      // Check if lint script exists
+      if (fs.existsSync('package.json')) {
+        try {
+          const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          if (packageJson.scripts && packageJson.scripts.lint) {
+            score += 30;
+          }
+        } catch (error) {
+          // Ignore errors
+        }
+      }
+      
+      // Check for lint configuration files
+      const lintConfigs = ['.eslintrc.js', '.eslintrc.json', '.eslintrc.cjs', 'eslint.config.js'];
+      const existingConfigs = lintConfigs.filter(config => fs.existsSync(config));
+      if (existingConfigs.length > 0) {
+        score += 20;
+      }
+      
+      // Try to run lint
+      try {
+        execSync('npm run lint --silent', { 
+          stdio: 'pipe',
+          timeout: 30000
+        });
+        score += 50;
+      } catch (error) {
+        // Lint failed, but we already have some points
+      }
+      
+      const status = this.getStatusFromScore(score);
+      return { status, score };
+      
+    } catch (error) {
+      return { status: 'error', score: 0 };
+    }
+  }
+
+  async checkDependencyStatus() {
+    try {
+      this.log('📦 Checking dependency status...');
+      
+      let score = 100;
+      
+      // Check for package.json
+      if (!fs.existsSync('package.json')) {
+        return { status: 'error', score: 0 };
+      }
+      
+      // Check for vulnerabilities
+      try {
+        const auditResult = execSync('npm audit --json --silent', { 
+          encoding: 'utf8',
+          stdio: 'pipe'
+        });
         
-        try {}
-            execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            return {;}
-                "status": 'success',
-                "typeCheck": 'passed',
-                "score": 20;
-            }} catch (error) {}
-            return {;}
-                "status": 'warning',
-                "typeCheck": 'failed',
-                "score": 0,
-                "error": error.message;
-            }};
+        const audit = JSON.parse(auditResult);
+        const vulnerabilities = audit.metadata?.vulnerabilities?.total || 0;
+        
+        if (vulnerabilities > 0) {
+          score -= Math.min(vulnerabilities * 10, 50);
+        }
+      } catch (error) {
+        // Audit failed, but we still have points
+      }
+      
+      // Check for outdated dependencies
+      try {
+        const outdatedResult = execSync('npm outdated --json --silent', { 
+          encoding: 'utf8',
+          stdio: 'pipe'
+        });
+        
+        const outdated = JSON.parse(outdatedResult);
+        const outdatedCount = Object.keys(outdated).length;
+        
+        if (outdatedCount > 10) {
+          score -= 20;
+        } else if (outdatedCount > 5) {
+          score -= 10;
+        }
+      } catch (error) {
+        // Outdated check failed, but we still have points
+      }
+      
+      const status = this.getStatusFromScore(score);
+      return { status, score: Math.max(0, score) };
+      
+    } catch (error) {
+      return { status: 'error', score: 0 };
+    }
+  }
+
+  async checkSecurityStatus() {
+    try {
+      this.log('🛡️ Checking security status...');
+      
+      let score = 50;
+      
+      // Check for security files
+      const securityFiles = ['.env.example', 'security.md', 'SECURITY.md', '.gitignore'];
+      const existingSecurityFiles = securityFiles.filter(file => fs.existsSync(file));
+      score += (existingSecurityFiles.length / securityFiles.length) * 30;
+      
+      // Check for HTTPS configuration
+      if (fs.existsSync('next.config.js')) {
+        const config = fs.readFileSync('next.config.js', 'utf8');
+        if (config.includes('https') || config.includes('secure')) {
+          score += 20;
+        }
+      }
+      
+      // Check for environment variable protection
+      if (fs.existsSync('.gitignore')) {
+        const gitignore = fs.readFileSync('.gitignore', 'utf8');
+        if (gitignore.includes('.env') || gitignore.includes('*.env')) {
+          score += 20;
+        }
+      }
+      
+      const status = this.getStatusFromScore(score);
+      return { status, score: Math.min(100, score) };
+      
+    } catch (error) {
+      return { status: 'error', score: 0 };
+    }
+  }
+
+  countFilesByExtension(extensions) {
+    let count = 0;
+    
+    try {
+      const srcDir = path.join(process.cwd(), 'src');
+      const componentsDir = path.join(process.cwd(), 'components');
+      const testsDir = path.join(process.cwd(), 'tests');
+      
+      [srcDir, componentsDir, testsDir].forEach(dir => {
+        if (fs.existsSync(dir)) {
+          count += this.countFilesInDirectory(dir, extensions);
+        }
+      });
+    } catch (error) {
+      // Ignore errors
+    }
+    
+    return count;
+  }
+
+  countFilesInDirectory(dirPath, extensions) {
+    let count = 0;
+    
+    try {
+      const items = fs.readdirSync(dirPath);
+      for (const item of items) {
+        const fullPath = path.join(dirPath, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          count += this.countFilesInDirectory(fullPath, extensions);
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          count++;
+        }
+      }
+    } catch (error) {
+      // Ignore errors
+    }
+    
+    return count;
+  }
+
+  getStatusFromScore(score) {
+    if (score >= this.alertThresholds.good) return 'excellent';
+    if (score >= this.alertThresholds.warning) return 'good';
+    if (score >= this.alertThresholds.critical) return 'fair';
+    return 'poor';
+  }
+
+  calculateOverallHealth(metrics) {
+    const weights = {
+      buildStatus: 0.25,
+      testStatus: 0.20,
+      lintStatus: 0.20,
+      dependencyStatus: 0.20,
+      securityStatus: 0.15
     };
-    checkBuildHealth() {}
-        this.log('Checking build health...');
-<<<<<<< HEAD
-        try {}
-            execSync('npm run build', { })
-                "cwd": this.projectRoot,
-                "stdio": 'pipe'
-            }
-});
-=======
-        
-        try {}
-            execSync('npm run build', { })
-                "cwd": this.projectRoot, 
-                "stdio": 'pipe'
-            }
-});
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            return {;}
-                "status": 'success',
-                "build": 'passed',
-                "score": 20;
-            }} catch (error) {}
-            return {;}
-                "status": 'failed',
-                "build": 'failed',
-                "score": 0,
-                "error": error.message;
-            }};
+    
+    const overallScore = Object.entries(metrics).reduce((total, [key, value]) => {
+      if (key !== 'overallHealth' && weights[key]) {
+        return total + (value.score * weights[key]);
+      }
+      return total;
+    }, 0);
+    
+    return Math.round(overallScore);
+  }
+
+  updateHealthMetrics(metrics) {
+    this.healthMetrics = { ...metrics };
+    
+    // Record health history
+    this.healthHistory.push({
+      timestamp: new Date().toISOString(),
+      ...metrics
+    });
+    
+    // Keep only recent history
+    if (this.healthHistory.length > this.maxHealthHistory) {
+      this.healthHistory = this.healthHistory.slice(-this.maxHealthHistory);
+    }
+    
+    // Save health metrics
+    const metricsFile = path.join(this.monitorLogDir, 'project-health-monitor-metrics.json');
+    fs.writeFileSync(metricsFile, JSON.stringify({
+      ...this.healthMetrics,
+      history: this.healthHistory
+    }, null, 2));
+  }
+
+  checkAlerts(healthScore) {
+    if (healthScore < this.alertThresholds.critical) {
+      this.log('🚨 CRITICAL ALERT: Project health is critically low!');
+    } else if (healthScore < this.alertThresholds.warning) {
+      this.log('⚠️ WARNING: Project health needs attention');
+    } else if (healthScore >= this.alertThresholds.good) {
+      this.log('✅ Project health is excellent');
+    }
+  }
+
+  generateHealthReport() {
+    const totalChecks = this.healthHistory.length;
+    const excellentChecks = this.healthHistory.filter(h => h.overallHealth >= 90).length;
+    const goodChecks = this.healthHistory.filter(h => h.overallHealth >= 80 && h.overallHealth < 90).length;
+    const fairChecks = this.healthHistory.filter(h => h.overallHealth >= 70 && h.overallHealth < 80).length;
+    const poorChecks = this.healthHistory.filter(h => h.overallHealth >= 60 && h.overallHealth < 70).length;
+    const criticalChecks = this.healthHistory.filter(h => h.overallHealth < 60).length;
+    
+    const report = {
+      currentHealth: this.healthMetrics.overallHealth,
+      healthBreakdown: {
+        build: this.healthMetrics.buildStatus,
+        test: this.healthMetrics.testStatus,
+        lint: this.healthMetrics.lintStatus,
+        dependencies: this.healthMetrics.dependencyStatus,
+        security: this.healthMetrics.securityStatus
+      },
+      summary: {
+        totalChecks,
+        excellent: excellentChecks,
+        good: goodChecks,
+        fair: fairChecks,
+        poor: poorChecks,
+        critical: criticalChecks
+      },
+      recentHistory: this.healthHistory.slice(-10),
+      recommendations: this.generateHealthRecommendations(),
+      trends: this.analyzeHealthTrends()
     };
-    checkDependencies() {}
-        this.log('Checking dependencies health...');
-<<<<<<< HEAD
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            const totalDeps = Object.keys(packageJson.dependencies || {}).length +
-                             Object.keys(packageJson.devDependencies || {}).lengt;h;
-=======
-        
-        try {}
-            const packageJsonPath = path.join(this.projectRoot, 'package.json';);
-            const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
-            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
-                             Object.keys(packageJson.devDependencies || {}).lengt;h;
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            // Check for outdated packages;
-            let outdatedCount = ;0;
-            try {}
-                execSync('npm outdated --json', { })
-<<<<<<< HEAD
-                    "cwd": this.projectRoot,
-=======
-                    "cwd": this.projectRoot, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-                    "stdio": 'pipe'
-=======
-    checkTypeScript() {}"
+    
+    return report;
+  }
 
-            const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
-                             Object.keys(packageJson.devDependencies || {}).lengt;h;
-            // Check for outdated packages;
-            let outdatedCount = ;0;
+  generateHealthRecommendations() {
+    const recommendations = [];
+    
+    if (this.healthMetrics.buildStatus === 'poor') {
+      recommendations.push('🏗️ Build system needs immediate attention. Check configuration and dependencies.');
+    }
+    
+    if (this.healthMetrics.testStatus === 'poor') {
+      recommendations.push('🧪 Test coverage is insufficient. Add more tests and ensure they pass.');
+    }
+    
+    if (this.healthMetrics.lintStatus === 'poor') {
+      recommendations.push('📝 Linting is not properly configured. Set up ESLint and fix code style issues.');
+    }
+    
+    if (this.healthMetrics.dependencyStatus === 'poor') {
+      recommendations.push('📦 Dependencies have security vulnerabilities. Run npm audit fix immediately.');
+    }
+    
+    if (this.healthMetrics.securityStatus === 'poor') {
+      recommendations.push('🛡️ Security configuration is inadequate. Review security settings and best practices.');
+    }
+    
+    if (this.healthMetrics.overallHealth >= 90) {
+      recommendations.push('✅ Project health is excellent! Maintain current standards and continue monitoring.');
+    } else if (this.healthMetrics.overallHealth >= 80) {
+      recommendations.push('👍 Project health is good. Focus on areas that need improvement.');
+    } else if (this.healthMetrics.overallHealth >= 70) {
+      recommendations.push('⚠️ Project health is fair. Several areas need attention to improve overall quality.');
+    } else {
+      recommendations.push('🚨 Project health is poor. Immediate action required across multiple areas.');
+    }
+    
+    return recommendations;
+  }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                })} catch (error) {}
-                if ( {})
-                        const outdated = JSON.parse(error.stdout) {}
-     {}
-                        const outdated = JSON.parse(error.stdout})
-                        outdatedCount = Object.keys(outdated).length} catch (parseError) {}
-                        // No outdated packages;
-            const score = Math.max(0, 20 - (outdatedCount * 2;););
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            return {;}
-                "status": 'success',
-                "totalDependencies": totalDeps,
-                "outdatedCount": outdatedCount,
-                "score": score;
-            }} catch (error) {}
-            return {;}
-                "status": 'failed',
-                "score": 0,
-                "error": error.message;
-            }};
-    };
-    checkSecurity() {}
-        this.log('Checking security health...');
-<<<<<<< HEAD
-        try {}
-            const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot,
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            const score = Math.max(0, 20 - (vulnerabilities * 5;););
-=======
-        
-        try {}
-            const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
-                "encoding": 'utf8',
-                "stdio": 'pipe'
-=======
+  analyzeHealthTrends() {
+    if (this.healthHistory.length < 3) {
+      return { trend: 'insufficient_data', direction: 'unknown', change: 0 };
+    }
+    
+    const recent = this.healthHistory.slice(-3);
+    const older = this.healthHistory.slice(-6, -3);
+    
+    if (older.length === 0) {
+      return { trend: 'insufficient_data', direction: 'unknown', change: 0 };
+    }
+    
+    const recentAvg = recent.reduce((sum, h) => sum + h.overallHealth, 0) / recent.length;
+    const olderAvg = older.reduce((sum, h) => sum + h.overallHealth, 0) / older.length;
+    
+    const change = recentAvg - olderAvg;
+    const direction = change > 0 ? 'improving' : change < 0 ? 'declining' : 'stable';
+    
+    let trend = 'stable';
+    if (Math.abs(change) > 15) {
+      trend = change > 0 ? 'significant_improvement' : 'significant_decline';
+    } else if (Math.abs(change) > 8) {
+      trend = change > 0 ? 'improvement' : 'decline';
+    }
+    
+    return { trend, direction, change: Math.round(change) };
+  }
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            };);
-            const auditData = JSON.parse(auditResult;);
-            const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            const score = Math.max(0, 20 - (vulnerabilities * 5;););
-<<<<<<< HEAD
-            
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-            return {;}
-                "status": 'success',
-                "vulnerabilities": vulnerabilities,
-                "score": score;
-            }} catch (error) {}
-            return {;}
-                "status": 'warning',
-                "score": 10,
-                "error": error.message;
-            }};
-    };
-    generateHealthReport() {}
-        this.log('Generating project health report...');
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
+  async startContinuousMonitoring() {
+    this.log('🔄 Starting continuous health monitoring...');
+    
+    const interval = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes default
+    
+    // Run initial health check
+    await this.monitorProjectHealth();
+    
+    // Set up continuous monitoring
+    setInterval(async () => {
+      this.log('🔄 Running scheduled health check...');
+      await this.monitorProjectHealth();
+      
+      // Generate and log report
+      const report = this.generateHealthReport();
+      this.log(`📊 Health Report: ${report.currentHealth}/100 (${report.trends.direction})`);
+      
+      if (report.recommendations.length > 0) {
+        this.log('💡 Top Recommendations:');
+        report.recommendations.slice(0, 3).forEach(rec => this.log(`   ${rec}`));
+      }
+    }, interval);
+    
+    this.log(`⏰ Health monitoring active. Running every ${interval / 60000} minutes.`);
+  }
+}
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        const structure = this.checkProjectStructure(;);
-        const codeQuality = this.checkCodeQuality(;);
-        const typeScript = this.checkTypeScript(;);
-        const build = this.checkBuildHealth(;);
-        const dependencies = this.checkDependencies(;);
-        const security = this.checkSecurity(;);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        const totalScore = structure.score + codeQuality.score + typeScript.score +
-                          build.score + dependencies.score + security.scor;e;
-        const healthStatus = totalScore >= 80 ? 'excellent' :
-                           totalScore >= 60 ? 'good' :
-                           totalScore >= 40 ? 'fair' : 'poo;r;';
-=======
-        
-        const totalScore = structure.score + codeQuality.score + typeScript.score + 
-                          build.score + dependencies.score + security.scor;e;
-        
-        const healthStatus = totalScore >= 80 ? 'excellent' : 
-                           totalScore >= 60 ? 'good' : 
-                           totalScore >= 40 ? 'fair' : 'poo;r;';
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        const report = {}
-            "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
-            "health": {}
-=======
-        const totalScore = structure.score + codeQuality.score + typeScript.score + 
-                          build.score + dependencies.score + security.scor;e;
+// Main execution
+async function main() {
+  const healthMonitor = new ProjectHealthMonitor();
+  
+  try {
+    await healthMonitor.startContinuousMonitoring();
+  } catch (error) {
+    console.error('❌ Project health monitor failed:', error);
+    process.exit(1);
+  }
+}
 
-            "health": {}"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                overall: {}
-                    score: totalScore,"
-                    "status": healthStatus,
-                    "maxScore": 100;"
-                },"
-                "structure": structure,
-                "codeQuality": codeQuality,
-                "typeScript": typeScript,
-                "build": build,
-                "dependencies": dependencies,
-<<<<<<< HEAD
-                "security": security;
-            },
-            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
-       };
-<<<<<<< HEAD
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Project health report saved to ${this.reportFile}`);
-        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
-        return report};
-    generateHealthRecommendations(score, status) {}
-        const recommendations = [];
-=======
-=======
-                "security": security;"
-            "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-        this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);"
-        return report};
-    generateHealthRecommendations(score, status) {}
-        const recommendations = [];
-<<<<<<< HEAD
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        if ( {})
-=======
-        if ( {})"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            recommendations.push('Project health needs immediate attention')};
-
-            recommendations.push('Focus on improving code quality and fixing build issues')};
-            recommendations.push('Update outdated dependencies');
-            recommendations.push('Address security vulnerabilities')};
-        recommendations.push('Implement automated testing');
-        recommendations.push('Set up continuous integration');
-        recommendations.push('Regularly monitor project health');
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return recommendations};
-    async run() {}
-        this.log('Project Health Monitor started');
-=======
-        
-        return recommendations};
-    async run() {}
-        this.log('Project Health Monitor started');
-        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-        try {}
-            const report = this.generateHealthReport(;);
-            this.log('Project Health Monitor completed successfully');
-            return report} catch (error) {}
-            this.log(`Project Health Monitor "failed": ${error.message}`);
-=======
-        return recommendations};
-    async run() {}
-        this.log('Project Health Monitor started');
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            throw error};
-// Run the monitor if this script is executed directly;
-    const monitor = new ProjectHealthMonitor) {}
-    const monitor = new ProjectHealthMonitor}(;);
-    monitor.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-module.exports = ProjectHealthMonitor;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-module.exports = ProjectHealthMonitor;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ProjectHealthMonitor;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+// Start the health monitor
+main().catch(console.error);

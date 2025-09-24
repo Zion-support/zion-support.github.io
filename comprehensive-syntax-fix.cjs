@@ -1,230 +1,96 @@
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-main
-
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureReportsDir();
-  }
+console.log('🔧 Starting comprehensive syntax fixes...');
 
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async fixMergeConflicts() {
-    this.log('🔧 Fixing merge conflicts...');
+// Get all TypeScript and JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    const files = [
-      'tsconfig.json',
-      '.eslintrc.js',
-      'package.json'
-    ];
-
-    for (const file of files) {
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Remove merge conflict markers
-
-=======
-
-          content = content.replace(/
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-console.log('🔧 Running comprehensive syntax fix...');
-// Fix specific files with known issues;
-const fixes = [
-  {
-    file: '/workspace/lib/analytics.ts',
-    content: `// Analytics utilities;
-export const trackEvent = (event: string, data?: any) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', event, data);
-
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
   }
-};
+  
+  return files;
+}
 
-export const trackPageView = (url: string) => {
+// Advanced syntax fixes
+function fixAdvancedSyntax(content, filePath) {
+  let fixed = content;
+  
+  // Fix import statements
+  fixed = fixed.replace(/import\s+([^,]+),\s*$/gm, 'import $1;');
+  fixed = fixed.replace(/import\s+([^,]+),\s*import/gm, 'import $1;\nimport');
+  
+  // Fix object syntax
+  fixed = fixed.replace(/"([^"]+)":\s*([^,}]+);/g, '"$1": $2,');
+  fixed = fixed.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
+  
+  // Fix array syntax
+  fixed = fixed.replace(/\[([^\]]+),\]/g, '[$1]');
+  
+  // Fix function parameters
+  fixed = fixed.replace(/\(\s*([^)]+),\s*\)/g, '($1)');
+  
+  // Fix trailing commas in objects and arrays
+  fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
+  
+  // Fix semicolons after commas
+  fixed = fixed.replace(/;/g, ',');
+  
+  // Fix double commas
+  fixed = fixed.replace(/,+/g, ',');
+  
+  // Fix malformed JSX
+  fixed = fixed.replace(/<(\w+)([^>]*),>/g, '<$1$2>');
+  
+  // Fix string concatenation
+  fixed = fixed.replace(/'([^']+)',\s*'([^']+)'/g, "'$1$2'");
+  
+  return fixed;
+}
 
-    });
-  }`;
-};`,
-  },
-
-    content: `import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom404() {
-  return (
-    <>
-      <Head>
-
-        <title>404 - Page Not Found</title>
-        <meta name="description" content="The page you are looking for does not exist." />"
-</meta>
-      "
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">"
-</div>"
-        <div className="text-center">"
-
-          <Link href="/" className="text-blue-600 hover:text-blue-800">"
-
-        </div>
-    </>)
-  );`;
-}`,
-  {"
-
-export default function App() {
-    <div className="App">"
-      <h1>App Component</h1>
-export default class ErrorBoundary extends Component<Props, State> {
-
-      return <h1>Sorry, something went wrong.</h1>;"
-    <footer className="bg-gray-900 text-white p-4">"
-</footer>"
-      <div className="container mx-auto text-center">"
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-    <header className="bg-blue-600 text-white p-4">"
-</header>
-      <h1>Header Component</h1>
-    </header>"
-    <div className="performance-monitor">"
-      <p>Performance Monitor</p>
-    <div className="performance-optimized">"
-      <p>Performance Optimized Component</p>
-    <header className="layout-header">"
-      <h1>Layout Header</h1>
-    <div className="main-layout">"
-    <aside className="sidebar">"
-</aside>
-      <p>Sidebar</p>
-  <React.StrictMode>
-
-    <App />
-
-  </React.StrictMode>)`;
-);`,
-
-];
-
+// Process files
+const files = getAllFiles(__dirname);
 let fixedCount = 0;
-for (const fix of fixes) {
+let errorCount = 0;
+
+files.forEach(file => {
   try {
-
-<<<<<<< HEAD
-console.log(`✅ Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5
-const { execSync } = require('child_process');
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-
-          content = content.replace(/
-
-<<<<<<< HEAD
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-=======
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed merge conflicts in ${file}`);
-        } catch (error) {
-          this.log(`❌ Failed to fix merge conflicts in ${file}: ${error.message}`);
-        }
-      }
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixAdvancedSyntax(content, file);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(file, fixed);
+      console.log(`✅ Fixed: ${path.relative(__dirname, file)}`);
+      fixedCount++;
     }
+  } catch (error) {
+    console.log(`❌ Error fixing ${path.relative(__dirname, file)}: ${error.message}`);
+    errorCount++;
   }
+});
 
-  async fixSyntaxErrors() {
-    this.log('🔧 Fixing syntax errors...');
-    const commands = [
-      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
-      { cmd: 'npm run format', desc: 'Format code' }
-    ];
+console.log(`\n🎉 Comprehensive syntax fixes completed!`);
+console.log(`📊 Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
 
-    for (const { cmd, desc } of commands) {
-      try {
-        this.log(`🚀 ${desc}`);
-        execSync(cmd, { stdio: 'pipe', cwd: this.projectRoot });
-        this.log(`✅ ${desc} completed`);
-      } catch (error) {
-        this.log(`⚠️ ${desc} failed: ${error.message}`);
-      }
-    }
-  }
-
-  async generateReport() {
-    this.log('📊 Generating syntax fix report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      status: 'completed',
-      fixes: [
-        'Merge conflicts resolved',
-        'Syntax errors fixed',
-        'Code formatted'
-      ],
-      summary: 'Comprehensive syntax fix completed successfully'
-    };
-
-    const reportPath = path.join(this.reportsDir, 'syntax-fix-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting Comprehensive Syntax Fix...');
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.generateReport();
-      this.log('🎉 Comprehensive Syntax Fix completed successfully!');
-    } catch (error) {
-      this.log(`❌ Comprehensive Syntax Fix failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-
-    fixedCount++;
-  } catch (error) {`;
-    console.error(`Error fixing ${fix.file}:`, error.message);
-`;
-console.log(`✅ Fixed ${fixedCount} files`);
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+// Try to run lint fix
+try {
+  console.log('\n🔧 Running ESLint fix...');
+  execSync('npm run lint:fix', { stdio: 'inherit' });
+  console.log('✅ ESLint fix completed');
+} catch (error) {
+  console.log('⚠️ ESLint fix failed, continuing...');
+}

@@ -1,979 +1,123 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-}
-
-import { useState } from \"react\";
-import { useForm } from \"react-hook-form\";
-import { Button } from \"@/components/ui/button\";
-import { Textarea } from \"@/components/ui/textarea\";
-import {
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  Form,
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  Form,
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  FormControl,
-  FormField,
-  FormItem,
-FormMessage,;
-<<<<<<< HEAD
-} from "@/components/ui/form";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
-}
-
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormMessage,;
-} from "@/components/ui/form";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-interface ReplyFormProps {;
-
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string
-}
-
-onSubmit: (content: string) => Promise<void>;
-  parentId?: string
-}
-import { useState  } from './react';
-import { use_form  } from './react - hook - form';
-import { Button  } from '@/components / ui / button';
-=======
-} from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-import { useState  } from './react';'
-import { use_form  } from './react - hook - form';'
-import { Button  } from '@/components / ui / button';'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { Textarea  } from '@/components / ui / textarea';
-import {";
-import { useState } from "react";"
-import { useForm } from "react-hook-form";
-"
-import { Button } from "@/components/ui/button";"
-import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-FormMessage,;
-} from "@/components/ui/form";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-=======
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  FormMessage,
-
-} from "@/components/ui/form";
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  FormMessage,
-} from '@/components / ui / form';
-import { Card, CardContent, CardFooter  } from '@/components / ui / card';
-interface ReplyFormProps {
-  on_submit: (content: string) => Promise < void>;
-  parent_id?: string;
-}
-interface ReplyFormValues {
-interface ReplyFormValues {;
-  content: string;
-}
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-  const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true);
-    try {;
-      (await onSubmit(values && values.content), form && form.reset());
-    } finally {;
-      setIsSubmitting(false);
-    }
-
-  },
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  return (
-    <Card>;
-=======
-
-
-
-
-
-  return (;
-    <Card>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-      <CardContent className="pt-6">;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField;
-              control={form && form.control}"
-              name="content"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const form = use_form < ReplyFormValues>({}
-    default_values: {"
-      content: "",
-    },
-
-FormMessage,;
-} from "@/components/ui/form";""
-import { Card, CardContent, CardFooter } from "@/components/ui/card";"
-interface ReplyFormProps {
-  // TODO: Implement
-}
-  onSubmit: (content: string) => Promise<void>;
-</void>
-    <Card>;
-"
-      <CardContent className="pt-6">;"
-
-        <Form {...form}>;
-
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-</form>
-            <FormField;
-              control={form && form.control}"
-              name="content""
-              render={({ field }) => (;
-
-                <FormItem>;
-
-                  <FormControl>;
-
-                    <Textarea;)
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
-
-  const form = use_form < ReplyFormValues>({
-    default_values: {,"
-  content: "","
-    },)
-pr-12325
-  });
-;
-  const handle_submit = async (values: ReplyFormValues) => {}
-    setIsSubmitting (true);
-    try {}
-      (await on_submit (values.content), form.reset ());
-<<<<<<< HEAD
-    } finally {}
-=======
-    } finally {
-  // TODO: Implement
-}
-      (await on_submit (values.content), form.reset ());
-    } finally {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-<<<<<<< HEAD
-    <Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <CardContent className="pt-6">;
-=======
-    <Card>;"
-      <CardContent className="pt - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <CardContent className="pt - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <CardContent className="pt-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (handle_submit)}>;
-            <FormField;
-              control={form.control}"
-              name="content";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder={}
-                        parent_id;"
-                          ? "Write your reply...";"
-                          : "Join the discussion...";
-<<<<<<< HEAD
-                      }
-                      className="min - h-[100px] resize-y";
-  FormMessage;
-} from "@/components/ui/form",;
-=======
-                      }"
-                      className="min - h-[100px] resize - y";
-  FormMessage;"
-} from "@/components/ui/form",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-;
-interface ReplyFormProps {;
-  onSubmit:(content:string) => Promise<void>,;
-  parentId?:string;}
-;
-interface ReplyFormValues {;
-  content:string;
-}
-;
-export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  ;
-  const form = useForm<ReplyFormValues>({;
-    defaultValues:{;"
-      content:"";
-    }
-  }),;
-;
-  const handleSubmit = async (values:ReplyFormValues) => {;
-    setIsSubmitting(true),;
-    try {;
-      await onSubmit(values.content),;
-      form.reset();
-    } finally {;
-      setIsSubmitting(false),;
-    }
-  },;
-;
-  return (;
-    <Card>;"
-      <CardContent className="pt-6">;
-        <Form {...form}>;
-          <form onSubmit={form.handleSubmit(handleSubmit)}>;
-            <FormField;
-              control={form.control}"
-              name="content";
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;"
-                      placeholder={parentId ? "Write your reply..." :"Join the discussion..."}"
-                      className="min-h-[100px] resize-y";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;"
-            <div className="mt-4 flex justify-end">;"
-              <Button type="submit" disabled={isSubmitting}>;"
-                {isSubmitting ? "Submitting..." :"Post Reply"}
-</Card>"
-      <CardContent className="pt - 6">;"
-</CardContent>
-        <Form {...form}>;
-</Form>)
-          <form on_submit={form.handle_submit (handle_submit)}>;
-</form>
-            <FormField;
-              control={form.control}"
-              name="content";"
-              render={({ field }) => (
-</FormField>
-                <FormItem>;
-</FormItem>
-                  <FormControl>;
-</FormControl>
-                    <Textarea;
-                      placeholder={
-                        parent_id;"
-                          ? "Write your reply...";""
-                          : "Join the discussion...";"
-                      }"
-                      className="min - h-[100px] resize - y";"
-  FormMessage;"
-} from "@/components/ui/form",;""
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;"
-;
-interface ReplyFormProps {;)
-  onSubmit:(content:string) => Promise<void>,;
-</Textarea>
-  const form = useForm<ReplyFormValues>({;
-</ReplyFormValues>
-    <Card>;
-</Card>"
-      <CardContent className="pt-6">;"
-</CardContent>
-        <Form {...form}>;
-</Form>)
-          <form onSubmit={form.handleSubmit(handleSubmit)}>;
-</form>
-            <FormField;
-              control={form.control}"
-              name="content";"
-              render={({ field }) => (;
-</FormField>
-                <FormItem>;
-</FormItem>
-                  <FormControl>;
-</FormControl>
-                    <Textarea;"
-                      placeholder={parentId ? "Write your reply..." :"Join the discussion..."}""
-                      className="min-h-[100px] resize-y";"
-                      {...field}
-                    />;
-</Textarea>
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-                </FormItem>;"
-            <div className="mt-4 flex justify-end">;"
-</div>"
-              <Button type="submit" disabled={isSubmitting}>;"
-</Button>
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </CardContent>;
-
-<<<<<<< HEAD
-FormMessage,;
-placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-} from "@/components/ui/form";
-
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-};
-=======
-
-"
-} from "@/components/ui/form";
-"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-};
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    setIsSubmitting(true);
-    try {;
-      (await onSubmit(values && values.content), form && form.reset());
-    } finally {;
-      setIsSubmitting(false);
-    }
-
-  },
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  return (
-    <Card>;"
-      <CardContent className="pt-6">;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField;
-              control={form && form.control}"
-              name="content"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
-  const [is_submitting, setIsSubmitting] = useState (false);
-;
-  const form = use_form < ReplyFormValues>({}
-    default_values: {"
-      content: "",
-    },
-    <Card>;
-</Card>"
-      <CardContent className="pt-6">;"
-</CardContent>
-        <Form {...form}>;
-</Form>)
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-</form>
-            <FormField;
-              control={form && form.control}"
-              name="content""
-              render={({ field }) => (;
-</FormField>
-                <FormItem>;
-</FormItem>
-                  <FormControl>;
-</FormControl>
-                    <Textarea;)
-export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
-</Textarea>
-  const form = use_form < ReplyFormValues>({
-    default_values: {,"
-  content: "","
-    },)
-  });
-;
-  const handle_submit = async (values: ReplyFormValues) => {}
-    setIsSubmitting (true);
-    try {}
-      (await on_submit (values.content), form.reset ());
-<<<<<<< HEAD
-    } finally {}
-=======
-    } finally {
-  // TODO: Implement
-}
-      (await on_submit (values.content), form.reset ());
-    } finally {
-  // TODO: Implement
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-<<<<<<< HEAD
-    <Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <CardContent className="pt-6">;
-=======
-    <Card>;"
-      <CardContent className="pt - 6">;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <CardContent className="pt - 6">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-      <CardContent className="pt-6">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        <Form {...form}>;
-          <form on_submit={form.handle_submit (handle_submit)}>;
-            <FormField;
-              control={form.control}"
-              name="content";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-
-                      placeholder={}
-                        parent_id;"
-                          ? "Write your reply...";"
-                          : "Join the discussion...";
-<<<<<<< HEAD
-                      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className="min - h-[100px] resize-y";
-=======
-                      }"
-                      className="min - h-[100px] resize - y";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      className="min - h-[100px] resize - y";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                      className="min - h-[100px] resize-y";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-
-                </FormItem>)}
-<<<<<<< HEAD
-            />;
-            <div className="mt - 4 flex justify-end">;
-              <Button type="submit" disabled={is_submitting}>;
-=======
-            />;"
-            <div className="mt - 4 flex justify - end">;"
-              <Button type="submit" disabled={is_submitting}>;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                {is_submitting ? "Submitting..." : "Post Reply"}
-
-</Card>"
-      <CardContent className="pt - 6">;"
-</CardContent>
-        <Form {...form}>;
-</Form>)
-          <form on_submit={form.handle_submit (handle_submit)}>;
-</form>
-            <FormField;
-              control={form.control}"
-              name="content";"
-              render={({ field }) => (
-</FormField>
-                <FormItem>;
-</FormItem>
-                  <FormControl>;
-</FormControl>
-                    <Textarea;
-
-                      placeholder={
-                        parent_id;"
-                          ? "Write your reply...";""
-                          : "Join the discussion...";"
-                      }"
-                      className="min - h-[100px] resize - y";"
-                      {...field}
-                    />;
-</Textarea>
-                  </FormControl>;
-                  <FormMessage />;
-</FormMessage>
-)
-                </FormItem>)}"
-            <div className="mt - 4 flex justify - end">;"
-</div>"
-              <Button type="submit" disabled={is_submitting}>;"
-</Button>
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </CardContent>;
-
-    </Card>);
-}
-;
-export default ReplyForm;
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-} from "@/components/ui/form";
-=======
-
-
-"
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-"
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />"
-            <div className="mt-4 flex justify-end">"
-              <Button type="submit" disabled={isSubmitting}>"
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-"
-} from "@/components/ui/form";
-"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-<<<<<<< HEAD
-interface ReplyFormProps {
-=======
-
-interface ReplyFormProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
-}
-interface ReplyFormValues {}
-  content: string;
-}
-
-<<<<<<< HEAD
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const form = useForm<ReplyFormValues>({}
-    defaultValues: {"
-      content: ""
-    }
-  });
-  const handleSubmit = async (values: ReplyFormValues) => {}
-    setIsSubmitting(true);
-    try {}
-      (await onSubmit(values.content), form.reset());
-    } finally {}
-      setIsSubmitting(false);
-    }
-  }
-  };
-"
-import { useState } from "react","
-import { useForm } from "react-hook-form","
-import { Button } from "@/components/ui/button","
+import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
-import {}
+import {
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { useState  } from './react',
+import { use_form  } from './react - hook - form',
+import { Button  } from '@/components / ui / button',
+import { Textarea  } from '@/components / ui / textarea',
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormMessage"
-} from "@/components/ui/form","
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
-interface ReplyFormProps {}
-  onSubmit: (content: string) => Promise<void>,
-  parentId?: string";
-import { useState } from "react",;"
-import { useForm } from "react-hook-form",;"
-import { Button } from "@/components/ui/button",;"
-import { Textarea } from "@/components/ui/textarea",;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormMessage,;"
-} from "@/components/ui/form";"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-interface ReplyFormProps {;
-
-  onSubmit: (content: string) => Promise<void>;
-  parentId?: string;
-}
-'
-import { useState  } from './react';'
-import { use_form  } from './react - hook - form';'
-import { Button  } from '@/components / ui / button';'
-import { Textarea  } from '@/components / ui / textarea';
-import {";
-import { useState } from "react";"
-import { useForm } from "react-hook-form";
-"
-import { Button } from "@/components/ui/button";"
-import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-=======
-import {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-<<<<<<< HEAD
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-interface ReplyFormValues {;
-
-  content: string;
-}
-    setIsSubmitting(true);
-    try {;
-      (await onSubmit(values && values.content), form && form.reset());
-    } finally {;
-      setIsSubmitting(false);
-    }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  return (
-    <Card>;"
-      <CardContent className="pt-6">;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
-            <FormField;
-              control={form && form.control}"
-              name="content"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder={}
-                        parent_id;"
-                          ? "Write your reply...";"
-                          : "Join the discussion...";
-<<<<<<< HEAD
-                      }
-<<<<<<< HEAD
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                      }"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />"
-            <div className="mt-4 flex justify-end">"
-              <Button type="submit" disabled={isSubmitting}>"
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
-  )
-},
-
-
-    </Card>;
-  ),;
-},;
-;
-export default ReplyForm,; import {
+  FormMessage,
   Form;
-FormControl;
-FormField;
-FormItem;
-FormMessage interface ReplyFormProps {
+  FormControl;
+  FormField;
+  FormItem;
+FormMessage;
+} from "@/components/ui/form",
+interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
-parentId?: string 
-}interface ReplyFormValues {
-  content: string 
-}export const ReplyForm = ({
-  onSubmit, parentId 
-}: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState (false);
-defaultValues: {
-  className="min-h-[100px] resize-y" {
-  ...field 
-}/> </FormControl> <FormMessage /> </FormItem>) 
-}/> </Button> </div> </form> </Form> </CardContent> </Card>) 
+  parentId?: string}
+interface ReplyFormValues {
+  content: string}
+,
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""}
+  }),
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true),
+    try {
+      (await onSubmit(values.content), form.reset())} finally {
+      setIsSubmitting(false)}
+  }
+  };
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormMessage} from "@/components/ui/form";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string,
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormMessage;
+} from "@/components/ui/form",
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string}
+,
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage} from "@/components/ui/form",
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string}
+interface ReplyFormValues {
+interface ReplyFormValues {
+  content: string}
+,
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""}
+  }),
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true),
+    try {
+      (await onSubmit(values && values.content), form && form.reset())} finally {
+      setIsSubmitting(false)}
 };
-export default ReplyForm;
-);
-}
-export default ReplyForm;
-
-export default ReplyForm;
-
-  );
-}
-export default ReplyForm;
-
-  )
-},
-
-
-export default ReplyForm,
-export default ReplyForm;
-export default ReplyForm,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export default ReplyForm;
-export default ReplyForm,
-
-=======
-
-
-  )
-},
-
-
-
-export default ReplyForm;
-export default ReplyForm,
-";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-export default ReplyForm;
-export default ReplyForm,
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                      className="min - h-[100px] resize - y";
+  return (
+    <Card>,
+      <CardContent className="pt-6">,
+        <Form {...form}>,
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>,
+            <FormField
+              control={form && form.control}
+              name="content",
+              render={({ field }) => (
+                <FormItem>,
+                  <FormControl>,
+                    <Textarea
+                      placeholder={
+                        parent_id,
+                          ? "Write your reply...",
+                          : "Join the discussion..."}
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+                      className="min-h-[100px] resize-y",
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                    />,
+                  </FormControl>,
+                  <FormMessage />,
+                </FormItem>)}
+            />,
+            <div className="mt-4 flex justify-end">,
+              <Button type="submit" disabled={isSubmitting}>,
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>,
+            </div>,
+          </form>,
+        </Form>,
+      </CardContent>,
+    </Card>)}
+export default ReplyForm)};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

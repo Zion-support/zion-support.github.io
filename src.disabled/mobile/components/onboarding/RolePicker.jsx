@@ -1,36 +1,12 @@
-import React from 'react';
-interface RolePickerProps {}
-  // Add props here as needed;
-}
-export default function RolePicker({ }: RolePickerProps) {}
+"export function RolePicker({ onSelect }) { const [selectedRole,setSelectedRole] = useState(null), const { t } = useTranslation(), const handleSelect = role => { setSelectedRole(role), onSelect(role)}; return (), <div className=\"space-y-4 px-4\">\" <h2 className=\"text-xl font-medium\">{t(\"onboarding.title\")}</h2>\" <p className=\"text-muted-foreground\">{t(\"onboarding.subtitle\")}</p>\" <div className=\"space-y-3 mt-6\">\" <Card\" className={`cursor-pointer transition-all ${` selectedRole === \"talent\" ? \"border-primary bg-primary/5\" : \"border-border \"hover\": border-primary/40\""\" }\"}\" onClick={() => handleSelect(\"talent\")}\" >\" <CardContent className=\"p-5\">\" <div className=\"flex items-center\">\" <div className=\"w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4\">\" <Briefcase className=\"h-6 w-6 text-primary\"  />\" </div>\" <div className=\"flex-1\">\" <h3 className=\"font-medium\">{t(\"onboarding.talent_title\")}</h3>\" <p className=\"text-sm text-muted-foreground\">\" {t(\"onboarding.talent_desc\")}\" </p>\" </div>\" {selectedRole === \"talent\" && (\" <Check className=\"h-5 w-5 text-primary\"  />\" )}\" </div> </CardContent> </Card> <Card\"" className={\"cursor-pointer transition-all ${\" selectedRole === \"client\" ? \"border-primary bg-primary/5\" : \"border-border \"hover\": border-primary/40\""\" }\"}\" onClick={() => handleSelect(\"client\")}\" >\" <CardContent className=\"p-5\">\" <div className=\"flex items-center\">\" <div className=\"w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4\">\" <Users className=\"h-6 w-6 text-primary\"  />\" </div>\" <div className=\"flex-1\">\" <h3 className=\"font-medium\">{t(\"onboarding.client_title\")}</h3>\" <p className=\"text-sm text-muted-foreground\">\" {t(\"onboarding.client_desc\")}\" </p>\" </div>\" {selectedRole === \"client\" && (\" <Check className=\"h-5 w-5 text-primary\"  />\" )}\" </div> \",\",
+"export function RolePicker({ onSelect }) { const [selectedRole,setSelectedRole] = useState(null), const { t } = useTranslation(), const handleSelect = role => { setSelectedRole(role), onSelect(role)}; return (), <div className="space-y-4 px-4">" <h2 className="text-xl font-medium">{t("onboarding.title")}</h2>" <p className="text-muted-foreground">{t("onboarding.subtitle")}</p>" <div className="space-y-3 mt-6">" <Card" className={`cursor-pointer transition-all ${` selectedRole === "talent" ? "border-primary bg-primary/5" : "border-border hover: border-primary/40""" }"}" onClick={() => handleSelect("talent")}" >" <CardContent className="p-5">" <div className="flex items-center">" <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">" <Briefcase className="h-6 w-6 text-primary"  />" </div>" <div className="flex-1">" <h3 className="font-medium">{t("onboarding.talent_title")}</h3>" <p className="text-sm text-muted-foreground">" {t("onboarding.talent_desc")}" </p>" </div>" {selectedRole === "talent" && (" <Check className="h-5 w-5 text-primary"  />" )}" </div> </CardContent> </Card> <Card"" className={"cursor-pointer transition-all ${" selectedRole === "client" ? "border-primary bg-primary/5" : "border-border hover: border-primary/40""" }"}" onClick={() => handleSelect("client")}" >" <CardContent className="p-5">" <div className="flex items-center">" <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">" <Users className="h-6 w-6 text-primary"  />" </div>" <div className="flex-1">" <h3 className="font-medium">{t("onboarding.client_title")}</h3>" <p className="text-sm text-muted-foreground">" {t("onboarding.client_desc")}" </p>" </div>" {selectedRole === "client" && (" <Check className="h-5 w-5 text-primary"  />" )}" </div> ",""`"`,
+interface RolePickerProps {
+  // Add props here as needed}
+export default function RolePicker({ }: RolePickerProps) {
   return (
-    <div>
-      <h1>RolePicker</h1>
-      <p>This component is currently under development.</p>
-<<<<<<< HEAD
-    </div>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
+    <div>,
+      <h1>RolePicker</h1>,
+      <p>This component is currently under development.</p>,
+    </div>)}
 }
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>
-  );
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+ursor/add-new-services-and-deploy-updates-0o462}
